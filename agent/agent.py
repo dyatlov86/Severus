@@ -1,5 +1,5 @@
 import frida
-import sys,time,psutil
+import sys,time,psutil,os
 from threading import Lock, Thread
 func=[]
 
@@ -23,10 +23,10 @@ def run():
     pid=frida.spawn(sys.argv[1])
     session = frida.attach(pid)
 
-    f=open("C:\\Users\\onuro\\OneDrive\\Masaüstü\\Severus\\agent\\dll_exports\\user32.dll.txt","r")
+    f=open(os.getcwd()+"\\dll_exports\\user32.dll.txt","r")
     js=f.read()
     f.close()
-    f=open("C:\\Users\\onuro\\OneDrive\\Masaüstü\\Severus\\agent\\dll_exports\\kernel32.dll.txt","r")
+    f=open(os.getcwd()+"\\dll_exports\\kernel32.dll.txt","r")
     js+=f.read()
     f.close()
     script = session.create_script(js)
