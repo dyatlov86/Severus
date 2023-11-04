@@ -23,10 +23,10 @@ def run():
     pid=frida.spawn(sys.argv[1])
     session = frida.attach(pid)
 
-    f=open("C:\\Users\\onuro\\OneDrive\\Masaüstü\\dll_exports\\user32.dll.txt","r")
+    f=open("C:\\Users\\onuro\\OneDrive\\Masaüstü\\Severus\\agent\\dll_exports\\user32.dll.txt","r")
     js=f.read()
     f.close()
-    f=open("C:\\Users\\onuro\\OneDrive\\Masaüstü\\dll_exports\\kernel32.dll.txt","r")
+    f=open("C:\\Users\\onuro\\OneDrive\\Masaüstü\\Severus\\agent\\dll_exports\\kernel32.dll.txt","r")
     js+=f.read()
     f.close()
     script = """
