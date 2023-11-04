@@ -1,16 +1,26 @@
 import frida
 import sys,time,psutil,os
-from threading import Lock, Thread
+from multiprocessing import Process
 func=[]
 
+import http.server,socketserver
 
+class Handler(http.server.SimpleHTTPRequestHandler):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, directory=os.getcwd()+"\\output", **kwargs)
+
+def server():
+    with socketserver.TCPServer(("0.0.0.0", 8080), Handler) as httpd:
+        httpd.serve_forever()
 
 def on_message(message, data):
     global func
     if message['type'] == 'send':
 #        print(message['payload'])
         if not message['payload'] in func:
-            print(message['payload'])
+            f=open(os.getcwd()+"\\output\\exports.txt","a+")
+            f.write(message["payload"]+"\n")
+            f.close()
             func.append(message['payload'])
     elif message['type'] == 'error':
         print(message['stack'])
@@ -37,10 +47,10 @@ def run():
     frida.resume(pid)
     sys.stdin.read()
 
-def deneme():
-    print("thread2")
+
 
 
 if __name__ == "__main__":
-	thread1 = Thread(target=run,name="frida")
-	thread1.start()
+    process1 = Process(target=server)
+    process1.start()
+    run()
