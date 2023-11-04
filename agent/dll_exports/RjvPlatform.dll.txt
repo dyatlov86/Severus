@@ -1,0 +1,6 @@
+var RejuvShutdown = Module.findExportByName("RjvPlatform.dll", "RejuvShutdown")
+Interceptor.attach(RejuvShutdown, {onLeave: function (args) {send("RejuvShutdown");}});
+
+var RejuvStartup = Module.findExportByName("RjvPlatform.dll", "RejuvStartup")
+Interceptor.attach(RejuvStartup, {onLeave: function (args) {send("RejuvStartup");}});
+

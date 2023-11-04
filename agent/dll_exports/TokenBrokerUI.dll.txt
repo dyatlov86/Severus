@@ -1,0 +1,6 @@
+var TokenBrokerGetEdgeSids = Module.findExportByName("TokenBrokerUI.dll", "TokenBrokerGetEdgeSids")
+Interceptor.attach(TokenBrokerGetEdgeSids, {onLeave: function (args) {send("TokenBrokerGetEdgeSids");}});
+
+var TokenBrokerGetPushCookieMonikers = Module.findExportByName("TokenBrokerUI.dll", "TokenBrokerGetPushCookieMonikers")
+Interceptor.attach(TokenBrokerGetPushCookieMonikers, {onLeave: function (args) {send("TokenBrokerGetPushCookieMonikers");}});
+

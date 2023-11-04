@@ -1,0 +1,63 @@
+var DllCanUnloadNow = Module.findExportByName("xwizards.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("xwizards.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ProcessXMLFileA = Module.findExportByName("xwizards.dll", "ProcessXMLFileA")
+Interceptor.attach(ProcessXMLFileA, {onLeave: function (args) {send("ProcessXMLFileA");}});
+
+var ProcessXMLFileW = Module.findExportByName("xwizards.dll", "ProcessXMLFileW")
+Interceptor.attach(ProcessXMLFileW, {onLeave: function (args) {send("ProcessXMLFileW");}});
+
+var ResetRegistrationA = Module.findExportByName("xwizards.dll", "ResetRegistrationA")
+Interceptor.attach(ResetRegistrationA, {onLeave: function (args) {send("ResetRegistrationA");}});
+
+var ResetRegistrationW = Module.findExportByName("xwizards.dll", "ResetRegistrationW")
+Interceptor.attach(ResetRegistrationW, {onLeave: function (args) {send("ResetRegistrationW");}});
+
+var RunPropertySheetA = Module.findExportByName("xwizards.dll", "RunPropertySheetA")
+Interceptor.attach(RunPropertySheetA, {onLeave: function (args) {send("RunPropertySheetA");}});
+
+var RunPropertySheetW = Module.findExportByName("xwizards.dll", "RunPropertySheetW")
+Interceptor.attach(RunPropertySheetW, {onLeave: function (args) {send("RunPropertySheetW");}});
+
+var RunWizardA = Module.findExportByName("xwizards.dll", "RunWizardA")
+Interceptor.attach(RunWizardA, {onLeave: function (args) {send("RunWizardA");}});
+
+var RunWizardW = Module.findExportByName("xwizards.dll", "RunWizardW")
+Interceptor.attach(RunWizardW, {onLeave: function (args) {send("RunWizardW");}});
+
+var XWProcessXMLFile = Module.findExportByName("xwizards.dll", "XWProcessXMLFile")
+Interceptor.attach(XWProcessXMLFile, {onLeave: function (args) {send("XWProcessXMLFile");}});
+
+var XWRegisterHost = Module.findExportByName("xwizards.dll", "XWRegisterHost")
+Interceptor.attach(XWRegisterHost, {onLeave: function (args) {send("XWRegisterHost");}});
+
+var XWRegisterPageWithPage = Module.findExportByName("xwizards.dll", "XWRegisterPageWithPage")
+Interceptor.attach(XWRegisterPageWithPage, {onLeave: function (args) {send("XWRegisterPageWithPage");}});
+
+var XWRegisterPageWithTask = Module.findExportByName("xwizards.dll", "XWRegisterPageWithTask")
+Interceptor.attach(XWRegisterPageWithTask, {onLeave: function (args) {send("XWRegisterPageWithTask");}});
+
+var XWRegisterTaskWithHost = Module.findExportByName("xwizards.dll", "XWRegisterTaskWithHost")
+Interceptor.attach(XWRegisterTaskWithHost, {onLeave: function (args) {send("XWRegisterTaskWithHost");}});
+
+var XWUnregisterHost = Module.findExportByName("xwizards.dll", "XWUnregisterHost")
+Interceptor.attach(XWUnregisterHost, {onLeave: function (args) {send("XWUnregisterHost");}});
+
+var XWUnregisterHostTaskLink = Module.findExportByName("xwizards.dll", "XWUnregisterHostTaskLink")
+Interceptor.attach(XWUnregisterHostTaskLink, {onLeave: function (args) {send("XWUnregisterHostTaskLink");}});
+
+var XWUnregisterPage = Module.findExportByName("xwizards.dll", "XWUnregisterPage")
+Interceptor.attach(XWUnregisterPage, {onLeave: function (args) {send("XWUnregisterPage");}});
+
+var XWUnregisterPagesLink = Module.findExportByName("xwizards.dll", "XWUnregisterPagesLink")
+Interceptor.attach(XWUnregisterPagesLink, {onLeave: function (args) {send("XWUnregisterPagesLink");}});
+
+var XWUnregisterTask = Module.findExportByName("xwizards.dll", "XWUnregisterTask")
+Interceptor.attach(XWUnregisterTask, {onLeave: function (args) {send("XWUnregisterTask");}});
+
+var XWUnregisterTaskPageLink = Module.findExportByName("xwizards.dll", "XWUnregisterTaskPageLink")
+Interceptor.attach(XWUnregisterTaskPageLink, {onLeave: function (args) {send("XWUnregisterTaskPageLink");}});
+

@@ -1,0 +1,3 @@
+var GetIPELoggingHelper = Module.findExportByName("IPELoggingDictationHelper.dll", "GetIPELoggingHelper")
+Interceptor.attach(GetIPELoggingHelper, {onLeave: function (args) {send("GetIPELoggingHelper");}});
+

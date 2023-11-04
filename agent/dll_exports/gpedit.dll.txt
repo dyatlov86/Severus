@@ -1,0 +1,24 @@
+var BrowseForGPO = Module.findExportByName("gpedit.dll", "BrowseForGPO")
+Interceptor.attach(BrowseForGPO, {onLeave: function (args) {send("BrowseForGPO");}});
+
+var CreateGPOLink = Module.findExportByName("gpedit.dll", "CreateGPOLink")
+Interceptor.attach(CreateGPOLink, {onLeave: function (args) {send("CreateGPOLink");}});
+
+var DeleteAllGPOLinks = Module.findExportByName("gpedit.dll", "DeleteAllGPOLinks")
+Interceptor.attach(DeleteAllGPOLinks, {onLeave: function (args) {send("DeleteAllGPOLinks");}});
+
+var DeleteGPOLink = Module.findExportByName("gpedit.dll", "DeleteGPOLink")
+Interceptor.attach(DeleteGPOLink, {onLeave: function (args) {send("DeleteGPOLink");}});
+
+var DllCanUnloadNow = Module.findExportByName("gpedit.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("gpedit.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ExportRSoPData = Module.findExportByName("gpedit.dll", "ExportRSoPData")
+Interceptor.attach(ExportRSoPData, {onLeave: function (args) {send("ExportRSoPData");}});
+
+var ImportRSoPData = Module.findExportByName("gpedit.dll", "ImportRSoPData")
+Interceptor.attach(ImportRSoPData, {onLeave: function (args) {send("ImportRSoPData");}});
+

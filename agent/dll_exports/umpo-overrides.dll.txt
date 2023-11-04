@@ -1,0 +1,9 @@
+var UmpoDisablePowerSettingOverrideUpdates = Module.findExportByName("umpo-overrides.dll", "UmpoDisablePowerSettingOverrideUpdates")
+Interceptor.attach(UmpoDisablePowerSettingOverrideUpdates, {onLeave: function (args) {send("UmpoDisablePowerSettingOverrideUpdates");}});
+
+var UmpoEnablePowerSettingOverrideUpdates = Module.findExportByName("umpo-overrides.dll", "UmpoEnablePowerSettingOverrideUpdates")
+Interceptor.attach(UmpoEnablePowerSettingOverrideUpdates, {onLeave: function (args) {send("UmpoEnablePowerSettingOverrideUpdates");}});
+
+var UmpoGetPowerSettingOverrides = Module.findExportByName("umpo-overrides.dll", "UmpoGetPowerSettingOverrides")
+Interceptor.attach(UmpoGetPowerSettingOverrides, {onLeave: function (args) {send("UmpoGetPowerSettingOverrides");}});
+

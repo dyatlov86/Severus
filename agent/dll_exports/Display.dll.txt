@@ -1,0 +1,12 @@
+var DisplaySaveSettingsEx = Module.findExportByName("Display.dll", "DisplaySaveSettingsEx")
+Interceptor.attach(DisplaySaveSettingsEx, {onLeave: function (args) {send("DisplaySaveSettingsEx");}});
+
+var DllCanUnloadNow = Module.findExportByName("Display.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("Display.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ShowAdapterSettings = Module.findExportByName("Display.dll", "ShowAdapterSettings")
+Interceptor.attach(ShowAdapterSettings, {onLeave: function (args) {send("ShowAdapterSettings");}});
+

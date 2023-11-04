@@ -1,0 +1,6 @@
+var NtWow64UserConnectHook = Module.findExportByName("wow64win.dll", "NtWow64UserConnectHook")
+Interceptor.attach(NtWow64UserConnectHook, {onLeave: function (args) {send("NtWow64UserConnectHook");}});
+
+var sdwhwin32 = Module.findExportByName("wow64win.dll", "sdwhwin32")
+Interceptor.attach(sdwhwin32, {onLeave: function (args) {send("sdwhwin32");}});
+

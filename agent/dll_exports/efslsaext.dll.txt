@@ -1,0 +1,3 @@
+var InitializeLsaExtension = Module.findExportByName("efslsaext.dll", "InitializeLsaExtension")
+Interceptor.attach(InitializeLsaExtension, {onLeave: function (args) {send("InitializeLsaExtension");}});
+

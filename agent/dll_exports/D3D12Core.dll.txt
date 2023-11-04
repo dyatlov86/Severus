@@ -1,0 +1,6 @@
+var D3D12GetInterface = Module.findExportByName("D3D12Core.dll", "D3D12GetInterface")
+Interceptor.attach(D3D12GetInterface, {onLeave: function (args) {send("D3D12GetInterface");}});
+
+var D3D12SDKVersion = Module.findExportByName("D3D12Core.dll", "D3D12SDKVersion")
+Interceptor.attach(D3D12SDKVersion, {onLeave: function (args) {send("D3D12SDKVersion");}});
+

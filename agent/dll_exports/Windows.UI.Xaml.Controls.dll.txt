@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.UI.Xaml.Controls.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.UI.Xaml.Controls.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.UI.Xaml.Controls.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("Windows.UI.Xaml.Controls.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GetDependencyLocatorStorage = Module.findExportByName("Windows.UI.Xaml.Controls.dll", "GetDependencyLocatorStorage")
+Interceptor.attach(GetDependencyLocatorStorage, {onLeave: function (args) {send("GetDependencyLocatorStorage");}});
+
+var SendTelemetryOnSuspend = Module.findExportByName("Windows.UI.Xaml.Controls.dll", "SendTelemetryOnSuspend")
+Interceptor.attach(SendTelemetryOnSuspend, {onLeave: function (args) {send("SendTelemetryOnSuspend");}});
+
+var XamlTestHookFreeControlsResourceLibrary = Module.findExportByName("Windows.UI.Xaml.Controls.dll", "XamlTestHookFreeControlsResourceLibrary")
+Interceptor.attach(XamlTestHookFreeControlsResourceLibrary, {onLeave: function (args) {send("XamlTestHookFreeControlsResourceLibrary");}});
+

@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("iassam.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("iassam.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("iassam.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("iassam.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var IASParmsQueryUserProperty = Module.findExportByName("iassam.dll", "IASParmsQueryUserProperty")
+Interceptor.attach(IASParmsQueryUserProperty, {onLeave: function (args) {send("IASParmsQueryUserProperty");}});
+

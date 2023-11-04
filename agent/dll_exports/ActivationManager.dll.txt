@@ -1,0 +1,42 @@
+var DisableAppXDebuggingForPackage = Module.findExportByName("ActivationManager.dll", "DisableAppXDebuggingForPackage")
+Interceptor.attach(DisableAppXDebuggingForPackage, {onLeave: function (args) {send("DisableAppXDebuggingForPackage");}});
+
+var DllCanUnloadNow = Module.findExportByName("ActivationManager.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("ActivationManager.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("ActivationManager.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var EnableAppXDebuggingForPackage = Module.findExportByName("ActivationManager.dll", "EnableAppXDebuggingForPackage")
+Interceptor.attach(EnableAppXDebuggingForPackage, {onLeave: function (args) {send("EnableAppXDebuggingForPackage");}});
+
+var FreeAppXLaunchContext = Module.findExportByName("ActivationManager.dll", "FreeAppXLaunchContext")
+Interceptor.attach(FreeAppXLaunchContext, {onLeave: function (args) {send("FreeAppXLaunchContext");}});
+
+var GetPackageExecutionContextForAumid = Module.findExportByName("ActivationManager.dll", "GetPackageExecutionContextForAumid")
+Interceptor.attach(GetPackageExecutionContextForAumid, {onLeave: function (args) {send("GetPackageExecutionContextForAumid");}});
+
+var GetPackageExecutionContextForAumidAndUser = Module.findExportByName("ActivationManager.dll", "GetPackageExecutionContextForAumidAndUser")
+Interceptor.attach(GetPackageExecutionContextForAumidAndUser, {onLeave: function (args) {send("GetPackageExecutionContextForAumidAndUser");}});
+
+var GetPackageExecutionContextForPackageByFamilyNameAndUser = Module.findExportByName("ActivationManager.dll", "GetPackageExecutionContextForPackageByFamilyNameAndUser")
+Interceptor.attach(GetPackageExecutionContextForPackageByFamilyNameAndUser, {onLeave: function (args) {send("GetPackageExecutionContextForPackageByFamilyNameAndUser");}});
+
+var GetPackageExecutionContextForPackageByFullName = Module.findExportByName("ActivationManager.dll", "GetPackageExecutionContextForPackageByFullName")
+Interceptor.attach(GetPackageExecutionContextForPackageByFullName, {onLeave: function (args) {send("GetPackageExecutionContextForPackageByFullName");}});
+
+var PostCreateProcessAppXActivation = Module.findExportByName("ActivationManager.dll", "PostCreateProcessAppXActivation")
+Interceptor.attach(PostCreateProcessAppXActivation, {onLeave: function (args) {send("PostCreateProcessAppXActivation");}});
+
+var PrepareAppXActivation = Module.findExportByName("ActivationManager.dll", "PrepareAppXActivation")
+Interceptor.attach(PrepareAppXActivation, {onLeave: function (args) {send("PrepareAppXActivation");}});
+
+var RegisterAppXPackageIfNecessary = Module.findExportByName("ActivationManager.dll", "RegisterAppXPackageIfNecessary")
+Interceptor.attach(RegisterAppXPackageIfNecessary, {onLeave: function (args) {send("RegisterAppXPackageIfNecessary");}});
+
+var RegisterAppXPackageIfNecessary2 = Module.findExportByName("ActivationManager.dll", "RegisterAppXPackageIfNecessary2")
+Interceptor.attach(RegisterAppXPackageIfNecessary2, {onLeave: function (args) {send("RegisterAppXPackageIfNecessary2");}});
+

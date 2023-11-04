@@ -1,0 +1,3 @@
+var CreateMapGeocoderFactory = Module.findExportByName("MapGeocoder.dll", "CreateMapGeocoderFactory")
+Interceptor.attach(CreateMapGeocoderFactory, {onLeave: function (args) {send("CreateMapGeocoderFactory");}});
+

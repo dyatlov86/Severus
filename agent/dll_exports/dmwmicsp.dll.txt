@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("dmwmicsp.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("dmwmicsp.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("dmwmicsp.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+

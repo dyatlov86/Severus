@@ -1,0 +1,3 @@
+var FxDriverEntryUm = Module.findExportByName("HidLampArray.dll", "FxDriverEntryUm")
+Interceptor.attach(FxDriverEntryUm, {onLeave: function (args) {send("FxDriverEntryUm");}});
+

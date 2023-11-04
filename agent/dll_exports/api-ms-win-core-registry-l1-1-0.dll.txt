@@ -1,0 +1,129 @@
+var RegCloseKey = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegCloseKey")
+Interceptor.attach(RegCloseKey, {onLeave: function (args) {send("RegCloseKey");}});
+
+var RegCopyTreeW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegCopyTreeW")
+Interceptor.attach(RegCopyTreeW, {onLeave: function (args) {send("RegCopyTreeW");}});
+
+var RegCreateKeyExA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegCreateKeyExA")
+Interceptor.attach(RegCreateKeyExA, {onLeave: function (args) {send("RegCreateKeyExA");}});
+
+var RegCreateKeyExW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegCreateKeyExW")
+Interceptor.attach(RegCreateKeyExW, {onLeave: function (args) {send("RegCreateKeyExW");}});
+
+var RegDeleteKeyExA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegDeleteKeyExA")
+Interceptor.attach(RegDeleteKeyExA, {onLeave: function (args) {send("RegDeleteKeyExA");}});
+
+var RegDeleteKeyExW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegDeleteKeyExW")
+Interceptor.attach(RegDeleteKeyExW, {onLeave: function (args) {send("RegDeleteKeyExW");}});
+
+var RegDeleteTreeA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegDeleteTreeA")
+Interceptor.attach(RegDeleteTreeA, {onLeave: function (args) {send("RegDeleteTreeA");}});
+
+var RegDeleteTreeW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegDeleteTreeW")
+Interceptor.attach(RegDeleteTreeW, {onLeave: function (args) {send("RegDeleteTreeW");}});
+
+var RegDeleteValueA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegDeleteValueA")
+Interceptor.attach(RegDeleteValueA, {onLeave: function (args) {send("RegDeleteValueA");}});
+
+var RegDeleteValueW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegDeleteValueW")
+Interceptor.attach(RegDeleteValueW, {onLeave: function (args) {send("RegDeleteValueW");}});
+
+var RegDisablePredefinedCacheEx = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegDisablePredefinedCacheEx")
+Interceptor.attach(RegDisablePredefinedCacheEx, {onLeave: function (args) {send("RegDisablePredefinedCacheEx");}});
+
+var RegEnumKeyExA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegEnumKeyExA")
+Interceptor.attach(RegEnumKeyExA, {onLeave: function (args) {send("RegEnumKeyExA");}});
+
+var RegEnumKeyExW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegEnumKeyExW")
+Interceptor.attach(RegEnumKeyExW, {onLeave: function (args) {send("RegEnumKeyExW");}});
+
+var RegEnumValueA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegEnumValueA")
+Interceptor.attach(RegEnumValueA, {onLeave: function (args) {send("RegEnumValueA");}});
+
+var RegEnumValueW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegEnumValueW")
+Interceptor.attach(RegEnumValueW, {onLeave: function (args) {send("RegEnumValueW");}});
+
+var RegFlushKey = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegFlushKey")
+Interceptor.attach(RegFlushKey, {onLeave: function (args) {send("RegFlushKey");}});
+
+var RegGetKeySecurity = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegGetKeySecurity")
+Interceptor.attach(RegGetKeySecurity, {onLeave: function (args) {send("RegGetKeySecurity");}});
+
+var RegGetValueA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegGetValueA")
+Interceptor.attach(RegGetValueA, {onLeave: function (args) {send("RegGetValueA");}});
+
+var RegGetValueW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegGetValueW")
+Interceptor.attach(RegGetValueW, {onLeave: function (args) {send("RegGetValueW");}});
+
+var RegLoadAppKeyA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegLoadAppKeyA")
+Interceptor.attach(RegLoadAppKeyA, {onLeave: function (args) {send("RegLoadAppKeyA");}});
+
+var RegLoadAppKeyW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegLoadAppKeyW")
+Interceptor.attach(RegLoadAppKeyW, {onLeave: function (args) {send("RegLoadAppKeyW");}});
+
+var RegLoadKeyA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegLoadKeyA")
+Interceptor.attach(RegLoadKeyA, {onLeave: function (args) {send("RegLoadKeyA");}});
+
+var RegLoadKeyW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegLoadKeyW")
+Interceptor.attach(RegLoadKeyW, {onLeave: function (args) {send("RegLoadKeyW");}});
+
+var RegLoadMUIStringA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegLoadMUIStringA")
+Interceptor.attach(RegLoadMUIStringA, {onLeave: function (args) {send("RegLoadMUIStringA");}});
+
+var RegLoadMUIStringW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegLoadMUIStringW")
+Interceptor.attach(RegLoadMUIStringW, {onLeave: function (args) {send("RegLoadMUIStringW");}});
+
+var RegNotifyChangeKeyValue = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegNotifyChangeKeyValue")
+Interceptor.attach(RegNotifyChangeKeyValue, {onLeave: function (args) {send("RegNotifyChangeKeyValue");}});
+
+var RegOpenCurrentUser = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegOpenCurrentUser")
+Interceptor.attach(RegOpenCurrentUser, {onLeave: function (args) {send("RegOpenCurrentUser");}});
+
+var RegOpenKeyExA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegOpenKeyExA")
+Interceptor.attach(RegOpenKeyExA, {onLeave: function (args) {send("RegOpenKeyExA");}});
+
+var RegOpenKeyExW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegOpenKeyExW")
+Interceptor.attach(RegOpenKeyExW, {onLeave: function (args) {send("RegOpenKeyExW");}});
+
+var RegOpenUserClassesRoot = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegOpenUserClassesRoot")
+Interceptor.attach(RegOpenUserClassesRoot, {onLeave: function (args) {send("RegOpenUserClassesRoot");}});
+
+var RegQueryInfoKeyA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegQueryInfoKeyA")
+Interceptor.attach(RegQueryInfoKeyA, {onLeave: function (args) {send("RegQueryInfoKeyA");}});
+
+var RegQueryInfoKeyW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegQueryInfoKeyW")
+Interceptor.attach(RegQueryInfoKeyW, {onLeave: function (args) {send("RegQueryInfoKeyW");}});
+
+var RegQueryValueExA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegQueryValueExA")
+Interceptor.attach(RegQueryValueExA, {onLeave: function (args) {send("RegQueryValueExA");}});
+
+var RegQueryValueExW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegQueryValueExW")
+Interceptor.attach(RegQueryValueExW, {onLeave: function (args) {send("RegQueryValueExW");}});
+
+var RegRestoreKeyA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegRestoreKeyA")
+Interceptor.attach(RegRestoreKeyA, {onLeave: function (args) {send("RegRestoreKeyA");}});
+
+var RegRestoreKeyW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegRestoreKeyW")
+Interceptor.attach(RegRestoreKeyW, {onLeave: function (args) {send("RegRestoreKeyW");}});
+
+var RegSaveKeyExA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegSaveKeyExA")
+Interceptor.attach(RegSaveKeyExA, {onLeave: function (args) {send("RegSaveKeyExA");}});
+
+var RegSaveKeyExW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegSaveKeyExW")
+Interceptor.attach(RegSaveKeyExW, {onLeave: function (args) {send("RegSaveKeyExW");}});
+
+var RegSetKeySecurity = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegSetKeySecurity")
+Interceptor.attach(RegSetKeySecurity, {onLeave: function (args) {send("RegSetKeySecurity");}});
+
+var RegSetValueExA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegSetValueExA")
+Interceptor.attach(RegSetValueExA, {onLeave: function (args) {send("RegSetValueExA");}});
+
+var RegSetValueExW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegSetValueExW")
+Interceptor.attach(RegSetValueExW, {onLeave: function (args) {send("RegSetValueExW");}});
+
+var RegUnLoadKeyA = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegUnLoadKeyA")
+Interceptor.attach(RegUnLoadKeyA, {onLeave: function (args) {send("RegUnLoadKeyA");}});
+
+var RegUnLoadKeyW = Module.findExportByName("api-ms-win-core-registry-l1-1-0.dll", "RegUnLoadKeyW")
+Interceptor.attach(RegUnLoadKeyW, {onLeave: function (args) {send("RegUnLoadKeyW");}});
+

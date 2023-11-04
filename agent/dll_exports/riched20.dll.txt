@@ -1,0 +1,27 @@
+var CreateTextServices = Module.findExportByName("riched20.dll", "CreateTextServices")
+Interceptor.attach(CreateTextServices, {onLeave: function (args) {send("CreateTextServices");}});
+
+var IID_IRichEditOle = Module.findExportByName("riched20.dll", "IID_IRichEditOle")
+Interceptor.attach(IID_IRichEditOle, {onLeave: function (args) {send("IID_IRichEditOle");}});
+
+var IID_IRichEditOleCallback = Module.findExportByName("riched20.dll", "IID_IRichEditOleCallback")
+Interceptor.attach(IID_IRichEditOleCallback, {onLeave: function (args) {send("IID_IRichEditOleCallback");}});
+
+var IID_ITextHost = Module.findExportByName("riched20.dll", "IID_ITextHost")
+Interceptor.attach(IID_ITextHost, {onLeave: function (args) {send("IID_ITextHost");}});
+
+var IID_ITextHost2 = Module.findExportByName("riched20.dll", "IID_ITextHost2")
+Interceptor.attach(IID_ITextHost2, {onLeave: function (args) {send("IID_ITextHost2");}});
+
+var IID_ITextServices = Module.findExportByName("riched20.dll", "IID_ITextServices")
+Interceptor.attach(IID_ITextServices, {onLeave: function (args) {send("IID_ITextServices");}});
+
+var REExtendedRegisterClass = Module.findExportByName("riched20.dll", "REExtendedRegisterClass")
+Interceptor.attach(REExtendedRegisterClass, {onLeave: function (args) {send("REExtendedRegisterClass");}});
+
+var RichEdit10ANSIWndProc = Module.findExportByName("riched20.dll", "RichEdit10ANSIWndProc")
+Interceptor.attach(RichEdit10ANSIWndProc, {onLeave: function (args) {send("RichEdit10ANSIWndProc");}});
+
+var RichEditANSIWndProc = Module.findExportByName("riched20.dll", "RichEditANSIWndProc")
+Interceptor.attach(RichEditANSIWndProc, {onLeave: function (args) {send("RichEditANSIWndProc");}});
+

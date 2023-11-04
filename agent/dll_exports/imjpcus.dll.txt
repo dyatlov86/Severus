@@ -1,0 +1,6 @@
+var DllMain = Module.findExportByName("imjpcus.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var OpenDetailDialog = Module.findExportByName("imjpcus.dll", "OpenDetailDialog")
+Interceptor.attach(OpenDetailDialog, {onLeave: function (args) {send("OpenDetailDialog");}});
+

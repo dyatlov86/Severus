@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("SystemSettings.DeviceEncryptionHandlers.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SystemSettings.DeviceEncryptionHandlers.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetActualDeviceEncryptionUIState = Module.findExportByName("SystemSettings.DeviceEncryptionHandlers.dll", "GetActualDeviceEncryptionUIState")
+Interceptor.attach(GetActualDeviceEncryptionUIState, {onLeave: function (args) {send("GetActualDeviceEncryptionUIState");}});
+
+var GetSetting = Module.findExportByName("SystemSettings.DeviceEncryptionHandlers.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+

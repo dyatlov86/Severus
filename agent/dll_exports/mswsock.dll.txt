@@ -1,0 +1,192 @@
+var AcceptEx = Module.findExportByName("mswsock.dll", "AcceptEx")
+Interceptor.attach(AcceptEx, {onLeave: function (args) {send("AcceptEx");}});
+
+var EnumProtocolsA = Module.findExportByName("mswsock.dll", "EnumProtocolsA")
+Interceptor.attach(EnumProtocolsA, {onLeave: function (args) {send("EnumProtocolsA");}});
+
+var EnumProtocolsW = Module.findExportByName("mswsock.dll", "EnumProtocolsW")
+Interceptor.attach(EnumProtocolsW, {onLeave: function (args) {send("EnumProtocolsW");}});
+
+var GetAcceptExSockaddrs = Module.findExportByName("mswsock.dll", "GetAcceptExSockaddrs")
+Interceptor.attach(GetAcceptExSockaddrs, {onLeave: function (args) {send("GetAcceptExSockaddrs");}});
+
+var GetAddressByNameA = Module.findExportByName("mswsock.dll", "GetAddressByNameA")
+Interceptor.attach(GetAddressByNameA, {onLeave: function (args) {send("GetAddressByNameA");}});
+
+var GetAddressByNameW = Module.findExportByName("mswsock.dll", "GetAddressByNameW")
+Interceptor.attach(GetAddressByNameW, {onLeave: function (args) {send("GetAddressByNameW");}});
+
+var GetNameByTypeA = Module.findExportByName("mswsock.dll", "GetNameByTypeA")
+Interceptor.attach(GetNameByTypeA, {onLeave: function (args) {send("GetNameByTypeA");}});
+
+var GetNameByTypeW = Module.findExportByName("mswsock.dll", "GetNameByTypeW")
+Interceptor.attach(GetNameByTypeW, {onLeave: function (args) {send("GetNameByTypeW");}});
+
+var GetServiceA = Module.findExportByName("mswsock.dll", "GetServiceA")
+Interceptor.attach(GetServiceA, {onLeave: function (args) {send("GetServiceA");}});
+
+var GetServiceW = Module.findExportByName("mswsock.dll", "GetServiceW")
+Interceptor.attach(GetServiceW, {onLeave: function (args) {send("GetServiceW");}});
+
+var GetSocketErrorMessageW = Module.findExportByName("mswsock.dll", "GetSocketErrorMessageW")
+Interceptor.attach(GetSocketErrorMessageW, {onLeave: function (args) {send("GetSocketErrorMessageW");}});
+
+var GetTypeByNameA = Module.findExportByName("mswsock.dll", "GetTypeByNameA")
+Interceptor.attach(GetTypeByNameA, {onLeave: function (args) {send("GetTypeByNameA");}});
+
+var GetTypeByNameW = Module.findExportByName("mswsock.dll", "GetTypeByNameW")
+Interceptor.attach(GetTypeByNameW, {onLeave: function (args) {send("GetTypeByNameW");}});
+
+var MigrateWinsockConfiguration = Module.findExportByName("mswsock.dll", "MigrateWinsockConfiguration")
+Interceptor.attach(MigrateWinsockConfiguration, {onLeave: function (args) {send("MigrateWinsockConfiguration");}});
+
+var MigrateWinsockConfigurationEx = Module.findExportByName("mswsock.dll", "MigrateWinsockConfigurationEx")
+Interceptor.attach(MigrateWinsockConfigurationEx, {onLeave: function (args) {send("MigrateWinsockConfigurationEx");}});
+
+var NPLoadNameSpaces = Module.findExportByName("mswsock.dll", "NPLoadNameSpaces")
+Interceptor.attach(NPLoadNameSpaces, {onLeave: function (args) {send("NPLoadNameSpaces");}});
+
+var NSPStartup = Module.findExportByName("mswsock.dll", "NSPStartup")
+Interceptor.attach(NSPStartup, {onLeave: function (args) {send("NSPStartup");}});
+
+var ProcessSocketNotifications = Module.findExportByName("mswsock.dll", "ProcessSocketNotifications")
+Interceptor.attach(ProcessSocketNotifications, {onLeave: function (args) {send("ProcessSocketNotifications");}});
+
+var SetServiceA = Module.findExportByName("mswsock.dll", "SetServiceA")
+Interceptor.attach(SetServiceA, {onLeave: function (args) {send("SetServiceA");}});
+
+var SetServiceW = Module.findExportByName("mswsock.dll", "SetServiceW")
+Interceptor.attach(SetServiceW, {onLeave: function (args) {send("SetServiceW");}});
+
+var StartWsdpService = Module.findExportByName("mswsock.dll", "StartWsdpService")
+Interceptor.attach(StartWsdpService, {onLeave: function (args) {send("StartWsdpService");}});
+
+var StopWsdpService = Module.findExportByName("mswsock.dll", "StopWsdpService")
+Interceptor.attach(StopWsdpService, {onLeave: function (args) {send("StopWsdpService");}});
+
+var Tcpip4_WSHAddressToString = Module.findExportByName("mswsock.dll", "Tcpip4_WSHAddressToString")
+Interceptor.attach(Tcpip4_WSHAddressToString, {onLeave: function (args) {send("Tcpip4_WSHAddressToString");}});
+
+var Tcpip4_WSHEnumProtocols = Module.findExportByName("mswsock.dll", "Tcpip4_WSHEnumProtocols")
+Interceptor.attach(Tcpip4_WSHEnumProtocols, {onLeave: function (args) {send("Tcpip4_WSHEnumProtocols");}});
+
+var Tcpip4_WSHGetBroadcastSockaddr = Module.findExportByName("mswsock.dll", "Tcpip4_WSHGetBroadcastSockaddr")
+Interceptor.attach(Tcpip4_WSHGetBroadcastSockaddr, {onLeave: function (args) {send("Tcpip4_WSHGetBroadcastSockaddr");}});
+
+var Tcpip4_WSHGetProviderGuid = Module.findExportByName("mswsock.dll", "Tcpip4_WSHGetProviderGuid")
+Interceptor.attach(Tcpip4_WSHGetProviderGuid, {onLeave: function (args) {send("Tcpip4_WSHGetProviderGuid");}});
+
+var Tcpip4_WSHGetSockaddrType = Module.findExportByName("mswsock.dll", "Tcpip4_WSHGetSockaddrType")
+Interceptor.attach(Tcpip4_WSHGetSockaddrType, {onLeave: function (args) {send("Tcpip4_WSHGetSockaddrType");}});
+
+var Tcpip4_WSHGetSocketInformation = Module.findExportByName("mswsock.dll", "Tcpip4_WSHGetSocketInformation")
+Interceptor.attach(Tcpip4_WSHGetSocketInformation, {onLeave: function (args) {send("Tcpip4_WSHGetSocketInformation");}});
+
+var Tcpip4_WSHGetWSAProtocolInfo = Module.findExportByName("mswsock.dll", "Tcpip4_WSHGetWSAProtocolInfo")
+Interceptor.attach(Tcpip4_WSHGetWSAProtocolInfo, {onLeave: function (args) {send("Tcpip4_WSHGetWSAProtocolInfo");}});
+
+var Tcpip4_WSHGetWildcardSockaddr = Module.findExportByName("mswsock.dll", "Tcpip4_WSHGetWildcardSockaddr")
+Interceptor.attach(Tcpip4_WSHGetWildcardSockaddr, {onLeave: function (args) {send("Tcpip4_WSHGetWildcardSockaddr");}});
+
+var Tcpip4_WSHGetWinsockMapping = Module.findExportByName("mswsock.dll", "Tcpip4_WSHGetWinsockMapping")
+Interceptor.attach(Tcpip4_WSHGetWinsockMapping, {onLeave: function (args) {send("Tcpip4_WSHGetWinsockMapping");}});
+
+var Tcpip4_WSHIoctl = Module.findExportByName("mswsock.dll", "Tcpip4_WSHIoctl")
+Interceptor.attach(Tcpip4_WSHIoctl, {onLeave: function (args) {send("Tcpip4_WSHIoctl");}});
+
+var Tcpip4_WSHJoinLeaf = Module.findExportByName("mswsock.dll", "Tcpip4_WSHJoinLeaf")
+Interceptor.attach(Tcpip4_WSHJoinLeaf, {onLeave: function (args) {send("Tcpip4_WSHJoinLeaf");}});
+
+var Tcpip4_WSHNotify = Module.findExportByName("mswsock.dll", "Tcpip4_WSHNotify")
+Interceptor.attach(Tcpip4_WSHNotify, {onLeave: function (args) {send("Tcpip4_WSHNotify");}});
+
+var Tcpip4_WSHOpenSocket = Module.findExportByName("mswsock.dll", "Tcpip4_WSHOpenSocket")
+Interceptor.attach(Tcpip4_WSHOpenSocket, {onLeave: function (args) {send("Tcpip4_WSHOpenSocket");}});
+
+var Tcpip4_WSHOpenSocket2 = Module.findExportByName("mswsock.dll", "Tcpip4_WSHOpenSocket2")
+Interceptor.attach(Tcpip4_WSHOpenSocket2, {onLeave: function (args) {send("Tcpip4_WSHOpenSocket2");}});
+
+var Tcpip4_WSHSetSocketInformation = Module.findExportByName("mswsock.dll", "Tcpip4_WSHSetSocketInformation")
+Interceptor.attach(Tcpip4_WSHSetSocketInformation, {onLeave: function (args) {send("Tcpip4_WSHSetSocketInformation");}});
+
+var Tcpip4_WSHStringToAddress = Module.findExportByName("mswsock.dll", "Tcpip4_WSHStringToAddress")
+Interceptor.attach(Tcpip4_WSHStringToAddress, {onLeave: function (args) {send("Tcpip4_WSHStringToAddress");}});
+
+var Tcpip6_WSHAddressToString = Module.findExportByName("mswsock.dll", "Tcpip6_WSHAddressToString")
+Interceptor.attach(Tcpip6_WSHAddressToString, {onLeave: function (args) {send("Tcpip6_WSHAddressToString");}});
+
+var Tcpip6_WSHEnumProtocols = Module.findExportByName("mswsock.dll", "Tcpip6_WSHEnumProtocols")
+Interceptor.attach(Tcpip6_WSHEnumProtocols, {onLeave: function (args) {send("Tcpip6_WSHEnumProtocols");}});
+
+var Tcpip6_WSHGetProviderGuid = Module.findExportByName("mswsock.dll", "Tcpip6_WSHGetProviderGuid")
+Interceptor.attach(Tcpip6_WSHGetProviderGuid, {onLeave: function (args) {send("Tcpip6_WSHGetProviderGuid");}});
+
+var Tcpip6_WSHGetSockaddrType = Module.findExportByName("mswsock.dll", "Tcpip6_WSHGetSockaddrType")
+Interceptor.attach(Tcpip6_WSHGetSockaddrType, {onLeave: function (args) {send("Tcpip6_WSHGetSockaddrType");}});
+
+var Tcpip6_WSHGetSocketInformation = Module.findExportByName("mswsock.dll", "Tcpip6_WSHGetSocketInformation")
+Interceptor.attach(Tcpip6_WSHGetSocketInformation, {onLeave: function (args) {send("Tcpip6_WSHGetSocketInformation");}});
+
+var Tcpip6_WSHGetWSAProtocolInfo = Module.findExportByName("mswsock.dll", "Tcpip6_WSHGetWSAProtocolInfo")
+Interceptor.attach(Tcpip6_WSHGetWSAProtocolInfo, {onLeave: function (args) {send("Tcpip6_WSHGetWSAProtocolInfo");}});
+
+var Tcpip6_WSHGetWildcardSockaddr = Module.findExportByName("mswsock.dll", "Tcpip6_WSHGetWildcardSockaddr")
+Interceptor.attach(Tcpip6_WSHGetWildcardSockaddr, {onLeave: function (args) {send("Tcpip6_WSHGetWildcardSockaddr");}});
+
+var Tcpip6_WSHGetWinsockMapping = Module.findExportByName("mswsock.dll", "Tcpip6_WSHGetWinsockMapping")
+Interceptor.attach(Tcpip6_WSHGetWinsockMapping, {onLeave: function (args) {send("Tcpip6_WSHGetWinsockMapping");}});
+
+var Tcpip6_WSHIoctl = Module.findExportByName("mswsock.dll", "Tcpip6_WSHIoctl")
+Interceptor.attach(Tcpip6_WSHIoctl, {onLeave: function (args) {send("Tcpip6_WSHIoctl");}});
+
+var Tcpip6_WSHJoinLeaf = Module.findExportByName("mswsock.dll", "Tcpip6_WSHJoinLeaf")
+Interceptor.attach(Tcpip6_WSHJoinLeaf, {onLeave: function (args) {send("Tcpip6_WSHJoinLeaf");}});
+
+var Tcpip6_WSHNotify = Module.findExportByName("mswsock.dll", "Tcpip6_WSHNotify")
+Interceptor.attach(Tcpip6_WSHNotify, {onLeave: function (args) {send("Tcpip6_WSHNotify");}});
+
+var Tcpip6_WSHOpenSocket = Module.findExportByName("mswsock.dll", "Tcpip6_WSHOpenSocket")
+Interceptor.attach(Tcpip6_WSHOpenSocket, {onLeave: function (args) {send("Tcpip6_WSHOpenSocket");}});
+
+var Tcpip6_WSHOpenSocket2 = Module.findExportByName("mswsock.dll", "Tcpip6_WSHOpenSocket2")
+Interceptor.attach(Tcpip6_WSHOpenSocket2, {onLeave: function (args) {send("Tcpip6_WSHOpenSocket2");}});
+
+var Tcpip6_WSHSetSocketInformation = Module.findExportByName("mswsock.dll", "Tcpip6_WSHSetSocketInformation")
+Interceptor.attach(Tcpip6_WSHSetSocketInformation, {onLeave: function (args) {send("Tcpip6_WSHSetSocketInformation");}});
+
+var Tcpip6_WSHStringToAddress = Module.findExportByName("mswsock.dll", "Tcpip6_WSHStringToAddress")
+Interceptor.attach(Tcpip6_WSHStringToAddress, {onLeave: function (args) {send("Tcpip6_WSHStringToAddress");}});
+
+var TransmitFile = Module.findExportByName("mswsock.dll", "TransmitFile")
+Interceptor.attach(TransmitFile, {onLeave: function (args) {send("TransmitFile");}});
+
+var WSARecvEx = Module.findExportByName("mswsock.dll", "WSARecvEx")
+Interceptor.attach(WSARecvEx, {onLeave: function (args) {send("WSARecvEx");}});
+
+var WSPStartup = Module.findExportByName("mswsock.dll", "WSPStartup")
+Interceptor.attach(WSPStartup, {onLeave: function (args) {send("WSPStartup");}});
+
+var dn_expand = Module.findExportByName("mswsock.dll", "dn_expand")
+Interceptor.attach(dn_expand, {onLeave: function (args) {send("dn_expand");}});
+
+var getnetbyname = Module.findExportByName("mswsock.dll", "getnetbyname")
+Interceptor.attach(getnetbyname, {onLeave: function (args) {send("getnetbyname");}});
+
+var inet_network = Module.findExportByName("mswsock.dll", "inet_network")
+Interceptor.attach(inet_network, {onLeave: function (args) {send("inet_network");}});
+
+var rcmd = Module.findExportByName("mswsock.dll", "rcmd")
+Interceptor.attach(rcmd, {onLeave: function (args) {send("rcmd");}});
+
+var rexec = Module.findExportByName("mswsock.dll", "rexec")
+Interceptor.attach(rexec, {onLeave: function (args) {send("rexec");}});
+
+var rresvport = Module.findExportByName("mswsock.dll", "rresvport")
+Interceptor.attach(rresvport, {onLeave: function (args) {send("rresvport");}});
+
+var s_perror = Module.findExportByName("mswsock.dll", "s_perror")
+Interceptor.attach(s_perror, {onLeave: function (args) {send("s_perror");}});
+
+var sethostname = Module.findExportByName("mswsock.dll", "sethostname")
+Interceptor.attach(sethostname, {onLeave: function (args) {send("sethostname");}});
+

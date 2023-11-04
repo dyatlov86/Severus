@@ -1,0 +1,1905 @@
+var BASIC_CLASS_AddRef = Module.findExportByName("msvbvm60.dll", "BASIC_CLASS_AddRef")
+Interceptor.attach(BASIC_CLASS_AddRef, {onLeave: function (args) {send("BASIC_CLASS_AddRef");}});
+
+var BASIC_CLASS_GetIDsOfNames = Module.findExportByName("msvbvm60.dll", "BASIC_CLASS_GetIDsOfNames")
+Interceptor.attach(BASIC_CLASS_GetIDsOfNames, {onLeave: function (args) {send("BASIC_CLASS_GetIDsOfNames");}});
+
+var BASIC_CLASS_Invoke = Module.findExportByName("msvbvm60.dll", "BASIC_CLASS_Invoke")
+Interceptor.attach(BASIC_CLASS_Invoke, {onLeave: function (args) {send("BASIC_CLASS_Invoke");}});
+
+var BASIC_CLASS_QueryInterface = Module.findExportByName("msvbvm60.dll", "BASIC_CLASS_QueryInterface")
+Interceptor.attach(BASIC_CLASS_QueryInterface, {onLeave: function (args) {send("BASIC_CLASS_QueryInterface");}});
+
+var BASIC_CLASS_Release = Module.findExportByName("msvbvm60.dll", "BASIC_CLASS_Release")
+Interceptor.attach(BASIC_CLASS_Release, {onLeave: function (args) {send("BASIC_CLASS_Release");}});
+
+var BASIC_DISPINTERFACE_GetTICount = Module.findExportByName("msvbvm60.dll", "BASIC_DISPINTERFACE_GetTICount")
+Interceptor.attach(BASIC_DISPINTERFACE_GetTICount, {onLeave: function (args) {send("BASIC_DISPINTERFACE_GetTICount");}});
+
+var BASIC_DISPINTERFACE_GetTypeInfo = Module.findExportByName("msvbvm60.dll", "BASIC_DISPINTERFACE_GetTypeInfo")
+Interceptor.attach(BASIC_DISPINTERFACE_GetTypeInfo, {onLeave: function (args) {send("BASIC_DISPINTERFACE_GetTypeInfo");}});
+
+var CopyRecord = Module.findExportByName("msvbvm60.dll", "CopyRecord")
+Interceptor.attach(CopyRecord, {onLeave: function (args) {send("CopyRecord");}});
+
+var CreateIExprSrvObj = Module.findExportByName("msvbvm60.dll", "CreateIExprSrvObj")
+Interceptor.attach(CreateIExprSrvObj, {onLeave: function (args) {send("CreateIExprSrvObj");}});
+
+var DLLGetDocumentation = Module.findExportByName("msvbvm60.dll", "DLLGetDocumentation")
+Interceptor.attach(DLLGetDocumentation, {onLeave: function (args) {send("DLLGetDocumentation");}});
+
+var DllCanUnloadNow = Module.findExportByName("msvbvm60.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllFunctionCall = Module.findExportByName("msvbvm60.dll", "DllFunctionCall")
+Interceptor.attach(DllFunctionCall, {onLeave: function (args) {send("DllFunctionCall");}});
+
+var DllGetClassObject = Module.findExportByName("msvbvm60.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("msvbvm60.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msvbvm60.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var EVENT_SINK2_AddRef = Module.findExportByName("msvbvm60.dll", "EVENT_SINK2_AddRef")
+Interceptor.attach(EVENT_SINK2_AddRef, {onLeave: function (args) {send("EVENT_SINK2_AddRef");}});
+
+var EVENT_SINK2_Release = Module.findExportByName("msvbvm60.dll", "EVENT_SINK2_Release")
+Interceptor.attach(EVENT_SINK2_Release, {onLeave: function (args) {send("EVENT_SINK2_Release");}});
+
+var EVENT_SINK_AddRef = Module.findExportByName("msvbvm60.dll", "EVENT_SINK_AddRef")
+Interceptor.attach(EVENT_SINK_AddRef, {onLeave: function (args) {send("EVENT_SINK_AddRef");}});
+
+var EVENT_SINK_GetIDsOfNames = Module.findExportByName("msvbvm60.dll", "EVENT_SINK_GetIDsOfNames")
+Interceptor.attach(EVENT_SINK_GetIDsOfNames, {onLeave: function (args) {send("EVENT_SINK_GetIDsOfNames");}});
+
+var EVENT_SINK_Invoke = Module.findExportByName("msvbvm60.dll", "EVENT_SINK_Invoke")
+Interceptor.attach(EVENT_SINK_Invoke, {onLeave: function (args) {send("EVENT_SINK_Invoke");}});
+
+var EVENT_SINK_QueryInterface = Module.findExportByName("msvbvm60.dll", "EVENT_SINK_QueryInterface")
+Interceptor.attach(EVENT_SINK_QueryInterface, {onLeave: function (args) {send("EVENT_SINK_QueryInterface");}});
+
+var EVENT_SINK_Release = Module.findExportByName("msvbvm60.dll", "EVENT_SINK_Release")
+Interceptor.attach(EVENT_SINK_Release, {onLeave: function (args) {send("EVENT_SINK_Release");}});
+
+var EbCreateContext = Module.findExportByName("msvbvm60.dll", "EbCreateContext")
+Interceptor.attach(EbCreateContext, {onLeave: function (args) {send("EbCreateContext");}});
+
+var EbDestroyContext = Module.findExportByName("msvbvm60.dll", "EbDestroyContext")
+Interceptor.attach(EbDestroyContext, {onLeave: function (args) {send("EbDestroyContext");}});
+
+var EbGetErrorInfo = Module.findExportByName("msvbvm60.dll", "EbGetErrorInfo")
+Interceptor.attach(EbGetErrorInfo, {onLeave: function (args) {send("EbGetErrorInfo");}});
+
+var EbGetHandleOfExecutingProject = Module.findExportByName("msvbvm60.dll", "EbGetHandleOfExecutingProject")
+Interceptor.attach(EbGetHandleOfExecutingProject, {onLeave: function (args) {send("EbGetHandleOfExecutingProject");}});
+
+var EbGetObjConnectionCounts = Module.findExportByName("msvbvm60.dll", "EbGetObjConnectionCounts")
+Interceptor.attach(EbGetObjConnectionCounts, {onLeave: function (args) {send("EbGetObjConnectionCounts");}});
+
+var EbGetVBAObject = Module.findExportByName("msvbvm60.dll", "EbGetVBAObject")
+Interceptor.attach(EbGetVBAObject, {onLeave: function (args) {send("EbGetVBAObject");}});
+
+var EbIsProjectOnStack = Module.findExportByName("msvbvm60.dll", "EbIsProjectOnStack")
+Interceptor.attach(EbIsProjectOnStack, {onLeave: function (args) {send("EbIsProjectOnStack");}});
+
+var EbLibraryLoad = Module.findExportByName("msvbvm60.dll", "EbLibraryLoad")
+Interceptor.attach(EbLibraryLoad, {onLeave: function (args) {send("EbLibraryLoad");}});
+
+var EbLibraryUnload = Module.findExportByName("msvbvm60.dll", "EbLibraryUnload")
+Interceptor.attach(EbLibraryUnload, {onLeave: function (args) {send("EbLibraryUnload");}});
+
+var EbLoadRunTime = Module.findExportByName("msvbvm60.dll", "EbLoadRunTime")
+Interceptor.attach(EbLoadRunTime, {onLeave: function (args) {send("EbLoadRunTime");}});
+
+var EbResetProject = Module.findExportByName("msvbvm60.dll", "EbResetProject")
+Interceptor.attach(EbResetProject, {onLeave: function (args) {send("EbResetProject");}});
+
+var EbResetProjectNormal = Module.findExportByName("msvbvm60.dll", "EbResetProjectNormal")
+Interceptor.attach(EbResetProjectNormal, {onLeave: function (args) {send("EbResetProjectNormal");}});
+
+var EbSetContextWorkerThread = Module.findExportByName("msvbvm60.dll", "EbSetContextWorkerThread")
+Interceptor.attach(EbSetContextWorkerThread, {onLeave: function (args) {send("EbSetContextWorkerThread");}});
+
+var GetMem1 = Module.findExportByName("msvbvm60.dll", "GetMem1")
+Interceptor.attach(GetMem1, {onLeave: function (args) {send("GetMem1");}});
+
+var GetMem2 = Module.findExportByName("msvbvm60.dll", "GetMem2")
+Interceptor.attach(GetMem2, {onLeave: function (args) {send("GetMem2");}});
+
+var GetMem4 = Module.findExportByName("msvbvm60.dll", "GetMem4")
+Interceptor.attach(GetMem4, {onLeave: function (args) {send("GetMem4");}});
+
+var GetMem8 = Module.findExportByName("msvbvm60.dll", "GetMem8")
+Interceptor.attach(GetMem8, {onLeave: function (args) {send("GetMem8");}});
+
+var GetMemEvent = Module.findExportByName("msvbvm60.dll", "GetMemEvent")
+Interceptor.attach(GetMemEvent, {onLeave: function (args) {send("GetMemEvent");}});
+
+var GetMemNewObj = Module.findExportByName("msvbvm60.dll", "GetMemNewObj")
+Interceptor.attach(GetMemNewObj, {onLeave: function (args) {send("GetMemNewObj");}});
+
+var GetMemObj = Module.findExportByName("msvbvm60.dll", "GetMemObj")
+Interceptor.attach(GetMemObj, {onLeave: function (args) {send("GetMemObj");}});
+
+var GetMemStr = Module.findExportByName("msvbvm60.dll", "GetMemStr")
+Interceptor.attach(GetMemStr, {onLeave: function (args) {send("GetMemStr");}});
+
+var GetMemVar = Module.findExportByName("msvbvm60.dll", "GetMemVar")
+Interceptor.attach(GetMemVar, {onLeave: function (args) {send("GetMemVar");}});
+
+var IID_IVbaHost = Module.findExportByName("msvbvm60.dll", "IID_IVbaHost")
+Interceptor.attach(IID_IVbaHost, {onLeave: function (args) {send("IID_IVbaHost");}});
+
+var MethCallEngine = Module.findExportByName("msvbvm60.dll", "MethCallEngine")
+Interceptor.attach(MethCallEngine, {onLeave: function (args) {send("MethCallEngine");}});
+
+var ProcCallEngine = Module.findExportByName("msvbvm60.dll", "ProcCallEngine")
+Interceptor.attach(ProcCallEngine, {onLeave: function (args) {send("ProcCallEngine");}});
+
+var PutMem1 = Module.findExportByName("msvbvm60.dll", "PutMem1")
+Interceptor.attach(PutMem1, {onLeave: function (args) {send("PutMem1");}});
+
+var PutMem2 = Module.findExportByName("msvbvm60.dll", "PutMem2")
+Interceptor.attach(PutMem2, {onLeave: function (args) {send("PutMem2");}});
+
+var PutMem4 = Module.findExportByName("msvbvm60.dll", "PutMem4")
+Interceptor.attach(PutMem4, {onLeave: function (args) {send("PutMem4");}});
+
+var PutMem8 = Module.findExportByName("msvbvm60.dll", "PutMem8")
+Interceptor.attach(PutMem8, {onLeave: function (args) {send("PutMem8");}});
+
+var PutMemEvent = Module.findExportByName("msvbvm60.dll", "PutMemEvent")
+Interceptor.attach(PutMemEvent, {onLeave: function (args) {send("PutMemEvent");}});
+
+var PutMemNewObj = Module.findExportByName("msvbvm60.dll", "PutMemNewObj")
+Interceptor.attach(PutMemNewObj, {onLeave: function (args) {send("PutMemNewObj");}});
+
+var PutMemObj = Module.findExportByName("msvbvm60.dll", "PutMemObj")
+Interceptor.attach(PutMemObj, {onLeave: function (args) {send("PutMemObj");}});
+
+var PutMemStr = Module.findExportByName("msvbvm60.dll", "PutMemStr")
+Interceptor.attach(PutMemStr, {onLeave: function (args) {send("PutMemStr");}});
+
+var PutMemVar = Module.findExportByName("msvbvm60.dll", "PutMemVar")
+Interceptor.attach(PutMemVar, {onLeave: function (args) {send("PutMemVar");}});
+
+var SetMemEvent = Module.findExportByName("msvbvm60.dll", "SetMemEvent")
+Interceptor.attach(SetMemEvent, {onLeave: function (args) {send("SetMemEvent");}});
+
+var SetMemNewObj = Module.findExportByName("msvbvm60.dll", "SetMemNewObj")
+Interceptor.attach(SetMemNewObj, {onLeave: function (args) {send("SetMemNewObj");}});
+
+var SetMemObj = Module.findExportByName("msvbvm60.dll", "SetMemObj")
+Interceptor.attach(SetMemObj, {onLeave: function (args) {send("SetMemObj");}});
+
+var SetMemVar = Module.findExportByName("msvbvm60.dll", "SetMemVar")
+Interceptor.attach(SetMemVar, {onLeave: function (args) {send("SetMemVar");}});
+
+var ThunRTMain = Module.findExportByName("msvbvm60.dll", "ThunRTMain")
+Interceptor.attach(ThunRTMain, {onLeave: function (args) {send("ThunRTMain");}});
+
+var TipCreateInstanceEx = Module.findExportByName("msvbvm60.dll", "TipCreateInstanceEx")
+Interceptor.attach(TipCreateInstanceEx, {onLeave: function (args) {send("TipCreateInstanceEx");}});
+
+var TipCreateInstanceProject2 = Module.findExportByName("msvbvm60.dll", "TipCreateInstanceProject2")
+Interceptor.attach(TipCreateInstanceProject2, {onLeave: function (args) {send("TipCreateInstanceProject2");}});
+
+var TipGetAddressOfPredeclaredInstance = Module.findExportByName("msvbvm60.dll", "TipGetAddressOfPredeclaredInstance")
+Interceptor.attach(TipGetAddressOfPredeclaredInstance, {onLeave: function (args) {send("TipGetAddressOfPredeclaredInstance");}});
+
+var TipInvokeMethod = Module.findExportByName("msvbvm60.dll", "TipInvokeMethod")
+Interceptor.attach(TipInvokeMethod, {onLeave: function (args) {send("TipInvokeMethod");}});
+
+var TipInvokeMethod2 = Module.findExportByName("msvbvm60.dll", "TipInvokeMethod2")
+Interceptor.attach(TipInvokeMethod2, {onLeave: function (args) {send("TipInvokeMethod2");}});
+
+var TipSetOption = Module.findExportByName("msvbvm60.dll", "TipSetOption")
+Interceptor.attach(TipSetOption, {onLeave: function (args) {send("TipSetOption");}});
+
+var TipUnloadInstance = Module.findExportByName("msvbvm60.dll", "TipUnloadInstance")
+Interceptor.attach(TipUnloadInstance, {onLeave: function (args) {send("TipUnloadInstance");}});
+
+var TipUnloadProject = Module.findExportByName("msvbvm60.dll", "TipUnloadProject")
+Interceptor.attach(TipUnloadProject, {onLeave: function (args) {send("TipUnloadProject");}});
+
+var UserDllMain = Module.findExportByName("msvbvm60.dll", "UserDllMain")
+Interceptor.attach(UserDllMain, {onLeave: function (args) {send("UserDllMain");}});
+
+var VBDllCanUnloadNow = Module.findExportByName("msvbvm60.dll", "VBDllCanUnloadNow")
+Interceptor.attach(VBDllCanUnloadNow, {onLeave: function (args) {send("VBDllCanUnloadNow");}});
+
+var VBDllGetClassObject = Module.findExportByName("msvbvm60.dll", "VBDllGetClassObject")
+Interceptor.attach(VBDllGetClassObject, {onLeave: function (args) {send("VBDllGetClassObject");}});
+
+var VBDllRegisterServer = Module.findExportByName("msvbvm60.dll", "VBDllRegisterServer")
+Interceptor.attach(VBDllRegisterServer, {onLeave: function (args) {send("VBDllRegisterServer");}});
+
+var VBDllUnRegisterServer = Module.findExportByName("msvbvm60.dll", "VBDllUnRegisterServer")
+Interceptor.attach(VBDllUnRegisterServer, {onLeave: function (args) {send("VBDllUnRegisterServer");}});
+
+var VarPtr = Module.findExportByName("msvbvm60.dll", "VarPtr")
+Interceptor.attach(VarPtr, {onLeave: function (args) {send("VarPtr");}});
+
+var Zombie_AddRef = Module.findExportByName("msvbvm60.dll", "Zombie_AddRef")
+Interceptor.attach(Zombie_AddRef, {onLeave: function (args) {send("Zombie_AddRef");}});
+
+var Zombie_GetIDsOfNames = Module.findExportByName("msvbvm60.dll", "Zombie_GetIDsOfNames")
+Interceptor.attach(Zombie_GetIDsOfNames, {onLeave: function (args) {send("Zombie_GetIDsOfNames");}});
+
+var Zombie_GetTypeInfo = Module.findExportByName("msvbvm60.dll", "Zombie_GetTypeInfo")
+Interceptor.attach(Zombie_GetTypeInfo, {onLeave: function (args) {send("Zombie_GetTypeInfo");}});
+
+var Zombie_GetTypeInfoCount = Module.findExportByName("msvbvm60.dll", "Zombie_GetTypeInfoCount")
+Interceptor.attach(Zombie_GetTypeInfoCount, {onLeave: function (args) {send("Zombie_GetTypeInfoCount");}});
+
+var Zombie_Invoke = Module.findExportByName("msvbvm60.dll", "Zombie_Invoke")
+Interceptor.attach(Zombie_Invoke, {onLeave: function (args) {send("Zombie_Invoke");}});
+
+var Zombie_QueryInterface = Module.findExportByName("msvbvm60.dll", "Zombie_QueryInterface")
+Interceptor.attach(Zombie_QueryInterface, {onLeave: function (args) {send("Zombie_QueryInterface");}});
+
+var Zombie_Release = Module.findExportByName("msvbvm60.dll", "Zombie_Release")
+Interceptor.attach(Zombie_Release, {onLeave: function (args) {send("Zombie_Release");}});
+
+var _CIatan = Module.findExportByName("msvbvm60.dll", "_CIatan")
+Interceptor.attach(_CIatan, {onLeave: function (args) {send("_CIatan");}});
+
+var _CIcos = Module.findExportByName("msvbvm60.dll", "_CIcos")
+Interceptor.attach(_CIcos, {onLeave: function (args) {send("_CIcos");}});
+
+var _CIexp = Module.findExportByName("msvbvm60.dll", "_CIexp")
+Interceptor.attach(_CIexp, {onLeave: function (args) {send("_CIexp");}});
+
+var _CIlog = Module.findExportByName("msvbvm60.dll", "_CIlog")
+Interceptor.attach(_CIlog, {onLeave: function (args) {send("_CIlog");}});
+
+var _CIsin = Module.findExportByName("msvbvm60.dll", "_CIsin")
+Interceptor.attach(_CIsin, {onLeave: function (args) {send("_CIsin");}});
+
+var _CIsqrt = Module.findExportByName("msvbvm60.dll", "_CIsqrt")
+Interceptor.attach(_CIsqrt, {onLeave: function (args) {send("_CIsqrt");}});
+
+var _CItan = Module.findExportByName("msvbvm60.dll", "_CItan")
+Interceptor.attach(_CItan, {onLeave: function (args) {send("_CItan");}});
+
+var __vbaAptOffset = Module.findExportByName("msvbvm60.dll", "__vbaAptOffset")
+Interceptor.attach(__vbaAptOffset, {onLeave: function (args) {send("__vbaAptOffset");}});
+
+var __vbaAryConstruct = Module.findExportByName("msvbvm60.dll", "__vbaAryConstruct")
+Interceptor.attach(__vbaAryConstruct, {onLeave: function (args) {send("__vbaAryConstruct");}});
+
+var __vbaAryConstruct2 = Module.findExportByName("msvbvm60.dll", "__vbaAryConstruct2")
+Interceptor.attach(__vbaAryConstruct2, {onLeave: function (args) {send("__vbaAryConstruct2");}});
+
+var __vbaAryCopy = Module.findExportByName("msvbvm60.dll", "__vbaAryCopy")
+Interceptor.attach(__vbaAryCopy, {onLeave: function (args) {send("__vbaAryCopy");}});
+
+var __vbaAryDestruct = Module.findExportByName("msvbvm60.dll", "__vbaAryDestruct")
+Interceptor.attach(__vbaAryDestruct, {onLeave: function (args) {send("__vbaAryDestruct");}});
+
+var __vbaAryLock = Module.findExportByName("msvbvm60.dll", "__vbaAryLock")
+Interceptor.attach(__vbaAryLock, {onLeave: function (args) {send("__vbaAryLock");}});
+
+var __vbaAryMove = Module.findExportByName("msvbvm60.dll", "__vbaAryMove")
+Interceptor.attach(__vbaAryMove, {onLeave: function (args) {send("__vbaAryMove");}});
+
+var __vbaAryRebase1Var = Module.findExportByName("msvbvm60.dll", "__vbaAryRebase1Var")
+Interceptor.attach(__vbaAryRebase1Var, {onLeave: function (args) {send("__vbaAryRebase1Var");}});
+
+var __vbaAryRecCopy = Module.findExportByName("msvbvm60.dll", "__vbaAryRecCopy")
+Interceptor.attach(__vbaAryRecCopy, {onLeave: function (args) {send("__vbaAryRecCopy");}});
+
+var __vbaAryRecMove = Module.findExportByName("msvbvm60.dll", "__vbaAryRecMove")
+Interceptor.attach(__vbaAryRecMove, {onLeave: function (args) {send("__vbaAryRecMove");}});
+
+var __vbaAryUnlock = Module.findExportByName("msvbvm60.dll", "__vbaAryUnlock")
+Interceptor.attach(__vbaAryUnlock, {onLeave: function (args) {send("__vbaAryUnlock");}});
+
+var __vbaAryVar = Module.findExportByName("msvbvm60.dll", "__vbaAryVar")
+Interceptor.attach(__vbaAryVar, {onLeave: function (args) {send("__vbaAryVar");}});
+
+var __vbaAryVarVarg = Module.findExportByName("msvbvm60.dll", "__vbaAryVarVarg")
+Interceptor.attach(__vbaAryVarVarg, {onLeave: function (args) {send("__vbaAryVarVarg");}});
+
+var __vbaBoolErrVar = Module.findExportByName("msvbvm60.dll", "__vbaBoolErrVar")
+Interceptor.attach(__vbaBoolErrVar, {onLeave: function (args) {send("__vbaBoolErrVar");}});
+
+var __vbaBoolStr = Module.findExportByName("msvbvm60.dll", "__vbaBoolStr")
+Interceptor.attach(__vbaBoolStr, {onLeave: function (args) {send("__vbaBoolStr");}});
+
+var __vbaBoolVar = Module.findExportByName("msvbvm60.dll", "__vbaBoolVar")
+Interceptor.attach(__vbaBoolVar, {onLeave: function (args) {send("__vbaBoolVar");}});
+
+var __vbaBoolVarNull = Module.findExportByName("msvbvm60.dll", "__vbaBoolVarNull")
+Interceptor.attach(__vbaBoolVarNull, {onLeave: function (args) {send("__vbaBoolVarNull");}});
+
+var __vbaCVarAryUdt = Module.findExportByName("msvbvm60.dll", "__vbaCVarAryUdt")
+Interceptor.attach(__vbaCVarAryUdt, {onLeave: function (args) {send("__vbaCVarAryUdt");}});
+
+var __vbaCastObj = Module.findExportByName("msvbvm60.dll", "__vbaCastObj")
+Interceptor.attach(__vbaCastObj, {onLeave: function (args) {send("__vbaCastObj");}});
+
+var __vbaCastObjVar = Module.findExportByName("msvbvm60.dll", "__vbaCastObjVar")
+Interceptor.attach(__vbaCastObjVar, {onLeave: function (args) {send("__vbaCastObjVar");}});
+
+var __vbaCheckType = Module.findExportByName("msvbvm60.dll", "__vbaCheckType")
+Interceptor.attach(__vbaCheckType, {onLeave: function (args) {send("__vbaCheckType");}});
+
+var __vbaCheckTypeVar = Module.findExportByName("msvbvm60.dll", "__vbaCheckTypeVar")
+Interceptor.attach(__vbaCheckTypeVar, {onLeave: function (args) {send("__vbaCheckTypeVar");}});
+
+var __vbaChkstk = Module.findExportByName("msvbvm60.dll", "__vbaChkstk")
+Interceptor.attach(__vbaChkstk, {onLeave: function (args) {send("__vbaChkstk");}});
+
+var __vbaCopyBytes = Module.findExportByName("msvbvm60.dll", "__vbaCopyBytes")
+Interceptor.attach(__vbaCopyBytes, {onLeave: function (args) {send("__vbaCopyBytes");}});
+
+var __vbaCopyBytesZero = Module.findExportByName("msvbvm60.dll", "__vbaCopyBytesZero")
+Interceptor.attach(__vbaCopyBytesZero, {onLeave: function (args) {send("__vbaCopyBytesZero");}});
+
+var __vbaCyAbs = Module.findExportByName("msvbvm60.dll", "__vbaCyAbs")
+Interceptor.attach(__vbaCyAbs, {onLeave: function (args) {send("__vbaCyAbs");}});
+
+var __vbaCyAdd = Module.findExportByName("msvbvm60.dll", "__vbaCyAdd")
+Interceptor.attach(__vbaCyAdd, {onLeave: function (args) {send("__vbaCyAdd");}});
+
+var __vbaCyErrVar = Module.findExportByName("msvbvm60.dll", "__vbaCyErrVar")
+Interceptor.attach(__vbaCyErrVar, {onLeave: function (args) {send("__vbaCyErrVar");}});
+
+var __vbaCyFix = Module.findExportByName("msvbvm60.dll", "__vbaCyFix")
+Interceptor.attach(__vbaCyFix, {onLeave: function (args) {send("__vbaCyFix");}});
+
+var __vbaCyForInit = Module.findExportByName("msvbvm60.dll", "__vbaCyForInit")
+Interceptor.attach(__vbaCyForInit, {onLeave: function (args) {send("__vbaCyForInit");}});
+
+var __vbaCyForNext = Module.findExportByName("msvbvm60.dll", "__vbaCyForNext")
+Interceptor.attach(__vbaCyForNext, {onLeave: function (args) {send("__vbaCyForNext");}});
+
+var __vbaCyI2 = Module.findExportByName("msvbvm60.dll", "__vbaCyI2")
+Interceptor.attach(__vbaCyI2, {onLeave: function (args) {send("__vbaCyI2");}});
+
+var __vbaCyI4 = Module.findExportByName("msvbvm60.dll", "__vbaCyI4")
+Interceptor.attach(__vbaCyI4, {onLeave: function (args) {send("__vbaCyI4");}});
+
+var __vbaCyInt = Module.findExportByName("msvbvm60.dll", "__vbaCyInt")
+Interceptor.attach(__vbaCyInt, {onLeave: function (args) {send("__vbaCyInt");}});
+
+var __vbaCyMul = Module.findExportByName("msvbvm60.dll", "__vbaCyMul")
+Interceptor.attach(__vbaCyMul, {onLeave: function (args) {send("__vbaCyMul");}});
+
+var __vbaCyMulI2 = Module.findExportByName("msvbvm60.dll", "__vbaCyMulI2")
+Interceptor.attach(__vbaCyMulI2, {onLeave: function (args) {send("__vbaCyMulI2");}});
+
+var __vbaCySgn = Module.findExportByName("msvbvm60.dll", "__vbaCySgn")
+Interceptor.attach(__vbaCySgn, {onLeave: function (args) {send("__vbaCySgn");}});
+
+var __vbaCyStr = Module.findExportByName("msvbvm60.dll", "__vbaCyStr")
+Interceptor.attach(__vbaCyStr, {onLeave: function (args) {send("__vbaCyStr");}});
+
+var __vbaCySub = Module.findExportByName("msvbvm60.dll", "__vbaCySub")
+Interceptor.attach(__vbaCySub, {onLeave: function (args) {send("__vbaCySub");}});
+
+var __vbaCyUI1 = Module.findExportByName("msvbvm60.dll", "__vbaCyUI1")
+Interceptor.attach(__vbaCyUI1, {onLeave: function (args) {send("__vbaCyUI1");}});
+
+var __vbaCyVar = Module.findExportByName("msvbvm60.dll", "__vbaCyVar")
+Interceptor.attach(__vbaCyVar, {onLeave: function (args) {send("__vbaCyVar");}});
+
+var __vbaDateR4 = Module.findExportByName("msvbvm60.dll", "__vbaDateR4")
+Interceptor.attach(__vbaDateR4, {onLeave: function (args) {send("__vbaDateR4");}});
+
+var __vbaDateR8 = Module.findExportByName("msvbvm60.dll", "__vbaDateR8")
+Interceptor.attach(__vbaDateR8, {onLeave: function (args) {send("__vbaDateR8");}});
+
+var __vbaDateStr = Module.findExportByName("msvbvm60.dll", "__vbaDateStr")
+Interceptor.attach(__vbaDateStr, {onLeave: function (args) {send("__vbaDateStr");}});
+
+var __vbaDateVar = Module.findExportByName("msvbvm60.dll", "__vbaDateVar")
+Interceptor.attach(__vbaDateVar, {onLeave: function (args) {send("__vbaDateVar");}});
+
+var __vbaDerefAry = Module.findExportByName("msvbvm60.dll", "__vbaDerefAry")
+Interceptor.attach(__vbaDerefAry, {onLeave: function (args) {send("__vbaDerefAry");}});
+
+var __vbaDerefAry1 = Module.findExportByName("msvbvm60.dll", "__vbaDerefAry1")
+Interceptor.attach(__vbaDerefAry1, {onLeave: function (args) {send("__vbaDerefAry1");}});
+
+var __vbaEnd = Module.findExportByName("msvbvm60.dll", "__vbaEnd")
+Interceptor.attach(__vbaEnd, {onLeave: function (args) {send("__vbaEnd");}});
+
+var __vbaErase = Module.findExportByName("msvbvm60.dll", "__vbaErase")
+Interceptor.attach(__vbaErase, {onLeave: function (args) {send("__vbaErase");}});
+
+var __vbaEraseKeepData = Module.findExportByName("msvbvm60.dll", "__vbaEraseKeepData")
+Interceptor.attach(__vbaEraseKeepData, {onLeave: function (args) {send("__vbaEraseKeepData");}});
+
+var __vbaEraseNoPop = Module.findExportByName("msvbvm60.dll", "__vbaEraseNoPop")
+Interceptor.attach(__vbaEraseNoPop, {onLeave: function (args) {send("__vbaEraseNoPop");}});
+
+var __vbaError = Module.findExportByName("msvbvm60.dll", "__vbaError")
+Interceptor.attach(__vbaError, {onLeave: function (args) {send("__vbaError");}});
+
+var __vbaErrorOverflow = Module.findExportByName("msvbvm60.dll", "__vbaErrorOverflow")
+Interceptor.attach(__vbaErrorOverflow, {onLeave: function (args) {send("__vbaErrorOverflow");}});
+
+var __vbaExceptHandler = Module.findExportByName("msvbvm60.dll", "__vbaExceptHandler")
+Interceptor.attach(__vbaExceptHandler, {onLeave: function (args) {send("__vbaExceptHandler");}});
+
+var __vbaExitEachAry = Module.findExportByName("msvbvm60.dll", "__vbaExitEachAry")
+Interceptor.attach(__vbaExitEachAry, {onLeave: function (args) {send("__vbaExitEachAry");}});
+
+var __vbaExitEachColl = Module.findExportByName("msvbvm60.dll", "__vbaExitEachColl")
+Interceptor.attach(__vbaExitEachColl, {onLeave: function (args) {send("__vbaExitEachColl");}});
+
+var __vbaExitEachVar = Module.findExportByName("msvbvm60.dll", "__vbaExitEachVar")
+Interceptor.attach(__vbaExitEachVar, {onLeave: function (args) {send("__vbaExitEachVar");}});
+
+var __vbaExitProc = Module.findExportByName("msvbvm60.dll", "__vbaExitProc")
+Interceptor.attach(__vbaExitProc, {onLeave: function (args) {send("__vbaExitProc");}});
+
+var __vbaFPException = Module.findExportByName("msvbvm60.dll", "__vbaFPException")
+Interceptor.attach(__vbaFPException, {onLeave: function (args) {send("__vbaFPException");}});
+
+var __vbaFPFix = Module.findExportByName("msvbvm60.dll", "__vbaFPFix")
+Interceptor.attach(__vbaFPFix, {onLeave: function (args) {send("__vbaFPFix");}});
+
+var __vbaFPInt = Module.findExportByName("msvbvm60.dll", "__vbaFPInt")
+Interceptor.attach(__vbaFPInt, {onLeave: function (args) {send("__vbaFPInt");}});
+
+var __vbaFailedFriend = Module.findExportByName("msvbvm60.dll", "__vbaFailedFriend")
+Interceptor.attach(__vbaFailedFriend, {onLeave: function (args) {send("__vbaFailedFriend");}});
+
+var __vbaFileClose = Module.findExportByName("msvbvm60.dll", "__vbaFileClose")
+Interceptor.attach(__vbaFileClose, {onLeave: function (args) {send("__vbaFileClose");}});
+
+var __vbaFileCloseAll = Module.findExportByName("msvbvm60.dll", "__vbaFileCloseAll")
+Interceptor.attach(__vbaFileCloseAll, {onLeave: function (args) {send("__vbaFileCloseAll");}});
+
+var __vbaFileLock = Module.findExportByName("msvbvm60.dll", "__vbaFileLock")
+Interceptor.attach(__vbaFileLock, {onLeave: function (args) {send("__vbaFileLock");}});
+
+var __vbaFileOpen = Module.findExportByName("msvbvm60.dll", "__vbaFileOpen")
+Interceptor.attach(__vbaFileOpen, {onLeave: function (args) {send("__vbaFileOpen");}});
+
+var __vbaFileSeek = Module.findExportByName("msvbvm60.dll", "__vbaFileSeek")
+Interceptor.attach(__vbaFileSeek, {onLeave: function (args) {send("__vbaFileSeek");}});
+
+var __vbaFixstrConstruct = Module.findExportByName("msvbvm60.dll", "__vbaFixstrConstruct")
+Interceptor.attach(__vbaFixstrConstruct, {onLeave: function (args) {send("__vbaFixstrConstruct");}});
+
+var __vbaForEachAry = Module.findExportByName("msvbvm60.dll", "__vbaForEachAry")
+Interceptor.attach(__vbaForEachAry, {onLeave: function (args) {send("__vbaForEachAry");}});
+
+var __vbaForEachCollAd = Module.findExportByName("msvbvm60.dll", "__vbaForEachCollAd")
+Interceptor.attach(__vbaForEachCollAd, {onLeave: function (args) {send("__vbaForEachCollAd");}});
+
+var __vbaForEachCollObj = Module.findExportByName("msvbvm60.dll", "__vbaForEachCollObj")
+Interceptor.attach(__vbaForEachCollObj, {onLeave: function (args) {send("__vbaForEachCollObj");}});
+
+var __vbaForEachCollVar = Module.findExportByName("msvbvm60.dll", "__vbaForEachCollVar")
+Interceptor.attach(__vbaForEachCollVar, {onLeave: function (args) {send("__vbaForEachCollVar");}});
+
+var __vbaForEachVar = Module.findExportByName("msvbvm60.dll", "__vbaForEachVar")
+Interceptor.attach(__vbaForEachVar, {onLeave: function (args) {send("__vbaForEachVar");}});
+
+var __vbaFpCDblR4 = Module.findExportByName("msvbvm60.dll", "__vbaFpCDblR4")
+Interceptor.attach(__vbaFpCDblR4, {onLeave: function (args) {send("__vbaFpCDblR4");}});
+
+var __vbaFpCDblR8 = Module.findExportByName("msvbvm60.dll", "__vbaFpCDblR8")
+Interceptor.attach(__vbaFpCDblR8, {onLeave: function (args) {send("__vbaFpCDblR8");}});
+
+var __vbaFpCSngR4 = Module.findExportByName("msvbvm60.dll", "__vbaFpCSngR4")
+Interceptor.attach(__vbaFpCSngR4, {onLeave: function (args) {send("__vbaFpCSngR4");}});
+
+var __vbaFpCSngR8 = Module.findExportByName("msvbvm60.dll", "__vbaFpCSngR8")
+Interceptor.attach(__vbaFpCSngR8, {onLeave: function (args) {send("__vbaFpCSngR8");}});
+
+var __vbaFpCmpCy = Module.findExportByName("msvbvm60.dll", "__vbaFpCmpCy")
+Interceptor.attach(__vbaFpCmpCy, {onLeave: function (args) {send("__vbaFpCmpCy");}});
+
+var __vbaFpCy = Module.findExportByName("msvbvm60.dll", "__vbaFpCy")
+Interceptor.attach(__vbaFpCy, {onLeave: function (args) {send("__vbaFpCy");}});
+
+var __vbaFpI2 = Module.findExportByName("msvbvm60.dll", "__vbaFpI2")
+Interceptor.attach(__vbaFpI2, {onLeave: function (args) {send("__vbaFpI2");}});
+
+var __vbaFpI4 = Module.findExportByName("msvbvm60.dll", "__vbaFpI4")
+Interceptor.attach(__vbaFpI4, {onLeave: function (args) {send("__vbaFpI4");}});
+
+var __vbaFpR4 = Module.findExportByName("msvbvm60.dll", "__vbaFpR4")
+Interceptor.attach(__vbaFpR4, {onLeave: function (args) {send("__vbaFpR4");}});
+
+var __vbaFpR8 = Module.findExportByName("msvbvm60.dll", "__vbaFpR8")
+Interceptor.attach(__vbaFpR8, {onLeave: function (args) {send("__vbaFpR8");}});
+
+var __vbaFpUI1 = Module.findExportByName("msvbvm60.dll", "__vbaFpUI1")
+Interceptor.attach(__vbaFpUI1, {onLeave: function (args) {send("__vbaFpUI1");}});
+
+var __vbaFreeObj = Module.findExportByName("msvbvm60.dll", "__vbaFreeObj")
+Interceptor.attach(__vbaFreeObj, {onLeave: function (args) {send("__vbaFreeObj");}});
+
+var __vbaFreeObjList = Module.findExportByName("msvbvm60.dll", "__vbaFreeObjList")
+Interceptor.attach(__vbaFreeObjList, {onLeave: function (args) {send("__vbaFreeObjList");}});
+
+var __vbaFreeStr = Module.findExportByName("msvbvm60.dll", "__vbaFreeStr")
+Interceptor.attach(__vbaFreeStr, {onLeave: function (args) {send("__vbaFreeStr");}});
+
+var __vbaFreeStrList = Module.findExportByName("msvbvm60.dll", "__vbaFreeStrList")
+Interceptor.attach(__vbaFreeStrList, {onLeave: function (args) {send("__vbaFreeStrList");}});
+
+var __vbaFreeVar = Module.findExportByName("msvbvm60.dll", "__vbaFreeVar")
+Interceptor.attach(__vbaFreeVar, {onLeave: function (args) {send("__vbaFreeVar");}});
+
+var __vbaFreeVarList = Module.findExportByName("msvbvm60.dll", "__vbaFreeVarList")
+Interceptor.attach(__vbaFreeVarList, {onLeave: function (args) {send("__vbaFreeVarList");}});
+
+var __vbaFreeVarg = Module.findExportByName("msvbvm60.dll", "__vbaFreeVarg")
+Interceptor.attach(__vbaFreeVarg, {onLeave: function (args) {send("__vbaFreeVarg");}});
+
+var __vbaGenerateBoundsError = Module.findExportByName("msvbvm60.dll", "__vbaGenerateBoundsError")
+Interceptor.attach(__vbaGenerateBoundsError, {onLeave: function (args) {send("__vbaGenerateBoundsError");}});
+
+var __vbaGet3 = Module.findExportByName("msvbvm60.dll", "__vbaGet3")
+Interceptor.attach(__vbaGet3, {onLeave: function (args) {send("__vbaGet3");}});
+
+var __vbaGet4 = Module.findExportByName("msvbvm60.dll", "__vbaGet4")
+Interceptor.attach(__vbaGet4, {onLeave: function (args) {send("__vbaGet4");}});
+
+var __vbaGetFxStr3 = Module.findExportByName("msvbvm60.dll", "__vbaGetFxStr3")
+Interceptor.attach(__vbaGetFxStr3, {onLeave: function (args) {send("__vbaGetFxStr3");}});
+
+var __vbaGetFxStr4 = Module.findExportByName("msvbvm60.dll", "__vbaGetFxStr4")
+Interceptor.attach(__vbaGetFxStr4, {onLeave: function (args) {send("__vbaGetFxStr4");}});
+
+var __vbaGetOwner3 = Module.findExportByName("msvbvm60.dll", "__vbaGetOwner3")
+Interceptor.attach(__vbaGetOwner3, {onLeave: function (args) {send("__vbaGetOwner3");}});
+
+var __vbaGetOwner4 = Module.findExportByName("msvbvm60.dll", "__vbaGetOwner4")
+Interceptor.attach(__vbaGetOwner4, {onLeave: function (args) {send("__vbaGetOwner4");}});
+
+var __vbaGosub = Module.findExportByName("msvbvm60.dll", "__vbaGosub")
+Interceptor.attach(__vbaGosub, {onLeave: function (args) {send("__vbaGosub");}});
+
+var __vbaGosubFree = Module.findExportByName("msvbvm60.dll", "__vbaGosubFree")
+Interceptor.attach(__vbaGosubFree, {onLeave: function (args) {send("__vbaGosubFree");}});
+
+var __vbaGosubReturn = Module.findExportByName("msvbvm60.dll", "__vbaGosubReturn")
+Interceptor.attach(__vbaGosubReturn, {onLeave: function (args) {send("__vbaGosubReturn");}});
+
+var __vbaHresultCheck = Module.findExportByName("msvbvm60.dll", "__vbaHresultCheck")
+Interceptor.attach(__vbaHresultCheck, {onLeave: function (args) {send("__vbaHresultCheck");}});
+
+var __vbaHresultCheckNonvirt = Module.findExportByName("msvbvm60.dll", "__vbaHresultCheckNonvirt")
+Interceptor.attach(__vbaHresultCheckNonvirt, {onLeave: function (args) {send("__vbaHresultCheckNonvirt");}});
+
+var __vbaHresultCheckObj = Module.findExportByName("msvbvm60.dll", "__vbaHresultCheckObj")
+Interceptor.attach(__vbaHresultCheckObj, {onLeave: function (args) {send("__vbaHresultCheckObj");}});
+
+var __vbaI2Abs = Module.findExportByName("msvbvm60.dll", "__vbaI2Abs")
+Interceptor.attach(__vbaI2Abs, {onLeave: function (args) {send("__vbaI2Abs");}});
+
+var __vbaI2Cy = Module.findExportByName("msvbvm60.dll", "__vbaI2Cy")
+Interceptor.attach(__vbaI2Cy, {onLeave: function (args) {send("__vbaI2Cy");}});
+
+var __vbaI2ErrVar = Module.findExportByName("msvbvm60.dll", "__vbaI2ErrVar")
+Interceptor.attach(__vbaI2ErrVar, {onLeave: function (args) {send("__vbaI2ErrVar");}});
+
+var __vbaI2ForNextCheck = Module.findExportByName("msvbvm60.dll", "__vbaI2ForNextCheck")
+Interceptor.attach(__vbaI2ForNextCheck, {onLeave: function (args) {send("__vbaI2ForNextCheck");}});
+
+var __vbaI2I4 = Module.findExportByName("msvbvm60.dll", "__vbaI2I4")
+Interceptor.attach(__vbaI2I4, {onLeave: function (args) {send("__vbaI2I4");}});
+
+var __vbaI2Sgn = Module.findExportByName("msvbvm60.dll", "__vbaI2Sgn")
+Interceptor.attach(__vbaI2Sgn, {onLeave: function (args) {send("__vbaI2Sgn");}});
+
+var __vbaI2Str = Module.findExportByName("msvbvm60.dll", "__vbaI2Str")
+Interceptor.attach(__vbaI2Str, {onLeave: function (args) {send("__vbaI2Str");}});
+
+var __vbaI2Var = Module.findExportByName("msvbvm60.dll", "__vbaI2Var")
+Interceptor.attach(__vbaI2Var, {onLeave: function (args) {send("__vbaI2Var");}});
+
+var __vbaI4Abs = Module.findExportByName("msvbvm60.dll", "__vbaI4Abs")
+Interceptor.attach(__vbaI4Abs, {onLeave: function (args) {send("__vbaI4Abs");}});
+
+var __vbaI4Cy = Module.findExportByName("msvbvm60.dll", "__vbaI4Cy")
+Interceptor.attach(__vbaI4Cy, {onLeave: function (args) {send("__vbaI4Cy");}});
+
+var __vbaI4ErrVar = Module.findExportByName("msvbvm60.dll", "__vbaI4ErrVar")
+Interceptor.attach(__vbaI4ErrVar, {onLeave: function (args) {send("__vbaI4ErrVar");}});
+
+var __vbaI4ForNextCheck = Module.findExportByName("msvbvm60.dll", "__vbaI4ForNextCheck")
+Interceptor.attach(__vbaI4ForNextCheck, {onLeave: function (args) {send("__vbaI4ForNextCheck");}});
+
+var __vbaI4Sgn = Module.findExportByName("msvbvm60.dll", "__vbaI4Sgn")
+Interceptor.attach(__vbaI4Sgn, {onLeave: function (args) {send("__vbaI4Sgn");}});
+
+var __vbaI4Str = Module.findExportByName("msvbvm60.dll", "__vbaI4Str")
+Interceptor.attach(__vbaI4Str, {onLeave: function (args) {send("__vbaI4Str");}});
+
+var __vbaI4Var = Module.findExportByName("msvbvm60.dll", "__vbaI4Var")
+Interceptor.attach(__vbaI4Var, {onLeave: function (args) {send("__vbaI4Var");}});
+
+var __vbaInStr = Module.findExportByName("msvbvm60.dll", "__vbaInStr")
+Interceptor.attach(__vbaInStr, {onLeave: function (args) {send("__vbaInStr");}});
+
+var __vbaInStrB = Module.findExportByName("msvbvm60.dll", "__vbaInStrB")
+Interceptor.attach(__vbaInStrB, {onLeave: function (args) {send("__vbaInStrB");}});
+
+var __vbaInStrVar = Module.findExportByName("msvbvm60.dll", "__vbaInStrVar")
+Interceptor.attach(__vbaInStrVar, {onLeave: function (args) {send("__vbaInStrVar");}});
+
+var __vbaInStrVarB = Module.findExportByName("msvbvm60.dll", "__vbaInStrVarB")
+Interceptor.attach(__vbaInStrVarB, {onLeave: function (args) {send("__vbaInStrVarB");}});
+
+var __vbaInputFile = Module.findExportByName("msvbvm60.dll", "__vbaInputFile")
+Interceptor.attach(__vbaInputFile, {onLeave: function (args) {send("__vbaInputFile");}});
+
+var __vbaLateIdCall = Module.findExportByName("msvbvm60.dll", "__vbaLateIdCall")
+Interceptor.attach(__vbaLateIdCall, {onLeave: function (args) {send("__vbaLateIdCall");}});
+
+var __vbaLateIdCallLd = Module.findExportByName("msvbvm60.dll", "__vbaLateIdCallLd")
+Interceptor.attach(__vbaLateIdCallLd, {onLeave: function (args) {send("__vbaLateIdCallLd");}});
+
+var __vbaLateIdCallSt = Module.findExportByName("msvbvm60.dll", "__vbaLateIdCallSt")
+Interceptor.attach(__vbaLateIdCallSt, {onLeave: function (args) {send("__vbaLateIdCallSt");}});
+
+var __vbaLateIdNamedCall = Module.findExportByName("msvbvm60.dll", "__vbaLateIdNamedCall")
+Interceptor.attach(__vbaLateIdNamedCall, {onLeave: function (args) {send("__vbaLateIdNamedCall");}});
+
+var __vbaLateIdNamedCallLd = Module.findExportByName("msvbvm60.dll", "__vbaLateIdNamedCallLd")
+Interceptor.attach(__vbaLateIdNamedCallLd, {onLeave: function (args) {send("__vbaLateIdNamedCallLd");}});
+
+var __vbaLateIdNamedCallSt = Module.findExportByName("msvbvm60.dll", "__vbaLateIdNamedCallSt")
+Interceptor.attach(__vbaLateIdNamedCallSt, {onLeave: function (args) {send("__vbaLateIdNamedCallSt");}});
+
+var __vbaLateIdNamedStAd = Module.findExportByName("msvbvm60.dll", "__vbaLateIdNamedStAd")
+Interceptor.attach(__vbaLateIdNamedStAd, {onLeave: function (args) {send("__vbaLateIdNamedStAd");}});
+
+var __vbaLateIdSt = Module.findExportByName("msvbvm60.dll", "__vbaLateIdSt")
+Interceptor.attach(__vbaLateIdSt, {onLeave: function (args) {send("__vbaLateIdSt");}});
+
+var __vbaLateIdStAd = Module.findExportByName("msvbvm60.dll", "__vbaLateIdStAd")
+Interceptor.attach(__vbaLateIdStAd, {onLeave: function (args) {send("__vbaLateIdStAd");}});
+
+var __vbaLateMemCall = Module.findExportByName("msvbvm60.dll", "__vbaLateMemCall")
+Interceptor.attach(__vbaLateMemCall, {onLeave: function (args) {send("__vbaLateMemCall");}});
+
+var __vbaLateMemCallLd = Module.findExportByName("msvbvm60.dll", "__vbaLateMemCallLd")
+Interceptor.attach(__vbaLateMemCallLd, {onLeave: function (args) {send("__vbaLateMemCallLd");}});
+
+var __vbaLateMemCallSt = Module.findExportByName("msvbvm60.dll", "__vbaLateMemCallSt")
+Interceptor.attach(__vbaLateMemCallSt, {onLeave: function (args) {send("__vbaLateMemCallSt");}});
+
+var __vbaLateMemNamedCall = Module.findExportByName("msvbvm60.dll", "__vbaLateMemNamedCall")
+Interceptor.attach(__vbaLateMemNamedCall, {onLeave: function (args) {send("__vbaLateMemNamedCall");}});
+
+var __vbaLateMemNamedCallLd = Module.findExportByName("msvbvm60.dll", "__vbaLateMemNamedCallLd")
+Interceptor.attach(__vbaLateMemNamedCallLd, {onLeave: function (args) {send("__vbaLateMemNamedCallLd");}});
+
+var __vbaLateMemNamedCallSt = Module.findExportByName("msvbvm60.dll", "__vbaLateMemNamedCallSt")
+Interceptor.attach(__vbaLateMemNamedCallSt, {onLeave: function (args) {send("__vbaLateMemNamedCallSt");}});
+
+var __vbaLateMemNamedStAd = Module.findExportByName("msvbvm60.dll", "__vbaLateMemNamedStAd")
+Interceptor.attach(__vbaLateMemNamedStAd, {onLeave: function (args) {send("__vbaLateMemNamedStAd");}});
+
+var __vbaLateMemSt = Module.findExportByName("msvbvm60.dll", "__vbaLateMemSt")
+Interceptor.attach(__vbaLateMemSt, {onLeave: function (args) {send("__vbaLateMemSt");}});
+
+var __vbaLateMemStAd = Module.findExportByName("msvbvm60.dll", "__vbaLateMemStAd")
+Interceptor.attach(__vbaLateMemStAd, {onLeave: function (args) {send("__vbaLateMemStAd");}});
+
+var __vbaLbound = Module.findExportByName("msvbvm60.dll", "__vbaLbound")
+Interceptor.attach(__vbaLbound, {onLeave: function (args) {send("__vbaLbound");}});
+
+var __vbaLdZeroAry = Module.findExportByName("msvbvm60.dll", "__vbaLdZeroAry")
+Interceptor.attach(__vbaLdZeroAry, {onLeave: function (args) {send("__vbaLdZeroAry");}});
+
+var __vbaLenBstr = Module.findExportByName("msvbvm60.dll", "__vbaLenBstr")
+Interceptor.attach(__vbaLenBstr, {onLeave: function (args) {send("__vbaLenBstr");}});
+
+var __vbaLenBstrB = Module.findExportByName("msvbvm60.dll", "__vbaLenBstrB")
+Interceptor.attach(__vbaLenBstrB, {onLeave: function (args) {send("__vbaLenBstrB");}});
+
+var __vbaLenVar = Module.findExportByName("msvbvm60.dll", "__vbaLenVar")
+Interceptor.attach(__vbaLenVar, {onLeave: function (args) {send("__vbaLenVar");}});
+
+var __vbaLenVarB = Module.findExportByName("msvbvm60.dll", "__vbaLenVarB")
+Interceptor.attach(__vbaLenVarB, {onLeave: function (args) {send("__vbaLenVarB");}});
+
+var __vbaLineInputStr = Module.findExportByName("msvbvm60.dll", "__vbaLineInputStr")
+Interceptor.attach(__vbaLineInputStr, {onLeave: function (args) {send("__vbaLineInputStr");}});
+
+var __vbaLineInputVar = Module.findExportByName("msvbvm60.dll", "__vbaLineInputVar")
+Interceptor.attach(__vbaLineInputVar, {onLeave: function (args) {send("__vbaLineInputVar");}});
+
+var __vbaLsetFixstr = Module.findExportByName("msvbvm60.dll", "__vbaLsetFixstr")
+Interceptor.attach(__vbaLsetFixstr, {onLeave: function (args) {send("__vbaLsetFixstr");}});
+
+var __vbaLsetFixstrFree = Module.findExportByName("msvbvm60.dll", "__vbaLsetFixstrFree")
+Interceptor.attach(__vbaLsetFixstrFree, {onLeave: function (args) {send("__vbaLsetFixstrFree");}});
+
+var __vbaMidStmtBstr = Module.findExportByName("msvbvm60.dll", "__vbaMidStmtBstr")
+Interceptor.attach(__vbaMidStmtBstr, {onLeave: function (args) {send("__vbaMidStmtBstr");}});
+
+var __vbaMidStmtBstrB = Module.findExportByName("msvbvm60.dll", "__vbaMidStmtBstrB")
+Interceptor.attach(__vbaMidStmtBstrB, {onLeave: function (args) {send("__vbaMidStmtBstrB");}});
+
+var __vbaMidStmtVar = Module.findExportByName("msvbvm60.dll", "__vbaMidStmtVar")
+Interceptor.attach(__vbaMidStmtVar, {onLeave: function (args) {send("__vbaMidStmtVar");}});
+
+var __vbaMidStmtVarB = Module.findExportByName("msvbvm60.dll", "__vbaMidStmtVarB")
+Interceptor.attach(__vbaMidStmtVarB, {onLeave: function (args) {send("__vbaMidStmtVarB");}});
+
+var __vbaNameFile = Module.findExportByName("msvbvm60.dll", "__vbaNameFile")
+Interceptor.attach(__vbaNameFile, {onLeave: function (args) {send("__vbaNameFile");}});
+
+var __vbaNew = Module.findExportByName("msvbvm60.dll", "__vbaNew")
+Interceptor.attach(__vbaNew, {onLeave: function (args) {send("__vbaNew");}});
+
+var __vbaNew2 = Module.findExportByName("msvbvm60.dll", "__vbaNew2")
+Interceptor.attach(__vbaNew2, {onLeave: function (args) {send("__vbaNew2");}});
+
+var __vbaNextEachAry = Module.findExportByName("msvbvm60.dll", "__vbaNextEachAry")
+Interceptor.attach(__vbaNextEachAry, {onLeave: function (args) {send("__vbaNextEachAry");}});
+
+var __vbaNextEachCollAd = Module.findExportByName("msvbvm60.dll", "__vbaNextEachCollAd")
+Interceptor.attach(__vbaNextEachCollAd, {onLeave: function (args) {send("__vbaNextEachCollAd");}});
+
+var __vbaNextEachCollObj = Module.findExportByName("msvbvm60.dll", "__vbaNextEachCollObj")
+Interceptor.attach(__vbaNextEachCollObj, {onLeave: function (args) {send("__vbaNextEachCollObj");}});
+
+var __vbaNextEachCollVar = Module.findExportByName("msvbvm60.dll", "__vbaNextEachCollVar")
+Interceptor.attach(__vbaNextEachCollVar, {onLeave: function (args) {send("__vbaNextEachCollVar");}});
+
+var __vbaNextEachVar = Module.findExportByName("msvbvm60.dll", "__vbaNextEachVar")
+Interceptor.attach(__vbaNextEachVar, {onLeave: function (args) {send("__vbaNextEachVar");}});
+
+var __vbaObjAddref = Module.findExportByName("msvbvm60.dll", "__vbaObjAddref")
+Interceptor.attach(__vbaObjAddref, {onLeave: function (args) {send("__vbaObjAddref");}});
+
+var __vbaObjIs = Module.findExportByName("msvbvm60.dll", "__vbaObjIs")
+Interceptor.attach(__vbaObjIs, {onLeave: function (args) {send("__vbaObjIs");}});
+
+var __vbaObjSet = Module.findExportByName("msvbvm60.dll", "__vbaObjSet")
+Interceptor.attach(__vbaObjSet, {onLeave: function (args) {send("__vbaObjSet");}});
+
+var __vbaObjSetAddref = Module.findExportByName("msvbvm60.dll", "__vbaObjSetAddref")
+Interceptor.attach(__vbaObjSetAddref, {onLeave: function (args) {send("__vbaObjSetAddref");}});
+
+var __vbaObjVar = Module.findExportByName("msvbvm60.dll", "__vbaObjVar")
+Interceptor.attach(__vbaObjVar, {onLeave: function (args) {send("__vbaObjVar");}});
+
+var __vbaOnError = Module.findExportByName("msvbvm60.dll", "__vbaOnError")
+Interceptor.attach(__vbaOnError, {onLeave: function (args) {send("__vbaOnError");}});
+
+var __vbaOnGoCheck = Module.findExportByName("msvbvm60.dll", "__vbaOnGoCheck")
+Interceptor.attach(__vbaOnGoCheck, {onLeave: function (args) {send("__vbaOnGoCheck");}});
+
+var __vbaPowerR8 = Module.findExportByName("msvbvm60.dll", "__vbaPowerR8")
+Interceptor.attach(__vbaPowerR8, {onLeave: function (args) {send("__vbaPowerR8");}});
+
+var __vbaPrintFile = Module.findExportByName("msvbvm60.dll", "__vbaPrintFile")
+Interceptor.attach(__vbaPrintFile, {onLeave: function (args) {send("__vbaPrintFile");}});
+
+var __vbaPrintObj = Module.findExportByName("msvbvm60.dll", "__vbaPrintObj")
+Interceptor.attach(__vbaPrintObj, {onLeave: function (args) {send("__vbaPrintObj");}});
+
+var __vbaPut3 = Module.findExportByName("msvbvm60.dll", "__vbaPut3")
+Interceptor.attach(__vbaPut3, {onLeave: function (args) {send("__vbaPut3");}});
+
+var __vbaPut4 = Module.findExportByName("msvbvm60.dll", "__vbaPut4")
+Interceptor.attach(__vbaPut4, {onLeave: function (args) {send("__vbaPut4");}});
+
+var __vbaPutFxStr3 = Module.findExportByName("msvbvm60.dll", "__vbaPutFxStr3")
+Interceptor.attach(__vbaPutFxStr3, {onLeave: function (args) {send("__vbaPutFxStr3");}});
+
+var __vbaPutFxStr4 = Module.findExportByName("msvbvm60.dll", "__vbaPutFxStr4")
+Interceptor.attach(__vbaPutFxStr4, {onLeave: function (args) {send("__vbaPutFxStr4");}});
+
+var __vbaPutOwner3 = Module.findExportByName("msvbvm60.dll", "__vbaPutOwner3")
+Interceptor.attach(__vbaPutOwner3, {onLeave: function (args) {send("__vbaPutOwner3");}});
+
+var __vbaPutOwner4 = Module.findExportByName("msvbvm60.dll", "__vbaPutOwner4")
+Interceptor.attach(__vbaPutOwner4, {onLeave: function (args) {send("__vbaPutOwner4");}});
+
+var __vbaR4Cy = Module.findExportByName("msvbvm60.dll", "__vbaR4Cy")
+Interceptor.attach(__vbaR4Cy, {onLeave: function (args) {send("__vbaR4Cy");}});
+
+var __vbaR4ErrVar = Module.findExportByName("msvbvm60.dll", "__vbaR4ErrVar")
+Interceptor.attach(__vbaR4ErrVar, {onLeave: function (args) {send("__vbaR4ErrVar");}});
+
+var __vbaR4ForNextCheck = Module.findExportByName("msvbvm60.dll", "__vbaR4ForNextCheck")
+Interceptor.attach(__vbaR4ForNextCheck, {onLeave: function (args) {send("__vbaR4ForNextCheck");}});
+
+var __vbaR4Sgn = Module.findExportByName("msvbvm60.dll", "__vbaR4Sgn")
+Interceptor.attach(__vbaR4Sgn, {onLeave: function (args) {send("__vbaR4Sgn");}});
+
+var __vbaR4Str = Module.findExportByName("msvbvm60.dll", "__vbaR4Str")
+Interceptor.attach(__vbaR4Str, {onLeave: function (args) {send("__vbaR4Str");}});
+
+var __vbaR4Var = Module.findExportByName("msvbvm60.dll", "__vbaR4Var")
+Interceptor.attach(__vbaR4Var, {onLeave: function (args) {send("__vbaR4Var");}});
+
+var __vbaR8Cy = Module.findExportByName("msvbvm60.dll", "__vbaR8Cy")
+Interceptor.attach(__vbaR8Cy, {onLeave: function (args) {send("__vbaR8Cy");}});
+
+var __vbaR8ErrVar = Module.findExportByName("msvbvm60.dll", "__vbaR8ErrVar")
+Interceptor.attach(__vbaR8ErrVar, {onLeave: function (args) {send("__vbaR8ErrVar");}});
+
+var __vbaR8FixI2 = Module.findExportByName("msvbvm60.dll", "__vbaR8FixI2")
+Interceptor.attach(__vbaR8FixI2, {onLeave: function (args) {send("__vbaR8FixI2");}});
+
+var __vbaR8FixI4 = Module.findExportByName("msvbvm60.dll", "__vbaR8FixI4")
+Interceptor.attach(__vbaR8FixI4, {onLeave: function (args) {send("__vbaR8FixI4");}});
+
+var __vbaR8ForNextCheck = Module.findExportByName("msvbvm60.dll", "__vbaR8ForNextCheck")
+Interceptor.attach(__vbaR8ForNextCheck, {onLeave: function (args) {send("__vbaR8ForNextCheck");}});
+
+var __vbaR8IntI2 = Module.findExportByName("msvbvm60.dll", "__vbaR8IntI2")
+Interceptor.attach(__vbaR8IntI2, {onLeave: function (args) {send("__vbaR8IntI2");}});
+
+var __vbaR8IntI4 = Module.findExportByName("msvbvm60.dll", "__vbaR8IntI4")
+Interceptor.attach(__vbaR8IntI4, {onLeave: function (args) {send("__vbaR8IntI4");}});
+
+var __vbaR8Sgn = Module.findExportByName("msvbvm60.dll", "__vbaR8Sgn")
+Interceptor.attach(__vbaR8Sgn, {onLeave: function (args) {send("__vbaR8Sgn");}});
+
+var __vbaR8Str = Module.findExportByName("msvbvm60.dll", "__vbaR8Str")
+Interceptor.attach(__vbaR8Str, {onLeave: function (args) {send("__vbaR8Str");}});
+
+var __vbaR8Var = Module.findExportByName("msvbvm60.dll", "__vbaR8Var")
+Interceptor.attach(__vbaR8Var, {onLeave: function (args) {send("__vbaR8Var");}});
+
+var __vbaRaiseEvent = Module.findExportByName("msvbvm60.dll", "__vbaRaiseEvent")
+Interceptor.attach(__vbaRaiseEvent, {onLeave: function (args) {send("__vbaRaiseEvent");}});
+
+var __vbaRecAnsiToUni = Module.findExportByName("msvbvm60.dll", "__vbaRecAnsiToUni")
+Interceptor.attach(__vbaRecAnsiToUni, {onLeave: function (args) {send("__vbaRecAnsiToUni");}});
+
+var __vbaRecAssign = Module.findExportByName("msvbvm60.dll", "__vbaRecAssign")
+Interceptor.attach(__vbaRecAssign, {onLeave: function (args) {send("__vbaRecAssign");}});
+
+var __vbaRecDestruct = Module.findExportByName("msvbvm60.dll", "__vbaRecDestruct")
+Interceptor.attach(__vbaRecDestruct, {onLeave: function (args) {send("__vbaRecDestruct");}});
+
+var __vbaRecDestructAnsi = Module.findExportByName("msvbvm60.dll", "__vbaRecDestructAnsi")
+Interceptor.attach(__vbaRecDestructAnsi, {onLeave: function (args) {send("__vbaRecDestructAnsi");}});
+
+var __vbaRecUniToAnsi = Module.findExportByName("msvbvm60.dll", "__vbaRecUniToAnsi")
+Interceptor.attach(__vbaRecUniToAnsi, {onLeave: function (args) {send("__vbaRecUniToAnsi");}});
+
+var __vbaRedim = Module.findExportByName("msvbvm60.dll", "__vbaRedim")
+Interceptor.attach(__vbaRedim, {onLeave: function (args) {send("__vbaRedim");}});
+
+var __vbaRedimPreserve = Module.findExportByName("msvbvm60.dll", "__vbaRedimPreserve")
+Interceptor.attach(__vbaRedimPreserve, {onLeave: function (args) {send("__vbaRedimPreserve");}});
+
+var __vbaRedimPreserveVar = Module.findExportByName("msvbvm60.dll", "__vbaRedimPreserveVar")
+Interceptor.attach(__vbaRedimPreserveVar, {onLeave: function (args) {send("__vbaRedimPreserveVar");}});
+
+var __vbaRedimPreserveVar2 = Module.findExportByName("msvbvm60.dll", "__vbaRedimPreserveVar2")
+Interceptor.attach(__vbaRedimPreserveVar2, {onLeave: function (args) {send("__vbaRedimPreserveVar2");}});
+
+var __vbaRedimVar = Module.findExportByName("msvbvm60.dll", "__vbaRedimVar")
+Interceptor.attach(__vbaRedimVar, {onLeave: function (args) {send("__vbaRedimVar");}});
+
+var __vbaRedimVar2 = Module.findExportByName("msvbvm60.dll", "__vbaRedimVar2")
+Interceptor.attach(__vbaRedimVar2, {onLeave: function (args) {send("__vbaRedimVar2");}});
+
+var __vbaRefVarAry = Module.findExportByName("msvbvm60.dll", "__vbaRefVarAry")
+Interceptor.attach(__vbaRefVarAry, {onLeave: function (args) {send("__vbaRefVarAry");}});
+
+var __vbaResume = Module.findExportByName("msvbvm60.dll", "__vbaResume")
+Interceptor.attach(__vbaResume, {onLeave: function (args) {send("__vbaResume");}});
+
+var __vbaRsetFixstr = Module.findExportByName("msvbvm60.dll", "__vbaRsetFixstr")
+Interceptor.attach(__vbaRsetFixstr, {onLeave: function (args) {send("__vbaRsetFixstr");}});
+
+var __vbaRsetFixstrFree = Module.findExportByName("msvbvm60.dll", "__vbaRsetFixstrFree")
+Interceptor.attach(__vbaRsetFixstrFree, {onLeave: function (args) {send("__vbaRsetFixstrFree");}});
+
+var __vbaSetSystemError = Module.findExportByName("msvbvm60.dll", "__vbaSetSystemError")
+Interceptor.attach(__vbaSetSystemError, {onLeave: function (args) {send("__vbaSetSystemError");}});
+
+var __vbaStopExe = Module.findExportByName("msvbvm60.dll", "__vbaStopExe")
+Interceptor.attach(__vbaStopExe, {onLeave: function (args) {send("__vbaStopExe");}});
+
+var __vbaStr2Vec = Module.findExportByName("msvbvm60.dll", "__vbaStr2Vec")
+Interceptor.attach(__vbaStr2Vec, {onLeave: function (args) {send("__vbaStr2Vec");}});
+
+var __vbaStrAryToAnsi = Module.findExportByName("msvbvm60.dll", "__vbaStrAryToAnsi")
+Interceptor.attach(__vbaStrAryToAnsi, {onLeave: function (args) {send("__vbaStrAryToAnsi");}});
+
+var __vbaStrAryToUnicode = Module.findExportByName("msvbvm60.dll", "__vbaStrAryToUnicode")
+Interceptor.attach(__vbaStrAryToUnicode, {onLeave: function (args) {send("__vbaStrAryToUnicode");}});
+
+var __vbaStrBool = Module.findExportByName("msvbvm60.dll", "__vbaStrBool")
+Interceptor.attach(__vbaStrBool, {onLeave: function (args) {send("__vbaStrBool");}});
+
+var __vbaStrCat = Module.findExportByName("msvbvm60.dll", "__vbaStrCat")
+Interceptor.attach(__vbaStrCat, {onLeave: function (args) {send("__vbaStrCat");}});
+
+var __vbaStrCmp = Module.findExportByName("msvbvm60.dll", "__vbaStrCmp")
+Interceptor.attach(__vbaStrCmp, {onLeave: function (args) {send("__vbaStrCmp");}});
+
+var __vbaStrComp = Module.findExportByName("msvbvm60.dll", "__vbaStrComp")
+Interceptor.attach(__vbaStrComp, {onLeave: function (args) {send("__vbaStrComp");}});
+
+var __vbaStrCompVar = Module.findExportByName("msvbvm60.dll", "__vbaStrCompVar")
+Interceptor.attach(__vbaStrCompVar, {onLeave: function (args) {send("__vbaStrCompVar");}});
+
+var __vbaStrCopy = Module.findExportByName("msvbvm60.dll", "__vbaStrCopy")
+Interceptor.attach(__vbaStrCopy, {onLeave: function (args) {send("__vbaStrCopy");}});
+
+var __vbaStrCy = Module.findExportByName("msvbvm60.dll", "__vbaStrCy")
+Interceptor.attach(__vbaStrCy, {onLeave: function (args) {send("__vbaStrCy");}});
+
+var __vbaStrDate = Module.findExportByName("msvbvm60.dll", "__vbaStrDate")
+Interceptor.attach(__vbaStrDate, {onLeave: function (args) {send("__vbaStrDate");}});
+
+var __vbaStrErrVarCopy = Module.findExportByName("msvbvm60.dll", "__vbaStrErrVarCopy")
+Interceptor.attach(__vbaStrErrVarCopy, {onLeave: function (args) {send("__vbaStrErrVarCopy");}});
+
+var __vbaStrFixstr = Module.findExportByName("msvbvm60.dll", "__vbaStrFixstr")
+Interceptor.attach(__vbaStrFixstr, {onLeave: function (args) {send("__vbaStrFixstr");}});
+
+var __vbaStrI2 = Module.findExportByName("msvbvm60.dll", "__vbaStrI2")
+Interceptor.attach(__vbaStrI2, {onLeave: function (args) {send("__vbaStrI2");}});
+
+var __vbaStrI4 = Module.findExportByName("msvbvm60.dll", "__vbaStrI4")
+Interceptor.attach(__vbaStrI4, {onLeave: function (args) {send("__vbaStrI4");}});
+
+var __vbaStrLike = Module.findExportByName("msvbvm60.dll", "__vbaStrLike")
+Interceptor.attach(__vbaStrLike, {onLeave: function (args) {send("__vbaStrLike");}});
+
+var __vbaStrMove = Module.findExportByName("msvbvm60.dll", "__vbaStrMove")
+Interceptor.attach(__vbaStrMove, {onLeave: function (args) {send("__vbaStrMove");}});
+
+var __vbaStrR4 = Module.findExportByName("msvbvm60.dll", "__vbaStrR4")
+Interceptor.attach(__vbaStrR4, {onLeave: function (args) {send("__vbaStrR4");}});
+
+var __vbaStrR8 = Module.findExportByName("msvbvm60.dll", "__vbaStrR8")
+Interceptor.attach(__vbaStrR8, {onLeave: function (args) {send("__vbaStrR8");}});
+
+var __vbaStrTextCmp = Module.findExportByName("msvbvm60.dll", "__vbaStrTextCmp")
+Interceptor.attach(__vbaStrTextCmp, {onLeave: function (args) {send("__vbaStrTextCmp");}});
+
+var __vbaStrTextLike = Module.findExportByName("msvbvm60.dll", "__vbaStrTextLike")
+Interceptor.attach(__vbaStrTextLike, {onLeave: function (args) {send("__vbaStrTextLike");}});
+
+var __vbaStrToAnsi = Module.findExportByName("msvbvm60.dll", "__vbaStrToAnsi")
+Interceptor.attach(__vbaStrToAnsi, {onLeave: function (args) {send("__vbaStrToAnsi");}});
+
+var __vbaStrToUnicode = Module.findExportByName("msvbvm60.dll", "__vbaStrToUnicode")
+Interceptor.attach(__vbaStrToUnicode, {onLeave: function (args) {send("__vbaStrToUnicode");}});
+
+var __vbaStrUI1 = Module.findExportByName("msvbvm60.dll", "__vbaStrUI1")
+Interceptor.attach(__vbaStrUI1, {onLeave: function (args) {send("__vbaStrUI1");}});
+
+var __vbaStrVarCopy = Module.findExportByName("msvbvm60.dll", "__vbaStrVarCopy")
+Interceptor.attach(__vbaStrVarCopy, {onLeave: function (args) {send("__vbaStrVarCopy");}});
+
+var __vbaStrVarMove = Module.findExportByName("msvbvm60.dll", "__vbaStrVarMove")
+Interceptor.attach(__vbaStrVarMove, {onLeave: function (args) {send("__vbaStrVarMove");}});
+
+var __vbaStrVarVal = Module.findExportByName("msvbvm60.dll", "__vbaStrVarVal")
+Interceptor.attach(__vbaStrVarVal, {onLeave: function (args) {send("__vbaStrVarVal");}});
+
+var __vbaUI1Cy = Module.findExportByName("msvbvm60.dll", "__vbaUI1Cy")
+Interceptor.attach(__vbaUI1Cy, {onLeave: function (args) {send("__vbaUI1Cy");}});
+
+var __vbaUI1ErrVar = Module.findExportByName("msvbvm60.dll", "__vbaUI1ErrVar")
+Interceptor.attach(__vbaUI1ErrVar, {onLeave: function (args) {send("__vbaUI1ErrVar");}});
+
+var __vbaUI1I2 = Module.findExportByName("msvbvm60.dll", "__vbaUI1I2")
+Interceptor.attach(__vbaUI1I2, {onLeave: function (args) {send("__vbaUI1I2");}});
+
+var __vbaUI1I4 = Module.findExportByName("msvbvm60.dll", "__vbaUI1I4")
+Interceptor.attach(__vbaUI1I4, {onLeave: function (args) {send("__vbaUI1I4");}});
+
+var __vbaUI1Sgn = Module.findExportByName("msvbvm60.dll", "__vbaUI1Sgn")
+Interceptor.attach(__vbaUI1Sgn, {onLeave: function (args) {send("__vbaUI1Sgn");}});
+
+var __vbaUI1Str = Module.findExportByName("msvbvm60.dll", "__vbaUI1Str")
+Interceptor.attach(__vbaUI1Str, {onLeave: function (args) {send("__vbaUI1Str");}});
+
+var __vbaUI1Var = Module.findExportByName("msvbvm60.dll", "__vbaUI1Var")
+Interceptor.attach(__vbaUI1Var, {onLeave: function (args) {send("__vbaUI1Var");}});
+
+var __vbaUbound = Module.findExportByName("msvbvm60.dll", "__vbaUbound")
+Interceptor.attach(__vbaUbound, {onLeave: function (args) {send("__vbaUbound");}});
+
+var __vbaUdtVar = Module.findExportByName("msvbvm60.dll", "__vbaUdtVar")
+Interceptor.attach(__vbaUdtVar, {onLeave: function (args) {send("__vbaUdtVar");}});
+
+var __vbaUnkVar = Module.findExportByName("msvbvm60.dll", "__vbaUnkVar")
+Interceptor.attach(__vbaUnkVar, {onLeave: function (args) {send("__vbaUnkVar");}});
+
+var __vbaVar2Vec = Module.findExportByName("msvbvm60.dll", "__vbaVar2Vec")
+Interceptor.attach(__vbaVar2Vec, {onLeave: function (args) {send("__vbaVar2Vec");}});
+
+var __vbaVarAbs = Module.findExportByName("msvbvm60.dll", "__vbaVarAbs")
+Interceptor.attach(__vbaVarAbs, {onLeave: function (args) {send("__vbaVarAbs");}});
+
+var __vbaVarAdd = Module.findExportByName("msvbvm60.dll", "__vbaVarAdd")
+Interceptor.attach(__vbaVarAdd, {onLeave: function (args) {send("__vbaVarAdd");}});
+
+var __vbaVarAnd = Module.findExportByName("msvbvm60.dll", "__vbaVarAnd")
+Interceptor.attach(__vbaVarAnd, {onLeave: function (args) {send("__vbaVarAnd");}});
+
+var __vbaVarCat = Module.findExportByName("msvbvm60.dll", "__vbaVarCat")
+Interceptor.attach(__vbaVarCat, {onLeave: function (args) {send("__vbaVarCat");}});
+
+var __vbaVarCmpEq = Module.findExportByName("msvbvm60.dll", "__vbaVarCmpEq")
+Interceptor.attach(__vbaVarCmpEq, {onLeave: function (args) {send("__vbaVarCmpEq");}});
+
+var __vbaVarCmpGe = Module.findExportByName("msvbvm60.dll", "__vbaVarCmpGe")
+Interceptor.attach(__vbaVarCmpGe, {onLeave: function (args) {send("__vbaVarCmpGe");}});
+
+var __vbaVarCmpGt = Module.findExportByName("msvbvm60.dll", "__vbaVarCmpGt")
+Interceptor.attach(__vbaVarCmpGt, {onLeave: function (args) {send("__vbaVarCmpGt");}});
+
+var __vbaVarCmpLe = Module.findExportByName("msvbvm60.dll", "__vbaVarCmpLe")
+Interceptor.attach(__vbaVarCmpLe, {onLeave: function (args) {send("__vbaVarCmpLe");}});
+
+var __vbaVarCmpLt = Module.findExportByName("msvbvm60.dll", "__vbaVarCmpLt")
+Interceptor.attach(__vbaVarCmpLt, {onLeave: function (args) {send("__vbaVarCmpLt");}});
+
+var __vbaVarCmpNe = Module.findExportByName("msvbvm60.dll", "__vbaVarCmpNe")
+Interceptor.attach(__vbaVarCmpNe, {onLeave: function (args) {send("__vbaVarCmpNe");}});
+
+var __vbaVarCopy = Module.findExportByName("msvbvm60.dll", "__vbaVarCopy")
+Interceptor.attach(__vbaVarCopy, {onLeave: function (args) {send("__vbaVarCopy");}});
+
+var __vbaVarDateVar = Module.findExportByName("msvbvm60.dll", "__vbaVarDateVar")
+Interceptor.attach(__vbaVarDateVar, {onLeave: function (args) {send("__vbaVarDateVar");}});
+
+var __vbaVarDiv = Module.findExportByName("msvbvm60.dll", "__vbaVarDiv")
+Interceptor.attach(__vbaVarDiv, {onLeave: function (args) {send("__vbaVarDiv");}});
+
+var __vbaVarDup = Module.findExportByName("msvbvm60.dll", "__vbaVarDup")
+Interceptor.attach(__vbaVarDup, {onLeave: function (args) {send("__vbaVarDup");}});
+
+var __vbaVarEqv = Module.findExportByName("msvbvm60.dll", "__vbaVarEqv")
+Interceptor.attach(__vbaVarEqv, {onLeave: function (args) {send("__vbaVarEqv");}});
+
+var __vbaVarErrI4 = Module.findExportByName("msvbvm60.dll", "__vbaVarErrI4")
+Interceptor.attach(__vbaVarErrI4, {onLeave: function (args) {send("__vbaVarErrI4");}});
+
+var __vbaVarFix = Module.findExportByName("msvbvm60.dll", "__vbaVarFix")
+Interceptor.attach(__vbaVarFix, {onLeave: function (args) {send("__vbaVarFix");}});
+
+var __vbaVarForInit = Module.findExportByName("msvbvm60.dll", "__vbaVarForInit")
+Interceptor.attach(__vbaVarForInit, {onLeave: function (args) {send("__vbaVarForInit");}});
+
+var __vbaVarForNext = Module.findExportByName("msvbvm60.dll", "__vbaVarForNext")
+Interceptor.attach(__vbaVarForNext, {onLeave: function (args) {send("__vbaVarForNext");}});
+
+var __vbaVarIdiv = Module.findExportByName("msvbvm60.dll", "__vbaVarIdiv")
+Interceptor.attach(__vbaVarIdiv, {onLeave: function (args) {send("__vbaVarIdiv");}});
+
+var __vbaVarImp = Module.findExportByName("msvbvm60.dll", "__vbaVarImp")
+Interceptor.attach(__vbaVarImp, {onLeave: function (args) {send("__vbaVarImp");}});
+
+var __vbaVarIndexLoad = Module.findExportByName("msvbvm60.dll", "__vbaVarIndexLoad")
+Interceptor.attach(__vbaVarIndexLoad, {onLeave: function (args) {send("__vbaVarIndexLoad");}});
+
+var __vbaVarIndexLoadRef = Module.findExportByName("msvbvm60.dll", "__vbaVarIndexLoadRef")
+Interceptor.attach(__vbaVarIndexLoadRef, {onLeave: function (args) {send("__vbaVarIndexLoadRef");}});
+
+var __vbaVarIndexLoadRefLock = Module.findExportByName("msvbvm60.dll", "__vbaVarIndexLoadRefLock")
+Interceptor.attach(__vbaVarIndexLoadRefLock, {onLeave: function (args) {send("__vbaVarIndexLoadRefLock");}});
+
+var __vbaVarIndexStore = Module.findExportByName("msvbvm60.dll", "__vbaVarIndexStore")
+Interceptor.attach(__vbaVarIndexStore, {onLeave: function (args) {send("__vbaVarIndexStore");}});
+
+var __vbaVarIndexStoreObj = Module.findExportByName("msvbvm60.dll", "__vbaVarIndexStoreObj")
+Interceptor.attach(__vbaVarIndexStoreObj, {onLeave: function (args) {send("__vbaVarIndexStoreObj");}});
+
+var __vbaVarInt = Module.findExportByName("msvbvm60.dll", "__vbaVarInt")
+Interceptor.attach(__vbaVarInt, {onLeave: function (args) {send("__vbaVarInt");}});
+
+var __vbaVarLateMemCallLd = Module.findExportByName("msvbvm60.dll", "__vbaVarLateMemCallLd")
+Interceptor.attach(__vbaVarLateMemCallLd, {onLeave: function (args) {send("__vbaVarLateMemCallLd");}});
+
+var __vbaVarLateMemCallLdRf = Module.findExportByName("msvbvm60.dll", "__vbaVarLateMemCallLdRf")
+Interceptor.attach(__vbaVarLateMemCallLdRf, {onLeave: function (args) {send("__vbaVarLateMemCallLdRf");}});
+
+var __vbaVarLateMemCallSt = Module.findExportByName("msvbvm60.dll", "__vbaVarLateMemCallSt")
+Interceptor.attach(__vbaVarLateMemCallSt, {onLeave: function (args) {send("__vbaVarLateMemCallSt");}});
+
+var __vbaVarLateMemSt = Module.findExportByName("msvbvm60.dll", "__vbaVarLateMemSt")
+Interceptor.attach(__vbaVarLateMemSt, {onLeave: function (args) {send("__vbaVarLateMemSt");}});
+
+var __vbaVarLateMemStAd = Module.findExportByName("msvbvm60.dll", "__vbaVarLateMemStAd")
+Interceptor.attach(__vbaVarLateMemStAd, {onLeave: function (args) {send("__vbaVarLateMemStAd");}});
+
+var __vbaVarLike = Module.findExportByName("msvbvm60.dll", "__vbaVarLike")
+Interceptor.attach(__vbaVarLike, {onLeave: function (args) {send("__vbaVarLike");}});
+
+var __vbaVarLikeVar = Module.findExportByName("msvbvm60.dll", "__vbaVarLikeVar")
+Interceptor.attach(__vbaVarLikeVar, {onLeave: function (args) {send("__vbaVarLikeVar");}});
+
+var __vbaVarMod = Module.findExportByName("msvbvm60.dll", "__vbaVarMod")
+Interceptor.attach(__vbaVarMod, {onLeave: function (args) {send("__vbaVarMod");}});
+
+var __vbaVarMove = Module.findExportByName("msvbvm60.dll", "__vbaVarMove")
+Interceptor.attach(__vbaVarMove, {onLeave: function (args) {send("__vbaVarMove");}});
+
+var __vbaVarMul = Module.findExportByName("msvbvm60.dll", "__vbaVarMul")
+Interceptor.attach(__vbaVarMul, {onLeave: function (args) {send("__vbaVarMul");}});
+
+var __vbaVarNeg = Module.findExportByName("msvbvm60.dll", "__vbaVarNeg")
+Interceptor.attach(__vbaVarNeg, {onLeave: function (args) {send("__vbaVarNeg");}});
+
+var __vbaVarNot = Module.findExportByName("msvbvm60.dll", "__vbaVarNot")
+Interceptor.attach(__vbaVarNot, {onLeave: function (args) {send("__vbaVarNot");}});
+
+var __vbaVarOr = Module.findExportByName("msvbvm60.dll", "__vbaVarOr")
+Interceptor.attach(__vbaVarOr, {onLeave: function (args) {send("__vbaVarOr");}});
+
+var __vbaVarPow = Module.findExportByName("msvbvm60.dll", "__vbaVarPow")
+Interceptor.attach(__vbaVarPow, {onLeave: function (args) {send("__vbaVarPow");}});
+
+var __vbaVarSetObj = Module.findExportByName("msvbvm60.dll", "__vbaVarSetObj")
+Interceptor.attach(__vbaVarSetObj, {onLeave: function (args) {send("__vbaVarSetObj");}});
+
+var __vbaVarSetObjAddref = Module.findExportByName("msvbvm60.dll", "__vbaVarSetObjAddref")
+Interceptor.attach(__vbaVarSetObjAddref, {onLeave: function (args) {send("__vbaVarSetObjAddref");}});
+
+var __vbaVarSetUnk = Module.findExportByName("msvbvm60.dll", "__vbaVarSetUnk")
+Interceptor.attach(__vbaVarSetUnk, {onLeave: function (args) {send("__vbaVarSetUnk");}});
+
+var __vbaVarSetUnkAddref = Module.findExportByName("msvbvm60.dll", "__vbaVarSetUnkAddref")
+Interceptor.attach(__vbaVarSetUnkAddref, {onLeave: function (args) {send("__vbaVarSetUnkAddref");}});
+
+var __vbaVarSetVar = Module.findExportByName("msvbvm60.dll", "__vbaVarSetVar")
+Interceptor.attach(__vbaVarSetVar, {onLeave: function (args) {send("__vbaVarSetVar");}});
+
+var __vbaVarSetVarAddref = Module.findExportByName("msvbvm60.dll", "__vbaVarSetVarAddref")
+Interceptor.attach(__vbaVarSetVarAddref, {onLeave: function (args) {send("__vbaVarSetVarAddref");}});
+
+var __vbaVarSub = Module.findExportByName("msvbvm60.dll", "__vbaVarSub")
+Interceptor.attach(__vbaVarSub, {onLeave: function (args) {send("__vbaVarSub");}});
+
+var __vbaVarTextCmpEq = Module.findExportByName("msvbvm60.dll", "__vbaVarTextCmpEq")
+Interceptor.attach(__vbaVarTextCmpEq, {onLeave: function (args) {send("__vbaVarTextCmpEq");}});
+
+var __vbaVarTextCmpGe = Module.findExportByName("msvbvm60.dll", "__vbaVarTextCmpGe")
+Interceptor.attach(__vbaVarTextCmpGe, {onLeave: function (args) {send("__vbaVarTextCmpGe");}});
+
+var __vbaVarTextCmpGt = Module.findExportByName("msvbvm60.dll", "__vbaVarTextCmpGt")
+Interceptor.attach(__vbaVarTextCmpGt, {onLeave: function (args) {send("__vbaVarTextCmpGt");}});
+
+var __vbaVarTextCmpLe = Module.findExportByName("msvbvm60.dll", "__vbaVarTextCmpLe")
+Interceptor.attach(__vbaVarTextCmpLe, {onLeave: function (args) {send("__vbaVarTextCmpLe");}});
+
+var __vbaVarTextCmpLt = Module.findExportByName("msvbvm60.dll", "__vbaVarTextCmpLt")
+Interceptor.attach(__vbaVarTextCmpLt, {onLeave: function (args) {send("__vbaVarTextCmpLt");}});
+
+var __vbaVarTextCmpNe = Module.findExportByName("msvbvm60.dll", "__vbaVarTextCmpNe")
+Interceptor.attach(__vbaVarTextCmpNe, {onLeave: function (args) {send("__vbaVarTextCmpNe");}});
+
+var __vbaVarTextLike = Module.findExportByName("msvbvm60.dll", "__vbaVarTextLike")
+Interceptor.attach(__vbaVarTextLike, {onLeave: function (args) {send("__vbaVarTextLike");}});
+
+var __vbaVarTextLikeVar = Module.findExportByName("msvbvm60.dll", "__vbaVarTextLikeVar")
+Interceptor.attach(__vbaVarTextLikeVar, {onLeave: function (args) {send("__vbaVarTextLikeVar");}});
+
+var __vbaVarTextTstEq = Module.findExportByName("msvbvm60.dll", "__vbaVarTextTstEq")
+Interceptor.attach(__vbaVarTextTstEq, {onLeave: function (args) {send("__vbaVarTextTstEq");}});
+
+var __vbaVarTextTstGe = Module.findExportByName("msvbvm60.dll", "__vbaVarTextTstGe")
+Interceptor.attach(__vbaVarTextTstGe, {onLeave: function (args) {send("__vbaVarTextTstGe");}});
+
+var __vbaVarTextTstGt = Module.findExportByName("msvbvm60.dll", "__vbaVarTextTstGt")
+Interceptor.attach(__vbaVarTextTstGt, {onLeave: function (args) {send("__vbaVarTextTstGt");}});
+
+var __vbaVarTextTstLe = Module.findExportByName("msvbvm60.dll", "__vbaVarTextTstLe")
+Interceptor.attach(__vbaVarTextTstLe, {onLeave: function (args) {send("__vbaVarTextTstLe");}});
+
+var __vbaVarTextTstLt = Module.findExportByName("msvbvm60.dll", "__vbaVarTextTstLt")
+Interceptor.attach(__vbaVarTextTstLt, {onLeave: function (args) {send("__vbaVarTextTstLt");}});
+
+var __vbaVarTextTstNe = Module.findExportByName("msvbvm60.dll", "__vbaVarTextTstNe")
+Interceptor.attach(__vbaVarTextTstNe, {onLeave: function (args) {send("__vbaVarTextTstNe");}});
+
+var __vbaVarTstEq = Module.findExportByName("msvbvm60.dll", "__vbaVarTstEq")
+Interceptor.attach(__vbaVarTstEq, {onLeave: function (args) {send("__vbaVarTstEq");}});
+
+var __vbaVarTstGe = Module.findExportByName("msvbvm60.dll", "__vbaVarTstGe")
+Interceptor.attach(__vbaVarTstGe, {onLeave: function (args) {send("__vbaVarTstGe");}});
+
+var __vbaVarTstGt = Module.findExportByName("msvbvm60.dll", "__vbaVarTstGt")
+Interceptor.attach(__vbaVarTstGt, {onLeave: function (args) {send("__vbaVarTstGt");}});
+
+var __vbaVarTstLe = Module.findExportByName("msvbvm60.dll", "__vbaVarTstLe")
+Interceptor.attach(__vbaVarTstLe, {onLeave: function (args) {send("__vbaVarTstLe");}});
+
+var __vbaVarTstLt = Module.findExportByName("msvbvm60.dll", "__vbaVarTstLt")
+Interceptor.attach(__vbaVarTstLt, {onLeave: function (args) {send("__vbaVarTstLt");}});
+
+var __vbaVarTstNe = Module.findExportByName("msvbvm60.dll", "__vbaVarTstNe")
+Interceptor.attach(__vbaVarTstNe, {onLeave: function (args) {send("__vbaVarTstNe");}});
+
+var __vbaVarVargNofree = Module.findExportByName("msvbvm60.dll", "__vbaVarVargNofree")
+Interceptor.attach(__vbaVarVargNofree, {onLeave: function (args) {send("__vbaVarVargNofree");}});
+
+var __vbaVarXor = Module.findExportByName("msvbvm60.dll", "__vbaVarXor")
+Interceptor.attach(__vbaVarXor, {onLeave: function (args) {send("__vbaVarXor");}});
+
+var __vbaVarZero = Module.findExportByName("msvbvm60.dll", "__vbaVarZero")
+Interceptor.attach(__vbaVarZero, {onLeave: function (args) {send("__vbaVarZero");}});
+
+var __vbaVargObj = Module.findExportByName("msvbvm60.dll", "__vbaVargObj")
+Interceptor.attach(__vbaVargObj, {onLeave: function (args) {send("__vbaVargObj");}});
+
+var __vbaVargObjAddref = Module.findExportByName("msvbvm60.dll", "__vbaVargObjAddref")
+Interceptor.attach(__vbaVargObjAddref, {onLeave: function (args) {send("__vbaVargObjAddref");}});
+
+var __vbaVargParmRef = Module.findExportByName("msvbvm60.dll", "__vbaVargParmRef")
+Interceptor.attach(__vbaVargParmRef, {onLeave: function (args) {send("__vbaVargParmRef");}});
+
+var __vbaVargUnk = Module.findExportByName("msvbvm60.dll", "__vbaVargUnk")
+Interceptor.attach(__vbaVargUnk, {onLeave: function (args) {send("__vbaVargUnk");}});
+
+var __vbaVargUnkAddref = Module.findExportByName("msvbvm60.dll", "__vbaVargUnkAddref")
+Interceptor.attach(__vbaVargUnkAddref, {onLeave: function (args) {send("__vbaVargUnkAddref");}});
+
+var __vbaVargVar = Module.findExportByName("msvbvm60.dll", "__vbaVargVar")
+Interceptor.attach(__vbaVargVar, {onLeave: function (args) {send("__vbaVargVar");}});
+
+var __vbaVargVarCopy = Module.findExportByName("msvbvm60.dll", "__vbaVargVarCopy")
+Interceptor.attach(__vbaVargVarCopy, {onLeave: function (args) {send("__vbaVargVarCopy");}});
+
+var __vbaVargVarMove = Module.findExportByName("msvbvm60.dll", "__vbaVargVarMove")
+Interceptor.attach(__vbaVargVarMove, {onLeave: function (args) {send("__vbaVargVarMove");}});
+
+var __vbaVargVarRef = Module.findExportByName("msvbvm60.dll", "__vbaVargVarRef")
+Interceptor.attach(__vbaVargVarRef, {onLeave: function (args) {send("__vbaVargVarRef");}});
+
+var __vbaVerifyVarObj = Module.findExportByName("msvbvm60.dll", "__vbaVerifyVarObj")
+Interceptor.attach(__vbaVerifyVarObj, {onLeave: function (args) {send("__vbaVerifyVarObj");}});
+
+var __vbaWriteFile = Module.findExportByName("msvbvm60.dll", "__vbaWriteFile")
+Interceptor.attach(__vbaWriteFile, {onLeave: function (args) {send("__vbaWriteFile");}});
+
+var _adj_fdiv_m16i = Module.findExportByName("msvbvm60.dll", "_adj_fdiv_m16i")
+Interceptor.attach(_adj_fdiv_m16i, {onLeave: function (args) {send("_adj_fdiv_m16i");}});
+
+var _adj_fdiv_m32 = Module.findExportByName("msvbvm60.dll", "_adj_fdiv_m32")
+Interceptor.attach(_adj_fdiv_m32, {onLeave: function (args) {send("_adj_fdiv_m32");}});
+
+var _adj_fdiv_m32i = Module.findExportByName("msvbvm60.dll", "_adj_fdiv_m32i")
+Interceptor.attach(_adj_fdiv_m32i, {onLeave: function (args) {send("_adj_fdiv_m32i");}});
+
+var _adj_fdiv_m64 = Module.findExportByName("msvbvm60.dll", "_adj_fdiv_m64")
+Interceptor.attach(_adj_fdiv_m64, {onLeave: function (args) {send("_adj_fdiv_m64");}});
+
+var _adj_fdiv_r = Module.findExportByName("msvbvm60.dll", "_adj_fdiv_r")
+Interceptor.attach(_adj_fdiv_r, {onLeave: function (args) {send("_adj_fdiv_r");}});
+
+var _adj_fdivr_m16i = Module.findExportByName("msvbvm60.dll", "_adj_fdivr_m16i")
+Interceptor.attach(_adj_fdivr_m16i, {onLeave: function (args) {send("_adj_fdivr_m16i");}});
+
+var _adj_fdivr_m32 = Module.findExportByName("msvbvm60.dll", "_adj_fdivr_m32")
+Interceptor.attach(_adj_fdivr_m32, {onLeave: function (args) {send("_adj_fdivr_m32");}});
+
+var _adj_fdivr_m32i = Module.findExportByName("msvbvm60.dll", "_adj_fdivr_m32i")
+Interceptor.attach(_adj_fdivr_m32i, {onLeave: function (args) {send("_adj_fdivr_m32i");}});
+
+var _adj_fdivr_m64 = Module.findExportByName("msvbvm60.dll", "_adj_fdivr_m64")
+Interceptor.attach(_adj_fdivr_m64, {onLeave: function (args) {send("_adj_fdivr_m64");}});
+
+var _adj_fpatan = Module.findExportByName("msvbvm60.dll", "_adj_fpatan")
+Interceptor.attach(_adj_fpatan, {onLeave: function (args) {send("_adj_fpatan");}});
+
+var _adj_fprem = Module.findExportByName("msvbvm60.dll", "_adj_fprem")
+Interceptor.attach(_adj_fprem, {onLeave: function (args) {send("_adj_fprem");}});
+
+var _adj_fprem1 = Module.findExportByName("msvbvm60.dll", "_adj_fprem1")
+Interceptor.attach(_adj_fprem1, {onLeave: function (args) {send("_adj_fprem1");}});
+
+var _adj_fptan = Module.findExportByName("msvbvm60.dll", "_adj_fptan")
+Interceptor.attach(_adj_fptan, {onLeave: function (args) {send("_adj_fptan");}});
+
+var _allmul = Module.findExportByName("msvbvm60.dll", "_allmul")
+Interceptor.attach(_allmul, {onLeave: function (args) {send("_allmul");}});
+
+var rtBoolFromErrVar = Module.findExportByName("msvbvm60.dll", "rtBoolFromErrVar")
+Interceptor.attach(rtBoolFromErrVar, {onLeave: function (args) {send("rtBoolFromErrVar");}});
+
+var rtBstrFromErrVar = Module.findExportByName("msvbvm60.dll", "rtBstrFromErrVar")
+Interceptor.attach(rtBstrFromErrVar, {onLeave: function (args) {send("rtBstrFromErrVar");}});
+
+var rtCyFromErrVar = Module.findExportByName("msvbvm60.dll", "rtCyFromErrVar")
+Interceptor.attach(rtCyFromErrVar, {onLeave: function (args) {send("rtCyFromErrVar");}});
+
+var rtDecFromVar = Module.findExportByName("msvbvm60.dll", "rtDecFromVar")
+Interceptor.attach(rtDecFromVar, {onLeave: function (args) {send("rtDecFromVar");}});
+
+var rtI2FromErrVar = Module.findExportByName("msvbvm60.dll", "rtI2FromErrVar")
+Interceptor.attach(rtI2FromErrVar, {onLeave: function (args) {send("rtI2FromErrVar");}});
+
+var rtI4FromErrVar = Module.findExportByName("msvbvm60.dll", "rtI4FromErrVar")
+Interceptor.attach(rtI4FromErrVar, {onLeave: function (args) {send("rtI4FromErrVar");}});
+
+var rtR4FromErrVar = Module.findExportByName("msvbvm60.dll", "rtR4FromErrVar")
+Interceptor.attach(rtR4FromErrVar, {onLeave: function (args) {send("rtR4FromErrVar");}});
+
+var rtR8FromErrVar = Module.findExportByName("msvbvm60.dll", "rtR8FromErrVar")
+Interceptor.attach(rtR8FromErrVar, {onLeave: function (args) {send("rtR8FromErrVar");}});
+
+var rtUI1FromErrVar = Module.findExportByName("msvbvm60.dll", "rtUI1FromErrVar")
+Interceptor.attach(rtUI1FromErrVar, {onLeave: function (args) {send("rtUI1FromErrVar");}});
+
+var rtcAbsVar = Module.findExportByName("msvbvm60.dll", "rtcAbsVar")
+Interceptor.attach(rtcAbsVar, {onLeave: function (args) {send("rtcAbsVar");}});
+
+var rtcAnsiValueBstr = Module.findExportByName("msvbvm60.dll", "rtcAnsiValueBstr")
+Interceptor.attach(rtcAnsiValueBstr, {onLeave: function (args) {send("rtcAnsiValueBstr");}});
+
+var rtcAppActivate = Module.findExportByName("msvbvm60.dll", "rtcAppActivate")
+Interceptor.attach(rtcAppActivate, {onLeave: function (args) {send("rtcAppActivate");}});
+
+var rtcAppleScript = Module.findExportByName("msvbvm60.dll", "rtcAppleScript")
+Interceptor.attach(rtcAppleScript, {onLeave: function (args) {send("rtcAppleScript");}});
+
+var rtcArray = Module.findExportByName("msvbvm60.dll", "rtcArray")
+Interceptor.attach(rtcArray, {onLeave: function (args) {send("rtcArray");}});
+
+var rtcAtn = Module.findExportByName("msvbvm60.dll", "rtcAtn")
+Interceptor.attach(rtcAtn, {onLeave: function (args) {send("rtcAtn");}});
+
+var rtcBeep = Module.findExportByName("msvbvm60.dll", "rtcBeep")
+Interceptor.attach(rtcBeep, {onLeave: function (args) {send("rtcBeep");}});
+
+var rtcBstrFromAnsi = Module.findExportByName("msvbvm60.dll", "rtcBstrFromAnsi")
+Interceptor.attach(rtcBstrFromAnsi, {onLeave: function (args) {send("rtcBstrFromAnsi");}});
+
+var rtcBstrFromByte = Module.findExportByName("msvbvm60.dll", "rtcBstrFromByte")
+Interceptor.attach(rtcBstrFromByte, {onLeave: function (args) {send("rtcBstrFromByte");}});
+
+var rtcBstrFromChar = Module.findExportByName("msvbvm60.dll", "rtcBstrFromChar")
+Interceptor.attach(rtcBstrFromChar, {onLeave: function (args) {send("rtcBstrFromChar");}});
+
+var rtcBstrFromError = Module.findExportByName("msvbvm60.dll", "rtcBstrFromError")
+Interceptor.attach(rtcBstrFromError, {onLeave: function (args) {send("rtcBstrFromError");}});
+
+var rtcBstrFromFormatVar = Module.findExportByName("msvbvm60.dll", "rtcBstrFromFormatVar")
+Interceptor.attach(rtcBstrFromFormatVar, {onLeave: function (args) {send("rtcBstrFromFormatVar");}});
+
+var rtcByteValueBstr = Module.findExportByName("msvbvm60.dll", "rtcByteValueBstr")
+Interceptor.attach(rtcByteValueBstr, {onLeave: function (args) {send("rtcByteValueBstr");}});
+
+var rtcCVErrFromVar = Module.findExportByName("msvbvm60.dll", "rtcCVErrFromVar")
+Interceptor.attach(rtcCVErrFromVar, {onLeave: function (args) {send("rtcCVErrFromVar");}});
+
+var rtcCallByName = Module.findExportByName("msvbvm60.dll", "rtcCallByName")
+Interceptor.attach(rtcCallByName, {onLeave: function (args) {send("rtcCallByName");}});
+
+var rtcChangeDir = Module.findExportByName("msvbvm60.dll", "rtcChangeDir")
+Interceptor.attach(rtcChangeDir, {onLeave: function (args) {send("rtcChangeDir");}});
+
+var rtcChangeDrive = Module.findExportByName("msvbvm60.dll", "rtcChangeDrive")
+Interceptor.attach(rtcChangeDrive, {onLeave: function (args) {send("rtcChangeDrive");}});
+
+var rtcCharValueBstr = Module.findExportByName("msvbvm60.dll", "rtcCharValueBstr")
+Interceptor.attach(rtcCharValueBstr, {onLeave: function (args) {send("rtcCharValueBstr");}});
+
+var rtcChoose = Module.findExportByName("msvbvm60.dll", "rtcChoose")
+Interceptor.attach(rtcChoose, {onLeave: function (args) {send("rtcChoose");}});
+
+var rtcCommandBstr = Module.findExportByName("msvbvm60.dll", "rtcCommandBstr")
+Interceptor.attach(rtcCommandBstr, {onLeave: function (args) {send("rtcCommandBstr");}});
+
+var rtcCommandVar = Module.findExportByName("msvbvm60.dll", "rtcCommandVar")
+Interceptor.attach(rtcCommandVar, {onLeave: function (args) {send("rtcCommandVar");}});
+
+var rtcCompareBstr = Module.findExportByName("msvbvm60.dll", "rtcCompareBstr")
+Interceptor.attach(rtcCompareBstr, {onLeave: function (args) {send("rtcCompareBstr");}});
+
+var rtcCos = Module.findExportByName("msvbvm60.dll", "rtcCos")
+Interceptor.attach(rtcCos, {onLeave: function (args) {send("rtcCos");}});
+
+var rtcCreateObject = Module.findExportByName("msvbvm60.dll", "rtcCreateObject")
+Interceptor.attach(rtcCreateObject, {onLeave: function (args) {send("rtcCreateObject");}});
+
+var rtcCreateObject2 = Module.findExportByName("msvbvm60.dll", "rtcCreateObject2")
+Interceptor.attach(rtcCreateObject2, {onLeave: function (args) {send("rtcCreateObject2");}});
+
+var rtcCurrentDir = Module.findExportByName("msvbvm60.dll", "rtcCurrentDir")
+Interceptor.attach(rtcCurrentDir, {onLeave: function (args) {send("rtcCurrentDir");}});
+
+var rtcCurrentDirBstr = Module.findExportByName("msvbvm60.dll", "rtcCurrentDirBstr")
+Interceptor.attach(rtcCurrentDirBstr, {onLeave: function (args) {send("rtcCurrentDirBstr");}});
+
+var rtcDDB = Module.findExportByName("msvbvm60.dll", "rtcDDB")
+Interceptor.attach(rtcDDB, {onLeave: function (args) {send("rtcDDB");}});
+
+var rtcDateAdd = Module.findExportByName("msvbvm60.dll", "rtcDateAdd")
+Interceptor.attach(rtcDateAdd, {onLeave: function (args) {send("rtcDateAdd");}});
+
+var rtcDateDiff = Module.findExportByName("msvbvm60.dll", "rtcDateDiff")
+Interceptor.attach(rtcDateDiff, {onLeave: function (args) {send("rtcDateDiff");}});
+
+var rtcDateFromVar = Module.findExportByName("msvbvm60.dll", "rtcDateFromVar")
+Interceptor.attach(rtcDateFromVar, {onLeave: function (args) {send("rtcDateFromVar");}});
+
+var rtcDatePart = Module.findExportByName("msvbvm60.dll", "rtcDatePart")
+Interceptor.attach(rtcDatePart, {onLeave: function (args) {send("rtcDatePart");}});
+
+var rtcDeleteSetting = Module.findExportByName("msvbvm60.dll", "rtcDeleteSetting")
+Interceptor.attach(rtcDeleteSetting, {onLeave: function (args) {send("rtcDeleteSetting");}});
+
+var rtcDir = Module.findExportByName("msvbvm60.dll", "rtcDir")
+Interceptor.attach(rtcDir, {onLeave: function (args) {send("rtcDir");}});
+
+var rtcDoEvents = Module.findExportByName("msvbvm60.dll", "rtcDoEvents")
+Interceptor.attach(rtcDoEvents, {onLeave: function (args) {send("rtcDoEvents");}});
+
+var rtcEndOfFile = Module.findExportByName("msvbvm60.dll", "rtcEndOfFile")
+Interceptor.attach(rtcEndOfFile, {onLeave: function (args) {send("rtcEndOfFile");}});
+
+var rtcEnvironBstr = Module.findExportByName("msvbvm60.dll", "rtcEnvironBstr")
+Interceptor.attach(rtcEnvironBstr, {onLeave: function (args) {send("rtcEnvironBstr");}});
+
+var rtcEnvironVar = Module.findExportByName("msvbvm60.dll", "rtcEnvironVar")
+Interceptor.attach(rtcEnvironVar, {onLeave: function (args) {send("rtcEnvironVar");}});
+
+var rtcErrObj = Module.findExportByName("msvbvm60.dll", "rtcErrObj")
+Interceptor.attach(rtcErrObj, {onLeave: function (args) {send("rtcErrObj");}});
+
+var rtcExp = Module.findExportByName("msvbvm60.dll", "rtcExp")
+Interceptor.attach(rtcExp, {onLeave: function (args) {send("rtcExp");}});
+
+var rtcFV = Module.findExportByName("msvbvm60.dll", "rtcFV")
+Interceptor.attach(rtcFV, {onLeave: function (args) {send("rtcFV");}});
+
+var rtcFileAttributes = Module.findExportByName("msvbvm60.dll", "rtcFileAttributes")
+Interceptor.attach(rtcFileAttributes, {onLeave: function (args) {send("rtcFileAttributes");}});
+
+var rtcFileCopy = Module.findExportByName("msvbvm60.dll", "rtcFileCopy")
+Interceptor.attach(rtcFileCopy, {onLeave: function (args) {send("rtcFileCopy");}});
+
+var rtcFileDateTime = Module.findExportByName("msvbvm60.dll", "rtcFileDateTime")
+Interceptor.attach(rtcFileDateTime, {onLeave: function (args) {send("rtcFileDateTime");}});
+
+var rtcFileLen = Module.findExportByName("msvbvm60.dll", "rtcFileLen")
+Interceptor.attach(rtcFileLen, {onLeave: function (args) {send("rtcFileLen");}});
+
+var rtcFileLength = Module.findExportByName("msvbvm60.dll", "rtcFileLength")
+Interceptor.attach(rtcFileLength, {onLeave: function (args) {send("rtcFileLength");}});
+
+var rtcFileLocation = Module.findExportByName("msvbvm60.dll", "rtcFileLocation")
+Interceptor.attach(rtcFileLocation, {onLeave: function (args) {send("rtcFileLocation");}});
+
+var rtcFileReset = Module.findExportByName("msvbvm60.dll", "rtcFileReset")
+Interceptor.attach(rtcFileReset, {onLeave: function (args) {send("rtcFileReset");}});
+
+var rtcFileSeek = Module.findExportByName("msvbvm60.dll", "rtcFileSeek")
+Interceptor.attach(rtcFileSeek, {onLeave: function (args) {send("rtcFileSeek");}});
+
+var rtcFileWidth = Module.findExportByName("msvbvm60.dll", "rtcFileWidth")
+Interceptor.attach(rtcFileWidth, {onLeave: function (args) {send("rtcFileWidth");}});
+
+var rtcFilter = Module.findExportByName("msvbvm60.dll", "rtcFilter")
+Interceptor.attach(rtcFilter, {onLeave: function (args) {send("rtcFilter");}});
+
+var rtcFixVar = Module.findExportByName("msvbvm60.dll", "rtcFixVar")
+Interceptor.attach(rtcFixVar, {onLeave: function (args) {send("rtcFixVar");}});
+
+var rtcFormatCurrency = Module.findExportByName("msvbvm60.dll", "rtcFormatCurrency")
+Interceptor.attach(rtcFormatCurrency, {onLeave: function (args) {send("rtcFormatCurrency");}});
+
+var rtcFormatDateTime = Module.findExportByName("msvbvm60.dll", "rtcFormatDateTime")
+Interceptor.attach(rtcFormatDateTime, {onLeave: function (args) {send("rtcFormatDateTime");}});
+
+var rtcFormatNumber = Module.findExportByName("msvbvm60.dll", "rtcFormatNumber")
+Interceptor.attach(rtcFormatNumber, {onLeave: function (args) {send("rtcFormatNumber");}});
+
+var rtcFormatPercent = Module.findExportByName("msvbvm60.dll", "rtcFormatPercent")
+Interceptor.attach(rtcFormatPercent, {onLeave: function (args) {send("rtcFormatPercent");}});
+
+var rtcFreeFile = Module.findExportByName("msvbvm60.dll", "rtcFreeFile")
+Interceptor.attach(rtcFreeFile, {onLeave: function (args) {send("rtcFreeFile");}});
+
+var rtcGetAllSettings = Module.findExportByName("msvbvm60.dll", "rtcGetAllSettings")
+Interceptor.attach(rtcGetAllSettings, {onLeave: function (args) {send("rtcGetAllSettings");}});
+
+var rtcGetCurrentCalendar = Module.findExportByName("msvbvm60.dll", "rtcGetCurrentCalendar")
+Interceptor.attach(rtcGetCurrentCalendar, {onLeave: function (args) {send("rtcGetCurrentCalendar");}});
+
+var rtcGetDateBstr = Module.findExportByName("msvbvm60.dll", "rtcGetDateBstr")
+Interceptor.attach(rtcGetDateBstr, {onLeave: function (args) {send("rtcGetDateBstr");}});
+
+var rtcGetDateValue = Module.findExportByName("msvbvm60.dll", "rtcGetDateValue")
+Interceptor.attach(rtcGetDateValue, {onLeave: function (args) {send("rtcGetDateValue");}});
+
+var rtcGetDateVar = Module.findExportByName("msvbvm60.dll", "rtcGetDateVar")
+Interceptor.attach(rtcGetDateVar, {onLeave: function (args) {send("rtcGetDateVar");}});
+
+var rtcGetDayOfMonth = Module.findExportByName("msvbvm60.dll", "rtcGetDayOfMonth")
+Interceptor.attach(rtcGetDayOfMonth, {onLeave: function (args) {send("rtcGetDayOfMonth");}});
+
+var rtcGetDayOfWeek = Module.findExportByName("msvbvm60.dll", "rtcGetDayOfWeek")
+Interceptor.attach(rtcGetDayOfWeek, {onLeave: function (args) {send("rtcGetDayOfWeek");}});
+
+var rtcGetErl = Module.findExportByName("msvbvm60.dll", "rtcGetErl")
+Interceptor.attach(rtcGetErl, {onLeave: function (args) {send("rtcGetErl");}});
+
+var rtcGetFileAttr = Module.findExportByName("msvbvm60.dll", "rtcGetFileAttr")
+Interceptor.attach(rtcGetFileAttr, {onLeave: function (args) {send("rtcGetFileAttr");}});
+
+var rtcGetHostLCID = Module.findExportByName("msvbvm60.dll", "rtcGetHostLCID")
+Interceptor.attach(rtcGetHostLCID, {onLeave: function (args) {send("rtcGetHostLCID");}});
+
+var rtcGetHourOfDay = Module.findExportByName("msvbvm60.dll", "rtcGetHourOfDay")
+Interceptor.attach(rtcGetHourOfDay, {onLeave: function (args) {send("rtcGetHourOfDay");}});
+
+var rtcGetMinuteOfHour = Module.findExportByName("msvbvm60.dll", "rtcGetMinuteOfHour")
+Interceptor.attach(rtcGetMinuteOfHour, {onLeave: function (args) {send("rtcGetMinuteOfHour");}});
+
+var rtcGetMonthOfYear = Module.findExportByName("msvbvm60.dll", "rtcGetMonthOfYear")
+Interceptor.attach(rtcGetMonthOfYear, {onLeave: function (args) {send("rtcGetMonthOfYear");}});
+
+var rtcGetObject = Module.findExportByName("msvbvm60.dll", "rtcGetObject")
+Interceptor.attach(rtcGetObject, {onLeave: function (args) {send("rtcGetObject");}});
+
+var rtcGetPresentDate = Module.findExportByName("msvbvm60.dll", "rtcGetPresentDate")
+Interceptor.attach(rtcGetPresentDate, {onLeave: function (args) {send("rtcGetPresentDate");}});
+
+var rtcGetSecondOfMinute = Module.findExportByName("msvbvm60.dll", "rtcGetSecondOfMinute")
+Interceptor.attach(rtcGetSecondOfMinute, {onLeave: function (args) {send("rtcGetSecondOfMinute");}});
+
+var rtcGetSetting = Module.findExportByName("msvbvm60.dll", "rtcGetSetting")
+Interceptor.attach(rtcGetSetting, {onLeave: function (args) {send("rtcGetSetting");}});
+
+var rtcGetTimeBstr = Module.findExportByName("msvbvm60.dll", "rtcGetTimeBstr")
+Interceptor.attach(rtcGetTimeBstr, {onLeave: function (args) {send("rtcGetTimeBstr");}});
+
+var rtcGetTimeValue = Module.findExportByName("msvbvm60.dll", "rtcGetTimeValue")
+Interceptor.attach(rtcGetTimeValue, {onLeave: function (args) {send("rtcGetTimeValue");}});
+
+var rtcGetTimeVar = Module.findExportByName("msvbvm60.dll", "rtcGetTimeVar")
+Interceptor.attach(rtcGetTimeVar, {onLeave: function (args) {send("rtcGetTimeVar");}});
+
+var rtcGetTimer = Module.findExportByName("msvbvm60.dll", "rtcGetTimer")
+Interceptor.attach(rtcGetTimer, {onLeave: function (args) {send("rtcGetTimer");}});
+
+var rtcGetYear = Module.findExportByName("msvbvm60.dll", "rtcGetYear")
+Interceptor.attach(rtcGetYear, {onLeave: function (args) {send("rtcGetYear");}});
+
+var rtcHexBstrFromVar = Module.findExportByName("msvbvm60.dll", "rtcHexBstrFromVar")
+Interceptor.attach(rtcHexBstrFromVar, {onLeave: function (args) {send("rtcHexBstrFromVar");}});
+
+var rtcHexVarFromVar = Module.findExportByName("msvbvm60.dll", "rtcHexVarFromVar")
+Interceptor.attach(rtcHexVarFromVar, {onLeave: function (args) {send("rtcHexVarFromVar");}});
+
+var rtcIMEStatus = Module.findExportByName("msvbvm60.dll", "rtcIMEStatus")
+Interceptor.attach(rtcIMEStatus, {onLeave: function (args) {send("rtcIMEStatus");}});
+
+var rtcIPMT = Module.findExportByName("msvbvm60.dll", "rtcIPMT")
+Interceptor.attach(rtcIPMT, {onLeave: function (args) {send("rtcIPMT");}});
+
+var rtcIRR = Module.findExportByName("msvbvm60.dll", "rtcIRR")
+Interceptor.attach(rtcIRR, {onLeave: function (args) {send("rtcIRR");}});
+
+var rtcImmediateIf = Module.findExportByName("msvbvm60.dll", "rtcImmediateIf")
+Interceptor.attach(rtcImmediateIf, {onLeave: function (args) {send("rtcImmediateIf");}});
+
+var rtcInStr = Module.findExportByName("msvbvm60.dll", "rtcInStr")
+Interceptor.attach(rtcInStr, {onLeave: function (args) {send("rtcInStr");}});
+
+var rtcInStrChar = Module.findExportByName("msvbvm60.dll", "rtcInStrChar")
+Interceptor.attach(rtcInStrChar, {onLeave: function (args) {send("rtcInStrChar");}});
+
+var rtcInStrRev = Module.findExportByName("msvbvm60.dll", "rtcInStrRev")
+Interceptor.attach(rtcInStrRev, {onLeave: function (args) {send("rtcInStrRev");}});
+
+var rtcInputBox = Module.findExportByName("msvbvm60.dll", "rtcInputBox")
+Interceptor.attach(rtcInputBox, {onLeave: function (args) {send("rtcInputBox");}});
+
+var rtcInputCharCount = Module.findExportByName("msvbvm60.dll", "rtcInputCharCount")
+Interceptor.attach(rtcInputCharCount, {onLeave: function (args) {send("rtcInputCharCount");}});
+
+var rtcInputCharCountVar = Module.findExportByName("msvbvm60.dll", "rtcInputCharCountVar")
+Interceptor.attach(rtcInputCharCountVar, {onLeave: function (args) {send("rtcInputCharCountVar");}});
+
+var rtcInputCount = Module.findExportByName("msvbvm60.dll", "rtcInputCount")
+Interceptor.attach(rtcInputCount, {onLeave: function (args) {send("rtcInputCount");}});
+
+var rtcInputCountVar = Module.findExportByName("msvbvm60.dll", "rtcInputCountVar")
+Interceptor.attach(rtcInputCountVar, {onLeave: function (args) {send("rtcInputCountVar");}});
+
+var rtcIntVar = Module.findExportByName("msvbvm60.dll", "rtcIntVar")
+Interceptor.attach(rtcIntVar, {onLeave: function (args) {send("rtcIntVar");}});
+
+var rtcIsArray = Module.findExportByName("msvbvm60.dll", "rtcIsArray")
+Interceptor.attach(rtcIsArray, {onLeave: function (args) {send("rtcIsArray");}});
+
+var rtcIsDate = Module.findExportByName("msvbvm60.dll", "rtcIsDate")
+Interceptor.attach(rtcIsDate, {onLeave: function (args) {send("rtcIsDate");}});
+
+var rtcIsEmpty = Module.findExportByName("msvbvm60.dll", "rtcIsEmpty")
+Interceptor.attach(rtcIsEmpty, {onLeave: function (args) {send("rtcIsEmpty");}});
+
+var rtcIsError = Module.findExportByName("msvbvm60.dll", "rtcIsError")
+Interceptor.attach(rtcIsError, {onLeave: function (args) {send("rtcIsError");}});
+
+var rtcIsMissing = Module.findExportByName("msvbvm60.dll", "rtcIsMissing")
+Interceptor.attach(rtcIsMissing, {onLeave: function (args) {send("rtcIsMissing");}});
+
+var rtcIsNull = Module.findExportByName("msvbvm60.dll", "rtcIsNull")
+Interceptor.attach(rtcIsNull, {onLeave: function (args) {send("rtcIsNull");}});
+
+var rtcIsNumeric = Module.findExportByName("msvbvm60.dll", "rtcIsNumeric")
+Interceptor.attach(rtcIsNumeric, {onLeave: function (args) {send("rtcIsNumeric");}});
+
+var rtcIsObject = Module.findExportByName("msvbvm60.dll", "rtcIsObject")
+Interceptor.attach(rtcIsObject, {onLeave: function (args) {send("rtcIsObject");}});
+
+var rtcJoin = Module.findExportByName("msvbvm60.dll", "rtcJoin")
+Interceptor.attach(rtcJoin, {onLeave: function (args) {send("rtcJoin");}});
+
+var rtcKillFiles = Module.findExportByName("msvbvm60.dll", "rtcKillFiles")
+Interceptor.attach(rtcKillFiles, {onLeave: function (args) {send("rtcKillFiles");}});
+
+var rtcLeftBstr = Module.findExportByName("msvbvm60.dll", "rtcLeftBstr")
+Interceptor.attach(rtcLeftBstr, {onLeave: function (args) {send("rtcLeftBstr");}});
+
+var rtcLeftCharBstr = Module.findExportByName("msvbvm60.dll", "rtcLeftCharBstr")
+Interceptor.attach(rtcLeftCharBstr, {onLeave: function (args) {send("rtcLeftCharBstr");}});
+
+var rtcLeftCharVar = Module.findExportByName("msvbvm60.dll", "rtcLeftCharVar")
+Interceptor.attach(rtcLeftCharVar, {onLeave: function (args) {send("rtcLeftCharVar");}});
+
+var rtcLeftTrimBstr = Module.findExportByName("msvbvm60.dll", "rtcLeftTrimBstr")
+Interceptor.attach(rtcLeftTrimBstr, {onLeave: function (args) {send("rtcLeftTrimBstr");}});
+
+var rtcLeftTrimVar = Module.findExportByName("msvbvm60.dll", "rtcLeftTrimVar")
+Interceptor.attach(rtcLeftTrimVar, {onLeave: function (args) {send("rtcLeftTrimVar");}});
+
+var rtcLeftVar = Module.findExportByName("msvbvm60.dll", "rtcLeftVar")
+Interceptor.attach(rtcLeftVar, {onLeave: function (args) {send("rtcLeftVar");}});
+
+var rtcLenCharVar = Module.findExportByName("msvbvm60.dll", "rtcLenCharVar")
+Interceptor.attach(rtcLenCharVar, {onLeave: function (args) {send("rtcLenCharVar");}});
+
+var rtcLenVar = Module.findExportByName("msvbvm60.dll", "rtcLenVar")
+Interceptor.attach(rtcLenVar, {onLeave: function (args) {send("rtcLenVar");}});
+
+var rtcLog = Module.findExportByName("msvbvm60.dll", "rtcLog")
+Interceptor.attach(rtcLog, {onLeave: function (args) {send("rtcLog");}});
+
+var rtcLowerCaseBstr = Module.findExportByName("msvbvm60.dll", "rtcLowerCaseBstr")
+Interceptor.attach(rtcLowerCaseBstr, {onLeave: function (args) {send("rtcLowerCaseBstr");}});
+
+var rtcLowerCaseVar = Module.findExportByName("msvbvm60.dll", "rtcLowerCaseVar")
+Interceptor.attach(rtcLowerCaseVar, {onLeave: function (args) {send("rtcLowerCaseVar");}});
+
+var rtcMIRR = Module.findExportByName("msvbvm60.dll", "rtcMIRR")
+Interceptor.attach(rtcMIRR, {onLeave: function (args) {send("rtcMIRR");}});
+
+var rtcMacId = Module.findExportByName("msvbvm60.dll", "rtcMacId")
+Interceptor.attach(rtcMacId, {onLeave: function (args) {send("rtcMacId");}});
+
+var rtcMakeDir = Module.findExportByName("msvbvm60.dll", "rtcMakeDir")
+Interceptor.attach(rtcMakeDir, {onLeave: function (args) {send("rtcMakeDir");}});
+
+var rtcMidBstr = Module.findExportByName("msvbvm60.dll", "rtcMidBstr")
+Interceptor.attach(rtcMidBstr, {onLeave: function (args) {send("rtcMidBstr");}});
+
+var rtcMidCharBstr = Module.findExportByName("msvbvm60.dll", "rtcMidCharBstr")
+Interceptor.attach(rtcMidCharBstr, {onLeave: function (args) {send("rtcMidCharBstr");}});
+
+var rtcMidCharVar = Module.findExportByName("msvbvm60.dll", "rtcMidCharVar")
+Interceptor.attach(rtcMidCharVar, {onLeave: function (args) {send("rtcMidCharVar");}});
+
+var rtcMidVar = Module.findExportByName("msvbvm60.dll", "rtcMidVar")
+Interceptor.attach(rtcMidVar, {onLeave: function (args) {send("rtcMidVar");}});
+
+var rtcMonthName = Module.findExportByName("msvbvm60.dll", "rtcMonthName")
+Interceptor.attach(rtcMonthName, {onLeave: function (args) {send("rtcMonthName");}});
+
+var rtcMsgBox = Module.findExportByName("msvbvm60.dll", "rtcMsgBox")
+Interceptor.attach(rtcMsgBox, {onLeave: function (args) {send("rtcMsgBox");}});
+
+var rtcNPV = Module.findExportByName("msvbvm60.dll", "rtcNPV")
+Interceptor.attach(rtcNPV, {onLeave: function (args) {send("rtcNPV");}});
+
+var rtcNPer = Module.findExportByName("msvbvm60.dll", "rtcNPer")
+Interceptor.attach(rtcNPer, {onLeave: function (args) {send("rtcNPer");}});
+
+var rtcOctBstrFromVar = Module.findExportByName("msvbvm60.dll", "rtcOctBstrFromVar")
+Interceptor.attach(rtcOctBstrFromVar, {onLeave: function (args) {send("rtcOctBstrFromVar");}});
+
+var rtcOctVarFromVar = Module.findExportByName("msvbvm60.dll", "rtcOctVarFromVar")
+Interceptor.attach(rtcOctVarFromVar, {onLeave: function (args) {send("rtcOctVarFromVar");}});
+
+var rtcPMT = Module.findExportByName("msvbvm60.dll", "rtcPMT")
+Interceptor.attach(rtcPMT, {onLeave: function (args) {send("rtcPMT");}});
+
+var rtcPPMT = Module.findExportByName("msvbvm60.dll", "rtcPPMT")
+Interceptor.attach(rtcPPMT, {onLeave: function (args) {send("rtcPPMT");}});
+
+var rtcPV = Module.findExportByName("msvbvm60.dll", "rtcPV")
+Interceptor.attach(rtcPV, {onLeave: function (args) {send("rtcPV");}});
+
+var rtcPackDate = Module.findExportByName("msvbvm60.dll", "rtcPackDate")
+Interceptor.attach(rtcPackDate, {onLeave: function (args) {send("rtcPackDate");}});
+
+var rtcPackTime = Module.findExportByName("msvbvm60.dll", "rtcPackTime")
+Interceptor.attach(rtcPackTime, {onLeave: function (args) {send("rtcPackTime");}});
+
+var rtcPartition = Module.findExportByName("msvbvm60.dll", "rtcPartition")
+Interceptor.attach(rtcPartition, {onLeave: function (args) {send("rtcPartition");}});
+
+var rtcQBColor = Module.findExportByName("msvbvm60.dll", "rtcQBColor")
+Interceptor.attach(rtcQBColor, {onLeave: function (args) {send("rtcQBColor");}});
+
+var rtcR8ValFromBstr = Module.findExportByName("msvbvm60.dll", "rtcR8ValFromBstr")
+Interceptor.attach(rtcR8ValFromBstr, {onLeave: function (args) {send("rtcR8ValFromBstr");}});
+
+var rtcRandomNext = Module.findExportByName("msvbvm60.dll", "rtcRandomNext")
+Interceptor.attach(rtcRandomNext, {onLeave: function (args) {send("rtcRandomNext");}});
+
+var rtcRandomize = Module.findExportByName("msvbvm60.dll", "rtcRandomize")
+Interceptor.attach(rtcRandomize, {onLeave: function (args) {send("rtcRandomize");}});
+
+var rtcRate = Module.findExportByName("msvbvm60.dll", "rtcRate")
+Interceptor.attach(rtcRate, {onLeave: function (args) {send("rtcRate");}});
+
+var rtcRemoveDir = Module.findExportByName("msvbvm60.dll", "rtcRemoveDir")
+Interceptor.attach(rtcRemoveDir, {onLeave: function (args) {send("rtcRemoveDir");}});
+
+var rtcReplace = Module.findExportByName("msvbvm60.dll", "rtcReplace")
+Interceptor.attach(rtcReplace, {onLeave: function (args) {send("rtcReplace");}});
+
+var rtcRgb = Module.findExportByName("msvbvm60.dll", "rtcRgb")
+Interceptor.attach(rtcRgb, {onLeave: function (args) {send("rtcRgb");}});
+
+var rtcRightBstr = Module.findExportByName("msvbvm60.dll", "rtcRightBstr")
+Interceptor.attach(rtcRightBstr, {onLeave: function (args) {send("rtcRightBstr");}});
+
+var rtcRightCharBstr = Module.findExportByName("msvbvm60.dll", "rtcRightCharBstr")
+Interceptor.attach(rtcRightCharBstr, {onLeave: function (args) {send("rtcRightCharBstr");}});
+
+var rtcRightCharVar = Module.findExportByName("msvbvm60.dll", "rtcRightCharVar")
+Interceptor.attach(rtcRightCharVar, {onLeave: function (args) {send("rtcRightCharVar");}});
+
+var rtcRightTrimBstr = Module.findExportByName("msvbvm60.dll", "rtcRightTrimBstr")
+Interceptor.attach(rtcRightTrimBstr, {onLeave: function (args) {send("rtcRightTrimBstr");}});
+
+var rtcRightTrimVar = Module.findExportByName("msvbvm60.dll", "rtcRightTrimVar")
+Interceptor.attach(rtcRightTrimVar, {onLeave: function (args) {send("rtcRightTrimVar");}});
+
+var rtcRightVar = Module.findExportByName("msvbvm60.dll", "rtcRightVar")
+Interceptor.attach(rtcRightVar, {onLeave: function (args) {send("rtcRightVar");}});
+
+var rtcRound = Module.findExportByName("msvbvm60.dll", "rtcRound")
+Interceptor.attach(rtcRound, {onLeave: function (args) {send("rtcRound");}});
+
+var rtcSLN = Module.findExportByName("msvbvm60.dll", "rtcSLN")
+Interceptor.attach(rtcSLN, {onLeave: function (args) {send("rtcSLN");}});
+
+var rtcSYD = Module.findExportByName("msvbvm60.dll", "rtcSYD")
+Interceptor.attach(rtcSYD, {onLeave: function (args) {send("rtcSYD");}});
+
+var rtcSaveSetting = Module.findExportByName("msvbvm60.dll", "rtcSaveSetting")
+Interceptor.attach(rtcSaveSetting, {onLeave: function (args) {send("rtcSaveSetting");}});
+
+var rtcSendKeys = Module.findExportByName("msvbvm60.dll", "rtcSendKeys")
+Interceptor.attach(rtcSendKeys, {onLeave: function (args) {send("rtcSendKeys");}});
+
+var rtcSetCurrentCalendar = Module.findExportByName("msvbvm60.dll", "rtcSetCurrentCalendar")
+Interceptor.attach(rtcSetCurrentCalendar, {onLeave: function (args) {send("rtcSetCurrentCalendar");}});
+
+var rtcSetDateBstr = Module.findExportByName("msvbvm60.dll", "rtcSetDateBstr")
+Interceptor.attach(rtcSetDateBstr, {onLeave: function (args) {send("rtcSetDateBstr");}});
+
+var rtcSetDateVar = Module.findExportByName("msvbvm60.dll", "rtcSetDateVar")
+Interceptor.attach(rtcSetDateVar, {onLeave: function (args) {send("rtcSetDateVar");}});
+
+var rtcSetFileAttr = Module.findExportByName("msvbvm60.dll", "rtcSetFileAttr")
+Interceptor.attach(rtcSetFileAttr, {onLeave: function (args) {send("rtcSetFileAttr");}});
+
+var rtcSetTimeBstr = Module.findExportByName("msvbvm60.dll", "rtcSetTimeBstr")
+Interceptor.attach(rtcSetTimeBstr, {onLeave: function (args) {send("rtcSetTimeBstr");}});
+
+var rtcSetTimeVar = Module.findExportByName("msvbvm60.dll", "rtcSetTimeVar")
+Interceptor.attach(rtcSetTimeVar, {onLeave: function (args) {send("rtcSetTimeVar");}});
+
+var rtcSgnVar = Module.findExportByName("msvbvm60.dll", "rtcSgnVar")
+Interceptor.attach(rtcSgnVar, {onLeave: function (args) {send("rtcSgnVar");}});
+
+var rtcShell = Module.findExportByName("msvbvm60.dll", "rtcShell")
+Interceptor.attach(rtcShell, {onLeave: function (args) {send("rtcShell");}});
+
+var rtcSin = Module.findExportByName("msvbvm60.dll", "rtcSin")
+Interceptor.attach(rtcSin, {onLeave: function (args) {send("rtcSin");}});
+
+var rtcSpaceBstr = Module.findExportByName("msvbvm60.dll", "rtcSpaceBstr")
+Interceptor.attach(rtcSpaceBstr, {onLeave: function (args) {send("rtcSpaceBstr");}});
+
+var rtcSpaceVar = Module.findExportByName("msvbvm60.dll", "rtcSpaceVar")
+Interceptor.attach(rtcSpaceVar, {onLeave: function (args) {send("rtcSpaceVar");}});
+
+var rtcSplit = Module.findExportByName("msvbvm60.dll", "rtcSplit")
+Interceptor.attach(rtcSplit, {onLeave: function (args) {send("rtcSplit");}});
+
+var rtcSqr = Module.findExportByName("msvbvm60.dll", "rtcSqr")
+Interceptor.attach(rtcSqr, {onLeave: function (args) {send("rtcSqr");}});
+
+var rtcStrConvVar = Module.findExportByName("msvbvm60.dll", "rtcStrConvVar")
+Interceptor.attach(rtcStrConvVar, {onLeave: function (args) {send("rtcStrConvVar");}});
+
+var rtcStrConvVar2 = Module.findExportByName("msvbvm60.dll", "rtcStrConvVar2")
+Interceptor.attach(rtcStrConvVar2, {onLeave: function (args) {send("rtcStrConvVar2");}});
+
+var rtcStrFromVar = Module.findExportByName("msvbvm60.dll", "rtcStrFromVar")
+Interceptor.attach(rtcStrFromVar, {onLeave: function (args) {send("rtcStrFromVar");}});
+
+var rtcStrReverse = Module.findExportByName("msvbvm60.dll", "rtcStrReverse")
+Interceptor.attach(rtcStrReverse, {onLeave: function (args) {send("rtcStrReverse");}});
+
+var rtcStringBstr = Module.findExportByName("msvbvm60.dll", "rtcStringBstr")
+Interceptor.attach(rtcStringBstr, {onLeave: function (args) {send("rtcStringBstr");}});
+
+var rtcStringVar = Module.findExportByName("msvbvm60.dll", "rtcStringVar")
+Interceptor.attach(rtcStringVar, {onLeave: function (args) {send("rtcStringVar");}});
+
+var rtcSwitch = Module.findExportByName("msvbvm60.dll", "rtcSwitch")
+Interceptor.attach(rtcSwitch, {onLeave: function (args) {send("rtcSwitch");}});
+
+var rtcTan = Module.findExportByName("msvbvm60.dll", "rtcTan")
+Interceptor.attach(rtcTan, {onLeave: function (args) {send("rtcTan");}});
+
+var rtcTrimBstr = Module.findExportByName("msvbvm60.dll", "rtcTrimBstr")
+Interceptor.attach(rtcTrimBstr, {onLeave: function (args) {send("rtcTrimBstr");}});
+
+var rtcTrimVar = Module.findExportByName("msvbvm60.dll", "rtcTrimVar")
+Interceptor.attach(rtcTrimVar, {onLeave: function (args) {send("rtcTrimVar");}});
+
+var rtcTypeName = Module.findExportByName("msvbvm60.dll", "rtcTypeName")
+Interceptor.attach(rtcTypeName, {onLeave: function (args) {send("rtcTypeName");}});
+
+var rtcUpperCaseBstr = Module.findExportByName("msvbvm60.dll", "rtcUpperCaseBstr")
+Interceptor.attach(rtcUpperCaseBstr, {onLeave: function (args) {send("rtcUpperCaseBstr");}});
+
+var rtcUpperCaseVar = Module.findExportByName("msvbvm60.dll", "rtcUpperCaseVar")
+Interceptor.attach(rtcUpperCaseVar, {onLeave: function (args) {send("rtcUpperCaseVar");}});
+
+var rtcVarBstrFromAnsi = Module.findExportByName("msvbvm60.dll", "rtcVarBstrFromAnsi")
+Interceptor.attach(rtcVarBstrFromAnsi, {onLeave: function (args) {send("rtcVarBstrFromAnsi");}});
+
+var rtcVarBstrFromByte = Module.findExportByName("msvbvm60.dll", "rtcVarBstrFromByte")
+Interceptor.attach(rtcVarBstrFromByte, {onLeave: function (args) {send("rtcVarBstrFromByte");}});
+
+var rtcVarBstrFromChar = Module.findExportByName("msvbvm60.dll", "rtcVarBstrFromChar")
+Interceptor.attach(rtcVarBstrFromChar, {onLeave: function (args) {send("rtcVarBstrFromChar");}});
+
+var rtcVarDateFromVar = Module.findExportByName("msvbvm60.dll", "rtcVarDateFromVar")
+Interceptor.attach(rtcVarDateFromVar, {onLeave: function (args) {send("rtcVarDateFromVar");}});
+
+var rtcVarFromError = Module.findExportByName("msvbvm60.dll", "rtcVarFromError")
+Interceptor.attach(rtcVarFromError, {onLeave: function (args) {send("rtcVarFromError");}});
+
+var rtcVarFromFormatVar = Module.findExportByName("msvbvm60.dll", "rtcVarFromFormatVar")
+Interceptor.attach(rtcVarFromFormatVar, {onLeave: function (args) {send("rtcVarFromFormatVar");}});
+
+var rtcVarFromVar = Module.findExportByName("msvbvm60.dll", "rtcVarFromVar")
+Interceptor.attach(rtcVarFromVar, {onLeave: function (args) {send("rtcVarFromVar");}});
+
+var rtcVarStrFromVar = Module.findExportByName("msvbvm60.dll", "rtcVarStrFromVar")
+Interceptor.attach(rtcVarStrFromVar, {onLeave: function (args) {send("rtcVarStrFromVar");}});
+
+var rtcVarType = Module.findExportByName("msvbvm60.dll", "rtcVarType")
+Interceptor.attach(rtcVarType, {onLeave: function (args) {send("rtcVarType");}});
+
+var rtcWeekdayName = Module.findExportByName("msvbvm60.dll", "rtcWeekdayName")
+Interceptor.attach(rtcWeekdayName, {onLeave: function (args) {send("rtcWeekdayName");}});
+

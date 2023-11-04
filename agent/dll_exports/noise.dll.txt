@@ -1,0 +1,21 @@
+var NoiseCloseHandle = Module.findExportByName("noise.dll", "NoiseCloseHandle")
+Interceptor.attach(NoiseCloseHandle, {onLeave: function (args) {send("NoiseCloseHandle");}});
+
+var NoiseHandshakeGetHash = Module.findExportByName("noise.dll", "NoiseHandshakeGetHash")
+Interceptor.attach(NoiseHandshakeGetHash, {onLeave: function (args) {send("NoiseHandshakeGetHash");}});
+
+var NoiseHandshakeInitialize = Module.findExportByName("noise.dll", "NoiseHandshakeInitialize")
+Interceptor.attach(NoiseHandshakeInitialize, {onLeave: function (args) {send("NoiseHandshakeInitialize");}});
+
+var NoiseHandshakeProcessMessage = Module.findExportByName("noise.dll", "NoiseHandshakeProcessMessage")
+Interceptor.attach(NoiseHandshakeProcessMessage, {onLeave: function (args) {send("NoiseHandshakeProcessMessage");}});
+
+var NoiseOpenHandle = Module.findExportByName("noise.dll", "NoiseOpenHandle")
+Interceptor.attach(NoiseOpenHandle, {onLeave: function (args) {send("NoiseOpenHandle");}});
+
+var NoiseTransportMesssageDecrypt = Module.findExportByName("noise.dll", "NoiseTransportMesssageDecrypt")
+Interceptor.attach(NoiseTransportMesssageDecrypt, {onLeave: function (args) {send("NoiseTransportMesssageDecrypt");}});
+
+var NoiseTransportMesssageEncrypt = Module.findExportByName("noise.dll", "NoiseTransportMesssageEncrypt")
+Interceptor.attach(NoiseTransportMesssageEncrypt, {onLeave: function (args) {send("NoiseTransportMesssageEncrypt");}});
+

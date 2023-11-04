@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("puiobj.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("puiobj.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("puiobj.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("puiobj.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

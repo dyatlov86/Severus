@@ -1,0 +1,33 @@
+var DllCanUnloadNow = Module.findExportByName("netcfgx.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("netcfgx.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("netcfgx.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("netcfgx.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var LanaCfgFromCommandArgs = Module.findExportByName("netcfgx.dll", "LanaCfgFromCommandArgs")
+Interceptor.attach(LanaCfgFromCommandArgs, {onLeave: function (args) {send("LanaCfgFromCommandArgs");}});
+
+var NetCfgDiagFromCommandArgs = Module.findExportByName("netcfgx.dll", "NetCfgDiagFromCommandArgs")
+Interceptor.attach(NetCfgDiagFromCommandArgs, {onLeave: function (args) {send("NetCfgDiagFromCommandArgs");}});
+
+var NetCfgDiagRepairRegistryBindings = Module.findExportByName("netcfgx.dll", "NetCfgDiagRepairRegistryBindings")
+Interceptor.attach(NetCfgDiagRepairRegistryBindings, {onLeave: function (args) {send("NetCfgDiagRepairRegistryBindings");}});
+
+var NetClassInstaller = Module.findExportByName("netcfgx.dll", "NetClassInstaller")
+Interceptor.attach(NetClassInstaller, {onLeave: function (args) {send("NetClassInstaller");}});
+
+var NetPropPageProvider = Module.findExportByName("netcfgx.dll", "NetPropPageProvider")
+Interceptor.attach(NetPropPageProvider, {onLeave: function (args) {send("NetPropPageProvider");}});
+
+var OnMachineUILanguageInit = Module.findExportByName("netcfgx.dll", "OnMachineUILanguageInit")
+Interceptor.attach(OnMachineUILanguageInit, {onLeave: function (args) {send("OnMachineUILanguageInit");}});
+
+var OnMachineUILanguageSwitch = Module.findExportByName("netcfgx.dll", "OnMachineUILanguageSwitch")
+Interceptor.attach(OnMachineUILanguageSwitch, {onLeave: function (args) {send("OnMachineUILanguageSwitch");}});
+

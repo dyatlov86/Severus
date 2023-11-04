@@ -1,0 +1,6 @@
+var ServiceMain = Module.findExportByName("DiagSvc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("DiagSvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

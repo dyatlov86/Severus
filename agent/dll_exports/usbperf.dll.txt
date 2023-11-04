@@ -1,0 +1,9 @@
+var CloseUsbPerformanceData = Module.findExportByName("usbperf.dll", "CloseUsbPerformanceData")
+Interceptor.attach(CloseUsbPerformanceData, {onLeave: function (args) {send("CloseUsbPerformanceData");}});
+
+var CollectUsbPerformanceData = Module.findExportByName("usbperf.dll", "CollectUsbPerformanceData")
+Interceptor.attach(CollectUsbPerformanceData, {onLeave: function (args) {send("CollectUsbPerformanceData");}});
+
+var OpenUsbPerformanceData = Module.findExportByName("usbperf.dll", "OpenUsbPerformanceData")
+Interceptor.attach(OpenUsbPerformanceData, {onLeave: function (args) {send("OpenUsbPerformanceData");}});
+

@@ -1,0 +1,15 @@
+var OrtGetApiBase = Module.findExportByName("onnxruntime.dll", "OrtGetApiBase")
+Interceptor.attach(OrtGetApiBase, {onLeave: function (args) {send("OrtGetApiBase");}});
+
+var OrtGetWinMLAdapter = Module.findExportByName("onnxruntime.dll", "OrtGetWinMLAdapter")
+Interceptor.attach(OrtGetWinMLAdapter, {onLeave: function (args) {send("OrtGetWinMLAdapter");}});
+
+var OrtSessionOptionsAppendExecutionProviderEx_DML = Module.findExportByName("onnxruntime.dll", "OrtSessionOptionsAppendExecutionProviderEx_DML")
+Interceptor.attach(OrtSessionOptionsAppendExecutionProviderEx_DML, {onLeave: function (args) {send("OrtSessionOptionsAppendExecutionProviderEx_DML");}});
+
+var OrtSessionOptionsAppendExecutionProvider_CPU = Module.findExportByName("onnxruntime.dll", "OrtSessionOptionsAppendExecutionProvider_CPU")
+Interceptor.attach(OrtSessionOptionsAppendExecutionProvider_CPU, {onLeave: function (args) {send("OrtSessionOptionsAppendExecutionProvider_CPU");}});
+
+var OrtSessionOptionsAppendExecutionProvider_DML = Module.findExportByName("onnxruntime.dll", "OrtSessionOptionsAppendExecutionProvider_DML")
+Interceptor.attach(OrtSessionOptionsAppendExecutionProvider_DML, {onLeave: function (args) {send("OrtSessionOptionsAppendExecutionProvider_DML");}});
+

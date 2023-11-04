@@ -1,0 +1,42 @@
+var MI_Main = Module.findExportByName("mpunits.dll", "MI_Main")
+Interceptor.attach(MI_Main, {onLeave: function (args) {send("MI_Main");}});
+
+var MPUnitsTraps = Module.findExportByName("mpunits.dll", "MPUnitsTraps")
+Interceptor.attach(MPUnitsTraps, {onLeave: function (args) {send("MPUnitsTraps");}});
+
+var NITS_PRESENCE_STUB = Module.findExportByName("mpunits.dll", "NITS_PRESENCE_STUB")
+Interceptor.attach(NITS_PRESENCE_STUB, {onLeave: function (args) {send("NITS_PRESENCE_STUB");}});
+
+var NITS_STUB = Module.findExportByName("mpunits.dll", "NITS_STUB")
+Interceptor.attach(NITS_STUB, {onLeave: function (args) {send("NITS_STUB");}});
+
+var SyncBmilReader_Create = Module.findExportByName("mpunits.dll", "SyncBmilReader_Create")
+Interceptor.attach(SyncBmilReader_Create, {onLeave: function (args) {send("SyncBmilReader_Create");}});
+
+var SyncBmilReader_Delete = Module.findExportByName("mpunits.dll", "SyncBmilReader_Delete")
+Interceptor.attach(SyncBmilReader_Delete, {onLeave: function (args) {send("SyncBmilReader_Delete");}});
+
+var SyncBmilReader_ReadInstance = Module.findExportByName("mpunits.dll", "SyncBmilReader_ReadInstance")
+Interceptor.attach(SyncBmilReader_ReadInstance, {onLeave: function (args) {send("SyncBmilReader_ReadInstance");}});
+
+var SyncBmilWriter_Create = Module.findExportByName("mpunits.dll", "SyncBmilWriter_Create")
+Interceptor.attach(SyncBmilWriter_Create, {onLeave: function (args) {send("SyncBmilWriter_Create");}});
+
+var SyncBmilWriter_Delete = Module.findExportByName("mpunits.dll", "SyncBmilWriter_Delete")
+Interceptor.attach(SyncBmilWriter_Delete, {onLeave: function (args) {send("SyncBmilWriter_Delete");}});
+
+var SyncBmilWriter_WriteInstance = Module.findExportByName("mpunits.dll", "SyncBmilWriter_WriteInstance")
+Interceptor.attach(SyncBmilWriter_WriteInstance, {onLeave: function (args) {send("SyncBmilWriter_WriteInstance");}});
+
+var _BinaryLogReader_GetNextInstance = Module.findExportByName("mpunits.dll", "_BinaryLogReader_GetNextInstance")
+Interceptor.attach(_BinaryLogReader_GetNextInstance, {onLeave: function (args) {send("_BinaryLogReader_GetNextInstance");}});
+
+var _BinaryLogReader_ValidateHeader = Module.findExportByName("mpunits.dll", "_BinaryLogReader_ValidateHeader")
+Interceptor.attach(_BinaryLogReader_ValidateHeader, {onLeave: function (args) {send("_BinaryLogReader_ValidateHeader");}});
+
+var monitoring_platformFT_V1 = Module.findExportByName("mpunits.dll", "monitoring_platformFT_V1")
+Interceptor.attach(monitoring_platformFT_V1, {onLeave: function (args) {send("monitoring_platformFT_V1");}});
+
+var monitoring_platform_reactive_extensionsFT_V1 = Module.findExportByName("mpunits.dll", "monitoring_platform_reactive_extensionsFT_V1")
+Interceptor.attach(monitoring_platform_reactive_extensionsFT_V1, {onLeave: function (args) {send("monitoring_platform_reactive_extensionsFT_V1");}});
+

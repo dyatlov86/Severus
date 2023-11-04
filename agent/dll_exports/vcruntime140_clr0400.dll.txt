@@ -1,0 +1,213 @@
+var _CreateFrameInfo = Module.findExportByName("vcruntime140_clr0400.dll", "_CreateFrameInfo")
+Interceptor.attach(_CreateFrameInfo, {onLeave: function (args) {send("_CreateFrameInfo");}});
+
+var _CxxThrowException = Module.findExportByName("vcruntime140_clr0400.dll", "_CxxThrowException")
+Interceptor.attach(_CxxThrowException, {onLeave: function (args) {send("_CxxThrowException");}});
+
+var _FindAndUnlinkFrame = Module.findExportByName("vcruntime140_clr0400.dll", "_FindAndUnlinkFrame")
+Interceptor.attach(_FindAndUnlinkFrame, {onLeave: function (args) {send("_FindAndUnlinkFrame");}});
+
+var _IsExceptionObjectToBeDestroyed = Module.findExportByName("vcruntime140_clr0400.dll", "_IsExceptionObjectToBeDestroyed")
+Interceptor.attach(_IsExceptionObjectToBeDestroyed, {onLeave: function (args) {send("_IsExceptionObjectToBeDestroyed");}});
+
+var _SetWinRTOutOfMemoryExceptionCallback = Module.findExportByName("vcruntime140_clr0400.dll", "_SetWinRTOutOfMemoryExceptionCallback")
+Interceptor.attach(_SetWinRTOutOfMemoryExceptionCallback, {onLeave: function (args) {send("_SetWinRTOutOfMemoryExceptionCallback");}});
+
+var __AdjustPointer = Module.findExportByName("vcruntime140_clr0400.dll", "__AdjustPointer")
+Interceptor.attach(__AdjustPointer, {onLeave: function (args) {send("__AdjustPointer");}});
+
+var __BuildCatchObject = Module.findExportByName("vcruntime140_clr0400.dll", "__BuildCatchObject")
+Interceptor.attach(__BuildCatchObject, {onLeave: function (args) {send("__BuildCatchObject");}});
+
+var __BuildCatchObjectHelper = Module.findExportByName("vcruntime140_clr0400.dll", "__BuildCatchObjectHelper")
+Interceptor.attach(__BuildCatchObjectHelper, {onLeave: function (args) {send("__BuildCatchObjectHelper");}});
+
+var __C_specific_handler = Module.findExportByName("vcruntime140_clr0400.dll", "__C_specific_handler")
+Interceptor.attach(__C_specific_handler, {onLeave: function (args) {send("__C_specific_handler");}});
+
+var __C_specific_handler_noexcept = Module.findExportByName("vcruntime140_clr0400.dll", "__C_specific_handler_noexcept")
+Interceptor.attach(__C_specific_handler_noexcept, {onLeave: function (args) {send("__C_specific_handler_noexcept");}});
+
+var __CxxDetectRethrow = Module.findExportByName("vcruntime140_clr0400.dll", "__CxxDetectRethrow")
+Interceptor.attach(__CxxDetectRethrow, {onLeave: function (args) {send("__CxxDetectRethrow");}});
+
+var __CxxExceptionFilter = Module.findExportByName("vcruntime140_clr0400.dll", "__CxxExceptionFilter")
+Interceptor.attach(__CxxExceptionFilter, {onLeave: function (args) {send("__CxxExceptionFilter");}});
+
+var __CxxFrameHandler = Module.findExportByName("vcruntime140_clr0400.dll", "__CxxFrameHandler")
+Interceptor.attach(__CxxFrameHandler, {onLeave: function (args) {send("__CxxFrameHandler");}});
+
+var __CxxFrameHandler2 = Module.findExportByName("vcruntime140_clr0400.dll", "__CxxFrameHandler2")
+Interceptor.attach(__CxxFrameHandler2, {onLeave: function (args) {send("__CxxFrameHandler2");}});
+
+var __CxxFrameHandler3 = Module.findExportByName("vcruntime140_clr0400.dll", "__CxxFrameHandler3")
+Interceptor.attach(__CxxFrameHandler3, {onLeave: function (args) {send("__CxxFrameHandler3");}});
+
+var __CxxQueryExceptionSize = Module.findExportByName("vcruntime140_clr0400.dll", "__CxxQueryExceptionSize")
+Interceptor.attach(__CxxQueryExceptionSize, {onLeave: function (args) {send("__CxxQueryExceptionSize");}});
+
+var __CxxRegisterExceptionObject = Module.findExportByName("vcruntime140_clr0400.dll", "__CxxRegisterExceptionObject")
+Interceptor.attach(__CxxRegisterExceptionObject, {onLeave: function (args) {send("__CxxRegisterExceptionObject");}});
+
+var __CxxUnregisterExceptionObject = Module.findExportByName("vcruntime140_clr0400.dll", "__CxxUnregisterExceptionObject")
+Interceptor.attach(__CxxUnregisterExceptionObject, {onLeave: function (args) {send("__CxxUnregisterExceptionObject");}});
+
+var __DestructExceptionObject = Module.findExportByName("vcruntime140_clr0400.dll", "__DestructExceptionObject")
+Interceptor.attach(__DestructExceptionObject, {onLeave: function (args) {send("__DestructExceptionObject");}});
+
+var __FrameUnwindFilter = Module.findExportByName("vcruntime140_clr0400.dll", "__FrameUnwindFilter")
+Interceptor.attach(__FrameUnwindFilter, {onLeave: function (args) {send("__FrameUnwindFilter");}});
+
+var __GetPlatformExceptionInfo = Module.findExportByName("vcruntime140_clr0400.dll", "__GetPlatformExceptionInfo")
+Interceptor.attach(__GetPlatformExceptionInfo, {onLeave: function (args) {send("__GetPlatformExceptionInfo");}});
+
+var __NLG_Dispatch2 = Module.findExportByName("vcruntime140_clr0400.dll", "__NLG_Dispatch2")
+Interceptor.attach(__NLG_Dispatch2, {onLeave: function (args) {send("__NLG_Dispatch2");}});
+
+var __NLG_Return2 = Module.findExportByName("vcruntime140_clr0400.dll", "__NLG_Return2")
+Interceptor.attach(__NLG_Return2, {onLeave: function (args) {send("__NLG_Return2");}});
+
+var __RTCastToVoid = Module.findExportByName("vcruntime140_clr0400.dll", "__RTCastToVoid")
+Interceptor.attach(__RTCastToVoid, {onLeave: function (args) {send("__RTCastToVoid");}});
+
+var __RTDynamicCast = Module.findExportByName("vcruntime140_clr0400.dll", "__RTDynamicCast")
+Interceptor.attach(__RTDynamicCast, {onLeave: function (args) {send("__RTDynamicCast");}});
+
+var __RTtypeid = Module.findExportByName("vcruntime140_clr0400.dll", "__RTtypeid")
+Interceptor.attach(__RTtypeid, {onLeave: function (args) {send("__RTtypeid");}});
+
+var __TypeMatch = Module.findExportByName("vcruntime140_clr0400.dll", "__TypeMatch")
+Interceptor.attach(__TypeMatch, {onLeave: function (args) {send("__TypeMatch");}});
+
+var __current_exception = Module.findExportByName("vcruntime140_clr0400.dll", "__current_exception")
+Interceptor.attach(__current_exception, {onLeave: function (args) {send("__current_exception");}});
+
+var __current_exception_context = Module.findExportByName("vcruntime140_clr0400.dll", "__current_exception_context")
+Interceptor.attach(__current_exception_context, {onLeave: function (args) {send("__current_exception_context");}});
+
+var __intrinsic_setjmp = Module.findExportByName("vcruntime140_clr0400.dll", "__intrinsic_setjmp")
+Interceptor.attach(__intrinsic_setjmp, {onLeave: function (args) {send("__intrinsic_setjmp");}});
+
+var __intrinsic_setjmpex = Module.findExportByName("vcruntime140_clr0400.dll", "__intrinsic_setjmpex")
+Interceptor.attach(__intrinsic_setjmpex, {onLeave: function (args) {send("__intrinsic_setjmpex");}});
+
+var __processing_throw = Module.findExportByName("vcruntime140_clr0400.dll", "__processing_throw")
+Interceptor.attach(__processing_throw, {onLeave: function (args) {send("__processing_throw");}});
+
+var __report_gsfailure = Module.findExportByName("vcruntime140_clr0400.dll", "__report_gsfailure")
+Interceptor.attach(__report_gsfailure, {onLeave: function (args) {send("__report_gsfailure");}});
+
+var __std_exception_copy = Module.findExportByName("vcruntime140_clr0400.dll", "__std_exception_copy")
+Interceptor.attach(__std_exception_copy, {onLeave: function (args) {send("__std_exception_copy");}});
+
+var __std_exception_destroy = Module.findExportByName("vcruntime140_clr0400.dll", "__std_exception_destroy")
+Interceptor.attach(__std_exception_destroy, {onLeave: function (args) {send("__std_exception_destroy");}});
+
+var __std_terminate = Module.findExportByName("vcruntime140_clr0400.dll", "__std_terminate")
+Interceptor.attach(__std_terminate, {onLeave: function (args) {send("__std_terminate");}});
+
+var __std_type_info_compare = Module.findExportByName("vcruntime140_clr0400.dll", "__std_type_info_compare")
+Interceptor.attach(__std_type_info_compare, {onLeave: function (args) {send("__std_type_info_compare");}});
+
+var __std_type_info_destroy_list = Module.findExportByName("vcruntime140_clr0400.dll", "__std_type_info_destroy_list")
+Interceptor.attach(__std_type_info_destroy_list, {onLeave: function (args) {send("__std_type_info_destroy_list");}});
+
+var __std_type_info_hash = Module.findExportByName("vcruntime140_clr0400.dll", "__std_type_info_hash")
+Interceptor.attach(__std_type_info_hash, {onLeave: function (args) {send("__std_type_info_hash");}});
+
+var __std_type_info_name = Module.findExportByName("vcruntime140_clr0400.dll", "__std_type_info_name")
+Interceptor.attach(__std_type_info_name, {onLeave: function (args) {send("__std_type_info_name");}});
+
+var __telemetry_main_invoke_trigger = Module.findExportByName("vcruntime140_clr0400.dll", "__telemetry_main_invoke_trigger")
+Interceptor.attach(__telemetry_main_invoke_trigger, {onLeave: function (args) {send("__telemetry_main_invoke_trigger");}});
+
+var __telemetry_main_return_trigger = Module.findExportByName("vcruntime140_clr0400.dll", "__telemetry_main_return_trigger")
+Interceptor.attach(__telemetry_main_return_trigger, {onLeave: function (args) {send("__telemetry_main_return_trigger");}});
+
+var __unDName = Module.findExportByName("vcruntime140_clr0400.dll", "__unDName")
+Interceptor.attach(__unDName, {onLeave: function (args) {send("__unDName");}});
+
+var __unDNameEx = Module.findExportByName("vcruntime140_clr0400.dll", "__unDNameEx")
+Interceptor.attach(__unDNameEx, {onLeave: function (args) {send("__unDNameEx");}});
+
+var __uncaught_exception = Module.findExportByName("vcruntime140_clr0400.dll", "__uncaught_exception")
+Interceptor.attach(__uncaught_exception, {onLeave: function (args) {send("__uncaught_exception");}});
+
+var __uncaught_exceptions = Module.findExportByName("vcruntime140_clr0400.dll", "__uncaught_exceptions")
+Interceptor.attach(__uncaught_exceptions, {onLeave: function (args) {send("__uncaught_exceptions");}});
+
+var __vcrt_GetModuleFileNameW = Module.findExportByName("vcruntime140_clr0400.dll", "__vcrt_GetModuleFileNameW")
+Interceptor.attach(__vcrt_GetModuleFileNameW, {onLeave: function (args) {send("__vcrt_GetModuleFileNameW");}});
+
+var __vcrt_GetModuleHandleW = Module.findExportByName("vcruntime140_clr0400.dll", "__vcrt_GetModuleHandleW")
+Interceptor.attach(__vcrt_GetModuleHandleW, {onLeave: function (args) {send("__vcrt_GetModuleHandleW");}});
+
+var __vcrt_InitializeCriticalSectionEx = Module.findExportByName("vcruntime140_clr0400.dll", "__vcrt_InitializeCriticalSectionEx")
+Interceptor.attach(__vcrt_InitializeCriticalSectionEx, {onLeave: function (args) {send("__vcrt_InitializeCriticalSectionEx");}});
+
+var __vcrt_LoadLibraryExW = Module.findExportByName("vcruntime140_clr0400.dll", "__vcrt_LoadLibraryExW")
+Interceptor.attach(__vcrt_LoadLibraryExW, {onLeave: function (args) {send("__vcrt_LoadLibraryExW");}});
+
+var _get_purecall_handler = Module.findExportByName("vcruntime140_clr0400.dll", "_get_purecall_handler")
+Interceptor.attach(_get_purecall_handler, {onLeave: function (args) {send("_get_purecall_handler");}});
+
+var _get_unexpected = Module.findExportByName("vcruntime140_clr0400.dll", "_get_unexpected")
+Interceptor.attach(_get_unexpected, {onLeave: function (args) {send("_get_unexpected");}});
+
+var _is_exception_typeof = Module.findExportByName("vcruntime140_clr0400.dll", "_is_exception_typeof")
+Interceptor.attach(_is_exception_typeof, {onLeave: function (args) {send("_is_exception_typeof");}});
+
+var _local_unwind = Module.findExportByName("vcruntime140_clr0400.dll", "_local_unwind")
+Interceptor.attach(_local_unwind, {onLeave: function (args) {send("_local_unwind");}});
+
+var _purecall = Module.findExportByName("vcruntime140_clr0400.dll", "_purecall")
+Interceptor.attach(_purecall, {onLeave: function (args) {send("_purecall");}});
+
+var _set_purecall_handler = Module.findExportByName("vcruntime140_clr0400.dll", "_set_purecall_handler")
+Interceptor.attach(_set_purecall_handler, {onLeave: function (args) {send("_set_purecall_handler");}});
+
+var _set_se_translator = Module.findExportByName("vcruntime140_clr0400.dll", "_set_se_translator")
+Interceptor.attach(_set_se_translator, {onLeave: function (args) {send("_set_se_translator");}});
+
+var longjmp = Module.findExportByName("vcruntime140_clr0400.dll", "longjmp")
+Interceptor.attach(longjmp, {onLeave: function (args) {send("longjmp");}});
+
+var memchr = Module.findExportByName("vcruntime140_clr0400.dll", "memchr")
+Interceptor.attach(memchr, {onLeave: function (args) {send("memchr");}});
+
+var memcmp = Module.findExportByName("vcruntime140_clr0400.dll", "memcmp")
+Interceptor.attach(memcmp, {onLeave: function (args) {send("memcmp");}});
+
+var memcpy = Module.findExportByName("vcruntime140_clr0400.dll", "memcpy")
+Interceptor.attach(memcpy, {onLeave: function (args) {send("memcpy");}});
+
+var memmove = Module.findExportByName("vcruntime140_clr0400.dll", "memmove")
+Interceptor.attach(memmove, {onLeave: function (args) {send("memmove");}});
+
+var memset = Module.findExportByName("vcruntime140_clr0400.dll", "memset")
+Interceptor.attach(memset, {onLeave: function (args) {send("memset");}});
+
+var set_unexpected = Module.findExportByName("vcruntime140_clr0400.dll", "set_unexpected")
+Interceptor.attach(set_unexpected, {onLeave: function (args) {send("set_unexpected");}});
+
+var strchr = Module.findExportByName("vcruntime140_clr0400.dll", "strchr")
+Interceptor.attach(strchr, {onLeave: function (args) {send("strchr");}});
+
+var strrchr = Module.findExportByName("vcruntime140_clr0400.dll", "strrchr")
+Interceptor.attach(strrchr, {onLeave: function (args) {send("strrchr");}});
+
+var strstr = Module.findExportByName("vcruntime140_clr0400.dll", "strstr")
+Interceptor.attach(strstr, {onLeave: function (args) {send("strstr");}});
+
+var unexpected = Module.findExportByName("vcruntime140_clr0400.dll", "unexpected")
+Interceptor.attach(unexpected, {onLeave: function (args) {send("unexpected");}});
+
+var wcschr = Module.findExportByName("vcruntime140_clr0400.dll", "wcschr")
+Interceptor.attach(wcschr, {onLeave: function (args) {send("wcschr");}});
+
+var wcsrchr = Module.findExportByName("vcruntime140_clr0400.dll", "wcsrchr")
+Interceptor.attach(wcsrchr, {onLeave: function (args) {send("wcsrchr");}});
+
+var wcsstr = Module.findExportByName("vcruntime140_clr0400.dll", "wcsstr")
+Interceptor.attach(wcsstr, {onLeave: function (args) {send("wcsstr");}});
+

@@ -1,0 +1,24 @@
+var NlmGetBestCostNetworkConnection = Module.findExportByName("rasmans.dll", "NlmGetBestCostNetworkConnection")
+Interceptor.attach(NlmGetBestCostNetworkConnection, {onLeave: function (args) {send("NlmGetBestCostNetworkConnection");}});
+
+var NlmGetCostedNetworkSettings = Module.findExportByName("rasmans.dll", "NlmGetCostedNetworkSettings")
+Interceptor.attach(NlmGetCostedNetworkSettings, {onLeave: function (args) {send("NlmGetCostedNetworkSettings");}});
+
+var NlmSetCostedNetworkSettings = Module.findExportByName("rasmans.dll", "NlmSetCostedNetworkSettings")
+Interceptor.attach(NlmSetCostedNetworkSettings, {onLeave: function (args) {send("NlmSetCostedNetworkSettings");}});
+
+var ServiceInitialized = Module.findExportByName("rasmans.dll", "ServiceInitialized")
+Interceptor.attach(ServiceInitialized, {onLeave: function (args) {send("ServiceInitialized");}});
+
+var ServiceMain = Module.findExportByName("rasmans.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var ServiceRequestInProcess = Module.findExportByName("rasmans.dll", "ServiceRequestInProcess")
+Interceptor.attach(ServiceRequestInProcess, {onLeave: function (args) {send("ServiceRequestInProcess");}});
+
+var VpnProfileMatchingNrpt = Module.findExportByName("rasmans.dll", "VpnProfileMatchingNrpt")
+Interceptor.attach(VpnProfileMatchingNrpt, {onLeave: function (args) {send("VpnProfileMatchingNrpt");}});
+
+var VpnProfileNrptHasExemptions = Module.findExportByName("rasmans.dll", "VpnProfileNrptHasExemptions")
+Interceptor.attach(VpnProfileNrptHasExemptions, {onLeave: function (args) {send("VpnProfileNrptHasExemptions");}});
+

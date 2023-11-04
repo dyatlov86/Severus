@@ -1,0 +1,78 @@
+var AllocateOverStructEx = Module.findExportByName("uniplat.dll", "AllocateOverStructEx")
+Interceptor.attach(AllocateOverStructEx, {onLeave: function (args) {send("AllocateOverStructEx");}});
+
+var CallBeginning = Module.findExportByName("uniplat.dll", "CallBeginning")
+Interceptor.attach(CallBeginning, {onLeave: function (args) {send("CallBeginning");}});
+
+var CallEnding = Module.findExportByName("uniplat.dll", "CallEnding")
+Interceptor.attach(CallEnding, {onLeave: function (args) {send("CallEnding");}});
+
+var CancelUnimodemTimer = Module.findExportByName("uniplat.dll", "CancelUnimodemTimer")
+Interceptor.attach(CancelUnimodemTimer, {onLeave: function (args) {send("CancelUnimodemTimer");}});
+
+var CreateOverStructPool = Module.findExportByName("uniplat.dll", "CreateOverStructPool")
+Interceptor.attach(CreateOverStructPool, {onLeave: function (args) {send("CreateOverStructPool");}});
+
+var CreateUnimodemTimer = Module.findExportByName("uniplat.dll", "CreateUnimodemTimer")
+Interceptor.attach(CreateUnimodemTimer, {onLeave: function (args) {send("CreateUnimodemTimer");}});
+
+var DestroyOverStructPool = Module.findExportByName("uniplat.dll", "DestroyOverStructPool")
+Interceptor.attach(DestroyOverStructPool, {onLeave: function (args) {send("DestroyOverStructPool");}});
+
+var FreeOverStruct = Module.findExportByName("uniplat.dll", "FreeOverStruct")
+Interceptor.attach(FreeOverStruct, {onLeave: function (args) {send("FreeOverStruct");}});
+
+var FreeUnimodemTimer = Module.findExportByName("uniplat.dll", "FreeUnimodemTimer")
+Interceptor.attach(FreeUnimodemTimer, {onLeave: function (args) {send("FreeUnimodemTimer");}});
+
+var MonitorHandle = Module.findExportByName("uniplat.dll", "MonitorHandle")
+Interceptor.attach(MonitorHandle, {onLeave: function (args) {send("MonitorHandle");}});
+
+var ReinitOverStruct = Module.findExportByName("uniplat.dll", "ReinitOverStruct")
+Interceptor.attach(ReinitOverStruct, {onLeave: function (args) {send("ReinitOverStruct");}});
+
+var ResetCallCount = Module.findExportByName("uniplat.dll", "ResetCallCount")
+Interceptor.attach(ResetCallCount, {onLeave: function (args) {send("ResetCallCount");}});
+
+var SetUnimodemTimer = Module.findExportByName("uniplat.dll", "SetUnimodemTimer")
+Interceptor.attach(SetUnimodemTimer, {onLeave: function (args) {send("SetUnimodemTimer");}});
+
+var StartMonitorThread = Module.findExportByName("uniplat.dll", "StartMonitorThread")
+Interceptor.attach(StartMonitorThread, {onLeave: function (args) {send("StartMonitorThread");}});
+
+var StopMonitorThread = Module.findExportByName("uniplat.dll", "StopMonitorThread")
+Interceptor.attach(StopMonitorThread, {onLeave: function (args) {send("StopMonitorThread");}});
+
+var StopMonitoringHandle = Module.findExportByName("uniplat.dll", "StopMonitoringHandle")
+Interceptor.attach(StopMonitoringHandle, {onLeave: function (args) {send("StopMonitoringHandle");}});
+
+var SyncDeviceIoControl = Module.findExportByName("uniplat.dll", "SyncDeviceIoControl")
+Interceptor.attach(SyncDeviceIoControl, {onLeave: function (args) {send("SyncDeviceIoControl");}});
+
+var UmPlatformDeinitialize = Module.findExportByName("uniplat.dll", "UmPlatformDeinitialize")
+Interceptor.attach(UmPlatformDeinitialize, {onLeave: function (args) {send("UmPlatformDeinitialize");}});
+
+var UmPlatformInitialize = Module.findExportByName("uniplat.dll", "UmPlatformInitialize")
+Interceptor.attach(UmPlatformInitialize, {onLeave: function (args) {send("UmPlatformInitialize");}});
+
+var UnimodemDeviceIoControlEx = Module.findExportByName("uniplat.dll", "UnimodemDeviceIoControlEx")
+Interceptor.attach(UnimodemDeviceIoControlEx, {onLeave: function (args) {send("UnimodemDeviceIoControlEx");}});
+
+var UnimodemNotifyTSP = Module.findExportByName("uniplat.dll", "UnimodemNotifyTSP")
+Interceptor.attach(UnimodemNotifyTSP, {onLeave: function (args) {send("UnimodemNotifyTSP");}});
+
+var UnimodemQueueUserAPC = Module.findExportByName("uniplat.dll", "UnimodemQueueUserAPC")
+Interceptor.attach(UnimodemQueueUserAPC, {onLeave: function (args) {send("UnimodemQueueUserAPC");}});
+
+var UnimodemReadFileEx = Module.findExportByName("uniplat.dll", "UnimodemReadFileEx")
+Interceptor.attach(UnimodemReadFileEx, {onLeave: function (args) {send("UnimodemReadFileEx");}});
+
+var UnimodemWaitCommEventEx = Module.findExportByName("uniplat.dll", "UnimodemWaitCommEventEx")
+Interceptor.attach(UnimodemWaitCommEventEx, {onLeave: function (args) {send("UnimodemWaitCommEventEx");}});
+
+var UnimodemWriteFileEx = Module.findExportByName("uniplat.dll", "UnimodemWriteFileEx")
+Interceptor.attach(UnimodemWriteFileEx, {onLeave: function (args) {send("UnimodemWriteFileEx");}});
+
+var WinntIsWorkstation = Module.findExportByName("uniplat.dll", "WinntIsWorkstation")
+Interceptor.attach(WinntIsWorkstation, {onLeave: function (args) {send("WinntIsWorkstation");}});
+

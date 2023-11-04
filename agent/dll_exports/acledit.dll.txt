@@ -1,0 +1,24 @@
+var DllMain = Module.findExportByName("acledit.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var EditAuditInfo = Module.findExportByName("acledit.dll", "EditAuditInfo")
+Interceptor.attach(EditAuditInfo, {onLeave: function (args) {send("EditAuditInfo");}});
+
+var EditOwnerInfo = Module.findExportByName("acledit.dll", "EditOwnerInfo")
+Interceptor.attach(EditOwnerInfo, {onLeave: function (args) {send("EditOwnerInfo");}});
+
+var EditPermissionInfo = Module.findExportByName("acledit.dll", "EditPermissionInfo")
+Interceptor.attach(EditPermissionInfo, {onLeave: function (args) {send("EditPermissionInfo");}});
+
+var FMExtensionProcW = Module.findExportByName("acledit.dll", "FMExtensionProcW")
+Interceptor.attach(FMExtensionProcW, {onLeave: function (args) {send("FMExtensionProcW");}});
+
+var SedDiscretionaryAclEditor = Module.findExportByName("acledit.dll", "SedDiscretionaryAclEditor")
+Interceptor.attach(SedDiscretionaryAclEditor, {onLeave: function (args) {send("SedDiscretionaryAclEditor");}});
+
+var SedSystemAclEditor = Module.findExportByName("acledit.dll", "SedSystemAclEditor")
+Interceptor.attach(SedSystemAclEditor, {onLeave: function (args) {send("SedSystemAclEditor");}});
+
+var SedTakeOwnership = Module.findExportByName("acledit.dll", "SedTakeOwnership")
+Interceptor.attach(SedTakeOwnership, {onLeave: function (args) {send("SedTakeOwnership");}});
+

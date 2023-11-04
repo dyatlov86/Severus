@@ -1,0 +1,30 @@
+var AppRepComputeImageHash = Module.findExportByName("apprepapi.dll", "AppRepComputeImageHash")
+Interceptor.attach(AppRepComputeImageHash, {onLeave: function (args) {send("AppRepComputeImageHash");}});
+
+var AppRepComputeImageHashWithOffset = Module.findExportByName("apprepapi.dll", "AppRepComputeImageHashWithOffset")
+Interceptor.attach(AppRepComputeImageHashWithOffset, {onLeave: function (args) {send("AppRepComputeImageHashWithOffset");}});
+
+var AppRepComputeSignatureInfo = Module.findExportByName("apprepapi.dll", "AppRepComputeSignatureInfo")
+Interceptor.attach(AppRepComputeSignatureInfo, {onLeave: function (args) {send("AppRepComputeSignatureInfo");}});
+
+var AppRepFreeAttributeLib = Module.findExportByName("apprepapi.dll", "AppRepFreeAttributeLib")
+Interceptor.attach(AppRepFreeAttributeLib, {onLeave: function (args) {send("AppRepFreeAttributeLib");}});
+
+var AppRepInitializeAttributeLib = Module.findExportByName("apprepapi.dll", "AppRepInitializeAttributeLib")
+Interceptor.attach(AppRepInitializeAttributeLib, {onLeave: function (args) {send("AppRepInitializeAttributeLib");}});
+
+var AppRepParameterCleanup = Module.findExportByName("apprepapi.dll", "AppRepParameterCleanup")
+Interceptor.attach(AppRepParameterCleanup, {onLeave: function (args) {send("AppRepParameterCleanup");}});
+
+var AppRepPartialTelemetryCleanup = Module.findExportByName("apprepapi.dll", "AppRepPartialTelemetryCleanup")
+Interceptor.attach(AppRepPartialTelemetryCleanup, {onLeave: function (args) {send("AppRepPartialTelemetryCleanup");}});
+
+var RepGetFileInformation = Module.findExportByName("apprepapi.dll", "RepGetFileInformation")
+Interceptor.attach(RepGetFileInformation, {onLeave: function (args) {send("RepGetFileInformation");}});
+
+var RepInformUserAction = Module.findExportByName("apprepapi.dll", "RepInformUserAction")
+Interceptor.attach(RepInformUserAction, {onLeave: function (args) {send("RepInformUserAction");}});
+
+var ReputationInfoCleanup = Module.findExportByName("apprepapi.dll", "ReputationInfoCleanup")
+Interceptor.attach(ReputationInfoCleanup, {onLeave: function (args) {send("ReputationInfoCleanup");}});
+

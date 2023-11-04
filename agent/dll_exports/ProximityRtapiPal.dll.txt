@@ -1,0 +1,18 @@
+var PAL_App2DeviceFindAllPeers = Module.findExportByName("ProximityRtapiPal.dll", "PAL_App2DeviceFindAllPeers")
+Interceptor.attach(PAL_App2DeviceFindAllPeers, {onLeave: function (args) {send("PAL_App2DeviceFindAllPeers");}});
+
+var PAL_CheckForApp2DeviceAlternateId = Module.findExportByName("ProximityRtapiPal.dll", "PAL_CheckForApp2DeviceAlternateId")
+Interceptor.attach(PAL_CheckForApp2DeviceAlternateId, {onLeave: function (args) {send("PAL_CheckForApp2DeviceAlternateId");}});
+
+var PAL_CheckForBluetoothSupport = Module.findExportByName("ProximityRtapiPal.dll", "PAL_CheckForBluetoothSupport")
+Interceptor.attach(PAL_CheckForBluetoothSupport, {onLeave: function (args) {send("PAL_CheckForBluetoothSupport");}});
+
+var PAL_GetCurrentProcessExplicitAppUserModelID = Module.findExportByName("ProximityRtapiPal.dll", "PAL_GetCurrentProcessExplicitAppUserModelID")
+Interceptor.attach(PAL_GetCurrentProcessExplicitAppUserModelID, {onLeave: function (args) {send("PAL_GetCurrentProcessExplicitAppUserModelID");}});
+
+var PAL_ParseAppUserModelId = Module.findExportByName("ProximityRtapiPal.dll", "PAL_ParseAppUserModelId")
+Interceptor.attach(PAL_ParseAppUserModelId, {onLeave: function (args) {send("PAL_ParseAppUserModelId");}});
+
+var PAL_SetCurrentProcessExplicitAppUserModelID = Module.findExportByName("ProximityRtapiPal.dll", "PAL_SetCurrentProcessExplicitAppUserModelID")
+Interceptor.attach(PAL_SetCurrentProcessExplicitAppUserModelID, {onLeave: function (args) {send("PAL_SetCurrentProcessExplicitAppUserModelID");}});
+

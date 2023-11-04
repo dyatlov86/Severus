@@ -1,0 +1,21 @@
+var CscNetApiGetInterface = Module.findExportByName("cscapi.dll", "CscNetApiGetInterface")
+Interceptor.attach(CscNetApiGetInterface, {onLeave: function (args) {send("CscNetApiGetInterface");}});
+
+var CscSearchApiGetInterface = Module.findExportByName("cscapi.dll", "CscSearchApiGetInterface")
+Interceptor.attach(CscSearchApiGetInterface, {onLeave: function (args) {send("CscSearchApiGetInterface");}});
+
+var OfflineFilesEnable = Module.findExportByName("cscapi.dll", "OfflineFilesEnable")
+Interceptor.attach(OfflineFilesEnable, {onLeave: function (args) {send("OfflineFilesEnable");}});
+
+var OfflineFilesGetShareCachingMode = Module.findExportByName("cscapi.dll", "OfflineFilesGetShareCachingMode")
+Interceptor.attach(OfflineFilesGetShareCachingMode, {onLeave: function (args) {send("OfflineFilesGetShareCachingMode");}});
+
+var OfflineFilesQueryStatus = Module.findExportByName("cscapi.dll", "OfflineFilesQueryStatus")
+Interceptor.attach(OfflineFilesQueryStatus, {onLeave: function (args) {send("OfflineFilesQueryStatus");}});
+
+var OfflineFilesQueryStatusEx = Module.findExportByName("cscapi.dll", "OfflineFilesQueryStatusEx")
+Interceptor.attach(OfflineFilesQueryStatusEx, {onLeave: function (args) {send("OfflineFilesQueryStatusEx");}});
+
+var OfflineFilesStart = Module.findExportByName("cscapi.dll", "OfflineFilesStart")
+Interceptor.attach(OfflineFilesStart, {onLeave: function (args) {send("OfflineFilesStart");}});
+

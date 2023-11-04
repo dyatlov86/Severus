@@ -1,0 +1,15 @@
+var CreateModernAppToDelete = Module.findExportByName("ttdplm.dll", "CreateModernAppToDelete")
+Interceptor.attach(CreateModernAppToDelete, {onLeave: function (args) {send("CreateModernAppToDelete");}});
+
+var CreateModernAppToTrace = Module.findExportByName("ttdplm.dll", "CreateModernAppToTrace")
+Interceptor.attach(CreateModernAppToTrace, {onLeave: function (args) {send("CreateModernAppToTrace");}});
+
+var GetMaxPackageNameLength = Module.findExportByName("ttdplm.dll", "GetMaxPackageNameLength")
+Interceptor.attach(GetMaxPackageNameLength, {onLeave: function (args) {send("GetMaxPackageNameLength");}});
+
+var GetPackageFromPid = Module.findExportByName("ttdplm.dll", "GetPackageFromPid")
+Interceptor.attach(GetPackageFromPid, {onLeave: function (args) {send("GetPackageFromPid");}});
+
+var SetPermisionsForFolder = Module.findExportByName("ttdplm.dll", "SetPermisionsForFolder")
+Interceptor.attach(SetPermisionsForFolder, {onLeave: function (args) {send("SetPermisionsForFolder");}});
+

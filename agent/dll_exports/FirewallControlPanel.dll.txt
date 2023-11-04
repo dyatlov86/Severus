@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("FirewallControlPanel.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("FirewallControlPanel.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("FirewallControlPanel.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("FirewallControlPanel.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ShowNotificationDialogW = Module.findExportByName("FirewallControlPanel.dll", "ShowNotificationDialogW")
+Interceptor.attach(ShowNotificationDialogW, {onLeave: function (args) {send("ShowNotificationDialogW");}});
+
+var ShowWarningDialogW = Module.findExportByName("FirewallControlPanel.dll", "ShowWarningDialogW")
+Interceptor.attach(ShowWarningDialogW, {onLeave: function (args) {send("ShowWarningDialogW");}});
+

@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("TileStoreMigrationPlugin.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("TileStoreMigrationPlugin.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("TileStoreMigrationPlugin.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("TileStoreMigrationPlugin.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("TileStoreMigrationPlugin.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

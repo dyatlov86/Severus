@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("webplatstorageserver.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("webplatstorageserver.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("webplatstorageserver.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("webplatstorageserver.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("webplatstorageserver.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

@@ -1,0 +1,240 @@
+var ClassInstall32 = Module.findExportByName("WinSCard.dll", "ClassInstall32")
+Interceptor.attach(ClassInstall32, {onLeave: function (args) {send("ClassInstall32");}});
+
+var SCardAccessNewReaderEvent = Module.findExportByName("WinSCard.dll", "SCardAccessNewReaderEvent")
+Interceptor.attach(SCardAccessNewReaderEvent, {onLeave: function (args) {send("SCardAccessNewReaderEvent");}});
+
+var SCardAccessStartedEvent = Module.findExportByName("WinSCard.dll", "SCardAccessStartedEvent")
+Interceptor.attach(SCardAccessStartedEvent, {onLeave: function (args) {send("SCardAccessStartedEvent");}});
+
+var SCardAddReaderToGroupA = Module.findExportByName("WinSCard.dll", "SCardAddReaderToGroupA")
+Interceptor.attach(SCardAddReaderToGroupA, {onLeave: function (args) {send("SCardAddReaderToGroupA");}});
+
+var SCardAddReaderToGroupW = Module.findExportByName("WinSCard.dll", "SCardAddReaderToGroupW")
+Interceptor.attach(SCardAddReaderToGroupW, {onLeave: function (args) {send("SCardAddReaderToGroupW");}});
+
+var SCardAudit = Module.findExportByName("WinSCard.dll", "SCardAudit")
+Interceptor.attach(SCardAudit, {onLeave: function (args) {send("SCardAudit");}});
+
+var SCardBeginTransaction = Module.findExportByName("WinSCard.dll", "SCardBeginTransaction")
+Interceptor.attach(SCardBeginTransaction, {onLeave: function (args) {send("SCardBeginTransaction");}});
+
+var SCardCancel = Module.findExportByName("WinSCard.dll", "SCardCancel")
+Interceptor.attach(SCardCancel, {onLeave: function (args) {send("SCardCancel");}});
+
+var SCardConnectA = Module.findExportByName("WinSCard.dll", "SCardConnectA")
+Interceptor.attach(SCardConnectA, {onLeave: function (args) {send("SCardConnectA");}});
+
+var SCardConnectW = Module.findExportByName("WinSCard.dll", "SCardConnectW")
+Interceptor.attach(SCardConnectW, {onLeave: function (args) {send("SCardConnectW");}});
+
+var SCardControl = Module.findExportByName("WinSCard.dll", "SCardControl")
+Interceptor.attach(SCardControl, {onLeave: function (args) {send("SCardControl");}});
+
+var SCardDisconnect = Module.findExportByName("WinSCard.dll", "SCardDisconnect")
+Interceptor.attach(SCardDisconnect, {onLeave: function (args) {send("SCardDisconnect");}});
+
+var SCardEndTransaction = Module.findExportByName("WinSCard.dll", "SCardEndTransaction")
+Interceptor.attach(SCardEndTransaction, {onLeave: function (args) {send("SCardEndTransaction");}});
+
+var SCardEstablishContext = Module.findExportByName("WinSCard.dll", "SCardEstablishContext")
+Interceptor.attach(SCardEstablishContext, {onLeave: function (args) {send("SCardEstablishContext");}});
+
+var SCardForgetCardTypeA = Module.findExportByName("WinSCard.dll", "SCardForgetCardTypeA")
+Interceptor.attach(SCardForgetCardTypeA, {onLeave: function (args) {send("SCardForgetCardTypeA");}});
+
+var SCardForgetCardTypeW = Module.findExportByName("WinSCard.dll", "SCardForgetCardTypeW")
+Interceptor.attach(SCardForgetCardTypeW, {onLeave: function (args) {send("SCardForgetCardTypeW");}});
+
+var SCardForgetReaderA = Module.findExportByName("WinSCard.dll", "SCardForgetReaderA")
+Interceptor.attach(SCardForgetReaderA, {onLeave: function (args) {send("SCardForgetReaderA");}});
+
+var SCardForgetReaderGroupA = Module.findExportByName("WinSCard.dll", "SCardForgetReaderGroupA")
+Interceptor.attach(SCardForgetReaderGroupA, {onLeave: function (args) {send("SCardForgetReaderGroupA");}});
+
+var SCardForgetReaderGroupW = Module.findExportByName("WinSCard.dll", "SCardForgetReaderGroupW")
+Interceptor.attach(SCardForgetReaderGroupW, {onLeave: function (args) {send("SCardForgetReaderGroupW");}});
+
+var SCardForgetReaderW = Module.findExportByName("WinSCard.dll", "SCardForgetReaderW")
+Interceptor.attach(SCardForgetReaderW, {onLeave: function (args) {send("SCardForgetReaderW");}});
+
+var SCardFreeMemory = Module.findExportByName("WinSCard.dll", "SCardFreeMemory")
+Interceptor.attach(SCardFreeMemory, {onLeave: function (args) {send("SCardFreeMemory");}});
+
+var SCardGetAttrib = Module.findExportByName("WinSCard.dll", "SCardGetAttrib")
+Interceptor.attach(SCardGetAttrib, {onLeave: function (args) {send("SCardGetAttrib");}});
+
+var SCardGetCardTypeProviderNameA = Module.findExportByName("WinSCard.dll", "SCardGetCardTypeProviderNameA")
+Interceptor.attach(SCardGetCardTypeProviderNameA, {onLeave: function (args) {send("SCardGetCardTypeProviderNameA");}});
+
+var SCardGetCardTypeProviderNameW = Module.findExportByName("WinSCard.dll", "SCardGetCardTypeProviderNameW")
+Interceptor.attach(SCardGetCardTypeProviderNameW, {onLeave: function (args) {send("SCardGetCardTypeProviderNameW");}});
+
+var SCardGetDeviceTypeIdA = Module.findExportByName("WinSCard.dll", "SCardGetDeviceTypeIdA")
+Interceptor.attach(SCardGetDeviceTypeIdA, {onLeave: function (args) {send("SCardGetDeviceTypeIdA");}});
+
+var SCardGetDeviceTypeIdW = Module.findExportByName("WinSCard.dll", "SCardGetDeviceTypeIdW")
+Interceptor.attach(SCardGetDeviceTypeIdW, {onLeave: function (args) {send("SCardGetDeviceTypeIdW");}});
+
+var SCardGetProviderIdA = Module.findExportByName("WinSCard.dll", "SCardGetProviderIdA")
+Interceptor.attach(SCardGetProviderIdA, {onLeave: function (args) {send("SCardGetProviderIdA");}});
+
+var SCardGetProviderIdW = Module.findExportByName("WinSCard.dll", "SCardGetProviderIdW")
+Interceptor.attach(SCardGetProviderIdW, {onLeave: function (args) {send("SCardGetProviderIdW");}});
+
+var SCardGetReaderDeviceInstanceIdA = Module.findExportByName("WinSCard.dll", "SCardGetReaderDeviceInstanceIdA")
+Interceptor.attach(SCardGetReaderDeviceInstanceIdA, {onLeave: function (args) {send("SCardGetReaderDeviceInstanceIdA");}});
+
+var SCardGetReaderDeviceInstanceIdW = Module.findExportByName("WinSCard.dll", "SCardGetReaderDeviceInstanceIdW")
+Interceptor.attach(SCardGetReaderDeviceInstanceIdW, {onLeave: function (args) {send("SCardGetReaderDeviceInstanceIdW");}});
+
+var SCardGetReaderIconA = Module.findExportByName("WinSCard.dll", "SCardGetReaderIconA")
+Interceptor.attach(SCardGetReaderIconA, {onLeave: function (args) {send("SCardGetReaderIconA");}});
+
+var SCardGetReaderIconW = Module.findExportByName("WinSCard.dll", "SCardGetReaderIconW")
+Interceptor.attach(SCardGetReaderIconW, {onLeave: function (args) {send("SCardGetReaderIconW");}});
+
+var SCardGetStatusChangeA = Module.findExportByName("WinSCard.dll", "SCardGetStatusChangeA")
+Interceptor.attach(SCardGetStatusChangeA, {onLeave: function (args) {send("SCardGetStatusChangeA");}});
+
+var SCardGetStatusChangeW = Module.findExportByName("WinSCard.dll", "SCardGetStatusChangeW")
+Interceptor.attach(SCardGetStatusChangeW, {onLeave: function (args) {send("SCardGetStatusChangeW");}});
+
+var SCardGetTransmitCount = Module.findExportByName("WinSCard.dll", "SCardGetTransmitCount")
+Interceptor.attach(SCardGetTransmitCount, {onLeave: function (args) {send("SCardGetTransmitCount");}});
+
+var SCardIntroduceCardTypeA = Module.findExportByName("WinSCard.dll", "SCardIntroduceCardTypeA")
+Interceptor.attach(SCardIntroduceCardTypeA, {onLeave: function (args) {send("SCardIntroduceCardTypeA");}});
+
+var SCardIntroduceCardTypeW = Module.findExportByName("WinSCard.dll", "SCardIntroduceCardTypeW")
+Interceptor.attach(SCardIntroduceCardTypeW, {onLeave: function (args) {send("SCardIntroduceCardTypeW");}});
+
+var SCardIntroduceReaderA = Module.findExportByName("WinSCard.dll", "SCardIntroduceReaderA")
+Interceptor.attach(SCardIntroduceReaderA, {onLeave: function (args) {send("SCardIntroduceReaderA");}});
+
+var SCardIntroduceReaderGroupA = Module.findExportByName("WinSCard.dll", "SCardIntroduceReaderGroupA")
+Interceptor.attach(SCardIntroduceReaderGroupA, {onLeave: function (args) {send("SCardIntroduceReaderGroupA");}});
+
+var SCardIntroduceReaderGroupW = Module.findExportByName("WinSCard.dll", "SCardIntroduceReaderGroupW")
+Interceptor.attach(SCardIntroduceReaderGroupW, {onLeave: function (args) {send("SCardIntroduceReaderGroupW");}});
+
+var SCardIntroduceReaderW = Module.findExportByName("WinSCard.dll", "SCardIntroduceReaderW")
+Interceptor.attach(SCardIntroduceReaderW, {onLeave: function (args) {send("SCardIntroduceReaderW");}});
+
+var SCardIsValidContext = Module.findExportByName("WinSCard.dll", "SCardIsValidContext")
+Interceptor.attach(SCardIsValidContext, {onLeave: function (args) {send("SCardIsValidContext");}});
+
+var SCardListCardsA = Module.findExportByName("WinSCard.dll", "SCardListCardsA")
+Interceptor.attach(SCardListCardsA, {onLeave: function (args) {send("SCardListCardsA");}});
+
+var SCardListCardsW = Module.findExportByName("WinSCard.dll", "SCardListCardsW")
+Interceptor.attach(SCardListCardsW, {onLeave: function (args) {send("SCardListCardsW");}});
+
+var SCardListInterfacesA = Module.findExportByName("WinSCard.dll", "SCardListInterfacesA")
+Interceptor.attach(SCardListInterfacesA, {onLeave: function (args) {send("SCardListInterfacesA");}});
+
+var SCardListInterfacesW = Module.findExportByName("WinSCard.dll", "SCardListInterfacesW")
+Interceptor.attach(SCardListInterfacesW, {onLeave: function (args) {send("SCardListInterfacesW");}});
+
+var SCardListReaderGroupsA = Module.findExportByName("WinSCard.dll", "SCardListReaderGroupsA")
+Interceptor.attach(SCardListReaderGroupsA, {onLeave: function (args) {send("SCardListReaderGroupsA");}});
+
+var SCardListReaderGroupsW = Module.findExportByName("WinSCard.dll", "SCardListReaderGroupsW")
+Interceptor.attach(SCardListReaderGroupsW, {onLeave: function (args) {send("SCardListReaderGroupsW");}});
+
+var SCardListReadersA = Module.findExportByName("WinSCard.dll", "SCardListReadersA")
+Interceptor.attach(SCardListReadersA, {onLeave: function (args) {send("SCardListReadersA");}});
+
+var SCardListReadersW = Module.findExportByName("WinSCard.dll", "SCardListReadersW")
+Interceptor.attach(SCardListReadersW, {onLeave: function (args) {send("SCardListReadersW");}});
+
+var SCardListReadersWithDeviceInstanceIdA = Module.findExportByName("WinSCard.dll", "SCardListReadersWithDeviceInstanceIdA")
+Interceptor.attach(SCardListReadersWithDeviceInstanceIdA, {onLeave: function (args) {send("SCardListReadersWithDeviceInstanceIdA");}});
+
+var SCardListReadersWithDeviceInstanceIdW = Module.findExportByName("WinSCard.dll", "SCardListReadersWithDeviceInstanceIdW")
+Interceptor.attach(SCardListReadersWithDeviceInstanceIdW, {onLeave: function (args) {send("SCardListReadersWithDeviceInstanceIdW");}});
+
+var SCardLocateCardsA = Module.findExportByName("WinSCard.dll", "SCardLocateCardsA")
+Interceptor.attach(SCardLocateCardsA, {onLeave: function (args) {send("SCardLocateCardsA");}});
+
+var SCardLocateCardsByATRA = Module.findExportByName("WinSCard.dll", "SCardLocateCardsByATRA")
+Interceptor.attach(SCardLocateCardsByATRA, {onLeave: function (args) {send("SCardLocateCardsByATRA");}});
+
+var SCardLocateCardsByATRW = Module.findExportByName("WinSCard.dll", "SCardLocateCardsByATRW")
+Interceptor.attach(SCardLocateCardsByATRW, {onLeave: function (args) {send("SCardLocateCardsByATRW");}});
+
+var SCardLocateCardsW = Module.findExportByName("WinSCard.dll", "SCardLocateCardsW")
+Interceptor.attach(SCardLocateCardsW, {onLeave: function (args) {send("SCardLocateCardsW");}});
+
+var SCardPciRaw = Module.findExportByName("WinSCard.dll", "SCardPciRaw")
+Interceptor.attach(SCardPciRaw, {onLeave: function (args) {send("SCardPciRaw");}});
+
+var SCardPciT0 = Module.findExportByName("WinSCard.dll", "SCardPciT0")
+Interceptor.attach(SCardPciT0, {onLeave: function (args) {send("SCardPciT0");}});
+
+var SCardPciT1 = Module.findExportByName("WinSCard.dll", "SCardPciT1")
+Interceptor.attach(SCardPciT1, {onLeave: function (args) {send("SCardPciT1");}});
+
+var SCardReadCacheA = Module.findExportByName("WinSCard.dll", "SCardReadCacheA")
+Interceptor.attach(SCardReadCacheA, {onLeave: function (args) {send("SCardReadCacheA");}});
+
+var SCardReadCacheW = Module.findExportByName("WinSCard.dll", "SCardReadCacheW")
+Interceptor.attach(SCardReadCacheW, {onLeave: function (args) {send("SCardReadCacheW");}});
+
+var SCardReconnect = Module.findExportByName("WinSCard.dll", "SCardReconnect")
+Interceptor.attach(SCardReconnect, {onLeave: function (args) {send("SCardReconnect");}});
+
+var SCardReleaseAllEvents = Module.findExportByName("WinSCard.dll", "SCardReleaseAllEvents")
+Interceptor.attach(SCardReleaseAllEvents, {onLeave: function (args) {send("SCardReleaseAllEvents");}});
+
+var SCardReleaseContext = Module.findExportByName("WinSCard.dll", "SCardReleaseContext")
+Interceptor.attach(SCardReleaseContext, {onLeave: function (args) {send("SCardReleaseContext");}});
+
+var SCardReleaseNewReaderEvent = Module.findExportByName("WinSCard.dll", "SCardReleaseNewReaderEvent")
+Interceptor.attach(SCardReleaseNewReaderEvent, {onLeave: function (args) {send("SCardReleaseNewReaderEvent");}});
+
+var SCardReleaseStartedEvent = Module.findExportByName("WinSCard.dll", "SCardReleaseStartedEvent")
+Interceptor.attach(SCardReleaseStartedEvent, {onLeave: function (args) {send("SCardReleaseStartedEvent");}});
+
+var SCardRemoveReaderFromGroupA = Module.findExportByName("WinSCard.dll", "SCardRemoveReaderFromGroupA")
+Interceptor.attach(SCardRemoveReaderFromGroupA, {onLeave: function (args) {send("SCardRemoveReaderFromGroupA");}});
+
+var SCardRemoveReaderFromGroupW = Module.findExportByName("WinSCard.dll", "SCardRemoveReaderFromGroupW")
+Interceptor.attach(SCardRemoveReaderFromGroupW, {onLeave: function (args) {send("SCardRemoveReaderFromGroupW");}});
+
+var SCardSetAttrib = Module.findExportByName("WinSCard.dll", "SCardSetAttrib")
+Interceptor.attach(SCardSetAttrib, {onLeave: function (args) {send("SCardSetAttrib");}});
+
+var SCardSetCardTypeProviderNameA = Module.findExportByName("WinSCard.dll", "SCardSetCardTypeProviderNameA")
+Interceptor.attach(SCardSetCardTypeProviderNameA, {onLeave: function (args) {send("SCardSetCardTypeProviderNameA");}});
+
+var SCardSetCardTypeProviderNameW = Module.findExportByName("WinSCard.dll", "SCardSetCardTypeProviderNameW")
+Interceptor.attach(SCardSetCardTypeProviderNameW, {onLeave: function (args) {send("SCardSetCardTypeProviderNameW");}});
+
+var SCardState = Module.findExportByName("WinSCard.dll", "SCardState")
+Interceptor.attach(SCardState, {onLeave: function (args) {send("SCardState");}});
+
+var SCardStatusA = Module.findExportByName("WinSCard.dll", "SCardStatusA")
+Interceptor.attach(SCardStatusA, {onLeave: function (args) {send("SCardStatusA");}});
+
+var SCardStatusW = Module.findExportByName("WinSCard.dll", "SCardStatusW")
+Interceptor.attach(SCardStatusW, {onLeave: function (args) {send("SCardStatusW");}});
+
+var SCardTransmit = Module.findExportByName("WinSCard.dll", "SCardTransmit")
+Interceptor.attach(SCardTransmit, {onLeave: function (args) {send("SCardTransmit");}});
+
+var SCardWriteCacheA = Module.findExportByName("WinSCard.dll", "SCardWriteCacheA")
+Interceptor.attach(SCardWriteCacheA, {onLeave: function (args) {send("SCardWriteCacheA");}});
+
+var SCardWriteCacheW = Module.findExportByName("WinSCard.dll", "SCardWriteCacheW")
+Interceptor.attach(SCardWriteCacheW, {onLeave: function (args) {send("SCardWriteCacheW");}});
+
+var g_rgSCardRawPci = Module.findExportByName("WinSCard.dll", "g_rgSCardRawPci")
+Interceptor.attach(g_rgSCardRawPci, {onLeave: function (args) {send("g_rgSCardRawPci");}});
+
+var g_rgSCardT0Pci = Module.findExportByName("WinSCard.dll", "g_rgSCardT0Pci")
+Interceptor.attach(g_rgSCardT0Pci, {onLeave: function (args) {send("g_rgSCardT0Pci");}});
+
+var g_rgSCardT1Pci = Module.findExportByName("WinSCard.dll", "g_rgSCardT1Pci")
+Interceptor.attach(g_rgSCardT1Pci, {onLeave: function (args) {send("g_rgSCardT1Pci");}});
+

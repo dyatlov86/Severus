@@ -1,0 +1,36 @@
+var DllCanUnloadNow = Module.findExportByName("mfnetcore.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mfnetcore.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var IsLicensedComponentAC3_ENC = Module.findExportByName("mfnetcore.dll", "IsLicensedComponentAC3_ENC")
+Interceptor.attach(IsLicensedComponentAC3_ENC, {onLeave: function (args) {send("IsLicensedComponentAC3_ENC");}});
+
+var IsLicensedComponentDOLBY = Module.findExportByName("mfnetcore.dll", "IsLicensedComponentDOLBY")
+Interceptor.attach(IsLicensedComponentDOLBY, {onLeave: function (args) {send("IsLicensedComponentDOLBY");}});
+
+var IsLicensedComponentMPEG2 = Module.findExportByName("mfnetcore.dll", "IsLicensedComponentMPEG2")
+Interceptor.attach(IsLicensedComponentMPEG2, {onLeave: function (args) {send("IsLicensedComponentMPEG2");}});
+
+var IsLicensedComponentMPEG2_ENC = Module.findExportByName("mfnetcore.dll", "IsLicensedComponentMPEG2_ENC")
+Interceptor.attach(IsLicensedComponentMPEG2_ENC, {onLeave: function (args) {send("IsLicensedComponentMPEG2_ENC");}});
+
+var MFCreateByteCacheFile = Module.findExportByName("mfnetcore.dll", "MFCreateByteCacheFile")
+Interceptor.attach(MFCreateByteCacheFile, {onLeave: function (args) {send("MFCreateByteCacheFile");}});
+
+var MFCreateCredentialCache = Module.findExportByName("mfnetcore.dll", "MFCreateCredentialCache")
+Interceptor.attach(MFCreateCredentialCache, {onLeave: function (args) {send("MFCreateCredentialCache");}});
+
+var MFCreateFileBlockMap = Module.findExportByName("mfnetcore.dll", "MFCreateFileBlockMap")
+Interceptor.attach(MFCreateFileBlockMap, {onLeave: function (args) {send("MFCreateFileBlockMap");}});
+
+var MFCreatePartialSeekableByteStream = Module.findExportByName("mfnetcore.dll", "MFCreatePartialSeekableByteStream")
+Interceptor.attach(MFCreatePartialSeekableByteStream, {onLeave: function (args) {send("MFCreatePartialSeekableByteStream");}});
+
+var MFCreateProxyLocator = Module.findExportByName("mfnetcore.dll", "MFCreateProxyLocator")
+Interceptor.attach(MFCreateProxyLocator, {onLeave: function (args) {send("MFCreateProxyLocator");}});
+
+var MFGetSupportedDLNAProfileInfo = Module.findExportByName("mfnetcore.dll", "MFGetSupportedDLNAProfileInfo")
+Interceptor.attach(MFGetSupportedDLNAProfileInfo, {onLeave: function (args) {send("MFGetSupportedDLNAProfileInfo");}});
+

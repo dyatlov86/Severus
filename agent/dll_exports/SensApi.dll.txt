@@ -1,0 +1,9 @@
+var IsDestinationReachableA = Module.findExportByName("SensApi.dll", "IsDestinationReachableA")
+Interceptor.attach(IsDestinationReachableA, {onLeave: function (args) {send("IsDestinationReachableA");}});
+
+var IsDestinationReachableW = Module.findExportByName("SensApi.dll", "IsDestinationReachableW")
+Interceptor.attach(IsDestinationReachableW, {onLeave: function (args) {send("IsDestinationReachableW");}});
+
+var IsNetworkAlive = Module.findExportByName("SensApi.dll", "IsNetworkAlive")
+Interceptor.attach(IsNetworkAlive, {onLeave: function (args) {send("IsNetworkAlive");}});
+

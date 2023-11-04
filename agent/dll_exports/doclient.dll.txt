@@ -1,0 +1,3 @@
+var CreateDOService = Module.findExportByName("doclient.dll", "CreateDOService")
+Interceptor.attach(CreateDOService, {onLeave: function (args) {send("CreateDOService");}});
+

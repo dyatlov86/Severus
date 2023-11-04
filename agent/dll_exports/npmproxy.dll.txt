@@ -1,0 +1,27 @@
+var DllCanUnloadNow = Module.findExportByName("npmproxy.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("npmproxy.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("npmproxy.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("npmproxy.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetProxyDllInfo = Module.findExportByName("npmproxy.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+
+var LANIdFreeCollection = Module.findExportByName("npmproxy.dll", "LANIdFreeCollection")
+Interceptor.attach(LANIdFreeCollection, {onLeave: function (args) {send("LANIdFreeCollection");}});
+
+var LANIdRetrieveCollection = Module.findExportByName("npmproxy.dll", "LANIdRetrieveCollection")
+Interceptor.attach(LANIdRetrieveCollection, {onLeave: function (args) {send("LANIdRetrieveCollection");}});
+
+var NlmDiagSendWlanConnectionAttemptDiagnostics = Module.findExportByName("npmproxy.dll", "NlmDiagSendWlanConnectionAttemptDiagnostics")
+Interceptor.attach(NlmDiagSendWlanConnectionAttemptDiagnostics, {onLeave: function (args) {send("NlmDiagSendWlanConnectionAttemptDiagnostics");}});
+
+var NlmDiagSendWlanDisconnectionDiagnostics = Module.findExportByName("npmproxy.dll", "NlmDiagSendWlanDisconnectionDiagnostics")
+Interceptor.attach(NlmDiagSendWlanDisconnectionDiagnostics, {onLeave: function (args) {send("NlmDiagSendWlanDisconnectionDiagnostics");}});
+

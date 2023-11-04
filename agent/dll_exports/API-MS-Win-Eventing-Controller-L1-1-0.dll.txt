@@ -1,0 +1,33 @@
+var ControlTraceW = Module.findExportByName("API-MS-Win-Eventing-Controller-L1-1-0.dll", "ControlTraceW")
+Interceptor.attach(ControlTraceW, {onLeave: function (args) {send("ControlTraceW");}});
+
+var EnableTraceEx2 = Module.findExportByName("API-MS-Win-Eventing-Controller-L1-1-0.dll", "EnableTraceEx2")
+Interceptor.attach(EnableTraceEx2, {onLeave: function (args) {send("EnableTraceEx2");}});
+
+var EnumerateTraceGuidsEx = Module.findExportByName("API-MS-Win-Eventing-Controller-L1-1-0.dll", "EnumerateTraceGuidsEx")
+Interceptor.attach(EnumerateTraceGuidsEx, {onLeave: function (args) {send("EnumerateTraceGuidsEx");}});
+
+var EventAccessControl = Module.findExportByName("API-MS-Win-Eventing-Controller-L1-1-0.dll", "EventAccessControl")
+Interceptor.attach(EventAccessControl, {onLeave: function (args) {send("EventAccessControl");}});
+
+var EventAccessQuery = Module.findExportByName("API-MS-Win-Eventing-Controller-L1-1-0.dll", "EventAccessQuery")
+Interceptor.attach(EventAccessQuery, {onLeave: function (args) {send("EventAccessQuery");}});
+
+var EventAccessRemove = Module.findExportByName("API-MS-Win-Eventing-Controller-L1-1-0.dll", "EventAccessRemove")
+Interceptor.attach(EventAccessRemove, {onLeave: function (args) {send("EventAccessRemove");}});
+
+var QueryAllTracesW = Module.findExportByName("API-MS-Win-Eventing-Controller-L1-1-0.dll", "QueryAllTracesW")
+Interceptor.attach(QueryAllTracesW, {onLeave: function (args) {send("QueryAllTracesW");}});
+
+var StartTraceW = Module.findExportByName("API-MS-Win-Eventing-Controller-L1-1-0.dll", "StartTraceW")
+Interceptor.attach(StartTraceW, {onLeave: function (args) {send("StartTraceW");}});
+
+var StopTraceW = Module.findExportByName("API-MS-Win-Eventing-Controller-L1-1-0.dll", "StopTraceW")
+Interceptor.attach(StopTraceW, {onLeave: function (args) {send("StopTraceW");}});
+
+var TraceQueryInformation = Module.findExportByName("API-MS-Win-Eventing-Controller-L1-1-0.dll", "TraceQueryInformation")
+Interceptor.attach(TraceQueryInformation, {onLeave: function (args) {send("TraceQueryInformation");}});
+
+var TraceSetInformation = Module.findExportByName("API-MS-Win-Eventing-Controller-L1-1-0.dll", "TraceSetInformation")
+Interceptor.attach(TraceSetInformation, {onLeave: function (args) {send("TraceSetInformation");}});
+

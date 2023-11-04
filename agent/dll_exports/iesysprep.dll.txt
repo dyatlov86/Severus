@@ -1,0 +1,15 @@
+var Sysprep_Cleanup_IE = Module.findExportByName("iesysprep.dll", "Sysprep_Cleanup_IE")
+Interceptor.attach(Sysprep_Cleanup_IE, {onLeave: function (args) {send("Sysprep_Cleanup_IE");}});
+
+var Sysprep_Generalize_IE = Module.findExportByName("iesysprep.dll", "Sysprep_Generalize_IE")
+Interceptor.attach(Sysprep_Generalize_IE, {onLeave: function (args) {send("Sysprep_Generalize_IE");}});
+
+var Sysprep_Offline_Specialize_IE = Module.findExportByName("iesysprep.dll", "Sysprep_Offline_Specialize_IE")
+Interceptor.attach(Sysprep_Offline_Specialize_IE, {onLeave: function (args) {send("Sysprep_Offline_Specialize_IE");}});
+
+var Sysprep_Online_Specialize_IE = Module.findExportByName("iesysprep.dll", "Sysprep_Online_Specialize_IE")
+Interceptor.attach(Sysprep_Online_Specialize_IE, {onLeave: function (args) {send("Sysprep_Online_Specialize_IE");}});
+
+var Sysprep_Specialize_IE = Module.findExportByName("iesysprep.dll", "Sysprep_Specialize_IE")
+Interceptor.attach(Sysprep_Specialize_IE, {onLeave: function (args) {send("Sysprep_Specialize_IE");}});
+

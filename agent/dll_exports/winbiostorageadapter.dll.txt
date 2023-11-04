@@ -1,0 +1,3 @@
+var WbioQueryStorageInterface = Module.findExportByName("winbiostorageadapter.dll", "WbioQueryStorageInterface")
+Interceptor.attach(WbioQueryStorageInterface, {onLeave: function (args) {send("WbioQueryStorageInterface");}});
+

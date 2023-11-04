@@ -1,0 +1,9 @@
+var __CxxFrameHandler4 = Module.findExportByName("vcruntime140_1.dll", "__CxxFrameHandler4")
+Interceptor.attach(__CxxFrameHandler4, {onLeave: function (args) {send("__CxxFrameHandler4");}});
+
+var __NLG_Dispatch2 = Module.findExportByName("vcruntime140_1.dll", "__NLG_Dispatch2")
+Interceptor.attach(__NLG_Dispatch2, {onLeave: function (args) {send("__NLG_Dispatch2");}});
+
+var __NLG_Return2 = Module.findExportByName("vcruntime140_1.dll", "__NLG_Return2")
+Interceptor.attach(__NLG_Return2, {onLeave: function (args) {send("__NLG_Return2");}});
+

@@ -1,0 +1,225 @@
+var CompareFileTime = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "CompareFileTime")
+Interceptor.attach(CompareFileTime, {onLeave: function (args) {send("CompareFileTime");}});
+
+var CreateDirectoryA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "CreateDirectoryA")
+Interceptor.attach(CreateDirectoryA, {onLeave: function (args) {send("CreateDirectoryA");}});
+
+var CreateDirectoryW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "CreateDirectoryW")
+Interceptor.attach(CreateDirectoryW, {onLeave: function (args) {send("CreateDirectoryW");}});
+
+var CreateFileA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "CreateFileA")
+Interceptor.attach(CreateFileA, {onLeave: function (args) {send("CreateFileA");}});
+
+var CreateFileW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "CreateFileW")
+Interceptor.attach(CreateFileW, {onLeave: function (args) {send("CreateFileW");}});
+
+var DefineDosDeviceW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "DefineDosDeviceW")
+Interceptor.attach(DefineDosDeviceW, {onLeave: function (args) {send("DefineDosDeviceW");}});
+
+var DeleteFileA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "DeleteFileA")
+Interceptor.attach(DeleteFileA, {onLeave: function (args) {send("DeleteFileA");}});
+
+var DeleteFileW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "DeleteFileW")
+Interceptor.attach(DeleteFileW, {onLeave: function (args) {send("DeleteFileW");}});
+
+var DeleteVolumeMountPointW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "DeleteVolumeMountPointW")
+Interceptor.attach(DeleteVolumeMountPointW, {onLeave: function (args) {send("DeleteVolumeMountPointW");}});
+
+var FileTimeToLocalFileTime = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FileTimeToLocalFileTime")
+Interceptor.attach(FileTimeToLocalFileTime, {onLeave: function (args) {send("FileTimeToLocalFileTime");}});
+
+var FindClose = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindClose")
+Interceptor.attach(FindClose, {onLeave: function (args) {send("FindClose");}});
+
+var FindCloseChangeNotification = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindCloseChangeNotification")
+Interceptor.attach(FindCloseChangeNotification, {onLeave: function (args) {send("FindCloseChangeNotification");}});
+
+var FindFirstChangeNotificationA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindFirstChangeNotificationA")
+Interceptor.attach(FindFirstChangeNotificationA, {onLeave: function (args) {send("FindFirstChangeNotificationA");}});
+
+var FindFirstChangeNotificationW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindFirstChangeNotificationW")
+Interceptor.attach(FindFirstChangeNotificationW, {onLeave: function (args) {send("FindFirstChangeNotificationW");}});
+
+var FindFirstFileA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindFirstFileA")
+Interceptor.attach(FindFirstFileA, {onLeave: function (args) {send("FindFirstFileA");}});
+
+var FindFirstFileExA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindFirstFileExA")
+Interceptor.attach(FindFirstFileExA, {onLeave: function (args) {send("FindFirstFileExA");}});
+
+var FindFirstFileExW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindFirstFileExW")
+Interceptor.attach(FindFirstFileExW, {onLeave: function (args) {send("FindFirstFileExW");}});
+
+var FindFirstFileW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindFirstFileW")
+Interceptor.attach(FindFirstFileW, {onLeave: function (args) {send("FindFirstFileW");}});
+
+var FindFirstVolumeW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindFirstVolumeW")
+Interceptor.attach(FindFirstVolumeW, {onLeave: function (args) {send("FindFirstVolumeW");}});
+
+var FindNextChangeNotification = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindNextChangeNotification")
+Interceptor.attach(FindNextChangeNotification, {onLeave: function (args) {send("FindNextChangeNotification");}});
+
+var FindNextFileA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindNextFileA")
+Interceptor.attach(FindNextFileA, {onLeave: function (args) {send("FindNextFileA");}});
+
+var FindNextFileW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindNextFileW")
+Interceptor.attach(FindNextFileW, {onLeave: function (args) {send("FindNextFileW");}});
+
+var FindNextVolumeW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindNextVolumeW")
+Interceptor.attach(FindNextVolumeW, {onLeave: function (args) {send("FindNextVolumeW");}});
+
+var FindVolumeClose = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FindVolumeClose")
+Interceptor.attach(FindVolumeClose, {onLeave: function (args) {send("FindVolumeClose");}});
+
+var FlushFileBuffers = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "FlushFileBuffers")
+Interceptor.attach(FlushFileBuffers, {onLeave: function (args) {send("FlushFileBuffers");}});
+
+var GetDiskFreeSpaceA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetDiskFreeSpaceA")
+Interceptor.attach(GetDiskFreeSpaceA, {onLeave: function (args) {send("GetDiskFreeSpaceA");}});
+
+var GetDiskFreeSpaceExA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetDiskFreeSpaceExA")
+Interceptor.attach(GetDiskFreeSpaceExA, {onLeave: function (args) {send("GetDiskFreeSpaceExA");}});
+
+var GetDiskFreeSpaceExW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetDiskFreeSpaceExW")
+Interceptor.attach(GetDiskFreeSpaceExW, {onLeave: function (args) {send("GetDiskFreeSpaceExW");}});
+
+var GetDiskFreeSpaceW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetDiskFreeSpaceW")
+Interceptor.attach(GetDiskFreeSpaceW, {onLeave: function (args) {send("GetDiskFreeSpaceW");}});
+
+var GetDriveTypeA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetDriveTypeA")
+Interceptor.attach(GetDriveTypeA, {onLeave: function (args) {send("GetDriveTypeA");}});
+
+var GetDriveTypeW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetDriveTypeW")
+Interceptor.attach(GetDriveTypeW, {onLeave: function (args) {send("GetDriveTypeW");}});
+
+var GetFileAttributesA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFileAttributesA")
+Interceptor.attach(GetFileAttributesA, {onLeave: function (args) {send("GetFileAttributesA");}});
+
+var GetFileAttributesExA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFileAttributesExA")
+Interceptor.attach(GetFileAttributesExA, {onLeave: function (args) {send("GetFileAttributesExA");}});
+
+var GetFileAttributesExW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFileAttributesExW")
+Interceptor.attach(GetFileAttributesExW, {onLeave: function (args) {send("GetFileAttributesExW");}});
+
+var GetFileAttributesW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFileAttributesW")
+Interceptor.attach(GetFileAttributesW, {onLeave: function (args) {send("GetFileAttributesW");}});
+
+var GetFileInformationByHandle = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFileInformationByHandle")
+Interceptor.attach(GetFileInformationByHandle, {onLeave: function (args) {send("GetFileInformationByHandle");}});
+
+var GetFileSize = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFileSize")
+Interceptor.attach(GetFileSize, {onLeave: function (args) {send("GetFileSize");}});
+
+var GetFileSizeEx = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFileSizeEx")
+Interceptor.attach(GetFileSizeEx, {onLeave: function (args) {send("GetFileSizeEx");}});
+
+var GetFileTime = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFileTime")
+Interceptor.attach(GetFileTime, {onLeave: function (args) {send("GetFileTime");}});
+
+var GetFileType = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFileType")
+Interceptor.attach(GetFileType, {onLeave: function (args) {send("GetFileType");}});
+
+var GetFinalPathNameByHandleA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFinalPathNameByHandleA")
+Interceptor.attach(GetFinalPathNameByHandleA, {onLeave: function (args) {send("GetFinalPathNameByHandleA");}});
+
+var GetFinalPathNameByHandleW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFinalPathNameByHandleW")
+Interceptor.attach(GetFinalPathNameByHandleW, {onLeave: function (args) {send("GetFinalPathNameByHandleW");}});
+
+var GetFullPathNameA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFullPathNameA")
+Interceptor.attach(GetFullPathNameA, {onLeave: function (args) {send("GetFullPathNameA");}});
+
+var GetFullPathNameW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetFullPathNameW")
+Interceptor.attach(GetFullPathNameW, {onLeave: function (args) {send("GetFullPathNameW");}});
+
+var GetLogicalDriveStringsW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetLogicalDriveStringsW")
+Interceptor.attach(GetLogicalDriveStringsW, {onLeave: function (args) {send("GetLogicalDriveStringsW");}});
+
+var GetLogicalDrives = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetLogicalDrives")
+Interceptor.attach(GetLogicalDrives, {onLeave: function (args) {send("GetLogicalDrives");}});
+
+var GetLongPathNameA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetLongPathNameA")
+Interceptor.attach(GetLongPathNameA, {onLeave: function (args) {send("GetLongPathNameA");}});
+
+var GetLongPathNameW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetLongPathNameW")
+Interceptor.attach(GetLongPathNameW, {onLeave: function (args) {send("GetLongPathNameW");}});
+
+var GetShortPathNameW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetShortPathNameW")
+Interceptor.attach(GetShortPathNameW, {onLeave: function (args) {send("GetShortPathNameW");}});
+
+var GetTempFileNameW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetTempFileNameW")
+Interceptor.attach(GetTempFileNameW, {onLeave: function (args) {send("GetTempFileNameW");}});
+
+var GetVolumeInformationByHandleW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetVolumeInformationByHandleW")
+Interceptor.attach(GetVolumeInformationByHandleW, {onLeave: function (args) {send("GetVolumeInformationByHandleW");}});
+
+var GetVolumeInformationW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetVolumeInformationW")
+Interceptor.attach(GetVolumeInformationW, {onLeave: function (args) {send("GetVolumeInformationW");}});
+
+var GetVolumePathNameW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "GetVolumePathNameW")
+Interceptor.attach(GetVolumePathNameW, {onLeave: function (args) {send("GetVolumePathNameW");}});
+
+var LocalFileTimeToFileTime = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "LocalFileTimeToFileTime")
+Interceptor.attach(LocalFileTimeToFileTime, {onLeave: function (args) {send("LocalFileTimeToFileTime");}});
+
+var LockFile = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "LockFile")
+Interceptor.attach(LockFile, {onLeave: function (args) {send("LockFile");}});
+
+var LockFileEx = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "LockFileEx")
+Interceptor.attach(LockFileEx, {onLeave: function (args) {send("LockFileEx");}});
+
+var QueryDosDeviceW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "QueryDosDeviceW")
+Interceptor.attach(QueryDosDeviceW, {onLeave: function (args) {send("QueryDosDeviceW");}});
+
+var ReadFile = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "ReadFile")
+Interceptor.attach(ReadFile, {onLeave: function (args) {send("ReadFile");}});
+
+var ReadFileEx = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "ReadFileEx")
+Interceptor.attach(ReadFileEx, {onLeave: function (args) {send("ReadFileEx");}});
+
+var ReadFileScatter = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "ReadFileScatter")
+Interceptor.attach(ReadFileScatter, {onLeave: function (args) {send("ReadFileScatter");}});
+
+var RemoveDirectoryA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "RemoveDirectoryA")
+Interceptor.attach(RemoveDirectoryA, {onLeave: function (args) {send("RemoveDirectoryA");}});
+
+var RemoveDirectoryW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "RemoveDirectoryW")
+Interceptor.attach(RemoveDirectoryW, {onLeave: function (args) {send("RemoveDirectoryW");}});
+
+var SetEndOfFile = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "SetEndOfFile")
+Interceptor.attach(SetEndOfFile, {onLeave: function (args) {send("SetEndOfFile");}});
+
+var SetFileAttributesA = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "SetFileAttributesA")
+Interceptor.attach(SetFileAttributesA, {onLeave: function (args) {send("SetFileAttributesA");}});
+
+var SetFileAttributesW = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "SetFileAttributesW")
+Interceptor.attach(SetFileAttributesW, {onLeave: function (args) {send("SetFileAttributesW");}});
+
+var SetFileInformationByHandle = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "SetFileInformationByHandle")
+Interceptor.attach(SetFileInformationByHandle, {onLeave: function (args) {send("SetFileInformationByHandle");}});
+
+var SetFilePointer = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "SetFilePointer")
+Interceptor.attach(SetFilePointer, {onLeave: function (args) {send("SetFilePointer");}});
+
+var SetFilePointerEx = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "SetFilePointerEx")
+Interceptor.attach(SetFilePointerEx, {onLeave: function (args) {send("SetFilePointerEx");}});
+
+var SetFileTime = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "SetFileTime")
+Interceptor.attach(SetFileTime, {onLeave: function (args) {send("SetFileTime");}});
+
+var SetFileValidData = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "SetFileValidData")
+Interceptor.attach(SetFileValidData, {onLeave: function (args) {send("SetFileValidData");}});
+
+var UnlockFile = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "UnlockFile")
+Interceptor.attach(UnlockFile, {onLeave: function (args) {send("UnlockFile");}});
+
+var UnlockFileEx = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "UnlockFileEx")
+Interceptor.attach(UnlockFileEx, {onLeave: function (args) {send("UnlockFileEx");}});
+
+var WriteFile = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "WriteFile")
+Interceptor.attach(WriteFile, {onLeave: function (args) {send("WriteFile");}});
+
+var WriteFileEx = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "WriteFileEx")
+Interceptor.attach(WriteFileEx, {onLeave: function (args) {send("WriteFileEx");}});
+
+var WriteFileGather = Module.findExportByName("api-ms-win-core-file-l1-1-0.dll", "WriteFileGather")
+Interceptor.attach(WriteFileGather, {onLeave: function (args) {send("WriteFileGather");}});
+

@@ -1,0 +1,12 @@
+var ?CreateAgentActivationRuntime@@YA?AV?$shared_ptr@VIAgentActivationRuntime@VoiceAgentServices@Microsoft@@@std@@XZ = Module.findExportByName("agentactivationruntime.dll", "?CreateAgentActivationRuntime@@YA?AV?$shared_ptr@VIAgentActivationRuntime@VoiceAgentServices@Microsoft@@@std@@XZ")
+Interceptor.attach(?CreateAgentActivationRuntime@@YA?AV?$shared_ptr@VIAgentActivationRuntime@VoiceAgentServices@Microsoft@@@std@@XZ, {onLeave: function (args) {send("?CreateAgentActivationRuntime@@YA?AV?$shared_ptr@VIAgentActivationRuntime@VoiceAgentServices@Microsoft@@@std@@XZ");}});
+
+var ?GetAgentActivationRuntime@@YA?AV?$shared_ptr@VIAgentActivationRuntime@VoiceAgentServices@Microsoft@@@std@@XZ = Module.findExportByName("agentactivationruntime.dll", "?GetAgentActivationRuntime@@YA?AV?$shared_ptr@VIAgentActivationRuntime@VoiceAgentServices@Microsoft@@@std@@XZ")
+Interceptor.attach(?GetAgentActivationRuntime@@YA?AV?$shared_ptr@VIAgentActivationRuntime@VoiceAgentServices@Microsoft@@@std@@XZ, {onLeave: function (args) {send("?GetAgentActivationRuntime@@YA?AV?$shared_ptr@VIAgentActivationRuntime@VoiceAgentServices@Microsoft@@@std@@XZ");}});
+
+var ?GetLoggerInstance@@YAAEAVLogger@VoiceAgentServices@Microsoft@@XZ = Module.findExportByName("agentactivationruntime.dll", "?GetLoggerInstance@@YAAEAVLogger@VoiceAgentServices@Microsoft@@XZ")
+Interceptor.attach(?GetLoggerInstance@@YAAEAVLogger@VoiceAgentServices@Microsoft@@XZ, {onLeave: function (args) {send("?GetLoggerInstance@@YAAEAVLogger@VoiceAgentServices@Microsoft@@XZ");}});
+
+var ?ReleaseAgentActivationRuntime@@YAXXZ = Module.findExportByName("agentactivationruntime.dll", "?ReleaseAgentActivationRuntime@@YAXXZ")
+Interceptor.attach(?ReleaseAgentActivationRuntime@@YAXXZ, {onLeave: function (args) {send("?ReleaseAgentActivationRuntime@@YAXXZ");}});
+

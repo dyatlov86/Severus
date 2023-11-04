@@ -1,0 +1,21 @@
+var DwmpCreateSessionProcess = Module.findExportByName("dwminit.dll", "DwmpCreateSessionProcess")
+Interceptor.attach(DwmpCreateSessionProcess, {onLeave: function (args) {send("DwmpCreateSessionProcess");}});
+
+var DwmpIsInitialSessionInteractive = Module.findExportByName("dwminit.dll", "DwmpIsInitialSessionInteractive")
+Interceptor.attach(DwmpIsInitialSessionInteractive, {onLeave: function (args) {send("DwmpIsInitialSessionInteractive");}});
+
+var DwmpNotifyUserLogoff = Module.findExportByName("dwminit.dll", "DwmpNotifyUserLogoff")
+Interceptor.attach(DwmpNotifyUserLogoff, {onLeave: function (args) {send("DwmpNotifyUserLogoff");}});
+
+var DwmpNotifyUserLogon = Module.findExportByName("dwminit.dll", "DwmpNotifyUserLogon")
+Interceptor.attach(DwmpNotifyUserLogon, {onLeave: function (args) {send("DwmpNotifyUserLogon");}});
+
+var DwmpShutdownWinlogonMouseThread = Module.findExportByName("dwminit.dll", "DwmpShutdownWinlogonMouseThread")
+Interceptor.attach(DwmpShutdownWinlogonMouseThread, {onLeave: function (args) {send("DwmpShutdownWinlogonMouseThread");}});
+
+var DwmpStartWinlogonMouseThread = Module.findExportByName("dwminit.dll", "DwmpStartWinlogonMouseThread")
+Interceptor.attach(DwmpStartWinlogonMouseThread, {onLeave: function (args) {send("DwmpStartWinlogonMouseThread");}});
+
+var DwmpTerminateSessionProcess = Module.findExportByName("dwminit.dll", "DwmpTerminateSessionProcess")
+Interceptor.attach(DwmpTerminateSessionProcess, {onLeave: function (args) {send("DwmpTerminateSessionProcess");}});
+

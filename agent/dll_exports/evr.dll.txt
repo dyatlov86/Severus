@@ -1,0 +1,84 @@
+var DllCanUnloadNow = Module.findExportByName("evr.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("evr.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("evr.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("evr.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var MFConvertColorInfoFromDXVA = Module.findExportByName("evr.dll", "MFConvertColorInfoFromDXVA")
+Interceptor.attach(MFConvertColorInfoFromDXVA, {onLeave: function (args) {send("MFConvertColorInfoFromDXVA");}});
+
+var MFConvertColorInfoToDXVA = Module.findExportByName("evr.dll", "MFConvertColorInfoToDXVA")
+Interceptor.attach(MFConvertColorInfoToDXVA, {onLeave: function (args) {send("MFConvertColorInfoToDXVA");}});
+
+var MFConvertFromFP16Array = Module.findExportByName("evr.dll", "MFConvertFromFP16Array")
+Interceptor.attach(MFConvertFromFP16Array, {onLeave: function (args) {send("MFConvertFromFP16Array");}});
+
+var MFConvertToFP16Array = Module.findExportByName("evr.dll", "MFConvertToFP16Array")
+Interceptor.attach(MFConvertToFP16Array, {onLeave: function (args) {send("MFConvertToFP16Array");}});
+
+var MFCopyImage = Module.findExportByName("evr.dll", "MFCopyImage")
+Interceptor.attach(MFCopyImage, {onLeave: function (args) {send("MFCopyImage");}});
+
+var MFCreateDXSurfaceBuffer = Module.findExportByName("evr.dll", "MFCreateDXSurfaceBuffer")
+Interceptor.attach(MFCreateDXSurfaceBuffer, {onLeave: function (args) {send("MFCreateDXSurfaceBuffer");}});
+
+var MFCreateVideoMediaType = Module.findExportByName("evr.dll", "MFCreateVideoMediaType")
+Interceptor.attach(MFCreateVideoMediaType, {onLeave: function (args) {send("MFCreateVideoMediaType");}});
+
+var MFCreateVideoMediaTypeFromBitMapInfoHeader = Module.findExportByName("evr.dll", "MFCreateVideoMediaTypeFromBitMapInfoHeader")
+Interceptor.attach(MFCreateVideoMediaTypeFromBitMapInfoHeader, {onLeave: function (args) {send("MFCreateVideoMediaTypeFromBitMapInfoHeader");}});
+
+var MFCreateVideoMediaTypeFromSubtype = Module.findExportByName("evr.dll", "MFCreateVideoMediaTypeFromSubtype")
+Interceptor.attach(MFCreateVideoMediaTypeFromSubtype, {onLeave: function (args) {send("MFCreateVideoMediaTypeFromSubtype");}});
+
+var MFCreateVideoMediaTypeFromVideoInfoHeader = Module.findExportByName("evr.dll", "MFCreateVideoMediaTypeFromVideoInfoHeader")
+Interceptor.attach(MFCreateVideoMediaTypeFromVideoInfoHeader, {onLeave: function (args) {send("MFCreateVideoMediaTypeFromVideoInfoHeader");}});
+
+var MFCreateVideoMediaTypeFromVideoInfoHeader2 = Module.findExportByName("evr.dll", "MFCreateVideoMediaTypeFromVideoInfoHeader2")
+Interceptor.attach(MFCreateVideoMediaTypeFromVideoInfoHeader2, {onLeave: function (args) {send("MFCreateVideoMediaTypeFromVideoInfoHeader2");}});
+
+var MFCreateVideoMixer = Module.findExportByName("evr.dll", "MFCreateVideoMixer")
+Interceptor.attach(MFCreateVideoMixer, {onLeave: function (args) {send("MFCreateVideoMixer");}});
+
+var MFCreateVideoMixerAndPresenter = Module.findExportByName("evr.dll", "MFCreateVideoMixerAndPresenter")
+Interceptor.attach(MFCreateVideoMixerAndPresenter, {onLeave: function (args) {send("MFCreateVideoMixerAndPresenter");}});
+
+var MFCreateVideoOTA = Module.findExportByName("evr.dll", "MFCreateVideoOTA")
+Interceptor.attach(MFCreateVideoOTA, {onLeave: function (args) {send("MFCreateVideoOTA");}});
+
+var MFCreateVideoPresenter = Module.findExportByName("evr.dll", "MFCreateVideoPresenter")
+Interceptor.attach(MFCreateVideoPresenter, {onLeave: function (args) {send("MFCreateVideoPresenter");}});
+
+var MFCreateVideoPresenter2 = Module.findExportByName("evr.dll", "MFCreateVideoPresenter2")
+Interceptor.attach(MFCreateVideoPresenter2, {onLeave: function (args) {send("MFCreateVideoPresenter2");}});
+
+var MFCreateVideoSampleAllocator = Module.findExportByName("evr.dll", "MFCreateVideoSampleAllocator")
+Interceptor.attach(MFCreateVideoSampleAllocator, {onLeave: function (args) {send("MFCreateVideoSampleAllocator");}});
+
+var MFCreateVideoSampleFromSurface = Module.findExportByName("evr.dll", "MFCreateVideoSampleFromSurface")
+Interceptor.attach(MFCreateVideoSampleFromSurface, {onLeave: function (args) {send("MFCreateVideoSampleFromSurface");}});
+
+var MFGetPlaneSize = Module.findExportByName("evr.dll", "MFGetPlaneSize")
+Interceptor.attach(MFGetPlaneSize, {onLeave: function (args) {send("MFGetPlaneSize");}});
+
+var MFGetStrideForBitmapInfoHeader = Module.findExportByName("evr.dll", "MFGetStrideForBitmapInfoHeader")
+Interceptor.attach(MFGetStrideForBitmapInfoHeader, {onLeave: function (args) {send("MFGetStrideForBitmapInfoHeader");}});
+
+var MFGetUncompressedVideoFormat = Module.findExportByName("evr.dll", "MFGetUncompressedVideoFormat")
+Interceptor.attach(MFGetUncompressedVideoFormat, {onLeave: function (args) {send("MFGetUncompressedVideoFormat");}});
+
+var MFInitVideoFormat = Module.findExportByName("evr.dll", "MFInitVideoFormat")
+Interceptor.attach(MFInitVideoFormat, {onLeave: function (args) {send("MFInitVideoFormat");}});
+
+var MFInitVideoFormat_RGB = Module.findExportByName("evr.dll", "MFInitVideoFormat_RGB")
+Interceptor.attach(MFInitVideoFormat_RGB, {onLeave: function (args) {send("MFInitVideoFormat_RGB");}});
+
+var MFIsFormatYUV = Module.findExportByName("evr.dll", "MFIsFormatYUV")
+Interceptor.attach(MFIsFormatYUV, {onLeave: function (args) {send("MFIsFormatYUV");}});
+

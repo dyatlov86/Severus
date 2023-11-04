@@ -1,0 +1,33 @@
+var DllCanUnloadNow = Module.findExportByName("gpsvc.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("gpsvc.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GenerateRsopPolicy = Module.findExportByName("gpsvc.dll", "GenerateRsopPolicy")
+Interceptor.attach(GenerateRsopPolicy, {onLeave: function (args) {send("GenerateRsopPolicy");}});
+
+var GroupPolicyClientServiceMain = Module.findExportByName("gpsvc.dll", "GroupPolicyClientServiceMain")
+Interceptor.attach(GroupPolicyClientServiceMain, {onLeave: function (args) {send("GroupPolicyClientServiceMain");}});
+
+var ProcessGroupPolicyCompletedExInternal = Module.findExportByName("gpsvc.dll", "ProcessGroupPolicyCompletedExInternal")
+Interceptor.attach(ProcessGroupPolicyCompletedExInternal, {onLeave: function (args) {send("ProcessGroupPolicyCompletedExInternal");}});
+
+var ProcessGroupPolicyCompletedInternal = Module.findExportByName("gpsvc.dll", "ProcessGroupPolicyCompletedInternal")
+Interceptor.attach(ProcessGroupPolicyCompletedInternal, {onLeave: function (args) {send("ProcessGroupPolicyCompletedInternal");}});
+
+var RsopAccessCheckByTypeInternal = Module.findExportByName("gpsvc.dll", "RsopAccessCheckByTypeInternal")
+Interceptor.attach(RsopAccessCheckByTypeInternal, {onLeave: function (args) {send("RsopAccessCheckByTypeInternal");}});
+
+var RsopFileAccessCheckInternal = Module.findExportByName("gpsvc.dll", "RsopFileAccessCheckInternal")
+Interceptor.attach(RsopFileAccessCheckInternal, {onLeave: function (args) {send("RsopFileAccessCheckInternal");}});
+
+var RsopResetPolicySettingStatusInternal = Module.findExportByName("gpsvc.dll", "RsopResetPolicySettingStatusInternal")
+Interceptor.attach(RsopResetPolicySettingStatusInternal, {onLeave: function (args) {send("RsopResetPolicySettingStatusInternal");}});
+
+var RsopSetPolicySettingStatusInternal = Module.findExportByName("gpsvc.dll", "RsopSetPolicySettingStatusInternal")
+Interceptor.attach(RsopSetPolicySettingStatusInternal, {onLeave: function (args) {send("RsopSetPolicySettingStatusInternal");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("gpsvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

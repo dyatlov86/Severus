@@ -1,0 +1,18 @@
+var CreateFilterTestHook = Module.findExportByName("vfprint.dll", "CreateFilterTestHook")
+Interceptor.attach(CreateFilterTestHook, {onLeave: function (args) {send("CreateFilterTestHook");}});
+
+var GetAccessViolationsCount = Module.findExportByName("vfprint.dll", "GetAccessViolationsCount")
+Interceptor.attach(GetAccessViolationsCount, {onLeave: function (args) {send("GetAccessViolationsCount");}});
+
+var GetInvalidHandleExceptionCount = Module.findExportByName("vfprint.dll", "GetInvalidHandleExceptionCount")
+Interceptor.attach(GetInvalidHandleExceptionCount, {onLeave: function (args) {send("GetInvalidHandleExceptionCount");}});
+
+var GetPrinterHandleCount = Module.findExportByName("vfprint.dll", "GetPrinterHandleCount")
+Interceptor.attach(GetPrinterHandleCount, {onLeave: function (args) {send("GetPrinterHandleCount");}});
+
+var PrintVerifierCreatePluginInterfaceWrapper = Module.findExportByName("vfprint.dll", "PrintVerifierCreatePluginInterfaceWrapper")
+Interceptor.attach(PrintVerifierCreatePluginInterfaceWrapper, {onLeave: function (args) {send("PrintVerifierCreatePluginInterfaceWrapper");}});
+
+var PrintVerifierIsLayerEnabled = Module.findExportByName("vfprint.dll", "PrintVerifierIsLayerEnabled")
+Interceptor.attach(PrintVerifierIsLayerEnabled, {onLeave: function (args) {send("PrintVerifierIsLayerEnabled");}});
+

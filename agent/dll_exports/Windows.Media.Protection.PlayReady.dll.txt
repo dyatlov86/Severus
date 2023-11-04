@@ -1,0 +1,18 @@
+var BootstrapReleaseUnusedResources = Module.findExportByName("Windows.Media.Protection.PlayReady.dll", "BootstrapReleaseUnusedResources")
+Interceptor.attach(BootstrapReleaseUnusedResources, {onLeave: function (args) {send("BootstrapReleaseUnusedResources");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.Media.Protection.PlayReady.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Media.Protection.PlayReady.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Media.Protection.PlayReady.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var MSPRMFDllCanUnloadNow = Module.findExportByName("Windows.Media.Protection.PlayReady.dll", "MSPRMFDllCanUnloadNow")
+Interceptor.attach(MSPRMFDllCanUnloadNow, {onLeave: function (args) {send("MSPRMFDllCanUnloadNow");}});
+
+var MSPRMFGetClassObject = Module.findExportByName("Windows.Media.Protection.PlayReady.dll", "MSPRMFGetClassObject")
+Interceptor.attach(MSPRMFGetClassObject, {onLeave: function (args) {send("MSPRMFGetClassObject");}});
+

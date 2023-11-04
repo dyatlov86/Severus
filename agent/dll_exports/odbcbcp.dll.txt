@@ -1,0 +1,84 @@
+var LibMain = Module.findExportByName("odbcbcp.dll", "LibMain")
+Interceptor.attach(LibMain, {onLeave: function (args) {send("LibMain");}});
+
+var SQLCloseEnumServers = Module.findExportByName("odbcbcp.dll", "SQLCloseEnumServers")
+Interceptor.attach(SQLCloseEnumServers, {onLeave: function (args) {send("SQLCloseEnumServers");}});
+
+var SQLGetNextEnumeration = Module.findExportByName("odbcbcp.dll", "SQLGetNextEnumeration")
+Interceptor.attach(SQLGetNextEnumeration, {onLeave: function (args) {send("SQLGetNextEnumeration");}});
+
+var SQLInitEnumServers = Module.findExportByName("odbcbcp.dll", "SQLInitEnumServers")
+Interceptor.attach(SQLInitEnumServers, {onLeave: function (args) {send("SQLInitEnumServers");}});
+
+var SQLLinkedCatalogsA = Module.findExportByName("odbcbcp.dll", "SQLLinkedCatalogsA")
+Interceptor.attach(SQLLinkedCatalogsA, {onLeave: function (args) {send("SQLLinkedCatalogsA");}});
+
+var SQLLinkedCatalogsW = Module.findExportByName("odbcbcp.dll", "SQLLinkedCatalogsW")
+Interceptor.attach(SQLLinkedCatalogsW, {onLeave: function (args) {send("SQLLinkedCatalogsW");}});
+
+var SQLLinkedServers = Module.findExportByName("odbcbcp.dll", "SQLLinkedServers")
+Interceptor.attach(SQLLinkedServers, {onLeave: function (args) {send("SQLLinkedServers");}});
+
+var bcp_batch = Module.findExportByName("odbcbcp.dll", "bcp_batch")
+Interceptor.attach(bcp_batch, {onLeave: function (args) {send("bcp_batch");}});
+
+var bcp_bind = Module.findExportByName("odbcbcp.dll", "bcp_bind")
+Interceptor.attach(bcp_bind, {onLeave: function (args) {send("bcp_bind");}});
+
+var bcp_colfmt = Module.findExportByName("odbcbcp.dll", "bcp_colfmt")
+Interceptor.attach(bcp_colfmt, {onLeave: function (args) {send("bcp_colfmt");}});
+
+var bcp_collen = Module.findExportByName("odbcbcp.dll", "bcp_collen")
+Interceptor.attach(bcp_collen, {onLeave: function (args) {send("bcp_collen");}});
+
+var bcp_colptr = Module.findExportByName("odbcbcp.dll", "bcp_colptr")
+Interceptor.attach(bcp_colptr, {onLeave: function (args) {send("bcp_colptr");}});
+
+var bcp_columns = Module.findExportByName("odbcbcp.dll", "bcp_columns")
+Interceptor.attach(bcp_columns, {onLeave: function (args) {send("bcp_columns");}});
+
+var bcp_control = Module.findExportByName("odbcbcp.dll", "bcp_control")
+Interceptor.attach(bcp_control, {onLeave: function (args) {send("bcp_control");}});
+
+var bcp_done = Module.findExportByName("odbcbcp.dll", "bcp_done")
+Interceptor.attach(bcp_done, {onLeave: function (args) {send("bcp_done");}});
+
+var bcp_exec = Module.findExportByName("odbcbcp.dll", "bcp_exec")
+Interceptor.attach(bcp_exec, {onLeave: function (args) {send("bcp_exec");}});
+
+var bcp_getcolfmt = Module.findExportByName("odbcbcp.dll", "bcp_getcolfmt")
+Interceptor.attach(bcp_getcolfmt, {onLeave: function (args) {send("bcp_getcolfmt");}});
+
+var bcp_initA = Module.findExportByName("odbcbcp.dll", "bcp_initA")
+Interceptor.attach(bcp_initA, {onLeave: function (args) {send("bcp_initA");}});
+
+var bcp_initW = Module.findExportByName("odbcbcp.dll", "bcp_initW")
+Interceptor.attach(bcp_initW, {onLeave: function (args) {send("bcp_initW");}});
+
+var bcp_moretext = Module.findExportByName("odbcbcp.dll", "bcp_moretext")
+Interceptor.attach(bcp_moretext, {onLeave: function (args) {send("bcp_moretext");}});
+
+var bcp_readfmtA = Module.findExportByName("odbcbcp.dll", "bcp_readfmtA")
+Interceptor.attach(bcp_readfmtA, {onLeave: function (args) {send("bcp_readfmtA");}});
+
+var bcp_readfmtW = Module.findExportByName("odbcbcp.dll", "bcp_readfmtW")
+Interceptor.attach(bcp_readfmtW, {onLeave: function (args) {send("bcp_readfmtW");}});
+
+var bcp_sendrow = Module.findExportByName("odbcbcp.dll", "bcp_sendrow")
+Interceptor.attach(bcp_sendrow, {onLeave: function (args) {send("bcp_sendrow");}});
+
+var bcp_setcolfmt = Module.findExportByName("odbcbcp.dll", "bcp_setcolfmt")
+Interceptor.attach(bcp_setcolfmt, {onLeave: function (args) {send("bcp_setcolfmt");}});
+
+var bcp_writefmtA = Module.findExportByName("odbcbcp.dll", "bcp_writefmtA")
+Interceptor.attach(bcp_writefmtA, {onLeave: function (args) {send("bcp_writefmtA");}});
+
+var bcp_writefmtW = Module.findExportByName("odbcbcp.dll", "bcp_writefmtW")
+Interceptor.attach(bcp_writefmtW, {onLeave: function (args) {send("bcp_writefmtW");}});
+
+var dbprtypeA = Module.findExportByName("odbcbcp.dll", "dbprtypeA")
+Interceptor.attach(dbprtypeA, {onLeave: function (args) {send("dbprtypeA");}});
+
+var dbprtypeW = Module.findExportByName("odbcbcp.dll", "dbprtypeW")
+Interceptor.attach(dbprtypeW, {onLeave: function (args) {send("dbprtypeW");}});
+

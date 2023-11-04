@@ -1,0 +1,108 @@
+var DllRegisterServer = Module.findExportByName("mssign32.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mssign32.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var FreeCryptProvFromCert = Module.findExportByName("mssign32.dll", "FreeCryptProvFromCert")
+Interceptor.attach(FreeCryptProvFromCert, {onLeave: function (args) {send("FreeCryptProvFromCert");}});
+
+var FreeCryptProvFromCertEx = Module.findExportByName("mssign32.dll", "FreeCryptProvFromCertEx")
+Interceptor.attach(FreeCryptProvFromCertEx, {onLeave: function (args) {send("FreeCryptProvFromCertEx");}});
+
+var GetCryptProvFromCert = Module.findExportByName("mssign32.dll", "GetCryptProvFromCert")
+Interceptor.attach(GetCryptProvFromCert, {onLeave: function (args) {send("GetCryptProvFromCert");}});
+
+var GetCryptProvFromCertEx = Module.findExportByName("mssign32.dll", "GetCryptProvFromCertEx")
+Interceptor.attach(GetCryptProvFromCertEx, {onLeave: function (args) {send("GetCryptProvFromCertEx");}});
+
+var PvkFreeCryptProv = Module.findExportByName("mssign32.dll", "PvkFreeCryptProv")
+Interceptor.attach(PvkFreeCryptProv, {onLeave: function (args) {send("PvkFreeCryptProv");}});
+
+var PvkGetCryptProv = Module.findExportByName("mssign32.dll", "PvkGetCryptProv")
+Interceptor.attach(PvkGetCryptProv, {onLeave: function (args) {send("PvkGetCryptProv");}});
+
+var PvkPrivateKeyAcquireContext = Module.findExportByName("mssign32.dll", "PvkPrivateKeyAcquireContext")
+Interceptor.attach(PvkPrivateKeyAcquireContext, {onLeave: function (args) {send("PvkPrivateKeyAcquireContext");}});
+
+var PvkPrivateKeyAcquireContextA = Module.findExportByName("mssign32.dll", "PvkPrivateKeyAcquireContextA")
+Interceptor.attach(PvkPrivateKeyAcquireContextA, {onLeave: function (args) {send("PvkPrivateKeyAcquireContextA");}});
+
+var PvkPrivateKeyAcquireContextFromMemory = Module.findExportByName("mssign32.dll", "PvkPrivateKeyAcquireContextFromMemory")
+Interceptor.attach(PvkPrivateKeyAcquireContextFromMemory, {onLeave: function (args) {send("PvkPrivateKeyAcquireContextFromMemory");}});
+
+var PvkPrivateKeyAcquireContextFromMemoryA = Module.findExportByName("mssign32.dll", "PvkPrivateKeyAcquireContextFromMemoryA")
+Interceptor.attach(PvkPrivateKeyAcquireContextFromMemoryA, {onLeave: function (args) {send("PvkPrivateKeyAcquireContextFromMemoryA");}});
+
+var PvkPrivateKeyLoad = Module.findExportByName("mssign32.dll", "PvkPrivateKeyLoad")
+Interceptor.attach(PvkPrivateKeyLoad, {onLeave: function (args) {send("PvkPrivateKeyLoad");}});
+
+var PvkPrivateKeyLoadA = Module.findExportByName("mssign32.dll", "PvkPrivateKeyLoadA")
+Interceptor.attach(PvkPrivateKeyLoadA, {onLeave: function (args) {send("PvkPrivateKeyLoadA");}});
+
+var PvkPrivateKeyLoadFromMemory = Module.findExportByName("mssign32.dll", "PvkPrivateKeyLoadFromMemory")
+Interceptor.attach(PvkPrivateKeyLoadFromMemory, {onLeave: function (args) {send("PvkPrivateKeyLoadFromMemory");}});
+
+var PvkPrivateKeyLoadFromMemoryA = Module.findExportByName("mssign32.dll", "PvkPrivateKeyLoadFromMemoryA")
+Interceptor.attach(PvkPrivateKeyLoadFromMemoryA, {onLeave: function (args) {send("PvkPrivateKeyLoadFromMemoryA");}});
+
+var PvkPrivateKeyReleaseContext = Module.findExportByName("mssign32.dll", "PvkPrivateKeyReleaseContext")
+Interceptor.attach(PvkPrivateKeyReleaseContext, {onLeave: function (args) {send("PvkPrivateKeyReleaseContext");}});
+
+var PvkPrivateKeyReleaseContextA = Module.findExportByName("mssign32.dll", "PvkPrivateKeyReleaseContextA")
+Interceptor.attach(PvkPrivateKeyReleaseContextA, {onLeave: function (args) {send("PvkPrivateKeyReleaseContextA");}});
+
+var PvkPrivateKeySave = Module.findExportByName("mssign32.dll", "PvkPrivateKeySave")
+Interceptor.attach(PvkPrivateKeySave, {onLeave: function (args) {send("PvkPrivateKeySave");}});
+
+var PvkPrivateKeySaveA = Module.findExportByName("mssign32.dll", "PvkPrivateKeySaveA")
+Interceptor.attach(PvkPrivateKeySaveA, {onLeave: function (args) {send("PvkPrivateKeySaveA");}});
+
+var PvkPrivateKeySaveToMemory = Module.findExportByName("mssign32.dll", "PvkPrivateKeySaveToMemory")
+Interceptor.attach(PvkPrivateKeySaveToMemory, {onLeave: function (args) {send("PvkPrivateKeySaveToMemory");}});
+
+var PvkPrivateKeySaveToMemoryA = Module.findExportByName("mssign32.dll", "PvkPrivateKeySaveToMemoryA")
+Interceptor.attach(PvkPrivateKeySaveToMemoryA, {onLeave: function (args) {send("PvkPrivateKeySaveToMemoryA");}});
+
+var SignError = Module.findExportByName("mssign32.dll", "SignError")
+Interceptor.attach(SignError, {onLeave: function (args) {send("SignError");}});
+
+var SignerAddTimeStampResponse = Module.findExportByName("mssign32.dll", "SignerAddTimeStampResponse")
+Interceptor.attach(SignerAddTimeStampResponse, {onLeave: function (args) {send("SignerAddTimeStampResponse");}});
+
+var SignerAddTimeStampResponseEx = Module.findExportByName("mssign32.dll", "SignerAddTimeStampResponseEx")
+Interceptor.attach(SignerAddTimeStampResponseEx, {onLeave: function (args) {send("SignerAddTimeStampResponseEx");}});
+
+var SignerCreateTimeStampRequest = Module.findExportByName("mssign32.dll", "SignerCreateTimeStampRequest")
+Interceptor.attach(SignerCreateTimeStampRequest, {onLeave: function (args) {send("SignerCreateTimeStampRequest");}});
+
+var SignerFreeSignerContext = Module.findExportByName("mssign32.dll", "SignerFreeSignerContext")
+Interceptor.attach(SignerFreeSignerContext, {onLeave: function (args) {send("SignerFreeSignerContext");}});
+
+var SignerSign = Module.findExportByName("mssign32.dll", "SignerSign")
+Interceptor.attach(SignerSign, {onLeave: function (args) {send("SignerSign");}});
+
+var SignerSignEx = Module.findExportByName("mssign32.dll", "SignerSignEx")
+Interceptor.attach(SignerSignEx, {onLeave: function (args) {send("SignerSignEx");}});
+
+var SignerSignEx2 = Module.findExportByName("mssign32.dll", "SignerSignEx2")
+Interceptor.attach(SignerSignEx2, {onLeave: function (args) {send("SignerSignEx2");}});
+
+var SignerSignEx3 = Module.findExportByName("mssign32.dll", "SignerSignEx3")
+Interceptor.attach(SignerSignEx3, {onLeave: function (args) {send("SignerSignEx3");}});
+
+var SignerTimeStamp = Module.findExportByName("mssign32.dll", "SignerTimeStamp")
+Interceptor.attach(SignerTimeStamp, {onLeave: function (args) {send("SignerTimeStamp");}});
+
+var SignerTimeStampEx = Module.findExportByName("mssign32.dll", "SignerTimeStampEx")
+Interceptor.attach(SignerTimeStampEx, {onLeave: function (args) {send("SignerTimeStampEx");}});
+
+var SignerTimeStampEx2 = Module.findExportByName("mssign32.dll", "SignerTimeStampEx2")
+Interceptor.attach(SignerTimeStampEx2, {onLeave: function (args) {send("SignerTimeStampEx2");}});
+
+var SignerTimeStampEx3 = Module.findExportByName("mssign32.dll", "SignerTimeStampEx3")
+Interceptor.attach(SignerTimeStampEx3, {onLeave: function (args) {send("SignerTimeStampEx3");}});
+
+var SpcGetCertFromKey = Module.findExportByName("mssign32.dll", "SpcGetCertFromKey")
+Interceptor.attach(SpcGetCertFromKey, {onLeave: function (args) {send("SpcGetCertFromKey");}});
+

@@ -1,0 +1,6 @@
+var SkuFreeBuffer = Module.findExportByName("winsku.dll", "SkuFreeBuffer")
+Interceptor.attach(SkuFreeBuffer, {onLeave: function (args) {send("SkuFreeBuffer");}});
+
+var SkuGetEditionEulaFilePath = Module.findExportByName("winsku.dll", "SkuGetEditionEulaFilePath")
+Interceptor.attach(SkuGetEditionEulaFilePath, {onLeave: function (args) {send("SkuGetEditionEulaFilePath");}});
+

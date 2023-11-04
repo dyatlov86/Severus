@@ -1,0 +1,3 @@
+var PE_CreateProductEnumerator = Module.findExportByName("ProductEnumerator.dll", "PE_CreateProductEnumerator")
+Interceptor.attach(PE_CreateProductEnumerator, {onLeave: function (args) {send("PE_CreateProductEnumerator");}});
+

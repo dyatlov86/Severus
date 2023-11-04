@@ -1,0 +1,27 @@
+var GetNetworkCost = Module.findExportByName("ResetEngOnline.dll", "GetNetworkCost")
+Interceptor.attach(GetNetworkCost, {onLeave: function (args) {send("GetNetworkCost");}});
+
+var IsEsimPresent = Module.findExportByName("ResetEngOnline.dll", "IsEsimPresent")
+Interceptor.attach(IsEsimPresent, {onLeave: function (args) {send("IsEsimPresent");}});
+
+var ResetEsim = Module.findExportByName("ResetEngOnline.dll", "ResetEsim")
+Interceptor.attach(ResetEsim, {onLeave: function (args) {send("ResetEsim");}});
+
+var ResetGetEngineInterface = Module.findExportByName("ResetEngOnline.dll", "ResetGetEngineInterface")
+Interceptor.attach(ResetGetEngineInterface, {onLeave: function (args) {send("ResetGetEngineInterface");}});
+
+var ResetInitializeEngine = Module.findExportByName("ResetEngOnline.dll", "ResetInitializeEngine")
+Interceptor.attach(ResetInitializeEngine, {onLeave: function (args) {send("ResetInitializeEngine");}});
+
+var ResetRebootSystem = Module.findExportByName("ResetEngOnline.dll", "ResetRebootSystem")
+Interceptor.attach(ResetRebootSystem, {onLeave: function (args) {send("ResetRebootSystem");}});
+
+var ResetReleaseEngine = Module.findExportByName("ResetEngOnline.dll", "ResetReleaseEngine")
+Interceptor.attach(ResetReleaseEngine, {onLeave: function (args) {send("ResetReleaseEngine");}});
+
+var UninstallFinalize = Module.findExportByName("ResetEngOnline.dll", "UninstallFinalize")
+Interceptor.attach(UninstallFinalize, {onLeave: function (args) {send("UninstallFinalize");}});
+
+var UninstallGetInterface = Module.findExportByName("ResetEngOnline.dll", "UninstallGetInterface")
+Interceptor.attach(UninstallGetInterface, {onLeave: function (args) {send("UninstallGetInterface");}});
+

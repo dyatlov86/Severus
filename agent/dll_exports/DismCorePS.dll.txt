@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("DismCorePS.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("DismCorePS.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllGetDismInterfaces = Module.findExportByName("DismCorePS.dll", "DllGetDismInterfaces")
+Interceptor.attach(DllGetDismInterfaces, {onLeave: function (args) {send("DllGetDismInterfaces");}});
+
+var DllRegisterServer = Module.findExportByName("DismCorePS.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("DismCorePS.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

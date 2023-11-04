@@ -1,0 +1,18 @@
+var CloseNetSvcsObject = Module.findExportByName("perfnet.dll", "CloseNetSvcsObject")
+Interceptor.attach(CloseNetSvcsObject, {onLeave: function (args) {send("CloseNetSvcsObject");}});
+
+var CloseTcpIpPerformanceData = Module.findExportByName("perfnet.dll", "CloseTcpIpPerformanceData")
+Interceptor.attach(CloseTcpIpPerformanceData, {onLeave: function (args) {send("CloseTcpIpPerformanceData");}});
+
+var CollectNetSvcsObjectData = Module.findExportByName("perfnet.dll", "CollectNetSvcsObjectData")
+Interceptor.attach(CollectNetSvcsObjectData, {onLeave: function (args) {send("CollectNetSvcsObjectData");}});
+
+var CollectTcpIpPerformanceData = Module.findExportByName("perfnet.dll", "CollectTcpIpPerformanceData")
+Interceptor.attach(CollectTcpIpPerformanceData, {onLeave: function (args) {send("CollectTcpIpPerformanceData");}});
+
+var OpenNetSvcsObject = Module.findExportByName("perfnet.dll", "OpenNetSvcsObject")
+Interceptor.attach(OpenNetSvcsObject, {onLeave: function (args) {send("OpenNetSvcsObject");}});
+
+var OpenTcpIpPerformanceData = Module.findExportByName("perfnet.dll", "OpenTcpIpPerformanceData")
+Interceptor.attach(OpenTcpIpPerformanceData, {onLeave: function (args) {send("OpenTcpIpPerformanceData");}});
+

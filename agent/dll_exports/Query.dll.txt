@@ -1,0 +1,30 @@
+var BindIFilterFromStorage = Module.findExportByName("Query.dll", "BindIFilterFromStorage")
+Interceptor.attach(BindIFilterFromStorage, {onLeave: function (args) {send("BindIFilterFromStorage");}});
+
+var BindIFilterFromStream = Module.findExportByName("Query.dll", "BindIFilterFromStream")
+Interceptor.attach(BindIFilterFromStream, {onLeave: function (args) {send("BindIFilterFromStream");}});
+
+var DllCanUnloadNow = Module.findExportByName("Query.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("Query.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("Query.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("Query.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var LoadBinaryFilter = Module.findExportByName("Query.dll", "LoadBinaryFilter")
+Interceptor.attach(LoadBinaryFilter, {onLeave: function (args) {send("LoadBinaryFilter");}});
+
+var LoadIFilter = Module.findExportByName("Query.dll", "LoadIFilter")
+Interceptor.attach(LoadIFilter, {onLeave: function (args) {send("LoadIFilter");}});
+
+var LoadIFilterEx = Module.findExportByName("Query.dll", "LoadIFilterEx")
+Interceptor.attach(LoadIFilterEx, {onLeave: function (args) {send("LoadIFilterEx");}});
+
+var LoadTextFilter = Module.findExportByName("Query.dll", "LoadTextFilter")
+Interceptor.attach(LoadTextFilter, {onLeave: function (args) {send("LoadTextFilter");}});
+

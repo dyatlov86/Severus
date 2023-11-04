@@ -1,0 +1,6 @@
+var DXGIGetDebugInterface = Module.findExportByName("DXGIDebug.dll", "DXGIGetDebugInterface")
+Interceptor.attach(DXGIGetDebugInterface, {onLeave: function (args) {send("DXGIGetDebugInterface");}});
+
+var DXGI_SDK_MESSAGE = Module.findExportByName("DXGIDebug.dll", "DXGI_SDK_MESSAGE")
+Interceptor.attach(DXGI_SDK_MESSAGE, {onLeave: function (args) {send("DXGI_SDK_MESSAGE");}});
+

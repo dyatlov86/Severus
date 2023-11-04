@@ -1,0 +1,6 @@
+var CreateTdlMigrator = Module.findExportByName("TDLMigration.dll", "CreateTdlMigrator")
+Interceptor.attach(CreateTdlMigrator, {onLeave: function (args) {send("CreateTdlMigrator");}});
+
+var CreateTdlMigratorForUser = Module.findExportByName("TDLMigration.dll", "CreateTdlMigratorForUser")
+Interceptor.attach(CreateTdlMigratorForUser, {onLeave: function (args) {send("CreateTdlMigratorForUser");}});
+

@@ -1,0 +1,9 @@
+var SendNonArpTelemetry = Module.findExportByName("nonarpinv.dll", "SendNonArpTelemetry")
+Interceptor.attach(SendNonArpTelemetry, {onLeave: function (args) {send("SendNonArpTelemetry");}});
+
+var StartNonArpMonitor = Module.findExportByName("nonarpinv.dll", "StartNonArpMonitor")
+Interceptor.attach(StartNonArpMonitor, {onLeave: function (args) {send("StartNonArpMonitor");}});
+
+var StopNonArpMonitor = Module.findExportByName("nonarpinv.dll", "StopNonArpMonitor")
+Interceptor.attach(StopNonArpMonitor, {onLeave: function (args) {send("StopNonArpMonitor");}});
+

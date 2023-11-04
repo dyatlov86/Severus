@@ -1,0 +1,51 @@
+var CheckAppxPackageReputation = Module.findExportByName("smartscreen.dll", "CheckAppxPackageReputation")
+Interceptor.attach(CheckAppxPackageReputation, {onLeave: function (args) {send("CheckAppxPackageReputation");}});
+
+var CheckFileReputation = Module.findExportByName("smartscreen.dll", "CheckFileReputation")
+Interceptor.attach(CheckFileReputation, {onLeave: function (args) {send("CheckFileReputation");}});
+
+var CheckReputation = Module.findExportByName("smartscreen.dll", "CheckReputation")
+Interceptor.attach(CheckReputation, {onLeave: function (args) {send("CheckReputation");}});
+
+var ClearCache = Module.findExportByName("smartscreen.dll", "ClearCache")
+Interceptor.attach(ClearCache, {onLeave: function (args) {send("ClearCache");}});
+
+var EventLogger = Module.findExportByName("smartscreen.dll", "EventLogger")
+Interceptor.attach(EventLogger, {onLeave: function (args) {send("EventLogger");}});
+
+var FreeExperience = Module.findExportByName("smartscreen.dll", "FreeExperience")
+Interceptor.attach(FreeExperience, {onLeave: function (args) {send("FreeExperience");}});
+
+var GetAppControlEnforcementLevel = Module.findExportByName("smartscreen.dll", "GetAppControlEnforcementLevel")
+Interceptor.attach(GetAppControlEnforcementLevel, {onLeave: function (args) {send("GetAppControlEnforcementLevel");}});
+
+var GetAppReputationEnforcementLevel = Module.findExportByName("smartscreen.dll", "GetAppReputationEnforcementLevel")
+Interceptor.attach(GetAppReputationEnforcementLevel, {onLeave: function (args) {send("GetAppReputationEnforcementLevel");}});
+
+var GetEnforcementLevel = Module.findExportByName("smartscreen.dll", "GetEnforcementLevel")
+Interceptor.attach(GetEnforcementLevel, {onLeave: function (args) {send("GetEnforcementLevel");}});
+
+var GetEnforcementPolicy = Module.findExportByName("smartscreen.dll", "GetEnforcementPolicy")
+Interceptor.attach(GetEnforcementPolicy, {onLeave: function (args) {send("GetEnforcementPolicy");}});
+
+var RegisterEventLogger = Module.findExportByName("smartscreen.dll", "RegisterEventLogger")
+Interceptor.attach(RegisterEventLogger, {onLeave: function (args) {send("RegisterEventLogger");}});
+
+var ReportLaunch = Module.findExportByName("smartscreen.dll", "ReportLaunch")
+Interceptor.attach(ReportLaunch, {onLeave: function (args) {send("ReportLaunch");}});
+
+var ResetLogger = Module.findExportByName("smartscreen.dll", "ResetLogger")
+Interceptor.attach(ResetLogger, {onLeave: function (args) {send("ResetLogger");}});
+
+var SetAppControlEnforcementLevel = Module.findExportByName("smartscreen.dll", "SetAppControlEnforcementLevel")
+Interceptor.attach(SetAppControlEnforcementLevel, {onLeave: function (args) {send("SetAppControlEnforcementLevel");}});
+
+var SetAppReputationEnforcementLevel = Module.findExportByName("smartscreen.dll", "SetAppReputationEnforcementLevel")
+Interceptor.attach(SetAppReputationEnforcementLevel, {onLeave: function (args) {send("SetAppReputationEnforcementLevel");}});
+
+var SetEnforcementLevel = Module.findExportByName("smartscreen.dll", "SetEnforcementLevel")
+Interceptor.attach(SetEnforcementLevel, {onLeave: function (args) {send("SetEnforcementLevel");}});
+
+var UriReputationFactory = Module.findExportByName("smartscreen.dll", "UriReputationFactory")
+Interceptor.attach(UriReputationFactory, {onLeave: function (args) {send("UriReputationFactory");}});
+

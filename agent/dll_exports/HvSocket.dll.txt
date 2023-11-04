@@ -1,0 +1,9 @@
+var GetHvSocketLocalAddress = Module.findExportByName("HvSocket.dll", "GetHvSocketLocalAddress")
+Interceptor.attach(GetHvSocketLocalAddress, {onLeave: function (args) {send("GetHvSocketLocalAddress");}});
+
+var GetHvSocketParentAddress = Module.findExportByName("HvSocket.dll", "GetHvSocketParentAddress")
+Interceptor.attach(GetHvSocketParentAddress, {onLeave: function (args) {send("GetHvSocketParentAddress");}});
+
+var GetHvSocketSiloHostAddress = Module.findExportByName("HvSocket.dll", "GetHvSocketSiloHostAddress")
+Interceptor.attach(GetHvSocketSiloHostAddress, {onLeave: function (args) {send("GetHvSocketSiloHostAddress");}});
+

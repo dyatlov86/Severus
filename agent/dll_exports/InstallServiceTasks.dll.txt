@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("InstallServiceTasks.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("InstallServiceTasks.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("InstallServiceTasks.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("InstallServiceTasks.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ForceAppInUseRestart = Module.findExportByName("InstallServiceTasks.dll", "ForceAppInUseRestart")
+Interceptor.attach(ForceAppInUseRestart, {onLeave: function (args) {send("ForceAppInUseRestart");}});
+
+var GetSetting = Module.findExportByName("InstallServiceTasks.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+

@@ -1,0 +1,9 @@
+var NcdAutoSetup_Generalize = Module.findExportByName("NcdAutoSetup.dll", "NcdAutoSetup_Generalize")
+Interceptor.attach(NcdAutoSetup_Generalize, {onLeave: function (args) {send("NcdAutoSetup_Generalize");}});
+
+var SvchostMain = Module.findExportByName("NcdAutoSetup.dll", "SvchostMain")
+Interceptor.attach(SvchostMain, {onLeave: function (args) {send("SvchostMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("NcdAutoSetup.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

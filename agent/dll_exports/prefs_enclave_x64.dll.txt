@@ -1,0 +1,9 @@
+var Init = Module.findExportByName("prefs_enclave_x64.dll", "Init")
+Interceptor.attach(Init, {onLeave: function (args) {send("Init");}});
+
+var SealSettings = Module.findExportByName("prefs_enclave_x64.dll", "SealSettings")
+Interceptor.attach(SealSettings, {onLeave: function (args) {send("SealSettings");}});
+
+var UnsealSettings = Module.findExportByName("prefs_enclave_x64.dll", "UnsealSettings")
+Interceptor.attach(UnsealSettings, {onLeave: function (args) {send("UnsealSettings");}});
+

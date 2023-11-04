@@ -1,0 +1,843 @@
+var CMP_GetBlockedDriverInfo = Module.findExportByName("cfgmgr32.dll", "CMP_GetBlockedDriverInfo")
+Interceptor.attach(CMP_GetBlockedDriverInfo, {onLeave: function (args) {send("CMP_GetBlockedDriverInfo");}});
+
+var CMP_GetServerSideDeviceInstallFlags = Module.findExportByName("cfgmgr32.dll", "CMP_GetServerSideDeviceInstallFlags")
+Interceptor.attach(CMP_GetServerSideDeviceInstallFlags, {onLeave: function (args) {send("CMP_GetServerSideDeviceInstallFlags");}});
+
+var CMP_Get_Device_ID_List = Module.findExportByName("cfgmgr32.dll", "CMP_Get_Device_ID_List")
+Interceptor.attach(CMP_Get_Device_ID_List, {onLeave: function (args) {send("CMP_Get_Device_ID_List");}});
+
+var CMP_Get_Device_ID_List_Size = Module.findExportByName("cfgmgr32.dll", "CMP_Get_Device_ID_List_Size")
+Interceptor.attach(CMP_Get_Device_ID_List_Size, {onLeave: function (args) {send("CMP_Get_Device_ID_List_Size");}});
+
+var CMP_Init_Detection = Module.findExportByName("cfgmgr32.dll", "CMP_Init_Detection")
+Interceptor.attach(CMP_Init_Detection, {onLeave: function (args) {send("CMP_Init_Detection");}});
+
+var CMP_RegisterServiceNotification = Module.findExportByName("cfgmgr32.dll", "CMP_RegisterServiceNotification")
+Interceptor.attach(CMP_RegisterServiceNotification, {onLeave: function (args) {send("CMP_RegisterServiceNotification");}});
+
+var CMP_Register_Notification = Module.findExportByName("cfgmgr32.dll", "CMP_Register_Notification")
+Interceptor.attach(CMP_Register_Notification, {onLeave: function (args) {send("CMP_Register_Notification");}});
+
+var CMP_Report_LogOn = Module.findExportByName("cfgmgr32.dll", "CMP_Report_LogOn")
+Interceptor.attach(CMP_Report_LogOn, {onLeave: function (args) {send("CMP_Report_LogOn");}});
+
+var CMP_WaitNoPendingInstallEvents = Module.findExportByName("cfgmgr32.dll", "CMP_WaitNoPendingInstallEvents")
+Interceptor.attach(CMP_WaitNoPendingInstallEvents, {onLeave: function (args) {send("CMP_WaitNoPendingInstallEvents");}});
+
+var CMP_WaitServicesAvailable = Module.findExportByName("cfgmgr32.dll", "CMP_WaitServicesAvailable")
+Interceptor.attach(CMP_WaitServicesAvailable, {onLeave: function (args) {send("CMP_WaitServicesAvailable");}});
+
+var CM_Add_Driver_PackageW = Module.findExportByName("cfgmgr32.dll", "CM_Add_Driver_PackageW")
+Interceptor.attach(CM_Add_Driver_PackageW, {onLeave: function (args) {send("CM_Add_Driver_PackageW");}});
+
+var CM_Add_Driver_Package_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Add_Driver_Package_ExW")
+Interceptor.attach(CM_Add_Driver_Package_ExW, {onLeave: function (args) {send("CM_Add_Driver_Package_ExW");}});
+
+var CM_Add_Empty_Log_Conf = Module.findExportByName("cfgmgr32.dll", "CM_Add_Empty_Log_Conf")
+Interceptor.attach(CM_Add_Empty_Log_Conf, {onLeave: function (args) {send("CM_Add_Empty_Log_Conf");}});
+
+var CM_Add_Empty_Log_Conf_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Add_Empty_Log_Conf_Ex")
+Interceptor.attach(CM_Add_Empty_Log_Conf_Ex, {onLeave: function (args) {send("CM_Add_Empty_Log_Conf_Ex");}});
+
+var CM_Add_IDA = Module.findExportByName("cfgmgr32.dll", "CM_Add_IDA")
+Interceptor.attach(CM_Add_IDA, {onLeave: function (args) {send("CM_Add_IDA");}});
+
+var CM_Add_IDW = Module.findExportByName("cfgmgr32.dll", "CM_Add_IDW")
+Interceptor.attach(CM_Add_IDW, {onLeave: function (args) {send("CM_Add_IDW");}});
+
+var CM_Add_ID_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Add_ID_ExA")
+Interceptor.attach(CM_Add_ID_ExA, {onLeave: function (args) {send("CM_Add_ID_ExA");}});
+
+var CM_Add_ID_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Add_ID_ExW")
+Interceptor.attach(CM_Add_ID_ExW, {onLeave: function (args) {send("CM_Add_ID_ExW");}});
+
+var CM_Add_Range = Module.findExportByName("cfgmgr32.dll", "CM_Add_Range")
+Interceptor.attach(CM_Add_Range, {onLeave: function (args) {send("CM_Add_Range");}});
+
+var CM_Add_Res_Des = Module.findExportByName("cfgmgr32.dll", "CM_Add_Res_Des")
+Interceptor.attach(CM_Add_Res_Des, {onLeave: function (args) {send("CM_Add_Res_Des");}});
+
+var CM_Add_Res_Des_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Add_Res_Des_Ex")
+Interceptor.attach(CM_Add_Res_Des_Ex, {onLeave: function (args) {send("CM_Add_Res_Des_Ex");}});
+
+var CM_Apply_PowerScheme = Module.findExportByName("cfgmgr32.dll", "CM_Apply_PowerScheme")
+Interceptor.attach(CM_Apply_PowerScheme, {onLeave: function (args) {send("CM_Apply_PowerScheme");}});
+
+var CM_Connect_MachineA = Module.findExportByName("cfgmgr32.dll", "CM_Connect_MachineA")
+Interceptor.attach(CM_Connect_MachineA, {onLeave: function (args) {send("CM_Connect_MachineA");}});
+
+var CM_Connect_MachineW = Module.findExportByName("cfgmgr32.dll", "CM_Connect_MachineW")
+Interceptor.attach(CM_Connect_MachineW, {onLeave: function (args) {send("CM_Connect_MachineW");}});
+
+var CM_Create_DevNodeA = Module.findExportByName("cfgmgr32.dll", "CM_Create_DevNodeA")
+Interceptor.attach(CM_Create_DevNodeA, {onLeave: function (args) {send("CM_Create_DevNodeA");}});
+
+var CM_Create_DevNodeW = Module.findExportByName("cfgmgr32.dll", "CM_Create_DevNodeW")
+Interceptor.attach(CM_Create_DevNodeW, {onLeave: function (args) {send("CM_Create_DevNodeW");}});
+
+var CM_Create_DevNode_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Create_DevNode_ExA")
+Interceptor.attach(CM_Create_DevNode_ExA, {onLeave: function (args) {send("CM_Create_DevNode_ExA");}});
+
+var CM_Create_DevNode_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Create_DevNode_ExW")
+Interceptor.attach(CM_Create_DevNode_ExW, {onLeave: function (args) {send("CM_Create_DevNode_ExW");}});
+
+var CM_Create_Range_List = Module.findExportByName("cfgmgr32.dll", "CM_Create_Range_List")
+Interceptor.attach(CM_Create_Range_List, {onLeave: function (args) {send("CM_Create_Range_List");}});
+
+var CM_Delete_Class_Key = Module.findExportByName("cfgmgr32.dll", "CM_Delete_Class_Key")
+Interceptor.attach(CM_Delete_Class_Key, {onLeave: function (args) {send("CM_Delete_Class_Key");}});
+
+var CM_Delete_Class_Key_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Delete_Class_Key_Ex")
+Interceptor.attach(CM_Delete_Class_Key_Ex, {onLeave: function (args) {send("CM_Delete_Class_Key_Ex");}});
+
+var CM_Delete_DevNode_Key = Module.findExportByName("cfgmgr32.dll", "CM_Delete_DevNode_Key")
+Interceptor.attach(CM_Delete_DevNode_Key, {onLeave: function (args) {send("CM_Delete_DevNode_Key");}});
+
+var CM_Delete_DevNode_Key_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Delete_DevNode_Key_Ex")
+Interceptor.attach(CM_Delete_DevNode_Key_Ex, {onLeave: function (args) {send("CM_Delete_DevNode_Key_Ex");}});
+
+var CM_Delete_Device_Interface_KeyA = Module.findExportByName("cfgmgr32.dll", "CM_Delete_Device_Interface_KeyA")
+Interceptor.attach(CM_Delete_Device_Interface_KeyA, {onLeave: function (args) {send("CM_Delete_Device_Interface_KeyA");}});
+
+var CM_Delete_Device_Interface_KeyW = Module.findExportByName("cfgmgr32.dll", "CM_Delete_Device_Interface_KeyW")
+Interceptor.attach(CM_Delete_Device_Interface_KeyW, {onLeave: function (args) {send("CM_Delete_Device_Interface_KeyW");}});
+
+var CM_Delete_Device_Interface_Key_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Delete_Device_Interface_Key_ExA")
+Interceptor.attach(CM_Delete_Device_Interface_Key_ExA, {onLeave: function (args) {send("CM_Delete_Device_Interface_Key_ExA");}});
+
+var CM_Delete_Device_Interface_Key_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Delete_Device_Interface_Key_ExW")
+Interceptor.attach(CM_Delete_Device_Interface_Key_ExW, {onLeave: function (args) {send("CM_Delete_Device_Interface_Key_ExW");}});
+
+var CM_Delete_Driver_PackageW = Module.findExportByName("cfgmgr32.dll", "CM_Delete_Driver_PackageW")
+Interceptor.attach(CM_Delete_Driver_PackageW, {onLeave: function (args) {send("CM_Delete_Driver_PackageW");}});
+
+var CM_Delete_Driver_Package_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Delete_Driver_Package_ExW")
+Interceptor.attach(CM_Delete_Driver_Package_ExW, {onLeave: function (args) {send("CM_Delete_Driver_Package_ExW");}});
+
+var CM_Delete_PowerScheme = Module.findExportByName("cfgmgr32.dll", "CM_Delete_PowerScheme")
+Interceptor.attach(CM_Delete_PowerScheme, {onLeave: function (args) {send("CM_Delete_PowerScheme");}});
+
+var CM_Delete_Range = Module.findExportByName("cfgmgr32.dll", "CM_Delete_Range")
+Interceptor.attach(CM_Delete_Range, {onLeave: function (args) {send("CM_Delete_Range");}});
+
+var CM_Detect_Resource_Conflict = Module.findExportByName("cfgmgr32.dll", "CM_Detect_Resource_Conflict")
+Interceptor.attach(CM_Detect_Resource_Conflict, {onLeave: function (args) {send("CM_Detect_Resource_Conflict");}});
+
+var CM_Detect_Resource_Conflict_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Detect_Resource_Conflict_Ex")
+Interceptor.attach(CM_Detect_Resource_Conflict_Ex, {onLeave: function (args) {send("CM_Detect_Resource_Conflict_Ex");}});
+
+var CM_Disable_DevNode = Module.findExportByName("cfgmgr32.dll", "CM_Disable_DevNode")
+Interceptor.attach(CM_Disable_DevNode, {onLeave: function (args) {send("CM_Disable_DevNode");}});
+
+var CM_Disable_DevNode_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Disable_DevNode_Ex")
+Interceptor.attach(CM_Disable_DevNode_Ex, {onLeave: function (args) {send("CM_Disable_DevNode_Ex");}});
+
+var CM_Disconnect_Machine = Module.findExportByName("cfgmgr32.dll", "CM_Disconnect_Machine")
+Interceptor.attach(CM_Disconnect_Machine, {onLeave: function (args) {send("CM_Disconnect_Machine");}});
+
+var CM_Dup_Range_List = Module.findExportByName("cfgmgr32.dll", "CM_Dup_Range_List")
+Interceptor.attach(CM_Dup_Range_List, {onLeave: function (args) {send("CM_Dup_Range_List");}});
+
+var CM_Duplicate_PowerScheme = Module.findExportByName("cfgmgr32.dll", "CM_Duplicate_PowerScheme")
+Interceptor.attach(CM_Duplicate_PowerScheme, {onLeave: function (args) {send("CM_Duplicate_PowerScheme");}});
+
+var CM_Enable_DevNode = Module.findExportByName("cfgmgr32.dll", "CM_Enable_DevNode")
+Interceptor.attach(CM_Enable_DevNode, {onLeave: function (args) {send("CM_Enable_DevNode");}});
+
+var CM_Enable_DevNode_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Enable_DevNode_Ex")
+Interceptor.attach(CM_Enable_DevNode_Ex, {onLeave: function (args) {send("CM_Enable_DevNode_Ex");}});
+
+var CM_Enumerate_Classes = Module.findExportByName("cfgmgr32.dll", "CM_Enumerate_Classes")
+Interceptor.attach(CM_Enumerate_Classes, {onLeave: function (args) {send("CM_Enumerate_Classes");}});
+
+var CM_Enumerate_Classes_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Enumerate_Classes_Ex")
+Interceptor.attach(CM_Enumerate_Classes_Ex, {onLeave: function (args) {send("CM_Enumerate_Classes_Ex");}});
+
+var CM_Enumerate_EnumeratorsA = Module.findExportByName("cfgmgr32.dll", "CM_Enumerate_EnumeratorsA")
+Interceptor.attach(CM_Enumerate_EnumeratorsA, {onLeave: function (args) {send("CM_Enumerate_EnumeratorsA");}});
+
+var CM_Enumerate_EnumeratorsW = Module.findExportByName("cfgmgr32.dll", "CM_Enumerate_EnumeratorsW")
+Interceptor.attach(CM_Enumerate_EnumeratorsW, {onLeave: function (args) {send("CM_Enumerate_EnumeratorsW");}});
+
+var CM_Enumerate_Enumerators_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Enumerate_Enumerators_ExA")
+Interceptor.attach(CM_Enumerate_Enumerators_ExA, {onLeave: function (args) {send("CM_Enumerate_Enumerators_ExA");}});
+
+var CM_Enumerate_Enumerators_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Enumerate_Enumerators_ExW")
+Interceptor.attach(CM_Enumerate_Enumerators_ExW, {onLeave: function (args) {send("CM_Enumerate_Enumerators_ExW");}});
+
+var CM_Export_Pnp_StateW = Module.findExportByName("cfgmgr32.dll", "CM_Export_Pnp_StateW")
+Interceptor.attach(CM_Export_Pnp_StateW, {onLeave: function (args) {send("CM_Export_Pnp_StateW");}});
+
+var CM_Find_Range = Module.findExportByName("cfgmgr32.dll", "CM_Find_Range")
+Interceptor.attach(CM_Find_Range, {onLeave: function (args) {send("CM_Find_Range");}});
+
+var CM_First_Range = Module.findExportByName("cfgmgr32.dll", "CM_First_Range")
+Interceptor.attach(CM_First_Range, {onLeave: function (args) {send("CM_First_Range");}});
+
+var CM_Free_Log_Conf = Module.findExportByName("cfgmgr32.dll", "CM_Free_Log_Conf")
+Interceptor.attach(CM_Free_Log_Conf, {onLeave: function (args) {send("CM_Free_Log_Conf");}});
+
+var CM_Free_Log_Conf_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Free_Log_Conf_Ex")
+Interceptor.attach(CM_Free_Log_Conf_Ex, {onLeave: function (args) {send("CM_Free_Log_Conf_Ex");}});
+
+var CM_Free_Log_Conf_Handle = Module.findExportByName("cfgmgr32.dll", "CM_Free_Log_Conf_Handle")
+Interceptor.attach(CM_Free_Log_Conf_Handle, {onLeave: function (args) {send("CM_Free_Log_Conf_Handle");}});
+
+var CM_Free_Range_List = Module.findExportByName("cfgmgr32.dll", "CM_Free_Range_List")
+Interceptor.attach(CM_Free_Range_List, {onLeave: function (args) {send("CM_Free_Range_List");}});
+
+var CM_Free_Res_Des = Module.findExportByName("cfgmgr32.dll", "CM_Free_Res_Des")
+Interceptor.attach(CM_Free_Res_Des, {onLeave: function (args) {send("CM_Free_Res_Des");}});
+
+var CM_Free_Res_Des_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Free_Res_Des_Ex")
+Interceptor.attach(CM_Free_Res_Des_Ex, {onLeave: function (args) {send("CM_Free_Res_Des_Ex");}});
+
+var CM_Free_Res_Des_Handle = Module.findExportByName("cfgmgr32.dll", "CM_Free_Res_Des_Handle")
+Interceptor.attach(CM_Free_Res_Des_Handle, {onLeave: function (args) {send("CM_Free_Res_Des_Handle");}});
+
+var CM_Free_Resource_Conflict_Handle = Module.findExportByName("cfgmgr32.dll", "CM_Free_Resource_Conflict_Handle")
+Interceptor.attach(CM_Free_Resource_Conflict_Handle, {onLeave: function (args) {send("CM_Free_Resource_Conflict_Handle");}});
+
+var CM_Get_Child = Module.findExportByName("cfgmgr32.dll", "CM_Get_Child")
+Interceptor.attach(CM_Get_Child, {onLeave: function (args) {send("CM_Get_Child");}});
+
+var CM_Get_Child_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Child_Ex")
+Interceptor.attach(CM_Get_Child_Ex, {onLeave: function (args) {send("CM_Get_Child_Ex");}});
+
+var CM_Get_Class_Key_NameA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_Key_NameA")
+Interceptor.attach(CM_Get_Class_Key_NameA, {onLeave: function (args) {send("CM_Get_Class_Key_NameA");}});
+
+var CM_Get_Class_Key_NameW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_Key_NameW")
+Interceptor.attach(CM_Get_Class_Key_NameW, {onLeave: function (args) {send("CM_Get_Class_Key_NameW");}});
+
+var CM_Get_Class_Key_Name_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_Key_Name_ExA")
+Interceptor.attach(CM_Get_Class_Key_Name_ExA, {onLeave: function (args) {send("CM_Get_Class_Key_Name_ExA");}});
+
+var CM_Get_Class_Key_Name_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_Key_Name_ExW")
+Interceptor.attach(CM_Get_Class_Key_Name_ExW, {onLeave: function (args) {send("CM_Get_Class_Key_Name_ExW");}});
+
+var CM_Get_Class_NameA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_NameA")
+Interceptor.attach(CM_Get_Class_NameA, {onLeave: function (args) {send("CM_Get_Class_NameA");}});
+
+var CM_Get_Class_NameW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_NameW")
+Interceptor.attach(CM_Get_Class_NameW, {onLeave: function (args) {send("CM_Get_Class_NameW");}});
+
+var CM_Get_Class_Name_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_Name_ExA")
+Interceptor.attach(CM_Get_Class_Name_ExA, {onLeave: function (args) {send("CM_Get_Class_Name_ExA");}});
+
+var CM_Get_Class_Name_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_Name_ExW")
+Interceptor.attach(CM_Get_Class_Name_ExW, {onLeave: function (args) {send("CM_Get_Class_Name_ExW");}});
+
+var CM_Get_Class_PropertyW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_PropertyW")
+Interceptor.attach(CM_Get_Class_PropertyW, {onLeave: function (args) {send("CM_Get_Class_PropertyW");}});
+
+var CM_Get_Class_Property_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_Property_ExW")
+Interceptor.attach(CM_Get_Class_Property_ExW, {onLeave: function (args) {send("CM_Get_Class_Property_ExW");}});
+
+var CM_Get_Class_Property_Keys = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_Property_Keys")
+Interceptor.attach(CM_Get_Class_Property_Keys, {onLeave: function (args) {send("CM_Get_Class_Property_Keys");}});
+
+var CM_Get_Class_Property_Keys_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_Property_Keys_Ex")
+Interceptor.attach(CM_Get_Class_Property_Keys_Ex, {onLeave: function (args) {send("CM_Get_Class_Property_Keys_Ex");}});
+
+var CM_Get_Class_Registry_PropertyA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_Registry_PropertyA")
+Interceptor.attach(CM_Get_Class_Registry_PropertyA, {onLeave: function (args) {send("CM_Get_Class_Registry_PropertyA");}});
+
+var CM_Get_Class_Registry_PropertyW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Class_Registry_PropertyW")
+Interceptor.attach(CM_Get_Class_Registry_PropertyW, {onLeave: function (args) {send("CM_Get_Class_Registry_PropertyW");}});
+
+var CM_Get_Depth = Module.findExportByName("cfgmgr32.dll", "CM_Get_Depth")
+Interceptor.attach(CM_Get_Depth, {onLeave: function (args) {send("CM_Get_Depth");}});
+
+var CM_Get_Depth_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Depth_Ex")
+Interceptor.attach(CM_Get_Depth_Ex, {onLeave: function (args) {send("CM_Get_Depth_Ex");}});
+
+var CM_Get_DevNode_Custom_PropertyA = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Custom_PropertyA")
+Interceptor.attach(CM_Get_DevNode_Custom_PropertyA, {onLeave: function (args) {send("CM_Get_DevNode_Custom_PropertyA");}});
+
+var CM_Get_DevNode_Custom_PropertyW = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Custom_PropertyW")
+Interceptor.attach(CM_Get_DevNode_Custom_PropertyW, {onLeave: function (args) {send("CM_Get_DevNode_Custom_PropertyW");}});
+
+var CM_Get_DevNode_Custom_Property_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Custom_Property_ExA")
+Interceptor.attach(CM_Get_DevNode_Custom_Property_ExA, {onLeave: function (args) {send("CM_Get_DevNode_Custom_Property_ExA");}});
+
+var CM_Get_DevNode_Custom_Property_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Custom_Property_ExW")
+Interceptor.attach(CM_Get_DevNode_Custom_Property_ExW, {onLeave: function (args) {send("CM_Get_DevNode_Custom_Property_ExW");}});
+
+var CM_Get_DevNode_PropertyW = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_PropertyW")
+Interceptor.attach(CM_Get_DevNode_PropertyW, {onLeave: function (args) {send("CM_Get_DevNode_PropertyW");}});
+
+var CM_Get_DevNode_Property_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Property_ExW")
+Interceptor.attach(CM_Get_DevNode_Property_ExW, {onLeave: function (args) {send("CM_Get_DevNode_Property_ExW");}});
+
+var CM_Get_DevNode_Property_Keys = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Property_Keys")
+Interceptor.attach(CM_Get_DevNode_Property_Keys, {onLeave: function (args) {send("CM_Get_DevNode_Property_Keys");}});
+
+var CM_Get_DevNode_Property_Keys_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Property_Keys_Ex")
+Interceptor.attach(CM_Get_DevNode_Property_Keys_Ex, {onLeave: function (args) {send("CM_Get_DevNode_Property_Keys_Ex");}});
+
+var CM_Get_DevNode_Registry_PropertyA = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Registry_PropertyA")
+Interceptor.attach(CM_Get_DevNode_Registry_PropertyA, {onLeave: function (args) {send("CM_Get_DevNode_Registry_PropertyA");}});
+
+var CM_Get_DevNode_Registry_PropertyW = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Registry_PropertyW")
+Interceptor.attach(CM_Get_DevNode_Registry_PropertyW, {onLeave: function (args) {send("CM_Get_DevNode_Registry_PropertyW");}});
+
+var CM_Get_DevNode_Registry_Property_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Registry_Property_ExA")
+Interceptor.attach(CM_Get_DevNode_Registry_Property_ExA, {onLeave: function (args) {send("CM_Get_DevNode_Registry_Property_ExA");}});
+
+var CM_Get_DevNode_Registry_Property_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Registry_Property_ExW")
+Interceptor.attach(CM_Get_DevNode_Registry_Property_ExW, {onLeave: function (args) {send("CM_Get_DevNode_Registry_Property_ExW");}});
+
+var CM_Get_DevNode_Status = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Status")
+Interceptor.attach(CM_Get_DevNode_Status, {onLeave: function (args) {send("CM_Get_DevNode_Status");}});
+
+var CM_Get_DevNode_Status_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_DevNode_Status_Ex")
+Interceptor.attach(CM_Get_DevNode_Status_Ex, {onLeave: function (args) {send("CM_Get_DevNode_Status_Ex");}});
+
+var CM_Get_Device_IDA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_IDA")
+Interceptor.attach(CM_Get_Device_IDA, {onLeave: function (args) {send("CM_Get_Device_IDA");}});
+
+var CM_Get_Device_IDW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_IDW")
+Interceptor.attach(CM_Get_Device_IDW, {onLeave: function (args) {send("CM_Get_Device_IDW");}});
+
+var CM_Get_Device_ID_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_ExA")
+Interceptor.attach(CM_Get_Device_ID_ExA, {onLeave: function (args) {send("CM_Get_Device_ID_ExA");}});
+
+var CM_Get_Device_ID_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_ExW")
+Interceptor.attach(CM_Get_Device_ID_ExW, {onLeave: function (args) {send("CM_Get_Device_ID_ExW");}});
+
+var CM_Get_Device_ID_ListA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_ListA")
+Interceptor.attach(CM_Get_Device_ID_ListA, {onLeave: function (args) {send("CM_Get_Device_ID_ListA");}});
+
+var CM_Get_Device_ID_ListW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_ListW")
+Interceptor.attach(CM_Get_Device_ID_ListW, {onLeave: function (args) {send("CM_Get_Device_ID_ListW");}});
+
+var CM_Get_Device_ID_List_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_List_ExA")
+Interceptor.attach(CM_Get_Device_ID_List_ExA, {onLeave: function (args) {send("CM_Get_Device_ID_List_ExA");}});
+
+var CM_Get_Device_ID_List_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_List_ExW")
+Interceptor.attach(CM_Get_Device_ID_List_ExW, {onLeave: function (args) {send("CM_Get_Device_ID_List_ExW");}});
+
+var CM_Get_Device_ID_List_SizeA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_List_SizeA")
+Interceptor.attach(CM_Get_Device_ID_List_SizeA, {onLeave: function (args) {send("CM_Get_Device_ID_List_SizeA");}});
+
+var CM_Get_Device_ID_List_SizeW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_List_SizeW")
+Interceptor.attach(CM_Get_Device_ID_List_SizeW, {onLeave: function (args) {send("CM_Get_Device_ID_List_SizeW");}});
+
+var CM_Get_Device_ID_List_Size_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_List_Size_ExA")
+Interceptor.attach(CM_Get_Device_ID_List_Size_ExA, {onLeave: function (args) {send("CM_Get_Device_ID_List_Size_ExA");}});
+
+var CM_Get_Device_ID_List_Size_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_List_Size_ExW")
+Interceptor.attach(CM_Get_Device_ID_List_Size_ExW, {onLeave: function (args) {send("CM_Get_Device_ID_List_Size_ExW");}});
+
+var CM_Get_Device_ID_Size = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_Size")
+Interceptor.attach(CM_Get_Device_ID_Size, {onLeave: function (args) {send("CM_Get_Device_ID_Size");}});
+
+var CM_Get_Device_ID_Size_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_ID_Size_Ex")
+Interceptor.attach(CM_Get_Device_ID_Size_Ex, {onLeave: function (args) {send("CM_Get_Device_ID_Size_Ex");}});
+
+var CM_Get_Device_Interface_AliasA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_AliasA")
+Interceptor.attach(CM_Get_Device_Interface_AliasA, {onLeave: function (args) {send("CM_Get_Device_Interface_AliasA");}});
+
+var CM_Get_Device_Interface_AliasW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_AliasW")
+Interceptor.attach(CM_Get_Device_Interface_AliasW, {onLeave: function (args) {send("CM_Get_Device_Interface_AliasW");}});
+
+var CM_Get_Device_Interface_Alias_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_Alias_ExA")
+Interceptor.attach(CM_Get_Device_Interface_Alias_ExA, {onLeave: function (args) {send("CM_Get_Device_Interface_Alias_ExA");}});
+
+var CM_Get_Device_Interface_Alias_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_Alias_ExW")
+Interceptor.attach(CM_Get_Device_Interface_Alias_ExW, {onLeave: function (args) {send("CM_Get_Device_Interface_Alias_ExW");}});
+
+var CM_Get_Device_Interface_ListA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_ListA")
+Interceptor.attach(CM_Get_Device_Interface_ListA, {onLeave: function (args) {send("CM_Get_Device_Interface_ListA");}});
+
+var CM_Get_Device_Interface_ListW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_ListW")
+Interceptor.attach(CM_Get_Device_Interface_ListW, {onLeave: function (args) {send("CM_Get_Device_Interface_ListW");}});
+
+var CM_Get_Device_Interface_List_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_List_ExA")
+Interceptor.attach(CM_Get_Device_Interface_List_ExA, {onLeave: function (args) {send("CM_Get_Device_Interface_List_ExA");}});
+
+var CM_Get_Device_Interface_List_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_List_ExW")
+Interceptor.attach(CM_Get_Device_Interface_List_ExW, {onLeave: function (args) {send("CM_Get_Device_Interface_List_ExW");}});
+
+var CM_Get_Device_Interface_List_SizeA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_List_SizeA")
+Interceptor.attach(CM_Get_Device_Interface_List_SizeA, {onLeave: function (args) {send("CM_Get_Device_Interface_List_SizeA");}});
+
+var CM_Get_Device_Interface_List_SizeW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_List_SizeW")
+Interceptor.attach(CM_Get_Device_Interface_List_SizeW, {onLeave: function (args) {send("CM_Get_Device_Interface_List_SizeW");}});
+
+var CM_Get_Device_Interface_List_Size_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_List_Size_ExA")
+Interceptor.attach(CM_Get_Device_Interface_List_Size_ExA, {onLeave: function (args) {send("CM_Get_Device_Interface_List_Size_ExA");}});
+
+var CM_Get_Device_Interface_List_Size_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_List_Size_ExW")
+Interceptor.attach(CM_Get_Device_Interface_List_Size_ExW, {onLeave: function (args) {send("CM_Get_Device_Interface_List_Size_ExW");}});
+
+var CM_Get_Device_Interface_PropertyW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_PropertyW")
+Interceptor.attach(CM_Get_Device_Interface_PropertyW, {onLeave: function (args) {send("CM_Get_Device_Interface_PropertyW");}});
+
+var CM_Get_Device_Interface_Property_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_Property_ExW")
+Interceptor.attach(CM_Get_Device_Interface_Property_ExW, {onLeave: function (args) {send("CM_Get_Device_Interface_Property_ExW");}});
+
+var CM_Get_Device_Interface_Property_KeysW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_Property_KeysW")
+Interceptor.attach(CM_Get_Device_Interface_Property_KeysW, {onLeave: function (args) {send("CM_Get_Device_Interface_Property_KeysW");}});
+
+var CM_Get_Device_Interface_Property_Keys_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Device_Interface_Property_Keys_ExW")
+Interceptor.attach(CM_Get_Device_Interface_Property_Keys_ExW, {onLeave: function (args) {send("CM_Get_Device_Interface_Property_Keys_ExW");}});
+
+var CM_Get_First_Log_Conf = Module.findExportByName("cfgmgr32.dll", "CM_Get_First_Log_Conf")
+Interceptor.attach(CM_Get_First_Log_Conf, {onLeave: function (args) {send("CM_Get_First_Log_Conf");}});
+
+var CM_Get_First_Log_Conf_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_First_Log_Conf_Ex")
+Interceptor.attach(CM_Get_First_Log_Conf_Ex, {onLeave: function (args) {send("CM_Get_First_Log_Conf_Ex");}});
+
+var CM_Get_Global_State = Module.findExportByName("cfgmgr32.dll", "CM_Get_Global_State")
+Interceptor.attach(CM_Get_Global_State, {onLeave: function (args) {send("CM_Get_Global_State");}});
+
+var CM_Get_Global_State_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Global_State_Ex")
+Interceptor.attach(CM_Get_Global_State_Ex, {onLeave: function (args) {send("CM_Get_Global_State_Ex");}});
+
+var CM_Get_HW_Prof_FlagsA = Module.findExportByName("cfgmgr32.dll", "CM_Get_HW_Prof_FlagsA")
+Interceptor.attach(CM_Get_HW_Prof_FlagsA, {onLeave: function (args) {send("CM_Get_HW_Prof_FlagsA");}});
+
+var CM_Get_HW_Prof_FlagsW = Module.findExportByName("cfgmgr32.dll", "CM_Get_HW_Prof_FlagsW")
+Interceptor.attach(CM_Get_HW_Prof_FlagsW, {onLeave: function (args) {send("CM_Get_HW_Prof_FlagsW");}});
+
+var CM_Get_HW_Prof_Flags_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_HW_Prof_Flags_ExA")
+Interceptor.attach(CM_Get_HW_Prof_Flags_ExA, {onLeave: function (args) {send("CM_Get_HW_Prof_Flags_ExA");}});
+
+var CM_Get_HW_Prof_Flags_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_HW_Prof_Flags_ExW")
+Interceptor.attach(CM_Get_HW_Prof_Flags_ExW, {onLeave: function (args) {send("CM_Get_HW_Prof_Flags_ExW");}});
+
+var CM_Get_Hardware_Profile_InfoA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Hardware_Profile_InfoA")
+Interceptor.attach(CM_Get_Hardware_Profile_InfoA, {onLeave: function (args) {send("CM_Get_Hardware_Profile_InfoA");}});
+
+var CM_Get_Hardware_Profile_InfoW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Hardware_Profile_InfoW")
+Interceptor.attach(CM_Get_Hardware_Profile_InfoW, {onLeave: function (args) {send("CM_Get_Hardware_Profile_InfoW");}});
+
+var CM_Get_Hardware_Profile_Info_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Hardware_Profile_Info_ExA")
+Interceptor.attach(CM_Get_Hardware_Profile_Info_ExA, {onLeave: function (args) {send("CM_Get_Hardware_Profile_Info_ExA");}});
+
+var CM_Get_Hardware_Profile_Info_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Hardware_Profile_Info_ExW")
+Interceptor.attach(CM_Get_Hardware_Profile_Info_ExW, {onLeave: function (args) {send("CM_Get_Hardware_Profile_Info_ExW");}});
+
+var CM_Get_Log_Conf_Priority = Module.findExportByName("cfgmgr32.dll", "CM_Get_Log_Conf_Priority")
+Interceptor.attach(CM_Get_Log_Conf_Priority, {onLeave: function (args) {send("CM_Get_Log_Conf_Priority");}});
+
+var CM_Get_Log_Conf_Priority_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Log_Conf_Priority_Ex")
+Interceptor.attach(CM_Get_Log_Conf_Priority_Ex, {onLeave: function (args) {send("CM_Get_Log_Conf_Priority_Ex");}});
+
+var CM_Get_Next_Log_Conf = Module.findExportByName("cfgmgr32.dll", "CM_Get_Next_Log_Conf")
+Interceptor.attach(CM_Get_Next_Log_Conf, {onLeave: function (args) {send("CM_Get_Next_Log_Conf");}});
+
+var CM_Get_Next_Log_Conf_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Next_Log_Conf_Ex")
+Interceptor.attach(CM_Get_Next_Log_Conf_Ex, {onLeave: function (args) {send("CM_Get_Next_Log_Conf_Ex");}});
+
+var CM_Get_Next_Res_Des = Module.findExportByName("cfgmgr32.dll", "CM_Get_Next_Res_Des")
+Interceptor.attach(CM_Get_Next_Res_Des, {onLeave: function (args) {send("CM_Get_Next_Res_Des");}});
+
+var CM_Get_Next_Res_Des_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Next_Res_Des_Ex")
+Interceptor.attach(CM_Get_Next_Res_Des_Ex, {onLeave: function (args) {send("CM_Get_Next_Res_Des_Ex");}});
+
+var CM_Get_Parent = Module.findExportByName("cfgmgr32.dll", "CM_Get_Parent")
+Interceptor.attach(CM_Get_Parent, {onLeave: function (args) {send("CM_Get_Parent");}});
+
+var CM_Get_Parent_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Parent_Ex")
+Interceptor.attach(CM_Get_Parent_Ex, {onLeave: function (args) {send("CM_Get_Parent_Ex");}});
+
+var CM_Get_Res_Des_Data = Module.findExportByName("cfgmgr32.dll", "CM_Get_Res_Des_Data")
+Interceptor.attach(CM_Get_Res_Des_Data, {onLeave: function (args) {send("CM_Get_Res_Des_Data");}});
+
+var CM_Get_Res_Des_Data_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Res_Des_Data_Ex")
+Interceptor.attach(CM_Get_Res_Des_Data_Ex, {onLeave: function (args) {send("CM_Get_Res_Des_Data_Ex");}});
+
+var CM_Get_Res_Des_Data_Size = Module.findExportByName("cfgmgr32.dll", "CM_Get_Res_Des_Data_Size")
+Interceptor.attach(CM_Get_Res_Des_Data_Size, {onLeave: function (args) {send("CM_Get_Res_Des_Data_Size");}});
+
+var CM_Get_Res_Des_Data_Size_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Res_Des_Data_Size_Ex")
+Interceptor.attach(CM_Get_Res_Des_Data_Size_Ex, {onLeave: function (args) {send("CM_Get_Res_Des_Data_Size_Ex");}});
+
+var CM_Get_Resource_Conflict_Count = Module.findExportByName("cfgmgr32.dll", "CM_Get_Resource_Conflict_Count")
+Interceptor.attach(CM_Get_Resource_Conflict_Count, {onLeave: function (args) {send("CM_Get_Resource_Conflict_Count");}});
+
+var CM_Get_Resource_Conflict_DetailsA = Module.findExportByName("cfgmgr32.dll", "CM_Get_Resource_Conflict_DetailsA")
+Interceptor.attach(CM_Get_Resource_Conflict_DetailsA, {onLeave: function (args) {send("CM_Get_Resource_Conflict_DetailsA");}});
+
+var CM_Get_Resource_Conflict_DetailsW = Module.findExportByName("cfgmgr32.dll", "CM_Get_Resource_Conflict_DetailsW")
+Interceptor.attach(CM_Get_Resource_Conflict_DetailsW, {onLeave: function (args) {send("CM_Get_Resource_Conflict_DetailsW");}});
+
+var CM_Get_Sibling = Module.findExportByName("cfgmgr32.dll", "CM_Get_Sibling")
+Interceptor.attach(CM_Get_Sibling, {onLeave: function (args) {send("CM_Get_Sibling");}});
+
+var CM_Get_Sibling_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Sibling_Ex")
+Interceptor.attach(CM_Get_Sibling_Ex, {onLeave: function (args) {send("CM_Get_Sibling_Ex");}});
+
+var CM_Get_Version = Module.findExportByName("cfgmgr32.dll", "CM_Get_Version")
+Interceptor.attach(CM_Get_Version, {onLeave: function (args) {send("CM_Get_Version");}});
+
+var CM_Get_Version_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Get_Version_Ex")
+Interceptor.attach(CM_Get_Version_Ex, {onLeave: function (args) {send("CM_Get_Version_Ex");}});
+
+var CM_Import_PowerScheme = Module.findExportByName("cfgmgr32.dll", "CM_Import_PowerScheme")
+Interceptor.attach(CM_Import_PowerScheme, {onLeave: function (args) {send("CM_Import_PowerScheme");}});
+
+var CM_Install_DevNodeW = Module.findExportByName("cfgmgr32.dll", "CM_Install_DevNodeW")
+Interceptor.attach(CM_Install_DevNodeW, {onLeave: function (args) {send("CM_Install_DevNodeW");}});
+
+var CM_Install_DevNode_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Install_DevNode_ExW")
+Interceptor.attach(CM_Install_DevNode_ExW, {onLeave: function (args) {send("CM_Install_DevNode_ExW");}});
+
+var CM_Install_DriverW = Module.findExportByName("cfgmgr32.dll", "CM_Install_DriverW")
+Interceptor.attach(CM_Install_DriverW, {onLeave: function (args) {send("CM_Install_DriverW");}});
+
+var CM_Intersect_Range_List = Module.findExportByName("cfgmgr32.dll", "CM_Intersect_Range_List")
+Interceptor.attach(CM_Intersect_Range_List, {onLeave: function (args) {send("CM_Intersect_Range_List");}});
+
+var CM_Invert_Range_List = Module.findExportByName("cfgmgr32.dll", "CM_Invert_Range_List")
+Interceptor.attach(CM_Invert_Range_List, {onLeave: function (args) {send("CM_Invert_Range_List");}});
+
+var CM_Is_Dock_Station_Present = Module.findExportByName("cfgmgr32.dll", "CM_Is_Dock_Station_Present")
+Interceptor.attach(CM_Is_Dock_Station_Present, {onLeave: function (args) {send("CM_Is_Dock_Station_Present");}});
+
+var CM_Is_Dock_Station_Present_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Is_Dock_Station_Present_Ex")
+Interceptor.attach(CM_Is_Dock_Station_Present_Ex, {onLeave: function (args) {send("CM_Is_Dock_Station_Present_Ex");}});
+
+var CM_Is_Version_Available = Module.findExportByName("cfgmgr32.dll", "CM_Is_Version_Available")
+Interceptor.attach(CM_Is_Version_Available, {onLeave: function (args) {send("CM_Is_Version_Available");}});
+
+var CM_Is_Version_Available_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Is_Version_Available_Ex")
+Interceptor.attach(CM_Is_Version_Available_Ex, {onLeave: function (args) {send("CM_Is_Version_Available_Ex");}});
+
+var CM_Locate_DevNodeA = Module.findExportByName("cfgmgr32.dll", "CM_Locate_DevNodeA")
+Interceptor.attach(CM_Locate_DevNodeA, {onLeave: function (args) {send("CM_Locate_DevNodeA");}});
+
+var CM_Locate_DevNodeW = Module.findExportByName("cfgmgr32.dll", "CM_Locate_DevNodeW")
+Interceptor.attach(CM_Locate_DevNodeW, {onLeave: function (args) {send("CM_Locate_DevNodeW");}});
+
+var CM_Locate_DevNode_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Locate_DevNode_ExA")
+Interceptor.attach(CM_Locate_DevNode_ExA, {onLeave: function (args) {send("CM_Locate_DevNode_ExA");}});
+
+var CM_Locate_DevNode_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Locate_DevNode_ExW")
+Interceptor.attach(CM_Locate_DevNode_ExW, {onLeave: function (args) {send("CM_Locate_DevNode_ExW");}});
+
+var CM_MapCrToSpErr = Module.findExportByName("cfgmgr32.dll", "CM_MapCrToSpErr")
+Interceptor.attach(CM_MapCrToSpErr, {onLeave: function (args) {send("CM_MapCrToSpErr");}});
+
+var CM_MapCrToWin32Err = Module.findExportByName("cfgmgr32.dll", "CM_MapCrToWin32Err")
+Interceptor.attach(CM_MapCrToWin32Err, {onLeave: function (args) {send("CM_MapCrToWin32Err");}});
+
+var CM_Merge_Range_List = Module.findExportByName("cfgmgr32.dll", "CM_Merge_Range_List")
+Interceptor.attach(CM_Merge_Range_List, {onLeave: function (args) {send("CM_Merge_Range_List");}});
+
+var CM_Modify_Res_Des = Module.findExportByName("cfgmgr32.dll", "CM_Modify_Res_Des")
+Interceptor.attach(CM_Modify_Res_Des, {onLeave: function (args) {send("CM_Modify_Res_Des");}});
+
+var CM_Modify_Res_Des_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Modify_Res_Des_Ex")
+Interceptor.attach(CM_Modify_Res_Des_Ex, {onLeave: function (args) {send("CM_Modify_Res_Des_Ex");}});
+
+var CM_Move_DevNode = Module.findExportByName("cfgmgr32.dll", "CM_Move_DevNode")
+Interceptor.attach(CM_Move_DevNode, {onLeave: function (args) {send("CM_Move_DevNode");}});
+
+var CM_Move_DevNode_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Move_DevNode_Ex")
+Interceptor.attach(CM_Move_DevNode_Ex, {onLeave: function (args) {send("CM_Move_DevNode_Ex");}});
+
+var CM_Next_Range = Module.findExportByName("cfgmgr32.dll", "CM_Next_Range")
+Interceptor.attach(CM_Next_Range, {onLeave: function (args) {send("CM_Next_Range");}});
+
+var CM_Open_Class_KeyA = Module.findExportByName("cfgmgr32.dll", "CM_Open_Class_KeyA")
+Interceptor.attach(CM_Open_Class_KeyA, {onLeave: function (args) {send("CM_Open_Class_KeyA");}});
+
+var CM_Open_Class_KeyW = Module.findExportByName("cfgmgr32.dll", "CM_Open_Class_KeyW")
+Interceptor.attach(CM_Open_Class_KeyW, {onLeave: function (args) {send("CM_Open_Class_KeyW");}});
+
+var CM_Open_Class_Key_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Open_Class_Key_ExA")
+Interceptor.attach(CM_Open_Class_Key_ExA, {onLeave: function (args) {send("CM_Open_Class_Key_ExA");}});
+
+var CM_Open_Class_Key_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Open_Class_Key_ExW")
+Interceptor.attach(CM_Open_Class_Key_ExW, {onLeave: function (args) {send("CM_Open_Class_Key_ExW");}});
+
+var CM_Open_DevNode_Key = Module.findExportByName("cfgmgr32.dll", "CM_Open_DevNode_Key")
+Interceptor.attach(CM_Open_DevNode_Key, {onLeave: function (args) {send("CM_Open_DevNode_Key");}});
+
+var CM_Open_DevNode_Key_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Open_DevNode_Key_Ex")
+Interceptor.attach(CM_Open_DevNode_Key_Ex, {onLeave: function (args) {send("CM_Open_DevNode_Key_Ex");}});
+
+var CM_Open_Device_Interface_KeyA = Module.findExportByName("cfgmgr32.dll", "CM_Open_Device_Interface_KeyA")
+Interceptor.attach(CM_Open_Device_Interface_KeyA, {onLeave: function (args) {send("CM_Open_Device_Interface_KeyA");}});
+
+var CM_Open_Device_Interface_KeyW = Module.findExportByName("cfgmgr32.dll", "CM_Open_Device_Interface_KeyW")
+Interceptor.attach(CM_Open_Device_Interface_KeyW, {onLeave: function (args) {send("CM_Open_Device_Interface_KeyW");}});
+
+var CM_Open_Device_Interface_Key_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Open_Device_Interface_Key_ExA")
+Interceptor.attach(CM_Open_Device_Interface_Key_ExA, {onLeave: function (args) {send("CM_Open_Device_Interface_Key_ExA");}});
+
+var CM_Open_Device_Interface_Key_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Open_Device_Interface_Key_ExW")
+Interceptor.attach(CM_Open_Device_Interface_Key_ExW, {onLeave: function (args) {send("CM_Open_Device_Interface_Key_ExW");}});
+
+var CM_Query_And_Remove_SubTreeA = Module.findExportByName("cfgmgr32.dll", "CM_Query_And_Remove_SubTreeA")
+Interceptor.attach(CM_Query_And_Remove_SubTreeA, {onLeave: function (args) {send("CM_Query_And_Remove_SubTreeA");}});
+
+var CM_Query_And_Remove_SubTreeW = Module.findExportByName("cfgmgr32.dll", "CM_Query_And_Remove_SubTreeW")
+Interceptor.attach(CM_Query_And_Remove_SubTreeW, {onLeave: function (args) {send("CM_Query_And_Remove_SubTreeW");}});
+
+var CM_Query_And_Remove_SubTree_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Query_And_Remove_SubTree_ExA")
+Interceptor.attach(CM_Query_And_Remove_SubTree_ExA, {onLeave: function (args) {send("CM_Query_And_Remove_SubTree_ExA");}});
+
+var CM_Query_And_Remove_SubTree_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Query_And_Remove_SubTree_ExW")
+Interceptor.attach(CM_Query_And_Remove_SubTree_ExW, {onLeave: function (args) {send("CM_Query_And_Remove_SubTree_ExW");}});
+
+var CM_Query_Arbitrator_Free_Data = Module.findExportByName("cfgmgr32.dll", "CM_Query_Arbitrator_Free_Data")
+Interceptor.attach(CM_Query_Arbitrator_Free_Data, {onLeave: function (args) {send("CM_Query_Arbitrator_Free_Data");}});
+
+var CM_Query_Arbitrator_Free_Data_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Query_Arbitrator_Free_Data_Ex")
+Interceptor.attach(CM_Query_Arbitrator_Free_Data_Ex, {onLeave: function (args) {send("CM_Query_Arbitrator_Free_Data_Ex");}});
+
+var CM_Query_Arbitrator_Free_Size = Module.findExportByName("cfgmgr32.dll", "CM_Query_Arbitrator_Free_Size")
+Interceptor.attach(CM_Query_Arbitrator_Free_Size, {onLeave: function (args) {send("CM_Query_Arbitrator_Free_Size");}});
+
+var CM_Query_Arbitrator_Free_Size_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Query_Arbitrator_Free_Size_Ex")
+Interceptor.attach(CM_Query_Arbitrator_Free_Size_Ex, {onLeave: function (args) {send("CM_Query_Arbitrator_Free_Size_Ex");}});
+
+var CM_Query_Remove_SubTree = Module.findExportByName("cfgmgr32.dll", "CM_Query_Remove_SubTree")
+Interceptor.attach(CM_Query_Remove_SubTree, {onLeave: function (args) {send("CM_Query_Remove_SubTree");}});
+
+var CM_Query_Remove_SubTree_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Query_Remove_SubTree_Ex")
+Interceptor.attach(CM_Query_Remove_SubTree_Ex, {onLeave: function (args) {send("CM_Query_Remove_SubTree_Ex");}});
+
+var CM_Query_Resource_Conflict_List = Module.findExportByName("cfgmgr32.dll", "CM_Query_Resource_Conflict_List")
+Interceptor.attach(CM_Query_Resource_Conflict_List, {onLeave: function (args) {send("CM_Query_Resource_Conflict_List");}});
+
+var CM_Reenumerate_DevNode = Module.findExportByName("cfgmgr32.dll", "CM_Reenumerate_DevNode")
+Interceptor.attach(CM_Reenumerate_DevNode, {onLeave: function (args) {send("CM_Reenumerate_DevNode");}});
+
+var CM_Reenumerate_DevNode_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Reenumerate_DevNode_Ex")
+Interceptor.attach(CM_Reenumerate_DevNode_Ex, {onLeave: function (args) {send("CM_Reenumerate_DevNode_Ex");}});
+
+var CM_Register_Device_Driver = Module.findExportByName("cfgmgr32.dll", "CM_Register_Device_Driver")
+Interceptor.attach(CM_Register_Device_Driver, {onLeave: function (args) {send("CM_Register_Device_Driver");}});
+
+var CM_Register_Device_Driver_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Register_Device_Driver_Ex")
+Interceptor.attach(CM_Register_Device_Driver_Ex, {onLeave: function (args) {send("CM_Register_Device_Driver_Ex");}});
+
+var CM_Register_Device_InterfaceA = Module.findExportByName("cfgmgr32.dll", "CM_Register_Device_InterfaceA")
+Interceptor.attach(CM_Register_Device_InterfaceA, {onLeave: function (args) {send("CM_Register_Device_InterfaceA");}});
+
+var CM_Register_Device_InterfaceW = Module.findExportByName("cfgmgr32.dll", "CM_Register_Device_InterfaceW")
+Interceptor.attach(CM_Register_Device_InterfaceW, {onLeave: function (args) {send("CM_Register_Device_InterfaceW");}});
+
+var CM_Register_Device_Interface_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Register_Device_Interface_ExA")
+Interceptor.attach(CM_Register_Device_Interface_ExA, {onLeave: function (args) {send("CM_Register_Device_Interface_ExA");}});
+
+var CM_Register_Device_Interface_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Register_Device_Interface_ExW")
+Interceptor.attach(CM_Register_Device_Interface_ExW, {onLeave: function (args) {send("CM_Register_Device_Interface_ExW");}});
+
+var CM_Register_Notification = Module.findExportByName("cfgmgr32.dll", "CM_Register_Notification")
+Interceptor.attach(CM_Register_Notification, {onLeave: function (args) {send("CM_Register_Notification");}});
+
+var CM_Remove_SubTree = Module.findExportByName("cfgmgr32.dll", "CM_Remove_SubTree")
+Interceptor.attach(CM_Remove_SubTree, {onLeave: function (args) {send("CM_Remove_SubTree");}});
+
+var CM_Remove_SubTree_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Remove_SubTree_Ex")
+Interceptor.attach(CM_Remove_SubTree_Ex, {onLeave: function (args) {send("CM_Remove_SubTree_Ex");}});
+
+var CM_Request_Device_EjectA = Module.findExportByName("cfgmgr32.dll", "CM_Request_Device_EjectA")
+Interceptor.attach(CM_Request_Device_EjectA, {onLeave: function (args) {send("CM_Request_Device_EjectA");}});
+
+var CM_Request_Device_EjectW = Module.findExportByName("cfgmgr32.dll", "CM_Request_Device_EjectW")
+Interceptor.attach(CM_Request_Device_EjectW, {onLeave: function (args) {send("CM_Request_Device_EjectW");}});
+
+var CM_Request_Device_Eject_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Request_Device_Eject_ExA")
+Interceptor.attach(CM_Request_Device_Eject_ExA, {onLeave: function (args) {send("CM_Request_Device_Eject_ExA");}});
+
+var CM_Request_Device_Eject_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Request_Device_Eject_ExW")
+Interceptor.attach(CM_Request_Device_Eject_ExW, {onLeave: function (args) {send("CM_Request_Device_Eject_ExW");}});
+
+var CM_Request_Eject_PC = Module.findExportByName("cfgmgr32.dll", "CM_Request_Eject_PC")
+Interceptor.attach(CM_Request_Eject_PC, {onLeave: function (args) {send("CM_Request_Eject_PC");}});
+
+var CM_Request_Eject_PC_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Request_Eject_PC_Ex")
+Interceptor.attach(CM_Request_Eject_PC_Ex, {onLeave: function (args) {send("CM_Request_Eject_PC_Ex");}});
+
+var CM_RestoreAll_DefaultPowerSchemes = Module.findExportByName("cfgmgr32.dll", "CM_RestoreAll_DefaultPowerSchemes")
+Interceptor.attach(CM_RestoreAll_DefaultPowerSchemes, {onLeave: function (args) {send("CM_RestoreAll_DefaultPowerSchemes");}});
+
+var CM_Restore_DefaultPowerScheme = Module.findExportByName("cfgmgr32.dll", "CM_Restore_DefaultPowerScheme")
+Interceptor.attach(CM_Restore_DefaultPowerScheme, {onLeave: function (args) {send("CM_Restore_DefaultPowerScheme");}});
+
+var CM_Run_Detection = Module.findExportByName("cfgmgr32.dll", "CM_Run_Detection")
+Interceptor.attach(CM_Run_Detection, {onLeave: function (args) {send("CM_Run_Detection");}});
+
+var CM_Run_Detection_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Run_Detection_Ex")
+Interceptor.attach(CM_Run_Detection_Ex, {onLeave: function (args) {send("CM_Run_Detection_Ex");}});
+
+var CM_Set_ActiveScheme = Module.findExportByName("cfgmgr32.dll", "CM_Set_ActiveScheme")
+Interceptor.attach(CM_Set_ActiveScheme, {onLeave: function (args) {send("CM_Set_ActiveScheme");}});
+
+var CM_Set_Class_PropertyW = Module.findExportByName("cfgmgr32.dll", "CM_Set_Class_PropertyW")
+Interceptor.attach(CM_Set_Class_PropertyW, {onLeave: function (args) {send("CM_Set_Class_PropertyW");}});
+
+var CM_Set_Class_Property_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Set_Class_Property_ExW")
+Interceptor.attach(CM_Set_Class_Property_ExW, {onLeave: function (args) {send("CM_Set_Class_Property_ExW");}});
+
+var CM_Set_Class_Registry_PropertyA = Module.findExportByName("cfgmgr32.dll", "CM_Set_Class_Registry_PropertyA")
+Interceptor.attach(CM_Set_Class_Registry_PropertyA, {onLeave: function (args) {send("CM_Set_Class_Registry_PropertyA");}});
+
+var CM_Set_Class_Registry_PropertyW = Module.findExportByName("cfgmgr32.dll", "CM_Set_Class_Registry_PropertyW")
+Interceptor.attach(CM_Set_Class_Registry_PropertyW, {onLeave: function (args) {send("CM_Set_Class_Registry_PropertyW");}});
+
+var CM_Set_DevNode_Problem = Module.findExportByName("cfgmgr32.dll", "CM_Set_DevNode_Problem")
+Interceptor.attach(CM_Set_DevNode_Problem, {onLeave: function (args) {send("CM_Set_DevNode_Problem");}});
+
+var CM_Set_DevNode_Problem_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Set_DevNode_Problem_Ex")
+Interceptor.attach(CM_Set_DevNode_Problem_Ex, {onLeave: function (args) {send("CM_Set_DevNode_Problem_Ex");}});
+
+var CM_Set_DevNode_PropertyW = Module.findExportByName("cfgmgr32.dll", "CM_Set_DevNode_PropertyW")
+Interceptor.attach(CM_Set_DevNode_PropertyW, {onLeave: function (args) {send("CM_Set_DevNode_PropertyW");}});
+
+var CM_Set_DevNode_Property_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Set_DevNode_Property_ExW")
+Interceptor.attach(CM_Set_DevNode_Property_ExW, {onLeave: function (args) {send("CM_Set_DevNode_Property_ExW");}});
+
+var CM_Set_DevNode_Registry_PropertyA = Module.findExportByName("cfgmgr32.dll", "CM_Set_DevNode_Registry_PropertyA")
+Interceptor.attach(CM_Set_DevNode_Registry_PropertyA, {onLeave: function (args) {send("CM_Set_DevNode_Registry_PropertyA");}});
+
+var CM_Set_DevNode_Registry_PropertyW = Module.findExportByName("cfgmgr32.dll", "CM_Set_DevNode_Registry_PropertyW")
+Interceptor.attach(CM_Set_DevNode_Registry_PropertyW, {onLeave: function (args) {send("CM_Set_DevNode_Registry_PropertyW");}});
+
+var CM_Set_DevNode_Registry_Property_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Set_DevNode_Registry_Property_ExA")
+Interceptor.attach(CM_Set_DevNode_Registry_Property_ExA, {onLeave: function (args) {send("CM_Set_DevNode_Registry_Property_ExA");}});
+
+var CM_Set_DevNode_Registry_Property_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Set_DevNode_Registry_Property_ExW")
+Interceptor.attach(CM_Set_DevNode_Registry_Property_ExW, {onLeave: function (args) {send("CM_Set_DevNode_Registry_Property_ExW");}});
+
+var CM_Set_Device_Interface_PropertyW = Module.findExportByName("cfgmgr32.dll", "CM_Set_Device_Interface_PropertyW")
+Interceptor.attach(CM_Set_Device_Interface_PropertyW, {onLeave: function (args) {send("CM_Set_Device_Interface_PropertyW");}});
+
+var CM_Set_Device_Interface_Property_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Set_Device_Interface_Property_ExW")
+Interceptor.attach(CM_Set_Device_Interface_Property_ExW, {onLeave: function (args) {send("CM_Set_Device_Interface_Property_ExW");}});
+
+var CM_Set_HW_Prof = Module.findExportByName("cfgmgr32.dll", "CM_Set_HW_Prof")
+Interceptor.attach(CM_Set_HW_Prof, {onLeave: function (args) {send("CM_Set_HW_Prof");}});
+
+var CM_Set_HW_Prof_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Set_HW_Prof_Ex")
+Interceptor.attach(CM_Set_HW_Prof_Ex, {onLeave: function (args) {send("CM_Set_HW_Prof_Ex");}});
+
+var CM_Set_HW_Prof_FlagsA = Module.findExportByName("cfgmgr32.dll", "CM_Set_HW_Prof_FlagsA")
+Interceptor.attach(CM_Set_HW_Prof_FlagsA, {onLeave: function (args) {send("CM_Set_HW_Prof_FlagsA");}});
+
+var CM_Set_HW_Prof_FlagsW = Module.findExportByName("cfgmgr32.dll", "CM_Set_HW_Prof_FlagsW")
+Interceptor.attach(CM_Set_HW_Prof_FlagsW, {onLeave: function (args) {send("CM_Set_HW_Prof_FlagsW");}});
+
+var CM_Set_HW_Prof_Flags_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Set_HW_Prof_Flags_ExA")
+Interceptor.attach(CM_Set_HW_Prof_Flags_ExA, {onLeave: function (args) {send("CM_Set_HW_Prof_Flags_ExA");}});
+
+var CM_Set_HW_Prof_Flags_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Set_HW_Prof_Flags_ExW")
+Interceptor.attach(CM_Set_HW_Prof_Flags_ExW, {onLeave: function (args) {send("CM_Set_HW_Prof_Flags_ExW");}});
+
+var CM_Setup_DevNode = Module.findExportByName("cfgmgr32.dll", "CM_Setup_DevNode")
+Interceptor.attach(CM_Setup_DevNode, {onLeave: function (args) {send("CM_Setup_DevNode");}});
+
+var CM_Setup_DevNode_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Setup_DevNode_Ex")
+Interceptor.attach(CM_Setup_DevNode_Ex, {onLeave: function (args) {send("CM_Setup_DevNode_Ex");}});
+
+var CM_Test_Range_Available = Module.findExportByName("cfgmgr32.dll", "CM_Test_Range_Available")
+Interceptor.attach(CM_Test_Range_Available, {onLeave: function (args) {send("CM_Test_Range_Available");}});
+
+var CM_Uninstall_DevNode = Module.findExportByName("cfgmgr32.dll", "CM_Uninstall_DevNode")
+Interceptor.attach(CM_Uninstall_DevNode, {onLeave: function (args) {send("CM_Uninstall_DevNode");}});
+
+var CM_Uninstall_DevNode_Ex = Module.findExportByName("cfgmgr32.dll", "CM_Uninstall_DevNode_Ex")
+Interceptor.attach(CM_Uninstall_DevNode_Ex, {onLeave: function (args) {send("CM_Uninstall_DevNode_Ex");}});
+
+var CM_Uninstall_DriverW = Module.findExportByName("cfgmgr32.dll", "CM_Uninstall_DriverW")
+Interceptor.attach(CM_Uninstall_DriverW, {onLeave: function (args) {send("CM_Uninstall_DriverW");}});
+
+var CM_Unregister_Device_InterfaceA = Module.findExportByName("cfgmgr32.dll", "CM_Unregister_Device_InterfaceA")
+Interceptor.attach(CM_Unregister_Device_InterfaceA, {onLeave: function (args) {send("CM_Unregister_Device_InterfaceA");}});
+
+var CM_Unregister_Device_InterfaceW = Module.findExportByName("cfgmgr32.dll", "CM_Unregister_Device_InterfaceW")
+Interceptor.attach(CM_Unregister_Device_InterfaceW, {onLeave: function (args) {send("CM_Unregister_Device_InterfaceW");}});
+
+var CM_Unregister_Device_Interface_ExA = Module.findExportByName("cfgmgr32.dll", "CM_Unregister_Device_Interface_ExA")
+Interceptor.attach(CM_Unregister_Device_Interface_ExA, {onLeave: function (args) {send("CM_Unregister_Device_Interface_ExA");}});
+
+var CM_Unregister_Device_Interface_ExW = Module.findExportByName("cfgmgr32.dll", "CM_Unregister_Device_Interface_ExW")
+Interceptor.attach(CM_Unregister_Device_Interface_ExW, {onLeave: function (args) {send("CM_Unregister_Device_Interface_ExW");}});
+
+var CM_Unregister_Notification = Module.findExportByName("cfgmgr32.dll", "CM_Unregister_Notification")
+Interceptor.attach(CM_Unregister_Notification, {onLeave: function (args) {send("CM_Unregister_Notification");}});
+
+var CM_Write_UserPowerKey = Module.findExportByName("cfgmgr32.dll", "CM_Write_UserPowerKey")
+Interceptor.attach(CM_Write_UserPowerKey, {onLeave: function (args) {send("CM_Write_UserPowerKey");}});
+
+var DevCloseObjectQuery = Module.findExportByName("cfgmgr32.dll", "DevCloseObjectQuery")
+Interceptor.attach(DevCloseObjectQuery, {onLeave: function (args) {send("DevCloseObjectQuery");}});
+
+var DevCreateObjectQuery = Module.findExportByName("cfgmgr32.dll", "DevCreateObjectQuery")
+Interceptor.attach(DevCreateObjectQuery, {onLeave: function (args) {send("DevCreateObjectQuery");}});
+
+var DevCreateObjectQueryEx = Module.findExportByName("cfgmgr32.dll", "DevCreateObjectQueryEx")
+Interceptor.attach(DevCreateObjectQueryEx, {onLeave: function (args) {send("DevCreateObjectQueryEx");}});
+
+var DevCreateObjectQueryFromId = Module.findExportByName("cfgmgr32.dll", "DevCreateObjectQueryFromId")
+Interceptor.attach(DevCreateObjectQueryFromId, {onLeave: function (args) {send("DevCreateObjectQueryFromId");}});
+
+var DevCreateObjectQueryFromIdEx = Module.findExportByName("cfgmgr32.dll", "DevCreateObjectQueryFromIdEx")
+Interceptor.attach(DevCreateObjectQueryFromIdEx, {onLeave: function (args) {send("DevCreateObjectQueryFromIdEx");}});
+
+var DevCreateObjectQueryFromIds = Module.findExportByName("cfgmgr32.dll", "DevCreateObjectQueryFromIds")
+Interceptor.attach(DevCreateObjectQueryFromIds, {onLeave: function (args) {send("DevCreateObjectQueryFromIds");}});
+
+var DevCreateObjectQueryFromIdsEx = Module.findExportByName("cfgmgr32.dll", "DevCreateObjectQueryFromIdsEx")
+Interceptor.attach(DevCreateObjectQueryFromIdsEx, {onLeave: function (args) {send("DevCreateObjectQueryFromIdsEx");}});
+
+var DevFindProperty = Module.findExportByName("cfgmgr32.dll", "DevFindProperty")
+Interceptor.attach(DevFindProperty, {onLeave: function (args) {send("DevFindProperty");}});
+
+var DevFreeObjectProperties = Module.findExportByName("cfgmgr32.dll", "DevFreeObjectProperties")
+Interceptor.attach(DevFreeObjectProperties, {onLeave: function (args) {send("DevFreeObjectProperties");}});
+
+var DevFreeObjects = Module.findExportByName("cfgmgr32.dll", "DevFreeObjects")
+Interceptor.attach(DevFreeObjects, {onLeave: function (args) {send("DevFreeObjects");}});
+
+var DevGetObjectProperties = Module.findExportByName("cfgmgr32.dll", "DevGetObjectProperties")
+Interceptor.attach(DevGetObjectProperties, {onLeave: function (args) {send("DevGetObjectProperties");}});
+
+var DevGetObjectPropertiesEx = Module.findExportByName("cfgmgr32.dll", "DevGetObjectPropertiesEx")
+Interceptor.attach(DevGetObjectPropertiesEx, {onLeave: function (args) {send("DevGetObjectPropertiesEx");}});
+
+var DevGetObjects = Module.findExportByName("cfgmgr32.dll", "DevGetObjects")
+Interceptor.attach(DevGetObjects, {onLeave: function (args) {send("DevGetObjects");}});
+
+var DevGetObjectsEx = Module.findExportByName("cfgmgr32.dll", "DevGetObjectsEx")
+Interceptor.attach(DevGetObjectsEx, {onLeave: function (args) {send("DevGetObjectsEx");}});
+
+var DevSetObjectProperties = Module.findExportByName("cfgmgr32.dll", "DevSetObjectProperties")
+Interceptor.attach(DevSetObjectProperties, {onLeave: function (args) {send("DevSetObjectProperties");}});
+
+var SwDeviceClose = Module.findExportByName("cfgmgr32.dll", "SwDeviceClose")
+Interceptor.attach(SwDeviceClose, {onLeave: function (args) {send("SwDeviceClose");}});
+
+var SwDeviceCreate = Module.findExportByName("cfgmgr32.dll", "SwDeviceCreate")
+Interceptor.attach(SwDeviceCreate, {onLeave: function (args) {send("SwDeviceCreate");}});
+
+var SwDeviceGetLifetime = Module.findExportByName("cfgmgr32.dll", "SwDeviceGetLifetime")
+Interceptor.attach(SwDeviceGetLifetime, {onLeave: function (args) {send("SwDeviceGetLifetime");}});
+
+var SwDeviceInterfacePropertySet = Module.findExportByName("cfgmgr32.dll", "SwDeviceInterfacePropertySet")
+Interceptor.attach(SwDeviceInterfacePropertySet, {onLeave: function (args) {send("SwDeviceInterfacePropertySet");}});
+
+var SwDeviceInterfaceRegister = Module.findExportByName("cfgmgr32.dll", "SwDeviceInterfaceRegister")
+Interceptor.attach(SwDeviceInterfaceRegister, {onLeave: function (args) {send("SwDeviceInterfaceRegister");}});
+
+var SwDeviceInterfaceSetState = Module.findExportByName("cfgmgr32.dll", "SwDeviceInterfaceSetState")
+Interceptor.attach(SwDeviceInterfaceSetState, {onLeave: function (args) {send("SwDeviceInterfaceSetState");}});
+
+var SwDevicePropertySet = Module.findExportByName("cfgmgr32.dll", "SwDevicePropertySet")
+Interceptor.attach(SwDevicePropertySet, {onLeave: function (args) {send("SwDevicePropertySet");}});
+
+var SwDeviceSetLifetime = Module.findExportByName("cfgmgr32.dll", "SwDeviceSetLifetime")
+Interceptor.attach(SwDeviceSetLifetime, {onLeave: function (args) {send("SwDeviceSetLifetime");}});
+
+var SwMemFree = Module.findExportByName("cfgmgr32.dll", "SwMemFree")
+Interceptor.attach(SwMemFree, {onLeave: function (args) {send("SwMemFree");}});
+

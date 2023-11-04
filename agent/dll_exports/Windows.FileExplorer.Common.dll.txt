@@ -1,0 +1,60 @@
+var ApplyProviderSettings = Module.findExportByName("Windows.FileExplorer.Common.dll", "ApplyProviderSettings")
+Interceptor.attach(ApplyProviderSettings, {onLeave: function (args) {send("ApplyProviderSettings");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.FileExplorer.Common.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.FileExplorer.Common.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.FileExplorer.Common.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var FECommon_BindToFilePlaceholderHandler = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_BindToFilePlaceholderHandler")
+Interceptor.attach(FECommon_BindToFilePlaceholderHandler, {onLeave: function (args) {send("FECommon_BindToFilePlaceholderHandler");}});
+
+var FECommon_CSyncRootManager_CreateInstance = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_CSyncRootManager_CreateInstance")
+Interceptor.attach(FECommon_CSyncRootManager_CreateInstance, {onLeave: function (args) {send("FECommon_CSyncRootManager_CreateInstance");}});
+
+var FECommon_CreatePlaceholderFile = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_CreatePlaceholderFile")
+Interceptor.attach(FECommon_CreatePlaceholderFile, {onLeave: function (args) {send("FECommon_CreatePlaceholderFile");}});
+
+var FECommon_FilePlaceholder_BindToPrimaryStream = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_FilePlaceholder_BindToPrimaryStream")
+Interceptor.attach(FECommon_FilePlaceholder_BindToPrimaryStream, {onLeave: function (args) {send("FECommon_FilePlaceholder_BindToPrimaryStream");}});
+
+var FECommon_FilePlaceholder_CreateInstance = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_FilePlaceholder_CreateInstance")
+Interceptor.attach(FECommon_FilePlaceholder_CreateInstance, {onLeave: function (args) {send("FECommon_FilePlaceholder_CreateInstance");}});
+
+var FECommon_GetPlaceholderStatesFromFileAttributesAndReparsePointTag = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_GetPlaceholderStatesFromFileAttributesAndReparsePointTag")
+Interceptor.attach(FECommon_GetPlaceholderStatesFromFileAttributesAndReparsePointTag, {onLeave: function (args) {send("FECommon_GetPlaceholderStatesFromFileAttributesAndReparsePointTag");}});
+
+var FECommon_GetSkyDriveNetworkStates = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_GetSkyDriveNetworkStates")
+Interceptor.attach(FECommon_GetSkyDriveNetworkStates, {onLeave: function (args) {send("FECommon_GetSkyDriveNetworkStates");}});
+
+var FECommon_GetStorageProviderDisplayName = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_GetStorageProviderDisplayName")
+Interceptor.attach(FECommon_GetStorageProviderDisplayName, {onLeave: function (args) {send("FECommon_GetStorageProviderDisplayName");}});
+
+var FECommon_GetStorageProviderInfoFromItem = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_GetStorageProviderInfoFromItem")
+Interceptor.attach(FECommon_GetStorageProviderInfoFromItem, {onLeave: function (args) {send("FECommon_GetStorageProviderInfoFromItem");}});
+
+var FECommon_PerformCloudFilePinAction = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_PerformCloudFilePinAction")
+Interceptor.attach(FECommon_PerformCloudFilePinAction, {onLeave: function (args) {send("FECommon_PerformCloudFilePinAction");}});
+
+var FECommon_SetPlaceholderReparsePointAttribute = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_SetPlaceholderReparsePointAttribute")
+Interceptor.attach(FECommon_SetPlaceholderReparsePointAttribute, {onLeave: function (args) {send("FECommon_SetPlaceholderReparsePointAttribute");}});
+
+var FECommon_SetPlaceholderReparsePointAttribute2 = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_SetPlaceholderReparsePointAttribute2")
+Interceptor.attach(FECommon_SetPlaceholderReparsePointAttribute2, {onLeave: function (args) {send("FECommon_SetPlaceholderReparsePointAttribute2");}});
+
+var FECommon_UpdateFilePlaceholderStates = Module.findExportByName("Windows.FileExplorer.Common.dll", "FECommon_UpdateFilePlaceholderStates")
+Interceptor.attach(FECommon_UpdateFilePlaceholderStates, {onLeave: function (args) {send("FECommon_UpdateFilePlaceholderStates");}});
+
+var GatherProviderSettings = Module.findExportByName("Windows.FileExplorer.Common.dll", "GatherProviderSettings")
+Interceptor.attach(GatherProviderSettings, {onLeave: function (args) {send("GatherProviderSettings");}});
+
+var RegisterChangeNotifications = Module.findExportByName("Windows.FileExplorer.Common.dll", "RegisterChangeNotifications")
+Interceptor.attach(RegisterChangeNotifications, {onLeave: function (args) {send("RegisterChangeNotifications");}});
+
+var UnregisterChangeNotifications = Module.findExportByName("Windows.FileExplorer.Common.dll", "UnregisterChangeNotifications")
+Interceptor.attach(UnregisterChangeNotifications, {onLeave: function (args) {send("UnregisterChangeNotifications");}});
+

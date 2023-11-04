@@ -1,0 +1,15 @@
+var CreateIImeSkdicInstance = Module.findExportByName("IMJPKDIC.DLL", "CreateIImeSkdicInstance")
+Interceptor.attach(CreateIImeSkdicInstance, {onLeave: function (args) {send("CreateIImeSkdicInstance");}});
+
+var DllCanUnloadNow = Module.findExportByName("IMJPKDIC.DLL", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("IMJPKDIC.DLL", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("IMJPKDIC.DLL", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("IMJPKDIC.DLL", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

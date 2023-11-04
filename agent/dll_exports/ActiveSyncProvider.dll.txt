@@ -1,0 +1,87 @@
+var CreateMassObject = Module.findExportByName("ActiveSyncProvider.dll", "CreateMassObject")
+Interceptor.attach(CreateMassObject, {onLeave: function (args) {send("CreateMassObject");}});
+
+var CreateSyncServiceLayer = Module.findExportByName("ActiveSyncProvider.dll", "CreateSyncServiceLayer")
+Interceptor.attach(CreateSyncServiceLayer, {onLeave: function (args) {send("CreateSyncServiceLayer");}});
+
+var DllCanUnloadNow = Module.findExportByName("ActiveSyncProvider.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("ActiveSyncProvider.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DownloadEmailAttachment = Module.findExportByName("ActiveSyncProvider.dll", "DownloadEmailAttachment")
+Interceptor.attach(DownloadEmailAttachment, {onLeave: function (args) {send("DownloadEmailAttachment");}});
+
+var DownloadEmailBody = Module.findExportByName("ActiveSyncProvider.dll", "DownloadEmailBody")
+Interceptor.attach(DownloadEmailBody, {onLeave: function (args) {send("DownloadEmailBody");}});
+
+var GetActiveSyncServerProbeInstance = Module.findExportByName("ActiveSyncProvider.dll", "GetActiveSyncServerProbeInstance")
+Interceptor.attach(GetActiveSyncServerProbeInstance, {onLeave: function (args) {send("GetActiveSyncServerProbeInstance");}});
+
+var GetConversationSyncEnabled = Module.findExportByName("ActiveSyncProvider.dll", "GetConversationSyncEnabled")
+Interceptor.attach(GetConversationSyncEnabled, {onLeave: function (args) {send("GetConversationSyncEnabled");}});
+
+var GetOutlookExtensionSupportForAccount = Module.findExportByName("ActiveSyncProvider.dll", "GetOutlookExtensionSupportForAccount")
+Interceptor.attach(GetOutlookExtensionSupportForAccount, {onLeave: function (args) {send("GetOutlookExtensionSupportForAccount");}});
+
+var GetOutlookExtensionSupportFromAccessor = Module.findExportByName("ActiveSyncProvider.dll", "GetOutlookExtensionSupportFromAccessor")
+Interceptor.attach(GetOutlookExtensionSupportFromAccessor, {onLeave: function (args) {send("GetOutlookExtensionSupportFromAccessor");}});
+
+var GetUserInfoForUnconfiguredAccount = Module.findExportByName("ActiveSyncProvider.dll", "GetUserInfoForUnconfiguredAccount")
+Interceptor.attach(GetUserInfoForUnconfiguredAccount, {onLeave: function (args) {send("GetUserInfoForUnconfiguredAccount");}});
+
+var HandleEasMeetingResponseForAppointment = Module.findExportByName("ActiveSyncProvider.dll", "HandleEasMeetingResponseForAppointment")
+Interceptor.attach(HandleEasMeetingResponseForAppointment, {onLeave: function (args) {send("HandleEasMeetingResponseForAppointment");}});
+
+var HandleEasMeetingResponseForMeetingNotification = Module.findExportByName("ActiveSyncProvider.dll", "HandleEasMeetingResponseForMeetingNotification")
+Interceptor.attach(HandleEasMeetingResponseForMeetingNotification, {onLeave: function (args) {send("HandleEasMeetingResponseForMeetingNotification");}});
+
+var InitializeSyncStatus = Module.findExportByName("ActiveSyncProvider.dll", "InitializeSyncStatus")
+Interceptor.attach(InitializeSyncStatus, {onLeave: function (args) {send("InitializeSyncStatus");}});
+
+var IsEnabledForSync = Module.findExportByName("ActiveSyncProvider.dll", "IsEnabledForSync")
+Interceptor.attach(IsEnabledForSync, {onLeave: function (args) {send("IsEnabledForSync");}});
+
+var IsErrorCatastrophic = Module.findExportByName("ActiveSyncProvider.dll", "IsErrorCatastrophic")
+Interceptor.attach(IsErrorCatastrophic, {onLeave: function (args) {send("IsErrorCatastrophic");}});
+
+var IsValidOutlookExtensionVersion = Module.findExportByName("ActiveSyncProvider.dll", "IsValidOutlookExtensionVersion")
+Interceptor.attach(IsValidOutlookExtensionVersion, {onLeave: function (args) {send("IsValidOutlookExtensionVersion");}});
+
+var MarkPeopleFolderForResync = Module.findExportByName("ActiveSyncProvider.dll", "MarkPeopleFolderForResync")
+Interceptor.attach(MarkPeopleFolderForResync, {onLeave: function (args) {send("MarkPeopleFolderForResync");}});
+
+var OneStopFactory = Module.findExportByName("ActiveSyncProvider.dll", "OneStopFactory")
+Interceptor.attach(OneStopFactory, {onLeave: function (args) {send("OneStopFactory");}});
+
+var SyncGetMAPISession = Module.findExportByName("ActiveSyncProvider.dll", "SyncGetMAPISession")
+Interceptor.attach(SyncGetMAPISession, {onLeave: function (args) {send("SyncGetMAPISession");}});
+
+var SyncGetMessageStore = Module.findExportByName("ActiveSyncProvider.dll", "SyncGetMessageStore")
+Interceptor.attach(SyncGetMessageStore, {onLeave: function (args) {send("SyncGetMessageStore");}});
+
+var SyncGetSpecialFolder = Module.findExportByName("ActiveSyncProvider.dll", "SyncGetSpecialFolder")
+Interceptor.attach(SyncGetSpecialFolder, {onLeave: function (args) {send("SyncGetSpecialFolder");}});
+
+var SyncMgrPurgeFolderProvider = Module.findExportByName("ActiveSyncProvider.dll", "SyncMgrPurgeFolderProvider")
+Interceptor.attach(SyncMgrPurgeFolderProvider, {onLeave: function (args) {send("SyncMgrPurgeFolderProvider");}});
+
+var SyncMgrPurgeProviderStore = Module.findExportByName("ActiveSyncProvider.dll", "SyncMgrPurgeProviderStore")
+Interceptor.attach(SyncMgrPurgeProviderStore, {onLeave: function (args) {send("SyncMgrPurgeProviderStore");}});
+
+var SyncMgrRemovePolicy = Module.findExportByName("ActiveSyncProvider.dll", "SyncMgrRemovePolicy")
+Interceptor.attach(SyncMgrRemovePolicy, {onLeave: function (args) {send("SyncMgrRemovePolicy");}});
+
+var SyncSqmUpdateStats = Module.findExportByName("ActiveSyncProvider.dll", "SyncSqmUpdateStats")
+Interceptor.attach(SyncSqmUpdateStats, {onLeave: function (args) {send("SyncSqmUpdateStats");}});
+
+var UpdateEasTrackingSchema = Module.findExportByName("ActiveSyncProvider.dll", "UpdateEasTrackingSchema")
+Interceptor.attach(UpdateEasTrackingSchema, {onLeave: function (args) {send("UpdateEasTrackingSchema");}});
+
+var WriteStoreCapabilityProps = Module.findExportByName("ActiveSyncProvider.dll", "WriteStoreCapabilityProps")
+Interceptor.attach(WriteStoreCapabilityProps, {onLeave: function (args) {send("WriteStoreCapabilityProps");}});
+
+var WriteStoreContentTypesProps = Module.findExportByName("ActiveSyncProvider.dll", "WriteStoreContentTypesProps")
+Interceptor.attach(WriteStoreContentTypesProps, {onLeave: function (args) {send("WriteStoreContentTypesProps");}});
+

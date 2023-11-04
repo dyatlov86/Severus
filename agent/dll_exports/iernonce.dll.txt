@@ -1,0 +1,6 @@
+var InitCallback = Module.findExportByName("iernonce.dll", "InitCallback")
+Interceptor.attach(InitCallback, {onLeave: function (args) {send("InitCallback");}});
+
+var RunOnceExProcess = Module.findExportByName("iernonce.dll", "RunOnceExProcess")
+Interceptor.attach(RunOnceExProcess, {onLeave: function (args) {send("RunOnceExProcess");}});
+

@@ -1,0 +1,6 @@
+var Preserve = Module.findExportByName("RjvMDMConfig.dll", "Preserve")
+Interceptor.attach(Preserve, {onLeave: function (args) {send("Preserve");}});
+
+var Restore = Module.findExportByName("RjvMDMConfig.dll", "Restore")
+Interceptor.attach(Restore, {onLeave: function (args) {send("Restore");}});
+

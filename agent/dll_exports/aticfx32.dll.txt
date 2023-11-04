@@ -1,0 +1,24 @@
+var AmdExtRequestMgpuAppControl = Module.findExportByName("aticfx32.dll", "AmdExtRequestMgpuAppControl")
+Interceptor.attach(AmdExtRequestMgpuAppControl, {onLeave: function (args) {send("AmdExtRequestMgpuAppControl");}});
+
+var AmdGetCfxModuleHandle = Module.findExportByName("aticfx32.dll", "AmdGetCfxModuleHandle")
+Interceptor.attach(AmdGetCfxModuleHandle, {onLeave: function (args) {send("AmdGetCfxModuleHandle");}});
+
+var AmdQueryPowerXpressDeviceInfo = Module.findExportByName("aticfx32.dll", "AmdQueryPowerXpressDeviceInfo")
+Interceptor.attach(AmdQueryPowerXpressDeviceInfo, {onLeave: function (args) {send("AmdQueryPowerXpressDeviceInfo");}});
+
+var AmdQueryPowerXpressDeviceInfoEx = Module.findExportByName("aticfx32.dll", "AmdQueryPowerXpressDeviceInfoEx")
+Interceptor.attach(AmdQueryPowerXpressDeviceInfoEx, {onLeave: function (args) {send("AmdQueryPowerXpressDeviceInfoEx");}});
+
+var DllMain = Module.findExportByName("aticfx32.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var OpenAdapter = Module.findExportByName("aticfx32.dll", "OpenAdapter")
+Interceptor.attach(OpenAdapter, {onLeave: function (args) {send("OpenAdapter");}});
+
+var OpenAdapter10 = Module.findExportByName("aticfx32.dll", "OpenAdapter10")
+Interceptor.attach(OpenAdapter10, {onLeave: function (args) {send("OpenAdapter10");}});
+
+var OpenAdapter10_2 = Module.findExportByName("aticfx32.dll", "OpenAdapter10_2")
+Interceptor.attach(OpenAdapter10_2, {onLeave: function (args) {send("OpenAdapter10_2");}});
+

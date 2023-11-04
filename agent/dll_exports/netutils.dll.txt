@@ -1,0 +1,66 @@
+var NetApiBufferAllocate = Module.findExportByName("netutils.dll", "NetApiBufferAllocate")
+Interceptor.attach(NetApiBufferAllocate, {onLeave: function (args) {send("NetApiBufferAllocate");}});
+
+var NetApiBufferFree = Module.findExportByName("netutils.dll", "NetApiBufferFree")
+Interceptor.attach(NetApiBufferFree, {onLeave: function (args) {send("NetApiBufferFree");}});
+
+var NetApiBufferReallocate = Module.findExportByName("netutils.dll", "NetApiBufferReallocate")
+Interceptor.attach(NetApiBufferReallocate, {onLeave: function (args) {send("NetApiBufferReallocate");}});
+
+var NetApiBufferSize = Module.findExportByName("netutils.dll", "NetApiBufferSize")
+Interceptor.attach(NetApiBufferSize, {onLeave: function (args) {send("NetApiBufferSize");}});
+
+var NetRemoteComputerSupports = Module.findExportByName("netutils.dll", "NetRemoteComputerSupports")
+Interceptor.attach(NetRemoteComputerSupports, {onLeave: function (args) {send("NetRemoteComputerSupports");}});
+
+var NetapipBufferAllocate = Module.findExportByName("netutils.dll", "NetapipBufferAllocate")
+Interceptor.attach(NetapipBufferAllocate, {onLeave: function (args) {send("NetapipBufferAllocate");}});
+
+var NetpIsComputerNameValid = Module.findExportByName("netutils.dll", "NetpIsComputerNameValid")
+Interceptor.attach(NetpIsComputerNameValid, {onLeave: function (args) {send("NetpIsComputerNameValid");}});
+
+var NetpIsDomainNameValid = Module.findExportByName("netutils.dll", "NetpIsDomainNameValid")
+Interceptor.attach(NetpIsDomainNameValid, {onLeave: function (args) {send("NetpIsDomainNameValid");}});
+
+var NetpIsGroupNameValid = Module.findExportByName("netutils.dll", "NetpIsGroupNameValid")
+Interceptor.attach(NetpIsGroupNameValid, {onLeave: function (args) {send("NetpIsGroupNameValid");}});
+
+var NetpIsRemote = Module.findExportByName("netutils.dll", "NetpIsRemote")
+Interceptor.attach(NetpIsRemote, {onLeave: function (args) {send("NetpIsRemote");}});
+
+var NetpIsRemoteNameValid = Module.findExportByName("netutils.dll", "NetpIsRemoteNameValid")
+Interceptor.attach(NetpIsRemoteNameValid, {onLeave: function (args) {send("NetpIsRemoteNameValid");}});
+
+var NetpIsShareNameValid = Module.findExportByName("netutils.dll", "NetpIsShareNameValid")
+Interceptor.attach(NetpIsShareNameValid, {onLeave: function (args) {send("NetpIsShareNameValid");}});
+
+var NetpIsUncComputerNameValid = Module.findExportByName("netutils.dll", "NetpIsUncComputerNameValid")
+Interceptor.attach(NetpIsUncComputerNameValid, {onLeave: function (args) {send("NetpIsUncComputerNameValid");}});
+
+var NetpIsUserNameValid = Module.findExportByName("netutils.dll", "NetpIsUserNameValid")
+Interceptor.attach(NetpIsUserNameValid, {onLeave: function (args) {send("NetpIsUserNameValid");}});
+
+var NetpwListCanonicalize = Module.findExportByName("netutils.dll", "NetpwListCanonicalize")
+Interceptor.attach(NetpwListCanonicalize, {onLeave: function (args) {send("NetpwListCanonicalize");}});
+
+var NetpwListTraverse = Module.findExportByName("netutils.dll", "NetpwListTraverse")
+Interceptor.attach(NetpwListTraverse, {onLeave: function (args) {send("NetpwListTraverse");}});
+
+var NetpwNameCanonicalize = Module.findExportByName("netutils.dll", "NetpwNameCanonicalize")
+Interceptor.attach(NetpwNameCanonicalize, {onLeave: function (args) {send("NetpwNameCanonicalize");}});
+
+var NetpwNameCompare = Module.findExportByName("netutils.dll", "NetpwNameCompare")
+Interceptor.attach(NetpwNameCompare, {onLeave: function (args) {send("NetpwNameCompare");}});
+
+var NetpwNameValidate = Module.findExportByName("netutils.dll", "NetpwNameValidate")
+Interceptor.attach(NetpwNameValidate, {onLeave: function (args) {send("NetpwNameValidate");}});
+
+var NetpwPathCanonicalize = Module.findExportByName("netutils.dll", "NetpwPathCanonicalize")
+Interceptor.attach(NetpwPathCanonicalize, {onLeave: function (args) {send("NetpwPathCanonicalize");}});
+
+var NetpwPathCompare = Module.findExportByName("netutils.dll", "NetpwPathCompare")
+Interceptor.attach(NetpwPathCompare, {onLeave: function (args) {send("NetpwPathCompare");}});
+
+var NetpwPathType = Module.findExportByName("netutils.dll", "NetpwPathType")
+Interceptor.attach(NetpwPathType, {onLeave: function (args) {send("NetpwPathType");}});
+

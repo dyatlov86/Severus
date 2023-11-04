@@ -1,0 +1,84 @@
+var VDMBreakThread = Module.findExportByName("vdmdbg.dll", "VDMBreakThread")
+Interceptor.attach(VDMBreakThread, {onLeave: function (args) {send("VDMBreakThread");}});
+
+var VDMDetectWOW = Module.findExportByName("vdmdbg.dll", "VDMDetectWOW")
+Interceptor.attach(VDMDetectWOW, {onLeave: function (args) {send("VDMDetectWOW");}});
+
+var VDMEnumProcessWOW = Module.findExportByName("vdmdbg.dll", "VDMEnumProcessWOW")
+Interceptor.attach(VDMEnumProcessWOW, {onLeave: function (args) {send("VDMEnumProcessWOW");}});
+
+var VDMEnumTaskWOW = Module.findExportByName("vdmdbg.dll", "VDMEnumTaskWOW")
+Interceptor.attach(VDMEnumTaskWOW, {onLeave: function (args) {send("VDMEnumTaskWOW");}});
+
+var VDMEnumTaskWOWEx = Module.findExportByName("vdmdbg.dll", "VDMEnumTaskWOWEx")
+Interceptor.attach(VDMEnumTaskWOWEx, {onLeave: function (args) {send("VDMEnumTaskWOWEx");}});
+
+var VDMGetAddrExpression = Module.findExportByName("vdmdbg.dll", "VDMGetAddrExpression")
+Interceptor.attach(VDMGetAddrExpression, {onLeave: function (args) {send("VDMGetAddrExpression");}});
+
+var VDMGetContext = Module.findExportByName("vdmdbg.dll", "VDMGetContext")
+Interceptor.attach(VDMGetContext, {onLeave: function (args) {send("VDMGetContext");}});
+
+var VDMGetDbgFlags = Module.findExportByName("vdmdbg.dll", "VDMGetDbgFlags")
+Interceptor.attach(VDMGetDbgFlags, {onLeave: function (args) {send("VDMGetDbgFlags");}});
+
+var VDMGetModuleSelector = Module.findExportByName("vdmdbg.dll", "VDMGetModuleSelector")
+Interceptor.attach(VDMGetModuleSelector, {onLeave: function (args) {send("VDMGetModuleSelector");}});
+
+var VDMGetPointer = Module.findExportByName("vdmdbg.dll", "VDMGetPointer")
+Interceptor.attach(VDMGetPointer, {onLeave: function (args) {send("VDMGetPointer");}});
+
+var VDMGetSegmentInfo = Module.findExportByName("vdmdbg.dll", "VDMGetSegmentInfo")
+Interceptor.attach(VDMGetSegmentInfo, {onLeave: function (args) {send("VDMGetSegmentInfo");}});
+
+var VDMGetSegtablePointer = Module.findExportByName("vdmdbg.dll", "VDMGetSegtablePointer")
+Interceptor.attach(VDMGetSegtablePointer, {onLeave: function (args) {send("VDMGetSegtablePointer");}});
+
+var VDMGetSelectorModule = Module.findExportByName("vdmdbg.dll", "VDMGetSelectorModule")
+Interceptor.attach(VDMGetSelectorModule, {onLeave: function (args) {send("VDMGetSelectorModule");}});
+
+var VDMGetSymbol = Module.findExportByName("vdmdbg.dll", "VDMGetSymbol")
+Interceptor.attach(VDMGetSymbol, {onLeave: function (args) {send("VDMGetSymbol");}});
+
+var VDMGetThreadContext = Module.findExportByName("vdmdbg.dll", "VDMGetThreadContext")
+Interceptor.attach(VDMGetThreadContext, {onLeave: function (args) {send("VDMGetThreadContext");}});
+
+var VDMGetThreadSelectorEntry = Module.findExportByName("vdmdbg.dll", "VDMGetThreadSelectorEntry")
+Interceptor.attach(VDMGetThreadSelectorEntry, {onLeave: function (args) {send("VDMGetThreadSelectorEntry");}});
+
+var VDMGlobalFirst = Module.findExportByName("vdmdbg.dll", "VDMGlobalFirst")
+Interceptor.attach(VDMGlobalFirst, {onLeave: function (args) {send("VDMGlobalFirst");}});
+
+var VDMGlobalNext = Module.findExportByName("vdmdbg.dll", "VDMGlobalNext")
+Interceptor.attach(VDMGlobalNext, {onLeave: function (args) {send("VDMGlobalNext");}});
+
+var VDMIsModuleLoaded = Module.findExportByName("vdmdbg.dll", "VDMIsModuleLoaded")
+Interceptor.attach(VDMIsModuleLoaded, {onLeave: function (args) {send("VDMIsModuleLoaded");}});
+
+var VDMKillWOW = Module.findExportByName("vdmdbg.dll", "VDMKillWOW")
+Interceptor.attach(VDMKillWOW, {onLeave: function (args) {send("VDMKillWOW");}});
+
+var VDMModuleFirst = Module.findExportByName("vdmdbg.dll", "VDMModuleFirst")
+Interceptor.attach(VDMModuleFirst, {onLeave: function (args) {send("VDMModuleFirst");}});
+
+var VDMModuleNext = Module.findExportByName("vdmdbg.dll", "VDMModuleNext")
+Interceptor.attach(VDMModuleNext, {onLeave: function (args) {send("VDMModuleNext");}});
+
+var VDMProcessException = Module.findExportByName("vdmdbg.dll", "VDMProcessException")
+Interceptor.attach(VDMProcessException, {onLeave: function (args) {send("VDMProcessException");}});
+
+var VDMSetContext = Module.findExportByName("vdmdbg.dll", "VDMSetContext")
+Interceptor.attach(VDMSetContext, {onLeave: function (args) {send("VDMSetContext");}});
+
+var VDMSetDbgFlags = Module.findExportByName("vdmdbg.dll", "VDMSetDbgFlags")
+Interceptor.attach(VDMSetDbgFlags, {onLeave: function (args) {send("VDMSetDbgFlags");}});
+
+var VDMSetThreadContext = Module.findExportByName("vdmdbg.dll", "VDMSetThreadContext")
+Interceptor.attach(VDMSetThreadContext, {onLeave: function (args) {send("VDMSetThreadContext");}});
+
+var VDMStartTaskInWOW = Module.findExportByName("vdmdbg.dll", "VDMStartTaskInWOW")
+Interceptor.attach(VDMStartTaskInWOW, {onLeave: function (args) {send("VDMStartTaskInWOW");}});
+
+var VDMTerminateTaskWOW = Module.findExportByName("vdmdbg.dll", "VDMTerminateTaskWOW")
+Interceptor.attach(VDMTerminateTaskWOW, {onLeave: function (args) {send("VDMTerminateTaskWOW");}});
+

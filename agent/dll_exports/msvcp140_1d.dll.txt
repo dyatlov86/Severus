@@ -1,0 +1,21 @@
+var _Aligned_get_default_resource = Module.findExportByName("msvcp140_1d.dll", "_Aligned_get_default_resource")
+Interceptor.attach(_Aligned_get_default_resource, {onLeave: function (args) {send("_Aligned_get_default_resource");}});
+
+var _Aligned_new_delete_resource = Module.findExportByName("msvcp140_1d.dll", "_Aligned_new_delete_resource")
+Interceptor.attach(_Aligned_new_delete_resource, {onLeave: function (args) {send("_Aligned_new_delete_resource");}});
+
+var _Aligned_set_default_resource = Module.findExportByName("msvcp140_1d.dll", "_Aligned_set_default_resource")
+Interceptor.attach(_Aligned_set_default_resource, {onLeave: function (args) {send("_Aligned_set_default_resource");}});
+
+var _Unaligned_get_default_resource = Module.findExportByName("msvcp140_1d.dll", "_Unaligned_get_default_resource")
+Interceptor.attach(_Unaligned_get_default_resource, {onLeave: function (args) {send("_Unaligned_get_default_resource");}});
+
+var _Unaligned_new_delete_resource = Module.findExportByName("msvcp140_1d.dll", "_Unaligned_new_delete_resource")
+Interceptor.attach(_Unaligned_new_delete_resource, {onLeave: function (args) {send("_Unaligned_new_delete_resource");}});
+
+var _Unaligned_set_default_resource = Module.findExportByName("msvcp140_1d.dll", "_Unaligned_set_default_resource")
+Interceptor.attach(_Unaligned_set_default_resource, {onLeave: function (args) {send("_Unaligned_set_default_resource");}});
+
+var null_memory_resource = Module.findExportByName("msvcp140_1d.dll", "null_memory_resource")
+Interceptor.attach(null_memory_resource, {onLeave: function (args) {send("null_memory_resource");}});
+

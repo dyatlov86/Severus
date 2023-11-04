@@ -1,0 +1,3 @@
+var CreateIImeSystemDictInstance = Module.findExportByName("IMJPCD.DLL", "CreateIImeSystemDictInstance")
+Interceptor.attach(CreateIImeSystemDictInstance, {onLeave: function (args) {send("CreateIImeSystemDictInstance");}});
+

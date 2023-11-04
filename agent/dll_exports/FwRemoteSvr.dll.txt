@@ -1,0 +1,6 @@
+var FwRpcAPIsInitialize = Module.findExportByName("FwRemoteSvr.dll", "FwRpcAPIsInitialize")
+Interceptor.attach(FwRpcAPIsInitialize, {onLeave: function (args) {send("FwRpcAPIsInitialize");}});
+
+var FwRpcAPIsShutdown = Module.findExportByName("FwRemoteSvr.dll", "FwRpcAPIsShutdown")
+Interceptor.attach(FwRpcAPIsShutdown, {onLeave: function (args) {send("FwRpcAPIsShutdown");}});
+

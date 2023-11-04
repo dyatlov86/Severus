@@ -1,0 +1,885 @@
+var CertAddCRLContextToStore = Module.findExportByName("crypt32.dll", "CertAddCRLContextToStore")
+Interceptor.attach(CertAddCRLContextToStore, {onLeave: function (args) {send("CertAddCRLContextToStore");}});
+
+var CertAddCRLLinkToStore = Module.findExportByName("crypt32.dll", "CertAddCRLLinkToStore")
+Interceptor.attach(CertAddCRLLinkToStore, {onLeave: function (args) {send("CertAddCRLLinkToStore");}});
+
+var CertAddCTLContextToStore = Module.findExportByName("crypt32.dll", "CertAddCTLContextToStore")
+Interceptor.attach(CertAddCTLContextToStore, {onLeave: function (args) {send("CertAddCTLContextToStore");}});
+
+var CertAddCTLLinkToStore = Module.findExportByName("crypt32.dll", "CertAddCTLLinkToStore")
+Interceptor.attach(CertAddCTLLinkToStore, {onLeave: function (args) {send("CertAddCTLLinkToStore");}});
+
+var CertAddCertificateContextToStore = Module.findExportByName("crypt32.dll", "CertAddCertificateContextToStore")
+Interceptor.attach(CertAddCertificateContextToStore, {onLeave: function (args) {send("CertAddCertificateContextToStore");}});
+
+var CertAddCertificateLinkToStore = Module.findExportByName("crypt32.dll", "CertAddCertificateLinkToStore")
+Interceptor.attach(CertAddCertificateLinkToStore, {onLeave: function (args) {send("CertAddCertificateLinkToStore");}});
+
+var CertAddEncodedCRLToStore = Module.findExportByName("crypt32.dll", "CertAddEncodedCRLToStore")
+Interceptor.attach(CertAddEncodedCRLToStore, {onLeave: function (args) {send("CertAddEncodedCRLToStore");}});
+
+var CertAddEncodedCTLToStore = Module.findExportByName("crypt32.dll", "CertAddEncodedCTLToStore")
+Interceptor.attach(CertAddEncodedCTLToStore, {onLeave: function (args) {send("CertAddEncodedCTLToStore");}});
+
+var CertAddEncodedCertificateToStore = Module.findExportByName("crypt32.dll", "CertAddEncodedCertificateToStore")
+Interceptor.attach(CertAddEncodedCertificateToStore, {onLeave: function (args) {send("CertAddEncodedCertificateToStore");}});
+
+var CertAddEncodedCertificateToSystemStoreA = Module.findExportByName("crypt32.dll", "CertAddEncodedCertificateToSystemStoreA")
+Interceptor.attach(CertAddEncodedCertificateToSystemStoreA, {onLeave: function (args) {send("CertAddEncodedCertificateToSystemStoreA");}});
+
+var CertAddEncodedCertificateToSystemStoreW = Module.findExportByName("crypt32.dll", "CertAddEncodedCertificateToSystemStoreW")
+Interceptor.attach(CertAddEncodedCertificateToSystemStoreW, {onLeave: function (args) {send("CertAddEncodedCertificateToSystemStoreW");}});
+
+var CertAddEnhancedKeyUsageIdentifier = Module.findExportByName("crypt32.dll", "CertAddEnhancedKeyUsageIdentifier")
+Interceptor.attach(CertAddEnhancedKeyUsageIdentifier, {onLeave: function (args) {send("CertAddEnhancedKeyUsageIdentifier");}});
+
+var CertAddRefServerOcspResponse = Module.findExportByName("crypt32.dll", "CertAddRefServerOcspResponse")
+Interceptor.attach(CertAddRefServerOcspResponse, {onLeave: function (args) {send("CertAddRefServerOcspResponse");}});
+
+var CertAddRefServerOcspResponseContext = Module.findExportByName("crypt32.dll", "CertAddRefServerOcspResponseContext")
+Interceptor.attach(CertAddRefServerOcspResponseContext, {onLeave: function (args) {send("CertAddRefServerOcspResponseContext");}});
+
+var CertAddSerializedElementToStore = Module.findExportByName("crypt32.dll", "CertAddSerializedElementToStore")
+Interceptor.attach(CertAddSerializedElementToStore, {onLeave: function (args) {send("CertAddSerializedElementToStore");}});
+
+var CertAddStoreToCollection = Module.findExportByName("crypt32.dll", "CertAddStoreToCollection")
+Interceptor.attach(CertAddStoreToCollection, {onLeave: function (args) {send("CertAddStoreToCollection");}});
+
+var CertAlgIdToOID = Module.findExportByName("crypt32.dll", "CertAlgIdToOID")
+Interceptor.attach(CertAlgIdToOID, {onLeave: function (args) {send("CertAlgIdToOID");}});
+
+var CertCloseServerOcspResponse = Module.findExportByName("crypt32.dll", "CertCloseServerOcspResponse")
+Interceptor.attach(CertCloseServerOcspResponse, {onLeave: function (args) {send("CertCloseServerOcspResponse");}});
+
+var CertCloseStore = Module.findExportByName("crypt32.dll", "CertCloseStore")
+Interceptor.attach(CertCloseStore, {onLeave: function (args) {send("CertCloseStore");}});
+
+var CertCompareCertificate = Module.findExportByName("crypt32.dll", "CertCompareCertificate")
+Interceptor.attach(CertCompareCertificate, {onLeave: function (args) {send("CertCompareCertificate");}});
+
+var CertCompareCertificateName = Module.findExportByName("crypt32.dll", "CertCompareCertificateName")
+Interceptor.attach(CertCompareCertificateName, {onLeave: function (args) {send("CertCompareCertificateName");}});
+
+var CertCompareIntegerBlob = Module.findExportByName("crypt32.dll", "CertCompareIntegerBlob")
+Interceptor.attach(CertCompareIntegerBlob, {onLeave: function (args) {send("CertCompareIntegerBlob");}});
+
+var CertComparePublicKeyInfo = Module.findExportByName("crypt32.dll", "CertComparePublicKeyInfo")
+Interceptor.attach(CertComparePublicKeyInfo, {onLeave: function (args) {send("CertComparePublicKeyInfo");}});
+
+var CertControlStore = Module.findExportByName("crypt32.dll", "CertControlStore")
+Interceptor.attach(CertControlStore, {onLeave: function (args) {send("CertControlStore");}});
+
+var CertCreateCRLContext = Module.findExportByName("crypt32.dll", "CertCreateCRLContext")
+Interceptor.attach(CertCreateCRLContext, {onLeave: function (args) {send("CertCreateCRLContext");}});
+
+var CertCreateCTLContext = Module.findExportByName("crypt32.dll", "CertCreateCTLContext")
+Interceptor.attach(CertCreateCTLContext, {onLeave: function (args) {send("CertCreateCTLContext");}});
+
+var CertCreateCTLEntryFromCertificateContextProperties = Module.findExportByName("crypt32.dll", "CertCreateCTLEntryFromCertificateContextProperties")
+Interceptor.attach(CertCreateCTLEntryFromCertificateContextProperties, {onLeave: function (args) {send("CertCreateCTLEntryFromCertificateContextProperties");}});
+
+var CertCreateCertificateChainEngine = Module.findExportByName("crypt32.dll", "CertCreateCertificateChainEngine")
+Interceptor.attach(CertCreateCertificateChainEngine, {onLeave: function (args) {send("CertCreateCertificateChainEngine");}});
+
+var CertCreateCertificateContext = Module.findExportByName("crypt32.dll", "CertCreateCertificateContext")
+Interceptor.attach(CertCreateCertificateContext, {onLeave: function (args) {send("CertCreateCertificateContext");}});
+
+var CertCreateContext = Module.findExportByName("crypt32.dll", "CertCreateContext")
+Interceptor.attach(CertCreateContext, {onLeave: function (args) {send("CertCreateContext");}});
+
+var CertCreateSelfSignCertificate = Module.findExportByName("crypt32.dll", "CertCreateSelfSignCertificate")
+Interceptor.attach(CertCreateSelfSignCertificate, {onLeave: function (args) {send("CertCreateSelfSignCertificate");}});
+
+var CertDeleteCRLFromStore = Module.findExportByName("crypt32.dll", "CertDeleteCRLFromStore")
+Interceptor.attach(CertDeleteCRLFromStore, {onLeave: function (args) {send("CertDeleteCRLFromStore");}});
+
+var CertDeleteCTLFromStore = Module.findExportByName("crypt32.dll", "CertDeleteCTLFromStore")
+Interceptor.attach(CertDeleteCTLFromStore, {onLeave: function (args) {send("CertDeleteCTLFromStore");}});
+
+var CertDeleteCertificateFromStore = Module.findExportByName("crypt32.dll", "CertDeleteCertificateFromStore")
+Interceptor.attach(CertDeleteCertificateFromStore, {onLeave: function (args) {send("CertDeleteCertificateFromStore");}});
+
+var CertDuplicateCRLContext = Module.findExportByName("crypt32.dll", "CertDuplicateCRLContext")
+Interceptor.attach(CertDuplicateCRLContext, {onLeave: function (args) {send("CertDuplicateCRLContext");}});
+
+var CertDuplicateCTLContext = Module.findExportByName("crypt32.dll", "CertDuplicateCTLContext")
+Interceptor.attach(CertDuplicateCTLContext, {onLeave: function (args) {send("CertDuplicateCTLContext");}});
+
+var CertDuplicateCertificateChain = Module.findExportByName("crypt32.dll", "CertDuplicateCertificateChain")
+Interceptor.attach(CertDuplicateCertificateChain, {onLeave: function (args) {send("CertDuplicateCertificateChain");}});
+
+var CertDuplicateCertificateContext = Module.findExportByName("crypt32.dll", "CertDuplicateCertificateContext")
+Interceptor.attach(CertDuplicateCertificateContext, {onLeave: function (args) {send("CertDuplicateCertificateContext");}});
+
+var CertDuplicateStore = Module.findExportByName("crypt32.dll", "CertDuplicateStore")
+Interceptor.attach(CertDuplicateStore, {onLeave: function (args) {send("CertDuplicateStore");}});
+
+var CertEnumCRLContextProperties = Module.findExportByName("crypt32.dll", "CertEnumCRLContextProperties")
+Interceptor.attach(CertEnumCRLContextProperties, {onLeave: function (args) {send("CertEnumCRLContextProperties");}});
+
+var CertEnumCRLsInStore = Module.findExportByName("crypt32.dll", "CertEnumCRLsInStore")
+Interceptor.attach(CertEnumCRLsInStore, {onLeave: function (args) {send("CertEnumCRLsInStore");}});
+
+var CertEnumCTLContextProperties = Module.findExportByName("crypt32.dll", "CertEnumCTLContextProperties")
+Interceptor.attach(CertEnumCTLContextProperties, {onLeave: function (args) {send("CertEnumCTLContextProperties");}});
+
+var CertEnumCTLsInStore = Module.findExportByName("crypt32.dll", "CertEnumCTLsInStore")
+Interceptor.attach(CertEnumCTLsInStore, {onLeave: function (args) {send("CertEnumCTLsInStore");}});
+
+var CertEnumCertificateContextProperties = Module.findExportByName("crypt32.dll", "CertEnumCertificateContextProperties")
+Interceptor.attach(CertEnumCertificateContextProperties, {onLeave: function (args) {send("CertEnumCertificateContextProperties");}});
+
+var CertEnumCertificatesInStore = Module.findExportByName("crypt32.dll", "CertEnumCertificatesInStore")
+Interceptor.attach(CertEnumCertificatesInStore, {onLeave: function (args) {send("CertEnumCertificatesInStore");}});
+
+var CertEnumPhysicalStore = Module.findExportByName("crypt32.dll", "CertEnumPhysicalStore")
+Interceptor.attach(CertEnumPhysicalStore, {onLeave: function (args) {send("CertEnumPhysicalStore");}});
+
+var CertEnumSubjectInSortedCTL = Module.findExportByName("crypt32.dll", "CertEnumSubjectInSortedCTL")
+Interceptor.attach(CertEnumSubjectInSortedCTL, {onLeave: function (args) {send("CertEnumSubjectInSortedCTL");}});
+
+var CertEnumSystemStore = Module.findExportByName("crypt32.dll", "CertEnumSystemStore")
+Interceptor.attach(CertEnumSystemStore, {onLeave: function (args) {send("CertEnumSystemStore");}});
+
+var CertEnumSystemStoreLocation = Module.findExportByName("crypt32.dll", "CertEnumSystemStoreLocation")
+Interceptor.attach(CertEnumSystemStoreLocation, {onLeave: function (args) {send("CertEnumSystemStoreLocation");}});
+
+var CertFindAttribute = Module.findExportByName("crypt32.dll", "CertFindAttribute")
+Interceptor.attach(CertFindAttribute, {onLeave: function (args) {send("CertFindAttribute");}});
+
+var CertFindCRLInStore = Module.findExportByName("crypt32.dll", "CertFindCRLInStore")
+Interceptor.attach(CertFindCRLInStore, {onLeave: function (args) {send("CertFindCRLInStore");}});
+
+var CertFindCTLInStore = Module.findExportByName("crypt32.dll", "CertFindCTLInStore")
+Interceptor.attach(CertFindCTLInStore, {onLeave: function (args) {send("CertFindCTLInStore");}});
+
+var CertFindCertificateInCRL = Module.findExportByName("crypt32.dll", "CertFindCertificateInCRL")
+Interceptor.attach(CertFindCertificateInCRL, {onLeave: function (args) {send("CertFindCertificateInCRL");}});
+
+var CertFindCertificateInStore = Module.findExportByName("crypt32.dll", "CertFindCertificateInStore")
+Interceptor.attach(CertFindCertificateInStore, {onLeave: function (args) {send("CertFindCertificateInStore");}});
+
+var CertFindChainInStore = Module.findExportByName("crypt32.dll", "CertFindChainInStore")
+Interceptor.attach(CertFindChainInStore, {onLeave: function (args) {send("CertFindChainInStore");}});
+
+var CertFindExtension = Module.findExportByName("crypt32.dll", "CertFindExtension")
+Interceptor.attach(CertFindExtension, {onLeave: function (args) {send("CertFindExtension");}});
+
+var CertFindRDNAttr = Module.findExportByName("crypt32.dll", "CertFindRDNAttr")
+Interceptor.attach(CertFindRDNAttr, {onLeave: function (args) {send("CertFindRDNAttr");}});
+
+var CertFindSubjectInCTL = Module.findExportByName("crypt32.dll", "CertFindSubjectInCTL")
+Interceptor.attach(CertFindSubjectInCTL, {onLeave: function (args) {send("CertFindSubjectInCTL");}});
+
+var CertFindSubjectInSortedCTL = Module.findExportByName("crypt32.dll", "CertFindSubjectInSortedCTL")
+Interceptor.attach(CertFindSubjectInSortedCTL, {onLeave: function (args) {send("CertFindSubjectInSortedCTL");}});
+
+var CertFreeCRLContext = Module.findExportByName("crypt32.dll", "CertFreeCRLContext")
+Interceptor.attach(CertFreeCRLContext, {onLeave: function (args) {send("CertFreeCRLContext");}});
+
+var CertFreeCTLContext = Module.findExportByName("crypt32.dll", "CertFreeCTLContext")
+Interceptor.attach(CertFreeCTLContext, {onLeave: function (args) {send("CertFreeCTLContext");}});
+
+var CertFreeCertificateChain = Module.findExportByName("crypt32.dll", "CertFreeCertificateChain")
+Interceptor.attach(CertFreeCertificateChain, {onLeave: function (args) {send("CertFreeCertificateChain");}});
+
+var CertFreeCertificateChainEngine = Module.findExportByName("crypt32.dll", "CertFreeCertificateChainEngine")
+Interceptor.attach(CertFreeCertificateChainEngine, {onLeave: function (args) {send("CertFreeCertificateChainEngine");}});
+
+var CertFreeCertificateChainList = Module.findExportByName("crypt32.dll", "CertFreeCertificateChainList")
+Interceptor.attach(CertFreeCertificateChainList, {onLeave: function (args) {send("CertFreeCertificateChainList");}});
+
+var CertFreeCertificateContext = Module.findExportByName("crypt32.dll", "CertFreeCertificateContext")
+Interceptor.attach(CertFreeCertificateContext, {onLeave: function (args) {send("CertFreeCertificateContext");}});
+
+var CertFreeServerOcspResponseContext = Module.findExportByName("crypt32.dll", "CertFreeServerOcspResponseContext")
+Interceptor.attach(CertFreeServerOcspResponseContext, {onLeave: function (args) {send("CertFreeServerOcspResponseContext");}});
+
+var CertGetCRLContextProperty = Module.findExportByName("crypt32.dll", "CertGetCRLContextProperty")
+Interceptor.attach(CertGetCRLContextProperty, {onLeave: function (args) {send("CertGetCRLContextProperty");}});
+
+var CertGetCRLFromStore = Module.findExportByName("crypt32.dll", "CertGetCRLFromStore")
+Interceptor.attach(CertGetCRLFromStore, {onLeave: function (args) {send("CertGetCRLFromStore");}});
+
+var CertGetCTLContextProperty = Module.findExportByName("crypt32.dll", "CertGetCTLContextProperty")
+Interceptor.attach(CertGetCTLContextProperty, {onLeave: function (args) {send("CertGetCTLContextProperty");}});
+
+var CertGetCertificateChain = Module.findExportByName("crypt32.dll", "CertGetCertificateChain")
+Interceptor.attach(CertGetCertificateChain, {onLeave: function (args) {send("CertGetCertificateChain");}});
+
+var CertGetCertificateContextProperty = Module.findExportByName("crypt32.dll", "CertGetCertificateContextProperty")
+Interceptor.attach(CertGetCertificateContextProperty, {onLeave: function (args) {send("CertGetCertificateContextProperty");}});
+
+var CertGetEnhancedKeyUsage = Module.findExportByName("crypt32.dll", "CertGetEnhancedKeyUsage")
+Interceptor.attach(CertGetEnhancedKeyUsage, {onLeave: function (args) {send("CertGetEnhancedKeyUsage");}});
+
+var CertGetIntendedKeyUsage = Module.findExportByName("crypt32.dll", "CertGetIntendedKeyUsage")
+Interceptor.attach(CertGetIntendedKeyUsage, {onLeave: function (args) {send("CertGetIntendedKeyUsage");}});
+
+var CertGetIssuerCertificateFromStore = Module.findExportByName("crypt32.dll", "CertGetIssuerCertificateFromStore")
+Interceptor.attach(CertGetIssuerCertificateFromStore, {onLeave: function (args) {send("CertGetIssuerCertificateFromStore");}});
+
+var CertGetNameStringA = Module.findExportByName("crypt32.dll", "CertGetNameStringA")
+Interceptor.attach(CertGetNameStringA, {onLeave: function (args) {send("CertGetNameStringA");}});
+
+var CertGetNameStringW = Module.findExportByName("crypt32.dll", "CertGetNameStringW")
+Interceptor.attach(CertGetNameStringW, {onLeave: function (args) {send("CertGetNameStringW");}});
+
+var CertGetPublicKeyLength = Module.findExportByName("crypt32.dll", "CertGetPublicKeyLength")
+Interceptor.attach(CertGetPublicKeyLength, {onLeave: function (args) {send("CertGetPublicKeyLength");}});
+
+var CertGetServerOcspResponseContext = Module.findExportByName("crypt32.dll", "CertGetServerOcspResponseContext")
+Interceptor.attach(CertGetServerOcspResponseContext, {onLeave: function (args) {send("CertGetServerOcspResponseContext");}});
+
+var CertGetStoreProperty = Module.findExportByName("crypt32.dll", "CertGetStoreProperty")
+Interceptor.attach(CertGetStoreProperty, {onLeave: function (args) {send("CertGetStoreProperty");}});
+
+var CertGetSubjectCertificateFromStore = Module.findExportByName("crypt32.dll", "CertGetSubjectCertificateFromStore")
+Interceptor.attach(CertGetSubjectCertificateFromStore, {onLeave: function (args) {send("CertGetSubjectCertificateFromStore");}});
+
+var CertGetValidUsages = Module.findExportByName("crypt32.dll", "CertGetValidUsages")
+Interceptor.attach(CertGetValidUsages, {onLeave: function (args) {send("CertGetValidUsages");}});
+
+var CertIsRDNAttrsInCertificateName = Module.findExportByName("crypt32.dll", "CertIsRDNAttrsInCertificateName")
+Interceptor.attach(CertIsRDNAttrsInCertificateName, {onLeave: function (args) {send("CertIsRDNAttrsInCertificateName");}});
+
+var CertIsStrongHashToSign = Module.findExportByName("crypt32.dll", "CertIsStrongHashToSign")
+Interceptor.attach(CertIsStrongHashToSign, {onLeave: function (args) {send("CertIsStrongHashToSign");}});
+
+var CertIsValidCRLForCertificate = Module.findExportByName("crypt32.dll", "CertIsValidCRLForCertificate")
+Interceptor.attach(CertIsValidCRLForCertificate, {onLeave: function (args) {send("CertIsValidCRLForCertificate");}});
+
+var CertIsWeakHash = Module.findExportByName("crypt32.dll", "CertIsWeakHash")
+Interceptor.attach(CertIsWeakHash, {onLeave: function (args) {send("CertIsWeakHash");}});
+
+var CertNameToStrA = Module.findExportByName("crypt32.dll", "CertNameToStrA")
+Interceptor.attach(CertNameToStrA, {onLeave: function (args) {send("CertNameToStrA");}});
+
+var CertNameToStrW = Module.findExportByName("crypt32.dll", "CertNameToStrW")
+Interceptor.attach(CertNameToStrW, {onLeave: function (args) {send("CertNameToStrW");}});
+
+var CertOIDToAlgId = Module.findExportByName("crypt32.dll", "CertOIDToAlgId")
+Interceptor.attach(CertOIDToAlgId, {onLeave: function (args) {send("CertOIDToAlgId");}});
+
+var CertOpenServerOcspResponse = Module.findExportByName("crypt32.dll", "CertOpenServerOcspResponse")
+Interceptor.attach(CertOpenServerOcspResponse, {onLeave: function (args) {send("CertOpenServerOcspResponse");}});
+
+var CertOpenStore = Module.findExportByName("crypt32.dll", "CertOpenStore")
+Interceptor.attach(CertOpenStore, {onLeave: function (args) {send("CertOpenStore");}});
+
+var CertOpenSystemStoreA = Module.findExportByName("crypt32.dll", "CertOpenSystemStoreA")
+Interceptor.attach(CertOpenSystemStoreA, {onLeave: function (args) {send("CertOpenSystemStoreA");}});
+
+var CertOpenSystemStoreW = Module.findExportByName("crypt32.dll", "CertOpenSystemStoreW")
+Interceptor.attach(CertOpenSystemStoreW, {onLeave: function (args) {send("CertOpenSystemStoreW");}});
+
+var CertRDNValueToStrA = Module.findExportByName("crypt32.dll", "CertRDNValueToStrA")
+Interceptor.attach(CertRDNValueToStrA, {onLeave: function (args) {send("CertRDNValueToStrA");}});
+
+var CertRDNValueToStrW = Module.findExportByName("crypt32.dll", "CertRDNValueToStrW")
+Interceptor.attach(CertRDNValueToStrW, {onLeave: function (args) {send("CertRDNValueToStrW");}});
+
+var CertRegisterPhysicalStore = Module.findExportByName("crypt32.dll", "CertRegisterPhysicalStore")
+Interceptor.attach(CertRegisterPhysicalStore, {onLeave: function (args) {send("CertRegisterPhysicalStore");}});
+
+var CertRegisterSystemStore = Module.findExportByName("crypt32.dll", "CertRegisterSystemStore")
+Interceptor.attach(CertRegisterSystemStore, {onLeave: function (args) {send("CertRegisterSystemStore");}});
+
+var CertRemoveEnhancedKeyUsageIdentifier = Module.findExportByName("crypt32.dll", "CertRemoveEnhancedKeyUsageIdentifier")
+Interceptor.attach(CertRemoveEnhancedKeyUsageIdentifier, {onLeave: function (args) {send("CertRemoveEnhancedKeyUsageIdentifier");}});
+
+var CertRemoveStoreFromCollection = Module.findExportByName("crypt32.dll", "CertRemoveStoreFromCollection")
+Interceptor.attach(CertRemoveStoreFromCollection, {onLeave: function (args) {send("CertRemoveStoreFromCollection");}});
+
+var CertResyncCertificateChainEngine = Module.findExportByName("crypt32.dll", "CertResyncCertificateChainEngine")
+Interceptor.attach(CertResyncCertificateChainEngine, {onLeave: function (args) {send("CertResyncCertificateChainEngine");}});
+
+var CertRetrieveLogoOrBiometricInfo = Module.findExportByName("crypt32.dll", "CertRetrieveLogoOrBiometricInfo")
+Interceptor.attach(CertRetrieveLogoOrBiometricInfo, {onLeave: function (args) {send("CertRetrieveLogoOrBiometricInfo");}});
+
+var CertSaveStore = Module.findExportByName("crypt32.dll", "CertSaveStore")
+Interceptor.attach(CertSaveStore, {onLeave: function (args) {send("CertSaveStore");}});
+
+var CertSelectCertificateChains = Module.findExportByName("crypt32.dll", "CertSelectCertificateChains")
+Interceptor.attach(CertSelectCertificateChains, {onLeave: function (args) {send("CertSelectCertificateChains");}});
+
+var CertSerializeCRLStoreElement = Module.findExportByName("crypt32.dll", "CertSerializeCRLStoreElement")
+Interceptor.attach(CertSerializeCRLStoreElement, {onLeave: function (args) {send("CertSerializeCRLStoreElement");}});
+
+var CertSerializeCTLStoreElement = Module.findExportByName("crypt32.dll", "CertSerializeCTLStoreElement")
+Interceptor.attach(CertSerializeCTLStoreElement, {onLeave: function (args) {send("CertSerializeCTLStoreElement");}});
+
+var CertSerializeCertificateStoreElement = Module.findExportByName("crypt32.dll", "CertSerializeCertificateStoreElement")
+Interceptor.attach(CertSerializeCertificateStoreElement, {onLeave: function (args) {send("CertSerializeCertificateStoreElement");}});
+
+var CertSetCRLContextProperty = Module.findExportByName("crypt32.dll", "CertSetCRLContextProperty")
+Interceptor.attach(CertSetCRLContextProperty, {onLeave: function (args) {send("CertSetCRLContextProperty");}});
+
+var CertSetCTLContextProperty = Module.findExportByName("crypt32.dll", "CertSetCTLContextProperty")
+Interceptor.attach(CertSetCTLContextProperty, {onLeave: function (args) {send("CertSetCTLContextProperty");}});
+
+var CertSetCertificateContextPropertiesFromCTLEntry = Module.findExportByName("crypt32.dll", "CertSetCertificateContextPropertiesFromCTLEntry")
+Interceptor.attach(CertSetCertificateContextPropertiesFromCTLEntry, {onLeave: function (args) {send("CertSetCertificateContextPropertiesFromCTLEntry");}});
+
+var CertSetCertificateContextProperty = Module.findExportByName("crypt32.dll", "CertSetCertificateContextProperty")
+Interceptor.attach(CertSetCertificateContextProperty, {onLeave: function (args) {send("CertSetCertificateContextProperty");}});
+
+var CertSetEnhancedKeyUsage = Module.findExportByName("crypt32.dll", "CertSetEnhancedKeyUsage")
+Interceptor.attach(CertSetEnhancedKeyUsage, {onLeave: function (args) {send("CertSetEnhancedKeyUsage");}});
+
+var CertSetStoreProperty = Module.findExportByName("crypt32.dll", "CertSetStoreProperty")
+Interceptor.attach(CertSetStoreProperty, {onLeave: function (args) {send("CertSetStoreProperty");}});
+
+var CertStrToNameA = Module.findExportByName("crypt32.dll", "CertStrToNameA")
+Interceptor.attach(CertStrToNameA, {onLeave: function (args) {send("CertStrToNameA");}});
+
+var CertStrToNameW = Module.findExportByName("crypt32.dll", "CertStrToNameW")
+Interceptor.attach(CertStrToNameW, {onLeave: function (args) {send("CertStrToNameW");}});
+
+var CertUnregisterPhysicalStore = Module.findExportByName("crypt32.dll", "CertUnregisterPhysicalStore")
+Interceptor.attach(CertUnregisterPhysicalStore, {onLeave: function (args) {send("CertUnregisterPhysicalStore");}});
+
+var CertUnregisterSystemStore = Module.findExportByName("crypt32.dll", "CertUnregisterSystemStore")
+Interceptor.attach(CertUnregisterSystemStore, {onLeave: function (args) {send("CertUnregisterSystemStore");}});
+
+var CertVerifyCRLRevocation = Module.findExportByName("crypt32.dll", "CertVerifyCRLRevocation")
+Interceptor.attach(CertVerifyCRLRevocation, {onLeave: function (args) {send("CertVerifyCRLRevocation");}});
+
+var CertVerifyCRLTimeValidity = Module.findExportByName("crypt32.dll", "CertVerifyCRLTimeValidity")
+Interceptor.attach(CertVerifyCRLTimeValidity, {onLeave: function (args) {send("CertVerifyCRLTimeValidity");}});
+
+var CertVerifyCTLUsage = Module.findExportByName("crypt32.dll", "CertVerifyCTLUsage")
+Interceptor.attach(CertVerifyCTLUsage, {onLeave: function (args) {send("CertVerifyCTLUsage");}});
+
+var CertVerifyCertificateChainPolicy = Module.findExportByName("crypt32.dll", "CertVerifyCertificateChainPolicy")
+Interceptor.attach(CertVerifyCertificateChainPolicy, {onLeave: function (args) {send("CertVerifyCertificateChainPolicy");}});
+
+var CertVerifyRevocation = Module.findExportByName("crypt32.dll", "CertVerifyRevocation")
+Interceptor.attach(CertVerifyRevocation, {onLeave: function (args) {send("CertVerifyRevocation");}});
+
+var CertVerifySubjectCertificateContext = Module.findExportByName("crypt32.dll", "CertVerifySubjectCertificateContext")
+Interceptor.attach(CertVerifySubjectCertificateContext, {onLeave: function (args) {send("CertVerifySubjectCertificateContext");}});
+
+var CertVerifyTimeValidity = Module.findExportByName("crypt32.dll", "CertVerifyTimeValidity")
+Interceptor.attach(CertVerifyTimeValidity, {onLeave: function (args) {send("CertVerifyTimeValidity");}});
+
+var CertVerifyValidityNesting = Module.findExportByName("crypt32.dll", "CertVerifyValidityNesting")
+Interceptor.attach(CertVerifyValidityNesting, {onLeave: function (args) {send("CertVerifyValidityNesting");}});
+
+var CryptAcquireCertificatePrivateKey = Module.findExportByName("crypt32.dll", "CryptAcquireCertificatePrivateKey")
+Interceptor.attach(CryptAcquireCertificatePrivateKey, {onLeave: function (args) {send("CryptAcquireCertificatePrivateKey");}});
+
+var CryptBinaryToStringA = Module.findExportByName("crypt32.dll", "CryptBinaryToStringA")
+Interceptor.attach(CryptBinaryToStringA, {onLeave: function (args) {send("CryptBinaryToStringA");}});
+
+var CryptBinaryToStringW = Module.findExportByName("crypt32.dll", "CryptBinaryToStringW")
+Interceptor.attach(CryptBinaryToStringW, {onLeave: function (args) {send("CryptBinaryToStringW");}});
+
+var CryptCloseAsyncHandle = Module.findExportByName("crypt32.dll", "CryptCloseAsyncHandle")
+Interceptor.attach(CryptCloseAsyncHandle, {onLeave: function (args) {send("CryptCloseAsyncHandle");}});
+
+var CryptCreateAsyncHandle = Module.findExportByName("crypt32.dll", "CryptCreateAsyncHandle")
+Interceptor.attach(CryptCreateAsyncHandle, {onLeave: function (args) {send("CryptCreateAsyncHandle");}});
+
+var CryptCreateKeyIdentifierFromCSP = Module.findExportByName("crypt32.dll", "CryptCreateKeyIdentifierFromCSP")
+Interceptor.attach(CryptCreateKeyIdentifierFromCSP, {onLeave: function (args) {send("CryptCreateKeyIdentifierFromCSP");}});
+
+var CryptDecodeMessage = Module.findExportByName("crypt32.dll", "CryptDecodeMessage")
+Interceptor.attach(CryptDecodeMessage, {onLeave: function (args) {send("CryptDecodeMessage");}});
+
+var CryptDecodeObject = Module.findExportByName("crypt32.dll", "CryptDecodeObject")
+Interceptor.attach(CryptDecodeObject, {onLeave: function (args) {send("CryptDecodeObject");}});
+
+var CryptDecodeObjectEx = Module.findExportByName("crypt32.dll", "CryptDecodeObjectEx")
+Interceptor.attach(CryptDecodeObjectEx, {onLeave: function (args) {send("CryptDecodeObjectEx");}});
+
+var CryptDecryptAndVerifyMessageSignature = Module.findExportByName("crypt32.dll", "CryptDecryptAndVerifyMessageSignature")
+Interceptor.attach(CryptDecryptAndVerifyMessageSignature, {onLeave: function (args) {send("CryptDecryptAndVerifyMessageSignature");}});
+
+var CryptDecryptMessage = Module.findExportByName("crypt32.dll", "CryptDecryptMessage")
+Interceptor.attach(CryptDecryptMessage, {onLeave: function (args) {send("CryptDecryptMessage");}});
+
+var CryptEncodeObject = Module.findExportByName("crypt32.dll", "CryptEncodeObject")
+Interceptor.attach(CryptEncodeObject, {onLeave: function (args) {send("CryptEncodeObject");}});
+
+var CryptEncodeObjectEx = Module.findExportByName("crypt32.dll", "CryptEncodeObjectEx")
+Interceptor.attach(CryptEncodeObjectEx, {onLeave: function (args) {send("CryptEncodeObjectEx");}});
+
+var CryptEncryptMessage = Module.findExportByName("crypt32.dll", "CryptEncryptMessage")
+Interceptor.attach(CryptEncryptMessage, {onLeave: function (args) {send("CryptEncryptMessage");}});
+
+var CryptEnumKeyIdentifierProperties = Module.findExportByName("crypt32.dll", "CryptEnumKeyIdentifierProperties")
+Interceptor.attach(CryptEnumKeyIdentifierProperties, {onLeave: function (args) {send("CryptEnumKeyIdentifierProperties");}});
+
+var CryptEnumOIDFunction = Module.findExportByName("crypt32.dll", "CryptEnumOIDFunction")
+Interceptor.attach(CryptEnumOIDFunction, {onLeave: function (args) {send("CryptEnumOIDFunction");}});
+
+var CryptEnumOIDInfo = Module.findExportByName("crypt32.dll", "CryptEnumOIDInfo")
+Interceptor.attach(CryptEnumOIDInfo, {onLeave: function (args) {send("CryptEnumOIDInfo");}});
+
+var CryptExportPKCS8 = Module.findExportByName("crypt32.dll", "CryptExportPKCS8")
+Interceptor.attach(CryptExportPKCS8, {onLeave: function (args) {send("CryptExportPKCS8");}});
+
+var CryptExportPublicKeyInfo = Module.findExportByName("crypt32.dll", "CryptExportPublicKeyInfo")
+Interceptor.attach(CryptExportPublicKeyInfo, {onLeave: function (args) {send("CryptExportPublicKeyInfo");}});
+
+var CryptExportPublicKeyInfoEx = Module.findExportByName("crypt32.dll", "CryptExportPublicKeyInfoEx")
+Interceptor.attach(CryptExportPublicKeyInfoEx, {onLeave: function (args) {send("CryptExportPublicKeyInfoEx");}});
+
+var CryptExportPublicKeyInfoFromBCryptKeyHandle = Module.findExportByName("crypt32.dll", "CryptExportPublicKeyInfoFromBCryptKeyHandle")
+Interceptor.attach(CryptExportPublicKeyInfoFromBCryptKeyHandle, {onLeave: function (args) {send("CryptExportPublicKeyInfoFromBCryptKeyHandle");}});
+
+var CryptFindCertificateKeyProvInfo = Module.findExportByName("crypt32.dll", "CryptFindCertificateKeyProvInfo")
+Interceptor.attach(CryptFindCertificateKeyProvInfo, {onLeave: function (args) {send("CryptFindCertificateKeyProvInfo");}});
+
+var CryptFindLocalizedName = Module.findExportByName("crypt32.dll", "CryptFindLocalizedName")
+Interceptor.attach(CryptFindLocalizedName, {onLeave: function (args) {send("CryptFindLocalizedName");}});
+
+var CryptFindOIDInfo = Module.findExportByName("crypt32.dll", "CryptFindOIDInfo")
+Interceptor.attach(CryptFindOIDInfo, {onLeave: function (args) {send("CryptFindOIDInfo");}});
+
+var CryptFormatObject = Module.findExportByName("crypt32.dll", "CryptFormatObject")
+Interceptor.attach(CryptFormatObject, {onLeave: function (args) {send("CryptFormatObject");}});
+
+var CryptFreeOIDFunctionAddress = Module.findExportByName("crypt32.dll", "CryptFreeOIDFunctionAddress")
+Interceptor.attach(CryptFreeOIDFunctionAddress, {onLeave: function (args) {send("CryptFreeOIDFunctionAddress");}});
+
+var CryptGetAsyncParam = Module.findExportByName("crypt32.dll", "CryptGetAsyncParam")
+Interceptor.attach(CryptGetAsyncParam, {onLeave: function (args) {send("CryptGetAsyncParam");}});
+
+var CryptGetDefaultOIDDllList = Module.findExportByName("crypt32.dll", "CryptGetDefaultOIDDllList")
+Interceptor.attach(CryptGetDefaultOIDDllList, {onLeave: function (args) {send("CryptGetDefaultOIDDllList");}});
+
+var CryptGetDefaultOIDFunctionAddress = Module.findExportByName("crypt32.dll", "CryptGetDefaultOIDFunctionAddress")
+Interceptor.attach(CryptGetDefaultOIDFunctionAddress, {onLeave: function (args) {send("CryptGetDefaultOIDFunctionAddress");}});
+
+var CryptGetKeyIdentifierProperty = Module.findExportByName("crypt32.dll", "CryptGetKeyIdentifierProperty")
+Interceptor.attach(CryptGetKeyIdentifierProperty, {onLeave: function (args) {send("CryptGetKeyIdentifierProperty");}});
+
+var CryptGetMessageCertificates = Module.findExportByName("crypt32.dll", "CryptGetMessageCertificates")
+Interceptor.attach(CryptGetMessageCertificates, {onLeave: function (args) {send("CryptGetMessageCertificates");}});
+
+var CryptGetMessageSignerCount = Module.findExportByName("crypt32.dll", "CryptGetMessageSignerCount")
+Interceptor.attach(CryptGetMessageSignerCount, {onLeave: function (args) {send("CryptGetMessageSignerCount");}});
+
+var CryptGetOIDFunctionAddress = Module.findExportByName("crypt32.dll", "CryptGetOIDFunctionAddress")
+Interceptor.attach(CryptGetOIDFunctionAddress, {onLeave: function (args) {send("CryptGetOIDFunctionAddress");}});
+
+var CryptGetOIDFunctionValue = Module.findExportByName("crypt32.dll", "CryptGetOIDFunctionValue")
+Interceptor.attach(CryptGetOIDFunctionValue, {onLeave: function (args) {send("CryptGetOIDFunctionValue");}});
+
+var CryptHashCertificate = Module.findExportByName("crypt32.dll", "CryptHashCertificate")
+Interceptor.attach(CryptHashCertificate, {onLeave: function (args) {send("CryptHashCertificate");}});
+
+var CryptHashCertificate2 = Module.findExportByName("crypt32.dll", "CryptHashCertificate2")
+Interceptor.attach(CryptHashCertificate2, {onLeave: function (args) {send("CryptHashCertificate2");}});
+
+var CryptHashMessage = Module.findExportByName("crypt32.dll", "CryptHashMessage")
+Interceptor.attach(CryptHashMessage, {onLeave: function (args) {send("CryptHashMessage");}});
+
+var CryptHashPublicKeyInfo = Module.findExportByName("crypt32.dll", "CryptHashPublicKeyInfo")
+Interceptor.attach(CryptHashPublicKeyInfo, {onLeave: function (args) {send("CryptHashPublicKeyInfo");}});
+
+var CryptHashToBeSigned = Module.findExportByName("crypt32.dll", "CryptHashToBeSigned")
+Interceptor.attach(CryptHashToBeSigned, {onLeave: function (args) {send("CryptHashToBeSigned");}});
+
+var CryptImportPKCS8 = Module.findExportByName("crypt32.dll", "CryptImportPKCS8")
+Interceptor.attach(CryptImportPKCS8, {onLeave: function (args) {send("CryptImportPKCS8");}});
+
+var CryptImportPublicKeyInfo = Module.findExportByName("crypt32.dll", "CryptImportPublicKeyInfo")
+Interceptor.attach(CryptImportPublicKeyInfo, {onLeave: function (args) {send("CryptImportPublicKeyInfo");}});
+
+var CryptImportPublicKeyInfoEx = Module.findExportByName("crypt32.dll", "CryptImportPublicKeyInfoEx")
+Interceptor.attach(CryptImportPublicKeyInfoEx, {onLeave: function (args) {send("CryptImportPublicKeyInfoEx");}});
+
+var CryptImportPublicKeyInfoEx2 = Module.findExportByName("crypt32.dll", "CryptImportPublicKeyInfoEx2")
+Interceptor.attach(CryptImportPublicKeyInfoEx2, {onLeave: function (args) {send("CryptImportPublicKeyInfoEx2");}});
+
+var CryptInitOIDFunctionSet = Module.findExportByName("crypt32.dll", "CryptInitOIDFunctionSet")
+Interceptor.attach(CryptInitOIDFunctionSet, {onLeave: function (args) {send("CryptInitOIDFunctionSet");}});
+
+var CryptInstallDefaultContext = Module.findExportByName("crypt32.dll", "CryptInstallDefaultContext")
+Interceptor.attach(CryptInstallDefaultContext, {onLeave: function (args) {send("CryptInstallDefaultContext");}});
+
+var CryptInstallOIDFunctionAddress = Module.findExportByName("crypt32.dll", "CryptInstallOIDFunctionAddress")
+Interceptor.attach(CryptInstallOIDFunctionAddress, {onLeave: function (args) {send("CryptInstallOIDFunctionAddress");}});
+
+var CryptLoadSip = Module.findExportByName("crypt32.dll", "CryptLoadSip")
+Interceptor.attach(CryptLoadSip, {onLeave: function (args) {send("CryptLoadSip");}});
+
+var CryptMemAlloc = Module.findExportByName("crypt32.dll", "CryptMemAlloc")
+Interceptor.attach(CryptMemAlloc, {onLeave: function (args) {send("CryptMemAlloc");}});
+
+var CryptMemFree = Module.findExportByName("crypt32.dll", "CryptMemFree")
+Interceptor.attach(CryptMemFree, {onLeave: function (args) {send("CryptMemFree");}});
+
+var CryptMemRealloc = Module.findExportByName("crypt32.dll", "CryptMemRealloc")
+Interceptor.attach(CryptMemRealloc, {onLeave: function (args) {send("CryptMemRealloc");}});
+
+var CryptMsgCalculateEncodedLength = Module.findExportByName("crypt32.dll", "CryptMsgCalculateEncodedLength")
+Interceptor.attach(CryptMsgCalculateEncodedLength, {onLeave: function (args) {send("CryptMsgCalculateEncodedLength");}});
+
+var CryptMsgClose = Module.findExportByName("crypt32.dll", "CryptMsgClose")
+Interceptor.attach(CryptMsgClose, {onLeave: function (args) {send("CryptMsgClose");}});
+
+var CryptMsgControl = Module.findExportByName("crypt32.dll", "CryptMsgControl")
+Interceptor.attach(CryptMsgControl, {onLeave: function (args) {send("CryptMsgControl");}});
+
+var CryptMsgCountersign = Module.findExportByName("crypt32.dll", "CryptMsgCountersign")
+Interceptor.attach(CryptMsgCountersign, {onLeave: function (args) {send("CryptMsgCountersign");}});
+
+var CryptMsgCountersignEncoded = Module.findExportByName("crypt32.dll", "CryptMsgCountersignEncoded")
+Interceptor.attach(CryptMsgCountersignEncoded, {onLeave: function (args) {send("CryptMsgCountersignEncoded");}});
+
+var CryptMsgDuplicate = Module.findExportByName("crypt32.dll", "CryptMsgDuplicate")
+Interceptor.attach(CryptMsgDuplicate, {onLeave: function (args) {send("CryptMsgDuplicate");}});
+
+var CryptMsgEncodeAndSignCTL = Module.findExportByName("crypt32.dll", "CryptMsgEncodeAndSignCTL")
+Interceptor.attach(CryptMsgEncodeAndSignCTL, {onLeave: function (args) {send("CryptMsgEncodeAndSignCTL");}});
+
+var CryptMsgGetAndVerifySigner = Module.findExportByName("crypt32.dll", "CryptMsgGetAndVerifySigner")
+Interceptor.attach(CryptMsgGetAndVerifySigner, {onLeave: function (args) {send("CryptMsgGetAndVerifySigner");}});
+
+var CryptMsgGetParam = Module.findExportByName("crypt32.dll", "CryptMsgGetParam")
+Interceptor.attach(CryptMsgGetParam, {onLeave: function (args) {send("CryptMsgGetParam");}});
+
+var CryptMsgOpenToDecode = Module.findExportByName("crypt32.dll", "CryptMsgOpenToDecode")
+Interceptor.attach(CryptMsgOpenToDecode, {onLeave: function (args) {send("CryptMsgOpenToDecode");}});
+
+var CryptMsgOpenToEncode = Module.findExportByName("crypt32.dll", "CryptMsgOpenToEncode")
+Interceptor.attach(CryptMsgOpenToEncode, {onLeave: function (args) {send("CryptMsgOpenToEncode");}});
+
+var CryptMsgSignCTL = Module.findExportByName("crypt32.dll", "CryptMsgSignCTL")
+Interceptor.attach(CryptMsgSignCTL, {onLeave: function (args) {send("CryptMsgSignCTL");}});
+
+var CryptMsgUpdate = Module.findExportByName("crypt32.dll", "CryptMsgUpdate")
+Interceptor.attach(CryptMsgUpdate, {onLeave: function (args) {send("CryptMsgUpdate");}});
+
+var CryptMsgVerifyCountersignatureEncoded = Module.findExportByName("crypt32.dll", "CryptMsgVerifyCountersignatureEncoded")
+Interceptor.attach(CryptMsgVerifyCountersignatureEncoded, {onLeave: function (args) {send("CryptMsgVerifyCountersignatureEncoded");}});
+
+var CryptMsgVerifyCountersignatureEncodedEx = Module.findExportByName("crypt32.dll", "CryptMsgVerifyCountersignatureEncodedEx")
+Interceptor.attach(CryptMsgVerifyCountersignatureEncodedEx, {onLeave: function (args) {send("CryptMsgVerifyCountersignatureEncodedEx");}});
+
+var CryptObjectLocatorFree = Module.findExportByName("crypt32.dll", "CryptObjectLocatorFree")
+Interceptor.attach(CryptObjectLocatorFree, {onLeave: function (args) {send("CryptObjectLocatorFree");}});
+
+var CryptObjectLocatorGet = Module.findExportByName("crypt32.dll", "CryptObjectLocatorGet")
+Interceptor.attach(CryptObjectLocatorGet, {onLeave: function (args) {send("CryptObjectLocatorGet");}});
+
+var CryptObjectLocatorGetContent = Module.findExportByName("crypt32.dll", "CryptObjectLocatorGetContent")
+Interceptor.attach(CryptObjectLocatorGetContent, {onLeave: function (args) {send("CryptObjectLocatorGetContent");}});
+
+var CryptObjectLocatorGetUpdated = Module.findExportByName("crypt32.dll", "CryptObjectLocatorGetUpdated")
+Interceptor.attach(CryptObjectLocatorGetUpdated, {onLeave: function (args) {send("CryptObjectLocatorGetUpdated");}});
+
+var CryptObjectLocatorInitialize = Module.findExportByName("crypt32.dll", "CryptObjectLocatorInitialize")
+Interceptor.attach(CryptObjectLocatorInitialize, {onLeave: function (args) {send("CryptObjectLocatorInitialize");}});
+
+var CryptObjectLocatorIsChanged = Module.findExportByName("crypt32.dll", "CryptObjectLocatorIsChanged")
+Interceptor.attach(CryptObjectLocatorIsChanged, {onLeave: function (args) {send("CryptObjectLocatorIsChanged");}});
+
+var CryptObjectLocatorRelease = Module.findExportByName("crypt32.dll", "CryptObjectLocatorRelease")
+Interceptor.attach(CryptObjectLocatorRelease, {onLeave: function (args) {send("CryptObjectLocatorRelease");}});
+
+var CryptProtectData = Module.findExportByName("crypt32.dll", "CryptProtectData")
+Interceptor.attach(CryptProtectData, {onLeave: function (args) {send("CryptProtectData");}});
+
+var CryptProtectMemory = Module.findExportByName("crypt32.dll", "CryptProtectMemory")
+Interceptor.attach(CryptProtectMemory, {onLeave: function (args) {send("CryptProtectMemory");}});
+
+var CryptQueryObject = Module.findExportByName("crypt32.dll", "CryptQueryObject")
+Interceptor.attach(CryptQueryObject, {onLeave: function (args) {send("CryptQueryObject");}});
+
+var CryptRegisterDefaultOIDFunction = Module.findExportByName("crypt32.dll", "CryptRegisterDefaultOIDFunction")
+Interceptor.attach(CryptRegisterDefaultOIDFunction, {onLeave: function (args) {send("CryptRegisterDefaultOIDFunction");}});
+
+var CryptRegisterOIDFunction = Module.findExportByName("crypt32.dll", "CryptRegisterOIDFunction")
+Interceptor.attach(CryptRegisterOIDFunction, {onLeave: function (args) {send("CryptRegisterOIDFunction");}});
+
+var CryptRegisterOIDInfo = Module.findExportByName("crypt32.dll", "CryptRegisterOIDInfo")
+Interceptor.attach(CryptRegisterOIDInfo, {onLeave: function (args) {send("CryptRegisterOIDInfo");}});
+
+var CryptRetrieveTimeStamp = Module.findExportByName("crypt32.dll", "CryptRetrieveTimeStamp")
+Interceptor.attach(CryptRetrieveTimeStamp, {onLeave: function (args) {send("CryptRetrieveTimeStamp");}});
+
+var CryptSIPAddProvider = Module.findExportByName("crypt32.dll", "CryptSIPAddProvider")
+Interceptor.attach(CryptSIPAddProvider, {onLeave: function (args) {send("CryptSIPAddProvider");}});
+
+var CryptSIPCreateIndirectData = Module.findExportByName("crypt32.dll", "CryptSIPCreateIndirectData")
+Interceptor.attach(CryptSIPCreateIndirectData, {onLeave: function (args) {send("CryptSIPCreateIndirectData");}});
+
+var CryptSIPGetCaps = Module.findExportByName("crypt32.dll", "CryptSIPGetCaps")
+Interceptor.attach(CryptSIPGetCaps, {onLeave: function (args) {send("CryptSIPGetCaps");}});
+
+var CryptSIPGetSealedDigest = Module.findExportByName("crypt32.dll", "CryptSIPGetSealedDigest")
+Interceptor.attach(CryptSIPGetSealedDigest, {onLeave: function (args) {send("CryptSIPGetSealedDigest");}});
+
+var CryptSIPGetSignedDataMsg = Module.findExportByName("crypt32.dll", "CryptSIPGetSignedDataMsg")
+Interceptor.attach(CryptSIPGetSignedDataMsg, {onLeave: function (args) {send("CryptSIPGetSignedDataMsg");}});
+
+var CryptSIPLoad = Module.findExportByName("crypt32.dll", "CryptSIPLoad")
+Interceptor.attach(CryptSIPLoad, {onLeave: function (args) {send("CryptSIPLoad");}});
+
+var CryptSIPPutSignedDataMsg = Module.findExportByName("crypt32.dll", "CryptSIPPutSignedDataMsg")
+Interceptor.attach(CryptSIPPutSignedDataMsg, {onLeave: function (args) {send("CryptSIPPutSignedDataMsg");}});
+
+var CryptSIPRemoveProvider = Module.findExportByName("crypt32.dll", "CryptSIPRemoveProvider")
+Interceptor.attach(CryptSIPRemoveProvider, {onLeave: function (args) {send("CryptSIPRemoveProvider");}});
+
+var CryptSIPRemoveSignedDataMsg = Module.findExportByName("crypt32.dll", "CryptSIPRemoveSignedDataMsg")
+Interceptor.attach(CryptSIPRemoveSignedDataMsg, {onLeave: function (args) {send("CryptSIPRemoveSignedDataMsg");}});
+
+var CryptSIPRetrieveSubjectGuid = Module.findExportByName("crypt32.dll", "CryptSIPRetrieveSubjectGuid")
+Interceptor.attach(CryptSIPRetrieveSubjectGuid, {onLeave: function (args) {send("CryptSIPRetrieveSubjectGuid");}});
+
+var CryptSIPRetrieveSubjectGuidForCatalogFile = Module.findExportByName("crypt32.dll", "CryptSIPRetrieveSubjectGuidForCatalogFile")
+Interceptor.attach(CryptSIPRetrieveSubjectGuidForCatalogFile, {onLeave: function (args) {send("CryptSIPRetrieveSubjectGuidForCatalogFile");}});
+
+var CryptSIPVerifyIndirectData = Module.findExportByName("crypt32.dll", "CryptSIPVerifyIndirectData")
+Interceptor.attach(CryptSIPVerifyIndirectData, {onLeave: function (args) {send("CryptSIPVerifyIndirectData");}});
+
+var CryptSetAsyncParam = Module.findExportByName("crypt32.dll", "CryptSetAsyncParam")
+Interceptor.attach(CryptSetAsyncParam, {onLeave: function (args) {send("CryptSetAsyncParam");}});
+
+var CryptSetKeyIdentifierProperty = Module.findExportByName("crypt32.dll", "CryptSetKeyIdentifierProperty")
+Interceptor.attach(CryptSetKeyIdentifierProperty, {onLeave: function (args) {send("CryptSetKeyIdentifierProperty");}});
+
+var CryptSetOIDFunctionValue = Module.findExportByName("crypt32.dll", "CryptSetOIDFunctionValue")
+Interceptor.attach(CryptSetOIDFunctionValue, {onLeave: function (args) {send("CryptSetOIDFunctionValue");}});
+
+var CryptSignAndEncodeCertificate = Module.findExportByName("crypt32.dll", "CryptSignAndEncodeCertificate")
+Interceptor.attach(CryptSignAndEncodeCertificate, {onLeave: function (args) {send("CryptSignAndEncodeCertificate");}});
+
+var CryptSignAndEncryptMessage = Module.findExportByName("crypt32.dll", "CryptSignAndEncryptMessage")
+Interceptor.attach(CryptSignAndEncryptMessage, {onLeave: function (args) {send("CryptSignAndEncryptMessage");}});
+
+var CryptSignCertificate = Module.findExportByName("crypt32.dll", "CryptSignCertificate")
+Interceptor.attach(CryptSignCertificate, {onLeave: function (args) {send("CryptSignCertificate");}});
+
+var CryptSignMessage = Module.findExportByName("crypt32.dll", "CryptSignMessage")
+Interceptor.attach(CryptSignMessage, {onLeave: function (args) {send("CryptSignMessage");}});
+
+var CryptSignMessageWithKey = Module.findExportByName("crypt32.dll", "CryptSignMessageWithKey")
+Interceptor.attach(CryptSignMessageWithKey, {onLeave: function (args) {send("CryptSignMessageWithKey");}});
+
+var CryptStringToBinaryA = Module.findExportByName("crypt32.dll", "CryptStringToBinaryA")
+Interceptor.attach(CryptStringToBinaryA, {onLeave: function (args) {send("CryptStringToBinaryA");}});
+
+var CryptStringToBinaryW = Module.findExportByName("crypt32.dll", "CryptStringToBinaryW")
+Interceptor.attach(CryptStringToBinaryW, {onLeave: function (args) {send("CryptStringToBinaryW");}});
+
+var CryptUninstallDefaultContext = Module.findExportByName("crypt32.dll", "CryptUninstallDefaultContext")
+Interceptor.attach(CryptUninstallDefaultContext, {onLeave: function (args) {send("CryptUninstallDefaultContext");}});
+
+var CryptUnprotectData = Module.findExportByName("crypt32.dll", "CryptUnprotectData")
+Interceptor.attach(CryptUnprotectData, {onLeave: function (args) {send("CryptUnprotectData");}});
+
+var CryptUnprotectMemory = Module.findExportByName("crypt32.dll", "CryptUnprotectMemory")
+Interceptor.attach(CryptUnprotectMemory, {onLeave: function (args) {send("CryptUnprotectMemory");}});
+
+var CryptUnregisterDefaultOIDFunction = Module.findExportByName("crypt32.dll", "CryptUnregisterDefaultOIDFunction")
+Interceptor.attach(CryptUnregisterDefaultOIDFunction, {onLeave: function (args) {send("CryptUnregisterDefaultOIDFunction");}});
+
+var CryptUnregisterOIDFunction = Module.findExportByName("crypt32.dll", "CryptUnregisterOIDFunction")
+Interceptor.attach(CryptUnregisterOIDFunction, {onLeave: function (args) {send("CryptUnregisterOIDFunction");}});
+
+var CryptUnregisterOIDInfo = Module.findExportByName("crypt32.dll", "CryptUnregisterOIDInfo")
+Interceptor.attach(CryptUnregisterOIDInfo, {onLeave: function (args) {send("CryptUnregisterOIDInfo");}});
+
+var CryptUpdateProtectedState = Module.findExportByName("crypt32.dll", "CryptUpdateProtectedState")
+Interceptor.attach(CryptUpdateProtectedState, {onLeave: function (args) {send("CryptUpdateProtectedState");}});
+
+var CryptVerifyCertificateSignature = Module.findExportByName("crypt32.dll", "CryptVerifyCertificateSignature")
+Interceptor.attach(CryptVerifyCertificateSignature, {onLeave: function (args) {send("CryptVerifyCertificateSignature");}});
+
+var CryptVerifyCertificateSignatureEx = Module.findExportByName("crypt32.dll", "CryptVerifyCertificateSignatureEx")
+Interceptor.attach(CryptVerifyCertificateSignatureEx, {onLeave: function (args) {send("CryptVerifyCertificateSignatureEx");}});
+
+var CryptVerifyDetachedMessageHash = Module.findExportByName("crypt32.dll", "CryptVerifyDetachedMessageHash")
+Interceptor.attach(CryptVerifyDetachedMessageHash, {onLeave: function (args) {send("CryptVerifyDetachedMessageHash");}});
+
+var CryptVerifyDetachedMessageSignature = Module.findExportByName("crypt32.dll", "CryptVerifyDetachedMessageSignature")
+Interceptor.attach(CryptVerifyDetachedMessageSignature, {onLeave: function (args) {send("CryptVerifyDetachedMessageSignature");}});
+
+var CryptVerifyMessageHash = Module.findExportByName("crypt32.dll", "CryptVerifyMessageHash")
+Interceptor.attach(CryptVerifyMessageHash, {onLeave: function (args) {send("CryptVerifyMessageHash");}});
+
+var CryptVerifyMessageSignature = Module.findExportByName("crypt32.dll", "CryptVerifyMessageSignature")
+Interceptor.attach(CryptVerifyMessageSignature, {onLeave: function (args) {send("CryptVerifyMessageSignature");}});
+
+var CryptVerifyMessageSignatureWithKey = Module.findExportByName("crypt32.dll", "CryptVerifyMessageSignatureWithKey")
+Interceptor.attach(CryptVerifyMessageSignatureWithKey, {onLeave: function (args) {send("CryptVerifyMessageSignatureWithKey");}});
+
+var CryptVerifyTimeStampSignature = Module.findExportByName("crypt32.dll", "CryptVerifyTimeStampSignature")
+Interceptor.attach(CryptVerifyTimeStampSignature, {onLeave: function (args) {send("CryptVerifyTimeStampSignature");}});
+
+var I_CertChainEngineIsDisallowedCertificate = Module.findExportByName("crypt32.dll", "I_CertChainEngineIsDisallowedCertificate")
+Interceptor.attach(I_CertChainEngineIsDisallowedCertificate, {onLeave: function (args) {send("I_CertChainEngineIsDisallowedCertificate");}});
+
+var I_CertDiagControl = Module.findExportByName("crypt32.dll", "I_CertDiagControl")
+Interceptor.attach(I_CertDiagControl, {onLeave: function (args) {send("I_CertDiagControl");}});
+
+var I_CertFinishSslHandshake = Module.findExportByName("crypt32.dll", "I_CertFinishSslHandshake")
+Interceptor.attach(I_CertFinishSslHandshake, {onLeave: function (args) {send("I_CertFinishSslHandshake");}});
+
+var I_CertProcessSslHandshake = Module.findExportByName("crypt32.dll", "I_CertProcessSslHandshake")
+Interceptor.attach(I_CertProcessSslHandshake, {onLeave: function (args) {send("I_CertProcessSslHandshake");}});
+
+var I_CertProtectFunction = Module.findExportByName("crypt32.dll", "I_CertProtectFunction")
+Interceptor.attach(I_CertProtectFunction, {onLeave: function (args) {send("I_CertProtectFunction");}});
+
+var I_CertSrvProtectFunction = Module.findExportByName("crypt32.dll", "I_CertSrvProtectFunction")
+Interceptor.attach(I_CertSrvProtectFunction, {onLeave: function (args) {send("I_CertSrvProtectFunction");}});
+
+var I_CertSyncStore = Module.findExportByName("crypt32.dll", "I_CertSyncStore")
+Interceptor.attach(I_CertSyncStore, {onLeave: function (args) {send("I_CertSyncStore");}});
+
+var I_CertUpdateStore = Module.findExportByName("crypt32.dll", "I_CertUpdateStore")
+Interceptor.attach(I_CertUpdateStore, {onLeave: function (args) {send("I_CertUpdateStore");}});
+
+var I_CertWnfEnableFlushCache = Module.findExportByName("crypt32.dll", "I_CertWnfEnableFlushCache")
+Interceptor.attach(I_CertWnfEnableFlushCache, {onLeave: function (args) {send("I_CertWnfEnableFlushCache");}});
+
+var I_CryptAddRefLruEntry = Module.findExportByName("crypt32.dll", "I_CryptAddRefLruEntry")
+Interceptor.attach(I_CryptAddRefLruEntry, {onLeave: function (args) {send("I_CryptAddRefLruEntry");}});
+
+var I_CryptAddSmartCardCertToStore = Module.findExportByName("crypt32.dll", "I_CryptAddSmartCardCertToStore")
+Interceptor.attach(I_CryptAddSmartCardCertToStore, {onLeave: function (args) {send("I_CryptAddSmartCardCertToStore");}});
+
+var I_CryptAllocTls = Module.findExportByName("crypt32.dll", "I_CryptAllocTls")
+Interceptor.attach(I_CryptAllocTls, {onLeave: function (args) {send("I_CryptAllocTls");}});
+
+var I_CryptAllocTlsEx = Module.findExportByName("crypt32.dll", "I_CryptAllocTlsEx")
+Interceptor.attach(I_CryptAllocTlsEx, {onLeave: function (args) {send("I_CryptAllocTlsEx");}});
+
+var I_CryptCreateLruCache = Module.findExportByName("crypt32.dll", "I_CryptCreateLruCache")
+Interceptor.attach(I_CryptCreateLruCache, {onLeave: function (args) {send("I_CryptCreateLruCache");}});
+
+var I_CryptCreateLruEntry = Module.findExportByName("crypt32.dll", "I_CryptCreateLruEntry")
+Interceptor.attach(I_CryptCreateLruEntry, {onLeave: function (args) {send("I_CryptCreateLruEntry");}});
+
+var I_CryptDetachTls = Module.findExportByName("crypt32.dll", "I_CryptDetachTls")
+Interceptor.attach(I_CryptDetachTls, {onLeave: function (args) {send("I_CryptDetachTls");}});
+
+var I_CryptDisableLruOfEntries = Module.findExportByName("crypt32.dll", "I_CryptDisableLruOfEntries")
+Interceptor.attach(I_CryptDisableLruOfEntries, {onLeave: function (args) {send("I_CryptDisableLruOfEntries");}});
+
+var I_CryptEnableLruOfEntries = Module.findExportByName("crypt32.dll", "I_CryptEnableLruOfEntries")
+Interceptor.attach(I_CryptEnableLruOfEntries, {onLeave: function (args) {send("I_CryptEnableLruOfEntries");}});
+
+var I_CryptEnumMatchingLruEntries = Module.findExportByName("crypt32.dll", "I_CryptEnumMatchingLruEntries")
+Interceptor.attach(I_CryptEnumMatchingLruEntries, {onLeave: function (args) {send("I_CryptEnumMatchingLruEntries");}});
+
+var I_CryptFindLruEntry = Module.findExportByName("crypt32.dll", "I_CryptFindLruEntry")
+Interceptor.attach(I_CryptFindLruEntry, {onLeave: function (args) {send("I_CryptFindLruEntry");}});
+
+var I_CryptFindLruEntryData = Module.findExportByName("crypt32.dll", "I_CryptFindLruEntryData")
+Interceptor.attach(I_CryptFindLruEntryData, {onLeave: function (args) {send("I_CryptFindLruEntryData");}});
+
+var I_CryptFindSmartCardCertInStore = Module.findExportByName("crypt32.dll", "I_CryptFindSmartCardCertInStore")
+Interceptor.attach(I_CryptFindSmartCardCertInStore, {onLeave: function (args) {send("I_CryptFindSmartCardCertInStore");}});
+
+var I_CryptFlushLruCache = Module.findExportByName("crypt32.dll", "I_CryptFlushLruCache")
+Interceptor.attach(I_CryptFlushLruCache, {onLeave: function (args) {send("I_CryptFlushLruCache");}});
+
+var I_CryptFreeLruCache = Module.findExportByName("crypt32.dll", "I_CryptFreeLruCache")
+Interceptor.attach(I_CryptFreeLruCache, {onLeave: function (args) {send("I_CryptFreeLruCache");}});
+
+var I_CryptFreeTls = Module.findExportByName("crypt32.dll", "I_CryptFreeTls")
+Interceptor.attach(I_CryptFreeTls, {onLeave: function (args) {send("I_CryptFreeTls");}});
+
+var I_CryptGetAsn1Decoder = Module.findExportByName("crypt32.dll", "I_CryptGetAsn1Decoder")
+Interceptor.attach(I_CryptGetAsn1Decoder, {onLeave: function (args) {send("I_CryptGetAsn1Decoder");}});
+
+var I_CryptGetAsn1Encoder = Module.findExportByName("crypt32.dll", "I_CryptGetAsn1Encoder")
+Interceptor.attach(I_CryptGetAsn1Encoder, {onLeave: function (args) {send("I_CryptGetAsn1Encoder");}});
+
+var I_CryptGetDefaultCryptProv = Module.findExportByName("crypt32.dll", "I_CryptGetDefaultCryptProv")
+Interceptor.attach(I_CryptGetDefaultCryptProv, {onLeave: function (args) {send("I_CryptGetDefaultCryptProv");}});
+
+var I_CryptGetDefaultCryptProvForEncrypt = Module.findExportByName("crypt32.dll", "I_CryptGetDefaultCryptProvForEncrypt")
+Interceptor.attach(I_CryptGetDefaultCryptProvForEncrypt, {onLeave: function (args) {send("I_CryptGetDefaultCryptProvForEncrypt");}});
+
+var I_CryptGetFileVersion = Module.findExportByName("crypt32.dll", "I_CryptGetFileVersion")
+Interceptor.attach(I_CryptGetFileVersion, {onLeave: function (args) {send("I_CryptGetFileVersion");}});
+
+var I_CryptGetLruEntryData = Module.findExportByName("crypt32.dll", "I_CryptGetLruEntryData")
+Interceptor.attach(I_CryptGetLruEntryData, {onLeave: function (args) {send("I_CryptGetLruEntryData");}});
+
+var I_CryptGetLruEntryIdentifier = Module.findExportByName("crypt32.dll", "I_CryptGetLruEntryIdentifier")
+Interceptor.attach(I_CryptGetLruEntryIdentifier, {onLeave: function (args) {send("I_CryptGetLruEntryIdentifier");}});
+
+var I_CryptGetOssGlobal = Module.findExportByName("crypt32.dll", "I_CryptGetOssGlobal")
+Interceptor.attach(I_CryptGetOssGlobal, {onLeave: function (args) {send("I_CryptGetOssGlobal");}});
+
+var I_CryptGetTls = Module.findExportByName("crypt32.dll", "I_CryptGetTls")
+Interceptor.attach(I_CryptGetTls, {onLeave: function (args) {send("I_CryptGetTls");}});
+
+var I_CryptInsertLruEntry = Module.findExportByName("crypt32.dll", "I_CryptInsertLruEntry")
+Interceptor.attach(I_CryptInsertLruEntry, {onLeave: function (args) {send("I_CryptInsertLruEntry");}});
+
+var I_CryptInstallAsn1Module = Module.findExportByName("crypt32.dll", "I_CryptInstallAsn1Module")
+Interceptor.attach(I_CryptInstallAsn1Module, {onLeave: function (args) {send("I_CryptInstallAsn1Module");}});
+
+var I_CryptInstallOssGlobal = Module.findExportByName("crypt32.dll", "I_CryptInstallOssGlobal")
+Interceptor.attach(I_CryptInstallOssGlobal, {onLeave: function (args) {send("I_CryptInstallOssGlobal");}});
+
+var I_CryptReadTrustedPublisherDWORDValueFromRegistry = Module.findExportByName("crypt32.dll", "I_CryptReadTrustedPublisherDWORDValueFromRegistry")
+Interceptor.attach(I_CryptReadTrustedPublisherDWORDValueFromRegistry, {onLeave: function (args) {send("I_CryptReadTrustedPublisherDWORDValueFromRegistry");}});
+
+var I_CryptRegisterSmartCardStore = Module.findExportByName("crypt32.dll", "I_CryptRegisterSmartCardStore")
+Interceptor.attach(I_CryptRegisterSmartCardStore, {onLeave: function (args) {send("I_CryptRegisterSmartCardStore");}});
+
+var I_CryptReleaseLruEntry = Module.findExportByName("crypt32.dll", "I_CryptReleaseLruEntry")
+Interceptor.attach(I_CryptReleaseLruEntry, {onLeave: function (args) {send("I_CryptReleaseLruEntry");}});
+
+var I_CryptRemoveLruEntry = Module.findExportByName("crypt32.dll", "I_CryptRemoveLruEntry")
+Interceptor.attach(I_CryptRemoveLruEntry, {onLeave: function (args) {send("I_CryptRemoveLruEntry");}});
+
+var I_CryptSetTls = Module.findExportByName("crypt32.dll", "I_CryptSetTls")
+Interceptor.attach(I_CryptSetTls, {onLeave: function (args) {send("I_CryptSetTls");}});
+
+var I_CryptTouchLruEntry = Module.findExportByName("crypt32.dll", "I_CryptTouchLruEntry")
+Interceptor.attach(I_CryptTouchLruEntry, {onLeave: function (args) {send("I_CryptTouchLruEntry");}});
+
+var I_CryptUninstallAsn1Module = Module.findExportByName("crypt32.dll", "I_CryptUninstallAsn1Module")
+Interceptor.attach(I_CryptUninstallAsn1Module, {onLeave: function (args) {send("I_CryptUninstallAsn1Module");}});
+
+var I_CryptUninstallOssGlobal = Module.findExportByName("crypt32.dll", "I_CryptUninstallOssGlobal")
+Interceptor.attach(I_CryptUninstallOssGlobal, {onLeave: function (args) {send("I_CryptUninstallOssGlobal");}});
+
+var I_CryptUnregisterSmartCardStore = Module.findExportByName("crypt32.dll", "I_CryptUnregisterSmartCardStore")
+Interceptor.attach(I_CryptUnregisterSmartCardStore, {onLeave: function (args) {send("I_CryptUnregisterSmartCardStore");}});
+
+var I_CryptWalkAllLruCacheEntries = Module.findExportByName("crypt32.dll", "I_CryptWalkAllLruCacheEntries")
+Interceptor.attach(I_CryptWalkAllLruCacheEntries, {onLeave: function (args) {send("I_CryptWalkAllLruCacheEntries");}});
+
+var I_PFXDecrypt = Module.findExportByName("crypt32.dll", "I_PFXDecrypt")
+Interceptor.attach(I_PFXDecrypt, {onLeave: function (args) {send("I_PFXDecrypt");}});
+
+var I_PFXHMAC = Module.findExportByName("crypt32.dll", "I_PFXHMAC")
+Interceptor.attach(I_PFXHMAC, {onLeave: function (args) {send("I_PFXHMAC");}});
+
+var I_PFXImportCertStoreEx = Module.findExportByName("crypt32.dll", "I_PFXImportCertStoreEx")
+Interceptor.attach(I_PFXImportCertStoreEx, {onLeave: function (args) {send("I_PFXImportCertStoreEx");}});
+
+var PFXExportCertStore = Module.findExportByName("crypt32.dll", "PFXExportCertStore")
+Interceptor.attach(PFXExportCertStore, {onLeave: function (args) {send("PFXExportCertStore");}});
+
+var PFXExportCertStore2 = Module.findExportByName("crypt32.dll", "PFXExportCertStore2")
+Interceptor.attach(PFXExportCertStore2, {onLeave: function (args) {send("PFXExportCertStore2");}});
+
+var PFXExportCertStoreEx = Module.findExportByName("crypt32.dll", "PFXExportCertStoreEx")
+Interceptor.attach(PFXExportCertStoreEx, {onLeave: function (args) {send("PFXExportCertStoreEx");}});
+
+var PFXImportCertStore = Module.findExportByName("crypt32.dll", "PFXImportCertStore")
+Interceptor.attach(PFXImportCertStore, {onLeave: function (args) {send("PFXImportCertStore");}});
+
+var PFXIsPFXBlob = Module.findExportByName("crypt32.dll", "PFXIsPFXBlob")
+Interceptor.attach(PFXIsPFXBlob, {onLeave: function (args) {send("PFXIsPFXBlob");}});
+
+var PFXVerifyPassword = Module.findExportByName("crypt32.dll", "PFXVerifyPassword")
+Interceptor.attach(PFXVerifyPassword, {onLeave: function (args) {send("PFXVerifyPassword");}});
+

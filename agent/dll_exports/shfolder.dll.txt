@@ -1,0 +1,6 @@
+var SHGetFolderPathA = Module.findExportByName("shfolder.dll", "SHGetFolderPathA")
+Interceptor.attach(SHGetFolderPathA, {onLeave: function (args) {send("SHGetFolderPathA");}});
+
+var SHGetFolderPathW = Module.findExportByName("shfolder.dll", "SHGetFolderPathW")
+Interceptor.attach(SHGetFolderPathW, {onLeave: function (args) {send("SHGetFolderPathW");}});
+

@@ -1,0 +1,12 @@
+var AddNetPlaceRunDll = Module.findExportByName("shwebsvc.dll", "AddNetPlaceRunDll")
+Interceptor.attach(AddNetPlaceRunDll, {onLeave: function (args) {send("AddNetPlaceRunDll");}});
+
+var DllCanUnloadNow = Module.findExportByName("shwebsvc.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("shwebsvc.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var PublishRunDll = Module.findExportByName("shwebsvc.dll", "PublishRunDll")
+Interceptor.attach(PublishRunDll, {onLeave: function (args) {send("PublishRunDll");}});
+

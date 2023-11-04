@@ -1,0 +1,6 @@
+var Sysprep_Clean_Net = Module.findExportByName("spnet.dll", "Sysprep_Clean_Net")
+Interceptor.attach(Sysprep_Clean_Net, {onLeave: function (args) {send("Sysprep_Clean_Net");}});
+
+var Sysprep_Generalize_Net = Module.findExportByName("spnet.dll", "Sysprep_Generalize_Net")
+Interceptor.attach(Sysprep_Generalize_Net, {onLeave: function (args) {send("Sysprep_Generalize_Net");}});
+

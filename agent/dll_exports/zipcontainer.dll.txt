@@ -1,0 +1,12 @@
+var CreateFileStream = Module.findExportByName("zipcontainer.dll", "CreateFileStream")
+Interceptor.attach(CreateFileStream, {onLeave: function (args) {send("CreateFileStream");}});
+
+var ZipContainerCreateArchiveOnFile = Module.findExportByName("zipcontainer.dll", "ZipContainerCreateArchiveOnFile")
+Interceptor.attach(ZipContainerCreateArchiveOnFile, {onLeave: function (args) {send("ZipContainerCreateArchiveOnFile");}});
+
+var ZipContainerInitialize = Module.findExportByName("zipcontainer.dll", "ZipContainerInitialize")
+Interceptor.attach(ZipContainerInitialize, {onLeave: function (args) {send("ZipContainerInitialize");}});
+
+var ZipContainerUninitialize = Module.findExportByName("zipcontainer.dll", "ZipContainerUninitialize")
+Interceptor.attach(ZipContainerUninitialize, {onLeave: function (args) {send("ZipContainerUninitialize");}});
+

@@ -1,0 +1,36 @@
+var CreateExplorerSessionKey = Module.findExportByName("userinitext.dll", "CreateExplorerSessionKey")
+Interceptor.attach(CreateExplorerSessionKey, {onLeave: function (args) {send("CreateExplorerSessionKey");}});
+
+var DisplayMessageAndExitWindows = Module.findExportByName("userinitext.dll", "DisplayMessageAndExitWindows")
+Interceptor.attach(DisplayMessageAndExitWindows, {onLeave: function (args) {send("DisplayMessageAndExitWindows");}});
+
+var ImmWorker = Module.findExportByName("userinitext.dll", "ImmWorker")
+Interceptor.attach(ImmWorker, {onLeave: function (args) {send("ImmWorker");}});
+
+var IsSubDesktopSession = Module.findExportByName("userinitext.dll", "IsSubDesktopSession")
+Interceptor.attach(IsSubDesktopSession, {onLeave: function (args) {send("IsSubDesktopSession");}});
+
+var IsTSAppCompatOn = Module.findExportByName("userinitext.dll", "IsTSAppCompatOn")
+Interceptor.attach(IsTSAppCompatOn, {onLeave: function (args) {send("IsTSAppCompatOn");}});
+
+var LoadRemoteFontsAndInitMiscWorker = Module.findExportByName("userinitext.dll", "LoadRemoteFontsAndInitMiscWorker")
+Interceptor.attach(LoadRemoteFontsAndInitMiscWorker, {onLeave: function (args) {send("LoadRemoteFontsAndInitMiscWorker");}});
+
+var PerformXForestLogonCheck = Module.findExportByName("userinitext.dll", "PerformXForestLogonCheck")
+Interceptor.attach(PerformXForestLogonCheck, {onLeave: function (args) {send("PerformXForestLogonCheck");}});
+
+var ProcesRemoteSessionInitialCommand = Module.findExportByName("userinitext.dll", "ProcesRemoteSessionInitialCommand")
+Interceptor.attach(ProcesRemoteSessionInitialCommand, {onLeave: function (args) {send("ProcesRemoteSessionInitialCommand");}});
+
+var ProcessTermSrvIniFiles = Module.findExportByName("userinitext.dll", "ProcessTermSrvIniFiles")
+Interceptor.attach(ProcessTermSrvIniFiles, {onLeave: function (args) {send("ProcessTermSrvIniFiles");}});
+
+var SetShellDesktopSwitchEvent = Module.findExportByName("userinitext.dll", "SetShellDesktopSwitchEvent")
+Interceptor.attach(SetShellDesktopSwitchEvent, {onLeave: function (args) {send("SetShellDesktopSwitchEvent");}});
+
+var SetupHotKeyForKeyboardLayout = Module.findExportByName("userinitext.dll", "SetupHotKeyForKeyboardLayout")
+Interceptor.attach(SetupHotKeyForKeyboardLayout, {onLeave: function (args) {send("SetupHotKeyForKeyboardLayout");}});
+
+var UserinitExt = Module.findExportByName("userinitext.dll", "UserinitExt")
+Interceptor.attach(UserinitExt, {onLeave: function (args) {send("UserinitExt");}});
+

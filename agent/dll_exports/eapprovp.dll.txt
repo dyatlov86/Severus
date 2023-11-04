@@ -1,0 +1,21 @@
+var EapProvPlugGetInfo = Module.findExportByName("eapprovp.dll", "EapProvPlugGetInfo")
+Interceptor.attach(EapProvPlugGetInfo, {onLeave: function (args) {send("EapProvPlugGetInfo");}});
+
+var EapProvPluginDeinitialize = Module.findExportByName("eapprovp.dll", "EapProvPluginDeinitialize")
+Interceptor.attach(EapProvPluginDeinitialize, {onLeave: function (args) {send("EapProvPluginDeinitialize");}});
+
+var EapProvPluginInitialize = Module.findExportByName("eapprovp.dll", "EapProvPluginInitialize")
+Interceptor.attach(EapProvPluginInitialize, {onLeave: function (args) {send("EapProvPluginInitialize");}});
+
+var EapProvPluginTestForAuthenticatingWlanInterfaces = Module.findExportByName("eapprovp.dll", "EapProvPluginTestForAuthenticatingWlanInterfaces")
+Interceptor.attach(EapProvPluginTestForAuthenticatingWlanInterfaces, {onLeave: function (args) {send("EapProvPluginTestForAuthenticatingWlanInterfaces");}});
+
+var EapProvPluginWlanCloseHandle = Module.findExportByName("eapprovp.dll", "EapProvPluginWlanCloseHandle")
+Interceptor.attach(EapProvPluginWlanCloseHandle, {onLeave: function (args) {send("EapProvPluginWlanCloseHandle");}});
+
+var EapProvPluginWlanOpenHandle = Module.findExportByName("eapprovp.dll", "EapProvPluginWlanOpenHandle")
+Interceptor.attach(EapProvPluginWlanOpenHandle, {onLeave: function (args) {send("EapProvPluginWlanOpenHandle");}});
+
+var EapProvPluginWlanRegisterNotification = Module.findExportByName("eapprovp.dll", "EapProvPluginWlanRegisterNotification")
+Interceptor.attach(EapProvPluginWlanRegisterNotification, {onLeave: function (args) {send("EapProvPluginWlanRegisterNotification");}});
+

@@ -1,0 +1,45 @@
+var CuzzDisable = Module.findExportByName("vfcuzz.dll", "CuzzDisable")
+Interceptor.attach(CuzzDisable, {onLeave: function (args) {send("CuzzDisable");}});
+
+var CuzzDumpDebuggingState = Module.findExportByName("vfcuzz.dll", "CuzzDumpDebuggingState")
+Interceptor.attach(CuzzDumpDebuggingState, {onLeave: function (args) {send("CuzzDumpDebuggingState");}});
+
+var CuzzEnable = Module.findExportByName("vfcuzz.dll", "CuzzEnable")
+Interceptor.attach(CuzzEnable, {onLeave: function (args) {send("CuzzEnable");}});
+
+var CuzzGetCustomSchedulerInterface = Module.findExportByName("vfcuzz.dll", "CuzzGetCustomSchedulerInterface")
+Interceptor.attach(CuzzGetCustomSchedulerInterface, {onLeave: function (args) {send("CuzzGetCustomSchedulerInterface");}});
+
+var CuzzGetPriority = Module.findExportByName("vfcuzz.dll", "CuzzGetPriority")
+Interceptor.attach(CuzzGetPriority, {onLeave: function (args) {send("CuzzGetPriority");}});
+
+var CuzzGetPriorityOfTask = Module.findExportByName("vfcuzz.dll", "CuzzGetPriorityOfTask")
+Interceptor.attach(CuzzGetPriorityOfTask, {onLeave: function (args) {send("CuzzGetPriorityOfTask");}});
+
+var CuzzGetRandomSeed = Module.findExportByName("vfcuzz.dll", "CuzzGetRandomSeed")
+Interceptor.attach(CuzzGetRandomSeed, {onLeave: function (args) {send("CuzzGetRandomSeed");}});
+
+var CuzzIsEnabled = Module.findExportByName("vfcuzz.dll", "CuzzIsEnabled")
+Interceptor.attach(CuzzIsEnabled, {onLeave: function (args) {send("CuzzIsEnabled");}});
+
+var CuzzSchedule = Module.findExportByName("vfcuzz.dll", "CuzzSchedule")
+Interceptor.attach(CuzzSchedule, {onLeave: function (args) {send("CuzzSchedule");}});
+
+var CuzzSetDebugLoweringPoint = Module.findExportByName("vfcuzz.dll", "CuzzSetDebugLoweringPoint")
+Interceptor.attach(CuzzSetDebugLoweringPoint, {onLeave: function (args) {send("CuzzSetDebugLoweringPoint");}});
+
+var CuzzSetDebugPriority = Module.findExportByName("vfcuzz.dll", "CuzzSetDebugPriority")
+Interceptor.attach(CuzzSetDebugPriority, {onLeave: function (args) {send("CuzzSetDebugPriority");}});
+
+var CuzzSetFuzzingLevel = Module.findExportByName("vfcuzz.dll", "CuzzSetFuzzingLevel")
+Interceptor.attach(CuzzSetFuzzingLevel, {onLeave: function (args) {send("CuzzSetFuzzingLevel");}});
+
+var CuzzSetNumBlockedThreads = Module.findExportByName("vfcuzz.dll", "CuzzSetNumBlockedThreads")
+Interceptor.attach(CuzzSetNumBlockedThreads, {onLeave: function (args) {send("CuzzSetNumBlockedThreads");}});
+
+var CuzzSetPriority = Module.findExportByName("vfcuzz.dll", "CuzzSetPriority")
+Interceptor.attach(CuzzSetPriority, {onLeave: function (args) {send("CuzzSetPriority");}});
+
+var CuzzSetRandomSeed = Module.findExportByName("vfcuzz.dll", "CuzzSetRandomSeed")
+Interceptor.attach(CuzzSetRandomSeed, {onLeave: function (args) {send("CuzzSetRandomSeed");}});
+

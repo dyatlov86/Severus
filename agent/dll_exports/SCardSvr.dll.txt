@@ -1,0 +1,9 @@
+var CalaisMain = Module.findExportByName("SCardSvr.dll", "CalaisMain")
+Interceptor.attach(CalaisMain, {onLeave: function (args) {send("CalaisMain");}});
+
+var InitSmartCardService = Module.findExportByName("SCardSvr.dll", "InitSmartCardService")
+Interceptor.attach(InitSmartCardService, {onLeave: function (args) {send("InitSmartCardService");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("SCardSvr.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

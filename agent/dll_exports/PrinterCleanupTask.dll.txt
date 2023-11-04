@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("PrinterCleanupTask.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("PrinterCleanupTask.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var EnablePrintJobCleanupTask = Module.findExportByName("PrinterCleanupTask.dll", "EnablePrintJobCleanupTask")
+Interceptor.attach(EnablePrintJobCleanupTask, {onLeave: function (args) {send("EnablePrintJobCleanupTask");}});
+
+var EnablePrinterCleanUpTask = Module.findExportByName("PrinterCleanupTask.dll", "EnablePrinterCleanUpTask")
+Interceptor.attach(EnablePrinterCleanUpTask, {onLeave: function (args) {send("EnablePrinterCleanUpTask");}});
+
+var SetLastUserInteractionDate = Module.findExportByName("PrinterCleanupTask.dll", "SetLastUserInteractionDate")
+Interceptor.attach(SetLastUserInteractionDate, {onLeave: function (args) {send("SetLastUserInteractionDate");}});
+

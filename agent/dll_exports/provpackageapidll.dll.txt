@@ -1,0 +1,12 @@
+var CreatePackageBuilder = Module.findExportByName("provpackageapidll.dll", "CreatePackageBuilder")
+Interceptor.attach(CreatePackageBuilder, {onLeave: function (args) {send("CreatePackageBuilder");}});
+
+var CreatePackageSecurity = Module.findExportByName("provpackageapidll.dll", "CreatePackageSecurity")
+Interceptor.attach(CreatePackageSecurity, {onLeave: function (args) {send("CreatePackageSecurity");}});
+
+var OpenProvisioningPackage = Module.findExportByName("provpackageapidll.dll", "OpenProvisioningPackage")
+Interceptor.attach(OpenProvisioningPackage, {onLeave: function (args) {send("OpenProvisioningPackage");}});
+
+var OpenProvisioningPackageForRead = Module.findExportByName("provpackageapidll.dll", "OpenProvisioningPackageForRead")
+Interceptor.attach(OpenProvisioningPackageForRead, {onLeave: function (args) {send("OpenProvisioningPackageForRead");}});
+

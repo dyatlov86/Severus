@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("SDDS.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SDDS.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var SDDSCreateChxDictionary = Module.findExportByName("SDDS.dll", "SDDSCreateChxDictionary")
+Interceptor.attach(SDDSCreateChxDictionary, {onLeave: function (args) {send("SDDSCreateChxDictionary");}});
+
+var SDDSGetCharacterMappingObject = Module.findExportByName("SDDS.dll", "SDDSGetCharacterMappingObject")
+Interceptor.attach(SDDSGetCharacterMappingObject, {onLeave: function (args) {send("SDDSGetCharacterMappingObject");}});
+

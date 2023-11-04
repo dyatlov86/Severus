@@ -1,0 +1,183 @@
+var DllMain = Module.findExportByName("mantleaxl64.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var grAddEmulatedPrivateDisplay = Module.findExportByName("mantleaxl64.dll", "grAddEmulatedPrivateDisplay")
+Interceptor.attach(grAddEmulatedPrivateDisplay, {onLeave: function (args) {send("grAddEmulatedPrivateDisplay");}});
+
+var grAddPerfExperimentCounter = Module.findExportByName("mantleaxl64.dll", "grAddPerfExperimentCounter")
+Interceptor.attach(grAddPerfExperimentCounter, {onLeave: function (args) {send("grAddPerfExperimentCounter");}});
+
+var grAddPerfExperimentTrace = Module.findExportByName("mantleaxl64.dll", "grAddPerfExperimentTrace")
+Interceptor.attach(grAddPerfExperimentTrace, {onLeave: function (args) {send("grAddPerfExperimentTrace");}});
+
+var grBlankPrivateDisplay = Module.findExportByName("mantleaxl64.dll", "grBlankPrivateDisplay")
+Interceptor.attach(grBlankPrivateDisplay, {onLeave: function (args) {send("grBlankPrivateDisplay");}});
+
+var grCalibrateGpuTimestamp = Module.findExportByName("mantleaxl64.dll", "grCalibrateGpuTimestamp")
+Interceptor.attach(grCalibrateGpuTimestamp, {onLeave: function (args) {send("grCalibrateGpuTimestamp");}});
+
+var grCmdBeginPerfExperiment = Module.findExportByName("mantleaxl64.dll", "grCmdBeginPerfExperiment")
+Interceptor.attach(grCmdBeginPerfExperiment, {onLeave: function (args) {send("grCmdBeginPerfExperiment");}});
+
+var grCmdBindBorderColorPalette = Module.findExportByName("mantleaxl64.dll", "grCmdBindBorderColorPalette")
+Interceptor.attach(grCmdBindBorderColorPalette, {onLeave: function (args) {send("grCmdBindBorderColorPalette");}});
+
+var grCmdBindUserData = Module.findExportByName("mantleaxl64.dll", "grCmdBindUserData")
+Interceptor.attach(grCmdBindUserData, {onLeave: function (args) {send("grCmdBindUserData");}});
+
+var grCmdCopyOcclusionData = Module.findExportByName("mantleaxl64.dll", "grCmdCopyOcclusionData")
+Interceptor.attach(grCmdCopyOcclusionData, {onLeave: function (args) {send("grCmdCopyOcclusionData");}});
+
+var grCmdCopyRegisterToMemory = Module.findExportByName("mantleaxl64.dll", "grCmdCopyRegisterToMemory")
+Interceptor.attach(grCmdCopyRegisterToMemory, {onLeave: function (args) {send("grCmdCopyRegisterToMemory");}});
+
+var grCmdDispatchOffset = Module.findExportByName("mantleaxl64.dll", "grCmdDispatchOffset")
+Interceptor.attach(grCmdDispatchOffset, {onLeave: function (args) {send("grCmdDispatchOffset");}});
+
+var grCmdDispatchOffsetIndirect = Module.findExportByName("mantleaxl64.dll", "grCmdDispatchOffsetIndirect")
+Interceptor.attach(grCmdDispatchOffsetIndirect, {onLeave: function (args) {send("grCmdDispatchOffsetIndirect");}});
+
+var grCmdElse = Module.findExportByName("mantleaxl64.dll", "grCmdElse")
+Interceptor.attach(grCmdElse, {onLeave: function (args) {send("grCmdElse");}});
+
+var grCmdEndIf = Module.findExportByName("mantleaxl64.dll", "grCmdEndIf")
+Interceptor.attach(grCmdEndIf, {onLeave: function (args) {send("grCmdEndIf");}});
+
+var grCmdEndPerfExperiment = Module.findExportByName("mantleaxl64.dll", "grCmdEndPerfExperiment")
+Interceptor.attach(grCmdEndPerfExperiment, {onLeave: function (args) {send("grCmdEndPerfExperiment");}});
+
+var grCmdEndWhile = Module.findExportByName("mantleaxl64.dll", "grCmdEndWhile")
+Interceptor.attach(grCmdEndWhile, {onLeave: function (args) {send("grCmdEndWhile");}});
+
+var grCmdIf = Module.findExportByName("mantleaxl64.dll", "grCmdIf")
+Interceptor.attach(grCmdIf, {onLeave: function (args) {send("grCmdIf");}});
+
+var grCmdInsertTraceMarker = Module.findExportByName("mantleaxl64.dll", "grCmdInsertTraceMarker")
+Interceptor.attach(grCmdInsertTraceMarker, {onLeave: function (args) {send("grCmdInsertTraceMarker");}});
+
+var grCmdResetMemoryPredication = Module.findExportByName("mantleaxl64.dll", "grCmdResetMemoryPredication")
+Interceptor.attach(grCmdResetMemoryPredication, {onLeave: function (args) {send("grCmdResetMemoryPredication");}});
+
+var grCmdResetOcclusionPredication = Module.findExportByName("mantleaxl64.dll", "grCmdResetOcclusionPredication")
+Interceptor.attach(grCmdResetOcclusionPredication, {onLeave: function (args) {send("grCmdResetOcclusionPredication");}});
+
+var grCmdSetMemoryPredication = Module.findExportByName("mantleaxl64.dll", "grCmdSetMemoryPredication")
+Interceptor.attach(grCmdSetMemoryPredication, {onLeave: function (args) {send("grCmdSetMemoryPredication");}});
+
+var grCmdSetOcclusionPredication = Module.findExportByName("mantleaxl64.dll", "grCmdSetOcclusionPredication")
+Interceptor.attach(grCmdSetOcclusionPredication, {onLeave: function (args) {send("grCmdSetOcclusionPredication");}});
+
+var grCmdWaitMemoryValue = Module.findExportByName("mantleaxl64.dll", "grCmdWaitMemoryValue")
+Interceptor.attach(grCmdWaitMemoryValue, {onLeave: function (args) {send("grCmdWaitMemoryValue");}});
+
+var grCmdWaitRegisterValue = Module.findExportByName("mantleaxl64.dll", "grCmdWaitRegisterValue")
+Interceptor.attach(grCmdWaitRegisterValue, {onLeave: function (args) {send("grCmdWaitRegisterValue");}});
+
+var grCmdWhile = Module.findExportByName("mantleaxl64.dll", "grCmdWhile")
+Interceptor.attach(grCmdWhile, {onLeave: function (args) {send("grCmdWhile");}});
+
+var grCreateAdvancedMsaaState = Module.findExportByName("mantleaxl64.dll", "grCreateAdvancedMsaaState")
+Interceptor.attach(grCreateAdvancedMsaaState, {onLeave: function (args) {send("grCreateAdvancedMsaaState");}});
+
+var grCreateBorderColorPalette = Module.findExportByName("mantleaxl64.dll", "grCreateBorderColorPalette")
+Interceptor.attach(grCreateBorderColorPalette, {onLeave: function (args) {send("grCreateBorderColorPalette");}});
+
+var grCreateFmaskImageView = Module.findExportByName("mantleaxl64.dll", "grCreateFmaskImageView")
+Interceptor.attach(grCreateFmaskImageView, {onLeave: function (args) {send("grCreateFmaskImageView");}});
+
+var grCreatePerfExperiment = Module.findExportByName("mantleaxl64.dll", "grCreatePerfExperiment")
+Interceptor.attach(grCreatePerfExperiment, {onLeave: function (args) {send("grCreatePerfExperiment");}});
+
+var grCreatePrivateDisplayImage = Module.findExportByName("mantleaxl64.dll", "grCreatePrivateDisplayImage")
+Interceptor.attach(grCreatePrivateDisplayImage, {onLeave: function (args) {send("grCreatePrivateDisplayImage");}});
+
+var grCreateVirtualDisplay = Module.findExportByName("mantleaxl64.dll", "grCreateVirtualDisplay")
+Interceptor.attach(grCreateVirtualDisplay, {onLeave: function (args) {send("grCreateVirtualDisplay");}});
+
+var grDestroyVirtualDisplay = Module.findExportByName("mantleaxl64.dll", "grDestroyVirtualDisplay")
+Interceptor.attach(grDestroyVirtualDisplay, {onLeave: function (args) {send("grDestroyVirtualDisplay");}});
+
+var grDisablePrivateDisplay = Module.findExportByName("mantleaxl64.dll", "grDisablePrivateDisplay")
+Interceptor.attach(grDisablePrivateDisplay, {onLeave: function (args) {send("grDisablePrivateDisplay");}});
+
+var grEnablePrivateDisplay = Module.findExportByName("mantleaxl64.dll", "grEnablePrivateDisplay")
+Interceptor.attach(grEnablePrivateDisplay, {onLeave: function (args) {send("grEnablePrivateDisplay");}});
+
+var grEnablePrivateDisplayAudio = Module.findExportByName("mantleaxl64.dll", "grEnablePrivateDisplayAudio")
+Interceptor.attach(grEnablePrivateDisplayAudio, {onLeave: function (args) {send("grEnablePrivateDisplayAudio");}});
+
+var grFinalizePerfExperiment = Module.findExportByName("mantleaxl64.dll", "grFinalizePerfExperiment")
+Interceptor.attach(grFinalizePerfExperiment, {onLeave: function (args) {send("grFinalizePerfExperiment");}});
+
+var grGetExtensionLibraryVersion = Module.findExportByName("mantleaxl64.dll", "grGetExtensionLibraryVersion")
+Interceptor.attach(grGetExtensionLibraryVersion, {onLeave: function (args) {send("grGetExtensionLibraryVersion");}});
+
+var grGetPrivateDisplayScanLine = Module.findExportByName("mantleaxl64.dll", "grGetPrivateDisplayScanLine")
+Interceptor.attach(grGetPrivateDisplayScanLine, {onLeave: function (args) {send("grGetPrivateDisplayScanLine");}});
+
+var grGetPrivateDisplays = Module.findExportByName("mantleaxl64.dll", "grGetPrivateDisplays")
+Interceptor.attach(grGetPrivateDisplays, {onLeave: function (args) {send("grGetPrivateDisplays");}});
+
+var grGetVirtualDisplayProperties = Module.findExportByName("mantleaxl64.dll", "grGetVirtualDisplayProperties")
+Interceptor.attach(grGetVirtualDisplayProperties, {onLeave: function (args) {send("grGetVirtualDisplayProperties");}});
+
+var grOpenExternalSharedPrivateDisplayImage = Module.findExportByName("mantleaxl64.dll", "grOpenExternalSharedPrivateDisplayImage")
+Interceptor.attach(grOpenExternalSharedPrivateDisplayImage, {onLeave: function (args) {send("grOpenExternalSharedPrivateDisplayImage");}});
+
+var grPrivateDisplayPresent = Module.findExportByName("mantleaxl64.dll", "grPrivateDisplayPresent")
+Interceptor.attach(grPrivateDisplayPresent, {onLeave: function (args) {send("grPrivateDisplayPresent");}});
+
+var grQueueDelay = Module.findExportByName("mantleaxl64.dll", "grQueueDelay")
+Interceptor.attach(grQueueDelay, {onLeave: function (args) {send("grQueueDelay");}});
+
+var grQueueDelayAfterVsync = Module.findExportByName("mantleaxl64.dll", "grQueueDelayAfterVsync")
+Interceptor.attach(grQueueDelayAfterVsync, {onLeave: function (args) {send("grQueueDelayAfterVsync");}});
+
+var grQueueMigrateObjects = Module.findExportByName("mantleaxl64.dll", "grQueueMigrateObjects")
+Interceptor.attach(grQueueMigrateObjects, {onLeave: function (args) {send("grQueueMigrateObjects");}});
+
+var grQueueSetExecutionPriority = Module.findExportByName("mantleaxl64.dll", "grQueueSetExecutionPriority")
+Interceptor.attach(grQueueSetExecutionPriority, {onLeave: function (args) {send("grQueueSetExecutionPriority");}});
+
+var grRegisterPowerEvent = Module.findExportByName("mantleaxl64.dll", "grRegisterPowerEvent")
+Interceptor.attach(grRegisterPowerEvent, {onLeave: function (args) {send("grRegisterPowerEvent");}});
+
+var grRegisterPrivateDisplayEvent = Module.findExportByName("mantleaxl64.dll", "grRegisterPrivateDisplayEvent")
+Interceptor.attach(grRegisterPrivateDisplayEvent, {onLeave: function (args) {send("grRegisterPrivateDisplayEvent");}});
+
+var grRemoveEmulatedPrivateDisplay = Module.findExportByName("mantleaxl64.dll", "grRemoveEmulatedPrivateDisplay")
+Interceptor.attach(grRemoveEmulatedPrivateDisplay, {onLeave: function (args) {send("grRemoveEmulatedPrivateDisplay");}});
+
+var grSetEventAfterVsync = Module.findExportByName("mantleaxl64.dll", "grSetEventAfterVsync")
+Interceptor.attach(grSetEventAfterVsync, {onLeave: function (args) {send("grSetEventAfterVsync");}});
+
+var grSetPowerDefaultPerformance = Module.findExportByName("mantleaxl64.dll", "grSetPowerDefaultPerformance")
+Interceptor.attach(grSetPowerDefaultPerformance, {onLeave: function (args) {send("grSetPowerDefaultPerformance");}});
+
+var grSetPowerProfile = Module.findExportByName("mantleaxl64.dll", "grSetPowerProfile")
+Interceptor.attach(grSetPowerProfile, {onLeave: function (args) {send("grSetPowerProfile");}});
+
+var grSetPowerRegions = Module.findExportByName("mantleaxl64.dll", "grSetPowerRegions")
+Interceptor.attach(grSetPowerRegions, {onLeave: function (args) {send("grSetPowerRegions");}});
+
+var grSetPrivateDisplayPowerMode = Module.findExportByName("mantleaxl64.dll", "grSetPrivateDisplayPowerMode")
+Interceptor.attach(grSetPrivateDisplayPowerMode, {onLeave: function (args) {send("grSetPrivateDisplayPowerMode");}});
+
+var grSetPrivateDisplaySettings = Module.findExportByName("mantleaxl64.dll", "grSetPrivateDisplaySettings")
+Interceptor.attach(grSetPrivateDisplaySettings, {onLeave: function (args) {send("grSetPrivateDisplaySettings");}});
+
+var grUpdateBorderColorPalette = Module.findExportByName("mantleaxl64.dll", "grUpdateBorderColorPalette")
+Interceptor.attach(grUpdateBorderColorPalette, {onLeave: function (args) {send("grUpdateBorderColorPalette");}});
+
+var grWinAllocMemory = Module.findExportByName("mantleaxl64.dll", "grWinAllocMemory")
+Interceptor.attach(grWinAllocMemory, {onLeave: function (args) {send("grWinAllocMemory");}});
+
+var grWinOpenExternalSharedImage = Module.findExportByName("mantleaxl64.dll", "grWinOpenExternalSharedImage")
+Interceptor.attach(grWinOpenExternalSharedImage, {onLeave: function (args) {send("grWinOpenExternalSharedImage");}});
+
+var grWinOpenExternalSharedMemory = Module.findExportByName("mantleaxl64.dll", "grWinOpenExternalSharedMemory")
+Interceptor.attach(grWinOpenExternalSharedMemory, {onLeave: function (args) {send("grWinOpenExternalSharedMemory");}});
+
+var grWinOpenExternalSharedQueueSemaphore = Module.findExportByName("mantleaxl64.dll", "grWinOpenExternalSharedQueueSemaphore")
+Interceptor.attach(grWinOpenExternalSharedQueueSemaphore, {onLeave: function (args) {send("grWinOpenExternalSharedQueueSemaphore");}});
+

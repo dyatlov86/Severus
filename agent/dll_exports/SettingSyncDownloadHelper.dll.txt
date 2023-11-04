@@ -1,0 +1,3 @@
+var DownloadSettingUnits = Module.findExportByName("SettingSyncDownloadHelper.dll", "DownloadSettingUnits")
+Interceptor.attach(DownloadSettingUnits, {onLeave: function (args) {send("DownloadSettingUnits");}});
+

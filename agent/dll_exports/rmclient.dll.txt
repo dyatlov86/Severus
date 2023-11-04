@@ -1,0 +1,474 @@
+var AppModelQueryLifecyclePolicy = Module.findExportByName("rmclient.dll", "AppModelQueryLifecyclePolicy")
+Interceptor.attach(AppModelQueryLifecyclePolicy, {onLeave: function (args) {send("AppModelQueryLifecyclePolicy");}});
+
+var CreateActivityCoordinatorPolicy = Module.findExportByName("rmclient.dll", "CreateActivityCoordinatorPolicy")
+Interceptor.attach(CreateActivityCoordinatorPolicy, {onLeave: function (args) {send("CreateActivityCoordinatorPolicy");}});
+
+var CrmActivityAllocate = Module.findExportByName("rmclient.dll", "CrmActivityAllocate")
+Interceptor.attach(CrmActivityAllocate, {onLeave: function (args) {send("CrmActivityAllocate");}});
+
+var CrmActivityFree = Module.findExportByName("rmclient.dll", "CrmActivityFree")
+Interceptor.attach(CrmActivityFree, {onLeave: function (args) {send("CrmActivityFree");}});
+
+var CrmActivityFreeWindowClosedReasons = Module.findExportByName("rmclient.dll", "CrmActivityFreeWindowClosedReasons")
+Interceptor.attach(CrmActivityFreeWindowClosedReasons, {onLeave: function (args) {send("CrmActivityFreeWindowClosedReasons");}});
+
+var CrmActivityQueryWindowClosedReasons = Module.findExportByName("rmclient.dll", "CrmActivityQueryWindowClosedReasons")
+Interceptor.attach(CrmActivityQueryWindowClosedReasons, {onLeave: function (args) {send("CrmActivityQueryWindowClosedReasons");}});
+
+var CrmActivityRenew = Module.findExportByName("rmclient.dll", "CrmActivityRenew")
+Interceptor.attach(CrmActivityRenew, {onLeave: function (args) {send("CrmActivityRenew");}});
+
+var CrmActivityRequest = Module.findExportByName("rmclient.dll", "CrmActivityRequest")
+Interceptor.attach(CrmActivityRequest, {onLeave: function (args) {send("CrmActivityRequest");}});
+
+var CrmActivityRequestAndWait = Module.findExportByName("rmclient.dll", "CrmActivityRequestAndWait")
+Interceptor.attach(CrmActivityRequestAndWait, {onLeave: function (args) {send("CrmActivityRequestAndWait");}});
+
+var CrmActivityStart = Module.findExportByName("rmclient.dll", "CrmActivityStart")
+Interceptor.attach(CrmActivityStart, {onLeave: function (args) {send("CrmActivityStart");}});
+
+var CrmActivityStop = Module.findExportByName("rmclient.dll", "CrmActivityStop")
+Interceptor.attach(CrmActivityStop, {onLeave: function (args) {send("CrmActivityStop");}});
+
+var CrmActivityWindowClosedReasonSubscribe = Module.findExportByName("rmclient.dll", "CrmActivityWindowClosedReasonSubscribe")
+Interceptor.attach(CrmActivityWindowClosedReasonSubscribe, {onLeave: function (args) {send("CrmActivityWindowClosedReasonSubscribe");}});
+
+var CrmActivityWindowClosedReasonUnsubscribe = Module.findExportByName("rmclient.dll", "CrmActivityWindowClosedReasonUnsubscribe")
+Interceptor.attach(CrmActivityWindowClosedReasonUnsubscribe, {onLeave: function (args) {send("CrmActivityWindowClosedReasonUnsubscribe");}});
+
+var CrmRegister = Module.findExportByName("rmclient.dll", "CrmRegister")
+Interceptor.attach(CrmRegister, {onLeave: function (args) {send("CrmRegister");}});
+
+var CrmSubscribe = Module.findExportByName("rmclient.dll", "CrmSubscribe")
+Interceptor.attach(CrmSubscribe, {onLeave: function (args) {send("CrmSubscribe");}});
+
+var CrmUnregister = Module.findExportByName("rmclient.dll", "CrmUnregister")
+Interceptor.attach(CrmUnregister, {onLeave: function (args) {send("CrmUnregister");}});
+
+var CrmUnsubscribe = Module.findExportByName("rmclient.dll", "CrmUnsubscribe")
+Interceptor.attach(CrmUnsubscribe, {onLeave: function (args) {send("CrmUnsubscribe");}});
+
+var CrmWorkStart = Module.findExportByName("rmclient.dll", "CrmWorkStart")
+Interceptor.attach(CrmWorkStart, {onLeave: function (args) {send("CrmWorkStart");}});
+
+var CrmWorkStop = Module.findExportByName("rmclient.dll", "CrmWorkStop")
+Interceptor.attach(CrmWorkStop, {onLeave: function (args) {send("CrmWorkStop");}});
+
+var DestroyActivityCoordinatorPolicy = Module.findExportByName("rmclient.dll", "DestroyActivityCoordinatorPolicy")
+Interceptor.attach(DestroyActivityCoordinatorPolicy, {onLeave: function (args) {send("DestroyActivityCoordinatorPolicy");}});
+
+var DllCanUnloadNow = Module.findExportByName("rmclient.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("rmclient.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("rmclient.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetActivityCoordinatorPolicyResourceCondition = Module.findExportByName("rmclient.dll", "GetActivityCoordinatorPolicyResourceCondition")
+Interceptor.attach(GetActivityCoordinatorPolicyResourceCondition, {onLeave: function (args) {send("GetActivityCoordinatorPolicyResourceCondition");}});
+
+var HamAddDependency = Module.findExportByName("rmclient.dll", "HamAddDependency")
+Interceptor.attach(HamAddDependency, {onLeave: function (args) {send("HamAddDependency");}});
+
+var HamAddHostDependency = Module.findExportByName("rmclient.dll", "HamAddHostDependency")
+Interceptor.attach(HamAddHostDependency, {onLeave: function (args) {send("HamAddHostDependency");}});
+
+var HamAssociateActivityContext = Module.findExportByName("rmclient.dll", "HamAssociateActivityContext")
+Interceptor.attach(HamAssociateActivityContext, {onLeave: function (args) {send("HamAssociateActivityContext");}});
+
+var HamCloseActivity = Module.findExportByName("rmclient.dll", "HamCloseActivity")
+Interceptor.attach(HamCloseActivity, {onLeave: function (args) {send("HamCloseActivity");}});
+
+var HamCompleteActivityRestore = Module.findExportByName("rmclient.dll", "HamCompleteActivityRestore")
+Interceptor.attach(HamCompleteActivityRestore, {onLeave: function (args) {send("HamCompleteActivityRestore");}});
+
+var HamCompleteExtendedExecution = Module.findExportByName("rmclient.dll", "HamCompleteExtendedExecution")
+Interceptor.attach(HamCompleteExtendedExecution, {onLeave: function (args) {send("HamCompleteExtendedExecution");}});
+
+var HamConnectForDebugging = Module.findExportByName("rmclient.dll", "HamConnectForDebugging")
+Interceptor.attach(HamConnectForDebugging, {onLeave: function (args) {send("HamConnectForDebugging");}});
+
+var HamConnectForExtendedExecution = Module.findExportByName("rmclient.dll", "HamConnectForExtendedExecution")
+Interceptor.attach(HamConnectForExtendedExecution, {onLeave: function (args) {send("HamConnectForExtendedExecution");}});
+
+var HamConnectForFullTrust = Module.findExportByName("rmclient.dll", "HamConnectForFullTrust")
+Interceptor.attach(HamConnectForFullTrust, {onLeave: function (args) {send("HamConnectForFullTrust");}});
+
+var HamConnectForServicing = Module.findExportByName("rmclient.dll", "HamConnectForServicing")
+Interceptor.attach(HamConnectForServicing, {onLeave: function (args) {send("HamConnectForServicing");}});
+
+var HamConnectForSessionState = Module.findExportByName("rmclient.dll", "HamConnectForSessionState")
+Interceptor.attach(HamConnectForSessionState, {onLeave: function (args) {send("HamConnectForSessionState");}});
+
+var HamConnectForStateChangeNotifications = Module.findExportByName("rmclient.dll", "HamConnectForStateChangeNotifications")
+Interceptor.attach(HamConnectForStateChangeNotifications, {onLeave: function (args) {send("HamConnectForStateChangeNotifications");}});
+
+var HamConnectToServer = Module.findExportByName("rmclient.dll", "HamConnectToServer")
+Interceptor.attach(HamConnectToServer, {onLeave: function (args) {send("HamConnectToServer");}});
+
+var HamConnectToServerEx = Module.findExportByName("rmclient.dll", "HamConnectToServerEx")
+Interceptor.attach(HamConnectToServerEx, {onLeave: function (args) {send("HamConnectToServerEx");}});
+
+var HamCreateActivity = Module.findExportByName("rmclient.dll", "HamCreateActivity")
+Interceptor.attach(HamCreateActivity, {onLeave: function (args) {send("HamCreateActivity");}});
+
+var HamCreateActivityEx = Module.findExportByName("rmclient.dll", "HamCreateActivityEx")
+Interceptor.attach(HamCreateActivityEx, {onLeave: function (args) {send("HamCreateActivityEx");}});
+
+var HamCreateActivityForProcess = Module.findExportByName("rmclient.dll", "HamCreateActivityForProcess")
+Interceptor.attach(HamCreateActivityForProcess, {onLeave: function (args) {send("HamCreateActivityForProcess");}});
+
+var HamCreateAutoRestartActivity = Module.findExportByName("rmclient.dll", "HamCreateAutoRestartActivity")
+Interceptor.attach(HamCreateAutoRestartActivity, {onLeave: function (args) {send("HamCreateAutoRestartActivity");}});
+
+var HamCreateExtendedExecution = Module.findExportByName("rmclient.dll", "HamCreateExtendedExecution")
+Interceptor.attach(HamCreateExtendedExecution, {onLeave: function (args) {send("HamCreateExtendedExecution");}});
+
+var HamDebugClosePackageHandle = Module.findExportByName("rmclient.dll", "HamDebugClosePackageHandle")
+Interceptor.attach(HamDebugClosePackageHandle, {onLeave: function (args) {send("HamDebugClosePackageHandle");}});
+
+var HamDebugModeEnable = Module.findExportByName("rmclient.dll", "HamDebugModeEnable")
+Interceptor.attach(HamDebugModeEnable, {onLeave: function (args) {send("HamDebugModeEnable");}});
+
+var HamDebugOpenPackageHandle = Module.findExportByName("rmclient.dll", "HamDebugOpenPackageHandle")
+Interceptor.attach(HamDebugOpenPackageHandle, {onLeave: function (args) {send("HamDebugOpenPackageHandle");}});
+
+var HamDebugQueryPackageState = Module.findExportByName("rmclient.dll", "HamDebugQueryPackageState")
+Interceptor.attach(HamDebugQueryPackageState, {onLeave: function (args) {send("HamDebugQueryPackageState");}});
+
+var HamDebugSuspendPackage = Module.findExportByName("rmclient.dll", "HamDebugSuspendPackage")
+Interceptor.attach(HamDebugSuspendPackage, {onLeave: function (args) {send("HamDebugSuspendPackage");}});
+
+var HamDebugTerminatePackage = Module.findExportByName("rmclient.dll", "HamDebugTerminatePackage")
+Interceptor.attach(HamDebugTerminatePackage, {onLeave: function (args) {send("HamDebugTerminatePackage");}});
+
+var HamDisconnectForDebugging = Module.findExportByName("rmclient.dll", "HamDisconnectForDebugging")
+Interceptor.attach(HamDisconnectForDebugging, {onLeave: function (args) {send("HamDisconnectForDebugging");}});
+
+var HamDisconnectForExtendedExecution = Module.findExportByName("rmclient.dll", "HamDisconnectForExtendedExecution")
+Interceptor.attach(HamDisconnectForExtendedExecution, {onLeave: function (args) {send("HamDisconnectForExtendedExecution");}});
+
+var HamDisconnectForFullTrust = Module.findExportByName("rmclient.dll", "HamDisconnectForFullTrust")
+Interceptor.attach(HamDisconnectForFullTrust, {onLeave: function (args) {send("HamDisconnectForFullTrust");}});
+
+var HamDisconnectForServicing = Module.findExportByName("rmclient.dll", "HamDisconnectForServicing")
+Interceptor.attach(HamDisconnectForServicing, {onLeave: function (args) {send("HamDisconnectForServicing");}});
+
+var HamDisconnectForSessionState = Module.findExportByName("rmclient.dll", "HamDisconnectForSessionState")
+Interceptor.attach(HamDisconnectForSessionState, {onLeave: function (args) {send("HamDisconnectForSessionState");}});
+
+var HamDisconnectForStateChangeNotifications = Module.findExportByName("rmclient.dll", "HamDisconnectForStateChangeNotifications")
+Interceptor.attach(HamDisconnectForStateChangeNotifications, {onLeave: function (args) {send("HamDisconnectForStateChangeNotifications");}});
+
+var HamDisconnectFromServer = Module.findExportByName("rmclient.dll", "HamDisconnectFromServer")
+Interceptor.attach(HamDisconnectFromServer, {onLeave: function (args) {send("HamDisconnectFromServer");}});
+
+var HamFreeBuffer = Module.findExportByName("rmclient.dll", "HamFreeBuffer")
+Interceptor.attach(HamFreeBuffer, {onLeave: function (args) {send("HamFreeBuffer");}});
+
+var HamFullTrustClosePackageHandle = Module.findExportByName("rmclient.dll", "HamFullTrustClosePackageHandle")
+Interceptor.attach(HamFullTrustClosePackageHandle, {onLeave: function (args) {send("HamFullTrustClosePackageHandle");}});
+
+var HamFullTrustOpenPackageHandle = Module.findExportByName("rmclient.dll", "HamFullTrustOpenPackageHandle")
+Interceptor.attach(HamFullTrustOpenPackageHandle, {onLeave: function (args) {send("HamFullTrustOpenPackageHandle");}});
+
+var HamFullTrustTerminatePackage = Module.findExportByName("rmclient.dll", "HamFullTrustTerminatePackage")
+Interceptor.attach(HamFullTrustTerminatePackage, {onLeave: function (args) {send("HamFullTrustTerminatePackage");}});
+
+var HamGetApplicationInterruptiveUIState = Module.findExportByName("rmclient.dll", "HamGetApplicationInterruptiveUIState")
+Interceptor.attach(HamGetApplicationInterruptiveUIState, {onLeave: function (args) {send("HamGetApplicationInterruptiveUIState");}});
+
+var HamGetApplicationStateForPsmKey = Module.findExportByName("rmclient.dll", "HamGetApplicationStateForPsmKey")
+Interceptor.attach(HamGetApplicationStateForPsmKey, {onLeave: function (args) {send("HamGetApplicationStateForPsmKey");}});
+
+var HamGetInterruptiveUIStateForAumid = Module.findExportByName("rmclient.dll", "HamGetInterruptiveUIStateForAumid")
+Interceptor.attach(HamGetInterruptiveUIStateForAumid, {onLeave: function (args) {send("HamGetInterruptiveUIStateForAumid");}});
+
+var HamGetPackageInterruptiveUIState = Module.findExportByName("rmclient.dll", "HamGetPackageInterruptiveUIState")
+Interceptor.attach(HamGetPackageInterruptiveUIState, {onLeave: function (args) {send("HamGetPackageInterruptiveUIState");}});
+
+var HamGetStateSnapshotForAumid = Module.findExportByName("rmclient.dll", "HamGetStateSnapshotForAumid")
+Interceptor.attach(HamGetStateSnapshotForAumid, {onLeave: function (args) {send("HamGetStateSnapshotForAumid");}});
+
+var HamHostIdCreateSingleUse = Module.findExportByName("rmclient.dll", "HamHostIdCreateSingleUse")
+Interceptor.attach(HamHostIdCreateSingleUse, {onLeave: function (args) {send("HamHostIdCreateSingleUse");}});
+
+var HamHostIdFind = Module.findExportByName("rmclient.dll", "HamHostIdFind")
+Interceptor.attach(HamHostIdFind, {onLeave: function (args) {send("HamHostIdFind");}});
+
+var HamHostIdFindOrCreate = Module.findExportByName("rmclient.dll", "HamHostIdFindOrCreate")
+Interceptor.attach(HamHostIdFindOrCreate, {onLeave: function (args) {send("HamHostIdFindOrCreate");}});
+
+var HamHostIdInitializeKey = Module.findExportByName("rmclient.dll", "HamHostIdInitializeKey")
+Interceptor.attach(HamHostIdInitializeKey, {onLeave: function (args) {send("HamHostIdInitializeKey");}});
+
+var HamHostIdRetrieveDynamicId = Module.findExportByName("rmclient.dll", "HamHostIdRetrieveDynamicId")
+Interceptor.attach(HamHostIdRetrieveDynamicId, {onLeave: function (args) {send("HamHostIdRetrieveDynamicId");}});
+
+var HamInitializeActivityAutoRestartProperties = Module.findExportByName("rmclient.dll", "HamInitializeActivityAutoRestartProperties")
+Interceptor.attach(HamInitializeActivityAutoRestartProperties, {onLeave: function (args) {send("HamInitializeActivityAutoRestartProperties");}});
+
+var HamInitializeActivityDynamicProperties = Module.findExportByName("rmclient.dll", "HamInitializeActivityDynamicProperties")
+Interceptor.attach(HamInitializeActivityDynamicProperties, {onLeave: function (args) {send("HamInitializeActivityDynamicProperties");}});
+
+var HamInitializeStateChangeFlags = Module.findExportByName("rmclient.dll", "HamInitializeStateChangeFlags")
+Interceptor.attach(HamInitializeStateChangeFlags, {onLeave: function (args) {send("HamInitializeStateChangeFlags");}});
+
+var HamIsHostBeingDebugged = Module.findExportByName("rmclient.dll", "HamIsHostBeingDebugged")
+Interceptor.attach(HamIsHostBeingDebugged, {onLeave: function (args) {send("HamIsHostBeingDebugged");}});
+
+var HamPendDiagnosticsToWaitTimeout = Module.findExportByName("rmclient.dll", "HamPendDiagnosticsToWaitTimeout")
+Interceptor.attach(HamPendDiagnosticsToWaitTimeout, {onLeave: function (args) {send("HamPendDiagnosticsToWaitTimeout");}});
+
+var HamPlmNotifyNewSession = Module.findExportByName("rmclient.dll", "HamPlmNotifyNewSession")
+Interceptor.attach(HamPlmNotifyNewSession, {onLeave: function (args) {send("HamPlmNotifyNewSession");}});
+
+var HamPopulateActivityProperties = Module.findExportByName("rmclient.dll", "HamPopulateActivityProperties")
+Interceptor.attach(HamPopulateActivityProperties, {onLeave: function (args) {send("HamPopulateActivityProperties");}});
+
+var HamPopulateActivityPropertiesByClass = Module.findExportByName("rmclient.dll", "HamPopulateActivityPropertiesByClass")
+Interceptor.attach(HamPopulateActivityPropertiesByClass, {onLeave: function (args) {send("HamPopulateActivityPropertiesByClass");}});
+
+var HamQueryActivityPendDiagnostics = Module.findExportByName("rmclient.dll", "HamQueryActivityPendDiagnostics")
+Interceptor.attach(HamQueryActivityPendDiagnostics, {onLeave: function (args) {send("HamQueryActivityPendDiagnostics");}});
+
+var HamQueryApplicationUsageInfo = Module.findExportByName("rmclient.dll", "HamQueryApplicationUsageInfo")
+Interceptor.attach(HamQueryApplicationUsageInfo, {onLeave: function (args) {send("HamQueryApplicationUsageInfo");}});
+
+var HamQueryCallerTerminateReason = Module.findExportByName("rmclient.dll", "HamQueryCallerTerminateReason")
+Interceptor.attach(HamQueryCallerTerminateReason, {onLeave: function (args) {send("HamQueryCallerTerminateReason");}});
+
+var HamQueryHostStateSummary = Module.findExportByName("rmclient.dll", "HamQueryHostStateSummary")
+Interceptor.attach(HamQueryHostStateSummary, {onLeave: function (args) {send("HamQueryHostStateSummary");}});
+
+var HamQueryPackageStateSummary = Module.findExportByName("rmclient.dll", "HamQueryPackageStateSummary")
+Interceptor.attach(HamQueryPackageStateSummary, {onLeave: function (args) {send("HamQueryPackageStateSummary");}});
+
+var HamQueryPackageUsageInfo = Module.findExportByName("rmclient.dll", "HamQueryPackageUsageInfo")
+Interceptor.attach(HamQueryPackageUsageInfo, {onLeave: function (args) {send("HamQueryPackageUsageInfo");}});
+
+var HamQueryTaskCompletionsForTerminateGraph = Module.findExportByName("rmclient.dll", "HamQueryTaskCompletionsForTerminateGraph")
+Interceptor.attach(HamQueryTaskCompletionsForTerminateGraph, {onLeave: function (args) {send("HamQueryTaskCompletionsForTerminateGraph");}});
+
+var HamRegisterDesktopProcessWithAppContainerToken = Module.findExportByName("rmclient.dll", "HamRegisterDesktopProcessWithAppContainerToken")
+Interceptor.attach(HamRegisterDesktopProcessWithAppContainerToken, {onLeave: function (args) {send("HamRegisterDesktopProcessWithAppContainerToken");}});
+
+var HamRemoveDependency = Module.findExportByName("rmclient.dll", "HamRemoveDependency")
+Interceptor.attach(HamRemoveDependency, {onLeave: function (args) {send("HamRemoveDependency");}});
+
+var HamRemoveHostDependency = Module.findExportByName("rmclient.dll", "HamRemoveHostDependency")
+Interceptor.attach(HamRemoveHostDependency, {onLeave: function (args) {send("HamRemoveHostDependency");}});
+
+var HamResetExternalResourcePriority = Module.findExportByName("rmclient.dll", "HamResetExternalResourcePriority")
+Interceptor.attach(HamResetExternalResourcePriority, {onLeave: function (args) {send("HamResetExternalResourcePriority");}});
+
+var HamServicingClosePackageHandle = Module.findExportByName("rmclient.dll", "HamServicingClosePackageHandle")
+Interceptor.attach(HamServicingClosePackageHandle, {onLeave: function (args) {send("HamServicingClosePackageHandle");}});
+
+var HamServicingEnableServicing = Module.findExportByName("rmclient.dll", "HamServicingEnableServicing")
+Interceptor.attach(HamServicingEnableServicing, {onLeave: function (args) {send("HamServicingEnableServicing");}});
+
+var HamServicingOpenPackageHandle = Module.findExportByName("rmclient.dll", "HamServicingOpenPackageHandle")
+Interceptor.attach(HamServicingOpenPackageHandle, {onLeave: function (args) {send("HamServicingOpenPackageHandle");}});
+
+var HamServicingQueryActiveAppsInPackage = Module.findExportByName("rmclient.dll", "HamServicingQueryActiveAppsInPackage")
+Interceptor.attach(HamServicingQueryActiveAppsInPackage, {onLeave: function (args) {send("HamServicingQueryActiveAppsInPackage");}});
+
+var HamServicingTerminatePackage = Module.findExportByName("rmclient.dll", "HamServicingTerminatePackage")
+Interceptor.attach(HamServicingTerminatePackage, {onLeave: function (args) {send("HamServicingTerminatePackage");}});
+
+var HamSessionStateLogoffSession = Module.findExportByName("rmclient.dll", "HamSessionStateLogoffSession")
+Interceptor.attach(HamSessionStateLogoffSession, {onLeave: function (args) {send("HamSessionStateLogoffSession");}});
+
+var HamSessionStateLogoffUser = Module.findExportByName("rmclient.dll", "HamSessionStateLogoffUser")
+Interceptor.attach(HamSessionStateLogoffUser, {onLeave: function (args) {send("HamSessionStateLogoffUser");}});
+
+var HamSetCommitProperties = Module.findExportByName("rmclient.dll", "HamSetCommitProperties")
+Interceptor.attach(HamSetCommitProperties, {onLeave: function (args) {send("HamSetCommitProperties");}});
+
+var HamSetExternalResourcePriority = Module.findExportByName("rmclient.dll", "HamSetExternalResourcePriority")
+Interceptor.attach(HamSetExternalResourcePriority, {onLeave: function (args) {send("HamSetExternalResourcePriority");}});
+
+var HamStartActivityAsync = Module.findExportByName("rmclient.dll", "HamStartActivityAsync")
+Interceptor.attach(HamStartActivityAsync, {onLeave: function (args) {send("HamStartActivityAsync");}});
+
+var HamStartExtendedExecutionAsync = Module.findExportByName("rmclient.dll", "HamStartExtendedExecutionAsync")
+Interceptor.attach(HamStartExtendedExecutionAsync, {onLeave: function (args) {send("HamStartExtendedExecutionAsync");}});
+
+var HamStopActivity = Module.findExportByName("rmclient.dll", "HamStopActivity")
+Interceptor.attach(HamStopActivity, {onLeave: function (args) {send("HamStopActivity");}});
+
+var HamTerminateActivityHost = Module.findExportByName("rmclient.dll", "HamTerminateActivityHost")
+Interceptor.attach(HamTerminateActivityHost, {onLeave: function (args) {send("HamTerminateActivityHost");}});
+
+var HamTerminateActivityHostEx = Module.findExportByName("rmclient.dll", "HamTerminateActivityHostEx")
+Interceptor.attach(HamTerminateActivityHostEx, {onLeave: function (args) {send("HamTerminateActivityHostEx");}});
+
+var HamTerminateApplicationHost = Module.findExportByName("rmclient.dll", "HamTerminateApplicationHost")
+Interceptor.attach(HamTerminateApplicationHost, {onLeave: function (args) {send("HamTerminateApplicationHost");}});
+
+var HamTerminateHostOnProcessExit = Module.findExportByName("rmclient.dll", "HamTerminateHostOnProcessExit")
+Interceptor.attach(HamTerminateHostOnProcessExit, {onLeave: function (args) {send("HamTerminateHostOnProcessExit");}});
+
+var HamTerminateIfSuspendedByProcess = Module.findExportByName("rmclient.dll", "HamTerminateIfSuspendedByProcess")
+Interceptor.attach(HamTerminateIfSuspendedByProcess, {onLeave: function (args) {send("HamTerminateIfSuspendedByProcess");}});
+
+var HamTerminateSelf = Module.findExportByName("rmclient.dll", "HamTerminateSelf")
+Interceptor.attach(HamTerminateSelf, {onLeave: function (args) {send("HamTerminateSelf");}});
+
+var HamTerminateSelfEx = Module.findExportByName("rmclient.dll", "HamTerminateSelfEx")
+Interceptor.attach(HamTerminateSelfEx, {onLeave: function (args) {send("HamTerminateSelfEx");}});
+
+var HamTerminateSelfOnProcessExit = Module.findExportByName("rmclient.dll", "HamTerminateSelfOnProcessExit")
+Interceptor.attach(HamTerminateSelfOnProcessExit, {onLeave: function (args) {send("HamTerminateSelfOnProcessExit");}});
+
+var HamTryEstimateRemainingQuiesceTime = Module.findExportByName("rmclient.dll", "HamTryEstimateRemainingQuiesceTime")
+Interceptor.attach(HamTryEstimateRemainingQuiesceTime, {onLeave: function (args) {send("HamTryEstimateRemainingQuiesceTime");}});
+
+var HamUpdateActivityProperties = Module.findExportByName("rmclient.dll", "HamUpdateActivityProperties")
+Interceptor.attach(HamUpdateActivityProperties, {onLeave: function (args) {send("HamUpdateActivityProperties");}});
+
+var RmAccessCheck = Module.findExportByName("rmclient.dll", "RmAccessCheck")
+Interceptor.attach(RmAccessCheck, {onLeave: function (args) {send("RmAccessCheck");}});
+
+var RmAccessCheckOnSelf = Module.findExportByName("rmclient.dll", "RmAccessCheckOnSelf")
+Interceptor.attach(RmAccessCheckOnSelf, {onLeave: function (args) {send("RmAccessCheckOnSelf");}});
+
+var RmAcquireResourceSet = Module.findExportByName("rmclient.dll", "RmAcquireResourceSet")
+Interceptor.attach(RmAcquireResourceSet, {onLeave: function (args) {send("RmAcquireResourceSet");}});
+
+var RmAcquireResourceSetEx = Module.findExportByName("rmclient.dll", "RmAcquireResourceSetEx")
+Interceptor.attach(RmAcquireResourceSetEx, {onLeave: function (args) {send("RmAcquireResourceSetEx");}});
+
+var RmAcquireResources = Module.findExportByName("rmclient.dll", "RmAcquireResources")
+Interceptor.attach(RmAcquireResources, {onLeave: function (args) {send("RmAcquireResources");}});
+
+var RmActivityImportanceInitialize = Module.findExportByName("rmclient.dll", "RmActivityImportanceInitialize")
+Interceptor.attach(RmActivityImportanceInitialize, {onLeave: function (args) {send("RmActivityImportanceInitialize");}});
+
+var RmActivityImportanceTakeMostImportant = Module.findExportByName("rmclient.dll", "RmActivityImportanceTakeMostImportant")
+Interceptor.attach(RmActivityImportanceTakeMostImportant, {onLeave: function (args) {send("RmActivityImportanceTakeMostImportant");}});
+
+var RmApplyResourceSet = Module.findExportByName("rmclient.dll", "RmApplyResourceSet")
+Interceptor.attach(RmApplyResourceSet, {onLeave: function (args) {send("RmApplyResourceSet");}});
+
+var RmApplyResourceSetToHost = Module.findExportByName("rmclient.dll", "RmApplyResourceSetToHost")
+Interceptor.attach(RmApplyResourceSetToHost, {onLeave: function (args) {send("RmApplyResourceSetToHost");}});
+
+var RmAvailabilityCheck = Module.findExportByName("rmclient.dll", "RmAvailabilityCheck")
+Interceptor.attach(RmAvailabilityCheck, {onLeave: function (args) {send("RmAvailabilityCheck");}});
+
+var RmConnectProcessManager = Module.findExportByName("rmclient.dll", "RmConnectProcessManager")
+Interceptor.attach(RmConnectProcessManager, {onLeave: function (args) {send("RmConnectProcessManager");}});
+
+var RmConnectToResourceManager = Module.findExportByName("rmclient.dll", "RmConnectToResourceManager")
+Interceptor.attach(RmConnectToResourceManager, {onLeave: function (args) {send("RmConnectToResourceManager");}});
+
+var RmDisconnectFromResourceManager = Module.findExportByName("rmclient.dll", "RmDisconnectFromResourceManager")
+Interceptor.attach(RmDisconnectFromResourceManager, {onLeave: function (args) {send("RmDisconnectFromResourceManager");}});
+
+var RmDisconnectProcessManager = Module.findExportByName("rmclient.dll", "RmDisconnectProcessManager")
+Interceptor.attach(RmDisconnectProcessManager, {onLeave: function (args) {send("RmDisconnectProcessManager");}});
+
+var RmEnableLimits = Module.findExportByName("rmclient.dll", "RmEnableLimits")
+Interceptor.attach(RmEnableLimits, {onLeave: function (args) {send("RmEnableLimits");}});
+
+var RmGameModeDisableForRegisteredProcess = Module.findExportByName("rmclient.dll", "RmGameModeDisableForRegisteredProcess")
+Interceptor.attach(RmGameModeDisableForRegisteredProcess, {onLeave: function (args) {send("RmGameModeDisableForRegisteredProcess");}});
+
+var RmGameModeDisableForRegisteredProcessById = Module.findExportByName("rmclient.dll", "RmGameModeDisableForRegisteredProcessById")
+Interceptor.attach(RmGameModeDisableForRegisteredProcessById, {onLeave: function (args) {send("RmGameModeDisableForRegisteredProcessById");}});
+
+var RmGameModeGetLargestValidResourceRequest = Module.findExportByName("rmclient.dll", "RmGameModeGetLargestValidResourceRequest")
+Interceptor.attach(RmGameModeGetLargestValidResourceRequest, {onLeave: function (args) {send("RmGameModeGetLargestValidResourceRequest");}});
+
+var RmGameModeInitializeResourceRequest = Module.findExportByName("rmclient.dll", "RmGameModeInitializeResourceRequest")
+Interceptor.attach(RmGameModeInitializeResourceRequest, {onLeave: function (args) {send("RmGameModeInitializeResourceRequest");}});
+
+var RmGameModeReenableForRegisteredProcess = Module.findExportByName("rmclient.dll", "RmGameModeReenableForRegisteredProcess")
+Interceptor.attach(RmGameModeReenableForRegisteredProcess, {onLeave: function (args) {send("RmGameModeReenableForRegisteredProcess");}});
+
+var RmGameModeReenableForRegisteredProcessById = Module.findExportByName("rmclient.dll", "RmGameModeReenableForRegisteredProcessById")
+Interceptor.attach(RmGameModeReenableForRegisteredProcessById, {onLeave: function (args) {send("RmGameModeReenableForRegisteredProcessById");}});
+
+var RmGameModeRegisterPairedAuxiliaryProcess = Module.findExportByName("rmclient.dll", "RmGameModeRegisterPairedAuxiliaryProcess")
+Interceptor.attach(RmGameModeRegisterPairedAuxiliaryProcess, {onLeave: function (args) {send("RmGameModeRegisterPairedAuxiliaryProcess");}});
+
+var RmGameModeRegisterPairedAuxiliaryProcessById = Module.findExportByName("rmclient.dll", "RmGameModeRegisterPairedAuxiliaryProcessById")
+Interceptor.attach(RmGameModeRegisterPairedAuxiliaryProcessById, {onLeave: function (args) {send("RmGameModeRegisterPairedAuxiliaryProcessById");}});
+
+var RmGameModeRegisterProcess = Module.findExportByName("rmclient.dll", "RmGameModeRegisterProcess")
+Interceptor.attach(RmGameModeRegisterProcess, {onLeave: function (args) {send("RmGameModeRegisterProcess");}});
+
+var RmGameModeRegisterProcessById = Module.findExportByName("rmclient.dll", "RmGameModeRegisterProcessById")
+Interceptor.attach(RmGameModeRegisterProcessById, {onLeave: function (args) {send("RmGameModeRegisterProcessById");}});
+
+var RmGameModeUnregisterProcess = Module.findExportByName("rmclient.dll", "RmGameModeUnregisterProcess")
+Interceptor.attach(RmGameModeUnregisterProcess, {onLeave: function (args) {send("RmGameModeUnregisterProcess");}});
+
+var RmGameModeUnregisterProcessById = Module.findExportByName("rmclient.dll", "RmGameModeUnregisterProcessById")
+Interceptor.attach(RmGameModeUnregisterProcessById, {onLeave: function (args) {send("RmGameModeUnregisterProcessById");}});
+
+var RmGetNotification = Module.findExportByName("rmclient.dll", "RmGetNotification")
+Interceptor.attach(RmGetNotification, {onLeave: function (args) {send("RmGetNotification");}});
+
+var RmQueryHostMemoryLimitValues = Module.findExportByName("rmclient.dll", "RmQueryHostMemoryLimitValues")
+Interceptor.attach(RmQueryHostMemoryLimitValues, {onLeave: function (args) {send("RmQueryHostMemoryLimitValues");}});
+
+var RmRegisterActivityHostCallbacks = Module.findExportByName("rmclient.dll", "RmRegisterActivityHostCallbacks")
+Interceptor.attach(RmRegisterActivityHostCallbacks, {onLeave: function (args) {send("RmRegisterActivityHostCallbacks");}});
+
+var RmRegisterForGameMode = Module.findExportByName("rmclient.dll", "RmRegisterForGameMode")
+Interceptor.attach(RmRegisterForGameMode, {onLeave: function (args) {send("RmRegisterForGameMode");}});
+
+var RmRegisterResource = Module.findExportByName("rmclient.dll", "RmRegisterResource")
+Interceptor.attach(RmRegisterResource, {onLeave: function (args) {send("RmRegisterResource");}});
+
+var RmReleaseResourceSet = Module.findExportByName("rmclient.dll", "RmReleaseResourceSet")
+Interceptor.attach(RmReleaseResourceSet, {onLeave: function (args) {send("RmReleaseResourceSet");}});
+
+var RmReleaseResourceSetEx = Module.findExportByName("rmclient.dll", "RmReleaseResourceSetEx")
+Interceptor.attach(RmReleaseResourceSetEx, {onLeave: function (args) {send("RmReleaseResourceSetEx");}});
+
+var RmReleaseResources = Module.findExportByName("rmclient.dll", "RmReleaseResources")
+Interceptor.attach(RmReleaseResources, {onLeave: function (args) {send("RmReleaseResources");}});
+
+var RmResourceLimitFlagsInitialize = Module.findExportByName("rmclient.dll", "RmResourceLimitFlagsInitialize")
+Interceptor.attach(RmResourceLimitFlagsInitialize, {onLeave: function (args) {send("RmResourceLimitFlagsInitialize");}});
+
+var RmResourceLimitsInitialize = Module.findExportByName("rmclient.dll", "RmResourceLimitsInitialize")
+Interceptor.attach(RmResourceLimitsInitialize, {onLeave: function (args) {send("RmResourceLimitsInitialize");}});
+
+var RmResourceSetPropertiesInitialize = Module.findExportByName("rmclient.dll", "RmResourceSetPropertiesInitialize")
+Interceptor.attach(RmResourceSetPropertiesInitialize, {onLeave: function (args) {send("RmResourceSetPropertiesInitialize");}});
+
+var RmSetHostLimit = Module.findExportByName("rmclient.dll", "RmSetHostLimit")
+Interceptor.attach(RmSetHostLimit, {onLeave: function (args) {send("RmSetHostLimit");}});
+
+var RmSetProcessManagement = Module.findExportByName("rmclient.dll", "RmSetProcessManagement")
+Interceptor.attach(RmSetProcessManagement, {onLeave: function (args) {send("RmSetProcessManagement");}});
+
+var RmUnregisterActivityHost = Module.findExportByName("rmclient.dll", "RmUnregisterActivityHost")
+Interceptor.attach(RmUnregisterActivityHost, {onLeave: function (args) {send("RmUnregisterActivityHost");}});
+
+var RmUnregisterActivityHostCallbacks = Module.findExportByName("rmclient.dll", "RmUnregisterActivityHostCallbacks")
+Interceptor.attach(RmUnregisterActivityHostCallbacks, {onLeave: function (args) {send("RmUnregisterActivityHostCallbacks");}});
+
+var RmUnregisterForGameMode = Module.findExportByName("rmclient.dll", "RmUnregisterForGameMode")
+Interceptor.attach(RmUnregisterForGameMode, {onLeave: function (args) {send("RmUnregisterForGameMode");}});
+
+var RmUpdateResourceSetProperties = Module.findExportByName("rmclient.dll", "RmUpdateResourceSetProperties")
+Interceptor.attach(RmUpdateResourceSetProperties, {onLeave: function (args) {send("RmUpdateResourceSetProperties");}});
+
+var SetActivityCoordinatorPolicyResourceCondition = Module.findExportByName("rmclient.dll", "SetActivityCoordinatorPolicyResourceCondition")
+Interceptor.attach(SetActivityCoordinatorPolicyResourceCondition, {onLeave: function (args) {send("SetActivityCoordinatorPolicyResourceCondition");}});
+
+var SubscribeActivityCoordinatorPolicy = Module.findExportByName("rmclient.dll", "SubscribeActivityCoordinatorPolicy")
+Interceptor.attach(SubscribeActivityCoordinatorPolicy, {onLeave: function (args) {send("SubscribeActivityCoordinatorPolicy");}});
+
+var UnsubscribeActivityCoordinatorPolicy = Module.findExportByName("rmclient.dll", "UnsubscribeActivityCoordinatorPolicy")
+Interceptor.attach(UnsubscribeActivityCoordinatorPolicy, {onLeave: function (args) {send("UnsubscribeActivityCoordinatorPolicy");}});
+

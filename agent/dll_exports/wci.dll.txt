@@ -1,0 +1,42 @@
+var WcAttachFilter = Module.findExportByName("wci.dll", "WcAttachFilter")
+Interceptor.attach(WcAttachFilter, {onLeave: function (args) {send("WcAttachFilter");}});
+
+var WcDetachFilter = Module.findExportByName("wci.dll", "WcDetachFilter")
+Interceptor.attach(WcDetachFilter, {onLeave: function (args) {send("WcDetachFilter");}});
+
+var WcRemoveReparseData = Module.findExportByName("wci.dll", "WcRemoveReparseData")
+Interceptor.attach(WcRemoveReparseData, {onLeave: function (args) {send("WcRemoveReparseData");}});
+
+var WcRemoveTombstoneReparseData = Module.findExportByName("wci.dll", "WcRemoveTombstoneReparseData")
+Interceptor.attach(WcRemoveTombstoneReparseData, {onLeave: function (args) {send("WcRemoveTombstoneReparseData");}});
+
+var WciConfigureFilter = Module.findExportByName("wci.dll", "WciConfigureFilter")
+Interceptor.attach(WciConfigureFilter, {onLeave: function (args) {send("WciConfigureFilter");}});
+
+var WciConfigureVolume = Module.findExportByName("wci.dll", "WciConfigureVolume")
+Interceptor.attach(WciConfigureVolume, {onLeave: function (args) {send("WciConfigureVolume");}});
+
+var WciGenerateFilterConfiguration = Module.findExportByName("wci.dll", "WciGenerateFilterConfiguration")
+Interceptor.attach(WciGenerateFilterConfiguration, {onLeave: function (args) {send("WciGenerateFilterConfiguration");}});
+
+var WciGetUnions = Module.findExportByName("wci.dll", "WciGetUnions")
+Interceptor.attach(WciGetUnions, {onLeave: function (args) {send("WciGetUnions");}});
+
+var WciReadReparsePointData = Module.findExportByName("wci.dll", "WciReadReparsePointData")
+Interceptor.attach(WciReadReparsePointData, {onLeave: function (args) {send("WciReadReparsePointData");}});
+
+var WciRemoveRoot = Module.findExportByName("wci.dll", "WciRemoveRoot")
+Interceptor.attach(WciRemoveRoot, {onLeave: function (args) {send("WciRemoveRoot");}});
+
+var WciSetReparsePointData = Module.findExportByName("wci.dll", "WciSetReparsePointData")
+Interceptor.attach(WciSetReparsePointData, {onLeave: function (args) {send("WciSetReparsePointData");}});
+
+var WciSetReparsePointDataEx = Module.findExportByName("wci.dll", "WciSetReparsePointDataEx")
+Interceptor.attach(WciSetReparsePointDataEx, {onLeave: function (args) {send("WciSetReparsePointDataEx");}});
+
+var WciSetTombstone = Module.findExportByName("wci.dll", "WciSetTombstone")
+Interceptor.attach(WciSetTombstone, {onLeave: function (args) {send("WciSetTombstone");}});
+
+var WciSetupFilter = Module.findExportByName("wci.dll", "WciSetupFilter")
+Interceptor.attach(WciSetupFilter, {onLeave: function (args) {send("WciSetupFilter");}});
+

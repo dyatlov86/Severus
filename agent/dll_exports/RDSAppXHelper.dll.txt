@@ -1,0 +1,9 @@
+var DestroyAppXHelper = Module.findExportByName("RDSAppXHelper.dll", "DestroyAppXHelper")
+Interceptor.attach(DestroyAppXHelper, {onLeave: function (args) {send("DestroyAppXHelper");}});
+
+var GetInstanceOfAppXPackageManager = Module.findExportByName("RDSAppXHelper.dll", "GetInstanceOfAppXPackageManager")
+Interceptor.attach(GetInstanceOfAppXPackageManager, {onLeave: function (args) {send("GetInstanceOfAppXPackageManager");}});
+
+var InitializeAppXHelper = Module.findExportByName("RDSAppXHelper.dll", "InitializeAppXHelper")
+Interceptor.attach(InitializeAppXHelper, {onLeave: function (args) {send("InitializeAppXHelper");}});
+

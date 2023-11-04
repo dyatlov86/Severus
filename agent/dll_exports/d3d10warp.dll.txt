@@ -1,0 +1,27 @@
+var D3D11RefGetLastCreation = Module.findExportByName("d3d10warp.dll", "D3D11RefGetLastCreation")
+Interceptor.attach(D3D11RefGetLastCreation, {onLeave: function (args) {send("D3D11RefGetLastCreation");}});
+
+var D3DLayerGetInterface = Module.findExportByName("d3d10warp.dll", "D3DLayerGetInterface")
+Interceptor.attach(D3DLayerGetInterface, {onLeave: function (args) {send("D3DLayerGetInterface");}});
+
+var OpenAdapter = Module.findExportByName("d3d10warp.dll", "OpenAdapter")
+Interceptor.attach(OpenAdapter, {onLeave: function (args) {send("OpenAdapter");}});
+
+var OpenAdapter10_2 = Module.findExportByName("d3d10warp.dll", "OpenAdapter10_2")
+Interceptor.attach(OpenAdapter10_2, {onLeave: function (args) {send("OpenAdapter10_2");}});
+
+var OpenAdapter12 = Module.findExportByName("d3d10warp.dll", "OpenAdapter12")
+Interceptor.attach(OpenAdapter12, {onLeave: function (args) {send("OpenAdapter12");}});
+
+var OpenDisplayAdapter1 = Module.findExportByName("d3d10warp.dll", "OpenDisplayAdapter1")
+Interceptor.attach(OpenDisplayAdapter1, {onLeave: function (args) {send("OpenDisplayAdapter1");}});
+
+var QueryDListForApplication1 = Module.findExportByName("d3d10warp.dll", "QueryDListForApplication1")
+Interceptor.attach(QueryDListForApplication1, {onLeave: function (args) {send("QueryDListForApplication1");}});
+
+var QueryDListForApplication2 = Module.findExportByName("d3d10warp.dll", "QueryDListForApplication2")
+Interceptor.attach(QueryDListForApplication2, {onLeave: function (args) {send("QueryDListForApplication2");}});
+
+var VSD3DDebugConnectionBuffer = Module.findExportByName("d3d10warp.dll", "VSD3DDebugConnectionBuffer")
+Interceptor.attach(VSD3DDebugConnectionBuffer, {onLeave: function (args) {send("VSD3DDebugConnectionBuffer");}});
+

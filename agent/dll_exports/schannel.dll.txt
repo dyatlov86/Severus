@@ -1,0 +1,111 @@
+var AcceptSecurityContext = Module.findExportByName("schannel.dll", "AcceptSecurityContext")
+Interceptor.attach(AcceptSecurityContext, {onLeave: function (args) {send("AcceptSecurityContext");}});
+
+var AcquireCredentialsHandleA = Module.findExportByName("schannel.dll", "AcquireCredentialsHandleA")
+Interceptor.attach(AcquireCredentialsHandleA, {onLeave: function (args) {send("AcquireCredentialsHandleA");}});
+
+var AcquireCredentialsHandleW = Module.findExportByName("schannel.dll", "AcquireCredentialsHandleW")
+Interceptor.attach(AcquireCredentialsHandleW, {onLeave: function (args) {send("AcquireCredentialsHandleW");}});
+
+var ApplyControlToken = Module.findExportByName("schannel.dll", "ApplyControlToken")
+Interceptor.attach(ApplyControlToken, {onLeave: function (args) {send("ApplyControlToken");}});
+
+var CompleteAuthToken = Module.findExportByName("schannel.dll", "CompleteAuthToken")
+Interceptor.attach(CompleteAuthToken, {onLeave: function (args) {send("CompleteAuthToken");}});
+
+var DeleteSecurityContext = Module.findExportByName("schannel.dll", "DeleteSecurityContext")
+Interceptor.attach(DeleteSecurityContext, {onLeave: function (args) {send("DeleteSecurityContext");}});
+
+var EnumerateSecurityPackagesA = Module.findExportByName("schannel.dll", "EnumerateSecurityPackagesA")
+Interceptor.attach(EnumerateSecurityPackagesA, {onLeave: function (args) {send("EnumerateSecurityPackagesA");}});
+
+var EnumerateSecurityPackagesW = Module.findExportByName("schannel.dll", "EnumerateSecurityPackagesW")
+Interceptor.attach(EnumerateSecurityPackagesW, {onLeave: function (args) {send("EnumerateSecurityPackagesW");}});
+
+var FreeContextBuffer = Module.findExportByName("schannel.dll", "FreeContextBuffer")
+Interceptor.attach(FreeContextBuffer, {onLeave: function (args) {send("FreeContextBuffer");}});
+
+var FreeCredentialsHandle = Module.findExportByName("schannel.dll", "FreeCredentialsHandle")
+Interceptor.attach(FreeCredentialsHandle, {onLeave: function (args) {send("FreeCredentialsHandle");}});
+
+var ImpersonateSecurityContext = Module.findExportByName("schannel.dll", "ImpersonateSecurityContext")
+Interceptor.attach(ImpersonateSecurityContext, {onLeave: function (args) {send("ImpersonateSecurityContext");}});
+
+var InitSecurityInterfaceA = Module.findExportByName("schannel.dll", "InitSecurityInterfaceA")
+Interceptor.attach(InitSecurityInterfaceA, {onLeave: function (args) {send("InitSecurityInterfaceA");}});
+
+var InitSecurityInterfaceW = Module.findExportByName("schannel.dll", "InitSecurityInterfaceW")
+Interceptor.attach(InitSecurityInterfaceW, {onLeave: function (args) {send("InitSecurityInterfaceW");}});
+
+var InitializeSecurityContextA = Module.findExportByName("schannel.dll", "InitializeSecurityContextA")
+Interceptor.attach(InitializeSecurityContextA, {onLeave: function (args) {send("InitializeSecurityContextA");}});
+
+var InitializeSecurityContextW = Module.findExportByName("schannel.dll", "InitializeSecurityContextW")
+Interceptor.attach(InitializeSecurityContextW, {onLeave: function (args) {send("InitializeSecurityContextW");}});
+
+var MakeSignature = Module.findExportByName("schannel.dll", "MakeSignature")
+Interceptor.attach(MakeSignature, {onLeave: function (args) {send("MakeSignature");}});
+
+var QueryContextAttributesA = Module.findExportByName("schannel.dll", "QueryContextAttributesA")
+Interceptor.attach(QueryContextAttributesA, {onLeave: function (args) {send("QueryContextAttributesA");}});
+
+var QueryContextAttributesW = Module.findExportByName("schannel.dll", "QueryContextAttributesW")
+Interceptor.attach(QueryContextAttributesW, {onLeave: function (args) {send("QueryContextAttributesW");}});
+
+var QuerySecurityPackageInfoA = Module.findExportByName("schannel.dll", "QuerySecurityPackageInfoA")
+Interceptor.attach(QuerySecurityPackageInfoA, {onLeave: function (args) {send("QuerySecurityPackageInfoA");}});
+
+var QuerySecurityPackageInfoW = Module.findExportByName("schannel.dll", "QuerySecurityPackageInfoW")
+Interceptor.attach(QuerySecurityPackageInfoW, {onLeave: function (args) {send("QuerySecurityPackageInfoW");}});
+
+var RevertSecurityContext = Module.findExportByName("schannel.dll", "RevertSecurityContext")
+Interceptor.attach(RevertSecurityContext, {onLeave: function (args) {send("RevertSecurityContext");}});
+
+var SealMessage = Module.findExportByName("schannel.dll", "SealMessage")
+Interceptor.attach(SealMessage, {onLeave: function (args) {send("SealMessage");}});
+
+var SpLsaModeInitialize = Module.findExportByName("schannel.dll", "SpLsaModeInitialize")
+Interceptor.attach(SpLsaModeInitialize, {onLeave: function (args) {send("SpLsaModeInitialize");}});
+
+var SpUserModeInitialize = Module.findExportByName("schannel.dll", "SpUserModeInitialize")
+Interceptor.attach(SpUserModeInitialize, {onLeave: function (args) {send("SpUserModeInitialize");}});
+
+var SslCrackCertificate = Module.findExportByName("schannel.dll", "SslCrackCertificate")
+Interceptor.attach(SslCrackCertificate, {onLeave: function (args) {send("SslCrackCertificate");}});
+
+var SslDeserializeCertificateStore = Module.findExportByName("schannel.dll", "SslDeserializeCertificateStore")
+Interceptor.attach(SslDeserializeCertificateStore, {onLeave: function (args) {send("SslDeserializeCertificateStore");}});
+
+var SslEmptyCacheA = Module.findExportByName("schannel.dll", "SslEmptyCacheA")
+Interceptor.attach(SslEmptyCacheA, {onLeave: function (args) {send("SslEmptyCacheA");}});
+
+var SslEmptyCacheW = Module.findExportByName("schannel.dll", "SslEmptyCacheW")
+Interceptor.attach(SslEmptyCacheW, {onLeave: function (args) {send("SslEmptyCacheW");}});
+
+var SslFreeCertificate = Module.findExportByName("schannel.dll", "SslFreeCertificate")
+Interceptor.attach(SslFreeCertificate, {onLeave: function (args) {send("SslFreeCertificate");}});
+
+var SslFreeCustomBuffer = Module.findExportByName("schannel.dll", "SslFreeCustomBuffer")
+Interceptor.attach(SslFreeCustomBuffer, {onLeave: function (args) {send("SslFreeCustomBuffer");}});
+
+var SslGenerateRandomBits = Module.findExportByName("schannel.dll", "SslGenerateRandomBits")
+Interceptor.attach(SslGenerateRandomBits, {onLeave: function (args) {send("SslGenerateRandomBits");}});
+
+var SslGetExtensions = Module.findExportByName("schannel.dll", "SslGetExtensions")
+Interceptor.attach(SslGetExtensions, {onLeave: function (args) {send("SslGetExtensions");}});
+
+var SslGetMaximumKeySize = Module.findExportByName("schannel.dll", "SslGetMaximumKeySize")
+Interceptor.attach(SslGetMaximumKeySize, {onLeave: function (args) {send("SslGetMaximumKeySize");}});
+
+var SslGetServerIdentity = Module.findExportByName("schannel.dll", "SslGetServerIdentity")
+Interceptor.attach(SslGetServerIdentity, {onLeave: function (args) {send("SslGetServerIdentity");}});
+
+var SslLoadCertificate = Module.findExportByName("schannel.dll", "SslLoadCertificate")
+Interceptor.attach(SslLoadCertificate, {onLeave: function (args) {send("SslLoadCertificate");}});
+
+var UnsealMessage = Module.findExportByName("schannel.dll", "UnsealMessage")
+Interceptor.attach(UnsealMessage, {onLeave: function (args) {send("UnsealMessage");}});
+
+var VerifySignature = Module.findExportByName("schannel.dll", "VerifySignature")
+Interceptor.attach(VerifySignature, {onLeave: function (args) {send("VerifySignature");}});
+

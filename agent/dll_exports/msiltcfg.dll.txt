@@ -1,0 +1,42 @@
+var MsiAdvertiseScriptW = Module.findExportByName("msiltcfg.dll", "MsiAdvertiseScriptW")
+Interceptor.attach(MsiAdvertiseScriptW, {onLeave: function (args) {send("MsiAdvertiseScriptW");}});
+
+var MsiConfigureProductExW = Module.findExportByName("msiltcfg.dll", "MsiConfigureProductExW")
+Interceptor.attach(MsiConfigureProductExW, {onLeave: function (args) {send("MsiConfigureProductExW");}});
+
+var MsiDecomposeDescriptorW = Module.findExportByName("msiltcfg.dll", "MsiDecomposeDescriptorW")
+Interceptor.attach(MsiDecomposeDescriptorW, {onLeave: function (args) {send("MsiDecomposeDescriptorW");}});
+
+var MsiGetComponentPathW = Module.findExportByName("msiltcfg.dll", "MsiGetComponentPathW")
+Interceptor.attach(MsiGetComponentPathW, {onLeave: function (args) {send("MsiGetComponentPathW");}});
+
+var MsiGetProductInfoW = Module.findExportByName("msiltcfg.dll", "MsiGetProductInfoW")
+Interceptor.attach(MsiGetProductInfoW, {onLeave: function (args) {send("MsiGetProductInfoW");}});
+
+var MsiIsProductElevatedW = Module.findExportByName("msiltcfg.dll", "MsiIsProductElevatedW")
+Interceptor.attach(MsiIsProductElevatedW, {onLeave: function (args) {send("MsiIsProductElevatedW");}});
+
+var MsiProvideComponentFromDescriptorW = Module.findExportByName("msiltcfg.dll", "MsiProvideComponentFromDescriptorW")
+Interceptor.attach(MsiProvideComponentFromDescriptorW, {onLeave: function (args) {send("MsiProvideComponentFromDescriptorW");}});
+
+var MsiQueryFeatureStateFromDescriptorW = Module.findExportByName("msiltcfg.dll", "MsiQueryFeatureStateFromDescriptorW")
+Interceptor.attach(MsiQueryFeatureStateFromDescriptorW, {onLeave: function (args) {send("MsiQueryFeatureStateFromDescriptorW");}});
+
+var MsiQueryFeatureStateW = Module.findExportByName("msiltcfg.dll", "MsiQueryFeatureStateW")
+Interceptor.attach(MsiQueryFeatureStateW, {onLeave: function (args) {send("MsiQueryFeatureStateW");}});
+
+var MsiQueryProductStateW = Module.findExportByName("msiltcfg.dll", "MsiQueryProductStateW")
+Interceptor.attach(MsiQueryProductStateW, {onLeave: function (args) {send("MsiQueryProductStateW");}});
+
+var MsiReinstallProductW = Module.findExportByName("msiltcfg.dll", "MsiReinstallProductW")
+Interceptor.attach(MsiReinstallProductW, {onLeave: function (args) {send("MsiReinstallProductW");}});
+
+var MsiSetInternalUI = Module.findExportByName("msiltcfg.dll", "MsiSetInternalUI")
+Interceptor.attach(MsiSetInternalUI, {onLeave: function (args) {send("MsiSetInternalUI");}});
+
+var RestartMsi = Module.findExportByName("msiltcfg.dll", "RestartMsi")
+Interceptor.attach(RestartMsi, {onLeave: function (args) {send("RestartMsi");}});
+
+var ShutdownMsi = Module.findExportByName("msiltcfg.dll", "ShutdownMsi")
+Interceptor.attach(ShutdownMsi, {onLeave: function (args) {send("ShutdownMsi");}});
+

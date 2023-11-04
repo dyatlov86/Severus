@@ -1,0 +1,42 @@
+var TTCharToUnicode = Module.findExportByName("t2embed.dll", "TTCharToUnicode")
+Interceptor.attach(TTCharToUnicode, {onLeave: function (args) {send("TTCharToUnicode");}});
+
+var TTDeleteEmbeddedFont = Module.findExportByName("t2embed.dll", "TTDeleteEmbeddedFont")
+Interceptor.attach(TTDeleteEmbeddedFont, {onLeave: function (args) {send("TTDeleteEmbeddedFont");}});
+
+var TTEmbedFont = Module.findExportByName("t2embed.dll", "TTEmbedFont")
+Interceptor.attach(TTEmbedFont, {onLeave: function (args) {send("TTEmbedFont");}});
+
+var TTEmbedFontEx = Module.findExportByName("t2embed.dll", "TTEmbedFontEx")
+Interceptor.attach(TTEmbedFontEx, {onLeave: function (args) {send("TTEmbedFontEx");}});
+
+var TTEmbedFontFromFileA = Module.findExportByName("t2embed.dll", "TTEmbedFontFromFileA")
+Interceptor.attach(TTEmbedFontFromFileA, {onLeave: function (args) {send("TTEmbedFontFromFileA");}});
+
+var TTEnableEmbeddingForFacename = Module.findExportByName("t2embed.dll", "TTEnableEmbeddingForFacename")
+Interceptor.attach(TTEnableEmbeddingForFacename, {onLeave: function (args) {send("TTEnableEmbeddingForFacename");}});
+
+var TTGetEmbeddedFontInfo = Module.findExportByName("t2embed.dll", "TTGetEmbeddedFontInfo")
+Interceptor.attach(TTGetEmbeddedFontInfo, {onLeave: function (args) {send("TTGetEmbeddedFontInfo");}});
+
+var TTGetEmbeddingType = Module.findExportByName("t2embed.dll", "TTGetEmbeddingType")
+Interceptor.attach(TTGetEmbeddingType, {onLeave: function (args) {send("TTGetEmbeddingType");}});
+
+var TTGetNewFontName = Module.findExportByName("t2embed.dll", "TTGetNewFontName")
+Interceptor.attach(TTGetNewFontName, {onLeave: function (args) {send("TTGetNewFontName");}});
+
+var TTIsEmbeddingEnabled = Module.findExportByName("t2embed.dll", "TTIsEmbeddingEnabled")
+Interceptor.attach(TTIsEmbeddingEnabled, {onLeave: function (args) {send("TTIsEmbeddingEnabled");}});
+
+var TTIsEmbeddingEnabledForFacename = Module.findExportByName("t2embed.dll", "TTIsEmbeddingEnabledForFacename")
+Interceptor.attach(TTIsEmbeddingEnabledForFacename, {onLeave: function (args) {send("TTIsEmbeddingEnabledForFacename");}});
+
+var TTLoadEmbeddedFont = Module.findExportByName("t2embed.dll", "TTLoadEmbeddedFont")
+Interceptor.attach(TTLoadEmbeddedFont, {onLeave: function (args) {send("TTLoadEmbeddedFont");}});
+
+var TTRunValidationTests = Module.findExportByName("t2embed.dll", "TTRunValidationTests")
+Interceptor.attach(TTRunValidationTests, {onLeave: function (args) {send("TTRunValidationTests");}});
+
+var TTRunValidationTestsEx = Module.findExportByName("t2embed.dll", "TTRunValidationTestsEx")
+Interceptor.attach(TTRunValidationTestsEx, {onLeave: function (args) {send("TTRunValidationTestsEx");}});
+

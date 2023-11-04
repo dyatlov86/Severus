@@ -1,0 +1,12 @@
+var AggregateSSLHandshakeTime = Module.findExportByName("SecureTimeAggregator.dll", "AggregateSSLHandshakeTime")
+Interceptor.attach(AggregateSSLHandshakeTime, {onLeave: function (args) {send("AggregateSSLHandshakeTime");}});
+
+var DllCanUnloadNow = Module.findExportByName("SecureTimeAggregator.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var GetSecureTime = Module.findExportByName("SecureTimeAggregator.dll", "GetSecureTime")
+Interceptor.attach(GetSecureTime, {onLeave: function (args) {send("GetSecureTime");}});
+
+var UnInitialize = Module.findExportByName("SecureTimeAggregator.dll", "UnInitialize")
+Interceptor.attach(UnInitialize, {onLeave: function (args) {send("UnInitialize");}});
+

@@ -1,0 +1,6 @@
+var SvchostPushServiceGlobals = Module.findExportByName("wwansvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+
+var WwanSvcMain = Module.findExportByName("wwansvc.dll", "WwanSvcMain")
+Interceptor.attach(WwanSvcMain, {onLeave: function (args) {send("WwanSvcMain");}});
+

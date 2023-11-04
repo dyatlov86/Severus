@@ -1,0 +1,15 @@
+var Initialize = Module.findExportByName("MediaFoundationAggregator.dll", "Initialize")
+Interceptor.attach(Initialize, {onLeave: function (args) {send("Initialize");}});
+
+var NotifyTimerExpiryWithId = Module.findExportByName("MediaFoundationAggregator.dll", "NotifyTimerExpiryWithId")
+Interceptor.attach(NotifyTimerExpiryWithId, {onLeave: function (args) {send("NotifyTimerExpiryWithId");}});
+
+var ProcessNextEventJsonBuilder = Module.findExportByName("MediaFoundationAggregator.dll", "ProcessNextEventJsonBuilder")
+Interceptor.attach(ProcessNextEventJsonBuilder, {onLeave: function (args) {send("ProcessNextEventJsonBuilder");}});
+
+var SetParameter = Module.findExportByName("MediaFoundationAggregator.dll", "SetParameter")
+Interceptor.attach(SetParameter, {onLeave: function (args) {send("SetParameter");}});
+
+var Uninitialize = Module.findExportByName("MediaFoundationAggregator.dll", "Uninitialize")
+Interceptor.attach(Uninitialize, {onLeave: function (args) {send("Uninitialize");}});
+

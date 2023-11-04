@@ -1,0 +1,27 @@
+var BTCpuGetBopCode = Module.findExportByName("wow64cpu.dll", "BTCpuGetBopCode")
+Interceptor.attach(BTCpuGetBopCode, {onLeave: function (args) {send("BTCpuGetBopCode");}});
+
+var BTCpuGetContext = Module.findExportByName("wow64cpu.dll", "BTCpuGetContext")
+Interceptor.attach(BTCpuGetContext, {onLeave: function (args) {send("BTCpuGetContext");}});
+
+var BTCpuProcessInit = Module.findExportByName("wow64cpu.dll", "BTCpuProcessInit")
+Interceptor.attach(BTCpuProcessInit, {onLeave: function (args) {send("BTCpuProcessInit");}});
+
+var BTCpuResetToConsistentState = Module.findExportByName("wow64cpu.dll", "BTCpuResetToConsistentState")
+Interceptor.attach(BTCpuResetToConsistentState, {onLeave: function (args) {send("BTCpuResetToConsistentState");}});
+
+var BTCpuSetContext = Module.findExportByName("wow64cpu.dll", "BTCpuSetContext")
+Interceptor.attach(BTCpuSetContext, {onLeave: function (args) {send("BTCpuSetContext");}});
+
+var BTCpuSimulate = Module.findExportByName("wow64cpu.dll", "BTCpuSimulate")
+Interceptor.attach(BTCpuSimulate, {onLeave: function (args) {send("BTCpuSimulate");}});
+
+var BTCpuTurboThunkControl = Module.findExportByName("wow64cpu.dll", "BTCpuTurboThunkControl")
+Interceptor.attach(BTCpuTurboThunkControl, {onLeave: function (args) {send("BTCpuTurboThunkControl");}});
+
+var TurboDispatchJumpAddressEnd = Module.findExportByName("wow64cpu.dll", "TurboDispatchJumpAddressEnd")
+Interceptor.attach(TurboDispatchJumpAddressEnd, {onLeave: function (args) {send("TurboDispatchJumpAddressEnd");}});
+
+var TurboDispatchJumpAddressStart = Module.findExportByName("wow64cpu.dll", "TurboDispatchJumpAddressStart")
+Interceptor.attach(TurboDispatchJumpAddressStart, {onLeave: function (args) {send("TurboDispatchJumpAddressStart");}});
+

@@ -1,0 +1,33 @@
+var AttestationAttest = Module.findExportByName("AzureAttestManager.dll", "AttestationAttest")
+Interceptor.attach(AttestationAttest, {onLeave: function (args) {send("AttestationAttest");}});
+
+var AttestationCloseSession = Module.findExportByName("AzureAttestManager.dll", "AttestationCloseSession")
+Interceptor.attach(AttestationCloseSession, {onLeave: function (args) {send("AttestationCloseSession");}});
+
+var AttestationCreateSession = Module.findExportByName("AzureAttestManager.dll", "AttestationCreateSession")
+Interceptor.attach(AttestationCreateSession, {onLeave: function (args) {send("AttestationCreateSession");}});
+
+var AttestationGetReport = Module.findExportByName("AzureAttestManager.dll", "AttestationGetReport")
+Interceptor.attach(AttestationGetReport, {onLeave: function (args) {send("AttestationGetReport");}});
+
+var InitializeAttestationLibrary = Module.findExportByName("AzureAttestManager.dll", "InitializeAttestationLibrary")
+Interceptor.attach(InitializeAttestationLibrary, {onLeave: function (args) {send("InitializeAttestationLibrary");}});
+
+var __AllocateMemory = Module.findExportByName("AzureAttestManager.dll", "__AllocateMemory")
+Interceptor.attach(__AllocateMemory, {onLeave: function (args) {send("__AllocateMemory");}});
+
+var __AllocateParams = Module.findExportByName("AzureAttestManager.dll", "__AllocateParams")
+Interceptor.attach(__AllocateParams, {onLeave: function (args) {send("__AllocateParams");}});
+
+var __FreeMemory = Module.findExportByName("AzureAttestManager.dll", "__FreeMemory")
+Interceptor.attach(__FreeMemory, {onLeave: function (args) {send("__FreeMemory");}});
+
+var __GetHostMetadata = Module.findExportByName("AzureAttestManager.dll", "__GetHostMetadata")
+Interceptor.attach(__GetHostMetadata, {onLeave: function (args) {send("__GetHostMetadata");}});
+
+var __GetTcgLog = Module.findExportByName("AzureAttestManager.dll", "__GetTcgLog")
+Interceptor.attach(__GetTcgLog, {onLeave: function (args) {send("__GetTcgLog");}});
+
+var __TraceLog = Module.findExportByName("AzureAttestManager.dll", "__TraceLog")
+Interceptor.attach(__TraceLog, {onLeave: function (args) {send("__TraceLog");}});
+

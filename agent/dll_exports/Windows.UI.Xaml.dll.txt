@@ -1,0 +1,48 @@
+var CalculateAvailableMonitorRect = Module.findExportByName("Windows.UI.Xaml.dll", "CalculateAvailableMonitorRect")
+Interceptor.attach(CalculateAvailableMonitorRect, {onLeave: function (args) {send("CalculateAvailableMonitorRect");}});
+
+var CreateString = Module.findExportByName("Windows.UI.Xaml.dll", "CreateString")
+Interceptor.attach(CreateString, {onLeave: function (args) {send("CreateString");}});
+
+var CreateXamlUIPresenter = Module.findExportByName("Windows.UI.Xaml.dll", "CreateXamlUIPresenter")
+Interceptor.attach(CreateXamlUIPresenter, {onLeave: function (args) {send("CreateXamlUIPresenter");}});
+
+var DeleteString = Module.findExportByName("Windows.UI.Xaml.dll", "DeleteString")
+Interceptor.attach(DeleteString, {onLeave: function (args) {send("DeleteString");}});
+
+var DisableDeferredInvoke = Module.findExportByName("Windows.UI.Xaml.dll", "DisableDeferredInvoke")
+Interceptor.attach(DisableDeferredInvoke, {onLeave: function (args) {send("DisableDeferredInvoke");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.UI.Xaml.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.UI.Xaml.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllMain = Module.findExportByName("Windows.UI.Xaml.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GetDependencyObjectAddress = Module.findExportByName("Windows.UI.Xaml.dll", "GetDependencyObjectAddress")
+Interceptor.attach(GetDependencyObjectAddress, {onLeave: function (args) {send("GetDependencyObjectAddress");}});
+
+var GetErrorContextIndex = Module.findExportByName("Windows.UI.Xaml.dll", "GetErrorContextIndex")
+Interceptor.attach(GetErrorContextIndex, {onLeave: function (args) {send("GetErrorContextIndex");}});
+
+var GetGlobalModuleParams = Module.findExportByName("Windows.UI.Xaml.dll", "GetGlobalModuleParams")
+Interceptor.attach(GetGlobalModuleParams, {onLeave: function (args) {send("GetGlobalModuleParams");}});
+
+var GetStringLen = Module.findExportByName("Windows.UI.Xaml.dll", "GetStringLen")
+Interceptor.attach(GetStringLen, {onLeave: function (args) {send("GetStringLen");}});
+
+var GetStringRawBuffer = Module.findExportByName("Windows.UI.Xaml.dll", "GetStringRawBuffer")
+Interceptor.attach(GetStringRawBuffer, {onLeave: function (args) {send("GetStringRawBuffer");}});
+
+var InitializeXamlDiagnosticsEx = Module.findExportByName("Windows.UI.Xaml.dll", "InitializeXamlDiagnosticsEx")
+Interceptor.attach(InitializeXamlDiagnosticsEx, {onLeave: function (args) {send("InitializeXamlDiagnosticsEx");}});
+
+var OverrideXamlMetadataProvider = Module.findExportByName("Windows.UI.Xaml.dll", "OverrideXamlMetadataProvider")
+Interceptor.attach(OverrideXamlMetadataProvider, {onLeave: function (args) {send("OverrideXamlMetadataProvider");}});
+
+var OverrideXamlResourcePropertyBag = Module.findExportByName("Windows.UI.Xaml.dll", "OverrideXamlResourcePropertyBag")
+Interceptor.attach(OverrideXamlResourcePropertyBag, {onLeave: function (args) {send("OverrideXamlResourcePropertyBag");}});
+

@@ -1,0 +1,33 @@
+var DllMain = Module.findExportByName("NcaApi.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var NcaEngineClose = Module.findExportByName("NcaApi.dll", "NcaEngineClose")
+Interceptor.attach(NcaEngineClose, {onLeave: function (args) {send("NcaEngineClose");}});
+
+var NcaEngineOpen = Module.findExportByName("NcaApi.dll", "NcaEngineOpen")
+Interceptor.attach(NcaEngineOpen, {onLeave: function (args) {send("NcaEngineOpen");}});
+
+var NcaExecuteAndCaptureLogs = Module.findExportByName("NcaApi.dll", "NcaExecuteAndCaptureLogs")
+Interceptor.attach(NcaExecuteAndCaptureLogs, {onLeave: function (args) {send("NcaExecuteAndCaptureLogs");}});
+
+var NcaGetConfig = Module.findExportByName("NcaApi.dll", "NcaGetConfig")
+Interceptor.attach(NcaGetConfig, {onLeave: function (args) {send("NcaGetConfig");}});
+
+var NcaGetEvidenceCollectorResult = Module.findExportByName("NcaApi.dll", "NcaGetEvidenceCollectorResult")
+Interceptor.attach(NcaGetEvidenceCollectorResult, {onLeave: function (args) {send("NcaGetEvidenceCollectorResult");}});
+
+var NcaNetworkClose = Module.findExportByName("NcaApi.dll", "NcaNetworkClose")
+Interceptor.attach(NcaNetworkClose, {onLeave: function (args) {send("NcaNetworkClose");}});
+
+var NcaNetworkOpen = Module.findExportByName("NcaApi.dll", "NcaNetworkOpen")
+Interceptor.attach(NcaNetworkOpen, {onLeave: function (args) {send("NcaNetworkOpen");}});
+
+var NcaStatusEventSubscribe = Module.findExportByName("NcaApi.dll", "NcaStatusEventSubscribe")
+Interceptor.attach(NcaStatusEventSubscribe, {onLeave: function (args) {send("NcaStatusEventSubscribe");}});
+
+var NcaStatusEventUnsubscribe = Module.findExportByName("NcaApi.dll", "NcaStatusEventUnsubscribe")
+Interceptor.attach(NcaStatusEventUnsubscribe, {onLeave: function (args) {send("NcaStatusEventUnsubscribe");}});
+
+var NcaToggleNamePreferenceState = Module.findExportByName("NcaApi.dll", "NcaToggleNamePreferenceState")
+Interceptor.attach(NcaToggleNamePreferenceState, {onLeave: function (args) {send("NcaToggleNamePreferenceState");}});
+

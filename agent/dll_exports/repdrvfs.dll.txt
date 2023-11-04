@@ -1,0 +1,24 @@
+var DllCanUnloadNow = Module.findExportByName("repdrvfs.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("repdrvfs.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("repdrvfs.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("repdrvfs.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ResetRepository = Module.findExportByName("repdrvfs.dll", "ResetRepository")
+Interceptor.attach(ResetRepository, {onLeave: function (args) {send("ResetRepository");}});
+
+var RestoreWMIRepository = Module.findExportByName("repdrvfs.dll", "RestoreWMIRepository")
+Interceptor.attach(RestoreWMIRepository, {onLeave: function (args) {send("RestoreWMIRepository");}});
+
+var SalvageRepository = Module.findExportByName("repdrvfs.dll", "SalvageRepository")
+Interceptor.attach(SalvageRepository, {onLeave: function (args) {send("SalvageRepository");}});
+
+var VerifyRepository = Module.findExportByName("repdrvfs.dll", "VerifyRepository")
+Interceptor.attach(VerifyRepository, {onLeave: function (args) {send("VerifyRepository");}});
+

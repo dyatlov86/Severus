@@ -1,0 +1,1155 @@
+var DebugExtensionInitialize = Module.findExportByName("esent.dll", "DebugExtensionInitialize")
+Interceptor.attach(DebugExtensionInitialize, {onLeave: function (args) {send("DebugExtensionInitialize");}});
+
+var DebugExtensionNotify = Module.findExportByName("esent.dll", "DebugExtensionNotify")
+Interceptor.attach(DebugExtensionNotify, {onLeave: function (args) {send("DebugExtensionNotify");}});
+
+var DebugExtensionUninitialize = Module.findExportByName("esent.dll", "DebugExtensionUninitialize")
+Interceptor.attach(DebugExtensionUninitialize, {onLeave: function (args) {send("DebugExtensionUninitialize");}});
+
+var DllRegisterServer = Module.findExportByName("esent.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var JetAddColumn = Module.findExportByName("esent.dll", "JetAddColumn")
+Interceptor.attach(JetAddColumn, {onLeave: function (args) {send("JetAddColumn");}});
+
+var JetAddColumnA = Module.findExportByName("esent.dll", "JetAddColumnA")
+Interceptor.attach(JetAddColumnA, {onLeave: function (args) {send("JetAddColumnA");}});
+
+var JetAddColumnW = Module.findExportByName("esent.dll", "JetAddColumnW")
+Interceptor.attach(JetAddColumnW, {onLeave: function (args) {send("JetAddColumnW");}});
+
+var JetAttachDatabase = Module.findExportByName("esent.dll", "JetAttachDatabase")
+Interceptor.attach(JetAttachDatabase, {onLeave: function (args) {send("JetAttachDatabase");}});
+
+var JetAttachDatabase2 = Module.findExportByName("esent.dll", "JetAttachDatabase2")
+Interceptor.attach(JetAttachDatabase2, {onLeave: function (args) {send("JetAttachDatabase2");}});
+
+var JetAttachDatabase2A = Module.findExportByName("esent.dll", "JetAttachDatabase2A")
+Interceptor.attach(JetAttachDatabase2A, {onLeave: function (args) {send("JetAttachDatabase2A");}});
+
+var JetAttachDatabase2W = Module.findExportByName("esent.dll", "JetAttachDatabase2W")
+Interceptor.attach(JetAttachDatabase2W, {onLeave: function (args) {send("JetAttachDatabase2W");}});
+
+var JetAttachDatabase3 = Module.findExportByName("esent.dll", "JetAttachDatabase3")
+Interceptor.attach(JetAttachDatabase3, {onLeave: function (args) {send("JetAttachDatabase3");}});
+
+var JetAttachDatabase3A = Module.findExportByName("esent.dll", "JetAttachDatabase3A")
+Interceptor.attach(JetAttachDatabase3A, {onLeave: function (args) {send("JetAttachDatabase3A");}});
+
+var JetAttachDatabase3W = Module.findExportByName("esent.dll", "JetAttachDatabase3W")
+Interceptor.attach(JetAttachDatabase3W, {onLeave: function (args) {send("JetAttachDatabase3W");}});
+
+var JetAttachDatabaseA = Module.findExportByName("esent.dll", "JetAttachDatabaseA")
+Interceptor.attach(JetAttachDatabaseA, {onLeave: function (args) {send("JetAttachDatabaseA");}});
+
+var JetAttachDatabaseW = Module.findExportByName("esent.dll", "JetAttachDatabaseW")
+Interceptor.attach(JetAttachDatabaseW, {onLeave: function (args) {send("JetAttachDatabaseW");}});
+
+var JetAttachDatabaseWithStreaming = Module.findExportByName("esent.dll", "JetAttachDatabaseWithStreaming")
+Interceptor.attach(JetAttachDatabaseWithStreaming, {onLeave: function (args) {send("JetAttachDatabaseWithStreaming");}});
+
+var JetAttachDatabaseWithStreamingA = Module.findExportByName("esent.dll", "JetAttachDatabaseWithStreamingA")
+Interceptor.attach(JetAttachDatabaseWithStreamingA, {onLeave: function (args) {send("JetAttachDatabaseWithStreamingA");}});
+
+var JetAttachDatabaseWithStreamingW = Module.findExportByName("esent.dll", "JetAttachDatabaseWithStreamingW")
+Interceptor.attach(JetAttachDatabaseWithStreamingW, {onLeave: function (args) {send("JetAttachDatabaseWithStreamingW");}});
+
+var JetBackup = Module.findExportByName("esent.dll", "JetBackup")
+Interceptor.attach(JetBackup, {onLeave: function (args) {send("JetBackup");}});
+
+var JetBackupA = Module.findExportByName("esent.dll", "JetBackupA")
+Interceptor.attach(JetBackupA, {onLeave: function (args) {send("JetBackupA");}});
+
+var JetBackupInstance = Module.findExportByName("esent.dll", "JetBackupInstance")
+Interceptor.attach(JetBackupInstance, {onLeave: function (args) {send("JetBackupInstance");}});
+
+var JetBackupInstanceA = Module.findExportByName("esent.dll", "JetBackupInstanceA")
+Interceptor.attach(JetBackupInstanceA, {onLeave: function (args) {send("JetBackupInstanceA");}});
+
+var JetBackupInstanceW = Module.findExportByName("esent.dll", "JetBackupInstanceW")
+Interceptor.attach(JetBackupInstanceW, {onLeave: function (args) {send("JetBackupInstanceW");}});
+
+var JetBackupW = Module.findExportByName("esent.dll", "JetBackupW")
+Interceptor.attach(JetBackupW, {onLeave: function (args) {send("JetBackupW");}});
+
+var JetBeginDatabaseIncrementalReseed = Module.findExportByName("esent.dll", "JetBeginDatabaseIncrementalReseed")
+Interceptor.attach(JetBeginDatabaseIncrementalReseed, {onLeave: function (args) {send("JetBeginDatabaseIncrementalReseed");}});
+
+var JetBeginDatabaseIncrementalReseedA = Module.findExportByName("esent.dll", "JetBeginDatabaseIncrementalReseedA")
+Interceptor.attach(JetBeginDatabaseIncrementalReseedA, {onLeave: function (args) {send("JetBeginDatabaseIncrementalReseedA");}});
+
+var JetBeginDatabaseIncrementalReseedW = Module.findExportByName("esent.dll", "JetBeginDatabaseIncrementalReseedW")
+Interceptor.attach(JetBeginDatabaseIncrementalReseedW, {onLeave: function (args) {send("JetBeginDatabaseIncrementalReseedW");}});
+
+var JetBeginExternalBackup = Module.findExportByName("esent.dll", "JetBeginExternalBackup")
+Interceptor.attach(JetBeginExternalBackup, {onLeave: function (args) {send("JetBeginExternalBackup");}});
+
+var JetBeginExternalBackupInstance = Module.findExportByName("esent.dll", "JetBeginExternalBackupInstance")
+Interceptor.attach(JetBeginExternalBackupInstance, {onLeave: function (args) {send("JetBeginExternalBackupInstance");}});
+
+var JetBeginSession = Module.findExportByName("esent.dll", "JetBeginSession")
+Interceptor.attach(JetBeginSession, {onLeave: function (args) {send("JetBeginSession");}});
+
+var JetBeginSessionA = Module.findExportByName("esent.dll", "JetBeginSessionA")
+Interceptor.attach(JetBeginSessionA, {onLeave: function (args) {send("JetBeginSessionA");}});
+
+var JetBeginSessionW = Module.findExportByName("esent.dll", "JetBeginSessionW")
+Interceptor.attach(JetBeginSessionW, {onLeave: function (args) {send("JetBeginSessionW");}});
+
+var JetBeginSurrogateBackup = Module.findExportByName("esent.dll", "JetBeginSurrogateBackup")
+Interceptor.attach(JetBeginSurrogateBackup, {onLeave: function (args) {send("JetBeginSurrogateBackup");}});
+
+var JetBeginTransaction = Module.findExportByName("esent.dll", "JetBeginTransaction")
+Interceptor.attach(JetBeginTransaction, {onLeave: function (args) {send("JetBeginTransaction");}});
+
+var JetBeginTransaction2 = Module.findExportByName("esent.dll", "JetBeginTransaction2")
+Interceptor.attach(JetBeginTransaction2, {onLeave: function (args) {send("JetBeginTransaction2");}});
+
+var JetBeginTransaction3 = Module.findExportByName("esent.dll", "JetBeginTransaction3")
+Interceptor.attach(JetBeginTransaction3, {onLeave: function (args) {send("JetBeginTransaction3");}});
+
+var JetCloseDatabase = Module.findExportByName("esent.dll", "JetCloseDatabase")
+Interceptor.attach(JetCloseDatabase, {onLeave: function (args) {send("JetCloseDatabase");}});
+
+var JetCloseFile = Module.findExportByName("esent.dll", "JetCloseFile")
+Interceptor.attach(JetCloseFile, {onLeave: function (args) {send("JetCloseFile");}});
+
+var JetCloseFileInstance = Module.findExportByName("esent.dll", "JetCloseFileInstance")
+Interceptor.attach(JetCloseFileInstance, {onLeave: function (args) {send("JetCloseFileInstance");}});
+
+var JetCloseTable = Module.findExportByName("esent.dll", "JetCloseTable")
+Interceptor.attach(JetCloseTable, {onLeave: function (args) {send("JetCloseTable");}});
+
+var JetCommitTransaction = Module.findExportByName("esent.dll", "JetCommitTransaction")
+Interceptor.attach(JetCommitTransaction, {onLeave: function (args) {send("JetCommitTransaction");}});
+
+var JetCommitTransaction2 = Module.findExportByName("esent.dll", "JetCommitTransaction2")
+Interceptor.attach(JetCommitTransaction2, {onLeave: function (args) {send("JetCommitTransaction2");}});
+
+var JetCompact = Module.findExportByName("esent.dll", "JetCompact")
+Interceptor.attach(JetCompact, {onLeave: function (args) {send("JetCompact");}});
+
+var JetCompactA = Module.findExportByName("esent.dll", "JetCompactA")
+Interceptor.attach(JetCompactA, {onLeave: function (args) {send("JetCompactA");}});
+
+var JetCompactW = Module.findExportByName("esent.dll", "JetCompactW")
+Interceptor.attach(JetCompactW, {onLeave: function (args) {send("JetCompactW");}});
+
+var JetComputeStats = Module.findExportByName("esent.dll", "JetComputeStats")
+Interceptor.attach(JetComputeStats, {onLeave: function (args) {send("JetComputeStats");}});
+
+var JetConfigureProcessForCrashDump = Module.findExportByName("esent.dll", "JetConfigureProcessForCrashDump")
+Interceptor.attach(JetConfigureProcessForCrashDump, {onLeave: function (args) {send("JetConfigureProcessForCrashDump");}});
+
+var JetConsumeLogData = Module.findExportByName("esent.dll", "JetConsumeLogData")
+Interceptor.attach(JetConsumeLogData, {onLeave: function (args) {send("JetConsumeLogData");}});
+
+var JetConvertDDL = Module.findExportByName("esent.dll", "JetConvertDDL")
+Interceptor.attach(JetConvertDDL, {onLeave: function (args) {send("JetConvertDDL");}});
+
+var JetConvertDDLA = Module.findExportByName("esent.dll", "JetConvertDDLA")
+Interceptor.attach(JetConvertDDLA, {onLeave: function (args) {send("JetConvertDDLA");}});
+
+var JetConvertDDLW = Module.findExportByName("esent.dll", "JetConvertDDLW")
+Interceptor.attach(JetConvertDDLW, {onLeave: function (args) {send("JetConvertDDLW");}});
+
+var JetCreateDatabase = Module.findExportByName("esent.dll", "JetCreateDatabase")
+Interceptor.attach(JetCreateDatabase, {onLeave: function (args) {send("JetCreateDatabase");}});
+
+var JetCreateDatabase2 = Module.findExportByName("esent.dll", "JetCreateDatabase2")
+Interceptor.attach(JetCreateDatabase2, {onLeave: function (args) {send("JetCreateDatabase2");}});
+
+var JetCreateDatabase2A = Module.findExportByName("esent.dll", "JetCreateDatabase2A")
+Interceptor.attach(JetCreateDatabase2A, {onLeave: function (args) {send("JetCreateDatabase2A");}});
+
+var JetCreateDatabase2W = Module.findExportByName("esent.dll", "JetCreateDatabase2W")
+Interceptor.attach(JetCreateDatabase2W, {onLeave: function (args) {send("JetCreateDatabase2W");}});
+
+var JetCreateDatabase3 = Module.findExportByName("esent.dll", "JetCreateDatabase3")
+Interceptor.attach(JetCreateDatabase3, {onLeave: function (args) {send("JetCreateDatabase3");}});
+
+var JetCreateDatabase3A = Module.findExportByName("esent.dll", "JetCreateDatabase3A")
+Interceptor.attach(JetCreateDatabase3A, {onLeave: function (args) {send("JetCreateDatabase3A");}});
+
+var JetCreateDatabase3W = Module.findExportByName("esent.dll", "JetCreateDatabase3W")
+Interceptor.attach(JetCreateDatabase3W, {onLeave: function (args) {send("JetCreateDatabase3W");}});
+
+var JetCreateDatabaseA = Module.findExportByName("esent.dll", "JetCreateDatabaseA")
+Interceptor.attach(JetCreateDatabaseA, {onLeave: function (args) {send("JetCreateDatabaseA");}});
+
+var JetCreateDatabaseW = Module.findExportByName("esent.dll", "JetCreateDatabaseW")
+Interceptor.attach(JetCreateDatabaseW, {onLeave: function (args) {send("JetCreateDatabaseW");}});
+
+var JetCreateDatabaseWithStreaming = Module.findExportByName("esent.dll", "JetCreateDatabaseWithStreaming")
+Interceptor.attach(JetCreateDatabaseWithStreaming, {onLeave: function (args) {send("JetCreateDatabaseWithStreaming");}});
+
+var JetCreateDatabaseWithStreamingA = Module.findExportByName("esent.dll", "JetCreateDatabaseWithStreamingA")
+Interceptor.attach(JetCreateDatabaseWithStreamingA, {onLeave: function (args) {send("JetCreateDatabaseWithStreamingA");}});
+
+var JetCreateDatabaseWithStreamingW = Module.findExportByName("esent.dll", "JetCreateDatabaseWithStreamingW")
+Interceptor.attach(JetCreateDatabaseWithStreamingW, {onLeave: function (args) {send("JetCreateDatabaseWithStreamingW");}});
+
+var JetCreateEncryptionKey = Module.findExportByName("esent.dll", "JetCreateEncryptionKey")
+Interceptor.attach(JetCreateEncryptionKey, {onLeave: function (args) {send("JetCreateEncryptionKey");}});
+
+var JetCreateIndex = Module.findExportByName("esent.dll", "JetCreateIndex")
+Interceptor.attach(JetCreateIndex, {onLeave: function (args) {send("JetCreateIndex");}});
+
+var JetCreateIndex2 = Module.findExportByName("esent.dll", "JetCreateIndex2")
+Interceptor.attach(JetCreateIndex2, {onLeave: function (args) {send("JetCreateIndex2");}});
+
+var JetCreateIndex2A = Module.findExportByName("esent.dll", "JetCreateIndex2A")
+Interceptor.attach(JetCreateIndex2A, {onLeave: function (args) {send("JetCreateIndex2A");}});
+
+var JetCreateIndex2W = Module.findExportByName("esent.dll", "JetCreateIndex2W")
+Interceptor.attach(JetCreateIndex2W, {onLeave: function (args) {send("JetCreateIndex2W");}});
+
+var JetCreateIndex3A = Module.findExportByName("esent.dll", "JetCreateIndex3A")
+Interceptor.attach(JetCreateIndex3A, {onLeave: function (args) {send("JetCreateIndex3A");}});
+
+var JetCreateIndex3W = Module.findExportByName("esent.dll", "JetCreateIndex3W")
+Interceptor.attach(JetCreateIndex3W, {onLeave: function (args) {send("JetCreateIndex3W");}});
+
+var JetCreateIndex4A = Module.findExportByName("esent.dll", "JetCreateIndex4A")
+Interceptor.attach(JetCreateIndex4A, {onLeave: function (args) {send("JetCreateIndex4A");}});
+
+var JetCreateIndex4W = Module.findExportByName("esent.dll", "JetCreateIndex4W")
+Interceptor.attach(JetCreateIndex4W, {onLeave: function (args) {send("JetCreateIndex4W");}});
+
+var JetCreateIndexA = Module.findExportByName("esent.dll", "JetCreateIndexA")
+Interceptor.attach(JetCreateIndexA, {onLeave: function (args) {send("JetCreateIndexA");}});
+
+var JetCreateIndexW = Module.findExportByName("esent.dll", "JetCreateIndexW")
+Interceptor.attach(JetCreateIndexW, {onLeave: function (args) {send("JetCreateIndexW");}});
+
+var JetCreateInstance = Module.findExportByName("esent.dll", "JetCreateInstance")
+Interceptor.attach(JetCreateInstance, {onLeave: function (args) {send("JetCreateInstance");}});
+
+var JetCreateInstance2 = Module.findExportByName("esent.dll", "JetCreateInstance2")
+Interceptor.attach(JetCreateInstance2, {onLeave: function (args) {send("JetCreateInstance2");}});
+
+var JetCreateInstance2A = Module.findExportByName("esent.dll", "JetCreateInstance2A")
+Interceptor.attach(JetCreateInstance2A, {onLeave: function (args) {send("JetCreateInstance2A");}});
+
+var JetCreateInstance2W = Module.findExportByName("esent.dll", "JetCreateInstance2W")
+Interceptor.attach(JetCreateInstance2W, {onLeave: function (args) {send("JetCreateInstance2W");}});
+
+var JetCreateInstanceA = Module.findExportByName("esent.dll", "JetCreateInstanceA")
+Interceptor.attach(JetCreateInstanceA, {onLeave: function (args) {send("JetCreateInstanceA");}});
+
+var JetCreateInstanceW = Module.findExportByName("esent.dll", "JetCreateInstanceW")
+Interceptor.attach(JetCreateInstanceW, {onLeave: function (args) {send("JetCreateInstanceW");}});
+
+var JetCreateTable = Module.findExportByName("esent.dll", "JetCreateTable")
+Interceptor.attach(JetCreateTable, {onLeave: function (args) {send("JetCreateTable");}});
+
+var JetCreateTableA = Module.findExportByName("esent.dll", "JetCreateTableA")
+Interceptor.attach(JetCreateTableA, {onLeave: function (args) {send("JetCreateTableA");}});
+
+var JetCreateTableColumnIndex = Module.findExportByName("esent.dll", "JetCreateTableColumnIndex")
+Interceptor.attach(JetCreateTableColumnIndex, {onLeave: function (args) {send("JetCreateTableColumnIndex");}});
+
+var JetCreateTableColumnIndex2 = Module.findExportByName("esent.dll", "JetCreateTableColumnIndex2")
+Interceptor.attach(JetCreateTableColumnIndex2, {onLeave: function (args) {send("JetCreateTableColumnIndex2");}});
+
+var JetCreateTableColumnIndex2A = Module.findExportByName("esent.dll", "JetCreateTableColumnIndex2A")
+Interceptor.attach(JetCreateTableColumnIndex2A, {onLeave: function (args) {send("JetCreateTableColumnIndex2A");}});
+
+var JetCreateTableColumnIndex2W = Module.findExportByName("esent.dll", "JetCreateTableColumnIndex2W")
+Interceptor.attach(JetCreateTableColumnIndex2W, {onLeave: function (args) {send("JetCreateTableColumnIndex2W");}});
+
+var JetCreateTableColumnIndex3A = Module.findExportByName("esent.dll", "JetCreateTableColumnIndex3A")
+Interceptor.attach(JetCreateTableColumnIndex3A, {onLeave: function (args) {send("JetCreateTableColumnIndex3A");}});
+
+var JetCreateTableColumnIndex3W = Module.findExportByName("esent.dll", "JetCreateTableColumnIndex3W")
+Interceptor.attach(JetCreateTableColumnIndex3W, {onLeave: function (args) {send("JetCreateTableColumnIndex3W");}});
+
+var JetCreateTableColumnIndex4A = Module.findExportByName("esent.dll", "JetCreateTableColumnIndex4A")
+Interceptor.attach(JetCreateTableColumnIndex4A, {onLeave: function (args) {send("JetCreateTableColumnIndex4A");}});
+
+var JetCreateTableColumnIndex4W = Module.findExportByName("esent.dll", "JetCreateTableColumnIndex4W")
+Interceptor.attach(JetCreateTableColumnIndex4W, {onLeave: function (args) {send("JetCreateTableColumnIndex4W");}});
+
+var JetCreateTableColumnIndex5A = Module.findExportByName("esent.dll", "JetCreateTableColumnIndex5A")
+Interceptor.attach(JetCreateTableColumnIndex5A, {onLeave: function (args) {send("JetCreateTableColumnIndex5A");}});
+
+var JetCreateTableColumnIndex5W = Module.findExportByName("esent.dll", "JetCreateTableColumnIndex5W")
+Interceptor.attach(JetCreateTableColumnIndex5W, {onLeave: function (args) {send("JetCreateTableColumnIndex5W");}});
+
+var JetCreateTableColumnIndexA = Module.findExportByName("esent.dll", "JetCreateTableColumnIndexA")
+Interceptor.attach(JetCreateTableColumnIndexA, {onLeave: function (args) {send("JetCreateTableColumnIndexA");}});
+
+var JetCreateTableColumnIndexW = Module.findExportByName("esent.dll", "JetCreateTableColumnIndexW")
+Interceptor.attach(JetCreateTableColumnIndexW, {onLeave: function (args) {send("JetCreateTableColumnIndexW");}});
+
+var JetCreateTableW = Module.findExportByName("esent.dll", "JetCreateTableW")
+Interceptor.attach(JetCreateTableW, {onLeave: function (args) {send("JetCreateTableW");}});
+
+var JetDBUtilities = Module.findExportByName("esent.dll", "JetDBUtilities")
+Interceptor.attach(JetDBUtilities, {onLeave: function (args) {send("JetDBUtilities");}});
+
+var JetDBUtilitiesA = Module.findExportByName("esent.dll", "JetDBUtilitiesA")
+Interceptor.attach(JetDBUtilitiesA, {onLeave: function (args) {send("JetDBUtilitiesA");}});
+
+var JetDBUtilitiesW = Module.findExportByName("esent.dll", "JetDBUtilitiesW")
+Interceptor.attach(JetDBUtilitiesW, {onLeave: function (args) {send("JetDBUtilitiesW");}});
+
+var JetDatabaseScan = Module.findExportByName("esent.dll", "JetDatabaseScan")
+Interceptor.attach(JetDatabaseScan, {onLeave: function (args) {send("JetDatabaseScan");}});
+
+var JetDefragment = Module.findExportByName("esent.dll", "JetDefragment")
+Interceptor.attach(JetDefragment, {onLeave: function (args) {send("JetDefragment");}});
+
+var JetDefragment2 = Module.findExportByName("esent.dll", "JetDefragment2")
+Interceptor.attach(JetDefragment2, {onLeave: function (args) {send("JetDefragment2");}});
+
+var JetDefragment2A = Module.findExportByName("esent.dll", "JetDefragment2A")
+Interceptor.attach(JetDefragment2A, {onLeave: function (args) {send("JetDefragment2A");}});
+
+var JetDefragment2W = Module.findExportByName("esent.dll", "JetDefragment2W")
+Interceptor.attach(JetDefragment2W, {onLeave: function (args) {send("JetDefragment2W");}});
+
+var JetDefragment3 = Module.findExportByName("esent.dll", "JetDefragment3")
+Interceptor.attach(JetDefragment3, {onLeave: function (args) {send("JetDefragment3");}});
+
+var JetDefragment3A = Module.findExportByName("esent.dll", "JetDefragment3A")
+Interceptor.attach(JetDefragment3A, {onLeave: function (args) {send("JetDefragment3A");}});
+
+var JetDefragment3W = Module.findExportByName("esent.dll", "JetDefragment3W")
+Interceptor.attach(JetDefragment3W, {onLeave: function (args) {send("JetDefragment3W");}});
+
+var JetDefragmentA = Module.findExportByName("esent.dll", "JetDefragmentA")
+Interceptor.attach(JetDefragmentA, {onLeave: function (args) {send("JetDefragmentA");}});
+
+var JetDefragmentW = Module.findExportByName("esent.dll", "JetDefragmentW")
+Interceptor.attach(JetDefragmentW, {onLeave: function (args) {send("JetDefragmentW");}});
+
+var JetDelete = Module.findExportByName("esent.dll", "JetDelete")
+Interceptor.attach(JetDelete, {onLeave: function (args) {send("JetDelete");}});
+
+var JetDeleteColumn = Module.findExportByName("esent.dll", "JetDeleteColumn")
+Interceptor.attach(JetDeleteColumn, {onLeave: function (args) {send("JetDeleteColumn");}});
+
+var JetDeleteColumn2 = Module.findExportByName("esent.dll", "JetDeleteColumn2")
+Interceptor.attach(JetDeleteColumn2, {onLeave: function (args) {send("JetDeleteColumn2");}});
+
+var JetDeleteColumn2A = Module.findExportByName("esent.dll", "JetDeleteColumn2A")
+Interceptor.attach(JetDeleteColumn2A, {onLeave: function (args) {send("JetDeleteColumn2A");}});
+
+var JetDeleteColumn2W = Module.findExportByName("esent.dll", "JetDeleteColumn2W")
+Interceptor.attach(JetDeleteColumn2W, {onLeave: function (args) {send("JetDeleteColumn2W");}});
+
+var JetDeleteColumnA = Module.findExportByName("esent.dll", "JetDeleteColumnA")
+Interceptor.attach(JetDeleteColumnA, {onLeave: function (args) {send("JetDeleteColumnA");}});
+
+var JetDeleteColumnW = Module.findExportByName("esent.dll", "JetDeleteColumnW")
+Interceptor.attach(JetDeleteColumnW, {onLeave: function (args) {send("JetDeleteColumnW");}});
+
+var JetDeleteIndex = Module.findExportByName("esent.dll", "JetDeleteIndex")
+Interceptor.attach(JetDeleteIndex, {onLeave: function (args) {send("JetDeleteIndex");}});
+
+var JetDeleteIndexA = Module.findExportByName("esent.dll", "JetDeleteIndexA")
+Interceptor.attach(JetDeleteIndexA, {onLeave: function (args) {send("JetDeleteIndexA");}});
+
+var JetDeleteIndexW = Module.findExportByName("esent.dll", "JetDeleteIndexW")
+Interceptor.attach(JetDeleteIndexW, {onLeave: function (args) {send("JetDeleteIndexW");}});
+
+var JetDeleteTable = Module.findExportByName("esent.dll", "JetDeleteTable")
+Interceptor.attach(JetDeleteTable, {onLeave: function (args) {send("JetDeleteTable");}});
+
+var JetDeleteTable2 = Module.findExportByName("esent.dll", "JetDeleteTable2")
+Interceptor.attach(JetDeleteTable2, {onLeave: function (args) {send("JetDeleteTable2");}});
+
+var JetDeleteTable2A = Module.findExportByName("esent.dll", "JetDeleteTable2A")
+Interceptor.attach(JetDeleteTable2A, {onLeave: function (args) {send("JetDeleteTable2A");}});
+
+var JetDeleteTable2W = Module.findExportByName("esent.dll", "JetDeleteTable2W")
+Interceptor.attach(JetDeleteTable2W, {onLeave: function (args) {send("JetDeleteTable2W");}});
+
+var JetDeleteTableA = Module.findExportByName("esent.dll", "JetDeleteTableA")
+Interceptor.attach(JetDeleteTableA, {onLeave: function (args) {send("JetDeleteTableA");}});
+
+var JetDeleteTableW = Module.findExportByName("esent.dll", "JetDeleteTableW")
+Interceptor.attach(JetDeleteTableW, {onLeave: function (args) {send("JetDeleteTableW");}});
+
+var JetDetachDatabase = Module.findExportByName("esent.dll", "JetDetachDatabase")
+Interceptor.attach(JetDetachDatabase, {onLeave: function (args) {send("JetDetachDatabase");}});
+
+var JetDetachDatabase2 = Module.findExportByName("esent.dll", "JetDetachDatabase2")
+Interceptor.attach(JetDetachDatabase2, {onLeave: function (args) {send("JetDetachDatabase2");}});
+
+var JetDetachDatabase2A = Module.findExportByName("esent.dll", "JetDetachDatabase2A")
+Interceptor.attach(JetDetachDatabase2A, {onLeave: function (args) {send("JetDetachDatabase2A");}});
+
+var JetDetachDatabase2W = Module.findExportByName("esent.dll", "JetDetachDatabase2W")
+Interceptor.attach(JetDetachDatabase2W, {onLeave: function (args) {send("JetDetachDatabase2W");}});
+
+var JetDetachDatabaseA = Module.findExportByName("esent.dll", "JetDetachDatabaseA")
+Interceptor.attach(JetDetachDatabaseA, {onLeave: function (args) {send("JetDetachDatabaseA");}});
+
+var JetDetachDatabaseW = Module.findExportByName("esent.dll", "JetDetachDatabaseW")
+Interceptor.attach(JetDetachDatabaseW, {onLeave: function (args) {send("JetDetachDatabaseW");}});
+
+var JetDupCursor = Module.findExportByName("esent.dll", "JetDupCursor")
+Interceptor.attach(JetDupCursor, {onLeave: function (args) {send("JetDupCursor");}});
+
+var JetDupSession = Module.findExportByName("esent.dll", "JetDupSession")
+Interceptor.attach(JetDupSession, {onLeave: function (args) {send("JetDupSession");}});
+
+var JetEnableMultiInstance = Module.findExportByName("esent.dll", "JetEnableMultiInstance")
+Interceptor.attach(JetEnableMultiInstance, {onLeave: function (args) {send("JetEnableMultiInstance");}});
+
+var JetEnableMultiInstanceA = Module.findExportByName("esent.dll", "JetEnableMultiInstanceA")
+Interceptor.attach(JetEnableMultiInstanceA, {onLeave: function (args) {send("JetEnableMultiInstanceA");}});
+
+var JetEnableMultiInstanceW = Module.findExportByName("esent.dll", "JetEnableMultiInstanceW")
+Interceptor.attach(JetEnableMultiInstanceW, {onLeave: function (args) {send("JetEnableMultiInstanceW");}});
+
+var JetEndDatabaseIncrementalReseed = Module.findExportByName("esent.dll", "JetEndDatabaseIncrementalReseed")
+Interceptor.attach(JetEndDatabaseIncrementalReseed, {onLeave: function (args) {send("JetEndDatabaseIncrementalReseed");}});
+
+var JetEndDatabaseIncrementalReseedA = Module.findExportByName("esent.dll", "JetEndDatabaseIncrementalReseedA")
+Interceptor.attach(JetEndDatabaseIncrementalReseedA, {onLeave: function (args) {send("JetEndDatabaseIncrementalReseedA");}});
+
+var JetEndDatabaseIncrementalReseedW = Module.findExportByName("esent.dll", "JetEndDatabaseIncrementalReseedW")
+Interceptor.attach(JetEndDatabaseIncrementalReseedW, {onLeave: function (args) {send("JetEndDatabaseIncrementalReseedW");}});
+
+var JetEndExternalBackup = Module.findExportByName("esent.dll", "JetEndExternalBackup")
+Interceptor.attach(JetEndExternalBackup, {onLeave: function (args) {send("JetEndExternalBackup");}});
+
+var JetEndExternalBackupInstance = Module.findExportByName("esent.dll", "JetEndExternalBackupInstance")
+Interceptor.attach(JetEndExternalBackupInstance, {onLeave: function (args) {send("JetEndExternalBackupInstance");}});
+
+var JetEndExternalBackupInstance2 = Module.findExportByName("esent.dll", "JetEndExternalBackupInstance2")
+Interceptor.attach(JetEndExternalBackupInstance2, {onLeave: function (args) {send("JetEndExternalBackupInstance2");}});
+
+var JetEndSession = Module.findExportByName("esent.dll", "JetEndSession")
+Interceptor.attach(JetEndSession, {onLeave: function (args) {send("JetEndSession");}});
+
+var JetEndSurrogateBackup = Module.findExportByName("esent.dll", "JetEndSurrogateBackup")
+Interceptor.attach(JetEndSurrogateBackup, {onLeave: function (args) {send("JetEndSurrogateBackup");}});
+
+var JetEnumerateColumns = Module.findExportByName("esent.dll", "JetEnumerateColumns")
+Interceptor.attach(JetEnumerateColumns, {onLeave: function (args) {send("JetEnumerateColumns");}});
+
+var JetEscrowUpdate = Module.findExportByName("esent.dll", "JetEscrowUpdate")
+Interceptor.attach(JetEscrowUpdate, {onLeave: function (args) {send("JetEscrowUpdate");}});
+
+var JetExternalRestore = Module.findExportByName("esent.dll", "JetExternalRestore")
+Interceptor.attach(JetExternalRestore, {onLeave: function (args) {send("JetExternalRestore");}});
+
+var JetExternalRestore2 = Module.findExportByName("esent.dll", "JetExternalRestore2")
+Interceptor.attach(JetExternalRestore2, {onLeave: function (args) {send("JetExternalRestore2");}});
+
+var JetExternalRestore2A = Module.findExportByName("esent.dll", "JetExternalRestore2A")
+Interceptor.attach(JetExternalRestore2A, {onLeave: function (args) {send("JetExternalRestore2A");}});
+
+var JetExternalRestore2W = Module.findExportByName("esent.dll", "JetExternalRestore2W")
+Interceptor.attach(JetExternalRestore2W, {onLeave: function (args) {send("JetExternalRestore2W");}});
+
+var JetExternalRestoreA = Module.findExportByName("esent.dll", "JetExternalRestoreA")
+Interceptor.attach(JetExternalRestoreA, {onLeave: function (args) {send("JetExternalRestoreA");}});
+
+var JetExternalRestoreW = Module.findExportByName("esent.dll", "JetExternalRestoreW")
+Interceptor.attach(JetExternalRestoreW, {onLeave: function (args) {send("JetExternalRestoreW");}});
+
+var JetFreeBuffer = Module.findExportByName("esent.dll", "JetFreeBuffer")
+Interceptor.attach(JetFreeBuffer, {onLeave: function (args) {send("JetFreeBuffer");}});
+
+var JetGetAttachInfo = Module.findExportByName("esent.dll", "JetGetAttachInfo")
+Interceptor.attach(JetGetAttachInfo, {onLeave: function (args) {send("JetGetAttachInfo");}});
+
+var JetGetAttachInfoA = Module.findExportByName("esent.dll", "JetGetAttachInfoA")
+Interceptor.attach(JetGetAttachInfoA, {onLeave: function (args) {send("JetGetAttachInfoA");}});
+
+var JetGetAttachInfoInstance = Module.findExportByName("esent.dll", "JetGetAttachInfoInstance")
+Interceptor.attach(JetGetAttachInfoInstance, {onLeave: function (args) {send("JetGetAttachInfoInstance");}});
+
+var JetGetAttachInfoInstanceA = Module.findExportByName("esent.dll", "JetGetAttachInfoInstanceA")
+Interceptor.attach(JetGetAttachInfoInstanceA, {onLeave: function (args) {send("JetGetAttachInfoInstanceA");}});
+
+var JetGetAttachInfoInstanceW = Module.findExportByName("esent.dll", "JetGetAttachInfoInstanceW")
+Interceptor.attach(JetGetAttachInfoInstanceW, {onLeave: function (args) {send("JetGetAttachInfoInstanceW");}});
+
+var JetGetAttachInfoW = Module.findExportByName("esent.dll", "JetGetAttachInfoW")
+Interceptor.attach(JetGetAttachInfoW, {onLeave: function (args) {send("JetGetAttachInfoW");}});
+
+var JetGetBookmark = Module.findExportByName("esent.dll", "JetGetBookmark")
+Interceptor.attach(JetGetBookmark, {onLeave: function (args) {send("JetGetBookmark");}});
+
+var JetGetColumnInfo = Module.findExportByName("esent.dll", "JetGetColumnInfo")
+Interceptor.attach(JetGetColumnInfo, {onLeave: function (args) {send("JetGetColumnInfo");}});
+
+var JetGetColumnInfoA = Module.findExportByName("esent.dll", "JetGetColumnInfoA")
+Interceptor.attach(JetGetColumnInfoA, {onLeave: function (args) {send("JetGetColumnInfoA");}});
+
+var JetGetColumnInfoW = Module.findExportByName("esent.dll", "JetGetColumnInfoW")
+Interceptor.attach(JetGetColumnInfoW, {onLeave: function (args) {send("JetGetColumnInfoW");}});
+
+var JetGetCounter = Module.findExportByName("esent.dll", "JetGetCounter")
+Interceptor.attach(JetGetCounter, {onLeave: function (args) {send("JetGetCounter");}});
+
+var JetGetCurrentIndex = Module.findExportByName("esent.dll", "JetGetCurrentIndex")
+Interceptor.attach(JetGetCurrentIndex, {onLeave: function (args) {send("JetGetCurrentIndex");}});
+
+var JetGetCurrentIndexA = Module.findExportByName("esent.dll", "JetGetCurrentIndexA")
+Interceptor.attach(JetGetCurrentIndexA, {onLeave: function (args) {send("JetGetCurrentIndexA");}});
+
+var JetGetCurrentIndexW = Module.findExportByName("esent.dll", "JetGetCurrentIndexW")
+Interceptor.attach(JetGetCurrentIndexW, {onLeave: function (args) {send("JetGetCurrentIndexW");}});
+
+var JetGetCursorInfo = Module.findExportByName("esent.dll", "JetGetCursorInfo")
+Interceptor.attach(JetGetCursorInfo, {onLeave: function (args) {send("JetGetCursorInfo");}});
+
+var JetGetDatabaseFileInfo = Module.findExportByName("esent.dll", "JetGetDatabaseFileInfo")
+Interceptor.attach(JetGetDatabaseFileInfo, {onLeave: function (args) {send("JetGetDatabaseFileInfo");}});
+
+var JetGetDatabaseFileInfoA = Module.findExportByName("esent.dll", "JetGetDatabaseFileInfoA")
+Interceptor.attach(JetGetDatabaseFileInfoA, {onLeave: function (args) {send("JetGetDatabaseFileInfoA");}});
+
+var JetGetDatabaseFileInfoW = Module.findExportByName("esent.dll", "JetGetDatabaseFileInfoW")
+Interceptor.attach(JetGetDatabaseFileInfoW, {onLeave: function (args) {send("JetGetDatabaseFileInfoW");}});
+
+var JetGetDatabaseInfo = Module.findExportByName("esent.dll", "JetGetDatabaseInfo")
+Interceptor.attach(JetGetDatabaseInfo, {onLeave: function (args) {send("JetGetDatabaseInfo");}});
+
+var JetGetDatabaseInfoA = Module.findExportByName("esent.dll", "JetGetDatabaseInfoA")
+Interceptor.attach(JetGetDatabaseInfoA, {onLeave: function (args) {send("JetGetDatabaseInfoA");}});
+
+var JetGetDatabaseInfoW = Module.findExportByName("esent.dll", "JetGetDatabaseInfoW")
+Interceptor.attach(JetGetDatabaseInfoW, {onLeave: function (args) {send("JetGetDatabaseInfoW");}});
+
+var JetGetDatabasePages = Module.findExportByName("esent.dll", "JetGetDatabasePages")
+Interceptor.attach(JetGetDatabasePages, {onLeave: function (args) {send("JetGetDatabasePages");}});
+
+var JetGetErrorInfoW = Module.findExportByName("esent.dll", "JetGetErrorInfoW")
+Interceptor.attach(JetGetErrorInfoW, {onLeave: function (args) {send("JetGetErrorInfoW");}});
+
+var JetGetIndexInfo = Module.findExportByName("esent.dll", "JetGetIndexInfo")
+Interceptor.attach(JetGetIndexInfo, {onLeave: function (args) {send("JetGetIndexInfo");}});
+
+var JetGetIndexInfoA = Module.findExportByName("esent.dll", "JetGetIndexInfoA")
+Interceptor.attach(JetGetIndexInfoA, {onLeave: function (args) {send("JetGetIndexInfoA");}});
+
+var JetGetIndexInfoW = Module.findExportByName("esent.dll", "JetGetIndexInfoW")
+Interceptor.attach(JetGetIndexInfoW, {onLeave: function (args) {send("JetGetIndexInfoW");}});
+
+var JetGetInstanceInfo = Module.findExportByName("esent.dll", "JetGetInstanceInfo")
+Interceptor.attach(JetGetInstanceInfo, {onLeave: function (args) {send("JetGetInstanceInfo");}});
+
+var JetGetInstanceInfoA = Module.findExportByName("esent.dll", "JetGetInstanceInfoA")
+Interceptor.attach(JetGetInstanceInfoA, {onLeave: function (args) {send("JetGetInstanceInfoA");}});
+
+var JetGetInstanceInfoW = Module.findExportByName("esent.dll", "JetGetInstanceInfoW")
+Interceptor.attach(JetGetInstanceInfoW, {onLeave: function (args) {send("JetGetInstanceInfoW");}});
+
+var JetGetInstanceMiscInfo = Module.findExportByName("esent.dll", "JetGetInstanceMiscInfo")
+Interceptor.attach(JetGetInstanceMiscInfo, {onLeave: function (args) {send("JetGetInstanceMiscInfo");}});
+
+var JetGetLS = Module.findExportByName("esent.dll", "JetGetLS")
+Interceptor.attach(JetGetLS, {onLeave: function (args) {send("JetGetLS");}});
+
+var JetGetLock = Module.findExportByName("esent.dll", "JetGetLock")
+Interceptor.attach(JetGetLock, {onLeave: function (args) {send("JetGetLock");}});
+
+var JetGetLogFileInfo = Module.findExportByName("esent.dll", "JetGetLogFileInfo")
+Interceptor.attach(JetGetLogFileInfo, {onLeave: function (args) {send("JetGetLogFileInfo");}});
+
+var JetGetLogFileInfoA = Module.findExportByName("esent.dll", "JetGetLogFileInfoA")
+Interceptor.attach(JetGetLogFileInfoA, {onLeave: function (args) {send("JetGetLogFileInfoA");}});
+
+var JetGetLogFileInfoW = Module.findExportByName("esent.dll", "JetGetLogFileInfoW")
+Interceptor.attach(JetGetLogFileInfoW, {onLeave: function (args) {send("JetGetLogFileInfoW");}});
+
+var JetGetLogInfo = Module.findExportByName("esent.dll", "JetGetLogInfo")
+Interceptor.attach(JetGetLogInfo, {onLeave: function (args) {send("JetGetLogInfo");}});
+
+var JetGetLogInfoA = Module.findExportByName("esent.dll", "JetGetLogInfoA")
+Interceptor.attach(JetGetLogInfoA, {onLeave: function (args) {send("JetGetLogInfoA");}});
+
+var JetGetLogInfoInstance = Module.findExportByName("esent.dll", "JetGetLogInfoInstance")
+Interceptor.attach(JetGetLogInfoInstance, {onLeave: function (args) {send("JetGetLogInfoInstance");}});
+
+var JetGetLogInfoInstance2 = Module.findExportByName("esent.dll", "JetGetLogInfoInstance2")
+Interceptor.attach(JetGetLogInfoInstance2, {onLeave: function (args) {send("JetGetLogInfoInstance2");}});
+
+var JetGetLogInfoInstance2A = Module.findExportByName("esent.dll", "JetGetLogInfoInstance2A")
+Interceptor.attach(JetGetLogInfoInstance2A, {onLeave: function (args) {send("JetGetLogInfoInstance2A");}});
+
+var JetGetLogInfoInstance2W = Module.findExportByName("esent.dll", "JetGetLogInfoInstance2W")
+Interceptor.attach(JetGetLogInfoInstance2W, {onLeave: function (args) {send("JetGetLogInfoInstance2W");}});
+
+var JetGetLogInfoInstanceA = Module.findExportByName("esent.dll", "JetGetLogInfoInstanceA")
+Interceptor.attach(JetGetLogInfoInstanceA, {onLeave: function (args) {send("JetGetLogInfoInstanceA");}});
+
+var JetGetLogInfoInstanceW = Module.findExportByName("esent.dll", "JetGetLogInfoInstanceW")
+Interceptor.attach(JetGetLogInfoInstanceW, {onLeave: function (args) {send("JetGetLogInfoInstanceW");}});
+
+var JetGetLogInfoW = Module.findExportByName("esent.dll", "JetGetLogInfoW")
+Interceptor.attach(JetGetLogInfoW, {onLeave: function (args) {send("JetGetLogInfoW");}});
+
+var JetGetMaxDatabaseSize = Module.findExportByName("esent.dll", "JetGetMaxDatabaseSize")
+Interceptor.attach(JetGetMaxDatabaseSize, {onLeave: function (args) {send("JetGetMaxDatabaseSize");}});
+
+var JetGetObjectInfo = Module.findExportByName("esent.dll", "JetGetObjectInfo")
+Interceptor.attach(JetGetObjectInfo, {onLeave: function (args) {send("JetGetObjectInfo");}});
+
+var JetGetObjectInfoA = Module.findExportByName("esent.dll", "JetGetObjectInfoA")
+Interceptor.attach(JetGetObjectInfoA, {onLeave: function (args) {send("JetGetObjectInfoA");}});
+
+var JetGetObjectInfoW = Module.findExportByName("esent.dll", "JetGetObjectInfoW")
+Interceptor.attach(JetGetObjectInfoW, {onLeave: function (args) {send("JetGetObjectInfoW");}});
+
+var JetGetPageInfo = Module.findExportByName("esent.dll", "JetGetPageInfo")
+Interceptor.attach(JetGetPageInfo, {onLeave: function (args) {send("JetGetPageInfo");}});
+
+var JetGetPageInfo2 = Module.findExportByName("esent.dll", "JetGetPageInfo2")
+Interceptor.attach(JetGetPageInfo2, {onLeave: function (args) {send("JetGetPageInfo2");}});
+
+var JetGetRBSFileInfoA = Module.findExportByName("esent.dll", "JetGetRBSFileInfoA")
+Interceptor.attach(JetGetRBSFileInfoA, {onLeave: function (args) {send("JetGetRBSFileInfoA");}});
+
+var JetGetRBSFileInfoW = Module.findExportByName("esent.dll", "JetGetRBSFileInfoW")
+Interceptor.attach(JetGetRBSFileInfoW, {onLeave: function (args) {send("JetGetRBSFileInfoW");}});
+
+var JetGetRecordPosition = Module.findExportByName("esent.dll", "JetGetRecordPosition")
+Interceptor.attach(JetGetRecordPosition, {onLeave: function (args) {send("JetGetRecordPosition");}});
+
+var JetGetRecordSize = Module.findExportByName("esent.dll", "JetGetRecordSize")
+Interceptor.attach(JetGetRecordSize, {onLeave: function (args) {send("JetGetRecordSize");}});
+
+var JetGetRecordSize2 = Module.findExportByName("esent.dll", "JetGetRecordSize2")
+Interceptor.attach(JetGetRecordSize2, {onLeave: function (args) {send("JetGetRecordSize2");}});
+
+var JetGetRecordSize3 = Module.findExportByName("esent.dll", "JetGetRecordSize3")
+Interceptor.attach(JetGetRecordSize3, {onLeave: function (args) {send("JetGetRecordSize3");}});
+
+var JetGetResourceParam = Module.findExportByName("esent.dll", "JetGetResourceParam")
+Interceptor.attach(JetGetResourceParam, {onLeave: function (args) {send("JetGetResourceParam");}});
+
+var JetGetSecondaryIndexBookmark = Module.findExportByName("esent.dll", "JetGetSecondaryIndexBookmark")
+Interceptor.attach(JetGetSecondaryIndexBookmark, {onLeave: function (args) {send("JetGetSecondaryIndexBookmark");}});
+
+var JetGetSessionInfo = Module.findExportByName("esent.dll", "JetGetSessionInfo")
+Interceptor.attach(JetGetSessionInfo, {onLeave: function (args) {send("JetGetSessionInfo");}});
+
+var JetGetSessionParameter = Module.findExportByName("esent.dll", "JetGetSessionParameter")
+Interceptor.attach(JetGetSessionParameter, {onLeave: function (args) {send("JetGetSessionParameter");}});
+
+var JetGetSystemParameter = Module.findExportByName("esent.dll", "JetGetSystemParameter")
+Interceptor.attach(JetGetSystemParameter, {onLeave: function (args) {send("JetGetSystemParameter");}});
+
+var JetGetSystemParameterA = Module.findExportByName("esent.dll", "JetGetSystemParameterA")
+Interceptor.attach(JetGetSystemParameterA, {onLeave: function (args) {send("JetGetSystemParameterA");}});
+
+var JetGetSystemParameterW = Module.findExportByName("esent.dll", "JetGetSystemParameterW")
+Interceptor.attach(JetGetSystemParameterW, {onLeave: function (args) {send("JetGetSystemParameterW");}});
+
+var JetGetTableColumnInfo = Module.findExportByName("esent.dll", "JetGetTableColumnInfo")
+Interceptor.attach(JetGetTableColumnInfo, {onLeave: function (args) {send("JetGetTableColumnInfo");}});
+
+var JetGetTableColumnInfoA = Module.findExportByName("esent.dll", "JetGetTableColumnInfoA")
+Interceptor.attach(JetGetTableColumnInfoA, {onLeave: function (args) {send("JetGetTableColumnInfoA");}});
+
+var JetGetTableColumnInfoW = Module.findExportByName("esent.dll", "JetGetTableColumnInfoW")
+Interceptor.attach(JetGetTableColumnInfoW, {onLeave: function (args) {send("JetGetTableColumnInfoW");}});
+
+var JetGetTableIndexInfo = Module.findExportByName("esent.dll", "JetGetTableIndexInfo")
+Interceptor.attach(JetGetTableIndexInfo, {onLeave: function (args) {send("JetGetTableIndexInfo");}});
+
+var JetGetTableIndexInfoA = Module.findExportByName("esent.dll", "JetGetTableIndexInfoA")
+Interceptor.attach(JetGetTableIndexInfoA, {onLeave: function (args) {send("JetGetTableIndexInfoA");}});
+
+var JetGetTableIndexInfoW = Module.findExportByName("esent.dll", "JetGetTableIndexInfoW")
+Interceptor.attach(JetGetTableIndexInfoW, {onLeave: function (args) {send("JetGetTableIndexInfoW");}});
+
+var JetGetTableInfo = Module.findExportByName("esent.dll", "JetGetTableInfo")
+Interceptor.attach(JetGetTableInfo, {onLeave: function (args) {send("JetGetTableInfo");}});
+
+var JetGetTableInfoA = Module.findExportByName("esent.dll", "JetGetTableInfoA")
+Interceptor.attach(JetGetTableInfoA, {onLeave: function (args) {send("JetGetTableInfoA");}});
+
+var JetGetTableInfoW = Module.findExportByName("esent.dll", "JetGetTableInfoW")
+Interceptor.attach(JetGetTableInfoW, {onLeave: function (args) {send("JetGetTableInfoW");}});
+
+var JetGetThreadStats = Module.findExportByName("esent.dll", "JetGetThreadStats")
+Interceptor.attach(JetGetThreadStats, {onLeave: function (args) {send("JetGetThreadStats");}});
+
+var JetGetTruncateLogInfoInstance = Module.findExportByName("esent.dll", "JetGetTruncateLogInfoInstance")
+Interceptor.attach(JetGetTruncateLogInfoInstance, {onLeave: function (args) {send("JetGetTruncateLogInfoInstance");}});
+
+var JetGetTruncateLogInfoInstanceA = Module.findExportByName("esent.dll", "JetGetTruncateLogInfoInstanceA")
+Interceptor.attach(JetGetTruncateLogInfoInstanceA, {onLeave: function (args) {send("JetGetTruncateLogInfoInstanceA");}});
+
+var JetGetTruncateLogInfoInstanceW = Module.findExportByName("esent.dll", "JetGetTruncateLogInfoInstanceW")
+Interceptor.attach(JetGetTruncateLogInfoInstanceW, {onLeave: function (args) {send("JetGetTruncateLogInfoInstanceW");}});
+
+var JetGetVersion = Module.findExportByName("esent.dll", "JetGetVersion")
+Interceptor.attach(JetGetVersion, {onLeave: function (args) {send("JetGetVersion");}});
+
+var JetGotoBookmark = Module.findExportByName("esent.dll", "JetGotoBookmark")
+Interceptor.attach(JetGotoBookmark, {onLeave: function (args) {send("JetGotoBookmark");}});
+
+var JetGotoPosition = Module.findExportByName("esent.dll", "JetGotoPosition")
+Interceptor.attach(JetGotoPosition, {onLeave: function (args) {send("JetGotoPosition");}});
+
+var JetGotoSecondaryIndexBookmark = Module.findExportByName("esent.dll", "JetGotoSecondaryIndexBookmark")
+Interceptor.attach(JetGotoSecondaryIndexBookmark, {onLeave: function (args) {send("JetGotoSecondaryIndexBookmark");}});
+
+var JetGrowDatabase = Module.findExportByName("esent.dll", "JetGrowDatabase")
+Interceptor.attach(JetGrowDatabase, {onLeave: function (args) {send("JetGrowDatabase");}});
+
+var JetIdle = Module.findExportByName("esent.dll", "JetIdle")
+Interceptor.attach(JetIdle, {onLeave: function (args) {send("JetIdle");}});
+
+var JetIndexRecordCount = Module.findExportByName("esent.dll", "JetIndexRecordCount")
+Interceptor.attach(JetIndexRecordCount, {onLeave: function (args) {send("JetIndexRecordCount");}});
+
+var JetIndexRecordCount2 = Module.findExportByName("esent.dll", "JetIndexRecordCount2")
+Interceptor.attach(JetIndexRecordCount2, {onLeave: function (args) {send("JetIndexRecordCount2");}});
+
+var JetInit = Module.findExportByName("esent.dll", "JetInit")
+Interceptor.attach(JetInit, {onLeave: function (args) {send("JetInit");}});
+
+var JetInit2 = Module.findExportByName("esent.dll", "JetInit2")
+Interceptor.attach(JetInit2, {onLeave: function (args) {send("JetInit2");}});
+
+var JetInit3 = Module.findExportByName("esent.dll", "JetInit3")
+Interceptor.attach(JetInit3, {onLeave: function (args) {send("JetInit3");}});
+
+var JetInit3A = Module.findExportByName("esent.dll", "JetInit3A")
+Interceptor.attach(JetInit3A, {onLeave: function (args) {send("JetInit3A");}});
+
+var JetInit3W = Module.findExportByName("esent.dll", "JetInit3W")
+Interceptor.attach(JetInit3W, {onLeave: function (args) {send("JetInit3W");}});
+
+var JetInit4 = Module.findExportByName("esent.dll", "JetInit4")
+Interceptor.attach(JetInit4, {onLeave: function (args) {send("JetInit4");}});
+
+var JetInit4A = Module.findExportByName("esent.dll", "JetInit4A")
+Interceptor.attach(JetInit4A, {onLeave: function (args) {send("JetInit4A");}});
+
+var JetInit4W = Module.findExportByName("esent.dll", "JetInit4W")
+Interceptor.attach(JetInit4W, {onLeave: function (args) {send("JetInit4W");}});
+
+var JetIntersectIndexes = Module.findExportByName("esent.dll", "JetIntersectIndexes")
+Interceptor.attach(JetIntersectIndexes, {onLeave: function (args) {send("JetIntersectIndexes");}});
+
+var JetMakeKey = Module.findExportByName("esent.dll", "JetMakeKey")
+Interceptor.attach(JetMakeKey, {onLeave: function (args) {send("JetMakeKey");}});
+
+var JetMove = Module.findExportByName("esent.dll", "JetMove")
+Interceptor.attach(JetMove, {onLeave: function (args) {send("JetMove");}});
+
+var JetOSSnapshotAbort = Module.findExportByName("esent.dll", "JetOSSnapshotAbort")
+Interceptor.attach(JetOSSnapshotAbort, {onLeave: function (args) {send("JetOSSnapshotAbort");}});
+
+var JetOSSnapshotEnd = Module.findExportByName("esent.dll", "JetOSSnapshotEnd")
+Interceptor.attach(JetOSSnapshotEnd, {onLeave: function (args) {send("JetOSSnapshotEnd");}});
+
+var JetOSSnapshotFreeze = Module.findExportByName("esent.dll", "JetOSSnapshotFreeze")
+Interceptor.attach(JetOSSnapshotFreeze, {onLeave: function (args) {send("JetOSSnapshotFreeze");}});
+
+var JetOSSnapshotFreezeA = Module.findExportByName("esent.dll", "JetOSSnapshotFreezeA")
+Interceptor.attach(JetOSSnapshotFreezeA, {onLeave: function (args) {send("JetOSSnapshotFreezeA");}});
+
+var JetOSSnapshotFreezeW = Module.findExportByName("esent.dll", "JetOSSnapshotFreezeW")
+Interceptor.attach(JetOSSnapshotFreezeW, {onLeave: function (args) {send("JetOSSnapshotFreezeW");}});
+
+var JetOSSnapshotGetFreezeInfo = Module.findExportByName("esent.dll", "JetOSSnapshotGetFreezeInfo")
+Interceptor.attach(JetOSSnapshotGetFreezeInfo, {onLeave: function (args) {send("JetOSSnapshotGetFreezeInfo");}});
+
+var JetOSSnapshotGetFreezeInfoA = Module.findExportByName("esent.dll", "JetOSSnapshotGetFreezeInfoA")
+Interceptor.attach(JetOSSnapshotGetFreezeInfoA, {onLeave: function (args) {send("JetOSSnapshotGetFreezeInfoA");}});
+
+var JetOSSnapshotGetFreezeInfoW = Module.findExportByName("esent.dll", "JetOSSnapshotGetFreezeInfoW")
+Interceptor.attach(JetOSSnapshotGetFreezeInfoW, {onLeave: function (args) {send("JetOSSnapshotGetFreezeInfoW");}});
+
+var JetOSSnapshotPrepare = Module.findExportByName("esent.dll", "JetOSSnapshotPrepare")
+Interceptor.attach(JetOSSnapshotPrepare, {onLeave: function (args) {send("JetOSSnapshotPrepare");}});
+
+var JetOSSnapshotPrepareInstance = Module.findExportByName("esent.dll", "JetOSSnapshotPrepareInstance")
+Interceptor.attach(JetOSSnapshotPrepareInstance, {onLeave: function (args) {send("JetOSSnapshotPrepareInstance");}});
+
+var JetOSSnapshotThaw = Module.findExportByName("esent.dll", "JetOSSnapshotThaw")
+Interceptor.attach(JetOSSnapshotThaw, {onLeave: function (args) {send("JetOSSnapshotThaw");}});
+
+var JetOSSnapshotTruncateLog = Module.findExportByName("esent.dll", "JetOSSnapshotTruncateLog")
+Interceptor.attach(JetOSSnapshotTruncateLog, {onLeave: function (args) {send("JetOSSnapshotTruncateLog");}});
+
+var JetOSSnapshotTruncateLogInstance = Module.findExportByName("esent.dll", "JetOSSnapshotTruncateLogInstance")
+Interceptor.attach(JetOSSnapshotTruncateLogInstance, {onLeave: function (args) {send("JetOSSnapshotTruncateLogInstance");}});
+
+var JetOnlinePatchDatabasePage = Module.findExportByName("esent.dll", "JetOnlinePatchDatabasePage")
+Interceptor.attach(JetOnlinePatchDatabasePage, {onLeave: function (args) {send("JetOnlinePatchDatabasePage");}});
+
+var JetOpenDatabase = Module.findExportByName("esent.dll", "JetOpenDatabase")
+Interceptor.attach(JetOpenDatabase, {onLeave: function (args) {send("JetOpenDatabase");}});
+
+var JetOpenDatabaseA = Module.findExportByName("esent.dll", "JetOpenDatabaseA")
+Interceptor.attach(JetOpenDatabaseA, {onLeave: function (args) {send("JetOpenDatabaseA");}});
+
+var JetOpenDatabaseW = Module.findExportByName("esent.dll", "JetOpenDatabaseW")
+Interceptor.attach(JetOpenDatabaseW, {onLeave: function (args) {send("JetOpenDatabaseW");}});
+
+var JetOpenFile = Module.findExportByName("esent.dll", "JetOpenFile")
+Interceptor.attach(JetOpenFile, {onLeave: function (args) {send("JetOpenFile");}});
+
+var JetOpenFileA = Module.findExportByName("esent.dll", "JetOpenFileA")
+Interceptor.attach(JetOpenFileA, {onLeave: function (args) {send("JetOpenFileA");}});
+
+var JetOpenFileInstance = Module.findExportByName("esent.dll", "JetOpenFileInstance")
+Interceptor.attach(JetOpenFileInstance, {onLeave: function (args) {send("JetOpenFileInstance");}});
+
+var JetOpenFileInstanceA = Module.findExportByName("esent.dll", "JetOpenFileInstanceA")
+Interceptor.attach(JetOpenFileInstanceA, {onLeave: function (args) {send("JetOpenFileInstanceA");}});
+
+var JetOpenFileInstanceW = Module.findExportByName("esent.dll", "JetOpenFileInstanceW")
+Interceptor.attach(JetOpenFileInstanceW, {onLeave: function (args) {send("JetOpenFileInstanceW");}});
+
+var JetOpenFileSectionInstance = Module.findExportByName("esent.dll", "JetOpenFileSectionInstance")
+Interceptor.attach(JetOpenFileSectionInstance, {onLeave: function (args) {send("JetOpenFileSectionInstance");}});
+
+var JetOpenFileSectionInstanceA = Module.findExportByName("esent.dll", "JetOpenFileSectionInstanceA")
+Interceptor.attach(JetOpenFileSectionInstanceA, {onLeave: function (args) {send("JetOpenFileSectionInstanceA");}});
+
+var JetOpenFileSectionInstanceW = Module.findExportByName("esent.dll", "JetOpenFileSectionInstanceW")
+Interceptor.attach(JetOpenFileSectionInstanceW, {onLeave: function (args) {send("JetOpenFileSectionInstanceW");}});
+
+var JetOpenFileW = Module.findExportByName("esent.dll", "JetOpenFileW")
+Interceptor.attach(JetOpenFileW, {onLeave: function (args) {send("JetOpenFileW");}});
+
+var JetOpenTable = Module.findExportByName("esent.dll", "JetOpenTable")
+Interceptor.attach(JetOpenTable, {onLeave: function (args) {send("JetOpenTable");}});
+
+var JetOpenTableA = Module.findExportByName("esent.dll", "JetOpenTableA")
+Interceptor.attach(JetOpenTableA, {onLeave: function (args) {send("JetOpenTableA");}});
+
+var JetOpenTableW = Module.findExportByName("esent.dll", "JetOpenTableW")
+Interceptor.attach(JetOpenTableW, {onLeave: function (args) {send("JetOpenTableW");}});
+
+var JetOpenTempTable = Module.findExportByName("esent.dll", "JetOpenTempTable")
+Interceptor.attach(JetOpenTempTable, {onLeave: function (args) {send("JetOpenTempTable");}});
+
+var JetOpenTempTable2 = Module.findExportByName("esent.dll", "JetOpenTempTable2")
+Interceptor.attach(JetOpenTempTable2, {onLeave: function (args) {send("JetOpenTempTable2");}});
+
+var JetOpenTempTable3 = Module.findExportByName("esent.dll", "JetOpenTempTable3")
+Interceptor.attach(JetOpenTempTable3, {onLeave: function (args) {send("JetOpenTempTable3");}});
+
+var JetOpenTemporaryTable = Module.findExportByName("esent.dll", "JetOpenTemporaryTable")
+Interceptor.attach(JetOpenTemporaryTable, {onLeave: function (args) {send("JetOpenTemporaryTable");}});
+
+var JetOpenTemporaryTable2 = Module.findExportByName("esent.dll", "JetOpenTemporaryTable2")
+Interceptor.attach(JetOpenTemporaryTable2, {onLeave: function (args) {send("JetOpenTemporaryTable2");}});
+
+var JetPatchDatabasePages = Module.findExportByName("esent.dll", "JetPatchDatabasePages")
+Interceptor.attach(JetPatchDatabasePages, {onLeave: function (args) {send("JetPatchDatabasePages");}});
+
+var JetPatchDatabasePagesA = Module.findExportByName("esent.dll", "JetPatchDatabasePagesA")
+Interceptor.attach(JetPatchDatabasePagesA, {onLeave: function (args) {send("JetPatchDatabasePagesA");}});
+
+var JetPatchDatabasePagesW = Module.findExportByName("esent.dll", "JetPatchDatabasePagesW")
+Interceptor.attach(JetPatchDatabasePagesW, {onLeave: function (args) {send("JetPatchDatabasePagesW");}});
+
+var JetPrepareToCommitTransaction = Module.findExportByName("esent.dll", "JetPrepareToCommitTransaction")
+Interceptor.attach(JetPrepareToCommitTransaction, {onLeave: function (args) {send("JetPrepareToCommitTransaction");}});
+
+var JetPrepareUpdate = Module.findExportByName("esent.dll", "JetPrepareUpdate")
+Interceptor.attach(JetPrepareUpdate, {onLeave: function (args) {send("JetPrepareUpdate");}});
+
+var JetPrereadColumnsByReference = Module.findExportByName("esent.dll", "JetPrereadColumnsByReference")
+Interceptor.attach(JetPrereadColumnsByReference, {onLeave: function (args) {send("JetPrereadColumnsByReference");}});
+
+var JetPrereadIndexRange = Module.findExportByName("esent.dll", "JetPrereadIndexRange")
+Interceptor.attach(JetPrereadIndexRange, {onLeave: function (args) {send("JetPrereadIndexRange");}});
+
+var JetPrereadIndexRanges = Module.findExportByName("esent.dll", "JetPrereadIndexRanges")
+Interceptor.attach(JetPrereadIndexRanges, {onLeave: function (args) {send("JetPrereadIndexRanges");}});
+
+var JetPrereadKeys = Module.findExportByName("esent.dll", "JetPrereadKeys")
+Interceptor.attach(JetPrereadKeys, {onLeave: function (args) {send("JetPrereadKeys");}});
+
+var JetPrereadTablesW = Module.findExportByName("esent.dll", "JetPrereadTablesW")
+Interceptor.attach(JetPrereadTablesW, {onLeave: function (args) {send("JetPrereadTablesW");}});
+
+var JetRBSCancelRevert = Module.findExportByName("esent.dll", "JetRBSCancelRevert")
+Interceptor.attach(JetRBSCancelRevert, {onLeave: function (args) {send("JetRBSCancelRevert");}});
+
+var JetRBSExecuteRevert = Module.findExportByName("esent.dll", "JetRBSExecuteRevert")
+Interceptor.attach(JetRBSExecuteRevert, {onLeave: function (args) {send("JetRBSExecuteRevert");}});
+
+var JetRBSPrepareRevert = Module.findExportByName("esent.dll", "JetRBSPrepareRevert")
+Interceptor.attach(JetRBSPrepareRevert, {onLeave: function (args) {send("JetRBSPrepareRevert");}});
+
+var JetReadFile = Module.findExportByName("esent.dll", "JetReadFile")
+Interceptor.attach(JetReadFile, {onLeave: function (args) {send("JetReadFile");}});
+
+var JetReadFileInstance = Module.findExportByName("esent.dll", "JetReadFileInstance")
+Interceptor.attach(JetReadFileInstance, {onLeave: function (args) {send("JetReadFileInstance");}});
+
+var JetRegisterCallback = Module.findExportByName("esent.dll", "JetRegisterCallback")
+Interceptor.attach(JetRegisterCallback, {onLeave: function (args) {send("JetRegisterCallback");}});
+
+var JetRemoveLogfileA = Module.findExportByName("esent.dll", "JetRemoveLogfileA")
+Interceptor.attach(JetRemoveLogfileA, {onLeave: function (args) {send("JetRemoveLogfileA");}});
+
+var JetRemoveLogfileW = Module.findExportByName("esent.dll", "JetRemoveLogfileW")
+Interceptor.attach(JetRemoveLogfileW, {onLeave: function (args) {send("JetRemoveLogfileW");}});
+
+var JetRenameColumn = Module.findExportByName("esent.dll", "JetRenameColumn")
+Interceptor.attach(JetRenameColumn, {onLeave: function (args) {send("JetRenameColumn");}});
+
+var JetRenameColumnA = Module.findExportByName("esent.dll", "JetRenameColumnA")
+Interceptor.attach(JetRenameColumnA, {onLeave: function (args) {send("JetRenameColumnA");}});
+
+var JetRenameColumnW = Module.findExportByName("esent.dll", "JetRenameColumnW")
+Interceptor.attach(JetRenameColumnW, {onLeave: function (args) {send("JetRenameColumnW");}});
+
+var JetRenameTable = Module.findExportByName("esent.dll", "JetRenameTable")
+Interceptor.attach(JetRenameTable, {onLeave: function (args) {send("JetRenameTable");}});
+
+var JetRenameTableA = Module.findExportByName("esent.dll", "JetRenameTableA")
+Interceptor.attach(JetRenameTableA, {onLeave: function (args) {send("JetRenameTableA");}});
+
+var JetRenameTableW = Module.findExportByName("esent.dll", "JetRenameTableW")
+Interceptor.attach(JetRenameTableW, {onLeave: function (args) {send("JetRenameTableW");}});
+
+var JetResetCounter = Module.findExportByName("esent.dll", "JetResetCounter")
+Interceptor.attach(JetResetCounter, {onLeave: function (args) {send("JetResetCounter");}});
+
+var JetResetSessionContext = Module.findExportByName("esent.dll", "JetResetSessionContext")
+Interceptor.attach(JetResetSessionContext, {onLeave: function (args) {send("JetResetSessionContext");}});
+
+var JetResetTableSequential = Module.findExportByName("esent.dll", "JetResetTableSequential")
+Interceptor.attach(JetResetTableSequential, {onLeave: function (args) {send("JetResetTableSequential");}});
+
+var JetResizeDatabase = Module.findExportByName("esent.dll", "JetResizeDatabase")
+Interceptor.attach(JetResizeDatabase, {onLeave: function (args) {send("JetResizeDatabase");}});
+
+var JetRestore = Module.findExportByName("esent.dll", "JetRestore")
+Interceptor.attach(JetRestore, {onLeave: function (args) {send("JetRestore");}});
+
+var JetRestore2 = Module.findExportByName("esent.dll", "JetRestore2")
+Interceptor.attach(JetRestore2, {onLeave: function (args) {send("JetRestore2");}});
+
+var JetRestore2A = Module.findExportByName("esent.dll", "JetRestore2A")
+Interceptor.attach(JetRestore2A, {onLeave: function (args) {send("JetRestore2A");}});
+
+var JetRestore2W = Module.findExportByName("esent.dll", "JetRestore2W")
+Interceptor.attach(JetRestore2W, {onLeave: function (args) {send("JetRestore2W");}});
+
+var JetRestoreA = Module.findExportByName("esent.dll", "JetRestoreA")
+Interceptor.attach(JetRestoreA, {onLeave: function (args) {send("JetRestoreA");}});
+
+var JetRestoreInstance = Module.findExportByName("esent.dll", "JetRestoreInstance")
+Interceptor.attach(JetRestoreInstance, {onLeave: function (args) {send("JetRestoreInstance");}});
+
+var JetRestoreInstanceA = Module.findExportByName("esent.dll", "JetRestoreInstanceA")
+Interceptor.attach(JetRestoreInstanceA, {onLeave: function (args) {send("JetRestoreInstanceA");}});
+
+var JetRestoreInstanceW = Module.findExportByName("esent.dll", "JetRestoreInstanceW")
+Interceptor.attach(JetRestoreInstanceW, {onLeave: function (args) {send("JetRestoreInstanceW");}});
+
+var JetRestoreW = Module.findExportByName("esent.dll", "JetRestoreW")
+Interceptor.attach(JetRestoreW, {onLeave: function (args) {send("JetRestoreW");}});
+
+var JetRetrieveColumn = Module.findExportByName("esent.dll", "JetRetrieveColumn")
+Interceptor.attach(JetRetrieveColumn, {onLeave: function (args) {send("JetRetrieveColumn");}});
+
+var JetRetrieveColumnByReference = Module.findExportByName("esent.dll", "JetRetrieveColumnByReference")
+Interceptor.attach(JetRetrieveColumnByReference, {onLeave: function (args) {send("JetRetrieveColumnByReference");}});
+
+var JetRetrieveColumnFromRecordStream = Module.findExportByName("esent.dll", "JetRetrieveColumnFromRecordStream")
+Interceptor.attach(JetRetrieveColumnFromRecordStream, {onLeave: function (args) {send("JetRetrieveColumnFromRecordStream");}});
+
+var JetRetrieveColumns = Module.findExportByName("esent.dll", "JetRetrieveColumns")
+Interceptor.attach(JetRetrieveColumns, {onLeave: function (args) {send("JetRetrieveColumns");}});
+
+var JetRetrieveKey = Module.findExportByName("esent.dll", "JetRetrieveKey")
+Interceptor.attach(JetRetrieveKey, {onLeave: function (args) {send("JetRetrieveKey");}});
+
+var JetRetrieveTaggedColumnList = Module.findExportByName("esent.dll", "JetRetrieveTaggedColumnList")
+Interceptor.attach(JetRetrieveTaggedColumnList, {onLeave: function (args) {send("JetRetrieveTaggedColumnList");}});
+
+var JetRollback = Module.findExportByName("esent.dll", "JetRollback")
+Interceptor.attach(JetRollback, {onLeave: function (args) {send("JetRollback");}});
+
+var JetSeek = Module.findExportByName("esent.dll", "JetSeek")
+Interceptor.attach(JetSeek, {onLeave: function (args) {send("JetSeek");}});
+
+var JetSetColumn = Module.findExportByName("esent.dll", "JetSetColumn")
+Interceptor.attach(JetSetColumn, {onLeave: function (args) {send("JetSetColumn");}});
+
+var JetSetColumnDefaultValue = Module.findExportByName("esent.dll", "JetSetColumnDefaultValue")
+Interceptor.attach(JetSetColumnDefaultValue, {onLeave: function (args) {send("JetSetColumnDefaultValue");}});
+
+var JetSetColumnDefaultValueA = Module.findExportByName("esent.dll", "JetSetColumnDefaultValueA")
+Interceptor.attach(JetSetColumnDefaultValueA, {onLeave: function (args) {send("JetSetColumnDefaultValueA");}});
+
+var JetSetColumnDefaultValueW = Module.findExportByName("esent.dll", "JetSetColumnDefaultValueW")
+Interceptor.attach(JetSetColumnDefaultValueW, {onLeave: function (args) {send("JetSetColumnDefaultValueW");}});
+
+var JetSetColumns = Module.findExportByName("esent.dll", "JetSetColumns")
+Interceptor.attach(JetSetColumns, {onLeave: function (args) {send("JetSetColumns");}});
+
+var JetSetCurrentIndex = Module.findExportByName("esent.dll", "JetSetCurrentIndex")
+Interceptor.attach(JetSetCurrentIndex, {onLeave: function (args) {send("JetSetCurrentIndex");}});
+
+var JetSetCurrentIndex2 = Module.findExportByName("esent.dll", "JetSetCurrentIndex2")
+Interceptor.attach(JetSetCurrentIndex2, {onLeave: function (args) {send("JetSetCurrentIndex2");}});
+
+var JetSetCurrentIndex2A = Module.findExportByName("esent.dll", "JetSetCurrentIndex2A")
+Interceptor.attach(JetSetCurrentIndex2A, {onLeave: function (args) {send("JetSetCurrentIndex2A");}});
+
+var JetSetCurrentIndex2W = Module.findExportByName("esent.dll", "JetSetCurrentIndex2W")
+Interceptor.attach(JetSetCurrentIndex2W, {onLeave: function (args) {send("JetSetCurrentIndex2W");}});
+
+var JetSetCurrentIndex3 = Module.findExportByName("esent.dll", "JetSetCurrentIndex3")
+Interceptor.attach(JetSetCurrentIndex3, {onLeave: function (args) {send("JetSetCurrentIndex3");}});
+
+var JetSetCurrentIndex3A = Module.findExportByName("esent.dll", "JetSetCurrentIndex3A")
+Interceptor.attach(JetSetCurrentIndex3A, {onLeave: function (args) {send("JetSetCurrentIndex3A");}});
+
+var JetSetCurrentIndex3W = Module.findExportByName("esent.dll", "JetSetCurrentIndex3W")
+Interceptor.attach(JetSetCurrentIndex3W, {onLeave: function (args) {send("JetSetCurrentIndex3W");}});
+
+var JetSetCurrentIndex4 = Module.findExportByName("esent.dll", "JetSetCurrentIndex4")
+Interceptor.attach(JetSetCurrentIndex4, {onLeave: function (args) {send("JetSetCurrentIndex4");}});
+
+var JetSetCurrentIndex4A = Module.findExportByName("esent.dll", "JetSetCurrentIndex4A")
+Interceptor.attach(JetSetCurrentIndex4A, {onLeave: function (args) {send("JetSetCurrentIndex4A");}});
+
+var JetSetCurrentIndex4W = Module.findExportByName("esent.dll", "JetSetCurrentIndex4W")
+Interceptor.attach(JetSetCurrentIndex4W, {onLeave: function (args) {send("JetSetCurrentIndex4W");}});
+
+var JetSetCurrentIndexA = Module.findExportByName("esent.dll", "JetSetCurrentIndexA")
+Interceptor.attach(JetSetCurrentIndexA, {onLeave: function (args) {send("JetSetCurrentIndexA");}});
+
+var JetSetCurrentIndexW = Module.findExportByName("esent.dll", "JetSetCurrentIndexW")
+Interceptor.attach(JetSetCurrentIndexW, {onLeave: function (args) {send("JetSetCurrentIndexW");}});
+
+var JetSetCursorFilter = Module.findExportByName("esent.dll", "JetSetCursorFilter")
+Interceptor.attach(JetSetCursorFilter, {onLeave: function (args) {send("JetSetCursorFilter");}});
+
+var JetSetDatabaseSize = Module.findExportByName("esent.dll", "JetSetDatabaseSize")
+Interceptor.attach(JetSetDatabaseSize, {onLeave: function (args) {send("JetSetDatabaseSize");}});
+
+var JetSetDatabaseSizeA = Module.findExportByName("esent.dll", "JetSetDatabaseSizeA")
+Interceptor.attach(JetSetDatabaseSizeA, {onLeave: function (args) {send("JetSetDatabaseSizeA");}});
+
+var JetSetDatabaseSizeW = Module.findExportByName("esent.dll", "JetSetDatabaseSizeW")
+Interceptor.attach(JetSetDatabaseSizeW, {onLeave: function (args) {send("JetSetDatabaseSizeW");}});
+
+var JetSetIndexRange = Module.findExportByName("esent.dll", "JetSetIndexRange")
+Interceptor.attach(JetSetIndexRange, {onLeave: function (args) {send("JetSetIndexRange");}});
+
+var JetSetLS = Module.findExportByName("esent.dll", "JetSetLS")
+Interceptor.attach(JetSetLS, {onLeave: function (args) {send("JetSetLS");}});
+
+var JetSetMaxDatabaseSize = Module.findExportByName("esent.dll", "JetSetMaxDatabaseSize")
+Interceptor.attach(JetSetMaxDatabaseSize, {onLeave: function (args) {send("JetSetMaxDatabaseSize");}});
+
+var JetSetResourceParam = Module.findExportByName("esent.dll", "JetSetResourceParam")
+Interceptor.attach(JetSetResourceParam, {onLeave: function (args) {send("JetSetResourceParam");}});
+
+var JetSetSessionContext = Module.findExportByName("esent.dll", "JetSetSessionContext")
+Interceptor.attach(JetSetSessionContext, {onLeave: function (args) {send("JetSetSessionContext");}});
+
+var JetSetSessionParameter = Module.findExportByName("esent.dll", "JetSetSessionParameter")
+Interceptor.attach(JetSetSessionParameter, {onLeave: function (args) {send("JetSetSessionParameter");}});
+
+var JetSetSystemParameter = Module.findExportByName("esent.dll", "JetSetSystemParameter")
+Interceptor.attach(JetSetSystemParameter, {onLeave: function (args) {send("JetSetSystemParameter");}});
+
+var JetSetSystemParameterA = Module.findExportByName("esent.dll", "JetSetSystemParameterA")
+Interceptor.attach(JetSetSystemParameterA, {onLeave: function (args) {send("JetSetSystemParameterA");}});
+
+var JetSetSystemParameterW = Module.findExportByName("esent.dll", "JetSetSystemParameterW")
+Interceptor.attach(JetSetSystemParameterW, {onLeave: function (args) {send("JetSetSystemParameterW");}});
+
+var JetSetTableInfo = Module.findExportByName("esent.dll", "JetSetTableInfo")
+Interceptor.attach(JetSetTableInfo, {onLeave: function (args) {send("JetSetTableInfo");}});
+
+var JetSetTableInfoA = Module.findExportByName("esent.dll", "JetSetTableInfoA")
+Interceptor.attach(JetSetTableInfoA, {onLeave: function (args) {send("JetSetTableInfoA");}});
+
+var JetSetTableInfoW = Module.findExportByName("esent.dll", "JetSetTableInfoW")
+Interceptor.attach(JetSetTableInfoW, {onLeave: function (args) {send("JetSetTableInfoW");}});
+
+var JetSetTableSequential = Module.findExportByName("esent.dll", "JetSetTableSequential")
+Interceptor.attach(JetSetTableSequential, {onLeave: function (args) {send("JetSetTableSequential");}});
+
+var JetSnapshotStart = Module.findExportByName("esent.dll", "JetSnapshotStart")
+Interceptor.attach(JetSnapshotStart, {onLeave: function (args) {send("JetSnapshotStart");}});
+
+var JetSnapshotStartA = Module.findExportByName("esent.dll", "JetSnapshotStartA")
+Interceptor.attach(JetSnapshotStartA, {onLeave: function (args) {send("JetSnapshotStartA");}});
+
+var JetSnapshotStartW = Module.findExportByName("esent.dll", "JetSnapshotStartW")
+Interceptor.attach(JetSnapshotStartW, {onLeave: function (args) {send("JetSnapshotStartW");}});
+
+var JetSnapshotStop = Module.findExportByName("esent.dll", "JetSnapshotStop")
+Interceptor.attach(JetSnapshotStop, {onLeave: function (args) {send("JetSnapshotStop");}});
+
+var JetStopBackup = Module.findExportByName("esent.dll", "JetStopBackup")
+Interceptor.attach(JetStopBackup, {onLeave: function (args) {send("JetStopBackup");}});
+
+var JetStopBackupInstance = Module.findExportByName("esent.dll", "JetStopBackupInstance")
+Interceptor.attach(JetStopBackupInstance, {onLeave: function (args) {send("JetStopBackupInstance");}});
+
+var JetStopService = Module.findExportByName("esent.dll", "JetStopService")
+Interceptor.attach(JetStopService, {onLeave: function (args) {send("JetStopService");}});
+
+var JetStopServiceInstance = Module.findExportByName("esent.dll", "JetStopServiceInstance")
+Interceptor.attach(JetStopServiceInstance, {onLeave: function (args) {send("JetStopServiceInstance");}});
+
+var JetStopServiceInstance2 = Module.findExportByName("esent.dll", "JetStopServiceInstance2")
+Interceptor.attach(JetStopServiceInstance2, {onLeave: function (args) {send("JetStopServiceInstance2");}});
+
+var JetStreamRecords = Module.findExportByName("esent.dll", "JetStreamRecords")
+Interceptor.attach(JetStreamRecords, {onLeave: function (args) {send("JetStreamRecords");}});
+
+var JetTerm = Module.findExportByName("esent.dll", "JetTerm")
+Interceptor.attach(JetTerm, {onLeave: function (args) {send("JetTerm");}});
+
+var JetTerm2 = Module.findExportByName("esent.dll", "JetTerm2")
+Interceptor.attach(JetTerm2, {onLeave: function (args) {send("JetTerm2");}});
+
+var JetTestHook = Module.findExportByName("esent.dll", "JetTestHook")
+Interceptor.attach(JetTestHook, {onLeave: function (args) {send("JetTestHook");}});
+
+var JetTracing = Module.findExportByName("esent.dll", "JetTracing")
+Interceptor.attach(JetTracing, {onLeave: function (args) {send("JetTracing");}});
+
+var JetTruncateLog = Module.findExportByName("esent.dll", "JetTruncateLog")
+Interceptor.attach(JetTruncateLog, {onLeave: function (args) {send("JetTruncateLog");}});
+
+var JetTruncateLogInstance = Module.findExportByName("esent.dll", "JetTruncateLogInstance")
+Interceptor.attach(JetTruncateLogInstance, {onLeave: function (args) {send("JetTruncateLogInstance");}});
+
+var JetUnregisterCallback = Module.findExportByName("esent.dll", "JetUnregisterCallback")
+Interceptor.attach(JetUnregisterCallback, {onLeave: function (args) {send("JetUnregisterCallback");}});
+
+var JetUpdate = Module.findExportByName("esent.dll", "JetUpdate")
+Interceptor.attach(JetUpdate, {onLeave: function (args) {send("JetUpdate");}});
+
+var JetUpdate2 = Module.findExportByName("esent.dll", "JetUpdate2")
+Interceptor.attach(JetUpdate2, {onLeave: function (args) {send("JetUpdate2");}});
+
+var JetUpgradeDatabase = Module.findExportByName("esent.dll", "JetUpgradeDatabase")
+Interceptor.attach(JetUpgradeDatabase, {onLeave: function (args) {send("JetUpgradeDatabase");}});
+
+var JetUpgradeDatabaseA = Module.findExportByName("esent.dll", "JetUpgradeDatabaseA")
+Interceptor.attach(JetUpgradeDatabaseA, {onLeave: function (args) {send("JetUpgradeDatabaseA");}});
+
+var JetUpgradeDatabaseW = Module.findExportByName("esent.dll", "JetUpgradeDatabaseW")
+Interceptor.attach(JetUpgradeDatabaseW, {onLeave: function (args) {send("JetUpgradeDatabaseW");}});
+
+var ese = Module.findExportByName("esent.dll", "ese")
+Interceptor.attach(ese, {onLeave: function (args) {send("ese");}});
+
+var rgEDBGGlobals = Module.findExportByName("esent.dll", "rgEDBGGlobals")
+Interceptor.attach(rgEDBGGlobals, {onLeave: function (args) {send("rgEDBGGlobals");}});
+

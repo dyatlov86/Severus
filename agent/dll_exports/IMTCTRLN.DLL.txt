@@ -1,0 +1,3 @@
+var CreateInstance = Module.findExportByName("IMTCTRLN.DLL", "CreateInstance")
+Interceptor.attach(CreateInstance, {onLeave: function (args) {send("CreateInstance");}});
+

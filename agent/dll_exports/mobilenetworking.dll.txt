@@ -1,0 +1,243 @@
+var AcquireReadLock = Module.findExportByName("mobilenetworking.dll", "AcquireReadLock")
+Interceptor.attach(AcquireReadLock, {onLeave: function (args) {send("AcquireReadLock");}});
+
+var AcquireWriteLock = Module.findExportByName("mobilenetworking.dll", "AcquireWriteLock")
+Interceptor.attach(AcquireWriteLock, {onLeave: function (args) {send("AcquireWriteLock");}});
+
+var AllocateAndCopyPointerData = Module.findExportByName("mobilenetworking.dll", "AllocateAndCopyPointerData")
+Interceptor.attach(AllocateAndCopyPointerData, {onLeave: function (args) {send("AllocateAndCopyPointerData");}});
+
+var AllocateMemory = Module.findExportByName("mobilenetworking.dll", "AllocateMemory")
+Interceptor.attach(AllocateMemory, {onLeave: function (args) {send("AllocateMemory");}});
+
+var BindNetworkInterfaceIdToAccountId = Module.findExportByName("mobilenetworking.dll", "BindNetworkInterfaceIdToAccountId")
+Interceptor.attach(BindNetworkInterfaceIdToAccountId, {onLeave: function (args) {send("BindNetworkInterfaceIdToAccountId");}});
+
+var CheckRpcClientTokenMembership = Module.findExportByName("mobilenetworking.dll", "CheckRpcClientTokenMembership")
+Interceptor.attach(CheckRpcClientTokenMembership, {onLeave: function (args) {send("CheckRpcClientTokenMembership");}});
+
+var ConvertByteArrayToWideStr = Module.findExportByName("mobilenetworking.dll", "ConvertByteArrayToWideStr")
+Interceptor.attach(ConvertByteArrayToWideStr, {onLeave: function (args) {send("ConvertByteArrayToWideStr");}});
+
+var ConvertSDDLToValidSecurityDescriptor = Module.findExportByName("mobilenetworking.dll", "ConvertSDDLToValidSecurityDescriptor")
+Interceptor.attach(ConvertSDDLToValidSecurityDescriptor, {onLeave: function (args) {send("ConvertSDDLToValidSecurityDescriptor");}});
+
+var CreateReadWriteLock = Module.findExportByName("mobilenetworking.dll", "CreateReadWriteLock")
+Interceptor.attach(CreateReadWriteLock, {onLeave: function (args) {send("CreateReadWriteLock");}});
+
+var CreateTimer = Module.findExportByName("mobilenetworking.dll", "CreateTimer")
+Interceptor.attach(CreateTimer, {onLeave: function (args) {send("CreateTimer");}});
+
+var DeInitializeTimers = Module.findExportByName("mobilenetworking.dll", "DeInitializeTimers")
+Interceptor.attach(DeInitializeTimers, {onLeave: function (args) {send("DeInitializeTimers");}});
+
+var DeinitSecUtils = Module.findExportByName("mobilenetworking.dll", "DeinitSecUtils")
+Interceptor.attach(DeinitSecUtils, {onLeave: function (args) {send("DeinitSecUtils");}});
+
+var DeleteReadWriteLock = Module.findExportByName("mobilenetworking.dll", "DeleteReadWriteLock")
+Interceptor.attach(DeleteReadWriteLock, {onLeave: function (args) {send("DeleteReadWriteLock");}});
+
+var DeleteTimer = Module.findExportByName("mobilenetworking.dll", "DeleteTimer")
+Interceptor.attach(DeleteTimer, {onLeave: function (args) {send("DeleteTimer");}});
+
+var DiffTimeInMSec = Module.findExportByName("mobilenetworking.dll", "DiffTimeInMSec")
+Interceptor.attach(DiffTimeInMSec, {onLeave: function (args) {send("DiffTimeInMSec");}});
+
+var DiffTimeInSec = Module.findExportByName("mobilenetworking.dll", "DiffTimeInSec")
+Interceptor.attach(DiffTimeInSec, {onLeave: function (args) {send("DiffTimeInSec");}});
+
+var FreeMemory = Module.findExportByName("mobilenetworking.dll", "FreeMemory")
+Interceptor.attach(FreeMemory, {onLeave: function (args) {send("FreeMemory");}});
+
+var FreeSecurityDescriptor = Module.findExportByName("mobilenetworking.dll", "FreeSecurityDescriptor")
+Interceptor.attach(FreeSecurityDescriptor, {onLeave: function (args) {send("FreeSecurityDescriptor");}});
+
+var GetAdapterConnectivity = Module.findExportByName("mobilenetworking.dll", "GetAdapterConnectivity")
+Interceptor.attach(GetAdapterConnectivity, {onLeave: function (args) {send("GetAdapterConnectivity");}});
+
+var GetMnoSmsBindingDeviceInterfacePath = Module.findExportByName("mobilenetworking.dll", "GetMnoSmsBindingDeviceInterfacePath")
+Interceptor.attach(GetMnoSmsBindingDeviceInterfacePath, {onLeave: function (args) {send("GetMnoSmsBindingDeviceInterfacePath");}});
+
+var GetNetworkAccountBindingDeviceInterfacePath = Module.findExportByName("mobilenetworking.dll", "GetNetworkAccountBindingDeviceInterfacePath")
+Interceptor.attach(GetNetworkAccountBindingDeviceInterfacePath, {onLeave: function (args) {send("GetNetworkAccountBindingDeviceInterfacePath");}});
+
+var GetNetworkAccountIdBoundToInterfaceId = Module.findExportByName("mobilenetworking.dll", "GetNetworkAccountIdBoundToInterfaceId")
+Interceptor.attach(GetNetworkAccountIdBoundToInterfaceId, {onLeave: function (args) {send("GetNetworkAccountIdBoundToInterfaceId");}});
+
+var GetNetworkInterfaceIdBoundToAccountId = Module.findExportByName("mobilenetworking.dll", "GetNetworkInterfaceIdBoundToAccountId")
+Interceptor.attach(GetNetworkInterfaceIdBoundToAccountId, {onLeave: function (args) {send("GetNetworkInterfaceIdBoundToAccountId");}});
+
+var GetOemIhvSmsBindingDeviceInterfacePath = Module.findExportByName("mobilenetworking.dll", "GetOemIhvSmsBindingDeviceInterfacePath")
+Interceptor.attach(GetOemIhvSmsBindingDeviceInterfacePath, {onLeave: function (args) {send("GetOemIhvSmsBindingDeviceInterfacePath");}});
+
+var GetPersistentRegPath = Module.findExportByName("mobilenetworking.dll", "GetPersistentRegPath")
+Interceptor.attach(GetPersistentRegPath, {onLeave: function (args) {send("GetPersistentRegPath");}});
+
+var GetPersistentRegPathFromRegPath = Module.findExportByName("mobilenetworking.dll", "GetPersistentRegPathFromRegPath")
+Interceptor.attach(GetPersistentRegPathFromRegPath, {onLeave: function (args) {send("GetPersistentRegPathFromRegPath");}});
+
+var GetSDDetailsFromObjectID = Module.findExportByName("mobilenetworking.dll", "GetSDDetailsFromObjectID")
+Interceptor.attach(GetSDDetailsFromObjectID, {onLeave: function (args) {send("GetSDDetailsFromObjectID");}});
+
+var GetSystemTimeAsUlongLong = Module.findExportByName("mobilenetworking.dll", "GetSystemTimeAsUlongLong")
+Interceptor.attach(GetSystemTimeAsUlongLong, {onLeave: function (args) {send("GetSystemTimeAsUlongLong");}});
+
+var HtCreateHandleTable = Module.findExportByName("mobilenetworking.dll", "HtCreateHandleTable")
+Interceptor.attach(HtCreateHandleTable, {onLeave: function (args) {send("HtCreateHandleTable");}});
+
+var HtDereferenceHandleWithTag = Module.findExportByName("mobilenetworking.dll", "HtDereferenceHandleWithTag")
+Interceptor.attach(HtDereferenceHandleWithTag, {onLeave: function (args) {send("HtDereferenceHandleWithTag");}});
+
+var HtDestroyHandleTable = Module.findExportByName("mobilenetworking.dll", "HtDestroyHandleTable")
+Interceptor.attach(HtDestroyHandleTable, {onLeave: function (args) {send("HtDestroyHandleTable");}});
+
+var HtNewHandle = Module.findExportByName("mobilenetworking.dll", "HtNewHandle")
+Interceptor.attach(HtNewHandle, {onLeave: function (args) {send("HtNewHandle");}});
+
+var HtPeekReferenceCountOnHandle = Module.findExportByName("mobilenetworking.dll", "HtPeekReferenceCountOnHandle")
+Interceptor.attach(HtPeekReferenceCountOnHandle, {onLeave: function (args) {send("HtPeekReferenceCountOnHandle");}});
+
+var HtReferenceHandleWithTag = Module.findExportByName("mobilenetworking.dll", "HtReferenceHandleWithTag")
+Interceptor.attach(HtReferenceHandleWithTag, {onLeave: function (args) {send("HtReferenceHandleWithTag");}});
+
+var InitSecUtils = Module.findExportByName("mobilenetworking.dll", "InitSecUtils")
+Interceptor.attach(InitSecUtils, {onLeave: function (args) {send("InitSecUtils");}});
+
+var InitializeTimers = Module.findExportByName("mobilenetworking.dll", "InitializeTimers")
+Interceptor.attach(InitializeTimers, {onLeave: function (args) {send("InitializeTimers");}});
+
+var IsDomainMemberMode = Module.findExportByName("mobilenetworking.dll", "IsDomainMemberMode")
+Interceptor.attach(IsDomainMemberMode, {onLeave: function (args) {send("IsDomainMemberMode");}});
+
+var IsWinPE = Module.findExportByName("mobilenetworking.dll", "IsWinPE")
+Interceptor.attach(IsWinPE, {onLeave: function (args) {send("IsWinPE");}});
+
+var L2DeinitializeAuditing = Module.findExportByName("mobilenetworking.dll", "L2DeinitializeAuditing")
+Interceptor.attach(L2DeinitializeAuditing, {onLeave: function (args) {send("L2DeinitializeAuditing");}});
+
+var L2InitializeAuditing = Module.findExportByName("mobilenetworking.dll", "L2InitializeAuditing")
+Interceptor.attach(L2InitializeAuditing, {onLeave: function (args) {send("L2InitializeAuditing");}});
+
+var LogBailError = Module.findExportByName("mobilenetworking.dll", "LogBailError")
+Interceptor.attach(LogBailError, {onLeave: function (args) {send("LogBailError");}});
+
+var NdisQueryMaxPayloadSizeByGuid = Module.findExportByName("mobilenetworking.dll", "NdisQueryMaxPayloadSizeByGuid")
+Interceptor.attach(NdisQueryMaxPayloadSizeByGuid, {onLeave: function (args) {send("NdisQueryMaxPayloadSizeByGuid");}});
+
+var NdisQueryPhysicalMedium = Module.findExportByName("mobilenetworking.dll", "NdisQueryPhysicalMedium")
+Interceptor.attach(NdisQueryPhysicalMedium, {onLeave: function (args) {send("NdisQueryPhysicalMedium");}});
+
+var NetworkAccountBindingAccessCheck = Module.findExportByName("mobilenetworking.dll", "NetworkAccountBindingAccessCheck")
+Interceptor.attach(NetworkAccountBindingAccessCheck, {onLeave: function (args) {send("NetworkAccountBindingAccessCheck");}});
+
+var NetworkAccountBindingAccessCheckByInterfaceId = Module.findExportByName("mobilenetworking.dll", "NetworkAccountBindingAccessCheckByInterfaceId")
+Interceptor.attach(NetworkAccountBindingAccessCheckByInterfaceId, {onLeave: function (args) {send("NetworkAccountBindingAccessCheckByInterfaceId");}});
+
+var PersistentRegPathCreateKey = Module.findExportByName("mobilenetworking.dll", "PersistentRegPathCreateKey")
+Interceptor.attach(PersistentRegPathCreateKey, {onLeave: function (args) {send("PersistentRegPathCreateKey");}});
+
+var PersistentRegPathGetDWORD = Module.findExportByName("mobilenetworking.dll", "PersistentRegPathGetDWORD")
+Interceptor.attach(PersistentRegPathGetDWORD, {onLeave: function (args) {send("PersistentRegPathGetDWORD");}});
+
+var PersistentRegPathGetValue = Module.findExportByName("mobilenetworking.dll", "PersistentRegPathGetValue")
+Interceptor.attach(PersistentRegPathGetValue, {onLeave: function (args) {send("PersistentRegPathGetValue");}});
+
+var PersistentRegPathOpenKey = Module.findExportByName("mobilenetworking.dll", "PersistentRegPathOpenKey")
+Interceptor.attach(PersistentRegPathOpenKey, {onLeave: function (args) {send("PersistentRegPathOpenKey");}});
+
+var PersistentRegPathSetDWORD = Module.findExportByName("mobilenetworking.dll", "PersistentRegPathSetDWORD")
+Interceptor.attach(PersistentRegPathSetDWORD, {onLeave: function (args) {send("PersistentRegPathSetDWORD");}});
+
+var PersistentRegPathSetString = Module.findExportByName("mobilenetworking.dll", "PersistentRegPathSetString")
+Interceptor.attach(PersistentRegPathSetString, {onLeave: function (args) {send("PersistentRegPathSetString");}});
+
+var PersistentRegPathSetValue = Module.findExportByName("mobilenetworking.dll", "PersistentRegPathSetValue")
+Interceptor.attach(PersistentRegPathSetValue, {onLeave: function (args) {send("PersistentRegPathSetValue");}});
+
+var RaCheckRpcAllowed = Module.findExportByName("mobilenetworking.dll", "RaCheckRpcAllowed")
+Interceptor.attach(RaCheckRpcAllowed, {onLeave: function (args) {send("RaCheckRpcAllowed");}});
+
+var RaCreateWellKnownSid = Module.findExportByName("mobilenetworking.dll", "RaCreateWellKnownSid")
+Interceptor.attach(RaCreateWellKnownSid, {onLeave: function (args) {send("RaCreateWellKnownSid");}});
+
+var RaDestroySid = Module.findExportByName("mobilenetworking.dll", "RaDestroySid")
+Interceptor.attach(RaDestroySid, {onLeave: function (args) {send("RaDestroySid");}});
+
+var RaFreeSidList = Module.findExportByName("mobilenetworking.dll", "RaFreeSidList")
+Interceptor.attach(RaFreeSidList, {onLeave: function (args) {send("RaFreeSidList");}});
+
+var RaFreeTokenUserInfo = Module.findExportByName("mobilenetworking.dll", "RaFreeTokenUserInfo")
+Interceptor.attach(RaFreeTokenUserInfo, {onLeave: function (args) {send("RaFreeTokenUserInfo");}});
+
+var RaGetTokenUserInfo = Module.findExportByName("mobilenetworking.dll", "RaGetTokenUserInfo")
+Interceptor.attach(RaGetTokenUserInfo, {onLeave: function (args) {send("RaGetTokenUserInfo");}});
+
+var RaInitSidList = Module.findExportByName("mobilenetworking.dll", "RaInitSidList")
+Interceptor.attach(RaInitSidList, {onLeave: function (args) {send("RaInitSidList");}});
+
+var RaQueryRpcClientToken = Module.findExportByName("mobilenetworking.dll", "RaQueryRpcClientToken")
+Interceptor.attach(RaQueryRpcClientToken, {onLeave: function (args) {send("RaQueryRpcClientToken");}});
+
+var RegisterObject = Module.findExportByName("mobilenetworking.dll", "RegisterObject")
+Interceptor.attach(RegisterObject, {onLeave: function (args) {send("RegisterObject");}});
+
+var RegisterUserType = Module.findExportByName("mobilenetworking.dll", "RegisterUserType")
+Interceptor.attach(RegisterUserType, {onLeave: function (args) {send("RegisterUserType");}});
+
+var ReleaseReadLock = Module.findExportByName("mobilenetworking.dll", "ReleaseReadLock")
+Interceptor.attach(ReleaseReadLock, {onLeave: function (args) {send("ReleaseReadLock");}});
+
+var ReleaseWriteLock = Module.findExportByName("mobilenetworking.dll", "ReleaseWriteLock")
+Interceptor.attach(ReleaseWriteLock, {onLeave: function (args) {send("ReleaseWriteLock");}});
+
+var ReplaceObject = Module.findExportByName("mobilenetworking.dll", "ReplaceObject")
+Interceptor.attach(ReplaceObject, {onLeave: function (args) {send("ReplaceObject");}});
+
+var ReplaceObjectWithPersistedSettings = Module.findExportByName("mobilenetworking.dll", "ReplaceObjectWithPersistedSettings")
+Interceptor.attach(ReplaceObjectWithPersistedSettings, {onLeave: function (args) {send("ReplaceObjectWithPersistedSettings");}});
+
+var SetBufferAndLength = Module.findExportByName("mobilenetworking.dll", "SetBufferAndLength")
+Interceptor.attach(SetBufferAndLength, {onLeave: function (args) {send("SetBufferAndLength");}});
+
+var SetMnoSmsBindingDeviceInterfacePath = Module.findExportByName("mobilenetworking.dll", "SetMnoSmsBindingDeviceInterfacePath")
+Interceptor.attach(SetMnoSmsBindingDeviceInterfacePath, {onLeave: function (args) {send("SetMnoSmsBindingDeviceInterfacePath");}});
+
+var SetNetworkAccountBindingDeviceInterfacePath = Module.findExportByName("mobilenetworking.dll", "SetNetworkAccountBindingDeviceInterfacePath")
+Interceptor.attach(SetNetworkAccountBindingDeviceInterfacePath, {onLeave: function (args) {send("SetNetworkAccountBindingDeviceInterfacePath");}});
+
+var SetOemIhvSmsBindingDeviceInterfacePath = Module.findExportByName("mobilenetworking.dll", "SetOemIhvSmsBindingDeviceInterfacePath")
+Interceptor.attach(SetOemIhvSmsBindingDeviceInterfacePath, {onLeave: function (args) {send("SetOemIhvSmsBindingDeviceInterfacePath");}});
+
+var StartTimer = Module.findExportByName("mobilenetworking.dll", "StartTimer")
+Interceptor.attach(StartTimer, {onLeave: function (args) {send("StartTimer");}});
+
+var StopTimer = Module.findExportByName("mobilenetworking.dll", "StopTimer")
+Interceptor.attach(StopTimer, {onLeave: function (args) {send("StopTimer");}});
+
+var TraceAssert = Module.findExportByName("mobilenetworking.dll", "TraceAssert")
+Interceptor.attach(TraceAssert, {onLeave: function (args) {send("TraceAssert");}});
+
+var UnbindNetworkInterfaceId = Module.findExportByName("mobilenetworking.dll", "UnbindNetworkInterfaceId")
+Interceptor.attach(UnbindNetworkInterfaceId, {onLeave: function (args) {send("UnbindNetworkInterfaceId");}});
+
+var ValidateNetworkAccountIdBinding = Module.findExportByName("mobilenetworking.dll", "ValidateNetworkAccountIdBinding")
+Interceptor.attach(ValidateNetworkAccountIdBinding, {onLeave: function (args) {send("ValidateNetworkAccountIdBinding");}});
+
+var ValidateSecurityDescriptor = Module.findExportByName("mobilenetworking.dll", "ValidateSecurityDescriptor")
+Interceptor.attach(ValidateSecurityDescriptor, {onLeave: function (args) {send("ValidateSecurityDescriptor");}});
+
+var VerifyRpcClientAccess = Module.findExportByName("mobilenetworking.dll", "VerifyRpcClientAccess")
+Interceptor.attach(VerifyRpcClientAccess, {onLeave: function (args) {send("VerifyRpcClientAccess");}});
+
+var VerifyRpcClientAccessToSecurityDescriptor = Module.findExportByName("mobilenetworking.dll", "VerifyRpcClientAccessToSecurityDescriptor")
+Interceptor.attach(VerifyRpcClientAccessToSecurityDescriptor, {onLeave: function (args) {send("VerifyRpcClientAccessToSecurityDescriptor");}});
+
+var WmiEnumerateAdapters = Module.findExportByName("mobilenetworking.dll", "WmiEnumerateAdapters")
+Interceptor.attach(WmiEnumerateAdapters, {onLeave: function (args) {send("WmiEnumerateAdapters");}});
+
+var WmiQueryMediaSupported = Module.findExportByName("mobilenetworking.dll", "WmiQueryMediaSupported")
+Interceptor.attach(WmiQueryMediaSupported, {onLeave: function (args) {send("WmiQueryMediaSupported");}});
+
+var WmiQueryPhysicalMedium = Module.findExportByName("mobilenetworking.dll", "WmiQueryPhysicalMedium")
+Interceptor.attach(WmiQueryPhysicalMedium, {onLeave: function (args) {send("WmiQueryPhysicalMedium");}});
+

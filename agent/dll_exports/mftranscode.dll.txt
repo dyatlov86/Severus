@@ -1,0 +1,24 @@
+var GetTranscodeComponentCreator = Module.findExportByName("mftranscode.dll", "GetTranscodeComponentCreator")
+Interceptor.attach(GetTranscodeComponentCreator, {onLeave: function (args) {send("GetTranscodeComponentCreator");}});
+
+var MFCreateSmartRemuxEngine = Module.findExportByName("mftranscode.dll", "MFCreateSmartRemuxEngine")
+Interceptor.attach(MFCreateSmartRemuxEngine, {onLeave: function (args) {send("MFCreateSmartRemuxEngine");}});
+
+var MFCreateTranscodeEngine = Module.findExportByName("mftranscode.dll", "MFCreateTranscodeEngine")
+Interceptor.attach(MFCreateTranscodeEngine, {onLeave: function (args) {send("MFCreateTranscodeEngine");}});
+
+var MFCreateTranscodeProfile = Module.findExportByName("mftranscode.dll", "MFCreateTranscodeProfile")
+Interceptor.attach(MFCreateTranscodeProfile, {onLeave: function (args) {send("MFCreateTranscodeProfile");}});
+
+var MFCreateTranscodeSinkActivate = Module.findExportByName("mftranscode.dll", "MFCreateTranscodeSinkActivate")
+Interceptor.attach(MFCreateTranscodeSinkActivate, {onLeave: function (args) {send("MFCreateTranscodeSinkActivate");}});
+
+var MFCreateTranscodeTopology = Module.findExportByName("mftranscode.dll", "MFCreateTranscodeTopology")
+Interceptor.attach(MFCreateTranscodeTopology, {onLeave: function (args) {send("MFCreateTranscodeTopology");}});
+
+var MFCreateTranscodeTopologyFromByteStream = Module.findExportByName("mftranscode.dll", "MFCreateTranscodeTopologyFromByteStream")
+Interceptor.attach(MFCreateTranscodeTopologyFromByteStream, {onLeave: function (args) {send("MFCreateTranscodeTopologyFromByteStream");}});
+
+var MFTranscodeGetAudioOutputAvailableTypes = Module.findExportByName("mftranscode.dll", "MFTranscodeGetAudioOutputAvailableTypes")
+Interceptor.attach(MFTranscodeGetAudioOutputAvailableTypes, {onLeave: function (args) {send("MFTranscodeGetAudioOutputAvailableTypes");}});
+

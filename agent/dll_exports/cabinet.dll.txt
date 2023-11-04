@@ -1,0 +1,78 @@
+var CloseCompressor = Module.findExportByName("cabinet.dll", "CloseCompressor")
+Interceptor.attach(CloseCompressor, {onLeave: function (args) {send("CloseCompressor");}});
+
+var CloseDecompressor = Module.findExportByName("cabinet.dll", "CloseDecompressor")
+Interceptor.attach(CloseDecompressor, {onLeave: function (args) {send("CloseDecompressor");}});
+
+var Compress = Module.findExportByName("cabinet.dll", "Compress")
+Interceptor.attach(Compress, {onLeave: function (args) {send("Compress");}});
+
+var CreateCompressor = Module.findExportByName("cabinet.dll", "CreateCompressor")
+Interceptor.attach(CreateCompressor, {onLeave: function (args) {send("CreateCompressor");}});
+
+var CreateDecompressor = Module.findExportByName("cabinet.dll", "CreateDecompressor")
+Interceptor.attach(CreateDecompressor, {onLeave: function (args) {send("CreateDecompressor");}});
+
+var Decompress = Module.findExportByName("cabinet.dll", "Decompress")
+Interceptor.attach(Decompress, {onLeave: function (args) {send("Decompress");}});
+
+var DeleteExtractedFiles = Module.findExportByName("cabinet.dll", "DeleteExtractedFiles")
+Interceptor.attach(DeleteExtractedFiles, {onLeave: function (args) {send("DeleteExtractedFiles");}});
+
+var DllGetVersion = Module.findExportByName("cabinet.dll", "DllGetVersion")
+Interceptor.attach(DllGetVersion, {onLeave: function (args) {send("DllGetVersion");}});
+
+var Extract = Module.findExportByName("cabinet.dll", "Extract")
+Interceptor.attach(Extract, {onLeave: function (args) {send("Extract");}});
+
+var FCIAddFile = Module.findExportByName("cabinet.dll", "FCIAddFile")
+Interceptor.attach(FCIAddFile, {onLeave: function (args) {send("FCIAddFile");}});
+
+var FCICreate = Module.findExportByName("cabinet.dll", "FCICreate")
+Interceptor.attach(FCICreate, {onLeave: function (args) {send("FCICreate");}});
+
+var FCIDestroy = Module.findExportByName("cabinet.dll", "FCIDestroy")
+Interceptor.attach(FCIDestroy, {onLeave: function (args) {send("FCIDestroy");}});
+
+var FCIFlushCabinet = Module.findExportByName("cabinet.dll", "FCIFlushCabinet")
+Interceptor.attach(FCIFlushCabinet, {onLeave: function (args) {send("FCIFlushCabinet");}});
+
+var FCIFlushFolder = Module.findExportByName("cabinet.dll", "FCIFlushFolder")
+Interceptor.attach(FCIFlushFolder, {onLeave: function (args) {send("FCIFlushFolder");}});
+
+var FDICopy = Module.findExportByName("cabinet.dll", "FDICopy")
+Interceptor.attach(FDICopy, {onLeave: function (args) {send("FDICopy");}});
+
+var FDICreate = Module.findExportByName("cabinet.dll", "FDICreate")
+Interceptor.attach(FDICreate, {onLeave: function (args) {send("FDICreate");}});
+
+var FDIDestroy = Module.findExportByName("cabinet.dll", "FDIDestroy")
+Interceptor.attach(FDIDestroy, {onLeave: function (args) {send("FDIDestroy");}});
+
+var FDIIsCabinet = Module.findExportByName("cabinet.dll", "FDIIsCabinet")
+Interceptor.attach(FDIIsCabinet, {onLeave: function (args) {send("FDIIsCabinet");}});
+
+var FDITruncateCabinet = Module.findExportByName("cabinet.dll", "FDITruncateCabinet")
+Interceptor.attach(FDITruncateCabinet, {onLeave: function (args) {send("FDITruncateCabinet");}});
+
+var GetDllVersion = Module.findExportByName("cabinet.dll", "GetDllVersion")
+Interceptor.attach(GetDllVersion, {onLeave: function (args) {send("GetDllVersion");}});
+
+var QueryCompressorInformation = Module.findExportByName("cabinet.dll", "QueryCompressorInformation")
+Interceptor.attach(QueryCompressorInformation, {onLeave: function (args) {send("QueryCompressorInformation");}});
+
+var QueryDecompressorInformation = Module.findExportByName("cabinet.dll", "QueryDecompressorInformation")
+Interceptor.attach(QueryDecompressorInformation, {onLeave: function (args) {send("QueryDecompressorInformation");}});
+
+var ResetCompressor = Module.findExportByName("cabinet.dll", "ResetCompressor")
+Interceptor.attach(ResetCompressor, {onLeave: function (args) {send("ResetCompressor");}});
+
+var ResetDecompressor = Module.findExportByName("cabinet.dll", "ResetDecompressor")
+Interceptor.attach(ResetDecompressor, {onLeave: function (args) {send("ResetDecompressor");}});
+
+var SetCompressorInformation = Module.findExportByName("cabinet.dll", "SetCompressorInformation")
+Interceptor.attach(SetCompressorInformation, {onLeave: function (args) {send("SetCompressorInformation");}});
+
+var SetDecompressorInformation = Module.findExportByName("cabinet.dll", "SetDecompressorInformation")
+Interceptor.attach(SetDecompressorInformation, {onLeave: function (args) {send("SetDecompressorInformation");}});
+

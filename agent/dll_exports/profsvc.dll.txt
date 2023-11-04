@@ -1,0 +1,12 @@
+var GetExclusionListFromRegistry = Module.findExportByName("profsvc.dll", "GetExclusionListFromRegistry")
+Interceptor.attach(GetExclusionListFromRegistry, {onLeave: function (args) {send("GetExclusionListFromRegistry");}});
+
+var GetUserChoiceForSlowLink = Module.findExportByName("profsvc.dll", "GetUserChoiceForSlowLink")
+Interceptor.attach(GetUserChoiceForSlowLink, {onLeave: function (args) {send("GetUserChoiceForSlowLink");}});
+
+var GetUserPreferenceValue = Module.findExportByName("profsvc.dll", "GetUserPreferenceValue")
+Interceptor.attach(GetUserPreferenceValue, {onLeave: function (args) {send("GetUserPreferenceValue");}});
+
+var UserProfileServiceMain = Module.findExportByName("profsvc.dll", "UserProfileServiceMain")
+Interceptor.attach(UserProfileServiceMain, {onLeave: function (args) {send("UserProfileServiceMain");}});
+

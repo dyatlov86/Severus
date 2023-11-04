@@ -1,0 +1,9 @@
+var GetCompressedFileSizeA = Module.findExportByName("api-ms-win-core-file-l1-2-1.dll", "GetCompressedFileSizeA")
+Interceptor.attach(GetCompressedFileSizeA, {onLeave: function (args) {send("GetCompressedFileSizeA");}});
+
+var GetCompressedFileSizeW = Module.findExportByName("api-ms-win-core-file-l1-2-1.dll", "GetCompressedFileSizeW")
+Interceptor.attach(GetCompressedFileSizeW, {onLeave: function (args) {send("GetCompressedFileSizeW");}});
+
+var SetFileIoOverlappedRange = Module.findExportByName("api-ms-win-core-file-l1-2-1.dll", "SetFileIoOverlappedRange")
+Interceptor.attach(SetFileIoOverlappedRange, {onLeave: function (args) {send("SetFileIoOverlappedRange");}});
+

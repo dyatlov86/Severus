@@ -1,0 +1,18 @@
+var WinAppSDKCohabitation_EnsureWASDKFrameworkPackageRegistered = Module.findExportByName("WinUICohabitation.dll", "WinAppSDKCohabitation_EnsureWASDKFrameworkPackageRegistered")
+Interceptor.attach(WinAppSDKCohabitation_EnsureWASDKFrameworkPackageRegistered, {onLeave: function (args) {send("WinAppSDKCohabitation_EnsureWASDKFrameworkPackageRegistered");}});
+
+var WinAppSDKCohabitation_RegisterWASDKThread = Module.findExportByName("WinUICohabitation.dll", "WinAppSDKCohabitation_RegisterWASDKThread")
+Interceptor.attach(WinAppSDKCohabitation_RegisterWASDKThread, {onLeave: function (args) {send("WinAppSDKCohabitation_RegisterWASDKThread");}});
+
+var WinAppSDKCohabitation_UnregisterWASDKThread = Module.findExportByName("WinUICohabitation.dll", "WinAppSDKCohabitation_UnregisterWASDKThread")
+Interceptor.attach(WinAppSDKCohabitation_UnregisterWASDKThread, {onLeave: function (args) {send("WinAppSDKCohabitation_UnregisterWASDKThread");}});
+
+var WinUICohabitation_DesktopWindowXamlSourceNative_AttachToWindow = Module.findExportByName("WinUICohabitation.dll", "WinUICohabitation_DesktopWindowXamlSourceNative_AttachToWindow")
+Interceptor.attach(WinUICohabitation_DesktopWindowXamlSourceNative_AttachToWindow, {onLeave: function (args) {send("WinUICohabitation_DesktopWindowXamlSourceNative_AttachToWindow");}});
+
+var WinUICohabitation_DesktopWindowXamlSourceNative_get_WindowHandle = Module.findExportByName("WinUICohabitation.dll", "WinUICohabitation_DesktopWindowXamlSourceNative_get_WindowHandle")
+Interceptor.attach(WinUICohabitation_DesktopWindowXamlSourceNative_get_WindowHandle, {onLeave: function (args) {send("WinUICohabitation_DesktopWindowXamlSourceNative_get_WindowHandle");}});
+
+var WinUICohabitation_GetWinUI2XamlControlsResources = Module.findExportByName("WinUICohabitation.dll", "WinUICohabitation_GetWinUI2XamlControlsResources")
+Interceptor.attach(WinUICohabitation_GetWinUI2XamlControlsResources, {onLeave: function (args) {send("WinUICohabitation_GetWinUI2XamlControlsResources");}});
+

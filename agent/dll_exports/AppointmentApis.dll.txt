@@ -1,0 +1,15 @@
+var CreatePropertiesFromRecurrencePattern = Module.findExportByName("AppointmentApis.dll", "CreatePropertiesFromRecurrencePattern")
+Interceptor.attach(CreatePropertiesFromRecurrencePattern, {onLeave: function (args) {send("CreatePropertiesFromRecurrencePattern");}});
+
+var CreateRecurrencePatternFromProperties = Module.findExportByName("AppointmentApis.dll", "CreateRecurrencePatternFromProperties")
+Interceptor.attach(CreateRecurrencePatternFromProperties, {onLeave: function (args) {send("CreateRecurrencePatternFromProperties");}});
+
+var DllCanUnloadNow = Module.findExportByName("AppointmentApis.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("AppointmentApis.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("AppointmentApis.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

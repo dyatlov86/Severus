@@ -1,0 +1,78 @@
+var AVrfAPILookupCallback = Module.findExportByName("verifier.dll", "AVrfAPILookupCallback")
+Interceptor.attach(AVrfAPILookupCallback, {onLeave: function (args) {send("AVrfAPILookupCallback");}});
+
+var VerifierAddFreeMemoryCallback = Module.findExportByName("verifier.dll", "VerifierAddFreeMemoryCallback")
+Interceptor.attach(VerifierAddFreeMemoryCallback, {onLeave: function (args) {send("VerifierAddFreeMemoryCallback");}});
+
+var VerifierCheckPageHeapAllocation = Module.findExportByName("verifier.dll", "VerifierCheckPageHeapAllocation")
+Interceptor.attach(VerifierCheckPageHeapAllocation, {onLeave: function (args) {send("VerifierCheckPageHeapAllocation");}});
+
+var VerifierCreateRpcPageHeap = Module.findExportByName("verifier.dll", "VerifierCreateRpcPageHeap")
+Interceptor.attach(VerifierCreateRpcPageHeap, {onLeave: function (args) {send("VerifierCreateRpcPageHeap");}});
+
+var VerifierDeleteFreeMemoryCallback = Module.findExportByName("verifier.dll", "VerifierDeleteFreeMemoryCallback")
+Interceptor.attach(VerifierDeleteFreeMemoryCallback, {onLeave: function (args) {send("VerifierDeleteFreeMemoryCallback");}});
+
+var VerifierDestroyRpcPageHeap = Module.findExportByName("verifier.dll", "VerifierDestroyRpcPageHeap")
+Interceptor.attach(VerifierDestroyRpcPageHeap, {onLeave: function (args) {send("VerifierDestroyRpcPageHeap");}});
+
+var VerifierDisableFaultInjectionExclusionRange = Module.findExportByName("verifier.dll", "VerifierDisableFaultInjectionExclusionRange")
+Interceptor.attach(VerifierDisableFaultInjectionExclusionRange, {onLeave: function (args) {send("VerifierDisableFaultInjectionExclusionRange");}});
+
+var VerifierDisableFaultInjectionTargetRange = Module.findExportByName("verifier.dll", "VerifierDisableFaultInjectionTargetRange")
+Interceptor.attach(VerifierDisableFaultInjectionTargetRange, {onLeave: function (args) {send("VerifierDisableFaultInjectionTargetRange");}});
+
+var VerifierEnableFaultInjectionExclusionRange = Module.findExportByName("verifier.dll", "VerifierEnableFaultInjectionExclusionRange")
+Interceptor.attach(VerifierEnableFaultInjectionExclusionRange, {onLeave: function (args) {send("VerifierEnableFaultInjectionExclusionRange");}});
+
+var VerifierEnableFaultInjectionTargetRange = Module.findExportByName("verifier.dll", "VerifierEnableFaultInjectionTargetRange")
+Interceptor.attach(VerifierEnableFaultInjectionTargetRange, {onLeave: function (args) {send("VerifierEnableFaultInjectionTargetRange");}});
+
+var VerifierEnumerateResource = Module.findExportByName("verifier.dll", "VerifierEnumerateResource")
+Interceptor.attach(VerifierEnumerateResource, {onLeave: function (args) {send("VerifierEnumerateResource");}});
+
+var VerifierForceNormalHeap = Module.findExportByName("verifier.dll", "VerifierForceNormalHeap")
+Interceptor.attach(VerifierForceNormalHeap, {onLeave: function (args) {send("VerifierForceNormalHeap");}});
+
+var VerifierGetInfoForException = Module.findExportByName("verifier.dll", "VerifierGetInfoForException")
+Interceptor.attach(VerifierGetInfoForException, {onLeave: function (args) {send("VerifierGetInfoForException");}});
+
+var VerifierGetMemoryForDump = Module.findExportByName("verifier.dll", "VerifierGetMemoryForDump")
+Interceptor.attach(VerifierGetMemoryForDump, {onLeave: function (args) {send("VerifierGetMemoryForDump");}});
+
+var VerifierGetPropertyValueByName = Module.findExportByName("verifier.dll", "VerifierGetPropertyValueByName")
+Interceptor.attach(VerifierGetPropertyValueByName, {onLeave: function (args) {send("VerifierGetPropertyValueByName");}});
+
+var VerifierGetProviderHelper = Module.findExportByName("verifier.dll", "VerifierGetProviderHelper")
+Interceptor.attach(VerifierGetProviderHelper, {onLeave: function (args) {send("VerifierGetProviderHelper");}});
+
+var VerifierIsAddressInAnyPageHeap = Module.findExportByName("verifier.dll", "VerifierIsAddressInAnyPageHeap")
+Interceptor.attach(VerifierIsAddressInAnyPageHeap, {onLeave: function (args) {send("VerifierIsAddressInAnyPageHeap");}});
+
+var VerifierIsCurrentThreadHoldingLocks = Module.findExportByName("verifier.dll", "VerifierIsCurrentThreadHoldingLocks")
+Interceptor.attach(VerifierIsCurrentThreadHoldingLocks, {onLeave: function (args) {send("VerifierIsCurrentThreadHoldingLocks");}});
+
+var VerifierIsDllEntryActive = Module.findExportByName("verifier.dll", "VerifierIsDllEntryActive")
+Interceptor.attach(VerifierIsDllEntryActive, {onLeave: function (args) {send("VerifierIsDllEntryActive");}});
+
+var VerifierIsPerUserSettingsEnabled = Module.findExportByName("verifier.dll", "VerifierIsPerUserSettingsEnabled")
+Interceptor.attach(VerifierIsPerUserSettingsEnabled, {onLeave: function (args) {send("VerifierIsPerUserSettingsEnabled");}});
+
+var VerifierQueryRuntimeFlags = Module.findExportByName("verifier.dll", "VerifierQueryRuntimeFlags")
+Interceptor.attach(VerifierQueryRuntimeFlags, {onLeave: function (args) {send("VerifierQueryRuntimeFlags");}});
+
+var VerifierRedirectStopFunctions = Module.findExportByName("verifier.dll", "VerifierRedirectStopFunctions")
+Interceptor.attach(VerifierRedirectStopFunctions, {onLeave: function (args) {send("VerifierRedirectStopFunctions");}});
+
+var VerifierSetFaultInjectionProbability = Module.findExportByName("verifier.dll", "VerifierSetFaultInjectionProbability")
+Interceptor.attach(VerifierSetFaultInjectionProbability, {onLeave: function (args) {send("VerifierSetFaultInjectionProbability");}});
+
+var VerifierSetFlags = Module.findExportByName("verifier.dll", "VerifierSetFlags")
+Interceptor.attach(VerifierSetFlags, {onLeave: function (args) {send("VerifierSetFlags");}});
+
+var VerifierSetRuntimeFlags = Module.findExportByName("verifier.dll", "VerifierSetRuntimeFlags")
+Interceptor.attach(VerifierSetRuntimeFlags, {onLeave: function (args) {send("VerifierSetRuntimeFlags");}});
+
+var VerifierStopMessage = Module.findExportByName("verifier.dll", "VerifierStopMessage")
+Interceptor.attach(VerifierStopMessage, {onLeave: function (args) {send("VerifierStopMessage");}});
+

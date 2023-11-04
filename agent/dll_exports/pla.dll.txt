@@ -1,0 +1,45 @@
+var DllCanUnloadNow = Module.findExportByName("pla.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("pla.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("pla.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("pla.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var PlaDeleteReport = Module.findExportByName("pla.dll", "PlaDeleteReport")
+Interceptor.attach(PlaDeleteReport, {onLeave: function (args) {send("PlaDeleteReport");}});
+
+var PlaExpandTaskArguments = Module.findExportByName("pla.dll", "PlaExpandTaskArguments")
+Interceptor.attach(PlaExpandTaskArguments, {onLeave: function (args) {send("PlaExpandTaskArguments");}});
+
+var PlaExtractCabinet = Module.findExportByName("pla.dll", "PlaExtractCabinet")
+Interceptor.attach(PlaExtractCabinet, {onLeave: function (args) {send("PlaExtractCabinet");}});
+
+var PlaGetLegacyAlertActionsFlagsFromString = Module.findExportByName("pla.dll", "PlaGetLegacyAlertActionsFlagsFromString")
+Interceptor.attach(PlaGetLegacyAlertActionsFlagsFromString, {onLeave: function (args) {send("PlaGetLegacyAlertActionsFlagsFromString");}});
+
+var PlaGetLegacyAlertActionsStringFromFlags = Module.findExportByName("pla.dll", "PlaGetLegacyAlertActionsStringFromFlags")
+Interceptor.attach(PlaGetLegacyAlertActionsStringFromFlags, {onLeave: function (args) {send("PlaGetLegacyAlertActionsStringFromFlags");}});
+
+var PlaGetServerCapabilities = Module.findExportByName("pla.dll", "PlaGetServerCapabilities")
+Interceptor.attach(PlaGetServerCapabilities, {onLeave: function (args) {send("PlaGetServerCapabilities");}});
+
+var PlaHost = Module.findExportByName("pla.dll", "PlaHost")
+Interceptor.attach(PlaHost, {onLeave: function (args) {send("PlaHost");}});
+
+var PlaServer = Module.findExportByName("pla.dll", "PlaServer")
+Interceptor.attach(PlaServer, {onLeave: function (args) {send("PlaServer");}});
+
+var PlaUpgrade = Module.findExportByName("pla.dll", "PlaUpgrade")
+Interceptor.attach(PlaUpgrade, {onLeave: function (args) {send("PlaUpgrade");}});
+
+var ServiceMain = Module.findExportByName("pla.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("pla.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

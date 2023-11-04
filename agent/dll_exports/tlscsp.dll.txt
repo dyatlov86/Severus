@@ -1,0 +1,30 @@
+var LsCsp_DecryptEnvelopedData = Module.findExportByName("tlscsp.dll", "LsCsp_DecryptEnvelopedData")
+Interceptor.attach(LsCsp_DecryptEnvelopedData, {onLeave: function (args) {send("LsCsp_DecryptEnvelopedData");}});
+
+var LsCsp_EncryptHwid = Module.findExportByName("tlscsp.dll", "LsCsp_EncryptHwid")
+Interceptor.attach(LsCsp_EncryptHwid, {onLeave: function (args) {send("LsCsp_EncryptHwid");}});
+
+var LsCsp_GetServerData = Module.findExportByName("tlscsp.dll", "LsCsp_GetServerData")
+Interceptor.attach(LsCsp_GetServerData, {onLeave: function (args) {send("LsCsp_GetServerData");}});
+
+var LsCsp_RetrieveSecret = Module.findExportByName("tlscsp.dll", "LsCsp_RetrieveSecret")
+Interceptor.attach(LsCsp_RetrieveSecret, {onLeave: function (args) {send("LsCsp_RetrieveSecret");}});
+
+var LsCsp_StoreSecret = Module.findExportByName("tlscsp.dll", "LsCsp_StoreSecret")
+Interceptor.attach(LsCsp_StoreSecret, {onLeave: function (args) {send("LsCsp_StoreSecret");}});
+
+var TLSCspInit = Module.findExportByName("tlscsp.dll", "TLSCspInit")
+Interceptor.attach(TLSCspInit, {onLeave: function (args) {send("TLSCspInit");}});
+
+var TLSCspShutdown = Module.findExportByName("tlscsp.dll", "TLSCspShutdown")
+Interceptor.attach(TLSCspShutdown, {onLeave: function (args) {send("TLSCspShutdown");}});
+
+var TLSCspStartInstallCertificateThread = Module.findExportByName("tlscsp.dll", "TLSCspStartInstallCertificateThread")
+Interceptor.attach(TLSCspStartInstallCertificateThread, {onLeave: function (args) {send("TLSCspStartInstallCertificateThread");}});
+
+var TLSFreeTSCertificate = Module.findExportByName("tlscsp.dll", "TLSFreeTSCertificate")
+Interceptor.attach(TLSFreeTSCertificate, {onLeave: function (args) {send("TLSFreeTSCertificate");}});
+
+var TLSGetTSCertificate = Module.findExportByName("tlscsp.dll", "TLSGetTSCertificate")
+Interceptor.attach(TLSGetTSCertificate, {onLeave: function (args) {send("TLSGetTSCertificate");}});
+

@@ -1,0 +1,21 @@
+var WtdsAllocateEvent = Module.findExportByName("wtdsensor.dll", "WtdsAllocateEvent")
+Interceptor.attach(WtdsAllocateEvent, {onLeave: function (args) {send("WtdsAllocateEvent");}});
+
+var WtdsFreeEvent = Module.findExportByName("wtdsensor.dll", "WtdsFreeEvent")
+Interceptor.attach(WtdsFreeEvent, {onLeave: function (args) {send("WtdsFreeEvent");}});
+
+var WtdsGetEventData = Module.findExportByName("wtdsensor.dll", "WtdsGetEventData")
+Interceptor.attach(WtdsGetEventData, {onLeave: function (args) {send("WtdsGetEventData");}});
+
+var WtdsGetProcessId = Module.findExportByName("wtdsensor.dll", "WtdsGetProcessId")
+Interceptor.attach(WtdsGetProcessId, {onLeave: function (args) {send("WtdsGetProcessId");}});
+
+var WtdsRegisterSensor = Module.findExportByName("wtdsensor.dll", "WtdsRegisterSensor")
+Interceptor.attach(WtdsRegisterSensor, {onLeave: function (args) {send("WtdsRegisterSensor");}});
+
+var WtdsSendEvent = Module.findExportByName("wtdsensor.dll", "WtdsSendEvent")
+Interceptor.attach(WtdsSendEvent, {onLeave: function (args) {send("WtdsSendEvent");}});
+
+var WtdsUnregisterSensor = Module.findExportByName("wtdsensor.dll", "WtdsUnregisterSensor")
+Interceptor.attach(WtdsUnregisterSensor, {onLeave: function (args) {send("WtdsUnregisterSensor");}});
+

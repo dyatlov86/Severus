@@ -1,0 +1,93 @@
+var PshedAllocateMemory = Module.findExportByName("PSHED.DLL", "PshedAllocateMemory")
+Interceptor.attach(PshedAllocateMemory, {onLeave: function (args) {send("PshedAllocateMemory");}});
+
+var PshedArePluginsPresent = Module.findExportByName("PSHED.DLL", "PshedArePluginsPresent")
+Interceptor.attach(PshedArePluginsPresent, {onLeave: function (args) {send("PshedArePluginsPresent");}});
+
+var PshedAttemptErrorRecovery = Module.findExportByName("PSHED.DLL", "PshedAttemptErrorRecovery")
+Interceptor.attach(PshedAttemptErrorRecovery, {onLeave: function (args) {send("PshedAttemptErrorRecovery");}});
+
+var PshedBugCheckSystem = Module.findExportByName("PSHED.DLL", "PshedBugCheckSystem")
+Interceptor.attach(PshedBugCheckSystem, {onLeave: function (args) {send("PshedBugCheckSystem");}});
+
+var PshedClearErrorRecord = Module.findExportByName("PSHED.DLL", "PshedClearErrorRecord")
+Interceptor.attach(PshedClearErrorRecord, {onLeave: function (args) {send("PshedClearErrorRecord");}});
+
+var PshedDisableErrorSource = Module.findExportByName("PSHED.DLL", "PshedDisableErrorSource")
+Interceptor.attach(PshedDisableErrorSource, {onLeave: function (args) {send("PshedDisableErrorSource");}});
+
+var PshedDoPfa = Module.findExportByName("PSHED.DLL", "PshedDoPfa")
+Interceptor.attach(PshedDoPfa, {onLeave: function (args) {send("PshedDoPfa");}});
+
+var PshedDoPluginCtl = Module.findExportByName("PSHED.DLL", "PshedDoPluginCtl")
+Interceptor.attach(PshedDoPluginCtl, {onLeave: function (args) {send("PshedDoPluginCtl");}});
+
+var PshedEnableErrorSource = Module.findExportByName("PSHED.DLL", "PshedEnableErrorSource")
+Interceptor.attach(PshedEnableErrorSource, {onLeave: function (args) {send("PshedEnableErrorSource");}});
+
+var PshedFinalizeErrorRecord = Module.findExportByName("PSHED.DLL", "PshedFinalizeErrorRecord")
+Interceptor.attach(PshedFinalizeErrorRecord, {onLeave: function (args) {send("PshedFinalizeErrorRecord");}});
+
+var PshedFreeMemory = Module.findExportByName("PSHED.DLL", "PshedFreeMemory")
+Interceptor.attach(PshedFreeMemory, {onLeave: function (args) {send("PshedFreeMemory");}});
+
+var PshedGetAllErrorSources = Module.findExportByName("PSHED.DLL", "PshedGetAllErrorSources")
+Interceptor.attach(PshedGetAllErrorSources, {onLeave: function (args) {send("PshedGetAllErrorSources");}});
+
+var PshedGetBootErrorPacket = Module.findExportByName("PSHED.DLL", "PshedGetBootErrorPacket")
+Interceptor.attach(PshedGetBootErrorPacket, {onLeave: function (args) {send("PshedGetBootErrorPacket");}});
+
+var PshedGetErrorSourceInfo = Module.findExportByName("PSHED.DLL", "PshedGetErrorSourceInfo")
+Interceptor.attach(PshedGetErrorSourceInfo, {onLeave: function (args) {send("PshedGetErrorSourceInfo");}});
+
+var PshedGetHalEnlightenments = Module.findExportByName("PSHED.DLL", "PshedGetHalEnlightenments")
+Interceptor.attach(PshedGetHalEnlightenments, {onLeave: function (args) {send("PshedGetHalEnlightenments");}});
+
+var PshedGetInjectionCapabilities = Module.findExportByName("PSHED.DLL", "PshedGetInjectionCapabilities")
+Interceptor.attach(PshedGetInjectionCapabilities, {onLeave: function (args) {send("PshedGetInjectionCapabilities");}});
+
+var PshedInitAvailable = Module.findExportByName("PSHED.DLL", "PshedInitAvailable")
+Interceptor.attach(PshedInitAvailable, {onLeave: function (args) {send("PshedInitAvailable");}});
+
+var PshedInitGlobal = Module.findExportByName("PSHED.DLL", "PshedInitGlobal")
+Interceptor.attach(PshedInitGlobal, {onLeave: function (args) {send("PshedInitGlobal");}});
+
+var PshedInitProc = Module.findExportByName("PSHED.DLL", "PshedInitProc")
+Interceptor.attach(PshedInitProc, {onLeave: function (args) {send("PshedInitProc");}});
+
+var PshedInitialize = Module.findExportByName("PSHED.DLL", "PshedInitialize")
+Interceptor.attach(PshedInitialize, {onLeave: function (args) {send("PshedInitialize");}});
+
+var PshedInjectError = Module.findExportByName("PSHED.DLL", "PshedInjectError")
+Interceptor.attach(PshedInjectError, {onLeave: function (args) {send("PshedInjectError");}});
+
+var PshedIsSystemWheaEnabled = Module.findExportByName("PSHED.DLL", "PshedIsSystemWheaEnabled")
+Interceptor.attach(PshedIsSystemWheaEnabled, {onLeave: function (args) {send("PshedIsSystemWheaEnabled");}});
+
+var PshedMarkHiberPhase = Module.findExportByName("PSHED.DLL", "PshedMarkHiberPhase")
+Interceptor.attach(PshedMarkHiberPhase, {onLeave: function (args) {send("PshedMarkHiberPhase");}});
+
+var PshedReadErrorRecord = Module.findExportByName("PSHED.DLL", "PshedReadErrorRecord")
+Interceptor.attach(PshedReadErrorRecord, {onLeave: function (args) {send("PshedReadErrorRecord");}});
+
+var PshedRegisterPlugin = Module.findExportByName("PSHED.DLL", "PshedRegisterPlugin")
+Interceptor.attach(PshedRegisterPlugin, {onLeave: function (args) {send("PshedRegisterPlugin");}});
+
+var PshedRetrieveErrorInfo = Module.findExportByName("PSHED.DLL", "PshedRetrieveErrorInfo")
+Interceptor.attach(PshedRetrieveErrorInfo, {onLeave: function (args) {send("PshedRetrieveErrorInfo");}});
+
+var PshedSetErrorSourceInfo = Module.findExportByName("PSHED.DLL", "PshedSetErrorSourceInfo")
+Interceptor.attach(PshedSetErrorSourceInfo, {onLeave: function (args) {send("PshedSetErrorSourceInfo");}});
+
+var PshedSetHalEnlightenments = Module.findExportByName("PSHED.DLL", "PshedSetHalEnlightenments")
+Interceptor.attach(PshedSetHalEnlightenments, {onLeave: function (args) {send("PshedSetHalEnlightenments");}});
+
+var PshedSynchronizeExecution = Module.findExportByName("PSHED.DLL", "PshedSynchronizeExecution")
+Interceptor.attach(PshedSynchronizeExecution, {onLeave: function (args) {send("PshedSynchronizeExecution");}});
+
+var PshedUnregisterPlugin = Module.findExportByName("PSHED.DLL", "PshedUnregisterPlugin")
+Interceptor.attach(PshedUnregisterPlugin, {onLeave: function (args) {send("PshedUnregisterPlugin");}});
+
+var PshedWriteErrorRecord = Module.findExportByName("PSHED.DLL", "PshedWriteErrorRecord")
+Interceptor.attach(PshedWriteErrorRecord, {onLeave: function (args) {send("PshedWriteErrorRecord");}});
+

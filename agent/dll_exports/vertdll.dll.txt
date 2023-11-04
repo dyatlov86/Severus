@@ -1,0 +1,537 @@
+var AcquireSRWLockExclusive = Module.findExportByName("vertdll.dll", "AcquireSRWLockExclusive")
+Interceptor.attach(AcquireSRWLockExclusive, {onLeave: function (args) {send("AcquireSRWLockExclusive");}});
+
+var AcquireSRWLockShared = Module.findExportByName("vertdll.dll", "AcquireSRWLockShared")
+Interceptor.attach(AcquireSRWLockShared, {onLeave: function (args) {send("AcquireSRWLockShared");}});
+
+var CallEnclave = Module.findExportByName("vertdll.dll", "CallEnclave")
+Interceptor.attach(CallEnclave, {onLeave: function (args) {send("CallEnclave");}});
+
+var CloseHandle = Module.findExportByName("vertdll.dll", "CloseHandle")
+Interceptor.attach(CloseHandle, {onLeave: function (args) {send("CloseHandle");}});
+
+var CreateEventW = Module.findExportByName("vertdll.dll", "CreateEventW")
+Interceptor.attach(CreateEventW, {onLeave: function (args) {send("CreateEventW");}});
+
+var DbgPrint = Module.findExportByName("vertdll.dll", "DbgPrint")
+Interceptor.attach(DbgPrint, {onLeave: function (args) {send("DbgPrint");}});
+
+var DelayLoadFailureHook = Module.findExportByName("vertdll.dll", "DelayLoadFailureHook")
+Interceptor.attach(DelayLoadFailureHook, {onLeave: function (args) {send("DelayLoadFailureHook");}});
+
+var DeleteCriticalSection = Module.findExportByName("vertdll.dll", "DeleteCriticalSection")
+Interceptor.attach(DeleteCriticalSection, {onLeave: function (args) {send("DeleteCriticalSection");}});
+
+var DeleteSynchronizationBarrier = Module.findExportByName("vertdll.dll", "DeleteSynchronizationBarrier")
+Interceptor.attach(DeleteSynchronizationBarrier, {onLeave: function (args) {send("DeleteSynchronizationBarrier");}});
+
+var DeviceIoControl = Module.findExportByName("vertdll.dll", "DeviceIoControl")
+Interceptor.attach(DeviceIoControl, {onLeave: function (args) {send("DeviceIoControl");}});
+
+var DisableThreadLibraryCalls = Module.findExportByName("vertdll.dll", "DisableThreadLibraryCalls")
+Interceptor.attach(DisableThreadLibraryCalls, {onLeave: function (args) {send("DisableThreadLibraryCalls");}});
+
+var EnclaveGetAttestationReport = Module.findExportByName("vertdll.dll", "EnclaveGetAttestationReport")
+Interceptor.attach(EnclaveGetAttestationReport, {onLeave: function (args) {send("EnclaveGetAttestationReport");}});
+
+var EnclaveGetEnclaveInformation = Module.findExportByName("vertdll.dll", "EnclaveGetEnclaveInformation")
+Interceptor.attach(EnclaveGetEnclaveInformation, {onLeave: function (args) {send("EnclaveGetEnclaveInformation");}});
+
+var EnclaveSealData = Module.findExportByName("vertdll.dll", "EnclaveSealData")
+Interceptor.attach(EnclaveSealData, {onLeave: function (args) {send("EnclaveSealData");}});
+
+var EnclaveUnsealData = Module.findExportByName("vertdll.dll", "EnclaveUnsealData")
+Interceptor.attach(EnclaveUnsealData, {onLeave: function (args) {send("EnclaveUnsealData");}});
+
+var EnclaveVerifyAttestationReport = Module.findExportByName("vertdll.dll", "EnclaveVerifyAttestationReport")
+Interceptor.attach(EnclaveVerifyAttestationReport, {onLeave: function (args) {send("EnclaveVerifyAttestationReport");}});
+
+var EnterCriticalSection = Module.findExportByName("vertdll.dll", "EnterCriticalSection")
+Interceptor.attach(EnterCriticalSection, {onLeave: function (args) {send("EnterCriticalSection");}});
+
+var EnterSynchronizationBarrier = Module.findExportByName("vertdll.dll", "EnterSynchronizationBarrier")
+Interceptor.attach(EnterSynchronizationBarrier, {onLeave: function (args) {send("EnterSynchronizationBarrier");}});
+
+var EtwEventRegister = Module.findExportByName("vertdll.dll", "EtwEventRegister")
+Interceptor.attach(EtwEventRegister, {onLeave: function (args) {send("EtwEventRegister");}});
+
+var EtwEventUnregister = Module.findExportByName("vertdll.dll", "EtwEventUnregister")
+Interceptor.attach(EtwEventUnregister, {onLeave: function (args) {send("EtwEventUnregister");}});
+
+var EtwEventWrite = Module.findExportByName("vertdll.dll", "EtwEventWrite")
+Interceptor.attach(EtwEventWrite, {onLeave: function (args) {send("EtwEventWrite");}});
+
+var EtwEventWriteTransfer = Module.findExportByName("vertdll.dll", "EtwEventWriteTransfer")
+Interceptor.attach(EtwEventWriteTransfer, {onLeave: function (args) {send("EtwEventWriteTransfer");}});
+
+var EtwGetTraceEnableFlags = Module.findExportByName("vertdll.dll", "EtwGetTraceEnableFlags")
+Interceptor.attach(EtwGetTraceEnableFlags, {onLeave: function (args) {send("EtwGetTraceEnableFlags");}});
+
+var EtwGetTraceEnableLevel = Module.findExportByName("vertdll.dll", "EtwGetTraceEnableLevel")
+Interceptor.attach(EtwGetTraceEnableLevel, {onLeave: function (args) {send("EtwGetTraceEnableLevel");}});
+
+var EtwGetTraceLoggerHandle = Module.findExportByName("vertdll.dll", "EtwGetTraceLoggerHandle")
+Interceptor.attach(EtwGetTraceLoggerHandle, {onLeave: function (args) {send("EtwGetTraceLoggerHandle");}});
+
+var EtwRegisterTraceGuidsW = Module.findExportByName("vertdll.dll", "EtwRegisterTraceGuidsW")
+Interceptor.attach(EtwRegisterTraceGuidsW, {onLeave: function (args) {send("EtwRegisterTraceGuidsW");}});
+
+var EtwTraceMessage = Module.findExportByName("vertdll.dll", "EtwTraceMessage")
+Interceptor.attach(EtwTraceMessage, {onLeave: function (args) {send("EtwTraceMessage");}});
+
+var EtwUnregisterTraceGuids = Module.findExportByName("vertdll.dll", "EtwUnregisterTraceGuids")
+Interceptor.attach(EtwUnregisterTraceGuids, {onLeave: function (args) {send("EtwUnregisterTraceGuids");}});
+
+var EventRegister = Module.findExportByName("vertdll.dll", "EventRegister")
+Interceptor.attach(EventRegister, {onLeave: function (args) {send("EventRegister");}});
+
+var EventSetInformation = Module.findExportByName("vertdll.dll", "EventSetInformation")
+Interceptor.attach(EventSetInformation, {onLeave: function (args) {send("EventSetInformation");}});
+
+var EventUnregister = Module.findExportByName("vertdll.dll", "EventUnregister")
+Interceptor.attach(EventUnregister, {onLeave: function (args) {send("EventUnregister");}});
+
+var EventWriteTransfer = Module.findExportByName("vertdll.dll", "EventWriteTransfer")
+Interceptor.attach(EventWriteTransfer, {onLeave: function (args) {send("EventWriteTransfer");}});
+
+var ExpInterlockedPopEntrySListEnd = Module.findExportByName("vertdll.dll", "ExpInterlockedPopEntrySListEnd")
+Interceptor.attach(ExpInterlockedPopEntrySListEnd, {onLeave: function (args) {send("ExpInterlockedPopEntrySListEnd");}});
+
+var ExpInterlockedPopEntrySListFault = Module.findExportByName("vertdll.dll", "ExpInterlockedPopEntrySListFault")
+Interceptor.attach(ExpInterlockedPopEntrySListFault, {onLeave: function (args) {send("ExpInterlockedPopEntrySListFault");}});
+
+var ExpInterlockedPopEntrySListResume = Module.findExportByName("vertdll.dll", "ExpInterlockedPopEntrySListResume")
+Interceptor.attach(ExpInterlockedPopEntrySListResume, {onLeave: function (args) {send("ExpInterlockedPopEntrySListResume");}});
+
+var FreeLibrary = Module.findExportByName("vertdll.dll", "FreeLibrary")
+Interceptor.attach(FreeLibrary, {onLeave: function (args) {send("FreeLibrary");}});
+
+var GetCurrentProcess = Module.findExportByName("vertdll.dll", "GetCurrentProcess")
+Interceptor.attach(GetCurrentProcess, {onLeave: function (args) {send("GetCurrentProcess");}});
+
+var GetCurrentProcessId = Module.findExportByName("vertdll.dll", "GetCurrentProcessId")
+Interceptor.attach(GetCurrentProcessId, {onLeave: function (args) {send("GetCurrentProcessId");}});
+
+var GetCurrentThread = Module.findExportByName("vertdll.dll", "GetCurrentThread")
+Interceptor.attach(GetCurrentThread, {onLeave: function (args) {send("GetCurrentThread");}});
+
+var GetCurrentThreadId = Module.findExportByName("vertdll.dll", "GetCurrentThreadId")
+Interceptor.attach(GetCurrentThreadId, {onLeave: function (args) {send("GetCurrentThreadId");}});
+
+var GetEnabledXStateFeatures = Module.findExportByName("vertdll.dll", "GetEnabledXStateFeatures")
+Interceptor.attach(GetEnabledXStateFeatures, {onLeave: function (args) {send("GetEnabledXStateFeatures");}});
+
+var GetFipsModeFromIumKernelState = Module.findExportByName("vertdll.dll", "GetFipsModeFromIumKernelState")
+Interceptor.attach(GetFipsModeFromIumKernelState, {onLeave: function (args) {send("GetFipsModeFromIumKernelState");}});
+
+var GetLastError = Module.findExportByName("vertdll.dll", "GetLastError")
+Interceptor.attach(GetLastError, {onLeave: function (args) {send("GetLastError");}});
+
+var GetModuleFileNameW = Module.findExportByName("vertdll.dll", "GetModuleFileNameW")
+Interceptor.attach(GetModuleFileNameW, {onLeave: function (args) {send("GetModuleFileNameW");}});
+
+var GetModuleHandleExW = Module.findExportByName("vertdll.dll", "GetModuleHandleExW")
+Interceptor.attach(GetModuleHandleExW, {onLeave: function (args) {send("GetModuleHandleExW");}});
+
+var GetProcAddress = Module.findExportByName("vertdll.dll", "GetProcAddress")
+Interceptor.attach(GetProcAddress, {onLeave: function (args) {send("GetProcAddress");}});
+
+var GetProcessHeap = Module.findExportByName("vertdll.dll", "GetProcessHeap")
+Interceptor.attach(GetProcessHeap, {onLeave: function (args) {send("GetProcessHeap");}});
+
+var GetProcessHeaps = Module.findExportByName("vertdll.dll", "GetProcessHeaps")
+Interceptor.attach(GetProcessHeaps, {onLeave: function (args) {send("GetProcessHeaps");}});
+
+var GetSeedFromIumKernelState = Module.findExportByName("vertdll.dll", "GetSeedFromIumKernelState")
+Interceptor.attach(GetSeedFromIumKernelState, {onLeave: function (args) {send("GetSeedFromIumKernelState");}});
+
+var GetSystemDirectoryW = Module.findExportByName("vertdll.dll", "GetSystemDirectoryW")
+Interceptor.attach(GetSystemDirectoryW, {onLeave: function (args) {send("GetSystemDirectoryW");}});
+
+var GetSystemInfo = Module.findExportByName("vertdll.dll", "GetSystemInfo")
+Interceptor.attach(GetSystemInfo, {onLeave: function (args) {send("GetSystemInfo");}});
+
+var GetXStateFeaturesMask = Module.findExportByName("vertdll.dll", "GetXStateFeaturesMask")
+Interceptor.attach(GetXStateFeaturesMask, {onLeave: function (args) {send("GetXStateFeaturesMask");}});
+
+var HeapAlloc = Module.findExportByName("vertdll.dll", "HeapAlloc")
+Interceptor.attach(HeapAlloc, {onLeave: function (args) {send("HeapAlloc");}});
+
+var HeapCompact = Module.findExportByName("vertdll.dll", "HeapCompact")
+Interceptor.attach(HeapCompact, {onLeave: function (args) {send("HeapCompact");}});
+
+var HeapCreate = Module.findExportByName("vertdll.dll", "HeapCreate")
+Interceptor.attach(HeapCreate, {onLeave: function (args) {send("HeapCreate");}});
+
+var HeapDestroy = Module.findExportByName("vertdll.dll", "HeapDestroy")
+Interceptor.attach(HeapDestroy, {onLeave: function (args) {send("HeapDestroy");}});
+
+var HeapFree = Module.findExportByName("vertdll.dll", "HeapFree")
+Interceptor.attach(HeapFree, {onLeave: function (args) {send("HeapFree");}});
+
+var HeapLock = Module.findExportByName("vertdll.dll", "HeapLock")
+Interceptor.attach(HeapLock, {onLeave: function (args) {send("HeapLock");}});
+
+var HeapReAlloc = Module.findExportByName("vertdll.dll", "HeapReAlloc")
+Interceptor.attach(HeapReAlloc, {onLeave: function (args) {send("HeapReAlloc");}});
+
+var HeapSize = Module.findExportByName("vertdll.dll", "HeapSize")
+Interceptor.attach(HeapSize, {onLeave: function (args) {send("HeapSize");}});
+
+var HeapUnlock = Module.findExportByName("vertdll.dll", "HeapUnlock")
+Interceptor.attach(HeapUnlock, {onLeave: function (args) {send("HeapUnlock");}});
+
+var InitializeConditionVariable = Module.findExportByName("vertdll.dll", "InitializeConditionVariable")
+Interceptor.attach(InitializeConditionVariable, {onLeave: function (args) {send("InitializeConditionVariable");}});
+
+var InitializeCriticalSection = Module.findExportByName("vertdll.dll", "InitializeCriticalSection")
+Interceptor.attach(InitializeCriticalSection, {onLeave: function (args) {send("InitializeCriticalSection");}});
+
+var InitializeCriticalSectionAndSpinCount = Module.findExportByName("vertdll.dll", "InitializeCriticalSectionAndSpinCount")
+Interceptor.attach(InitializeCriticalSectionAndSpinCount, {onLeave: function (args) {send("InitializeCriticalSectionAndSpinCount");}});
+
+var InitializeCriticalSectionEx = Module.findExportByName("vertdll.dll", "InitializeCriticalSectionEx")
+Interceptor.attach(InitializeCriticalSectionEx, {onLeave: function (args) {send("InitializeCriticalSectionEx");}});
+
+var InitializeSListHead = Module.findExportByName("vertdll.dll", "InitializeSListHead")
+Interceptor.attach(InitializeSListHead, {onLeave: function (args) {send("InitializeSListHead");}});
+
+var InitializeSRWLock = Module.findExportByName("vertdll.dll", "InitializeSRWLock")
+Interceptor.attach(InitializeSRWLock, {onLeave: function (args) {send("InitializeSRWLock");}});
+
+var InitializeSynchronizationBarrier = Module.findExportByName("vertdll.dll", "InitializeSynchronizationBarrier")
+Interceptor.attach(InitializeSynchronizationBarrier, {onLeave: function (args) {send("InitializeSynchronizationBarrier");}});
+
+var InterlockedFlushSList = Module.findExportByName("vertdll.dll", "InterlockedFlushSList")
+Interceptor.attach(InterlockedFlushSList, {onLeave: function (args) {send("InterlockedFlushSList");}});
+
+var InterlockedPopEntrySList = Module.findExportByName("vertdll.dll", "InterlockedPopEntrySList")
+Interceptor.attach(InterlockedPopEntrySList, {onLeave: function (args) {send("InterlockedPopEntrySList");}});
+
+var InterlockedPushEntrySList = Module.findExportByName("vertdll.dll", "InterlockedPushEntrySList")
+Interceptor.attach(InterlockedPushEntrySList, {onLeave: function (args) {send("InterlockedPushEntrySList");}});
+
+var InterlockedPushListSList = Module.findExportByName("vertdll.dll", "InterlockedPushListSList")
+Interceptor.attach(InterlockedPushListSList, {onLeave: function (args) {send("InterlockedPushListSList");}});
+
+var InterlockedPushListSListEx = Module.findExportByName("vertdll.dll", "InterlockedPushListSListEx")
+Interceptor.attach(InterlockedPushListSListEx, {onLeave: function (args) {send("InterlockedPushListSListEx");}});
+
+var IsProcessorFeaturePresent = Module.findExportByName("vertdll.dll", "IsProcessorFeaturePresent")
+Interceptor.attach(IsProcessorFeaturePresent, {onLeave: function (args) {send("IsProcessorFeaturePresent");}});
+
+var KiUserExceptionDispatcher = Module.findExportByName("vertdll.dll", "KiUserExceptionDispatcher")
+Interceptor.attach(KiUserExceptionDispatcher, {onLeave: function (args) {send("KiUserExceptionDispatcher");}});
+
+var LdrDisableThreadCalloutsForDll = Module.findExportByName("vertdll.dll", "LdrDisableThreadCalloutsForDll")
+Interceptor.attach(LdrDisableThreadCalloutsForDll, {onLeave: function (args) {send("LdrDisableThreadCalloutsForDll");}});
+
+var LdrResolveDelayLoadedAPI = Module.findExportByName("vertdll.dll", "LdrResolveDelayLoadedAPI")
+Interceptor.attach(LdrResolveDelayLoadedAPI, {onLeave: function (args) {send("LdrResolveDelayLoadedAPI");}});
+
+var LeaveCriticalSection = Module.findExportByName("vertdll.dll", "LeaveCriticalSection")
+Interceptor.attach(LeaveCriticalSection, {onLeave: function (args) {send("LeaveCriticalSection");}});
+
+var LoadLibraryExW = Module.findExportByName("vertdll.dll", "LoadLibraryExW")
+Interceptor.attach(LoadLibraryExW, {onLeave: function (args) {send("LoadLibraryExW");}});
+
+var LoadLibraryW = Module.findExportByName("vertdll.dll", "LoadLibraryW")
+Interceptor.attach(LoadLibraryW, {onLeave: function (args) {send("LoadLibraryW");}});
+
+var LocateXStateFeature = Module.findExportByName("vertdll.dll", "LocateXStateFeature")
+Interceptor.attach(LocateXStateFeature, {onLeave: function (args) {send("LocateXStateFeature");}});
+
+var MultiByteToWideChar = Module.findExportByName("vertdll.dll", "MultiByteToWideChar")
+Interceptor.attach(MultiByteToWideChar, {onLeave: function (args) {send("MultiByteToWideChar");}});
+
+var NtClose = Module.findExportByName("vertdll.dll", "NtClose")
+Interceptor.attach(NtClose, {onLeave: function (args) {send("NtClose");}});
+
+var NtDeviceIoControlFile = Module.findExportByName("vertdll.dll", "NtDeviceIoControlFile")
+Interceptor.attach(NtDeviceIoControlFile, {onLeave: function (args) {send("NtDeviceIoControlFile");}});
+
+var NtOpenFile = Module.findExportByName("vertdll.dll", "NtOpenFile")
+Interceptor.attach(NtOpenFile, {onLeave: function (args) {send("NtOpenFile");}});
+
+var NtOpenKey = Module.findExportByName("vertdll.dll", "NtOpenKey")
+Interceptor.attach(NtOpenKey, {onLeave: function (args) {send("NtOpenKey");}});
+
+var NtQueryInformationProcess = Module.findExportByName("vertdll.dll", "NtQueryInformationProcess")
+Interceptor.attach(NtQueryInformationProcess, {onLeave: function (args) {send("NtQueryInformationProcess");}});
+
+var NtQueryValueKey = Module.findExportByName("vertdll.dll", "NtQueryValueKey")
+Interceptor.attach(NtQueryValueKey, {onLeave: function (args) {send("NtQueryValueKey");}});
+
+var NtTerminateProcess = Module.findExportByName("vertdll.dll", "NtTerminateProcess")
+Interceptor.attach(NtTerminateProcess, {onLeave: function (args) {send("NtTerminateProcess");}});
+
+var OpenProcessToken = Module.findExportByName("vertdll.dll", "OpenProcessToken")
+Interceptor.attach(OpenProcessToken, {onLeave: function (args) {send("OpenProcessToken");}});
+
+var OutputDebugStringW = Module.findExportByName("vertdll.dll", "OutputDebugStringW")
+Interceptor.attach(OutputDebugStringW, {onLeave: function (args) {send("OutputDebugStringW");}});
+
+var PrivilegeCheck = Module.findExportByName("vertdll.dll", "PrivilegeCheck")
+Interceptor.attach(PrivilegeCheck, {onLeave: function (args) {send("PrivilegeCheck");}});
+
+var QueryDepthSList = Module.findExportByName("vertdll.dll", "QueryDepthSList")
+Interceptor.attach(QueryDepthSList, {onLeave: function (args) {send("QueryDepthSList");}});
+
+var QueryFullProcess = Module.findExportByName("vertdll.dll", "QueryFullProcess")
+Interceptor.attach(QueryFullProcess, {onLeave: function (args) {send("QueryFullProcess");}});
+
+var QueryFullProcessImageNameW = Module.findExportByName("vertdll.dll", "QueryFullProcessImageNameW")
+Interceptor.attach(QueryFullProcessImageNameW, {onLeave: function (args) {send("QueryFullProcessImageNameW");}});
+
+var QueryPerformanceCounter = Module.findExportByName("vertdll.dll", "QueryPerformanceCounter")
+Interceptor.attach(QueryPerformanceCounter, {onLeave: function (args) {send("QueryPerformanceCounter");}});
+
+var QueryPerformanceFrequency = Module.findExportByName("vertdll.dll", "QueryPerformanceFrequency")
+Interceptor.attach(QueryPerformanceFrequency, {onLeave: function (args) {send("QueryPerformanceFrequency");}});
+
+var RaiseException = Module.findExportByName("vertdll.dll", "RaiseException")
+Interceptor.attach(RaiseException, {onLeave: function (args) {send("RaiseException");}});
+
+var RegCloseKey = Module.findExportByName("vertdll.dll", "RegCloseKey")
+Interceptor.attach(RegCloseKey, {onLeave: function (args) {send("RegCloseKey");}});
+
+var RegEnumKeyExW = Module.findExportByName("vertdll.dll", "RegEnumKeyExW")
+Interceptor.attach(RegEnumKeyExW, {onLeave: function (args) {send("RegEnumKeyExW");}});
+
+var RegOpenKeyExW = Module.findExportByName("vertdll.dll", "RegOpenKeyExW")
+Interceptor.attach(RegOpenKeyExW, {onLeave: function (args) {send("RegOpenKeyExW");}});
+
+var RegQueryInfoKeyW = Module.findExportByName("vertdll.dll", "RegQueryInfoKeyW")
+Interceptor.attach(RegQueryInfoKeyW, {onLeave: function (args) {send("RegQueryInfoKeyW");}});
+
+var RegQueryValueExW = Module.findExportByName("vertdll.dll", "RegQueryValueExW")
+Interceptor.attach(RegQueryValueExW, {onLeave: function (args) {send("RegQueryValueExW");}});
+
+var RegisterWaitForSingleObjectEx = Module.findExportByName("vertdll.dll", "RegisterWaitForSingleObjectEx")
+Interceptor.attach(RegisterWaitForSingleObjectEx, {onLeave: function (args) {send("RegisterWaitForSingleObjectEx");}});
+
+var ReleaseSRWLockExclusive = Module.findExportByName("vertdll.dll", "ReleaseSRWLockExclusive")
+Interceptor.attach(ReleaseSRWLockExclusive, {onLeave: function (args) {send("ReleaseSRWLockExclusive");}});
+
+var ReleaseSRWLockShared = Module.findExportByName("vertdll.dll", "ReleaseSRWLockShared")
+Interceptor.attach(ReleaseSRWLockShared, {onLeave: function (args) {send("ReleaseSRWLockShared");}});
+
+var ResolveDelayLoadedAPI = Module.findExportByName("vertdll.dll", "ResolveDelayLoadedAPI")
+Interceptor.attach(ResolveDelayLoadedAPI, {onLeave: function (args) {send("ResolveDelayLoadedAPI");}});
+
+var RtlAcquireResourceExclusive = Module.findExportByName("vertdll.dll", "RtlAcquireResourceExclusive")
+Interceptor.attach(RtlAcquireResourceExclusive, {onLeave: function (args) {send("RtlAcquireResourceExclusive");}});
+
+var RtlAcquireResourceShared = Module.findExportByName("vertdll.dll", "RtlAcquireResourceShared")
+Interceptor.attach(RtlAcquireResourceShared, {onLeave: function (args) {send("RtlAcquireResourceShared");}});
+
+var RtlAllocateHeap = Module.findExportByName("vertdll.dll", "RtlAllocateHeap")
+Interceptor.attach(RtlAllocateHeap, {onLeave: function (args) {send("RtlAllocateHeap");}});
+
+var RtlAssert = Module.findExportByName("vertdll.dll", "RtlAssert")
+Interceptor.attach(RtlAssert, {onLeave: function (args) {send("RtlAssert");}});
+
+var RtlCallEnclave = Module.findExportByName("vertdll.dll", "RtlCallEnclave")
+Interceptor.attach(RtlCallEnclave, {onLeave: function (args) {send("RtlCallEnclave");}});
+
+var RtlCallEnclaveReturn = Module.findExportByName("vertdll.dll", "RtlCallEnclaveReturn")
+Interceptor.attach(RtlCallEnclaveReturn, {onLeave: function (args) {send("RtlCallEnclaveReturn");}});
+
+var RtlCaptureContext = Module.findExportByName("vertdll.dll", "RtlCaptureContext")
+Interceptor.attach(RtlCaptureContext, {onLeave: function (args) {send("RtlCaptureContext");}});
+
+var RtlCompareUnicodeString = Module.findExportByName("vertdll.dll", "RtlCompareUnicodeString")
+Interceptor.attach(RtlCompareUnicodeString, {onLeave: function (args) {send("RtlCompareUnicodeString");}});
+
+var RtlDeleteCriticalSection = Module.findExportByName("vertdll.dll", "RtlDeleteCriticalSection")
+Interceptor.attach(RtlDeleteCriticalSection, {onLeave: function (args) {send("RtlDeleteCriticalSection");}});
+
+var RtlDeleteResource = Module.findExportByName("vertdll.dll", "RtlDeleteResource")
+Interceptor.attach(RtlDeleteResource, {onLeave: function (args) {send("RtlDeleteResource");}});
+
+var RtlEnclaveCallDispatch = Module.findExportByName("vertdll.dll", "RtlEnclaveCallDispatch")
+Interceptor.attach(RtlEnclaveCallDispatch, {onLeave: function (args) {send("RtlEnclaveCallDispatch");}});
+
+var RtlEnclaveCallDispatchReturn = Module.findExportByName("vertdll.dll", "RtlEnclaveCallDispatchReturn")
+Interceptor.attach(RtlEnclaveCallDispatchReturn, {onLeave: function (args) {send("RtlEnclaveCallDispatchReturn");}});
+
+var RtlEnterCriticalSection = Module.findExportByName("vertdll.dll", "RtlEnterCriticalSection")
+Interceptor.attach(RtlEnterCriticalSection, {onLeave: function (args) {send("RtlEnterCriticalSection");}});
+
+var RtlFreeHeap = Module.findExportByName("vertdll.dll", "RtlFreeHeap")
+Interceptor.attach(RtlFreeHeap, {onLeave: function (args) {send("RtlFreeHeap");}});
+
+var RtlGetCurrentProcessorNumberEx = Module.findExportByName("vertdll.dll", "RtlGetCurrentProcessorNumberEx")
+Interceptor.attach(RtlGetCurrentProcessorNumberEx, {onLeave: function (args) {send("RtlGetCurrentProcessorNumberEx");}});
+
+var RtlGetLastNtStatus = Module.findExportByName("vertdll.dll", "RtlGetLastNtStatus")
+Interceptor.attach(RtlGetLastNtStatus, {onLeave: function (args) {send("RtlGetLastNtStatus");}});
+
+var RtlGetSystemGlobalData = Module.findExportByName("vertdll.dll", "RtlGetSystemGlobalData")
+Interceptor.attach(RtlGetSystemGlobalData, {onLeave: function (args) {send("RtlGetSystemGlobalData");}});
+
+var RtlImageNtHeader = Module.findExportByName("vertdll.dll", "RtlImageNtHeader")
+Interceptor.attach(RtlImageNtHeader, {onLeave: function (args) {send("RtlImageNtHeader");}});
+
+var RtlInitUnicodeString = Module.findExportByName("vertdll.dll", "RtlInitUnicodeString")
+Interceptor.attach(RtlInitUnicodeString, {onLeave: function (args) {send("RtlInitUnicodeString");}});
+
+var RtlInitializeCriticalSection = Module.findExportByName("vertdll.dll", "RtlInitializeCriticalSection")
+Interceptor.attach(RtlInitializeCriticalSection, {onLeave: function (args) {send("RtlInitializeCriticalSection");}});
+
+var RtlInitializeResource = Module.findExportByName("vertdll.dll", "RtlInitializeResource")
+Interceptor.attach(RtlInitializeResource, {onLeave: function (args) {send("RtlInitializeResource");}});
+
+var RtlLeaveCriticalSection = Module.findExportByName("vertdll.dll", "RtlLeaveCriticalSection")
+Interceptor.attach(RtlLeaveCriticalSection, {onLeave: function (args) {send("RtlLeaveCriticalSection");}});
+
+var RtlLookupFunctionEntry = Module.findExportByName("vertdll.dll", "RtlLookupFunctionEntry")
+Interceptor.attach(RtlLookupFunctionEntry, {onLeave: function (args) {send("RtlLookupFunctionEntry");}});
+
+var RtlNtStatusToDosError = Module.findExportByName("vertdll.dll", "RtlNtStatusToDosError")
+Interceptor.attach(RtlNtStatusToDosError, {onLeave: function (args) {send("RtlNtStatusToDosError");}});
+
+var RtlPcToFileHeader = Module.findExportByName("vertdll.dll", "RtlPcToFileHeader")
+Interceptor.attach(RtlPcToFileHeader, {onLeave: function (args) {send("RtlPcToFileHeader");}});
+
+var RtlRaiseStatus = Module.findExportByName("vertdll.dll", "RtlRaiseStatus")
+Interceptor.attach(RtlRaiseStatus, {onLeave: function (args) {send("RtlRaiseStatus");}});
+
+var RtlReleaseResource = Module.findExportByName("vertdll.dll", "RtlReleaseResource")
+Interceptor.attach(RtlReleaseResource, {onLeave: function (args) {send("RtlReleaseResource");}});
+
+var RtlReleaseResourceShared = Module.findExportByName("vertdll.dll", "RtlReleaseResourceShared")
+Interceptor.attach(RtlReleaseResourceShared, {onLeave: function (args) {send("RtlReleaseResourceShared");}});
+
+var RtlTimeFieldsToTime = Module.findExportByName("vertdll.dll", "RtlTimeFieldsToTime")
+Interceptor.attach(RtlTimeFieldsToTime, {onLeave: function (args) {send("RtlTimeFieldsToTime");}});
+
+var RtlUnhandledExceptionFilter = Module.findExportByName("vertdll.dll", "RtlUnhandledExceptionFilter")
+Interceptor.attach(RtlUnhandledExceptionFilter, {onLeave: function (args) {send("RtlUnhandledExceptionFilter");}});
+
+var RtlUnwind = Module.findExportByName("vertdll.dll", "RtlUnwind")
+Interceptor.attach(RtlUnwind, {onLeave: function (args) {send("RtlUnwind");}});
+
+var RtlUnwindEx = Module.findExportByName("vertdll.dll", "RtlUnwindEx")
+Interceptor.attach(RtlUnwindEx, {onLeave: function (args) {send("RtlUnwindEx");}});
+
+var RtlVirtualUnwind = Module.findExportByName("vertdll.dll", "RtlVirtualUnwind")
+Interceptor.attach(RtlVirtualUnwind, {onLeave: function (args) {send("RtlVirtualUnwind");}});
+
+var SetCriticalSectionSpinCount = Module.findExportByName("vertdll.dll", "SetCriticalSectionSpinCount")
+Interceptor.attach(SetCriticalSectionSpinCount, {onLeave: function (args) {send("SetCriticalSectionSpinCount");}});
+
+var SetLastError = Module.findExportByName("vertdll.dll", "SetLastError")
+Interceptor.attach(SetLastError, {onLeave: function (args) {send("SetLastError");}});
+
+var SetThreadStackGuarantee = Module.findExportByName("vertdll.dll", "SetThreadStackGuarantee")
+Interceptor.attach(SetThreadStackGuarantee, {onLeave: function (args) {send("SetThreadStackGuarantee");}});
+
+var SetUnhandledExceptionFilter = Module.findExportByName("vertdll.dll", "SetUnhandledExceptionFilter")
+Interceptor.attach(SetUnhandledExceptionFilter, {onLeave: function (args) {send("SetUnhandledExceptionFilter");}});
+
+var SleepConditionVariableCS = Module.findExportByName("vertdll.dll", "SleepConditionVariableCS")
+Interceptor.attach(SleepConditionVariableCS, {onLeave: function (args) {send("SleepConditionVariableCS");}});
+
+var SleepConditionVariableSRW = Module.findExportByName("vertdll.dll", "SleepConditionVariableSRW")
+Interceptor.attach(SleepConditionVariableSRW, {onLeave: function (args) {send("SleepConditionVariableSRW");}});
+
+var TerminateEnclave = Module.findExportByName("vertdll.dll", "TerminateEnclave")
+Interceptor.attach(TerminateEnclave, {onLeave: function (args) {send("TerminateEnclave");}});
+
+var TerminateProcess = Module.findExportByName("vertdll.dll", "TerminateProcess")
+Interceptor.attach(TerminateProcess, {onLeave: function (args) {send("TerminateProcess");}});
+
+var TlsAlloc = Module.findExportByName("vertdll.dll", "TlsAlloc")
+Interceptor.attach(TlsAlloc, {onLeave: function (args) {send("TlsAlloc");}});
+
+var TlsFree = Module.findExportByName("vertdll.dll", "TlsFree")
+Interceptor.attach(TlsFree, {onLeave: function (args) {send("TlsFree");}});
+
+var TlsGetValue = Module.findExportByName("vertdll.dll", "TlsGetValue")
+Interceptor.attach(TlsGetValue, {onLeave: function (args) {send("TlsGetValue");}});
+
+var TlsSetValue = Module.findExportByName("vertdll.dll", "TlsSetValue")
+Interceptor.attach(TlsSetValue, {onLeave: function (args) {send("TlsSetValue");}});
+
+var TryAcquireSRWLockExclusive = Module.findExportByName("vertdll.dll", "TryAcquireSRWLockExclusive")
+Interceptor.attach(TryAcquireSRWLockExclusive, {onLeave: function (args) {send("TryAcquireSRWLockExclusive");}});
+
+var TryAcquireSRWLockShared = Module.findExportByName("vertdll.dll", "TryAcquireSRWLockShared")
+Interceptor.attach(TryAcquireSRWLockShared, {onLeave: function (args) {send("TryAcquireSRWLockShared");}});
+
+var TryEnterCriticalSection = Module.findExportByName("vertdll.dll", "TryEnterCriticalSection")
+Interceptor.attach(TryEnterCriticalSection, {onLeave: function (args) {send("TryEnterCriticalSection");}});
+
+var UnregisterWaitEx = Module.findExportByName("vertdll.dll", "UnregisterWaitEx")
+Interceptor.attach(UnregisterWaitEx, {onLeave: function (args) {send("UnregisterWaitEx");}});
+
+var VirtualAlloc = Module.findExportByName("vertdll.dll", "VirtualAlloc")
+Interceptor.attach(VirtualAlloc, {onLeave: function (args) {send("VirtualAlloc");}});
+
+var VirtualFree = Module.findExportByName("vertdll.dll", "VirtualFree")
+Interceptor.attach(VirtualFree, {onLeave: function (args) {send("VirtualFree");}});
+
+var VirtualProtect = Module.findExportByName("vertdll.dll", "VirtualProtect")
+Interceptor.attach(VirtualProtect, {onLeave: function (args) {send("VirtualProtect");}});
+
+var VirtualQuery = Module.findExportByName("vertdll.dll", "VirtualQuery")
+Interceptor.attach(VirtualQuery, {onLeave: function (args) {send("VirtualQuery");}});
+
+var WaitOnAddress = Module.findExportByName("vertdll.dll", "WaitOnAddress")
+Interceptor.attach(WaitOnAddress, {onLeave: function (args) {send("WaitOnAddress");}});
+
+var WakeAllConditionVariable = Module.findExportByName("vertdll.dll", "WakeAllConditionVariable")
+Interceptor.attach(WakeAllConditionVariable, {onLeave: function (args) {send("WakeAllConditionVariable");}});
+
+var WakeByAddressAll = Module.findExportByName("vertdll.dll", "WakeByAddressAll")
+Interceptor.attach(WakeByAddressAll, {onLeave: function (args) {send("WakeByAddressAll");}});
+
+var WakeByAddressSingle = Module.findExportByName("vertdll.dll", "WakeByAddressSingle")
+Interceptor.attach(WakeByAddressSingle, {onLeave: function (args) {send("WakeByAddressSingle");}});
+
+var WakeConditionVariable = Module.findExportByName("vertdll.dll", "WakeConditionVariable")
+Interceptor.attach(WakeConditionVariable, {onLeave: function (args) {send("WakeConditionVariable");}});
+
+var WideCharToMultiByte = Module.findExportByName("vertdll.dll", "WideCharToMultiByte")
+Interceptor.attach(WideCharToMultiByte, {onLeave: function (args) {send("WideCharToMultiByte");}});
+
+var __C_specific_handler = Module.findExportByName("vertdll.dll", "__C_specific_handler")
+Interceptor.attach(__C_specific_handler, {onLeave: function (args) {send("__C_specific_handler");}});
+
+var __chkstk = Module.findExportByName("vertdll.dll", "__chkstk")
+Interceptor.attach(__chkstk, {onLeave: function (args) {send("__chkstk");}});
+
+var _local_unwind = Module.findExportByName("vertdll.dll", "_local_unwind")
+Interceptor.attach(_local_unwind, {onLeave: function (args) {send("_local_unwind");}});
+
+var _vsnwprintf = Module.findExportByName("vertdll.dll", "_vsnwprintf")
+Interceptor.attach(_vsnwprintf, {onLeave: function (args) {send("_vsnwprintf");}});
+
+var _wcsicmp = Module.findExportByName("vertdll.dll", "_wcsicmp")
+Interceptor.attach(_wcsicmp, {onLeave: function (args) {send("_wcsicmp");}});
+
+var memcmp = Module.findExportByName("vertdll.dll", "memcmp")
+Interceptor.attach(memcmp, {onLeave: function (args) {send("memcmp");}});
+
+var memcpy = Module.findExportByName("vertdll.dll", "memcpy")
+Interceptor.attach(memcpy, {onLeave: function (args) {send("memcpy");}});
+
+var memmove = Module.findExportByName("vertdll.dll", "memmove")
+Interceptor.attach(memmove, {onLeave: function (args) {send("memmove");}});
+
+var memset = Module.findExportByName("vertdll.dll", "memset")
+Interceptor.attach(memset, {onLeave: function (args) {send("memset");}});
+
+var qsort = Module.findExportByName("vertdll.dll", "qsort")
+Interceptor.attach(qsort, {onLeave: function (args) {send("qsort");}});
+
+var wcscmp = Module.findExportByName("vertdll.dll", "wcscmp")
+Interceptor.attach(wcscmp, {onLeave: function (args) {send("wcscmp");}});
+
+var wcscpy_s = Module.findExportByName("vertdll.dll", "wcscpy_s")
+Interceptor.attach(wcscpy_s, {onLeave: function (args) {send("wcscpy_s");}});
+
+var wcsncmp = Module.findExportByName("vertdll.dll", "wcsncmp")
+Interceptor.attach(wcsncmp, {onLeave: function (args) {send("wcsncmp");}});
+

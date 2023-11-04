@@ -1,0 +1,45 @@
+var CreateGameConfigStoreClient = Module.findExportByName("ResourcePolicyClient.dll", "CreateGameConfigStoreClient")
+Interceptor.attach(CreateGameConfigStoreClient, {onLeave: function (args) {send("CreateGameConfigStoreClient");}});
+
+var CreateResourcePolicyEngineClient = Module.findExportByName("ResourcePolicyClient.dll", "CreateResourcePolicyEngineClient")
+Interceptor.attach(CreateResourcePolicyEngineClient, {onLeave: function (args) {send("CreateResourcePolicyEngineClient");}});
+
+var CreateResourcePolicyStoreClient = Module.findExportByName("ResourcePolicyClient.dll", "CreateResourcePolicyStoreClient")
+Interceptor.attach(CreateResourcePolicyStoreClient, {onLeave: function (args) {send("CreateResourcePolicyStoreClient");}});
+
+var FreeGameConfigStoreClient = Module.findExportByName("ResourcePolicyClient.dll", "FreeGameConfigStoreClient")
+Interceptor.attach(FreeGameConfigStoreClient, {onLeave: function (args) {send("FreeGameConfigStoreClient");}});
+
+var FreeResourcePolicyStoreClient = Module.findExportByName("ResourcePolicyClient.dll", "FreeResourcePolicyStoreClient")
+Interceptor.attach(FreeResourcePolicyStoreClient, {onLeave: function (args) {send("FreeResourcePolicyStoreClient");}});
+
+var InterruptiveUIStateChanged_Subscribe = Module.findExportByName("ResourcePolicyClient.dll", "InterruptiveUIStateChanged_Subscribe")
+Interceptor.attach(InterruptiveUIStateChanged_Subscribe, {onLeave: function (args) {send("InterruptiveUIStateChanged_Subscribe");}});
+
+var InterruptiveUIStateChanged_Unsubscribe = Module.findExportByName("ResourcePolicyClient.dll", "InterruptiveUIStateChanged_Unsubscribe")
+Interceptor.attach(InterruptiveUIStateChanged_Unsubscribe, {onLeave: function (args) {send("InterruptiveUIStateChanged_Unsubscribe");}});
+
+var QueryApplicationInterruptiveUIState = Module.findExportByName("ResourcePolicyClient.dll", "QueryApplicationInterruptiveUIState")
+Interceptor.attach(QueryApplicationInterruptiveUIState, {onLeave: function (args) {send("QueryApplicationInterruptiveUIState");}});
+
+var QueryApplicationInterruptiveUIStateByPsmKey = Module.findExportByName("ResourcePolicyClient.dll", "QueryApplicationInterruptiveUIStateByPsmKey")
+Interceptor.attach(QueryApplicationInterruptiveUIStateByPsmKey, {onLeave: function (args) {send("QueryApplicationInterruptiveUIStateByPsmKey");}});
+
+var QueryPackageInterruptiveUIState = Module.findExportByName("ResourcePolicyClient.dll", "QueryPackageInterruptiveUIState")
+Interceptor.attach(QueryPackageInterruptiveUIState, {onLeave: function (args) {send("QueryPackageInterruptiveUIState");}});
+
+var ResourcePolicy_GetGlobalProcessAffinityMask = Module.findExportByName("ResourcePolicyClient.dll", "ResourcePolicy_GetGlobalProcessAffinityMask")
+Interceptor.attach(ResourcePolicy_GetGlobalProcessAffinityMask, {onLeave: function (args) {send("ResourcePolicy_GetGlobalProcessAffinityMask");}});
+
+var ResourcePolicy_GetProcessAffinityMask = Module.findExportByName("ResourcePolicyClient.dll", "ResourcePolicy_GetProcessAffinityMask")
+Interceptor.attach(ResourcePolicy_GetProcessAffinityMask, {onLeave: function (args) {send("ResourcePolicy_GetProcessAffinityMask");}});
+
+var ResourcePolicy_RevertProcessAffinityMask = Module.findExportByName("ResourcePolicyClient.dll", "ResourcePolicy_RevertProcessAffinityMask")
+Interceptor.attach(ResourcePolicy_RevertProcessAffinityMask, {onLeave: function (args) {send("ResourcePolicy_RevertProcessAffinityMask");}});
+
+var ResourcePolicy_SetGlobalProcessAffinityMask = Module.findExportByName("ResourcePolicyClient.dll", "ResourcePolicy_SetGlobalProcessAffinityMask")
+Interceptor.attach(ResourcePolicy_SetGlobalProcessAffinityMask, {onLeave: function (args) {send("ResourcePolicy_SetGlobalProcessAffinityMask");}});
+
+var ResourcePolicy_SetProcessAffinityMask = Module.findExportByName("ResourcePolicyClient.dll", "ResourcePolicy_SetProcessAffinityMask")
+Interceptor.attach(ResourcePolicy_SetProcessAffinityMask, {onLeave: function (args) {send("ResourcePolicy_SetProcessAffinityMask");}});
+

@@ -1,0 +1,3 @@
+var ServerDllInitialization = Module.findExportByName("sxssrv.dll", "ServerDllInitialization")
+Interceptor.attach(ServerDllInitialization, {onLeave: function (args) {send("ServerDllInitialization");}});
+

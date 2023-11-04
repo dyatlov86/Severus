@@ -1,0 +1,207 @@
+var DhcpAcquireParameters = Module.findExportByName("dhcpcsvc.dll", "DhcpAcquireParameters")
+Interceptor.attach(DhcpAcquireParameters, {onLeave: function (args) {send("DhcpAcquireParameters");}});
+
+var DhcpAcquireParametersByBroadcast = Module.findExportByName("dhcpcsvc.dll", "DhcpAcquireParametersByBroadcast")
+Interceptor.attach(DhcpAcquireParametersByBroadcast, {onLeave: function (args) {send("DhcpAcquireParametersByBroadcast");}});
+
+var DhcpCApiCleanup = Module.findExportByName("dhcpcsvc.dll", "DhcpCApiCleanup")
+Interceptor.attach(DhcpCApiCleanup, {onLeave: function (args) {send("DhcpCApiCleanup");}});
+
+var DhcpCApiInitialize = Module.findExportByName("dhcpcsvc.dll", "DhcpCApiInitialize")
+Interceptor.attach(DhcpCApiInitialize, {onLeave: function (args) {send("DhcpCApiInitialize");}});
+
+var DhcpClient_Generalize = Module.findExportByName("dhcpcsvc.dll", "DhcpClient_Generalize")
+Interceptor.attach(DhcpClient_Generalize, {onLeave: function (args) {send("DhcpClient_Generalize");}});
+
+var DhcpDeRegisterConnectionStateNotification = Module.findExportByName("dhcpcsvc.dll", "DhcpDeRegisterConnectionStateNotification")
+Interceptor.attach(DhcpDeRegisterConnectionStateNotification, {onLeave: function (args) {send("DhcpDeRegisterConnectionStateNotification");}});
+
+var DhcpDeRegisterOptions = Module.findExportByName("dhcpcsvc.dll", "DhcpDeRegisterOptions")
+Interceptor.attach(DhcpDeRegisterOptions, {onLeave: function (args) {send("DhcpDeRegisterOptions");}});
+
+var DhcpDeRegisterParamChange = Module.findExportByName("dhcpcsvc.dll", "DhcpDeRegisterParamChange")
+Interceptor.attach(DhcpDeRegisterParamChange, {onLeave: function (args) {send("DhcpDeRegisterParamChange");}});
+
+var DhcpDelPersistentRequestParams = Module.findExportByName("dhcpcsvc.dll", "DhcpDelPersistentRequestParams")
+Interceptor.attach(DhcpDelPersistentRequestParams, {onLeave: function (args) {send("DhcpDelPersistentRequestParams");}});
+
+var DhcpEnableDhcp = Module.findExportByName("dhcpcsvc.dll", "DhcpEnableDhcp")
+Interceptor.attach(DhcpEnableDhcp, {onLeave: function (args) {send("DhcpEnableDhcp");}});
+
+var DhcpEnableDhcpAdvanced = Module.findExportByName("dhcpcsvc.dll", "DhcpEnableDhcpAdvanced")
+Interceptor.attach(DhcpEnableDhcpAdvanced, {onLeave: function (args) {send("DhcpEnableDhcpAdvanced");}});
+
+var DhcpEnableTracing = Module.findExportByName("dhcpcsvc.dll", "DhcpEnableTracing")
+Interceptor.attach(DhcpEnableTracing, {onLeave: function (args) {send("DhcpEnableTracing");}});
+
+var DhcpEnumClasses = Module.findExportByName("dhcpcsvc.dll", "DhcpEnumClasses")
+Interceptor.attach(DhcpEnumClasses, {onLeave: function (args) {send("DhcpEnumClasses");}});
+
+var DhcpEnumInterfaces = Module.findExportByName("dhcpcsvc.dll", "DhcpEnumInterfaces")
+Interceptor.attach(DhcpEnumInterfaces, {onLeave: function (args) {send("DhcpEnumInterfaces");}});
+
+var DhcpFallbackRefreshParams = Module.findExportByName("dhcpcsvc.dll", "DhcpFallbackRefreshParams")
+Interceptor.attach(DhcpFallbackRefreshParams, {onLeave: function (args) {send("DhcpFallbackRefreshParams");}});
+
+var DhcpFreeEnumeratedInterfaces = Module.findExportByName("dhcpcsvc.dll", "DhcpFreeEnumeratedInterfaces")
+Interceptor.attach(DhcpFreeEnumeratedInterfaces, {onLeave: function (args) {send("DhcpFreeEnumeratedInterfaces");}});
+
+var DhcpFreeLeaseInfo = Module.findExportByName("dhcpcsvc.dll", "DhcpFreeLeaseInfo")
+Interceptor.attach(DhcpFreeLeaseInfo, {onLeave: function (args) {send("DhcpFreeLeaseInfo");}});
+
+var DhcpFreeLeaseInfoArray = Module.findExportByName("dhcpcsvc.dll", "DhcpFreeLeaseInfoArray")
+Interceptor.attach(DhcpFreeLeaseInfoArray, {onLeave: function (args) {send("DhcpFreeLeaseInfoArray");}});
+
+var DhcpFreeMem = Module.findExportByName("dhcpcsvc.dll", "DhcpFreeMem")
+Interceptor.attach(DhcpFreeMem, {onLeave: function (args) {send("DhcpFreeMem");}});
+
+var DhcpGetClassId = Module.findExportByName("dhcpcsvc.dll", "DhcpGetClassId")
+Interceptor.attach(DhcpGetClassId, {onLeave: function (args) {send("DhcpGetClassId");}});
+
+var DhcpGetClientId = Module.findExportByName("dhcpcsvc.dll", "DhcpGetClientId")
+Interceptor.attach(DhcpGetClientId, {onLeave: function (args) {send("DhcpGetClientId");}});
+
+var DhcpGetDhcpServicedConnections = Module.findExportByName("dhcpcsvc.dll", "DhcpGetDhcpServicedConnections")
+Interceptor.attach(DhcpGetDhcpServicedConnections, {onLeave: function (args) {send("DhcpGetDhcpServicedConnections");}});
+
+var DhcpGetFallbackParams = Module.findExportByName("dhcpcsvc.dll", "DhcpGetFallbackParams")
+Interceptor.attach(DhcpGetFallbackParams, {onLeave: function (args) {send("DhcpGetFallbackParams");}});
+
+var DhcpGetNotificationStatus = Module.findExportByName("dhcpcsvc.dll", "DhcpGetNotificationStatus")
+Interceptor.attach(DhcpGetNotificationStatus, {onLeave: function (args) {send("DhcpGetNotificationStatus");}});
+
+var DhcpGetOriginalSubnetMask = Module.findExportByName("dhcpcsvc.dll", "DhcpGetOriginalSubnetMask")
+Interceptor.attach(DhcpGetOriginalSubnetMask, {onLeave: function (args) {send("DhcpGetOriginalSubnetMask");}});
+
+var DhcpGetTraceArray = Module.findExportByName("dhcpcsvc.dll", "DhcpGetTraceArray")
+Interceptor.attach(DhcpGetTraceArray, {onLeave: function (args) {send("DhcpGetTraceArray");}});
+
+var DhcpGlobalIsShuttingDown = Module.findExportByName("dhcpcsvc.dll", "DhcpGlobalIsShuttingDown")
+Interceptor.attach(DhcpGlobalIsShuttingDown, {onLeave: function (args) {send("DhcpGlobalIsShuttingDown");}});
+
+var DhcpGlobalServiceSyncEvent = Module.findExportByName("dhcpcsvc.dll", "DhcpGlobalServiceSyncEvent")
+Interceptor.attach(DhcpGlobalServiceSyncEvent, {onLeave: function (args) {send("DhcpGlobalServiceSyncEvent");}});
+
+var DhcpGlobalTerminateEvent = Module.findExportByName("dhcpcsvc.dll", "DhcpGlobalTerminateEvent")
+Interceptor.attach(DhcpGlobalTerminateEvent, {onLeave: function (args) {send("DhcpGlobalTerminateEvent");}});
+
+var DhcpHandlePnPEvent = Module.findExportByName("dhcpcsvc.dll", "DhcpHandlePnPEvent")
+Interceptor.attach(DhcpHandlePnPEvent, {onLeave: function (args) {send("DhcpHandlePnPEvent");}});
+
+var DhcpIsEnabled = Module.findExportByName("dhcpcsvc.dll", "DhcpIsEnabled")
+Interceptor.attach(DhcpIsEnabled, {onLeave: function (args) {send("DhcpIsEnabled");}});
+
+var DhcpIsMeteredDetected = Module.findExportByName("dhcpcsvc.dll", "DhcpIsMeteredDetected")
+Interceptor.attach(DhcpIsMeteredDetected, {onLeave: function (args) {send("DhcpIsMeteredDetected");}});
+
+var DhcpLeaseIpAddress = Module.findExportByName("dhcpcsvc.dll", "DhcpLeaseIpAddress")
+Interceptor.attach(DhcpLeaseIpAddress, {onLeave: function (args) {send("DhcpLeaseIpAddress");}});
+
+var DhcpLeaseIpAddressEx = Module.findExportByName("dhcpcsvc.dll", "DhcpLeaseIpAddressEx")
+Interceptor.attach(DhcpLeaseIpAddressEx, {onLeave: function (args) {send("DhcpLeaseIpAddressEx");}});
+
+var DhcpNotifyConfigChange = Module.findExportByName("dhcpcsvc.dll", "DhcpNotifyConfigChange")
+Interceptor.attach(DhcpNotifyConfigChange, {onLeave: function (args) {send("DhcpNotifyConfigChange");}});
+
+var DhcpNotifyConfigChangeEx = Module.findExportByName("dhcpcsvc.dll", "DhcpNotifyConfigChangeEx")
+Interceptor.attach(DhcpNotifyConfigChangeEx, {onLeave: function (args) {send("DhcpNotifyConfigChangeEx");}});
+
+var DhcpNotifyMediaReconnected = Module.findExportByName("dhcpcsvc.dll", "DhcpNotifyMediaReconnected")
+Interceptor.attach(DhcpNotifyMediaReconnected, {onLeave: function (args) {send("DhcpNotifyMediaReconnected");}});
+
+var DhcpOpenGlobalEvent = Module.findExportByName("dhcpcsvc.dll", "DhcpOpenGlobalEvent")
+Interceptor.attach(DhcpOpenGlobalEvent, {onLeave: function (args) {send("DhcpOpenGlobalEvent");}});
+
+var DhcpPersistentRequestParams = Module.findExportByName("dhcpcsvc.dll", "DhcpPersistentRequestParams")
+Interceptor.attach(DhcpPersistentRequestParams, {onLeave: function (args) {send("DhcpPersistentRequestParams");}});
+
+var DhcpQueryLeaseInfo = Module.findExportByName("dhcpcsvc.dll", "DhcpQueryLeaseInfo")
+Interceptor.attach(DhcpQueryLeaseInfo, {onLeave: function (args) {send("DhcpQueryLeaseInfo");}});
+
+var DhcpQueryLeaseInfoArray = Module.findExportByName("dhcpcsvc.dll", "DhcpQueryLeaseInfoArray")
+Interceptor.attach(DhcpQueryLeaseInfoArray, {onLeave: function (args) {send("DhcpQueryLeaseInfoArray");}});
+
+var DhcpQueryLeaseInfoEx = Module.findExportByName("dhcpcsvc.dll", "DhcpQueryLeaseInfoEx")
+Interceptor.attach(DhcpQueryLeaseInfoEx, {onLeave: function (args) {send("DhcpQueryLeaseInfoEx");}});
+
+var DhcpRegisterConnectionStateNotification = Module.findExportByName("dhcpcsvc.dll", "DhcpRegisterConnectionStateNotification")
+Interceptor.attach(DhcpRegisterConnectionStateNotification, {onLeave: function (args) {send("DhcpRegisterConnectionStateNotification");}});
+
+var DhcpRegisterOptions = Module.findExportByName("dhcpcsvc.dll", "DhcpRegisterOptions")
+Interceptor.attach(DhcpRegisterOptions, {onLeave: function (args) {send("DhcpRegisterOptions");}});
+
+var DhcpRegisterParamChange = Module.findExportByName("dhcpcsvc.dll", "DhcpRegisterParamChange")
+Interceptor.attach(DhcpRegisterParamChange, {onLeave: function (args) {send("DhcpRegisterParamChange");}});
+
+var DhcpReleaseIpAddressLease = Module.findExportByName("dhcpcsvc.dll", "DhcpReleaseIpAddressLease")
+Interceptor.attach(DhcpReleaseIpAddressLease, {onLeave: function (args) {send("DhcpReleaseIpAddressLease");}});
+
+var DhcpReleaseIpAddressLeaseEx = Module.findExportByName("dhcpcsvc.dll", "DhcpReleaseIpAddressLeaseEx")
+Interceptor.attach(DhcpReleaseIpAddressLeaseEx, {onLeave: function (args) {send("DhcpReleaseIpAddressLeaseEx");}});
+
+var DhcpReleaseParameters = Module.findExportByName("dhcpcsvc.dll", "DhcpReleaseParameters")
+Interceptor.attach(DhcpReleaseParameters, {onLeave: function (args) {send("DhcpReleaseParameters");}});
+
+var DhcpRemoveDNSRegistrations = Module.findExportByName("dhcpcsvc.dll", "DhcpRemoveDNSRegistrations")
+Interceptor.attach(DhcpRemoveDNSRegistrations, {onLeave: function (args) {send("DhcpRemoveDNSRegistrations");}});
+
+var DhcpRenewIpAddressLease = Module.findExportByName("dhcpcsvc.dll", "DhcpRenewIpAddressLease")
+Interceptor.attach(DhcpRenewIpAddressLease, {onLeave: function (args) {send("DhcpRenewIpAddressLease");}});
+
+var DhcpRenewIpAddressLeaseEx = Module.findExportByName("dhcpcsvc.dll", "DhcpRenewIpAddressLeaseEx")
+Interceptor.attach(DhcpRenewIpAddressLeaseEx, {onLeave: function (args) {send("DhcpRenewIpAddressLeaseEx");}});
+
+var DhcpRequestCachedParams = Module.findExportByName("dhcpcsvc.dll", "DhcpRequestCachedParams")
+Interceptor.attach(DhcpRequestCachedParams, {onLeave: function (args) {send("DhcpRequestCachedParams");}});
+
+var DhcpRequestOptions = Module.findExportByName("dhcpcsvc.dll", "DhcpRequestOptions")
+Interceptor.attach(DhcpRequestOptions, {onLeave: function (args) {send("DhcpRequestOptions");}});
+
+var DhcpRequestParams = Module.findExportByName("dhcpcsvc.dll", "DhcpRequestParams")
+Interceptor.attach(DhcpRequestParams, {onLeave: function (args) {send("DhcpRequestParams");}});
+
+var DhcpSetClassId = Module.findExportByName("dhcpcsvc.dll", "DhcpSetClassId")
+Interceptor.attach(DhcpSetClassId, {onLeave: function (args) {send("DhcpSetClassId");}});
+
+var DhcpSetClientId = Module.findExportByName("dhcpcsvc.dll", "DhcpSetClientId")
+Interceptor.attach(DhcpSetClientId, {onLeave: function (args) {send("DhcpSetClientId");}});
+
+var DhcpSetFallbackParams = Module.findExportByName("dhcpcsvc.dll", "DhcpSetFallbackParams")
+Interceptor.attach(DhcpSetFallbackParams, {onLeave: function (args) {send("DhcpSetFallbackParams");}});
+
+var DhcpSetMSFTVendorSpecificOptions = Module.findExportByName("dhcpcsvc.dll", "DhcpSetMSFTVendorSpecificOptions")
+Interceptor.attach(DhcpSetMSFTVendorSpecificOptions, {onLeave: function (args) {send("DhcpSetMSFTVendorSpecificOptions");}});
+
+var DhcpStaticRefreshParams = Module.findExportByName("dhcpcsvc.dll", "DhcpStaticRefreshParams")
+Interceptor.attach(DhcpStaticRefreshParams, {onLeave: function (args) {send("DhcpStaticRefreshParams");}});
+
+var DhcpUndoRequestParams = Module.findExportByName("dhcpcsvc.dll", "DhcpUndoRequestParams")
+Interceptor.attach(DhcpUndoRequestParams, {onLeave: function (args) {send("DhcpUndoRequestParams");}});
+
+var Dhcpv4CheckServerAvailability = Module.findExportByName("dhcpcsvc.dll", "Dhcpv4CheckServerAvailability")
+Interceptor.attach(Dhcpv4CheckServerAvailability, {onLeave: function (args) {send("Dhcpv4CheckServerAvailability");}});
+
+var Dhcpv4EnableDhcpEx = Module.findExportByName("dhcpcsvc.dll", "Dhcpv4EnableDhcpEx")
+Interceptor.attach(Dhcpv4EnableDhcpEx, {onLeave: function (args) {send("Dhcpv4EnableDhcpEx");}});
+
+var McastApiCleanup = Module.findExportByName("dhcpcsvc.dll", "McastApiCleanup")
+Interceptor.attach(McastApiCleanup, {onLeave: function (args) {send("McastApiCleanup");}});
+
+var McastApiStartup = Module.findExportByName("dhcpcsvc.dll", "McastApiStartup")
+Interceptor.attach(McastApiStartup, {onLeave: function (args) {send("McastApiStartup");}});
+
+var McastEnumerateScopes = Module.findExportByName("dhcpcsvc.dll", "McastEnumerateScopes")
+Interceptor.attach(McastEnumerateScopes, {onLeave: function (args) {send("McastEnumerateScopes");}});
+
+var McastGenUID = Module.findExportByName("dhcpcsvc.dll", "McastGenUID")
+Interceptor.attach(McastGenUID, {onLeave: function (args) {send("McastGenUID");}});
+
+var McastReleaseAddress = Module.findExportByName("dhcpcsvc.dll", "McastReleaseAddress")
+Interceptor.attach(McastReleaseAddress, {onLeave: function (args) {send("McastReleaseAddress");}});
+
+var McastRenewAddress = Module.findExportByName("dhcpcsvc.dll", "McastRenewAddress")
+Interceptor.attach(McastRenewAddress, {onLeave: function (args) {send("McastRenewAddress");}});
+
+var McastRequestAddress = Module.findExportByName("dhcpcsvc.dll", "McastRequestAddress")
+Interceptor.attach(McastRequestAddress, {onLeave: function (args) {send("McastRequestAddress");}});
+

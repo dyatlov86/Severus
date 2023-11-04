@@ -1,0 +1,339 @@
+var DllMain = Module.findExportByName("P2P.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var PeerCollabAddContact = Module.findExportByName("P2P.dll", "PeerCollabAddContact")
+Interceptor.attach(PeerCollabAddContact, {onLeave: function (args) {send("PeerCollabAddContact");}});
+
+var PeerCollabAsyncInviteContact = Module.findExportByName("P2P.dll", "PeerCollabAsyncInviteContact")
+Interceptor.attach(PeerCollabAsyncInviteContact, {onLeave: function (args) {send("PeerCollabAsyncInviteContact");}});
+
+var PeerCollabAsyncInviteEndpoint = Module.findExportByName("P2P.dll", "PeerCollabAsyncInviteEndpoint")
+Interceptor.attach(PeerCollabAsyncInviteEndpoint, {onLeave: function (args) {send("PeerCollabAsyncInviteEndpoint");}});
+
+var PeerCollabCancelInvitation = Module.findExportByName("P2P.dll", "PeerCollabCancelInvitation")
+Interceptor.attach(PeerCollabCancelInvitation, {onLeave: function (args) {send("PeerCollabCancelInvitation");}});
+
+var PeerCollabCloseHandle = Module.findExportByName("P2P.dll", "PeerCollabCloseHandle")
+Interceptor.attach(PeerCollabCloseHandle, {onLeave: function (args) {send("PeerCollabCloseHandle");}});
+
+var PeerCollabDeleteContact = Module.findExportByName("P2P.dll", "PeerCollabDeleteContact")
+Interceptor.attach(PeerCollabDeleteContact, {onLeave: function (args) {send("PeerCollabDeleteContact");}});
+
+var PeerCollabDeleteEndpointData = Module.findExportByName("P2P.dll", "PeerCollabDeleteEndpointData")
+Interceptor.attach(PeerCollabDeleteEndpointData, {onLeave: function (args) {send("PeerCollabDeleteEndpointData");}});
+
+var PeerCollabDeleteObject = Module.findExportByName("P2P.dll", "PeerCollabDeleteObject")
+Interceptor.attach(PeerCollabDeleteObject, {onLeave: function (args) {send("PeerCollabDeleteObject");}});
+
+var PeerCollabEnumApplicationRegistrationInfo = Module.findExportByName("P2P.dll", "PeerCollabEnumApplicationRegistrationInfo")
+Interceptor.attach(PeerCollabEnumApplicationRegistrationInfo, {onLeave: function (args) {send("PeerCollabEnumApplicationRegistrationInfo");}});
+
+var PeerCollabEnumApplications = Module.findExportByName("P2P.dll", "PeerCollabEnumApplications")
+Interceptor.attach(PeerCollabEnumApplications, {onLeave: function (args) {send("PeerCollabEnumApplications");}});
+
+var PeerCollabEnumContacts = Module.findExportByName("P2P.dll", "PeerCollabEnumContacts")
+Interceptor.attach(PeerCollabEnumContacts, {onLeave: function (args) {send("PeerCollabEnumContacts");}});
+
+var PeerCollabEnumEndpoints = Module.findExportByName("P2P.dll", "PeerCollabEnumEndpoints")
+Interceptor.attach(PeerCollabEnumEndpoints, {onLeave: function (args) {send("PeerCollabEnumEndpoints");}});
+
+var PeerCollabEnumObjects = Module.findExportByName("P2P.dll", "PeerCollabEnumObjects")
+Interceptor.attach(PeerCollabEnumObjects, {onLeave: function (args) {send("PeerCollabEnumObjects");}});
+
+var PeerCollabEnumPeopleNearMe = Module.findExportByName("P2P.dll", "PeerCollabEnumPeopleNearMe")
+Interceptor.attach(PeerCollabEnumPeopleNearMe, {onLeave: function (args) {send("PeerCollabEnumPeopleNearMe");}});
+
+var PeerCollabExportContact = Module.findExportByName("P2P.dll", "PeerCollabExportContact")
+Interceptor.attach(PeerCollabExportContact, {onLeave: function (args) {send("PeerCollabExportContact");}});
+
+var PeerCollabGetAppLaunchInfo = Module.findExportByName("P2P.dll", "PeerCollabGetAppLaunchInfo")
+Interceptor.attach(PeerCollabGetAppLaunchInfo, {onLeave: function (args) {send("PeerCollabGetAppLaunchInfo");}});
+
+var PeerCollabGetApplicationRegistrationInfo = Module.findExportByName("P2P.dll", "PeerCollabGetApplicationRegistrationInfo")
+Interceptor.attach(PeerCollabGetApplicationRegistrationInfo, {onLeave: function (args) {send("PeerCollabGetApplicationRegistrationInfo");}});
+
+var PeerCollabGetContact = Module.findExportByName("P2P.dll", "PeerCollabGetContact")
+Interceptor.attach(PeerCollabGetContact, {onLeave: function (args) {send("PeerCollabGetContact");}});
+
+var PeerCollabGetEndpointName = Module.findExportByName("P2P.dll", "PeerCollabGetEndpointName")
+Interceptor.attach(PeerCollabGetEndpointName, {onLeave: function (args) {send("PeerCollabGetEndpointName");}});
+
+var PeerCollabGetEventData = Module.findExportByName("P2P.dll", "PeerCollabGetEventData")
+Interceptor.attach(PeerCollabGetEventData, {onLeave: function (args) {send("PeerCollabGetEventData");}});
+
+var PeerCollabGetInvitationResponse = Module.findExportByName("P2P.dll", "PeerCollabGetInvitationResponse")
+Interceptor.attach(PeerCollabGetInvitationResponse, {onLeave: function (args) {send("PeerCollabGetInvitationResponse");}});
+
+var PeerCollabGetPresenceInfo = Module.findExportByName("P2P.dll", "PeerCollabGetPresenceInfo")
+Interceptor.attach(PeerCollabGetPresenceInfo, {onLeave: function (args) {send("PeerCollabGetPresenceInfo");}});
+
+var PeerCollabGetSigninOptions = Module.findExportByName("P2P.dll", "PeerCollabGetSigninOptions")
+Interceptor.attach(PeerCollabGetSigninOptions, {onLeave: function (args) {send("PeerCollabGetSigninOptions");}});
+
+var PeerCollabInviteContact = Module.findExportByName("P2P.dll", "PeerCollabInviteContact")
+Interceptor.attach(PeerCollabInviteContact, {onLeave: function (args) {send("PeerCollabInviteContact");}});
+
+var PeerCollabInviteEndpoint = Module.findExportByName("P2P.dll", "PeerCollabInviteEndpoint")
+Interceptor.attach(PeerCollabInviteEndpoint, {onLeave: function (args) {send("PeerCollabInviteEndpoint");}});
+
+var PeerCollabParseContact = Module.findExportByName("P2P.dll", "PeerCollabParseContact")
+Interceptor.attach(PeerCollabParseContact, {onLeave: function (args) {send("PeerCollabParseContact");}});
+
+var PeerCollabQueryContactData = Module.findExportByName("P2P.dll", "PeerCollabQueryContactData")
+Interceptor.attach(PeerCollabQueryContactData, {onLeave: function (args) {send("PeerCollabQueryContactData");}});
+
+var PeerCollabRefreshEndpointData = Module.findExportByName("P2P.dll", "PeerCollabRefreshEndpointData")
+Interceptor.attach(PeerCollabRefreshEndpointData, {onLeave: function (args) {send("PeerCollabRefreshEndpointData");}});
+
+var PeerCollabRegisterApplication = Module.findExportByName("P2P.dll", "PeerCollabRegisterApplication")
+Interceptor.attach(PeerCollabRegisterApplication, {onLeave: function (args) {send("PeerCollabRegisterApplication");}});
+
+var PeerCollabRegisterEvent = Module.findExportByName("P2P.dll", "PeerCollabRegisterEvent")
+Interceptor.attach(PeerCollabRegisterEvent, {onLeave: function (args) {send("PeerCollabRegisterEvent");}});
+
+var PeerCollabSetEndpointName = Module.findExportByName("P2P.dll", "PeerCollabSetEndpointName")
+Interceptor.attach(PeerCollabSetEndpointName, {onLeave: function (args) {send("PeerCollabSetEndpointName");}});
+
+var PeerCollabSetObject = Module.findExportByName("P2P.dll", "PeerCollabSetObject")
+Interceptor.attach(PeerCollabSetObject, {onLeave: function (args) {send("PeerCollabSetObject");}});
+
+var PeerCollabSetPresenceInfo = Module.findExportByName("P2P.dll", "PeerCollabSetPresenceInfo")
+Interceptor.attach(PeerCollabSetPresenceInfo, {onLeave: function (args) {send("PeerCollabSetPresenceInfo");}});
+
+var PeerCollabShutdown = Module.findExportByName("P2P.dll", "PeerCollabShutdown")
+Interceptor.attach(PeerCollabShutdown, {onLeave: function (args) {send("PeerCollabShutdown");}});
+
+var PeerCollabSignin = Module.findExportByName("P2P.dll", "PeerCollabSignin")
+Interceptor.attach(PeerCollabSignin, {onLeave: function (args) {send("PeerCollabSignin");}});
+
+var PeerCollabSignout = Module.findExportByName("P2P.dll", "PeerCollabSignout")
+Interceptor.attach(PeerCollabSignout, {onLeave: function (args) {send("PeerCollabSignout");}});
+
+var PeerCollabStartup = Module.findExportByName("P2P.dll", "PeerCollabStartup")
+Interceptor.attach(PeerCollabStartup, {onLeave: function (args) {send("PeerCollabStartup");}});
+
+var PeerCollabSubscribeEndpointData = Module.findExportByName("P2P.dll", "PeerCollabSubscribeEndpointData")
+Interceptor.attach(PeerCollabSubscribeEndpointData, {onLeave: function (args) {send("PeerCollabSubscribeEndpointData");}});
+
+var PeerCollabUnregisterApplication = Module.findExportByName("P2P.dll", "PeerCollabUnregisterApplication")
+Interceptor.attach(PeerCollabUnregisterApplication, {onLeave: function (args) {send("PeerCollabUnregisterApplication");}});
+
+var PeerCollabUnregisterEvent = Module.findExportByName("P2P.dll", "PeerCollabUnregisterEvent")
+Interceptor.attach(PeerCollabUnregisterEvent, {onLeave: function (args) {send("PeerCollabUnregisterEvent");}});
+
+var PeerCollabUnsubscribeEndpointData = Module.findExportByName("P2P.dll", "PeerCollabUnsubscribeEndpointData")
+Interceptor.attach(PeerCollabUnsubscribeEndpointData, {onLeave: function (args) {send("PeerCollabUnsubscribeEndpointData");}});
+
+var PeerCollabUpdateContact = Module.findExportByName("P2P.dll", "PeerCollabUpdateContact")
+Interceptor.attach(PeerCollabUpdateContact, {onLeave: function (args) {send("PeerCollabUpdateContact");}});
+
+var PeerCreatePeerName = Module.findExportByName("P2P.dll", "PeerCreatePeerName")
+Interceptor.attach(PeerCreatePeerName, {onLeave: function (args) {send("PeerCreatePeerName");}});
+
+var PeerEndEnumeration = Module.findExportByName("P2P.dll", "PeerEndEnumeration")
+Interceptor.attach(PeerEndEnumeration, {onLeave: function (args) {send("PeerEndEnumeration");}});
+
+var PeerEnumGroups = Module.findExportByName("P2P.dll", "PeerEnumGroups")
+Interceptor.attach(PeerEnumGroups, {onLeave: function (args) {send("PeerEnumGroups");}});
+
+var PeerEnumIdentities = Module.findExportByName("P2P.dll", "PeerEnumIdentities")
+Interceptor.attach(PeerEnumIdentities, {onLeave: function (args) {send("PeerEnumIdentities");}});
+
+var PeerFreeData = Module.findExportByName("P2P.dll", "PeerFreeData")
+Interceptor.attach(PeerFreeData, {onLeave: function (args) {send("PeerFreeData");}});
+
+var PeerGetItemCount = Module.findExportByName("P2P.dll", "PeerGetItemCount")
+Interceptor.attach(PeerGetItemCount, {onLeave: function (args) {send("PeerGetItemCount");}});
+
+var PeerGetNextItem = Module.findExportByName("P2P.dll", "PeerGetNextItem")
+Interceptor.attach(PeerGetNextItem, {onLeave: function (args) {send("PeerGetNextItem");}});
+
+var PeerGroupAddRecord = Module.findExportByName("P2P.dll", "PeerGroupAddRecord")
+Interceptor.attach(PeerGroupAddRecord, {onLeave: function (args) {send("PeerGroupAddRecord");}});
+
+var PeerGroupClose = Module.findExportByName("P2P.dll", "PeerGroupClose")
+Interceptor.attach(PeerGroupClose, {onLeave: function (args) {send("PeerGroupClose");}});
+
+var PeerGroupCloseDirectConnection = Module.findExportByName("P2P.dll", "PeerGroupCloseDirectConnection")
+Interceptor.attach(PeerGroupCloseDirectConnection, {onLeave: function (args) {send("PeerGroupCloseDirectConnection");}});
+
+var PeerGroupConnect = Module.findExportByName("P2P.dll", "PeerGroupConnect")
+Interceptor.attach(PeerGroupConnect, {onLeave: function (args) {send("PeerGroupConnect");}});
+
+var PeerGroupConnectByAddress = Module.findExportByName("P2P.dll", "PeerGroupConnectByAddress")
+Interceptor.attach(PeerGroupConnectByAddress, {onLeave: function (args) {send("PeerGroupConnectByAddress");}});
+
+var PeerGroupCreate = Module.findExportByName("P2P.dll", "PeerGroupCreate")
+Interceptor.attach(PeerGroupCreate, {onLeave: function (args) {send("PeerGroupCreate");}});
+
+var PeerGroupCreateInvitation = Module.findExportByName("P2P.dll", "PeerGroupCreateInvitation")
+Interceptor.attach(PeerGroupCreateInvitation, {onLeave: function (args) {send("PeerGroupCreateInvitation");}});
+
+var PeerGroupCreatePasswordInvitation = Module.findExportByName("P2P.dll", "PeerGroupCreatePasswordInvitation")
+Interceptor.attach(PeerGroupCreatePasswordInvitation, {onLeave: function (args) {send("PeerGroupCreatePasswordInvitation");}});
+
+var PeerGroupDelete = Module.findExportByName("P2P.dll", "PeerGroupDelete")
+Interceptor.attach(PeerGroupDelete, {onLeave: function (args) {send("PeerGroupDelete");}});
+
+var PeerGroupDeleteRecord = Module.findExportByName("P2P.dll", "PeerGroupDeleteRecord")
+Interceptor.attach(PeerGroupDeleteRecord, {onLeave: function (args) {send("PeerGroupDeleteRecord");}});
+
+var PeerGroupEnumConnections = Module.findExportByName("P2P.dll", "PeerGroupEnumConnections")
+Interceptor.attach(PeerGroupEnumConnections, {onLeave: function (args) {send("PeerGroupEnumConnections");}});
+
+var PeerGroupEnumMembers = Module.findExportByName("P2P.dll", "PeerGroupEnumMembers")
+Interceptor.attach(PeerGroupEnumMembers, {onLeave: function (args) {send("PeerGroupEnumMembers");}});
+
+var PeerGroupEnumRecords = Module.findExportByName("P2P.dll", "PeerGroupEnumRecords")
+Interceptor.attach(PeerGroupEnumRecords, {onLeave: function (args) {send("PeerGroupEnumRecords");}});
+
+var PeerGroupExportConfig = Module.findExportByName("P2P.dll", "PeerGroupExportConfig")
+Interceptor.attach(PeerGroupExportConfig, {onLeave: function (args) {send("PeerGroupExportConfig");}});
+
+var PeerGroupExportDatabase = Module.findExportByName("P2P.dll", "PeerGroupExportDatabase")
+Interceptor.attach(PeerGroupExportDatabase, {onLeave: function (args) {send("PeerGroupExportDatabase");}});
+
+var PeerGroupGetEventData = Module.findExportByName("P2P.dll", "PeerGroupGetEventData")
+Interceptor.attach(PeerGroupGetEventData, {onLeave: function (args) {send("PeerGroupGetEventData");}});
+
+var PeerGroupGetProperties = Module.findExportByName("P2P.dll", "PeerGroupGetProperties")
+Interceptor.attach(PeerGroupGetProperties, {onLeave: function (args) {send("PeerGroupGetProperties");}});
+
+var PeerGroupGetRecord = Module.findExportByName("P2P.dll", "PeerGroupGetRecord")
+Interceptor.attach(PeerGroupGetRecord, {onLeave: function (args) {send("PeerGroupGetRecord");}});
+
+var PeerGroupGetStatus = Module.findExportByName("P2P.dll", "PeerGroupGetStatus")
+Interceptor.attach(PeerGroupGetStatus, {onLeave: function (args) {send("PeerGroupGetStatus");}});
+
+var PeerGroupHandlePowerEvent = Module.findExportByName("P2P.dll", "PeerGroupHandlePowerEvent")
+Interceptor.attach(PeerGroupHandlePowerEvent, {onLeave: function (args) {send("PeerGroupHandlePowerEvent");}});
+
+var PeerGroupImportConfig = Module.findExportByName("P2P.dll", "PeerGroupImportConfig")
+Interceptor.attach(PeerGroupImportConfig, {onLeave: function (args) {send("PeerGroupImportConfig");}});
+
+var PeerGroupImportDatabase = Module.findExportByName("P2P.dll", "PeerGroupImportDatabase")
+Interceptor.attach(PeerGroupImportDatabase, {onLeave: function (args) {send("PeerGroupImportDatabase");}});
+
+var PeerGroupIssueCredentials = Module.findExportByName("P2P.dll", "PeerGroupIssueCredentials")
+Interceptor.attach(PeerGroupIssueCredentials, {onLeave: function (args) {send("PeerGroupIssueCredentials");}});
+
+var PeerGroupJoin = Module.findExportByName("P2P.dll", "PeerGroupJoin")
+Interceptor.attach(PeerGroupJoin, {onLeave: function (args) {send("PeerGroupJoin");}});
+
+var PeerGroupOpen = Module.findExportByName("P2P.dll", "PeerGroupOpen")
+Interceptor.attach(PeerGroupOpen, {onLeave: function (args) {send("PeerGroupOpen");}});
+
+var PeerGroupOpenDirectConnection = Module.findExportByName("P2P.dll", "PeerGroupOpenDirectConnection")
+Interceptor.attach(PeerGroupOpenDirectConnection, {onLeave: function (args) {send("PeerGroupOpenDirectConnection");}});
+
+var PeerGroupParseInvitation = Module.findExportByName("P2P.dll", "PeerGroupParseInvitation")
+Interceptor.attach(PeerGroupParseInvitation, {onLeave: function (args) {send("PeerGroupParseInvitation");}});
+
+var PeerGroupPasswordJoin = Module.findExportByName("P2P.dll", "PeerGroupPasswordJoin")
+Interceptor.attach(PeerGroupPasswordJoin, {onLeave: function (args) {send("PeerGroupPasswordJoin");}});
+
+var PeerGroupPeerTimeToUniversalTime = Module.findExportByName("P2P.dll", "PeerGroupPeerTimeToUniversalTime")
+Interceptor.attach(PeerGroupPeerTimeToUniversalTime, {onLeave: function (args) {send("PeerGroupPeerTimeToUniversalTime");}});
+
+var PeerGroupRegisterEvent = Module.findExportByName("P2P.dll", "PeerGroupRegisterEvent")
+Interceptor.attach(PeerGroupRegisterEvent, {onLeave: function (args) {send("PeerGroupRegisterEvent");}});
+
+var PeerGroupResumePasswordAuthentication = Module.findExportByName("P2P.dll", "PeerGroupResumePasswordAuthentication")
+Interceptor.attach(PeerGroupResumePasswordAuthentication, {onLeave: function (args) {send("PeerGroupResumePasswordAuthentication");}});
+
+var PeerGroupSearchRecords = Module.findExportByName("P2P.dll", "PeerGroupSearchRecords")
+Interceptor.attach(PeerGroupSearchRecords, {onLeave: function (args) {send("PeerGroupSearchRecords");}});
+
+var PeerGroupSendData = Module.findExportByName("P2P.dll", "PeerGroupSendData")
+Interceptor.attach(PeerGroupSendData, {onLeave: function (args) {send("PeerGroupSendData");}});
+
+var PeerGroupSetProperties = Module.findExportByName("P2P.dll", "PeerGroupSetProperties")
+Interceptor.attach(PeerGroupSetProperties, {onLeave: function (args) {send("PeerGroupSetProperties");}});
+
+var PeerGroupShutdown = Module.findExportByName("P2P.dll", "PeerGroupShutdown")
+Interceptor.attach(PeerGroupShutdown, {onLeave: function (args) {send("PeerGroupShutdown");}});
+
+var PeerGroupStartup = Module.findExportByName("P2P.dll", "PeerGroupStartup")
+Interceptor.attach(PeerGroupStartup, {onLeave: function (args) {send("PeerGroupStartup");}});
+
+var PeerGroupUniversalTimeToPeerTime = Module.findExportByName("P2P.dll", "PeerGroupUniversalTimeToPeerTime")
+Interceptor.attach(PeerGroupUniversalTimeToPeerTime, {onLeave: function (args) {send("PeerGroupUniversalTimeToPeerTime");}});
+
+var PeerGroupUnregisterEvent = Module.findExportByName("P2P.dll", "PeerGroupUnregisterEvent")
+Interceptor.attach(PeerGroupUnregisterEvent, {onLeave: function (args) {send("PeerGroupUnregisterEvent");}});
+
+var PeerGroupUpdateRecord = Module.findExportByName("P2P.dll", "PeerGroupUpdateRecord")
+Interceptor.attach(PeerGroupUpdateRecord, {onLeave: function (args) {send("PeerGroupUpdateRecord");}});
+
+var PeerHostNameToPeerName = Module.findExportByName("P2P.dll", "PeerHostNameToPeerName")
+Interceptor.attach(PeerHostNameToPeerName, {onLeave: function (args) {send("PeerHostNameToPeerName");}});
+
+var PeerIdentityCreate = Module.findExportByName("P2P.dll", "PeerIdentityCreate")
+Interceptor.attach(PeerIdentityCreate, {onLeave: function (args) {send("PeerIdentityCreate");}});
+
+var PeerIdentityDelete = Module.findExportByName("P2P.dll", "PeerIdentityDelete")
+Interceptor.attach(PeerIdentityDelete, {onLeave: function (args) {send("PeerIdentityDelete");}});
+
+var PeerIdentityExport = Module.findExportByName("P2P.dll", "PeerIdentityExport")
+Interceptor.attach(PeerIdentityExport, {onLeave: function (args) {send("PeerIdentityExport");}});
+
+var PeerIdentityGetCert = Module.findExportByName("P2P.dll", "PeerIdentityGetCert")
+Interceptor.attach(PeerIdentityGetCert, {onLeave: function (args) {send("PeerIdentityGetCert");}});
+
+var PeerIdentityGetCryptKey = Module.findExportByName("P2P.dll", "PeerIdentityGetCryptKey")
+Interceptor.attach(PeerIdentityGetCryptKey, {onLeave: function (args) {send("PeerIdentityGetCryptKey");}});
+
+var PeerIdentityGetDefault = Module.findExportByName("P2P.dll", "PeerIdentityGetDefault")
+Interceptor.attach(PeerIdentityGetDefault, {onLeave: function (args) {send("PeerIdentityGetDefault");}});
+
+var PeerIdentityGetFriendlyName = Module.findExportByName("P2P.dll", "PeerIdentityGetFriendlyName")
+Interceptor.attach(PeerIdentityGetFriendlyName, {onLeave: function (args) {send("PeerIdentityGetFriendlyName");}});
+
+var PeerIdentityGetXML = Module.findExportByName("P2P.dll", "PeerIdentityGetXML")
+Interceptor.attach(PeerIdentityGetXML, {onLeave: function (args) {send("PeerIdentityGetXML");}});
+
+var PeerIdentityImport = Module.findExportByName("P2P.dll", "PeerIdentityImport")
+Interceptor.attach(PeerIdentityImport, {onLeave: function (args) {send("PeerIdentityImport");}});
+
+var PeerIdentitySetFriendlyName = Module.findExportByName("P2P.dll", "PeerIdentitySetFriendlyName")
+Interceptor.attach(PeerIdentitySetFriendlyName, {onLeave: function (args) {send("PeerIdentitySetFriendlyName");}});
+
+var PeerNameToPeerHostName = Module.findExportByName("P2P.dll", "PeerNameToPeerHostName")
+Interceptor.attach(PeerNameToPeerHostName, {onLeave: function (args) {send("PeerNameToPeerHostName");}});
+
+var PeerPnrpEndResolve = Module.findExportByName("P2P.dll", "PeerPnrpEndResolve")
+Interceptor.attach(PeerPnrpEndResolve, {onLeave: function (args) {send("PeerPnrpEndResolve");}});
+
+var PeerPnrpGetCloudInfo = Module.findExportByName("P2P.dll", "PeerPnrpGetCloudInfo")
+Interceptor.attach(PeerPnrpGetCloudInfo, {onLeave: function (args) {send("PeerPnrpGetCloudInfo");}});
+
+var PeerPnrpGetEndpoint = Module.findExportByName("P2P.dll", "PeerPnrpGetEndpoint")
+Interceptor.attach(PeerPnrpGetEndpoint, {onLeave: function (args) {send("PeerPnrpGetEndpoint");}});
+
+var PeerPnrpRegister = Module.findExportByName("P2P.dll", "PeerPnrpRegister")
+Interceptor.attach(PeerPnrpRegister, {onLeave: function (args) {send("PeerPnrpRegister");}});
+
+var PeerPnrpResolve = Module.findExportByName("P2P.dll", "PeerPnrpResolve")
+Interceptor.attach(PeerPnrpResolve, {onLeave: function (args) {send("PeerPnrpResolve");}});
+
+var PeerPnrpShutdown = Module.findExportByName("P2P.dll", "PeerPnrpShutdown")
+Interceptor.attach(PeerPnrpShutdown, {onLeave: function (args) {send("PeerPnrpShutdown");}});
+
+var PeerPnrpStartResolve = Module.findExportByName("P2P.dll", "PeerPnrpStartResolve")
+Interceptor.attach(PeerPnrpStartResolve, {onLeave: function (args) {send("PeerPnrpStartResolve");}});
+
+var PeerPnrpStartup = Module.findExportByName("P2P.dll", "PeerPnrpStartup")
+Interceptor.attach(PeerPnrpStartup, {onLeave: function (args) {send("PeerPnrpStartup");}});
+
+var PeerPnrpUnregister = Module.findExportByName("P2P.dll", "PeerPnrpUnregister")
+Interceptor.attach(PeerPnrpUnregister, {onLeave: function (args) {send("PeerPnrpUnregister");}});
+
+var PeerPnrpUpdateRegistration = Module.findExportByName("P2P.dll", "PeerPnrpUpdateRegistration")
+Interceptor.attach(PeerPnrpUpdateRegistration, {onLeave: function (args) {send("PeerPnrpUpdateRegistration");}});
+
+var PeerSSPAddCredentials = Module.findExportByName("P2P.dll", "PeerSSPAddCredentials")
+Interceptor.attach(PeerSSPAddCredentials, {onLeave: function (args) {send("PeerSSPAddCredentials");}});
+
+var PeerSSPRemoveCredentials = Module.findExportByName("P2P.dll", "PeerSSPRemoveCredentials")
+Interceptor.attach(PeerSSPRemoveCredentials, {onLeave: function (args) {send("PeerSSPRemoveCredentials");}});
+

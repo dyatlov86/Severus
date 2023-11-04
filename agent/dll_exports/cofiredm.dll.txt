@@ -1,0 +1,9 @@
+var WdiDiagnosticModuleMain = Module.findExportByName("cofiredm.dll", "WdiDiagnosticModuleMain")
+Interceptor.attach(WdiDiagnosticModuleMain, {onLeave: function (args) {send("WdiDiagnosticModuleMain");}});
+
+var WdiGetDiagnosticModuleInterfaceVersion = Module.findExportByName("cofiredm.dll", "WdiGetDiagnosticModuleInterfaceVersion")
+Interceptor.attach(WdiGetDiagnosticModuleInterfaceVersion, {onLeave: function (args) {send("WdiGetDiagnosticModuleInterfaceVersion");}});
+
+var WdiHandleInstance = Module.findExportByName("cofiredm.dll", "WdiHandleInstance")
+Interceptor.attach(WdiHandleInstance, {onLeave: function (args) {send("WdiHandleInstance");}});
+

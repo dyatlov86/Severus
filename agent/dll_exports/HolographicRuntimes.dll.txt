@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("HolographicRuntimes.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("HolographicRuntimes.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("HolographicRuntimes.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllGetClassObjectRuntime = Module.findExportByName("HolographicRuntimes.dll", "DllGetClassObjectRuntime")
+Interceptor.attach(DllGetClassObjectRuntime, {onLeave: function (args) {send("DllGetClassObjectRuntime");}});
+

@@ -1,0 +1,36 @@
+var DllCanUnloadNow = Module.findExportByName("windowsperformancerecordercontrol.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("windowsperformancerecordercontrol.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("windowsperformancerecordercontrol.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("windowsperformancerecordercontrol.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var WPRCControlLogging = Module.findExportByName("windowsperformancerecordercontrol.dll", "WPRCControlLogging")
+Interceptor.attach(WPRCControlLogging, {onLeave: function (args) {send("WPRCControlLogging");}});
+
+var WPRCCreateInstance = Module.findExportByName("windowsperformancerecordercontrol.dll", "WPRCCreateInstance")
+Interceptor.attach(WPRCCreateInstance, {onLeave: function (args) {send("WPRCCreateInstance");}});
+
+var WPRCCreateInstanceUnderInstanceName = Module.findExportByName("windowsperformancerecordercontrol.dll", "WPRCCreateInstanceUnderInstanceName")
+Interceptor.attach(WPRCCreateInstanceUnderInstanceName, {onLeave: function (args) {send("WPRCCreateInstanceUnderInstanceName");}});
+
+var WPRCDisableBuiltinProfiles = Module.findExportByName("windowsperformancerecordercontrol.dll", "WPRCDisableBuiltinProfiles")
+Interceptor.attach(WPRCDisableBuiltinProfiles, {onLeave: function (args) {send("WPRCDisableBuiltinProfiles");}});
+
+var WPRCFormatError = Module.findExportByName("windowsperformancerecordercontrol.dll", "WPRCFormatError")
+Interceptor.attach(WPRCFormatError, {onLeave: function (args) {send("WPRCFormatError");}});
+
+var WPRCQueryBuiltInProfiles = Module.findExportByName("windowsperformancerecordercontrol.dll", "WPRCQueryBuiltInProfiles")
+Interceptor.attach(WPRCQueryBuiltInProfiles, {onLeave: function (args) {send("WPRCQueryBuiltInProfiles");}});
+
+var WPRCReleaseInstanceByName = Module.findExportByName("windowsperformancerecordercontrol.dll", "WPRCReleaseInstanceByName")
+Interceptor.attach(WPRCReleaseInstanceByName, {onLeave: function (args) {send("WPRCReleaseInstanceByName");}});
+
+var WPRCRemoveLogging = Module.findExportByName("windowsperformancerecordercontrol.dll", "WPRCRemoveLogging")
+Interceptor.attach(WPRCRemoveLogging, {onLeave: function (args) {send("WPRCRemoveLogging");}});
+

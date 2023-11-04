@@ -1,0 +1,3 @@
+var CreatePackageFactory = Module.findExportByName("DiagnosticsHub.Packaging.dll", "CreatePackageFactory")
+Interceptor.attach(CreatePackageFactory, {onLeave: function (args) {send("CreatePackageFactory");}});
+

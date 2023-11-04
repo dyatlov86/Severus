@@ -1,0 +1,6 @@
+var CardAcquireContext = Module.findExportByName("msclmd.dll", "CardAcquireContext")
+Interceptor.attach(CardAcquireContext, {onLeave: function (args) {send("CardAcquireContext");}});
+
+var CardAcquireContextInternal = Module.findExportByName("msclmd.dll", "CardAcquireContextInternal")
+Interceptor.attach(CardAcquireContextInternal, {onLeave: function (args) {send("CardAcquireContextInternal");}});
+

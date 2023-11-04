@@ -1,0 +1,96 @@
+var RedirectDosPath = Module.findExportByName("wow64.dll", "RedirectDosPath")
+Interceptor.attach(RedirectDosPath, {onLeave: function (args) {send("RedirectDosPath");}});
+
+var RedirectDosPathUnicode = Module.findExportByName("wow64.dll", "RedirectDosPathUnicode")
+Interceptor.attach(RedirectDosPathUnicode, {onLeave: function (args) {send("RedirectDosPathUnicode");}});
+
+var RedirectObjectName = Module.findExportByName("wow64.dll", "RedirectObjectName")
+Interceptor.attach(RedirectObjectName, {onLeave: function (args) {send("RedirectObjectName");}});
+
+var Wow64AllocThreadHeap = Module.findExportByName("wow64.dll", "Wow64AllocThreadHeap")
+Interceptor.attach(Wow64AllocThreadHeap, {onLeave: function (args) {send("Wow64AllocThreadHeap");}});
+
+var Wow64AllocateHeap = Module.findExportByName("wow64.dll", "Wow64AllocateHeap")
+Interceptor.attach(Wow64AllocateHeap, {onLeave: function (args) {send("Wow64AllocateHeap");}});
+
+var Wow64AllocateTemp = Module.findExportByName("wow64.dll", "Wow64AllocateTemp")
+Interceptor.attach(Wow64AllocateTemp, {onLeave: function (args) {send("Wow64AllocateTemp");}});
+
+var Wow64ApcRoutine = Module.findExportByName("wow64.dll", "Wow64ApcRoutine")
+Interceptor.attach(Wow64ApcRoutine, {onLeave: function (args) {send("Wow64ApcRoutine");}});
+
+var Wow64CheckIfNXEnabled = Module.findExportByName("wow64.dll", "Wow64CheckIfNXEnabled")
+Interceptor.attach(Wow64CheckIfNXEnabled, {onLeave: function (args) {send("Wow64CheckIfNXEnabled");}});
+
+var Wow64DispatchExceptionCHPE = Module.findExportByName("wow64.dll", "Wow64DispatchExceptionCHPE")
+Interceptor.attach(Wow64DispatchExceptionCHPE, {onLeave: function (args) {send("Wow64DispatchExceptionCHPE");}});
+
+var Wow64EmulateAtlThunk = Module.findExportByName("wow64.dll", "Wow64EmulateAtlThunk")
+Interceptor.attach(Wow64EmulateAtlThunk, {onLeave: function (args) {send("Wow64EmulateAtlThunk");}});
+
+var Wow64FreeHeap = Module.findExportByName("wow64.dll", "Wow64FreeHeap")
+Interceptor.attach(Wow64FreeHeap, {onLeave: function (args) {send("Wow64FreeHeap");}});
+
+var Wow64FreeThreadHeap = Module.findExportByName("wow64.dll", "Wow64FreeThreadHeap")
+Interceptor.attach(Wow64FreeThreadHeap, {onLeave: function (args) {send("Wow64FreeThreadHeap");}});
+
+var Wow64IsControlFlowGuardEnforced = Module.findExportByName("wow64.dll", "Wow64IsControlFlowGuardEnforced")
+Interceptor.attach(Wow64IsControlFlowGuardEnforced, {onLeave: function (args) {send("Wow64IsControlFlowGuardEnforced");}});
+
+var Wow64IsStackExtentsCheckEnforced = Module.findExportByName("wow64.dll", "Wow64IsStackExtentsCheckEnforced")
+Interceptor.attach(Wow64IsStackExtentsCheckEnforced, {onLeave: function (args) {send("Wow64IsStackExtentsCheckEnforced");}});
+
+var Wow64KiUserCallbackDispatcher = Module.findExportByName("wow64.dll", "Wow64KiUserCallbackDispatcher")
+Interceptor.attach(Wow64KiUserCallbackDispatcher, {onLeave: function (args) {send("Wow64KiUserCallbackDispatcher");}});
+
+var Wow64LdrpInitialize = Module.findExportByName("wow64.dll", "Wow64LdrpInitialize")
+Interceptor.attach(Wow64LdrpInitialize, {onLeave: function (args) {send("Wow64LdrpInitialize");}});
+
+var Wow64LogPrint = Module.findExportByName("wow64.dll", "Wow64LogPrint")
+Interceptor.attach(Wow64LogPrint, {onLeave: function (args) {send("Wow64LogPrint");}});
+
+var Wow64NotifyUnsimulateComplete = Module.findExportByName("wow64.dll", "Wow64NotifyUnsimulateComplete")
+Interceptor.attach(Wow64NotifyUnsimulateComplete, {onLeave: function (args) {send("Wow64NotifyUnsimulateComplete");}});
+
+var Wow64PassExceptionToGuest = Module.findExportByName("wow64.dll", "Wow64PassExceptionToGuest")
+Interceptor.attach(Wow64PassExceptionToGuest, {onLeave: function (args) {send("Wow64PassExceptionToGuest");}});
+
+var Wow64PrepareForDebuggerAttach = Module.findExportByName("wow64.dll", "Wow64PrepareForDebuggerAttach")
+Interceptor.attach(Wow64PrepareForDebuggerAttach, {onLeave: function (args) {send("Wow64PrepareForDebuggerAttach");}});
+
+var Wow64PrepareForException = Module.findExportByName("wow64.dll", "Wow64PrepareForException")
+Interceptor.attach(Wow64PrepareForException, {onLeave: function (args) {send("Wow64PrepareForException");}});
+
+var Wow64ProcessPendingCrossProcessItems = Module.findExportByName("wow64.dll", "Wow64ProcessPendingCrossProcessItems")
+Interceptor.attach(Wow64ProcessPendingCrossProcessItems, {onLeave: function (args) {send("Wow64ProcessPendingCrossProcessItems");}});
+
+var Wow64RaiseException = Module.findExportByName("wow64.dll", "Wow64RaiseException")
+Interceptor.attach(Wow64RaiseException, {onLeave: function (args) {send("Wow64RaiseException");}});
+
+var Wow64ShallowThunkAllocObjectAttributes32TO64_FNC = Module.findExportByName("wow64.dll", "Wow64ShallowThunkAllocObjectAttributes32TO64_FNC")
+Interceptor.attach(Wow64ShallowThunkAllocObjectAttributes32TO64_FNC, {onLeave: function (args) {send("Wow64ShallowThunkAllocObjectAttributes32TO64_FNC");}});
+
+var Wow64ShallowThunkAllocSecurityQualityOfService32TO64_FNC = Module.findExportByName("wow64.dll", "Wow64ShallowThunkAllocSecurityQualityOfService32TO64_FNC")
+Interceptor.attach(Wow64ShallowThunkAllocSecurityQualityOfService32TO64_FNC, {onLeave: function (args) {send("Wow64ShallowThunkAllocSecurityQualityOfService32TO64_FNC");}});
+
+var Wow64ShallowThunkSIZE_T32TO64 = Module.findExportByName("wow64.dll", "Wow64ShallowThunkSIZE_T32TO64")
+Interceptor.attach(Wow64ShallowThunkSIZE_T32TO64, {onLeave: function (args) {send("Wow64ShallowThunkSIZE_T32TO64");}});
+
+var Wow64ShallowThunkSIZE_T64TO32 = Module.findExportByName("wow64.dll", "Wow64ShallowThunkSIZE_T64TO32")
+Interceptor.attach(Wow64ShallowThunkSIZE_T64TO32, {onLeave: function (args) {send("Wow64ShallowThunkSIZE_T64TO32");}});
+
+var Wow64SuspendLocalProcess = Module.findExportByName("wow64.dll", "Wow64SuspendLocalProcess")
+Interceptor.attach(Wow64SuspendLocalProcess, {onLeave: function (args) {send("Wow64SuspendLocalProcess");}});
+
+var Wow64SuspendLocalThread = Module.findExportByName("wow64.dll", "Wow64SuspendLocalThread")
+Interceptor.attach(Wow64SuspendLocalThread, {onLeave: function (args) {send("Wow64SuspendLocalThread");}});
+
+var Wow64SystemServiceEx = Module.findExportByName("wow64.dll", "Wow64SystemServiceEx")
+Interceptor.attach(Wow64SystemServiceEx, {onLeave: function (args) {send("Wow64SystemServiceEx");}});
+
+var Wow64ValidateUserCallTarget = Module.findExportByName("wow64.dll", "Wow64ValidateUserCallTarget")
+Interceptor.attach(Wow64ValidateUserCallTarget, {onLeave: function (args) {send("Wow64ValidateUserCallTarget");}});
+
+var Wow64ValidateUserCallTargetFilter = Module.findExportByName("wow64.dll", "Wow64ValidateUserCallTargetFilter")
+Interceptor.attach(Wow64ValidateUserCallTargetFilter, {onLeave: function (args) {send("Wow64ValidateUserCallTargetFilter");}});
+

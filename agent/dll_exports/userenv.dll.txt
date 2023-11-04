@@ -1,0 +1,177 @@
+var AreThereVisibleLogoffScripts = Module.findExportByName("userenv.dll", "AreThereVisibleLogoffScripts")
+Interceptor.attach(AreThereVisibleLogoffScripts, {onLeave: function (args) {send("AreThereVisibleLogoffScripts");}});
+
+var AreThereVisibleShutdownScripts = Module.findExportByName("userenv.dll", "AreThereVisibleShutdownScripts")
+Interceptor.attach(AreThereVisibleShutdownScripts, {onLeave: function (args) {send("AreThereVisibleShutdownScripts");}});
+
+var CreateAppContainerProfile = Module.findExportByName("userenv.dll", "CreateAppContainerProfile")
+Interceptor.attach(CreateAppContainerProfile, {onLeave: function (args) {send("CreateAppContainerProfile");}});
+
+var CreateEnvironmentBlock = Module.findExportByName("userenv.dll", "CreateEnvironmentBlock")
+Interceptor.attach(CreateEnvironmentBlock, {onLeave: function (args) {send("CreateEnvironmentBlock");}});
+
+var CreateProfile = Module.findExportByName("userenv.dll", "CreateProfile")
+Interceptor.attach(CreateProfile, {onLeave: function (args) {send("CreateProfile");}});
+
+var DeleteAppContainerProfile = Module.findExportByName("userenv.dll", "DeleteAppContainerProfile")
+Interceptor.attach(DeleteAppContainerProfile, {onLeave: function (args) {send("DeleteAppContainerProfile");}});
+
+var DeleteProfileA = Module.findExportByName("userenv.dll", "DeleteProfileA")
+Interceptor.attach(DeleteProfileA, {onLeave: function (args) {send("DeleteProfileA");}});
+
+var DeleteProfileW = Module.findExportByName("userenv.dll", "DeleteProfileW")
+Interceptor.attach(DeleteProfileW, {onLeave: function (args) {send("DeleteProfileW");}});
+
+var DeriveAppContainerSidFromAppContainerName = Module.findExportByName("userenv.dll", "DeriveAppContainerSidFromAppContainerName")
+Interceptor.attach(DeriveAppContainerSidFromAppContainerName, {onLeave: function (args) {send("DeriveAppContainerSidFromAppContainerName");}});
+
+var DeriveRestrictedAppContainerSidFromAppContainerSidAndRestrictedName = Module.findExportByName("userenv.dll", "DeriveRestrictedAppContainerSidFromAppContainerSidAndRestrictedName")
+Interceptor.attach(DeriveRestrictedAppContainerSidFromAppContainerSidAndRestrictedName, {onLeave: function (args) {send("DeriveRestrictedAppContainerSidFromAppContainerSidAndRestrictedName");}});
+
+var DestroyEnvironmentBlock = Module.findExportByName("userenv.dll", "DestroyEnvironmentBlock")
+Interceptor.attach(DestroyEnvironmentBlock, {onLeave: function (args) {send("DestroyEnvironmentBlock");}});
+
+var DllCanUnloadNow = Module.findExportByName("userenv.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("userenv.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("userenv.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("userenv.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var EnterCriticalPolicySection = Module.findExportByName("userenv.dll", "EnterCriticalPolicySection")
+Interceptor.attach(EnterCriticalPolicySection, {onLeave: function (args) {send("EnterCriticalPolicySection");}});
+
+var ExpandEnvironmentStringsForUserA = Module.findExportByName("userenv.dll", "ExpandEnvironmentStringsForUserA")
+Interceptor.attach(ExpandEnvironmentStringsForUserA, {onLeave: function (args) {send("ExpandEnvironmentStringsForUserA");}});
+
+var ExpandEnvironmentStringsForUserW = Module.findExportByName("userenv.dll", "ExpandEnvironmentStringsForUserW")
+Interceptor.attach(ExpandEnvironmentStringsForUserW, {onLeave: function (args) {send("ExpandEnvironmentStringsForUserW");}});
+
+var ForceSyncFgPolicy = Module.findExportByName("userenv.dll", "ForceSyncFgPolicy")
+Interceptor.attach(ForceSyncFgPolicy, {onLeave: function (args) {send("ForceSyncFgPolicy");}});
+
+var FreeGPOListA = Module.findExportByName("userenv.dll", "FreeGPOListA")
+Interceptor.attach(FreeGPOListA, {onLeave: function (args) {send("FreeGPOListA");}});
+
+var FreeGPOListW = Module.findExportByName("userenv.dll", "FreeGPOListW")
+Interceptor.attach(FreeGPOListW, {onLeave: function (args) {send("FreeGPOListW");}});
+
+var GenerateGPNotification = Module.findExportByName("userenv.dll", "GenerateGPNotification")
+Interceptor.attach(GenerateGPNotification, {onLeave: function (args) {send("GenerateGPNotification");}});
+
+var GetAllUsersProfileDirectoryA = Module.findExportByName("userenv.dll", "GetAllUsersProfileDirectoryA")
+Interceptor.attach(GetAllUsersProfileDirectoryA, {onLeave: function (args) {send("GetAllUsersProfileDirectoryA");}});
+
+var GetAllUsersProfileDirectoryW = Module.findExportByName("userenv.dll", "GetAllUsersProfileDirectoryW")
+Interceptor.attach(GetAllUsersProfileDirectoryW, {onLeave: function (args) {send("GetAllUsersProfileDirectoryW");}});
+
+var GetAppContainerFolderPath = Module.findExportByName("userenv.dll", "GetAppContainerFolderPath")
+Interceptor.attach(GetAppContainerFolderPath, {onLeave: function (args) {send("GetAppContainerFolderPath");}});
+
+var GetAppContainerRegistryLocation = Module.findExportByName("userenv.dll", "GetAppContainerRegistryLocation")
+Interceptor.attach(GetAppContainerRegistryLocation, {onLeave: function (args) {send("GetAppContainerRegistryLocation");}});
+
+var GetAppliedGPOListA = Module.findExportByName("userenv.dll", "GetAppliedGPOListA")
+Interceptor.attach(GetAppliedGPOListA, {onLeave: function (args) {send("GetAppliedGPOListA");}});
+
+var GetAppliedGPOListW = Module.findExportByName("userenv.dll", "GetAppliedGPOListW")
+Interceptor.attach(GetAppliedGPOListW, {onLeave: function (args) {send("GetAppliedGPOListW");}});
+
+var GetDefaultUserProfileDirectoryA = Module.findExportByName("userenv.dll", "GetDefaultUserProfileDirectoryA")
+Interceptor.attach(GetDefaultUserProfileDirectoryA, {onLeave: function (args) {send("GetDefaultUserProfileDirectoryA");}});
+
+var GetDefaultUserProfileDirectoryW = Module.findExportByName("userenv.dll", "GetDefaultUserProfileDirectoryW")
+Interceptor.attach(GetDefaultUserProfileDirectoryW, {onLeave: function (args) {send("GetDefaultUserProfileDirectoryW");}});
+
+var GetGPOListA = Module.findExportByName("userenv.dll", "GetGPOListA")
+Interceptor.attach(GetGPOListA, {onLeave: function (args) {send("GetGPOListA");}});
+
+var GetGPOListW = Module.findExportByName("userenv.dll", "GetGPOListW")
+Interceptor.attach(GetGPOListW, {onLeave: function (args) {send("GetGPOListW");}});
+
+var GetNextFgPolicyRefreshInfo = Module.findExportByName("userenv.dll", "GetNextFgPolicyRefreshInfo")
+Interceptor.attach(GetNextFgPolicyRefreshInfo, {onLeave: function (args) {send("GetNextFgPolicyRefreshInfo");}});
+
+var GetPreviousFgPolicyRefreshInfo = Module.findExportByName("userenv.dll", "GetPreviousFgPolicyRefreshInfo")
+Interceptor.attach(GetPreviousFgPolicyRefreshInfo, {onLeave: function (args) {send("GetPreviousFgPolicyRefreshInfo");}});
+
+var GetProfileType = Module.findExportByName("userenv.dll", "GetProfileType")
+Interceptor.attach(GetProfileType, {onLeave: function (args) {send("GetProfileType");}});
+
+var GetProfilesDirectoryA = Module.findExportByName("userenv.dll", "GetProfilesDirectoryA")
+Interceptor.attach(GetProfilesDirectoryA, {onLeave: function (args) {send("GetProfilesDirectoryA");}});
+
+var GetProfilesDirectoryW = Module.findExportByName("userenv.dll", "GetProfilesDirectoryW")
+Interceptor.attach(GetProfilesDirectoryW, {onLeave: function (args) {send("GetProfilesDirectoryW");}});
+
+var GetUserProfileDirectoryA = Module.findExportByName("userenv.dll", "GetUserProfileDirectoryA")
+Interceptor.attach(GetUserProfileDirectoryA, {onLeave: function (args) {send("GetUserProfileDirectoryA");}});
+
+var GetUserProfileDirectoryW = Module.findExportByName("userenv.dll", "GetUserProfileDirectoryW")
+Interceptor.attach(GetUserProfileDirectoryW, {onLeave: function (args) {send("GetUserProfileDirectoryW");}});
+
+var HasPolicyForegroundProcessingCompleted = Module.findExportByName("userenv.dll", "HasPolicyForegroundProcessingCompleted")
+Interceptor.attach(HasPolicyForegroundProcessingCompleted, {onLeave: function (args) {send("HasPolicyForegroundProcessingCompleted");}});
+
+var LeaveCriticalPolicySection = Module.findExportByName("userenv.dll", "LeaveCriticalPolicySection")
+Interceptor.attach(LeaveCriticalPolicySection, {onLeave: function (args) {send("LeaveCriticalPolicySection");}});
+
+var LoadProfileExtender = Module.findExportByName("userenv.dll", "LoadProfileExtender")
+Interceptor.attach(LoadProfileExtender, {onLeave: function (args) {send("LoadProfileExtender");}});
+
+var LoadUserProfileA = Module.findExportByName("userenv.dll", "LoadUserProfileA")
+Interceptor.attach(LoadUserProfileA, {onLeave: function (args) {send("LoadUserProfileA");}});
+
+var LoadUserProfileW = Module.findExportByName("userenv.dll", "LoadUserProfileW")
+Interceptor.attach(LoadUserProfileW, {onLeave: function (args) {send("LoadUserProfileW");}});
+
+var ProcessGroupPolicyCompleted = Module.findExportByName("userenv.dll", "ProcessGroupPolicyCompleted")
+Interceptor.attach(ProcessGroupPolicyCompleted, {onLeave: function (args) {send("ProcessGroupPolicyCompleted");}});
+
+var ProcessGroupPolicyCompletedEx = Module.findExportByName("userenv.dll", "ProcessGroupPolicyCompletedEx")
+Interceptor.attach(ProcessGroupPolicyCompletedEx, {onLeave: function (args) {send("ProcessGroupPolicyCompletedEx");}});
+
+var RefreshPolicy = Module.findExportByName("userenv.dll", "RefreshPolicy")
+Interceptor.attach(RefreshPolicy, {onLeave: function (args) {send("RefreshPolicy");}});
+
+var RefreshPolicyEx = Module.findExportByName("userenv.dll", "RefreshPolicyEx")
+Interceptor.attach(RefreshPolicyEx, {onLeave: function (args) {send("RefreshPolicyEx");}});
+
+var RegisterGPNotification = Module.findExportByName("userenv.dll", "RegisterGPNotification")
+Interceptor.attach(RegisterGPNotification, {onLeave: function (args) {send("RegisterGPNotification");}});
+
+var RsopAccessCheckByType = Module.findExportByName("userenv.dll", "RsopAccessCheckByType")
+Interceptor.attach(RsopAccessCheckByType, {onLeave: function (args) {send("RsopAccessCheckByType");}});
+
+var RsopFileAccessCheck = Module.findExportByName("userenv.dll", "RsopFileAccessCheck")
+Interceptor.attach(RsopFileAccessCheck, {onLeave: function (args) {send("RsopFileAccessCheck");}});
+
+var RsopLoggingEnabled = Module.findExportByName("userenv.dll", "RsopLoggingEnabled")
+Interceptor.attach(RsopLoggingEnabled, {onLeave: function (args) {send("RsopLoggingEnabled");}});
+
+var RsopResetPolicySettingStatus = Module.findExportByName("userenv.dll", "RsopResetPolicySettingStatus")
+Interceptor.attach(RsopResetPolicySettingStatus, {onLeave: function (args) {send("RsopResetPolicySettingStatus");}});
+
+var RsopSetPolicySettingStatus = Module.findExportByName("userenv.dll", "RsopSetPolicySettingStatus")
+Interceptor.attach(RsopSetPolicySettingStatus, {onLeave: function (args) {send("RsopSetPolicySettingStatus");}});
+
+var UnloadProfileExtender = Module.findExportByName("userenv.dll", "UnloadProfileExtender")
+Interceptor.attach(UnloadProfileExtender, {onLeave: function (args) {send("UnloadProfileExtender");}});
+
+var UnloadUserProfile = Module.findExportByName("userenv.dll", "UnloadUserProfile")
+Interceptor.attach(UnloadUserProfile, {onLeave: function (args) {send("UnloadUserProfile");}});
+
+var UnregisterGPNotification = Module.findExportByName("userenv.dll", "UnregisterGPNotification")
+Interceptor.attach(UnregisterGPNotification, {onLeave: function (args) {send("UnregisterGPNotification");}});
+
+var WaitForMachinePolicyForegroundProcessing = Module.findExportByName("userenv.dll", "WaitForMachinePolicyForegroundProcessing")
+Interceptor.attach(WaitForMachinePolicyForegroundProcessing, {onLeave: function (args) {send("WaitForMachinePolicyForegroundProcessing");}});
+
+var WaitForUserPolicyForegroundProcessing = Module.findExportByName("userenv.dll", "WaitForUserPolicyForegroundProcessing")
+Interceptor.attach(WaitForUserPolicyForegroundProcessing, {onLeave: function (args) {send("WaitForUserPolicyForegroundProcessing");}});
+

@@ -1,0 +1,33 @@
+var AllocateUserPhysicalPages = Module.findExportByName("api-ms-win-core-memory-l1-1-2.dll", "AllocateUserPhysicalPages")
+Interceptor.attach(AllocateUserPhysicalPages, {onLeave: function (args) {send("AllocateUserPhysicalPages");}});
+
+var AllocateUserPhysicalPagesNuma = Module.findExportByName("api-ms-win-core-memory-l1-1-2.dll", "AllocateUserPhysicalPagesNuma")
+Interceptor.attach(AllocateUserPhysicalPagesNuma, {onLeave: function (args) {send("AllocateUserPhysicalPagesNuma");}});
+
+var DiscardVirtualMemory = Module.findExportByName("api-ms-win-core-memory-l1-1-2.dll", "DiscardVirtualMemory")
+Interceptor.attach(DiscardVirtualMemory, {onLeave: function (args) {send("DiscardVirtualMemory");}});
+
+var FreeUserPhysicalPages = Module.findExportByName("api-ms-win-core-memory-l1-1-2.dll", "FreeUserPhysicalPages")
+Interceptor.attach(FreeUserPhysicalPages, {onLeave: function (args) {send("FreeUserPhysicalPages");}});
+
+var GetMemoryErrorHandlingCapabilities = Module.findExportByName("api-ms-win-core-memory-l1-1-2.dll", "GetMemoryErrorHandlingCapabilities")
+Interceptor.attach(GetMemoryErrorHandlingCapabilities, {onLeave: function (args) {send("GetMemoryErrorHandlingCapabilities");}});
+
+var MapUserPhysicalPages = Module.findExportByName("api-ms-win-core-memory-l1-1-2.dll", "MapUserPhysicalPages")
+Interceptor.attach(MapUserPhysicalPages, {onLeave: function (args) {send("MapUserPhysicalPages");}});
+
+var OfferVirtualMemory = Module.findExportByName("api-ms-win-core-memory-l1-1-2.dll", "OfferVirtualMemory")
+Interceptor.attach(OfferVirtualMemory, {onLeave: function (args) {send("OfferVirtualMemory");}});
+
+var ReclaimVirtualMemory = Module.findExportByName("api-ms-win-core-memory-l1-1-2.dll", "ReclaimVirtualMemory")
+Interceptor.attach(ReclaimVirtualMemory, {onLeave: function (args) {send("ReclaimVirtualMemory");}});
+
+var RegisterBadMemoryNotification = Module.findExportByName("api-ms-win-core-memory-l1-1-2.dll", "RegisterBadMemoryNotification")
+Interceptor.attach(RegisterBadMemoryNotification, {onLeave: function (args) {send("RegisterBadMemoryNotification");}});
+
+var UnregisterBadMemoryNotification = Module.findExportByName("api-ms-win-core-memory-l1-1-2.dll", "UnregisterBadMemoryNotification")
+Interceptor.attach(UnregisterBadMemoryNotification, {onLeave: function (args) {send("UnregisterBadMemoryNotification");}});
+
+var VirtualAllocExNuma = Module.findExportByName("api-ms-win-core-memory-l1-1-2.dll", "VirtualAllocExNuma")
+Interceptor.attach(VirtualAllocExNuma, {onLeave: function (args) {send("VirtualAllocExNuma");}});
+

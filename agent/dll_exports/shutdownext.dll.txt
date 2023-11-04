@@ -1,0 +1,15 @@
+var ShutdownExAnnotate = Module.findExportByName("shutdownext.dll", "ShutdownExAnnotate")
+Interceptor.attach(ShutdownExAnnotate, {onLeave: function (args) {send("ShutdownExAnnotate");}});
+
+var ShutdownExDirtyDialog = Module.findExportByName("shutdownext.dll", "ShutdownExDirtyDialog")
+Interceptor.attach(ShutdownExDirtyDialog, {onLeave: function (args) {send("ShutdownExDirtyDialog");}});
+
+var ShutdownExPrintReasons = Module.findExportByName("shutdownext.dll", "ShutdownExPrintReasons")
+Interceptor.attach(ShutdownExPrintReasons, {onLeave: function (args) {send("ShutdownExPrintReasons");}});
+
+var ShutdownExReasonCommentRequired = Module.findExportByName("shutdownext.dll", "ShutdownExReasonCommentRequired")
+Interceptor.attach(ShutdownExReasonCommentRequired, {onLeave: function (args) {send("ShutdownExReasonCommentRequired");}});
+
+var ShutdownExRemoteDialog = Module.findExportByName("shutdownext.dll", "ShutdownExRemoteDialog")
+Interceptor.attach(ShutdownExRemoteDialog, {onLeave: function (args) {send("ShutdownExRemoteDialog");}});
+

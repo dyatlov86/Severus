@@ -1,0 +1,42 @@
+var DllCanUnloadNow = Module.findExportByName("hnetcfg.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("hnetcfg.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("hnetcfg.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("hnetcfg.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var HNetDeleteRasConnection = Module.findExportByName("hnetcfg.dll", "HNetDeleteRasConnection")
+Interceptor.attach(HNetDeleteRasConnection, {onLeave: function (args) {send("HNetDeleteRasConnection");}});
+
+var HNetFreeSharingServicesPage = Module.findExportByName("hnetcfg.dll", "HNetFreeSharingServicesPage")
+Interceptor.attach(HNetFreeSharingServicesPage, {onLeave: function (args) {send("HNetFreeSharingServicesPage");}});
+
+var HNetGetFirewallSettingsPage = Module.findExportByName("hnetcfg.dll", "HNetGetFirewallSettingsPage")
+Interceptor.attach(HNetGetFirewallSettingsPage, {onLeave: function (args) {send("HNetGetFirewallSettingsPage");}});
+
+var HNetGetSharingServicesPage = Module.findExportByName("hnetcfg.dll", "HNetGetSharingServicesPage")
+Interceptor.attach(HNetGetSharingServicesPage, {onLeave: function (args) {send("HNetGetSharingServicesPage");}});
+
+var HNetSharedAccessSettingsDlg = Module.findExportByName("hnetcfg.dll", "HNetSharedAccessSettingsDlg")
+Interceptor.attach(HNetSharedAccessSettingsDlg, {onLeave: function (args) {send("HNetSharedAccessSettingsDlg");}});
+
+var HNetSharingAndFirewallSettingsDlg = Module.findExportByName("hnetcfg.dll", "HNetSharingAndFirewallSettingsDlg")
+Interceptor.attach(HNetSharingAndFirewallSettingsDlg, {onLeave: function (args) {send("HNetSharingAndFirewallSettingsDlg");}});
+
+var RegisterClassObjects = Module.findExportByName("hnetcfg.dll", "RegisterClassObjects")
+Interceptor.attach(RegisterClassObjects, {onLeave: function (args) {send("RegisterClassObjects");}});
+
+var ReleaseSingletons = Module.findExportByName("hnetcfg.dll", "ReleaseSingletons")
+Interceptor.attach(ReleaseSingletons, {onLeave: function (args) {send("ReleaseSingletons");}});
+
+var RevokeClassObjects = Module.findExportByName("hnetcfg.dll", "RevokeClassObjects")
+Interceptor.attach(RevokeClassObjects, {onLeave: function (args) {send("RevokeClassObjects");}});
+
+var WinBomConfigureWindowsFirewall = Module.findExportByName("hnetcfg.dll", "WinBomConfigureWindowsFirewall")
+Interceptor.attach(WinBomConfigureWindowsFirewall, {onLeave: function (args) {send("WinBomConfigureWindowsFirewall");}});
+

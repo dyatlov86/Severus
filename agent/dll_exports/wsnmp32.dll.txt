@@ -1,0 +1,153 @@
+var SnmpCancelMsg = Module.findExportByName("wsnmp32.dll", "SnmpCancelMsg")
+Interceptor.attach(SnmpCancelMsg, {onLeave: function (args) {send("SnmpCancelMsg");}});
+
+var SnmpCleanup = Module.findExportByName("wsnmp32.dll", "SnmpCleanup")
+Interceptor.attach(SnmpCleanup, {onLeave: function (args) {send("SnmpCleanup");}});
+
+var SnmpCleanupEx = Module.findExportByName("wsnmp32.dll", "SnmpCleanupEx")
+Interceptor.attach(SnmpCleanupEx, {onLeave: function (args) {send("SnmpCleanupEx");}});
+
+var SnmpClose = Module.findExportByName("wsnmp32.dll", "SnmpClose")
+Interceptor.attach(SnmpClose, {onLeave: function (args) {send("SnmpClose");}});
+
+var SnmpContextToStr = Module.findExportByName("wsnmp32.dll", "SnmpContextToStr")
+Interceptor.attach(SnmpContextToStr, {onLeave: function (args) {send("SnmpContextToStr");}});
+
+var SnmpConveyAgentAddress = Module.findExportByName("wsnmp32.dll", "SnmpConveyAgentAddress")
+Interceptor.attach(SnmpConveyAgentAddress, {onLeave: function (args) {send("SnmpConveyAgentAddress");}});
+
+var SnmpCountVbl = Module.findExportByName("wsnmp32.dll", "SnmpCountVbl")
+Interceptor.attach(SnmpCountVbl, {onLeave: function (args) {send("SnmpCountVbl");}});
+
+var SnmpCreatePdu = Module.findExportByName("wsnmp32.dll", "SnmpCreatePdu")
+Interceptor.attach(SnmpCreatePdu, {onLeave: function (args) {send("SnmpCreatePdu");}});
+
+var SnmpCreateSession = Module.findExportByName("wsnmp32.dll", "SnmpCreateSession")
+Interceptor.attach(SnmpCreateSession, {onLeave: function (args) {send("SnmpCreateSession");}});
+
+var SnmpCreateVbl = Module.findExportByName("wsnmp32.dll", "SnmpCreateVbl")
+Interceptor.attach(SnmpCreateVbl, {onLeave: function (args) {send("SnmpCreateVbl");}});
+
+var SnmpDecodeMsg = Module.findExportByName("wsnmp32.dll", "SnmpDecodeMsg")
+Interceptor.attach(SnmpDecodeMsg, {onLeave: function (args) {send("SnmpDecodeMsg");}});
+
+var SnmpDeleteVb = Module.findExportByName("wsnmp32.dll", "SnmpDeleteVb")
+Interceptor.attach(SnmpDeleteVb, {onLeave: function (args) {send("SnmpDeleteVb");}});
+
+var SnmpDuplicatePdu = Module.findExportByName("wsnmp32.dll", "SnmpDuplicatePdu")
+Interceptor.attach(SnmpDuplicatePdu, {onLeave: function (args) {send("SnmpDuplicatePdu");}});
+
+var SnmpDuplicateVbl = Module.findExportByName("wsnmp32.dll", "SnmpDuplicateVbl")
+Interceptor.attach(SnmpDuplicateVbl, {onLeave: function (args) {send("SnmpDuplicateVbl");}});
+
+var SnmpEncodeMsg = Module.findExportByName("wsnmp32.dll", "SnmpEncodeMsg")
+Interceptor.attach(SnmpEncodeMsg, {onLeave: function (args) {send("SnmpEncodeMsg");}});
+
+var SnmpEntityToStr = Module.findExportByName("wsnmp32.dll", "SnmpEntityToStr")
+Interceptor.attach(SnmpEntityToStr, {onLeave: function (args) {send("SnmpEntityToStr");}});
+
+var SnmpFreeContext = Module.findExportByName("wsnmp32.dll", "SnmpFreeContext")
+Interceptor.attach(SnmpFreeContext, {onLeave: function (args) {send("SnmpFreeContext");}});
+
+var SnmpFreeDescriptor = Module.findExportByName("wsnmp32.dll", "SnmpFreeDescriptor")
+Interceptor.attach(SnmpFreeDescriptor, {onLeave: function (args) {send("SnmpFreeDescriptor");}});
+
+var SnmpFreeEntity = Module.findExportByName("wsnmp32.dll", "SnmpFreeEntity")
+Interceptor.attach(SnmpFreeEntity, {onLeave: function (args) {send("SnmpFreeEntity");}});
+
+var SnmpFreePdu = Module.findExportByName("wsnmp32.dll", "SnmpFreePdu")
+Interceptor.attach(SnmpFreePdu, {onLeave: function (args) {send("SnmpFreePdu");}});
+
+var SnmpFreeVbl = Module.findExportByName("wsnmp32.dll", "SnmpFreeVbl")
+Interceptor.attach(SnmpFreeVbl, {onLeave: function (args) {send("SnmpFreeVbl");}});
+
+var SnmpGetLastError = Module.findExportByName("wsnmp32.dll", "SnmpGetLastError")
+Interceptor.attach(SnmpGetLastError, {onLeave: function (args) {send("SnmpGetLastError");}});
+
+var SnmpGetPduData = Module.findExportByName("wsnmp32.dll", "SnmpGetPduData")
+Interceptor.attach(SnmpGetPduData, {onLeave: function (args) {send("SnmpGetPduData");}});
+
+var SnmpGetRetransmitMode = Module.findExportByName("wsnmp32.dll", "SnmpGetRetransmitMode")
+Interceptor.attach(SnmpGetRetransmitMode, {onLeave: function (args) {send("SnmpGetRetransmitMode");}});
+
+var SnmpGetRetry = Module.findExportByName("wsnmp32.dll", "SnmpGetRetry")
+Interceptor.attach(SnmpGetRetry, {onLeave: function (args) {send("SnmpGetRetry");}});
+
+var SnmpGetTimeout = Module.findExportByName("wsnmp32.dll", "SnmpGetTimeout")
+Interceptor.attach(SnmpGetTimeout, {onLeave: function (args) {send("SnmpGetTimeout");}});
+
+var SnmpGetTranslateMode = Module.findExportByName("wsnmp32.dll", "SnmpGetTranslateMode")
+Interceptor.attach(SnmpGetTranslateMode, {onLeave: function (args) {send("SnmpGetTranslateMode");}});
+
+var SnmpGetVb = Module.findExportByName("wsnmp32.dll", "SnmpGetVb")
+Interceptor.attach(SnmpGetVb, {onLeave: function (args) {send("SnmpGetVb");}});
+
+var SnmpGetVendorInfo = Module.findExportByName("wsnmp32.dll", "SnmpGetVendorInfo")
+Interceptor.attach(SnmpGetVendorInfo, {onLeave: function (args) {send("SnmpGetVendorInfo");}});
+
+var SnmpListen = Module.findExportByName("wsnmp32.dll", "SnmpListen")
+Interceptor.attach(SnmpListen, {onLeave: function (args) {send("SnmpListen");}});
+
+var SnmpListenEx = Module.findExportByName("wsnmp32.dll", "SnmpListenEx")
+Interceptor.attach(SnmpListenEx, {onLeave: function (args) {send("SnmpListenEx");}});
+
+var SnmpOidCompare = Module.findExportByName("wsnmp32.dll", "SnmpOidCompare")
+Interceptor.attach(SnmpOidCompare, {onLeave: function (args) {send("SnmpOidCompare");}});
+
+var SnmpOidCopy = Module.findExportByName("wsnmp32.dll", "SnmpOidCopy")
+Interceptor.attach(SnmpOidCopy, {onLeave: function (args) {send("SnmpOidCopy");}});
+
+var SnmpOidToStr = Module.findExportByName("wsnmp32.dll", "SnmpOidToStr")
+Interceptor.attach(SnmpOidToStr, {onLeave: function (args) {send("SnmpOidToStr");}});
+
+var SnmpOpen = Module.findExportByName("wsnmp32.dll", "SnmpOpen")
+Interceptor.attach(SnmpOpen, {onLeave: function (args) {send("SnmpOpen");}});
+
+var SnmpRecvMsg = Module.findExportByName("wsnmp32.dll", "SnmpRecvMsg")
+Interceptor.attach(SnmpRecvMsg, {onLeave: function (args) {send("SnmpRecvMsg");}});
+
+var SnmpRegister = Module.findExportByName("wsnmp32.dll", "SnmpRegister")
+Interceptor.attach(SnmpRegister, {onLeave: function (args) {send("SnmpRegister");}});
+
+var SnmpSendMsg = Module.findExportByName("wsnmp32.dll", "SnmpSendMsg")
+Interceptor.attach(SnmpSendMsg, {onLeave: function (args) {send("SnmpSendMsg");}});
+
+var SnmpSetAgentAddress = Module.findExportByName("wsnmp32.dll", "SnmpSetAgentAddress")
+Interceptor.attach(SnmpSetAgentAddress, {onLeave: function (args) {send("SnmpSetAgentAddress");}});
+
+var SnmpSetPduData = Module.findExportByName("wsnmp32.dll", "SnmpSetPduData")
+Interceptor.attach(SnmpSetPduData, {onLeave: function (args) {send("SnmpSetPduData");}});
+
+var SnmpSetPort = Module.findExportByName("wsnmp32.dll", "SnmpSetPort")
+Interceptor.attach(SnmpSetPort, {onLeave: function (args) {send("SnmpSetPort");}});
+
+var SnmpSetRetransmitMode = Module.findExportByName("wsnmp32.dll", "SnmpSetRetransmitMode")
+Interceptor.attach(SnmpSetRetransmitMode, {onLeave: function (args) {send("SnmpSetRetransmitMode");}});
+
+var SnmpSetRetry = Module.findExportByName("wsnmp32.dll", "SnmpSetRetry")
+Interceptor.attach(SnmpSetRetry, {onLeave: function (args) {send("SnmpSetRetry");}});
+
+var SnmpSetTimeout = Module.findExportByName("wsnmp32.dll", "SnmpSetTimeout")
+Interceptor.attach(SnmpSetTimeout, {onLeave: function (args) {send("SnmpSetTimeout");}});
+
+var SnmpSetTranslateMode = Module.findExportByName("wsnmp32.dll", "SnmpSetTranslateMode")
+Interceptor.attach(SnmpSetTranslateMode, {onLeave: function (args) {send("SnmpSetTranslateMode");}});
+
+var SnmpSetVb = Module.findExportByName("wsnmp32.dll", "SnmpSetVb")
+Interceptor.attach(SnmpSetVb, {onLeave: function (args) {send("SnmpSetVb");}});
+
+var SnmpStartup = Module.findExportByName("wsnmp32.dll", "SnmpStartup")
+Interceptor.attach(SnmpStartup, {onLeave: function (args) {send("SnmpStartup");}});
+
+var SnmpStartupEx = Module.findExportByName("wsnmp32.dll", "SnmpStartupEx")
+Interceptor.attach(SnmpStartupEx, {onLeave: function (args) {send("SnmpStartupEx");}});
+
+var SnmpStrToContext = Module.findExportByName("wsnmp32.dll", "SnmpStrToContext")
+Interceptor.attach(SnmpStrToContext, {onLeave: function (args) {send("SnmpStrToContext");}});
+
+var SnmpStrToEntity = Module.findExportByName("wsnmp32.dll", "SnmpStrToEntity")
+Interceptor.attach(SnmpStrToEntity, {onLeave: function (args) {send("SnmpStrToEntity");}});
+
+var SnmpStrToOid = Module.findExportByName("wsnmp32.dll", "SnmpStrToOid")
+Interceptor.attach(SnmpStrToOid, {onLeave: function (args) {send("SnmpStrToOid");}});
+

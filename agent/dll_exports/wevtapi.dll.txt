@@ -1,0 +1,135 @@
+var EvtArchiveExportedLog = Module.findExportByName("wevtapi.dll", "EvtArchiveExportedLog")
+Interceptor.attach(EvtArchiveExportedLog, {onLeave: function (args) {send("EvtArchiveExportedLog");}});
+
+var EvtCancel = Module.findExportByName("wevtapi.dll", "EvtCancel")
+Interceptor.attach(EvtCancel, {onLeave: function (args) {send("EvtCancel");}});
+
+var EvtClearLog = Module.findExportByName("wevtapi.dll", "EvtClearLog")
+Interceptor.attach(EvtClearLog, {onLeave: function (args) {send("EvtClearLog");}});
+
+var EvtClose = Module.findExportByName("wevtapi.dll", "EvtClose")
+Interceptor.attach(EvtClose, {onLeave: function (args) {send("EvtClose");}});
+
+var EvtCreateBookmark = Module.findExportByName("wevtapi.dll", "EvtCreateBookmark")
+Interceptor.attach(EvtCreateBookmark, {onLeave: function (args) {send("EvtCreateBookmark");}});
+
+var EvtCreateRenderContext = Module.findExportByName("wevtapi.dll", "EvtCreateRenderContext")
+Interceptor.attach(EvtCreateRenderContext, {onLeave: function (args) {send("EvtCreateRenderContext");}});
+
+var EvtExportLog = Module.findExportByName("wevtapi.dll", "EvtExportLog")
+Interceptor.attach(EvtExportLog, {onLeave: function (args) {send("EvtExportLog");}});
+
+var EvtFormatMessage = Module.findExportByName("wevtapi.dll", "EvtFormatMessage")
+Interceptor.attach(EvtFormatMessage, {onLeave: function (args) {send("EvtFormatMessage");}});
+
+var EvtGetChannelConfigProperty = Module.findExportByName("wevtapi.dll", "EvtGetChannelConfigProperty")
+Interceptor.attach(EvtGetChannelConfigProperty, {onLeave: function (args) {send("EvtGetChannelConfigProperty");}});
+
+var EvtGetEventInfo = Module.findExportByName("wevtapi.dll", "EvtGetEventInfo")
+Interceptor.attach(EvtGetEventInfo, {onLeave: function (args) {send("EvtGetEventInfo");}});
+
+var EvtGetEventMetadataProperty = Module.findExportByName("wevtapi.dll", "EvtGetEventMetadataProperty")
+Interceptor.attach(EvtGetEventMetadataProperty, {onLeave: function (args) {send("EvtGetEventMetadataProperty");}});
+
+var EvtGetExtendedStatus = Module.findExportByName("wevtapi.dll", "EvtGetExtendedStatus")
+Interceptor.attach(EvtGetExtendedStatus, {onLeave: function (args) {send("EvtGetExtendedStatus");}});
+
+var EvtGetLogInfo = Module.findExportByName("wevtapi.dll", "EvtGetLogInfo")
+Interceptor.attach(EvtGetLogInfo, {onLeave: function (args) {send("EvtGetLogInfo");}});
+
+var EvtGetObjectArrayProperty = Module.findExportByName("wevtapi.dll", "EvtGetObjectArrayProperty")
+Interceptor.attach(EvtGetObjectArrayProperty, {onLeave: function (args) {send("EvtGetObjectArrayProperty");}});
+
+var EvtGetObjectArraySize = Module.findExportByName("wevtapi.dll", "EvtGetObjectArraySize")
+Interceptor.attach(EvtGetObjectArraySize, {onLeave: function (args) {send("EvtGetObjectArraySize");}});
+
+var EvtGetPublisherMetadataProperty = Module.findExportByName("wevtapi.dll", "EvtGetPublisherMetadataProperty")
+Interceptor.attach(EvtGetPublisherMetadataProperty, {onLeave: function (args) {send("EvtGetPublisherMetadataProperty");}});
+
+var EvtGetQueryInfo = Module.findExportByName("wevtapi.dll", "EvtGetQueryInfo")
+Interceptor.attach(EvtGetQueryInfo, {onLeave: function (args) {send("EvtGetQueryInfo");}});
+
+var EvtIntAssertConfig = Module.findExportByName("wevtapi.dll", "EvtIntAssertConfig")
+Interceptor.attach(EvtIntAssertConfig, {onLeave: function (args) {send("EvtIntAssertConfig");}});
+
+var EvtIntCreateBinXMLFromCustomXML = Module.findExportByName("wevtapi.dll", "EvtIntCreateBinXMLFromCustomXML")
+Interceptor.attach(EvtIntCreateBinXMLFromCustomXML, {onLeave: function (args) {send("EvtIntCreateBinXMLFromCustomXML");}});
+
+var EvtIntCreateLocalLogfile = Module.findExportByName("wevtapi.dll", "EvtIntCreateLocalLogfile")
+Interceptor.attach(EvtIntCreateLocalLogfile, {onLeave: function (args) {send("EvtIntCreateLocalLogfile");}});
+
+var EvtIntGetClassicLogDisplayName = Module.findExportByName("wevtapi.dll", "EvtIntGetClassicLogDisplayName")
+Interceptor.attach(EvtIntGetClassicLogDisplayName, {onLeave: function (args) {send("EvtIntGetClassicLogDisplayName");}});
+
+var EvtIntRenderResourceEventTemplate = Module.findExportByName("wevtapi.dll", "EvtIntRenderResourceEventTemplate")
+Interceptor.attach(EvtIntRenderResourceEventTemplate, {onLeave: function (args) {send("EvtIntRenderResourceEventTemplate");}});
+
+var EvtIntReportAuthzEventAndSourceAsync = Module.findExportByName("wevtapi.dll", "EvtIntReportAuthzEventAndSourceAsync")
+Interceptor.attach(EvtIntReportAuthzEventAndSourceAsync, {onLeave: function (args) {send("EvtIntReportAuthzEventAndSourceAsync");}});
+
+var EvtIntReportEventAndSourceAsync = Module.findExportByName("wevtapi.dll", "EvtIntReportEventAndSourceAsync")
+Interceptor.attach(EvtIntReportEventAndSourceAsync, {onLeave: function (args) {send("EvtIntReportEventAndSourceAsync");}});
+
+var EvtIntRetractConfig = Module.findExportByName("wevtapi.dll", "EvtIntRetractConfig")
+Interceptor.attach(EvtIntRetractConfig, {onLeave: function (args) {send("EvtIntRetractConfig");}});
+
+var EvtIntSysprepCleanup = Module.findExportByName("wevtapi.dll", "EvtIntSysprepCleanup")
+Interceptor.attach(EvtIntSysprepCleanup, {onLeave: function (args) {send("EvtIntSysprepCleanup");}});
+
+var EvtIntWriteXmlEventToLocalLogfile = Module.findExportByName("wevtapi.dll", "EvtIntWriteXmlEventToLocalLogfile")
+Interceptor.attach(EvtIntWriteXmlEventToLocalLogfile, {onLeave: function (args) {send("EvtIntWriteXmlEventToLocalLogfile");}});
+
+var EvtNext = Module.findExportByName("wevtapi.dll", "EvtNext")
+Interceptor.attach(EvtNext, {onLeave: function (args) {send("EvtNext");}});
+
+var EvtNextChannelPath = Module.findExportByName("wevtapi.dll", "EvtNextChannelPath")
+Interceptor.attach(EvtNextChannelPath, {onLeave: function (args) {send("EvtNextChannelPath");}});
+
+var EvtNextEventMetadata = Module.findExportByName("wevtapi.dll", "EvtNextEventMetadata")
+Interceptor.attach(EvtNextEventMetadata, {onLeave: function (args) {send("EvtNextEventMetadata");}});
+
+var EvtNextPublisherId = Module.findExportByName("wevtapi.dll", "EvtNextPublisherId")
+Interceptor.attach(EvtNextPublisherId, {onLeave: function (args) {send("EvtNextPublisherId");}});
+
+var EvtOpenChannelConfig = Module.findExportByName("wevtapi.dll", "EvtOpenChannelConfig")
+Interceptor.attach(EvtOpenChannelConfig, {onLeave: function (args) {send("EvtOpenChannelConfig");}});
+
+var EvtOpenChannelEnum = Module.findExportByName("wevtapi.dll", "EvtOpenChannelEnum")
+Interceptor.attach(EvtOpenChannelEnum, {onLeave: function (args) {send("EvtOpenChannelEnum");}});
+
+var EvtOpenEventMetadataEnum = Module.findExportByName("wevtapi.dll", "EvtOpenEventMetadataEnum")
+Interceptor.attach(EvtOpenEventMetadataEnum, {onLeave: function (args) {send("EvtOpenEventMetadataEnum");}});
+
+var EvtOpenLog = Module.findExportByName("wevtapi.dll", "EvtOpenLog")
+Interceptor.attach(EvtOpenLog, {onLeave: function (args) {send("EvtOpenLog");}});
+
+var EvtOpenPublisherEnum = Module.findExportByName("wevtapi.dll", "EvtOpenPublisherEnum")
+Interceptor.attach(EvtOpenPublisherEnum, {onLeave: function (args) {send("EvtOpenPublisherEnum");}});
+
+var EvtOpenPublisherMetadata = Module.findExportByName("wevtapi.dll", "EvtOpenPublisherMetadata")
+Interceptor.attach(EvtOpenPublisherMetadata, {onLeave: function (args) {send("EvtOpenPublisherMetadata");}});
+
+var EvtOpenSession = Module.findExportByName("wevtapi.dll", "EvtOpenSession")
+Interceptor.attach(EvtOpenSession, {onLeave: function (args) {send("EvtOpenSession");}});
+
+var EvtQuery = Module.findExportByName("wevtapi.dll", "EvtQuery")
+Interceptor.attach(EvtQuery, {onLeave: function (args) {send("EvtQuery");}});
+
+var EvtRender = Module.findExportByName("wevtapi.dll", "EvtRender")
+Interceptor.attach(EvtRender, {onLeave: function (args) {send("EvtRender");}});
+
+var EvtSaveChannelConfig = Module.findExportByName("wevtapi.dll", "EvtSaveChannelConfig")
+Interceptor.attach(EvtSaveChannelConfig, {onLeave: function (args) {send("EvtSaveChannelConfig");}});
+
+var EvtSeek = Module.findExportByName("wevtapi.dll", "EvtSeek")
+Interceptor.attach(EvtSeek, {onLeave: function (args) {send("EvtSeek");}});
+
+var EvtSetChannelConfigProperty = Module.findExportByName("wevtapi.dll", "EvtSetChannelConfigProperty")
+Interceptor.attach(EvtSetChannelConfigProperty, {onLeave: function (args) {send("EvtSetChannelConfigProperty");}});
+
+var EvtSubscribe = Module.findExportByName("wevtapi.dll", "EvtSubscribe")
+Interceptor.attach(EvtSubscribe, {onLeave: function (args) {send("EvtSubscribe");}});
+
+var EvtUpdateBookmark = Module.findExportByName("wevtapi.dll", "EvtUpdateBookmark")
+Interceptor.attach(EvtUpdateBookmark, {onLeave: function (args) {send("EvtUpdateBookmark");}});
+

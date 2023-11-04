@@ -1,0 +1,27 @@
+var DllCanUnloadNow = Module.findExportByName("VAN.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("VAN.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("VAN.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("VAN.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var HideVAN = Module.findExportByName("VAN.dll", "HideVAN")
+Interceptor.attach(HideVAN, {onLeave: function (args) {send("HideVAN");}});
+
+var RunVANW = Module.findExportByName("VAN.dll", "RunVANW")
+Interceptor.attach(RunVANW, {onLeave: function (args) {send("RunVANW");}});
+
+var ShowVAN = Module.findExportByName("VAN.dll", "ShowVAN")
+Interceptor.attach(ShowVAN, {onLeave: function (args) {send("ShowVAN");}});
+
+var ShutdownVAN = Module.findExportByName("VAN.dll", "ShutdownVAN")
+Interceptor.attach(ShutdownVAN, {onLeave: function (args) {send("ShutdownVAN");}});
+
+var VanUIManager_CreateInstance = Module.findExportByName("VAN.dll", "VanUIManager_CreateInstance")
+Interceptor.attach(VanUIManager_CreateInstance, {onLeave: function (args) {send("VanUIManager_CreateInstance");}});
+

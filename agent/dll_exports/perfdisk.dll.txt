@@ -1,0 +1,9 @@
+var CloseDiskObject = Module.findExportByName("perfdisk.dll", "CloseDiskObject")
+Interceptor.attach(CloseDiskObject, {onLeave: function (args) {send("CloseDiskObject");}});
+
+var CollectDiskObjectData = Module.findExportByName("perfdisk.dll", "CollectDiskObjectData")
+Interceptor.attach(CollectDiskObjectData, {onLeave: function (args) {send("CollectDiskObjectData");}});
+
+var OpenDiskObject = Module.findExportByName("perfdisk.dll", "OpenDiskObject")
+Interceptor.attach(OpenDiskObject, {onLeave: function (args) {send("OpenDiskObject");}});
+

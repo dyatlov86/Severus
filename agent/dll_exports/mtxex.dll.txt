@@ -1,0 +1,12 @@
+var DllGetClassObject = Module.findExportByName("mtxex.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetObjectContext = Module.findExportByName("mtxex.dll", "GetObjectContext")
+Interceptor.attach(GetObjectContext, {onLeave: function (args) {send("GetObjectContext");}});
+
+var MTSCreateActivity = Module.findExportByName("mtxex.dll", "MTSCreateActivity")
+Interceptor.attach(MTSCreateActivity, {onLeave: function (args) {send("MTSCreateActivity");}});
+
+var SafeRef = Module.findExportByName("mtxex.dll", "SafeRef")
+Interceptor.attach(SafeRef, {onLeave: function (args) {send("SafeRef");}});
+

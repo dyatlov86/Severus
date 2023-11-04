@@ -1,0 +1,12 @@
+var CreateVirtualInputManager = Module.findExportByName("Docking.VirtualInput.dll", "CreateVirtualInputManager")
+Interceptor.attach(CreateVirtualInputManager, {onLeave: function (args) {send("CreateVirtualInputManager");}});
+
+var CreateVirtualTouchPad = Module.findExportByName("Docking.VirtualInput.dll", "CreateVirtualTouchPad")
+Interceptor.attach(CreateVirtualTouchPad, {onLeave: function (args) {send("CreateVirtualTouchPad");}});
+
+var DllCanUnloadNow = Module.findExportByName("Docking.VirtualInput.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("Docking.VirtualInput.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

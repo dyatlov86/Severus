@@ -1,0 +1,27 @@
+var CancelScanJob = Module.findExportByName("EsclProtocol.dll", "CancelScanJob")
+Interceptor.attach(CancelScanJob, {onLeave: function (args) {send("CancelScanJob");}});
+
+var CloseScanner = Module.findExportByName("EsclProtocol.dll", "CloseScanner")
+Interceptor.attach(CloseScanner, {onLeave: function (args) {send("CloseScanner");}});
+
+var FreeScannerCapabilities = Module.findExportByName("EsclProtocol.dll", "FreeScannerCapabilities")
+Interceptor.attach(FreeScannerCapabilities, {onLeave: function (args) {send("FreeScannerCapabilities");}});
+
+var GetScanJobState = Module.findExportByName("EsclProtocol.dll", "GetScanJobState")
+Interceptor.attach(GetScanJobState, {onLeave: function (args) {send("GetScanJobState");}});
+
+var GetScannerCapabilities = Module.findExportByName("EsclProtocol.dll", "GetScannerCapabilities")
+Interceptor.attach(GetScannerCapabilities, {onLeave: function (args) {send("GetScannerCapabilities");}});
+
+var GetScannerStatus = Module.findExportByName("EsclProtocol.dll", "GetScannerStatus")
+Interceptor.attach(GetScannerStatus, {onLeave: function (args) {send("GetScannerStatus");}});
+
+var OpenScanner = Module.findExportByName("EsclProtocol.dll", "OpenScanner")
+Interceptor.attach(OpenScanner, {onLeave: function (args) {send("OpenScanner");}});
+
+var OpenUsbScanner = Module.findExportByName("EsclProtocol.dll", "OpenUsbScanner")
+Interceptor.attach(OpenUsbScanner, {onLeave: function (args) {send("OpenUsbScanner");}});
+
+var StartScanJob = Module.findExportByName("EsclProtocol.dll", "StartScanJob")
+Interceptor.attach(StartScanJob, {onLeave: function (args) {send("StartScanJob");}});
+

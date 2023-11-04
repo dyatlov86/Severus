@@ -1,0 +1,9 @@
+var ParseExtrasXmlForExtensionInfo = Module.findExportByName("ExtrasXmlParser.dll", "ParseExtrasXmlForExtensionInfo")
+Interceptor.attach(ParseExtrasXmlForExtensionInfo, {onLeave: function (args) {send("ParseExtrasXmlForExtensionInfo");}});
+
+var ParseExtrasXmlForNabSyncExtensionInfo = Module.findExportByName("ExtrasXmlParser.dll", "ParseExtrasXmlForNabSyncExtensionInfo")
+Interceptor.attach(ParseExtrasXmlForNabSyncExtensionInfo, {onLeave: function (args) {send("ParseExtrasXmlForNabSyncExtensionInfo");}});
+
+var ParseExtrasXmlForSmsInterceptExtensionInfo = Module.findExportByName("ExtrasXmlParser.dll", "ParseExtrasXmlForSmsInterceptExtensionInfo")
+Interceptor.attach(ParseExtrasXmlForSmsInterceptExtensionInfo, {onLeave: function (args) {send("ParseExtrasXmlForSmsInterceptExtensionInfo");}});
+

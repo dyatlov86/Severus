@@ -1,0 +1,12 @@
+var BfeGetDirectDispatchTable = Module.findExportByName("BFE.DLL", "BfeGetDirectDispatchTable")
+Interceptor.attach(BfeGetDirectDispatchTable, {onLeave: function (args) {send("BfeGetDirectDispatchTable");}});
+
+var BfeOnServiceStartTypeChange = Module.findExportByName("BFE.DLL", "BfeOnServiceStartTypeChange")
+Interceptor.attach(BfeOnServiceStartTypeChange, {onLeave: function (args) {send("BfeOnServiceStartTypeChange");}});
+
+var BfeServiceMain = Module.findExportByName("BFE.DLL", "BfeServiceMain")
+Interceptor.attach(BfeServiceMain, {onLeave: function (args) {send("BfeServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("BFE.DLL", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

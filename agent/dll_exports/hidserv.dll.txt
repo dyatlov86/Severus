@@ -1,0 +1,6 @@
+var InstallHidserv = Module.findExportByName("hidserv.dll", "InstallHidserv")
+Interceptor.attach(InstallHidserv, {onLeave: function (args) {send("InstallHidserv");}});
+
+var ServiceMain = Module.findExportByName("hidserv.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

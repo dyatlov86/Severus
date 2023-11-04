@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("SettingsHandlers_Storage.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("SettingsHandlers_Storage.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("SettingsHandlers_Storage.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetProxyDllInfo = Module.findExportByName("SettingsHandlers_Storage.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+
+var GetSetting = Module.findExportByName("SettingsHandlers_Storage.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+

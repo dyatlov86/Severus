@@ -1,0 +1,9 @@
+var CreateDataUsageHelper = Module.findExportByName("datusage.dll", "CreateDataUsageHelper")
+Interceptor.attach(CreateDataUsageHelper, {onLeave: function (args) {send("CreateDataUsageHelper");}});
+
+var SetRealTimeUsage = Module.findExportByName("datusage.dll", "SetRealTimeUsage")
+Interceptor.attach(SetRealTimeUsage, {onLeave: function (args) {send("SetRealTimeUsage");}});
+
+var SetUsageHistory = Module.findExportByName("datusage.dll", "SetUsageHistory")
+Interceptor.attach(SetUsageHistory, {onLeave: function (args) {send("SetUsageHistory");}});
+

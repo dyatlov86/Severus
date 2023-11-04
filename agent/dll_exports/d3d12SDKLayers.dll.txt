@@ -1,0 +1,12 @@
+var D3D12RegisterLayers = Module.findExportByName("d3d12SDKLayers.dll", "D3D12RegisterLayers")
+Interceptor.attach(D3D12RegisterLayers, {onLeave: function (args) {send("D3D12RegisterLayers");}});
+
+var D3D12SDKVersion = Module.findExportByName("d3d12SDKLayers.dll", "D3D12SDKVersion")
+Interceptor.attach(D3D12SDKVersion, {onLeave: function (args) {send("D3D12SDKVersion");}});
+
+var D3D12TranslateCreateDevice = Module.findExportByName("d3d12SDKLayers.dll", "D3D12TranslateCreateDevice")
+Interceptor.attach(D3D12TranslateCreateDevice, {onLeave: function (args) {send("D3D12TranslateCreateDevice");}});
+
+var SetD3DDebugLayerStartupOptions = Module.findExportByName("d3d12SDKLayers.dll", "SetD3DDebugLayerStartupOptions")
+Interceptor.attach(SetD3DDebugLayerStartupOptions, {onLeave: function (args) {send("SetD3DDebugLayerStartupOptions");}});
+

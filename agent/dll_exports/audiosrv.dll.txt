@@ -1,0 +1,6 @@
+var ServiceMain = Module.findExportByName("audiosrv.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("audiosrv.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

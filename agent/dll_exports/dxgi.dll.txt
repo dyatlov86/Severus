@@ -1,0 +1,60 @@
+var ApplyCompatResolutionQuirking = Module.findExportByName("dxgi.dll", "ApplyCompatResolutionQuirking")
+Interceptor.attach(ApplyCompatResolutionQuirking, {onLeave: function (args) {send("ApplyCompatResolutionQuirking");}});
+
+var CompatString = Module.findExportByName("dxgi.dll", "CompatString")
+Interceptor.attach(CompatString, {onLeave: function (args) {send("CompatString");}});
+
+var CompatValue = Module.findExportByName("dxgi.dll", "CompatValue")
+Interceptor.attach(CompatValue, {onLeave: function (args) {send("CompatValue");}});
+
+var CreateDXGIFactory = Module.findExportByName("dxgi.dll", "CreateDXGIFactory")
+Interceptor.attach(CreateDXGIFactory, {onLeave: function (args) {send("CreateDXGIFactory");}});
+
+var CreateDXGIFactory1 = Module.findExportByName("dxgi.dll", "CreateDXGIFactory1")
+Interceptor.attach(CreateDXGIFactory1, {onLeave: function (args) {send("CreateDXGIFactory1");}});
+
+var CreateDXGIFactory2 = Module.findExportByName("dxgi.dll", "CreateDXGIFactory2")
+Interceptor.attach(CreateDXGIFactory2, {onLeave: function (args) {send("CreateDXGIFactory2");}});
+
+var DXGID3D10CreateDevice = Module.findExportByName("dxgi.dll", "DXGID3D10CreateDevice")
+Interceptor.attach(DXGID3D10CreateDevice, {onLeave: function (args) {send("DXGID3D10CreateDevice");}});
+
+var DXGID3D10CreateLayeredDevice = Module.findExportByName("dxgi.dll", "DXGID3D10CreateLayeredDevice")
+Interceptor.attach(DXGID3D10CreateLayeredDevice, {onLeave: function (args) {send("DXGID3D10CreateLayeredDevice");}});
+
+var DXGID3D10GetLayeredDeviceSize = Module.findExportByName("dxgi.dll", "DXGID3D10GetLayeredDeviceSize")
+Interceptor.attach(DXGID3D10GetLayeredDeviceSize, {onLeave: function (args) {send("DXGID3D10GetLayeredDeviceSize");}});
+
+var DXGID3D10RegisterLayers = Module.findExportByName("dxgi.dll", "DXGID3D10RegisterLayers")
+Interceptor.attach(DXGID3D10RegisterLayers, {onLeave: function (args) {send("DXGID3D10RegisterLayers");}});
+
+var DXGIDeclareAdapterRemovalSupport = Module.findExportByName("dxgi.dll", "DXGIDeclareAdapterRemovalSupport")
+Interceptor.attach(DXGIDeclareAdapterRemovalSupport, {onLeave: function (args) {send("DXGIDeclareAdapterRemovalSupport");}});
+
+var DXGIDisableVBlankVirtualization = Module.findExportByName("dxgi.dll", "DXGIDisableVBlankVirtualization")
+Interceptor.attach(DXGIDisableVBlankVirtualization, {onLeave: function (args) {send("DXGIDisableVBlankVirtualization");}});
+
+var DXGIDumpJournal = Module.findExportByName("dxgi.dll", "DXGIDumpJournal")
+Interceptor.attach(DXGIDumpJournal, {onLeave: function (args) {send("DXGIDumpJournal");}});
+
+var DXGIGetDebugInterface1 = Module.findExportByName("dxgi.dll", "DXGIGetDebugInterface1")
+Interceptor.attach(DXGIGetDebugInterface1, {onLeave: function (args) {send("DXGIGetDebugInterface1");}});
+
+var DXGIReportAdapterConfiguration = Module.findExportByName("dxgi.dll", "DXGIReportAdapterConfiguration")
+Interceptor.attach(DXGIReportAdapterConfiguration, {onLeave: function (args) {send("DXGIReportAdapterConfiguration");}});
+
+var PIXBeginCapture = Module.findExportByName("dxgi.dll", "PIXBeginCapture")
+Interceptor.attach(PIXBeginCapture, {onLeave: function (args) {send("PIXBeginCapture");}});
+
+var PIXEndCapture = Module.findExportByName("dxgi.dll", "PIXEndCapture")
+Interceptor.attach(PIXEndCapture, {onLeave: function (args) {send("PIXEndCapture");}});
+
+var PIXGetCaptureState = Module.findExportByName("dxgi.dll", "PIXGetCaptureState")
+Interceptor.attach(PIXGetCaptureState, {onLeave: function (args) {send("PIXGetCaptureState");}});
+
+var SetAppCompatStringPointer = Module.findExportByName("dxgi.dll", "SetAppCompatStringPointer")
+Interceptor.attach(SetAppCompatStringPointer, {onLeave: function (args) {send("SetAppCompatStringPointer");}});
+
+var UpdateHMDEmulationStatus = Module.findExportByName("dxgi.dll", "UpdateHMDEmulationStatus")
+Interceptor.attach(UpdateHMDEmulationStatus, {onLeave: function (args) {send("UpdateHMDEmulationStatus");}});
+

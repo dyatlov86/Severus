@@ -1,0 +1,33 @@
+var DllCanUnloadNow = Module.findExportByName("mpeval.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mpeval.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("mpeval.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("mpeval.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mpeval.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetProviderClassID = Module.findExportByName("mpeval.dll", "GetProviderClassID")
+Interceptor.attach(GetProviderClassID, {onLeave: function (args) {send("GetProviderClassID");}});
+
+var MI_Main = Module.findExportByName("mpeval.dll", "MI_Main")
+Interceptor.attach(MI_Main, {onLeave: function (args) {send("MI_Main");}});
+
+var MPEvalTrap = Module.findExportByName("mpeval.dll", "MPEvalTrap")
+Interceptor.attach(MPEvalTrap, {onLeave: function (args) {send("MPEvalTrap");}});
+
+var NITS_PRESENCE_STUB = Module.findExportByName("mpeval.dll", "NITS_PRESENCE_STUB")
+Interceptor.attach(NITS_PRESENCE_STUB, {onLeave: function (args) {send("NITS_PRESENCE_STUB");}});
+
+var NITS_STUB = Module.findExportByName("mpeval.dll", "NITS_STUB")
+Interceptor.attach(NITS_STUB, {onLeave: function (args) {send("NITS_STUB");}});
+
+var monitoring_platform_evaluatorFT_V1 = Module.findExportByName("mpeval.dll", "monitoring_platform_evaluatorFT_V1")
+Interceptor.attach(monitoring_platform_evaluatorFT_V1, {onLeave: function (args) {send("monitoring_platform_evaluatorFT_V1");}});
+

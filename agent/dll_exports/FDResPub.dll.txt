@@ -1,0 +1,9 @@
+var FDResPub_MainHosted = Module.findExportByName("FDResPub.dll", "FDResPub_MainHosted")
+Interceptor.attach(FDResPub_MainHosted, {onLeave: function (args) {send("FDResPub_MainHosted");}});
+
+var ServiceMain = Module.findExportByName("FDResPub.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("FDResPub.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

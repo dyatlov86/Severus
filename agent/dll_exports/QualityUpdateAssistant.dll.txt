@@ -1,0 +1,3 @@
+var Execute = Module.findExportByName("QualityUpdateAssistant.dll", "Execute")
+Interceptor.attach(Execute, {onLeave: function (args) {send("Execute");}});
+

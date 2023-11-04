@@ -1,0 +1,21 @@
+var CreateDeviceBundle = Module.findExportByName("CloudRecoveryDownloadTool.dll", "CreateDeviceBundle")
+Interceptor.attach(CreateDeviceBundle, {onLeave: function (args) {send("CreateDeviceBundle");}});
+
+var DllGetClassObject = Module.findExportByName("CloudRecoveryDownloadTool.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("CloudRecoveryDownloadTool.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("CloudRecoveryDownloadTool.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("CloudRecoveryDownloadTool.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ETW_TRACE_LOGGING_METADATA = Module.findExportByName("CloudRecoveryDownloadTool.dll", "ETW_TRACE_LOGGING_METADATA")
+Interceptor.attach(ETW_TRACE_LOGGING_METADATA, {onLeave: function (args) {send("ETW_TRACE_LOGGING_METADATA");}});
+
+var rust_eh_personality = Module.findExportByName("CloudRecoveryDownloadTool.dll", "rust_eh_personality")
+Interceptor.attach(rust_eh_personality, {onLeave: function (args) {send("rust_eh_personality");}});
+

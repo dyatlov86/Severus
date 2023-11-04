@@ -1,0 +1,270 @@
+var BCP_batch = Module.findExportByName("sqlsrv32.dll", "BCP_batch")
+Interceptor.attach(BCP_batch, {onLeave: function (args) {send("BCP_batch");}});
+
+var BCP_bind = Module.findExportByName("sqlsrv32.dll", "BCP_bind")
+Interceptor.attach(BCP_bind, {onLeave: function (args) {send("BCP_bind");}});
+
+var BCP_colfmt = Module.findExportByName("sqlsrv32.dll", "BCP_colfmt")
+Interceptor.attach(BCP_colfmt, {onLeave: function (args) {send("BCP_colfmt");}});
+
+var BCP_collen = Module.findExportByName("sqlsrv32.dll", "BCP_collen")
+Interceptor.attach(BCP_collen, {onLeave: function (args) {send("BCP_collen");}});
+
+var BCP_colptr = Module.findExportByName("sqlsrv32.dll", "BCP_colptr")
+Interceptor.attach(BCP_colptr, {onLeave: function (args) {send("BCP_colptr");}});
+
+var BCP_columns = Module.findExportByName("sqlsrv32.dll", "BCP_columns")
+Interceptor.attach(BCP_columns, {onLeave: function (args) {send("BCP_columns");}});
+
+var BCP_control = Module.findExportByName("sqlsrv32.dll", "BCP_control")
+Interceptor.attach(BCP_control, {onLeave: function (args) {send("BCP_control");}});
+
+var BCP_done = Module.findExportByName("sqlsrv32.dll", "BCP_done")
+Interceptor.attach(BCP_done, {onLeave: function (args) {send("BCP_done");}});
+
+var BCP_exec = Module.findExportByName("sqlsrv32.dll", "BCP_exec")
+Interceptor.attach(BCP_exec, {onLeave: function (args) {send("BCP_exec");}});
+
+var BCP_getcolfmt = Module.findExportByName("sqlsrv32.dll", "BCP_getcolfmt")
+Interceptor.attach(BCP_getcolfmt, {onLeave: function (args) {send("BCP_getcolfmt");}});
+
+var BCP_init = Module.findExportByName("sqlsrv32.dll", "BCP_init")
+Interceptor.attach(BCP_init, {onLeave: function (args) {send("BCP_init");}});
+
+var BCP_moretext = Module.findExportByName("sqlsrv32.dll", "BCP_moretext")
+Interceptor.attach(BCP_moretext, {onLeave: function (args) {send("BCP_moretext");}});
+
+var BCP_readfmt = Module.findExportByName("sqlsrv32.dll", "BCP_readfmt")
+Interceptor.attach(BCP_readfmt, {onLeave: function (args) {send("BCP_readfmt");}});
+
+var BCP_sendrow = Module.findExportByName("sqlsrv32.dll", "BCP_sendrow")
+Interceptor.attach(BCP_sendrow, {onLeave: function (args) {send("BCP_sendrow");}});
+
+var BCP_setcolfmt = Module.findExportByName("sqlsrv32.dll", "BCP_setcolfmt")
+Interceptor.attach(BCP_setcolfmt, {onLeave: function (args) {send("BCP_setcolfmt");}});
+
+var BCP_writefmt = Module.findExportByName("sqlsrv32.dll", "BCP_writefmt")
+Interceptor.attach(BCP_writefmt, {onLeave: function (args) {send("BCP_writefmt");}});
+
+var ConfigDSNW = Module.findExportByName("sqlsrv32.dll", "ConfigDSNW")
+Interceptor.attach(ConfigDSNW, {onLeave: function (args) {send("ConfigDSNW");}});
+
+var ConfigDriverW = Module.findExportByName("sqlsrv32.dll", "ConfigDriverW")
+Interceptor.attach(ConfigDriverW, {onLeave: function (args) {send("ConfigDriverW");}});
+
+var ConnectDlgProc = Module.findExportByName("sqlsrv32.dll", "ConnectDlgProc")
+Interceptor.attach(ConnectDlgProc, {onLeave: function (args) {send("ConnectDlgProc");}});
+
+var FinishDlgProc = Module.findExportByName("sqlsrv32.dll", "FinishDlgProc")
+Interceptor.attach(FinishDlgProc, {onLeave: function (args) {send("FinishDlgProc");}});
+
+var LibMain = Module.findExportByName("sqlsrv32.dll", "LibMain")
+Interceptor.attach(LibMain, {onLeave: function (args) {send("LibMain");}});
+
+var SQLAllocHandle = Module.findExportByName("sqlsrv32.dll", "SQLAllocHandle")
+Interceptor.attach(SQLAllocHandle, {onLeave: function (args) {send("SQLAllocHandle");}});
+
+var SQLBindCol = Module.findExportByName("sqlsrv32.dll", "SQLBindCol")
+Interceptor.attach(SQLBindCol, {onLeave: function (args) {send("SQLBindCol");}});
+
+var SQLBindParameter = Module.findExportByName("sqlsrv32.dll", "SQLBindParameter")
+Interceptor.attach(SQLBindParameter, {onLeave: function (args) {send("SQLBindParameter");}});
+
+var SQLBrowseConnectW = Module.findExportByName("sqlsrv32.dll", "SQLBrowseConnectW")
+Interceptor.attach(SQLBrowseConnectW, {onLeave: function (args) {send("SQLBrowseConnectW");}});
+
+var SQLBulkOperations = Module.findExportByName("sqlsrv32.dll", "SQLBulkOperations")
+Interceptor.attach(SQLBulkOperations, {onLeave: function (args) {send("SQLBulkOperations");}});
+
+var SQLCancel = Module.findExportByName("sqlsrv32.dll", "SQLCancel")
+Interceptor.attach(SQLCancel, {onLeave: function (args) {send("SQLCancel");}});
+
+var SQLCloseCursor = Module.findExportByName("sqlsrv32.dll", "SQLCloseCursor")
+Interceptor.attach(SQLCloseCursor, {onLeave: function (args) {send("SQLCloseCursor");}});
+
+var SQLColAttributeW = Module.findExportByName("sqlsrv32.dll", "SQLColAttributeW")
+Interceptor.attach(SQLColAttributeW, {onLeave: function (args) {send("SQLColAttributeW");}});
+
+var SQLColumnPrivilegesW = Module.findExportByName("sqlsrv32.dll", "SQLColumnPrivilegesW")
+Interceptor.attach(SQLColumnPrivilegesW, {onLeave: function (args) {send("SQLColumnPrivilegesW");}});
+
+var SQLColumnsW = Module.findExportByName("sqlsrv32.dll", "SQLColumnsW")
+Interceptor.attach(SQLColumnsW, {onLeave: function (args) {send("SQLColumnsW");}});
+
+var SQLConnectW = Module.findExportByName("sqlsrv32.dll", "SQLConnectW")
+Interceptor.attach(SQLConnectW, {onLeave: function (args) {send("SQLConnectW");}});
+
+var SQLCopyDesc = Module.findExportByName("sqlsrv32.dll", "SQLCopyDesc")
+Interceptor.attach(SQLCopyDesc, {onLeave: function (args) {send("SQLCopyDesc");}});
+
+var SQLDebug = Module.findExportByName("sqlsrv32.dll", "SQLDebug")
+Interceptor.attach(SQLDebug, {onLeave: function (args) {send("SQLDebug");}});
+
+var SQLDescribeColW = Module.findExportByName("sqlsrv32.dll", "SQLDescribeColW")
+Interceptor.attach(SQLDescribeColW, {onLeave: function (args) {send("SQLDescribeColW");}});
+
+var SQLDescribeParam = Module.findExportByName("sqlsrv32.dll", "SQLDescribeParam")
+Interceptor.attach(SQLDescribeParam, {onLeave: function (args) {send("SQLDescribeParam");}});
+
+var SQLDisconnect = Module.findExportByName("sqlsrv32.dll", "SQLDisconnect")
+Interceptor.attach(SQLDisconnect, {onLeave: function (args) {send("SQLDisconnect");}});
+
+var SQLDriverConnectW = Module.findExportByName("sqlsrv32.dll", "SQLDriverConnectW")
+Interceptor.attach(SQLDriverConnectW, {onLeave: function (args) {send("SQLDriverConnectW");}});
+
+var SQLEndTran = Module.findExportByName("sqlsrv32.dll", "SQLEndTran")
+Interceptor.attach(SQLEndTran, {onLeave: function (args) {send("SQLEndTran");}});
+
+var SQLExecDirectW = Module.findExportByName("sqlsrv32.dll", "SQLExecDirectW")
+Interceptor.attach(SQLExecDirectW, {onLeave: function (args) {send("SQLExecDirectW");}});
+
+var SQLExecute = Module.findExportByName("sqlsrv32.dll", "SQLExecute")
+Interceptor.attach(SQLExecute, {onLeave: function (args) {send("SQLExecute");}});
+
+var SQLExtendedFetch = Module.findExportByName("sqlsrv32.dll", "SQLExtendedFetch")
+Interceptor.attach(SQLExtendedFetch, {onLeave: function (args) {send("SQLExtendedFetch");}});
+
+var SQLFetch = Module.findExportByName("sqlsrv32.dll", "SQLFetch")
+Interceptor.attach(SQLFetch, {onLeave: function (args) {send("SQLFetch");}});
+
+var SQLFetchScroll = Module.findExportByName("sqlsrv32.dll", "SQLFetchScroll")
+Interceptor.attach(SQLFetchScroll, {onLeave: function (args) {send("SQLFetchScroll");}});
+
+var SQLForeignKeysW = Module.findExportByName("sqlsrv32.dll", "SQLForeignKeysW")
+Interceptor.attach(SQLForeignKeysW, {onLeave: function (args) {send("SQLForeignKeysW");}});
+
+var SQLFreeHandle = Module.findExportByName("sqlsrv32.dll", "SQLFreeHandle")
+Interceptor.attach(SQLFreeHandle, {onLeave: function (args) {send("SQLFreeHandle");}});
+
+var SQLFreeStmt = Module.findExportByName("sqlsrv32.dll", "SQLFreeStmt")
+Interceptor.attach(SQLFreeStmt, {onLeave: function (args) {send("SQLFreeStmt");}});
+
+var SQLGetConnectAttrW = Module.findExportByName("sqlsrv32.dll", "SQLGetConnectAttrW")
+Interceptor.attach(SQLGetConnectAttrW, {onLeave: function (args) {send("SQLGetConnectAttrW");}});
+
+var SQLGetConnectOptionW = Module.findExportByName("sqlsrv32.dll", "SQLGetConnectOptionW")
+Interceptor.attach(SQLGetConnectOptionW, {onLeave: function (args) {send("SQLGetConnectOptionW");}});
+
+var SQLGetCursorNameW = Module.findExportByName("sqlsrv32.dll", "SQLGetCursorNameW")
+Interceptor.attach(SQLGetCursorNameW, {onLeave: function (args) {send("SQLGetCursorNameW");}});
+
+var SQLGetData = Module.findExportByName("sqlsrv32.dll", "SQLGetData")
+Interceptor.attach(SQLGetData, {onLeave: function (args) {send("SQLGetData");}});
+
+var SQLGetDescFieldW = Module.findExportByName("sqlsrv32.dll", "SQLGetDescFieldW")
+Interceptor.attach(SQLGetDescFieldW, {onLeave: function (args) {send("SQLGetDescFieldW");}});
+
+var SQLGetDescRecW = Module.findExportByName("sqlsrv32.dll", "SQLGetDescRecW")
+Interceptor.attach(SQLGetDescRecW, {onLeave: function (args) {send("SQLGetDescRecW");}});
+
+var SQLGetDiagFieldW = Module.findExportByName("sqlsrv32.dll", "SQLGetDiagFieldW")
+Interceptor.attach(SQLGetDiagFieldW, {onLeave: function (args) {send("SQLGetDiagFieldW");}});
+
+var SQLGetDiagRecW = Module.findExportByName("sqlsrv32.dll", "SQLGetDiagRecW")
+Interceptor.attach(SQLGetDiagRecW, {onLeave: function (args) {send("SQLGetDiagRecW");}});
+
+var SQLGetEnvAttr = Module.findExportByName("sqlsrv32.dll", "SQLGetEnvAttr")
+Interceptor.attach(SQLGetEnvAttr, {onLeave: function (args) {send("SQLGetEnvAttr");}});
+
+var SQLGetFunctions = Module.findExportByName("sqlsrv32.dll", "SQLGetFunctions")
+Interceptor.attach(SQLGetFunctions, {onLeave: function (args) {send("SQLGetFunctions");}});
+
+var SQLGetInfoW = Module.findExportByName("sqlsrv32.dll", "SQLGetInfoW")
+Interceptor.attach(SQLGetInfoW, {onLeave: function (args) {send("SQLGetInfoW");}});
+
+var SQLGetStmtAttrW = Module.findExportByName("sqlsrv32.dll", "SQLGetStmtAttrW")
+Interceptor.attach(SQLGetStmtAttrW, {onLeave: function (args) {send("SQLGetStmtAttrW");}});
+
+var SQLGetTypeInfoW = Module.findExportByName("sqlsrv32.dll", "SQLGetTypeInfoW")
+Interceptor.attach(SQLGetTypeInfoW, {onLeave: function (args) {send("SQLGetTypeInfoW");}});
+
+var SQLMoreResults = Module.findExportByName("sqlsrv32.dll", "SQLMoreResults")
+Interceptor.attach(SQLMoreResults, {onLeave: function (args) {send("SQLMoreResults");}});
+
+var SQLNativeSqlW = Module.findExportByName("sqlsrv32.dll", "SQLNativeSqlW")
+Interceptor.attach(SQLNativeSqlW, {onLeave: function (args) {send("SQLNativeSqlW");}});
+
+var SQLNumParams = Module.findExportByName("sqlsrv32.dll", "SQLNumParams")
+Interceptor.attach(SQLNumParams, {onLeave: function (args) {send("SQLNumParams");}});
+
+var SQLNumResultCols = Module.findExportByName("sqlsrv32.dll", "SQLNumResultCols")
+Interceptor.attach(SQLNumResultCols, {onLeave: function (args) {send("SQLNumResultCols");}});
+
+var SQLParamData = Module.findExportByName("sqlsrv32.dll", "SQLParamData")
+Interceptor.attach(SQLParamData, {onLeave: function (args) {send("SQLParamData");}});
+
+var SQLParamOptions = Module.findExportByName("sqlsrv32.dll", "SQLParamOptions")
+Interceptor.attach(SQLParamOptions, {onLeave: function (args) {send("SQLParamOptions");}});
+
+var SQLPrepareW = Module.findExportByName("sqlsrv32.dll", "SQLPrepareW")
+Interceptor.attach(SQLPrepareW, {onLeave: function (args) {send("SQLPrepareW");}});
+
+var SQLPrimaryKeysW = Module.findExportByName("sqlsrv32.dll", "SQLPrimaryKeysW")
+Interceptor.attach(SQLPrimaryKeysW, {onLeave: function (args) {send("SQLPrimaryKeysW");}});
+
+var SQLProcedureColumnsW = Module.findExportByName("sqlsrv32.dll", "SQLProcedureColumnsW")
+Interceptor.attach(SQLProcedureColumnsW, {onLeave: function (args) {send("SQLProcedureColumnsW");}});
+
+var SQLProceduresW = Module.findExportByName("sqlsrv32.dll", "SQLProceduresW")
+Interceptor.attach(SQLProceduresW, {onLeave: function (args) {send("SQLProceduresW");}});
+
+var SQLPutData = Module.findExportByName("sqlsrv32.dll", "SQLPutData")
+Interceptor.attach(SQLPutData, {onLeave: function (args) {send("SQLPutData");}});
+
+var SQLRowCount = Module.findExportByName("sqlsrv32.dll", "SQLRowCount")
+Interceptor.attach(SQLRowCount, {onLeave: function (args) {send("SQLRowCount");}});
+
+var SQLSetConnectAttrW = Module.findExportByName("sqlsrv32.dll", "SQLSetConnectAttrW")
+Interceptor.attach(SQLSetConnectAttrW, {onLeave: function (args) {send("SQLSetConnectAttrW");}});
+
+var SQLSetConnectOptionW = Module.findExportByName("sqlsrv32.dll", "SQLSetConnectOptionW")
+Interceptor.attach(SQLSetConnectOptionW, {onLeave: function (args) {send("SQLSetConnectOptionW");}});
+
+var SQLSetCursorNameW = Module.findExportByName("sqlsrv32.dll", "SQLSetCursorNameW")
+Interceptor.attach(SQLSetCursorNameW, {onLeave: function (args) {send("SQLSetCursorNameW");}});
+
+var SQLSetDescFieldW = Module.findExportByName("sqlsrv32.dll", "SQLSetDescFieldW")
+Interceptor.attach(SQLSetDescFieldW, {onLeave: function (args) {send("SQLSetDescFieldW");}});
+
+var SQLSetDescRec = Module.findExportByName("sqlsrv32.dll", "SQLSetDescRec")
+Interceptor.attach(SQLSetDescRec, {onLeave: function (args) {send("SQLSetDescRec");}});
+
+var SQLSetEnvAttr = Module.findExportByName("sqlsrv32.dll", "SQLSetEnvAttr")
+Interceptor.attach(SQLSetEnvAttr, {onLeave: function (args) {send("SQLSetEnvAttr");}});
+
+var SQLSetPos = Module.findExportByName("sqlsrv32.dll", "SQLSetPos")
+Interceptor.attach(SQLSetPos, {onLeave: function (args) {send("SQLSetPos");}});
+
+var SQLSetScrollOptions = Module.findExportByName("sqlsrv32.dll", "SQLSetScrollOptions")
+Interceptor.attach(SQLSetScrollOptions, {onLeave: function (args) {send("SQLSetScrollOptions");}});
+
+var SQLSetStmtAttrW = Module.findExportByName("sqlsrv32.dll", "SQLSetStmtAttrW")
+Interceptor.attach(SQLSetStmtAttrW, {onLeave: function (args) {send("SQLSetStmtAttrW");}});
+
+var SQLSpecialColumnsW = Module.findExportByName("sqlsrv32.dll", "SQLSpecialColumnsW")
+Interceptor.attach(SQLSpecialColumnsW, {onLeave: function (args) {send("SQLSpecialColumnsW");}});
+
+var SQLStatisticsW = Module.findExportByName("sqlsrv32.dll", "SQLStatisticsW")
+Interceptor.attach(SQLStatisticsW, {onLeave: function (args) {send("SQLStatisticsW");}});
+
+var SQLTablePrivilegesW = Module.findExportByName("sqlsrv32.dll", "SQLTablePrivilegesW")
+Interceptor.attach(SQLTablePrivilegesW, {onLeave: function (args) {send("SQLTablePrivilegesW");}});
+
+var SQLTablesW = Module.findExportByName("sqlsrv32.dll", "SQLTablesW")
+Interceptor.attach(SQLTablesW, {onLeave: function (args) {send("SQLTablesW");}});
+
+var TestDlgProc = Module.findExportByName("sqlsrv32.dll", "TestDlgProc")
+Interceptor.attach(TestDlgProc, {onLeave: function (args) {send("TestDlgProc");}});
+
+var WizDSNDlgProc = Module.findExportByName("sqlsrv32.dll", "WizDSNDlgProc")
+Interceptor.attach(WizDSNDlgProc, {onLeave: function (args) {send("WizDSNDlgProc");}});
+
+var WizDatabaseDlgProc = Module.findExportByName("sqlsrv32.dll", "WizDatabaseDlgProc")
+Interceptor.attach(WizDatabaseDlgProc, {onLeave: function (args) {send("WizDatabaseDlgProc");}});
+
+var WizIntSecurityDlgProc = Module.findExportByName("sqlsrv32.dll", "WizIntSecurityDlgProc")
+Interceptor.attach(WizIntSecurityDlgProc, {onLeave: function (args) {send("WizIntSecurityDlgProc");}});
+
+var WizLanguageDlgProc = Module.findExportByName("sqlsrv32.dll", "WizLanguageDlgProc")
+Interceptor.attach(WizLanguageDlgProc, {onLeave: function (args) {send("WizLanguageDlgProc");}});
+

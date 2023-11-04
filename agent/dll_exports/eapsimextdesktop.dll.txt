@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("eapsimextdesktop.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("eapsimextdesktop.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var EapSimExtCallRunWizard = Module.findExportByName("eapsimextdesktop.dll", "EapSimExtCallRunWizard")
+Interceptor.attach(EapSimExtCallRunWizard, {onLeave: function (args) {send("EapSimExtCallRunWizard");}});
+
+var EapSimExtGetIdentityPageGuid = Module.findExportByName("eapsimextdesktop.dll", "EapSimExtGetIdentityPageGuid")
+Interceptor.attach(EapSimExtGetIdentityPageGuid, {onLeave: function (args) {send("EapSimExtGetIdentityPageGuid");}});
+
+var EapSimExtInvokeUIAndGetConfig = Module.findExportByName("eapsimextdesktop.dll", "EapSimExtInvokeUIAndGetConfig")
+Interceptor.attach(EapSimExtInvokeUIAndGetConfig, {onLeave: function (args) {send("EapSimExtInvokeUIAndGetConfig");}});
+

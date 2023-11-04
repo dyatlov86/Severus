@@ -1,0 +1,3 @@
+var CreateDlpManager = Module.findExportByName("windlp.dll", "CreateDlpManager")
+Interceptor.attach(CreateDlpManager, {onLeave: function (args) {send("CreateDlpManager");}});
+

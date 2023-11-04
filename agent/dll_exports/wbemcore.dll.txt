@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("wbemcore.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wbemcore.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("wbemcore.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wbemcore.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var Reinitialize = Module.findExportByName("wbemcore.dll", "Reinitialize")
+Interceptor.attach(Reinitialize, {onLeave: function (args) {send("Reinitialize");}});
+
+var Shutdown = Module.findExportByName("wbemcore.dll", "Shutdown")
+Interceptor.attach(Shutdown, {onLeave: function (args) {send("Shutdown");}});
+

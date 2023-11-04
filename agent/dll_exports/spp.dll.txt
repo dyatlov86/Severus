@@ -1,0 +1,39 @@
+var DllCanUnloadNow = Module.findExportByName("spp.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("spp.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("spp.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("spp.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var SppFreeBadWritersArray = Module.findExportByName("spp.dll", "SppFreeBadWritersArray")
+Interceptor.attach(SppFreeBadWritersArray, {onLeave: function (args) {send("SppFreeBadWritersArray");}});
+
+var SppFreeClientPropArray = Module.findExportByName("spp.dll", "SppFreeClientPropArray")
+Interceptor.attach(SppFreeClientPropArray, {onLeave: function (args) {send("SppFreeClientPropArray");}});
+
+var SppFreeExternalGroupPropArray = Module.findExportByName("spp.dll", "SppFreeExternalGroupPropArray")
+Interceptor.attach(SppFreeExternalGroupPropArray, {onLeave: function (args) {send("SppFreeExternalGroupPropArray");}});
+
+var SppFreeGroupPropArray = Module.findExportByName("spp.dll", "SppFreeGroupPropArray")
+Interceptor.attach(SppFreeGroupPropArray, {onLeave: function (args) {send("SppFreeGroupPropArray");}});
+
+var SppFreeMetadataProp = Module.findExportByName("spp.dll", "SppFreeMetadataProp")
+Interceptor.attach(SppFreeMetadataProp, {onLeave: function (args) {send("SppFreeMetadataProp");}});
+
+var SxTracerDebuggerBreak = Module.findExportByName("spp.dll", "SxTracerDebuggerBreak")
+Interceptor.attach(SxTracerDebuggerBreak, {onLeave: function (args) {send("SxTracerDebuggerBreak");}});
+
+var SxTracerGetThreadContextDebug = Module.findExportByName("spp.dll", "SxTracerGetThreadContextDebug")
+Interceptor.attach(SxTracerGetThreadContextDebug, {onLeave: function (args) {send("SxTracerGetThreadContextDebug");}});
+
+var SxTracerGetThreadContextRetail = Module.findExportByName("spp.dll", "SxTracerGetThreadContextRetail")
+Interceptor.attach(SxTracerGetThreadContextRetail, {onLeave: function (args) {send("SxTracerGetThreadContextRetail");}});
+
+var SxTracerShouldTrackFailure = Module.findExportByName("spp.dll", "SxTracerShouldTrackFailure")
+Interceptor.attach(SxTracerShouldTrackFailure, {onLeave: function (args) {send("SxTracerShouldTrackFailure");}});
+

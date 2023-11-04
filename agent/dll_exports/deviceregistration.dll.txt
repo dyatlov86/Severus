@@ -1,0 +1,18 @@
+var ConfigureRegistrationIEZoneMappings = Module.findExportByName("deviceregistration.dll", "ConfigureRegistrationIEZoneMappings")
+Interceptor.attach(ConfigureRegistrationIEZoneMappings, {onLeave: function (args) {send("ConfigureRegistrationIEZoneMappings");}});
+
+var DiscoverRegistrationService = Module.findExportByName("deviceregistration.dll", "DiscoverRegistrationService")
+Interceptor.attach(DiscoverRegistrationService, {onLeave: function (args) {send("DiscoverRegistrationService");}});
+
+var GetRegistrationInfo = Module.findExportByName("deviceregistration.dll", "GetRegistrationInfo")
+Interceptor.attach(GetRegistrationInfo, {onLeave: function (args) {send("GetRegistrationInfo");}});
+
+var IsRegistrationAvailable = Module.findExportByName("deviceregistration.dll", "IsRegistrationAvailable")
+Interceptor.attach(IsRegistrationAvailable, {onLeave: function (args) {send("IsRegistrationAvailable");}});
+
+var RegisterDevice = Module.findExportByName("deviceregistration.dll", "RegisterDevice")
+Interceptor.attach(RegisterDevice, {onLeave: function (args) {send("RegisterDevice");}});
+
+var UnRegisterDevice = Module.findExportByName("deviceregistration.dll", "UnRegisterDevice")
+Interceptor.attach(UnRegisterDevice, {onLeave: function (args) {send("UnRegisterDevice");}});
+

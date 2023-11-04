@@ -1,0 +1,9 @@
+var DllMain = Module.findExportByName("pku2u.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var SpLsaModeInitialize = Module.findExportByName("pku2u.dll", "SpLsaModeInitialize")
+Interceptor.attach(SpLsaModeInitialize, {onLeave: function (args) {send("SpLsaModeInitialize");}});
+
+var SpUserModeInitialize = Module.findExportByName("pku2u.dll", "SpUserModeInitialize")
+Interceptor.attach(SpUserModeInitialize, {onLeave: function (args) {send("SpUserModeInitialize");}});
+

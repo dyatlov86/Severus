@@ -1,0 +1,21 @@
+var CloseServiceHandle = Module.findExportByName("api-ms-win-service-management-l1-1-0.dll", "CloseServiceHandle")
+Interceptor.attach(CloseServiceHandle, {onLeave: function (args) {send("CloseServiceHandle");}});
+
+var ControlServiceExW = Module.findExportByName("api-ms-win-service-management-l1-1-0.dll", "ControlServiceExW")
+Interceptor.attach(ControlServiceExW, {onLeave: function (args) {send("ControlServiceExW");}});
+
+var CreateServiceW = Module.findExportByName("api-ms-win-service-management-l1-1-0.dll", "CreateServiceW")
+Interceptor.attach(CreateServiceW, {onLeave: function (args) {send("CreateServiceW");}});
+
+var DeleteService = Module.findExportByName("api-ms-win-service-management-l1-1-0.dll", "DeleteService")
+Interceptor.attach(DeleteService, {onLeave: function (args) {send("DeleteService");}});
+
+var OpenSCManagerW = Module.findExportByName("api-ms-win-service-management-l1-1-0.dll", "OpenSCManagerW")
+Interceptor.attach(OpenSCManagerW, {onLeave: function (args) {send("OpenSCManagerW");}});
+
+var OpenServiceW = Module.findExportByName("api-ms-win-service-management-l1-1-0.dll", "OpenServiceW")
+Interceptor.attach(OpenServiceW, {onLeave: function (args) {send("OpenServiceW");}});
+
+var StartServiceW = Module.findExportByName("api-ms-win-service-management-l1-1-0.dll", "StartServiceW")
+Interceptor.attach(StartServiceW, {onLeave: function (args) {send("StartServiceW");}});
+

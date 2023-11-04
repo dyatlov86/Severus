@@ -1,0 +1,27 @@
+var DSCopyFromSharedFile = Module.findExportByName("dsclient.dll", "DSCopyFromSharedFile")
+Interceptor.attach(DSCopyFromSharedFile, {onLeave: function (args) {send("DSCopyFromSharedFile");}});
+
+var DSCreateSharedFileToken = Module.findExportByName("dsclient.dll", "DSCreateSharedFileToken")
+Interceptor.attach(DSCreateSharedFileToken, {onLeave: function (args) {send("DSCreateSharedFileToken");}});
+
+var DSDelegateSharingToken = Module.findExportByName("dsclient.dll", "DSDelegateSharingToken")
+Interceptor.attach(DSDelegateSharingToken, {onLeave: function (args) {send("DSDelegateSharingToken");}});
+
+var DSFreeString = Module.findExportByName("dsclient.dll", "DSFreeString")
+Interceptor.attach(DSFreeString, {onLeave: function (args) {send("DSFreeString");}});
+
+var DSGetSharedFileName = Module.findExportByName("dsclient.dll", "DSGetSharedFileName")
+Interceptor.attach(DSGetSharedFileName, {onLeave: function (args) {send("DSGetSharedFileName");}});
+
+var DSGetSharingTokenInformation = Module.findExportByName("dsclient.dll", "DSGetSharingTokenInformation")
+Interceptor.attach(DSGetSharingTokenInformation, {onLeave: function (args) {send("DSGetSharingTokenInformation");}});
+
+var DSOpenSharedFile = Module.findExportByName("dsclient.dll", "DSOpenSharedFile")
+Interceptor.attach(DSOpenSharedFile, {onLeave: function (args) {send("DSOpenSharedFile");}});
+
+var DSRemoveExpiredTokens = Module.findExportByName("dsclient.dll", "DSRemoveExpiredTokens")
+Interceptor.attach(DSRemoveExpiredTokens, {onLeave: function (args) {send("DSRemoveExpiredTokens");}});
+
+var DSRemoveSharingToken = Module.findExportByName("dsclient.dll", "DSRemoveSharingToken")
+Interceptor.attach(DSRemoveSharingToken, {onLeave: function (args) {send("DSRemoveSharingToken");}});
+

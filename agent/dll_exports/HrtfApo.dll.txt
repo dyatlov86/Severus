@@ -1,0 +1,15 @@
+var CreateHrtfApo = Module.findExportByName("HrtfApo.dll", "CreateHrtfApo")
+Interceptor.attach(CreateHrtfApo, {onLeave: function (args) {send("CreateHrtfApo");}});
+
+var CreateHrtfApoWithDatasetType = Module.findExportByName("HrtfApo.dll", "CreateHrtfApoWithDatasetType")
+Interceptor.attach(CreateHrtfApoWithDatasetType, {onLeave: function (args) {send("CreateHrtfApoWithDatasetType");}});
+
+var CreateHrtfEngineFactory = Module.findExportByName("HrtfApo.dll", "CreateHrtfEngineFactory")
+Interceptor.attach(CreateHrtfEngineFactory, {onLeave: function (args) {send("CreateHrtfEngineFactory");}});
+
+var GetHrtfEngineMinFrameCount = Module.findExportByName("HrtfApo.dll", "GetHrtfEngineMinFrameCount")
+Interceptor.attach(GetHrtfEngineMinFrameCount, {onLeave: function (args) {send("GetHrtfEngineMinFrameCount");}});
+
+var IsHrtfApoAvailable = Module.findExportByName("HrtfApo.dll", "IsHrtfApoAvailable")
+Interceptor.attach(IsHrtfApoAvailable, {onLeave: function (args) {send("IsHrtfApoAvailable");}});
+

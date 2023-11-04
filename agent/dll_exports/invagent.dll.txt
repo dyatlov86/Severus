@@ -1,0 +1,24 @@
+var DllCanUnloadNow = Module.findExportByName("invagent.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("invagent.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("invagent.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("invagent.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetDetailedAppInventoryReport = Module.findExportByName("invagent.dll", "GetDetailedAppInventoryReport")
+Interceptor.attach(GetDetailedAppInventoryReport, {onLeave: function (args) {send("GetDetailedAppInventoryReport");}});
+
+var GetFileSigningInfoTC = Module.findExportByName("invagent.dll", "GetFileSigningInfoTC")
+Interceptor.attach(GetFileSigningInfoTC, {onLeave: function (args) {send("GetFileSigningInfoTC");}});
+
+var RunUpdate = Module.findExportByName("invagent.dll", "RunUpdate")
+Interceptor.attach(RunUpdate, {onLeave: function (args) {send("RunUpdate");}});
+
+var RunUpdateTC = Module.findExportByName("invagent.dll", "RunUpdateTC")
+Interceptor.attach(RunUpdateTC, {onLeave: function (args) {send("RunUpdateTC");}});
+

@@ -1,0 +1,15 @@
+var OnMachineUILanguageClear = Module.findExportByName("MUILanguageCleanup.dll", "OnMachineUILanguageClear")
+Interceptor.attach(OnMachineUILanguageClear, {onLeave: function (args) {send("OnMachineUILanguageClear");}});
+
+var OnMachineUILanguageInit = Module.findExportByName("MUILanguageCleanup.dll", "OnMachineUILanguageInit")
+Interceptor.attach(OnMachineUILanguageInit, {onLeave: function (args) {send("OnMachineUILanguageInit");}});
+
+var OnMachineUILanguageSwitch = Module.findExportByName("MUILanguageCleanup.dll", "OnMachineUILanguageSwitch")
+Interceptor.attach(OnMachineUILanguageSwitch, {onLeave: function (args) {send("OnMachineUILanguageSwitch");}});
+
+var OnUILanguageAdd = Module.findExportByName("MUILanguageCleanup.dll", "OnUILanguageAdd")
+Interceptor.attach(OnUILanguageAdd, {onLeave: function (args) {send("OnUILanguageAdd");}});
+
+var OnUILanguageRemove = Module.findExportByName("MUILanguageCleanup.dll", "OnUILanguageRemove")
+Interceptor.attach(OnUILanguageRemove, {onLeave: function (args) {send("OnUILanguageRemove");}});
+

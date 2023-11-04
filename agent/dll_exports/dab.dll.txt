@@ -1,0 +1,15 @@
+var DabInitialize = Module.findExportByName("dab.dll", "DabInitialize")
+Interceptor.attach(DabInitialize, {onLeave: function (args) {send("DabInitialize");}});
+
+var DabNotifyPowerEvent = Module.findExportByName("dab.dll", "DabNotifyPowerEvent")
+Interceptor.attach(DabNotifyPowerEvent, {onLeave: function (args) {send("DabNotifyPowerEvent");}});
+
+var DabNotifySessionChange = Module.findExportByName("dab.dll", "DabNotifySessionChange")
+Interceptor.attach(DabNotifySessionChange, {onLeave: function (args) {send("DabNotifySessionChange");}});
+
+var DabNotifyTimeChange = Module.findExportByName("dab.dll", "DabNotifyTimeChange")
+Interceptor.attach(DabNotifyTimeChange, {onLeave: function (args) {send("DabNotifyTimeChange");}});
+
+var DabTerminate = Module.findExportByName("dab.dll", "DabTerminate")
+Interceptor.attach(DabTerminate, {onLeave: function (args) {send("DabTerminate");}});
+

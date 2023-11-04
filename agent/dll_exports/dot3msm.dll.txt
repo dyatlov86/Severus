@@ -1,0 +1,63 @@
+var DllMain = Module.findExportByName("dot3msm.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var Dot3MsmConnect = Module.findExportByName("dot3msm.dll", "Dot3MsmConnect")
+Interceptor.attach(Dot3MsmConnect, {onLeave: function (args) {send("Dot3MsmConnect");}});
+
+var Dot3MsmCreateDefaultProfile = Module.findExportByName("dot3msm.dll", "Dot3MsmCreateDefaultProfile")
+Interceptor.attach(Dot3MsmCreateDefaultProfile, {onLeave: function (args) {send("Dot3MsmCreateDefaultProfile");}});
+
+var Dot3MsmDeInit = Module.findExportByName("dot3msm.dll", "Dot3MsmDeInit")
+Interceptor.attach(Dot3MsmDeInit, {onLeave: function (args) {send("Dot3MsmDeInit");}});
+
+var Dot3MsmDeInitAdapter = Module.findExportByName("dot3msm.dll", "Dot3MsmDeInitAdapter")
+Interceptor.attach(Dot3MsmDeInitAdapter, {onLeave: function (args) {send("Dot3MsmDeInitAdapter");}});
+
+var Dot3MsmDisconnect = Module.findExportByName("dot3msm.dll", "Dot3MsmDisconnect")
+Interceptor.attach(Dot3MsmDisconnect, {onLeave: function (args) {send("Dot3MsmDisconnect");}});
+
+var Dot3MsmFreeMemory = Module.findExportByName("dot3msm.dll", "Dot3MsmFreeMemory")
+Interceptor.attach(Dot3MsmFreeMemory, {onLeave: function (args) {send("Dot3MsmFreeMemory");}});
+
+var Dot3MsmFreeProfile = Module.findExportByName("dot3msm.dll", "Dot3MsmFreeProfile")
+Interceptor.attach(Dot3MsmFreeProfile, {onLeave: function (args) {send("Dot3MsmFreeProfile");}});
+
+var Dot3MsmIndicateSessionChange = Module.findExportByName("dot3msm.dll", "Dot3MsmIndicateSessionChange")
+Interceptor.attach(Dot3MsmIndicateSessionChange, {onLeave: function (args) {send("Dot3MsmIndicateSessionChange");}});
+
+var Dot3MsmInit = Module.findExportByName("dot3msm.dll", "Dot3MsmInit")
+Interceptor.attach(Dot3MsmInit, {onLeave: function (args) {send("Dot3MsmInit");}});
+
+var Dot3MsmInitAdapter = Module.findExportByName("dot3msm.dll", "Dot3MsmInitAdapter")
+Interceptor.attach(Dot3MsmInitAdapter, {onLeave: function (args) {send("Dot3MsmInitAdapter");}});
+
+var Dot3MsmOnMediaStateChange = Module.findExportByName("dot3msm.dll", "Dot3MsmOnMediaStateChange")
+Interceptor.attach(Dot3MsmOnMediaStateChange, {onLeave: function (args) {send("Dot3MsmOnMediaStateChange");}});
+
+var Dot3MsmQueryMediaState = Module.findExportByName("dot3msm.dll", "Dot3MsmQueryMediaState")
+Interceptor.attach(Dot3MsmQueryMediaState, {onLeave: function (args) {send("Dot3MsmQueryMediaState");}});
+
+var Dot3MsmQueryPendingUIRequest = Module.findExportByName("dot3msm.dll", "Dot3MsmQueryPendingUIRequest")
+Interceptor.attach(Dot3MsmQueryPendingUIRequest, {onLeave: function (args) {send("Dot3MsmQueryPendingUIRequest");}});
+
+var Dot3MsmQueryState = Module.findExportByName("dot3msm.dll", "Dot3MsmQueryState")
+Interceptor.attach(Dot3MsmQueryState, {onLeave: function (args) {send("Dot3MsmQueryState");}});
+
+var Dot3MsmReAuthenticate = Module.findExportByName("dot3msm.dll", "Dot3MsmReAuthenticate")
+Interceptor.attach(Dot3MsmReAuthenticate, {onLeave: function (args) {send("Dot3MsmReAuthenticate");}});
+
+var Dot3MsmSetRuntimeState = Module.findExportByName("dot3msm.dll", "Dot3MsmSetRuntimeState")
+Interceptor.attach(Dot3MsmSetRuntimeState, {onLeave: function (args) {send("Dot3MsmSetRuntimeState");}});
+
+var Dot3MsmUIResponse = Module.findExportByName("dot3msm.dll", "Dot3MsmUIResponse")
+Interceptor.attach(Dot3MsmUIResponse, {onLeave: function (args) {send("Dot3MsmUIResponse");}});
+
+var Dot3MsmValidateProfile = Module.findExportByName("dot3msm.dll", "Dot3MsmValidateProfile")
+Interceptor.attach(Dot3MsmValidateProfile, {onLeave: function (args) {send("Dot3MsmValidateProfile");}});
+
+var Dot3ReasonCodeMsmToString = Module.findExportByName("dot3msm.dll", "Dot3ReasonCodeMsmToString")
+Interceptor.attach(Dot3ReasonCodeMsmToString, {onLeave: function (args) {send("Dot3ReasonCodeMsmToString");}});
+
+var Dot3SetPortAuthenticationState = Module.findExportByName("dot3msm.dll", "Dot3SetPortAuthenticationState")
+Interceptor.attach(Dot3SetPortAuthenticationState, {onLeave: function (args) {send("Dot3SetPortAuthenticationState");}});
+

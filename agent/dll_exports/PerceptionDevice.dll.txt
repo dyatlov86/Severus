@@ -1,0 +1,9 @@
+var DllMain = Module.findExportByName("PerceptionDevice.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var PerceptionDeviceCreateFactory = Module.findExportByName("PerceptionDevice.dll", "PerceptionDeviceCreateFactory")
+Interceptor.attach(PerceptionDeviceCreateFactory, {onLeave: function (args) {send("PerceptionDeviceCreateFactory");}});
+
+var PerceptionDeviceSetCreateFactoryOverride = Module.findExportByName("PerceptionDevice.dll", "PerceptionDeviceSetCreateFactoryOverride")
+Interceptor.attach(PerceptionDeviceSetCreateFactoryOverride, {onLeave: function (args) {send("PerceptionDeviceSetCreateFactoryOverride");}});
+

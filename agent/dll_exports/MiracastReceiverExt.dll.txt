@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("MiracastReceiverExt.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("MiracastReceiverExt.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("MiracastReceiverExt.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GetPlatformSpecificLockScreenAppLauncher = Module.findExportByName("MiracastReceiverExt.dll", "GetPlatformSpecificLockScreenAppLauncher")
+Interceptor.attach(GetPlatformSpecificLockScreenAppLauncher, {onLeave: function (args) {send("GetPlatformSpecificLockScreenAppLauncher");}});
+
+var IsLockScreenActive = Module.findExportByName("MiracastReceiverExt.dll", "IsLockScreenActive")
+Interceptor.attach(IsLockScreenActive, {onLeave: function (args) {send("IsLockScreenActive");}});
+

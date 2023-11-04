@@ -1,0 +1,6 @@
+var OpenDicTool = Module.findExportByName("IMJPDCTP.DLL", "OpenDicTool")
+Interceptor.attach(OpenDicTool, {onLeave: function (args) {send("OpenDicTool");}});
+
+var OpenRegisterWord = Module.findExportByName("IMJPDCTP.DLL", "OpenRegisterWord")
+Interceptor.attach(OpenRegisterWord, {onLeave: function (args) {send("OpenRegisterWord");}});
+

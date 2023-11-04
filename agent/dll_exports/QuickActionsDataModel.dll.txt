@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("QuickActionsDataModel.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("QuickActionsDataModel.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("QuickActionsDataModel.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetQuickActionsProvider = Module.findExportByName("QuickActionsDataModel.dll", "GetQuickActionsProvider")
+Interceptor.attach(GetQuickActionsProvider, {onLeave: function (args) {send("GetQuickActionsProvider");}});
+

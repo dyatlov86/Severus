@@ -1,0 +1,3 @@
+var IsTextUnicode = Module.findExportByName("api-ms-win-base-util-l1-1-0.dll", "IsTextUnicode")
+Interceptor.attach(IsTextUnicode, {onLeave: function (args) {send("IsTextUnicode");}});
+

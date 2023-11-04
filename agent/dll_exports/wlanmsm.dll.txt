@@ -1,0 +1,9 @@
+var Dot11MsmDeInit = Module.findExportByName("wlanmsm.dll", "Dot11MsmDeInit")
+Interceptor.attach(Dot11MsmDeInit, {onLeave: function (args) {send("Dot11MsmDeInit");}});
+
+var Dot11MsmInit = Module.findExportByName("wlanmsm.dll", "Dot11MsmInit")
+Interceptor.attach(Dot11MsmInit, {onLeave: function (args) {send("Dot11MsmInit");}});
+
+var InitializeDll = Module.findExportByName("wlanmsm.dll", "InitializeDll")
+Interceptor.attach(InitializeDll, {onLeave: function (args) {send("InitializeDll");}});
+

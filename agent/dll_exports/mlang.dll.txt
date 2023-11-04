@@ -1,0 +1,36 @@
+var ConvertINetMultiByteToUnicode = Module.findExportByName("mlang.dll", "ConvertINetMultiByteToUnicode")
+Interceptor.attach(ConvertINetMultiByteToUnicode, {onLeave: function (args) {send("ConvertINetMultiByteToUnicode");}});
+
+var ConvertINetReset = Module.findExportByName("mlang.dll", "ConvertINetReset")
+Interceptor.attach(ConvertINetReset, {onLeave: function (args) {send("ConvertINetReset");}});
+
+var ConvertINetString = Module.findExportByName("mlang.dll", "ConvertINetString")
+Interceptor.attach(ConvertINetString, {onLeave: function (args) {send("ConvertINetString");}});
+
+var ConvertINetUnicodeToMultiByte = Module.findExportByName("mlang.dll", "ConvertINetUnicodeToMultiByte")
+Interceptor.attach(ConvertINetUnicodeToMultiByte, {onLeave: function (args) {send("ConvertINetUnicodeToMultiByte");}});
+
+var DllCanUnloadNow = Module.findExportByName("mlang.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mlang.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetGlobalFontLinkObject = Module.findExportByName("mlang.dll", "GetGlobalFontLinkObject")
+Interceptor.attach(GetGlobalFontLinkObject, {onLeave: function (args) {send("GetGlobalFontLinkObject");}});
+
+var IsConvertINetStringAvailable = Module.findExportByName("mlang.dll", "IsConvertINetStringAvailable")
+Interceptor.attach(IsConvertINetStringAvailable, {onLeave: function (args) {send("IsConvertINetStringAvailable");}});
+
+var LcidToRfc1766A = Module.findExportByName("mlang.dll", "LcidToRfc1766A")
+Interceptor.attach(LcidToRfc1766A, {onLeave: function (args) {send("LcidToRfc1766A");}});
+
+var LcidToRfc1766W = Module.findExportByName("mlang.dll", "LcidToRfc1766W")
+Interceptor.attach(LcidToRfc1766W, {onLeave: function (args) {send("LcidToRfc1766W");}});
+
+var Rfc1766ToLcidA = Module.findExportByName("mlang.dll", "Rfc1766ToLcidA")
+Interceptor.attach(Rfc1766ToLcidA, {onLeave: function (args) {send("Rfc1766ToLcidA");}});
+
+var Rfc1766ToLcidW = Module.findExportByName("mlang.dll", "Rfc1766ToLcidW")
+Interceptor.attach(Rfc1766ToLcidW, {onLeave: function (args) {send("Rfc1766ToLcidW");}});
+

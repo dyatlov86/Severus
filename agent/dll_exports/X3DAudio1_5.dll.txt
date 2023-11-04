@@ -1,0 +1,6 @@
+var X3DAudioCalculate = Module.findExportByName("X3DAudio1_5.dll", "X3DAudioCalculate")
+Interceptor.attach(X3DAudioCalculate, {onLeave: function (args) {send("X3DAudioCalculate");}});
+
+var X3DAudioInitialize = Module.findExportByName("X3DAudio1_5.dll", "X3DAudioInitialize")
+Interceptor.attach(X3DAudioInitialize, {onLeave: function (args) {send("X3DAudioInitialize");}});
+

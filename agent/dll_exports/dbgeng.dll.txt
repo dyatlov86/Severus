@@ -1,0 +1,12 @@
+var DebugConnect = Module.findExportByName("dbgeng.dll", "DebugConnect")
+Interceptor.attach(DebugConnect, {onLeave: function (args) {send("DebugConnect");}});
+
+var DebugConnectWide = Module.findExportByName("dbgeng.dll", "DebugConnectWide")
+Interceptor.attach(DebugConnectWide, {onLeave: function (args) {send("DebugConnectWide");}});
+
+var DebugCreate = Module.findExportByName("dbgeng.dll", "DebugCreate")
+Interceptor.attach(DebugCreate, {onLeave: function (args) {send("DebugCreate");}});
+
+var DebugCreateEx = Module.findExportByName("dbgeng.dll", "DebugCreateEx")
+Interceptor.attach(DebugCreateEx, {onLeave: function (args) {send("DebugCreateEx");}});
+

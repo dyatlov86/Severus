@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("mshtmled.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllEnumClassObjects = Module.findExportByName("mshtmled.dll", "DllEnumClassObjects")
+Interceptor.attach(DllEnumClassObjects, {onLeave: function (args) {send("DllEnumClassObjects");}});
+
+var DllGetClassObject = Module.findExportByName("mshtmled.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("mshtmled.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mshtmled.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

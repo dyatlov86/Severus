@@ -1,0 +1,27 @@
+var OslGenRandomBytes = Module.findExportByName("tcbloader.dll", "OslGenRandomBytes")
+Interceptor.attach(OslGenRandomBytes, {onLeave: function (args) {send("OslGenRandomBytes");}});
+
+var OslGetControlSubkeyCell = Module.findExportByName("tcbloader.dll", "OslGetControlSubkeyCell")
+Interceptor.attach(OslGetControlSubkeyCell, {onLeave: function (args) {send("OslGetControlSubkeyCell");}});
+
+var OslGetExportRoutineInModule = Module.findExportByName("tcbloader.dll", "OslGetExportRoutineInModule")
+Interceptor.attach(OslGetExportRoutineInModule, {onLeave: function (args) {send("OslGetExportRoutineInModule");}});
+
+var OslGetStringValue = Module.findExportByName("tcbloader.dll", "OslGetStringValue")
+Interceptor.attach(OslGetStringValue, {onLeave: function (args) {send("OslGetStringValue");}});
+
+var OslGetSubkey = Module.findExportByName("tcbloader.dll", "OslGetSubkey")
+Interceptor.attach(OslGetSubkey, {onLeave: function (args) {send("OslGetSubkey");}});
+
+var OslGetValue = Module.findExportByName("tcbloader.dll", "OslGetValue")
+Interceptor.attach(OslGetValue, {onLeave: function (args) {send("OslGetValue");}});
+
+var OslIsRunningInSecureKernel = Module.findExportByName("tcbloader.dll", "OslIsRunningInSecureKernel")
+Interceptor.attach(OslIsRunningInSecureKernel, {onLeave: function (args) {send("OslIsRunningInSecureKernel");}});
+
+var TcbLoadEntry = Module.findExportByName("tcbloader.dll", "TcbLoadEntry")
+Interceptor.attach(TcbLoadEntry, {onLeave: function (args) {send("TcbLoadEntry");}});
+
+var TcbResumeEntry = Module.findExportByName("tcbloader.dll", "TcbResumeEntry")
+Interceptor.attach(TcbResumeEntry, {onLeave: function (args) {send("TcbResumeEntry");}});
+

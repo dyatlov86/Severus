@@ -1,0 +1,45 @@
+var NsiConnectToServer = Module.findExportByName("winnsi.dll", "NsiConnectToServer")
+Interceptor.attach(NsiConnectToServer, {onLeave: function (args) {send("NsiConnectToServer");}});
+
+var NsiDisconnectFromServer = Module.findExportByName("winnsi.dll", "NsiDisconnectFromServer")
+Interceptor.attach(NsiDisconnectFromServer, {onLeave: function (args) {send("NsiDisconnectFromServer");}});
+
+var NsiRpcDeregisterChangeNotification = Module.findExportByName("winnsi.dll", "NsiRpcDeregisterChangeNotification")
+Interceptor.attach(NsiRpcDeregisterChangeNotification, {onLeave: function (args) {send("NsiRpcDeregisterChangeNotification");}});
+
+var NsiRpcDeregisterChangeNotificationEx = Module.findExportByName("winnsi.dll", "NsiRpcDeregisterChangeNotificationEx")
+Interceptor.attach(NsiRpcDeregisterChangeNotificationEx, {onLeave: function (args) {send("NsiRpcDeregisterChangeNotificationEx");}});
+
+var NsiRpcEnumerateObjectsAllParameters = Module.findExportByName("winnsi.dll", "NsiRpcEnumerateObjectsAllParameters")
+Interceptor.attach(NsiRpcEnumerateObjectsAllParameters, {onLeave: function (args) {send("NsiRpcEnumerateObjectsAllParameters");}});
+
+var NsiRpcGetAllParameters = Module.findExportByName("winnsi.dll", "NsiRpcGetAllParameters")
+Interceptor.attach(NsiRpcGetAllParameters, {onLeave: function (args) {send("NsiRpcGetAllParameters");}});
+
+var NsiRpcGetAllParametersEx = Module.findExportByName("winnsi.dll", "NsiRpcGetAllParametersEx")
+Interceptor.attach(NsiRpcGetAllParametersEx, {onLeave: function (args) {send("NsiRpcGetAllParametersEx");}});
+
+var NsiRpcGetParameter = Module.findExportByName("winnsi.dll", "NsiRpcGetParameter")
+Interceptor.attach(NsiRpcGetParameter, {onLeave: function (args) {send("NsiRpcGetParameter");}});
+
+var NsiRpcGetParameterEx = Module.findExportByName("winnsi.dll", "NsiRpcGetParameterEx")
+Interceptor.attach(NsiRpcGetParameterEx, {onLeave: function (args) {send("NsiRpcGetParameterEx");}});
+
+var NsiRpcRegisterChangeNotification = Module.findExportByName("winnsi.dll", "NsiRpcRegisterChangeNotification")
+Interceptor.attach(NsiRpcRegisterChangeNotification, {onLeave: function (args) {send("NsiRpcRegisterChangeNotification");}});
+
+var NsiRpcRegisterChangeNotificationEx = Module.findExportByName("winnsi.dll", "NsiRpcRegisterChangeNotificationEx")
+Interceptor.attach(NsiRpcRegisterChangeNotificationEx, {onLeave: function (args) {send("NsiRpcRegisterChangeNotificationEx");}});
+
+var NsiRpcSetAllParameters = Module.findExportByName("winnsi.dll", "NsiRpcSetAllParameters")
+Interceptor.attach(NsiRpcSetAllParameters, {onLeave: function (args) {send("NsiRpcSetAllParameters");}});
+
+var NsiRpcSetAllParametersEx = Module.findExportByName("winnsi.dll", "NsiRpcSetAllParametersEx")
+Interceptor.attach(NsiRpcSetAllParametersEx, {onLeave: function (args) {send("NsiRpcSetAllParametersEx");}});
+
+var NsiRpcSetParameter = Module.findExportByName("winnsi.dll", "NsiRpcSetParameter")
+Interceptor.attach(NsiRpcSetParameter, {onLeave: function (args) {send("NsiRpcSetParameter");}});
+
+var NsiRpcSetParameterEx = Module.findExportByName("winnsi.dll", "NsiRpcSetParameterEx")
+Interceptor.attach(NsiRpcSetParameterEx, {onLeave: function (args) {send("NsiRpcSetParameterEx");}});
+

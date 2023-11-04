@@ -1,0 +1,9 @@
+var ClassFactory = Module.findExportByName("RdpAvenc.dll", "ClassFactory")
+Interceptor.attach(ClassFactory, {onLeave: function (args) {send("ClassFactory");}});
+
+var ClassFactoryEx = Module.findExportByName("RdpAvenc.dll", "ClassFactoryEx")
+Interceptor.attach(ClassFactoryEx, {onLeave: function (args) {send("ClassFactoryEx");}});
+
+var NegotiateVersions = Module.findExportByName("RdpAvenc.dll", "NegotiateVersions")
+Interceptor.attach(NegotiateVersions, {onLeave: function (args) {send("NegotiateVersions");}});
+

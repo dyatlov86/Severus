@@ -1,0 +1,48 @@
+var CreateIndexedFilterClient = Module.findExportByName("PimIndexMaintenanceClient.dll", "CreateIndexedFilterClient")
+Interceptor.attach(CreateIndexedFilterClient, {onLeave: function (args) {send("CreateIndexedFilterClient");}});
+
+var CreatePOOMSortedAggregateDataSource = Module.findExportByName("PimIndexMaintenanceClient.dll", "CreatePOOMSortedAggregateDataSource")
+Interceptor.attach(CreatePOOMSortedAggregateDataSource, {onLeave: function (args) {send("CreatePOOMSortedAggregateDataSource");}});
+
+var GetDefaultContactsFilterSupplierSortOrder = Module.findExportByName("PimIndexMaintenanceClient.dll", "GetDefaultContactsFilterSupplierSortOrder")
+Interceptor.attach(GetDefaultContactsFilterSupplierSortOrder, {onLeave: function (args) {send("GetDefaultContactsFilterSupplierSortOrder");}});
+
+var PimIMClient_CacheAggregateCacheFileMapping = Module.findExportByName("PimIndexMaintenanceClient.dll", "PimIMClient_CacheAggregateCacheFileMapping")
+Interceptor.attach(PimIMClient_CacheAggregateCacheFileMapping, {onLeave: function (args) {send("PimIMClient_CacheAggregateCacheFileMapping");}});
+
+var PimIMClient_Free = Module.findExportByName("PimIndexMaintenanceClient.dll", "PimIMClient_Free")
+Interceptor.attach(PimIMClient_Free, {onLeave: function (args) {send("PimIMClient_Free");}});
+
+var PimIMClient_LoadAggregateCache = Module.findExportByName("PimIndexMaintenanceClient.dll", "PimIMClient_LoadAggregateCache")
+Interceptor.attach(PimIMClient_LoadAggregateCache, {onLeave: function (args) {send("PimIMClient_LoadAggregateCache");}});
+
+var PimIMClient_RebuildAggregateCache = Module.findExportByName("PimIndexMaintenanceClient.dll", "PimIMClient_RebuildAggregateCache")
+Interceptor.attach(PimIMClient_RebuildAggregateCache, {onLeave: function (args) {send("PimIMClient_RebuildAggregateCache");}});
+
+var PimIMClient_ResetInprocService = Module.findExportByName("PimIndexMaintenanceClient.dll", "PimIMClient_ResetInprocService")
+Interceptor.attach(PimIMClient_ResetInprocService, {onLeave: function (args) {send("PimIMClient_ResetInprocService");}});
+
+var PimIMClient_Resume = Module.findExportByName("PimIndexMaintenanceClient.dll", "PimIMClient_Resume")
+Interceptor.attach(PimIMClient_Resume, {onLeave: function (args) {send("PimIMClient_Resume");}});
+
+var PimIMClient_Suspend = Module.findExportByName("PimIndexMaintenanceClient.dll", "PimIMClient_Suspend")
+Interceptor.attach(PimIMClient_Suspend, {onLeave: function (args) {send("PimIMClient_Suspend");}});
+
+var PimIMClient_UpdateItems = Module.findExportByName("PimIndexMaintenanceClient.dll", "PimIMClient_UpdateItems")
+Interceptor.attach(PimIMClient_UpdateItems, {onLeave: function (args) {send("PimIMClient_UpdateItems");}});
+
+var PimIMClient_UpdateStores = Module.findExportByName("PimIndexMaintenanceClient.dll", "PimIMClient_UpdateStores")
+Interceptor.attach(PimIMClient_UpdateStores, {onLeave: function (args) {send("PimIMClient_UpdateStores");}});
+
+var PimIM_RpcConnect = Module.findExportByName("PimIndexMaintenanceClient.dll", "PimIM_RpcConnect")
+Interceptor.attach(PimIM_RpcConnect, {onLeave: function (args) {send("PimIM_RpcConnect");}});
+
+var PimIM_RpcDisconnect = Module.findExportByName("PimIndexMaintenanceClient.dll", "PimIM_RpcDisconnect")
+Interceptor.attach(PimIM_RpcDisconnect, {onLeave: function (args) {send("PimIM_RpcDisconnect");}});
+
+var WaitForCookie = Module.findExportByName("PimIndexMaintenanceClient.dll", "WaitForCookie")
+Interceptor.attach(WaitForCookie, {onLeave: function (args) {send("WaitForCookie");}});
+
+var WaitForCookieValueToSet = Module.findExportByName("PimIndexMaintenanceClient.dll", "WaitForCookieValueToSet")
+Interceptor.attach(WaitForCookieValueToSet, {onLeave: function (args) {send("WaitForCookieValueToSet");}});
+

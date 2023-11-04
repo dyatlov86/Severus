@@ -1,0 +1,6 @@
+var LdrInitializeThunk = Module.findExportByName("tprtdll.dll", "LdrInitializeThunk")
+Interceptor.attach(LdrInitializeThunk, {onLeave: function (args) {send("LdrInitializeThunk");}});
+
+var RtlUserThreadStart = Module.findExportByName("tprtdll.dll", "RtlUserThreadStart")
+Interceptor.attach(RtlUserThreadStart, {onLeave: function (args) {send("RtlUserThreadStart");}});
+

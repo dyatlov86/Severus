@@ -1,0 +1,9 @@
+var GetSSID = Module.findExportByName("DAXSSID.dll", "GetSSID")
+Interceptor.attach(GetSSID, {onLeave: function (args) {send("GetSSID");}});
+
+var GetSystemDeviceInstanceId = Module.findExportByName("DAXSSID.dll", "GetSystemDeviceInstanceId")
+Interceptor.attach(GetSystemDeviceInstanceId, {onLeave: function (args) {send("GetSystemDeviceInstanceId");}});
+
+var IsSupportedUsbDevice = Module.findExportByName("DAXSSID.dll", "IsSupportedUsbDevice")
+Interceptor.attach(IsSupportedUsbDevice, {onLeave: function (args) {send("IsSupportedUsbDevice");}});
+

@@ -1,0 +1,6 @@
+var WbioQueryEngineInterface = Module.findExportByName("NUIVoiceWBSAdapters.dll", "WbioQueryEngineInterface")
+Interceptor.attach(WbioQueryEngineInterface, {onLeave: function (args) {send("WbioQueryEngineInterface");}});
+
+var WbioQuerySensorInterface = Module.findExportByName("NUIVoiceWBSAdapters.dll", "WbioQuerySensorInterface")
+Interceptor.attach(WbioQuerySensorInterface, {onLeave: function (args) {send("WbioQuerySensorInterface");}});
+

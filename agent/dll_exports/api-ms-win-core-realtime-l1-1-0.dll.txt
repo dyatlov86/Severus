@@ -1,0 +1,15 @@
+var QueryIdleProcessorCycleTime = Module.findExportByName("api-ms-win-core-realtime-l1-1-0.dll", "QueryIdleProcessorCycleTime")
+Interceptor.attach(QueryIdleProcessorCycleTime, {onLeave: function (args) {send("QueryIdleProcessorCycleTime");}});
+
+var QueryIdleProcessorCycleTimeEx = Module.findExportByName("api-ms-win-core-realtime-l1-1-0.dll", "QueryIdleProcessorCycleTimeEx")
+Interceptor.attach(QueryIdleProcessorCycleTimeEx, {onLeave: function (args) {send("QueryIdleProcessorCycleTimeEx");}});
+
+var QueryProcessCycleTime = Module.findExportByName("api-ms-win-core-realtime-l1-1-0.dll", "QueryProcessCycleTime")
+Interceptor.attach(QueryProcessCycleTime, {onLeave: function (args) {send("QueryProcessCycleTime");}});
+
+var QueryThreadCycleTime = Module.findExportByName("api-ms-win-core-realtime-l1-1-0.dll", "QueryThreadCycleTime")
+Interceptor.attach(QueryThreadCycleTime, {onLeave: function (args) {send("QueryThreadCycleTime");}});
+
+var QueryUnbiasedInterruptTime = Module.findExportByName("api-ms-win-core-realtime-l1-1-0.dll", "QueryUnbiasedInterruptTime")
+Interceptor.attach(QueryUnbiasedInterruptTime, {onLeave: function (args) {send("QueryUnbiasedInterruptTime");}});
+

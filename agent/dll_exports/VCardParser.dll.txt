@@ -1,0 +1,18 @@
+var CreateCardParser = Module.findExportByName("VCardParser.dll", "CreateCardParser")
+Interceptor.attach(CreateCardParser, {onLeave: function (args) {send("CreateCardParser");}});
+
+var CreateCardParserEx = Module.findExportByName("VCardParser.dll", "CreateCardParserEx")
+Interceptor.attach(CreateCardParserEx, {onLeave: function (args) {send("CreateCardParserEx");}});
+
+var CreateCardParserExA = Module.findExportByName("VCardParser.dll", "CreateCardParserExA")
+Interceptor.attach(CreateCardParserExA, {onLeave: function (args) {send("CreateCardParserExA");}});
+
+var CreateICalGen = Module.findExportByName("VCardParser.dll", "CreateICalGen")
+Interceptor.attach(CreateICalGen, {onLeave: function (args) {send("CreateICalGen");}});
+
+var CreateVCardGen = Module.findExportByName("VCardParser.dll", "CreateVCardGen")
+Interceptor.attach(CreateVCardGen, {onLeave: function (args) {send("CreateVCardGen");}});
+
+var EncodeQP = Module.findExportByName("VCardParser.dll", "EncodeQP")
+Interceptor.attach(EncodeQP, {onLeave: function (args) {send("EncodeQP");}});
+

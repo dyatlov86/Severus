@@ -1,0 +1,207 @@
+var DllCanUnloadNow = Module.findExportByName("gpprefcl.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("gpprefcl.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("gpprefcl.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("gpprefcl.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GenerateGroupPolicyApplications = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyApplications")
+Interceptor.attach(GenerateGroupPolicyApplications, {onLeave: function (args) {send("GenerateGroupPolicyApplications");}});
+
+var GenerateGroupPolicyDataSources = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyDataSources")
+Interceptor.attach(GenerateGroupPolicyDataSources, {onLeave: function (args) {send("GenerateGroupPolicyDataSources");}});
+
+var GenerateGroupPolicyDevices = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyDevices")
+Interceptor.attach(GenerateGroupPolicyDevices, {onLeave: function (args) {send("GenerateGroupPolicyDevices");}});
+
+var GenerateGroupPolicyDrives = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyDrives")
+Interceptor.attach(GenerateGroupPolicyDrives, {onLeave: function (args) {send("GenerateGroupPolicyDrives");}});
+
+var GenerateGroupPolicyEnviron = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyEnviron")
+Interceptor.attach(GenerateGroupPolicyEnviron, {onLeave: function (args) {send("GenerateGroupPolicyEnviron");}});
+
+var GenerateGroupPolicyFiles = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyFiles")
+Interceptor.attach(GenerateGroupPolicyFiles, {onLeave: function (args) {send("GenerateGroupPolicyFiles");}});
+
+var GenerateGroupPolicyFolderOptions = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyFolderOptions")
+Interceptor.attach(GenerateGroupPolicyFolderOptions, {onLeave: function (args) {send("GenerateGroupPolicyFolderOptions");}});
+
+var GenerateGroupPolicyFolders = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyFolders")
+Interceptor.attach(GenerateGroupPolicyFolders, {onLeave: function (args) {send("GenerateGroupPolicyFolders");}});
+
+var GenerateGroupPolicyIniFile = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyIniFile")
+Interceptor.attach(GenerateGroupPolicyIniFile, {onLeave: function (args) {send("GenerateGroupPolicyIniFile");}});
+
+var GenerateGroupPolicyInternet = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyInternet")
+Interceptor.attach(GenerateGroupPolicyInternet, {onLeave: function (args) {send("GenerateGroupPolicyInternet");}});
+
+var GenerateGroupPolicyLocUsAndGroups = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyLocUsAndGroups")
+Interceptor.attach(GenerateGroupPolicyLocUsAndGroups, {onLeave: function (args) {send("GenerateGroupPolicyLocUsAndGroups");}});
+
+var GenerateGroupPolicyNetShares = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyNetShares")
+Interceptor.attach(GenerateGroupPolicyNetShares, {onLeave: function (args) {send("GenerateGroupPolicyNetShares");}});
+
+var GenerateGroupPolicyNetworkOptions = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyNetworkOptions")
+Interceptor.attach(GenerateGroupPolicyNetworkOptions, {onLeave: function (args) {send("GenerateGroupPolicyNetworkOptions");}});
+
+var GenerateGroupPolicyPowerOptions = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyPowerOptions")
+Interceptor.attach(GenerateGroupPolicyPowerOptions, {onLeave: function (args) {send("GenerateGroupPolicyPowerOptions");}});
+
+var GenerateGroupPolicyPrinters = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyPrinters")
+Interceptor.attach(GenerateGroupPolicyPrinters, {onLeave: function (args) {send("GenerateGroupPolicyPrinters");}});
+
+var GenerateGroupPolicyRegionOptions = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyRegionOptions")
+Interceptor.attach(GenerateGroupPolicyRegionOptions, {onLeave: function (args) {send("GenerateGroupPolicyRegionOptions");}});
+
+var GenerateGroupPolicyRegistry = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyRegistry")
+Interceptor.attach(GenerateGroupPolicyRegistry, {onLeave: function (args) {send("GenerateGroupPolicyRegistry");}});
+
+var GenerateGroupPolicySchedTasks = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicySchedTasks")
+Interceptor.attach(GenerateGroupPolicySchedTasks, {onLeave: function (args) {send("GenerateGroupPolicySchedTasks");}});
+
+var GenerateGroupPolicyServices = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyServices")
+Interceptor.attach(GenerateGroupPolicyServices, {onLeave: function (args) {send("GenerateGroupPolicyServices");}});
+
+var GenerateGroupPolicyShortcuts = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyShortcuts")
+Interceptor.attach(GenerateGroupPolicyShortcuts, {onLeave: function (args) {send("GenerateGroupPolicyShortcuts");}});
+
+var GenerateGroupPolicyStartMenu = Module.findExportByName("gpprefcl.dll", "GenerateGroupPolicyStartMenu")
+Interceptor.attach(GenerateGroupPolicyStartMenu, {onLeave: function (args) {send("GenerateGroupPolicyStartMenu");}});
+
+var ProcessGroupPolicyApplications = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyApplications")
+Interceptor.attach(ProcessGroupPolicyApplications, {onLeave: function (args) {send("ProcessGroupPolicyApplications");}});
+
+var ProcessGroupPolicyDataSources = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyDataSources")
+Interceptor.attach(ProcessGroupPolicyDataSources, {onLeave: function (args) {send("ProcessGroupPolicyDataSources");}});
+
+var ProcessGroupPolicyDevices = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyDevices")
+Interceptor.attach(ProcessGroupPolicyDevices, {onLeave: function (args) {send("ProcessGroupPolicyDevices");}});
+
+var ProcessGroupPolicyDrives = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyDrives")
+Interceptor.attach(ProcessGroupPolicyDrives, {onLeave: function (args) {send("ProcessGroupPolicyDrives");}});
+
+var ProcessGroupPolicyEnviron = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyEnviron")
+Interceptor.attach(ProcessGroupPolicyEnviron, {onLeave: function (args) {send("ProcessGroupPolicyEnviron");}});
+
+var ProcessGroupPolicyExApplications = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExApplications")
+Interceptor.attach(ProcessGroupPolicyExApplications, {onLeave: function (args) {send("ProcessGroupPolicyExApplications");}});
+
+var ProcessGroupPolicyExDataSources = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExDataSources")
+Interceptor.attach(ProcessGroupPolicyExDataSources, {onLeave: function (args) {send("ProcessGroupPolicyExDataSources");}});
+
+var ProcessGroupPolicyExDevices = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExDevices")
+Interceptor.attach(ProcessGroupPolicyExDevices, {onLeave: function (args) {send("ProcessGroupPolicyExDevices");}});
+
+var ProcessGroupPolicyExDrives = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExDrives")
+Interceptor.attach(ProcessGroupPolicyExDrives, {onLeave: function (args) {send("ProcessGroupPolicyExDrives");}});
+
+var ProcessGroupPolicyExEnviron = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExEnviron")
+Interceptor.attach(ProcessGroupPolicyExEnviron, {onLeave: function (args) {send("ProcessGroupPolicyExEnviron");}});
+
+var ProcessGroupPolicyExFiles = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExFiles")
+Interceptor.attach(ProcessGroupPolicyExFiles, {onLeave: function (args) {send("ProcessGroupPolicyExFiles");}});
+
+var ProcessGroupPolicyExFolderOptions = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExFolderOptions")
+Interceptor.attach(ProcessGroupPolicyExFolderOptions, {onLeave: function (args) {send("ProcessGroupPolicyExFolderOptions");}});
+
+var ProcessGroupPolicyExFolders = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExFolders")
+Interceptor.attach(ProcessGroupPolicyExFolders, {onLeave: function (args) {send("ProcessGroupPolicyExFolders");}});
+
+var ProcessGroupPolicyExIniFile = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExIniFile")
+Interceptor.attach(ProcessGroupPolicyExIniFile, {onLeave: function (args) {send("ProcessGroupPolicyExIniFile");}});
+
+var ProcessGroupPolicyExInternet = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExInternet")
+Interceptor.attach(ProcessGroupPolicyExInternet, {onLeave: function (args) {send("ProcessGroupPolicyExInternet");}});
+
+var ProcessGroupPolicyExLocUsAndGroups = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExLocUsAndGroups")
+Interceptor.attach(ProcessGroupPolicyExLocUsAndGroups, {onLeave: function (args) {send("ProcessGroupPolicyExLocUsAndGroups");}});
+
+var ProcessGroupPolicyExNetShares = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExNetShares")
+Interceptor.attach(ProcessGroupPolicyExNetShares, {onLeave: function (args) {send("ProcessGroupPolicyExNetShares");}});
+
+var ProcessGroupPolicyExNetworkOptions = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExNetworkOptions")
+Interceptor.attach(ProcessGroupPolicyExNetworkOptions, {onLeave: function (args) {send("ProcessGroupPolicyExNetworkOptions");}});
+
+var ProcessGroupPolicyExPowerOptions = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExPowerOptions")
+Interceptor.attach(ProcessGroupPolicyExPowerOptions, {onLeave: function (args) {send("ProcessGroupPolicyExPowerOptions");}});
+
+var ProcessGroupPolicyExPrinters = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExPrinters")
+Interceptor.attach(ProcessGroupPolicyExPrinters, {onLeave: function (args) {send("ProcessGroupPolicyExPrinters");}});
+
+var ProcessGroupPolicyExRegionOptions = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExRegionOptions")
+Interceptor.attach(ProcessGroupPolicyExRegionOptions, {onLeave: function (args) {send("ProcessGroupPolicyExRegionOptions");}});
+
+var ProcessGroupPolicyExRegistry = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExRegistry")
+Interceptor.attach(ProcessGroupPolicyExRegistry, {onLeave: function (args) {send("ProcessGroupPolicyExRegistry");}});
+
+var ProcessGroupPolicyExSchedTasks = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExSchedTasks")
+Interceptor.attach(ProcessGroupPolicyExSchedTasks, {onLeave: function (args) {send("ProcessGroupPolicyExSchedTasks");}});
+
+var ProcessGroupPolicyExServices = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExServices")
+Interceptor.attach(ProcessGroupPolicyExServices, {onLeave: function (args) {send("ProcessGroupPolicyExServices");}});
+
+var ProcessGroupPolicyExShortcuts = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExShortcuts")
+Interceptor.attach(ProcessGroupPolicyExShortcuts, {onLeave: function (args) {send("ProcessGroupPolicyExShortcuts");}});
+
+var ProcessGroupPolicyExStartMenu = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyExStartMenu")
+Interceptor.attach(ProcessGroupPolicyExStartMenu, {onLeave: function (args) {send("ProcessGroupPolicyExStartMenu");}});
+
+var ProcessGroupPolicyFiles = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyFiles")
+Interceptor.attach(ProcessGroupPolicyFiles, {onLeave: function (args) {send("ProcessGroupPolicyFiles");}});
+
+var ProcessGroupPolicyFolderOptions = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyFolderOptions")
+Interceptor.attach(ProcessGroupPolicyFolderOptions, {onLeave: function (args) {send("ProcessGroupPolicyFolderOptions");}});
+
+var ProcessGroupPolicyFolders = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyFolders")
+Interceptor.attach(ProcessGroupPolicyFolders, {onLeave: function (args) {send("ProcessGroupPolicyFolders");}});
+
+var ProcessGroupPolicyIniFile = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyIniFile")
+Interceptor.attach(ProcessGroupPolicyIniFile, {onLeave: function (args) {send("ProcessGroupPolicyIniFile");}});
+
+var ProcessGroupPolicyInternet = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyInternet")
+Interceptor.attach(ProcessGroupPolicyInternet, {onLeave: function (args) {send("ProcessGroupPolicyInternet");}});
+
+var ProcessGroupPolicyLocUsAndGroups = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyLocUsAndGroups")
+Interceptor.attach(ProcessGroupPolicyLocUsAndGroups, {onLeave: function (args) {send("ProcessGroupPolicyLocUsAndGroups");}});
+
+var ProcessGroupPolicyMitigationOptions = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyMitigationOptions")
+Interceptor.attach(ProcessGroupPolicyMitigationOptions, {onLeave: function (args) {send("ProcessGroupPolicyMitigationOptions");}});
+
+var ProcessGroupPolicyNetShares = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyNetShares")
+Interceptor.attach(ProcessGroupPolicyNetShares, {onLeave: function (args) {send("ProcessGroupPolicyNetShares");}});
+
+var ProcessGroupPolicyNetworkOptions = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyNetworkOptions")
+Interceptor.attach(ProcessGroupPolicyNetworkOptions, {onLeave: function (args) {send("ProcessGroupPolicyNetworkOptions");}});
+
+var ProcessGroupPolicyPowerOptions = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyPowerOptions")
+Interceptor.attach(ProcessGroupPolicyPowerOptions, {onLeave: function (args) {send("ProcessGroupPolicyPowerOptions");}});
+
+var ProcessGroupPolicyPrinters = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyPrinters")
+Interceptor.attach(ProcessGroupPolicyPrinters, {onLeave: function (args) {send("ProcessGroupPolicyPrinters");}});
+
+var ProcessGroupPolicyProcessMitigationOptions = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyProcessMitigationOptions")
+Interceptor.attach(ProcessGroupPolicyProcessMitigationOptions, {onLeave: function (args) {send("ProcessGroupPolicyProcessMitigationOptions");}});
+
+var ProcessGroupPolicyRegionOptions = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyRegionOptions")
+Interceptor.attach(ProcessGroupPolicyRegionOptions, {onLeave: function (args) {send("ProcessGroupPolicyRegionOptions");}});
+
+var ProcessGroupPolicyRegistry = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyRegistry")
+Interceptor.attach(ProcessGroupPolicyRegistry, {onLeave: function (args) {send("ProcessGroupPolicyRegistry");}});
+
+var ProcessGroupPolicySchedTasks = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicySchedTasks")
+Interceptor.attach(ProcessGroupPolicySchedTasks, {onLeave: function (args) {send("ProcessGroupPolicySchedTasks");}});
+
+var ProcessGroupPolicyServices = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyServices")
+Interceptor.attach(ProcessGroupPolicyServices, {onLeave: function (args) {send("ProcessGroupPolicyServices");}});
+
+var ProcessGroupPolicyShortcuts = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyShortcuts")
+Interceptor.attach(ProcessGroupPolicyShortcuts, {onLeave: function (args) {send("ProcessGroupPolicyShortcuts");}});
+
+var ProcessGroupPolicyStartMenu = Module.findExportByName("gpprefcl.dll", "ProcessGroupPolicyStartMenu")
+Interceptor.attach(ProcessGroupPolicyStartMenu, {onLeave: function (args) {send("ProcessGroupPolicyStartMenu");}});
+

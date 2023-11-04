@@ -1,0 +1,3 @@
+var InitializeHandler = Module.findExportByName("NgcCtnrGidsHandler.dll", "InitializeHandler")
+Interceptor.attach(InitializeHandler, {onLeave: function (args) {send("InitializeHandler");}});
+

@@ -1,0 +1,6 @@
+var CreateDictationManager = Module.findExportByName("DictationManager.dll", "CreateDictationManager")
+Interceptor.attach(CreateDictationManager, {onLeave: function (args) {send("CreateDictationManager");}});
+
+var CreateDictationManagerWithDeviceController = Module.findExportByName("DictationManager.dll", "CreateDictationManagerWithDeviceController")
+Interceptor.attach(CreateDictationManagerWithDeviceController, {onLeave: function (args) {send("CreateDictationManagerWithDeviceController");}});
+

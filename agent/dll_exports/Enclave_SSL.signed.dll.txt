@@ -1,0 +1,9 @@
+var ?g_checked_by_emmt@@3_NA = Module.findExportByName("Enclave_SSL.signed.dll", "?g_checked_by_emmt@@3_NA")
+Interceptor.attach(?g_checked_by_emmt@@3_NA, {onLeave: function (args) {send("?g_checked_by_emmt@@3_NA");}});
+
+var enclave_entry = Module.findExportByName("Enclave_SSL.signed.dll", "enclave_entry")
+Interceptor.attach(enclave_entry, {onLeave: function (args) {send("enclave_entry");}});
+
+var g_peak_heap_used = Module.findExportByName("Enclave_SSL.signed.dll", "g_peak_heap_used")
+Interceptor.attach(g_peak_heap_used, {onLeave: function (args) {send("g_peak_heap_used");}});
+

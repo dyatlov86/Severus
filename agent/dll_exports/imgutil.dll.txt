@@ -1,0 +1,33 @@
+var ComputeInvCMAP = Module.findExportByName("imgutil.dll", "ComputeInvCMAP")
+Interceptor.attach(ComputeInvCMAP, {onLeave: function (args) {send("ComputeInvCMAP");}});
+
+var CreateDDrawSurfaceOnDIB = Module.findExportByName("imgutil.dll", "CreateDDrawSurfaceOnDIB")
+Interceptor.attach(CreateDDrawSurfaceOnDIB, {onLeave: function (args) {send("CreateDDrawSurfaceOnDIB");}});
+
+var CreateMIMEMap = Module.findExportByName("imgutil.dll", "CreateMIMEMap")
+Interceptor.attach(CreateMIMEMap, {onLeave: function (args) {send("CreateMIMEMap");}});
+
+var DecodeImage = Module.findExportByName("imgutil.dll", "DecodeImage")
+Interceptor.attach(DecodeImage, {onLeave: function (args) {send("DecodeImage");}});
+
+var DecodeImageEx = Module.findExportByName("imgutil.dll", "DecodeImageEx")
+Interceptor.attach(DecodeImageEx, {onLeave: function (args) {send("DecodeImageEx");}});
+
+var DitherTo8 = Module.findExportByName("imgutil.dll", "DitherTo8")
+Interceptor.attach(DitherTo8, {onLeave: function (args) {send("DitherTo8");}});
+
+var DllCanUnloadNow = Module.findExportByName("imgutil.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("imgutil.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetMaxMIMEIDBytes = Module.findExportByName("imgutil.dll", "GetMaxMIMEIDBytes")
+Interceptor.attach(GetMaxMIMEIDBytes, {onLeave: function (args) {send("GetMaxMIMEIDBytes");}});
+
+var IdentifyMIMEType = Module.findExportByName("imgutil.dll", "IdentifyMIMEType")
+Interceptor.attach(IdentifyMIMEType, {onLeave: function (args) {send("IdentifyMIMEType");}});
+
+var SniffStream = Module.findExportByName("imgutil.dll", "SniffStream")
+Interceptor.attach(SniffStream, {onLeave: function (args) {send("SniffStream");}});
+

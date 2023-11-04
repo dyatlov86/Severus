@@ -1,0 +1,30 @@
+var EapPeerConfigBlob2Xml = Module.findExportByName("EapTeapConfig.dll", "EapPeerConfigBlob2Xml")
+Interceptor.attach(EapPeerConfigBlob2Xml, {onLeave: function (args) {send("EapPeerConfigBlob2Xml");}});
+
+var EapPeerConfigXml2Blob = Module.findExportByName("EapTeapConfig.dll", "EapPeerConfigXml2Blob")
+Interceptor.attach(EapPeerConfigXml2Blob, {onLeave: function (args) {send("EapPeerConfigXml2Blob");}});
+
+var EapPeerCredentialsXml2Blob = Module.findExportByName("EapTeapConfig.dll", "EapPeerCredentialsXml2Blob")
+Interceptor.attach(EapPeerCredentialsXml2Blob, {onLeave: function (args) {send("EapPeerCredentialsXml2Blob");}});
+
+var EapPeerFreeErrorMemory = Module.findExportByName("EapTeapConfig.dll", "EapPeerFreeErrorMemory")
+Interceptor.attach(EapPeerFreeErrorMemory, {onLeave: function (args) {send("EapPeerFreeErrorMemory");}});
+
+var EapPeerFreeMemory = Module.findExportByName("EapTeapConfig.dll", "EapPeerFreeMemory")
+Interceptor.attach(EapPeerFreeMemory, {onLeave: function (args) {send("EapPeerFreeMemory");}});
+
+var EapPeerGetMethodProperties = Module.findExportByName("EapTeapConfig.dll", "EapPeerGetMethodProperties")
+Interceptor.attach(EapPeerGetMethodProperties, {onLeave: function (args) {send("EapPeerGetMethodProperties");}});
+
+var EapPeerGetNextPageGuid = Module.findExportByName("EapTeapConfig.dll", "EapPeerGetNextPageGuid")
+Interceptor.attach(EapPeerGetNextPageGuid, {onLeave: function (args) {send("EapPeerGetNextPageGuid");}});
+
+var EapPeerInvokeConfigUI = Module.findExportByName("EapTeapConfig.dll", "EapPeerInvokeConfigUI")
+Interceptor.attach(EapPeerInvokeConfigUI, {onLeave: function (args) {send("EapPeerInvokeConfigUI");}});
+
+var EapPeerInvokeInteractiveUI = Module.findExportByName("EapTeapConfig.dll", "EapPeerInvokeInteractiveUI")
+Interceptor.attach(EapPeerInvokeInteractiveUI, {onLeave: function (args) {send("EapPeerInvokeInteractiveUI");}});
+
+var EapPeerQueryInteractiveUIInputFields = Module.findExportByName("EapTeapConfig.dll", "EapPeerQueryInteractiveUIInputFields")
+Interceptor.attach(EapPeerQueryInteractiveUIInputFields, {onLeave: function (args) {send("EapPeerQueryInteractiveUIInputFields");}});
+

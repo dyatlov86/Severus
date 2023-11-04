@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("IMEAPIS.DLL", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("IMEAPIS.DLL", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("IMEAPIS.DLL", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("IMEAPIS.DLL", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetProxyDllInfo = Module.findExportByName("IMEAPIS.DLL", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+

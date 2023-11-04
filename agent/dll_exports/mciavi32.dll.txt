@@ -1,0 +1,6 @@
+var DriverProc = Module.findExportByName("mciavi32.dll", "DriverProc")
+Interceptor.attach(DriverProc, {onLeave: function (args) {send("DriverProc");}});
+
+var KeyboardHookProc = Module.findExportByName("mciavi32.dll", "KeyboardHookProc")
+Interceptor.attach(KeyboardHookProc, {onLeave: function (args) {send("KeyboardHookProc");}});
+

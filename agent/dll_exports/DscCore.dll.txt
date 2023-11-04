@@ -1,0 +1,48 @@
+var CATraps = Module.findExportByName("DscCore.dll", "CATraps")
+Interceptor.attach(CATraps, {onLeave: function (args) {send("CATraps");}});
+
+var CUTraps = Module.findExportByName("DscCore.dll", "CUTraps")
+Interceptor.attach(CUTraps, {onLeave: function (args) {send("CUTraps");}});
+
+var CreateAuthenticationCertificateWrapper = Module.findExportByName("DscCore.dll", "CreateAuthenticationCertificateWrapper")
+Interceptor.attach(CreateAuthenticationCertificateWrapper, {onLeave: function (args) {send("CreateAuthenticationCertificateWrapper");}});
+
+var DllCanUnloadNow = Module.findExportByName("DscCore.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("DscCore.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("DscCore.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("DscCore.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("DscCore.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetProviderClassID = Module.findExportByName("DscCore.dll", "GetProviderClassID")
+Interceptor.attach(GetProviderClassID, {onLeave: function (args) {send("GetProviderClassID");}});
+
+var LCMTraps = Module.findExportByName("DscCore.dll", "LCMTraps")
+Interceptor.attach(LCMTraps, {onLeave: function (args) {send("LCMTraps");}});
+
+var MI_Main = Module.findExportByName("DscCore.dll", "MI_Main")
+Interceptor.attach(MI_Main, {onLeave: function (args) {send("MI_Main");}});
+
+var NITS_PRESENCE_STUB = Module.findExportByName("DscCore.dll", "NITS_PRESENCE_STUB")
+Interceptor.attach(NITS_PRESENCE_STUB, {onLeave: function (args) {send("NITS_PRESENCE_STUB");}});
+
+var NITS_STUB = Module.findExportByName("DscCore.dll", "NITS_STUB")
+Interceptor.attach(NITS_STUB, {onLeave: function (args) {send("NITS_STUB");}});
+
+var SysPrep_Cleanup = Module.findExportByName("DscCore.dll", "SysPrep_Cleanup")
+Interceptor.attach(SysPrep_Cleanup, {onLeave: function (args) {send("SysPrep_Cleanup");}});
+
+var ValidateCertificateExpirationWrapper = Module.findExportByName("DscCore.dll", "ValidateCertificateExpirationWrapper")
+Interceptor.attach(ValidateCertificateExpirationWrapper, {onLeave: function (args) {send("ValidateCertificateExpirationWrapper");}});
+
+var ValidatorTraps = Module.findExportByName("DscCore.dll", "ValidatorTraps")
+Interceptor.attach(ValidatorTraps, {onLeave: function (args) {send("ValidatorTraps");}});
+

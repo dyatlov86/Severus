@@ -1,0 +1,15 @@
+var DLLGetDocumentation = Module.findExportByName("wshcon.dll", "DLLGetDocumentation")
+Interceptor.attach(DLLGetDocumentation, {onLeave: function (args) {send("DLLGetDocumentation");}});
+
+var DllCanUnloadNow = Module.findExportByName("wshcon.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wshcon.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("wshcon.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wshcon.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

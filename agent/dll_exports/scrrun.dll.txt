@@ -1,0 +1,18 @@
+var DLLGetDocumentation = Module.findExportByName("scrrun.dll", "DLLGetDocumentation")
+Interceptor.attach(DLLGetDocumentation, {onLeave: function (args) {send("DLLGetDocumentation");}});
+
+var DllCanUnloadNow = Module.findExportByName("scrrun.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("scrrun.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("scrrun.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("scrrun.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DoOpenPipeStream = Module.findExportByName("scrrun.dll", "DoOpenPipeStream")
+Interceptor.attach(DoOpenPipeStream, {onLeave: function (args) {send("DoOpenPipeStream");}});
+

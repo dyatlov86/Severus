@@ -1,0 +1,9 @@
+var CreateCaptureAnalyzer = Module.findExportByName("DXToolsOfflineAnalysis.dll", "CreateCaptureAnalyzer")
+Interceptor.attach(CreateCaptureAnalyzer, {onLeave: function (args) {send("CreateCaptureAnalyzer");}});
+
+var CreateCounterEnumerator = Module.findExportByName("DXToolsOfflineAnalysis.dll", "CreateCounterEnumerator")
+Interceptor.attach(CreateCounterEnumerator, {onLeave: function (args) {send("CreateCounterEnumerator");}});
+
+var GetCounterEnumerator = Module.findExportByName("DXToolsOfflineAnalysis.dll", "GetCounterEnumerator")
+Interceptor.attach(GetCounterEnumerator, {onLeave: function (args) {send("GetCounterEnumerator");}});
+

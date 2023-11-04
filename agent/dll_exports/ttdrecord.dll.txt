@@ -1,0 +1,3 @@
+var ExecuteTTTracerCommandLine = Module.findExportByName("ttdrecord.dll", "ExecuteTTTracerCommandLine")
+Interceptor.attach(ExecuteTTTracerCommandLine, {onLeave: function (args) {send("ExecuteTTTracerCommandLine");}});
+

@@ -1,0 +1,33 @@
+var ProxyHelperClientAllocateMemory = Module.findExportByName("httpprxc.dll", "ProxyHelperClientAllocateMemory")
+Interceptor.attach(ProxyHelperClientAllocateMemory, {onLeave: function (args) {send("ProxyHelperClientAllocateMemory");}});
+
+var ProxyHelperClientConnectToServer = Module.findExportByName("httpprxc.dll", "ProxyHelperClientConnectToServer")
+Interceptor.attach(ProxyHelperClientConnectToServer, {onLeave: function (args) {send("ProxyHelperClientConnectToServer");}});
+
+var ProxyHelperClientDisconnectFromServer = Module.findExportByName("httpprxc.dll", "ProxyHelperClientDisconnectFromServer")
+Interceptor.attach(ProxyHelperClientDisconnectFromServer, {onLeave: function (args) {send("ProxyHelperClientDisconnectFromServer");}});
+
+var ProxyHelperClientFreeMemory = Module.findExportByName("httpprxc.dll", "ProxyHelperClientFreeMemory")
+Interceptor.attach(ProxyHelperClientFreeMemory, {onLeave: function (args) {send("ProxyHelperClientFreeMemory");}});
+
+var ProxyHelperClientGetAllProxiesForUrl = Module.findExportByName("httpprxc.dll", "ProxyHelperClientGetAllProxiesForUrl")
+Interceptor.attach(ProxyHelperClientGetAllProxiesForUrl, {onLeave: function (args) {send("ProxyHelperClientGetAllProxiesForUrl");}});
+
+var ProxyHelperClientGetProxyCredentials = Module.findExportByName("httpprxc.dll", "ProxyHelperClientGetProxyCredentials")
+Interceptor.attach(ProxyHelperClientGetProxyCredentials, {onLeave: function (args) {send("ProxyHelperClientGetProxyCredentials");}});
+
+var ProxyHelperClientGetProxyForUrl = Module.findExportByName("httpprxc.dll", "ProxyHelperClientGetProxyForUrl")
+Interceptor.attach(ProxyHelperClientGetProxyForUrl, {onLeave: function (args) {send("ProxyHelperClientGetProxyForUrl");}});
+
+var ProxyHelperClientInitialize = Module.findExportByName("httpprxc.dll", "ProxyHelperClientInitialize")
+Interceptor.attach(ProxyHelperClientInitialize, {onLeave: function (args) {send("ProxyHelperClientInitialize");}});
+
+var ProxyHelperClientRegisterForEventNotification = Module.findExportByName("httpprxc.dll", "ProxyHelperClientRegisterForEventNotification")
+Interceptor.attach(ProxyHelperClientRegisterForEventNotification, {onLeave: function (args) {send("ProxyHelperClientRegisterForEventNotification");}});
+
+var ProxyHelperClientUninitialize = Module.findExportByName("httpprxc.dll", "ProxyHelperClientUninitialize")
+Interceptor.attach(ProxyHelperClientUninitialize, {onLeave: function (args) {send("ProxyHelperClientUninitialize");}});
+
+var ProxyHelperClientUnregisterEventNotification = Module.findExportByName("httpprxc.dll", "ProxyHelperClientUnregisterEventNotification")
+Interceptor.attach(ProxyHelperClientUnregisterEventNotification, {onLeave: function (args) {send("ProxyHelperClientUnregisterEventNotification");}});
+

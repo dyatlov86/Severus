@@ -1,0 +1,36 @@
+var CreateUserSpecificGlobalizationSettings = Module.findExportByName("coreglobconfig.dll", "CreateUserSpecificGlobalizationSettings")
+Interceptor.attach(CreateUserSpecificGlobalizationSettings, {onLeave: function (args) {send("CreateUserSpecificGlobalizationSettings");}});
+
+var DllCanUnloadNow = Module.findExportByName("coreglobconfig.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("coreglobconfig.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetDisplayLanguageLocalizedName = Module.findExportByName("coreglobconfig.dll", "GetDisplayLanguageLocalizedName")
+Interceptor.attach(GetDisplayLanguageLocalizedName, {onLeave: function (args) {send("GetDisplayLanguageLocalizedName");}});
+
+var GetDisplayLanguageNativeName = Module.findExportByName("coreglobconfig.dll", "GetDisplayLanguageNativeName")
+Interceptor.attach(GetDisplayLanguageNativeName, {onLeave: function (args) {send("GetDisplayLanguageNativeName");}});
+
+var GetSupportedDisplayLanguages = Module.findExportByName("coreglobconfig.dll", "GetSupportedDisplayLanguages")
+Interceptor.attach(GetSupportedDisplayLanguages, {onLeave: function (args) {send("GetSupportedDisplayLanguages");}});
+
+var SetDisplayLanguageCore = Module.findExportByName("coreglobconfig.dll", "SetDisplayLanguageCore")
+Interceptor.attach(SetDisplayLanguageCore, {onLeave: function (args) {send("SetDisplayLanguageCore");}});
+
+var SetUserDisplayLanguageCore = Module.findExportByName("coreglobconfig.dll", "SetUserDisplayLanguageCore")
+Interceptor.attach(SetUserDisplayLanguageCore, {onLeave: function (args) {send("SetUserDisplayLanguageCore");}});
+
+var SyncLanguageDataFromCloud = Module.findExportByName("coreglobconfig.dll", "SyncLanguageDataFromCloud")
+Interceptor.attach(SyncLanguageDataFromCloud, {onLeave: function (args) {send("SyncLanguageDataFromCloud");}});
+
+var SyncLanguageDataToCloud = Module.findExportByName("coreglobconfig.dll", "SyncLanguageDataToCloud")
+Interceptor.attach(SyncLanguageDataToCloud, {onLeave: function (args) {send("SyncLanguageDataToCloud");}});
+
+var SyncLanguageDataToCloudSynchronous = Module.findExportByName("coreglobconfig.dll", "SyncLanguageDataToCloudSynchronous")
+Interceptor.attach(SyncLanguageDataToCloudSynchronous, {onLeave: function (args) {send("SyncLanguageDataToCloudSynchronous");}});
+
+var UpdateDefaultGlobalizationSettings = Module.findExportByName("coreglobconfig.dll", "UpdateDefaultGlobalizationSettings")
+Interceptor.attach(UpdateDefaultGlobalizationSettings, {onLeave: function (args) {send("UpdateDefaultGlobalizationSettings");}});
+

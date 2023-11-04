@@ -1,0 +1,3 @@
+var CreateCommandingEngine = Module.findExportByName("Windows.Speech.Dictation.dll", "CreateCommandingEngine")
+Interceptor.attach(CreateCommandingEngine, {onLeave: function (args) {send("CreateCommandingEngine");}});
+

@@ -1,0 +1,3 @@
+var OpenFileById = Module.findExportByName("API-MS-Win-core-file-l2-1-1.dll", "OpenFileById")
+Interceptor.attach(OpenFileById, {onLeave: function (args) {send("OpenFileById");}});
+

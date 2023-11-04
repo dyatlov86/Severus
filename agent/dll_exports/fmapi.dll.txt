@@ -1,0 +1,24 @@
+var CloseFileRestoreContext = Module.findExportByName("fmapi.dll", "CloseFileRestoreContext")
+Interceptor.attach(CloseFileRestoreContext, {onLeave: function (args) {send("CloseFileRestoreContext");}});
+
+var CreateFileRestoreContext = Module.findExportByName("fmapi.dll", "CreateFileRestoreContext")
+Interceptor.attach(CreateFileRestoreContext, {onLeave: function (args) {send("CreateFileRestoreContext");}});
+
+var DetectBootSector = Module.findExportByName("fmapi.dll", "DetectBootSector")
+Interceptor.attach(DetectBootSector, {onLeave: function (args) {send("DetectBootSector");}});
+
+var DetectEncryptedVolume = Module.findExportByName("fmapi.dll", "DetectEncryptedVolume")
+Interceptor.attach(DetectEncryptedVolume, {onLeave: function (args) {send("DetectEncryptedVolume");}});
+
+var DetectEncryptedVolumeEx = Module.findExportByName("fmapi.dll", "DetectEncryptedVolumeEx")
+Interceptor.attach(DetectEncryptedVolumeEx, {onLeave: function (args) {send("DetectEncryptedVolumeEx");}});
+
+var RestoreFile = Module.findExportByName("fmapi.dll", "RestoreFile")
+Interceptor.attach(RestoreFile, {onLeave: function (args) {send("RestoreFile");}});
+
+var ScanRestorableFiles = Module.findExportByName("fmapi.dll", "ScanRestorableFiles")
+Interceptor.attach(ScanRestorableFiles, {onLeave: function (args) {send("ScanRestorableFiles");}});
+
+var SupplyDecryptionInfo = Module.findExportByName("fmapi.dll", "SupplyDecryptionInfo")
+Interceptor.attach(SupplyDecryptionInfo, {onLeave: function (args) {send("SupplyDecryptionInfo");}});
+

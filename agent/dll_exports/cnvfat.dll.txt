@@ -1,0 +1,6 @@
+var ConvertFAT = Module.findExportByName("cnvfat.dll", "ConvertFAT")
+Interceptor.attach(ConvertFAT, {onLeave: function (args) {send("ConvertFAT");}});
+
+var IsConversionAvailable = Module.findExportByName("cnvfat.dll", "IsConversionAvailable")
+Interceptor.attach(IsConversionAvailable, {onLeave: function (args) {send("IsConversionAvailable");}});
+

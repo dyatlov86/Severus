@@ -1,0 +1,81 @@
+var EmptyWorkingSet = Module.findExportByName("psapi.dll", "EmptyWorkingSet")
+Interceptor.attach(EmptyWorkingSet, {onLeave: function (args) {send("EmptyWorkingSet");}});
+
+var EnumDeviceDrivers = Module.findExportByName("psapi.dll", "EnumDeviceDrivers")
+Interceptor.attach(EnumDeviceDrivers, {onLeave: function (args) {send("EnumDeviceDrivers");}});
+
+var EnumPageFilesA = Module.findExportByName("psapi.dll", "EnumPageFilesA")
+Interceptor.attach(EnumPageFilesA, {onLeave: function (args) {send("EnumPageFilesA");}});
+
+var EnumPageFilesW = Module.findExportByName("psapi.dll", "EnumPageFilesW")
+Interceptor.attach(EnumPageFilesW, {onLeave: function (args) {send("EnumPageFilesW");}});
+
+var EnumProcessModules = Module.findExportByName("psapi.dll", "EnumProcessModules")
+Interceptor.attach(EnumProcessModules, {onLeave: function (args) {send("EnumProcessModules");}});
+
+var EnumProcessModulesEx = Module.findExportByName("psapi.dll", "EnumProcessModulesEx")
+Interceptor.attach(EnumProcessModulesEx, {onLeave: function (args) {send("EnumProcessModulesEx");}});
+
+var EnumProcesses = Module.findExportByName("psapi.dll", "EnumProcesses")
+Interceptor.attach(EnumProcesses, {onLeave: function (args) {send("EnumProcesses");}});
+
+var GetDeviceDriverBaseNameA = Module.findExportByName("psapi.dll", "GetDeviceDriverBaseNameA")
+Interceptor.attach(GetDeviceDriverBaseNameA, {onLeave: function (args) {send("GetDeviceDriverBaseNameA");}});
+
+var GetDeviceDriverBaseNameW = Module.findExportByName("psapi.dll", "GetDeviceDriverBaseNameW")
+Interceptor.attach(GetDeviceDriverBaseNameW, {onLeave: function (args) {send("GetDeviceDriverBaseNameW");}});
+
+var GetDeviceDriverFileNameA = Module.findExportByName("psapi.dll", "GetDeviceDriverFileNameA")
+Interceptor.attach(GetDeviceDriverFileNameA, {onLeave: function (args) {send("GetDeviceDriverFileNameA");}});
+
+var GetDeviceDriverFileNameW = Module.findExportByName("psapi.dll", "GetDeviceDriverFileNameW")
+Interceptor.attach(GetDeviceDriverFileNameW, {onLeave: function (args) {send("GetDeviceDriverFileNameW");}});
+
+var GetMappedFileNameA = Module.findExportByName("psapi.dll", "GetMappedFileNameA")
+Interceptor.attach(GetMappedFileNameA, {onLeave: function (args) {send("GetMappedFileNameA");}});
+
+var GetMappedFileNameW = Module.findExportByName("psapi.dll", "GetMappedFileNameW")
+Interceptor.attach(GetMappedFileNameW, {onLeave: function (args) {send("GetMappedFileNameW");}});
+
+var GetModuleBaseNameA = Module.findExportByName("psapi.dll", "GetModuleBaseNameA")
+Interceptor.attach(GetModuleBaseNameA, {onLeave: function (args) {send("GetModuleBaseNameA");}});
+
+var GetModuleBaseNameW = Module.findExportByName("psapi.dll", "GetModuleBaseNameW")
+Interceptor.attach(GetModuleBaseNameW, {onLeave: function (args) {send("GetModuleBaseNameW");}});
+
+var GetModuleFileNameExA = Module.findExportByName("psapi.dll", "GetModuleFileNameExA")
+Interceptor.attach(GetModuleFileNameExA, {onLeave: function (args) {send("GetModuleFileNameExA");}});
+
+var GetModuleFileNameExW = Module.findExportByName("psapi.dll", "GetModuleFileNameExW")
+Interceptor.attach(GetModuleFileNameExW, {onLeave: function (args) {send("GetModuleFileNameExW");}});
+
+var GetModuleInformation = Module.findExportByName("psapi.dll", "GetModuleInformation")
+Interceptor.attach(GetModuleInformation, {onLeave: function (args) {send("GetModuleInformation");}});
+
+var GetPerformanceInfo = Module.findExportByName("psapi.dll", "GetPerformanceInfo")
+Interceptor.attach(GetPerformanceInfo, {onLeave: function (args) {send("GetPerformanceInfo");}});
+
+var GetProcessImageFileNameA = Module.findExportByName("psapi.dll", "GetProcessImageFileNameA")
+Interceptor.attach(GetProcessImageFileNameA, {onLeave: function (args) {send("GetProcessImageFileNameA");}});
+
+var GetProcessImageFileNameW = Module.findExportByName("psapi.dll", "GetProcessImageFileNameW")
+Interceptor.attach(GetProcessImageFileNameW, {onLeave: function (args) {send("GetProcessImageFileNameW");}});
+
+var GetProcessMemoryInfo = Module.findExportByName("psapi.dll", "GetProcessMemoryInfo")
+Interceptor.attach(GetProcessMemoryInfo, {onLeave: function (args) {send("GetProcessMemoryInfo");}});
+
+var GetWsChanges = Module.findExportByName("psapi.dll", "GetWsChanges")
+Interceptor.attach(GetWsChanges, {onLeave: function (args) {send("GetWsChanges");}});
+
+var GetWsChangesEx = Module.findExportByName("psapi.dll", "GetWsChangesEx")
+Interceptor.attach(GetWsChangesEx, {onLeave: function (args) {send("GetWsChangesEx");}});
+
+var InitializeProcessForWsWatch = Module.findExportByName("psapi.dll", "InitializeProcessForWsWatch")
+Interceptor.attach(InitializeProcessForWsWatch, {onLeave: function (args) {send("InitializeProcessForWsWatch");}});
+
+var QueryWorkingSet = Module.findExportByName("psapi.dll", "QueryWorkingSet")
+Interceptor.attach(QueryWorkingSet, {onLeave: function (args) {send("QueryWorkingSet");}});
+
+var QueryWorkingSetEx = Module.findExportByName("psapi.dll", "QueryWorkingSetEx")
+Interceptor.attach(QueryWorkingSetEx, {onLeave: function (args) {send("QueryWorkingSetEx");}});
+

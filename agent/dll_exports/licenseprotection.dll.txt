@@ -1,0 +1,9 @@
+var LicenseProtectionPbrReset = Module.findExportByName("licenseprotection.dll", "LicenseProtectionPbrReset")
+Interceptor.attach(LicenseProtectionPbrReset, {onLeave: function (args) {send("LicenseProtectionPbrReset");}});
+
+var RegisterLicenseKeyWithExpiration = Module.findExportByName("licenseprotection.dll", "RegisterLicenseKeyWithExpiration")
+Interceptor.attach(RegisterLicenseKeyWithExpiration, {onLeave: function (args) {send("RegisterLicenseKeyWithExpiration");}});
+
+var ValidateLicenseKeyProtection = Module.findExportByName("licenseprotection.dll", "ValidateLicenseKeyProtection")
+Interceptor.attach(ValidateLicenseKeyProtection, {onLeave: function (args) {send("ValidateLicenseKeyProtection");}});
+

@@ -1,0 +1,45 @@
+var AssertFail = Module.findExportByName("vsstrace.dll", "AssertFail")
+Interceptor.attach(AssertFail, {onLeave: function (args) {send("AssertFail");}});
+
+var VssGetTracingContextPerThread = Module.findExportByName("vsstrace.dll", "VssGetTracingContextPerThread")
+Interceptor.attach(VssGetTracingContextPerThread, {onLeave: function (args) {send("VssGetTracingContextPerThread");}});
+
+var VssGetTracingModuleInfo = Module.findExportByName("vsstrace.dll", "VssGetTracingModuleInfo")
+Interceptor.attach(VssGetTracingModuleInfo, {onLeave: function (args) {send("VssGetTracingModuleInfo");}});
+
+var VssGetTracingSequenceNumber = Module.findExportByName("vsstrace.dll", "VssGetTracingSequenceNumber")
+Interceptor.attach(VssGetTracingSequenceNumber, {onLeave: function (args) {send("VssGetTracingSequenceNumber");}});
+
+var VssIsKernelDebuggerAttached = Module.findExportByName("vsstrace.dll", "VssIsKernelDebuggerAttached")
+Interceptor.attach(VssIsKernelDebuggerAttached, {onLeave: function (args) {send("VssIsKernelDebuggerAttached");}});
+
+var VssIsTracingEnabled = Module.findExportByName("vsstrace.dll", "VssIsTracingEnabled")
+Interceptor.attach(VssIsTracingEnabled, {onLeave: function (args) {send("VssIsTracingEnabled");}});
+
+var VssIsTracingEnabledOnFunction = Module.findExportByName("vsstrace.dll", "VssIsTracingEnabledOnFunction")
+Interceptor.attach(VssIsTracingEnabledOnFunction, {onLeave: function (args) {send("VssIsTracingEnabledOnFunction");}});
+
+var VssIsTracingEnabledOnModule = Module.findExportByName("vsstrace.dll", "VssIsTracingEnabledOnModule")
+Interceptor.attach(VssIsTracingEnabledOnModule, {onLeave: function (args) {send("VssIsTracingEnabledOnModule");}});
+
+var VssIsTracingEnabledPerThread = Module.findExportByName("vsstrace.dll", "VssIsTracingEnabledPerThread")
+Interceptor.attach(VssIsTracingEnabledPerThread, {onLeave: function (args) {send("VssIsTracingEnabledPerThread");}});
+
+var VssSetDebugReport = Module.findExportByName("vsstrace.dll", "VssSetDebugReport")
+Interceptor.attach(VssSetDebugReport, {onLeave: function (args) {send("VssSetDebugReport");}});
+
+var VssSetTracingContextPerThread = Module.findExportByName("vsstrace.dll", "VssSetTracingContextPerThread")
+Interceptor.attach(VssSetTracingContextPerThread, {onLeave: function (args) {send("VssSetTracingContextPerThread");}});
+
+var VssTraceBinary = Module.findExportByName("vsstrace.dll", "VssTraceBinary")
+Interceptor.attach(VssTraceBinary, {onLeave: function (args) {send("VssTraceBinary");}});
+
+var VssTraceInitialize = Module.findExportByName("vsstrace.dll", "VssTraceInitialize")
+Interceptor.attach(VssTraceInitialize, {onLeave: function (args) {send("VssTraceInitialize");}});
+
+var VssTraceMessage = Module.findExportByName("vsstrace.dll", "VssTraceMessage")
+Interceptor.attach(VssTraceMessage, {onLeave: function (args) {send("VssTraceMessage");}});
+
+var VssTraceUninitialize = Module.findExportByName("vsstrace.dll", "VssTraceUninitialize")
+Interceptor.attach(VssTraceUninitialize, {onLeave: function (args) {send("VssTraceUninitialize");}});
+

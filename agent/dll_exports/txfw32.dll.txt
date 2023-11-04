@@ -1,0 +1,27 @@
+var TxfGetThreadMiniVersionForCreate = Module.findExportByName("txfw32.dll", "TxfGetThreadMiniVersionForCreate")
+Interceptor.attach(TxfGetThreadMiniVersionForCreate, {onLeave: function (args) {send("TxfGetThreadMiniVersionForCreate");}});
+
+var TxfLogCreateFileReadContext = Module.findExportByName("txfw32.dll", "TxfLogCreateFileReadContext")
+Interceptor.attach(TxfLogCreateFileReadContext, {onLeave: function (args) {send("TxfLogCreateFileReadContext");}});
+
+var TxfLogCreateRangeReadContext = Module.findExportByName("txfw32.dll", "TxfLogCreateRangeReadContext")
+Interceptor.attach(TxfLogCreateRangeReadContext, {onLeave: function (args) {send("TxfLogCreateRangeReadContext");}});
+
+var TxfLogDestroyReadContext = Module.findExportByName("txfw32.dll", "TxfLogDestroyReadContext")
+Interceptor.attach(TxfLogDestroyReadContext, {onLeave: function (args) {send("TxfLogDestroyReadContext");}});
+
+var TxfLogReadRecords = Module.findExportByName("txfw32.dll", "TxfLogReadRecords")
+Interceptor.attach(TxfLogReadRecords, {onLeave: function (args) {send("TxfLogReadRecords");}});
+
+var TxfLogRecordGetFileName = Module.findExportByName("txfw32.dll", "TxfLogRecordGetFileName")
+Interceptor.attach(TxfLogRecordGetFileName, {onLeave: function (args) {send("TxfLogRecordGetFileName");}});
+
+var TxfLogRecordGetGenericType = Module.findExportByName("txfw32.dll", "TxfLogRecordGetGenericType")
+Interceptor.attach(TxfLogRecordGetGenericType, {onLeave: function (args) {send("TxfLogRecordGetGenericType");}});
+
+var TxfReadMetadataInfo = Module.findExportByName("txfw32.dll", "TxfReadMetadataInfo")
+Interceptor.attach(TxfReadMetadataInfo, {onLeave: function (args) {send("TxfReadMetadataInfo");}});
+
+var TxfSetThreadMiniVersionForCreate = Module.findExportByName("txfw32.dll", "TxfSetThreadMiniVersionForCreate")
+Interceptor.attach(TxfSetThreadMiniVersionForCreate, {onLeave: function (args) {send("TxfSetThreadMiniVersionForCreate");}});
+

@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("iismig.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("iismig.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("iismig.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("iismig.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var TriggerApply = Module.findExportByName("iismig.dll", "TriggerApply")
+Interceptor.attach(TriggerApply, {onLeave: function (args) {send("TriggerApply");}});
+
+var TriggerGather = Module.findExportByName("iismig.dll", "TriggerGather")
+Interceptor.attach(TriggerGather, {onLeave: function (args) {send("TriggerGather");}});
+

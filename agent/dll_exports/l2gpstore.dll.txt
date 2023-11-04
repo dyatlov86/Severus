@@ -1,0 +1,21 @@
+var L2GPPolicyDataDelete = Module.findExportByName("l2gpstore.dll", "L2GPPolicyDataDelete")
+Interceptor.attach(L2GPPolicyDataDelete, {onLeave: function (args) {send("L2GPPolicyDataDelete");}});
+
+var L2GPPolicyDataDeleteAll = Module.findExportByName("l2gpstore.dll", "L2GPPolicyDataDeleteAll")
+Interceptor.attach(L2GPPolicyDataDeleteAll, {onLeave: function (args) {send("L2GPPolicyDataDeleteAll");}});
+
+var L2GPPolicyDataRead = Module.findExportByName("l2gpstore.dll", "L2GPPolicyDataRead")
+Interceptor.attach(L2GPPolicyDataRead, {onLeave: function (args) {send("L2GPPolicyDataRead");}});
+
+var L2GPPolicyDataWrite = Module.findExportByName("l2gpstore.dll", "L2GPPolicyDataWrite")
+Interceptor.attach(L2GPPolicyDataWrite, {onLeave: function (args) {send("L2GPPolicyDataWrite");}});
+
+var L2GPPolicyFreeMem = Module.findExportByName("l2gpstore.dll", "L2GPPolicyFreeMem")
+Interceptor.attach(L2GPPolicyFreeMem, {onLeave: function (args) {send("L2GPPolicyFreeMem");}});
+
+var L2GPPolicyStoreClose = Module.findExportByName("l2gpstore.dll", "L2GPPolicyStoreClose")
+Interceptor.attach(L2GPPolicyStoreClose, {onLeave: function (args) {send("L2GPPolicyStoreClose");}});
+
+var L2GPPolicyStoreOpen = Module.findExportByName("l2gpstore.dll", "L2GPPolicyStoreOpen")
+Interceptor.attach(L2GPPolicyStoreOpen, {onLeave: function (args) {send("L2GPPolicyStoreOpen");}});
+

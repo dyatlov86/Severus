@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("mfsvr.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mfsvr.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var MFCreateHDCPStatus = Module.findExportByName("mfsvr.dll", "MFCreateHDCPStatus")
+Interceptor.attach(MFCreateHDCPStatus, {onLeave: function (args) {send("MFCreateHDCPStatus");}});
+
+var MFCreateMediaEngineVideoOTA = Module.findExportByName("mfsvr.dll", "MFCreateMediaEngineVideoOTA")
+Interceptor.attach(MFCreateMediaEngineVideoOTA, {onLeave: function (args) {send("MFCreateMediaEngineVideoOTA");}});
+
+var MFCreateOPMHelper = Module.findExportByName("mfsvr.dll", "MFCreateOPMHelper")
+Interceptor.attach(MFCreateOPMHelper, {onLeave: function (args) {send("MFCreateOPMHelper");}});
+
+var MFCreateTimedTextRenderer = Module.findExportByName("mfsvr.dll", "MFCreateTimedTextRenderer")
+Interceptor.attach(MFCreateTimedTextRenderer, {onLeave: function (args) {send("MFCreateTimedTextRenderer");}});
+

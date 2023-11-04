@@ -1,0 +1,12 @@
+var KeyCredentialManagerFreeInformation = Module.findExportByName("KeyCredMgr.dll", "KeyCredentialManagerFreeInformation")
+Interceptor.attach(KeyCredentialManagerFreeInformation, {onLeave: function (args) {send("KeyCredentialManagerFreeInformation");}});
+
+var KeyCredentialManagerGetInformation = Module.findExportByName("KeyCredMgr.dll", "KeyCredentialManagerGetInformation")
+Interceptor.attach(KeyCredentialManagerGetInformation, {onLeave: function (args) {send("KeyCredentialManagerGetInformation");}});
+
+var KeyCredentialManagerGetOperationErrorStates = Module.findExportByName("KeyCredMgr.dll", "KeyCredentialManagerGetOperationErrorStates")
+Interceptor.attach(KeyCredentialManagerGetOperationErrorStates, {onLeave: function (args) {send("KeyCredentialManagerGetOperationErrorStates");}});
+
+var KeyCredentialManagerShowUIOperation = Module.findExportByName("KeyCredMgr.dll", "KeyCredentialManagerShowUIOperation")
+Interceptor.attach(KeyCredentialManagerShowUIOperation, {onLeave: function (args) {send("KeyCredentialManagerShowUIOperation");}});
+

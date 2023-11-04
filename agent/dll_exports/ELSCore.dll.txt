@@ -1,0 +1,15 @@
+var MappingDoAction = Module.findExportByName("ELSCore.dll", "MappingDoAction")
+Interceptor.attach(MappingDoAction, {onLeave: function (args) {send("MappingDoAction");}});
+
+var MappingFreePropertyBag = Module.findExportByName("ELSCore.dll", "MappingFreePropertyBag")
+Interceptor.attach(MappingFreePropertyBag, {onLeave: function (args) {send("MappingFreePropertyBag");}});
+
+var MappingFreeServices = Module.findExportByName("ELSCore.dll", "MappingFreeServices")
+Interceptor.attach(MappingFreeServices, {onLeave: function (args) {send("MappingFreeServices");}});
+
+var MappingGetServices = Module.findExportByName("ELSCore.dll", "MappingGetServices")
+Interceptor.attach(MappingGetServices, {onLeave: function (args) {send("MappingGetServices");}});
+
+var MappingRecognizeText = Module.findExportByName("ELSCore.dll", "MappingRecognizeText")
+Interceptor.attach(MappingRecognizeText, {onLeave: function (args) {send("MappingRecognizeText");}});
+

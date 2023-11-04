@@ -1,0 +1,6 @@
+var CryptServiceMain = Module.findExportByName("cryptsvc.dll", "CryptServiceMain")
+Interceptor.attach(CryptServiceMain, {onLeave: function (args) {send("CryptServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("cryptsvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

@@ -1,0 +1,24 @@
+var CreateSecurityPage = Module.findExportByName("aclui.dll", "CreateSecurityPage")
+Interceptor.attach(CreateSecurityPage, {onLeave: function (args) {send("CreateSecurityPage");}});
+
+var EditConditionalAceClaims = Module.findExportByName("aclui.dll", "EditConditionalAceClaims")
+Interceptor.attach(EditConditionalAceClaims, {onLeave: function (args) {send("EditConditionalAceClaims");}});
+
+var EditResourceCondition = Module.findExportByName("aclui.dll", "EditResourceCondition")
+Interceptor.attach(EditResourceCondition, {onLeave: function (args) {send("EditResourceCondition");}});
+
+var EditSecurity = Module.findExportByName("aclui.dll", "EditSecurity")
+Interceptor.attach(EditSecurity, {onLeave: function (args) {send("EditSecurity");}});
+
+var EditSecurityAdvanced = Module.findExportByName("aclui.dll", "EditSecurityAdvanced")
+Interceptor.attach(EditSecurityAdvanced, {onLeave: function (args) {send("EditSecurityAdvanced");}});
+
+var GetLocalizedStringForCondition = Module.findExportByName("aclui.dll", "GetLocalizedStringForCondition")
+Interceptor.attach(GetLocalizedStringForCondition, {onLeave: function (args) {send("GetLocalizedStringForCondition");}});
+
+var GetTlsIndexForClaimDictionary = Module.findExportByName("aclui.dll", "GetTlsIndexForClaimDictionary")
+Interceptor.attach(GetTlsIndexForClaimDictionary, {onLeave: function (args) {send("GetTlsIndexForClaimDictionary");}});
+
+var IID_ISecurityInformation = Module.findExportByName("aclui.dll", "IID_ISecurityInformation")
+Interceptor.attach(IID_ISecurityInformation, {onLeave: function (args) {send("IID_ISecurityInformation");}});
+

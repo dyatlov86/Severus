@@ -1,0 +1,3 @@
+var SRGetCplPropPage = Module.findExportByName("srrstr.dll", "SRGetCplPropPage")
+Interceptor.attach(SRGetCplPropPage, {onLeave: function (args) {send("SRGetCplPropPage");}});
+

@@ -1,0 +1,87 @@
+var ADsBuildEnumerator = Module.findExportByName("activeds.dll", "ADsBuildEnumerator")
+Interceptor.attach(ADsBuildEnumerator, {onLeave: function (args) {send("ADsBuildEnumerator");}});
+
+var ADsBuildVarArrayInt = Module.findExportByName("activeds.dll", "ADsBuildVarArrayInt")
+Interceptor.attach(ADsBuildVarArrayInt, {onLeave: function (args) {send("ADsBuildVarArrayInt");}});
+
+var ADsBuildVarArrayStr = Module.findExportByName("activeds.dll", "ADsBuildVarArrayStr")
+Interceptor.attach(ADsBuildVarArrayStr, {onLeave: function (args) {send("ADsBuildVarArrayStr");}});
+
+var ADsDecodeBinaryData = Module.findExportByName("activeds.dll", "ADsDecodeBinaryData")
+Interceptor.attach(ADsDecodeBinaryData, {onLeave: function (args) {send("ADsDecodeBinaryData");}});
+
+var ADsEncodeBinaryData = Module.findExportByName("activeds.dll", "ADsEncodeBinaryData")
+Interceptor.attach(ADsEncodeBinaryData, {onLeave: function (args) {send("ADsEncodeBinaryData");}});
+
+var ADsEnumerateNext = Module.findExportByName("activeds.dll", "ADsEnumerateNext")
+Interceptor.attach(ADsEnumerateNext, {onLeave: function (args) {send("ADsEnumerateNext");}});
+
+var ADsFreeEnumerator = Module.findExportByName("activeds.dll", "ADsFreeEnumerator")
+Interceptor.attach(ADsFreeEnumerator, {onLeave: function (args) {send("ADsFreeEnumerator");}});
+
+var ADsGetLastError = Module.findExportByName("activeds.dll", "ADsGetLastError")
+Interceptor.attach(ADsGetLastError, {onLeave: function (args) {send("ADsGetLastError");}});
+
+var ADsGetObject = Module.findExportByName("activeds.dll", "ADsGetObject")
+Interceptor.attach(ADsGetObject, {onLeave: function (args) {send("ADsGetObject");}});
+
+var ADsOpenObject = Module.findExportByName("activeds.dll", "ADsOpenObject")
+Interceptor.attach(ADsOpenObject, {onLeave: function (args) {send("ADsOpenObject");}});
+
+var ADsSetLastError = Module.findExportByName("activeds.dll", "ADsSetLastError")
+Interceptor.attach(ADsSetLastError, {onLeave: function (args) {send("ADsSetLastError");}});
+
+var AdsFreeAdsValues = Module.findExportByName("activeds.dll", "AdsFreeAdsValues")
+Interceptor.attach(AdsFreeAdsValues, {onLeave: function (args) {send("AdsFreeAdsValues");}});
+
+var AdsTypeToPropVariant = Module.findExportByName("activeds.dll", "AdsTypeToPropVariant")
+Interceptor.attach(AdsTypeToPropVariant, {onLeave: function (args) {send("AdsTypeToPropVariant");}});
+
+var AdsTypeToPropVariant2 = Module.findExportByName("activeds.dll", "AdsTypeToPropVariant2")
+Interceptor.attach(AdsTypeToPropVariant2, {onLeave: function (args) {send("AdsTypeToPropVariant2");}});
+
+var AllocADsMem = Module.findExportByName("activeds.dll", "AllocADsMem")
+Interceptor.attach(AllocADsMem, {onLeave: function (args) {send("AllocADsMem");}});
+
+var AllocADsStr = Module.findExportByName("activeds.dll", "AllocADsStr")
+Interceptor.attach(AllocADsStr, {onLeave: function (args) {send("AllocADsStr");}});
+
+var BinarySDToSecurityDescriptor = Module.findExportByName("activeds.dll", "BinarySDToSecurityDescriptor")
+Interceptor.attach(BinarySDToSecurityDescriptor, {onLeave: function (args) {send("BinarySDToSecurityDescriptor");}});
+
+var ConvertSecDescriptorToVariant = Module.findExportByName("activeds.dll", "ConvertSecDescriptorToVariant")
+Interceptor.attach(ConvertSecDescriptorToVariant, {onLeave: function (args) {send("ConvertSecDescriptorToVariant");}});
+
+var ConvertSecurityDescriptorToSecDes = Module.findExportByName("activeds.dll", "ConvertSecurityDescriptorToSecDes")
+Interceptor.attach(ConvertSecurityDescriptorToSecDes, {onLeave: function (args) {send("ConvertSecurityDescriptorToSecDes");}});
+
+var ConvertTrusteeToSid = Module.findExportByName("activeds.dll", "ConvertTrusteeToSid")
+Interceptor.attach(ConvertTrusteeToSid, {onLeave: function (args) {send("ConvertTrusteeToSid");}});
+
+var DllCanUnloadNow = Module.findExportByName("activeds.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("activeds.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var FreeADsMem = Module.findExportByName("activeds.dll", "FreeADsMem")
+Interceptor.attach(FreeADsMem, {onLeave: function (args) {send("FreeADsMem");}});
+
+var FreeADsStr = Module.findExportByName("activeds.dll", "FreeADsStr")
+Interceptor.attach(FreeADsStr, {onLeave: function (args) {send("FreeADsStr");}});
+
+var PropVariantToAdsType = Module.findExportByName("activeds.dll", "PropVariantToAdsType")
+Interceptor.attach(PropVariantToAdsType, {onLeave: function (args) {send("PropVariantToAdsType");}});
+
+var PropVariantToAdsType2 = Module.findExportByName("activeds.dll", "PropVariantToAdsType2")
+Interceptor.attach(PropVariantToAdsType2, {onLeave: function (args) {send("PropVariantToAdsType2");}});
+
+var ReallocADsMem = Module.findExportByName("activeds.dll", "ReallocADsMem")
+Interceptor.attach(ReallocADsMem, {onLeave: function (args) {send("ReallocADsMem");}});
+
+var ReallocADsStr = Module.findExportByName("activeds.dll", "ReallocADsStr")
+Interceptor.attach(ReallocADsStr, {onLeave: function (args) {send("ReallocADsStr");}});
+
+var SecurityDescriptorToBinarySD = Module.findExportByName("activeds.dll", "SecurityDescriptorToBinarySD")
+Interceptor.attach(SecurityDescriptorToBinarySD, {onLeave: function (args) {send("SecurityDescriptorToBinarySD");}});
+

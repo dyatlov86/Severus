@@ -1,0 +1,24 @@
+var WtdhAllocateEvent = Module.findExportByName("wtdhost.dll", "WtdhAllocateEvent")
+Interceptor.attach(WtdhAllocateEvent, {onLeave: function (args) {send("WtdhAllocateEvent");}});
+
+var WtdhDisableSensors = Module.findExportByName("wtdhost.dll", "WtdhDisableSensors")
+Interceptor.attach(WtdhDisableSensors, {onLeave: function (args) {send("WtdhDisableSensors");}});
+
+var WtdhEnableSensors = Module.findExportByName("wtdhost.dll", "WtdhEnableSensors")
+Interceptor.attach(WtdhEnableSensors, {onLeave: function (args) {send("WtdhEnableSensors");}});
+
+var WtdhFreeEventIoPacket = Module.findExportByName("wtdhost.dll", "WtdhFreeEventIoPacket")
+Interceptor.attach(WtdhFreeEventIoPacket, {onLeave: function (args) {send("WtdhFreeEventIoPacket");}});
+
+var WtdhGetProcessId = Module.findExportByName("wtdhost.dll", "WtdhGetProcessId")
+Interceptor.attach(WtdhGetProcessId, {onLeave: function (args) {send("WtdhGetProcessId");}});
+
+var WtdhRegister = Module.findExportByName("wtdhost.dll", "WtdhRegister")
+Interceptor.attach(WtdhRegister, {onLeave: function (args) {send("WtdhRegister");}});
+
+var WtdhUnregister = Module.findExportByName("wtdhost.dll", "WtdhUnregister")
+Interceptor.attach(WtdhUnregister, {onLeave: function (args) {send("WtdhUnregister");}});
+
+var WtdhWaitForSensorEvent = Module.findExportByName("wtdhost.dll", "WtdhWaitForSensorEvent")
+Interceptor.attach(WtdhWaitForSensorEvent, {onLeave: function (args) {send("WtdhWaitForSensorEvent");}});
+

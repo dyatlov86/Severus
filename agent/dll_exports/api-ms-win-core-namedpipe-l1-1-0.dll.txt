@@ -1,0 +1,30 @@
+var ConnectNamedPipe = Module.findExportByName("api-ms-win-core-namedpipe-l1-1-0.dll", "ConnectNamedPipe")
+Interceptor.attach(ConnectNamedPipe, {onLeave: function (args) {send("ConnectNamedPipe");}});
+
+var CreateNamedPipeW = Module.findExportByName("api-ms-win-core-namedpipe-l1-1-0.dll", "CreateNamedPipeW")
+Interceptor.attach(CreateNamedPipeW, {onLeave: function (args) {send("CreateNamedPipeW");}});
+
+var CreatePipe = Module.findExportByName("api-ms-win-core-namedpipe-l1-1-0.dll", "CreatePipe")
+Interceptor.attach(CreatePipe, {onLeave: function (args) {send("CreatePipe");}});
+
+var DisconnectNamedPipe = Module.findExportByName("api-ms-win-core-namedpipe-l1-1-0.dll", "DisconnectNamedPipe")
+Interceptor.attach(DisconnectNamedPipe, {onLeave: function (args) {send("DisconnectNamedPipe");}});
+
+var GetNamedPipeClientComputerNameW = Module.findExportByName("api-ms-win-core-namedpipe-l1-1-0.dll", "GetNamedPipeClientComputerNameW")
+Interceptor.attach(GetNamedPipeClientComputerNameW, {onLeave: function (args) {send("GetNamedPipeClientComputerNameW");}});
+
+var ImpersonateNamedPipeClient = Module.findExportByName("api-ms-win-core-namedpipe-l1-1-0.dll", "ImpersonateNamedPipeClient")
+Interceptor.attach(ImpersonateNamedPipeClient, {onLeave: function (args) {send("ImpersonateNamedPipeClient");}});
+
+var PeekNamedPipe = Module.findExportByName("api-ms-win-core-namedpipe-l1-1-0.dll", "PeekNamedPipe")
+Interceptor.attach(PeekNamedPipe, {onLeave: function (args) {send("PeekNamedPipe");}});
+
+var SetNamedPipeHandleState = Module.findExportByName("api-ms-win-core-namedpipe-l1-1-0.dll", "SetNamedPipeHandleState")
+Interceptor.attach(SetNamedPipeHandleState, {onLeave: function (args) {send("SetNamedPipeHandleState");}});
+
+var TransactNamedPipe = Module.findExportByName("api-ms-win-core-namedpipe-l1-1-0.dll", "TransactNamedPipe")
+Interceptor.attach(TransactNamedPipe, {onLeave: function (args) {send("TransactNamedPipe");}});
+
+var WaitNamedPipeW = Module.findExportByName("api-ms-win-core-namedpipe-l1-1-0.dll", "WaitNamedPipeW")
+Interceptor.attach(WaitNamedPipeW, {onLeave: function (args) {send("WaitNamedPipeW");}});
+

@@ -1,0 +1,21 @@
+var ImplatMuxDispatch = Module.findExportByName("ImplatSetup.dll", "ImplatMuxDispatch")
+Interceptor.attach(ImplatMuxDispatch, {onLeave: function (args) {send("ImplatMuxDispatch");}});
+
+var ImplatMuxMemberUninstall = Module.findExportByName("ImplatSetup.dll", "ImplatMuxMemberUninstall")
+Interceptor.attach(ImplatMuxMemberUninstall, {onLeave: function (args) {send("ImplatMuxMemberUninstall");}});
+
+var ImplatMuxModified = Module.findExportByName("ImplatSetup.dll", "ImplatMuxModified")
+Interceptor.attach(ImplatMuxModified, {onLeave: function (args) {send("ImplatMuxModified");}});
+
+var ImplatMuxVirtualInterfaceChanged = Module.findExportByName("ImplatSetup.dll", "ImplatMuxVirtualInterfaceChanged")
+Interceptor.attach(ImplatMuxVirtualInterfaceChanged, {onLeave: function (args) {send("ImplatMuxVirtualInterfaceChanged");}});
+
+var ImplatMuxVirtualInterfaces = Module.findExportByName("ImplatSetup.dll", "ImplatMuxVirtualInterfaces")
+Interceptor.attach(ImplatMuxVirtualInterfaces, {onLeave: function (args) {send("ImplatMuxVirtualInterfaces");}});
+
+var ImplatTransactionDispatch = Module.findExportByName("ImplatSetup.dll", "ImplatTransactionDispatch")
+Interceptor.attach(ImplatTransactionDispatch, {onLeave: function (args) {send("ImplatTransactionDispatch");}});
+
+var ImplatVmsBinding = Module.findExportByName("ImplatSetup.dll", "ImplatVmsBinding")
+Interceptor.attach(ImplatVmsBinding, {onLeave: function (args) {send("ImplatVmsBinding");}});
+

@@ -1,0 +1,84 @@
+var DllCanUnloadNow = Module.findExportByName("ndfapi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("ndfapi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("ndfapi.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("ndfapi.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var NdfCancelIncident = Module.findExportByName("ndfapi.dll", "NdfCancelIncident")
+Interceptor.attach(NdfCancelIncident, {onLeave: function (args) {send("NdfCancelIncident");}});
+
+var NdfCloseIncident = Module.findExportByName("ndfapi.dll", "NdfCloseIncident")
+Interceptor.attach(NdfCloseIncident, {onLeave: function (args) {send("NdfCloseIncident");}});
+
+var NdfCreateConnectivityIncident = Module.findExportByName("ndfapi.dll", "NdfCreateConnectivityIncident")
+Interceptor.attach(NdfCreateConnectivityIncident, {onLeave: function (args) {send("NdfCreateConnectivityIncident");}});
+
+var NdfCreateDNSIncident = Module.findExportByName("ndfapi.dll", "NdfCreateDNSIncident")
+Interceptor.attach(NdfCreateDNSIncident, {onLeave: function (args) {send("NdfCreateDNSIncident");}});
+
+var NdfCreateGroupingIncident = Module.findExportByName("ndfapi.dll", "NdfCreateGroupingIncident")
+Interceptor.attach(NdfCreateGroupingIncident, {onLeave: function (args) {send("NdfCreateGroupingIncident");}});
+
+var NdfCreateInboundIncident = Module.findExportByName("ndfapi.dll", "NdfCreateInboundIncident")
+Interceptor.attach(NdfCreateInboundIncident, {onLeave: function (args) {send("NdfCreateInboundIncident");}});
+
+var NdfCreateIncident = Module.findExportByName("ndfapi.dll", "NdfCreateIncident")
+Interceptor.attach(NdfCreateIncident, {onLeave: function (args) {send("NdfCreateIncident");}});
+
+var NdfCreateNetConnectionIncident = Module.findExportByName("ndfapi.dll", "NdfCreateNetConnectionIncident")
+Interceptor.attach(NdfCreateNetConnectionIncident, {onLeave: function (args) {send("NdfCreateNetConnectionIncident");}});
+
+var NdfCreatePnrpIncident = Module.findExportByName("ndfapi.dll", "NdfCreatePnrpIncident")
+Interceptor.attach(NdfCreatePnrpIncident, {onLeave: function (args) {send("NdfCreatePnrpIncident");}});
+
+var NdfCreateSharingIncident = Module.findExportByName("ndfapi.dll", "NdfCreateSharingIncident")
+Interceptor.attach(NdfCreateSharingIncident, {onLeave: function (args) {send("NdfCreateSharingIncident");}});
+
+var NdfCreateWebIncident = Module.findExportByName("ndfapi.dll", "NdfCreateWebIncident")
+Interceptor.attach(NdfCreateWebIncident, {onLeave: function (args) {send("NdfCreateWebIncident");}});
+
+var NdfCreateWebIncidentEx = Module.findExportByName("ndfapi.dll", "NdfCreateWebIncidentEx")
+Interceptor.attach(NdfCreateWebIncidentEx, {onLeave: function (args) {send("NdfCreateWebIncidentEx");}});
+
+var NdfCreateWinSockIncident = Module.findExportByName("ndfapi.dll", "NdfCreateWinSockIncident")
+Interceptor.attach(NdfCreateWinSockIncident, {onLeave: function (args) {send("NdfCreateWinSockIncident");}});
+
+var NdfDiagnoseIncident = Module.findExportByName("ndfapi.dll", "NdfDiagnoseIncident")
+Interceptor.attach(NdfDiagnoseIncident, {onLeave: function (args) {send("NdfDiagnoseIncident");}});
+
+var NdfExecuteDiagnosis = Module.findExportByName("ndfapi.dll", "NdfExecuteDiagnosis")
+Interceptor.attach(NdfExecuteDiagnosis, {onLeave: function (args) {send("NdfExecuteDiagnosis");}});
+
+var NdfGetTraceFile = Module.findExportByName("ndfapi.dll", "NdfGetTraceFile")
+Interceptor.attach(NdfGetTraceFile, {onLeave: function (args) {send("NdfGetTraceFile");}});
+
+var NdfRepairIncident = Module.findExportByName("ndfapi.dll", "NdfRepairIncident")
+Interceptor.attach(NdfRepairIncident, {onLeave: function (args) {send("NdfRepairIncident");}});
+
+var NdfRepairIncidentEx = Module.findExportByName("ndfapi.dll", "NdfRepairIncidentEx")
+Interceptor.attach(NdfRepairIncidentEx, {onLeave: function (args) {send("NdfRepairIncidentEx");}});
+
+var NdfRunDllDiagnoseIncident = Module.findExportByName("ndfapi.dll", "NdfRunDllDiagnoseIncident")
+Interceptor.attach(NdfRunDllDiagnoseIncident, {onLeave: function (args) {send("NdfRunDllDiagnoseIncident");}});
+
+var NdfRunDllDiagnoseNetConnectionIncident = Module.findExportByName("ndfapi.dll", "NdfRunDllDiagnoseNetConnectionIncident")
+Interceptor.attach(NdfRunDllDiagnoseNetConnectionIncident, {onLeave: function (args) {send("NdfRunDllDiagnoseNetConnectionIncident");}});
+
+var NdfRunDllDiagnoseWithAnswerFile = Module.findExportByName("ndfapi.dll", "NdfRunDllDiagnoseWithAnswerFile")
+Interceptor.attach(NdfRunDllDiagnoseWithAnswerFile, {onLeave: function (args) {send("NdfRunDllDiagnoseWithAnswerFile");}});
+
+var NdfRunDllDuplicateIPDefendingSystem = Module.findExportByName("ndfapi.dll", "NdfRunDllDuplicateIPDefendingSystem")
+Interceptor.attach(NdfRunDllDuplicateIPDefendingSystem, {onLeave: function (args) {send("NdfRunDllDuplicateIPDefendingSystem");}});
+
+var NdfRunDllDuplicateIPOffendingSystem = Module.findExportByName("ndfapi.dll", "NdfRunDllDuplicateIPOffendingSystem")
+Interceptor.attach(NdfRunDllDuplicateIPOffendingSystem, {onLeave: function (args) {send("NdfRunDllDuplicateIPOffendingSystem");}});
+
+var NdfRunDllHelpTopic = Module.findExportByName("ndfapi.dll", "NdfRunDllHelpTopic")
+Interceptor.attach(NdfRunDllHelpTopic, {onLeave: function (args) {send("NdfRunDllHelpTopic");}});
+

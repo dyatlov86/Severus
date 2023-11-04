@@ -1,0 +1,18 @@
+var DllRegisterServer = Module.findExportByName("gptext.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("gptext.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ProcessConnectivityPlatformPolicy = Module.findExportByName("gptext.dll", "ProcessConnectivityPlatformPolicy")
+Interceptor.attach(ProcessConnectivityPlatformPolicy, {onLeave: function (args) {send("ProcessConnectivityPlatformPolicy");}});
+
+var ProcessEQoSPolicy = Module.findExportByName("gptext.dll", "ProcessEQoSPolicy")
+Interceptor.attach(ProcessEQoSPolicy, {onLeave: function (args) {send("ProcessEQoSPolicy");}});
+
+var ProcessPSCHEDPolicy = Module.findExportByName("gptext.dll", "ProcessPSCHEDPolicy")
+Interceptor.attach(ProcessPSCHEDPolicy, {onLeave: function (args) {send("ProcessPSCHEDPolicy");}});
+
+var ProcessTCPIPPolicy = Module.findExportByName("gptext.dll", "ProcessTCPIPPolicy")
+Interceptor.attach(ProcessTCPIPPolicy, {onLeave: function (args) {send("ProcessTCPIPPolicy");}});
+

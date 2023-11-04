@@ -1,0 +1,9 @@
+var DirectXFileCreate = Module.findExportByName("d3dxof.dll", "DirectXFileCreate")
+Interceptor.attach(DirectXFileCreate, {onLeave: function (args) {send("DirectXFileCreate");}});
+
+var DllCanUnloadNow = Module.findExportByName("d3dxof.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("d3dxof.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

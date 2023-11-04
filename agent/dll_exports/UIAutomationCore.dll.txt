@@ -1,0 +1,324 @@
+var DllCanUnloadNow = Module.findExportByName("UIAutomationCore.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("UIAutomationCore.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("UIAutomationCore.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DockPattern_SetDockPosition = Module.findExportByName("UIAutomationCore.dll", "DockPattern_SetDockPosition")
+Interceptor.attach(DockPattern_SetDockPosition, {onLeave: function (args) {send("DockPattern_SetDockPosition");}});
+
+var ExpandCollapsePattern_Collapse = Module.findExportByName("UIAutomationCore.dll", "ExpandCollapsePattern_Collapse")
+Interceptor.attach(ExpandCollapsePattern_Collapse, {onLeave: function (args) {send("ExpandCollapsePattern_Collapse");}});
+
+var ExpandCollapsePattern_Expand = Module.findExportByName("UIAutomationCore.dll", "ExpandCollapsePattern_Expand")
+Interceptor.attach(ExpandCollapsePattern_Expand, {onLeave: function (args) {send("ExpandCollapsePattern_Expand");}});
+
+var GridPattern_GetItem = Module.findExportByName("UIAutomationCore.dll", "GridPattern_GetItem")
+Interceptor.attach(GridPattern_GetItem, {onLeave: function (args) {send("GridPattern_GetItem");}});
+
+var IgnoreLeaksInCurrentlyTrackedMemory = Module.findExportByName("UIAutomationCore.dll", "IgnoreLeaksInCurrentlyTrackedMemory")
+Interceptor.attach(IgnoreLeaksInCurrentlyTrackedMemory, {onLeave: function (args) {send("IgnoreLeaksInCurrentlyTrackedMemory");}});
+
+var InitializeChannelBasedConnectionForProviderProxy = Module.findExportByName("UIAutomationCore.dll", "InitializeChannelBasedConnectionForProviderProxy")
+Interceptor.attach(InitializeChannelBasedConnectionForProviderProxy, {onLeave: function (args) {send("InitializeChannelBasedConnectionForProviderProxy");}});
+
+var InvokePattern_Invoke = Module.findExportByName("UIAutomationCore.dll", "InvokePattern_Invoke")
+Interceptor.attach(InvokePattern_Invoke, {onLeave: function (args) {send("InvokePattern_Invoke");}});
+
+var IsIgnoringLeaks = Module.findExportByName("UIAutomationCore.dll", "IsIgnoringLeaks")
+Interceptor.attach(IsIgnoringLeaks, {onLeave: function (args) {send("IsIgnoringLeaks");}});
+
+var ItemContainerPattern_FindItemByProperty = Module.findExportByName("UIAutomationCore.dll", "ItemContainerPattern_FindItemByProperty")
+Interceptor.attach(ItemContainerPattern_FindItemByProperty, {onLeave: function (args) {send("ItemContainerPattern_FindItemByProperty");}});
+
+var LegacyIAccessiblePattern_DoDefaultAction = Module.findExportByName("UIAutomationCore.dll", "LegacyIAccessiblePattern_DoDefaultAction")
+Interceptor.attach(LegacyIAccessiblePattern_DoDefaultAction, {onLeave: function (args) {send("LegacyIAccessiblePattern_DoDefaultAction");}});
+
+var LegacyIAccessiblePattern_GetIAccessible = Module.findExportByName("UIAutomationCore.dll", "LegacyIAccessiblePattern_GetIAccessible")
+Interceptor.attach(LegacyIAccessiblePattern_GetIAccessible, {onLeave: function (args) {send("LegacyIAccessiblePattern_GetIAccessible");}});
+
+var LegacyIAccessiblePattern_Select = Module.findExportByName("UIAutomationCore.dll", "LegacyIAccessiblePattern_Select")
+Interceptor.attach(LegacyIAccessiblePattern_Select, {onLeave: function (args) {send("LegacyIAccessiblePattern_Select");}});
+
+var LegacyIAccessiblePattern_SetValue = Module.findExportByName("UIAutomationCore.dll", "LegacyIAccessiblePattern_SetValue")
+Interceptor.attach(LegacyIAccessiblePattern_SetValue, {onLeave: function (args) {send("LegacyIAccessiblePattern_SetValue");}});
+
+var MultipleViewPattern_GetViewName = Module.findExportByName("UIAutomationCore.dll", "MultipleViewPattern_GetViewName")
+Interceptor.attach(MultipleViewPattern_GetViewName, {onLeave: function (args) {send("MultipleViewPattern_GetViewName");}});
+
+var MultipleViewPattern_SetCurrentView = Module.findExportByName("UIAutomationCore.dll", "MultipleViewPattern_SetCurrentView")
+Interceptor.attach(MultipleViewPattern_SetCurrentView, {onLeave: function (args) {send("MultipleViewPattern_SetCurrentView");}});
+
+var PostTestCheckForLeaks = Module.findExportByName("UIAutomationCore.dll", "PostTestCheckForLeaks")
+Interceptor.attach(PostTestCheckForLeaks, {onLeave: function (args) {send("PostTestCheckForLeaks");}});
+
+var RangeValuePattern_SetValue = Module.findExportByName("UIAutomationCore.dll", "RangeValuePattern_SetValue")
+Interceptor.attach(RangeValuePattern_SetValue, {onLeave: function (args) {send("RangeValuePattern_SetValue");}});
+
+var ScrollItemPattern_ScrollIntoView = Module.findExportByName("UIAutomationCore.dll", "ScrollItemPattern_ScrollIntoView")
+Interceptor.attach(ScrollItemPattern_ScrollIntoView, {onLeave: function (args) {send("ScrollItemPattern_ScrollIntoView");}});
+
+var ScrollPattern_Scroll = Module.findExportByName("UIAutomationCore.dll", "ScrollPattern_Scroll")
+Interceptor.attach(ScrollPattern_Scroll, {onLeave: function (args) {send("ScrollPattern_Scroll");}});
+
+var ScrollPattern_SetScrollPercent = Module.findExportByName("UIAutomationCore.dll", "ScrollPattern_SetScrollPercent")
+Interceptor.attach(ScrollPattern_SetScrollPercent, {onLeave: function (args) {send("ScrollPattern_SetScrollPercent");}});
+
+var SelectionItemPattern_AddToSelection = Module.findExportByName("UIAutomationCore.dll", "SelectionItemPattern_AddToSelection")
+Interceptor.attach(SelectionItemPattern_AddToSelection, {onLeave: function (args) {send("SelectionItemPattern_AddToSelection");}});
+
+var SelectionItemPattern_RemoveFromSelection = Module.findExportByName("UIAutomationCore.dll", "SelectionItemPattern_RemoveFromSelection")
+Interceptor.attach(SelectionItemPattern_RemoveFromSelection, {onLeave: function (args) {send("SelectionItemPattern_RemoveFromSelection");}});
+
+var SelectionItemPattern_Select = Module.findExportByName("UIAutomationCore.dll", "SelectionItemPattern_Select")
+Interceptor.attach(SelectionItemPattern_Select, {onLeave: function (args) {send("SelectionItemPattern_Select");}});
+
+var StartIgnoringLeaks = Module.findExportByName("UIAutomationCore.dll", "StartIgnoringLeaks")
+Interceptor.attach(StartIgnoringLeaks, {onLeave: function (args) {send("StartIgnoringLeaks");}});
+
+var StopIgnoringLeaks = Module.findExportByName("UIAutomationCore.dll", "StopIgnoringLeaks")
+Interceptor.attach(StopIgnoringLeaks, {onLeave: function (args) {send("StopIgnoringLeaks");}});
+
+var SynchronizedInputPattern_Cancel = Module.findExportByName("UIAutomationCore.dll", "SynchronizedInputPattern_Cancel")
+Interceptor.attach(SynchronizedInputPattern_Cancel, {onLeave: function (args) {send("SynchronizedInputPattern_Cancel");}});
+
+var SynchronizedInputPattern_StartListening = Module.findExportByName("UIAutomationCore.dll", "SynchronizedInputPattern_StartListening")
+Interceptor.attach(SynchronizedInputPattern_StartListening, {onLeave: function (args) {send("SynchronizedInputPattern_StartListening");}});
+
+var TextPattern_GetSelection = Module.findExportByName("UIAutomationCore.dll", "TextPattern_GetSelection")
+Interceptor.attach(TextPattern_GetSelection, {onLeave: function (args) {send("TextPattern_GetSelection");}});
+
+var TextPattern_GetVisibleRanges = Module.findExportByName("UIAutomationCore.dll", "TextPattern_GetVisibleRanges")
+Interceptor.attach(TextPattern_GetVisibleRanges, {onLeave: function (args) {send("TextPattern_GetVisibleRanges");}});
+
+var TextPattern_RangeFromChild = Module.findExportByName("UIAutomationCore.dll", "TextPattern_RangeFromChild")
+Interceptor.attach(TextPattern_RangeFromChild, {onLeave: function (args) {send("TextPattern_RangeFromChild");}});
+
+var TextPattern_RangeFromPoint = Module.findExportByName("UIAutomationCore.dll", "TextPattern_RangeFromPoint")
+Interceptor.attach(TextPattern_RangeFromPoint, {onLeave: function (args) {send("TextPattern_RangeFromPoint");}});
+
+var TextPattern_get_DocumentRange = Module.findExportByName("UIAutomationCore.dll", "TextPattern_get_DocumentRange")
+Interceptor.attach(TextPattern_get_DocumentRange, {onLeave: function (args) {send("TextPattern_get_DocumentRange");}});
+
+var TextPattern_get_SupportedTextSelection = Module.findExportByName("UIAutomationCore.dll", "TextPattern_get_SupportedTextSelection")
+Interceptor.attach(TextPattern_get_SupportedTextSelection, {onLeave: function (args) {send("TextPattern_get_SupportedTextSelection");}});
+
+var TextRange_AddToSelection = Module.findExportByName("UIAutomationCore.dll", "TextRange_AddToSelection")
+Interceptor.attach(TextRange_AddToSelection, {onLeave: function (args) {send("TextRange_AddToSelection");}});
+
+var TextRange_Clone = Module.findExportByName("UIAutomationCore.dll", "TextRange_Clone")
+Interceptor.attach(TextRange_Clone, {onLeave: function (args) {send("TextRange_Clone");}});
+
+var TextRange_Compare = Module.findExportByName("UIAutomationCore.dll", "TextRange_Compare")
+Interceptor.attach(TextRange_Compare, {onLeave: function (args) {send("TextRange_Compare");}});
+
+var TextRange_CompareEndpoints = Module.findExportByName("UIAutomationCore.dll", "TextRange_CompareEndpoints")
+Interceptor.attach(TextRange_CompareEndpoints, {onLeave: function (args) {send("TextRange_CompareEndpoints");}});
+
+var TextRange_ExpandToEnclosingUnit = Module.findExportByName("UIAutomationCore.dll", "TextRange_ExpandToEnclosingUnit")
+Interceptor.attach(TextRange_ExpandToEnclosingUnit, {onLeave: function (args) {send("TextRange_ExpandToEnclosingUnit");}});
+
+var TextRange_FindAttribute = Module.findExportByName("UIAutomationCore.dll", "TextRange_FindAttribute")
+Interceptor.attach(TextRange_FindAttribute, {onLeave: function (args) {send("TextRange_FindAttribute");}});
+
+var TextRange_FindText = Module.findExportByName("UIAutomationCore.dll", "TextRange_FindText")
+Interceptor.attach(TextRange_FindText, {onLeave: function (args) {send("TextRange_FindText");}});
+
+var TextRange_GetAttributeValue = Module.findExportByName("UIAutomationCore.dll", "TextRange_GetAttributeValue")
+Interceptor.attach(TextRange_GetAttributeValue, {onLeave: function (args) {send("TextRange_GetAttributeValue");}});
+
+var TextRange_GetBoundingRectangles = Module.findExportByName("UIAutomationCore.dll", "TextRange_GetBoundingRectangles")
+Interceptor.attach(TextRange_GetBoundingRectangles, {onLeave: function (args) {send("TextRange_GetBoundingRectangles");}});
+
+var TextRange_GetChildren = Module.findExportByName("UIAutomationCore.dll", "TextRange_GetChildren")
+Interceptor.attach(TextRange_GetChildren, {onLeave: function (args) {send("TextRange_GetChildren");}});
+
+var TextRange_GetEnclosingElement = Module.findExportByName("UIAutomationCore.dll", "TextRange_GetEnclosingElement")
+Interceptor.attach(TextRange_GetEnclosingElement, {onLeave: function (args) {send("TextRange_GetEnclosingElement");}});
+
+var TextRange_GetText = Module.findExportByName("UIAutomationCore.dll", "TextRange_GetText")
+Interceptor.attach(TextRange_GetText, {onLeave: function (args) {send("TextRange_GetText");}});
+
+var TextRange_Move = Module.findExportByName("UIAutomationCore.dll", "TextRange_Move")
+Interceptor.attach(TextRange_Move, {onLeave: function (args) {send("TextRange_Move");}});
+
+var TextRange_MoveEndpointByRange = Module.findExportByName("UIAutomationCore.dll", "TextRange_MoveEndpointByRange")
+Interceptor.attach(TextRange_MoveEndpointByRange, {onLeave: function (args) {send("TextRange_MoveEndpointByRange");}});
+
+var TextRange_MoveEndpointByUnit = Module.findExportByName("UIAutomationCore.dll", "TextRange_MoveEndpointByUnit")
+Interceptor.attach(TextRange_MoveEndpointByUnit, {onLeave: function (args) {send("TextRange_MoveEndpointByUnit");}});
+
+var TextRange_RemoveFromSelection = Module.findExportByName("UIAutomationCore.dll", "TextRange_RemoveFromSelection")
+Interceptor.attach(TextRange_RemoveFromSelection, {onLeave: function (args) {send("TextRange_RemoveFromSelection");}});
+
+var TextRange_ScrollIntoView = Module.findExportByName("UIAutomationCore.dll", "TextRange_ScrollIntoView")
+Interceptor.attach(TextRange_ScrollIntoView, {onLeave: function (args) {send("TextRange_ScrollIntoView");}});
+
+var TextRange_Select = Module.findExportByName("UIAutomationCore.dll", "TextRange_Select")
+Interceptor.attach(TextRange_Select, {onLeave: function (args) {send("TextRange_Select");}});
+
+var TogglePattern_Toggle = Module.findExportByName("UIAutomationCore.dll", "TogglePattern_Toggle")
+Interceptor.attach(TogglePattern_Toggle, {onLeave: function (args) {send("TogglePattern_Toggle");}});
+
+var TransformPattern_Move = Module.findExportByName("UIAutomationCore.dll", "TransformPattern_Move")
+Interceptor.attach(TransformPattern_Move, {onLeave: function (args) {send("TransformPattern_Move");}});
+
+var TransformPattern_Resize = Module.findExportByName("UIAutomationCore.dll", "TransformPattern_Resize")
+Interceptor.attach(TransformPattern_Resize, {onLeave: function (args) {send("TransformPattern_Resize");}});
+
+var TransformPattern_Rotate = Module.findExportByName("UIAutomationCore.dll", "TransformPattern_Rotate")
+Interceptor.attach(TransformPattern_Rotate, {onLeave: function (args) {send("TransformPattern_Rotate");}});
+
+var UiaAddEvent = Module.findExportByName("UIAutomationCore.dll", "UiaAddEvent")
+Interceptor.attach(UiaAddEvent, {onLeave: function (args) {send("UiaAddEvent");}});
+
+var UiaClientsAreListening = Module.findExportByName("UIAutomationCore.dll", "UiaClientsAreListening")
+Interceptor.attach(UiaClientsAreListening, {onLeave: function (args) {send("UiaClientsAreListening");}});
+
+var UiaDisconnectAllProviders = Module.findExportByName("UIAutomationCore.dll", "UiaDisconnectAllProviders")
+Interceptor.attach(UiaDisconnectAllProviders, {onLeave: function (args) {send("UiaDisconnectAllProviders");}});
+
+var UiaDisconnectProvider = Module.findExportByName("UIAutomationCore.dll", "UiaDisconnectProvider")
+Interceptor.attach(UiaDisconnectProvider, {onLeave: function (args) {send("UiaDisconnectProvider");}});
+
+var UiaEventAddWindow = Module.findExportByName("UIAutomationCore.dll", "UiaEventAddWindow")
+Interceptor.attach(UiaEventAddWindow, {onLeave: function (args) {send("UiaEventAddWindow");}});
+
+var UiaEventRemoveWindow = Module.findExportByName("UIAutomationCore.dll", "UiaEventRemoveWindow")
+Interceptor.attach(UiaEventRemoveWindow, {onLeave: function (args) {send("UiaEventRemoveWindow");}});
+
+var UiaFind = Module.findExportByName("UIAutomationCore.dll", "UiaFind")
+Interceptor.attach(UiaFind, {onLeave: function (args) {send("UiaFind");}});
+
+var UiaGetErrorDescription = Module.findExportByName("UIAutomationCore.dll", "UiaGetErrorDescription")
+Interceptor.attach(UiaGetErrorDescription, {onLeave: function (args) {send("UiaGetErrorDescription");}});
+
+var UiaGetPatternProvider = Module.findExportByName("UIAutomationCore.dll", "UiaGetPatternProvider")
+Interceptor.attach(UiaGetPatternProvider, {onLeave: function (args) {send("UiaGetPatternProvider");}});
+
+var UiaGetPropertyValue = Module.findExportByName("UIAutomationCore.dll", "UiaGetPropertyValue")
+Interceptor.attach(UiaGetPropertyValue, {onLeave: function (args) {send("UiaGetPropertyValue");}});
+
+var UiaGetReservedMixedAttributeValue = Module.findExportByName("UIAutomationCore.dll", "UiaGetReservedMixedAttributeValue")
+Interceptor.attach(UiaGetReservedMixedAttributeValue, {onLeave: function (args) {send("UiaGetReservedMixedAttributeValue");}});
+
+var UiaGetReservedNotSupportedValue = Module.findExportByName("UIAutomationCore.dll", "UiaGetReservedNotSupportedValue")
+Interceptor.attach(UiaGetReservedNotSupportedValue, {onLeave: function (args) {send("UiaGetReservedNotSupportedValue");}});
+
+var UiaGetRootNode = Module.findExportByName("UIAutomationCore.dll", "UiaGetRootNode")
+Interceptor.attach(UiaGetRootNode, {onLeave: function (args) {send("UiaGetRootNode");}});
+
+var UiaGetRuntimeId = Module.findExportByName("UIAutomationCore.dll", "UiaGetRuntimeId")
+Interceptor.attach(UiaGetRuntimeId, {onLeave: function (args) {send("UiaGetRuntimeId");}});
+
+var UiaGetUpdatedCache = Module.findExportByName("UIAutomationCore.dll", "UiaGetUpdatedCache")
+Interceptor.attach(UiaGetUpdatedCache, {onLeave: function (args) {send("UiaGetUpdatedCache");}});
+
+var UiaHPatternObjectFromVariant = Module.findExportByName("UIAutomationCore.dll", "UiaHPatternObjectFromVariant")
+Interceptor.attach(UiaHPatternObjectFromVariant, {onLeave: function (args) {send("UiaHPatternObjectFromVariant");}});
+
+var UiaHTextRangeFromVariant = Module.findExportByName("UIAutomationCore.dll", "UiaHTextRangeFromVariant")
+Interceptor.attach(UiaHTextRangeFromVariant, {onLeave: function (args) {send("UiaHTextRangeFromVariant");}});
+
+var UiaHUiaNodeFromVariant = Module.findExportByName("UIAutomationCore.dll", "UiaHUiaNodeFromVariant")
+Interceptor.attach(UiaHUiaNodeFromVariant, {onLeave: function (args) {send("UiaHUiaNodeFromVariant");}});
+
+var UiaHasServerSideProvider = Module.findExportByName("UIAutomationCore.dll", "UiaHasServerSideProvider")
+Interceptor.attach(UiaHasServerSideProvider, {onLeave: function (args) {send("UiaHasServerSideProvider");}});
+
+var UiaHostProviderFromHwnd = Module.findExportByName("UIAutomationCore.dll", "UiaHostProviderFromHwnd")
+Interceptor.attach(UiaHostProviderFromHwnd, {onLeave: function (args) {send("UiaHostProviderFromHwnd");}});
+
+var UiaIAccessibleFromProvider = Module.findExportByName("UIAutomationCore.dll", "UiaIAccessibleFromProvider")
+Interceptor.attach(UiaIAccessibleFromProvider, {onLeave: function (args) {send("UiaIAccessibleFromProvider");}});
+
+var UiaLookupId = Module.findExportByName("UIAutomationCore.dll", "UiaLookupId")
+Interceptor.attach(UiaLookupId, {onLeave: function (args) {send("UiaLookupId");}});
+
+var UiaNavigate = Module.findExportByName("UIAutomationCore.dll", "UiaNavigate")
+Interceptor.attach(UiaNavigate, {onLeave: function (args) {send("UiaNavigate");}});
+
+var UiaNodeFromFocus = Module.findExportByName("UIAutomationCore.dll", "UiaNodeFromFocus")
+Interceptor.attach(UiaNodeFromFocus, {onLeave: function (args) {send("UiaNodeFromFocus");}});
+
+var UiaNodeFromHandle = Module.findExportByName("UIAutomationCore.dll", "UiaNodeFromHandle")
+Interceptor.attach(UiaNodeFromHandle, {onLeave: function (args) {send("UiaNodeFromHandle");}});
+
+var UiaNodeFromPoint = Module.findExportByName("UIAutomationCore.dll", "UiaNodeFromPoint")
+Interceptor.attach(UiaNodeFromPoint, {onLeave: function (args) {send("UiaNodeFromPoint");}});
+
+var UiaNodeFromProvider = Module.findExportByName("UIAutomationCore.dll", "UiaNodeFromProvider")
+Interceptor.attach(UiaNodeFromProvider, {onLeave: function (args) {send("UiaNodeFromProvider");}});
+
+var UiaNodeRelease = Module.findExportByName("UIAutomationCore.dll", "UiaNodeRelease")
+Interceptor.attach(UiaNodeRelease, {onLeave: function (args) {send("UiaNodeRelease");}});
+
+var UiaPatternRelease = Module.findExportByName("UIAutomationCore.dll", "UiaPatternRelease")
+Interceptor.attach(UiaPatternRelease, {onLeave: function (args) {send("UiaPatternRelease");}});
+
+var UiaProviderForNonClient = Module.findExportByName("UIAutomationCore.dll", "UiaProviderForNonClient")
+Interceptor.attach(UiaProviderForNonClient, {onLeave: function (args) {send("UiaProviderForNonClient");}});
+
+var UiaProviderFromIAccessible = Module.findExportByName("UIAutomationCore.dll", "UiaProviderFromIAccessible")
+Interceptor.attach(UiaProviderFromIAccessible, {onLeave: function (args) {send("UiaProviderFromIAccessible");}});
+
+var UiaRaiseActiveTextPositionChangedEvent = Module.findExportByName("UIAutomationCore.dll", "UiaRaiseActiveTextPositionChangedEvent")
+Interceptor.attach(UiaRaiseActiveTextPositionChangedEvent, {onLeave: function (args) {send("UiaRaiseActiveTextPositionChangedEvent");}});
+
+var UiaRaiseAsyncContentLoadedEvent = Module.findExportByName("UIAutomationCore.dll", "UiaRaiseAsyncContentLoadedEvent")
+Interceptor.attach(UiaRaiseAsyncContentLoadedEvent, {onLeave: function (args) {send("UiaRaiseAsyncContentLoadedEvent");}});
+
+var UiaRaiseAutomationEvent = Module.findExportByName("UIAutomationCore.dll", "UiaRaiseAutomationEvent")
+Interceptor.attach(UiaRaiseAutomationEvent, {onLeave: function (args) {send("UiaRaiseAutomationEvent");}});
+
+var UiaRaiseAutomationPropertyChangedEvent = Module.findExportByName("UIAutomationCore.dll", "UiaRaiseAutomationPropertyChangedEvent")
+Interceptor.attach(UiaRaiseAutomationPropertyChangedEvent, {onLeave: function (args) {send("UiaRaiseAutomationPropertyChangedEvent");}});
+
+var UiaRaiseChangesEvent = Module.findExportByName("UIAutomationCore.dll", "UiaRaiseChangesEvent")
+Interceptor.attach(UiaRaiseChangesEvent, {onLeave: function (args) {send("UiaRaiseChangesEvent");}});
+
+var UiaRaiseNotificationEvent = Module.findExportByName("UIAutomationCore.dll", "UiaRaiseNotificationEvent")
+Interceptor.attach(UiaRaiseNotificationEvent, {onLeave: function (args) {send("UiaRaiseNotificationEvent");}});
+
+var UiaRaiseStructureChangedEvent = Module.findExportByName("UIAutomationCore.dll", "UiaRaiseStructureChangedEvent")
+Interceptor.attach(UiaRaiseStructureChangedEvent, {onLeave: function (args) {send("UiaRaiseStructureChangedEvent");}});
+
+var UiaRaiseTextEditTextChangedEvent = Module.findExportByName("UIAutomationCore.dll", "UiaRaiseTextEditTextChangedEvent")
+Interceptor.attach(UiaRaiseTextEditTextChangedEvent, {onLeave: function (args) {send("UiaRaiseTextEditTextChangedEvent");}});
+
+var UiaRegisterProviderCallback = Module.findExportByName("UIAutomationCore.dll", "UiaRegisterProviderCallback")
+Interceptor.attach(UiaRegisterProviderCallback, {onLeave: function (args) {send("UiaRegisterProviderCallback");}});
+
+var UiaRemoveEvent = Module.findExportByName("UIAutomationCore.dll", "UiaRemoveEvent")
+Interceptor.attach(UiaRemoveEvent, {onLeave: function (args) {send("UiaRemoveEvent");}});
+
+var UiaReturnRawElementProvider = Module.findExportByName("UIAutomationCore.dll", "UiaReturnRawElementProvider")
+Interceptor.attach(UiaReturnRawElementProvider, {onLeave: function (args) {send("UiaReturnRawElementProvider");}});
+
+var UiaSetFocus = Module.findExportByName("UIAutomationCore.dll", "UiaSetFocus")
+Interceptor.attach(UiaSetFocus, {onLeave: function (args) {send("UiaSetFocus");}});
+
+var UiaTextRangeRelease = Module.findExportByName("UIAutomationCore.dll", "UiaTextRangeRelease")
+Interceptor.attach(UiaTextRangeRelease, {onLeave: function (args) {send("UiaTextRangeRelease");}});
+
+var UpdateErrorLoggingCallback = Module.findExportByName("UIAutomationCore.dll", "UpdateErrorLoggingCallback")
+Interceptor.attach(UpdateErrorLoggingCallback, {onLeave: function (args) {send("UpdateErrorLoggingCallback");}});
+
+var ValuePattern_SetValue = Module.findExportByName("UIAutomationCore.dll", "ValuePattern_SetValue")
+Interceptor.attach(ValuePattern_SetValue, {onLeave: function (args) {send("ValuePattern_SetValue");}});
+
+var VirtualizedItemPattern_Realize = Module.findExportByName("UIAutomationCore.dll", "VirtualizedItemPattern_Realize")
+Interceptor.attach(VirtualizedItemPattern_Realize, {onLeave: function (args) {send("VirtualizedItemPattern_Realize");}});
+
+var WindowPattern_Close = Module.findExportByName("UIAutomationCore.dll", "WindowPattern_Close")
+Interceptor.attach(WindowPattern_Close, {onLeave: function (args) {send("WindowPattern_Close");}});
+
+var WindowPattern_SetWindowVisualState = Module.findExportByName("UIAutomationCore.dll", "WindowPattern_SetWindowVisualState")
+Interceptor.attach(WindowPattern_SetWindowVisualState, {onLeave: function (args) {send("WindowPattern_SetWindowVisualState");}});
+
+var WindowPattern_WaitForInputIdle = Module.findExportByName("UIAutomationCore.dll", "WindowPattern_WaitForInputIdle")
+Interceptor.attach(WindowPattern_WaitForInputIdle, {onLeave: function (args) {send("WindowPattern_WaitForInputIdle");}});
+

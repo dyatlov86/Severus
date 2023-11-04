@@ -1,0 +1,6 @@
+var BluetoothClassInstaller = Module.findExportByName("bthci.dll", "BluetoothClassInstaller")
+Interceptor.attach(BluetoothClassInstaller, {onLeave: function (args) {send("BluetoothClassInstaller");}});
+
+var BluetoothPropPageProvider = Module.findExportByName("bthci.dll", "BluetoothPropPageProvider")
+Interceptor.attach(BluetoothPropPageProvider, {onLeave: function (args) {send("BluetoothPropPageProvider");}});
+

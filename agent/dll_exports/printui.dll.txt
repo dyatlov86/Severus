@@ -1,0 +1,93 @@
+var ConnectToPrinterDlg = Module.findExportByName("printui.dll", "ConnectToPrinterDlg")
+Interceptor.attach(ConnectToPrinterDlg, {onLeave: function (args) {send("ConnectToPrinterDlg");}});
+
+var ConstructPrinterFriendlyName = Module.findExportByName("printui.dll", "ConstructPrinterFriendlyName")
+Interceptor.attach(ConstructPrinterFriendlyName, {onLeave: function (args) {send("ConstructPrinterFriendlyName");}});
+
+var DllCanUnloadNow = Module.findExportByName("printui.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("printui.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("printui.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("printui.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("printui.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DocumentPropertiesWrap = Module.findExportByName("printui.dll", "DocumentPropertiesWrap")
+Interceptor.attach(DocumentPropertiesWrap, {onLeave: function (args) {send("DocumentPropertiesWrap");}});
+
+var LaunchPlatformHelp = Module.findExportByName("printui.dll", "LaunchPlatformHelp")
+Interceptor.attach(LaunchPlatformHelp, {onLeave: function (args) {send("LaunchPlatformHelp");}});
+
+var PnPInterface = Module.findExportByName("printui.dll", "PnPInterface")
+Interceptor.attach(PnPInterface, {onLeave: function (args) {send("PnPInterface");}});
+
+var PrintNotifyTray_Exit = Module.findExportByName("printui.dll", "PrintNotifyTray_Exit")
+Interceptor.attach(PrintNotifyTray_Exit, {onLeave: function (args) {send("PrintNotifyTray_Exit");}});
+
+var PrintNotifyTray_Init = Module.findExportByName("printui.dll", "PrintNotifyTray_Init")
+Interceptor.attach(PrintNotifyTray_Init, {onLeave: function (args) {send("PrintNotifyTray_Init");}});
+
+var PrintUIDownloadAndInstallLegacyDriver = Module.findExportByName("printui.dll", "PrintUIDownloadAndInstallLegacyDriver")
+Interceptor.attach(PrintUIDownloadAndInstallLegacyDriver, {onLeave: function (args) {send("PrintUIDownloadAndInstallLegacyDriver");}});
+
+var PrintUIEntryDPIAwareW = Module.findExportByName("printui.dll", "PrintUIEntryDPIAwareW")
+Interceptor.attach(PrintUIEntryDPIAwareW, {onLeave: function (args) {send("PrintUIEntryDPIAwareW");}});
+
+var PrintUIEntryW = Module.findExportByName("printui.dll", "PrintUIEntryW")
+Interceptor.attach(PrintUIEntryW, {onLeave: function (args) {send("PrintUIEntryW");}});
+
+var PrinterPropPageProvider = Module.findExportByName("printui.dll", "PrinterPropPageProvider")
+Interceptor.attach(PrinterPropPageProvider, {onLeave: function (args) {send("PrinterPropPageProvider");}});
+
+var RegisterPrintNotify = Module.findExportByName("printui.dll", "RegisterPrintNotify")
+Interceptor.attach(RegisterPrintNotify, {onLeave: function (args) {send("RegisterPrintNotify");}});
+
+var ReleaseArgv = Module.findExportByName("printui.dll", "ReleaseArgv")
+Interceptor.attach(ReleaseArgv, {onLeave: function (args) {send("ReleaseArgv");}});
+
+var ShowErrorMessageHR = Module.findExportByName("printui.dll", "ShowErrorMessageHR")
+Interceptor.attach(ShowErrorMessageHR, {onLeave: function (args) {send("ShowErrorMessageHR");}});
+
+var ShowErrorMessageSC = Module.findExportByName("printui.dll", "ShowErrorMessageSC")
+Interceptor.attach(ShowErrorMessageSC, {onLeave: function (args) {send("ShowErrorMessageSC");}});
+
+var ShowHelpLinkDialog = Module.findExportByName("printui.dll", "ShowHelpLinkDialog")
+Interceptor.attach(ShowHelpLinkDialog, {onLeave: function (args) {send("ShowHelpLinkDialog");}});
+
+var StringToArgv = Module.findExportByName("printui.dll", "StringToArgv")
+Interceptor.attach(StringToArgv, {onLeave: function (args) {send("StringToArgv");}});
+
+var UnregisterPrintNotify = Module.findExportByName("printui.dll", "UnregisterPrintNotify")
+Interceptor.attach(UnregisterPrintNotify, {onLeave: function (args) {send("UnregisterPrintNotify");}});
+
+var bFolderEnumPrinters = Module.findExportByName("printui.dll", "bFolderEnumPrinters")
+Interceptor.attach(bFolderEnumPrinters, {onLeave: function (args) {send("bFolderEnumPrinters");}});
+
+var bFolderGetPrinter = Module.findExportByName("printui.dll", "bFolderGetPrinter")
+Interceptor.attach(bFolderGetPrinter, {onLeave: function (args) {send("bFolderGetPrinter");}});
+
+var bFolderRefresh = Module.findExportByName("printui.dll", "bFolderRefresh")
+Interceptor.attach(bFolderRefresh, {onLeave: function (args) {send("bFolderRefresh");}});
+
+var bPrinterSetup = Module.findExportByName("printui.dll", "bPrinterSetup")
+Interceptor.attach(bPrinterSetup, {onLeave: function (args) {send("bPrinterSetup");}});
+
+var vDocumentDefaults = Module.findExportByName("printui.dll", "vDocumentDefaults")
+Interceptor.attach(vDocumentDefaults, {onLeave: function (args) {send("vDocumentDefaults");}});
+
+var vPrinterPropPages = Module.findExportByName("printui.dll", "vPrinterPropPages")
+Interceptor.attach(vPrinterPropPages, {onLeave: function (args) {send("vPrinterPropPages");}});
+
+var vQueueCreate = Module.findExportByName("printui.dll", "vQueueCreate")
+Interceptor.attach(vQueueCreate, {onLeave: function (args) {send("vQueueCreate");}});
+
+var vServerPropPages = Module.findExportByName("printui.dll", "vServerPropPages")
+Interceptor.attach(vServerPropPages, {onLeave: function (args) {send("vServerPropPages");}});
+

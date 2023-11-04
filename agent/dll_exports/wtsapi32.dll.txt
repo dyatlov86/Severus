@@ -1,0 +1,207 @@
+var IsInteractiveUserSession = Module.findExportByName("wtsapi32.dll", "IsInteractiveUserSession")
+Interceptor.attach(IsInteractiveUserSession, {onLeave: function (args) {send("IsInteractiveUserSession");}});
+
+var QueryActiveSession = Module.findExportByName("wtsapi32.dll", "QueryActiveSession")
+Interceptor.attach(QueryActiveSession, {onLeave: function (args) {send("QueryActiveSession");}});
+
+var QueryUserToken = Module.findExportByName("wtsapi32.dll", "QueryUserToken")
+Interceptor.attach(QueryUserToken, {onLeave: function (args) {send("QueryUserToken");}});
+
+var RegisterUsertokenForNoWinlogon = Module.findExportByName("wtsapi32.dll", "RegisterUsertokenForNoWinlogon")
+Interceptor.attach(RegisterUsertokenForNoWinlogon, {onLeave: function (args) {send("RegisterUsertokenForNoWinlogon");}});
+
+var WTSCloseServer = Module.findExportByName("wtsapi32.dll", "WTSCloseServer")
+Interceptor.attach(WTSCloseServer, {onLeave: function (args) {send("WTSCloseServer");}});
+
+var WTSConnectSessionA = Module.findExportByName("wtsapi32.dll", "WTSConnectSessionA")
+Interceptor.attach(WTSConnectSessionA, {onLeave: function (args) {send("WTSConnectSessionA");}});
+
+var WTSConnectSessionW = Module.findExportByName("wtsapi32.dll", "WTSConnectSessionW")
+Interceptor.attach(WTSConnectSessionW, {onLeave: function (args) {send("WTSConnectSessionW");}});
+
+var WTSCreateListenerA = Module.findExportByName("wtsapi32.dll", "WTSCreateListenerA")
+Interceptor.attach(WTSCreateListenerA, {onLeave: function (args) {send("WTSCreateListenerA");}});
+
+var WTSCreateListenerW = Module.findExportByName("wtsapi32.dll", "WTSCreateListenerW")
+Interceptor.attach(WTSCreateListenerW, {onLeave: function (args) {send("WTSCreateListenerW");}});
+
+var WTSDisconnectSession = Module.findExportByName("wtsapi32.dll", "WTSDisconnectSession")
+Interceptor.attach(WTSDisconnectSession, {onLeave: function (args) {send("WTSDisconnectSession");}});
+
+var WTSEnableChildSessions = Module.findExportByName("wtsapi32.dll", "WTSEnableChildSessions")
+Interceptor.attach(WTSEnableChildSessions, {onLeave: function (args) {send("WTSEnableChildSessions");}});
+
+var WTSEnumerateListenersA = Module.findExportByName("wtsapi32.dll", "WTSEnumerateListenersA")
+Interceptor.attach(WTSEnumerateListenersA, {onLeave: function (args) {send("WTSEnumerateListenersA");}});
+
+var WTSEnumerateListenersW = Module.findExportByName("wtsapi32.dll", "WTSEnumerateListenersW")
+Interceptor.attach(WTSEnumerateListenersW, {onLeave: function (args) {send("WTSEnumerateListenersW");}});
+
+var WTSEnumerateProcessesA = Module.findExportByName("wtsapi32.dll", "WTSEnumerateProcessesA")
+Interceptor.attach(WTSEnumerateProcessesA, {onLeave: function (args) {send("WTSEnumerateProcessesA");}});
+
+var WTSEnumerateProcessesExA = Module.findExportByName("wtsapi32.dll", "WTSEnumerateProcessesExA")
+Interceptor.attach(WTSEnumerateProcessesExA, {onLeave: function (args) {send("WTSEnumerateProcessesExA");}});
+
+var WTSEnumerateProcessesExW = Module.findExportByName("wtsapi32.dll", "WTSEnumerateProcessesExW")
+Interceptor.attach(WTSEnumerateProcessesExW, {onLeave: function (args) {send("WTSEnumerateProcessesExW");}});
+
+var WTSEnumerateProcessesW = Module.findExportByName("wtsapi32.dll", "WTSEnumerateProcessesW")
+Interceptor.attach(WTSEnumerateProcessesW, {onLeave: function (args) {send("WTSEnumerateProcessesW");}});
+
+var WTSEnumerateServersA = Module.findExportByName("wtsapi32.dll", "WTSEnumerateServersA")
+Interceptor.attach(WTSEnumerateServersA, {onLeave: function (args) {send("WTSEnumerateServersA");}});
+
+var WTSEnumerateServersW = Module.findExportByName("wtsapi32.dll", "WTSEnumerateServersW")
+Interceptor.attach(WTSEnumerateServersW, {onLeave: function (args) {send("WTSEnumerateServersW");}});
+
+var WTSEnumerateSessionsA = Module.findExportByName("wtsapi32.dll", "WTSEnumerateSessionsA")
+Interceptor.attach(WTSEnumerateSessionsA, {onLeave: function (args) {send("WTSEnumerateSessionsA");}});
+
+var WTSEnumerateSessionsExA = Module.findExportByName("wtsapi32.dll", "WTSEnumerateSessionsExA")
+Interceptor.attach(WTSEnumerateSessionsExA, {onLeave: function (args) {send("WTSEnumerateSessionsExA");}});
+
+var WTSEnumerateSessionsExW = Module.findExportByName("wtsapi32.dll", "WTSEnumerateSessionsExW")
+Interceptor.attach(WTSEnumerateSessionsExW, {onLeave: function (args) {send("WTSEnumerateSessionsExW");}});
+
+var WTSEnumerateSessionsW = Module.findExportByName("wtsapi32.dll", "WTSEnumerateSessionsW")
+Interceptor.attach(WTSEnumerateSessionsW, {onLeave: function (args) {send("WTSEnumerateSessionsW");}});
+
+var WTSFreeMemory = Module.findExportByName("wtsapi32.dll", "WTSFreeMemory")
+Interceptor.attach(WTSFreeMemory, {onLeave: function (args) {send("WTSFreeMemory");}});
+
+var WTSFreeMemoryExA = Module.findExportByName("wtsapi32.dll", "WTSFreeMemoryExA")
+Interceptor.attach(WTSFreeMemoryExA, {onLeave: function (args) {send("WTSFreeMemoryExA");}});
+
+var WTSFreeMemoryExW = Module.findExportByName("wtsapi32.dll", "WTSFreeMemoryExW")
+Interceptor.attach(WTSFreeMemoryExW, {onLeave: function (args) {send("WTSFreeMemoryExW");}});
+
+var WTSGetChildSessionId = Module.findExportByName("wtsapi32.dll", "WTSGetChildSessionId")
+Interceptor.attach(WTSGetChildSessionId, {onLeave: function (args) {send("WTSGetChildSessionId");}});
+
+var WTSGetListenerSecurityA = Module.findExportByName("wtsapi32.dll", "WTSGetListenerSecurityA")
+Interceptor.attach(WTSGetListenerSecurityA, {onLeave: function (args) {send("WTSGetListenerSecurityA");}});
+
+var WTSGetListenerSecurityW = Module.findExportByName("wtsapi32.dll", "WTSGetListenerSecurityW")
+Interceptor.attach(WTSGetListenerSecurityW, {onLeave: function (args) {send("WTSGetListenerSecurityW");}});
+
+var WTSIsChildSessionsEnabled = Module.findExportByName("wtsapi32.dll", "WTSIsChildSessionsEnabled")
+Interceptor.attach(WTSIsChildSessionsEnabled, {onLeave: function (args) {send("WTSIsChildSessionsEnabled");}});
+
+var WTSLogoffSession = Module.findExportByName("wtsapi32.dll", "WTSLogoffSession")
+Interceptor.attach(WTSLogoffSession, {onLeave: function (args) {send("WTSLogoffSession");}});
+
+var WTSOpenServerA = Module.findExportByName("wtsapi32.dll", "WTSOpenServerA")
+Interceptor.attach(WTSOpenServerA, {onLeave: function (args) {send("WTSOpenServerA");}});
+
+var WTSOpenServerExA = Module.findExportByName("wtsapi32.dll", "WTSOpenServerExA")
+Interceptor.attach(WTSOpenServerExA, {onLeave: function (args) {send("WTSOpenServerExA");}});
+
+var WTSOpenServerExW = Module.findExportByName("wtsapi32.dll", "WTSOpenServerExW")
+Interceptor.attach(WTSOpenServerExW, {onLeave: function (args) {send("WTSOpenServerExW");}});
+
+var WTSOpenServerW = Module.findExportByName("wtsapi32.dll", "WTSOpenServerW")
+Interceptor.attach(WTSOpenServerW, {onLeave: function (args) {send("WTSOpenServerW");}});
+
+var WTSQueryListenerConfigA = Module.findExportByName("wtsapi32.dll", "WTSQueryListenerConfigA")
+Interceptor.attach(WTSQueryListenerConfigA, {onLeave: function (args) {send("WTSQueryListenerConfigA");}});
+
+var WTSQueryListenerConfigW = Module.findExportByName("wtsapi32.dll", "WTSQueryListenerConfigW")
+Interceptor.attach(WTSQueryListenerConfigW, {onLeave: function (args) {send("WTSQueryListenerConfigW");}});
+
+var WTSQuerySessionInformationA = Module.findExportByName("wtsapi32.dll", "WTSQuerySessionInformationA")
+Interceptor.attach(WTSQuerySessionInformationA, {onLeave: function (args) {send("WTSQuerySessionInformationA");}});
+
+var WTSQuerySessionInformationW = Module.findExportByName("wtsapi32.dll", "WTSQuerySessionInformationW")
+Interceptor.attach(WTSQuerySessionInformationW, {onLeave: function (args) {send("WTSQuerySessionInformationW");}});
+
+var WTSQueryUserConfigA = Module.findExportByName("wtsapi32.dll", "WTSQueryUserConfigA")
+Interceptor.attach(WTSQueryUserConfigA, {onLeave: function (args) {send("WTSQueryUserConfigA");}});
+
+var WTSQueryUserConfigW = Module.findExportByName("wtsapi32.dll", "WTSQueryUserConfigW")
+Interceptor.attach(WTSQueryUserConfigW, {onLeave: function (args) {send("WTSQueryUserConfigW");}});
+
+var WTSQueryUserToken = Module.findExportByName("wtsapi32.dll", "WTSQueryUserToken")
+Interceptor.attach(WTSQueryUserToken, {onLeave: function (args) {send("WTSQueryUserToken");}});
+
+var WTSRegisterSessionNotification = Module.findExportByName("wtsapi32.dll", "WTSRegisterSessionNotification")
+Interceptor.attach(WTSRegisterSessionNotification, {onLeave: function (args) {send("WTSRegisterSessionNotification");}});
+
+var WTSRegisterSessionNotificationEx = Module.findExportByName("wtsapi32.dll", "WTSRegisterSessionNotificationEx")
+Interceptor.attach(WTSRegisterSessionNotificationEx, {onLeave: function (args) {send("WTSRegisterSessionNotificationEx");}});
+
+var WTSSendMessageA = Module.findExportByName("wtsapi32.dll", "WTSSendMessageA")
+Interceptor.attach(WTSSendMessageA, {onLeave: function (args) {send("WTSSendMessageA");}});
+
+var WTSSendMessageW = Module.findExportByName("wtsapi32.dll", "WTSSendMessageW")
+Interceptor.attach(WTSSendMessageW, {onLeave: function (args) {send("WTSSendMessageW");}});
+
+var WTSSetListenerSecurityA = Module.findExportByName("wtsapi32.dll", "WTSSetListenerSecurityA")
+Interceptor.attach(WTSSetListenerSecurityA, {onLeave: function (args) {send("WTSSetListenerSecurityA");}});
+
+var WTSSetListenerSecurityW = Module.findExportByName("wtsapi32.dll", "WTSSetListenerSecurityW")
+Interceptor.attach(WTSSetListenerSecurityW, {onLeave: function (args) {send("WTSSetListenerSecurityW");}});
+
+var WTSSetRenderHint = Module.findExportByName("wtsapi32.dll", "WTSSetRenderHint")
+Interceptor.attach(WTSSetRenderHint, {onLeave: function (args) {send("WTSSetRenderHint");}});
+
+var WTSSetSessionInformationA = Module.findExportByName("wtsapi32.dll", "WTSSetSessionInformationA")
+Interceptor.attach(WTSSetSessionInformationA, {onLeave: function (args) {send("WTSSetSessionInformationA");}});
+
+var WTSSetSessionInformationW = Module.findExportByName("wtsapi32.dll", "WTSSetSessionInformationW")
+Interceptor.attach(WTSSetSessionInformationW, {onLeave: function (args) {send("WTSSetSessionInformationW");}});
+
+var WTSSetUserConfigA = Module.findExportByName("wtsapi32.dll", "WTSSetUserConfigA")
+Interceptor.attach(WTSSetUserConfigA, {onLeave: function (args) {send("WTSSetUserConfigA");}});
+
+var WTSSetUserConfigW = Module.findExportByName("wtsapi32.dll", "WTSSetUserConfigW")
+Interceptor.attach(WTSSetUserConfigW, {onLeave: function (args) {send("WTSSetUserConfigW");}});
+
+var WTSShutdownSystem = Module.findExportByName("wtsapi32.dll", "WTSShutdownSystem")
+Interceptor.attach(WTSShutdownSystem, {onLeave: function (args) {send("WTSShutdownSystem");}});
+
+var WTSStartRemoteControlSessionA = Module.findExportByName("wtsapi32.dll", "WTSStartRemoteControlSessionA")
+Interceptor.attach(WTSStartRemoteControlSessionA, {onLeave: function (args) {send("WTSStartRemoteControlSessionA");}});
+
+var WTSStartRemoteControlSessionW = Module.findExportByName("wtsapi32.dll", "WTSStartRemoteControlSessionW")
+Interceptor.attach(WTSStartRemoteControlSessionW, {onLeave: function (args) {send("WTSStartRemoteControlSessionW");}});
+
+var WTSStopRemoteControlSession = Module.findExportByName("wtsapi32.dll", "WTSStopRemoteControlSession")
+Interceptor.attach(WTSStopRemoteControlSession, {onLeave: function (args) {send("WTSStopRemoteControlSession");}});
+
+var WTSTerminateProcess = Module.findExportByName("wtsapi32.dll", "WTSTerminateProcess")
+Interceptor.attach(WTSTerminateProcess, {onLeave: function (args) {send("WTSTerminateProcess");}});
+
+var WTSUnRegisterSessionNotification = Module.findExportByName("wtsapi32.dll", "WTSUnRegisterSessionNotification")
+Interceptor.attach(WTSUnRegisterSessionNotification, {onLeave: function (args) {send("WTSUnRegisterSessionNotification");}});
+
+var WTSUnRegisterSessionNotificationEx = Module.findExportByName("wtsapi32.dll", "WTSUnRegisterSessionNotificationEx")
+Interceptor.attach(WTSUnRegisterSessionNotificationEx, {onLeave: function (args) {send("WTSUnRegisterSessionNotificationEx");}});
+
+var WTSVirtualChannelClose = Module.findExportByName("wtsapi32.dll", "WTSVirtualChannelClose")
+Interceptor.attach(WTSVirtualChannelClose, {onLeave: function (args) {send("WTSVirtualChannelClose");}});
+
+var WTSVirtualChannelOpen = Module.findExportByName("wtsapi32.dll", "WTSVirtualChannelOpen")
+Interceptor.attach(WTSVirtualChannelOpen, {onLeave: function (args) {send("WTSVirtualChannelOpen");}});
+
+var WTSVirtualChannelOpenEx = Module.findExportByName("wtsapi32.dll", "WTSVirtualChannelOpenEx")
+Interceptor.attach(WTSVirtualChannelOpenEx, {onLeave: function (args) {send("WTSVirtualChannelOpenEx");}});
+
+var WTSVirtualChannelPurgeInput = Module.findExportByName("wtsapi32.dll", "WTSVirtualChannelPurgeInput")
+Interceptor.attach(WTSVirtualChannelPurgeInput, {onLeave: function (args) {send("WTSVirtualChannelPurgeInput");}});
+
+var WTSVirtualChannelPurgeOutput = Module.findExportByName("wtsapi32.dll", "WTSVirtualChannelPurgeOutput")
+Interceptor.attach(WTSVirtualChannelPurgeOutput, {onLeave: function (args) {send("WTSVirtualChannelPurgeOutput");}});
+
+var WTSVirtualChannelQuery = Module.findExportByName("wtsapi32.dll", "WTSVirtualChannelQuery")
+Interceptor.attach(WTSVirtualChannelQuery, {onLeave: function (args) {send("WTSVirtualChannelQuery");}});
+
+var WTSVirtualChannelRead = Module.findExportByName("wtsapi32.dll", "WTSVirtualChannelRead")
+Interceptor.attach(WTSVirtualChannelRead, {onLeave: function (args) {send("WTSVirtualChannelRead");}});
+
+var WTSVirtualChannelWrite = Module.findExportByName("wtsapi32.dll", "WTSVirtualChannelWrite")
+Interceptor.attach(WTSVirtualChannelWrite, {onLeave: function (args) {send("WTSVirtualChannelWrite");}});
+
+var WTSWaitSystemEvent = Module.findExportByName("wtsapi32.dll", "WTSWaitSystemEvent")
+Interceptor.attach(WTSWaitSystemEvent, {onLeave: function (args) {send("WTSWaitSystemEvent");}});
+

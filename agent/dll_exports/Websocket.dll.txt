@@ -1,0 +1,39 @@
+var WebSocketAbortHandle = Module.findExportByName("Websocket.dll", "WebSocketAbortHandle")
+Interceptor.attach(WebSocketAbortHandle, {onLeave: function (args) {send("WebSocketAbortHandle");}});
+
+var WebSocketBeginClientHandshake = Module.findExportByName("Websocket.dll", "WebSocketBeginClientHandshake")
+Interceptor.attach(WebSocketBeginClientHandshake, {onLeave: function (args) {send("WebSocketBeginClientHandshake");}});
+
+var WebSocketBeginServerHandshake = Module.findExportByName("Websocket.dll", "WebSocketBeginServerHandshake")
+Interceptor.attach(WebSocketBeginServerHandshake, {onLeave: function (args) {send("WebSocketBeginServerHandshake");}});
+
+var WebSocketCompleteAction = Module.findExportByName("Websocket.dll", "WebSocketCompleteAction")
+Interceptor.attach(WebSocketCompleteAction, {onLeave: function (args) {send("WebSocketCompleteAction");}});
+
+var WebSocketCreateClientHandle = Module.findExportByName("Websocket.dll", "WebSocketCreateClientHandle")
+Interceptor.attach(WebSocketCreateClientHandle, {onLeave: function (args) {send("WebSocketCreateClientHandle");}});
+
+var WebSocketCreateServerHandle = Module.findExportByName("Websocket.dll", "WebSocketCreateServerHandle")
+Interceptor.attach(WebSocketCreateServerHandle, {onLeave: function (args) {send("WebSocketCreateServerHandle");}});
+
+var WebSocketDeleteHandle = Module.findExportByName("Websocket.dll", "WebSocketDeleteHandle")
+Interceptor.attach(WebSocketDeleteHandle, {onLeave: function (args) {send("WebSocketDeleteHandle");}});
+
+var WebSocketEndClientHandshake = Module.findExportByName("Websocket.dll", "WebSocketEndClientHandshake")
+Interceptor.attach(WebSocketEndClientHandshake, {onLeave: function (args) {send("WebSocketEndClientHandshake");}});
+
+var WebSocketEndServerHandshake = Module.findExportByName("Websocket.dll", "WebSocketEndServerHandshake")
+Interceptor.attach(WebSocketEndServerHandshake, {onLeave: function (args) {send("WebSocketEndServerHandshake");}});
+
+var WebSocketGetAction = Module.findExportByName("Websocket.dll", "WebSocketGetAction")
+Interceptor.attach(WebSocketGetAction, {onLeave: function (args) {send("WebSocketGetAction");}});
+
+var WebSocketGetGlobalProperty = Module.findExportByName("Websocket.dll", "WebSocketGetGlobalProperty")
+Interceptor.attach(WebSocketGetGlobalProperty, {onLeave: function (args) {send("WebSocketGetGlobalProperty");}});
+
+var WebSocketReceive = Module.findExportByName("Websocket.dll", "WebSocketReceive")
+Interceptor.attach(WebSocketReceive, {onLeave: function (args) {send("WebSocketReceive");}});
+
+var WebSocketSend = Module.findExportByName("Websocket.dll", "WebSocketSend")
+Interceptor.attach(WebSocketSend, {onLeave: function (args) {send("WebSocketSend");}});
+

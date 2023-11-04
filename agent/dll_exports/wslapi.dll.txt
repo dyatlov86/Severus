@@ -1,0 +1,30 @@
+var DllCanUnloadNow = Module.findExportByName("wslapi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wslapi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("wslapi.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var WslConfigureDistribution = Module.findExportByName("wslapi.dll", "WslConfigureDistribution")
+Interceptor.attach(WslConfigureDistribution, {onLeave: function (args) {send("WslConfigureDistribution");}});
+
+var WslGetDistributionConfiguration = Module.findExportByName("wslapi.dll", "WslGetDistributionConfiguration")
+Interceptor.attach(WslGetDistributionConfiguration, {onLeave: function (args) {send("WslGetDistributionConfiguration");}});
+
+var WslIsDistributionRegistered = Module.findExportByName("wslapi.dll", "WslIsDistributionRegistered")
+Interceptor.attach(WslIsDistributionRegistered, {onLeave: function (args) {send("WslIsDistributionRegistered");}});
+
+var WslLaunch = Module.findExportByName("wslapi.dll", "WslLaunch")
+Interceptor.attach(WslLaunch, {onLeave: function (args) {send("WslLaunch");}});
+
+var WslLaunchInteractive = Module.findExportByName("wslapi.dll", "WslLaunchInteractive")
+Interceptor.attach(WslLaunchInteractive, {onLeave: function (args) {send("WslLaunchInteractive");}});
+
+var WslRegisterDistribution = Module.findExportByName("wslapi.dll", "WslRegisterDistribution")
+Interceptor.attach(WslRegisterDistribution, {onLeave: function (args) {send("WslRegisterDistribution");}});
+
+var WslUnregisterDistribution = Module.findExportByName("wslapi.dll", "WslUnregisterDistribution")
+Interceptor.attach(WslUnregisterDistribution, {onLeave: function (args) {send("WslUnregisterDistribution");}});
+

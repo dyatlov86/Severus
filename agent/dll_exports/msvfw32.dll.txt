@@ -1,0 +1,141 @@
+var DrawDibBegin = Module.findExportByName("msvfw32.dll", "DrawDibBegin")
+Interceptor.attach(DrawDibBegin, {onLeave: function (args) {send("DrawDibBegin");}});
+
+var DrawDibChangePalette = Module.findExportByName("msvfw32.dll", "DrawDibChangePalette")
+Interceptor.attach(DrawDibChangePalette, {onLeave: function (args) {send("DrawDibChangePalette");}});
+
+var DrawDibClose = Module.findExportByName("msvfw32.dll", "DrawDibClose")
+Interceptor.attach(DrawDibClose, {onLeave: function (args) {send("DrawDibClose");}});
+
+var DrawDibDraw = Module.findExportByName("msvfw32.dll", "DrawDibDraw")
+Interceptor.attach(DrawDibDraw, {onLeave: function (args) {send("DrawDibDraw");}});
+
+var DrawDibEnd = Module.findExportByName("msvfw32.dll", "DrawDibEnd")
+Interceptor.attach(DrawDibEnd, {onLeave: function (args) {send("DrawDibEnd");}});
+
+var DrawDibGetBuffer = Module.findExportByName("msvfw32.dll", "DrawDibGetBuffer")
+Interceptor.attach(DrawDibGetBuffer, {onLeave: function (args) {send("DrawDibGetBuffer");}});
+
+var DrawDibGetPalette = Module.findExportByName("msvfw32.dll", "DrawDibGetPalette")
+Interceptor.attach(DrawDibGetPalette, {onLeave: function (args) {send("DrawDibGetPalette");}});
+
+var DrawDibOpen = Module.findExportByName("msvfw32.dll", "DrawDibOpen")
+Interceptor.attach(DrawDibOpen, {onLeave: function (args) {send("DrawDibOpen");}});
+
+var DrawDibProfileDisplay = Module.findExportByName("msvfw32.dll", "DrawDibProfileDisplay")
+Interceptor.attach(DrawDibProfileDisplay, {onLeave: function (args) {send("DrawDibProfileDisplay");}});
+
+var DrawDibRealize = Module.findExportByName("msvfw32.dll", "DrawDibRealize")
+Interceptor.attach(DrawDibRealize, {onLeave: function (args) {send("DrawDibRealize");}});
+
+var DrawDibSetPalette = Module.findExportByName("msvfw32.dll", "DrawDibSetPalette")
+Interceptor.attach(DrawDibSetPalette, {onLeave: function (args) {send("DrawDibSetPalette");}});
+
+var DrawDibStart = Module.findExportByName("msvfw32.dll", "DrawDibStart")
+Interceptor.attach(DrawDibStart, {onLeave: function (args) {send("DrawDibStart");}});
+
+var DrawDibStop = Module.findExportByName("msvfw32.dll", "DrawDibStop")
+Interceptor.attach(DrawDibStop, {onLeave: function (args) {send("DrawDibStop");}});
+
+var DrawDibTime = Module.findExportByName("msvfw32.dll", "DrawDibTime")
+Interceptor.attach(DrawDibTime, {onLeave: function (args) {send("DrawDibTime");}});
+
+var GetOpenFileNamePreview = Module.findExportByName("msvfw32.dll", "GetOpenFileNamePreview")
+Interceptor.attach(GetOpenFileNamePreview, {onLeave: function (args) {send("GetOpenFileNamePreview");}});
+
+var GetOpenFileNamePreviewA = Module.findExportByName("msvfw32.dll", "GetOpenFileNamePreviewA")
+Interceptor.attach(GetOpenFileNamePreviewA, {onLeave: function (args) {send("GetOpenFileNamePreviewA");}});
+
+var GetOpenFileNamePreviewW = Module.findExportByName("msvfw32.dll", "GetOpenFileNamePreviewW")
+Interceptor.attach(GetOpenFileNamePreviewW, {onLeave: function (args) {send("GetOpenFileNamePreviewW");}});
+
+var GetSaveFileNamePreviewA = Module.findExportByName("msvfw32.dll", "GetSaveFileNamePreviewA")
+Interceptor.attach(GetSaveFileNamePreviewA, {onLeave: function (args) {send("GetSaveFileNamePreviewA");}});
+
+var GetSaveFileNamePreviewW = Module.findExportByName("msvfw32.dll", "GetSaveFileNamePreviewW")
+Interceptor.attach(GetSaveFileNamePreviewW, {onLeave: function (args) {send("GetSaveFileNamePreviewW");}});
+
+var ICClose = Module.findExportByName("msvfw32.dll", "ICClose")
+Interceptor.attach(ICClose, {onLeave: function (args) {send("ICClose");}});
+
+var ICCompress = Module.findExportByName("msvfw32.dll", "ICCompress")
+Interceptor.attach(ICCompress, {onLeave: function (args) {send("ICCompress");}});
+
+var ICCompressorChoose = Module.findExportByName("msvfw32.dll", "ICCompressorChoose")
+Interceptor.attach(ICCompressorChoose, {onLeave: function (args) {send("ICCompressorChoose");}});
+
+var ICCompressorFree = Module.findExportByName("msvfw32.dll", "ICCompressorFree")
+Interceptor.attach(ICCompressorFree, {onLeave: function (args) {send("ICCompressorFree");}});
+
+var ICDecompress = Module.findExportByName("msvfw32.dll", "ICDecompress")
+Interceptor.attach(ICDecompress, {onLeave: function (args) {send("ICDecompress");}});
+
+var ICDraw = Module.findExportByName("msvfw32.dll", "ICDraw")
+Interceptor.attach(ICDraw, {onLeave: function (args) {send("ICDraw");}});
+
+var ICDrawBegin = Module.findExportByName("msvfw32.dll", "ICDrawBegin")
+Interceptor.attach(ICDrawBegin, {onLeave: function (args) {send("ICDrawBegin");}});
+
+var ICGetDisplayFormat = Module.findExportByName("msvfw32.dll", "ICGetDisplayFormat")
+Interceptor.attach(ICGetDisplayFormat, {onLeave: function (args) {send("ICGetDisplayFormat");}});
+
+var ICGetInfo = Module.findExportByName("msvfw32.dll", "ICGetInfo")
+Interceptor.attach(ICGetInfo, {onLeave: function (args) {send("ICGetInfo");}});
+
+var ICImageCompress = Module.findExportByName("msvfw32.dll", "ICImageCompress")
+Interceptor.attach(ICImageCompress, {onLeave: function (args) {send("ICImageCompress");}});
+
+var ICImageDecompress = Module.findExportByName("msvfw32.dll", "ICImageDecompress")
+Interceptor.attach(ICImageDecompress, {onLeave: function (args) {send("ICImageDecompress");}});
+
+var ICInfo = Module.findExportByName("msvfw32.dll", "ICInfo")
+Interceptor.attach(ICInfo, {onLeave: function (args) {send("ICInfo");}});
+
+var ICInstall = Module.findExportByName("msvfw32.dll", "ICInstall")
+Interceptor.attach(ICInstall, {onLeave: function (args) {send("ICInstall");}});
+
+var ICLocate = Module.findExportByName("msvfw32.dll", "ICLocate")
+Interceptor.attach(ICLocate, {onLeave: function (args) {send("ICLocate");}});
+
+var ICMThunk32 = Module.findExportByName("msvfw32.dll", "ICMThunk32")
+Interceptor.attach(ICMThunk32, {onLeave: function (args) {send("ICMThunk32");}});
+
+var ICOpen = Module.findExportByName("msvfw32.dll", "ICOpen")
+Interceptor.attach(ICOpen, {onLeave: function (args) {send("ICOpen");}});
+
+var ICOpenFunction = Module.findExportByName("msvfw32.dll", "ICOpenFunction")
+Interceptor.attach(ICOpenFunction, {onLeave: function (args) {send("ICOpenFunction");}});
+
+var ICRemove = Module.findExportByName("msvfw32.dll", "ICRemove")
+Interceptor.attach(ICRemove, {onLeave: function (args) {send("ICRemove");}});
+
+var ICSendMessage = Module.findExportByName("msvfw32.dll", "ICSendMessage")
+Interceptor.attach(ICSendMessage, {onLeave: function (args) {send("ICSendMessage");}});
+
+var ICSeqCompressFrame = Module.findExportByName("msvfw32.dll", "ICSeqCompressFrame")
+Interceptor.attach(ICSeqCompressFrame, {onLeave: function (args) {send("ICSeqCompressFrame");}});
+
+var ICSeqCompressFrameEnd = Module.findExportByName("msvfw32.dll", "ICSeqCompressFrameEnd")
+Interceptor.attach(ICSeqCompressFrameEnd, {onLeave: function (args) {send("ICSeqCompressFrameEnd");}});
+
+var ICSeqCompressFrameStart = Module.findExportByName("msvfw32.dll", "ICSeqCompressFrameStart")
+Interceptor.attach(ICSeqCompressFrameStart, {onLeave: function (args) {send("ICSeqCompressFrameStart");}});
+
+var MCIWndCreate = Module.findExportByName("msvfw32.dll", "MCIWndCreate")
+Interceptor.attach(MCIWndCreate, {onLeave: function (args) {send("MCIWndCreate");}});
+
+var MCIWndCreateA = Module.findExportByName("msvfw32.dll", "MCIWndCreateA")
+Interceptor.attach(MCIWndCreateA, {onLeave: function (args) {send("MCIWndCreateA");}});
+
+var MCIWndCreateW = Module.findExportByName("msvfw32.dll", "MCIWndCreateW")
+Interceptor.attach(MCIWndCreateW, {onLeave: function (args) {send("MCIWndCreateW");}});
+
+var MCIWndRegisterClass = Module.findExportByName("msvfw32.dll", "MCIWndRegisterClass")
+Interceptor.attach(MCIWndRegisterClass, {onLeave: function (args) {send("MCIWndRegisterClass");}});
+
+var StretchDIB = Module.findExportByName("msvfw32.dll", "StretchDIB")
+Interceptor.attach(StretchDIB, {onLeave: function (args) {send("StretchDIB");}});
+
+var VideoForWindowsVersion = Module.findExportByName("msvfw32.dll", "VideoForWindowsVersion")
+Interceptor.attach(VideoForWindowsVersion, {onLeave: function (args) {send("VideoForWindowsVersion");}});
+

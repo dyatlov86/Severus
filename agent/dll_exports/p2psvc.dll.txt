@@ -1,0 +1,9 @@
+var GroupServiceMain = Module.findExportByName("p2psvc.dll", "GroupServiceMain")
+Interceptor.attach(GroupServiceMain, {onLeave: function (args) {send("GroupServiceMain");}});
+
+var InitSecurityInterfaceW = Module.findExportByName("p2psvc.dll", "InitSecurityInterfaceW")
+Interceptor.attach(InitSecurityInterfaceW, {onLeave: function (args) {send("InitSecurityInterfaceW");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("p2psvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

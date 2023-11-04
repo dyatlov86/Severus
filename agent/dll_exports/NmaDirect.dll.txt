@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("NmaDirect.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("NmaDirect.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("NmaDirect.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var NmaDirect_OverrideUserLocation = Module.findExportByName("NmaDirect.dll", "NmaDirect_OverrideUserLocation")
+Interceptor.attach(NmaDirect_OverrideUserLocation, {onLeave: function (args) {send("NmaDirect_OverrideUserLocation");}});
+
+var NmaDirect_StartGuidanceWithSimulatedRoute = Module.findExportByName("NmaDirect.dll", "NmaDirect_StartGuidanceWithSimulatedRoute")
+Interceptor.attach(NmaDirect_StartGuidanceWithSimulatedRoute, {onLeave: function (args) {send("NmaDirect_StartGuidanceWithSimulatedRoute");}});
+

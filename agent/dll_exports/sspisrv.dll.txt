@@ -1,0 +1,15 @@
+var SspiSrvClientCallback = Module.findExportByName("sspisrv.dll", "SspiSrvClientCallback")
+Interceptor.attach(SspiSrvClientCallback, {onLeave: function (args) {send("SspiSrvClientCallback");}});
+
+var SspiSrvInitialize = Module.findExportByName("sspisrv.dll", "SspiSrvInitialize")
+Interceptor.attach(SspiSrvInitialize, {onLeave: function (args) {send("SspiSrvInitialize");}});
+
+var SspirAcquireCredentialsHandle = Module.findExportByName("sspisrv.dll", "SspirAcquireCredentialsHandle")
+Interceptor.attach(SspirAcquireCredentialsHandle, {onLeave: function (args) {send("SspirAcquireCredentialsHandle");}});
+
+var SspirDeleteSecurityContext = Module.findExportByName("sspisrv.dll", "SspirDeleteSecurityContext")
+Interceptor.attach(SspirDeleteSecurityContext, {onLeave: function (args) {send("SspirDeleteSecurityContext");}});
+
+var SspirProcessSecurityContext = Module.findExportByName("sspisrv.dll", "SspirProcessSecurityContext")
+Interceptor.attach(SspirProcessSecurityContext, {onLeave: function (args) {send("SspirProcessSecurityContext");}});
+

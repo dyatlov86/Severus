@@ -1,0 +1,36 @@
+var GetCLRVersionForPSVersion = Module.findExportByName("pwrshplugin.dll", "GetCLRVersionForPSVersion")
+Interceptor.attach(GetCLRVersionForPSVersion, {onLeave: function (args) {send("GetCLRVersionForPSVersion");}});
+
+var PerformWSManPluginReportCompletion = Module.findExportByName("pwrshplugin.dll", "PerformWSManPluginReportCompletion")
+Interceptor.attach(PerformWSManPluginReportCompletion, {onLeave: function (args) {send("PerformWSManPluginReportCompletion");}});
+
+var WSManPluginCommand = Module.findExportByName("pwrshplugin.dll", "WSManPluginCommand")
+Interceptor.attach(WSManPluginCommand, {onLeave: function (args) {send("WSManPluginCommand");}});
+
+var WSManPluginConnect = Module.findExportByName("pwrshplugin.dll", "WSManPluginConnect")
+Interceptor.attach(WSManPluginConnect, {onLeave: function (args) {send("WSManPluginConnect");}});
+
+var WSManPluginReceive = Module.findExportByName("pwrshplugin.dll", "WSManPluginReceive")
+Interceptor.attach(WSManPluginReceive, {onLeave: function (args) {send("WSManPluginReceive");}});
+
+var WSManPluginReleaseCommandContext = Module.findExportByName("pwrshplugin.dll", "WSManPluginReleaseCommandContext")
+Interceptor.attach(WSManPluginReleaseCommandContext, {onLeave: function (args) {send("WSManPluginReleaseCommandContext");}});
+
+var WSManPluginReleaseShellContext = Module.findExportByName("pwrshplugin.dll", "WSManPluginReleaseShellContext")
+Interceptor.attach(WSManPluginReleaseShellContext, {onLeave: function (args) {send("WSManPluginReleaseShellContext");}});
+
+var WSManPluginSend = Module.findExportByName("pwrshplugin.dll", "WSManPluginSend")
+Interceptor.attach(WSManPluginSend, {onLeave: function (args) {send("WSManPluginSend");}});
+
+var WSManPluginShell = Module.findExportByName("pwrshplugin.dll", "WSManPluginShell")
+Interceptor.attach(WSManPluginShell, {onLeave: function (args) {send("WSManPluginShell");}});
+
+var WSManPluginShutdown = Module.findExportByName("pwrshplugin.dll", "WSManPluginShutdown")
+Interceptor.attach(WSManPluginShutdown, {onLeave: function (args) {send("WSManPluginShutdown");}});
+
+var WSManPluginSignal = Module.findExportByName("pwrshplugin.dll", "WSManPluginSignal")
+Interceptor.attach(WSManPluginSignal, {onLeave: function (args) {send("WSManPluginSignal");}});
+
+var WSManPluginStartup = Module.findExportByName("pwrshplugin.dll", "WSManPluginStartup")
+Interceptor.attach(WSManPluginStartup, {onLeave: function (args) {send("WSManPluginStartup");}});
+

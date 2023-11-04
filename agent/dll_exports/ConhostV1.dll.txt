@@ -1,0 +1,3 @@
+var ConsoleCreateIoThread = Module.findExportByName("ConhostV1.dll", "ConsoleCreateIoThread")
+Interceptor.attach(ConsoleCreateIoThread, {onLeave: function (args) {send("ConsoleCreateIoThread");}});
+

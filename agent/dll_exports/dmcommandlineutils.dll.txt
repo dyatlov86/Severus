@@ -1,0 +1,9 @@
+var FreeCommandLineOptions = Module.findExportByName("dmcommandlineutils.dll", "FreeCommandLineOptions")
+Interceptor.attach(FreeCommandLineOptions, {onLeave: function (args) {send("FreeCommandLineOptions");}});
+
+var ProcessCommandLine = Module.findExportByName("dmcommandlineutils.dll", "ProcessCommandLine")
+Interceptor.attach(ProcessCommandLine, {onLeave: function (args) {send("ProcessCommandLine");}});
+
+var ProcessCommandLineOption = Module.findExportByName("dmcommandlineutils.dll", "ProcessCommandLineOption")
+Interceptor.attach(ProcessCommandLineOption, {onLeave: function (args) {send("ProcessCommandLineOption");}});
+

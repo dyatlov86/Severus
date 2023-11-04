@@ -1,0 +1,57 @@
+var DllCanUnloadNow = Module.findExportByName("uireng.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("uireng.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("uireng.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var UirFreeRecordedActionInfo = Module.findExportByName("uireng.dll", "UirFreeRecordedActionInfo")
+Interceptor.attach(UirFreeRecordedActionInfo, {onLeave: function (args) {send("UirFreeRecordedActionInfo");}});
+
+var UirGetRecordedActionInfo = Module.findExportByName("uireng.dll", "UirGetRecordedActionInfo")
+Interceptor.attach(UirGetRecordedActionInfo, {onLeave: function (args) {send("UirGetRecordedActionInfo");}});
+
+var UirGetScreenComment = Module.findExportByName("uireng.dll", "UirGetScreenComment")
+Interceptor.attach(UirGetScreenComment, {onLeave: function (args) {send("UirGetScreenComment");}});
+
+var UirInitializeEngine = Module.findExportByName("uireng.dll", "UirInitializeEngine")
+Interceptor.attach(UirInitializeEngine, {onLeave: function (args) {send("UirInitializeEngine");}});
+
+var UirIsRecordingActive = Module.findExportByName("uireng.dll", "UirIsRecordingActive")
+Interceptor.attach(UirIsRecordingActive, {onLeave: function (args) {send("UirIsRecordingActive");}});
+
+var UirOutCreateOutputFile = Module.findExportByName("uireng.dll", "UirOutCreateOutputFile")
+Interceptor.attach(UirOutCreateOutputFile, {onLeave: function (args) {send("UirOutCreateOutputFile");}});
+
+var UirPauseRecordingSession = Module.findExportByName("uireng.dll", "UirPauseRecordingSession")
+Interceptor.attach(UirPauseRecordingSession, {onLeave: function (args) {send("UirPauseRecordingSession");}});
+
+var UirResumeRecordingSession = Module.findExportByName("uireng.dll", "UirResumeRecordingSession")
+Interceptor.attach(UirResumeRecordingSession, {onLeave: function (args) {send("UirResumeRecordingSession");}});
+
+var UirStartRecordingSession = Module.findExportByName("uireng.dll", "UirStartRecordingSession")
+Interceptor.attach(UirStartRecordingSession, {onLeave: function (args) {send("UirStartRecordingSession");}});
+
+var UirStopRecordingSession = Module.findExportByName("uireng.dll", "UirStopRecordingSession")
+Interceptor.attach(UirStopRecordingSession, {onLeave: function (args) {send("UirStopRecordingSession");}});
+
+var UirUninitializeEngine = Module.findExportByName("uireng.dll", "UirUninitializeEngine")
+Interceptor.attach(UirUninitializeEngine, {onLeave: function (args) {send("UirUninitializeEngine");}});
+
+var UirUpdateRecordingSession = Module.findExportByName("uireng.dll", "UirUpdateRecordingSession")
+Interceptor.attach(UirUpdateRecordingSession, {onLeave: function (args) {send("UirUpdateRecordingSession");}});
+
+var UirWriteRecordedActionAndCommentListMht = Module.findExportByName("uireng.dll", "UirWriteRecordedActionAndCommentListMht")
+Interceptor.attach(UirWriteRecordedActionAndCommentListMht, {onLeave: function (args) {send("UirWriteRecordedActionAndCommentListMht");}});
+
+var UirWriteRecordedActionListMht = Module.findExportByName("uireng.dll", "UirWriteRecordedActionListMht")
+Interceptor.attach(UirWriteRecordedActionListMht, {onLeave: function (args) {send("UirWriteRecordedActionListMht");}});
+
+var UirWriteRecordedActionListXml = Module.findExportByName("uireng.dll", "UirWriteRecordedActionListXml")
+Interceptor.attach(UirWriteRecordedActionListXml, {onLeave: function (args) {send("UirWriteRecordedActionListXml");}});
+
+var UirWriteUserComments = Module.findExportByName("uireng.dll", "UirWriteUserComments")
+Interceptor.attach(UirWriteUserComments, {onLeave: function (args) {send("UirWriteUserComments");}});
+

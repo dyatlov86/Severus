@@ -1,0 +1,12 @@
+var MmdDxxCreateDevice = Module.findExportByName("atiumd6a.dll", "MmdDxxCreateDevice")
+Interceptor.attach(MmdDxxCreateDevice, {onLeave: function (args) {send("MmdDxxCreateDevice");}});
+
+var Mmtelemetry_parser = Module.findExportByName("atiumd6a.dll", "Mmtelemetry_parser")
+Interceptor.attach(Mmtelemetry_parser, {onLeave: function (args) {send("Mmtelemetry_parser");}});
+
+var RRVideoCommandDispatcher = Module.findExportByName("atiumd6a.dll", "RRVideoCommandDispatcher")
+Interceptor.attach(RRVideoCommandDispatcher, {onLeave: function (args) {send("RRVideoCommandDispatcher");}});
+
+var mmdllInitUMDFuncs = Module.findExportByName("atiumd6a.dll", "mmdllInitUMDFuncs")
+Interceptor.attach(mmdllInitUMDFuncs, {onLeave: function (args) {send("mmdllInitUMDFuncs");}});
+

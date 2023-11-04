@@ -1,0 +1,9 @@
+var CPlApplet = Module.findExportByName("cliconfg.dll", "CPlApplet")
+Interceptor.attach(CPlApplet, {onLeave: function (args) {send("CPlApplet");}});
+
+var ClientConfigureAddEdit = Module.findExportByName("cliconfg.dll", "ClientConfigureAddEdit")
+Interceptor.attach(ClientConfigureAddEdit, {onLeave: function (args) {send("ClientConfigureAddEdit");}});
+
+var OnInitDialogMain = Module.findExportByName("cliconfg.dll", "OnInitDialogMain")
+Interceptor.attach(OnInitDialogMain, {onLeave: function (args) {send("OnInitDialogMain");}});
+

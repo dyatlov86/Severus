@@ -1,0 +1,39 @@
+var DllCanUnloadNow = Module.findExportByName("TtlsExt.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("TtlsExt.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("TtlsExt.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("TtlsExt.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var TtlsExt_EapPeerInvokeConfigUI = Module.findExportByName("TtlsExt.dll", "TtlsExt_EapPeerInvokeConfigUI")
+Interceptor.attach(TtlsExt_EapPeerInvokeConfigUI, {onLeave: function (args) {send("TtlsExt_EapPeerInvokeConfigUI");}});
+
+var TtlsExt_FreeMemoryExt = Module.findExportByName("TtlsExt.dll", "TtlsExt_FreeMemoryExt")
+Interceptor.attach(TtlsExt_FreeMemoryExt, {onLeave: function (args) {send("TtlsExt_FreeMemoryExt");}});
+
+var TtlsExt_GetConfigCacheOnlyCertValidation = Module.findExportByName("TtlsExt.dll", "TtlsExt_GetConfigCacheOnlyCertValidation")
+Interceptor.attach(TtlsExt_GetConfigCacheOnlyCertValidation, {onLeave: function (args) {send("TtlsExt_GetConfigCacheOnlyCertValidation");}});
+
+var TtlsExt_GetConfigForceNotDomainJoined = Module.findExportByName("TtlsExt.dll", "TtlsExt_GetConfigForceNotDomainJoined")
+Interceptor.attach(TtlsExt_GetConfigForceNotDomainJoined, {onLeave: function (args) {send("TtlsExt_GetConfigForceNotDomainJoined");}});
+
+var TtlsExt_GetContextData = Module.findExportByName("TtlsExt.dll", "TtlsExt_GetContextData")
+Interceptor.attach(TtlsExt_GetContextData, {onLeave: function (args) {send("TtlsExt_GetContextData");}});
+
+var TtlsExt_GetUserCredentials = Module.findExportByName("TtlsExt.dll", "TtlsExt_GetUserCredentials")
+Interceptor.attach(TtlsExt_GetUserCredentials, {onLeave: function (args) {send("TtlsExt_GetUserCredentials");}});
+
+var TtlsExt_InvokeNonEapMethodUI = Module.findExportByName("TtlsExt.dll", "TtlsExt_InvokeNonEapMethodUI")
+Interceptor.attach(TtlsExt_InvokeNonEapMethodUI, {onLeave: function (args) {send("TtlsExt_InvokeNonEapMethodUI");}});
+
+var TtlsExt_InvokeServerAuthentication = Module.findExportByName("TtlsExt.dll", "TtlsExt_InvokeServerAuthentication")
+Interceptor.attach(TtlsExt_InvokeServerAuthentication, {onLeave: function (args) {send("TtlsExt_InvokeServerAuthentication");}});
+
+var TtlsExt_ShowHelp = Module.findExportByName("TtlsExt.dll", "TtlsExt_ShowHelp")
+Interceptor.attach(TtlsExt_ShowHelp, {onLeave: function (args) {send("TtlsExt_ShowHelp");}});
+

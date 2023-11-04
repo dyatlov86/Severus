@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("RdpSaPs.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("RdpSaPs.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("RdpSaPs.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("RdpSaPs.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetProxyDllInfo = Module.findExportByName("RdpSaPs.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+

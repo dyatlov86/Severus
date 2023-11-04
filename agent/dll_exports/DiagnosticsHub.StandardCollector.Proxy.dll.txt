@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("DiagnosticsHub.StandardCollector.Proxy.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("DiagnosticsHub.StandardCollector.Proxy.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("DiagnosticsHub.StandardCollector.Proxy.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("DiagnosticsHub.StandardCollector.Proxy.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ManualRegisterInterfaces = Module.findExportByName("DiagnosticsHub.StandardCollector.Proxy.dll", "ManualRegisterInterfaces")
+Interceptor.attach(ManualRegisterInterfaces, {onLeave: function (args) {send("ManualRegisterInterfaces");}});
+
+var ManualUnregisterInterfaces = Module.findExportByName("DiagnosticsHub.StandardCollector.Proxy.dll", "ManualUnregisterInterfaces")
+Interceptor.attach(ManualUnregisterInterfaces, {onLeave: function (args) {send("ManualUnregisterInterfaces");}});
+

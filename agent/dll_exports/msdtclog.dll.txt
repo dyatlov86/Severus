@@ -1,0 +1,21 @@
+var CreateInstance = Module.findExportByName("msdtclog.dll", "CreateInstance")
+Interceptor.attach(CreateInstance, {onLeave: function (args) {send("CreateInstance");}});
+
+var DeleteInstance = Module.findExportByName("msdtclog.dll", "DeleteInstance")
+Interceptor.attach(DeleteInstance, {onLeave: function (args) {send("DeleteInstance");}});
+
+var DllGetClassObject = Module.findExportByName("msdtclog.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllGetDTCLOG = Module.findExportByName("msdtclog.dll", "DllGetDTCLOG")
+Interceptor.attach(DllGetDTCLOG, {onLeave: function (args) {send("DllGetDTCLOG");}});
+
+var DllGetDTCLOG2 = Module.findExportByName("msdtclog.dll", "DllGetDTCLOG2")
+Interceptor.attach(DllGetDTCLOG2, {onLeave: function (args) {send("DllGetDTCLOG2");}});
+
+var DllRegisterServer = Module.findExportByName("msdtclog.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msdtclog.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

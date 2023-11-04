@@ -1,0 +1,15 @@
+var AmdExtRequestMgpuAppControl = Module.findExportByName("aticfx64.dll", "AmdExtRequestMgpuAppControl")
+Interceptor.attach(AmdExtRequestMgpuAppControl, {onLeave: function (args) {send("AmdExtRequestMgpuAppControl");}});
+
+var AmdGetCfxModuleHandle = Module.findExportByName("aticfx64.dll", "AmdGetCfxModuleHandle")
+Interceptor.attach(AmdGetCfxModuleHandle, {onLeave: function (args) {send("AmdGetCfxModuleHandle");}});
+
+var AmdQueryPowerXpressDeviceInfo = Module.findExportByName("aticfx64.dll", "AmdQueryPowerXpressDeviceInfo")
+Interceptor.attach(AmdQueryPowerXpressDeviceInfo, {onLeave: function (args) {send("AmdQueryPowerXpressDeviceInfo");}});
+
+var AmdQueryPowerXpressDeviceInfoEx = Module.findExportByName("aticfx64.dll", "AmdQueryPowerXpressDeviceInfoEx")
+Interceptor.attach(AmdQueryPowerXpressDeviceInfoEx, {onLeave: function (args) {send("AmdQueryPowerXpressDeviceInfoEx");}});
+
+var DllMain = Module.findExportByName("aticfx64.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+

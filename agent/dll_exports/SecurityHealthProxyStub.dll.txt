@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("SecurityHealthProxyStub.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SecurityHealthProxyStub.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("SecurityHealthProxyStub.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var GetProxyDllInfo = Module.findExportByName("SecurityHealthProxyStub.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+

@@ -1,0 +1,219 @@
+var DllCanUnloadNow = Module.findExportByName("unattend.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllMain = Module.findExportByName("unattend.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var UnattendAddResults = Module.findExportByName("unattend.dll", "UnattendAddResults")
+Interceptor.attach(UnattendAddResults, {onLeave: function (args) {send("UnattendAddResults");}});
+
+var UnattendCleanup = Module.findExportByName("unattend.dll", "UnattendCleanup")
+Interceptor.attach(UnattendCleanup, {onLeave: function (args) {send("UnattendCleanup");}});
+
+var UnattendCtxAddOrModifyNodeText = Module.findExportByName("unattend.dll", "UnattendCtxAddOrModifyNodeText")
+Interceptor.attach(UnattendCtxAddOrModifyNodeText, {onLeave: function (args) {send("UnattendCtxAddOrModifyNodeText");}});
+
+var UnattendCtxBeginModify = Module.findExportByName("unattend.dll", "UnattendCtxBeginModify")
+Interceptor.attach(UnattendCtxBeginModify, {onLeave: function (args) {send("UnattendCtxBeginModify");}});
+
+var UnattendCtxCancelModify = Module.findExportByName("unattend.dll", "UnattendCtxCancelModify")
+Interceptor.attach(UnattendCtxCancelModify, {onLeave: function (args) {send("UnattendCtxCancelModify");}});
+
+var UnattendCtxCleanup = Module.findExportByName("unattend.dll", "UnattendCtxCleanup")
+Interceptor.attach(UnattendCtxCleanup, {onLeave: function (args) {send("UnattendCtxCleanup");}});
+
+var UnattendCtxCommitModify = Module.findExportByName("unattend.dll", "UnattendCtxCommitModify")
+Interceptor.attach(UnattendCtxCommitModify, {onLeave: function (args) {send("UnattendCtxCommitModify");}});
+
+var UnattendCtxCompareNodes = Module.findExportByName("unattend.dll", "UnattendCtxCompareNodes")
+Interceptor.attach(UnattendCtxCompareNodes, {onLeave: function (args) {send("UnattendCtxCompareNodes");}});
+
+var UnattendCtxDeserialize = Module.findExportByName("unattend.dll", "UnattendCtxDeserialize")
+Interceptor.attach(UnattendCtxDeserialize, {onLeave: function (args) {send("UnattendCtxDeserialize");}});
+
+var UnattendCtxDeserializeBuffer = Module.findExportByName("unattend.dll", "UnattendCtxDeserializeBuffer")
+Interceptor.attach(UnattendCtxDeserializeBuffer, {onLeave: function (args) {send("UnattendCtxDeserializeBuffer");}});
+
+var UnattendCtxDeserializeFile = Module.findExportByName("unattend.dll", "UnattendCtxDeserializeFile")
+Interceptor.attach(UnattendCtxDeserializeFile, {onLeave: function (args) {send("UnattendCtxDeserializeFile");}});
+
+var UnattendCtxDeserializeString = Module.findExportByName("unattend.dll", "UnattendCtxDeserializeString")
+Interceptor.attach(UnattendCtxDeserializeString, {onLeave: function (args) {send("UnattendCtxDeserializeString");}});
+
+var UnattendCtxDeserializeWithResults = Module.findExportByName("unattend.dll", "UnattendCtxDeserializeWithResults")
+Interceptor.attach(UnattendCtxDeserializeWithResults, {onLeave: function (args) {send("UnattendCtxDeserializeWithResults");}});
+
+var UnattendCtxEnumGet = Module.findExportByName("unattend.dll", "UnattendCtxEnumGet")
+Interceptor.attach(UnattendCtxEnumGet, {onLeave: function (args) {send("UnattendCtxEnumGet");}});
+
+var UnattendCtxEnumOrderedSubNodes = Module.findExportByName("unattend.dll", "UnattendCtxEnumOrderedSubNodes")
+Interceptor.attach(UnattendCtxEnumOrderedSubNodes, {onLeave: function (args) {send("UnattendCtxEnumOrderedSubNodes");}});
+
+var UnattendCtxGetCount = Module.findExportByName("unattend.dll", "UnattendCtxGetCount")
+Interceptor.attach(UnattendCtxGetCount, {onLeave: function (args) {send("UnattendCtxGetCount");}});
+
+var UnattendCtxGetCountByNode = Module.findExportByName("unattend.dll", "UnattendCtxGetCountByNode")
+Interceptor.attach(UnattendCtxGetCountByNode, {onLeave: function (args) {send("UnattendCtxGetCountByNode");}});
+
+var UnattendCtxGetEnumValue = Module.findExportByName("unattend.dll", "UnattendCtxGetEnumValue")
+Interceptor.attach(UnattendCtxGetEnumValue, {onLeave: function (args) {send("UnattendCtxGetEnumValue");}});
+
+var UnattendCtxGetEnumValueByNode = Module.findExportByName("unattend.dll", "UnattendCtxGetEnumValueByNode")
+Interceptor.attach(UnattendCtxGetEnumValueByNode, {onLeave: function (args) {send("UnattendCtxGetEnumValueByNode");}});
+
+var UnattendCtxGetExpandedString = Module.findExportByName("unattend.dll", "UnattendCtxGetExpandedString")
+Interceptor.attach(UnattendCtxGetExpandedString, {onLeave: function (args) {send("UnattendCtxGetExpandedString");}});
+
+var UnattendCtxGetExpandedStringByNode = Module.findExportByName("unattend.dll", "UnattendCtxGetExpandedStringByNode")
+Interceptor.attach(UnattendCtxGetExpandedStringByNode, {onLeave: function (args) {send("UnattendCtxGetExpandedStringByNode");}});
+
+var UnattendCtxGetFlag = Module.findExportByName("unattend.dll", "UnattendCtxGetFlag")
+Interceptor.attach(UnattendCtxGetFlag, {onLeave: function (args) {send("UnattendCtxGetFlag");}});
+
+var UnattendCtxGetFlagByNode = Module.findExportByName("unattend.dll", "UnattendCtxGetFlagByNode")
+Interceptor.attach(UnattendCtxGetFlagByNode, {onLeave: function (args) {send("UnattendCtxGetFlagByNode");}});
+
+var UnattendCtxGetLong = Module.findExportByName("unattend.dll", "UnattendCtxGetLong")
+Interceptor.attach(UnattendCtxGetLong, {onLeave: function (args) {send("UnattendCtxGetLong");}});
+
+var UnattendCtxGetLongByNode = Module.findExportByName("unattend.dll", "UnattendCtxGetLongByNode")
+Interceptor.attach(UnattendCtxGetLongByNode, {onLeave: function (args) {send("UnattendCtxGetLongByNode");}});
+
+var UnattendCtxGetNodeAttr = Module.findExportByName("unattend.dll", "UnattendCtxGetNodeAttr")
+Interceptor.attach(UnattendCtxGetNodeAttr, {onLeave: function (args) {send("UnattendCtxGetNodeAttr");}});
+
+var UnattendCtxGetNodeChild = Module.findExportByName("unattend.dll", "UnattendCtxGetNodeChild")
+Interceptor.attach(UnattendCtxGetNodeChild, {onLeave: function (args) {send("UnattendCtxGetNodeChild");}});
+
+var UnattendCtxGetNodeValue = Module.findExportByName("unattend.dll", "UnattendCtxGetNodeValue")
+Interceptor.attach(UnattendCtxGetNodeValue, {onLeave: function (args) {send("UnattendCtxGetNodeValue");}});
+
+var UnattendCtxGetRootNode = Module.findExportByName("unattend.dll", "UnattendCtxGetRootNode")
+Interceptor.attach(UnattendCtxGetRootNode, {onLeave: function (args) {send("UnattendCtxGetRootNode");}});
+
+var UnattendCtxGetShowUI = Module.findExportByName("unattend.dll", "UnattendCtxGetShowUI")
+Interceptor.attach(UnattendCtxGetShowUI, {onLeave: function (args) {send("UnattendCtxGetShowUI");}});
+
+var UnattendCtxGetShowUIFromNode = Module.findExportByName("unattend.dll", "UnattendCtxGetShowUIFromNode")
+Interceptor.attach(UnattendCtxGetShowUIFromNode, {onLeave: function (args) {send("UnattendCtxGetShowUIFromNode");}});
+
+var UnattendCtxGetString = Module.findExportByName("unattend.dll", "UnattendCtxGetString")
+Interceptor.attach(UnattendCtxGetString, {onLeave: function (args) {send("UnattendCtxGetString");}});
+
+var UnattendCtxGetStringByNode = Module.findExportByName("unattend.dll", "UnattendCtxGetStringByNode")
+Interceptor.attach(UnattendCtxGetStringByNode, {onLeave: function (args) {send("UnattendCtxGetStringByNode");}});
+
+var UnattendCtxGetUlong = Module.findExportByName("unattend.dll", "UnattendCtxGetUlong")
+Interceptor.attach(UnattendCtxGetUlong, {onLeave: function (args) {send("UnattendCtxGetUlong");}});
+
+var UnattendCtxGetUlongByNode = Module.findExportByName("unattend.dll", "UnattendCtxGetUlongByNode")
+Interceptor.attach(UnattendCtxGetUlongByNode, {onLeave: function (args) {send("UnattendCtxGetUlongByNode");}});
+
+var UnattendCtxOpenNode = Module.findExportByName("unattend.dll", "UnattendCtxOpenNode")
+Interceptor.attach(UnattendCtxOpenNode, {onLeave: function (args) {send("UnattendCtxOpenNode");}});
+
+var UnattendCtxOpenNodeByNode = Module.findExportByName("unattend.dll", "UnattendCtxOpenNodeByNode")
+Interceptor.attach(UnattendCtxOpenNodeByNode, {onLeave: function (args) {send("UnattendCtxOpenNodeByNode");}});
+
+var UnattendCtxPrettyPrint = Module.findExportByName("unattend.dll", "UnattendCtxPrettyPrint")
+Interceptor.attach(UnattendCtxPrettyPrint, {onLeave: function (args) {send("UnattendCtxPrettyPrint");}});
+
+var UnattendCtxRemoveAttr = Module.findExportByName("unattend.dll", "UnattendCtxRemoveAttr")
+Interceptor.attach(UnattendCtxRemoveAttr, {onLeave: function (args) {send("UnattendCtxRemoveAttr");}});
+
+var UnattendCtxRemoveNode = Module.findExportByName("unattend.dll", "UnattendCtxRemoveNode")
+Interceptor.attach(UnattendCtxRemoveNode, {onLeave: function (args) {send("UnattendCtxRemoveNode");}});
+
+var UnattendCtxReplaceMatchedNodesWithText = Module.findExportByName("unattend.dll", "UnattendCtxReplaceMatchedNodesWithText")
+Interceptor.attach(UnattendCtxReplaceMatchedNodesWithText, {onLeave: function (args) {send("UnattendCtxReplaceMatchedNodesWithText");}});
+
+var UnattendCtxReplaceNode = Module.findExportByName("unattend.dll", "UnattendCtxReplaceNode")
+Interceptor.attach(UnattendCtxReplaceNode, {onLeave: function (args) {send("UnattendCtxReplaceNode");}});
+
+var UnattendCtxSerialize = Module.findExportByName("unattend.dll", "UnattendCtxSerialize")
+Interceptor.attach(UnattendCtxSerialize, {onLeave: function (args) {send("UnattendCtxSerialize");}});
+
+var UnattendCtxSerializeSettingsStream = Module.findExportByName("unattend.dll", "UnattendCtxSerializeSettingsStream")
+Interceptor.attach(UnattendCtxSerializeSettingsStream, {onLeave: function (args) {send("UnattendCtxSerializeSettingsStream");}});
+
+var UnattendCtxSerializeToBuffer = Module.findExportByName("unattend.dll", "UnattendCtxSerializeToBuffer")
+Interceptor.attach(UnattendCtxSerializeToBuffer, {onLeave: function (args) {send("UnattendCtxSerializeToBuffer");}});
+
+var UnattendCtxSerializeToBufferFromNode = Module.findExportByName("unattend.dll", "UnattendCtxSerializeToBufferFromNode")
+Interceptor.attach(UnattendCtxSerializeToBufferFromNode, {onLeave: function (args) {send("UnattendCtxSerializeToBufferFromNode");}});
+
+var UnattendCtxSerializeToStream = Module.findExportByName("unattend.dll", "UnattendCtxSerializeToStream")
+Interceptor.attach(UnattendCtxSerializeToStream, {onLeave: function (args) {send("UnattendCtxSerializeToStream");}});
+
+var UnattendCtxSerializeToStreamFromNode = Module.findExportByName("unattend.dll", "UnattendCtxSerializeToStreamFromNode")
+Interceptor.attach(UnattendCtxSerializeToStreamFromNode, {onLeave: function (args) {send("UnattendCtxSerializeToStreamFromNode");}});
+
+var UnattendCtxSetNodeName = Module.findExportByName("unattend.dll", "UnattendCtxSetNodeName")
+Interceptor.attach(UnattendCtxSetNodeName, {onLeave: function (args) {send("UnattendCtxSetNodeName");}});
+
+var UnattendCtxSetString = Module.findExportByName("unattend.dll", "UnattendCtxSetString")
+Interceptor.attach(UnattendCtxSetString, {onLeave: function (args) {send("UnattendCtxSetString");}});
+
+var UnattendCtxSetStringByNode = Module.findExportByName("unattend.dll", "UnattendCtxSetStringByNode")
+Interceptor.attach(UnattendCtxSetStringByNode, {onLeave: function (args) {send("UnattendCtxSetStringByNode");}});
+
+var UnattendCtxSpliceTrees = Module.findExportByName("unattend.dll", "UnattendCtxSpliceTrees")
+Interceptor.attach(UnattendCtxSpliceTrees, {onLeave: function (args) {send("UnattendCtxSpliceTrees");}});
+
+var UnattendDeserializeWithResults = Module.findExportByName("unattend.dll", "UnattendDeserializeWithResults")
+Interceptor.attach(UnattendDeserializeWithResults, {onLeave: function (args) {send("UnattendDeserializeWithResults");}});
+
+var UnattendEnumFree = Module.findExportByName("unattend.dll", "UnattendEnumFree")
+Interceptor.attach(UnattendEnumFree, {onLeave: function (args) {send("UnattendEnumFree");}});
+
+var UnattendFindAnswerFile = Module.findExportByName("unattend.dll", "UnattendFindAnswerFile")
+Interceptor.attach(UnattendFindAnswerFile, {onLeave: function (args) {send("UnattendFindAnswerFile");}});
+
+var UnattendFindAnswerFileSkipPantherFolder = Module.findExportByName("unattend.dll", "UnattendFindAnswerFileSkipPantherFolder")
+Interceptor.attach(UnattendFindAnswerFileSkipPantherFolder, {onLeave: function (args) {send("UnattendFindAnswerFileSkipPantherFolder");}});
+
+var UnattendFindAnswerFileWithResults = Module.findExportByName("unattend.dll", "UnattendFindAnswerFileWithResults")
+Interceptor.attach(UnattendFindAnswerFileWithResults, {onLeave: function (args) {send("UnattendFindAnswerFileWithResults");}});
+
+var UnattendFindFileFromCmdLine = Module.findExportByName("unattend.dll", "UnattendFindFileFromCmdLine")
+Interceptor.attach(UnattendFindFileFromCmdLine, {onLeave: function (args) {send("UnattendFindFileFromCmdLine");}});
+
+var UnattendFormatPath = Module.findExportByName("unattend.dll", "UnattendFormatPath")
+Interceptor.attach(UnattendFormatPath, {onLeave: function (args) {send("UnattendFormatPath");}});
+
+var UnattendFreeNode = Module.findExportByName("unattend.dll", "UnattendFreeNode")
+Interceptor.attach(UnattendFreeNode, {onLeave: function (args) {send("UnattendFreeNode");}});
+
+var UnattendFreeResults = Module.findExportByName("unattend.dll", "UnattendFreeResults")
+Interceptor.attach(UnattendFreeResults, {onLeave: function (args) {send("UnattendFreeResults");}});
+
+var UnattendFreeSetting = Module.findExportByName("unattend.dll", "UnattendFreeSetting")
+Interceptor.attach(UnattendFreeSetting, {onLeave: function (args) {send("UnattendFreeSetting");}});
+
+var UnattendGetCount = Module.findExportByName("unattend.dll", "UnattendGetCount")
+Interceptor.attach(UnattendGetCount, {onLeave: function (args) {send("UnattendGetCount");}});
+
+var UnattendGetFirstFailingSetting = Module.findExportByName("unattend.dll", "UnattendGetFirstFailingSetting")
+Interceptor.attach(UnattendGetFirstFailingSetting, {onLeave: function (args) {send("UnattendGetFirstFailingSetting");}});
+
+var UnattendGetFlag = Module.findExportByName("unattend.dll", "UnattendGetFlag")
+Interceptor.attach(UnattendGetFlag, {onLeave: function (args) {send("UnattendGetFlag");}});
+
+var UnattendGetImplicitContext = Module.findExportByName("unattend.dll", "UnattendGetImplicitContext")
+Interceptor.attach(UnattendGetImplicitContext, {onLeave: function (args) {send("UnattendGetImplicitContext");}});
+
+var UnattendGetString = Module.findExportByName("unattend.dll", "UnattendGetString")
+Interceptor.attach(UnattendGetString, {onLeave: function (args) {send("UnattendGetString");}});
+
+var UnattendIsNodeValid = Module.findExportByName("unattend.dll", "UnattendIsNodeValid")
+Interceptor.attach(UnattendIsNodeValid, {onLeave: function (args) {send("UnattendIsNodeValid");}});
+
+var UnattendIsPassUnusedInCtx = Module.findExportByName("unattend.dll", "UnattendIsPassUnusedInCtx")
+Interceptor.attach(UnattendIsPassUnusedInCtx, {onLeave: function (args) {send("UnattendIsPassUnusedInCtx");}});
+
+var UnattendMarkPassUsedInCtx = Module.findExportByName("unattend.dll", "UnattendMarkPassUsedInCtx")
+Interceptor.attach(UnattendMarkPassUsedInCtx, {onLeave: function (args) {send("UnattendMarkPassUsedInCtx");}});
+
+var UnattendUsedPassesExistInCtx = Module.findExportByName("unattend.dll", "UnattendUsedPassesExistInCtx")
+Interceptor.attach(UnattendUsedPassesExistInCtx, {onLeave: function (args) {send("UnattendUsedPassesExistInCtx");}});
+

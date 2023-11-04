@@ -1,0 +1,3 @@
+var GetSetting = Module.findExportByName("SettingsHandlers_Devices.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+

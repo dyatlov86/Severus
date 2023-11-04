@@ -1,0 +1,21 @@
+var IEApplyCurrentHardening = Module.findExportByName("iesetup.dll", "IEApplyCurrentHardening")
+Interceptor.attach(IEApplyCurrentHardening, {onLeave: function (args) {send("IEApplyCurrentHardening");}});
+
+var IEHardenAdmin = Module.findExportByName("iesetup.dll", "IEHardenAdmin")
+Interceptor.attach(IEHardenAdmin, {onLeave: function (args) {send("IEHardenAdmin");}});
+
+var IEHardenAdminNow = Module.findExportByName("iesetup.dll", "IEHardenAdminNow")
+Interceptor.attach(IEHardenAdminNow, {onLeave: function (args) {send("IEHardenAdminNow");}});
+
+var IEHardenLMSettings = Module.findExportByName("iesetup.dll", "IEHardenLMSettings")
+Interceptor.attach(IEHardenLMSettings, {onLeave: function (args) {send("IEHardenLMSettings");}});
+
+var IEHardenMachineNow = Module.findExportByName("iesetup.dll", "IEHardenMachineNow")
+Interceptor.attach(IEHardenMachineNow, {onLeave: function (args) {send("IEHardenMachineNow");}});
+
+var IEHardenUser = Module.findExportByName("iesetup.dll", "IEHardenUser")
+Interceptor.attach(IEHardenUser, {onLeave: function (args) {send("IEHardenUser");}});
+
+var IEShowHardeningDialog = Module.findExportByName("iesetup.dll", "IEShowHardeningDialog")
+Interceptor.attach(IEShowHardeningDialog, {onLeave: function (args) {send("IEShowHardeningDialog");}});
+

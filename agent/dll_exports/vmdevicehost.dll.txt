@@ -1,0 +1,54 @@
+var HdvCreateDeviceInstance = Module.findExportByName("vmdevicehost.dll", "HdvCreateDeviceInstance")
+Interceptor.attach(HdvCreateDeviceInstance, {onLeave: function (args) {send("HdvCreateDeviceInstance");}});
+
+var HdvCreateGuestMemoryAperture = Module.findExportByName("vmdevicehost.dll", "HdvCreateGuestMemoryAperture")
+Interceptor.attach(HdvCreateGuestMemoryAperture, {onLeave: function (args) {send("HdvCreateGuestMemoryAperture");}});
+
+var HdvCreateSectionBackedMmioRange = Module.findExportByName("vmdevicehost.dll", "HdvCreateSectionBackedMmioRange")
+Interceptor.attach(HdvCreateSectionBackedMmioRange, {onLeave: function (args) {send("HdvCreateSectionBackedMmioRange");}});
+
+var HdvDeliverGuestInterrupt = Module.findExportByName("vmdevicehost.dll", "HdvDeliverGuestInterrupt")
+Interceptor.attach(HdvDeliverGuestInterrupt, {onLeave: function (args) {send("HdvDeliverGuestInterrupt");}});
+
+var HdvDestroyGuestMemoryAperture = Module.findExportByName("vmdevicehost.dll", "HdvDestroyGuestMemoryAperture")
+Interceptor.attach(HdvDestroyGuestMemoryAperture, {onLeave: function (args) {send("HdvDestroyGuestMemoryAperture");}});
+
+var HdvDestroySectionBackedMmioRange = Module.findExportByName("vmdevicehost.dll", "HdvDestroySectionBackedMmioRange")
+Interceptor.attach(HdvDestroySectionBackedMmioRange, {onLeave: function (args) {send("HdvDestroySectionBackedMmioRange");}});
+
+var HdvInitializeDeviceHost = Module.findExportByName("vmdevicehost.dll", "HdvInitializeDeviceHost")
+Interceptor.attach(HdvInitializeDeviceHost, {onLeave: function (args) {send("HdvInitializeDeviceHost");}});
+
+var HdvInitializeDeviceHostEx = Module.findExportByName("vmdevicehost.dll", "HdvInitializeDeviceHostEx")
+Interceptor.attach(HdvInitializeDeviceHostEx, {onLeave: function (args) {send("HdvInitializeDeviceHostEx");}});
+
+var HdvInitializeDeviceHostForProxy = Module.findExportByName("vmdevicehost.dll", "HdvInitializeDeviceHostForProxy")
+Interceptor.attach(HdvInitializeDeviceHostForProxy, {onLeave: function (args) {send("HdvInitializeDeviceHostForProxy");}});
+
+var HdvInitializeDeviceHostForProxyEx = Module.findExportByName("vmdevicehost.dll", "HdvInitializeDeviceHostForProxyEx")
+Interceptor.attach(HdvInitializeDeviceHostForProxyEx, {onLeave: function (args) {send("HdvInitializeDeviceHostForProxyEx");}});
+
+var HdvProxyDeviceHost = Module.findExportByName("vmdevicehost.dll", "HdvProxyDeviceHost")
+Interceptor.attach(HdvProxyDeviceHost, {onLeave: function (args) {send("HdvProxyDeviceHost");}});
+
+var HdvReadGuestMemory = Module.findExportByName("vmdevicehost.dll", "HdvReadGuestMemory")
+Interceptor.attach(HdvReadGuestMemory, {onLeave: function (args) {send("HdvReadGuestMemory");}});
+
+var HdvRegisterDoorbell = Module.findExportByName("vmdevicehost.dll", "HdvRegisterDoorbell")
+Interceptor.attach(HdvRegisterDoorbell, {onLeave: function (args) {send("HdvRegisterDoorbell");}});
+
+var HdvRegisterDoorbellPage = Module.findExportByName("vmdevicehost.dll", "HdvRegisterDoorbellPage")
+Interceptor.attach(HdvRegisterDoorbellPage, {onLeave: function (args) {send("HdvRegisterDoorbellPage");}});
+
+var HdvTeardownDeviceHost = Module.findExportByName("vmdevicehost.dll", "HdvTeardownDeviceHost")
+Interceptor.attach(HdvTeardownDeviceHost, {onLeave: function (args) {send("HdvTeardownDeviceHost");}});
+
+var HdvUnregisterDoorbell = Module.findExportByName("vmdevicehost.dll", "HdvUnregisterDoorbell")
+Interceptor.attach(HdvUnregisterDoorbell, {onLeave: function (args) {send("HdvUnregisterDoorbell");}});
+
+var HdvUnregisterDoorbellPage = Module.findExportByName("vmdevicehost.dll", "HdvUnregisterDoorbellPage")
+Interceptor.attach(HdvUnregisterDoorbellPage, {onLeave: function (args) {send("HdvUnregisterDoorbellPage");}});
+
+var HdvWriteGuestMemory = Module.findExportByName("vmdevicehost.dll", "HdvWriteGuestMemory")
+Interceptor.attach(HdvWriteGuestMemory, {onLeave: function (args) {send("HdvWriteGuestMemory");}});
+

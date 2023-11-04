@@ -1,0 +1,6 @@
+var DsRoleFreeMemory = Module.findExportByName("dsrole.dll", "DsRoleFreeMemory")
+Interceptor.attach(DsRoleFreeMemory, {onLeave: function (args) {send("DsRoleFreeMemory");}});
+
+var DsRoleGetPrimaryDomainInformation = Module.findExportByName("dsrole.dll", "DsRoleGetPrimaryDomainInformation")
+Interceptor.attach(DsRoleGetPrimaryDomainInformation, {onLeave: function (args) {send("DsRoleGetPrimaryDomainInformation");}});
+

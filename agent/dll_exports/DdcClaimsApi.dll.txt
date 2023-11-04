@@ -1,0 +1,6 @@
+var DdcGetDeviceClaimsForUser = Module.findExportByName("DdcClaimsApi.dll", "DdcGetDeviceClaimsForUser")
+Interceptor.attach(DdcGetDeviceClaimsForUser, {onLeave: function (args) {send("DdcGetDeviceClaimsForUser");}});
+
+var FreeDeviceClaimsResponse = Module.findExportByName("DdcClaimsApi.dll", "FreeDeviceClaimsResponse")
+Interceptor.attach(FreeDeviceClaimsResponse, {onLeave: function (args) {send("FreeDeviceClaimsResponse");}});
+

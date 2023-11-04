@@ -1,0 +1,60 @@
+var DCIBeginAccess = Module.findExportByName("dciman32.dll", "DCIBeginAccess")
+Interceptor.attach(DCIBeginAccess, {onLeave: function (args) {send("DCIBeginAccess");}});
+
+var DCICloseProvider = Module.findExportByName("dciman32.dll", "DCICloseProvider")
+Interceptor.attach(DCICloseProvider, {onLeave: function (args) {send("DCICloseProvider");}});
+
+var DCICreateOffscreen = Module.findExportByName("dciman32.dll", "DCICreateOffscreen")
+Interceptor.attach(DCICreateOffscreen, {onLeave: function (args) {send("DCICreateOffscreen");}});
+
+var DCICreateOverlay = Module.findExportByName("dciman32.dll", "DCICreateOverlay")
+Interceptor.attach(DCICreateOverlay, {onLeave: function (args) {send("DCICreateOverlay");}});
+
+var DCICreatePrimary = Module.findExportByName("dciman32.dll", "DCICreatePrimary")
+Interceptor.attach(DCICreatePrimary, {onLeave: function (args) {send("DCICreatePrimary");}});
+
+var DCIDestroy = Module.findExportByName("dciman32.dll", "DCIDestroy")
+Interceptor.attach(DCIDestroy, {onLeave: function (args) {send("DCIDestroy");}});
+
+var DCIDraw = Module.findExportByName("dciman32.dll", "DCIDraw")
+Interceptor.attach(DCIDraw, {onLeave: function (args) {send("DCIDraw");}});
+
+var DCIEndAccess = Module.findExportByName("dciman32.dll", "DCIEndAccess")
+Interceptor.attach(DCIEndAccess, {onLeave: function (args) {send("DCIEndAccess");}});
+
+var DCIEnum = Module.findExportByName("dciman32.dll", "DCIEnum")
+Interceptor.attach(DCIEnum, {onLeave: function (args) {send("DCIEnum");}});
+
+var DCIOpenProvider = Module.findExportByName("dciman32.dll", "DCIOpenProvider")
+Interceptor.attach(DCIOpenProvider, {onLeave: function (args) {send("DCIOpenProvider");}});
+
+var DCISetClipList = Module.findExportByName("dciman32.dll", "DCISetClipList")
+Interceptor.attach(DCISetClipList, {onLeave: function (args) {send("DCISetClipList");}});
+
+var DCISetDestination = Module.findExportByName("dciman32.dll", "DCISetDestination")
+Interceptor.attach(DCISetDestination, {onLeave: function (args) {send("DCISetDestination");}});
+
+var DCISetSrcDestClip = Module.findExportByName("dciman32.dll", "DCISetSrcDestClip")
+Interceptor.attach(DCISetSrcDestClip, {onLeave: function (args) {send("DCISetSrcDestClip");}});
+
+var GetDCRegionData = Module.findExportByName("dciman32.dll", "GetDCRegionData")
+Interceptor.attach(GetDCRegionData, {onLeave: function (args) {send("GetDCRegionData");}});
+
+var GetWindowRegionData = Module.findExportByName("dciman32.dll", "GetWindowRegionData")
+Interceptor.attach(GetWindowRegionData, {onLeave: function (args) {send("GetWindowRegionData");}});
+
+var WinWatchClose = Module.findExportByName("dciman32.dll", "WinWatchClose")
+Interceptor.attach(WinWatchClose, {onLeave: function (args) {send("WinWatchClose");}});
+
+var WinWatchDidStatusChange = Module.findExportByName("dciman32.dll", "WinWatchDidStatusChange")
+Interceptor.attach(WinWatchDidStatusChange, {onLeave: function (args) {send("WinWatchDidStatusChange");}});
+
+var WinWatchGetClipList = Module.findExportByName("dciman32.dll", "WinWatchGetClipList")
+Interceptor.attach(WinWatchGetClipList, {onLeave: function (args) {send("WinWatchGetClipList");}});
+
+var WinWatchNotify = Module.findExportByName("dciman32.dll", "WinWatchNotify")
+Interceptor.attach(WinWatchNotify, {onLeave: function (args) {send("WinWatchNotify");}});
+
+var WinWatchOpen = Module.findExportByName("dciman32.dll", "WinWatchOpen")
+Interceptor.attach(WinWatchOpen, {onLeave: function (args) {send("WinWatchOpen");}});
+

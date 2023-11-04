@@ -1,0 +1,18 @@
+var CreateIFECommonInstance = Module.findExportByName("IMJPAPI.DLL", "CreateIFECommonInstance")
+Interceptor.attach(CreateIFECommonInstance, {onLeave: function (args) {send("CreateIFECommonInstance");}});
+
+var DllCanUnloadNow = Module.findExportByName("IMJPAPI.DLL", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("IMJPAPI.DLL", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("IMJPAPI.DLL", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("IMJPAPI.DLL", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var UpdateDefaultStyleList = Module.findExportByName("IMJPAPI.DLL", "UpdateDefaultStyleList")
+Interceptor.attach(UpdateDefaultStyleList, {onLeave: function (args) {send("UpdateDefaultStyleList");}});
+

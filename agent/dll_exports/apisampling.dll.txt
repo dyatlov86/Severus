@@ -1,0 +1,9 @@
+var APISamplingInitialize = Module.findExportByName("apisampling.dll", "APISamplingInitialize")
+Interceptor.attach(APISamplingInitialize, {onLeave: function (args) {send("APISamplingInitialize");}});
+
+var APISamplingSetValue = Module.findExportByName("apisampling.dll", "APISamplingSetValue")
+Interceptor.attach(APISamplingSetValue, {onLeave: function (args) {send("APISamplingSetValue");}});
+
+var APISamplingUninitialize = Module.findExportByName("apisampling.dll", "APISamplingUninitialize")
+Interceptor.attach(APISamplingUninitialize, {onLeave: function (args) {send("APISamplingUninitialize");}});
+

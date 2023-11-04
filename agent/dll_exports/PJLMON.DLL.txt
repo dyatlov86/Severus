@@ -1,0 +1,3 @@
+var InitializePrintMonitor = Module.findExportByName("PJLMON.DLL", "InitializePrintMonitor")
+Interceptor.attach(InitializePrintMonitor, {onLeave: function (args) {send("InitializePrintMonitor");}});
+

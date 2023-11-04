@@ -1,0 +1,6 @@
+var CreateDebugOverlay = Module.findExportByName("HologramWorld.dll", "CreateDebugOverlay")
+Interceptor.attach(CreateDebugOverlay, {onLeave: function (args) {send("CreateDebugOverlay");}});
+
+var GetSharedWorldFactory = Module.findExportByName("HologramWorld.dll", "GetSharedWorldFactory")
+Interceptor.attach(GetSharedWorldFactory, {onLeave: function (args) {send("GetSharedWorldFactory");}});
+

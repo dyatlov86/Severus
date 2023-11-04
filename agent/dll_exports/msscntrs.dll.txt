@@ -1,0 +1,15 @@
+var Close = Module.findExportByName("msscntrs.dll", "Close")
+Interceptor.attach(Close, {onLeave: function (args) {send("Close");}});
+
+var Collect = Module.findExportByName("msscntrs.dll", "Collect")
+Interceptor.attach(Collect, {onLeave: function (args) {send("Collect");}});
+
+var DllRegisterServer = Module.findExportByName("msscntrs.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msscntrs.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var Open = Module.findExportByName("msscntrs.dll", "Open")
+Interceptor.attach(Open, {onLeave: function (args) {send("Open");}});
+

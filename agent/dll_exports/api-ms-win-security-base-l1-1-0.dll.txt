@@ -1,0 +1,291 @@
+var AccessCheck = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AccessCheck")
+Interceptor.attach(AccessCheck, {onLeave: function (args) {send("AccessCheck");}});
+
+var AccessCheckAndAuditAlarmW = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AccessCheckAndAuditAlarmW")
+Interceptor.attach(AccessCheckAndAuditAlarmW, {onLeave: function (args) {send("AccessCheckAndAuditAlarmW");}});
+
+var AccessCheckByType = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AccessCheckByType")
+Interceptor.attach(AccessCheckByType, {onLeave: function (args) {send("AccessCheckByType");}});
+
+var AccessCheckByTypeAndAuditAlarmW = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AccessCheckByTypeAndAuditAlarmW")
+Interceptor.attach(AccessCheckByTypeAndAuditAlarmW, {onLeave: function (args) {send("AccessCheckByTypeAndAuditAlarmW");}});
+
+var AccessCheckByTypeResultList = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AccessCheckByTypeResultList")
+Interceptor.attach(AccessCheckByTypeResultList, {onLeave: function (args) {send("AccessCheckByTypeResultList");}});
+
+var AccessCheckByTypeResultListAndAuditAlarmByHandleW = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AccessCheckByTypeResultListAndAuditAlarmByHandleW")
+Interceptor.attach(AccessCheckByTypeResultListAndAuditAlarmByHandleW, {onLeave: function (args) {send("AccessCheckByTypeResultListAndAuditAlarmByHandleW");}});
+
+var AccessCheckByTypeResultListAndAuditAlarmW = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AccessCheckByTypeResultListAndAuditAlarmW")
+Interceptor.attach(AccessCheckByTypeResultListAndAuditAlarmW, {onLeave: function (args) {send("AccessCheckByTypeResultListAndAuditAlarmW");}});
+
+var AddAccessAllowedAce = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AddAccessAllowedAce")
+Interceptor.attach(AddAccessAllowedAce, {onLeave: function (args) {send("AddAccessAllowedAce");}});
+
+var AddAccessAllowedAceEx = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AddAccessAllowedAceEx")
+Interceptor.attach(AddAccessAllowedAceEx, {onLeave: function (args) {send("AddAccessAllowedAceEx");}});
+
+var AddAccessAllowedObjectAce = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AddAccessAllowedObjectAce")
+Interceptor.attach(AddAccessAllowedObjectAce, {onLeave: function (args) {send("AddAccessAllowedObjectAce");}});
+
+var AddAccessDeniedAce = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AddAccessDeniedAce")
+Interceptor.attach(AddAccessDeniedAce, {onLeave: function (args) {send("AddAccessDeniedAce");}});
+
+var AddAccessDeniedAceEx = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AddAccessDeniedAceEx")
+Interceptor.attach(AddAccessDeniedAceEx, {onLeave: function (args) {send("AddAccessDeniedAceEx");}});
+
+var AddAccessDeniedObjectAce = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AddAccessDeniedObjectAce")
+Interceptor.attach(AddAccessDeniedObjectAce, {onLeave: function (args) {send("AddAccessDeniedObjectAce");}});
+
+var AddAce = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AddAce")
+Interceptor.attach(AddAce, {onLeave: function (args) {send("AddAce");}});
+
+var AddAuditAccessAce = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AddAuditAccessAce")
+Interceptor.attach(AddAuditAccessAce, {onLeave: function (args) {send("AddAuditAccessAce");}});
+
+var AddAuditAccessAceEx = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AddAuditAccessAceEx")
+Interceptor.attach(AddAuditAccessAceEx, {onLeave: function (args) {send("AddAuditAccessAceEx");}});
+
+var AddAuditAccessObjectAce = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AddAuditAccessObjectAce")
+Interceptor.attach(AddAuditAccessObjectAce, {onLeave: function (args) {send("AddAuditAccessObjectAce");}});
+
+var AddMandatoryAce = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AddMandatoryAce")
+Interceptor.attach(AddMandatoryAce, {onLeave: function (args) {send("AddMandatoryAce");}});
+
+var AdjustTokenGroups = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AdjustTokenGroups")
+Interceptor.attach(AdjustTokenGroups, {onLeave: function (args) {send("AdjustTokenGroups");}});
+
+var AdjustTokenPrivileges = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AdjustTokenPrivileges")
+Interceptor.attach(AdjustTokenPrivileges, {onLeave: function (args) {send("AdjustTokenPrivileges");}});
+
+var AllocateAndInitializeSid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AllocateAndInitializeSid")
+Interceptor.attach(AllocateAndInitializeSid, {onLeave: function (args) {send("AllocateAndInitializeSid");}});
+
+var AllocateLocallyUniqueId = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AllocateLocallyUniqueId")
+Interceptor.attach(AllocateLocallyUniqueId, {onLeave: function (args) {send("AllocateLocallyUniqueId");}});
+
+var AreAllAccessesGranted = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AreAllAccessesGranted")
+Interceptor.attach(AreAllAccessesGranted, {onLeave: function (args) {send("AreAllAccessesGranted");}});
+
+var AreAnyAccessesGranted = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "AreAnyAccessesGranted")
+Interceptor.attach(AreAnyAccessesGranted, {onLeave: function (args) {send("AreAnyAccessesGranted");}});
+
+var CheckTokenMembership = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "CheckTokenMembership")
+Interceptor.attach(CheckTokenMembership, {onLeave: function (args) {send("CheckTokenMembership");}});
+
+var ConvertToAutoInheritPrivateObjectSecurity = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "ConvertToAutoInheritPrivateObjectSecurity")
+Interceptor.attach(ConvertToAutoInheritPrivateObjectSecurity, {onLeave: function (args) {send("ConvertToAutoInheritPrivateObjectSecurity");}});
+
+var CopySid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "CopySid")
+Interceptor.attach(CopySid, {onLeave: function (args) {send("CopySid");}});
+
+var CreatePrivateObjectSecurity = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "CreatePrivateObjectSecurity")
+Interceptor.attach(CreatePrivateObjectSecurity, {onLeave: function (args) {send("CreatePrivateObjectSecurity");}});
+
+var CreatePrivateObjectSecurityEx = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "CreatePrivateObjectSecurityEx")
+Interceptor.attach(CreatePrivateObjectSecurityEx, {onLeave: function (args) {send("CreatePrivateObjectSecurityEx");}});
+
+var CreatePrivateObjectSecurityWithMultipleInheritance = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "CreatePrivateObjectSecurityWithMultipleInheritance")
+Interceptor.attach(CreatePrivateObjectSecurityWithMultipleInheritance, {onLeave: function (args) {send("CreatePrivateObjectSecurityWithMultipleInheritance");}});
+
+var CreateRestrictedToken = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "CreateRestrictedToken")
+Interceptor.attach(CreateRestrictedToken, {onLeave: function (args) {send("CreateRestrictedToken");}});
+
+var CreateWellKnownSid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "CreateWellKnownSid")
+Interceptor.attach(CreateWellKnownSid, {onLeave: function (args) {send("CreateWellKnownSid");}});
+
+var DeleteAce = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "DeleteAce")
+Interceptor.attach(DeleteAce, {onLeave: function (args) {send("DeleteAce");}});
+
+var DestroyPrivateObjectSecurity = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "DestroyPrivateObjectSecurity")
+Interceptor.attach(DestroyPrivateObjectSecurity, {onLeave: function (args) {send("DestroyPrivateObjectSecurity");}});
+
+var DuplicateToken = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "DuplicateToken")
+Interceptor.attach(DuplicateToken, {onLeave: function (args) {send("DuplicateToken");}});
+
+var DuplicateTokenEx = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "DuplicateTokenEx")
+Interceptor.attach(DuplicateTokenEx, {onLeave: function (args) {send("DuplicateTokenEx");}});
+
+var EqualDomainSid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "EqualDomainSid")
+Interceptor.attach(EqualDomainSid, {onLeave: function (args) {send("EqualDomainSid");}});
+
+var EqualPrefixSid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "EqualPrefixSid")
+Interceptor.attach(EqualPrefixSid, {onLeave: function (args) {send("EqualPrefixSid");}});
+
+var EqualSid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "EqualSid")
+Interceptor.attach(EqualSid, {onLeave: function (args) {send("EqualSid");}});
+
+var FindFirstFreeAce = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "FindFirstFreeAce")
+Interceptor.attach(FindFirstFreeAce, {onLeave: function (args) {send("FindFirstFreeAce");}});
+
+var FreeSid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "FreeSid")
+Interceptor.attach(FreeSid, {onLeave: function (args) {send("FreeSid");}});
+
+var GetAce = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetAce")
+Interceptor.attach(GetAce, {onLeave: function (args) {send("GetAce");}});
+
+var GetAclInformation = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetAclInformation")
+Interceptor.attach(GetAclInformation, {onLeave: function (args) {send("GetAclInformation");}});
+
+var GetFileSecurityW = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetFileSecurityW")
+Interceptor.attach(GetFileSecurityW, {onLeave: function (args) {send("GetFileSecurityW");}});
+
+var GetKernelObjectSecurity = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetKernelObjectSecurity")
+Interceptor.attach(GetKernelObjectSecurity, {onLeave: function (args) {send("GetKernelObjectSecurity");}});
+
+var GetLengthSid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetLengthSid")
+Interceptor.attach(GetLengthSid, {onLeave: function (args) {send("GetLengthSid");}});
+
+var GetPrivateObjectSecurity = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetPrivateObjectSecurity")
+Interceptor.attach(GetPrivateObjectSecurity, {onLeave: function (args) {send("GetPrivateObjectSecurity");}});
+
+var GetSecurityDescriptorControl = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetSecurityDescriptorControl")
+Interceptor.attach(GetSecurityDescriptorControl, {onLeave: function (args) {send("GetSecurityDescriptorControl");}});
+
+var GetSecurityDescriptorDacl = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetSecurityDescriptorDacl")
+Interceptor.attach(GetSecurityDescriptorDacl, {onLeave: function (args) {send("GetSecurityDescriptorDacl");}});
+
+var GetSecurityDescriptorGroup = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetSecurityDescriptorGroup")
+Interceptor.attach(GetSecurityDescriptorGroup, {onLeave: function (args) {send("GetSecurityDescriptorGroup");}});
+
+var GetSecurityDescriptorLength = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetSecurityDescriptorLength")
+Interceptor.attach(GetSecurityDescriptorLength, {onLeave: function (args) {send("GetSecurityDescriptorLength");}});
+
+var GetSecurityDescriptorOwner = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetSecurityDescriptorOwner")
+Interceptor.attach(GetSecurityDescriptorOwner, {onLeave: function (args) {send("GetSecurityDescriptorOwner");}});
+
+var GetSecurityDescriptorRMControl = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetSecurityDescriptorRMControl")
+Interceptor.attach(GetSecurityDescriptorRMControl, {onLeave: function (args) {send("GetSecurityDescriptorRMControl");}});
+
+var GetSecurityDescriptorSacl = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetSecurityDescriptorSacl")
+Interceptor.attach(GetSecurityDescriptorSacl, {onLeave: function (args) {send("GetSecurityDescriptorSacl");}});
+
+var GetSidIdentifierAuthority = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetSidIdentifierAuthority")
+Interceptor.attach(GetSidIdentifierAuthority, {onLeave: function (args) {send("GetSidIdentifierAuthority");}});
+
+var GetSidLengthRequired = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetSidLengthRequired")
+Interceptor.attach(GetSidLengthRequired, {onLeave: function (args) {send("GetSidLengthRequired");}});
+
+var GetSidSubAuthority = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetSidSubAuthority")
+Interceptor.attach(GetSidSubAuthority, {onLeave: function (args) {send("GetSidSubAuthority");}});
+
+var GetSidSubAuthorityCount = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetSidSubAuthorityCount")
+Interceptor.attach(GetSidSubAuthorityCount, {onLeave: function (args) {send("GetSidSubAuthorityCount");}});
+
+var GetTokenInformation = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetTokenInformation")
+Interceptor.attach(GetTokenInformation, {onLeave: function (args) {send("GetTokenInformation");}});
+
+var GetWindowsAccountDomainSid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "GetWindowsAccountDomainSid")
+Interceptor.attach(GetWindowsAccountDomainSid, {onLeave: function (args) {send("GetWindowsAccountDomainSid");}});
+
+var ImpersonateAnonymousToken = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "ImpersonateAnonymousToken")
+Interceptor.attach(ImpersonateAnonymousToken, {onLeave: function (args) {send("ImpersonateAnonymousToken");}});
+
+var ImpersonateLoggedOnUser = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "ImpersonateLoggedOnUser")
+Interceptor.attach(ImpersonateLoggedOnUser, {onLeave: function (args) {send("ImpersonateLoggedOnUser");}});
+
+var ImpersonateSelf = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "ImpersonateSelf")
+Interceptor.attach(ImpersonateSelf, {onLeave: function (args) {send("ImpersonateSelf");}});
+
+var InitializeAcl = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "InitializeAcl")
+Interceptor.attach(InitializeAcl, {onLeave: function (args) {send("InitializeAcl");}});
+
+var InitializeSecurityDescriptor = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "InitializeSecurityDescriptor")
+Interceptor.attach(InitializeSecurityDescriptor, {onLeave: function (args) {send("InitializeSecurityDescriptor");}});
+
+var InitializeSid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "InitializeSid")
+Interceptor.attach(InitializeSid, {onLeave: function (args) {send("InitializeSid");}});
+
+var IsTokenRestricted = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "IsTokenRestricted")
+Interceptor.attach(IsTokenRestricted, {onLeave: function (args) {send("IsTokenRestricted");}});
+
+var IsValidAcl = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "IsValidAcl")
+Interceptor.attach(IsValidAcl, {onLeave: function (args) {send("IsValidAcl");}});
+
+var IsValidRelativeSecurityDescriptor = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "IsValidRelativeSecurityDescriptor")
+Interceptor.attach(IsValidRelativeSecurityDescriptor, {onLeave: function (args) {send("IsValidRelativeSecurityDescriptor");}});
+
+var IsValidSecurityDescriptor = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "IsValidSecurityDescriptor")
+Interceptor.attach(IsValidSecurityDescriptor, {onLeave: function (args) {send("IsValidSecurityDescriptor");}});
+
+var IsValidSid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "IsValidSid")
+Interceptor.attach(IsValidSid, {onLeave: function (args) {send("IsValidSid");}});
+
+var IsWellKnownSid = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "IsWellKnownSid")
+Interceptor.attach(IsWellKnownSid, {onLeave: function (args) {send("IsWellKnownSid");}});
+
+var MakeAbsoluteSD = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "MakeAbsoluteSD")
+Interceptor.attach(MakeAbsoluteSD, {onLeave: function (args) {send("MakeAbsoluteSD");}});
+
+var MakeAbsoluteSD2 = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "MakeAbsoluteSD2")
+Interceptor.attach(MakeAbsoluteSD2, {onLeave: function (args) {send("MakeAbsoluteSD2");}});
+
+var MakeSelfRelativeSD = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "MakeSelfRelativeSD")
+Interceptor.attach(MakeSelfRelativeSD, {onLeave: function (args) {send("MakeSelfRelativeSD");}});
+
+var MapGenericMask = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "MapGenericMask")
+Interceptor.attach(MapGenericMask, {onLeave: function (args) {send("MapGenericMask");}});
+
+var ObjectCloseAuditAlarmW = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "ObjectCloseAuditAlarmW")
+Interceptor.attach(ObjectCloseAuditAlarmW, {onLeave: function (args) {send("ObjectCloseAuditAlarmW");}});
+
+var ObjectDeleteAuditAlarmW = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "ObjectDeleteAuditAlarmW")
+Interceptor.attach(ObjectDeleteAuditAlarmW, {onLeave: function (args) {send("ObjectDeleteAuditAlarmW");}});
+
+var ObjectOpenAuditAlarmW = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "ObjectOpenAuditAlarmW")
+Interceptor.attach(ObjectOpenAuditAlarmW, {onLeave: function (args) {send("ObjectOpenAuditAlarmW");}});
+
+var ObjectPrivilegeAuditAlarmW = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "ObjectPrivilegeAuditAlarmW")
+Interceptor.attach(ObjectPrivilegeAuditAlarmW, {onLeave: function (args) {send("ObjectPrivilegeAuditAlarmW");}});
+
+var PrivilegeCheck = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "PrivilegeCheck")
+Interceptor.attach(PrivilegeCheck, {onLeave: function (args) {send("PrivilegeCheck");}});
+
+var PrivilegedServiceAuditAlarmW = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "PrivilegedServiceAuditAlarmW")
+Interceptor.attach(PrivilegedServiceAuditAlarmW, {onLeave: function (args) {send("PrivilegedServiceAuditAlarmW");}});
+
+var QuerySecurityAccessMask = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "QuerySecurityAccessMask")
+Interceptor.attach(QuerySecurityAccessMask, {onLeave: function (args) {send("QuerySecurityAccessMask");}});
+
+var RevertToSelf = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "RevertToSelf")
+Interceptor.attach(RevertToSelf, {onLeave: function (args) {send("RevertToSelf");}});
+
+var SetAclInformation = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetAclInformation")
+Interceptor.attach(SetAclInformation, {onLeave: function (args) {send("SetAclInformation");}});
+
+var SetFileSecurityW = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetFileSecurityW")
+Interceptor.attach(SetFileSecurityW, {onLeave: function (args) {send("SetFileSecurityW");}});
+
+var SetKernelObjectSecurity = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetKernelObjectSecurity")
+Interceptor.attach(SetKernelObjectSecurity, {onLeave: function (args) {send("SetKernelObjectSecurity");}});
+
+var SetPrivateObjectSecurity = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetPrivateObjectSecurity")
+Interceptor.attach(SetPrivateObjectSecurity, {onLeave: function (args) {send("SetPrivateObjectSecurity");}});
+
+var SetPrivateObjectSecurityEx = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetPrivateObjectSecurityEx")
+Interceptor.attach(SetPrivateObjectSecurityEx, {onLeave: function (args) {send("SetPrivateObjectSecurityEx");}});
+
+var SetSecurityAccessMask = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetSecurityAccessMask")
+Interceptor.attach(SetSecurityAccessMask, {onLeave: function (args) {send("SetSecurityAccessMask");}});
+
+var SetSecurityDescriptorControl = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetSecurityDescriptorControl")
+Interceptor.attach(SetSecurityDescriptorControl, {onLeave: function (args) {send("SetSecurityDescriptorControl");}});
+
+var SetSecurityDescriptorDacl = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetSecurityDescriptorDacl")
+Interceptor.attach(SetSecurityDescriptorDacl, {onLeave: function (args) {send("SetSecurityDescriptorDacl");}});
+
+var SetSecurityDescriptorGroup = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetSecurityDescriptorGroup")
+Interceptor.attach(SetSecurityDescriptorGroup, {onLeave: function (args) {send("SetSecurityDescriptorGroup");}});
+
+var SetSecurityDescriptorOwner = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetSecurityDescriptorOwner")
+Interceptor.attach(SetSecurityDescriptorOwner, {onLeave: function (args) {send("SetSecurityDescriptorOwner");}});
+
+var SetSecurityDescriptorRMControl = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetSecurityDescriptorRMControl")
+Interceptor.attach(SetSecurityDescriptorRMControl, {onLeave: function (args) {send("SetSecurityDescriptorRMControl");}});
+
+var SetSecurityDescriptorSacl = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetSecurityDescriptorSacl")
+Interceptor.attach(SetSecurityDescriptorSacl, {onLeave: function (args) {send("SetSecurityDescriptorSacl");}});
+
+var SetTokenInformation = Module.findExportByName("api-ms-win-security-base-l1-1-0.dll", "SetTokenInformation")
+Interceptor.attach(SetTokenInformation, {onLeave: function (args) {send("SetTokenInformation");}});
+

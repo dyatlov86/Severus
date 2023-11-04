@@ -1,0 +1,39 @@
+var EdpAuditHarden = Module.findExportByName("edpauditapi.dll", "EdpAuditHarden")
+Interceptor.attach(EdpAuditHarden, {onLeave: function (args) {send("EdpAuditHarden");}});
+
+var EdpAuditLogApplicationGenerated = Module.findExportByName("edpauditapi.dll", "EdpAuditLogApplicationGenerated")
+Interceptor.attach(EdpAuditLogApplicationGenerated, {onLeave: function (args) {send("EdpAuditLogApplicationGenerated");}});
+
+var EdpAuditLogApplicationLearning = Module.findExportByName("edpauditapi.dll", "EdpAuditLogApplicationLearning")
+Interceptor.attach(EdpAuditLogApplicationLearning, {onLeave: function (args) {send("EdpAuditLogApplicationLearning");}});
+
+var EdpAuditLogDataCopied = Module.findExportByName("edpauditapi.dll", "EdpAuditLogDataCopied")
+Interceptor.attach(EdpAuditLogDataCopied, {onLeave: function (args) {send("EdpAuditLogDataCopied");}});
+
+var EdpAuditLogProtectionRemoved = Module.findExportByName("edpauditapi.dll", "EdpAuditLogProtectionRemoved")
+Interceptor.attach(EdpAuditLogProtectionRemoved, {onLeave: function (args) {send("EdpAuditLogProtectionRemoved");}});
+
+var EdpAuditLogSiteLearning = Module.findExportByName("edpauditapi.dll", "EdpAuditLogSiteLearning")
+Interceptor.attach(EdpAuditLogSiteLearning, {onLeave: function (args) {send("EdpAuditLogSiteLearning");}});
+
+var EdpAuditLoggerRegister = Module.findExportByName("edpauditapi.dll", "EdpAuditLoggerRegister")
+Interceptor.attach(EdpAuditLoggerRegister, {onLeave: function (args) {send("EdpAuditLoggerRegister");}});
+
+var EdpAuditLoggerUnregister = Module.findExportByName("edpauditapi.dll", "EdpAuditLoggerUnregister")
+Interceptor.attach(EdpAuditLoggerUnregister, {onLeave: function (args) {send("EdpAuditLoggerUnregister");}});
+
+var EdpAuditRead = Module.findExportByName("edpauditapi.dll", "EdpAuditRead")
+Interceptor.attach(EdpAuditRead, {onLeave: function (args) {send("EdpAuditRead");}});
+
+var EdpFlushTraces = Module.findExportByName("edpauditapi.dll", "EdpFlushTraces")
+Interceptor.attach(EdpFlushTraces, {onLeave: function (args) {send("EdpFlushTraces");}});
+
+var EdpGetLogFullPathFromRelativePath = Module.findExportByName("edpauditapi.dll", "EdpGetLogFullPathFromRelativePath")
+Interceptor.attach(EdpGetLogFullPathFromRelativePath, {onLeave: function (args) {send("EdpGetLogFullPathFromRelativePath");}});
+
+var ReadAuditLogByCount = Module.findExportByName("edpauditapi.dll", "ReadAuditLogByCount")
+Interceptor.attach(ReadAuditLogByCount, {onLeave: function (args) {send("ReadAuditLogByCount");}});
+
+var ReadAuditLogByTimeRange = Module.findExportByName("edpauditapi.dll", "ReadAuditLogByTimeRange")
+Interceptor.attach(ReadAuditLogByTimeRange, {onLeave: function (args) {send("ReadAuditLogByTimeRange");}});
+

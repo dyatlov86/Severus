@@ -1,0 +1,45 @@
+var CheckAllowDiagnosticsMode = Module.findExportByName("WwaExt.dll", "CheckAllowDiagnosticsMode")
+Interceptor.attach(CheckAllowDiagnosticsMode, {onLeave: function (args) {send("CheckAllowDiagnosticsMode");}});
+
+var DetermineCurrentDisplayRotationAngle = Module.findExportByName("WwaExt.dll", "DetermineCurrentDisplayRotationAngle")
+Interceptor.attach(DetermineCurrentDisplayRotationAngle, {onLeave: function (args) {send("DetermineCurrentDisplayRotationAngle");}});
+
+var DllMain = Module.findExportByName("WwaExt.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var ExtensionModulePreActivate = Module.findExportByName("WwaExt.dll", "ExtensionModulePreActivate")
+Interceptor.attach(ExtensionModulePreActivate, {onLeave: function (args) {send("ExtensionModulePreActivate");}});
+
+var GetExtensionHostModuleCount = Module.findExportByName("WwaExt.dll", "GetExtensionHostModuleCount")
+Interceptor.attach(GetExtensionHostModuleCount, {onLeave: function (args) {send("GetExtensionHostModuleCount");}});
+
+var GetExtensionHostModuleFactory = Module.findExportByName("WwaExt.dll", "GetExtensionHostModuleFactory")
+Interceptor.attach(GetExtensionHostModuleFactory, {onLeave: function (args) {send("GetExtensionHostModuleFactory");}});
+
+var GetExtensionWebModuleCount = Module.findExportByName("WwaExt.dll", "GetExtensionWebModuleCount")
+Interceptor.attach(GetExtensionWebModuleCount, {onLeave: function (args) {send("GetExtensionWebModuleCount");}});
+
+var GetExtensionWebModuleFactory = Module.findExportByName("WwaExt.dll", "GetExtensionWebModuleFactory")
+Interceptor.attach(GetExtensionWebModuleFactory, {onLeave: function (args) {send("GetExtensionWebModuleFactory");}});
+
+var GetExtensionWebMultiThreadedModuleCount = Module.findExportByName("WwaExt.dll", "GetExtensionWebMultiThreadedModuleCount")
+Interceptor.attach(GetExtensionWebMultiThreadedModuleCount, {onLeave: function (args) {send("GetExtensionWebMultiThreadedModuleCount");}});
+
+var GetExtensionWebMultiThreadedModuleFactory = Module.findExportByName("WwaExt.dll", "GetExtensionWebMultiThreadedModuleFactory")
+Interceptor.attach(GetExtensionWebMultiThreadedModuleFactory, {onLeave: function (args) {send("GetExtensionWebMultiThreadedModuleFactory");}});
+
+var ProcessDisplayRotation = Module.findExportByName("WwaExt.dll", "ProcessDisplayRotation")
+Interceptor.attach(ProcessDisplayRotation, {onLeave: function (args) {send("ProcessDisplayRotation");}});
+
+var SetPhoneWerParameters = Module.findExportByName("WwaExt.dll", "SetPhoneWerParameters")
+Interceptor.attach(SetPhoneWerParameters, {onLeave: function (args) {send("SetPhoneWerParameters");}});
+
+var StaticExtensionInitialization = Module.findExportByName("WwaExt.dll", "StaticExtensionInitialization")
+Interceptor.attach(StaticExtensionInitialization, {onLeave: function (args) {send("StaticExtensionInitialization");}});
+
+var StaticExtensionUnInitialization = Module.findExportByName("WwaExt.dll", "StaticExtensionUnInitialization")
+Interceptor.attach(StaticExtensionUnInitialization, {onLeave: function (args) {send("StaticExtensionUnInitialization");}});
+
+var WWABehaviorEnabled = Module.findExportByName("WwaExt.dll", "WWABehaviorEnabled")
+Interceptor.attach(WWABehaviorEnabled, {onLeave: function (args) {send("WWABehaviorEnabled");}});
+

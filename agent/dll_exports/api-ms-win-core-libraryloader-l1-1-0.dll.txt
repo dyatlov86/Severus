@@ -1,0 +1,69 @@
+var AddDllDirectory = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "AddDllDirectory")
+Interceptor.attach(AddDllDirectory, {onLeave: function (args) {send("AddDllDirectory");}});
+
+var DisableThreadLibraryCalls = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "DisableThreadLibraryCalls")
+Interceptor.attach(DisableThreadLibraryCalls, {onLeave: function (args) {send("DisableThreadLibraryCalls");}});
+
+var FindResourceExW = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "FindResourceExW")
+Interceptor.attach(FindResourceExW, {onLeave: function (args) {send("FindResourceExW");}});
+
+var FindStringOrdinal = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "FindStringOrdinal")
+Interceptor.attach(FindStringOrdinal, {onLeave: function (args) {send("FindStringOrdinal");}});
+
+var FreeLibrary = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "FreeLibrary")
+Interceptor.attach(FreeLibrary, {onLeave: function (args) {send("FreeLibrary");}});
+
+var FreeLibraryAndExitThread = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "FreeLibraryAndExitThread")
+Interceptor.attach(FreeLibraryAndExitThread, {onLeave: function (args) {send("FreeLibraryAndExitThread");}});
+
+var FreeResource = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "FreeResource")
+Interceptor.attach(FreeResource, {onLeave: function (args) {send("FreeResource");}});
+
+var GetModuleFileNameA = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "GetModuleFileNameA")
+Interceptor.attach(GetModuleFileNameA, {onLeave: function (args) {send("GetModuleFileNameA");}});
+
+var GetModuleFileNameW = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "GetModuleFileNameW")
+Interceptor.attach(GetModuleFileNameW, {onLeave: function (args) {send("GetModuleFileNameW");}});
+
+var GetModuleHandleA = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "GetModuleHandleA")
+Interceptor.attach(GetModuleHandleA, {onLeave: function (args) {send("GetModuleHandleA");}});
+
+var GetModuleHandleExA = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "GetModuleHandleExA")
+Interceptor.attach(GetModuleHandleExA, {onLeave: function (args) {send("GetModuleHandleExA");}});
+
+var GetModuleHandleExW = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "GetModuleHandleExW")
+Interceptor.attach(GetModuleHandleExW, {onLeave: function (args) {send("GetModuleHandleExW");}});
+
+var GetModuleHandleW = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "GetModuleHandleW")
+Interceptor.attach(GetModuleHandleW, {onLeave: function (args) {send("GetModuleHandleW");}});
+
+var GetProcAddress = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "GetProcAddress")
+Interceptor.attach(GetProcAddress, {onLeave: function (args) {send("GetProcAddress");}});
+
+var LoadLibraryExA = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "LoadLibraryExA")
+Interceptor.attach(LoadLibraryExA, {onLeave: function (args) {send("LoadLibraryExA");}});
+
+var LoadLibraryExW = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "LoadLibraryExW")
+Interceptor.attach(LoadLibraryExW, {onLeave: function (args) {send("LoadLibraryExW");}});
+
+var LoadResource = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "LoadResource")
+Interceptor.attach(LoadResource, {onLeave: function (args) {send("LoadResource");}});
+
+var LoadStringA = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "LoadStringA")
+Interceptor.attach(LoadStringA, {onLeave: function (args) {send("LoadStringA");}});
+
+var LoadStringW = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "LoadStringW")
+Interceptor.attach(LoadStringW, {onLeave: function (args) {send("LoadStringW");}});
+
+var LockResource = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "LockResource")
+Interceptor.attach(LockResource, {onLeave: function (args) {send("LockResource");}});
+
+var RemoveDllDirectory = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "RemoveDllDirectory")
+Interceptor.attach(RemoveDllDirectory, {onLeave: function (args) {send("RemoveDllDirectory");}});
+
+var SetDefaultDllDirectories = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "SetDefaultDllDirectories")
+Interceptor.attach(SetDefaultDllDirectories, {onLeave: function (args) {send("SetDefaultDllDirectories");}});
+
+var SizeofResource = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-0.dll", "SizeofResource")
+Interceptor.attach(SizeofResource, {onLeave: function (args) {send("SizeofResource");}});
+

@@ -1,0 +1,15 @@
+var CoDeviceInstall = Module.findExportByName("wpd_ci.dll", "CoDeviceInstall")
+Interceptor.attach(CoDeviceInstall, {onLeave: function (args) {send("CoDeviceInstall");}});
+
+var DoCmd = Module.findExportByName("wpd_ci.dll", "DoCmd")
+Interceptor.attach(DoCmd, {onLeave: function (args) {send("DoCmd");}});
+
+var MigrateMTPDevicesInstalledAsMSC = Module.findExportByName("wpd_ci.dll", "MigrateMTPDevicesInstalledAsMSC")
+Interceptor.attach(MigrateMTPDevicesInstalledAsMSC, {onLeave: function (args) {send("MigrateMTPDevicesInstalledAsMSC");}});
+
+var RescanBus = Module.findExportByName("wpd_ci.dll", "RescanBus")
+Interceptor.attach(RescanBus, {onLeave: function (args) {send("RescanBus");}});
+
+var WpdClassInstaller = Module.findExportByName("wpd_ci.dll", "WpdClassInstaller")
+Interceptor.attach(WpdClassInstaller, {onLeave: function (args) {send("WpdClassInstaller");}});
+

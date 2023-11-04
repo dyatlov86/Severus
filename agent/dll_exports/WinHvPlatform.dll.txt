@@ -1,0 +1,198 @@
+var WHvAcceptPartitionMigration = Module.findExportByName("WinHvPlatform.dll", "WHvAcceptPartitionMigration")
+Interceptor.attach(WHvAcceptPartitionMigration, {onLeave: function (args) {send("WHvAcceptPartitionMigration");}});
+
+var WHvAdviseGpaRange = Module.findExportByName("WinHvPlatform.dll", "WHvAdviseGpaRange")
+Interceptor.attach(WHvAdviseGpaRange, {onLeave: function (args) {send("WHvAdviseGpaRange");}});
+
+var WHvAllocateVpciResource = Module.findExportByName("WinHvPlatform.dll", "WHvAllocateVpciResource")
+Interceptor.attach(WHvAllocateVpciResource, {onLeave: function (args) {send("WHvAllocateVpciResource");}});
+
+var WHvCancelPartitionMigration = Module.findExportByName("WinHvPlatform.dll", "WHvCancelPartitionMigration")
+Interceptor.attach(WHvCancelPartitionMigration, {onLeave: function (args) {send("WHvCancelPartitionMigration");}});
+
+var WHvCancelRunVirtualProcessor = Module.findExportByName("WinHvPlatform.dll", "WHvCancelRunVirtualProcessor")
+Interceptor.attach(WHvCancelRunVirtualProcessor, {onLeave: function (args) {send("WHvCancelRunVirtualProcessor");}});
+
+var WHvCompletePartitionMigration = Module.findExportByName("WinHvPlatform.dll", "WHvCompletePartitionMigration")
+Interceptor.attach(WHvCompletePartitionMigration, {onLeave: function (args) {send("WHvCompletePartitionMigration");}});
+
+var WHvCreateNotificationPort = Module.findExportByName("WinHvPlatform.dll", "WHvCreateNotificationPort")
+Interceptor.attach(WHvCreateNotificationPort, {onLeave: function (args) {send("WHvCreateNotificationPort");}});
+
+var WHvCreatePartition = Module.findExportByName("WinHvPlatform.dll", "WHvCreatePartition")
+Interceptor.attach(WHvCreatePartition, {onLeave: function (args) {send("WHvCreatePartition");}});
+
+var WHvCreateTrigger = Module.findExportByName("WinHvPlatform.dll", "WHvCreateTrigger")
+Interceptor.attach(WHvCreateTrigger, {onLeave: function (args) {send("WHvCreateTrigger");}});
+
+var WHvCreateVirtualProcessor = Module.findExportByName("WinHvPlatform.dll", "WHvCreateVirtualProcessor")
+Interceptor.attach(WHvCreateVirtualProcessor, {onLeave: function (args) {send("WHvCreateVirtualProcessor");}});
+
+var WHvCreateVirtualProcessor2 = Module.findExportByName("WinHvPlatform.dll", "WHvCreateVirtualProcessor2")
+Interceptor.attach(WHvCreateVirtualProcessor2, {onLeave: function (args) {send("WHvCreateVirtualProcessor2");}});
+
+var WHvCreateVpciDevice = Module.findExportByName("WinHvPlatform.dll", "WHvCreateVpciDevice")
+Interceptor.attach(WHvCreateVpciDevice, {onLeave: function (args) {send("WHvCreateVpciDevice");}});
+
+var WHvDeleteNotificationPort = Module.findExportByName("WinHvPlatform.dll", "WHvDeleteNotificationPort")
+Interceptor.attach(WHvDeleteNotificationPort, {onLeave: function (args) {send("WHvDeleteNotificationPort");}});
+
+var WHvDeletePartition = Module.findExportByName("WinHvPlatform.dll", "WHvDeletePartition")
+Interceptor.attach(WHvDeletePartition, {onLeave: function (args) {send("WHvDeletePartition");}});
+
+var WHvDeleteTrigger = Module.findExportByName("WinHvPlatform.dll", "WHvDeleteTrigger")
+Interceptor.attach(WHvDeleteTrigger, {onLeave: function (args) {send("WHvDeleteTrigger");}});
+
+var WHvDeleteVirtualProcessor = Module.findExportByName("WinHvPlatform.dll", "WHvDeleteVirtualProcessor")
+Interceptor.attach(WHvDeleteVirtualProcessor, {onLeave: function (args) {send("WHvDeleteVirtualProcessor");}});
+
+var WHvDeleteVpciDevice = Module.findExportByName("WinHvPlatform.dll", "WHvDeleteVpciDevice")
+Interceptor.attach(WHvDeleteVpciDevice, {onLeave: function (args) {send("WHvDeleteVpciDevice");}});
+
+var WHvGetCapability = Module.findExportByName("WinHvPlatform.dll", "WHvGetCapability")
+Interceptor.attach(WHvGetCapability, {onLeave: function (args) {send("WHvGetCapability");}});
+
+var WHvGetInterruptTargetVpSet = Module.findExportByName("WinHvPlatform.dll", "WHvGetInterruptTargetVpSet")
+Interceptor.attach(WHvGetInterruptTargetVpSet, {onLeave: function (args) {send("WHvGetInterruptTargetVpSet");}});
+
+var WHvGetPartitionCounters = Module.findExportByName("WinHvPlatform.dll", "WHvGetPartitionCounters")
+Interceptor.attach(WHvGetPartitionCounters, {onLeave: function (args) {send("WHvGetPartitionCounters");}});
+
+var WHvGetPartitionProperty = Module.findExportByName("WinHvPlatform.dll", "WHvGetPartitionProperty")
+Interceptor.attach(WHvGetPartitionProperty, {onLeave: function (args) {send("WHvGetPartitionProperty");}});
+
+var WHvGetVirtualProcessorCounters = Module.findExportByName("WinHvPlatform.dll", "WHvGetVirtualProcessorCounters")
+Interceptor.attach(WHvGetVirtualProcessorCounters, {onLeave: function (args) {send("WHvGetVirtualProcessorCounters");}});
+
+var WHvGetVirtualProcessorCpuidOutput = Module.findExportByName("WinHvPlatform.dll", "WHvGetVirtualProcessorCpuidOutput")
+Interceptor.attach(WHvGetVirtualProcessorCpuidOutput, {onLeave: function (args) {send("WHvGetVirtualProcessorCpuidOutput");}});
+
+var WHvGetVirtualProcessorInterruptControllerState = Module.findExportByName("WinHvPlatform.dll", "WHvGetVirtualProcessorInterruptControllerState")
+Interceptor.attach(WHvGetVirtualProcessorInterruptControllerState, {onLeave: function (args) {send("WHvGetVirtualProcessorInterruptControllerState");}});
+
+var WHvGetVirtualProcessorInterruptControllerState2 = Module.findExportByName("WinHvPlatform.dll", "WHvGetVirtualProcessorInterruptControllerState2")
+Interceptor.attach(WHvGetVirtualProcessorInterruptControllerState2, {onLeave: function (args) {send("WHvGetVirtualProcessorInterruptControllerState2");}});
+
+var WHvGetVirtualProcessorRegisters = Module.findExportByName("WinHvPlatform.dll", "WHvGetVirtualProcessorRegisters")
+Interceptor.attach(WHvGetVirtualProcessorRegisters, {onLeave: function (args) {send("WHvGetVirtualProcessorRegisters");}});
+
+var WHvGetVirtualProcessorState = Module.findExportByName("WinHvPlatform.dll", "WHvGetVirtualProcessorState")
+Interceptor.attach(WHvGetVirtualProcessorState, {onLeave: function (args) {send("WHvGetVirtualProcessorState");}});
+
+var WHvGetVirtualProcessorXsaveState = Module.findExportByName("WinHvPlatform.dll", "WHvGetVirtualProcessorXsaveState")
+Interceptor.attach(WHvGetVirtualProcessorXsaveState, {onLeave: function (args) {send("WHvGetVirtualProcessorXsaveState");}});
+
+var WHvGetVpciDeviceInterruptTarget = Module.findExportByName("WinHvPlatform.dll", "WHvGetVpciDeviceInterruptTarget")
+Interceptor.attach(WHvGetVpciDeviceInterruptTarget, {onLeave: function (args) {send("WHvGetVpciDeviceInterruptTarget");}});
+
+var WHvGetVpciDeviceNotification = Module.findExportByName("WinHvPlatform.dll", "WHvGetVpciDeviceNotification")
+Interceptor.attach(WHvGetVpciDeviceNotification, {onLeave: function (args) {send("WHvGetVpciDeviceNotification");}});
+
+var WHvGetVpciDeviceProperty = Module.findExportByName("WinHvPlatform.dll", "WHvGetVpciDeviceProperty")
+Interceptor.attach(WHvGetVpciDeviceProperty, {onLeave: function (args) {send("WHvGetVpciDeviceProperty");}});
+
+var WHvMapGpaRange = Module.findExportByName("WinHvPlatform.dll", "WHvMapGpaRange")
+Interceptor.attach(WHvMapGpaRange, {onLeave: function (args) {send("WHvMapGpaRange");}});
+
+var WHvMapGpaRange2 = Module.findExportByName("WinHvPlatform.dll", "WHvMapGpaRange2")
+Interceptor.attach(WHvMapGpaRange2, {onLeave: function (args) {send("WHvMapGpaRange2");}});
+
+var WHvMapVpciDeviceInterrupt = Module.findExportByName("WinHvPlatform.dll", "WHvMapVpciDeviceInterrupt")
+Interceptor.attach(WHvMapVpciDeviceInterrupt, {onLeave: function (args) {send("WHvMapVpciDeviceInterrupt");}});
+
+var WHvMapVpciDeviceMmioRanges = Module.findExportByName("WinHvPlatform.dll", "WHvMapVpciDeviceMmioRanges")
+Interceptor.attach(WHvMapVpciDeviceMmioRanges, {onLeave: function (args) {send("WHvMapVpciDeviceMmioRanges");}});
+
+var WHvPostVirtualProcessorSynicMessage = Module.findExportByName("WinHvPlatform.dll", "WHvPostVirtualProcessorSynicMessage")
+Interceptor.attach(WHvPostVirtualProcessorSynicMessage, {onLeave: function (args) {send("WHvPostVirtualProcessorSynicMessage");}});
+
+var WHvQueryGpaRangeDirtyBitmap = Module.findExportByName("WinHvPlatform.dll", "WHvQueryGpaRangeDirtyBitmap")
+Interceptor.attach(WHvQueryGpaRangeDirtyBitmap, {onLeave: function (args) {send("WHvQueryGpaRangeDirtyBitmap");}});
+
+var WHvReadGpaRange = Module.findExportByName("WinHvPlatform.dll", "WHvReadGpaRange")
+Interceptor.attach(WHvReadGpaRange, {onLeave: function (args) {send("WHvReadGpaRange");}});
+
+var WHvReadVpciDeviceRegister = Module.findExportByName("WinHvPlatform.dll", "WHvReadVpciDeviceRegister")
+Interceptor.attach(WHvReadVpciDeviceRegister, {onLeave: function (args) {send("WHvReadVpciDeviceRegister");}});
+
+var WHvRegisterPartitionDoorbellEvent = Module.findExportByName("WinHvPlatform.dll", "WHvRegisterPartitionDoorbellEvent")
+Interceptor.attach(WHvRegisterPartitionDoorbellEvent, {onLeave: function (args) {send("WHvRegisterPartitionDoorbellEvent");}});
+
+var WHvRequestInterrupt = Module.findExportByName("WinHvPlatform.dll", "WHvRequestInterrupt")
+Interceptor.attach(WHvRequestInterrupt, {onLeave: function (args) {send("WHvRequestInterrupt");}});
+
+var WHvRequestVpciDeviceInterrupt = Module.findExportByName("WinHvPlatform.dll", "WHvRequestVpciDeviceInterrupt")
+Interceptor.attach(WHvRequestVpciDeviceInterrupt, {onLeave: function (args) {send("WHvRequestVpciDeviceInterrupt");}});
+
+var WHvResetPartition = Module.findExportByName("WinHvPlatform.dll", "WHvResetPartition")
+Interceptor.attach(WHvResetPartition, {onLeave: function (args) {send("WHvResetPartition");}});
+
+var WHvResumePartitionTime = Module.findExportByName("WinHvPlatform.dll", "WHvResumePartitionTime")
+Interceptor.attach(WHvResumePartitionTime, {onLeave: function (args) {send("WHvResumePartitionTime");}});
+
+var WHvRetargetVpciDeviceInterrupt = Module.findExportByName("WinHvPlatform.dll", "WHvRetargetVpciDeviceInterrupt")
+Interceptor.attach(WHvRetargetVpciDeviceInterrupt, {onLeave: function (args) {send("WHvRetargetVpciDeviceInterrupt");}});
+
+var WHvRunVirtualProcessor = Module.findExportByName("WinHvPlatform.dll", "WHvRunVirtualProcessor")
+Interceptor.attach(WHvRunVirtualProcessor, {onLeave: function (args) {send("WHvRunVirtualProcessor");}});
+
+var WHvSetNotificationPortProperty = Module.findExportByName("WinHvPlatform.dll", "WHvSetNotificationPortProperty")
+Interceptor.attach(WHvSetNotificationPortProperty, {onLeave: function (args) {send("WHvSetNotificationPortProperty");}});
+
+var WHvSetPartitionProperty = Module.findExportByName("WinHvPlatform.dll", "WHvSetPartitionProperty")
+Interceptor.attach(WHvSetPartitionProperty, {onLeave: function (args) {send("WHvSetPartitionProperty");}});
+
+var WHvSetVirtualProcessorInterruptControllerState = Module.findExportByName("WinHvPlatform.dll", "WHvSetVirtualProcessorInterruptControllerState")
+Interceptor.attach(WHvSetVirtualProcessorInterruptControllerState, {onLeave: function (args) {send("WHvSetVirtualProcessorInterruptControllerState");}});
+
+var WHvSetVirtualProcessorInterruptControllerState2 = Module.findExportByName("WinHvPlatform.dll", "WHvSetVirtualProcessorInterruptControllerState2")
+Interceptor.attach(WHvSetVirtualProcessorInterruptControllerState2, {onLeave: function (args) {send("WHvSetVirtualProcessorInterruptControllerState2");}});
+
+var WHvSetVirtualProcessorRegisters = Module.findExportByName("WinHvPlatform.dll", "WHvSetVirtualProcessorRegisters")
+Interceptor.attach(WHvSetVirtualProcessorRegisters, {onLeave: function (args) {send("WHvSetVirtualProcessorRegisters");}});
+
+var WHvSetVirtualProcessorState = Module.findExportByName("WinHvPlatform.dll", "WHvSetVirtualProcessorState")
+Interceptor.attach(WHvSetVirtualProcessorState, {onLeave: function (args) {send("WHvSetVirtualProcessorState");}});
+
+var WHvSetVirtualProcessorXsaveState = Module.findExportByName("WinHvPlatform.dll", "WHvSetVirtualProcessorXsaveState")
+Interceptor.attach(WHvSetVirtualProcessorXsaveState, {onLeave: function (args) {send("WHvSetVirtualProcessorXsaveState");}});
+
+var WHvSetVpciDevicePowerState = Module.findExportByName("WinHvPlatform.dll", "WHvSetVpciDevicePowerState")
+Interceptor.attach(WHvSetVpciDevicePowerState, {onLeave: function (args) {send("WHvSetVpciDevicePowerState");}});
+
+var WHvSetupPartition = Module.findExportByName("WinHvPlatform.dll", "WHvSetupPartition")
+Interceptor.attach(WHvSetupPartition, {onLeave: function (args) {send("WHvSetupPartition");}});
+
+var WHvSignalVirtualProcessorSynicEvent = Module.findExportByName("WinHvPlatform.dll", "WHvSignalVirtualProcessorSynicEvent")
+Interceptor.attach(WHvSignalVirtualProcessorSynicEvent, {onLeave: function (args) {send("WHvSignalVirtualProcessorSynicEvent");}});
+
+var WHvStartPartitionMigration = Module.findExportByName("WinHvPlatform.dll", "WHvStartPartitionMigration")
+Interceptor.attach(WHvStartPartitionMigration, {onLeave: function (args) {send("WHvStartPartitionMigration");}});
+
+var WHvSuspendPartitionTime = Module.findExportByName("WinHvPlatform.dll", "WHvSuspendPartitionTime")
+Interceptor.attach(WHvSuspendPartitionTime, {onLeave: function (args) {send("WHvSuspendPartitionTime");}});
+
+var WHvTranslateGva = Module.findExportByName("WinHvPlatform.dll", "WHvTranslateGva")
+Interceptor.attach(WHvTranslateGva, {onLeave: function (args) {send("WHvTranslateGva");}});
+
+var WHvUnmapGpaRange = Module.findExportByName("WinHvPlatform.dll", "WHvUnmapGpaRange")
+Interceptor.attach(WHvUnmapGpaRange, {onLeave: function (args) {send("WHvUnmapGpaRange");}});
+
+var WHvUnmapVpciDeviceInterrupt = Module.findExportByName("WinHvPlatform.dll", "WHvUnmapVpciDeviceInterrupt")
+Interceptor.attach(WHvUnmapVpciDeviceInterrupt, {onLeave: function (args) {send("WHvUnmapVpciDeviceInterrupt");}});
+
+var WHvUnmapVpciDeviceMmioRanges = Module.findExportByName("WinHvPlatform.dll", "WHvUnmapVpciDeviceMmioRanges")
+Interceptor.attach(WHvUnmapVpciDeviceMmioRanges, {onLeave: function (args) {send("WHvUnmapVpciDeviceMmioRanges");}});
+
+var WHvUnregisterPartitionDoorbellEvent = Module.findExportByName("WinHvPlatform.dll", "WHvUnregisterPartitionDoorbellEvent")
+Interceptor.attach(WHvUnregisterPartitionDoorbellEvent, {onLeave: function (args) {send("WHvUnregisterPartitionDoorbellEvent");}});
+
+var WHvUpdateTriggerParameters = Module.findExportByName("WinHvPlatform.dll", "WHvUpdateTriggerParameters")
+Interceptor.attach(WHvUpdateTriggerParameters, {onLeave: function (args) {send("WHvUpdateTriggerParameters");}});
+
+var WHvWriteGpaRange = Module.findExportByName("WinHvPlatform.dll", "WHvWriteGpaRange")
+Interceptor.attach(WHvWriteGpaRange, {onLeave: function (args) {send("WHvWriteGpaRange");}});
+
+var WHvWriteVpciDeviceRegister = Module.findExportByName("WinHvPlatform.dll", "WHvWriteVpciDeviceRegister")
+Interceptor.attach(WHvWriteVpciDeviceRegister, {onLeave: function (args) {send("WHvWriteVpciDeviceRegister");}});
+

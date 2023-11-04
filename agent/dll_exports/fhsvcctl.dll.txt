@@ -1,0 +1,42 @@
+var DllMain = Module.findExportByName("fhsvcctl.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var FhQueryConfiguredUsersCount = Module.findExportByName("fhsvcctl.dll", "FhQueryConfiguredUsersCount")
+Interceptor.attach(FhQueryConfiguredUsersCount, {onLeave: function (args) {send("FhQueryConfiguredUsersCount");}});
+
+var FhServiceBlockBackup = Module.findExportByName("fhsvcctl.dll", "FhServiceBlockBackup")
+Interceptor.attach(FhServiceBlockBackup, {onLeave: function (args) {send("FhServiceBlockBackup");}});
+
+var FhServiceClearProtectionState = Module.findExportByName("fhsvcctl.dll", "FhServiceClearProtectionState")
+Interceptor.attach(FhServiceClearProtectionState, {onLeave: function (args) {send("FhServiceClearProtectionState");}});
+
+var FhServiceClosePipe = Module.findExportByName("fhsvcctl.dll", "FhServiceClosePipe")
+Interceptor.attach(FhServiceClosePipe, {onLeave: function (args) {send("FhServiceClosePipe");}});
+
+var FhServiceEnterMaintenanceMode = Module.findExportByName("fhsvcctl.dll", "FhServiceEnterMaintenanceMode")
+Interceptor.attach(FhServiceEnterMaintenanceMode, {onLeave: function (args) {send("FhServiceEnterMaintenanceMode");}});
+
+var FhServiceExitMaintenanceMode = Module.findExportByName("fhsvcctl.dll", "FhServiceExitMaintenanceMode")
+Interceptor.attach(FhServiceExitMaintenanceMode, {onLeave: function (args) {send("FhServiceExitMaintenanceMode");}});
+
+var FhServiceMigrationFinished = Module.findExportByName("fhsvcctl.dll", "FhServiceMigrationFinished")
+Interceptor.attach(FhServiceMigrationFinished, {onLeave: function (args) {send("FhServiceMigrationFinished");}});
+
+var FhServiceMigrationStarting = Module.findExportByName("fhsvcctl.dll", "FhServiceMigrationStarting")
+Interceptor.attach(FhServiceMigrationStarting, {onLeave: function (args) {send("FhServiceMigrationStarting");}});
+
+var FhServiceOpenPipe = Module.findExportByName("fhsvcctl.dll", "FhServiceOpenPipe")
+Interceptor.attach(FhServiceOpenPipe, {onLeave: function (args) {send("FhServiceOpenPipe");}});
+
+var FhServiceReloadConfiguration = Module.findExportByName("fhsvcctl.dll", "FhServiceReloadConfiguration")
+Interceptor.attach(FhServiceReloadConfiguration, {onLeave: function (args) {send("FhServiceReloadConfiguration");}});
+
+var FhServiceStartBackup = Module.findExportByName("fhsvcctl.dll", "FhServiceStartBackup")
+Interceptor.attach(FhServiceStartBackup, {onLeave: function (args) {send("FhServiceStartBackup");}});
+
+var FhServiceStopBackup = Module.findExportByName("fhsvcctl.dll", "FhServiceStopBackup")
+Interceptor.attach(FhServiceStopBackup, {onLeave: function (args) {send("FhServiceStopBackup");}});
+
+var FhServiceUnblockBackup = Module.findExportByName("fhsvcctl.dll", "FhServiceUnblockBackup")
+Interceptor.attach(FhServiceUnblockBackup, {onLeave: function (args) {send("FhServiceUnblockBackup");}});
+

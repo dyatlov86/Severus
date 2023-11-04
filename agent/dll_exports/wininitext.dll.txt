@@ -1,0 +1,21 @@
+var GetLoggedOnUserCount = Module.findExportByName("wininitext.dll", "GetLoggedOnUserCount")
+Interceptor.attach(GetLoggedOnUserCount, {onLeave: function (args) {send("GetLoggedOnUserCount");}});
+
+var LaunchUmfdHostWithVirtualAccountWorker = Module.findExportByName("wininitext.dll", "LaunchUmfdHostWithVirtualAccountWorker")
+Interceptor.attach(LaunchUmfdHostWithVirtualAccountWorker, {onLeave: function (args) {send("LaunchUmfdHostWithVirtualAccountWorker");}});
+
+var PrimaryTerminalAndHookWorker = Module.findExportByName("wininitext.dll", "PrimaryTerminalAndHookWorker")
+Interceptor.attach(PrimaryTerminalAndHookWorker, {onLeave: function (args) {send("PrimaryTerminalAndHookWorker");}});
+
+var StartLoadingFontsWorker = Module.findExportByName("wininitext.dll", "StartLoadingFontsWorker")
+Interceptor.attach(StartLoadingFontsWorker, {onLeave: function (args) {send("StartLoadingFontsWorker");}});
+
+var UIStartupWorker = Module.findExportByName("wininitext.dll", "UIStartupWorker")
+Interceptor.attach(UIStartupWorker, {onLeave: function (args) {send("UIStartupWorker");}});
+
+var WaitForWinstationShutdown = Module.findExportByName("wininitext.dll", "WaitForWinstationShutdown")
+Interceptor.attach(WaitForWinstationShutdown, {onLeave: function (args) {send("WaitForWinstationShutdown");}});
+
+var WinStationSystemShutdownStartedWorker = Module.findExportByName("wininitext.dll", "WinStationSystemShutdownStartedWorker")
+Interceptor.attach(WinStationSystemShutdownStartedWorker, {onLeave: function (args) {send("WinStationSystemShutdownStartedWorker");}});
+

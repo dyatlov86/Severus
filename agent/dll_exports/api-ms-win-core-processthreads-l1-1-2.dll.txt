@@ -1,0 +1,27 @@
+var GetProcessPriorityBoost = Module.findExportByName("api-ms-win-core-processthreads-l1-1-2.dll", "GetProcessPriorityBoost")
+Interceptor.attach(GetProcessPriorityBoost, {onLeave: function (args) {send("GetProcessPriorityBoost");}});
+
+var GetSystemTimes = Module.findExportByName("api-ms-win-core-processthreads-l1-1-2.dll", "GetSystemTimes")
+Interceptor.attach(GetSystemTimes, {onLeave: function (args) {send("GetSystemTimes");}});
+
+var GetThreadIOPendingFlag = Module.findExportByName("api-ms-win-core-processthreads-l1-1-2.dll", "GetThreadIOPendingFlag")
+Interceptor.attach(GetThreadIOPendingFlag, {onLeave: function (args) {send("GetThreadIOPendingFlag");}});
+
+var GetThreadInformation = Module.findExportByName("api-ms-win-core-processthreads-l1-1-2.dll", "GetThreadInformation")
+Interceptor.attach(GetThreadInformation, {onLeave: function (args) {send("GetThreadInformation");}});
+
+var IsProcessCritical = Module.findExportByName("api-ms-win-core-processthreads-l1-1-2.dll", "IsProcessCritical")
+Interceptor.attach(IsProcessCritical, {onLeave: function (args) {send("IsProcessCritical");}});
+
+var QueryProtectedPolicy = Module.findExportByName("api-ms-win-core-processthreads-l1-1-2.dll", "QueryProtectedPolicy")
+Interceptor.attach(QueryProtectedPolicy, {onLeave: function (args) {send("QueryProtectedPolicy");}});
+
+var SetProcessPriorityBoost = Module.findExportByName("api-ms-win-core-processthreads-l1-1-2.dll", "SetProcessPriorityBoost")
+Interceptor.attach(SetProcessPriorityBoost, {onLeave: function (args) {send("SetProcessPriorityBoost");}});
+
+var SetProtectedPolicy = Module.findExportByName("api-ms-win-core-processthreads-l1-1-2.dll", "SetProtectedPolicy")
+Interceptor.attach(SetProtectedPolicy, {onLeave: function (args) {send("SetProtectedPolicy");}});
+
+var SetThreadInformation = Module.findExportByName("api-ms-win-core-processthreads-l1-1-2.dll", "SetThreadInformation")
+Interceptor.attach(SetThreadInformation, {onLeave: function (args) {send("SetThreadInformation");}});
+

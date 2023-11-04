@@ -1,0 +1,558 @@
+var IsRasmanProcess = Module.findExportByName("rasman.dll", "IsRasmanProcess")
+Interceptor.attach(IsRasmanProcess, {onLeave: function (args) {send("IsRasmanProcess");}});
+
+var RasActivateRoute = Module.findExportByName("rasman.dll", "RasActivateRoute")
+Interceptor.attach(RasActivateRoute, {onLeave: function (args) {send("RasActivateRoute");}});
+
+var RasActivateRouteEx = Module.findExportByName("rasman.dll", "RasActivateRouteEx")
+Interceptor.attach(RasActivateRouteEx, {onLeave: function (args) {send("RasActivateRouteEx");}});
+
+var RasActivateRouteEx2 = Module.findExportByName("rasman.dll", "RasActivateRouteEx2")
+Interceptor.attach(RasActivateRouteEx2, {onLeave: function (args) {send("RasActivateRouteEx2");}});
+
+var RasAddConnectionPort = Module.findExportByName("rasman.dll", "RasAddConnectionPort")
+Interceptor.attach(RasAddConnectionPort, {onLeave: function (args) {send("RasAddConnectionPort");}});
+
+var RasAddNotification = Module.findExportByName("rasman.dll", "RasAddNotification")
+Interceptor.attach(RasAddNotification, {onLeave: function (args) {send("RasAddNotification");}});
+
+var RasAddNotificationEx = Module.findExportByName("rasman.dll", "RasAddNotificationEx")
+Interceptor.attach(RasAddNotificationEx, {onLeave: function (args) {send("RasAddNotificationEx");}});
+
+var RasAllocInterfaceLuidIndex = Module.findExportByName("rasman.dll", "RasAllocInterfaceLuidIndex")
+Interceptor.attach(RasAllocInterfaceLuidIndex, {onLeave: function (args) {send("RasAllocInterfaceLuidIndex");}});
+
+var RasAllocateRoute = Module.findExportByName("rasman.dll", "RasAllocateRoute")
+Interceptor.attach(RasAllocateRoute, {onLeave: function (args) {send("RasAllocateRoute");}});
+
+var RasApplyPostConnectActions = Module.findExportByName("rasman.dll", "RasApplyPostConnectActions")
+Interceptor.attach(RasApplyPostConnectActions, {onLeave: function (args) {send("RasApplyPostConnectActions");}});
+
+var RasBundleClearStatistics = Module.findExportByName("rasman.dll", "RasBundleClearStatistics")
+Interceptor.attach(RasBundleClearStatistics, {onLeave: function (args) {send("RasBundleClearStatistics");}});
+
+var RasBundleClearStatisticsEx = Module.findExportByName("rasman.dll", "RasBundleClearStatisticsEx")
+Interceptor.attach(RasBundleClearStatisticsEx, {onLeave: function (args) {send("RasBundleClearStatisticsEx");}});
+
+var RasBundleGetPort = Module.findExportByName("rasman.dll", "RasBundleGetPort")
+Interceptor.attach(RasBundleGetPort, {onLeave: function (args) {send("RasBundleGetPort");}});
+
+var RasBundleGetStatistics = Module.findExportByName("rasman.dll", "RasBundleGetStatistics")
+Interceptor.attach(RasBundleGetStatistics, {onLeave: function (args) {send("RasBundleGetStatistics");}});
+
+var RasBundleGetStatisticsEx = Module.findExportByName("rasman.dll", "RasBundleGetStatisticsEx")
+Interceptor.attach(RasBundleGetStatisticsEx, {onLeave: function (args) {send("RasBundleGetStatisticsEx");}});
+
+var RasClearPortUserData = Module.findExportByName("rasman.dll", "RasClearPortUserData")
+Interceptor.attach(RasClearPortUserData, {onLeave: function (args) {send("RasClearPortUserData");}});
+
+var RasCompressionGetInfo = Module.findExportByName("rasman.dll", "RasCompressionGetInfo")
+Interceptor.attach(RasCompressionGetInfo, {onLeave: function (args) {send("RasCompressionGetInfo");}});
+
+var RasCompressionSetInfo = Module.findExportByName("rasman.dll", "RasCompressionSetInfo")
+Interceptor.attach(RasCompressionSetInfo, {onLeave: function (args) {send("RasCompressionSetInfo");}});
+
+var RasConnectionEnum = Module.findExportByName("rasman.dll", "RasConnectionEnum")
+Interceptor.attach(RasConnectionEnum, {onLeave: function (args) {send("RasConnectionEnum");}});
+
+var RasConnectionGetStatistics = Module.findExportByName("rasman.dll", "RasConnectionGetStatistics")
+Interceptor.attach(RasConnectionGetStatistics, {onLeave: function (args) {send("RasConnectionGetStatistics");}});
+
+var RasCreateConnection = Module.findExportByName("rasman.dll", "RasCreateConnection")
+Interceptor.attach(RasCreateConnection, {onLeave: function (args) {send("RasCreateConnection");}});
+
+var RasDeAllocateRoute = Module.findExportByName("rasman.dll", "RasDeAllocateRoute")
+Interceptor.attach(RasDeAllocateRoute, {onLeave: function (args) {send("RasDeAllocateRoute");}});
+
+var RasDeleteIkev2PskPolicy = Module.findExportByName("rasman.dll", "RasDeleteIkev2PskPolicy")
+Interceptor.attach(RasDeleteIkev2PskPolicy, {onLeave: function (args) {send("RasDeleteIkev2PskPolicy");}});
+
+var RasDestroyConnection = Module.findExportByName("rasman.dll", "RasDestroyConnection")
+Interceptor.attach(RasDestroyConnection, {onLeave: function (args) {send("RasDestroyConnection");}});
+
+var RasDeviceConnect = Module.findExportByName("rasman.dll", "RasDeviceConnect")
+Interceptor.attach(RasDeviceConnect, {onLeave: function (args) {send("RasDeviceConnect");}});
+
+var RasDeviceEnum = Module.findExportByName("rasman.dll", "RasDeviceEnum")
+Interceptor.attach(RasDeviceEnum, {onLeave: function (args) {send("RasDeviceEnum");}});
+
+var RasDeviceGetInfo = Module.findExportByName("rasman.dll", "RasDeviceGetInfo")
+Interceptor.attach(RasDeviceGetInfo, {onLeave: function (args) {send("RasDeviceGetInfo");}});
+
+var RasDeviceSetInfo = Module.findExportByName("rasman.dll", "RasDeviceSetInfo")
+Interceptor.attach(RasDeviceSetInfo, {onLeave: function (args) {send("RasDeviceSetInfo");}});
+
+var RasDeviceSetInfoSafe = Module.findExportByName("rasman.dll", "RasDeviceSetInfoSafe")
+Interceptor.attach(RasDeviceSetInfoSafe, {onLeave: function (args) {send("RasDeviceSetInfoSafe");}});
+
+var RasDoIke = Module.findExportByName("rasman.dll", "RasDoIke")
+Interceptor.attach(RasDoIke, {onLeave: function (args) {send("RasDoIke");}});
+
+var RasEnableIpSec = Module.findExportByName("rasman.dll", "RasEnableIpSec")
+Interceptor.attach(RasEnableIpSec, {onLeave: function (args) {send("RasEnableIpSec");}});
+
+var RasEnumConnectionPorts = Module.findExportByName("rasman.dll", "RasEnumConnectionPorts")
+Interceptor.attach(RasEnumConnectionPorts, {onLeave: function (args) {send("RasEnumConnectionPorts");}});
+
+var RasEnumLanNets = Module.findExportByName("rasman.dll", "RasEnumLanNets")
+Interceptor.attach(RasEnumLanNets, {onLeave: function (args) {send("RasEnumLanNets");}});
+
+var RasFindPrerequisiteEntry = Module.findExportByName("rasman.dll", "RasFindPrerequisiteEntry")
+Interceptor.attach(RasFindPrerequisiteEntry, {onLeave: function (args) {send("RasFindPrerequisiteEntry");}});
+
+var RasFreeBuffer = Module.findExportByName("rasman.dll", "RasFreeBuffer")
+Interceptor.attach(RasFreeBuffer, {onLeave: function (args) {send("RasFreeBuffer");}});
+
+var RasFreeInterfaceLuidIndex = Module.findExportByName("rasman.dll", "RasFreeInterfaceLuidIndex")
+Interceptor.attach(RasFreeInterfaceLuidIndex, {onLeave: function (args) {send("RasFreeInterfaceLuidIndex");}});
+
+var RasGetAutoTriggerData = Module.findExportByName("rasman.dll", "RasGetAutoTriggerData")
+Interceptor.attach(RasGetAutoTriggerData, {onLeave: function (args) {send("RasGetAutoTriggerData");}});
+
+var RasGetBuffer = Module.findExportByName("rasman.dll", "RasGetBuffer")
+Interceptor.attach(RasGetBuffer, {onLeave: function (args) {send("RasGetBuffer");}});
+
+var RasGetCalledIdInfo = Module.findExportByName("rasman.dll", "RasGetCalledIdInfo")
+Interceptor.attach(RasGetCalledIdInfo, {onLeave: function (args) {send("RasGetCalledIdInfo");}});
+
+var RasGetConnectInfo = Module.findExportByName("rasman.dll", "RasGetConnectInfo")
+Interceptor.attach(RasGetConnectInfo, {onLeave: function (args) {send("RasGetConnectInfo");}});
+
+var RasGetConnectionParams = Module.findExportByName("rasman.dll", "RasGetConnectionParams")
+Interceptor.attach(RasGetConnectionParams, {onLeave: function (args) {send("RasGetConnectionParams");}});
+
+var RasGetConnectionUserData = Module.findExportByName("rasman.dll", "RasGetConnectionUserData")
+Interceptor.attach(RasGetConnectionUserData, {onLeave: function (args) {send("RasGetConnectionUserData");}});
+
+var RasGetCustomScriptDll = Module.findExportByName("rasman.dll", "RasGetCustomScriptDll")
+Interceptor.attach(RasGetCustomScriptDll, {onLeave: function (args) {send("RasGetCustomScriptDll");}});
+
+var RasGetDevConfig = Module.findExportByName("rasman.dll", "RasGetDevConfig")
+Interceptor.attach(RasGetDevConfig, {onLeave: function (args) {send("RasGetDevConfig");}});
+
+var RasGetDevConfigEx = Module.findExportByName("rasman.dll", "RasGetDevConfigEx")
+Interceptor.attach(RasGetDevConfigEx, {onLeave: function (args) {send("RasGetDevConfigEx");}});
+
+var RasGetDeviceConfigInfo = Module.findExportByName("rasman.dll", "RasGetDeviceConfigInfo")
+Interceptor.attach(RasGetDeviceConfigInfo, {onLeave: function (args) {send("RasGetDeviceConfigInfo");}});
+
+var RasGetDeviceName = Module.findExportByName("rasman.dll", "RasGetDeviceName")
+Interceptor.attach(RasGetDeviceName, {onLeave: function (args) {send("RasGetDeviceName");}});
+
+var RasGetDeviceNameW = Module.findExportByName("rasman.dll", "RasGetDeviceNameW")
+Interceptor.attach(RasGetDeviceNameW, {onLeave: function (args) {send("RasGetDeviceNameW");}});
+
+var RasGetDialMachineEventContext = Module.findExportByName("rasman.dll", "RasGetDialMachineEventContext")
+Interceptor.attach(RasGetDialMachineEventContext, {onLeave: function (args) {send("RasGetDialMachineEventContext");}});
+
+var RasGetDialParams = Module.findExportByName("rasman.dll", "RasGetDialParams")
+Interceptor.attach(RasGetDialParams, {onLeave: function (args) {send("RasGetDialParams");}});
+
+var RasGetEapUIData = Module.findExportByName("rasman.dll", "RasGetEapUIData")
+Interceptor.attach(RasGetEapUIData, {onLeave: function (args) {send("RasGetEapUIData");}});
+
+var RasGetEapUserInfo = Module.findExportByName("rasman.dll", "RasGetEapUserInfo")
+Interceptor.attach(RasGetEapUserInfo, {onLeave: function (args) {send("RasGetEapUserInfo");}});
+
+var RasGetFramingCapabilities = Module.findExportByName("rasman.dll", "RasGetFramingCapabilities")
+Interceptor.attach(RasGetFramingCapabilities, {onLeave: function (args) {send("RasGetFramingCapabilities");}});
+
+var RasGetHConnFromEntry = Module.findExportByName("rasman.dll", "RasGetHConnFromEntry")
+Interceptor.attach(RasGetHConnFromEntry, {onLeave: function (args) {send("RasGetHConnFromEntry");}});
+
+var RasGetHportFromConnection = Module.findExportByName("rasman.dll", "RasGetHportFromConnection")
+Interceptor.attach(RasGetHportFromConnection, {onLeave: function (args) {send("RasGetHportFromConnection");}});
+
+var RasGetInfo = Module.findExportByName("rasman.dll", "RasGetInfo")
+Interceptor.attach(RasGetInfo, {onLeave: function (args) {send("RasGetInfo");}});
+
+var RasGetInfoEx = Module.findExportByName("rasman.dll", "RasGetInfoEx")
+Interceptor.attach(RasGetInfoEx, {onLeave: function (args) {send("RasGetInfoEx");}});
+
+var RasGetKey = Module.findExportByName("rasman.dll", "RasGetKey")
+Interceptor.attach(RasGetKey, {onLeave: function (args) {send("RasGetKey");}});
+
+var RasGetNdiswanDriverCaps = Module.findExportByName("rasman.dll", "RasGetNdiswanDriverCaps")
+Interceptor.attach(RasGetNdiswanDriverCaps, {onLeave: function (args) {send("RasGetNdiswanDriverCaps");}});
+
+var RasGetNotificationEntry = Module.findExportByName("rasman.dll", "RasGetNotificationEntry")
+Interceptor.attach(RasGetNotificationEntry, {onLeave: function (args) {send("RasGetNotificationEntry");}});
+
+var RasGetNumPortOpen = Module.findExportByName("rasman.dll", "RasGetNumPortOpen")
+Interceptor.attach(RasGetNumPortOpen, {onLeave: function (args) {send("RasGetNumPortOpen");}});
+
+var RasGetPortDialParams = Module.findExportByName("rasman.dll", "RasGetPortDialParams")
+Interceptor.attach(RasGetPortDialParams, {onLeave: function (args) {send("RasGetPortDialParams");}});
+
+var RasGetPortUserData = Module.findExportByName("rasman.dll", "RasGetPortUserData")
+Interceptor.attach(RasGetPortUserData, {onLeave: function (args) {send("RasGetPortUserData");}});
+
+var RasGetProtocolInfo = Module.findExportByName("rasman.dll", "RasGetProtocolInfo")
+Interceptor.attach(RasGetProtocolInfo, {onLeave: function (args) {send("RasGetProtocolInfo");}});
+
+var RasGetTimeSinceLastActivity = Module.findExportByName("rasman.dll", "RasGetTimeSinceLastActivity")
+Interceptor.attach(RasGetTimeSinceLastActivity, {onLeave: function (args) {send("RasGetTimeSinceLastActivity");}});
+
+var RasGetTriggerAuthData = Module.findExportByName("rasman.dll", "RasGetTriggerAuthData")
+Interceptor.attach(RasGetTriggerAuthData, {onLeave: function (args) {send("RasGetTriggerAuthData");}});
+
+var RasGetUnicodeDeviceName = Module.findExportByName("rasman.dll", "RasGetUnicodeDeviceName")
+Interceptor.attach(RasGetUnicodeDeviceName, {onLeave: function (args) {send("RasGetUnicodeDeviceName");}});
+
+var RasGetUserCredentials = Module.findExportByName("rasman.dll", "RasGetUserCredentials")
+Interceptor.attach(RasGetUserCredentials, {onLeave: function (args) {send("RasGetUserCredentials");}});
+
+var RasInitialize = Module.findExportByName("rasman.dll", "RasInitialize")
+Interceptor.attach(RasInitialize, {onLeave: function (args) {send("RasInitialize");}});
+
+var RasInitializeNoWait = Module.findExportByName("rasman.dll", "RasInitializeNoWait")
+Interceptor.attach(RasInitializeNoWait, {onLeave: function (args) {send("RasInitializeNoWait");}});
+
+var RasIsPulseDial = Module.findExportByName("rasman.dll", "RasIsPulseDial")
+Interceptor.attach(RasIsPulseDial, {onLeave: function (args) {send("RasIsPulseDial");}});
+
+var RasIsTrustedCustomDll = Module.findExportByName("rasman.dll", "RasIsTrustedCustomDll")
+Interceptor.attach(RasIsTrustedCustomDll, {onLeave: function (args) {send("RasIsTrustedCustomDll");}});
+
+var RasLinkGetStatistics = Module.findExportByName("rasman.dll", "RasLinkGetStatistics")
+Interceptor.attach(RasLinkGetStatistics, {onLeave: function (args) {send("RasLinkGetStatistics");}});
+
+var RasNQMEnterNotify = Module.findExportByName("rasman.dll", "RasNQMEnterNotify")
+Interceptor.attach(RasNQMEnterNotify, {onLeave: function (args) {send("RasNQMEnterNotify");}});
+
+var RasPlumbIkev2PskPolicy = Module.findExportByName("rasman.dll", "RasPlumbIkev2PskPolicy")
+Interceptor.attach(RasPlumbIkev2PskPolicy, {onLeave: function (args) {send("RasPlumbIkev2PskPolicy");}});
+
+var RasPortBundle = Module.findExportByName("rasman.dll", "RasPortBundle")
+Interceptor.attach(RasPortBundle, {onLeave: function (args) {send("RasPortBundle");}});
+
+var RasPortCancelReceive = Module.findExportByName("rasman.dll", "RasPortCancelReceive")
+Interceptor.attach(RasPortCancelReceive, {onLeave: function (args) {send("RasPortCancelReceive");}});
+
+var RasPortClearStatistics = Module.findExportByName("rasman.dll", "RasPortClearStatistics")
+Interceptor.attach(RasPortClearStatistics, {onLeave: function (args) {send("RasPortClearStatistics");}});
+
+var RasPortClose = Module.findExportByName("rasman.dll", "RasPortClose")
+Interceptor.attach(RasPortClose, {onLeave: function (args) {send("RasPortClose");}});
+
+var RasPortConnectComplete = Module.findExportByName("rasman.dll", "RasPortConnectComplete")
+Interceptor.attach(RasPortConnectComplete, {onLeave: function (args) {send("RasPortConnectComplete");}});
+
+var RasPortDisconnect = Module.findExportByName("rasman.dll", "RasPortDisconnect")
+Interceptor.attach(RasPortDisconnect, {onLeave: function (args) {send("RasPortDisconnect");}});
+
+var RasPortEnum = Module.findExportByName("rasman.dll", "RasPortEnum")
+Interceptor.attach(RasPortEnum, {onLeave: function (args) {send("RasPortEnum");}});
+
+var RasPortEnumProtocols = Module.findExportByName("rasman.dll", "RasPortEnumProtocols")
+Interceptor.attach(RasPortEnumProtocols, {onLeave: function (args) {send("RasPortEnumProtocols");}});
+
+var RasPortFree = Module.findExportByName("rasman.dll", "RasPortFree")
+Interceptor.attach(RasPortFree, {onLeave: function (args) {send("RasPortFree");}});
+
+var RasPortGetBundle = Module.findExportByName("rasman.dll", "RasPortGetBundle")
+Interceptor.attach(RasPortGetBundle, {onLeave: function (args) {send("RasPortGetBundle");}});
+
+var RasPortGetBundledPort = Module.findExportByName("rasman.dll", "RasPortGetBundledPort")
+Interceptor.attach(RasPortGetBundledPort, {onLeave: function (args) {send("RasPortGetBundledPort");}});
+
+var RasPortGetFramingEx = Module.findExportByName("rasman.dll", "RasPortGetFramingEx")
+Interceptor.attach(RasPortGetFramingEx, {onLeave: function (args) {send("RasPortGetFramingEx");}});
+
+var RasPortGetInfo = Module.findExportByName("rasman.dll", "RasPortGetInfo")
+Interceptor.attach(RasPortGetInfo, {onLeave: function (args) {send("RasPortGetInfo");}});
+
+var RasPortGetProtocolCompression = Module.findExportByName("rasman.dll", "RasPortGetProtocolCompression")
+Interceptor.attach(RasPortGetProtocolCompression, {onLeave: function (args) {send("RasPortGetProtocolCompression");}});
+
+var RasPortGetStatistics = Module.findExportByName("rasman.dll", "RasPortGetStatistics")
+Interceptor.attach(RasPortGetStatistics, {onLeave: function (args) {send("RasPortGetStatistics");}});
+
+var RasPortGetStatisticsEx = Module.findExportByName("rasman.dll", "RasPortGetStatisticsEx")
+Interceptor.attach(RasPortGetStatisticsEx, {onLeave: function (args) {send("RasPortGetStatisticsEx");}});
+
+var RasPortListen = Module.findExportByName("rasman.dll", "RasPortListen")
+Interceptor.attach(RasPortListen, {onLeave: function (args) {send("RasPortListen");}});
+
+var RasPortOpen = Module.findExportByName("rasman.dll", "RasPortOpen")
+Interceptor.attach(RasPortOpen, {onLeave: function (args) {send("RasPortOpen");}});
+
+var RasPortOpenEx = Module.findExportByName("rasman.dll", "RasPortOpenEx")
+Interceptor.attach(RasPortOpenEx, {onLeave: function (args) {send("RasPortOpenEx");}});
+
+var RasPortReceive = Module.findExportByName("rasman.dll", "RasPortReceive")
+Interceptor.attach(RasPortReceive, {onLeave: function (args) {send("RasPortReceive");}});
+
+var RasPortReceiveEx = Module.findExportByName("rasman.dll", "RasPortReceiveEx")
+Interceptor.attach(RasPortReceiveEx, {onLeave: function (args) {send("RasPortReceiveEx");}});
+
+var RasPortReserve = Module.findExportByName("rasman.dll", "RasPortReserve")
+Interceptor.attach(RasPortReserve, {onLeave: function (args) {send("RasPortReserve");}});
+
+var RasPortRetrieveUserData = Module.findExportByName("rasman.dll", "RasPortRetrieveUserData")
+Interceptor.attach(RasPortRetrieveUserData, {onLeave: function (args) {send("RasPortRetrieveUserData");}});
+
+var RasPortSend = Module.findExportByName("rasman.dll", "RasPortSend")
+Interceptor.attach(RasPortSend, {onLeave: function (args) {send("RasPortSend");}});
+
+var RasPortSetFraming = Module.findExportByName("rasman.dll", "RasPortSetFraming")
+Interceptor.attach(RasPortSetFraming, {onLeave: function (args) {send("RasPortSetFraming");}});
+
+var RasPortSetFramingEx = Module.findExportByName("rasman.dll", "RasPortSetFramingEx")
+Interceptor.attach(RasPortSetFramingEx, {onLeave: function (args) {send("RasPortSetFramingEx");}});
+
+var RasPortSetInfo = Module.findExportByName("rasman.dll", "RasPortSetInfo")
+Interceptor.attach(RasPortSetInfo, {onLeave: function (args) {send("RasPortSetInfo");}});
+
+var RasPortSetProtocolCompression = Module.findExportByName("rasman.dll", "RasPortSetProtocolCompression")
+Interceptor.attach(RasPortSetProtocolCompression, {onLeave: function (args) {send("RasPortSetProtocolCompression");}});
+
+var RasPortStoreUserData = Module.findExportByName("rasman.dll", "RasPortStoreUserData")
+Interceptor.attach(RasPortStoreUserData, {onLeave: function (args) {send("RasPortStoreUserData");}});
+
+var RasProtocolCallback = Module.findExportByName("rasman.dll", "RasProtocolCallback")
+Interceptor.attach(RasProtocolCallback, {onLeave: function (args) {send("RasProtocolCallback");}});
+
+var RasProtocolChangePassword = Module.findExportByName("rasman.dll", "RasProtocolChangePassword")
+Interceptor.attach(RasProtocolChangePassword, {onLeave: function (args) {send("RasProtocolChangePassword");}});
+
+var RasProtocolEnum = Module.findExportByName("rasman.dll", "RasProtocolEnum")
+Interceptor.attach(RasProtocolEnum, {onLeave: function (args) {send("RasProtocolEnum");}});
+
+var RasProtocolGetInfo = Module.findExportByName("rasman.dll", "RasProtocolGetInfo")
+Interceptor.attach(RasProtocolGetInfo, {onLeave: function (args) {send("RasProtocolGetInfo");}});
+
+var RasProtocolRetry = Module.findExportByName("rasman.dll", "RasProtocolRetry")
+Interceptor.attach(RasProtocolRetry, {onLeave: function (args) {send("RasProtocolRetry");}});
+
+var RasProtocolStart = Module.findExportByName("rasman.dll", "RasProtocolStart")
+Interceptor.attach(RasProtocolStart, {onLeave: function (args) {send("RasProtocolStart");}});
+
+var RasProtocolStarted = Module.findExportByName("rasman.dll", "RasProtocolStarted")
+Interceptor.attach(RasProtocolStarted, {onLeave: function (args) {send("RasProtocolStarted");}});
+
+var RasProtocolStop = Module.findExportByName("rasman.dll", "RasProtocolStop")
+Interceptor.attach(RasProtocolStop, {onLeave: function (args) {send("RasProtocolStop");}});
+
+var RasProtocolUpdateConnection = Module.findExportByName("rasman.dll", "RasProtocolUpdateConnection")
+Interceptor.attach(RasProtocolUpdateConnection, {onLeave: function (args) {send("RasProtocolUpdateConnection");}});
+
+var RasRPCBind = Module.findExportByName("rasman.dll", "RasRPCBind")
+Interceptor.attach(RasRPCBind, {onLeave: function (args) {send("RasRPCBind");}});
+
+var RasRefConnection = Module.findExportByName("rasman.dll", "RasRefConnection")
+Interceptor.attach(RasRefConnection, {onLeave: function (args) {send("RasRefConnection");}});
+
+var RasReferenceCustomCount = Module.findExportByName("rasman.dll", "RasReferenceCustomCount")
+Interceptor.attach(RasReferenceCustomCount, {onLeave: function (args) {send("RasReferenceCustomCount");}});
+
+var RasReferenceRasman = Module.findExportByName("rasman.dll", "RasReferenceRasman")
+Interceptor.attach(RasReferenceRasman, {onLeave: function (args) {send("RasReferenceRasman");}});
+
+var RasRegisterPnPEvent = Module.findExportByName("rasman.dll", "RasRegisterPnPEvent")
+Interceptor.attach(RasRegisterPnPEvent, {onLeave: function (args) {send("RasRegisterPnPEvent");}});
+
+var RasRegisterPnPHandler = Module.findExportByName("rasman.dll", "RasRegisterPnPHandler")
+Interceptor.attach(RasRegisterPnPHandler, {onLeave: function (args) {send("RasRegisterPnPHandler");}});
+
+var RasRegisterRedialCallback = Module.findExportByName("rasman.dll", "RasRegisterRedialCallback")
+Interceptor.attach(RasRegisterRedialCallback, {onLeave: function (args) {send("RasRegisterRedialCallback");}});
+
+var RasRemoveNotificationEx = Module.findExportByName("rasman.dll", "RasRemoveNotificationEx")
+Interceptor.attach(RasRemoveNotificationEx, {onLeave: function (args) {send("RasRemoveNotificationEx");}});
+
+var RasRequestNotification = Module.findExportByName("rasman.dll", "RasRequestNotification")
+Interceptor.attach(RasRequestNotification, {onLeave: function (args) {send("RasRequestNotification");}});
+
+var RasRpcConnect = Module.findExportByName("rasman.dll", "RasRpcConnect")
+Interceptor.attach(RasRpcConnect, {onLeave: function (args) {send("RasRpcConnect");}});
+
+var RasRpcConnectServer = Module.findExportByName("rasman.dll", "RasRpcConnectServer")
+Interceptor.attach(RasRpcConnectServer, {onLeave: function (args) {send("RasRpcConnectServer");}});
+
+var RasRpcDeleteEntry = Module.findExportByName("rasman.dll", "RasRpcDeleteEntry")
+Interceptor.attach(RasRpcDeleteEntry, {onLeave: function (args) {send("RasRpcDeleteEntry");}});
+
+var RasRpcDeviceEnum = Module.findExportByName("rasman.dll", "RasRpcDeviceEnum")
+Interceptor.attach(RasRpcDeviceEnum, {onLeave: function (args) {send("RasRpcDeviceEnum");}});
+
+var RasRpcDisconnect = Module.findExportByName("rasman.dll", "RasRpcDisconnect")
+Interceptor.attach(RasRpcDisconnect, {onLeave: function (args) {send("RasRpcDisconnect");}});
+
+var RasRpcDisconnectServer = Module.findExportByName("rasman.dll", "RasRpcDisconnectServer")
+Interceptor.attach(RasRpcDisconnectServer, {onLeave: function (args) {send("RasRpcDisconnectServer");}});
+
+var RasRpcEnumConnections = Module.findExportByName("rasman.dll", "RasRpcEnumConnections")
+Interceptor.attach(RasRpcEnumConnections, {onLeave: function (args) {send("RasRpcEnumConnections");}});
+
+var RasRpcGetCountryInfo = Module.findExportByName("rasman.dll", "RasRpcGetCountryInfo")
+Interceptor.attach(RasRpcGetCountryInfo, {onLeave: function (args) {send("RasRpcGetCountryInfo");}});
+
+var RasRpcGetDevConfig = Module.findExportByName("rasman.dll", "RasRpcGetDevConfig")
+Interceptor.attach(RasRpcGetDevConfig, {onLeave: function (args) {send("RasRpcGetDevConfig");}});
+
+var RasRpcGetErrorString = Module.findExportByName("rasman.dll", "RasRpcGetErrorString")
+Interceptor.attach(RasRpcGetErrorString, {onLeave: function (args) {send("RasRpcGetErrorString");}});
+
+var RasRpcGetInstalledProtocols = Module.findExportByName("rasman.dll", "RasRpcGetInstalledProtocols")
+Interceptor.attach(RasRpcGetInstalledProtocols, {onLeave: function (args) {send("RasRpcGetInstalledProtocols");}});
+
+var RasRpcGetInstalledProtocolsEx = Module.findExportByName("rasman.dll", "RasRpcGetInstalledProtocolsEx")
+Interceptor.attach(RasRpcGetInstalledProtocolsEx, {onLeave: function (args) {send("RasRpcGetInstalledProtocolsEx");}});
+
+var RasRpcGetSystemDirectory = Module.findExportByName("rasman.dll", "RasRpcGetSystemDirectory")
+Interceptor.attach(RasRpcGetSystemDirectory, {onLeave: function (args) {send("RasRpcGetSystemDirectory");}});
+
+var RasRpcGetUserPreferences = Module.findExportByName("rasman.dll", "RasRpcGetUserPreferences")
+Interceptor.attach(RasRpcGetUserPreferences, {onLeave: function (args) {send("RasRpcGetUserPreferences");}});
+
+var RasRpcGetVersion = Module.findExportByName("rasman.dll", "RasRpcGetVersion")
+Interceptor.attach(RasRpcGetVersion, {onLeave: function (args) {send("RasRpcGetVersion");}});
+
+var RasRpcPortEnum = Module.findExportByName("rasman.dll", "RasRpcPortEnum")
+Interceptor.attach(RasRpcPortEnum, {onLeave: function (args) {send("RasRpcPortEnum");}});
+
+var RasRpcPortGetInfo = Module.findExportByName("rasman.dll", "RasRpcPortGetInfo")
+Interceptor.attach(RasRpcPortGetInfo, {onLeave: function (args) {send("RasRpcPortGetInfo");}});
+
+var RasRpcRemoteGetSystemDirectory = Module.findExportByName("rasman.dll", "RasRpcRemoteGetSystemDirectory")
+Interceptor.attach(RasRpcRemoteGetSystemDirectory, {onLeave: function (args) {send("RasRpcRemoteGetSystemDirectory");}});
+
+var RasRpcRemoteGetUserPreferences = Module.findExportByName("rasman.dll", "RasRpcRemoteGetUserPreferences")
+Interceptor.attach(RasRpcRemoteGetUserPreferences, {onLeave: function (args) {send("RasRpcRemoteGetUserPreferences");}});
+
+var RasRpcRemoteRasDeleteEntry = Module.findExportByName("rasman.dll", "RasRpcRemoteRasDeleteEntry")
+Interceptor.attach(RasRpcRemoteRasDeleteEntry, {onLeave: function (args) {send("RasRpcRemoteRasDeleteEntry");}});
+
+var RasRpcRemoteSetUserPreferences = Module.findExportByName("rasman.dll", "RasRpcRemoteSetUserPreferences")
+Interceptor.attach(RasRpcRemoteSetUserPreferences, {onLeave: function (args) {send("RasRpcRemoteSetUserPreferences");}});
+
+var RasRpcSetUserPreferences = Module.findExportByName("rasman.dll", "RasRpcSetUserPreferences")
+Interceptor.attach(RasRpcSetUserPreferences, {onLeave: function (args) {send("RasRpcSetUserPreferences");}});
+
+var RasRpcUnloadDll = Module.findExportByName("rasman.dll", "RasRpcUnloadDll")
+Interceptor.attach(RasRpcUnloadDll, {onLeave: function (args) {send("RasRpcUnloadDll");}});
+
+var RasSecurityDialogGetInfo = Module.findExportByName("rasman.dll", "RasSecurityDialogGetInfo")
+Interceptor.attach(RasSecurityDialogGetInfo, {onLeave: function (args) {send("RasSecurityDialogGetInfo");}});
+
+var RasSecurityDialogReceive = Module.findExportByName("rasman.dll", "RasSecurityDialogReceive")
+Interceptor.attach(RasSecurityDialogReceive, {onLeave: function (args) {send("RasSecurityDialogReceive");}});
+
+var RasSecurityDialogSend = Module.findExportByName("rasman.dll", "RasSecurityDialogSend")
+Interceptor.attach(RasSecurityDialogSend, {onLeave: function (args) {send("RasSecurityDialogSend");}});
+
+var RasSendCreds = Module.findExportByName("rasman.dll", "RasSendCreds")
+Interceptor.attach(RasSendCreds, {onLeave: function (args) {send("RasSendCreds");}});
+
+var RasSendNotification = Module.findExportByName("rasman.dll", "RasSendNotification")
+Interceptor.attach(RasSendNotification, {onLeave: function (args) {send("RasSendNotification");}});
+
+var RasSendProtocolResultToRasman = Module.findExportByName("rasman.dll", "RasSendProtocolResultToRasman")
+Interceptor.attach(RasSendProtocolResultToRasman, {onLeave: function (args) {send("RasSendProtocolResultToRasman");}});
+
+var RasServerPortClose = Module.findExportByName("rasman.dll", "RasServerPortClose")
+Interceptor.attach(RasServerPortClose, {onLeave: function (args) {send("RasServerPortClose");}});
+
+var RasSetAddressDisable = Module.findExportByName("rasman.dll", "RasSetAddressDisable")
+Interceptor.attach(RasSetAddressDisable, {onLeave: function (args) {send("RasSetAddressDisable");}});
+
+var RasSetAdvConnectionParams = Module.findExportByName("rasman.dll", "RasSetAdvConnectionParams")
+Interceptor.attach(RasSetAdvConnectionParams, {onLeave: function (args) {send("RasSetAdvConnectionParams");}});
+
+var RasSetCachedCredentials = Module.findExportByName("rasman.dll", "RasSetCachedCredentials")
+Interceptor.attach(RasSetCachedCredentials, {onLeave: function (args) {send("RasSetCachedCredentials");}});
+
+var RasSetCalledIdInfo = Module.findExportByName("rasman.dll", "RasSetCalledIdInfo")
+Interceptor.attach(RasSetCalledIdInfo, {onLeave: function (args) {send("RasSetCalledIdInfo");}});
+
+var RasSetCommSettings = Module.findExportByName("rasman.dll", "RasSetCommSettings")
+Interceptor.attach(RasSetCommSettings, {onLeave: function (args) {send("RasSetCommSettings");}});
+
+var RasSetConnectionParams = Module.findExportByName("rasman.dll", "RasSetConnectionParams")
+Interceptor.attach(RasSetConnectionParams, {onLeave: function (args) {send("RasSetConnectionParams");}});
+
+var RasSetConnectionUserData = Module.findExportByName("rasman.dll", "RasSetConnectionUserData")
+Interceptor.attach(RasSetConnectionUserData, {onLeave: function (args) {send("RasSetConnectionUserData");}});
+
+var RasSetDevConfig = Module.findExportByName("rasman.dll", "RasSetDevConfig")
+Interceptor.attach(RasSetDevConfig, {onLeave: function (args) {send("RasSetDevConfig");}});
+
+var RasSetDeviceConfigInfo = Module.findExportByName("rasman.dll", "RasSetDeviceConfigInfo")
+Interceptor.attach(RasSetDeviceConfigInfo, {onLeave: function (args) {send("RasSetDeviceConfigInfo");}});
+
+var RasSetDialMachineEventHandle = Module.findExportByName("rasman.dll", "RasSetDialMachineEventHandle")
+Interceptor.attach(RasSetDialMachineEventHandle, {onLeave: function (args) {send("RasSetDialMachineEventHandle");}});
+
+var RasSetDialParams = Module.findExportByName("rasman.dll", "RasSetDialParams")
+Interceptor.attach(RasSetDialParams, {onLeave: function (args) {send("RasSetDialParams");}});
+
+var RasSetEapInfo = Module.findExportByName("rasman.dll", "RasSetEapInfo")
+Interceptor.attach(RasSetEapInfo, {onLeave: function (args) {send("RasSetEapInfo");}});
+
+var RasSetEapUIData = Module.findExportByName("rasman.dll", "RasSetEapUIData")
+Interceptor.attach(RasSetEapUIData, {onLeave: function (args) {send("RasSetEapUIData");}});
+
+var RasSetEapUserInfo = Module.findExportByName("rasman.dll", "RasSetEapUserInfo")
+Interceptor.attach(RasSetEapUserInfo, {onLeave: function (args) {send("RasSetEapUserInfo");}});
+
+var RasSetEncPassword = Module.findExportByName("rasman.dll", "RasSetEncPassword")
+Interceptor.attach(RasSetEncPassword, {onLeave: function (args) {send("RasSetEncPassword");}});
+
+var RasSetIPAddresses = Module.findExportByName("rasman.dll", "RasSetIPAddresses")
+Interceptor.attach(RasSetIPAddresses, {onLeave: function (args) {send("RasSetIPAddresses");}});
+
+var RasSetKey = Module.findExportByName("rasman.dll", "RasSetKey")
+Interceptor.attach(RasSetKey, {onLeave: function (args) {send("RasSetKey");}});
+
+var RasSetPortUserData = Module.findExportByName("rasman.dll", "RasSetPortUserData")
+Interceptor.attach(RasSetPortUserData, {onLeave: function (args) {send("RasSetPortUserData");}});
+
+var RasSetRouterUsage = Module.findExportByName("rasman.dll", "RasSetRouterUsage")
+Interceptor.attach(RasSetRouterUsage, {onLeave: function (args) {send("RasSetRouterUsage");}});
+
+var RasSetTriggerAuthData = Module.findExportByName("rasman.dll", "RasSetTriggerAuthData")
+Interceptor.attach(RasSetTriggerAuthData, {onLeave: function (args) {send("RasSetTriggerAuthData");}});
+
+var RasSetTunnelEndPoints = Module.findExportByName("rasman.dll", "RasSetTunnelEndPoints")
+Interceptor.attach(RasSetTunnelEndPoints, {onLeave: function (args) {send("RasSetTunnelEndPoints");}});
+
+var RasSetVpnClientConnectionType = Module.findExportByName("rasman.dll", "RasSetVpnClientConnectionType")
+Interceptor.attach(RasSetVpnClientConnectionType, {onLeave: function (args) {send("RasSetVpnClientConnectionType");}});
+
+var RasSignalActionRequired = Module.findExportByName("rasman.dll", "RasSignalActionRequired")
+Interceptor.attach(RasSignalActionRequired, {onLeave: function (args) {send("RasSignalActionRequired");}});
+
+var RasSignalMonitorThreadExit = Module.findExportByName("rasman.dll", "RasSignalMonitorThreadExit")
+Interceptor.attach(RasSignalMonitorThreadExit, {onLeave: function (args) {send("RasSignalMonitorThreadExit");}});
+
+var RasSignalNewConnection = Module.findExportByName("rasman.dll", "RasSignalNewConnection")
+Interceptor.attach(RasSignalNewConnection, {onLeave: function (args) {send("RasSignalNewConnection");}});
+
+var RasStartProtocolRenegotiation = Module.findExportByName("rasman.dll", "RasStartProtocolRenegotiation")
+Interceptor.attach(RasStartProtocolRenegotiation, {onLeave: function (args) {send("RasStartProtocolRenegotiation");}});
+
+var RasStartRasAutoIfRequired = Module.findExportByName("rasman.dll", "RasStartRasAutoIfRequired")
+Interceptor.attach(RasStartRasAutoIfRequired, {onLeave: function (args) {send("RasStartRasAutoIfRequired");}});
+
+var RasUpdateAutoTriggerRegKeys = Module.findExportByName("rasman.dll", "RasUpdateAutoTriggerRegKeys")
+Interceptor.attach(RasUpdateAutoTriggerRegKeys, {onLeave: function (args) {send("RasUpdateAutoTriggerRegKeys");}});
+
+var RasUpdateAutoTriggerRegKeysEx = Module.findExportByName("rasman.dll", "RasUpdateAutoTriggerRegKeysEx")
+Interceptor.attach(RasUpdateAutoTriggerRegKeysEx, {onLeave: function (args) {send("RasUpdateAutoTriggerRegKeysEx");}});
+
+var RasUpdateDefaultRouteSettings = Module.findExportByName("rasman.dll", "RasUpdateDefaultRouteSettings")
+Interceptor.attach(RasUpdateDefaultRouteSettings, {onLeave: function (args) {send("RasUpdateDefaultRouteSettings");}});
+
+var RasUpdateQoSPolicies = Module.findExportByName("rasman.dll", "RasUpdateQoSPolicies")
+Interceptor.attach(RasUpdateQoSPolicies, {onLeave: function (args) {send("RasUpdateQoSPolicies");}});
+
+var RasVpnIkeGetNewTunnelId = Module.findExportByName("rasman.dll", "RasVpnIkeGetNewTunnelId")
+Interceptor.attach(RasVpnIkeGetNewTunnelId, {onLeave: function (args) {send("RasVpnIkeGetNewTunnelId");}});
+
+var RasVpnIkeGetPCscf = Module.findExportByName("rasman.dll", "RasVpnIkeGetPCscf")
+Interceptor.attach(RasVpnIkeGetPCscf, {onLeave: function (args) {send("RasVpnIkeGetPCscf");}});
+
+var RasmanUninitialize = Module.findExportByName("rasman.dll", "RasmanUninitialize")
+Interceptor.attach(RasmanUninitialize, {onLeave: function (args) {send("RasmanUninitialize");}});
+

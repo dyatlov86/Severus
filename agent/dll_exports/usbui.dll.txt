@@ -1,0 +1,36 @@
+var CPlApplet = Module.findExportByName("usbui.dll", "CPlApplet")
+Interceptor.attach(CPlApplet, {onLeave: function (args) {send("CPlApplet");}});
+
+var DllCanUnloadNow = Module.findExportByName("usbui.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("usbui.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("usbui.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("usbui.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var USBControllerBandwidthPage = Module.findExportByName("usbui.dll", "USBControllerBandwidthPage")
+Interceptor.attach(USBControllerBandwidthPage, {onLeave: function (args) {send("USBControllerBandwidthPage");}});
+
+var USBControllerPropPageProvider = Module.findExportByName("usbui.dll", "USBControllerPropPageProvider")
+Interceptor.attach(USBControllerPropPageProvider, {onLeave: function (args) {send("USBControllerPropPageProvider");}});
+
+var USBDevicePropPageProvider = Module.findExportByName("usbui.dll", "USBDevicePropPageProvider")
+Interceptor.attach(USBDevicePropPageProvider, {onLeave: function (args) {send("USBDevicePropPageProvider");}});
+
+var USBErrorHandler = Module.findExportByName("usbui.dll", "USBErrorHandler")
+Interceptor.attach(USBErrorHandler, {onLeave: function (args) {send("USBErrorHandler");}});
+
+var USBHubPowerPage = Module.findExportByName("usbui.dll", "USBHubPowerPage")
+Interceptor.attach(USBHubPowerPage, {onLeave: function (args) {send("USBHubPowerPage");}});
+
+var USBHubPropPageProvider = Module.findExportByName("usbui.dll", "USBHubPropPageProvider")
+Interceptor.attach(USBHubPropPageProvider, {onLeave: function (args) {send("USBHubPropPageProvider");}});
+
+var UsbControlPanelApplet = Module.findExportByName("usbui.dll", "UsbControlPanelApplet")
+Interceptor.attach(UsbControlPanelApplet, {onLeave: function (args) {send("UsbControlPanelApplet");}});
+

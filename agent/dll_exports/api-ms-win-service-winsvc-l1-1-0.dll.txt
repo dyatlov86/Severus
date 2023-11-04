@@ -1,0 +1,78 @@
+var ChangeServiceConfig2A = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "ChangeServiceConfig2A")
+Interceptor.attach(ChangeServiceConfig2A, {onLeave: function (args) {send("ChangeServiceConfig2A");}});
+
+var ChangeServiceConfigA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "ChangeServiceConfigA")
+Interceptor.attach(ChangeServiceConfigA, {onLeave: function (args) {send("ChangeServiceConfigA");}});
+
+var ControlService = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "ControlService")
+Interceptor.attach(ControlService, {onLeave: function (args) {send("ControlService");}});
+
+var ControlServiceExA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "ControlServiceExA")
+Interceptor.attach(ControlServiceExA, {onLeave: function (args) {send("ControlServiceExA");}});
+
+var CreateServiceA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "CreateServiceA")
+Interceptor.attach(CreateServiceA, {onLeave: function (args) {send("CreateServiceA");}});
+
+var I_QueryTagInformation = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "I_QueryTagInformation")
+Interceptor.attach(I_QueryTagInformation, {onLeave: function (args) {send("I_QueryTagInformation");}});
+
+var I_ScBroadcastServiceControlMessage = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "I_ScBroadcastServiceControlMessage")
+Interceptor.attach(I_ScBroadcastServiceControlMessage, {onLeave: function (args) {send("I_ScBroadcastServiceControlMessage");}});
+
+var I_ScIsSecurityProcess = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "I_ScIsSecurityProcess")
+Interceptor.attach(I_ScIsSecurityProcess, {onLeave: function (args) {send("I_ScIsSecurityProcess");}});
+
+var I_ScPnPGetServiceName = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "I_ScPnPGetServiceName")
+Interceptor.attach(I_ScPnPGetServiceName, {onLeave: function (args) {send("I_ScPnPGetServiceName");}});
+
+var I_ScQueryServiceConfig = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "I_ScQueryServiceConfig")
+Interceptor.attach(I_ScQueryServiceConfig, {onLeave: function (args) {send("I_ScQueryServiceConfig");}});
+
+var I_ScRpcBindA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "I_ScRpcBindA")
+Interceptor.attach(I_ScRpcBindA, {onLeave: function (args) {send("I_ScRpcBindA");}});
+
+var I_ScRpcBindW = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "I_ScRpcBindW")
+Interceptor.attach(I_ScRpcBindW, {onLeave: function (args) {send("I_ScRpcBindW");}});
+
+var I_ScSendPnPMessage = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "I_ScSendPnPMessage")
+Interceptor.attach(I_ScSendPnPMessage, {onLeave: function (args) {send("I_ScSendPnPMessage");}});
+
+var I_ScSendTSMessage = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "I_ScSendTSMessage")
+Interceptor.attach(I_ScSendTSMessage, {onLeave: function (args) {send("I_ScSendTSMessage");}});
+
+var I_ScValidatePnPService = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "I_ScValidatePnPService")
+Interceptor.attach(I_ScValidatePnPService, {onLeave: function (args) {send("I_ScValidatePnPService");}});
+
+var NotifyServiceStatusChangeA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "NotifyServiceStatusChangeA")
+Interceptor.attach(NotifyServiceStatusChangeA, {onLeave: function (args) {send("NotifyServiceStatusChangeA");}});
+
+var OpenSCManagerA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "OpenSCManagerA")
+Interceptor.attach(OpenSCManagerA, {onLeave: function (args) {send("OpenSCManagerA");}});
+
+var OpenServiceA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "OpenServiceA")
+Interceptor.attach(OpenServiceA, {onLeave: function (args) {send("OpenServiceA");}});
+
+var QueryServiceConfig2A = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "QueryServiceConfig2A")
+Interceptor.attach(QueryServiceConfig2A, {onLeave: function (args) {send("QueryServiceConfig2A");}});
+
+var QueryServiceConfigA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "QueryServiceConfigA")
+Interceptor.attach(QueryServiceConfigA, {onLeave: function (args) {send("QueryServiceConfigA");}});
+
+var QueryServiceStatus = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "QueryServiceStatus")
+Interceptor.attach(QueryServiceStatus, {onLeave: function (args) {send("QueryServiceStatus");}});
+
+var RegisterServiceCtrlHandlerA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "RegisterServiceCtrlHandlerA")
+Interceptor.attach(RegisterServiceCtrlHandlerA, {onLeave: function (args) {send("RegisterServiceCtrlHandlerA");}});
+
+var RegisterServiceCtrlHandlerExA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "RegisterServiceCtrlHandlerExA")
+Interceptor.attach(RegisterServiceCtrlHandlerExA, {onLeave: function (args) {send("RegisterServiceCtrlHandlerExA");}});
+
+var RegisterServiceCtrlHandlerW = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "RegisterServiceCtrlHandlerW")
+Interceptor.attach(RegisterServiceCtrlHandlerW, {onLeave: function (args) {send("RegisterServiceCtrlHandlerW");}});
+
+var StartServiceA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "StartServiceA")
+Interceptor.attach(StartServiceA, {onLeave: function (args) {send("StartServiceA");}});
+
+var StartServiceCtrlDispatcherA = Module.findExportByName("api-ms-win-service-winsvc-l1-1-0.dll", "StartServiceCtrlDispatcherA")
+Interceptor.attach(StartServiceCtrlDispatcherA, {onLeave: function (args) {send("StartServiceCtrlDispatcherA");}});
+

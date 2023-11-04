@@ -1,0 +1,9 @@
+var CloseRasPerformanceData = Module.findExportByName("rasctrs.dll", "CloseRasPerformanceData")
+Interceptor.attach(CloseRasPerformanceData, {onLeave: function (args) {send("CloseRasPerformanceData");}});
+
+var CollectRasPerformanceData = Module.findExportByName("rasctrs.dll", "CollectRasPerformanceData")
+Interceptor.attach(CollectRasPerformanceData, {onLeave: function (args) {send("CollectRasPerformanceData");}});
+
+var OpenRasPerformanceData = Module.findExportByName("rasctrs.dll", "OpenRasPerformanceData")
+Interceptor.attach(OpenRasPerformanceData, {onLeave: function (args) {send("OpenRasPerformanceData");}});
+

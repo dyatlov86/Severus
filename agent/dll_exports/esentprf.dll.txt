@@ -1,0 +1,9 @@
+var ClosePerformanceData = Module.findExportByName("esentprf.dll", "ClosePerformanceData")
+Interceptor.attach(ClosePerformanceData, {onLeave: function (args) {send("ClosePerformanceData");}});
+
+var CollectPerformanceData = Module.findExportByName("esentprf.dll", "CollectPerformanceData")
+Interceptor.attach(CollectPerformanceData, {onLeave: function (args) {send("CollectPerformanceData");}});
+
+var OpenPerformanceData = Module.findExportByName("esentprf.dll", "OpenPerformanceData")
+Interceptor.attach(OpenPerformanceData, {onLeave: function (args) {send("OpenPerformanceData");}});
+

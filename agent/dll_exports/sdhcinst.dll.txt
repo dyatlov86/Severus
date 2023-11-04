@@ -1,0 +1,6 @@
+var SdClassCoInstaller = Module.findExportByName("sdhcinst.dll", "SdClassCoInstaller")
+Interceptor.attach(SdClassCoInstaller, {onLeave: function (args) {send("SdClassCoInstaller");}});
+
+var SdClassInstall = Module.findExportByName("sdhcinst.dll", "SdClassInstall")
+Interceptor.attach(SdClassInstall, {onLeave: function (args) {send("SdClassInstall");}});
+

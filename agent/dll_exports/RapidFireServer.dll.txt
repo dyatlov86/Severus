@@ -1,0 +1,51 @@
+var rfCreateEncodeSession = Module.findExportByName("RapidFireServer.dll", "rfCreateEncodeSession")
+Interceptor.attach(rfCreateEncodeSession, {onLeave: function (args) {send("rfCreateEncodeSession");}});
+
+var rfCreateEncodeSession2 = Module.findExportByName("RapidFireServer.dll", "rfCreateEncodeSession2")
+Interceptor.attach(rfCreateEncodeSession2, {onLeave: function (args) {send("rfCreateEncodeSession2");}});
+
+var rfCreateEncoder = Module.findExportByName("RapidFireServer.dll", "rfCreateEncoder")
+Interceptor.attach(rfCreateEncoder, {onLeave: function (args) {send("rfCreateEncoder");}});
+
+var rfCreateEncoder2 = Module.findExportByName("RapidFireServer.dll", "rfCreateEncoder2")
+Interceptor.attach(rfCreateEncoder2, {onLeave: function (args) {send("rfCreateEncoder2");}});
+
+var rfDeleteEncodeSession = Module.findExportByName("RapidFireServer.dll", "rfDeleteEncodeSession")
+Interceptor.attach(rfDeleteEncodeSession, {onLeave: function (args) {send("rfDeleteEncodeSession");}});
+
+var rfEncodeFrame = Module.findExportByName("RapidFireServer.dll", "rfEncodeFrame")
+Interceptor.attach(rfEncodeFrame, {onLeave: function (args) {send("rfEncodeFrame");}});
+
+var rfGetEncodeParameter = Module.findExportByName("RapidFireServer.dll", "rfGetEncodeParameter")
+Interceptor.attach(rfGetEncodeParameter, {onLeave: function (args) {send("rfGetEncodeParameter");}});
+
+var rfGetEncodedFrame = Module.findExportByName("RapidFireServer.dll", "rfGetEncodedFrame")
+Interceptor.attach(rfGetEncodedFrame, {onLeave: function (args) {send("rfGetEncodedFrame");}});
+
+var rfGetMouseData = Module.findExportByName("RapidFireServer.dll", "rfGetMouseData")
+Interceptor.attach(rfGetMouseData, {onLeave: function (args) {send("rfGetMouseData");}});
+
+var rfGetMouseData2 = Module.findExportByName("RapidFireServer.dll", "rfGetMouseData2")
+Interceptor.attach(rfGetMouseData2, {onLeave: function (args) {send("rfGetMouseData2");}});
+
+var rfGetRenderTargetState = Module.findExportByName("RapidFireServer.dll", "rfGetRenderTargetState")
+Interceptor.attach(rfGetRenderTargetState, {onLeave: function (args) {send("rfGetRenderTargetState");}});
+
+var rfGetSourceFrame = Module.findExportByName("RapidFireServer.dll", "rfGetSourceFrame")
+Interceptor.attach(rfGetSourceFrame, {onLeave: function (args) {send("rfGetSourceFrame");}});
+
+var rfRegisterRenderTarget = Module.findExportByName("RapidFireServer.dll", "rfRegisterRenderTarget")
+Interceptor.attach(rfRegisterRenderTarget, {onLeave: function (args) {send("rfRegisterRenderTarget");}});
+
+var rfReleaseEvent = Module.findExportByName("RapidFireServer.dll", "rfReleaseEvent")
+Interceptor.attach(rfReleaseEvent, {onLeave: function (args) {send("rfReleaseEvent");}});
+
+var rfRemoveRenderTarget = Module.findExportByName("RapidFireServer.dll", "rfRemoveRenderTarget")
+Interceptor.attach(rfRemoveRenderTarget, {onLeave: function (args) {send("rfRemoveRenderTarget");}});
+
+var rfResizeSession = Module.findExportByName("RapidFireServer.dll", "rfResizeSession")
+Interceptor.attach(rfResizeSession, {onLeave: function (args) {send("rfResizeSession");}});
+
+var rfSetEncodeParameter = Module.findExportByName("RapidFireServer.dll", "rfSetEncodeParameter")
+Interceptor.attach(rfSetEncodeParameter, {onLeave: function (args) {send("rfSetEncodeParameter");}});
+

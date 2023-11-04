@@ -1,0 +1,6 @@
+var MakeRawRpcRequest = Module.findExportByName("VantageRpcClient.dll", "MakeRawRpcRequest")
+Interceptor.attach(MakeRawRpcRequest, {onLeave: function (args) {send("MakeRawRpcRequest");}});
+
+var MakeRpcRequest = Module.findExportByName("VantageRpcClient.dll", "MakeRpcRequest")
+Interceptor.attach(MakeRpcRequest, {onLeave: function (args) {send("MakeRpcRequest");}});
+

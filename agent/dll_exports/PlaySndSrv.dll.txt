@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("PlaySndSrv.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("PlaySndSrv.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var PlaySoundServerInitialize = Module.findExportByName("PlaySndSrv.dll", "PlaySoundServerInitialize")
+Interceptor.attach(PlaySoundServerInitialize, {onLeave: function (args) {send("PlaySoundServerInitialize");}});
+
+var PlaySoundServerTerminate = Module.findExportByName("PlaySndSrv.dll", "PlaySoundServerTerminate")
+Interceptor.attach(PlaySoundServerTerminate, {onLeave: function (args) {send("PlaySoundServerTerminate");}});
+

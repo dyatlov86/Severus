@@ -1,0 +1,6 @@
+var ScesrvInitializeServer = Module.findExportByName("scesrv.dll", "ScesrvInitializeServer")
+Interceptor.attach(ScesrvInitializeServer, {onLeave: function (args) {send("ScesrvInitializeServer");}});
+
+var ScesrvTerminateServer = Module.findExportByName("scesrv.dll", "ScesrvTerminateServer")
+Interceptor.attach(ScesrvTerminateServer, {onLeave: function (args) {send("ScesrvTerminateServer");}});
+

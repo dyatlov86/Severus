@@ -1,0 +1,63 @@
+var DllRegisterServer = Module.findExportByName("WMVCORE.DLL", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var WMCheckURLExtension = Module.findExportByName("WMVCORE.DLL", "WMCheckURLExtension")
+Interceptor.attach(WMCheckURLExtension, {onLeave: function (args) {send("WMCheckURLExtension");}});
+
+var WMCheckURLScheme = Module.findExportByName("WMVCORE.DLL", "WMCheckURLScheme")
+Interceptor.attach(WMCheckURLScheme, {onLeave: function (args) {send("WMCheckURLScheme");}});
+
+var WMCreateBackupRestorer = Module.findExportByName("WMVCORE.DLL", "WMCreateBackupRestorer")
+Interceptor.attach(WMCreateBackupRestorer, {onLeave: function (args) {send("WMCreateBackupRestorer");}});
+
+var WMCreateBackupRestorerPrivate = Module.findExportByName("WMVCORE.DLL", "WMCreateBackupRestorerPrivate")
+Interceptor.attach(WMCreateBackupRestorerPrivate, {onLeave: function (args) {send("WMCreateBackupRestorerPrivate");}});
+
+var WMCreateEditor = Module.findExportByName("WMVCORE.DLL", "WMCreateEditor")
+Interceptor.attach(WMCreateEditor, {onLeave: function (args) {send("WMCreateEditor");}});
+
+var WMCreateIndexer = Module.findExportByName("WMVCORE.DLL", "WMCreateIndexer")
+Interceptor.attach(WMCreateIndexer, {onLeave: function (args) {send("WMCreateIndexer");}});
+
+var WMCreateLicenseRevocationAgentPrivate = Module.findExportByName("WMVCORE.DLL", "WMCreateLicenseRevocationAgentPrivate")
+Interceptor.attach(WMCreateLicenseRevocationAgentPrivate, {onLeave: function (args) {send("WMCreateLicenseRevocationAgentPrivate");}});
+
+var WMCreateProfileManager = Module.findExportByName("WMVCORE.DLL", "WMCreateProfileManager")
+Interceptor.attach(WMCreateProfileManager, {onLeave: function (args) {send("WMCreateProfileManager");}});
+
+var WMCreateReader = Module.findExportByName("WMVCORE.DLL", "WMCreateReader")
+Interceptor.attach(WMCreateReader, {onLeave: function (args) {send("WMCreateReader");}});
+
+var WMCreateReaderPriv = Module.findExportByName("WMVCORE.DLL", "WMCreateReaderPriv")
+Interceptor.attach(WMCreateReaderPriv, {onLeave: function (args) {send("WMCreateReaderPriv");}});
+
+var WMCreateSyncReader = Module.findExportByName("WMVCORE.DLL", "WMCreateSyncReader")
+Interceptor.attach(WMCreateSyncReader, {onLeave: function (args) {send("WMCreateSyncReader");}});
+
+var WMCreateSyncReaderPriv = Module.findExportByName("WMVCORE.DLL", "WMCreateSyncReaderPriv")
+Interceptor.attach(WMCreateSyncReaderPriv, {onLeave: function (args) {send("WMCreateSyncReaderPriv");}});
+
+var WMCreateWriter = Module.findExportByName("WMVCORE.DLL", "WMCreateWriter")
+Interceptor.attach(WMCreateWriter, {onLeave: function (args) {send("WMCreateWriter");}});
+
+var WMCreateWriterFileSink = Module.findExportByName("WMVCORE.DLL", "WMCreateWriterFileSink")
+Interceptor.attach(WMCreateWriterFileSink, {onLeave: function (args) {send("WMCreateWriterFileSink");}});
+
+var WMCreateWriterNetworkSink = Module.findExportByName("WMVCORE.DLL", "WMCreateWriterNetworkSink")
+Interceptor.attach(WMCreateWriterNetworkSink, {onLeave: function (args) {send("WMCreateWriterNetworkSink");}});
+
+var WMCreateWriterPriv = Module.findExportByName("WMVCORE.DLL", "WMCreateWriterPriv")
+Interceptor.attach(WMCreateWriterPriv, {onLeave: function (args) {send("WMCreateWriterPriv");}});
+
+var WMCreateWriterPushSink = Module.findExportByName("WMVCORE.DLL", "WMCreateWriterPushSink")
+Interceptor.attach(WMCreateWriterPushSink, {onLeave: function (args) {send("WMCreateWriterPushSink");}});
+
+var WMIsAvailableOffline = Module.findExportByName("WMVCORE.DLL", "WMIsAvailableOffline")
+Interceptor.attach(WMIsAvailableOffline, {onLeave: function (args) {send("WMIsAvailableOffline");}});
+
+var WMIsContentProtected = Module.findExportByName("WMVCORE.DLL", "WMIsContentProtected")
+Interceptor.attach(WMIsContentProtected, {onLeave: function (args) {send("WMIsContentProtected");}});
+
+var WMValidateData = Module.findExportByName("WMVCORE.DLL", "WMValidateData")
+Interceptor.attach(WMValidateData, {onLeave: function (args) {send("WMValidateData");}});
+

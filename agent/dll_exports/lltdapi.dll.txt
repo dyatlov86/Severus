@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("lltdapi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("lltdapi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var LLTDCreateEnumerator = Module.findExportByName("lltdapi.dll", "LLTDCreateEnumerator")
+Interceptor.attach(LLTDCreateEnumerator, {onLeave: function (args) {send("LLTDCreateEnumerator");}});
+
+var LLTDCreateMapFromXML = Module.findExportByName("lltdapi.dll", "LLTDCreateMapFromXML")
+Interceptor.attach(LLTDCreateMapFromXML, {onLeave: function (args) {send("LLTDCreateMapFromXML");}});
+
+var LLTDCreateMapper = Module.findExportByName("lltdapi.dll", "LLTDCreateMapper")
+Interceptor.attach(LLTDCreateMapper, {onLeave: function (args) {send("LLTDCreateMapper");}});
+
+var LLTDCreateNode = Module.findExportByName("lltdapi.dll", "LLTDCreateNode")
+Interceptor.attach(LLTDCreateNode, {onLeave: function (args) {send("LLTDCreateNode");}});
+

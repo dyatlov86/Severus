@@ -1,0 +1,255 @@
+var BeginBufferedAnimation = Module.findExportByName("uxtheme.dll", "BeginBufferedAnimation")
+Interceptor.attach(BeginBufferedAnimation, {onLeave: function (args) {send("BeginBufferedAnimation");}});
+
+var BeginBufferedPaint = Module.findExportByName("uxtheme.dll", "BeginBufferedPaint")
+Interceptor.attach(BeginBufferedPaint, {onLeave: function (args) {send("BeginBufferedPaint");}});
+
+var BeginPanningFeedback = Module.findExportByName("uxtheme.dll", "BeginPanningFeedback")
+Interceptor.attach(BeginPanningFeedback, {onLeave: function (args) {send("BeginPanningFeedback");}});
+
+var BufferedPaintClear = Module.findExportByName("uxtheme.dll", "BufferedPaintClear")
+Interceptor.attach(BufferedPaintClear, {onLeave: function (args) {send("BufferedPaintClear");}});
+
+var BufferedPaintInit = Module.findExportByName("uxtheme.dll", "BufferedPaintInit")
+Interceptor.attach(BufferedPaintInit, {onLeave: function (args) {send("BufferedPaintInit");}});
+
+var BufferedPaintRenderAnimation = Module.findExportByName("uxtheme.dll", "BufferedPaintRenderAnimation")
+Interceptor.attach(BufferedPaintRenderAnimation, {onLeave: function (args) {send("BufferedPaintRenderAnimation");}});
+
+var BufferedPaintSetAlpha = Module.findExportByName("uxtheme.dll", "BufferedPaintSetAlpha")
+Interceptor.attach(BufferedPaintSetAlpha, {onLeave: function (args) {send("BufferedPaintSetAlpha");}});
+
+var BufferedPaintStopAllAnimations = Module.findExportByName("uxtheme.dll", "BufferedPaintStopAllAnimations")
+Interceptor.attach(BufferedPaintStopAllAnimations, {onLeave: function (args) {send("BufferedPaintStopAllAnimations");}});
+
+var BufferedPaintUnInit = Module.findExportByName("uxtheme.dll", "BufferedPaintUnInit")
+Interceptor.attach(BufferedPaintUnInit, {onLeave: function (args) {send("BufferedPaintUnInit");}});
+
+var CloseThemeData = Module.findExportByName("uxtheme.dll", "CloseThemeData")
+Interceptor.attach(CloseThemeData, {onLeave: function (args) {send("CloseThemeData");}});
+
+var DllCanUnloadNow = Module.findExportByName("uxtheme.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("uxtheme.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("uxtheme.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DrawThemeBackground = Module.findExportByName("uxtheme.dll", "DrawThemeBackground")
+Interceptor.attach(DrawThemeBackground, {onLeave: function (args) {send("DrawThemeBackground");}});
+
+var DrawThemeBackgroundEx = Module.findExportByName("uxtheme.dll", "DrawThemeBackgroundEx")
+Interceptor.attach(DrawThemeBackgroundEx, {onLeave: function (args) {send("DrawThemeBackgroundEx");}});
+
+var DrawThemeEdge = Module.findExportByName("uxtheme.dll", "DrawThemeEdge")
+Interceptor.attach(DrawThemeEdge, {onLeave: function (args) {send("DrawThemeEdge");}});
+
+var DrawThemeIcon = Module.findExportByName("uxtheme.dll", "DrawThemeIcon")
+Interceptor.attach(DrawThemeIcon, {onLeave: function (args) {send("DrawThemeIcon");}});
+
+var DrawThemeParentBackground = Module.findExportByName("uxtheme.dll", "DrawThemeParentBackground")
+Interceptor.attach(DrawThemeParentBackground, {onLeave: function (args) {send("DrawThemeParentBackground");}});
+
+var DrawThemeParentBackgroundEx = Module.findExportByName("uxtheme.dll", "DrawThemeParentBackgroundEx")
+Interceptor.attach(DrawThemeParentBackgroundEx, {onLeave: function (args) {send("DrawThemeParentBackgroundEx");}});
+
+var DrawThemeText = Module.findExportByName("uxtheme.dll", "DrawThemeText")
+Interceptor.attach(DrawThemeText, {onLeave: function (args) {send("DrawThemeText");}});
+
+var DrawThemeTextEx = Module.findExportByName("uxtheme.dll", "DrawThemeTextEx")
+Interceptor.attach(DrawThemeTextEx, {onLeave: function (args) {send("DrawThemeTextEx");}});
+
+var EnableThemeDialogTexture = Module.findExportByName("uxtheme.dll", "EnableThemeDialogTexture")
+Interceptor.attach(EnableThemeDialogTexture, {onLeave: function (args) {send("EnableThemeDialogTexture");}});
+
+var EnableTheming = Module.findExportByName("uxtheme.dll", "EnableTheming")
+Interceptor.attach(EnableTheming, {onLeave: function (args) {send("EnableTheming");}});
+
+var EndBufferedAnimation = Module.findExportByName("uxtheme.dll", "EndBufferedAnimation")
+Interceptor.attach(EndBufferedAnimation, {onLeave: function (args) {send("EndBufferedAnimation");}});
+
+var EndBufferedPaint = Module.findExportByName("uxtheme.dll", "EndBufferedPaint")
+Interceptor.attach(EndBufferedPaint, {onLeave: function (args) {send("EndBufferedPaint");}});
+
+var EndPanningFeedback = Module.findExportByName("uxtheme.dll", "EndPanningFeedback")
+Interceptor.attach(EndPanningFeedback, {onLeave: function (args) {send("EndPanningFeedback");}});
+
+var GetBufferedPaintBits = Module.findExportByName("uxtheme.dll", "GetBufferedPaintBits")
+Interceptor.attach(GetBufferedPaintBits, {onLeave: function (args) {send("GetBufferedPaintBits");}});
+
+var GetBufferedPaintDC = Module.findExportByName("uxtheme.dll", "GetBufferedPaintDC")
+Interceptor.attach(GetBufferedPaintDC, {onLeave: function (args) {send("GetBufferedPaintDC");}});
+
+var GetBufferedPaintTargetDC = Module.findExportByName("uxtheme.dll", "GetBufferedPaintTargetDC")
+Interceptor.attach(GetBufferedPaintTargetDC, {onLeave: function (args) {send("GetBufferedPaintTargetDC");}});
+
+var GetBufferedPaintTargetRect = Module.findExportByName("uxtheme.dll", "GetBufferedPaintTargetRect")
+Interceptor.attach(GetBufferedPaintTargetRect, {onLeave: function (args) {send("GetBufferedPaintTargetRect");}});
+
+var GetColorFromPreference = Module.findExportByName("uxtheme.dll", "GetColorFromPreference")
+Interceptor.attach(GetColorFromPreference, {onLeave: function (args) {send("GetColorFromPreference");}});
+
+var GetCurrentThemeName = Module.findExportByName("uxtheme.dll", "GetCurrentThemeName")
+Interceptor.attach(GetCurrentThemeName, {onLeave: function (args) {send("GetCurrentThemeName");}});
+
+var GetImmersiveColorFromColorSetEx = Module.findExportByName("uxtheme.dll", "GetImmersiveColorFromColorSetEx")
+Interceptor.attach(GetImmersiveColorFromColorSetEx, {onLeave: function (args) {send("GetImmersiveColorFromColorSetEx");}});
+
+var GetImmersiveUserColorSetPreference = Module.findExportByName("uxtheme.dll", "GetImmersiveUserColorSetPreference")
+Interceptor.attach(GetImmersiveUserColorSetPreference, {onLeave: function (args) {send("GetImmersiveUserColorSetPreference");}});
+
+var GetThemeAnimationProperty = Module.findExportByName("uxtheme.dll", "GetThemeAnimationProperty")
+Interceptor.attach(GetThemeAnimationProperty, {onLeave: function (args) {send("GetThemeAnimationProperty");}});
+
+var GetThemeAnimationTransform = Module.findExportByName("uxtheme.dll", "GetThemeAnimationTransform")
+Interceptor.attach(GetThemeAnimationTransform, {onLeave: function (args) {send("GetThemeAnimationTransform");}});
+
+var GetThemeAppProperties = Module.findExportByName("uxtheme.dll", "GetThemeAppProperties")
+Interceptor.attach(GetThemeAppProperties, {onLeave: function (args) {send("GetThemeAppProperties");}});
+
+var GetThemeBackgroundContentRect = Module.findExportByName("uxtheme.dll", "GetThemeBackgroundContentRect")
+Interceptor.attach(GetThemeBackgroundContentRect, {onLeave: function (args) {send("GetThemeBackgroundContentRect");}});
+
+var GetThemeBackgroundExtent = Module.findExportByName("uxtheme.dll", "GetThemeBackgroundExtent")
+Interceptor.attach(GetThemeBackgroundExtent, {onLeave: function (args) {send("GetThemeBackgroundExtent");}});
+
+var GetThemeBackgroundRegion = Module.findExportByName("uxtheme.dll", "GetThemeBackgroundRegion")
+Interceptor.attach(GetThemeBackgroundRegion, {onLeave: function (args) {send("GetThemeBackgroundRegion");}});
+
+var GetThemeBitmap = Module.findExportByName("uxtheme.dll", "GetThemeBitmap")
+Interceptor.attach(GetThemeBitmap, {onLeave: function (args) {send("GetThemeBitmap");}});
+
+var GetThemeBool = Module.findExportByName("uxtheme.dll", "GetThemeBool")
+Interceptor.attach(GetThemeBool, {onLeave: function (args) {send("GetThemeBool");}});
+
+var GetThemeColor = Module.findExportByName("uxtheme.dll", "GetThemeColor")
+Interceptor.attach(GetThemeColor, {onLeave: function (args) {send("GetThemeColor");}});
+
+var GetThemeDocumentationProperty = Module.findExportByName("uxtheme.dll", "GetThemeDocumentationProperty")
+Interceptor.attach(GetThemeDocumentationProperty, {onLeave: function (args) {send("GetThemeDocumentationProperty");}});
+
+var GetThemeEnumValue = Module.findExportByName("uxtheme.dll", "GetThemeEnumValue")
+Interceptor.attach(GetThemeEnumValue, {onLeave: function (args) {send("GetThemeEnumValue");}});
+
+var GetThemeFilename = Module.findExportByName("uxtheme.dll", "GetThemeFilename")
+Interceptor.attach(GetThemeFilename, {onLeave: function (args) {send("GetThemeFilename");}});
+
+var GetThemeFont = Module.findExportByName("uxtheme.dll", "GetThemeFont")
+Interceptor.attach(GetThemeFont, {onLeave: function (args) {send("GetThemeFont");}});
+
+var GetThemeInt = Module.findExportByName("uxtheme.dll", "GetThemeInt")
+Interceptor.attach(GetThemeInt, {onLeave: function (args) {send("GetThemeInt");}});
+
+var GetThemeIntList = Module.findExportByName("uxtheme.dll", "GetThemeIntList")
+Interceptor.attach(GetThemeIntList, {onLeave: function (args) {send("GetThemeIntList");}});
+
+var GetThemeMargins = Module.findExportByName("uxtheme.dll", "GetThemeMargins")
+Interceptor.attach(GetThemeMargins, {onLeave: function (args) {send("GetThemeMargins");}});
+
+var GetThemeMetric = Module.findExportByName("uxtheme.dll", "GetThemeMetric")
+Interceptor.attach(GetThemeMetric, {onLeave: function (args) {send("GetThemeMetric");}});
+
+var GetThemePartSize = Module.findExportByName("uxtheme.dll", "GetThemePartSize")
+Interceptor.attach(GetThemePartSize, {onLeave: function (args) {send("GetThemePartSize");}});
+
+var GetThemePosition = Module.findExportByName("uxtheme.dll", "GetThemePosition")
+Interceptor.attach(GetThemePosition, {onLeave: function (args) {send("GetThemePosition");}});
+
+var GetThemePropertyOrigin = Module.findExportByName("uxtheme.dll", "GetThemePropertyOrigin")
+Interceptor.attach(GetThemePropertyOrigin, {onLeave: function (args) {send("GetThemePropertyOrigin");}});
+
+var GetThemeRect = Module.findExportByName("uxtheme.dll", "GetThemeRect")
+Interceptor.attach(GetThemeRect, {onLeave: function (args) {send("GetThemeRect");}});
+
+var GetThemeStream = Module.findExportByName("uxtheme.dll", "GetThemeStream")
+Interceptor.attach(GetThemeStream, {onLeave: function (args) {send("GetThemeStream");}});
+
+var GetThemeString = Module.findExportByName("uxtheme.dll", "GetThemeString")
+Interceptor.attach(GetThemeString, {onLeave: function (args) {send("GetThemeString");}});
+
+var GetThemeSysBool = Module.findExportByName("uxtheme.dll", "GetThemeSysBool")
+Interceptor.attach(GetThemeSysBool, {onLeave: function (args) {send("GetThemeSysBool");}});
+
+var GetThemeSysColor = Module.findExportByName("uxtheme.dll", "GetThemeSysColor")
+Interceptor.attach(GetThemeSysColor, {onLeave: function (args) {send("GetThemeSysColor");}});
+
+var GetThemeSysColorBrush = Module.findExportByName("uxtheme.dll", "GetThemeSysColorBrush")
+Interceptor.attach(GetThemeSysColorBrush, {onLeave: function (args) {send("GetThemeSysColorBrush");}});
+
+var GetThemeSysFont = Module.findExportByName("uxtheme.dll", "GetThemeSysFont")
+Interceptor.attach(GetThemeSysFont, {onLeave: function (args) {send("GetThemeSysFont");}});
+
+var GetThemeSysInt = Module.findExportByName("uxtheme.dll", "GetThemeSysInt")
+Interceptor.attach(GetThemeSysInt, {onLeave: function (args) {send("GetThemeSysInt");}});
+
+var GetThemeSysSize = Module.findExportByName("uxtheme.dll", "GetThemeSysSize")
+Interceptor.attach(GetThemeSysSize, {onLeave: function (args) {send("GetThemeSysSize");}});
+
+var GetThemeSysString = Module.findExportByName("uxtheme.dll", "GetThemeSysString")
+Interceptor.attach(GetThemeSysString, {onLeave: function (args) {send("GetThemeSysString");}});
+
+var GetThemeTextExtent = Module.findExportByName("uxtheme.dll", "GetThemeTextExtent")
+Interceptor.attach(GetThemeTextExtent, {onLeave: function (args) {send("GetThemeTextExtent");}});
+
+var GetThemeTextMetrics = Module.findExportByName("uxtheme.dll", "GetThemeTextMetrics")
+Interceptor.attach(GetThemeTextMetrics, {onLeave: function (args) {send("GetThemeTextMetrics");}});
+
+var GetThemeTimingFunction = Module.findExportByName("uxtheme.dll", "GetThemeTimingFunction")
+Interceptor.attach(GetThemeTimingFunction, {onLeave: function (args) {send("GetThemeTimingFunction");}});
+
+var GetThemeTransitionDuration = Module.findExportByName("uxtheme.dll", "GetThemeTransitionDuration")
+Interceptor.attach(GetThemeTransitionDuration, {onLeave: function (args) {send("GetThemeTransitionDuration");}});
+
+var GetUserColorPreference = Module.findExportByName("uxtheme.dll", "GetUserColorPreference")
+Interceptor.attach(GetUserColorPreference, {onLeave: function (args) {send("GetUserColorPreference");}});
+
+var GetWindowTheme = Module.findExportByName("uxtheme.dll", "GetWindowTheme")
+Interceptor.attach(GetWindowTheme, {onLeave: function (args) {send("GetWindowTheme");}});
+
+var HitTestThemeBackground = Module.findExportByName("uxtheme.dll", "HitTestThemeBackground")
+Interceptor.attach(HitTestThemeBackground, {onLeave: function (args) {send("HitTestThemeBackground");}});
+
+var IsAppThemed = Module.findExportByName("uxtheme.dll", "IsAppThemed")
+Interceptor.attach(IsAppThemed, {onLeave: function (args) {send("IsAppThemed");}});
+
+var IsCompositionActive = Module.findExportByName("uxtheme.dll", "IsCompositionActive")
+Interceptor.attach(IsCompositionActive, {onLeave: function (args) {send("IsCompositionActive");}});
+
+var IsThemeActive = Module.findExportByName("uxtheme.dll", "IsThemeActive")
+Interceptor.attach(IsThemeActive, {onLeave: function (args) {send("IsThemeActive");}});
+
+var IsThemeBackgroundPartiallyTransparent = Module.findExportByName("uxtheme.dll", "IsThemeBackgroundPartiallyTransparent")
+Interceptor.attach(IsThemeBackgroundPartiallyTransparent, {onLeave: function (args) {send("IsThemeBackgroundPartiallyTransparent");}});
+
+var IsThemeDialogTextureEnabled = Module.findExportByName("uxtheme.dll", "IsThemeDialogTextureEnabled")
+Interceptor.attach(IsThemeDialogTextureEnabled, {onLeave: function (args) {send("IsThemeDialogTextureEnabled");}});
+
+var IsThemePartDefined = Module.findExportByName("uxtheme.dll", "IsThemePartDefined")
+Interceptor.attach(IsThemePartDefined, {onLeave: function (args) {send("IsThemePartDefined");}});
+
+var OpenThemeData = Module.findExportByName("uxtheme.dll", "OpenThemeData")
+Interceptor.attach(OpenThemeData, {onLeave: function (args) {send("OpenThemeData");}});
+
+var OpenThemeDataEx = Module.findExportByName("uxtheme.dll", "OpenThemeDataEx")
+Interceptor.attach(OpenThemeDataEx, {onLeave: function (args) {send("OpenThemeDataEx");}});
+
+var OpenThemeDataForDpi = Module.findExportByName("uxtheme.dll", "OpenThemeDataForDpi")
+Interceptor.attach(OpenThemeDataForDpi, {onLeave: function (args) {send("OpenThemeDataForDpi");}});
+
+var SetThemeAppProperties = Module.findExportByName("uxtheme.dll", "SetThemeAppProperties")
+Interceptor.attach(SetThemeAppProperties, {onLeave: function (args) {send("SetThemeAppProperties");}});
+
+var SetWindowTheme = Module.findExportByName("uxtheme.dll", "SetWindowTheme")
+Interceptor.attach(SetWindowTheme, {onLeave: function (args) {send("SetWindowTheme");}});
+
+var SetWindowThemeAttribute = Module.findExportByName("uxtheme.dll", "SetWindowThemeAttribute")
+Interceptor.attach(SetWindowThemeAttribute, {onLeave: function (args) {send("SetWindowThemeAttribute");}});
+
+var ThemeInitApiHook = Module.findExportByName("uxtheme.dll", "ThemeInitApiHook")
+Interceptor.attach(ThemeInitApiHook, {onLeave: function (args) {send("ThemeInitApiHook");}});
+
+var UpdatePanningFeedback = Module.findExportByName("uxtheme.dll", "UpdatePanningFeedback")
+Interceptor.attach(UpdatePanningFeedback, {onLeave: function (args) {send("UpdatePanningFeedback");}});
+

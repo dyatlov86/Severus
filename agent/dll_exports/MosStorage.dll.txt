@@ -1,0 +1,99 @@
+var MosQueryAnyPackagesFromPath = Module.findExportByName("MosStorage.dll", "MosQueryAnyPackagesFromPath")
+Interceptor.attach(MosQueryAnyPackagesFromPath, {onLeave: function (args) {send("MosQueryAnyPackagesFromPath");}});
+
+var MosQueryCatalogExists = Module.findExportByName("MosStorage.dll", "MosQueryCatalogExists")
+Interceptor.attach(MosQueryCatalogExists, {onLeave: function (args) {send("MosQueryCatalogExists");}});
+
+var MosQueryPackages = Module.findExportByName("MosStorage.dll", "MosQueryPackages")
+Interceptor.attach(MosQueryPackages, {onLeave: function (args) {send("MosQueryPackages");}});
+
+var MosQueryPackagesFromPath = Module.findExportByName("MosStorage.dll", "MosQueryPackagesFromPath")
+Interceptor.attach(MosQueryPackagesFromPath, {onLeave: function (args) {send("MosQueryPackagesFromPath");}});
+
+var MosStorageDumpConfiguration = Module.findExportByName("MosStorage.dll", "MosStorageDumpConfiguration")
+Interceptor.attach(MosStorageDumpConfiguration, {onLeave: function (args) {send("MosStorageDumpConfiguration");}});
+
+var MosStorageEnsureIsAppContainerCompliant = Module.findExportByName("MosStorage.dll", "MosStorageEnsureIsAppContainerCompliant")
+Interceptor.attach(MosStorageEnsureIsAppContainerCompliant, {onLeave: function (args) {send("MosStorageEnsureIsAppContainerCompliant");}});
+
+var MosStorageEnsureMapDataDirectory = Module.findExportByName("MosStorage.dll", "MosStorageEnsureMapDataDirectory")
+Interceptor.attach(MosStorageEnsureMapDataDirectory, {onLeave: function (args) {send("MosStorageEnsureMapDataDirectory");}});
+
+var MosStorageEnsureMapDataDirectoryAndKeepFileHandle = Module.findExportByName("MosStorage.dll", "MosStorageEnsureMapDataDirectoryAndKeepFileHandle")
+Interceptor.attach(MosStorageEnsureMapDataDirectoryAndKeepFileHandle, {onLeave: function (args) {send("MosStorageEnsureMapDataDirectoryAndKeepFileHandle");}});
+
+var MosStorageEnsureMapDataDirectoryReturnPath = Module.findExportByName("MosStorage.dll", "MosStorageEnsureMapDataDirectoryReturnPath")
+Interceptor.attach(MosStorageEnsureMapDataDirectoryReturnPath, {onLeave: function (args) {send("MosStorageEnsureMapDataDirectoryReturnPath");}});
+
+var MosStorageGetBrowseCacheSizeInMBytes = Module.findExportByName("MosStorage.dll", "MosStorageGetBrowseCacheSizeInMBytes")
+Interceptor.attach(MosStorageGetBrowseCacheSizeInMBytes, {onLeave: function (args) {send("MosStorageGetBrowseCacheSizeInMBytes");}});
+
+var MosStorageGetCurrentLocation = Module.findExportByName("MosStorage.dll", "MosStorageGetCurrentLocation")
+Interceptor.attach(MosStorageGetCurrentLocation, {onLeave: function (args) {send("MosStorageGetCurrentLocation");}});
+
+var MosStorageGetDataDirectory = Module.findExportByName("MosStorage.dll", "MosStorageGetDataDirectory")
+Interceptor.attach(MosStorageGetDataDirectory, {onLeave: function (args) {send("MosStorageGetDataDirectory");}});
+
+var MosStorageGetDefaultExternalStorage = Module.findExportByName("MosStorage.dll", "MosStorageGetDefaultExternalStorage")
+Interceptor.attach(MosStorageGetDefaultExternalStorage, {onLeave: function (args) {send("MosStorageGetDefaultExternalStorage");}});
+
+var MosStorageGetLocations = Module.findExportByName("MosStorage.dll", "MosStorageGetLocations")
+Interceptor.attach(MosStorageGetLocations, {onLeave: function (args) {send("MosStorageGetLocations");}});
+
+var MosStorageGetMapDataMaxBrowseCacheSizeInBytes = Module.findExportByName("MosStorage.dll", "MosStorageGetMapDataMaxBrowseCacheSizeInBytes")
+Interceptor.attach(MosStorageGetMapDataMaxBrowseCacheSizeInBytes, {onLeave: function (args) {send("MosStorageGetMapDataMaxBrowseCacheSizeInBytes");}});
+
+var MosStorageGetMapsRepairAttempts = Module.findExportByName("MosStorage.dll", "MosStorageGetMapsRepairAttempts")
+Interceptor.attach(MosStorageGetMapsRepairAttempts, {onLeave: function (args) {send("MosStorageGetMapsRepairAttempts");}});
+
+var MosStorageGetMigrationState = Module.findExportByName("MosStorage.dll", "MosStorageGetMigrationState")
+Interceptor.attach(MosStorageGetMigrationState, {onLeave: function (args) {send("MosStorageGetMigrationState");}});
+
+var MosStorageGetResourceDirectory = Module.findExportByName("MosStorage.dll", "MosStorageGetResourceDirectory")
+Interceptor.attach(MosStorageGetResourceDirectory, {onLeave: function (args) {send("MosStorageGetResourceDirectory");}});
+
+var MosStorageGetStorageDeviceDataFromDeviceGuid = Module.findExportByName("MosStorage.dll", "MosStorageGetStorageDeviceDataFromDeviceGuid")
+Interceptor.attach(MosStorageGetStorageDeviceDataFromDeviceGuid, {onLeave: function (args) {send("MosStorageGetStorageDeviceDataFromDeviceGuid");}});
+
+var MosStorageGetStorageSizesInBytes = Module.findExportByName("MosStorage.dll", "MosStorageGetStorageSizesInBytes")
+Interceptor.attach(MosStorageGetStorageSizesInBytes, {onLeave: function (args) {send("MosStorageGetStorageSizesInBytes");}});
+
+var MosStorageGetSystemDataDirectory = Module.findExportByName("MosStorage.dll", "MosStorageGetSystemDataDirectory")
+Interceptor.attach(MosStorageGetSystemDataDirectory, {onLeave: function (args) {send("MosStorageGetSystemDataDirectory");}});
+
+var MosStorageGetTotalMapDataInBytes = Module.findExportByName("MosStorage.dll", "MosStorageGetTotalMapDataInBytes")
+Interceptor.attach(MosStorageGetTotalMapDataInBytes, {onLeave: function (args) {send("MosStorageGetTotalMapDataInBytes");}});
+
+var MosStorageGetWhetherSpaceAvailable = Module.findExportByName("MosStorage.dll", "MosStorageGetWhetherSpaceAvailable")
+Interceptor.attach(MosStorageGetWhetherSpaceAvailable, {onLeave: function (args) {send("MosStorageGetWhetherSpaceAvailable");}});
+
+var MosStorageIsStorageStateValid = Module.findExportByName("MosStorage.dll", "MosStorageIsStorageStateValid")
+Interceptor.attach(MosStorageIsStorageStateValid, {onLeave: function (args) {send("MosStorageIsStorageStateValid");}});
+
+var MosStorageResetCacheValues = Module.findExportByName("MosStorage.dll", "MosStorageResetCacheValues")
+Interceptor.attach(MosStorageResetCacheValues, {onLeave: function (args) {send("MosStorageResetCacheValues");}});
+
+var MosStorageResetPreferredLocationIfDefined = Module.findExportByName("MosStorage.dll", "MosStorageResetPreferredLocationIfDefined")
+Interceptor.attach(MosStorageResetPreferredLocationIfDefined, {onLeave: function (args) {send("MosStorageResetPreferredLocationIfDefined");}});
+
+var MosStorageResetPreferredLocationIfNotPresent = Module.findExportByName("MosStorage.dll", "MosStorageResetPreferredLocationIfNotPresent")
+Interceptor.attach(MosStorageResetPreferredLocationIfNotPresent, {onLeave: function (args) {send("MosStorageResetPreferredLocationIfNotPresent");}});
+
+var MosStorageSetLocation = Module.findExportByName("MosStorage.dll", "MosStorageSetLocation")
+Interceptor.attach(MosStorageSetLocation, {onLeave: function (args) {send("MosStorageSetLocation");}});
+
+var MosStorageSetMapsRepairAttempts = Module.findExportByName("MosStorage.dll", "MosStorageSetMapsRepairAttempts")
+Interceptor.attach(MosStorageSetMapsRepairAttempts, {onLeave: function (args) {send("MosStorageSetMapsRepairAttempts");}});
+
+var MosStorageSetMigrationState = Module.findExportByName("MosStorage.dll", "MosStorageSetMigrationState")
+Interceptor.attach(MosStorageSetMigrationState, {onLeave: function (args) {send("MosStorageSetMigrationState");}});
+
+var MosStorageUseDefaultExternalStorage = Module.findExportByName("MosStorage.dll", "MosStorageUseDefaultExternalStorage")
+Interceptor.attach(MosStorageUseDefaultExternalStorage, {onLeave: function (args) {send("MosStorageUseDefaultExternalStorage");}});
+
+var MosStorageValidateLocation = Module.findExportByName("MosStorage.dll", "MosStorageValidateLocation")
+Interceptor.attach(MosStorageValidateLocation, {onLeave: function (args) {send("MosStorageValidateLocation");}});
+
+var MosStorage_SetServiceCallbacks = Module.findExportByName("MosStorage.dll", "MosStorage_SetServiceCallbacks")
+Interceptor.attach(MosStorage_SetServiceCallbacks, {onLeave: function (args) {send("MosStorage_SetServiceCallbacks");}});
+

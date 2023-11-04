@@ -1,0 +1,9 @@
+var CertAutoEnrollment = Module.findExportByName("pautoenr.dll", "CertAutoEnrollment")
+Interceptor.attach(CertAutoEnrollment, {onLeave: function (args) {send("CertAutoEnrollment");}});
+
+var CertAutoRemove = Module.findExportByName("pautoenr.dll", "CertAutoRemove")
+Interceptor.attach(CertAutoRemove, {onLeave: function (args) {send("CertAutoRemove");}});
+
+var DimsProvEntry = Module.findExportByName("pautoenr.dll", "DimsProvEntry")
+Interceptor.attach(DimsProvEntry, {onLeave: function (args) {send("DimsProvEntry");}});
+

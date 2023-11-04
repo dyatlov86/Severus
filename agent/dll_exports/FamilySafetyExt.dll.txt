@@ -1,0 +1,3 @@
+var IsChildAccount = Module.findExportByName("FamilySafetyExt.dll", "IsChildAccount")
+Interceptor.attach(IsChildAccount, {onLeave: function (args) {send("IsChildAccount");}});
+

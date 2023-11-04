@@ -1,0 +1,3 @@
+var KdInitializeLibrary = Module.findExportByName("kdnet_uart16550.dll", "KdInitializeLibrary")
+Interceptor.attach(KdInitializeLibrary, {onLeave: function (args) {send("KdInitializeLibrary");}});
+

@@ -1,0 +1,36 @@
+var GetBootPolicySetForEdition = Module.findExportByName("pkeyhelper.dll", "GetBootPolicySetForEdition")
+Interceptor.attach(GetBootPolicySetForEdition, {onLeave: function (args) {send("GetBootPolicySetForEdition");}});
+
+var GetCompositionEditionForVirtualEdition = Module.findExportByName("pkeyhelper.dll", "GetCompositionEditionForVirtualEdition")
+Interceptor.attach(GetCompositionEditionForVirtualEdition, {onLeave: function (args) {send("GetCompositionEditionForVirtualEdition");}});
+
+var GetDefaultProductKeyForPfn = Module.findExportByName("pkeyhelper.dll", "GetDefaultProductKeyForPfn")
+Interceptor.attach(GetDefaultProductKeyForPfn, {onLeave: function (args) {send("GetDefaultProductKeyForPfn");}});
+
+var GetEditionIdFromName = Module.findExportByName("pkeyhelper.dll", "GetEditionIdFromName")
+Interceptor.attach(GetEditionIdFromName, {onLeave: function (args) {send("GetEditionIdFromName");}});
+
+var GetEditionNameFromId = Module.findExportByName("pkeyhelper.dll", "GetEditionNameFromId")
+Interceptor.attach(GetEditionNameFromId, {onLeave: function (args) {send("GetEditionNameFromId");}});
+
+var GetProductKeyFromContentId = Module.findExportByName("pkeyhelper.dll", "GetProductKeyFromContentId")
+Interceptor.attach(GetProductKeyFromContentId, {onLeave: function (args) {send("GetProductKeyFromContentId");}});
+
+var GetVirtualEditionsForCompositionEdition = Module.findExportByName("pkeyhelper.dll", "GetVirtualEditionsForCompositionEdition")
+Interceptor.attach(GetVirtualEditionsForCompositionEdition, {onLeave: function (args) {send("GetVirtualEditionsForCompositionEdition");}});
+
+var IsDefaultPKey = Module.findExportByName("pkeyhelper.dll", "IsDefaultPKey")
+Interceptor.attach(IsDefaultPKey, {onLeave: function (args) {send("IsDefaultPKey");}});
+
+var SkuGetProductKeyForEdition = Module.findExportByName("pkeyhelper.dll", "SkuGetProductKeyForEdition")
+Interceptor.attach(SkuGetProductKeyForEdition, {onLeave: function (args) {send("SkuGetProductKeyForEdition");}});
+
+var SkuGetUpgradeProductKey = Module.findExportByName("pkeyhelper.dll", "SkuGetUpgradeProductKey")
+Interceptor.attach(SkuGetUpgradeProductKey, {onLeave: function (args) {send("SkuGetUpgradeProductKey");}});
+
+var SkuGetUpgradeProductKeyEx = Module.findExportByName("pkeyhelper.dll", "SkuGetUpgradeProductKeyEx")
+Interceptor.attach(SkuGetUpgradeProductKeyEx, {onLeave: function (args) {send("SkuGetUpgradeProductKeyEx");}});
+
+var SkuGetUpgradeProductKeyFromDownlevelEdition = Module.findExportByName("pkeyhelper.dll", "SkuGetUpgradeProductKeyFromDownlevelEdition")
+Interceptor.attach(SkuGetUpgradeProductKeyFromDownlevelEdition, {onLeave: function (args) {send("SkuGetUpgradeProductKeyFromDownlevelEdition");}});
+

@@ -1,0 +1,21 @@
+var ConnectToRoamingVhdProfile = Module.findExportByName("profsvcext.dll", "ConnectToRoamingVhdProfile")
+Interceptor.attach(ConnectToRoamingVhdProfile, {onLeave: function (args) {send("ConnectToRoamingVhdProfile");}});
+
+var CreateRoamingProviderInstance = Module.findExportByName("profsvcext.dll", "CreateRoamingProviderInstance")
+Interceptor.attach(CreateRoamingProviderInstance, {onLeave: function (args) {send("CreateRoamingProviderInstance");}});
+
+var InitializeSuspendFolderPolicyAndUploadTaskConfig = Module.findExportByName("profsvcext.dll", "InitializeSuspendFolderPolicyAndUploadTaskConfig")
+Interceptor.attach(InitializeSuspendFolderPolicyAndUploadTaskConfig, {onLeave: function (args) {send("InitializeSuspendFolderPolicyAndUploadTaskConfig");}});
+
+var RefreshSuspendFolderPolicyAndUploadTaskConfig = Module.findExportByName("profsvcext.dll", "RefreshSuspendFolderPolicyAndUploadTaskConfig")
+Interceptor.attach(RefreshSuspendFolderPolicyAndUploadTaskConfig, {onLeave: function (args) {send("RefreshSuspendFolderPolicyAndUploadTaskConfig");}});
+
+var StartRoamingClassFactories = Module.findExportByName("profsvcext.dll", "StartRoamingClassFactories")
+Interceptor.attach(StartRoamingClassFactories, {onLeave: function (args) {send("StartRoamingClassFactories");}});
+
+var StopRoamingClassFactories = Module.findExportByName("profsvcext.dll", "StopRoamingClassFactories")
+Interceptor.attach(StopRoamingClassFactories, {onLeave: function (args) {send("StopRoamingClassFactories");}});
+
+var WaitForNetworkForRoamingProfile = Module.findExportByName("profsvcext.dll", "WaitForNetworkForRoamingProfile")
+Interceptor.attach(WaitForNetworkForRoamingProfile, {onLeave: function (args) {send("WaitForNetworkForRoamingProfile");}});
+

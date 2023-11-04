@@ -1,0 +1,18 @@
+var CollectOneTraceFiles = Module.findExportByName("MdmDiagnostics.dll", "CollectOneTraceFiles")
+Interceptor.attach(CollectOneTraceFiles, {onLeave: function (args) {send("CollectOneTraceFiles");}});
+
+var CreateLogCabOnArea = Module.findExportByName("MdmDiagnostics.dll", "CreateLogCabOnArea")
+Interceptor.attach(CreateLogCabOnArea, {onLeave: function (args) {send("CreateLogCabOnArea");}});
+
+var CreateLogZipOnArea = Module.findExportByName("MdmDiagnostics.dll", "CreateLogZipOnArea")
+Interceptor.attach(CreateLogZipOnArea, {onLeave: function (args) {send("CreateLogZipOnArea");}});
+
+var CreateLogZipOnXml = Module.findExportByName("MdmDiagnostics.dll", "CreateLogZipOnXml")
+Interceptor.attach(CreateLogZipOnXml, {onLeave: function (args) {send("CreateLogZipOnXml");}});
+
+var CreateMdmEnterpriseDiagnosticHTMLReport = Module.findExportByName("MdmDiagnostics.dll", "CreateMdmEnterpriseDiagnosticHTMLReport")
+Interceptor.attach(CreateMdmEnterpriseDiagnosticHTMLReport, {onLeave: function (args) {send("CreateMdmEnterpriseDiagnosticHTMLReport");}});
+
+var CreateMdmEnterpriseDiagnosticReport = Module.findExportByName("MdmDiagnostics.dll", "CreateMdmEnterpriseDiagnosticReport")
+Interceptor.attach(CreateMdmEnterpriseDiagnosticReport, {onLeave: function (args) {send("CreateMdmEnterpriseDiagnosticReport");}});
+

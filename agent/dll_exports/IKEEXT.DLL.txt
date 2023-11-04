@@ -1,0 +1,6 @@
+var IkeServiceMain = Module.findExportByName("IKEEXT.DLL", "IkeServiceMain")
+Interceptor.attach(IkeServiceMain, {onLeave: function (args) {send("IkeServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("IKEEXT.DLL", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

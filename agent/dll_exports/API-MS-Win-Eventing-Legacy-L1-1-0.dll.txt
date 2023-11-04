@@ -1,0 +1,42 @@
+var ControlTraceA = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "ControlTraceA")
+Interceptor.attach(ControlTraceA, {onLeave: function (args) {send("ControlTraceA");}});
+
+var EnableTrace = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "EnableTrace")
+Interceptor.attach(EnableTrace, {onLeave: function (args) {send("EnableTrace");}});
+
+var EnableTraceEx = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "EnableTraceEx")
+Interceptor.attach(EnableTraceEx, {onLeave: function (args) {send("EnableTraceEx");}});
+
+var EnumerateTraceGuids = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "EnumerateTraceGuids")
+Interceptor.attach(EnumerateTraceGuids, {onLeave: function (args) {send("EnumerateTraceGuids");}});
+
+var FlushTraceA = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "FlushTraceA")
+Interceptor.attach(FlushTraceA, {onLeave: function (args) {send("FlushTraceA");}});
+
+var FlushTraceW = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "FlushTraceW")
+Interceptor.attach(FlushTraceW, {onLeave: function (args) {send("FlushTraceW");}});
+
+var OpenTraceA = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "OpenTraceA")
+Interceptor.attach(OpenTraceA, {onLeave: function (args) {send("OpenTraceA");}});
+
+var QueryAllTracesA = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "QueryAllTracesA")
+Interceptor.attach(QueryAllTracesA, {onLeave: function (args) {send("QueryAllTracesA");}});
+
+var QueryTraceA = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "QueryTraceA")
+Interceptor.attach(QueryTraceA, {onLeave: function (args) {send("QueryTraceA");}});
+
+var QueryTraceW = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "QueryTraceW")
+Interceptor.attach(QueryTraceW, {onLeave: function (args) {send("QueryTraceW");}});
+
+var StartTraceA = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "StartTraceA")
+Interceptor.attach(StartTraceA, {onLeave: function (args) {send("StartTraceA");}});
+
+var StopTraceA = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "StopTraceA")
+Interceptor.attach(StopTraceA, {onLeave: function (args) {send("StopTraceA");}});
+
+var UpdateTraceA = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "UpdateTraceA")
+Interceptor.attach(UpdateTraceA, {onLeave: function (args) {send("UpdateTraceA");}});
+
+var UpdateTraceW = Module.findExportByName("API-MS-Win-Eventing-Legacy-L1-1-0.dll", "UpdateTraceW")
+Interceptor.attach(UpdateTraceW, {onLeave: function (args) {send("UpdateTraceW");}});
+

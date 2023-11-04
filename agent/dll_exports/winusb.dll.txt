@@ -1,0 +1,111 @@
+var WinUsb_AbortPipe = Module.findExportByName("winusb.dll", "WinUsb_AbortPipe")
+Interceptor.attach(WinUsb_AbortPipe, {onLeave: function (args) {send("WinUsb_AbortPipe");}});
+
+var WinUsb_AbortPipeAsync = Module.findExportByName("winusb.dll", "WinUsb_AbortPipeAsync")
+Interceptor.attach(WinUsb_AbortPipeAsync, {onLeave: function (args) {send("WinUsb_AbortPipeAsync");}});
+
+var WinUsb_ControlTransfer = Module.findExportByName("winusb.dll", "WinUsb_ControlTransfer")
+Interceptor.attach(WinUsb_ControlTransfer, {onLeave: function (args) {send("WinUsb_ControlTransfer");}});
+
+var WinUsb_FlushPipe = Module.findExportByName("winusb.dll", "WinUsb_FlushPipe")
+Interceptor.attach(WinUsb_FlushPipe, {onLeave: function (args) {send("WinUsb_FlushPipe");}});
+
+var WinUsb_Free = Module.findExportByName("winusb.dll", "WinUsb_Free")
+Interceptor.attach(WinUsb_Free, {onLeave: function (args) {send("WinUsb_Free");}});
+
+var WinUsb_GetAdjustedFrameNumber = Module.findExportByName("winusb.dll", "WinUsb_GetAdjustedFrameNumber")
+Interceptor.attach(WinUsb_GetAdjustedFrameNumber, {onLeave: function (args) {send("WinUsb_GetAdjustedFrameNumber");}});
+
+var WinUsb_GetAssociatedInterface = Module.findExportByName("winusb.dll", "WinUsb_GetAssociatedInterface")
+Interceptor.attach(WinUsb_GetAssociatedInterface, {onLeave: function (args) {send("WinUsb_GetAssociatedInterface");}});
+
+var WinUsb_GetCurrentAlternateSetting = Module.findExportByName("winusb.dll", "WinUsb_GetCurrentAlternateSetting")
+Interceptor.attach(WinUsb_GetCurrentAlternateSetting, {onLeave: function (args) {send("WinUsb_GetCurrentAlternateSetting");}});
+
+var WinUsb_GetCurrentFrameNumber = Module.findExportByName("winusb.dll", "WinUsb_GetCurrentFrameNumber")
+Interceptor.attach(WinUsb_GetCurrentFrameNumber, {onLeave: function (args) {send("WinUsb_GetCurrentFrameNumber");}});
+
+var WinUsb_GetCurrentFrameNumberAndQpc = Module.findExportByName("winusb.dll", "WinUsb_GetCurrentFrameNumberAndQpc")
+Interceptor.attach(WinUsb_GetCurrentFrameNumberAndQpc, {onLeave: function (args) {send("WinUsb_GetCurrentFrameNumberAndQpc");}});
+
+var WinUsb_GetDescriptor = Module.findExportByName("winusb.dll", "WinUsb_GetDescriptor")
+Interceptor.attach(WinUsb_GetDescriptor, {onLeave: function (args) {send("WinUsb_GetDescriptor");}});
+
+var WinUsb_GetOverlappedResult = Module.findExportByName("winusb.dll", "WinUsb_GetOverlappedResult")
+Interceptor.attach(WinUsb_GetOverlappedResult, {onLeave: function (args) {send("WinUsb_GetOverlappedResult");}});
+
+var WinUsb_GetPipePolicy = Module.findExportByName("winusb.dll", "WinUsb_GetPipePolicy")
+Interceptor.attach(WinUsb_GetPipePolicy, {onLeave: function (args) {send("WinUsb_GetPipePolicy");}});
+
+var WinUsb_GetPowerPolicy = Module.findExportByName("winusb.dll", "WinUsb_GetPowerPolicy")
+Interceptor.attach(WinUsb_GetPowerPolicy, {onLeave: function (args) {send("WinUsb_GetPowerPolicy");}});
+
+var WinUsb_Initialize = Module.findExportByName("winusb.dll", "WinUsb_Initialize")
+Interceptor.attach(WinUsb_Initialize, {onLeave: function (args) {send("WinUsb_Initialize");}});
+
+var WinUsb_ParseConfigurationDescriptor = Module.findExportByName("winusb.dll", "WinUsb_ParseConfigurationDescriptor")
+Interceptor.attach(WinUsb_ParseConfigurationDescriptor, {onLeave: function (args) {send("WinUsb_ParseConfigurationDescriptor");}});
+
+var WinUsb_ParseDescriptors = Module.findExportByName("winusb.dll", "WinUsb_ParseDescriptors")
+Interceptor.attach(WinUsb_ParseDescriptors, {onLeave: function (args) {send("WinUsb_ParseDescriptors");}});
+
+var WinUsb_QueryDeviceInformation = Module.findExportByName("winusb.dll", "WinUsb_QueryDeviceInformation")
+Interceptor.attach(WinUsb_QueryDeviceInformation, {onLeave: function (args) {send("WinUsb_QueryDeviceInformation");}});
+
+var WinUsb_QueryInterfaceSettings = Module.findExportByName("winusb.dll", "WinUsb_QueryInterfaceSettings")
+Interceptor.attach(WinUsb_QueryInterfaceSettings, {onLeave: function (args) {send("WinUsb_QueryInterfaceSettings");}});
+
+var WinUsb_QueryPipe = Module.findExportByName("winusb.dll", "WinUsb_QueryPipe")
+Interceptor.attach(WinUsb_QueryPipe, {onLeave: function (args) {send("WinUsb_QueryPipe");}});
+
+var WinUsb_QueryPipeEx = Module.findExportByName("winusb.dll", "WinUsb_QueryPipeEx")
+Interceptor.attach(WinUsb_QueryPipeEx, {onLeave: function (args) {send("WinUsb_QueryPipeEx");}});
+
+var WinUsb_ReadIsochPipe = Module.findExportByName("winusb.dll", "WinUsb_ReadIsochPipe")
+Interceptor.attach(WinUsb_ReadIsochPipe, {onLeave: function (args) {send("WinUsb_ReadIsochPipe");}});
+
+var WinUsb_ReadIsochPipeAsap = Module.findExportByName("winusb.dll", "WinUsb_ReadIsochPipeAsap")
+Interceptor.attach(WinUsb_ReadIsochPipeAsap, {onLeave: function (args) {send("WinUsb_ReadIsochPipeAsap");}});
+
+var WinUsb_ReadPipe = Module.findExportByName("winusb.dll", "WinUsb_ReadPipe")
+Interceptor.attach(WinUsb_ReadPipe, {onLeave: function (args) {send("WinUsb_ReadPipe");}});
+
+var WinUsb_RegisterIsochBuffer = Module.findExportByName("winusb.dll", "WinUsb_RegisterIsochBuffer")
+Interceptor.attach(WinUsb_RegisterIsochBuffer, {onLeave: function (args) {send("WinUsb_RegisterIsochBuffer");}});
+
+var WinUsb_ResetPipe = Module.findExportByName("winusb.dll", "WinUsb_ResetPipe")
+Interceptor.attach(WinUsb_ResetPipe, {onLeave: function (args) {send("WinUsb_ResetPipe");}});
+
+var WinUsb_ResetPipeAsync = Module.findExportByName("winusb.dll", "WinUsb_ResetPipeAsync")
+Interceptor.attach(WinUsb_ResetPipeAsync, {onLeave: function (args) {send("WinUsb_ResetPipeAsync");}});
+
+var WinUsb_SetCurrentAlternateSetting = Module.findExportByName("winusb.dll", "WinUsb_SetCurrentAlternateSetting")
+Interceptor.attach(WinUsb_SetCurrentAlternateSetting, {onLeave: function (args) {send("WinUsb_SetCurrentAlternateSetting");}});
+
+var WinUsb_SetCurrentAlternateSettingAsync = Module.findExportByName("winusb.dll", "WinUsb_SetCurrentAlternateSettingAsync")
+Interceptor.attach(WinUsb_SetCurrentAlternateSettingAsync, {onLeave: function (args) {send("WinUsb_SetCurrentAlternateSettingAsync");}});
+
+var WinUsb_SetPipePolicy = Module.findExportByName("winusb.dll", "WinUsb_SetPipePolicy")
+Interceptor.attach(WinUsb_SetPipePolicy, {onLeave: function (args) {send("WinUsb_SetPipePolicy");}});
+
+var WinUsb_SetPowerPolicy = Module.findExportByName("winusb.dll", "WinUsb_SetPowerPolicy")
+Interceptor.attach(WinUsb_SetPowerPolicy, {onLeave: function (args) {send("WinUsb_SetPowerPolicy");}});
+
+var WinUsb_StartTrackingForTimeSync = Module.findExportByName("winusb.dll", "WinUsb_StartTrackingForTimeSync")
+Interceptor.attach(WinUsb_StartTrackingForTimeSync, {onLeave: function (args) {send("WinUsb_StartTrackingForTimeSync");}});
+
+var WinUsb_StopTrackingForTimeSync = Module.findExportByName("winusb.dll", "WinUsb_StopTrackingForTimeSync")
+Interceptor.attach(WinUsb_StopTrackingForTimeSync, {onLeave: function (args) {send("WinUsb_StopTrackingForTimeSync");}});
+
+var WinUsb_UnregisterIsochBuffer = Module.findExportByName("winusb.dll", "WinUsb_UnregisterIsochBuffer")
+Interceptor.attach(WinUsb_UnregisterIsochBuffer, {onLeave: function (args) {send("WinUsb_UnregisterIsochBuffer");}});
+
+var WinUsb_WriteIsochPipe = Module.findExportByName("winusb.dll", "WinUsb_WriteIsochPipe")
+Interceptor.attach(WinUsb_WriteIsochPipe, {onLeave: function (args) {send("WinUsb_WriteIsochPipe");}});
+
+var WinUsb_WriteIsochPipeAsap = Module.findExportByName("winusb.dll", "WinUsb_WriteIsochPipeAsap")
+Interceptor.attach(WinUsb_WriteIsochPipeAsap, {onLeave: function (args) {send("WinUsb_WriteIsochPipeAsap");}});
+
+var WinUsb_WritePipe = Module.findExportByName("winusb.dll", "WinUsb_WritePipe")
+Interceptor.attach(WinUsb_WritePipe, {onLeave: function (args) {send("WinUsb_WritePipe");}});
+

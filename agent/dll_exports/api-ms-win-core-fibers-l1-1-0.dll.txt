@@ -1,0 +1,12 @@
+var FlsAlloc = Module.findExportByName("api-ms-win-core-fibers-l1-1-0.dll", "FlsAlloc")
+Interceptor.attach(FlsAlloc, {onLeave: function (args) {send("FlsAlloc");}});
+
+var FlsFree = Module.findExportByName("api-ms-win-core-fibers-l1-1-0.dll", "FlsFree")
+Interceptor.attach(FlsFree, {onLeave: function (args) {send("FlsFree");}});
+
+var FlsGetValue = Module.findExportByName("api-ms-win-core-fibers-l1-1-0.dll", "FlsGetValue")
+Interceptor.attach(FlsGetValue, {onLeave: function (args) {send("FlsGetValue");}});
+
+var FlsSetValue = Module.findExportByName("api-ms-win-core-fibers-l1-1-0.dll", "FlsSetValue")
+Interceptor.attach(FlsSetValue, {onLeave: function (args) {send("FlsSetValue");}});
+

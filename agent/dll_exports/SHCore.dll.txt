@@ -1,0 +1,291 @@
+var CommandLineToArgvW = Module.findExportByName("SHCore.dll", "CommandLineToArgvW")
+Interceptor.attach(CommandLineToArgvW, {onLeave: function (args) {send("CommandLineToArgvW");}});
+
+var CreateRandomAccessStreamOnFile = Module.findExportByName("SHCore.dll", "CreateRandomAccessStreamOnFile")
+Interceptor.attach(CreateRandomAccessStreamOnFile, {onLeave: function (args) {send("CreateRandomAccessStreamOnFile");}});
+
+var CreateRandomAccessStreamOverStream = Module.findExportByName("SHCore.dll", "CreateRandomAccessStreamOverStream")
+Interceptor.attach(CreateRandomAccessStreamOverStream, {onLeave: function (args) {send("CreateRandomAccessStreamOverStream");}});
+
+var CreateStreamOverRandomAccessStream = Module.findExportByName("SHCore.dll", "CreateStreamOverRandomAccessStream")
+Interceptor.attach(CreateStreamOverRandomAccessStream, {onLeave: function (args) {send("CreateStreamOverRandomAccessStream");}});
+
+var DllCanUnloadNow = Module.findExportByName("SHCore.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("SHCore.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("SHCore.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetCurrentProcessExplicitAppUserModelID = Module.findExportByName("SHCore.dll", "GetCurrentProcessExplicitAppUserModelID")
+Interceptor.attach(GetCurrentProcessExplicitAppUserModelID, {onLeave: function (args) {send("GetCurrentProcessExplicitAppUserModelID");}});
+
+var GetDpiForMonitor = Module.findExportByName("SHCore.dll", "GetDpiForMonitor")
+Interceptor.attach(GetDpiForMonitor, {onLeave: function (args) {send("GetDpiForMonitor");}});
+
+var GetDpiForShellUIComponent = Module.findExportByName("SHCore.dll", "GetDpiForShellUIComponent")
+Interceptor.attach(GetDpiForShellUIComponent, {onLeave: function (args) {send("GetDpiForShellUIComponent");}});
+
+var GetFeatureEnabledState = Module.findExportByName("SHCore.dll", "GetFeatureEnabledState")
+Interceptor.attach(GetFeatureEnabledState, {onLeave: function (args) {send("GetFeatureEnabledState");}});
+
+var GetFeatureVariant = Module.findExportByName("SHCore.dll", "GetFeatureVariant")
+Interceptor.attach(GetFeatureVariant, {onLeave: function (args) {send("GetFeatureVariant");}});
+
+var GetProcessDpiAwareness = Module.findExportByName("SHCore.dll", "GetProcessDpiAwareness")
+Interceptor.attach(GetProcessDpiAwareness, {onLeave: function (args) {send("GetProcessDpiAwareness");}});
+
+var GetProcessReference = Module.findExportByName("SHCore.dll", "GetProcessReference")
+Interceptor.attach(GetProcessReference, {onLeave: function (args) {send("GetProcessReference");}});
+
+var GetScaleFactorForDevice = Module.findExportByName("SHCore.dll", "GetScaleFactorForDevice")
+Interceptor.attach(GetScaleFactorForDevice, {onLeave: function (args) {send("GetScaleFactorForDevice");}});
+
+var GetScaleFactorForMonitor = Module.findExportByName("SHCore.dll", "GetScaleFactorForMonitor")
+Interceptor.attach(GetScaleFactorForMonitor, {onLeave: function (args) {send("GetScaleFactorForMonitor");}});
+
+var IStream_Copy = Module.findExportByName("SHCore.dll", "IStream_Copy")
+Interceptor.attach(IStream_Copy, {onLeave: function (args) {send("IStream_Copy");}});
+
+var IStream_Read = Module.findExportByName("SHCore.dll", "IStream_Read")
+Interceptor.attach(IStream_Read, {onLeave: function (args) {send("IStream_Read");}});
+
+var IStream_ReadStr = Module.findExportByName("SHCore.dll", "IStream_ReadStr")
+Interceptor.attach(IStream_ReadStr, {onLeave: function (args) {send("IStream_ReadStr");}});
+
+var IStream_Reset = Module.findExportByName("SHCore.dll", "IStream_Reset")
+Interceptor.attach(IStream_Reset, {onLeave: function (args) {send("IStream_Reset");}});
+
+var IStream_Size = Module.findExportByName("SHCore.dll", "IStream_Size")
+Interceptor.attach(IStream_Size, {onLeave: function (args) {send("IStream_Size");}});
+
+var IStream_Write = Module.findExportByName("SHCore.dll", "IStream_Write")
+Interceptor.attach(IStream_Write, {onLeave: function (args) {send("IStream_Write");}});
+
+var IStream_WriteStr = Module.findExportByName("SHCore.dll", "IStream_WriteStr")
+Interceptor.attach(IStream_WriteStr, {onLeave: function (args) {send("IStream_WriteStr");}});
+
+var IUnknown_AtomicRelease = Module.findExportByName("SHCore.dll", "IUnknown_AtomicRelease")
+Interceptor.attach(IUnknown_AtomicRelease, {onLeave: function (args) {send("IUnknown_AtomicRelease");}});
+
+var IUnknown_GetSite = Module.findExportByName("SHCore.dll", "IUnknown_GetSite")
+Interceptor.attach(IUnknown_GetSite, {onLeave: function (args) {send("IUnknown_GetSite");}});
+
+var IUnknown_QueryService = Module.findExportByName("SHCore.dll", "IUnknown_QueryService")
+Interceptor.attach(IUnknown_QueryService, {onLeave: function (args) {send("IUnknown_QueryService");}});
+
+var IUnknown_Set = Module.findExportByName("SHCore.dll", "IUnknown_Set")
+Interceptor.attach(IUnknown_Set, {onLeave: function (args) {send("IUnknown_Set");}});
+
+var IUnknown_SetSite = Module.findExportByName("SHCore.dll", "IUnknown_SetSite")
+Interceptor.attach(IUnknown_SetSite, {onLeave: function (args) {send("IUnknown_SetSite");}});
+
+var IsOS = Module.findExportByName("SHCore.dll", "IsOS")
+Interceptor.attach(IsOS, {onLeave: function (args) {send("IsOS");}});
+
+var IsProcessInIsolatedContainer = Module.findExportByName("SHCore.dll", "IsProcessInIsolatedContainer")
+Interceptor.attach(IsProcessInIsolatedContainer, {onLeave: function (args) {send("IsProcessInIsolatedContainer");}});
+
+var IsProcessInWDAGContainer = Module.findExportByName("SHCore.dll", "IsProcessInWDAGContainer")
+Interceptor.attach(IsProcessInWDAGContainer, {onLeave: function (args) {send("IsProcessInWDAGContainer");}});
+
+var RecordFeatureError = Module.findExportByName("SHCore.dll", "RecordFeatureError")
+Interceptor.attach(RecordFeatureError, {onLeave: function (args) {send("RecordFeatureError");}});
+
+var RecordFeatureUsage = Module.findExportByName("SHCore.dll", "RecordFeatureUsage")
+Interceptor.attach(RecordFeatureUsage, {onLeave: function (args) {send("RecordFeatureUsage");}});
+
+var RegisterScaleChangeEvent = Module.findExportByName("SHCore.dll", "RegisterScaleChangeEvent")
+Interceptor.attach(RegisterScaleChangeEvent, {onLeave: function (args) {send("RegisterScaleChangeEvent");}});
+
+var RegisterScaleChangeNotifications = Module.findExportByName("SHCore.dll", "RegisterScaleChangeNotifications")
+Interceptor.attach(RegisterScaleChangeNotifications, {onLeave: function (args) {send("RegisterScaleChangeNotifications");}});
+
+var RevokeScaleChangeNotifications = Module.findExportByName("SHCore.dll", "RevokeScaleChangeNotifications")
+Interceptor.attach(RevokeScaleChangeNotifications, {onLeave: function (args) {send("RevokeScaleChangeNotifications");}});
+
+var SHAnsiToAnsi = Module.findExportByName("SHCore.dll", "SHAnsiToAnsi")
+Interceptor.attach(SHAnsiToAnsi, {onLeave: function (args) {send("SHAnsiToAnsi");}});
+
+var SHAnsiToUnicode = Module.findExportByName("SHCore.dll", "SHAnsiToUnicode")
+Interceptor.attach(SHAnsiToUnicode, {onLeave: function (args) {send("SHAnsiToUnicode");}});
+
+var SHCopyKeyA = Module.findExportByName("SHCore.dll", "SHCopyKeyA")
+Interceptor.attach(SHCopyKeyA, {onLeave: function (args) {send("SHCopyKeyA");}});
+
+var SHCopyKeyW = Module.findExportByName("SHCore.dll", "SHCopyKeyW")
+Interceptor.attach(SHCopyKeyW, {onLeave: function (args) {send("SHCopyKeyW");}});
+
+var SHCreateMemStream = Module.findExportByName("SHCore.dll", "SHCreateMemStream")
+Interceptor.attach(SHCreateMemStream, {onLeave: function (args) {send("SHCreateMemStream");}});
+
+var SHCreateStreamOnFileA = Module.findExportByName("SHCore.dll", "SHCreateStreamOnFileA")
+Interceptor.attach(SHCreateStreamOnFileA, {onLeave: function (args) {send("SHCreateStreamOnFileA");}});
+
+var SHCreateStreamOnFileEx = Module.findExportByName("SHCore.dll", "SHCreateStreamOnFileEx")
+Interceptor.attach(SHCreateStreamOnFileEx, {onLeave: function (args) {send("SHCreateStreamOnFileEx");}});
+
+var SHCreateStreamOnFileW = Module.findExportByName("SHCore.dll", "SHCreateStreamOnFileW")
+Interceptor.attach(SHCreateStreamOnFileW, {onLeave: function (args) {send("SHCreateStreamOnFileW");}});
+
+var SHCreateThread = Module.findExportByName("SHCore.dll", "SHCreateThread")
+Interceptor.attach(SHCreateThread, {onLeave: function (args) {send("SHCreateThread");}});
+
+var SHCreateThreadRef = Module.findExportByName("SHCore.dll", "SHCreateThreadRef")
+Interceptor.attach(SHCreateThreadRef, {onLeave: function (args) {send("SHCreateThreadRef");}});
+
+var SHCreateThreadWithHandle = Module.findExportByName("SHCore.dll", "SHCreateThreadWithHandle")
+Interceptor.attach(SHCreateThreadWithHandle, {onLeave: function (args) {send("SHCreateThreadWithHandle");}});
+
+var SHDeleteEmptyKeyA = Module.findExportByName("SHCore.dll", "SHDeleteEmptyKeyA")
+Interceptor.attach(SHDeleteEmptyKeyA, {onLeave: function (args) {send("SHDeleteEmptyKeyA");}});
+
+var SHDeleteEmptyKeyW = Module.findExportByName("SHCore.dll", "SHDeleteEmptyKeyW")
+Interceptor.attach(SHDeleteEmptyKeyW, {onLeave: function (args) {send("SHDeleteEmptyKeyW");}});
+
+var SHDeleteKeyA = Module.findExportByName("SHCore.dll", "SHDeleteKeyA")
+Interceptor.attach(SHDeleteKeyA, {onLeave: function (args) {send("SHDeleteKeyA");}});
+
+var SHDeleteKeyW = Module.findExportByName("SHCore.dll", "SHDeleteKeyW")
+Interceptor.attach(SHDeleteKeyW, {onLeave: function (args) {send("SHDeleteKeyW");}});
+
+var SHDeleteValueA = Module.findExportByName("SHCore.dll", "SHDeleteValueA")
+Interceptor.attach(SHDeleteValueA, {onLeave: function (args) {send("SHDeleteValueA");}});
+
+var SHDeleteValueW = Module.findExportByName("SHCore.dll", "SHDeleteValueW")
+Interceptor.attach(SHDeleteValueW, {onLeave: function (args) {send("SHDeleteValueW");}});
+
+var SHEnumKeyExA = Module.findExportByName("SHCore.dll", "SHEnumKeyExA")
+Interceptor.attach(SHEnumKeyExA, {onLeave: function (args) {send("SHEnumKeyExA");}});
+
+var SHEnumKeyExW = Module.findExportByName("SHCore.dll", "SHEnumKeyExW")
+Interceptor.attach(SHEnumKeyExW, {onLeave: function (args) {send("SHEnumKeyExW");}});
+
+var SHEnumValueA = Module.findExportByName("SHCore.dll", "SHEnumValueA")
+Interceptor.attach(SHEnumValueA, {onLeave: function (args) {send("SHEnumValueA");}});
+
+var SHEnumValueW = Module.findExportByName("SHCore.dll", "SHEnumValueW")
+Interceptor.attach(SHEnumValueW, {onLeave: function (args) {send("SHEnumValueW");}});
+
+var SHGetThreadRef = Module.findExportByName("SHCore.dll", "SHGetThreadRef")
+Interceptor.attach(SHGetThreadRef, {onLeave: function (args) {send("SHGetThreadRef");}});
+
+var SHGetValueA = Module.findExportByName("SHCore.dll", "SHGetValueA")
+Interceptor.attach(SHGetValueA, {onLeave: function (args) {send("SHGetValueA");}});
+
+var SHGetValueW = Module.findExportByName("SHCore.dll", "SHGetValueW")
+Interceptor.attach(SHGetValueW, {onLeave: function (args) {send("SHGetValueW");}});
+
+var SHOpenRegStream2A = Module.findExportByName("SHCore.dll", "SHOpenRegStream2A")
+Interceptor.attach(SHOpenRegStream2A, {onLeave: function (args) {send("SHOpenRegStream2A");}});
+
+var SHOpenRegStream2W = Module.findExportByName("SHCore.dll", "SHOpenRegStream2W")
+Interceptor.attach(SHOpenRegStream2W, {onLeave: function (args) {send("SHOpenRegStream2W");}});
+
+var SHOpenRegStreamA = Module.findExportByName("SHCore.dll", "SHOpenRegStreamA")
+Interceptor.attach(SHOpenRegStreamA, {onLeave: function (args) {send("SHOpenRegStreamA");}});
+
+var SHOpenRegStreamW = Module.findExportByName("SHCore.dll", "SHOpenRegStreamW")
+Interceptor.attach(SHOpenRegStreamW, {onLeave: function (args) {send("SHOpenRegStreamW");}});
+
+var SHQueryInfoKeyA = Module.findExportByName("SHCore.dll", "SHQueryInfoKeyA")
+Interceptor.attach(SHQueryInfoKeyA, {onLeave: function (args) {send("SHQueryInfoKeyA");}});
+
+var SHQueryInfoKeyW = Module.findExportByName("SHCore.dll", "SHQueryInfoKeyW")
+Interceptor.attach(SHQueryInfoKeyW, {onLeave: function (args) {send("SHQueryInfoKeyW");}});
+
+var SHQueryValueExA = Module.findExportByName("SHCore.dll", "SHQueryValueExA")
+Interceptor.attach(SHQueryValueExA, {onLeave: function (args) {send("SHQueryValueExA");}});
+
+var SHQueryValueExW = Module.findExportByName("SHCore.dll", "SHQueryValueExW")
+Interceptor.attach(SHQueryValueExW, {onLeave: function (args) {send("SHQueryValueExW");}});
+
+var SHRegDuplicateHKey = Module.findExportByName("SHCore.dll", "SHRegDuplicateHKey")
+Interceptor.attach(SHRegDuplicateHKey, {onLeave: function (args) {send("SHRegDuplicateHKey");}});
+
+var SHRegGetIntW = Module.findExportByName("SHCore.dll", "SHRegGetIntW")
+Interceptor.attach(SHRegGetIntW, {onLeave: function (args) {send("SHRegGetIntW");}});
+
+var SHRegGetPathA = Module.findExportByName("SHCore.dll", "SHRegGetPathA")
+Interceptor.attach(SHRegGetPathA, {onLeave: function (args) {send("SHRegGetPathA");}});
+
+var SHRegGetPathW = Module.findExportByName("SHCore.dll", "SHRegGetPathW")
+Interceptor.attach(SHRegGetPathW, {onLeave: function (args) {send("SHRegGetPathW");}});
+
+var SHRegGetValueA = Module.findExportByName("SHCore.dll", "SHRegGetValueA")
+Interceptor.attach(SHRegGetValueA, {onLeave: function (args) {send("SHRegGetValueA");}});
+
+var SHRegGetValueFromHKCUHKLM = Module.findExportByName("SHCore.dll", "SHRegGetValueFromHKCUHKLM")
+Interceptor.attach(SHRegGetValueFromHKCUHKLM, {onLeave: function (args) {send("SHRegGetValueFromHKCUHKLM");}});
+
+var SHRegGetValueW = Module.findExportByName("SHCore.dll", "SHRegGetValueW")
+Interceptor.attach(SHRegGetValueW, {onLeave: function (args) {send("SHRegGetValueW");}});
+
+var SHRegSetPathA = Module.findExportByName("SHCore.dll", "SHRegSetPathA")
+Interceptor.attach(SHRegSetPathA, {onLeave: function (args) {send("SHRegSetPathA");}});
+
+var SHRegSetPathW = Module.findExportByName("SHCore.dll", "SHRegSetPathW")
+Interceptor.attach(SHRegSetPathW, {onLeave: function (args) {send("SHRegSetPathW");}});
+
+var SHReleaseThreadRef = Module.findExportByName("SHCore.dll", "SHReleaseThreadRef")
+Interceptor.attach(SHReleaseThreadRef, {onLeave: function (args) {send("SHReleaseThreadRef");}});
+
+var SHSetThreadRef = Module.findExportByName("SHCore.dll", "SHSetThreadRef")
+Interceptor.attach(SHSetThreadRef, {onLeave: function (args) {send("SHSetThreadRef");}});
+
+var SHSetValueA = Module.findExportByName("SHCore.dll", "SHSetValueA")
+Interceptor.attach(SHSetValueA, {onLeave: function (args) {send("SHSetValueA");}});
+
+var SHSetValueW = Module.findExportByName("SHCore.dll", "SHSetValueW")
+Interceptor.attach(SHSetValueW, {onLeave: function (args) {send("SHSetValueW");}});
+
+var SHStrDupA = Module.findExportByName("SHCore.dll", "SHStrDupA")
+Interceptor.attach(SHStrDupA, {onLeave: function (args) {send("SHStrDupA");}});
+
+var SHStrDupW = Module.findExportByName("SHCore.dll", "SHStrDupW")
+Interceptor.attach(SHStrDupW, {onLeave: function (args) {send("SHStrDupW");}});
+
+var SHTaskPoolAllowThreadReuse = Module.findExportByName("SHCore.dll", "SHTaskPoolAllowThreadReuse")
+Interceptor.attach(SHTaskPoolAllowThreadReuse, {onLeave: function (args) {send("SHTaskPoolAllowThreadReuse");}});
+
+var SHTaskPoolDoNotWaitForMoreTasks = Module.findExportByName("SHCore.dll", "SHTaskPoolDoNotWaitForMoreTasks")
+Interceptor.attach(SHTaskPoolDoNotWaitForMoreTasks, {onLeave: function (args) {send("SHTaskPoolDoNotWaitForMoreTasks");}});
+
+var SHTaskPoolGetCurrentThreadLifetime = Module.findExportByName("SHCore.dll", "SHTaskPoolGetCurrentThreadLifetime")
+Interceptor.attach(SHTaskPoolGetCurrentThreadLifetime, {onLeave: function (args) {send("SHTaskPoolGetCurrentThreadLifetime");}});
+
+var SHTaskPoolGetUniqueContext = Module.findExportByName("SHCore.dll", "SHTaskPoolGetUniqueContext")
+Interceptor.attach(SHTaskPoolGetUniqueContext, {onLeave: function (args) {send("SHTaskPoolGetUniqueContext");}});
+
+var SHTaskPoolQueueTask = Module.findExportByName("SHCore.dll", "SHTaskPoolQueueTask")
+Interceptor.attach(SHTaskPoolQueueTask, {onLeave: function (args) {send("SHTaskPoolQueueTask");}});
+
+var SHTaskPoolSetThreadReuseAllowed = Module.findExportByName("SHCore.dll", "SHTaskPoolSetThreadReuseAllowed")
+Interceptor.attach(SHTaskPoolSetThreadReuseAllowed, {onLeave: function (args) {send("SHTaskPoolSetThreadReuseAllowed");}});
+
+var SHUnicodeToAnsi = Module.findExportByName("SHCore.dll", "SHUnicodeToAnsi")
+Interceptor.attach(SHUnicodeToAnsi, {onLeave: function (args) {send("SHUnicodeToAnsi");}});
+
+var SHUnicodeToUnicode = Module.findExportByName("SHCore.dll", "SHUnicodeToUnicode")
+Interceptor.attach(SHUnicodeToUnicode, {onLeave: function (args) {send("SHUnicodeToUnicode");}});
+
+var SetCurrentProcessExplicitAppUserModelID = Module.findExportByName("SHCore.dll", "SetCurrentProcessExplicitAppUserModelID")
+Interceptor.attach(SetCurrentProcessExplicitAppUserModelID, {onLeave: function (args) {send("SetCurrentProcessExplicitAppUserModelID");}});
+
+var SetProcessDpiAwareness = Module.findExportByName("SHCore.dll", "SetProcessDpiAwareness")
+Interceptor.attach(SetProcessDpiAwareness, {onLeave: function (args) {send("SetProcessDpiAwareness");}});
+
+var SetProcessReference = Module.findExportByName("SHCore.dll", "SetProcessReference")
+Interceptor.attach(SetProcessReference, {onLeave: function (args) {send("SetProcessReference");}});
+
+var SubscribeFeatureStateChangeNotification = Module.findExportByName("SHCore.dll", "SubscribeFeatureStateChangeNotification")
+Interceptor.attach(SubscribeFeatureStateChangeNotification, {onLeave: function (args) {send("SubscribeFeatureStateChangeNotification");}});
+
+var UnregisterScaleChangeEvent = Module.findExportByName("SHCore.dll", "UnregisterScaleChangeEvent")
+Interceptor.attach(UnregisterScaleChangeEvent, {onLeave: function (args) {send("UnregisterScaleChangeEvent");}});
+
+var UnsubscribeFeatureStateChangeNotification = Module.findExportByName("SHCore.dll", "UnsubscribeFeatureStateChangeNotification")
+Interceptor.attach(UnsubscribeFeatureStateChangeNotification, {onLeave: function (args) {send("UnsubscribeFeatureStateChangeNotification");}});
+

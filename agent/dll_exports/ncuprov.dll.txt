@@ -1,0 +1,6 @@
+var SruInitializeProvider = Module.findExportByName("ncuprov.dll", "SruInitializeProvider")
+Interceptor.attach(SruInitializeProvider, {onLeave: function (args) {send("SruInitializeProvider");}});
+
+var SruUninitializeProvider = Module.findExportByName("ncuprov.dll", "SruUninitializeProvider")
+Interceptor.attach(SruUninitializeProvider, {onLeave: function (args) {send("SruUninitializeProvider");}});
+

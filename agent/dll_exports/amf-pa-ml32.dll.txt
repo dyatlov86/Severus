@@ -1,0 +1,9 @@
+var AMFInitWinML = Module.findExportByName("amf-pa-ml32.dll", "AMFInitWinML")
+Interceptor.attach(AMFInitWinML, {onLeave: function (args) {send("AMFInitWinML");}});
+
+var AMFProcessWinML = Module.findExportByName("amf-pa-ml32.dll", "AMFProcessWinML")
+Interceptor.attach(AMFProcessWinML, {onLeave: function (args) {send("AMFProcessWinML");}});
+
+var AMFTerminateWinML = Module.findExportByName("amf-pa-ml32.dll", "AMFTerminateWinML")
+Interceptor.attach(AMFTerminateWinML, {onLeave: function (args) {send("AMFTerminateWinML");}});
+

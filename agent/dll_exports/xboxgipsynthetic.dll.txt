@@ -1,0 +1,42 @@
+var DllMain = Module.findExportByName("xboxgipsynthetic.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var SyntheticController_AddAudioHeadset = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_AddAudioHeadset")
+Interceptor.attach(SyntheticController_AddAudioHeadset, {onLeave: function (args) {send("SyntheticController_AddAudioHeadset");}});
+
+var SyntheticController_Connect = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_Connect")
+Interceptor.attach(SyntheticController_Connect, {onLeave: function (args) {send("SyntheticController_Connect");}});
+
+var SyntheticController_CreateController = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_CreateController")
+Interceptor.attach(SyntheticController_CreateController, {onLeave: function (args) {send("SyntheticController_CreateController");}});
+
+var SyntheticController_Disconnect = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_Disconnect")
+Interceptor.attach(SyntheticController_Disconnect, {onLeave: function (args) {send("SyntheticController_Disconnect");}});
+
+var SyntheticController_GetDeviceId = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_GetDeviceId")
+Interceptor.attach(SyntheticController_GetDeviceId, {onLeave: function (args) {send("SyntheticController_GetDeviceId");}});
+
+var SyntheticController_RegisterReportCallback = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_RegisterReportCallback")
+Interceptor.attach(SyntheticController_RegisterReportCallback, {onLeave: function (args) {send("SyntheticController_RegisterReportCallback");}});
+
+var SyntheticController_RemoveAudioHeadset = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_RemoveAudioHeadset")
+Interceptor.attach(SyntheticController_RemoveAudioHeadset, {onLeave: function (args) {send("SyntheticController_RemoveAudioHeadset");}});
+
+var SyntheticController_RemoveController = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_RemoveController")
+Interceptor.attach(SyntheticController_RemoveController, {onLeave: function (args) {send("SyntheticController_RemoveController");}});
+
+var SyntheticController_SendAudio = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_SendAudio")
+Interceptor.attach(SyntheticController_SendAudio, {onLeave: function (args) {send("SyntheticController_SendAudio");}});
+
+var SyntheticController_SendReport = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_SendReport")
+Interceptor.attach(SyntheticController_SendReport, {onLeave: function (args) {send("SyntheticController_SendReport");}});
+
+var SyntheticController_SetControllerFwVersion = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_SetControllerFwVersion")
+Interceptor.attach(SyntheticController_SetControllerFwVersion, {onLeave: function (args) {send("SyntheticController_SetControllerFwVersion");}});
+
+var SyntheticController_SetTargetProcess = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_SetTargetProcess")
+Interceptor.attach(SyntheticController_SetTargetProcess, {onLeave: function (args) {send("SyntheticController_SetTargetProcess");}});
+
+var SyntheticController_UnregisterReportCallback = Module.findExportByName("xboxgipsynthetic.dll", "SyntheticController_UnregisterReportCallback")
+Interceptor.attach(SyntheticController_UnregisterReportCallback, {onLeave: function (args) {send("SyntheticController_UnregisterReportCallback");}});
+

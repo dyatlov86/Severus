@@ -1,0 +1,87 @@
+var I_NetDfsIsThisADomainName = Module.findExportByName("dfscli.dll", "I_NetDfsIsThisADomainName")
+Interceptor.attach(I_NetDfsIsThisADomainName, {onLeave: function (args) {send("I_NetDfsIsThisADomainName");}});
+
+var NetDfsAdd = Module.findExportByName("dfscli.dll", "NetDfsAdd")
+Interceptor.attach(NetDfsAdd, {onLeave: function (args) {send("NetDfsAdd");}});
+
+var NetDfsAddFtRoot = Module.findExportByName("dfscli.dll", "NetDfsAddFtRoot")
+Interceptor.attach(NetDfsAddFtRoot, {onLeave: function (args) {send("NetDfsAddFtRoot");}});
+
+var NetDfsAddRootTarget = Module.findExportByName("dfscli.dll", "NetDfsAddRootTarget")
+Interceptor.attach(NetDfsAddRootTarget, {onLeave: function (args) {send("NetDfsAddRootTarget");}});
+
+var NetDfsAddStdRoot = Module.findExportByName("dfscli.dll", "NetDfsAddStdRoot")
+Interceptor.attach(NetDfsAddStdRoot, {onLeave: function (args) {send("NetDfsAddStdRoot");}});
+
+var NetDfsAddStdRootForced = Module.findExportByName("dfscli.dll", "NetDfsAddStdRootForced")
+Interceptor.attach(NetDfsAddStdRootForced, {onLeave: function (args) {send("NetDfsAddStdRootForced");}});
+
+var NetDfsEnum = Module.findExportByName("dfscli.dll", "NetDfsEnum")
+Interceptor.attach(NetDfsEnum, {onLeave: function (args) {send("NetDfsEnum");}});
+
+var NetDfsGetClientInfo = Module.findExportByName("dfscli.dll", "NetDfsGetClientInfo")
+Interceptor.attach(NetDfsGetClientInfo, {onLeave: function (args) {send("NetDfsGetClientInfo");}});
+
+var NetDfsGetDcAddress = Module.findExportByName("dfscli.dll", "NetDfsGetDcAddress")
+Interceptor.attach(NetDfsGetDcAddress, {onLeave: function (args) {send("NetDfsGetDcAddress");}});
+
+var NetDfsGetFtContainerSecurity = Module.findExportByName("dfscli.dll", "NetDfsGetFtContainerSecurity")
+Interceptor.attach(NetDfsGetFtContainerSecurity, {onLeave: function (args) {send("NetDfsGetFtContainerSecurity");}});
+
+var NetDfsGetInfo = Module.findExportByName("dfscli.dll", "NetDfsGetInfo")
+Interceptor.attach(NetDfsGetInfo, {onLeave: function (args) {send("NetDfsGetInfo");}});
+
+var NetDfsGetSecurity = Module.findExportByName("dfscli.dll", "NetDfsGetSecurity")
+Interceptor.attach(NetDfsGetSecurity, {onLeave: function (args) {send("NetDfsGetSecurity");}});
+
+var NetDfsGetStdContainerSecurity = Module.findExportByName("dfscli.dll", "NetDfsGetStdContainerSecurity")
+Interceptor.attach(NetDfsGetStdContainerSecurity, {onLeave: function (args) {send("NetDfsGetStdContainerSecurity");}});
+
+var NetDfsGetSupportedNamespaceVersion = Module.findExportByName("dfscli.dll", "NetDfsGetSupportedNamespaceVersion")
+Interceptor.attach(NetDfsGetSupportedNamespaceVersion, {onLeave: function (args) {send("NetDfsGetSupportedNamespaceVersion");}});
+
+var NetDfsManagerGetConfigInfo = Module.findExportByName("dfscli.dll", "NetDfsManagerGetConfigInfo")
+Interceptor.attach(NetDfsManagerGetConfigInfo, {onLeave: function (args) {send("NetDfsManagerGetConfigInfo");}});
+
+var NetDfsManagerInitialize = Module.findExportByName("dfscli.dll", "NetDfsManagerInitialize")
+Interceptor.attach(NetDfsManagerInitialize, {onLeave: function (args) {send("NetDfsManagerInitialize");}});
+
+var NetDfsManagerSendSiteInfo = Module.findExportByName("dfscli.dll", "NetDfsManagerSendSiteInfo")
+Interceptor.attach(NetDfsManagerSendSiteInfo, {onLeave: function (args) {send("NetDfsManagerSendSiteInfo");}});
+
+var NetDfsMove = Module.findExportByName("dfscli.dll", "NetDfsMove")
+Interceptor.attach(NetDfsMove, {onLeave: function (args) {send("NetDfsMove");}});
+
+var NetDfsRemove = Module.findExportByName("dfscli.dll", "NetDfsRemove")
+Interceptor.attach(NetDfsRemove, {onLeave: function (args) {send("NetDfsRemove");}});
+
+var NetDfsRemoveFtRoot = Module.findExportByName("dfscli.dll", "NetDfsRemoveFtRoot")
+Interceptor.attach(NetDfsRemoveFtRoot, {onLeave: function (args) {send("NetDfsRemoveFtRoot");}});
+
+var NetDfsRemoveFtRootForced = Module.findExportByName("dfscli.dll", "NetDfsRemoveFtRootForced")
+Interceptor.attach(NetDfsRemoveFtRootForced, {onLeave: function (args) {send("NetDfsRemoveFtRootForced");}});
+
+var NetDfsRemoveRootTarget = Module.findExportByName("dfscli.dll", "NetDfsRemoveRootTarget")
+Interceptor.attach(NetDfsRemoveRootTarget, {onLeave: function (args) {send("NetDfsRemoveRootTarget");}});
+
+var NetDfsRemoveStdRoot = Module.findExportByName("dfscli.dll", "NetDfsRemoveStdRoot")
+Interceptor.attach(NetDfsRemoveStdRoot, {onLeave: function (args) {send("NetDfsRemoveStdRoot");}});
+
+var NetDfsRename = Module.findExportByName("dfscli.dll", "NetDfsRename")
+Interceptor.attach(NetDfsRename, {onLeave: function (args) {send("NetDfsRename");}});
+
+var NetDfsSetClientInfo = Module.findExportByName("dfscli.dll", "NetDfsSetClientInfo")
+Interceptor.attach(NetDfsSetClientInfo, {onLeave: function (args) {send("NetDfsSetClientInfo");}});
+
+var NetDfsSetFtContainerSecurity = Module.findExportByName("dfscli.dll", "NetDfsSetFtContainerSecurity")
+Interceptor.attach(NetDfsSetFtContainerSecurity, {onLeave: function (args) {send("NetDfsSetFtContainerSecurity");}});
+
+var NetDfsSetInfo = Module.findExportByName("dfscli.dll", "NetDfsSetInfo")
+Interceptor.attach(NetDfsSetInfo, {onLeave: function (args) {send("NetDfsSetInfo");}});
+
+var NetDfsSetSecurity = Module.findExportByName("dfscli.dll", "NetDfsSetSecurity")
+Interceptor.attach(NetDfsSetSecurity, {onLeave: function (args) {send("NetDfsSetSecurity");}});
+
+var NetDfsSetStdContainerSecurity = Module.findExportByName("dfscli.dll", "NetDfsSetStdContainerSecurity")
+Interceptor.attach(NetDfsSetStdContainerSecurity, {onLeave: function (args) {send("NetDfsSetStdContainerSecurity");}});
+

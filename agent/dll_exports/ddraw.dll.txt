@@ -1,0 +1,66 @@
+var AcquireDDThreadLock = Module.findExportByName("ddraw.dll", "AcquireDDThreadLock")
+Interceptor.attach(AcquireDDThreadLock, {onLeave: function (args) {send("AcquireDDThreadLock");}});
+
+var CompleteCreateSysmemSurface = Module.findExportByName("ddraw.dll", "CompleteCreateSysmemSurface")
+Interceptor.attach(CompleteCreateSysmemSurface, {onLeave: function (args) {send("CompleteCreateSysmemSurface");}});
+
+var D3DParseUnknownCommand = Module.findExportByName("ddraw.dll", "D3DParseUnknownCommand")
+Interceptor.attach(D3DParseUnknownCommand, {onLeave: function (args) {send("D3DParseUnknownCommand");}});
+
+var DDGetAttachedSurfaceLcl = Module.findExportByName("ddraw.dll", "DDGetAttachedSurfaceLcl")
+Interceptor.attach(DDGetAttachedSurfaceLcl, {onLeave: function (args) {send("DDGetAttachedSurfaceLcl");}});
+
+var DDInternalLock = Module.findExportByName("ddraw.dll", "DDInternalLock")
+Interceptor.attach(DDInternalLock, {onLeave: function (args) {send("DDInternalLock");}});
+
+var DDInternalUnlock = Module.findExportByName("ddraw.dll", "DDInternalUnlock")
+Interceptor.attach(DDInternalUnlock, {onLeave: function (args) {send("DDInternalUnlock");}});
+
+var DSoundHelp = Module.findExportByName("ddraw.dll", "DSoundHelp")
+Interceptor.attach(DSoundHelp, {onLeave: function (args) {send("DSoundHelp");}});
+
+var DirectDrawCreate = Module.findExportByName("ddraw.dll", "DirectDrawCreate")
+Interceptor.attach(DirectDrawCreate, {onLeave: function (args) {send("DirectDrawCreate");}});
+
+var DirectDrawCreateClipper = Module.findExportByName("ddraw.dll", "DirectDrawCreateClipper")
+Interceptor.attach(DirectDrawCreateClipper, {onLeave: function (args) {send("DirectDrawCreateClipper");}});
+
+var DirectDrawCreateEx = Module.findExportByName("ddraw.dll", "DirectDrawCreateEx")
+Interceptor.attach(DirectDrawCreateEx, {onLeave: function (args) {send("DirectDrawCreateEx");}});
+
+var DirectDrawEnumerateA = Module.findExportByName("ddraw.dll", "DirectDrawEnumerateA")
+Interceptor.attach(DirectDrawEnumerateA, {onLeave: function (args) {send("DirectDrawEnumerateA");}});
+
+var DirectDrawEnumerateExA = Module.findExportByName("ddraw.dll", "DirectDrawEnumerateExA")
+Interceptor.attach(DirectDrawEnumerateExA, {onLeave: function (args) {send("DirectDrawEnumerateExA");}});
+
+var DirectDrawEnumerateExW = Module.findExportByName("ddraw.dll", "DirectDrawEnumerateExW")
+Interceptor.attach(DirectDrawEnumerateExW, {onLeave: function (args) {send("DirectDrawEnumerateExW");}});
+
+var DirectDrawEnumerateW = Module.findExportByName("ddraw.dll", "DirectDrawEnumerateW")
+Interceptor.attach(DirectDrawEnumerateW, {onLeave: function (args) {send("DirectDrawEnumerateW");}});
+
+var DllCanUnloadNow = Module.findExportByName("ddraw.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("ddraw.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetDDSurfaceLocal = Module.findExportByName("ddraw.dll", "GetDDSurfaceLocal")
+Interceptor.attach(GetDDSurfaceLocal, {onLeave: function (args) {send("GetDDSurfaceLocal");}});
+
+var GetOLEThunkData = Module.findExportByName("ddraw.dll", "GetOLEThunkData")
+Interceptor.attach(GetOLEThunkData, {onLeave: function (args) {send("GetOLEThunkData");}});
+
+var GetSurfaceFromDC = Module.findExportByName("ddraw.dll", "GetSurfaceFromDC")
+Interceptor.attach(GetSurfaceFromDC, {onLeave: function (args) {send("GetSurfaceFromDC");}});
+
+var RegisterSpecialCase = Module.findExportByName("ddraw.dll", "RegisterSpecialCase")
+Interceptor.attach(RegisterSpecialCase, {onLeave: function (args) {send("RegisterSpecialCase");}});
+
+var ReleaseDDThreadLock = Module.findExportByName("ddraw.dll", "ReleaseDDThreadLock")
+Interceptor.attach(ReleaseDDThreadLock, {onLeave: function (args) {send("ReleaseDDThreadLock");}});
+
+var SetAppCompatData = Module.findExportByName("ddraw.dll", "SetAppCompatData")
+Interceptor.attach(SetAppCompatData, {onLeave: function (args) {send("SetAppCompatData");}});
+

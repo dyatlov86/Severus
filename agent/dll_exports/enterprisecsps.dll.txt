@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("enterprisecsps.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("enterprisecsps.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetPushStatus = Module.findExportByName("enterprisecsps.dll", "GetPushStatus")
+Interceptor.attach(GetPushStatus, {onLeave: function (args) {send("GetPushStatus");}});
+
+var GetPushStatusOld = Module.findExportByName("enterprisecsps.dll", "GetPushStatusOld")
+Interceptor.attach(GetPushStatusOld, {onLeave: function (args) {send("GetPushStatusOld");}});
+
+var SetPushPFN = Module.findExportByName("enterprisecsps.dll", "SetPushPFN")
+Interceptor.attach(SetPushPFN, {onLeave: function (args) {send("SetPushPFN");}});
+
+var SetPushPFNOld = Module.findExportByName("enterprisecsps.dll", "SetPushPFNOld")
+Interceptor.attach(SetPushPFNOld, {onLeave: function (args) {send("SetPushPFNOld");}});
+

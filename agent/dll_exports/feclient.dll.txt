@@ -1,0 +1,180 @@
+var DpQueryUserProtectorDescriptor = Module.findExportByName("feclient.dll", "DpQueryUserProtectorDescriptor")
+Interceptor.attach(DpQueryUserProtectorDescriptor, {onLeave: function (args) {send("DpQueryUserProtectorDescriptor");}});
+
+var DpQueryUserProtectorDescriptorInfo = Module.findExportByName("feclient.dll", "DpQueryUserProtectorDescriptorInfo")
+Interceptor.attach(DpQueryUserProtectorDescriptorInfo, {onLeave: function (args) {send("DpQueryUserProtectorDescriptorInfo");}});
+
+var EdpAllowFileAccessForProcess = Module.findExportByName("feclient.dll", "EdpAllowFileAccessForProcess")
+Interceptor.attach(EdpAllowFileAccessForProcess, {onLeave: function (args) {send("EdpAllowFileAccessForProcess");}});
+
+var EdpContainerizeFile = Module.findExportByName("feclient.dll", "EdpContainerizeFile")
+Interceptor.attach(EdpContainerizeFile, {onLeave: function (args) {send("EdpContainerizeFile");}});
+
+var EdpCredentialCreate = Module.findExportByName("feclient.dll", "EdpCredentialCreate")
+Interceptor.attach(EdpCredentialCreate, {onLeave: function (args) {send("EdpCredentialCreate");}});
+
+var EdpCredentialDelete = Module.findExportByName("feclient.dll", "EdpCredentialDelete")
+Interceptor.attach(EdpCredentialDelete, {onLeave: function (args) {send("EdpCredentialDelete");}});
+
+var EdpCredentialExists = Module.findExportByName("feclient.dll", "EdpCredentialExists")
+Interceptor.attach(EdpCredentialExists, {onLeave: function (args) {send("EdpCredentialExists");}});
+
+var EdpCredentialQuery = Module.findExportByName("feclient.dll", "EdpCredentialQuery")
+Interceptor.attach(EdpCredentialQuery, {onLeave: function (args) {send("EdpCredentialQuery");}});
+
+var EdpDecontainerizeFile = Module.findExportByName("feclient.dll", "EdpDecontainerizeFile")
+Interceptor.attach(EdpDecontainerizeFile, {onLeave: function (args) {send("EdpDecontainerizeFile");}});
+
+var EdpDplPolicyEnabledForUser = Module.findExportByName("feclient.dll", "EdpDplPolicyEnabledForUser")
+Interceptor.attach(EdpDplPolicyEnabledForUser, {onLeave: function (args) {send("EdpDplPolicyEnabledForUser");}});
+
+var EdpDplStartCredServiceIfDplEnabledForUser = Module.findExportByName("feclient.dll", "EdpDplStartCredServiceIfDplEnabledForUser")
+Interceptor.attach(EdpDplStartCredServiceIfDplEnabledForUser, {onLeave: function (args) {send("EdpDplStartCredServiceIfDplEnabledForUser");}});
+
+var EdpDplUpgradePinInfo = Module.findExportByName("feclient.dll", "EdpDplUpgradePinInfo")
+Interceptor.attach(EdpDplUpgradePinInfo, {onLeave: function (args) {send("EdpDplUpgradePinInfo");}});
+
+var EdpDplUpgradeVerifyUser = Module.findExportByName("feclient.dll", "EdpDplUpgradeVerifyUser")
+Interceptor.attach(EdpDplUpgradeVerifyUser, {onLeave: function (args) {send("EdpDplUpgradeVerifyUser");}});
+
+var EdpDplUserCredentialsSet = Module.findExportByName("feclient.dll", "EdpDplUserCredentialsSet")
+Interceptor.attach(EdpDplUserCredentialsSet, {onLeave: function (args) {send("EdpDplUserCredentialsSet");}});
+
+var EdpDplUserUnlockComplete = Module.findExportByName("feclient.dll", "EdpDplUserUnlockComplete")
+Interceptor.attach(EdpDplUserUnlockComplete, {onLeave: function (args) {send("EdpDplUserUnlockComplete");}});
+
+var EdpDplUserUnlockStart = Module.findExportByName("feclient.dll", "EdpDplUserUnlockStart")
+Interceptor.attach(EdpDplUserUnlockStart, {onLeave: function (args) {send("EdpDplUserUnlockStart");}});
+
+var EdpFree = Module.findExportByName("feclient.dll", "EdpFree")
+Interceptor.attach(EdpFree, {onLeave: function (args) {send("EdpFree");}});
+
+var EdpGetContainerIdentity = Module.findExportByName("feclient.dll", "EdpGetContainerIdentity")
+Interceptor.attach(EdpGetContainerIdentity, {onLeave: function (args) {send("EdpGetContainerIdentity");}});
+
+var EdpGetCredServiceState = Module.findExportByName("feclient.dll", "EdpGetCredServiceState")
+Interceptor.attach(EdpGetCredServiceState, {onLeave: function (args) {send("EdpGetCredServiceState");}});
+
+var EdpIsConsumerDataProtectionEnforced = Module.findExportByName("feclient.dll", "EdpIsConsumerDataProtectionEnforced")
+Interceptor.attach(EdpIsConsumerDataProtectionEnforced, {onLeave: function (args) {send("EdpIsConsumerDataProtectionEnforced");}});
+
+var EdpIsConsumerDataProtectionSupported = Module.findExportByName("feclient.dll", "EdpIsConsumerDataProtectionSupported")
+Interceptor.attach(EdpIsConsumerDataProtectionSupported, {onLeave: function (args) {send("EdpIsConsumerDataProtectionSupported");}});
+
+var EdpPurgeAppLearningEvents = Module.findExportByName("feclient.dll", "EdpPurgeAppLearningEvents")
+Interceptor.attach(EdpPurgeAppLearningEvents, {onLeave: function (args) {send("EdpPurgeAppLearningEvents");}});
+
+var EdpQueryCredServiceInfo = Module.findExportByName("feclient.dll", "EdpQueryCredServiceInfo")
+Interceptor.attach(EdpQueryCredServiceInfo, {onLeave: function (args) {send("EdpQueryCredServiceInfo");}});
+
+var EdpQueryDplEnforcedPolicyOwnerIds = Module.findExportByName("feclient.dll", "EdpQueryDplEnforcedPolicyOwnerIds")
+Interceptor.attach(EdpQueryDplEnforcedPolicyOwnerIds, {onLeave: function (args) {send("EdpQueryDplEnforcedPolicyOwnerIds");}});
+
+var EdpQueryRevokedPolicyOwnerIds = Module.findExportByName("feclient.dll", "EdpQueryRevokedPolicyOwnerIds")
+Interceptor.attach(EdpQueryRevokedPolicyOwnerIds, {onLeave: function (args) {send("EdpQueryRevokedPolicyOwnerIds");}});
+
+var EdpRmsClearKeys = Module.findExportByName("feclient.dll", "EdpRmsClearKeys")
+Interceptor.attach(EdpRmsClearKeys, {onLeave: function (args) {send("EdpRmsClearKeys");}});
+
+var EdpSetCredServiceInfo = Module.findExportByName("feclient.dll", "EdpSetCredServiceInfo")
+Interceptor.attach(EdpSetCredServiceInfo, {onLeave: function (args) {send("EdpSetCredServiceInfo");}});
+
+var EdpUnprotectFile = Module.findExportByName("feclient.dll", "EdpUnprotectFile")
+Interceptor.attach(EdpUnprotectFile, {onLeave: function (args) {send("EdpUnprotectFile");}});
+
+var EdpWriteLogSiteLearningEvents = Module.findExportByName("feclient.dll", "EdpWriteLogSiteLearningEvents")
+Interceptor.attach(EdpWriteLogSiteLearningEvents, {onLeave: function (args) {send("EdpWriteLogSiteLearningEvents");}});
+
+var EfsClientAddUsers = Module.findExportByName("feclient.dll", "EfsClientAddUsers")
+Interceptor.attach(EfsClientAddUsers, {onLeave: function (args) {send("EfsClientAddUsers");}});
+
+var EfsClientCloseFileRaw = Module.findExportByName("feclient.dll", "EfsClientCloseFileRaw")
+Interceptor.attach(EfsClientCloseFileRaw, {onLeave: function (args) {send("EfsClientCloseFileRaw");}});
+
+var EfsClientCopyFileRaw = Module.findExportByName("feclient.dll", "EfsClientCopyFileRaw")
+Interceptor.attach(EfsClientCopyFileRaw, {onLeave: function (args) {send("EfsClientCopyFileRaw");}});
+
+var EfsClientDecryptFile = Module.findExportByName("feclient.dll", "EfsClientDecryptFile")
+Interceptor.attach(EfsClientDecryptFile, {onLeave: function (args) {send("EfsClientDecryptFile");}});
+
+var EfsClientDuplicateEncryptionInfo = Module.findExportByName("feclient.dll", "EfsClientDuplicateEncryptionInfo")
+Interceptor.attach(EfsClientDuplicateEncryptionInfo, {onLeave: function (args) {send("EfsClientDuplicateEncryptionInfo");}});
+
+var EfsClientEncryptFile = Module.findExportByName("feclient.dll", "EfsClientEncryptFile")
+Interceptor.attach(EfsClientEncryptFile, {onLeave: function (args) {send("EfsClientEncryptFile");}});
+
+var EfsClientEncryptFileEx = Module.findExportByName("feclient.dll", "EfsClientEncryptFileEx")
+Interceptor.attach(EfsClientEncryptFileEx, {onLeave: function (args) {send("EfsClientEncryptFileEx");}});
+
+var EfsClientFileEncryptionStatus = Module.findExportByName("feclient.dll", "EfsClientFileEncryptionStatus")
+Interceptor.attach(EfsClientFileEncryptionStatus, {onLeave: function (args) {send("EfsClientFileEncryptionStatus");}});
+
+var EfsClientFreeHashList = Module.findExportByName("feclient.dll", "EfsClientFreeHashList")
+Interceptor.attach(EfsClientFreeHashList, {onLeave: function (args) {send("EfsClientFreeHashList");}});
+
+var EfsClientFreeKeyInfo = Module.findExportByName("feclient.dll", "EfsClientFreeKeyInfo")
+Interceptor.attach(EfsClientFreeKeyInfo, {onLeave: function (args) {send("EfsClientFreeKeyInfo");}});
+
+var EfsClientFreeProtectorList = Module.findExportByName("feclient.dll", "EfsClientFreeProtectorList")
+Interceptor.attach(EfsClientFreeProtectorList, {onLeave: function (args) {send("EfsClientFreeProtectorList");}});
+
+var EfsClientGetEncryptedFileVersion = Module.findExportByName("feclient.dll", "EfsClientGetEncryptedFileVersion")
+Interceptor.attach(EfsClientGetEncryptedFileVersion, {onLeave: function (args) {send("EfsClientGetEncryptedFileVersion");}});
+
+var EfsClientGetKeyInfo = Module.findExportByName("feclient.dll", "EfsClientGetKeyInfo")
+Interceptor.attach(EfsClientGetKeyInfo, {onLeave: function (args) {send("EfsClientGetKeyInfo");}});
+
+var EfsClientOpenFileRaw = Module.findExportByName("feclient.dll", "EfsClientOpenFileRaw")
+Interceptor.attach(EfsClientOpenFileRaw, {onLeave: function (args) {send("EfsClientOpenFileRaw");}});
+
+var EfsClientQueryProtectors = Module.findExportByName("feclient.dll", "EfsClientQueryProtectors")
+Interceptor.attach(EfsClientQueryProtectors, {onLeave: function (args) {send("EfsClientQueryProtectors");}});
+
+var EfsClientQueryRecoveryAgents = Module.findExportByName("feclient.dll", "EfsClientQueryRecoveryAgents")
+Interceptor.attach(EfsClientQueryRecoveryAgents, {onLeave: function (args) {send("EfsClientQueryRecoveryAgents");}});
+
+var EfsClientQueryUsers = Module.findExportByName("feclient.dll", "EfsClientQueryUsers")
+Interceptor.attach(EfsClientQueryUsers, {onLeave: function (args) {send("EfsClientQueryUsers");}});
+
+var EfsClientReadFileRaw = Module.findExportByName("feclient.dll", "EfsClientReadFileRaw")
+Interceptor.attach(EfsClientReadFileRaw, {onLeave: function (args) {send("EfsClientReadFileRaw");}});
+
+var EfsClientRemoveUsers = Module.findExportByName("feclient.dll", "EfsClientRemoveUsers")
+Interceptor.attach(EfsClientRemoveUsers, {onLeave: function (args) {send("EfsClientRemoveUsers");}});
+
+var EfsClientWriteFileRaw = Module.findExportByName("feclient.dll", "EfsClientWriteFileRaw")
+Interceptor.attach(EfsClientWriteFileRaw, {onLeave: function (args) {send("EfsClientWriteFileRaw");}});
+
+var EfsClientWriteFileWithHeaderRaw = Module.findExportByName("feclient.dll", "EfsClientWriteFileWithHeaderRaw")
+Interceptor.attach(EfsClientWriteFileWithHeaderRaw, {onLeave: function (args) {send("EfsClientWriteFileWithHeaderRaw");}});
+
+var EfsReprotectFile = Module.findExportByName("feclient.dll", "EfsReprotectFile")
+Interceptor.attach(EfsReprotectFile, {onLeave: function (args) {send("EfsReprotectFile");}});
+
+var EfsUtilGetCurrentKey = Module.findExportByName("feclient.dll", "EfsUtilGetCurrentKey")
+Interceptor.attach(EfsUtilGetCurrentKey, {onLeave: function (args) {send("EfsUtilGetCurrentKey");}});
+
+var EfsValidateTokenForConsumer = Module.findExportByName("feclient.dll", "EfsValidateTokenForConsumer")
+Interceptor.attach(EfsValidateTokenForConsumer, {onLeave: function (args) {send("EfsValidateTokenForConsumer");}});
+
+var EfsValidateUserForConsumer = Module.findExportByName("feclient.dll", "EfsValidateUserForConsumer")
+Interceptor.attach(EfsValidateUserForConsumer, {onLeave: function (args) {send("EfsValidateUserForConsumer");}});
+
+var FeClClearCaches = Module.findExportByName("feclient.dll", "FeClClearCaches")
+Interceptor.attach(FeClClearCaches, {onLeave: function (args) {send("FeClClearCaches");}});
+
+var FeClQueryInfo = Module.findExportByName("feclient.dll", "FeClQueryInfo")
+Interceptor.attach(FeClQueryInfo, {onLeave: function (args) {send("FeClQueryInfo");}});
+
+var FeClientInitialize = Module.findExportByName("feclient.dll", "FeClientInitialize")
+Interceptor.attach(FeClientInitialize, {onLeave: function (args) {send("FeClientInitialize");}});
+
+var GetLockSessionUnwrappedKey = Module.findExportByName("feclient.dll", "GetLockSessionUnwrappedKey")
+Interceptor.attach(GetLockSessionUnwrappedKey, {onLeave: function (args) {send("GetLockSessionUnwrappedKey");}});
+
+var GetLockSessionWrappedKey = Module.findExportByName("feclient.dll", "GetLockSessionWrappedKey")
+Interceptor.attach(GetLockSessionWrappedKey, {onLeave: function (args) {send("GetLockSessionWrappedKey");}});
+
+var OefsCheckSupport = Module.findExportByName("feclient.dll", "OefsCheckSupport")
+Interceptor.attach(OefsCheckSupport, {onLeave: function (args) {send("OefsCheckSupport");}});
+

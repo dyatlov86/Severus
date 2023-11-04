@@ -1,0 +1,6 @@
+var McImageInfo = Module.findExportByName("mcupdate_AuthenticAMD.dll", "McImageInfo")
+Interceptor.attach(McImageInfo, {onLeave: function (args) {send("McImageInfo");}});
+
+var McMicrocodeOperation = Module.findExportByName("mcupdate_AuthenticAMD.dll", "McMicrocodeOperation")
+Interceptor.attach(McMicrocodeOperation, {onLeave: function (args) {send("McMicrocodeOperation");}});
+

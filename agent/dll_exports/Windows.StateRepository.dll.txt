@@ -1,0 +1,21 @@
+var ServiceMain = Module.findExportByName("Windows.StateRepository.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var StateRepository_DataAccessLayer_DatabaseCache_Add = Module.findExportByName("Windows.StateRepository.dll", "StateRepository_DataAccessLayer_DatabaseCache_Add")
+Interceptor.attach(StateRepository_DataAccessLayer_DatabaseCache_Add, {onLeave: function (args) {send("StateRepository_DataAccessLayer_DatabaseCache_Add");}});
+
+var StateRepository_DataAccessLayer_DatabaseCache_Get = Module.findExportByName("Windows.StateRepository.dll", "StateRepository_DataAccessLayer_DatabaseCache_Get")
+Interceptor.attach(StateRepository_DataAccessLayer_DatabaseCache_Get, {onLeave: function (args) {send("StateRepository_DataAccessLayer_DatabaseCache_Get");}});
+
+var StateRepository_Initialize = Module.findExportByName("Windows.StateRepository.dll", "StateRepository_Initialize")
+Interceptor.attach(StateRepository_Initialize, {onLeave: function (args) {send("StateRepository_Initialize");}});
+
+var StateRepository_Service_UpdateStatus = Module.findExportByName("Windows.StateRepository.dll", "StateRepository_Service_UpdateStatus")
+Interceptor.attach(StateRepository_Service_UpdateStatus, {onLeave: function (args) {send("StateRepository_Service_UpdateStatus");}});
+
+var StateRepository_Shutdown = Module.findExportByName("Windows.StateRepository.dll", "StateRepository_Shutdown")
+Interceptor.attach(StateRepository_Shutdown, {onLeave: function (args) {send("StateRepository_Shutdown");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("Windows.StateRepository.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

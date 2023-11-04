@@ -1,0 +1,6 @@
+var QueryHDCPDriverInterface = Module.findExportByName("amdmiracast.dll", "QueryHDCPDriverInterface")
+Interceptor.attach(QueryHDCPDriverInterface, {onLeave: function (args) {send("QueryHDCPDriverInterface");}});
+
+var QueryMiracastDriverInterface = Module.findExportByName("amdmiracast.dll", "QueryMiracastDriverInterface")
+Interceptor.attach(QueryMiracastDriverInterface, {onLeave: function (args) {send("QueryMiracastDriverInterface");}});
+

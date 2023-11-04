@@ -1,0 +1,45 @@
+var CdfPluginRegisterDevice = Module.findExportByName("NaturalAuthClient.dll", "CdfPluginRegisterDevice")
+Interceptor.attach(CdfPluginRegisterDevice, {onLeave: function (args) {send("CdfPluginRegisterDevice");}});
+
+var CdfPluginUnregisterDevice = Module.findExportByName("NaturalAuthClient.dll", "CdfPluginUnregisterDevice")
+Interceptor.attach(CdfPluginUnregisterDevice, {onLeave: function (args) {send("CdfPluginUnregisterDevice");}});
+
+var CdfPluginUpdatePresenceState = Module.findExportByName("NaturalAuthClient.dll", "CdfPluginUpdatePresenceState")
+Interceptor.attach(CdfPluginUpdatePresenceState, {onLeave: function (args) {send("CdfPluginUpdatePresenceState");}});
+
+var NaDeviceUnlockStart = Module.findExportByName("NaturalAuthClient.dll", "NaDeviceUnlockStart")
+Interceptor.attach(NaDeviceUnlockStart, {onLeave: function (args) {send("NaDeviceUnlockStart");}});
+
+var NaDeviceUnlockStop = Module.findExportByName("NaturalAuthClient.dll", "NaDeviceUnlockStop")
+Interceptor.attach(NaDeviceUnlockStop, {onLeave: function (args) {send("NaDeviceUnlockStop");}});
+
+var NaDynamicLockForceEvaluate = Module.findExportByName("NaturalAuthClient.dll", "NaDynamicLockForceEvaluate")
+Interceptor.attach(NaDynamicLockForceEvaluate, {onLeave: function (args) {send("NaDynamicLockForceEvaluate");}});
+
+var NaDynamicLockShouldIgnoreDisplayRequestActivity = Module.findExportByName("NaturalAuthClient.dll", "NaDynamicLockShouldIgnoreDisplayRequestActivity")
+Interceptor.attach(NaDynamicLockShouldIgnoreDisplayRequestActivity, {onLeave: function (args) {send("NaDynamicLockShouldIgnoreDisplayRequestActivity");}});
+
+var NaDynamicLockShouldIgnoreUserActivity = Module.findExportByName("NaturalAuthClient.dll", "NaDynamicLockShouldIgnoreUserActivity")
+Interceptor.attach(NaDynamicLockShouldIgnoreUserActivity, {onLeave: function (args) {send("NaDynamicLockShouldIgnoreUserActivity");}});
+
+var NaDynamicLockShouldSkipGracePeriod = Module.findExportByName("NaturalAuthClient.dll", "NaDynamicLockShouldSkipGracePeriod")
+Interceptor.attach(NaDynamicLockShouldSkipGracePeriod, {onLeave: function (args) {send("NaDynamicLockShouldSkipGracePeriod");}});
+
+var NaDynamicLockStart = Module.findExportByName("NaturalAuthClient.dll", "NaDynamicLockStart")
+Interceptor.attach(NaDynamicLockStart, {onLeave: function (args) {send("NaDynamicLockStart");}});
+
+var NaDynamicLockStop = Module.findExportByName("NaturalAuthClient.dll", "NaDynamicLockStop")
+Interceptor.attach(NaDynamicLockStop, {onLeave: function (args) {send("NaDynamicLockStop");}});
+
+var NaRuleQuery = Module.findExportByName("NaturalAuthClient.dll", "NaRuleQuery")
+Interceptor.attach(NaRuleQuery, {onLeave: function (args) {send("NaRuleQuery");}});
+
+var NaRuleRegister = Module.findExportByName("NaturalAuthClient.dll", "NaRuleRegister")
+Interceptor.attach(NaRuleRegister, {onLeave: function (args) {send("NaRuleRegister");}});
+
+var NaRuleUnregister = Module.findExportByName("NaturalAuthClient.dll", "NaRuleUnregister")
+Interceptor.attach(NaRuleUnregister, {onLeave: function (args) {send("NaRuleUnregister");}});
+
+var NaRuleValidate = Module.findExportByName("NaturalAuthClient.dll", "NaRuleValidate")
+Interceptor.attach(NaRuleValidate, {onLeave: function (args) {send("NaRuleValidate");}});
+

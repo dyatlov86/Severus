@@ -1,0 +1,3 @@
+var GetSetting = Module.findExportByName("dosettings.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+

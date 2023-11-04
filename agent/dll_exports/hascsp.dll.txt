@@ -1,0 +1,33 @@
+var DllCanUnloadNow = Module.findExportByName("hascsp.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("hascsp.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("hascsp.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("hascsp.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("hascsp.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetForceRetrieve = Module.findExportByName("hascsp.dll", "GetForceRetrieve")
+Interceptor.attach(GetForceRetrieve, {onLeave: function (args) {send("GetForceRetrieve");}});
+
+var GetHealthCert = Module.findExportByName("hascsp.dll", "GetHealthCert")
+Interceptor.attach(GetHealthCert, {onLeave: function (args) {send("GetHealthCert");}});
+
+var GetNonce = Module.findExportByName("hascsp.dll", "GetNonce")
+Interceptor.attach(GetNonce, {onLeave: function (args) {send("GetNonce");}});
+
+var PolicyManager_PreCheck = Module.findExportByName("hascsp.dll", "PolicyManager_PreCheck")
+Interceptor.attach(PolicyManager_PreCheck, {onLeave: function (args) {send("PolicyManager_PreCheck");}});
+
+var SetForceRetrieve = Module.findExportByName("hascsp.dll", "SetForceRetrieve")
+Interceptor.attach(SetForceRetrieve, {onLeave: function (args) {send("SetForceRetrieve");}});
+
+var SetNonce = Module.findExportByName("hascsp.dll", "SetNonce")
+Interceptor.attach(SetNonce, {onLeave: function (args) {send("SetNonce");}});
+

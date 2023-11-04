@@ -1,0 +1,147 @@
+var CreateProcessA = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "CreateProcessA")
+Interceptor.attach(CreateProcessA, {onLeave: function (args) {send("CreateProcessA");}});
+
+var CreateProcessAsUserW = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "CreateProcessAsUserW")
+Interceptor.attach(CreateProcessAsUserW, {onLeave: function (args) {send("CreateProcessAsUserW");}});
+
+var CreateProcessW = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "CreateProcessW")
+Interceptor.attach(CreateProcessW, {onLeave: function (args) {send("CreateProcessW");}});
+
+var CreateRemoteThread = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "CreateRemoteThread")
+Interceptor.attach(CreateRemoteThread, {onLeave: function (args) {send("CreateRemoteThread");}});
+
+var CreateRemoteThreadEx = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "CreateRemoteThreadEx")
+Interceptor.attach(CreateRemoteThreadEx, {onLeave: function (args) {send("CreateRemoteThreadEx");}});
+
+var CreateThread = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "CreateThread")
+Interceptor.attach(CreateThread, {onLeave: function (args) {send("CreateThread");}});
+
+var DeleteProcThreadAttributeList = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "DeleteProcThreadAttributeList")
+Interceptor.attach(DeleteProcThreadAttributeList, {onLeave: function (args) {send("DeleteProcThreadAttributeList");}});
+
+var ExitProcess = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "ExitProcess")
+Interceptor.attach(ExitProcess, {onLeave: function (args) {send("ExitProcess");}});
+
+var ExitThread = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "ExitThread")
+Interceptor.attach(ExitThread, {onLeave: function (args) {send("ExitThread");}});
+
+var FlushProcessWriteBuffers = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "FlushProcessWriteBuffers")
+Interceptor.attach(FlushProcessWriteBuffers, {onLeave: function (args) {send("FlushProcessWriteBuffers");}});
+
+var GetCurrentProcess = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetCurrentProcess")
+Interceptor.attach(GetCurrentProcess, {onLeave: function (args) {send("GetCurrentProcess");}});
+
+var GetCurrentProcessId = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetCurrentProcessId")
+Interceptor.attach(GetCurrentProcessId, {onLeave: function (args) {send("GetCurrentProcessId");}});
+
+var GetCurrentThread = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetCurrentThread")
+Interceptor.attach(GetCurrentThread, {onLeave: function (args) {send("GetCurrentThread");}});
+
+var GetCurrentThreadId = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetCurrentThreadId")
+Interceptor.attach(GetCurrentThreadId, {onLeave: function (args) {send("GetCurrentThreadId");}});
+
+var GetExitCodeProcess = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetExitCodeProcess")
+Interceptor.attach(GetExitCodeProcess, {onLeave: function (args) {send("GetExitCodeProcess");}});
+
+var GetExitCodeThread = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetExitCodeThread")
+Interceptor.attach(GetExitCodeThread, {onLeave: function (args) {send("GetExitCodeThread");}});
+
+var GetPriorityClass = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetPriorityClass")
+Interceptor.attach(GetPriorityClass, {onLeave: function (args) {send("GetPriorityClass");}});
+
+var GetProcessId = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetProcessId")
+Interceptor.attach(GetProcessId, {onLeave: function (args) {send("GetProcessId");}});
+
+var GetProcessIdOfThread = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetProcessIdOfThread")
+Interceptor.attach(GetProcessIdOfThread, {onLeave: function (args) {send("GetProcessIdOfThread");}});
+
+var GetProcessTimes = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetProcessTimes")
+Interceptor.attach(GetProcessTimes, {onLeave: function (args) {send("GetProcessTimes");}});
+
+var GetProcessVersion = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetProcessVersion")
+Interceptor.attach(GetProcessVersion, {onLeave: function (args) {send("GetProcessVersion");}});
+
+var GetStartupInfoW = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetStartupInfoW")
+Interceptor.attach(GetStartupInfoW, {onLeave: function (args) {send("GetStartupInfoW");}});
+
+var GetThreadId = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetThreadId")
+Interceptor.attach(GetThreadId, {onLeave: function (args) {send("GetThreadId");}});
+
+var GetThreadPriority = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetThreadPriority")
+Interceptor.attach(GetThreadPriority, {onLeave: function (args) {send("GetThreadPriority");}});
+
+var GetThreadPriorityBoost = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "GetThreadPriorityBoost")
+Interceptor.attach(GetThreadPriorityBoost, {onLeave: function (args) {send("GetThreadPriorityBoost");}});
+
+var InitializeProcThreadAttributeList = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "InitializeProcThreadAttributeList")
+Interceptor.attach(InitializeProcThreadAttributeList, {onLeave: function (args) {send("InitializeProcThreadAttributeList");}});
+
+var OpenProcessToken = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "OpenProcessToken")
+Interceptor.attach(OpenProcessToken, {onLeave: function (args) {send("OpenProcessToken");}});
+
+var OpenThread = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "OpenThread")
+Interceptor.attach(OpenThread, {onLeave: function (args) {send("OpenThread");}});
+
+var OpenThreadToken = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "OpenThreadToken")
+Interceptor.attach(OpenThreadToken, {onLeave: function (args) {send("OpenThreadToken");}});
+
+var ProcessIdToSessionId = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "ProcessIdToSessionId")
+Interceptor.attach(ProcessIdToSessionId, {onLeave: function (args) {send("ProcessIdToSessionId");}});
+
+var QueryProcessAffinityUpdateMode = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "QueryProcessAffinityUpdateMode")
+Interceptor.attach(QueryProcessAffinityUpdateMode, {onLeave: function (args) {send("QueryProcessAffinityUpdateMode");}});
+
+var QueueUserAPC = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "QueueUserAPC")
+Interceptor.attach(QueueUserAPC, {onLeave: function (args) {send("QueueUserAPC");}});
+
+var ResumeThread = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "ResumeThread")
+Interceptor.attach(ResumeThread, {onLeave: function (args) {send("ResumeThread");}});
+
+var SetPriorityClass = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "SetPriorityClass")
+Interceptor.attach(SetPriorityClass, {onLeave: function (args) {send("SetPriorityClass");}});
+
+var SetProcessAffinityUpdateMode = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "SetProcessAffinityUpdateMode")
+Interceptor.attach(SetProcessAffinityUpdateMode, {onLeave: function (args) {send("SetProcessAffinityUpdateMode");}});
+
+var SetProcessShutdownParameters = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "SetProcessShutdownParameters")
+Interceptor.attach(SetProcessShutdownParameters, {onLeave: function (args) {send("SetProcessShutdownParameters");}});
+
+var SetThreadPriority = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "SetThreadPriority")
+Interceptor.attach(SetThreadPriority, {onLeave: function (args) {send("SetThreadPriority");}});
+
+var SetThreadPriorityBoost = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "SetThreadPriorityBoost")
+Interceptor.attach(SetThreadPriorityBoost, {onLeave: function (args) {send("SetThreadPriorityBoost");}});
+
+var SetThreadStackGuarantee = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "SetThreadStackGuarantee")
+Interceptor.attach(SetThreadStackGuarantee, {onLeave: function (args) {send("SetThreadStackGuarantee");}});
+
+var SetThreadToken = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "SetThreadToken")
+Interceptor.attach(SetThreadToken, {onLeave: function (args) {send("SetThreadToken");}});
+
+var SuspendThread = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "SuspendThread")
+Interceptor.attach(SuspendThread, {onLeave: function (args) {send("SuspendThread");}});
+
+var SwitchToThread = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "SwitchToThread")
+Interceptor.attach(SwitchToThread, {onLeave: function (args) {send("SwitchToThread");}});
+
+var TerminateProcess = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "TerminateProcess")
+Interceptor.attach(TerminateProcess, {onLeave: function (args) {send("TerminateProcess");}});
+
+var TerminateThread = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "TerminateThread")
+Interceptor.attach(TerminateThread, {onLeave: function (args) {send("TerminateThread");}});
+
+var TlsAlloc = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "TlsAlloc")
+Interceptor.attach(TlsAlloc, {onLeave: function (args) {send("TlsAlloc");}});
+
+var TlsFree = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "TlsFree")
+Interceptor.attach(TlsFree, {onLeave: function (args) {send("TlsFree");}});
+
+var TlsGetValue = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "TlsGetValue")
+Interceptor.attach(TlsGetValue, {onLeave: function (args) {send("TlsGetValue");}});
+
+var TlsSetValue = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "TlsSetValue")
+Interceptor.attach(TlsSetValue, {onLeave: function (args) {send("TlsSetValue");}});
+
+var UpdateProcThreadAttribute = Module.findExportByName("api-ms-win-core-processthreads-l1-1-0.dll", "UpdateProcThreadAttribute")
+Interceptor.attach(UpdateProcThreadAttribute, {onLeave: function (args) {send("UpdateProcThreadAttribute");}});
+

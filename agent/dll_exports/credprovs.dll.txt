@@ -1,0 +1,9 @@
+var CreatePasswordProviderWrapperInstance = Module.findExportByName("credprovs.dll", "CreatePasswordProviderWrapperInstance")
+Interceptor.attach(CreatePasswordProviderWrapperInstance, {onLeave: function (args) {send("CreatePasswordProviderWrapperInstance");}});
+
+var DllCanUnloadNow = Module.findExportByName("credprovs.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("credprovs.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

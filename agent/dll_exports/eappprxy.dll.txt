@@ -1,0 +1,54 @@
+var EapHostPeerBeginSession = Module.findExportByName("eappprxy.dll", "EapHostPeerBeginSession")
+Interceptor.attach(EapHostPeerBeginSession, {onLeave: function (args) {send("EapHostPeerBeginSession");}});
+
+var EapHostPeerClearConnection = Module.findExportByName("eappprxy.dll", "EapHostPeerClearConnection")
+Interceptor.attach(EapHostPeerClearConnection, {onLeave: function (args) {send("EapHostPeerClearConnection");}});
+
+var EapHostPeerEndSession = Module.findExportByName("eappprxy.dll", "EapHostPeerEndSession")
+Interceptor.attach(EapHostPeerEndSession, {onLeave: function (args) {send("EapHostPeerEndSession");}});
+
+var EapHostPeerFreeEapError = Module.findExportByName("eappprxy.dll", "EapHostPeerFreeEapError")
+Interceptor.attach(EapHostPeerFreeEapError, {onLeave: function (args) {send("EapHostPeerFreeEapError");}});
+
+var EapHostPeerFreeRuntimeMemory = Module.findExportByName("eappprxy.dll", "EapHostPeerFreeRuntimeMemory")
+Interceptor.attach(EapHostPeerFreeRuntimeMemory, {onLeave: function (args) {send("EapHostPeerFreeRuntimeMemory");}});
+
+var EapHostPeerGetAuthStatus = Module.findExportByName("eappprxy.dll", "EapHostPeerGetAuthStatus")
+Interceptor.attach(EapHostPeerGetAuthStatus, {onLeave: function (args) {send("EapHostPeerGetAuthStatus");}});
+
+var EapHostPeerGetDataToUnplumbCredentials = Module.findExportByName("eappprxy.dll", "EapHostPeerGetDataToUnplumbCredentials")
+Interceptor.attach(EapHostPeerGetDataToUnplumbCredentials, {onLeave: function (args) {send("EapHostPeerGetDataToUnplumbCredentials");}});
+
+var EapHostPeerGetEncryptedPassword = Module.findExportByName("eappprxy.dll", "EapHostPeerGetEncryptedPassword")
+Interceptor.attach(EapHostPeerGetEncryptedPassword, {onLeave: function (args) {send("EapHostPeerGetEncryptedPassword");}});
+
+var EapHostPeerGetIdentity = Module.findExportByName("eappprxy.dll", "EapHostPeerGetIdentity")
+Interceptor.attach(EapHostPeerGetIdentity, {onLeave: function (args) {send("EapHostPeerGetIdentity");}});
+
+var EapHostPeerGetResponseAttributes = Module.findExportByName("eappprxy.dll", "EapHostPeerGetResponseAttributes")
+Interceptor.attach(EapHostPeerGetResponseAttributes, {onLeave: function (args) {send("EapHostPeerGetResponseAttributes");}});
+
+var EapHostPeerGetResult = Module.findExportByName("eappprxy.dll", "EapHostPeerGetResult")
+Interceptor.attach(EapHostPeerGetResult, {onLeave: function (args) {send("EapHostPeerGetResult");}});
+
+var EapHostPeerGetSendPacket = Module.findExportByName("eappprxy.dll", "EapHostPeerGetSendPacket")
+Interceptor.attach(EapHostPeerGetSendPacket, {onLeave: function (args) {send("EapHostPeerGetSendPacket");}});
+
+var EapHostPeerGetUIContext = Module.findExportByName("eappprxy.dll", "EapHostPeerGetUIContext")
+Interceptor.attach(EapHostPeerGetUIContext, {onLeave: function (args) {send("EapHostPeerGetUIContext");}});
+
+var EapHostPeerInitialize = Module.findExportByName("eappprxy.dll", "EapHostPeerInitialize")
+Interceptor.attach(EapHostPeerInitialize, {onLeave: function (args) {send("EapHostPeerInitialize");}});
+
+var EapHostPeerProcessReceivedPacket = Module.findExportByName("eappprxy.dll", "EapHostPeerProcessReceivedPacket")
+Interceptor.attach(EapHostPeerProcessReceivedPacket, {onLeave: function (args) {send("EapHostPeerProcessReceivedPacket");}});
+
+var EapHostPeerSetResponseAttributes = Module.findExportByName("eappprxy.dll", "EapHostPeerSetResponseAttributes")
+Interceptor.attach(EapHostPeerSetResponseAttributes, {onLeave: function (args) {send("EapHostPeerSetResponseAttributes");}});
+
+var EapHostPeerSetUIContext = Module.findExportByName("eappprxy.dll", "EapHostPeerSetUIContext")
+Interceptor.attach(EapHostPeerSetUIContext, {onLeave: function (args) {send("EapHostPeerSetUIContext");}});
+
+var EapHostPeerUninitialize = Module.findExportByName("eappprxy.dll", "EapHostPeerUninitialize")
+Interceptor.attach(EapHostPeerUninitialize, {onLeave: function (args) {send("EapHostPeerUninitialize");}});
+

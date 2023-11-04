@@ -1,0 +1,6 @@
+var GetSetting = Module.findExportByName("NetworkMobileSettings.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+
+var GetSettingForUser = Module.findExportByName("NetworkMobileSettings.dll", "GetSettingForUser")
+Interceptor.attach(GetSettingForUser, {onLeave: function (args) {send("GetSettingForUser");}});
+

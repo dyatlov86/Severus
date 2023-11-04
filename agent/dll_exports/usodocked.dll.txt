@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("usodocked.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("usodocked.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetDockedComponent = Module.findExportByName("usodocked.dll", "GetDockedComponent")
+Interceptor.attach(GetDockedComponent, {onLeave: function (args) {send("GetDockedComponent");}});
+

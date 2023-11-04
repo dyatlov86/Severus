@@ -1,0 +1,57 @@
+var DllMain = Module.findExportByName("msv1_0.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var LsaApCallPackage = Module.findExportByName("msv1_0.dll", "LsaApCallPackage")
+Interceptor.attach(LsaApCallPackage, {onLeave: function (args) {send("LsaApCallPackage");}});
+
+var LsaApCallPackagePassthrough = Module.findExportByName("msv1_0.dll", "LsaApCallPackagePassthrough")
+Interceptor.attach(LsaApCallPackagePassthrough, {onLeave: function (args) {send("LsaApCallPackagePassthrough");}});
+
+var LsaApCallPackageUntrusted = Module.findExportByName("msv1_0.dll", "LsaApCallPackageUntrusted")
+Interceptor.attach(LsaApCallPackageUntrusted, {onLeave: function (args) {send("LsaApCallPackageUntrusted");}});
+
+var LsaApInitializePackage = Module.findExportByName("msv1_0.dll", "LsaApInitializePackage")
+Interceptor.attach(LsaApInitializePackage, {onLeave: function (args) {send("LsaApInitializePackage");}});
+
+var LsaApLogonTerminated = Module.findExportByName("msv1_0.dll", "LsaApLogonTerminated")
+Interceptor.attach(LsaApLogonTerminated, {onLeave: function (args) {send("LsaApLogonTerminated");}});
+
+var LsaApLogonUserEx2 = Module.findExportByName("msv1_0.dll", "LsaApLogonUserEx2")
+Interceptor.attach(LsaApLogonUserEx2, {onLeave: function (args) {send("LsaApLogonUserEx2");}});
+
+var Msv1_0ExportSubAuthenticationRoutine = Module.findExportByName("msv1_0.dll", "Msv1_0ExportSubAuthenticationRoutine")
+Interceptor.attach(Msv1_0ExportSubAuthenticationRoutine, {onLeave: function (args) {send("Msv1_0ExportSubAuthenticationRoutine");}});
+
+var Msv1_0SubAuthenticationPresent = Module.findExportByName("msv1_0.dll", "Msv1_0SubAuthenticationPresent")
+Interceptor.attach(Msv1_0SubAuthenticationPresent, {onLeave: function (args) {send("Msv1_0SubAuthenticationPresent");}});
+
+var MsvGetLogonAttemptCount = Module.findExportByName("msv1_0.dll", "MsvGetLogonAttemptCount")
+Interceptor.attach(MsvGetLogonAttemptCount, {onLeave: function (args) {send("MsvGetLogonAttemptCount");}});
+
+var MsvIsIpAddressLocal = Module.findExportByName("msv1_0.dll", "MsvIsIpAddressLocal")
+Interceptor.attach(MsvIsIpAddressLocal, {onLeave: function (args) {send("MsvIsIpAddressLocal");}});
+
+var MsvIsLocalhostAliases = Module.findExportByName("msv1_0.dll", "MsvIsLocalhostAliases")
+Interceptor.attach(MsvIsLocalhostAliases, {onLeave: function (args) {send("MsvIsLocalhostAliases");}});
+
+var MsvSamLogoff = Module.findExportByName("msv1_0.dll", "MsvSamLogoff")
+Interceptor.attach(MsvSamLogoff, {onLeave: function (args) {send("MsvSamLogoff");}});
+
+var MsvSamValidate = Module.findExportByName("msv1_0.dll", "MsvSamValidate")
+Interceptor.attach(MsvSamValidate, {onLeave: function (args) {send("MsvSamValidate");}});
+
+var MsvValidateTarget = Module.findExportByName("msv1_0.dll", "MsvValidateTarget")
+Interceptor.attach(MsvValidateTarget, {onLeave: function (args) {send("MsvValidateTarget");}});
+
+var SpInitialize = Module.findExportByName("msv1_0.dll", "SpInitialize")
+Interceptor.attach(SpInitialize, {onLeave: function (args) {send("SpInitialize");}});
+
+var SpInstanceInit = Module.findExportByName("msv1_0.dll", "SpInstanceInit")
+Interceptor.attach(SpInstanceInit, {onLeave: function (args) {send("SpInstanceInit");}});
+
+var SpLsaModeInitialize = Module.findExportByName("msv1_0.dll", "SpLsaModeInitialize")
+Interceptor.attach(SpLsaModeInitialize, {onLeave: function (args) {send("SpLsaModeInitialize");}});
+
+var SpUserModeInitialize = Module.findExportByName("msv1_0.dll", "SpUserModeInitialize")
+Interceptor.attach(SpUserModeInitialize, {onLeave: function (args) {send("SpUserModeInitialize");}});
+

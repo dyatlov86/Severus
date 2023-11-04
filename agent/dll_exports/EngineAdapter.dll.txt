@@ -1,0 +1,3 @@
+var WbioQueryEngineInterface = Module.findExportByName("EngineAdapter.dll", "WbioQueryEngineInterface")
+Interceptor.attach(WbioQueryEngineInterface, {onLeave: function (args) {send("WbioQueryEngineInterface");}});
+

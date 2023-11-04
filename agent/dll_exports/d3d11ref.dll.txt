@@ -1,0 +1,6 @@
+var SetRefOption = Module.findExportByName("d3d11ref.dll", "SetRefOption")
+Interceptor.attach(SetRefOption, {onLeave: function (args) {send("SetRefOption");}});
+
+var SetUseMidLevelShader = Module.findExportByName("d3d11ref.dll", "SetUseMidLevelShader")
+Interceptor.attach(SetUseMidLevelShader, {onLeave: function (args) {send("SetUseMidLevelShader");}});
+

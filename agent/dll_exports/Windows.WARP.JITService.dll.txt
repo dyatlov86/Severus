@@ -1,0 +1,6 @@
+var DllMain = Module.findExportByName("Windows.WARP.JITService.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var ServiceMain = Module.findExportByName("Windows.WARP.JITService.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

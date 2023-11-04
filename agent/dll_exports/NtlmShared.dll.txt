@@ -1,0 +1,84 @@
+var MsvpCachePasswordsToCredential = Module.findExportByName("NtlmShared.dll", "MsvpCachePasswordsToCredential")
+Interceptor.attach(MsvpCachePasswordsToCredential, {onLeave: function (args) {send("MsvpCachePasswordsToCredential");}});
+
+var MsvpCalculateNtlm2Challenge = Module.findExportByName("NtlmShared.dll", "MsvpCalculateNtlm2Challenge")
+Interceptor.attach(MsvpCalculateNtlm2Challenge, {onLeave: function (args) {send("MsvpCalculateNtlm2Challenge");}});
+
+var MsvpCalculateNtlm2SessionKeys = Module.findExportByName("NtlmShared.dll", "MsvpCalculateNtlm2SessionKeys")
+Interceptor.attach(MsvpCalculateNtlm2SessionKeys, {onLeave: function (args) {send("MsvpCalculateNtlm2SessionKeys");}});
+
+var MsvpCalculateNtlm3Owf = Module.findExportByName("NtlmShared.dll", "MsvpCalculateNtlm3Owf")
+Interceptor.attach(MsvpCalculateNtlm3Owf, {onLeave: function (args) {send("MsvpCalculateNtlm3Owf");}});
+
+var MsvpCompareCredentials = Module.findExportByName("NtlmShared.dll", "MsvpCompareCredentials")
+Interceptor.attach(MsvpCompareCredentials, {onLeave: function (args) {send("MsvpCompareCredentials");}});
+
+var MsvpComputeSaltedHashedPassword = Module.findExportByName("NtlmShared.dll", "MsvpComputeSaltedHashedPassword")
+Interceptor.attach(MsvpComputeSaltedHashedPassword, {onLeave: function (args) {send("MsvpComputeSaltedHashedPassword");}});
+
+var MsvpCredentialToCachePasswords = Module.findExportByName("NtlmShared.dll", "MsvpCredentialToCachePasswords")
+Interceptor.attach(MsvpCredentialToCachePasswords, {onLeave: function (args) {send("MsvpCredentialToCachePasswords");}});
+
+var MsvpDecryptDpapiMasterKey = Module.findExportByName("NtlmShared.dll", "MsvpDecryptDpapiMasterKey")
+Interceptor.attach(MsvpDecryptDpapiMasterKey, {onLeave: function (args) {send("MsvpDecryptDpapiMasterKey");}});
+
+var MsvpDeriveSecureCredKey = Module.findExportByName("NtlmShared.dll", "MsvpDeriveSecureCredKey")
+Interceptor.attach(MsvpDeriveSecureCredKey, {onLeave: function (args) {send("MsvpDeriveSecureCredKey");}});
+
+var MsvpGMSACred = Module.findExportByName("NtlmShared.dll", "MsvpGMSACred")
+Interceptor.attach(MsvpGMSACred, {onLeave: function (args) {send("MsvpGMSACred");}});
+
+var MsvpLm20GetNtlm3ChallengeResponse = Module.findExportByName("NtlmShared.dll", "MsvpLm20GetNtlm3ChallengeResponse")
+Interceptor.attach(MsvpLm20GetNtlm3ChallengeResponse, {onLeave: function (args) {send("MsvpLm20GetNtlm3ChallengeResponse");}});
+
+var MsvpLm3Response = Module.findExportByName("NtlmShared.dll", "MsvpLm3Response")
+Interceptor.attach(MsvpLm3Response, {onLeave: function (args) {send("MsvpLm3Response");}});
+
+var MsvpLm3ValidateResponse = Module.findExportByName("NtlmShared.dll", "MsvpLm3ValidateResponse")
+Interceptor.attach(MsvpLm3ValidateResponse, {onLeave: function (args) {send("MsvpLm3ValidateResponse");}});
+
+var MsvpMakeSecretPasswordNT5 = Module.findExportByName("NtlmShared.dll", "MsvpMakeSecretPasswordNT5")
+Interceptor.attach(MsvpMakeSecretPasswordNT5, {onLeave: function (args) {send("MsvpMakeSecretPasswordNT5");}});
+
+var MsvpNtlm3Response = Module.findExportByName("NtlmShared.dll", "MsvpNtlm3Response")
+Interceptor.attach(MsvpNtlm3Response, {onLeave: function (args) {send("MsvpNtlm3Response");}});
+
+var MsvpNtlm3ValidateResponse = Module.findExportByName("NtlmShared.dll", "MsvpNtlm3ValidateResponse")
+Interceptor.attach(MsvpNtlm3ValidateResponse, {onLeave: function (args) {send("MsvpNtlm3ValidateResponse");}});
+
+var MsvpPasswordValidate = Module.findExportByName("NtlmShared.dll", "MsvpPasswordValidate")
+Interceptor.attach(MsvpPasswordValidate, {onLeave: function (args) {send("MsvpPasswordValidate");}});
+
+var MsvpPutClearOwfsInPrimaryCredential = Module.findExportByName("NtlmShared.dll", "MsvpPutClearOwfsInPrimaryCredential")
+Interceptor.attach(MsvpPutClearOwfsInPrimaryCredential, {onLeave: function (args) {send("MsvpPutClearOwfsInPrimaryCredential");}});
+
+var MsvpUpdateSharedConfiguration = Module.findExportByName("NtlmShared.dll", "MsvpUpdateSharedConfiguration")
+Interceptor.attach(MsvpUpdateSharedConfiguration, {onLeave: function (args) {send("MsvpUpdateSharedConfiguration");}});
+
+var MsvpValidateSupplementalCreds = Module.findExportByName("NtlmShared.dll", "MsvpValidateSupplementalCreds")
+Interceptor.attach(MsvpValidateSupplementalCreds, {onLeave: function (args) {send("MsvpValidateSupplementalCreds");}});
+
+var MsvpValidateSupplementalCredsBuffer = Module.findExportByName("NtlmShared.dll", "MsvpValidateSupplementalCredsBuffer")
+Interceptor.attach(MsvpValidateSupplementalCredsBuffer, {onLeave: function (args) {send("MsvpValidateSupplementalCredsBuffer");}});
+
+var NtLmAlterRtlEqualUnicodeString = Module.findExportByName("NtlmShared.dll", "NtLmAlterRtlEqualUnicodeString")
+Interceptor.attach(NtLmAlterRtlEqualUnicodeString, {onLeave: function (args) {send("NtLmAlterRtlEqualUnicodeString");}});
+
+var NtlmSharedAllocate = Module.findExportByName("NtlmShared.dll", "NtlmSharedAllocate")
+Interceptor.attach(NtlmSharedAllocate, {onLeave: function (args) {send("NtlmSharedAllocate");}});
+
+var NtlmSharedAllocatePrivateHeap = Module.findExportByName("NtlmShared.dll", "NtlmSharedAllocatePrivateHeap")
+Interceptor.attach(NtlmSharedAllocatePrivateHeap, {onLeave: function (args) {send("NtlmSharedAllocatePrivateHeap");}});
+
+var NtlmSharedCleanup = Module.findExportByName("NtlmShared.dll", "NtlmSharedCleanup")
+Interceptor.attach(NtlmSharedCleanup, {onLeave: function (args) {send("NtlmSharedCleanup");}});
+
+var NtlmSharedFree = Module.findExportByName("NtlmShared.dll", "NtlmSharedFree")
+Interceptor.attach(NtlmSharedFree, {onLeave: function (args) {send("NtlmSharedFree");}});
+
+var NtlmSharedFreePrivateHeap = Module.findExportByName("NtlmShared.dll", "NtlmSharedFreePrivateHeap")
+Interceptor.attach(NtlmSharedFreePrivateHeap, {onLeave: function (args) {send("NtlmSharedFreePrivateHeap");}});
+
+var NtlmSharedInit = Module.findExportByName("NtlmShared.dll", "NtlmSharedInit")
+Interceptor.attach(NtlmSharedInit, {onLeave: function (args) {send("NtlmSharedInit");}});
+

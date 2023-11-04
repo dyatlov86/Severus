@@ -1,0 +1,525 @@
+var FXSAPIFree = Module.findExportByName("FXSAPI.DLL", "FXSAPIFree")
+Interceptor.attach(FXSAPIFree, {onLeave: function (args) {send("FXSAPIFree");}});
+
+var FXSAPIInitialize = Module.findExportByName("FXSAPI.DLL", "FXSAPIInitialize")
+Interceptor.attach(FXSAPIInitialize, {onLeave: function (args) {send("FXSAPIInitialize");}});
+
+var FaxAbort = Module.findExportByName("FXSAPI.DLL", "FaxAbort")
+Interceptor.attach(FaxAbort, {onLeave: function (args) {send("FaxAbort");}});
+
+var FaxAccessCheck = Module.findExportByName("FXSAPI.DLL", "FaxAccessCheck")
+Interceptor.attach(FaxAccessCheck, {onLeave: function (args) {send("FaxAccessCheck");}});
+
+var FaxAccessCheckEx = Module.findExportByName("FXSAPI.DLL", "FaxAccessCheckEx")
+Interceptor.attach(FaxAccessCheckEx, {onLeave: function (args) {send("FaxAccessCheckEx");}});
+
+var FaxAccessCheckEx2 = Module.findExportByName("FXSAPI.DLL", "FaxAccessCheckEx2")
+Interceptor.attach(FaxAccessCheckEx2, {onLeave: function (args) {send("FaxAccessCheckEx2");}});
+
+var FaxAddOutboundGroupA = Module.findExportByName("FXSAPI.DLL", "FaxAddOutboundGroupA")
+Interceptor.attach(FaxAddOutboundGroupA, {onLeave: function (args) {send("FaxAddOutboundGroupA");}});
+
+var FaxAddOutboundGroupW = Module.findExportByName("FXSAPI.DLL", "FaxAddOutboundGroupW")
+Interceptor.attach(FaxAddOutboundGroupW, {onLeave: function (args) {send("FaxAddOutboundGroupW");}});
+
+var FaxAddOutboundRuleA = Module.findExportByName("FXSAPI.DLL", "FaxAddOutboundRuleA")
+Interceptor.attach(FaxAddOutboundRuleA, {onLeave: function (args) {send("FaxAddOutboundRuleA");}});
+
+var FaxAddOutboundRuleW = Module.findExportByName("FXSAPI.DLL", "FaxAddOutboundRuleW")
+Interceptor.attach(FaxAddOutboundRuleW, {onLeave: function (args) {send("FaxAddOutboundRuleW");}});
+
+var FaxAnswerCall = Module.findExportByName("FXSAPI.DLL", "FaxAnswerCall")
+Interceptor.attach(FaxAnswerCall, {onLeave: function (args) {send("FaxAnswerCall");}});
+
+var FaxCheckValidFaxFolder = Module.findExportByName("FXSAPI.DLL", "FaxCheckValidFaxFolder")
+Interceptor.attach(FaxCheckValidFaxFolder, {onLeave: function (args) {send("FaxCheckValidFaxFolder");}});
+
+var FaxClose = Module.findExportByName("FXSAPI.DLL", "FaxClose")
+Interceptor.attach(FaxClose, {onLeave: function (args) {send("FaxClose");}});
+
+var FaxCompleteJobParamsA = Module.findExportByName("FXSAPI.DLL", "FaxCompleteJobParamsA")
+Interceptor.attach(FaxCompleteJobParamsA, {onLeave: function (args) {send("FaxCompleteJobParamsA");}});
+
+var FaxCompleteJobParamsW = Module.findExportByName("FXSAPI.DLL", "FaxCompleteJobParamsW")
+Interceptor.attach(FaxCompleteJobParamsW, {onLeave: function (args) {send("FaxCompleteJobParamsW");}});
+
+var FaxConnectFaxServerA = Module.findExportByName("FXSAPI.DLL", "FaxConnectFaxServerA")
+Interceptor.attach(FaxConnectFaxServerA, {onLeave: function (args) {send("FaxConnectFaxServerA");}});
+
+var FaxConnectFaxServerW = Module.findExportByName("FXSAPI.DLL", "FaxConnectFaxServerW")
+Interceptor.attach(FaxConnectFaxServerW, {onLeave: function (args) {send("FaxConnectFaxServerW");}});
+
+var FaxCreateAccount = Module.findExportByName("FXSAPI.DLL", "FaxCreateAccount")
+Interceptor.attach(FaxCreateAccount, {onLeave: function (args) {send("FaxCreateAccount");}});
+
+var FaxDeleteAccount = Module.findExportByName("FXSAPI.DLL", "FaxDeleteAccount")
+Interceptor.attach(FaxDeleteAccount, {onLeave: function (args) {send("FaxDeleteAccount");}});
+
+var FaxEnableRoutingMethodA = Module.findExportByName("FXSAPI.DLL", "FaxEnableRoutingMethodA")
+Interceptor.attach(FaxEnableRoutingMethodA, {onLeave: function (args) {send("FaxEnableRoutingMethodA");}});
+
+var FaxEnableRoutingMethodW = Module.findExportByName("FXSAPI.DLL", "FaxEnableRoutingMethodW")
+Interceptor.attach(FaxEnableRoutingMethodW, {onLeave: function (args) {send("FaxEnableRoutingMethodW");}});
+
+var FaxEndMessagesEnum = Module.findExportByName("FXSAPI.DLL", "FaxEndMessagesEnum")
+Interceptor.attach(FaxEndMessagesEnum, {onLeave: function (args) {send("FaxEndMessagesEnum");}});
+
+var FaxEnumAccounts = Module.findExportByName("FXSAPI.DLL", "FaxEnumAccounts")
+Interceptor.attach(FaxEnumAccounts, {onLeave: function (args) {send("FaxEnumAccounts");}});
+
+var FaxEnumGlobalRoutingInfoA = Module.findExportByName("FXSAPI.DLL", "FaxEnumGlobalRoutingInfoA")
+Interceptor.attach(FaxEnumGlobalRoutingInfoA, {onLeave: function (args) {send("FaxEnumGlobalRoutingInfoA");}});
+
+var FaxEnumGlobalRoutingInfoW = Module.findExportByName("FXSAPI.DLL", "FaxEnumGlobalRoutingInfoW")
+Interceptor.attach(FaxEnumGlobalRoutingInfoW, {onLeave: function (args) {send("FaxEnumGlobalRoutingInfoW");}});
+
+var FaxEnumJobsA = Module.findExportByName("FXSAPI.DLL", "FaxEnumJobsA")
+Interceptor.attach(FaxEnumJobsA, {onLeave: function (args) {send("FaxEnumJobsA");}});
+
+var FaxEnumJobsEx2 = Module.findExportByName("FXSAPI.DLL", "FaxEnumJobsEx2")
+Interceptor.attach(FaxEnumJobsEx2, {onLeave: function (args) {send("FaxEnumJobsEx2");}});
+
+var FaxEnumJobsExA = Module.findExportByName("FXSAPI.DLL", "FaxEnumJobsExA")
+Interceptor.attach(FaxEnumJobsExA, {onLeave: function (args) {send("FaxEnumJobsExA");}});
+
+var FaxEnumJobsExW = Module.findExportByName("FXSAPI.DLL", "FaxEnumJobsExW")
+Interceptor.attach(FaxEnumJobsExW, {onLeave: function (args) {send("FaxEnumJobsExW");}});
+
+var FaxEnumJobsW = Module.findExportByName("FXSAPI.DLL", "FaxEnumJobsW")
+Interceptor.attach(FaxEnumJobsW, {onLeave: function (args) {send("FaxEnumJobsW");}});
+
+var FaxEnumMessagesA = Module.findExportByName("FXSAPI.DLL", "FaxEnumMessagesA")
+Interceptor.attach(FaxEnumMessagesA, {onLeave: function (args) {send("FaxEnumMessagesA");}});
+
+var FaxEnumMessagesEx = Module.findExportByName("FXSAPI.DLL", "FaxEnumMessagesEx")
+Interceptor.attach(FaxEnumMessagesEx, {onLeave: function (args) {send("FaxEnumMessagesEx");}});
+
+var FaxEnumMessagesW = Module.findExportByName("FXSAPI.DLL", "FaxEnumMessagesW")
+Interceptor.attach(FaxEnumMessagesW, {onLeave: function (args) {send("FaxEnumMessagesW");}});
+
+var FaxEnumOutboundGroupsA = Module.findExportByName("FXSAPI.DLL", "FaxEnumOutboundGroupsA")
+Interceptor.attach(FaxEnumOutboundGroupsA, {onLeave: function (args) {send("FaxEnumOutboundGroupsA");}});
+
+var FaxEnumOutboundGroupsW = Module.findExportByName("FXSAPI.DLL", "FaxEnumOutboundGroupsW")
+Interceptor.attach(FaxEnumOutboundGroupsW, {onLeave: function (args) {send("FaxEnumOutboundGroupsW");}});
+
+var FaxEnumOutboundRulesA = Module.findExportByName("FXSAPI.DLL", "FaxEnumOutboundRulesA")
+Interceptor.attach(FaxEnumOutboundRulesA, {onLeave: function (args) {send("FaxEnumOutboundRulesA");}});
+
+var FaxEnumOutboundRulesW = Module.findExportByName("FXSAPI.DLL", "FaxEnumOutboundRulesW")
+Interceptor.attach(FaxEnumOutboundRulesW, {onLeave: function (args) {send("FaxEnumOutboundRulesW");}});
+
+var FaxEnumPortsA = Module.findExportByName("FXSAPI.DLL", "FaxEnumPortsA")
+Interceptor.attach(FaxEnumPortsA, {onLeave: function (args) {send("FaxEnumPortsA");}});
+
+var FaxEnumPortsExA = Module.findExportByName("FXSAPI.DLL", "FaxEnumPortsExA")
+Interceptor.attach(FaxEnumPortsExA, {onLeave: function (args) {send("FaxEnumPortsExA");}});
+
+var FaxEnumPortsExW = Module.findExportByName("FXSAPI.DLL", "FaxEnumPortsExW")
+Interceptor.attach(FaxEnumPortsExW, {onLeave: function (args) {send("FaxEnumPortsExW");}});
+
+var FaxEnumPortsW = Module.findExportByName("FXSAPI.DLL", "FaxEnumPortsW")
+Interceptor.attach(FaxEnumPortsW, {onLeave: function (args) {send("FaxEnumPortsW");}});
+
+var FaxEnumRoutingExtensionsA = Module.findExportByName("FXSAPI.DLL", "FaxEnumRoutingExtensionsA")
+Interceptor.attach(FaxEnumRoutingExtensionsA, {onLeave: function (args) {send("FaxEnumRoutingExtensionsA");}});
+
+var FaxEnumRoutingExtensionsW = Module.findExportByName("FXSAPI.DLL", "FaxEnumRoutingExtensionsW")
+Interceptor.attach(FaxEnumRoutingExtensionsW, {onLeave: function (args) {send("FaxEnumRoutingExtensionsW");}});
+
+var FaxEnumRoutingMethodsA = Module.findExportByName("FXSAPI.DLL", "FaxEnumRoutingMethodsA")
+Interceptor.attach(FaxEnumRoutingMethodsA, {onLeave: function (args) {send("FaxEnumRoutingMethodsA");}});
+
+var FaxEnumRoutingMethodsW = Module.findExportByName("FXSAPI.DLL", "FaxEnumRoutingMethodsW")
+Interceptor.attach(FaxEnumRoutingMethodsW, {onLeave: function (args) {send("FaxEnumRoutingMethodsW");}});
+
+var FaxEnumerateProvidersA = Module.findExportByName("FXSAPI.DLL", "FaxEnumerateProvidersA")
+Interceptor.attach(FaxEnumerateProvidersA, {onLeave: function (args) {send("FaxEnumerateProvidersA");}});
+
+var FaxEnumerateProvidersW = Module.findExportByName("FXSAPI.DLL", "FaxEnumerateProvidersW")
+Interceptor.attach(FaxEnumerateProvidersW, {onLeave: function (args) {send("FaxEnumerateProvidersW");}});
+
+var FaxFreeBuffer = Module.findExportByName("FXSAPI.DLL", "FaxFreeBuffer")
+Interceptor.attach(FaxFreeBuffer, {onLeave: function (args) {send("FaxFreeBuffer");}});
+
+var FaxFreeSenderInformation = Module.findExportByName("FXSAPI.DLL", "FaxFreeSenderInformation")
+Interceptor.attach(FaxFreeSenderInformation, {onLeave: function (args) {send("FaxFreeSenderInformation");}});
+
+var FaxGetAccountInfo = Module.findExportByName("FXSAPI.DLL", "FaxGetAccountInfo")
+Interceptor.attach(FaxGetAccountInfo, {onLeave: function (args) {send("FaxGetAccountInfo");}});
+
+var FaxGetActivityLoggingConfigurationA = Module.findExportByName("FXSAPI.DLL", "FaxGetActivityLoggingConfigurationA")
+Interceptor.attach(FaxGetActivityLoggingConfigurationA, {onLeave: function (args) {send("FaxGetActivityLoggingConfigurationA");}});
+
+var FaxGetActivityLoggingConfigurationW = Module.findExportByName("FXSAPI.DLL", "FaxGetActivityLoggingConfigurationW")
+Interceptor.attach(FaxGetActivityLoggingConfigurationW, {onLeave: function (args) {send("FaxGetActivityLoggingConfigurationW");}});
+
+var FaxGetArchiveConfigurationA = Module.findExportByName("FXSAPI.DLL", "FaxGetArchiveConfigurationA")
+Interceptor.attach(FaxGetArchiveConfigurationA, {onLeave: function (args) {send("FaxGetArchiveConfigurationA");}});
+
+var FaxGetArchiveConfigurationW = Module.findExportByName("FXSAPI.DLL", "FaxGetArchiveConfigurationW")
+Interceptor.attach(FaxGetArchiveConfigurationW, {onLeave: function (args) {send("FaxGetArchiveConfigurationW");}});
+
+var FaxGetConfigOption = Module.findExportByName("FXSAPI.DLL", "FaxGetConfigOption")
+Interceptor.attach(FaxGetConfigOption, {onLeave: function (args) {send("FaxGetConfigOption");}});
+
+var FaxGetConfigWizardUsed = Module.findExportByName("FXSAPI.DLL", "FaxGetConfigWizardUsed")
+Interceptor.attach(FaxGetConfigWizardUsed, {onLeave: function (args) {send("FaxGetConfigWizardUsed");}});
+
+var FaxGetConfigurationA = Module.findExportByName("FXSAPI.DLL", "FaxGetConfigurationA")
+Interceptor.attach(FaxGetConfigurationA, {onLeave: function (args) {send("FaxGetConfigurationA");}});
+
+var FaxGetConfigurationW = Module.findExportByName("FXSAPI.DLL", "FaxGetConfigurationW")
+Interceptor.attach(FaxGetConfigurationW, {onLeave: function (args) {send("FaxGetConfigurationW");}});
+
+var FaxGetCountryListA = Module.findExportByName("FXSAPI.DLL", "FaxGetCountryListA")
+Interceptor.attach(FaxGetCountryListA, {onLeave: function (args) {send("FaxGetCountryListA");}});
+
+var FaxGetCountryListW = Module.findExportByName("FXSAPI.DLL", "FaxGetCountryListW")
+Interceptor.attach(FaxGetCountryListW, {onLeave: function (args) {send("FaxGetCountryListW");}});
+
+var FaxGetDeviceStatusA = Module.findExportByName("FXSAPI.DLL", "FaxGetDeviceStatusA")
+Interceptor.attach(FaxGetDeviceStatusA, {onLeave: function (args) {send("FaxGetDeviceStatusA");}});
+
+var FaxGetDeviceStatusW = Module.findExportByName("FXSAPI.DLL", "FaxGetDeviceStatusW")
+Interceptor.attach(FaxGetDeviceStatusW, {onLeave: function (args) {send("FaxGetDeviceStatusW");}});
+
+var FaxGetExtensionDataA = Module.findExportByName("FXSAPI.DLL", "FaxGetExtensionDataA")
+Interceptor.attach(FaxGetExtensionDataA, {onLeave: function (args) {send("FaxGetExtensionDataA");}});
+
+var FaxGetExtensionDataW = Module.findExportByName("FXSAPI.DLL", "FaxGetExtensionDataW")
+Interceptor.attach(FaxGetExtensionDataW, {onLeave: function (args) {send("FaxGetExtensionDataW");}});
+
+var FaxGetGeneralConfiguration = Module.findExportByName("FXSAPI.DLL", "FaxGetGeneralConfiguration")
+Interceptor.attach(FaxGetGeneralConfiguration, {onLeave: function (args) {send("FaxGetGeneralConfiguration");}});
+
+var FaxGetJobA = Module.findExportByName("FXSAPI.DLL", "FaxGetJobA")
+Interceptor.attach(FaxGetJobA, {onLeave: function (args) {send("FaxGetJobA");}});
+
+var FaxGetJobEx2 = Module.findExportByName("FXSAPI.DLL", "FaxGetJobEx2")
+Interceptor.attach(FaxGetJobEx2, {onLeave: function (args) {send("FaxGetJobEx2");}});
+
+var FaxGetJobExA = Module.findExportByName("FXSAPI.DLL", "FaxGetJobExA")
+Interceptor.attach(FaxGetJobExA, {onLeave: function (args) {send("FaxGetJobExA");}});
+
+var FaxGetJobExW = Module.findExportByName("FXSAPI.DLL", "FaxGetJobExW")
+Interceptor.attach(FaxGetJobExW, {onLeave: function (args) {send("FaxGetJobExW");}});
+
+var FaxGetJobW = Module.findExportByName("FXSAPI.DLL", "FaxGetJobW")
+Interceptor.attach(FaxGetJobW, {onLeave: function (args) {send("FaxGetJobW");}});
+
+var FaxGetLoggingCategoriesA = Module.findExportByName("FXSAPI.DLL", "FaxGetLoggingCategoriesA")
+Interceptor.attach(FaxGetLoggingCategoriesA, {onLeave: function (args) {send("FaxGetLoggingCategoriesA");}});
+
+var FaxGetLoggingCategoriesW = Module.findExportByName("FXSAPI.DLL", "FaxGetLoggingCategoriesW")
+Interceptor.attach(FaxGetLoggingCategoriesW, {onLeave: function (args) {send("FaxGetLoggingCategoriesW");}});
+
+var FaxGetMessageA = Module.findExportByName("FXSAPI.DLL", "FaxGetMessageA")
+Interceptor.attach(FaxGetMessageA, {onLeave: function (args) {send("FaxGetMessageA");}});
+
+var FaxGetMessageEx = Module.findExportByName("FXSAPI.DLL", "FaxGetMessageEx")
+Interceptor.attach(FaxGetMessageEx, {onLeave: function (args) {send("FaxGetMessageEx");}});
+
+var FaxGetMessageTiffA = Module.findExportByName("FXSAPI.DLL", "FaxGetMessageTiffA")
+Interceptor.attach(FaxGetMessageTiffA, {onLeave: function (args) {send("FaxGetMessageTiffA");}});
+
+var FaxGetMessageTiffW = Module.findExportByName("FXSAPI.DLL", "FaxGetMessageTiffW")
+Interceptor.attach(FaxGetMessageTiffW, {onLeave: function (args) {send("FaxGetMessageTiffW");}});
+
+var FaxGetMessageW = Module.findExportByName("FXSAPI.DLL", "FaxGetMessageW")
+Interceptor.attach(FaxGetMessageW, {onLeave: function (args) {send("FaxGetMessageW");}});
+
+var FaxGetOutboxConfiguration = Module.findExportByName("FXSAPI.DLL", "FaxGetOutboxConfiguration")
+Interceptor.attach(FaxGetOutboxConfiguration, {onLeave: function (args) {send("FaxGetOutboxConfiguration");}});
+
+var FaxGetPageData = Module.findExportByName("FXSAPI.DLL", "FaxGetPageData")
+Interceptor.attach(FaxGetPageData, {onLeave: function (args) {send("FaxGetPageData");}});
+
+var FaxGetPersonalCoverPagesOption = Module.findExportByName("FXSAPI.DLL", "FaxGetPersonalCoverPagesOption")
+Interceptor.attach(FaxGetPersonalCoverPagesOption, {onLeave: function (args) {send("FaxGetPersonalCoverPagesOption");}});
+
+var FaxGetPortA = Module.findExportByName("FXSAPI.DLL", "FaxGetPortA")
+Interceptor.attach(FaxGetPortA, {onLeave: function (args) {send("FaxGetPortA");}});
+
+var FaxGetPortExA = Module.findExportByName("FXSAPI.DLL", "FaxGetPortExA")
+Interceptor.attach(FaxGetPortExA, {onLeave: function (args) {send("FaxGetPortExA");}});
+
+var FaxGetPortExW = Module.findExportByName("FXSAPI.DLL", "FaxGetPortExW")
+Interceptor.attach(FaxGetPortExW, {onLeave: function (args) {send("FaxGetPortExW");}});
+
+var FaxGetPortW = Module.findExportByName("FXSAPI.DLL", "FaxGetPortW")
+Interceptor.attach(FaxGetPortW, {onLeave: function (args) {send("FaxGetPortW");}});
+
+var FaxGetQueueStates = Module.findExportByName("FXSAPI.DLL", "FaxGetQueueStates")
+Interceptor.attach(FaxGetQueueStates, {onLeave: function (args) {send("FaxGetQueueStates");}});
+
+var FaxGetReceiptsConfigurationA = Module.findExportByName("FXSAPI.DLL", "FaxGetReceiptsConfigurationA")
+Interceptor.attach(FaxGetReceiptsConfigurationA, {onLeave: function (args) {send("FaxGetReceiptsConfigurationA");}});
+
+var FaxGetReceiptsConfigurationW = Module.findExportByName("FXSAPI.DLL", "FaxGetReceiptsConfigurationW")
+Interceptor.attach(FaxGetReceiptsConfigurationW, {onLeave: function (args) {send("FaxGetReceiptsConfigurationW");}});
+
+var FaxGetReceiptsOptions = Module.findExportByName("FXSAPI.DLL", "FaxGetReceiptsOptions")
+Interceptor.attach(FaxGetReceiptsOptions, {onLeave: function (args) {send("FaxGetReceiptsOptions");}});
+
+var FaxGetRecipientInfoA = Module.findExportByName("FXSAPI.DLL", "FaxGetRecipientInfoA")
+Interceptor.attach(FaxGetRecipientInfoA, {onLeave: function (args) {send("FaxGetRecipientInfoA");}});
+
+var FaxGetRecipientInfoW = Module.findExportByName("FXSAPI.DLL", "FaxGetRecipientInfoW")
+Interceptor.attach(FaxGetRecipientInfoW, {onLeave: function (args) {send("FaxGetRecipientInfoW");}});
+
+var FaxGetRecipientsLimit = Module.findExportByName("FXSAPI.DLL", "FaxGetRecipientsLimit")
+Interceptor.attach(FaxGetRecipientsLimit, {onLeave: function (args) {send("FaxGetRecipientsLimit");}});
+
+var FaxGetReportedServerAPIVersion = Module.findExportByName("FXSAPI.DLL", "FaxGetReportedServerAPIVersion")
+Interceptor.attach(FaxGetReportedServerAPIVersion, {onLeave: function (args) {send("FaxGetReportedServerAPIVersion");}});
+
+var FaxGetRoutingInfoA = Module.findExportByName("FXSAPI.DLL", "FaxGetRoutingInfoA")
+Interceptor.attach(FaxGetRoutingInfoA, {onLeave: function (args) {send("FaxGetRoutingInfoA");}});
+
+var FaxGetRoutingInfoW = Module.findExportByName("FXSAPI.DLL", "FaxGetRoutingInfoW")
+Interceptor.attach(FaxGetRoutingInfoW, {onLeave: function (args) {send("FaxGetRoutingInfoW");}});
+
+var FaxGetSecurity = Module.findExportByName("FXSAPI.DLL", "FaxGetSecurity")
+Interceptor.attach(FaxGetSecurity, {onLeave: function (args) {send("FaxGetSecurity");}});
+
+var FaxGetSecurityEx = Module.findExportByName("FXSAPI.DLL", "FaxGetSecurityEx")
+Interceptor.attach(FaxGetSecurityEx, {onLeave: function (args) {send("FaxGetSecurityEx");}});
+
+var FaxGetSecurityEx2 = Module.findExportByName("FXSAPI.DLL", "FaxGetSecurityEx2")
+Interceptor.attach(FaxGetSecurityEx2, {onLeave: function (args) {send("FaxGetSecurityEx2");}});
+
+var FaxGetSenderInfoA = Module.findExportByName("FXSAPI.DLL", "FaxGetSenderInfoA")
+Interceptor.attach(FaxGetSenderInfoA, {onLeave: function (args) {send("FaxGetSenderInfoA");}});
+
+var FaxGetSenderInfoW = Module.findExportByName("FXSAPI.DLL", "FaxGetSenderInfoW")
+Interceptor.attach(FaxGetSenderInfoW, {onLeave: function (args) {send("FaxGetSenderInfoW");}});
+
+var FaxGetSenderInformation = Module.findExportByName("FXSAPI.DLL", "FaxGetSenderInformation")
+Interceptor.attach(FaxGetSenderInformation, {onLeave: function (args) {send("FaxGetSenderInformation");}});
+
+var FaxGetServerActivity = Module.findExportByName("FXSAPI.DLL", "FaxGetServerActivity")
+Interceptor.attach(FaxGetServerActivity, {onLeave: function (args) {send("FaxGetServerActivity");}});
+
+var FaxGetServerSKU = Module.findExportByName("FXSAPI.DLL", "FaxGetServerSKU")
+Interceptor.attach(FaxGetServerSKU, {onLeave: function (args) {send("FaxGetServerSKU");}});
+
+var FaxGetServicePrintersA = Module.findExportByName("FXSAPI.DLL", "FaxGetServicePrintersA")
+Interceptor.attach(FaxGetServicePrintersA, {onLeave: function (args) {send("FaxGetServicePrintersA");}});
+
+var FaxGetServicePrintersW = Module.findExportByName("FXSAPI.DLL", "FaxGetServicePrintersW")
+Interceptor.attach(FaxGetServicePrintersW, {onLeave: function (args) {send("FaxGetServicePrintersW");}});
+
+var FaxGetVersion = Module.findExportByName("FXSAPI.DLL", "FaxGetVersion")
+Interceptor.attach(FaxGetVersion, {onLeave: function (args) {send("FaxGetVersion");}});
+
+var FaxInitializeEventQueue = Module.findExportByName("FXSAPI.DLL", "FaxInitializeEventQueue")
+Interceptor.attach(FaxInitializeEventQueue, {onLeave: function (args) {send("FaxInitializeEventQueue");}});
+
+var FaxOpenPort = Module.findExportByName("FXSAPI.DLL", "FaxOpenPort")
+Interceptor.attach(FaxOpenPort, {onLeave: function (args) {send("FaxOpenPort");}});
+
+var FaxPrintCoverPageA = Module.findExportByName("FXSAPI.DLL", "FaxPrintCoverPageA")
+Interceptor.attach(FaxPrintCoverPageA, {onLeave: function (args) {send("FaxPrintCoverPageA");}});
+
+var FaxPrintCoverPageW = Module.findExportByName("FXSAPI.DLL", "FaxPrintCoverPageW")
+Interceptor.attach(FaxPrintCoverPageW, {onLeave: function (args) {send("FaxPrintCoverPageW");}});
+
+var FaxReAssignMessage = Module.findExportByName("FXSAPI.DLL", "FaxReAssignMessage")
+Interceptor.attach(FaxReAssignMessage, {onLeave: function (args) {send("FaxReAssignMessage");}});
+
+var FaxRefreshArchive = Module.findExportByName("FXSAPI.DLL", "FaxRefreshArchive")
+Interceptor.attach(FaxRefreshArchive, {onLeave: function (args) {send("FaxRefreshArchive");}});
+
+var FaxRegisterForServerEvents = Module.findExportByName("FXSAPI.DLL", "FaxRegisterForServerEvents")
+Interceptor.attach(FaxRegisterForServerEvents, {onLeave: function (args) {send("FaxRegisterForServerEvents");}});
+
+var FaxRegisterForServerEventsEx = Module.findExportByName("FXSAPI.DLL", "FaxRegisterForServerEventsEx")
+Interceptor.attach(FaxRegisterForServerEventsEx, {onLeave: function (args) {send("FaxRegisterForServerEventsEx");}});
+
+var FaxRegisterRoutingExtensionW = Module.findExportByName("FXSAPI.DLL", "FaxRegisterRoutingExtensionW")
+Interceptor.attach(FaxRegisterRoutingExtensionW, {onLeave: function (args) {send("FaxRegisterRoutingExtensionW");}});
+
+var FaxRegisterServiceProviderExA = Module.findExportByName("FXSAPI.DLL", "FaxRegisterServiceProviderExA")
+Interceptor.attach(FaxRegisterServiceProviderExA, {onLeave: function (args) {send("FaxRegisterServiceProviderExA");}});
+
+var FaxRegisterServiceProviderExW = Module.findExportByName("FXSAPI.DLL", "FaxRegisterServiceProviderExW")
+Interceptor.attach(FaxRegisterServiceProviderExW, {onLeave: function (args) {send("FaxRegisterServiceProviderExW");}});
+
+var FaxRelease = Module.findExportByName("FXSAPI.DLL", "FaxRelease")
+Interceptor.attach(FaxRelease, {onLeave: function (args) {send("FaxRelease");}});
+
+var FaxRemoveMessage = Module.findExportByName("FXSAPI.DLL", "FaxRemoveMessage")
+Interceptor.attach(FaxRemoveMessage, {onLeave: function (args) {send("FaxRemoveMessage");}});
+
+var FaxRemoveOutboundGroupA = Module.findExportByName("FXSAPI.DLL", "FaxRemoveOutboundGroupA")
+Interceptor.attach(FaxRemoveOutboundGroupA, {onLeave: function (args) {send("FaxRemoveOutboundGroupA");}});
+
+var FaxRemoveOutboundGroupW = Module.findExportByName("FXSAPI.DLL", "FaxRemoveOutboundGroupW")
+Interceptor.attach(FaxRemoveOutboundGroupW, {onLeave: function (args) {send("FaxRemoveOutboundGroupW");}});
+
+var FaxRemoveOutboundRule = Module.findExportByName("FXSAPI.DLL", "FaxRemoveOutboundRule")
+Interceptor.attach(FaxRemoveOutboundRule, {onLeave: function (args) {send("FaxRemoveOutboundRule");}});
+
+var FaxSendDocumentA = Module.findExportByName("FXSAPI.DLL", "FaxSendDocumentA")
+Interceptor.attach(FaxSendDocumentA, {onLeave: function (args) {send("FaxSendDocumentA");}});
+
+var FaxSendDocumentEx2 = Module.findExportByName("FXSAPI.DLL", "FaxSendDocumentEx2")
+Interceptor.attach(FaxSendDocumentEx2, {onLeave: function (args) {send("FaxSendDocumentEx2");}});
+
+var FaxSendDocumentExA = Module.findExportByName("FXSAPI.DLL", "FaxSendDocumentExA")
+Interceptor.attach(FaxSendDocumentExA, {onLeave: function (args) {send("FaxSendDocumentExA");}});
+
+var FaxSendDocumentExW = Module.findExportByName("FXSAPI.DLL", "FaxSendDocumentExW")
+Interceptor.attach(FaxSendDocumentExW, {onLeave: function (args) {send("FaxSendDocumentExW");}});
+
+var FaxSendDocumentForBroadcastA = Module.findExportByName("FXSAPI.DLL", "FaxSendDocumentForBroadcastA")
+Interceptor.attach(FaxSendDocumentForBroadcastA, {onLeave: function (args) {send("FaxSendDocumentForBroadcastA");}});
+
+var FaxSendDocumentForBroadcastW = Module.findExportByName("FXSAPI.DLL", "FaxSendDocumentForBroadcastW")
+Interceptor.attach(FaxSendDocumentForBroadcastW, {onLeave: function (args) {send("FaxSendDocumentForBroadcastW");}});
+
+var FaxSendDocumentW = Module.findExportByName("FXSAPI.DLL", "FaxSendDocumentW")
+Interceptor.attach(FaxSendDocumentW, {onLeave: function (args) {send("FaxSendDocumentW");}});
+
+var FaxSetActivityLoggingConfigurationA = Module.findExportByName("FXSAPI.DLL", "FaxSetActivityLoggingConfigurationA")
+Interceptor.attach(FaxSetActivityLoggingConfigurationA, {onLeave: function (args) {send("FaxSetActivityLoggingConfigurationA");}});
+
+var FaxSetActivityLoggingConfigurationW = Module.findExportByName("FXSAPI.DLL", "FaxSetActivityLoggingConfigurationW")
+Interceptor.attach(FaxSetActivityLoggingConfigurationW, {onLeave: function (args) {send("FaxSetActivityLoggingConfigurationW");}});
+
+var FaxSetArchiveConfigurationA = Module.findExportByName("FXSAPI.DLL", "FaxSetArchiveConfigurationA")
+Interceptor.attach(FaxSetArchiveConfigurationA, {onLeave: function (args) {send("FaxSetArchiveConfigurationA");}});
+
+var FaxSetArchiveConfigurationW = Module.findExportByName("FXSAPI.DLL", "FaxSetArchiveConfigurationW")
+Interceptor.attach(FaxSetArchiveConfigurationW, {onLeave: function (args) {send("FaxSetArchiveConfigurationW");}});
+
+var FaxSetConfigWizardUsed = Module.findExportByName("FXSAPI.DLL", "FaxSetConfigWizardUsed")
+Interceptor.attach(FaxSetConfigWizardUsed, {onLeave: function (args) {send("FaxSetConfigWizardUsed");}});
+
+var FaxSetConfigurationA = Module.findExportByName("FXSAPI.DLL", "FaxSetConfigurationA")
+Interceptor.attach(FaxSetConfigurationA, {onLeave: function (args) {send("FaxSetConfigurationA");}});
+
+var FaxSetConfigurationW = Module.findExportByName("FXSAPI.DLL", "FaxSetConfigurationW")
+Interceptor.attach(FaxSetConfigurationW, {onLeave: function (args) {send("FaxSetConfigurationW");}});
+
+var FaxSetDeviceOrderInGroupA = Module.findExportByName("FXSAPI.DLL", "FaxSetDeviceOrderInGroupA")
+Interceptor.attach(FaxSetDeviceOrderInGroupA, {onLeave: function (args) {send("FaxSetDeviceOrderInGroupA");}});
+
+var FaxSetDeviceOrderInGroupW = Module.findExportByName("FXSAPI.DLL", "FaxSetDeviceOrderInGroupW")
+Interceptor.attach(FaxSetDeviceOrderInGroupW, {onLeave: function (args) {send("FaxSetDeviceOrderInGroupW");}});
+
+var FaxSetExtensionDataA = Module.findExportByName("FXSAPI.DLL", "FaxSetExtensionDataA")
+Interceptor.attach(FaxSetExtensionDataA, {onLeave: function (args) {send("FaxSetExtensionDataA");}});
+
+var FaxSetExtensionDataW = Module.findExportByName("FXSAPI.DLL", "FaxSetExtensionDataW")
+Interceptor.attach(FaxSetExtensionDataW, {onLeave: function (args) {send("FaxSetExtensionDataW");}});
+
+var FaxSetGeneralConfiguration = Module.findExportByName("FXSAPI.DLL", "FaxSetGeneralConfiguration")
+Interceptor.attach(FaxSetGeneralConfiguration, {onLeave: function (args) {send("FaxSetGeneralConfiguration");}});
+
+var FaxSetGlobalRoutingInfoA = Module.findExportByName("FXSAPI.DLL", "FaxSetGlobalRoutingInfoA")
+Interceptor.attach(FaxSetGlobalRoutingInfoA, {onLeave: function (args) {send("FaxSetGlobalRoutingInfoA");}});
+
+var FaxSetGlobalRoutingInfoW = Module.findExportByName("FXSAPI.DLL", "FaxSetGlobalRoutingInfoW")
+Interceptor.attach(FaxSetGlobalRoutingInfoW, {onLeave: function (args) {send("FaxSetGlobalRoutingInfoW");}});
+
+var FaxSetJobA = Module.findExportByName("FXSAPI.DLL", "FaxSetJobA")
+Interceptor.attach(FaxSetJobA, {onLeave: function (args) {send("FaxSetJobA");}});
+
+var FaxSetJobW = Module.findExportByName("FXSAPI.DLL", "FaxSetJobW")
+Interceptor.attach(FaxSetJobW, {onLeave: function (args) {send("FaxSetJobW");}});
+
+var FaxSetLoggingCategoriesA = Module.findExportByName("FXSAPI.DLL", "FaxSetLoggingCategoriesA")
+Interceptor.attach(FaxSetLoggingCategoriesA, {onLeave: function (args) {send("FaxSetLoggingCategoriesA");}});
+
+var FaxSetLoggingCategoriesW = Module.findExportByName("FXSAPI.DLL", "FaxSetLoggingCategoriesW")
+Interceptor.attach(FaxSetLoggingCategoriesW, {onLeave: function (args) {send("FaxSetLoggingCategoriesW");}});
+
+var FaxSetMessage = Module.findExportByName("FXSAPI.DLL", "FaxSetMessage")
+Interceptor.attach(FaxSetMessage, {onLeave: function (args) {send("FaxSetMessage");}});
+
+var FaxSetOutboundGroupA = Module.findExportByName("FXSAPI.DLL", "FaxSetOutboundGroupA")
+Interceptor.attach(FaxSetOutboundGroupA, {onLeave: function (args) {send("FaxSetOutboundGroupA");}});
+
+var FaxSetOutboundGroupW = Module.findExportByName("FXSAPI.DLL", "FaxSetOutboundGroupW")
+Interceptor.attach(FaxSetOutboundGroupW, {onLeave: function (args) {send("FaxSetOutboundGroupW");}});
+
+var FaxSetOutboundRuleA = Module.findExportByName("FXSAPI.DLL", "FaxSetOutboundRuleA")
+Interceptor.attach(FaxSetOutboundRuleA, {onLeave: function (args) {send("FaxSetOutboundRuleA");}});
+
+var FaxSetOutboundRuleW = Module.findExportByName("FXSAPI.DLL", "FaxSetOutboundRuleW")
+Interceptor.attach(FaxSetOutboundRuleW, {onLeave: function (args) {send("FaxSetOutboundRuleW");}});
+
+var FaxSetOutboxConfiguration = Module.findExportByName("FXSAPI.DLL", "FaxSetOutboxConfiguration")
+Interceptor.attach(FaxSetOutboxConfiguration, {onLeave: function (args) {send("FaxSetOutboxConfiguration");}});
+
+var FaxSetPortA = Module.findExportByName("FXSAPI.DLL", "FaxSetPortA")
+Interceptor.attach(FaxSetPortA, {onLeave: function (args) {send("FaxSetPortA");}});
+
+var FaxSetPortExA = Module.findExportByName("FXSAPI.DLL", "FaxSetPortExA")
+Interceptor.attach(FaxSetPortExA, {onLeave: function (args) {send("FaxSetPortExA");}});
+
+var FaxSetPortExW = Module.findExportByName("FXSAPI.DLL", "FaxSetPortExW")
+Interceptor.attach(FaxSetPortExW, {onLeave: function (args) {send("FaxSetPortExW");}});
+
+var FaxSetPortW = Module.findExportByName("FXSAPI.DLL", "FaxSetPortW")
+Interceptor.attach(FaxSetPortW, {onLeave: function (args) {send("FaxSetPortW");}});
+
+var FaxSetQueue = Module.findExportByName("FXSAPI.DLL", "FaxSetQueue")
+Interceptor.attach(FaxSetQueue, {onLeave: function (args) {send("FaxSetQueue");}});
+
+var FaxSetReceiptsConfigurationA = Module.findExportByName("FXSAPI.DLL", "FaxSetReceiptsConfigurationA")
+Interceptor.attach(FaxSetReceiptsConfigurationA, {onLeave: function (args) {send("FaxSetReceiptsConfigurationA");}});
+
+var FaxSetReceiptsConfigurationW = Module.findExportByName("FXSAPI.DLL", "FaxSetReceiptsConfigurationW")
+Interceptor.attach(FaxSetReceiptsConfigurationW, {onLeave: function (args) {send("FaxSetReceiptsConfigurationW");}});
+
+var FaxSetRoutingInfoA = Module.findExportByName("FXSAPI.DLL", "FaxSetRoutingInfoA")
+Interceptor.attach(FaxSetRoutingInfoA, {onLeave: function (args) {send("FaxSetRoutingInfoA");}});
+
+var FaxSetRoutingInfoW = Module.findExportByName("FXSAPI.DLL", "FaxSetRoutingInfoW")
+Interceptor.attach(FaxSetRoutingInfoW, {onLeave: function (args) {send("FaxSetRoutingInfoW");}});
+
+var FaxSetSecurity = Module.findExportByName("FXSAPI.DLL", "FaxSetSecurity")
+Interceptor.attach(FaxSetSecurity, {onLeave: function (args) {send("FaxSetSecurity");}});
+
+var FaxSetSecurityEx2 = Module.findExportByName("FXSAPI.DLL", "FaxSetSecurityEx2")
+Interceptor.attach(FaxSetSecurityEx2, {onLeave: function (args) {send("FaxSetSecurityEx2");}});
+
+var FaxSetSenderInformation = Module.findExportByName("FXSAPI.DLL", "FaxSetSenderInformation")
+Interceptor.attach(FaxSetSenderInformation, {onLeave: function (args) {send("FaxSetSenderInformation");}});
+
+var FaxStartMessagesEnum = Module.findExportByName("FXSAPI.DLL", "FaxStartMessagesEnum")
+Interceptor.attach(FaxStartMessagesEnum, {onLeave: function (args) {send("FaxStartMessagesEnum");}});
+
+var FaxStartMessagesEnumEx = Module.findExportByName("FXSAPI.DLL", "FaxStartMessagesEnumEx")
+Interceptor.attach(FaxStartMessagesEnumEx, {onLeave: function (args) {send("FaxStartMessagesEnumEx");}});
+
+var FaxStartPrintJob2W = Module.findExportByName("FXSAPI.DLL", "FaxStartPrintJob2W")
+Interceptor.attach(FaxStartPrintJob2W, {onLeave: function (args) {send("FaxStartPrintJob2W");}});
+
+var FaxStartPrintJobA = Module.findExportByName("FXSAPI.DLL", "FaxStartPrintJobA")
+Interceptor.attach(FaxStartPrintJobA, {onLeave: function (args) {send("FaxStartPrintJobA");}});
+
+var FaxStartPrintJobW = Module.findExportByName("FXSAPI.DLL", "FaxStartPrintJobW")
+Interceptor.attach(FaxStartPrintJobW, {onLeave: function (args) {send("FaxStartPrintJobW");}});
+
+var FaxUnregisterForServerEvents = Module.findExportByName("FXSAPI.DLL", "FaxUnregisterForServerEvents")
+Interceptor.attach(FaxUnregisterForServerEvents, {onLeave: function (args) {send("FaxUnregisterForServerEvents");}});
+
+var FaxUnregisterRoutingExtensionA = Module.findExportByName("FXSAPI.DLL", "FaxUnregisterRoutingExtensionA")
+Interceptor.attach(FaxUnregisterRoutingExtensionA, {onLeave: function (args) {send("FaxUnregisterRoutingExtensionA");}});
+
+var FaxUnregisterRoutingExtensionW = Module.findExportByName("FXSAPI.DLL", "FaxUnregisterRoutingExtensionW")
+Interceptor.attach(FaxUnregisterRoutingExtensionW, {onLeave: function (args) {send("FaxUnregisterRoutingExtensionW");}});
+
+var FaxUnregisterServiceProviderExA = Module.findExportByName("FXSAPI.DLL", "FaxUnregisterServiceProviderExA")
+Interceptor.attach(FaxUnregisterServiceProviderExA, {onLeave: function (args) {send("FaxUnregisterServiceProviderExA");}});
+
+var FaxUnregisterServiceProviderExW = Module.findExportByName("FXSAPI.DLL", "FaxUnregisterServiceProviderExW")
+Interceptor.attach(FaxUnregisterServiceProviderExW, {onLeave: function (args) {send("FaxUnregisterServiceProviderExW");}});
+
+var IsDeviceVirtual = Module.findExportByName("FXSAPI.DLL", "IsDeviceVirtual")
+Interceptor.attach(IsDeviceVirtual, {onLeave: function (args) {send("IsDeviceVirtual");}});
+

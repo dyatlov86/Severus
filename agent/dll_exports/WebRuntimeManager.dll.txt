@@ -1,0 +1,18 @@
+var CreateMessagePortEventDispatcher = Module.findExportByName("WebRuntimeManager.dll", "CreateMessagePortEventDispatcher")
+Interceptor.attach(CreateMessagePortEventDispatcher, {onLeave: function (args) {send("CreateMessagePortEventDispatcher");}});
+
+var CreateServiceWorkerClientMessageDispatcher = Module.findExportByName("WebRuntimeManager.dll", "CreateServiceWorkerClientMessageDispatcher")
+Interceptor.attach(CreateServiceWorkerClientMessageDispatcher, {onLeave: function (args) {send("CreateServiceWorkerClientMessageDispatcher");}});
+
+var CreateWebRuntimeFactory = Module.findExportByName("WebRuntimeManager.dll", "CreateWebRuntimeFactory")
+Interceptor.attach(CreateWebRuntimeFactory, {onLeave: function (args) {send("CreateWebRuntimeFactory");}});
+
+var CreateWebRuntimeNotificationFromEventArg = Module.findExportByName("WebRuntimeManager.dll", "CreateWebRuntimeNotificationFromEventArg")
+Interceptor.attach(CreateWebRuntimeNotificationFromEventArg, {onLeave: function (args) {send("CreateWebRuntimeNotificationFromEventArg");}});
+
+var DllGetActivationFactory = Module.findExportByName("WebRuntimeManager.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var EnsureServiceWorkerManagerComponent = Module.findExportByName("WebRuntimeManager.dll", "EnsureServiceWorkerManagerComponent")
+Interceptor.attach(EnsureServiceWorkerManagerComponent, {onLeave: function (args) {send("EnsureServiceWorkerManagerComponent");}});
+

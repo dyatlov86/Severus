@@ -1,0 +1,9 @@
+var ExecuteProcessGroupPolicyEx = Module.findExportByName("TsUsbRedirectionGroupPolicyExtension.dll", "ExecuteProcessGroupPolicyEx")
+Interceptor.attach(ExecuteProcessGroupPolicyEx, {onLeave: function (args) {send("ExecuteProcessGroupPolicyEx");}});
+
+var ExecuteProcessGroupPolicyExWithError = Module.findExportByName("TsUsbRedirectionGroupPolicyExtension.dll", "ExecuteProcessGroupPolicyExWithError")
+Interceptor.attach(ExecuteProcessGroupPolicyExWithError, {onLeave: function (args) {send("ExecuteProcessGroupPolicyExWithError");}});
+
+var ProcessGroupPolicyEx = Module.findExportByName("TsUsbRedirectionGroupPolicyExtension.dll", "ProcessGroupPolicyEx")
+Interceptor.attach(ProcessGroupPolicyEx, {onLeave: function (args) {send("ProcessGroupPolicyEx");}});
+

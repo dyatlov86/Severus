@@ -1,0 +1,18 @@
+var InitializeProtocolEngine = Module.findExportByName("vpnike.dll", "InitializeProtocolEngine")
+Interceptor.attach(InitializeProtocolEngine, {onLeave: function (args) {send("InitializeProtocolEngine");}});
+
+var InitializeServerProtocolEngine = Module.findExportByName("vpnike.dll", "InitializeServerProtocolEngine")
+Interceptor.attach(InitializeServerProtocolEngine, {onLeave: function (args) {send("InitializeServerProtocolEngine");}});
+
+var SendMessageToProtocolEngine = Module.findExportByName("vpnike.dll", "SendMessageToProtocolEngine")
+Interceptor.attach(SendMessageToProtocolEngine, {onLeave: function (args) {send("SendMessageToProtocolEngine");}});
+
+var UninitializeProtocolEngine = Module.findExportByName("vpnike.dll", "UninitializeProtocolEngine")
+Interceptor.attach(UninitializeProtocolEngine, {onLeave: function (args) {send("UninitializeProtocolEngine");}});
+
+var UninitializeServerProtocolEngine = Module.findExportByName("vpnike.dll", "UninitializeServerProtocolEngine")
+Interceptor.attach(UninitializeServerProtocolEngine, {onLeave: function (args) {send("UninitializeServerProtocolEngine");}});
+
+var VpnIkeRoamToBestCostInterface = Module.findExportByName("vpnike.dll", "VpnIkeRoamToBestCostInterface")
+Interceptor.attach(VpnIkeRoamToBestCostInterface, {onLeave: function (args) {send("VpnIkeRoamToBestCostInterface");}});
+

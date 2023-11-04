@@ -1,0 +1,21 @@
+var BackupWinRE = Module.findExportByName("WinREAgent.dll", "BackupWinRE")
+Interceptor.attach(BackupWinRE, {onLeave: function (args) {send("BackupWinRE");}});
+
+var CreateWinREServicingManager = Module.findExportByName("WinREAgent.dll", "CreateWinREServicingManager")
+Interceptor.attach(CreateWinREServicingManager, {onLeave: function (args) {send("CreateWinREServicingManager");}});
+
+var GetWinREAgentVersion = Module.findExportByName("WinREAgent.dll", "GetWinREAgentVersion")
+Interceptor.attach(GetWinREAgentVersion, {onLeave: function (args) {send("GetWinREAgentVersion");}});
+
+var GetWinREVersion = Module.findExportByName("WinREAgent.dll", "GetWinREVersion")
+Interceptor.attach(GetWinREVersion, {onLeave: function (args) {send("GetWinREVersion");}});
+
+var LoadWinREServicingManager = Module.findExportByName("WinREAgent.dll", "LoadWinREServicingManager")
+Interceptor.attach(LoadWinREServicingManager, {onLeave: function (args) {send("LoadWinREServicingManager");}});
+
+var RestoreWinRE = Module.findExportByName("WinREAgent.dll", "RestoreWinRE")
+Interceptor.attach(RestoreWinRE, {onLeave: function (args) {send("RestoreWinRE");}});
+
+var SaveWinREServicingManager = Module.findExportByName("WinREAgent.dll", "SaveWinREServicingManager")
+Interceptor.attach(SaveWinREServicingManager, {onLeave: function (args) {send("SaveWinREServicingManager");}});
+

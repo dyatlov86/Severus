@@ -1,0 +1,12 @@
+var IsWow64Process = Module.findExportByName("api-ms-win-core-wow64-l1-1-0.dll", "IsWow64Process")
+Interceptor.attach(IsWow64Process, {onLeave: function (args) {send("IsWow64Process");}});
+
+var Wow64DisableWow64FsRedirection = Module.findExportByName("api-ms-win-core-wow64-l1-1-0.dll", "Wow64DisableWow64FsRedirection")
+Interceptor.attach(Wow64DisableWow64FsRedirection, {onLeave: function (args) {send("Wow64DisableWow64FsRedirection");}});
+
+var Wow64EnableWow64FsRedirection = Module.findExportByName("api-ms-win-core-wow64-l1-1-0.dll", "Wow64EnableWow64FsRedirection")
+Interceptor.attach(Wow64EnableWow64FsRedirection, {onLeave: function (args) {send("Wow64EnableWow64FsRedirection");}});
+
+var Wow64RevertWow64FsRedirection = Module.findExportByName("api-ms-win-core-wow64-l1-1-0.dll", "Wow64RevertWow64FsRedirection")
+Interceptor.attach(Wow64RevertWow64FsRedirection, {onLeave: function (args) {send("Wow64RevertWow64FsRedirection");}});
+

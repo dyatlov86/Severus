@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("RoamingSecurity.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("RoamingSecurity.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("RoamingSecurity.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("RoamingSecurity.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("RoamingSecurity.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

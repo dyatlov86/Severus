@@ -1,0 +1,18 @@
+var drvCommConfigDialogA = Module.findExportByName("serialui.dll", "drvCommConfigDialogA")
+Interceptor.attach(drvCommConfigDialogA, {onLeave: function (args) {send("drvCommConfigDialogA");}});
+
+var drvCommConfigDialogW = Module.findExportByName("serialui.dll", "drvCommConfigDialogW")
+Interceptor.attach(drvCommConfigDialogW, {onLeave: function (args) {send("drvCommConfigDialogW");}});
+
+var drvGetDefaultCommConfigA = Module.findExportByName("serialui.dll", "drvGetDefaultCommConfigA")
+Interceptor.attach(drvGetDefaultCommConfigA, {onLeave: function (args) {send("drvGetDefaultCommConfigA");}});
+
+var drvGetDefaultCommConfigW = Module.findExportByName("serialui.dll", "drvGetDefaultCommConfigW")
+Interceptor.attach(drvGetDefaultCommConfigW, {onLeave: function (args) {send("drvGetDefaultCommConfigW");}});
+
+var drvSetDefaultCommConfigA = Module.findExportByName("serialui.dll", "drvSetDefaultCommConfigA")
+Interceptor.attach(drvSetDefaultCommConfigA, {onLeave: function (args) {send("drvSetDefaultCommConfigA");}});
+
+var drvSetDefaultCommConfigW = Module.findExportByName("serialui.dll", "drvSetDefaultCommConfigW")
+Interceptor.attach(drvSetDefaultCommConfigW, {onLeave: function (args) {send("drvSetDefaultCommConfigW");}});
+

@@ -1,0 +1,3 @@
+var VsIeProviderGetFunctionTable = Module.findExportByName("TetheringIeProvider.dll", "VsIeProviderGetFunctionTable")
+Interceptor.attach(VsIeProviderGetFunctionTable, {onLeave: function (args) {send("VsIeProviderGetFunctionTable");}});
+

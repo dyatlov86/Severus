@@ -1,0 +1,12 @@
+var ConfigurationManager_Create = Module.findExportByName("MapConfiguration.dll", "ConfigurationManager_Create")
+Interceptor.attach(ConfigurationManager_Create, {onLeave: function (args) {send("ConfigurationManager_Create");}});
+
+var ConfigurationManager_GetLocaleMapConfiguration = Module.findExportByName("MapConfiguration.dll", "ConfigurationManager_GetLocaleMapConfiguration")
+Interceptor.attach(ConfigurationManager_GetLocaleMapConfiguration, {onLeave: function (args) {send("ConfigurationManager_GetLocaleMapConfiguration");}});
+
+var ConfigurationManager_SetCustomStorageFolder = Module.findExportByName("MapConfiguration.dll", "ConfigurationManager_SetCustomStorageFolder")
+Interceptor.attach(ConfigurationManager_SetCustomStorageFolder, {onLeave: function (args) {send("ConfigurationManager_SetCustomStorageFolder");}});
+
+var ConfigurationManager_SetServiceCallbacks = Module.findExportByName("MapConfiguration.dll", "ConfigurationManager_SetServiceCallbacks")
+Interceptor.attach(ConfigurationManager_SetServiceCallbacks, {onLeave: function (args) {send("ConfigurationManager_SetServiceCallbacks");}});
+

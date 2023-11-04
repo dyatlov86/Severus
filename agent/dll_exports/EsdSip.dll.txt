@@ -1,0 +1,33 @@
+var DllCanUnloadNow = Module.findExportByName("EsdSip.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllMain = Module.findExportByName("EsdSip.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("EsdSip.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("EsdSip.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var EsdSipCreateHash = Module.findExportByName("EsdSip.dll", "EsdSipCreateHash")
+Interceptor.attach(EsdSipCreateHash, {onLeave: function (args) {send("EsdSipCreateHash");}});
+
+var EsdSipDelSignature = Module.findExportByName("EsdSip.dll", "EsdSipDelSignature")
+Interceptor.attach(EsdSipDelSignature, {onLeave: function (args) {send("EsdSipDelSignature");}});
+
+var EsdSipGetCaps = Module.findExportByName("EsdSip.dll", "EsdSipGetCaps")
+Interceptor.attach(EsdSipGetCaps, {onLeave: function (args) {send("EsdSipGetCaps");}});
+
+var EsdSipGetSignature = Module.findExportByName("EsdSip.dll", "EsdSipGetSignature")
+Interceptor.attach(EsdSipGetSignature, {onLeave: function (args) {send("EsdSipGetSignature");}});
+
+var EsdSipIsMyFileType = Module.findExportByName("EsdSip.dll", "EsdSipIsMyFileType")
+Interceptor.attach(EsdSipIsMyFileType, {onLeave: function (args) {send("EsdSipIsMyFileType");}});
+
+var EsdSipPutSignature = Module.findExportByName("EsdSip.dll", "EsdSipPutSignature")
+Interceptor.attach(EsdSipPutSignature, {onLeave: function (args) {send("EsdSipPutSignature");}});
+
+var EsdSipVerifyHash = Module.findExportByName("EsdSip.dll", "EsdSipVerifyHash")
+Interceptor.attach(EsdSipVerifyHash, {onLeave: function (args) {send("EsdSipVerifyHash");}});
+

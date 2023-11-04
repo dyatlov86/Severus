@@ -1,0 +1,18 @@
+var EnumResourceLanguagesExA = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-1.dll", "EnumResourceLanguagesExA")
+Interceptor.attach(EnumResourceLanguagesExA, {onLeave: function (args) {send("EnumResourceLanguagesExA");}});
+
+var EnumResourceLanguagesExW = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-1.dll", "EnumResourceLanguagesExW")
+Interceptor.attach(EnumResourceLanguagesExW, {onLeave: function (args) {send("EnumResourceLanguagesExW");}});
+
+var EnumResourceNamesExA = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-1.dll", "EnumResourceNamesExA")
+Interceptor.attach(EnumResourceNamesExA, {onLeave: function (args) {send("EnumResourceNamesExA");}});
+
+var EnumResourceNamesExW = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-1.dll", "EnumResourceNamesExW")
+Interceptor.attach(EnumResourceNamesExW, {onLeave: function (args) {send("EnumResourceNamesExW");}});
+
+var EnumResourceTypesExA = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-1.dll", "EnumResourceTypesExA")
+Interceptor.attach(EnumResourceTypesExA, {onLeave: function (args) {send("EnumResourceTypesExA");}});
+
+var EnumResourceTypesExW = Module.findExportByName("api-ms-win-core-libraryloader-l1-1-1.dll", "EnumResourceTypesExW")
+Interceptor.attach(EnumResourceTypesExW, {onLeave: function (args) {send("EnumResourceTypesExW");}});
+

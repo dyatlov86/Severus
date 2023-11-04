@@ -1,0 +1,15 @@
+var MilCompositionEngine_CreateChannel = Module.findExportByName("dwmcore.dll", "MilCompositionEngine_CreateChannel")
+Interceptor.attach(MilCompositionEngine_CreateChannel, {onLeave: function (args) {send("MilCompositionEngine_CreateChannel");}});
+
+var MilCompositionEngine_CreateCursorController = Module.findExportByName("dwmcore.dll", "MilCompositionEngine_CreateCursorController")
+Interceptor.attach(MilCompositionEngine_CreateCursorController, {onLeave: function (args) {send("MilCompositionEngine_CreateCursorController");}});
+
+var MilCompositionEngine_GetComposedEventId = Module.findExportByName("dwmcore.dll", "MilCompositionEngine_GetComposedEventId")
+Interceptor.attach(MilCompositionEngine_GetComposedEventId, {onLeave: function (args) {send("MilCompositionEngine_GetComposedEventId");}});
+
+var MilCompositionEngine_Initialize = Module.findExportByName("dwmcore.dll", "MilCompositionEngine_Initialize")
+Interceptor.attach(MilCompositionEngine_Initialize, {onLeave: function (args) {send("MilCompositionEngine_Initialize");}});
+
+var MilCompositionEngine_Uninitialize = Module.findExportByName("dwmcore.dll", "MilCompositionEngine_Uninitialize")
+Interceptor.attach(MilCompositionEngine_Uninitialize, {onLeave: function (args) {send("MilCompositionEngine_Uninitialize");}});
+

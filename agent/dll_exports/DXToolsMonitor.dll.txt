@@ -1,0 +1,21 @@
+var CLSID_DXDefaultPlatformStorage = Module.findExportByName("DXToolsMonitor.dll", "CLSID_DXDefaultPlatformStorage")
+Interceptor.attach(CLSID_DXDefaultPlatformStorage, {onLeave: function (args) {send("CLSID_DXDefaultPlatformStorage");}});
+
+var CLSID_DXToolsStockExperiment_FullCapture = Module.findExportByName("DXToolsMonitor.dll", "CLSID_DXToolsStockExperiment_FullCapture")
+Interceptor.attach(CLSID_DXToolsStockExperiment_FullCapture, {onLeave: function (args) {send("CLSID_DXToolsStockExperiment_FullCapture");}});
+
+var CLSID_DXToolsStockExperiment_FullPlayback = Module.findExportByName("DXToolsMonitor.dll", "CLSID_DXToolsStockExperiment_FullPlayback")
+Interceptor.attach(CLSID_DXToolsStockExperiment_FullPlayback, {onLeave: function (args) {send("CLSID_DXToolsStockExperiment_FullPlayback");}});
+
+var CLSID_DXToolsStockExperiment_Overdraw = Module.findExportByName("DXToolsMonitor.dll", "CLSID_DXToolsStockExperiment_Overdraw")
+Interceptor.attach(CLSID_DXToolsStockExperiment_Overdraw, {onLeave: function (args) {send("CLSID_DXToolsStockExperiment_Overdraw");}});
+
+var CLSID_DXToolsStockExperiment_Recapture = Module.findExportByName("DXToolsMonitor.dll", "CLSID_DXToolsStockExperiment_Recapture")
+Interceptor.attach(CLSID_DXToolsStockExperiment_Recapture, {onLeave: function (args) {send("CLSID_DXToolsStockExperiment_Recapture");}});
+
+var CreateSerializationController = Module.findExportByName("DXToolsMonitor.dll", "CreateSerializationController")
+Interceptor.attach(CreateSerializationController, {onLeave: function (args) {send("CreateSerializationController");}});
+
+var CreateWin8Injector = Module.findExportByName("DXToolsMonitor.dll", "CreateWin8Injector")
+Interceptor.attach(CreateWin8Injector, {onLeave: function (args) {send("CreateWin8Injector");}});
+

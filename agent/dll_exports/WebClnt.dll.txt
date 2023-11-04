@@ -1,0 +1,12 @@
+var DavClose = Module.findExportByName("WebClnt.dll", "DavClose")
+Interceptor.attach(DavClose, {onLeave: function (args) {send("DavClose");}});
+
+var DavInit = Module.findExportByName("WebClnt.dll", "DavInit")
+Interceptor.attach(DavInit, {onLeave: function (args) {send("DavInit");}});
+
+var ServiceMain = Module.findExportByName("WebClnt.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("WebClnt.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

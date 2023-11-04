@@ -1,0 +1,3 @@
+var InputLocaleManagerCreate = Module.findExportByName("InputLocaleManager.dll", "InputLocaleManagerCreate")
+Interceptor.attach(InputLocaleManagerCreate, {onLeave: function (args) {send("InputLocaleManagerCreate");}});
+

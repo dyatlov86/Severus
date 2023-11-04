@@ -1,0 +1,18 @@
+var DllMain = Module.findExportByName("SecurityHealthSsoUdk.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var Shield_ApplyOwnerDrawToMenu = Module.findExportByName("SecurityHealthSsoUdk.dll", "Shield_ApplyOwnerDrawToMenu")
+Interceptor.attach(Shield_ApplyOwnerDrawToMenu, {onLeave: function (args) {send("Shield_ApplyOwnerDrawToMenu");}});
+
+var Shield_ContextMenuWndProc = Module.findExportByName("SecurityHealthSsoUdk.dll", "Shield_ContextMenuWndProc")
+Interceptor.attach(Shield_ContextMenuWndProc, {onLeave: function (args) {send("Shield_ContextMenuWndProc");}});
+
+var Shield_GetDpiForShellUIComponentEx = Module.findExportByName("SecurityHealthSsoUdk.dll", "Shield_GetDpiForShellUIComponentEx")
+Interceptor.attach(Shield_GetDpiForShellUIComponentEx, {onLeave: function (args) {send("Shield_GetDpiForShellUIComponentEx");}});
+
+var Shield_RemoveOwnerDrawFromMenu = Module.findExportByName("SecurityHealthSsoUdk.dll", "Shield_RemoveOwnerDrawFromMenu")
+Interceptor.attach(Shield_RemoveOwnerDrawFromMenu, {onLeave: function (args) {send("Shield_RemoveOwnerDrawFromMenu");}});
+
+var Shield_SHLoadNativeIconSizeEx = Module.findExportByName("SecurityHealthSsoUdk.dll", "Shield_SHLoadNativeIconSizeEx")
+Interceptor.attach(Shield_SHLoadNativeIconSizeEx, {onLeave: function (args) {send("Shield_SHLoadNativeIconSizeEx");}});
+

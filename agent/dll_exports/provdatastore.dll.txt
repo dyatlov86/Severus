@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("provdatastore.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("provdatastore.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("provdatastore.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var MvDsGetInfoFromMcc = Module.findExportByName("provdatastore.dll", "MvDsGetInfoFromMcc")
+Interceptor.attach(MvDsGetInfoFromMcc, {onLeave: function (args) {send("MvDsGetInfoFromMcc");}});
+
+var MvGetMccFromGeoId = Module.findExportByName("provdatastore.dll", "MvGetMccFromGeoId")
+Interceptor.attach(MvGetMccFromGeoId, {onLeave: function (args) {send("MvGetMccFromGeoId");}});
+
+var ValidateMnc = Module.findExportByName("provdatastore.dll", "ValidateMnc")
+Interceptor.attach(ValidateMnc, {onLeave: function (args) {send("ValidateMnc");}});
+

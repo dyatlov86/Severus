@@ -1,0 +1,18 @@
+var CacheSettingsDlg = Module.findExportByName("filemgmt.dll", "CacheSettingsDlg")
+Interceptor.attach(CacheSettingsDlg, {onLeave: function (args) {send("CacheSettingsDlg");}});
+
+var CacheSettingsDlg2 = Module.findExportByName("filemgmt.dll", "CacheSettingsDlg2")
+Interceptor.attach(CacheSettingsDlg2, {onLeave: function (args) {send("CacheSettingsDlg2");}});
+
+var DllCanUnloadNow = Module.findExportByName("filemgmt.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("filemgmt.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("filemgmt.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("filemgmt.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("diagperf.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("diagperf.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("diagperf.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("diagperf.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var WdiDiagnosticModuleMain = Module.findExportByName("diagperf.dll", "WdiDiagnosticModuleMain")
+Interceptor.attach(WdiDiagnosticModuleMain, {onLeave: function (args) {send("WdiDiagnosticModuleMain");}});
+
+var WdiGetDiagnosticModuleInterfaceVersion = Module.findExportByName("diagperf.dll", "WdiGetDiagnosticModuleInterfaceVersion")
+Interceptor.attach(WdiGetDiagnosticModuleInterfaceVersion, {onLeave: function (args) {send("WdiGetDiagnosticModuleInterfaceVersion");}});
+
+var WdiHandleInstance = Module.findExportByName("diagperf.dll", "WdiHandleInstance")
+Interceptor.attach(WdiHandleInstance, {onLeave: function (args) {send("WdiHandleInstance");}});
+

@@ -1,0 +1,12 @@
+var InjectThread = Module.findExportByName("ttdloader.dll", "InjectThread")
+Interceptor.attach(InjectThread, {onLeave: function (args) {send("InjectThread");}});
+
+var ParametersBlock = Module.findExportByName("ttdloader.dll", "ParametersBlock")
+Interceptor.attach(ParametersBlock, {onLeave: function (args) {send("ParametersBlock");}});
+
+var StubDllEntry = Module.findExportByName("ttdloader.dll", "StubDllEntry")
+Interceptor.attach(StubDllEntry, {onLeave: function (args) {send("StubDllEntry");}});
+
+var ntdllLdrInitializeThunk = Module.findExportByName("ttdloader.dll", "ntdllLdrInitializeThunk")
+Interceptor.attach(ntdllLdrInitializeThunk, {onLeave: function (args) {send("ntdllLdrInitializeThunk");}});
+

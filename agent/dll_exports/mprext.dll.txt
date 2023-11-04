@@ -1,0 +1,33 @@
+var DoBroadcastSystemMessageWorker = Module.findExportByName("mprext.dll", "DoBroadcastSystemMessageWorker")
+Interceptor.attach(DoBroadcastSystemMessageWorker, {onLeave: function (args) {send("DoBroadcastSystemMessageWorker");}});
+
+var DoCommandLinePromptWorker = Module.findExportByName("mprext.dll", "DoCommandLinePromptWorker")
+Interceptor.attach(DoCommandLinePromptWorker, {onLeave: function (args) {send("DoCommandLinePromptWorker");}});
+
+var DoPasswordDialogWorker = Module.findExportByName("mprext.dll", "DoPasswordDialogWorker")
+Interceptor.attach(DoPasswordDialogWorker, {onLeave: function (args) {send("DoPasswordDialogWorker");}});
+
+var DoProfileErrorDialogWorker = Module.findExportByName("mprext.dll", "DoProfileErrorDialogWorker")
+Interceptor.attach(DoProfileErrorDialogWorker, {onLeave: function (args) {send("DoProfileErrorDialogWorker");}});
+
+var ShowReconnectDialogEndWorker = Module.findExportByName("mprext.dll", "ShowReconnectDialogEndWorker")
+Interceptor.attach(ShowReconnectDialogEndWorker, {onLeave: function (args) {send("ShowReconnectDialogEndWorker");}});
+
+var ShowReconnectDialogUIWorker = Module.findExportByName("mprext.dll", "ShowReconnectDialogUIWorker")
+Interceptor.attach(ShowReconnectDialogUIWorker, {onLeave: function (args) {send("ShowReconnectDialogUIWorker");}});
+
+var ShowReconnectDialogWorker = Module.findExportByName("mprext.dll", "ShowReconnectDialogWorker")
+Interceptor.attach(ShowReconnectDialogWorker, {onLeave: function (args) {send("ShowReconnectDialogWorker");}});
+
+var WNetConnectionDialog1WWorker = Module.findExportByName("mprext.dll", "WNetConnectionDialog1WWorker")
+Interceptor.attach(WNetConnectionDialog1WWorker, {onLeave: function (args) {send("WNetConnectionDialog1WWorker");}});
+
+var WNetConnectionDialogWorker = Module.findExportByName("mprext.dll", "WNetConnectionDialogWorker")
+Interceptor.attach(WNetConnectionDialogWorker, {onLeave: function (args) {send("WNetConnectionDialogWorker");}});
+
+var WNetDisconnectDialog1WWorker = Module.findExportByName("mprext.dll", "WNetDisconnectDialog1WWorker")
+Interceptor.attach(WNetDisconnectDialog1WWorker, {onLeave: function (args) {send("WNetDisconnectDialog1WWorker");}});
+
+var WNetDisconnectDialogWorker = Module.findExportByName("mprext.dll", "WNetDisconnectDialogWorker")
+Interceptor.attach(WNetDisconnectDialogWorker, {onLeave: function (args) {send("WNetDisconnectDialogWorker");}});
+

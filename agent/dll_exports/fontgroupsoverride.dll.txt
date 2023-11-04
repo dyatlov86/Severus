@@ -1,0 +1,3 @@
+var GetFontOverrides = Module.findExportByName("fontgroupsoverride.dll", "GetFontOverrides")
+Interceptor.attach(GetFontOverrides, {onLeave: function (args) {send("GetFontOverrides");}});
+

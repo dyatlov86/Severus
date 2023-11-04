@@ -1,0 +1,30 @@
+var TbCreateCEvent = Module.findExportByName("TimeBrokerClient.dll", "TbCreateCEvent")
+Interceptor.attach(TbCreateCEvent, {onLeave: function (args) {send("TbCreateCEvent");}});
+
+var TbCreateEvent = Module.findExportByName("TimeBrokerClient.dll", "TbCreateEvent")
+Interceptor.attach(TbCreateEvent, {onLeave: function (args) {send("TbCreateEvent");}});
+
+var TbDeleteCEvent = Module.findExportByName("TimeBrokerClient.dll", "TbDeleteCEvent")
+Interceptor.attach(TbDeleteCEvent, {onLeave: function (args) {send("TbDeleteCEvent");}});
+
+var TbDeleteEvent = Module.findExportByName("TimeBrokerClient.dll", "TbDeleteEvent")
+Interceptor.attach(TbDeleteEvent, {onLeave: function (args) {send("TbDeleteEvent");}});
+
+var TbEnumerateEvents = Module.findExportByName("TimeBrokerClient.dll", "TbEnumerateEvents")
+Interceptor.attach(TbEnumerateEvents, {onLeave: function (args) {send("TbEnumerateEvents");}});
+
+var TbQueryCEventData = Module.findExportByName("TimeBrokerClient.dll", "TbQueryCEventData")
+Interceptor.attach(TbQueryCEventData, {onLeave: function (args) {send("TbQueryCEventData");}});
+
+var TbQueryCEventTriggerTime = Module.findExportByName("TimeBrokerClient.dll", "TbQueryCEventTriggerTime")
+Interceptor.attach(TbQueryCEventTriggerTime, {onLeave: function (args) {send("TbQueryCEventTriggerTime");}});
+
+var TbQueryEventData = Module.findExportByName("TimeBrokerClient.dll", "TbQueryEventData")
+Interceptor.attach(TbQueryEventData, {onLeave: function (args) {send("TbQueryEventData");}});
+
+var TbUpdateCEvent = Module.findExportByName("TimeBrokerClient.dll", "TbUpdateCEvent")
+Interceptor.attach(TbUpdateCEvent, {onLeave: function (args) {send("TbUpdateCEvent");}});
+
+var TbUpdateEvent = Module.findExportByName("TimeBrokerClient.dll", "TbUpdateEvent")
+Interceptor.attach(TbUpdateEvent, {onLeave: function (args) {send("TbUpdateEvent");}});
+

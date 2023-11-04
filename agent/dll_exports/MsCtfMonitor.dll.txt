@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("MsCtfMonitor.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("MsCtfMonitor.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("MsCtfMonitor.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("MsCtfMonitor.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DoMsCtfMonitor = Module.findExportByName("MsCtfMonitor.dll", "DoMsCtfMonitor")
+Interceptor.attach(DoMsCtfMonitor, {onLeave: function (args) {send("DoMsCtfMonitor");}});
+
+var InitLocalMsCtfMonitor = Module.findExportByName("MsCtfMonitor.dll", "InitLocalMsCtfMonitor")
+Interceptor.attach(InitLocalMsCtfMonitor, {onLeave: function (args) {send("InitLocalMsCtfMonitor");}});
+
+var UninitLocalMsCtfMonitor = Module.findExportByName("MsCtfMonitor.dll", "UninitLocalMsCtfMonitor")
+Interceptor.attach(UninitLocalMsCtfMonitor, {onLeave: function (args) {send("UninitLocalMsCtfMonitor");}});
+

@@ -1,0 +1,39 @@
+var NcsiAllocateAndGetConnectivityStatusSet = Module.findExportByName("ncsi.dll", "NcsiAllocateAndGetConnectivityStatusSet")
+Interceptor.attach(NcsiAllocateAndGetConnectivityStatusSet, {onLeave: function (args) {send("NcsiAllocateAndGetConnectivityStatusSet");}});
+
+var NcsiDeregisterConnectivityStatusChange = Module.findExportByName("ncsi.dll", "NcsiDeregisterConnectivityStatusChange")
+Interceptor.attach(NcsiDeregisterConnectivityStatusChange, {onLeave: function (args) {send("NcsiDeregisterConnectivityStatusChange");}});
+
+var NcsiDeregisterDiagnosticsInfoChange = Module.findExportByName("ncsi.dll", "NcsiDeregisterDiagnosticsInfoChange")
+Interceptor.attach(NcsiDeregisterDiagnosticsInfoChange, {onLeave: function (args) {send("NcsiDeregisterDiagnosticsInfoChange");}});
+
+var NcsiFreeConnectivityStatusSet = Module.findExportByName("ncsi.dll", "NcsiFreeConnectivityStatusSet")
+Interceptor.attach(NcsiFreeConnectivityStatusSet, {onLeave: function (args) {send("NcsiFreeConnectivityStatusSet");}});
+
+var NcsiGetCaptivePortalHosts = Module.findExportByName("ncsi.dll", "NcsiGetCaptivePortalHosts")
+Interceptor.attach(NcsiGetCaptivePortalHosts, {onLeave: function (args) {send("NcsiGetCaptivePortalHosts");}});
+
+var NcsiGetWebProbeConfig = Module.findExportByName("ncsi.dll", "NcsiGetWebProbeConfig")
+Interceptor.attach(NcsiGetWebProbeConfig, {onLeave: function (args) {send("NcsiGetWebProbeConfig");}});
+
+var NcsiIdentifyUserSpecificProxies = Module.findExportByName("ncsi.dll", "NcsiIdentifyUserSpecificProxies")
+Interceptor.attach(NcsiIdentifyUserSpecificProxies, {onLeave: function (args) {send("NcsiIdentifyUserSpecificProxies");}});
+
+var NcsiNotifySessionChange = Module.findExportByName("ncsi.dll", "NcsiNotifySessionChange")
+Interceptor.attach(NcsiNotifySessionChange, {onLeave: function (args) {send("NcsiNotifySessionChange");}});
+
+var NcsiPerformRefresh = Module.findExportByName("ncsi.dll", "NcsiPerformRefresh")
+Interceptor.attach(NcsiPerformRefresh, {onLeave: function (args) {send("NcsiPerformRefresh");}});
+
+var NcsiPerformReprobe = Module.findExportByName("ncsi.dll", "NcsiPerformReprobe")
+Interceptor.attach(NcsiPerformReprobe, {onLeave: function (args) {send("NcsiPerformReprobe");}});
+
+var NcsiRegisterConnectivityStatusChange = Module.findExportByName("ncsi.dll", "NcsiRegisterConnectivityStatusChange")
+Interceptor.attach(NcsiRegisterConnectivityStatusChange, {onLeave: function (args) {send("NcsiRegisterConnectivityStatusChange");}});
+
+var NcsiRegisterDiagnosticsInfoChange = Module.findExportByName("ncsi.dll", "NcsiRegisterDiagnosticsInfoChange")
+Interceptor.attach(NcsiRegisterDiagnosticsInfoChange, {onLeave: function (args) {send("NcsiRegisterDiagnosticsInfoChange");}});
+
+var NcsiUpdateClientPresence = Module.findExportByName("ncsi.dll", "NcsiUpdateClientPresence")
+Interceptor.attach(NcsiUpdateClientPresence, {onLeave: function (args) {send("NcsiUpdateClientPresence");}});
+

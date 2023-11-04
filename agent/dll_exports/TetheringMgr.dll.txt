@@ -1,0 +1,9 @@
+var TetheringManagerDeinit = Module.findExportByName("TetheringMgr.dll", "TetheringManagerDeinit")
+Interceptor.attach(TetheringManagerDeinit, {onLeave: function (args) {send("TetheringManagerDeinit");}});
+
+var TetheringManagerInit = Module.findExportByName("TetheringMgr.dll", "TetheringManagerInit")
+Interceptor.attach(TetheringManagerInit, {onLeave: function (args) {send("TetheringManagerInit");}});
+
+var TetheringManagerNotify = Module.findExportByName("TetheringMgr.dll", "TetheringManagerNotify")
+Interceptor.attach(TetheringManagerNotify, {onLeave: function (args) {send("TetheringManagerNotify");}});
+

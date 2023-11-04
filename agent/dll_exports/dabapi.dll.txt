@@ -1,0 +1,12 @@
+var DabApiBufferFree = Module.findExportByName("dabapi.dll", "DabApiBufferFree")
+Interceptor.attach(DabApiBufferFree, {onLeave: function (args) {send("DabApiBufferFree");}});
+
+var DabGetLastScheduledRunTime = Module.findExportByName("dabapi.dll", "DabGetLastScheduledRunTime")
+Interceptor.attach(DabGetLastScheduledRunTime, {onLeave: function (args) {send("DabGetLastScheduledRunTime");}});
+
+var DabRegisterTriggerConsumer = Module.findExportByName("dabapi.dll", "DabRegisterTriggerConsumer")
+Interceptor.attach(DabRegisterTriggerConsumer, {onLeave: function (args) {send("DabRegisterTriggerConsumer");}});
+
+var DabUnregisterTriggerConsumer = Module.findExportByName("dabapi.dll", "DabUnregisterTriggerConsumer")
+Interceptor.attach(DabUnregisterTriggerConsumer, {onLeave: function (args) {send("DabUnregisterTriggerConsumer");}});
+

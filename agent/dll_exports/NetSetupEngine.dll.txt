@@ -1,0 +1,3 @@
+var NetSetupGetEngine = Module.findExportByName("NetSetupEngine.dll", "NetSetupGetEngine")
+Interceptor.attach(NetSetupGetEngine, {onLeave: function (args) {send("NetSetupGetEngine");}});
+

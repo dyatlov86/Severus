@@ -1,0 +1,24 @@
+var CvCloseDataSource = Module.findExportByName("chartv.dll", "CvCloseDataSource")
+Interceptor.attach(CvCloseDataSource, {onLeave: function (args) {send("CvCloseDataSource");}});
+
+var CvCreateDataSource = Module.findExportByName("chartv.dll", "CvCreateDataSource")
+Interceptor.attach(CvCreateDataSource, {onLeave: function (args) {send("CvCreateDataSource");}});
+
+var CvGetData = Module.findExportByName("chartv.dll", "CvGetData")
+Interceptor.attach(CvGetData, {onLeave: function (args) {send("CvGetData");}});
+
+var CvGetDataSourceName = Module.findExportByName("chartv.dll", "CvGetDataSourceName")
+Interceptor.attach(CvGetDataSourceName, {onLeave: function (args) {send("CvGetDataSourceName");}});
+
+var CvInitialize = Module.findExportByName("chartv.dll", "CvInitialize")
+Interceptor.attach(CvInitialize, {onLeave: function (args) {send("CvInitialize");}});
+
+var CvSetData = Module.findExportByName("chartv.dll", "CvSetData")
+Interceptor.attach(CvSetData, {onLeave: function (args) {send("CvSetData");}});
+
+var CvSetDataSourceName = Module.findExportByName("chartv.dll", "CvSetDataSourceName")
+Interceptor.attach(CvSetDataSourceName, {onLeave: function (args) {send("CvSetDataSourceName");}});
+
+var CvUninitialize = Module.findExportByName("chartv.dll", "CvUninitialize")
+Interceptor.attach(CvUninitialize, {onLeave: function (args) {send("CvUninitialize");}});
+

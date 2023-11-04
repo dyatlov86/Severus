@@ -1,0 +1,24 @@
+var DllCanUnloadNow = Module.findExportByName("pwlauncher.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("pwlauncher.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("pwlauncher.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("pwlauncher.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("pwlauncher.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ProcessHibernateGroupPolicy = Module.findExportByName("pwlauncher.dll", "ProcessHibernateGroupPolicy")
+Interceptor.attach(ProcessHibernateGroupPolicy, {onLeave: function (args) {send("ProcessHibernateGroupPolicy");}});
+
+var ProcessLauncherGroupPolicy = Module.findExportByName("pwlauncher.dll", "ProcessLauncherGroupPolicy")
+Interceptor.attach(ProcessLauncherGroupPolicy, {onLeave: function (args) {send("ProcessLauncherGroupPolicy");}});
+
+var ShowPortableWorkspaceLauncherConfigurationUX = Module.findExportByName("pwlauncher.dll", "ShowPortableWorkspaceLauncherConfigurationUX")
+Interceptor.attach(ShowPortableWorkspaceLauncherConfigurationUX, {onLeave: function (args) {send("ShowPortableWorkspaceLauncherConfigurationUX");}});
+

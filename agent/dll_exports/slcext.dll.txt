@@ -1,0 +1,27 @@
+var SLAcquireGenuineTicket = Module.findExportByName("slcext.dll", "SLAcquireGenuineTicket")
+Interceptor.attach(SLAcquireGenuineTicket, {onLeave: function (args) {send("SLAcquireGenuineTicket");}});
+
+var SLActivateProduct = Module.findExportByName("slcext.dll", "SLActivateProduct")
+Interceptor.attach(SLActivateProduct, {onLeave: function (args) {send("SLActivateProduct");}});
+
+var SLGetPackageProductKey = Module.findExportByName("slcext.dll", "SLGetPackageProductKey")
+Interceptor.attach(SLGetPackageProductKey, {onLeave: function (args) {send("SLGetPackageProductKey");}});
+
+var SLGetPackageProperties = Module.findExportByName("slcext.dll", "SLGetPackageProperties")
+Interceptor.attach(SLGetPackageProperties, {onLeave: function (args) {send("SLGetPackageProperties");}});
+
+var SLGetPackageToken = Module.findExportByName("slcext.dll", "SLGetPackageToken")
+Interceptor.attach(SLGetPackageToken, {onLeave: function (args) {send("SLGetPackageToken");}});
+
+var SLGetReferralInformation = Module.findExportByName("slcext.dll", "SLGetReferralInformation")
+Interceptor.attach(SLGetReferralInformation, {onLeave: function (args) {send("SLGetReferralInformation");}});
+
+var SLGetServerStatus = Module.findExportByName("slcext.dll", "SLGetServerStatus")
+Interceptor.attach(SLGetServerStatus, {onLeave: function (args) {send("SLGetServerStatus");}});
+
+var SLInstallPackage = Module.findExportByName("slcext.dll", "SLInstallPackage")
+Interceptor.attach(SLInstallPackage, {onLeave: function (args) {send("SLInstallPackage");}});
+
+var SLUninstallPackage = Module.findExportByName("slcext.dll", "SLUninstallPackage")
+Interceptor.attach(SLUninstallPackage, {onLeave: function (args) {send("SLUninstallPackage");}});
+

@@ -1,0 +1,3 @@
+var DllGetClassObject = Module.findExportByName("VsGraphicsExperiment.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

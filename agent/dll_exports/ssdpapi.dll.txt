@@ -1,0 +1,87 @@
+var BeginRegisterPropChangeNotificationEx = Module.findExportByName("ssdpapi.dll", "BeginRegisterPropChangeNotificationEx")
+Interceptor.attach(BeginRegisterPropChangeNotificationEx, {onLeave: function (args) {send("BeginRegisterPropChangeNotificationEx");}});
+
+var CleanupCache = Module.findExportByName("ssdpapi.dll", "CleanupCache")
+Interceptor.attach(CleanupCache, {onLeave: function (args) {send("CleanupCache");}});
+
+var DHSetICSInterfaces = Module.findExportByName("ssdpapi.dll", "DHSetICSInterfaces")
+Interceptor.attach(DHSetICSInterfaces, {onLeave: function (args) {send("DHSetICSInterfaces");}});
+
+var DHSetICSOff = Module.findExportByName("ssdpapi.dll", "DHSetICSOff")
+Interceptor.attach(DHSetICSOff, {onLeave: function (args) {send("DHSetICSOff");}});
+
+var DeregisterNotification = Module.findExportByName("ssdpapi.dll", "DeregisterNotification")
+Interceptor.attach(DeregisterNotification, {onLeave: function (args) {send("DeregisterNotification");}});
+
+var DeregisterService = Module.findExportByName("ssdpapi.dll", "DeregisterService")
+Interceptor.attach(DeregisterService, {onLeave: function (args) {send("DeregisterService");}});
+
+var DisableFirewallRule = Module.findExportByName("ssdpapi.dll", "DisableFirewallRule")
+Interceptor.attach(DisableFirewallRule, {onLeave: function (args) {send("DisableFirewallRule");}});
+
+var EnableFirewallRule = Module.findExportByName("ssdpapi.dll", "EnableFirewallRule")
+Interceptor.attach(EnableFirewallRule, {onLeave: function (args) {send("EnableFirewallRule");}});
+
+var EndRegisterPropChangeNotificationEx = Module.findExportByName("ssdpapi.dll", "EndRegisterPropChangeNotificationEx")
+Interceptor.attach(EndRegisterPropChangeNotificationEx, {onLeave: function (args) {send("EndRegisterPropChangeNotificationEx");}});
+
+var FindServices = Module.findExportByName("ssdpapi.dll", "FindServices")
+Interceptor.attach(FindServices, {onLeave: function (args) {send("FindServices");}});
+
+var FindServicesCallback = Module.findExportByName("ssdpapi.dll", "FindServicesCallback")
+Interceptor.attach(FindServicesCallback, {onLeave: function (args) {send("FindServicesCallback");}});
+
+var FindServicesCallbackEx = Module.findExportByName("ssdpapi.dll", "FindServicesCallbackEx")
+Interceptor.attach(FindServicesCallbackEx, {onLeave: function (args) {send("FindServicesCallbackEx");}});
+
+var FindServicesCancel = Module.findExportByName("ssdpapi.dll", "FindServicesCancel")
+Interceptor.attach(FindServicesCancel, {onLeave: function (args) {send("FindServicesCancel");}});
+
+var FindServicesClose = Module.findExportByName("ssdpapi.dll", "FindServicesClose")
+Interceptor.attach(FindServicesClose, {onLeave: function (args) {send("FindServicesClose");}});
+
+var FindServicesEx = Module.findExportByName("ssdpapi.dll", "FindServicesEx")
+Interceptor.attach(FindServicesEx, {onLeave: function (args) {send("FindServicesEx");}});
+
+var FindServicesOnNetworkCallbackEx = Module.findExportByName("ssdpapi.dll", "FindServicesOnNetworkCallbackEx")
+Interceptor.attach(FindServicesOnNetworkCallbackEx, {onLeave: function (args) {send("FindServicesOnNetworkCallbackEx");}});
+
+var FreeSsdpMessage = Module.findExportByName("ssdpapi.dll", "FreeSsdpMessage")
+Interceptor.attach(FreeSsdpMessage, {onLeave: function (args) {send("FreeSsdpMessage");}});
+
+var FreeSsdpMessageEx = Module.findExportByName("ssdpapi.dll", "FreeSsdpMessageEx")
+Interceptor.attach(FreeSsdpMessageEx, {onLeave: function (args) {send("FreeSsdpMessageEx");}});
+
+var GetFirstService = Module.findExportByName("ssdpapi.dll", "GetFirstService")
+Interceptor.attach(GetFirstService, {onLeave: function (args) {send("GetFirstService");}});
+
+var GetFirstServiceEx = Module.findExportByName("ssdpapi.dll", "GetFirstServiceEx")
+Interceptor.attach(GetFirstServiceEx, {onLeave: function (args) {send("GetFirstServiceEx");}});
+
+var GetNextService = Module.findExportByName("ssdpapi.dll", "GetNextService")
+Interceptor.attach(GetNextService, {onLeave: function (args) {send("GetNextService");}});
+
+var GetNextServiceEx = Module.findExportByName("ssdpapi.dll", "GetNextServiceEx")
+Interceptor.attach(GetNextServiceEx, {onLeave: function (args) {send("GetNextServiceEx");}});
+
+var RegisterAliveNotificationOnNetworkEx = Module.findExportByName("ssdpapi.dll", "RegisterAliveNotificationOnNetworkEx")
+Interceptor.attach(RegisterAliveNotificationOnNetworkEx, {onLeave: function (args) {send("RegisterAliveNotificationOnNetworkEx");}});
+
+var RegisterNotification = Module.findExportByName("ssdpapi.dll", "RegisterNotification")
+Interceptor.attach(RegisterNotification, {onLeave: function (args) {send("RegisterNotification");}});
+
+var RegisterNotificationEx = Module.findExportByName("ssdpapi.dll", "RegisterNotificationEx")
+Interceptor.attach(RegisterNotificationEx, {onLeave: function (args) {send("RegisterNotificationEx");}});
+
+var RegisterService = Module.findExportByName("ssdpapi.dll", "RegisterService")
+Interceptor.attach(RegisterService, {onLeave: function (args) {send("RegisterService");}});
+
+var RegisterServiceEx = Module.findExportByName("ssdpapi.dll", "RegisterServiceEx")
+Interceptor.attach(RegisterServiceEx, {onLeave: function (args) {send("RegisterServiceEx");}});
+
+var SsdpCleanup = Module.findExportByName("ssdpapi.dll", "SsdpCleanup")
+Interceptor.attach(SsdpCleanup, {onLeave: function (args) {send("SsdpCleanup");}});
+
+var SsdpStartup = Module.findExportByName("ssdpapi.dll", "SsdpStartup")
+Interceptor.attach(SsdpStartup, {onLeave: function (args) {send("SsdpStartup");}});
+

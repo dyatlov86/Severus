@@ -1,0 +1,18 @@
+var AERT_Allocate = Module.findExportByName("AudioEng.dll", "AERT_Allocate")
+Interceptor.attach(AERT_Allocate, {onLeave: function (args) {send("AERT_Allocate");}});
+
+var AERT_Free = Module.findExportByName("AudioEng.dll", "AERT_Free")
+Interceptor.attach(AERT_Free, {onLeave: function (args) {send("AERT_Free");}});
+
+var DllCanUnloadNow = Module.findExportByName("AudioEng.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("AudioEng.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("AudioEng.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("AudioEng.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

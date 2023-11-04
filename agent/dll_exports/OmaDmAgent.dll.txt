@@ -1,0 +1,6 @@
+var OmaDmRunPostSessionWork = Module.findExportByName("OmaDmAgent.dll", "OmaDmRunPostSessionWork")
+Interceptor.attach(OmaDmRunPostSessionWork, {onLeave: function (args) {send("OmaDmRunPostSessionWork");}});
+
+var ResourceManagerUninstallWmiApp = Module.findExportByName("OmaDmAgent.dll", "ResourceManagerUninstallWmiApp")
+Interceptor.attach(ResourceManagerUninstallWmiApp, {onLeave: function (args) {send("ResourceManagerUninstallWmiApp");}});
+

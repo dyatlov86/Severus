@@ -1,0 +1,39 @@
+var CPlApplet = Module.findExportByName("hotplug.dll", "CPlApplet")
+Interceptor.attach(CPlApplet, {onLeave: function (args) {send("CPlApplet");}});
+
+var DllGetClassObject = Module.findExportByName("hotplug.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var HotPlugChildWithInvalidIdW = Module.findExportByName("hotplug.dll", "HotPlugChildWithInvalidIdW")
+Interceptor.attach(HotPlugChildWithInvalidIdW, {onLeave: function (args) {send("HotPlugChildWithInvalidIdW");}});
+
+var HotPlugDriverBlockedW = Module.findExportByName("hotplug.dll", "HotPlugDriverBlockedW")
+Interceptor.attach(HotPlugDriverBlockedW, {onLeave: function (args) {send("HotPlugDriverBlockedW");}});
+
+var HotPlugEjectDevice = Module.findExportByName("hotplug.dll", "HotPlugEjectDevice")
+Interceptor.attach(HotPlugEjectDevice, {onLeave: function (args) {send("HotPlugEjectDevice");}});
+
+var HotPlugEjectDeviceEx = Module.findExportByName("hotplug.dll", "HotPlugEjectDeviceEx")
+Interceptor.attach(HotPlugEjectDeviceEx, {onLeave: function (args) {send("HotPlugEjectDeviceEx");}});
+
+var HotPlugEjectVetoedW = Module.findExportByName("hotplug.dll", "HotPlugEjectVetoedW")
+Interceptor.attach(HotPlugEjectVetoedW, {onLeave: function (args) {send("HotPlugEjectVetoedW");}});
+
+var HotPlugHibernateVetoedW = Module.findExportByName("hotplug.dll", "HotPlugHibernateVetoedW")
+Interceptor.attach(HotPlugHibernateVetoedW, {onLeave: function (args) {send("HotPlugHibernateVetoedW");}});
+
+var HotPlugRemovalVetoedW = Module.findExportByName("hotplug.dll", "HotPlugRemovalVetoedW")
+Interceptor.attach(HotPlugRemovalVetoedW, {onLeave: function (args) {send("HotPlugRemovalVetoedW");}});
+
+var HotPlugSafeRemovalDriveNotificationW = Module.findExportByName("hotplug.dll", "HotPlugSafeRemovalDriveNotificationW")
+Interceptor.attach(HotPlugSafeRemovalDriveNotificationW, {onLeave: function (args) {send("HotPlugSafeRemovalDriveNotificationW");}});
+
+var HotPlugSafeRemovalNotificationW = Module.findExportByName("hotplug.dll", "HotPlugSafeRemovalNotificationW")
+Interceptor.attach(HotPlugSafeRemovalNotificationW, {onLeave: function (args) {send("HotPlugSafeRemovalNotificationW");}});
+
+var HotPlugStandbyVetoedW = Module.findExportByName("hotplug.dll", "HotPlugStandbyVetoedW")
+Interceptor.attach(HotPlugStandbyVetoedW, {onLeave: function (args) {send("HotPlugStandbyVetoedW");}});
+
+var HotPlugWarmEjectVetoedW = Module.findExportByName("hotplug.dll", "HotPlugWarmEjectVetoedW")
+Interceptor.attach(HotPlugWarmEjectVetoedW, {onLeave: function (args) {send("HotPlugWarmEjectVetoedW");}});
+

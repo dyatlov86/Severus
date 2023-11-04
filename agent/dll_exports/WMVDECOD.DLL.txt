@@ -1,0 +1,18 @@
+var CreateInstance = Module.findExportByName("WMVDECOD.DLL", "CreateInstance")
+Interceptor.attach(CreateInstance, {onLeave: function (args) {send("CreateInstance");}});
+
+var DllCanUnloadNow = Module.findExportByName("WMVDECOD.DLL", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("WMVDECOD.DLL", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("WMVDECOD.DLL", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("WMVDECOD.DLL", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetVC1DecoderFunctionTable = Module.findExportByName("WMVDECOD.DLL", "GetVC1DecoderFunctionTable")
+Interceptor.attach(GetVC1DecoderFunctionTable, {onLeave: function (args) {send("GetVC1DecoderFunctionTable");}});
+

@@ -1,0 +1,45 @@
+var IStream_Copy = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "IStream_Copy")
+Interceptor.attach(IStream_Copy, {onLeave: function (args) {send("IStream_Copy");}});
+
+var IStream_Read = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "IStream_Read")
+Interceptor.attach(IStream_Read, {onLeave: function (args) {send("IStream_Read");}});
+
+var IStream_ReadStr = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "IStream_ReadStr")
+Interceptor.attach(IStream_ReadStr, {onLeave: function (args) {send("IStream_ReadStr");}});
+
+var IStream_Reset = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "IStream_Reset")
+Interceptor.attach(IStream_Reset, {onLeave: function (args) {send("IStream_Reset");}});
+
+var IStream_Size = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "IStream_Size")
+Interceptor.attach(IStream_Size, {onLeave: function (args) {send("IStream_Size");}});
+
+var IStream_Write = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "IStream_Write")
+Interceptor.attach(IStream_Write, {onLeave: function (args) {send("IStream_Write");}});
+
+var IStream_WriteStr = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "IStream_WriteStr")
+Interceptor.attach(IStream_WriteStr, {onLeave: function (args) {send("IStream_WriteStr");}});
+
+var SHCreateMemStream = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "SHCreateMemStream")
+Interceptor.attach(SHCreateMemStream, {onLeave: function (args) {send("SHCreateMemStream");}});
+
+var SHCreateStreamOnFileA = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "SHCreateStreamOnFileA")
+Interceptor.attach(SHCreateStreamOnFileA, {onLeave: function (args) {send("SHCreateStreamOnFileA");}});
+
+var SHCreateStreamOnFileEx = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "SHCreateStreamOnFileEx")
+Interceptor.attach(SHCreateStreamOnFileEx, {onLeave: function (args) {send("SHCreateStreamOnFileEx");}});
+
+var SHCreateStreamOnFileW = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "SHCreateStreamOnFileW")
+Interceptor.attach(SHCreateStreamOnFileW, {onLeave: function (args) {send("SHCreateStreamOnFileW");}});
+
+var SHOpenRegStream2A = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "SHOpenRegStream2A")
+Interceptor.attach(SHOpenRegStream2A, {onLeave: function (args) {send("SHOpenRegStream2A");}});
+
+var SHOpenRegStream2W = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "SHOpenRegStream2W")
+Interceptor.attach(SHOpenRegStream2W, {onLeave: function (args) {send("SHOpenRegStream2W");}});
+
+var SHOpenRegStreamA = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "SHOpenRegStreamA")
+Interceptor.attach(SHOpenRegStreamA, {onLeave: function (args) {send("SHOpenRegStreamA");}});
+
+var SHOpenRegStreamW = Module.findExportByName("api-ms-win-shcore-stream-l1-1-0.dll", "SHOpenRegStreamW")
+Interceptor.attach(SHOpenRegStreamW, {onLeave: function (args) {send("SHOpenRegStreamW");}});
+

@@ -1,0 +1,6 @@
+var Install = Module.findExportByName("mscories.dll", "Install")
+Interceptor.attach(Install, {onLeave: function (args) {send("Install");}});
+
+var Uninstall = Module.findExportByName("mscories.dll", "Uninstall")
+Interceptor.attach(Uninstall, {onLeave: function (args) {send("Uninstall");}});
+

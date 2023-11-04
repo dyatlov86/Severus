@@ -1,0 +1,3 @@
+var CreateDataModelManager = Module.findExportByName("DbgModel.dll", "CreateDataModelManager")
+Interceptor.attach(CreateDataModelManager, {onLeave: function (args) {send("CreateDataModelManager");}});
+

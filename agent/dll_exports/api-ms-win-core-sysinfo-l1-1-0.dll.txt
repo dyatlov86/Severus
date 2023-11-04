@@ -1,0 +1,66 @@
+var GetComputerNameExA = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetComputerNameExA")
+Interceptor.attach(GetComputerNameExA, {onLeave: function (args) {send("GetComputerNameExA");}});
+
+var GetComputerNameExW = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetComputerNameExW")
+Interceptor.attach(GetComputerNameExW, {onLeave: function (args) {send("GetComputerNameExW");}});
+
+var GetLocalTime = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetLocalTime")
+Interceptor.attach(GetLocalTime, {onLeave: function (args) {send("GetLocalTime");}});
+
+var GetLogicalProcessorInformation = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetLogicalProcessorInformation")
+Interceptor.attach(GetLogicalProcessorInformation, {onLeave: function (args) {send("GetLogicalProcessorInformation");}});
+
+var GetLogicalProcessorInformationEx = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetLogicalProcessorInformationEx")
+Interceptor.attach(GetLogicalProcessorInformationEx, {onLeave: function (args) {send("GetLogicalProcessorInformationEx");}});
+
+var GetSystemDirectoryA = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetSystemDirectoryA")
+Interceptor.attach(GetSystemDirectoryA, {onLeave: function (args) {send("GetSystemDirectoryA");}});
+
+var GetSystemDirectoryW = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetSystemDirectoryW")
+Interceptor.attach(GetSystemDirectoryW, {onLeave: function (args) {send("GetSystemDirectoryW");}});
+
+var GetSystemInfo = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetSystemInfo")
+Interceptor.attach(GetSystemInfo, {onLeave: function (args) {send("GetSystemInfo");}});
+
+var GetSystemTime = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetSystemTime")
+Interceptor.attach(GetSystemTime, {onLeave: function (args) {send("GetSystemTime");}});
+
+var GetSystemTimeAdjustment = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetSystemTimeAdjustment")
+Interceptor.attach(GetSystemTimeAdjustment, {onLeave: function (args) {send("GetSystemTimeAdjustment");}});
+
+var GetSystemTimeAsFileTime = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetSystemTimeAsFileTime")
+Interceptor.attach(GetSystemTimeAsFileTime, {onLeave: function (args) {send("GetSystemTimeAsFileTime");}});
+
+var GetSystemWindowsDirectoryA = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetSystemWindowsDirectoryA")
+Interceptor.attach(GetSystemWindowsDirectoryA, {onLeave: function (args) {send("GetSystemWindowsDirectoryA");}});
+
+var GetSystemWindowsDirectoryW = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetSystemWindowsDirectoryW")
+Interceptor.attach(GetSystemWindowsDirectoryW, {onLeave: function (args) {send("GetSystemWindowsDirectoryW");}});
+
+var GetTickCount = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetTickCount")
+Interceptor.attach(GetTickCount, {onLeave: function (args) {send("GetTickCount");}});
+
+var GetTickCount64 = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetTickCount64")
+Interceptor.attach(GetTickCount64, {onLeave: function (args) {send("GetTickCount64");}});
+
+var GetVersion = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetVersion")
+Interceptor.attach(GetVersion, {onLeave: function (args) {send("GetVersion");}});
+
+var GetVersionExA = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetVersionExA")
+Interceptor.attach(GetVersionExA, {onLeave: function (args) {send("GetVersionExA");}});
+
+var GetVersionExW = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetVersionExW")
+Interceptor.attach(GetVersionExW, {onLeave: function (args) {send("GetVersionExW");}});
+
+var GetWindowsDirectoryA = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetWindowsDirectoryA")
+Interceptor.attach(GetWindowsDirectoryA, {onLeave: function (args) {send("GetWindowsDirectoryA");}});
+
+var GetWindowsDirectoryW = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GetWindowsDirectoryW")
+Interceptor.attach(GetWindowsDirectoryW, {onLeave: function (args) {send("GetWindowsDirectoryW");}});
+
+var GlobalMemoryStatusEx = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "GlobalMemoryStatusEx")
+Interceptor.attach(GlobalMemoryStatusEx, {onLeave: function (args) {send("GlobalMemoryStatusEx");}});
+
+var SetLocalTime = Module.findExportByName("api-ms-win-core-sysinfo-l1-1-0.dll", "SetLocalTime")
+Interceptor.attach(SetLocalTime, {onLeave: function (args) {send("SetLocalTime");}});
+

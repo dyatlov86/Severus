@@ -1,0 +1,24 @@
+var KsCreateAllocator = Module.findExportByName("ksuser.dll", "KsCreateAllocator")
+Interceptor.attach(KsCreateAllocator, {onLeave: function (args) {send("KsCreateAllocator");}});
+
+var KsCreateAllocator2 = Module.findExportByName("ksuser.dll", "KsCreateAllocator2")
+Interceptor.attach(KsCreateAllocator2, {onLeave: function (args) {send("KsCreateAllocator2");}});
+
+var KsCreateClock = Module.findExportByName("ksuser.dll", "KsCreateClock")
+Interceptor.attach(KsCreateClock, {onLeave: function (args) {send("KsCreateClock");}});
+
+var KsCreateClock2 = Module.findExportByName("ksuser.dll", "KsCreateClock2")
+Interceptor.attach(KsCreateClock2, {onLeave: function (args) {send("KsCreateClock2");}});
+
+var KsCreatePin = Module.findExportByName("ksuser.dll", "KsCreatePin")
+Interceptor.attach(KsCreatePin, {onLeave: function (args) {send("KsCreatePin");}});
+
+var KsCreatePin2 = Module.findExportByName("ksuser.dll", "KsCreatePin2")
+Interceptor.attach(KsCreatePin2, {onLeave: function (args) {send("KsCreatePin2");}});
+
+var KsCreateTopologyNode = Module.findExportByName("ksuser.dll", "KsCreateTopologyNode")
+Interceptor.attach(KsCreateTopologyNode, {onLeave: function (args) {send("KsCreateTopologyNode");}});
+
+var KsCreateTopologyNode2 = Module.findExportByName("ksuser.dll", "KsCreateTopologyNode2")
+Interceptor.attach(KsCreateTopologyNode2, {onLeave: function (args) {send("KsCreateTopologyNode2");}});
+

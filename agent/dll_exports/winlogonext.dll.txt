@@ -1,0 +1,15 @@
+var ConfigureUserArso = Module.findExportByName("winlogonext.dll", "ConfigureUserArso")
+Interceptor.attach(ConfigureUserArso, {onLeave: function (args) {send("ConfigureUserArso");}});
+
+var EnableDisableElevationForSessionWorker = Module.findExportByName("winlogonext.dll", "EnableDisableElevationForSessionWorker")
+Interceptor.attach(EnableDisableElevationForSessionWorker, {onLeave: function (args) {send("EnableDisableElevationForSessionWorker");}});
+
+var NotifyInteractiveSessionLogoff = Module.findExportByName("winlogonext.dll", "NotifyInteractiveSessionLogoff")
+Interceptor.attach(NotifyInteractiveSessionLogoff, {onLeave: function (args) {send("NotifyInteractiveSessionLogoff");}});
+
+var UpdateUserTokenSessionId = Module.findExportByName("winlogonext.dll", "UpdateUserTokenSessionId")
+Interceptor.attach(UpdateUserTokenSessionId, {onLeave: function (args) {send("UpdateUserTokenSessionId");}});
+
+var WinLogonExt = Module.findExportByName("winlogonext.dll", "WinLogonExt")
+Interceptor.attach(WinLogonExt, {onLeave: function (args) {send("WinLogonExt");}});
+

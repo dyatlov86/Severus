@@ -1,0 +1,33 @@
+var EnclaveAttestationAttest = Module.findExportByName("AzureAttest.dll", "EnclaveAttestationAttest")
+Interceptor.attach(EnclaveAttestationAttest, {onLeave: function (args) {send("EnclaveAttestationAttest");}});
+
+var EnclaveAttestationAttestInternal = Module.findExportByName("AzureAttest.dll", "EnclaveAttestationAttestInternal")
+Interceptor.attach(EnclaveAttestationAttestInternal, {onLeave: function (args) {send("EnclaveAttestationAttestInternal");}});
+
+var EnclaveAttestationCloseSession = Module.findExportByName("AzureAttest.dll", "EnclaveAttestationCloseSession")
+Interceptor.attach(EnclaveAttestationCloseSession, {onLeave: function (args) {send("EnclaveAttestationCloseSession");}});
+
+var EnclaveAttestationCloseSessionInternal = Module.findExportByName("AzureAttest.dll", "EnclaveAttestationCloseSessionInternal")
+Interceptor.attach(EnclaveAttestationCloseSessionInternal, {onLeave: function (args) {send("EnclaveAttestationCloseSessionInternal");}});
+
+var EnclaveAttestationConfigure = Module.findExportByName("AzureAttest.dll", "EnclaveAttestationConfigure")
+Interceptor.attach(EnclaveAttestationConfigure, {onLeave: function (args) {send("EnclaveAttestationConfigure");}});
+
+var EnclaveAttestationConfigureInternal = Module.findExportByName("AzureAttest.dll", "EnclaveAttestationConfigureInternal")
+Interceptor.attach(EnclaveAttestationConfigureInternal, {onLeave: function (args) {send("EnclaveAttestationConfigureInternal");}});
+
+var EnclaveAttestationCreateSession = Module.findExportByName("AzureAttest.dll", "EnclaveAttestationCreateSession")
+Interceptor.attach(EnclaveAttestationCreateSession, {onLeave: function (args) {send("EnclaveAttestationCreateSession");}});
+
+var EnclaveAttestationCreateSessionInternal = Module.findExportByName("AzureAttest.dll", "EnclaveAttestationCreateSessionInternal")
+Interceptor.attach(EnclaveAttestationCreateSessionInternal, {onLeave: function (args) {send("EnclaveAttestationCreateSessionInternal");}});
+
+var EnclaveAttestationGetKey = Module.findExportByName("AzureAttest.dll", "EnclaveAttestationGetKey")
+Interceptor.attach(EnclaveAttestationGetKey, {onLeave: function (args) {send("EnclaveAttestationGetKey");}});
+
+var EnclaveAttestationGetReport = Module.findExportByName("AzureAttest.dll", "EnclaveAttestationGetReport")
+Interceptor.attach(EnclaveAttestationGetReport, {onLeave: function (args) {send("EnclaveAttestationGetReport");}});
+
+var EnclaveAttestationGetReportInternal = Module.findExportByName("AzureAttest.dll", "EnclaveAttestationGetReportInternal")
+Interceptor.attach(EnclaveAttestationGetReportInternal, {onLeave: function (args) {send("EnclaveAttestationGetReportInternal");}});
+

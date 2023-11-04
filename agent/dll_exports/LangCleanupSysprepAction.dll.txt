@@ -1,0 +1,3 @@
+var Sysprep_Generalize_MUILangCleanup = Module.findExportByName("LangCleanupSysprepAction.dll", "Sysprep_Generalize_MUILangCleanup")
+Interceptor.attach(Sysprep_Generalize_MUILangCleanup, {onLeave: function (args) {send("Sysprep_Generalize_MUILangCleanup");}});
+

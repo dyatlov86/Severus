@@ -1,0 +1,3 @@
+var CreateDeploymentSessionEx = Module.findExportByName("DeviceUpdateAgent.dll", "CreateDeploymentSessionEx")
+Interceptor.attach(CreateDeploymentSessionEx, {onLeave: function (args) {send("CreateDeploymentSessionEx");}});
+

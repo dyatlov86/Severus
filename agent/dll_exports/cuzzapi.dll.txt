@@ -1,0 +1,27 @@
+var CuzzDisable = Module.findExportByName("cuzzapi.dll", "CuzzDisable")
+Interceptor.attach(CuzzDisable, {onLeave: function (args) {send("CuzzDisable");}});
+
+var CuzzEnable = Module.findExportByName("cuzzapi.dll", "CuzzEnable")
+Interceptor.attach(CuzzEnable, {onLeave: function (args) {send("CuzzEnable");}});
+
+var CuzzGetRandomSeed = Module.findExportByName("cuzzapi.dll", "CuzzGetRandomSeed")
+Interceptor.attach(CuzzGetRandomSeed, {onLeave: function (args) {send("CuzzGetRandomSeed");}});
+
+var CuzzIsEnabled = Module.findExportByName("cuzzapi.dll", "CuzzIsEnabled")
+Interceptor.attach(CuzzIsEnabled, {onLeave: function (args) {send("CuzzIsEnabled");}});
+
+var CuzzSchedule = Module.findExportByName("cuzzapi.dll", "CuzzSchedule")
+Interceptor.attach(CuzzSchedule, {onLeave: function (args) {send("CuzzSchedule");}});
+
+var CuzzSetDebugLoweringPoint = Module.findExportByName("cuzzapi.dll", "CuzzSetDebugLoweringPoint")
+Interceptor.attach(CuzzSetDebugLoweringPoint, {onLeave: function (args) {send("CuzzSetDebugLoweringPoint");}});
+
+var CuzzSetDebugPriority = Module.findExportByName("cuzzapi.dll", "CuzzSetDebugPriority")
+Interceptor.attach(CuzzSetDebugPriority, {onLeave: function (args) {send("CuzzSetDebugPriority");}});
+
+var CuzzSetPriority = Module.findExportByName("cuzzapi.dll", "CuzzSetPriority")
+Interceptor.attach(CuzzSetPriority, {onLeave: function (args) {send("CuzzSetPriority");}});
+
+var CuzzSetRandomSeed = Module.findExportByName("cuzzapi.dll", "CuzzSetRandomSeed")
+Interceptor.attach(CuzzSetRandomSeed, {onLeave: function (args) {send("CuzzSetRandomSeed");}});
+

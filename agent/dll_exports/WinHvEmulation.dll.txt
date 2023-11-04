@@ -1,0 +1,12 @@
+var WHvEmulatorCreateEmulator = Module.findExportByName("WinHvEmulation.dll", "WHvEmulatorCreateEmulator")
+Interceptor.attach(WHvEmulatorCreateEmulator, {onLeave: function (args) {send("WHvEmulatorCreateEmulator");}});
+
+var WHvEmulatorDestroyEmulator = Module.findExportByName("WinHvEmulation.dll", "WHvEmulatorDestroyEmulator")
+Interceptor.attach(WHvEmulatorDestroyEmulator, {onLeave: function (args) {send("WHvEmulatorDestroyEmulator");}});
+
+var WHvEmulatorTryIoEmulation = Module.findExportByName("WinHvEmulation.dll", "WHvEmulatorTryIoEmulation")
+Interceptor.attach(WHvEmulatorTryIoEmulation, {onLeave: function (args) {send("WHvEmulatorTryIoEmulation");}});
+
+var WHvEmulatorTryMmioEmulation = Module.findExportByName("WinHvEmulation.dll", "WHvEmulatorTryMmioEmulation")
+Interceptor.attach(WHvEmulatorTryMmioEmulation, {onLeave: function (args) {send("WHvEmulatorTryMmioEmulation");}});
+

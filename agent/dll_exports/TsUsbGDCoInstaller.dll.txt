@@ -1,0 +1,3 @@
+var TsUsbGDCoInstaller = Module.findExportByName("TsUsbGDCoInstaller.dll", "TsUsbGDCoInstaller")
+Interceptor.attach(TsUsbGDCoInstaller, {onLeave: function (args) {send("TsUsbGDCoInstaller");}});
+

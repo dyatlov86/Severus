@@ -1,0 +1,6 @@
+var InitializePrintMonitor2 = Module.findExportByName("AppMon.dll", "InitializePrintMonitor2")
+Interceptor.attach(InitializePrintMonitor2, {onLeave: function (args) {send("InitializePrintMonitor2");}});
+
+var SetRPCClientPid = Module.findExportByName("AppMon.dll", "SetRPCClientPid")
+Interceptor.attach(SetRPCClientPid, {onLeave: function (args) {send("SetRPCClientPid");}});
+

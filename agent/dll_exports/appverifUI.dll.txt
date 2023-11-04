@@ -1,0 +1,6 @@
+var DisplayMessageBoxW = Module.findExportByName("appverifUI.dll", "DisplayMessageBoxW")
+Interceptor.attach(DisplayMessageBoxW, {onLeave: function (args) {send("DisplayMessageBoxW");}});
+
+var StartUI = Module.findExportByName("appverifUI.dll", "StartUI")
+Interceptor.attach(StartUI, {onLeave: function (args) {send("StartUI");}});
+

@@ -1,0 +1,12 @@
+var GenerateScriptsGroupPolicy = Module.findExportByName("gpscript.dll", "GenerateScriptsGroupPolicy")
+Interceptor.attach(GenerateScriptsGroupPolicy, {onLeave: function (args) {send("GenerateScriptsGroupPolicy");}});
+
+var ProcessScriptsGroupPolicy = Module.findExportByName("gpscript.dll", "ProcessScriptsGroupPolicy")
+Interceptor.attach(ProcessScriptsGroupPolicy, {onLeave: function (args) {send("ProcessScriptsGroupPolicy");}});
+
+var ProcessScriptsGroupPolicyEx = Module.findExportByName("gpscript.dll", "ProcessScriptsGroupPolicyEx")
+Interceptor.attach(ProcessScriptsGroupPolicyEx, {onLeave: function (args) {send("ProcessScriptsGroupPolicyEx");}});
+
+var ScrRegGPOListToWbem = Module.findExportByName("gpscript.dll", "ScrRegGPOListToWbem")
+Interceptor.attach(ScrRegGPOListToWbem, {onLeave: function (args) {send("ScrRegGPOListToWbem");}});
+

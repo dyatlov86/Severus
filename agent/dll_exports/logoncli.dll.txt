@@ -1,0 +1,261 @@
+var AuthzrExtAccessCheck = Module.findExportByName("logoncli.dll", "AuthzrExtAccessCheck")
+Interceptor.attach(AuthzrExtAccessCheck, {onLeave: function (args) {send("AuthzrExtAccessCheck");}});
+
+var AuthzrExtFreeContext = Module.findExportByName("logoncli.dll", "AuthzrExtFreeContext")
+Interceptor.attach(AuthzrExtFreeContext, {onLeave: function (args) {send("AuthzrExtFreeContext");}});
+
+var AuthzrExtFreeResourceManager = Module.findExportByName("logoncli.dll", "AuthzrExtFreeResourceManager")
+Interceptor.attach(AuthzrExtFreeResourceManager, {onLeave: function (args) {send("AuthzrExtFreeResourceManager");}});
+
+var AuthzrExtGetInformationFromContext = Module.findExportByName("logoncli.dll", "AuthzrExtGetInformationFromContext")
+Interceptor.attach(AuthzrExtGetInformationFromContext, {onLeave: function (args) {send("AuthzrExtGetInformationFromContext");}});
+
+var AuthzrExtInitializeCompoundContext = Module.findExportByName("logoncli.dll", "AuthzrExtInitializeCompoundContext")
+Interceptor.attach(AuthzrExtInitializeCompoundContext, {onLeave: function (args) {send("AuthzrExtInitializeCompoundContext");}});
+
+var AuthzrExtInitializeContextFromSid = Module.findExportByName("logoncli.dll", "AuthzrExtInitializeContextFromSid")
+Interceptor.attach(AuthzrExtInitializeContextFromSid, {onLeave: function (args) {send("AuthzrExtInitializeContextFromSid");}});
+
+var AuthzrExtInitializeRemoteResourceManager = Module.findExportByName("logoncli.dll", "AuthzrExtInitializeRemoteResourceManager")
+Interceptor.attach(AuthzrExtInitializeRemoteResourceManager, {onLeave: function (args) {send("AuthzrExtInitializeRemoteResourceManager");}});
+
+var AuthzrExtModifyClaims = Module.findExportByName("logoncli.dll", "AuthzrExtModifyClaims")
+Interceptor.attach(AuthzrExtModifyClaims, {onLeave: function (args) {send("AuthzrExtModifyClaims");}});
+
+var DsAddressToSiteNamesA = Module.findExportByName("logoncli.dll", "DsAddressToSiteNamesA")
+Interceptor.attach(DsAddressToSiteNamesA, {onLeave: function (args) {send("DsAddressToSiteNamesA");}});
+
+var DsAddressToSiteNamesExA = Module.findExportByName("logoncli.dll", "DsAddressToSiteNamesExA")
+Interceptor.attach(DsAddressToSiteNamesExA, {onLeave: function (args) {send("DsAddressToSiteNamesExA");}});
+
+var DsAddressToSiteNamesExW = Module.findExportByName("logoncli.dll", "DsAddressToSiteNamesExW")
+Interceptor.attach(DsAddressToSiteNamesExW, {onLeave: function (args) {send("DsAddressToSiteNamesExW");}});
+
+var DsAddressToSiteNamesW = Module.findExportByName("logoncli.dll", "DsAddressToSiteNamesW")
+Interceptor.attach(DsAddressToSiteNamesW, {onLeave: function (args) {send("DsAddressToSiteNamesW");}});
+
+var DsDeregisterDnsHostRecordsA = Module.findExportByName("logoncli.dll", "DsDeregisterDnsHostRecordsA")
+Interceptor.attach(DsDeregisterDnsHostRecordsA, {onLeave: function (args) {send("DsDeregisterDnsHostRecordsA");}});
+
+var DsDeregisterDnsHostRecordsW = Module.findExportByName("logoncli.dll", "DsDeregisterDnsHostRecordsW")
+Interceptor.attach(DsDeregisterDnsHostRecordsW, {onLeave: function (args) {send("DsDeregisterDnsHostRecordsW");}});
+
+var DsEnumerateDomainTrustsA = Module.findExportByName("logoncli.dll", "DsEnumerateDomainTrustsA")
+Interceptor.attach(DsEnumerateDomainTrustsA, {onLeave: function (args) {send("DsEnumerateDomainTrustsA");}});
+
+var DsEnumerateDomainTrustsW = Module.findExportByName("logoncli.dll", "DsEnumerateDomainTrustsW")
+Interceptor.attach(DsEnumerateDomainTrustsW, {onLeave: function (args) {send("DsEnumerateDomainTrustsW");}});
+
+var DsGetDcCloseW = Module.findExportByName("logoncli.dll", "DsGetDcCloseW")
+Interceptor.attach(DsGetDcCloseW, {onLeave: function (args) {send("DsGetDcCloseW");}});
+
+var DsGetDcNameA = Module.findExportByName("logoncli.dll", "DsGetDcNameA")
+Interceptor.attach(DsGetDcNameA, {onLeave: function (args) {send("DsGetDcNameA");}});
+
+var DsGetDcNameW = Module.findExportByName("logoncli.dll", "DsGetDcNameW")
+Interceptor.attach(DsGetDcNameW, {onLeave: function (args) {send("DsGetDcNameW");}});
+
+var DsGetDcNameWithAccountA = Module.findExportByName("logoncli.dll", "DsGetDcNameWithAccountA")
+Interceptor.attach(DsGetDcNameWithAccountA, {onLeave: function (args) {send("DsGetDcNameWithAccountA");}});
+
+var DsGetDcNameWithAccountW = Module.findExportByName("logoncli.dll", "DsGetDcNameWithAccountW")
+Interceptor.attach(DsGetDcNameWithAccountW, {onLeave: function (args) {send("DsGetDcNameWithAccountW");}});
+
+var DsGetDcNextA = Module.findExportByName("logoncli.dll", "DsGetDcNextA")
+Interceptor.attach(DsGetDcNextA, {onLeave: function (args) {send("DsGetDcNextA");}});
+
+var DsGetDcNextW = Module.findExportByName("logoncli.dll", "DsGetDcNextW")
+Interceptor.attach(DsGetDcNextW, {onLeave: function (args) {send("DsGetDcNextW");}});
+
+var DsGetDcOpenA = Module.findExportByName("logoncli.dll", "DsGetDcOpenA")
+Interceptor.attach(DsGetDcOpenA, {onLeave: function (args) {send("DsGetDcOpenA");}});
+
+var DsGetDcOpenW = Module.findExportByName("logoncli.dll", "DsGetDcOpenW")
+Interceptor.attach(DsGetDcOpenW, {onLeave: function (args) {send("DsGetDcOpenW");}});
+
+var DsGetDcSiteCoverageA = Module.findExportByName("logoncli.dll", "DsGetDcSiteCoverageA")
+Interceptor.attach(DsGetDcSiteCoverageA, {onLeave: function (args) {send("DsGetDcSiteCoverageA");}});
+
+var DsGetDcSiteCoverageW = Module.findExportByName("logoncli.dll", "DsGetDcSiteCoverageW")
+Interceptor.attach(DsGetDcSiteCoverageW, {onLeave: function (args) {send("DsGetDcSiteCoverageW");}});
+
+var DsGetForestTrustInformationW = Module.findExportByName("logoncli.dll", "DsGetForestTrustInformationW")
+Interceptor.attach(DsGetForestTrustInformationW, {onLeave: function (args) {send("DsGetForestTrustInformationW");}});
+
+var DsGetSiteNameA = Module.findExportByName("logoncli.dll", "DsGetSiteNameA")
+Interceptor.attach(DsGetSiteNameA, {onLeave: function (args) {send("DsGetSiteNameA");}});
+
+var DsGetSiteNameW = Module.findExportByName("logoncli.dll", "DsGetSiteNameW")
+Interceptor.attach(DsGetSiteNameW, {onLeave: function (args) {send("DsGetSiteNameW");}});
+
+var DsMergeForestTrustInformationW = Module.findExportByName("logoncli.dll", "DsMergeForestTrustInformationW")
+Interceptor.attach(DsMergeForestTrustInformationW, {onLeave: function (args) {send("DsMergeForestTrustInformationW");}});
+
+var DsValidateSubnetNameA = Module.findExportByName("logoncli.dll", "DsValidateSubnetNameA")
+Interceptor.attach(DsValidateSubnetNameA, {onLeave: function (args) {send("DsValidateSubnetNameA");}});
+
+var DsValidateSubnetNameW = Module.findExportByName("logoncli.dll", "DsValidateSubnetNameW")
+Interceptor.attach(DsValidateSubnetNameW, {onLeave: function (args) {send("DsValidateSubnetNameW");}});
+
+var I_DsUpdateReadOnlyServerDnsRecords = Module.findExportByName("logoncli.dll", "I_DsUpdateReadOnlyServerDnsRecords")
+Interceptor.attach(I_DsUpdateReadOnlyServerDnsRecords, {onLeave: function (args) {send("I_DsUpdateReadOnlyServerDnsRecords");}});
+
+var I_NetAccountDeltas = Module.findExportByName("logoncli.dll", "I_NetAccountDeltas")
+Interceptor.attach(I_NetAccountDeltas, {onLeave: function (args) {send("I_NetAccountDeltas");}});
+
+var I_NetAccountSync = Module.findExportByName("logoncli.dll", "I_NetAccountSync")
+Interceptor.attach(I_NetAccountSync, {onLeave: function (args) {send("I_NetAccountSync");}});
+
+var I_NetChainSetClientAttributes = Module.findExportByName("logoncli.dll", "I_NetChainSetClientAttributes")
+Interceptor.attach(I_NetChainSetClientAttributes, {onLeave: function (args) {send("I_NetChainSetClientAttributes");}});
+
+var I_NetChainSetClientAttributes2 = Module.findExportByName("logoncli.dll", "I_NetChainSetClientAttributes2")
+Interceptor.attach(I_NetChainSetClientAttributes2, {onLeave: function (args) {send("I_NetChainSetClientAttributes2");}});
+
+var I_NetDatabaseDeltas = Module.findExportByName("logoncli.dll", "I_NetDatabaseDeltas")
+Interceptor.attach(I_NetDatabaseDeltas, {onLeave: function (args) {send("I_NetDatabaseDeltas");}});
+
+var I_NetDatabaseRedo = Module.findExportByName("logoncli.dll", "I_NetDatabaseRedo")
+Interceptor.attach(I_NetDatabaseRedo, {onLeave: function (args) {send("I_NetDatabaseRedo");}});
+
+var I_NetDatabaseSync = Module.findExportByName("logoncli.dll", "I_NetDatabaseSync")
+Interceptor.attach(I_NetDatabaseSync, {onLeave: function (args) {send("I_NetDatabaseSync");}});
+
+var I_NetDatabaseSync2 = Module.findExportByName("logoncli.dll", "I_NetDatabaseSync2")
+Interceptor.attach(I_NetDatabaseSync2, {onLeave: function (args) {send("I_NetDatabaseSync2");}});
+
+var I_NetExtendMachinePasswordExpirationTimeout = Module.findExportByName("logoncli.dll", "I_NetExtendMachinePasswordExpirationTimeout")
+Interceptor.attach(I_NetExtendMachinePasswordExpirationTimeout, {onLeave: function (args) {send("I_NetExtendMachinePasswordExpirationTimeout");}});
+
+var I_NetGetDCList = Module.findExportByName("logoncli.dll", "I_NetGetDCList")
+Interceptor.attach(I_NetGetDCList, {onLeave: function (args) {send("I_NetGetDCList");}});
+
+var I_NetGetForestTrustInformation = Module.findExportByName("logoncli.dll", "I_NetGetForestTrustInformation")
+Interceptor.attach(I_NetGetForestTrustInformation, {onLeave: function (args) {send("I_NetGetForestTrustInformation");}});
+
+var I_NetLogonControl = Module.findExportByName("logoncli.dll", "I_NetLogonControl")
+Interceptor.attach(I_NetLogonControl, {onLeave: function (args) {send("I_NetLogonControl");}});
+
+var I_NetLogonControl2 = Module.findExportByName("logoncli.dll", "I_NetLogonControl2")
+Interceptor.attach(I_NetLogonControl2, {onLeave: function (args) {send("I_NetLogonControl2");}});
+
+var I_NetLogonGetCapabilities = Module.findExportByName("logoncli.dll", "I_NetLogonGetCapabilities")
+Interceptor.attach(I_NetLogonGetCapabilities, {onLeave: function (args) {send("I_NetLogonGetCapabilities");}});
+
+var I_NetLogonGetDomainInfo = Module.findExportByName("logoncli.dll", "I_NetLogonGetDomainInfo")
+Interceptor.attach(I_NetLogonGetDomainInfo, {onLeave: function (args) {send("I_NetLogonGetDomainInfo");}});
+
+var I_NetLogonSamLogoff = Module.findExportByName("logoncli.dll", "I_NetLogonSamLogoff")
+Interceptor.attach(I_NetLogonSamLogoff, {onLeave: function (args) {send("I_NetLogonSamLogoff");}});
+
+var I_NetLogonSamLogon = Module.findExportByName("logoncli.dll", "I_NetLogonSamLogon")
+Interceptor.attach(I_NetLogonSamLogon, {onLeave: function (args) {send("I_NetLogonSamLogon");}});
+
+var I_NetLogonSamLogonEx = Module.findExportByName("logoncli.dll", "I_NetLogonSamLogonEx")
+Interceptor.attach(I_NetLogonSamLogonEx, {onLeave: function (args) {send("I_NetLogonSamLogonEx");}});
+
+var I_NetLogonSamLogonWithFlags = Module.findExportByName("logoncli.dll", "I_NetLogonSamLogonWithFlags")
+Interceptor.attach(I_NetLogonSamLogonWithFlags, {onLeave: function (args) {send("I_NetLogonSamLogonWithFlags");}});
+
+var I_NetLogonSendToSam = Module.findExportByName("logoncli.dll", "I_NetLogonSendToSam")
+Interceptor.attach(I_NetLogonSendToSam, {onLeave: function (args) {send("I_NetLogonSendToSam");}});
+
+var I_NetLogonUasLogoff = Module.findExportByName("logoncli.dll", "I_NetLogonUasLogoff")
+Interceptor.attach(I_NetLogonUasLogoff, {onLeave: function (args) {send("I_NetLogonUasLogoff");}});
+
+var I_NetLogonUasLogon = Module.findExportByName("logoncli.dll", "I_NetLogonUasLogon")
+Interceptor.attach(I_NetLogonUasLogon, {onLeave: function (args) {send("I_NetLogonUasLogon");}});
+
+var I_NetQuerySecureChannelDCInfo = Module.findExportByName("logoncli.dll", "I_NetQuerySecureChannelDCInfo")
+Interceptor.attach(I_NetQuerySecureChannelDCInfo, {onLeave: function (args) {send("I_NetQuerySecureChannelDCInfo");}});
+
+var I_NetServerAuthenticate = Module.findExportByName("logoncli.dll", "I_NetServerAuthenticate")
+Interceptor.attach(I_NetServerAuthenticate, {onLeave: function (args) {send("I_NetServerAuthenticate");}});
+
+var I_NetServerAuthenticate2 = Module.findExportByName("logoncli.dll", "I_NetServerAuthenticate2")
+Interceptor.attach(I_NetServerAuthenticate2, {onLeave: function (args) {send("I_NetServerAuthenticate2");}});
+
+var I_NetServerAuthenticate3 = Module.findExportByName("logoncli.dll", "I_NetServerAuthenticate3")
+Interceptor.attach(I_NetServerAuthenticate3, {onLeave: function (args) {send("I_NetServerAuthenticate3");}});
+
+var I_NetServerAuthenticateKerberos = Module.findExportByName("logoncli.dll", "I_NetServerAuthenticateKerberos")
+Interceptor.attach(I_NetServerAuthenticateKerberos, {onLeave: function (args) {send("I_NetServerAuthenticateKerberos");}});
+
+var I_NetServerGetTrustInfo = Module.findExportByName("logoncli.dll", "I_NetServerGetTrustInfo")
+Interceptor.attach(I_NetServerGetTrustInfo, {onLeave: function (args) {send("I_NetServerGetTrustInfo");}});
+
+var I_NetServerPasswordGet = Module.findExportByName("logoncli.dll", "I_NetServerPasswordGet")
+Interceptor.attach(I_NetServerPasswordGet, {onLeave: function (args) {send("I_NetServerPasswordGet");}});
+
+var I_NetServerPasswordSet = Module.findExportByName("logoncli.dll", "I_NetServerPasswordSet")
+Interceptor.attach(I_NetServerPasswordSet, {onLeave: function (args) {send("I_NetServerPasswordSet");}});
+
+var I_NetServerPasswordSet2 = Module.findExportByName("logoncli.dll", "I_NetServerPasswordSet2")
+Interceptor.attach(I_NetServerPasswordSet2, {onLeave: function (args) {send("I_NetServerPasswordSet2");}});
+
+var I_NetServerReqChallenge = Module.findExportByName("logoncli.dll", "I_NetServerReqChallenge")
+Interceptor.attach(I_NetServerReqChallenge, {onLeave: function (args) {send("I_NetServerReqChallenge");}});
+
+var I_NetServerTrustPasswordsGet = Module.findExportByName("logoncli.dll", "I_NetServerTrustPasswordsGet")
+Interceptor.attach(I_NetServerTrustPasswordsGet, {onLeave: function (args) {send("I_NetServerTrustPasswordsGet");}});
+
+var I_NetlogonComputeClientDigest = Module.findExportByName("logoncli.dll", "I_NetlogonComputeClientDigest")
+Interceptor.attach(I_NetlogonComputeClientDigest, {onLeave: function (args) {send("I_NetlogonComputeClientDigest");}});
+
+var I_NetlogonComputeClientSignature = Module.findExportByName("logoncli.dll", "I_NetlogonComputeClientSignature")
+Interceptor.attach(I_NetlogonComputeClientSignature, {onLeave: function (args) {send("I_NetlogonComputeClientSignature");}});
+
+var I_NetlogonComputeServerDigest = Module.findExportByName("logoncli.dll", "I_NetlogonComputeServerDigest")
+Interceptor.attach(I_NetlogonComputeServerDigest, {onLeave: function (args) {send("I_NetlogonComputeServerDigest");}});
+
+var I_NetlogonComputeServerSignature = Module.findExportByName("logoncli.dll", "I_NetlogonComputeServerSignature")
+Interceptor.attach(I_NetlogonComputeServerSignature, {onLeave: function (args) {send("I_NetlogonComputeServerSignature");}});
+
+var I_NetlogonGetTrustRid = Module.findExportByName("logoncli.dll", "I_NetlogonGetTrustRid")
+Interceptor.attach(I_NetlogonGetTrustRid, {onLeave: function (args) {send("I_NetlogonGetTrustRid");}});
+
+var I_RpcExtInitializeExtensionPoint = Module.findExportByName("logoncli.dll", "I_RpcExtInitializeExtensionPoint")
+Interceptor.attach(I_RpcExtInitializeExtensionPoint, {onLeave: function (args) {send("I_RpcExtInitializeExtensionPoint");}});
+
+var NetAddServiceAccount = Module.findExportByName("logoncli.dll", "NetAddServiceAccount")
+Interceptor.attach(NetAddServiceAccount, {onLeave: function (args) {send("NetAddServiceAccount");}});
+
+var NetEnumerateServiceAccounts = Module.findExportByName("logoncli.dll", "NetEnumerateServiceAccounts")
+Interceptor.attach(NetEnumerateServiceAccounts, {onLeave: function (args) {send("NetEnumerateServiceAccounts");}});
+
+var NetEnumerateTrustedDomains = Module.findExportByName("logoncli.dll", "NetEnumerateTrustedDomains")
+Interceptor.attach(NetEnumerateTrustedDomains, {onLeave: function (args) {send("NetEnumerateTrustedDomains");}});
+
+var NetGetAnyDCName = Module.findExportByName("logoncli.dll", "NetGetAnyDCName")
+Interceptor.attach(NetGetAnyDCName, {onLeave: function (args) {send("NetGetAnyDCName");}});
+
+var NetGetDCName = Module.findExportByName("logoncli.dll", "NetGetDCName")
+Interceptor.attach(NetGetDCName, {onLeave: function (args) {send("NetGetDCName");}});
+
+var NetIsServiceAccount = Module.findExportByName("logoncli.dll", "NetIsServiceAccount")
+Interceptor.attach(NetIsServiceAccount, {onLeave: function (args) {send("NetIsServiceAccount");}});
+
+var NetLogonGetTimeServiceParentDomain = Module.findExportByName("logoncli.dll", "NetLogonGetTimeServiceParentDomain")
+Interceptor.attach(NetLogonGetTimeServiceParentDomain, {onLeave: function (args) {send("NetLogonGetTimeServiceParentDomain");}});
+
+var NetLogonSetServiceBits = Module.findExportByName("logoncli.dll", "NetLogonSetServiceBits")
+Interceptor.attach(NetLogonSetServiceBits, {onLeave: function (args) {send("NetLogonSetServiceBits");}});
+
+var NetQueryServiceAccount = Module.findExportByName("logoncli.dll", "NetQueryServiceAccount")
+Interceptor.attach(NetQueryServiceAccount, {onLeave: function (args) {send("NetQueryServiceAccount");}});
+
+var NetRemoveServiceAccount = Module.findExportByName("logoncli.dll", "NetRemoveServiceAccount")
+Interceptor.attach(NetRemoveServiceAccount, {onLeave: function (args) {send("NetRemoveServiceAccount");}});
+
+var NlBindingAddServerToCache = Module.findExportByName("logoncli.dll", "NlBindingAddServerToCache")
+Interceptor.attach(NlBindingAddServerToCache, {onLeave: function (args) {send("NlBindingAddServerToCache");}});
+
+var NlBindingRemoveServerFromCache = Module.findExportByName("logoncli.dll", "NlBindingRemoveServerFromCache")
+Interceptor.attach(NlBindingRemoveServerFromCache, {onLeave: function (args) {send("NlBindingRemoveServerFromCache");}});
+
+var NlBindingSetAuthInfo = Module.findExportByName("logoncli.dll", "NlBindingSetAuthInfo")
+Interceptor.attach(NlBindingSetAuthInfo, {onLeave: function (args) {send("NlBindingSetAuthInfo");}});
+
+var NlSetDsIsCloningPDC = Module.findExportByName("logoncli.dll", "NlSetDsIsCloningPDC")
+Interceptor.attach(NlSetDsIsCloningPDC, {onLeave: function (args) {send("NlSetDsIsCloningPDC");}});
+

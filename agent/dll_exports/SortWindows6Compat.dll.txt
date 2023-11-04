@@ -1,0 +1,6 @@
+var SortCloseHandle = Module.findExportByName("SortWindows6Compat.dll", "SortCloseHandle")
+Interceptor.attach(SortCloseHandle, {onLeave: function (args) {send("SortCloseHandle");}});
+
+var SortGetHandle = Module.findExportByName("SortWindows6Compat.dll", "SortGetHandle")
+Interceptor.attach(SortGetHandle, {onLeave: function (args) {send("SortGetHandle");}});
+

@@ -1,0 +1,12 @@
+var CreateSpatialInteractionSourceCollection = Module.findExportByName("spatialinteraction.dll", "CreateSpatialInteractionSourceCollection")
+Interceptor.attach(CreateSpatialInteractionSourceCollection, {onLeave: function (args) {send("CreateSpatialInteractionSourceCollection");}});
+
+var DllCanUnloadNow = Module.findExportByName("spatialinteraction.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("spatialinteraction.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("spatialinteraction.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

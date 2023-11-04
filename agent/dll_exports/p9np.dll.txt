@@ -1,0 +1,30 @@
+var NPAddConnection = Module.findExportByName("p9np.dll", "NPAddConnection")
+Interceptor.attach(NPAddConnection, {onLeave: function (args) {send("NPAddConnection");}});
+
+var NPAddConnection3 = Module.findExportByName("p9np.dll", "NPAddConnection3")
+Interceptor.attach(NPAddConnection3, {onLeave: function (args) {send("NPAddConnection3");}});
+
+var NPCancelConnection = Module.findExportByName("p9np.dll", "NPCancelConnection")
+Interceptor.attach(NPCancelConnection, {onLeave: function (args) {send("NPCancelConnection");}});
+
+var NPCloseEnum = Module.findExportByName("p9np.dll", "NPCloseEnum")
+Interceptor.attach(NPCloseEnum, {onLeave: function (args) {send("NPCloseEnum");}});
+
+var NPEnumResource = Module.findExportByName("p9np.dll", "NPEnumResource")
+Interceptor.attach(NPEnumResource, {onLeave: function (args) {send("NPEnumResource");}});
+
+var NPFormatNetworkName = Module.findExportByName("p9np.dll", "NPFormatNetworkName")
+Interceptor.attach(NPFormatNetworkName, {onLeave: function (args) {send("NPFormatNetworkName");}});
+
+var NPGetCaps = Module.findExportByName("p9np.dll", "NPGetCaps")
+Interceptor.attach(NPGetCaps, {onLeave: function (args) {send("NPGetCaps");}});
+
+var NPGetConnection = Module.findExportByName("p9np.dll", "NPGetConnection")
+Interceptor.attach(NPGetConnection, {onLeave: function (args) {send("NPGetConnection");}});
+
+var NPGetResourceInformation = Module.findExportByName("p9np.dll", "NPGetResourceInformation")
+Interceptor.attach(NPGetResourceInformation, {onLeave: function (args) {send("NPGetResourceInformation");}});
+
+var NPOpenEnum = Module.findExportByName("p9np.dll", "NPOpenEnum")
+Interceptor.attach(NPOpenEnum, {onLeave: function (args) {send("NPOpenEnum");}});
+

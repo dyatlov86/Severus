@@ -1,0 +1,6 @@
+var ScDeviceEnumServiceMain = Module.findExportByName("ScDeviceEnum.dll", "ScDeviceEnumServiceMain")
+Interceptor.attach(ScDeviceEnumServiceMain, {onLeave: function (args) {send("ScDeviceEnumServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("ScDeviceEnum.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

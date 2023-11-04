@@ -1,0 +1,24 @@
+var AMFCreateVirtualAudioManager = Module.findExportByName("amfrtdrv64.dll", "AMFCreateVirtualAudioManager")
+Interceptor.attach(AMFCreateVirtualAudioManager, {onLeave: function (args) {send("AMFCreateVirtualAudioManager");}});
+
+var AMFCreateVirtualDisplayManager = Module.findExportByName("amfrtdrv64.dll", "AMFCreateVirtualDisplayManager")
+Interceptor.attach(AMFCreateVirtualDisplayManager, {onLeave: function (args) {send("AMFCreateVirtualDisplayManager");}});
+
+var AMFGetPerformanceMonitor = Module.findExportByName("amfrtdrv64.dll", "AMFGetPerformanceMonitor")
+Interceptor.attach(AMFGetPerformanceMonitor, {onLeave: function (args) {send("AMFGetPerformanceMonitor");}});
+
+var AMFGetPerformanceMonitorLogger = Module.findExportByName("amfrtdrv64.dll", "AMFGetPerformanceMonitorLogger")
+Interceptor.attach(AMFGetPerformanceMonitorLogger, {onLeave: function (args) {send("AMFGetPerformanceMonitorLogger");}});
+
+var AMFInit = Module.findExportByName("amfrtdrv64.dll", "AMFInit")
+Interceptor.attach(AMFInit, {onLeave: function (args) {send("AMFInit");}});
+
+var AMFQueryVersion = Module.findExportByName("amfrtdrv64.dll", "AMFQueryVersion")
+Interceptor.attach(AMFQueryVersion, {onLeave: function (args) {send("AMFQueryVersion");}});
+
+var AMFXInputCreateController = Module.findExportByName("amfrtdrv64.dll", "AMFXInputCreateController")
+Interceptor.attach(AMFXInputCreateController, {onLeave: function (args) {send("AMFXInputCreateController");}});
+
+var DllMain = Module.findExportByName("amfrtdrv64.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+

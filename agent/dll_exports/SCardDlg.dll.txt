@@ -1,0 +1,15 @@
+var GetOpenCardNameA = Module.findExportByName("SCardDlg.dll", "GetOpenCardNameA")
+Interceptor.attach(GetOpenCardNameA, {onLeave: function (args) {send("GetOpenCardNameA");}});
+
+var GetOpenCardNameW = Module.findExportByName("SCardDlg.dll", "GetOpenCardNameW")
+Interceptor.attach(GetOpenCardNameW, {onLeave: function (args) {send("GetOpenCardNameW");}});
+
+var SCardDlgExtendedError = Module.findExportByName("SCardDlg.dll", "SCardDlgExtendedError")
+Interceptor.attach(SCardDlgExtendedError, {onLeave: function (args) {send("SCardDlgExtendedError");}});
+
+var SCardUIDlgSelectCardA = Module.findExportByName("SCardDlg.dll", "SCardUIDlgSelectCardA")
+Interceptor.attach(SCardUIDlgSelectCardA, {onLeave: function (args) {send("SCardUIDlgSelectCardA");}});
+
+var SCardUIDlgSelectCardW = Module.findExportByName("SCardDlg.dll", "SCardUIDlgSelectCardW")
+Interceptor.attach(SCardUIDlgSelectCardW, {onLeave: function (args) {send("SCardUIDlgSelectCardW");}});
+

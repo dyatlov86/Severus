@@ -1,0 +1,102 @@
+var AsyncDeviceEnumerate = Module.findExportByName("utildll.dll", "AsyncDeviceEnumerate")
+Interceptor.attach(AsyncDeviceEnumerate, {onLeave: function (args) {send("AsyncDeviceEnumerate");}});
+
+var CachedGetUserFromSid = Module.findExportByName("utildll.dll", "CachedGetUserFromSid")
+Interceptor.attach(CachedGetUserFromSid, {onLeave: function (args) {send("CachedGetUserFromSid");}});
+
+var CalculateDiffTime = Module.findExportByName("utildll.dll", "CalculateDiffTime")
+Interceptor.attach(CalculateDiffTime, {onLeave: function (args) {send("CalculateDiffTime");}});
+
+var CalculateElapsedTime = Module.findExportByName("utildll.dll", "CalculateElapsedTime")
+Interceptor.attach(CalculateElapsedTime, {onLeave: function (args) {send("CalculateElapsedTime");}});
+
+var CompareElapsedTime = Module.findExportByName("utildll.dll", "CompareElapsedTime")
+Interceptor.attach(CompareElapsedTime, {onLeave: function (args) {send("CompareElapsedTime");}});
+
+var ConfigureModem = Module.findExportByName("utildll.dll", "ConfigureModem")
+Interceptor.attach(ConfigureModem, {onLeave: function (args) {send("ConfigureModem");}});
+
+var CurrentDateTimeString = Module.findExportByName("utildll.dll", "CurrentDateTimeString")
+Interceptor.attach(CurrentDateTimeString, {onLeave: function (args) {send("CurrentDateTimeString");}});
+
+var DateTimeString = Module.findExportByName("utildll.dll", "DateTimeString")
+Interceptor.attach(DateTimeString, {onLeave: function (args) {send("DateTimeString");}});
+
+var ElapsedTimeString = Module.findExportByName("utildll.dll", "ElapsedTimeString")
+Interceptor.attach(ElapsedTimeString, {onLeave: function (args) {send("ElapsedTimeString");}});
+
+var EnumerateMultiUserServers = Module.findExportByName("utildll.dll", "EnumerateMultiUserServers")
+Interceptor.attach(EnumerateMultiUserServers, {onLeave: function (args) {send("EnumerateMultiUserServers");}});
+
+var FormDecoratedAsyncDeviceName = Module.findExportByName("utildll.dll", "FormDecoratedAsyncDeviceName")
+Interceptor.attach(FormDecoratedAsyncDeviceName, {onLeave: function (args) {send("FormDecoratedAsyncDeviceName");}});
+
+var GetAssociatedPortName = Module.findExportByName("utildll.dll", "GetAssociatedPortName")
+Interceptor.attach(GetAssociatedPortName, {onLeave: function (args) {send("GetAssociatedPortName");}});
+
+var GetSystemMessageA = Module.findExportByName("utildll.dll", "GetSystemMessageA")
+Interceptor.attach(GetSystemMessageA, {onLeave: function (args) {send("GetSystemMessageA");}});
+
+var GetSystemMessageW = Module.findExportByName("utildll.dll", "GetSystemMessageW")
+Interceptor.attach(GetSystemMessageW, {onLeave: function (args) {send("GetSystemMessageW");}});
+
+var GetUnknownString = Module.findExportByName("utildll.dll", "GetUnknownString")
+Interceptor.attach(GetUnknownString, {onLeave: function (args) {send("GetUnknownString");}});
+
+var GetUserFromSid = Module.findExportByName("utildll.dll", "GetUserFromSid")
+Interceptor.attach(GetUserFromSid, {onLeave: function (args) {send("GetUserFromSid");}});
+
+var HaveAnonymousUsersChanged = Module.findExportByName("utildll.dll", "HaveAnonymousUsersChanged")
+Interceptor.attach(HaveAnonymousUsersChanged, {onLeave: function (args) {send("HaveAnonymousUsersChanged");}});
+
+var InitializeAnonymousUserCompareList = Module.findExportByName("utildll.dll", "InitializeAnonymousUserCompareList")
+Interceptor.attach(InitializeAnonymousUserCompareList, {onLeave: function (args) {send("InitializeAnonymousUserCompareList");}});
+
+var InstallModem = Module.findExportByName("utildll.dll", "InstallModem")
+Interceptor.attach(InstallModem, {onLeave: function (args) {send("InstallModem");}});
+
+var IsPartOfDomain = Module.findExportByName("utildll.dll", "IsPartOfDomain")
+Interceptor.attach(IsPartOfDomain, {onLeave: function (args) {send("IsPartOfDomain");}});
+
+var NetBIOSDeviceEnumerate = Module.findExportByName("utildll.dll", "NetBIOSDeviceEnumerate")
+Interceptor.attach(NetBIOSDeviceEnumerate, {onLeave: function (args) {send("NetBIOSDeviceEnumerate");}});
+
+var NetworkDeviceEnumerate = Module.findExportByName("utildll.dll", "NetworkDeviceEnumerate")
+Interceptor.attach(NetworkDeviceEnumerate, {onLeave: function (args) {send("NetworkDeviceEnumerate");}});
+
+var ParseDecoratedAsyncDeviceName = Module.findExportByName("utildll.dll", "ParseDecoratedAsyncDeviceName")
+Interceptor.attach(ParseDecoratedAsyncDeviceName, {onLeave: function (args) {send("ParseDecoratedAsyncDeviceName");}});
+
+var QueryCurrentWinStation = Module.findExportByName("utildll.dll", "QueryCurrentWinStation")
+Interceptor.attach(QueryCurrentWinStation, {onLeave: function (args) {send("QueryCurrentWinStation");}});
+
+var RegGetNetworkDeviceName = Module.findExportByName("utildll.dll", "RegGetNetworkDeviceName")
+Interceptor.attach(RegGetNetworkDeviceName, {onLeave: function (args) {send("RegGetNetworkDeviceName");}});
+
+var RegGetNetworkServiceName = Module.findExportByName("utildll.dll", "RegGetNetworkServiceName")
+Interceptor.attach(RegGetNetworkServiceName, {onLeave: function (args) {send("RegGetNetworkServiceName");}});
+
+var StandardErrorMessage = Module.findExportByName("utildll.dll", "StandardErrorMessage")
+Interceptor.attach(StandardErrorMessage, {onLeave: function (args) {send("StandardErrorMessage");}});
+
+var StrAsyncConnectState = Module.findExportByName("utildll.dll", "StrAsyncConnectState")
+Interceptor.attach(StrAsyncConnectState, {onLeave: function (args) {send("StrAsyncConnectState");}});
+
+var StrConnectState = Module.findExportByName("utildll.dll", "StrConnectState")
+Interceptor.attach(StrConnectState, {onLeave: function (args) {send("StrConnectState");}});
+
+var StrProcessState = Module.findExportByName("utildll.dll", "StrProcessState")
+Interceptor.attach(StrProcessState, {onLeave: function (args) {send("StrProcessState");}});
+
+var StrSdClass = Module.findExportByName("utildll.dll", "StrSdClass")
+Interceptor.attach(StrSdClass, {onLeave: function (args) {send("StrSdClass");}});
+
+var StrSystemWaitReason = Module.findExportByName("utildll.dll", "StrSystemWaitReason")
+Interceptor.attach(StrSystemWaitReason, {onLeave: function (args) {send("StrSystemWaitReason");}});
+
+var TestUserForAdmin = Module.findExportByName("utildll.dll", "TestUserForAdmin")
+Interceptor.attach(TestUserForAdmin, {onLeave: function (args) {send("TestUserForAdmin");}});
+
+var WinEnumerateDevices = Module.findExportByName("utildll.dll", "WinEnumerateDevices")
+Interceptor.attach(WinEnumerateDevices, {onLeave: function (args) {send("WinEnumerateDevices");}});
+

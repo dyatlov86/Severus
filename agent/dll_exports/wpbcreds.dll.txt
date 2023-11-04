@@ -1,0 +1,21 @@
+var WpbcCleanup = Module.findExportByName("wpbcreds.dll", "WpbcCleanup")
+Interceptor.attach(WpbcCleanup, {onLeave: function (args) {send("WpbcCleanup");}});
+
+var WpbcCreateRemoveTestCredentials = Module.findExportByName("wpbcreds.dll", "WpbcCreateRemoveTestCredentials")
+Interceptor.attach(WpbcCreateRemoveTestCredentials, {onLeave: function (args) {send("WpbcCreateRemoveTestCredentials");}});
+
+var WpbcCreateTestPin = Module.findExportByName("wpbcreds.dll", "WpbcCreateTestPin")
+Interceptor.attach(WpbcCreateTestPin, {onLeave: function (args) {send("WpbcCreateTestPin");}});
+
+var WpbcExportCredentials = Module.findExportByName("wpbcreds.dll", "WpbcExportCredentials")
+Interceptor.attach(WpbcExportCredentials, {onLeave: function (args) {send("WpbcExportCredentials");}});
+
+var WpbcGetPinInfo = Module.findExportByName("wpbcreds.dll", "WpbcGetPinInfo")
+Interceptor.attach(WpbcGetPinInfo, {onLeave: function (args) {send("WpbcGetPinInfo");}});
+
+var WpbcInitialize = Module.findExportByName("wpbcreds.dll", "WpbcInitialize")
+Interceptor.attach(WpbcInitialize, {onLeave: function (args) {send("WpbcInitialize");}});
+
+var WpbcVerifyUser = Module.findExportByName("wpbcreds.dll", "WpbcVerifyUser")
+Interceptor.attach(WpbcVerifyUser, {onLeave: function (args) {send("WpbcVerifyUser");}});
+

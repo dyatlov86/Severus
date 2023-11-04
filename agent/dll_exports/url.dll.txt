@@ -1,0 +1,51 @@
+var AddMIMEFileTypesPS = Module.findExportByName("url.dll", "AddMIMEFileTypesPS")
+Interceptor.attach(AddMIMEFileTypesPS, {onLeave: function (args) {send("AddMIMEFileTypesPS");}});
+
+var AutodialHookCallback = Module.findExportByName("url.dll", "AutodialHookCallback")
+Interceptor.attach(AutodialHookCallback, {onLeave: function (args) {send("AutodialHookCallback");}});
+
+var FileProtocolHandler = Module.findExportByName("url.dll", "FileProtocolHandler")
+Interceptor.attach(FileProtocolHandler, {onLeave: function (args) {send("FileProtocolHandler");}});
+
+var FileProtocolHandlerA = Module.findExportByName("url.dll", "FileProtocolHandlerA")
+Interceptor.attach(FileProtocolHandlerA, {onLeave: function (args) {send("FileProtocolHandlerA");}});
+
+var InetIsOffline = Module.findExportByName("url.dll", "InetIsOffline")
+Interceptor.attach(InetIsOffline, {onLeave: function (args) {send("InetIsOffline");}});
+
+var MIMEAssociationDialogA = Module.findExportByName("url.dll", "MIMEAssociationDialogA")
+Interceptor.attach(MIMEAssociationDialogA, {onLeave: function (args) {send("MIMEAssociationDialogA");}});
+
+var MIMEAssociationDialogW = Module.findExportByName("url.dll", "MIMEAssociationDialogW")
+Interceptor.attach(MIMEAssociationDialogW, {onLeave: function (args) {send("MIMEAssociationDialogW");}});
+
+var MailToProtocolHandler = Module.findExportByName("url.dll", "MailToProtocolHandler")
+Interceptor.attach(MailToProtocolHandler, {onLeave: function (args) {send("MailToProtocolHandler");}});
+
+var MailToProtocolHandlerA = Module.findExportByName("url.dll", "MailToProtocolHandlerA")
+Interceptor.attach(MailToProtocolHandlerA, {onLeave: function (args) {send("MailToProtocolHandlerA");}});
+
+var OpenURL = Module.findExportByName("url.dll", "OpenURL")
+Interceptor.attach(OpenURL, {onLeave: function (args) {send("OpenURL");}});
+
+var OpenURLA = Module.findExportByName("url.dll", "OpenURLA")
+Interceptor.attach(OpenURLA, {onLeave: function (args) {send("OpenURLA");}});
+
+var TelnetProtocolHandler = Module.findExportByName("url.dll", "TelnetProtocolHandler")
+Interceptor.attach(TelnetProtocolHandler, {onLeave: function (args) {send("TelnetProtocolHandler");}});
+
+var TelnetProtocolHandlerA = Module.findExportByName("url.dll", "TelnetProtocolHandlerA")
+Interceptor.attach(TelnetProtocolHandlerA, {onLeave: function (args) {send("TelnetProtocolHandlerA");}});
+
+var TranslateURLA = Module.findExportByName("url.dll", "TranslateURLA")
+Interceptor.attach(TranslateURLA, {onLeave: function (args) {send("TranslateURLA");}});
+
+var TranslateURLW = Module.findExportByName("url.dll", "TranslateURLW")
+Interceptor.attach(TranslateURLW, {onLeave: function (args) {send("TranslateURLW");}});
+
+var URLAssociationDialogA = Module.findExportByName("url.dll", "URLAssociationDialogA")
+Interceptor.attach(URLAssociationDialogA, {onLeave: function (args) {send("URLAssociationDialogA");}});
+
+var URLAssociationDialogW = Module.findExportByName("url.dll", "URLAssociationDialogW")
+Interceptor.attach(URLAssociationDialogW, {onLeave: function (args) {send("URLAssociationDialogW");}});
+

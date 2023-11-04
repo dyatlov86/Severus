@@ -1,0 +1,27 @@
+var DllCanUnloadNow = Module.findExportByName("shimgvw.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("shimgvw.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ImageView_Fullscreen = Module.findExportByName("shimgvw.dll", "ImageView_Fullscreen")
+Interceptor.attach(ImageView_Fullscreen, {onLeave: function (args) {send("ImageView_Fullscreen");}});
+
+var ImageView_FullscreenA = Module.findExportByName("shimgvw.dll", "ImageView_FullscreenA")
+Interceptor.attach(ImageView_FullscreenA, {onLeave: function (args) {send("ImageView_FullscreenA");}});
+
+var ImageView_FullscreenW = Module.findExportByName("shimgvw.dll", "ImageView_FullscreenW")
+Interceptor.attach(ImageView_FullscreenW, {onLeave: function (args) {send("ImageView_FullscreenW");}});
+
+var ImageView_PrintTo = Module.findExportByName("shimgvw.dll", "ImageView_PrintTo")
+Interceptor.attach(ImageView_PrintTo, {onLeave: function (args) {send("ImageView_PrintTo");}});
+
+var ImageView_PrintToA = Module.findExportByName("shimgvw.dll", "ImageView_PrintToA")
+Interceptor.attach(ImageView_PrintToA, {onLeave: function (args) {send("ImageView_PrintToA");}});
+
+var ImageView_PrintToW = Module.findExportByName("shimgvw.dll", "ImageView_PrintToW")
+Interceptor.attach(ImageView_PrintToW, {onLeave: function (args) {send("ImageView_PrintToW");}});
+
+var imageview_fullscreenW = Module.findExportByName("shimgvw.dll", "imageview_fullscreenW")
+Interceptor.attach(imageview_fullscreenW, {onLeave: function (args) {send("imageview_fullscreenW");}});
+

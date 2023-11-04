@@ -1,0 +1,3 @@
+var StateRepository_Migrate = Module.findExportByName("Windows.StateRepositoryUpgrade.dll", "StateRepository_Migrate")
+Interceptor.attach(StateRepository_Migrate, {onLeave: function (args) {send("StateRepository_Migrate");}});
+

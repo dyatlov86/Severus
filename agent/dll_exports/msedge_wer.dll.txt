@@ -1,0 +1,9 @@
+var OutOfProcessExceptionEventCallback = Module.findExportByName("msedge_wer.dll", "OutOfProcessExceptionEventCallback")
+Interceptor.attach(OutOfProcessExceptionEventCallback, {onLeave: function (args) {send("OutOfProcessExceptionEventCallback");}});
+
+var OutOfProcessExceptionEventDebuggerLaunchCallback = Module.findExportByName("msedge_wer.dll", "OutOfProcessExceptionEventDebuggerLaunchCallback")
+Interceptor.attach(OutOfProcessExceptionEventDebuggerLaunchCallback, {onLeave: function (args) {send("OutOfProcessExceptionEventDebuggerLaunchCallback");}});
+
+var OutOfProcessExceptionEventSignatureCallback = Module.findExportByName("msedge_wer.dll", "OutOfProcessExceptionEventSignatureCallback")
+Interceptor.attach(OutOfProcessExceptionEventSignatureCallback, {onLeave: function (args) {send("OutOfProcessExceptionEventSignatureCallback");}});
+

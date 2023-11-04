@@ -1,0 +1,291 @@
+var CAAccessCheck = Module.findExportByName("certca.dll", "CAAccessCheck")
+Interceptor.attach(CAAccessCheck, {onLeave: function (args) {send("CAAccessCheck");}});
+
+var CAAccessCheckEx = Module.findExportByName("certca.dll", "CAAccessCheckEx")
+Interceptor.attach(CAAccessCheckEx, {onLeave: function (args) {send("CAAccessCheckEx");}});
+
+var CAAddCACertificateType = Module.findExportByName("certca.dll", "CAAddCACertificateType")
+Interceptor.attach(CAAddCACertificateType, {onLeave: function (args) {send("CAAddCACertificateType");}});
+
+var CAAddCACertificateTypeEx = Module.findExportByName("certca.dll", "CAAddCACertificateTypeEx")
+Interceptor.attach(CAAddCACertificateTypeEx, {onLeave: function (args) {send("CAAddCACertificateTypeEx");}});
+
+var CACertTypeAccessCheck = Module.findExportByName("certca.dll", "CACertTypeAccessCheck")
+Interceptor.attach(CACertTypeAccessCheck, {onLeave: function (args) {send("CACertTypeAccessCheck");}});
+
+var CACertTypeAccessCheckEx = Module.findExportByName("certca.dll", "CACertTypeAccessCheckEx")
+Interceptor.attach(CACertTypeAccessCheckEx, {onLeave: function (args) {send("CACertTypeAccessCheckEx");}});
+
+var CACertTypeAuthzAccessCheck = Module.findExportByName("certca.dll", "CACertTypeAuthzAccessCheck")
+Interceptor.attach(CACertTypeAuthzAccessCheck, {onLeave: function (args) {send("CACertTypeAuthzAccessCheck");}});
+
+var CACertTypeGetSecurity = Module.findExportByName("certca.dll", "CACertTypeGetSecurity")
+Interceptor.attach(CACertTypeGetSecurity, {onLeave: function (args) {send("CACertTypeGetSecurity");}});
+
+var CACertTypeQuery = Module.findExportByName("certca.dll", "CACertTypeQuery")
+Interceptor.attach(CACertTypeQuery, {onLeave: function (args) {send("CACertTypeQuery");}});
+
+var CACertTypeRegisterQuery = Module.findExportByName("certca.dll", "CACertTypeRegisterQuery")
+Interceptor.attach(CACertTypeRegisterQuery, {onLeave: function (args) {send("CACertTypeRegisterQuery");}});
+
+var CACertTypeSetSecurity = Module.findExportByName("certca.dll", "CACertTypeSetSecurity")
+Interceptor.attach(CACertTypeSetSecurity, {onLeave: function (args) {send("CACertTypeSetSecurity");}});
+
+var CACertTypeUnregisterQuery = Module.findExportByName("certca.dll", "CACertTypeUnregisterQuery")
+Interceptor.attach(CACertTypeUnregisterQuery, {onLeave: function (args) {send("CACertTypeUnregisterQuery");}});
+
+var CACloneCertType = Module.findExportByName("certca.dll", "CACloneCertType")
+Interceptor.attach(CACloneCertType, {onLeave: function (args) {send("CACloneCertType");}});
+
+var CACloseCA = Module.findExportByName("certca.dll", "CACloseCA")
+Interceptor.attach(CACloseCA, {onLeave: function (args) {send("CACloseCA");}});
+
+var CACloseCertType = Module.findExportByName("certca.dll", "CACloseCertType")
+Interceptor.attach(CACloseCertType, {onLeave: function (args) {send("CACloseCertType");}});
+
+var CACountCAs = Module.findExportByName("certca.dll", "CACountCAs")
+Interceptor.attach(CACountCAs, {onLeave: function (args) {send("CACountCAs");}});
+
+var CACountCertTypes = Module.findExportByName("certca.dll", "CACountCertTypes")
+Interceptor.attach(CACountCertTypes, {onLeave: function (args) {send("CACountCertTypes");}});
+
+var CACreateAutoEnrollmentObjectEx = Module.findExportByName("certca.dll", "CACreateAutoEnrollmentObjectEx")
+Interceptor.attach(CACreateAutoEnrollmentObjectEx, {onLeave: function (args) {send("CACreateAutoEnrollmentObjectEx");}});
+
+var CACreateCertType = Module.findExportByName("certca.dll", "CACreateCertType")
+Interceptor.attach(CACreateCertType, {onLeave: function (args) {send("CACreateCertType");}});
+
+var CACreateLocalAutoEnrollmentObject = Module.findExportByName("certca.dll", "CACreateLocalAutoEnrollmentObject")
+Interceptor.attach(CACreateLocalAutoEnrollmentObject, {onLeave: function (args) {send("CACreateLocalAutoEnrollmentObject");}});
+
+var CACreateNewCA = Module.findExportByName("certca.dll", "CACreateNewCA")
+Interceptor.attach(CACreateNewCA, {onLeave: function (args) {send("CACreateNewCA");}});
+
+var CADCSetCertTypePropertyEx = Module.findExportByName("certca.dll", "CADCSetCertTypePropertyEx")
+Interceptor.attach(CADCSetCertTypePropertyEx, {onLeave: function (args) {send("CADCSetCertTypePropertyEx");}});
+
+var CADeleteCA = Module.findExportByName("certca.dll", "CADeleteCA")
+Interceptor.attach(CADeleteCA, {onLeave: function (args) {send("CADeleteCA");}});
+
+var CADeleteCAEx = Module.findExportByName("certca.dll", "CADeleteCAEx")
+Interceptor.attach(CADeleteCAEx, {onLeave: function (args) {send("CADeleteCAEx");}});
+
+var CADeleteCertType = Module.findExportByName("certca.dll", "CADeleteCertType")
+Interceptor.attach(CADeleteCertType, {onLeave: function (args) {send("CADeleteCertType");}});
+
+var CADeleteCertTypeEx = Module.findExportByName("certca.dll", "CADeleteCertTypeEx")
+Interceptor.attach(CADeleteCertTypeEx, {onLeave: function (args) {send("CADeleteCertTypeEx");}});
+
+var CADeleteLocalAutoEnrollmentObject = Module.findExportByName("certca.dll", "CADeleteLocalAutoEnrollmentObject")
+Interceptor.attach(CADeleteLocalAutoEnrollmentObject, {onLeave: function (args) {send("CADeleteLocalAutoEnrollmentObject");}});
+
+var CAEnumCertTypes = Module.findExportByName("certca.dll", "CAEnumCertTypes")
+Interceptor.attach(CAEnumCertTypes, {onLeave: function (args) {send("CAEnumCertTypes");}});
+
+var CAEnumCertTypesEx = Module.findExportByName("certca.dll", "CAEnumCertTypesEx")
+Interceptor.attach(CAEnumCertTypesEx, {onLeave: function (args) {send("CAEnumCertTypesEx");}});
+
+var CAEnumCertTypesEx2 = Module.findExportByName("certca.dll", "CAEnumCertTypesEx2")
+Interceptor.attach(CAEnumCertTypesEx2, {onLeave: function (args) {send("CAEnumCertTypesEx2");}});
+
+var CAEnumCertTypesForCA = Module.findExportByName("certca.dll", "CAEnumCertTypesForCA")
+Interceptor.attach(CAEnumCertTypesForCA, {onLeave: function (args) {send("CAEnumCertTypesForCA");}});
+
+var CAEnumCertTypesForCAEx = Module.findExportByName("certca.dll", "CAEnumCertTypesForCAEx")
+Interceptor.attach(CAEnumCertTypesForCAEx, {onLeave: function (args) {send("CAEnumCertTypesForCAEx");}});
+
+var CAEnumFirstCA = Module.findExportByName("certca.dll", "CAEnumFirstCA")
+Interceptor.attach(CAEnumFirstCA, {onLeave: function (args) {send("CAEnumFirstCA");}});
+
+var CAEnumNextCA = Module.findExportByName("certca.dll", "CAEnumNextCA")
+Interceptor.attach(CAEnumNextCA, {onLeave: function (args) {send("CAEnumNextCA");}});
+
+var CAEnumNextCertType = Module.findExportByName("certca.dll", "CAEnumNextCertType")
+Interceptor.attach(CAEnumNextCertType, {onLeave: function (args) {send("CAEnumNextCertType");}});
+
+var CAFindByCertType = Module.findExportByName("certca.dll", "CAFindByCertType")
+Interceptor.attach(CAFindByCertType, {onLeave: function (args) {send("CAFindByCertType");}});
+
+var CAFindByIssuerDN = Module.findExportByName("certca.dll", "CAFindByIssuerDN")
+Interceptor.attach(CAFindByIssuerDN, {onLeave: function (args) {send("CAFindByIssuerDN");}});
+
+var CAFindByName = Module.findExportByName("certca.dll", "CAFindByName")
+Interceptor.attach(CAFindByName, {onLeave: function (args) {send("CAFindByName");}});
+
+var CAFindCertTypeByName = Module.findExportByName("certca.dll", "CAFindCertTypeByName")
+Interceptor.attach(CAFindCertTypeByName, {onLeave: function (args) {send("CAFindCertTypeByName");}});
+
+var CAFindCertTypeByName2 = Module.findExportByName("certca.dll", "CAFindCertTypeByName2")
+Interceptor.attach(CAFindCertTypeByName2, {onLeave: function (args) {send("CAFindCertTypeByName2");}});
+
+var CAFreeCAProperty = Module.findExportByName("certca.dll", "CAFreeCAProperty")
+Interceptor.attach(CAFreeCAProperty, {onLeave: function (args) {send("CAFreeCAProperty");}});
+
+var CAFreeCertTypeExtensions = Module.findExportByName("certca.dll", "CAFreeCertTypeExtensions")
+Interceptor.attach(CAFreeCertTypeExtensions, {onLeave: function (args) {send("CAFreeCertTypeExtensions");}});
+
+var CAFreeCertTypeProperty = Module.findExportByName("certca.dll", "CAFreeCertTypeProperty")
+Interceptor.attach(CAFreeCertTypeProperty, {onLeave: function (args) {send("CAFreeCertTypeProperty");}});
+
+var CAGetCACertificate = Module.findExportByName("certca.dll", "CAGetCACertificate")
+Interceptor.attach(CAGetCACertificate, {onLeave: function (args) {send("CAGetCACertificate");}});
+
+var CAGetCAExpiration = Module.findExportByName("certca.dll", "CAGetCAExpiration")
+Interceptor.attach(CAGetCAExpiration, {onLeave: function (args) {send("CAGetCAExpiration");}});
+
+var CAGetCAFlags = Module.findExportByName("certca.dll", "CAGetCAFlags")
+Interceptor.attach(CAGetCAFlags, {onLeave: function (args) {send("CAGetCAFlags");}});
+
+var CAGetCAProperty = Module.findExportByName("certca.dll", "CAGetCAProperty")
+Interceptor.attach(CAGetCAProperty, {onLeave: function (args) {send("CAGetCAProperty");}});
+
+var CAGetCASecurity = Module.findExportByName("certca.dll", "CAGetCASecurity")
+Interceptor.attach(CAGetCASecurity, {onLeave: function (args) {send("CAGetCASecurity");}});
+
+var CAGetCertTypeExpiration = Module.findExportByName("certca.dll", "CAGetCertTypeExpiration")
+Interceptor.attach(CAGetCertTypeExpiration, {onLeave: function (args) {send("CAGetCertTypeExpiration");}});
+
+var CAGetCertTypeExtensions = Module.findExportByName("certca.dll", "CAGetCertTypeExtensions")
+Interceptor.attach(CAGetCertTypeExtensions, {onLeave: function (args) {send("CAGetCertTypeExtensions");}});
+
+var CAGetCertTypeExtensionsEx = Module.findExportByName("certca.dll", "CAGetCertTypeExtensionsEx")
+Interceptor.attach(CAGetCertTypeExtensionsEx, {onLeave: function (args) {send("CAGetCertTypeExtensionsEx");}});
+
+var CAGetCertTypeFlags = Module.findExportByName("certca.dll", "CAGetCertTypeFlags")
+Interceptor.attach(CAGetCertTypeFlags, {onLeave: function (args) {send("CAGetCertTypeFlags");}});
+
+var CAGetCertTypeFlagsEx = Module.findExportByName("certca.dll", "CAGetCertTypeFlagsEx")
+Interceptor.attach(CAGetCertTypeFlagsEx, {onLeave: function (args) {send("CAGetCertTypeFlagsEx");}});
+
+var CAGetCertTypeKeySpec = Module.findExportByName("certca.dll", "CAGetCertTypeKeySpec")
+Interceptor.attach(CAGetCertTypeKeySpec, {onLeave: function (args) {send("CAGetCertTypeKeySpec");}});
+
+var CAGetCertTypeProperty = Module.findExportByName("certca.dll", "CAGetCertTypeProperty")
+Interceptor.attach(CAGetCertTypeProperty, {onLeave: function (args) {send("CAGetCertTypeProperty");}});
+
+var CAGetCertTypePropertyEx = Module.findExportByName("certca.dll", "CAGetCertTypePropertyEx")
+Interceptor.attach(CAGetCertTypePropertyEx, {onLeave: function (args) {send("CAGetCertTypePropertyEx");}});
+
+var CAGetDN = Module.findExportByName("certca.dll", "CAGetDN")
+Interceptor.attach(CAGetDN, {onLeave: function (args) {send("CAGetDN");}});
+
+var CAInstallDefaultCertType = Module.findExportByName("certca.dll", "CAInstallDefaultCertType")
+Interceptor.attach(CAInstallDefaultCertType, {onLeave: function (args) {send("CAInstallDefaultCertType");}});
+
+var CAInstallDefaultCertTypeEx = Module.findExportByName("certca.dll", "CAInstallDefaultCertTypeEx")
+Interceptor.attach(CAInstallDefaultCertTypeEx, {onLeave: function (args) {send("CAInstallDefaultCertTypeEx");}});
+
+var CAIsCertTypeCurrent = Module.findExportByName("certca.dll", "CAIsCertTypeCurrent")
+Interceptor.attach(CAIsCertTypeCurrent, {onLeave: function (args) {send("CAIsCertTypeCurrent");}});
+
+var CAIsCertTypeCurrentEx = Module.findExportByName("certca.dll", "CAIsCertTypeCurrentEx")
+Interceptor.attach(CAIsCertTypeCurrentEx, {onLeave: function (args) {send("CAIsCertTypeCurrentEx");}});
+
+var CAOIDAdd = Module.findExportByName("certca.dll", "CAOIDAdd")
+Interceptor.attach(CAOIDAdd, {onLeave: function (args) {send("CAOIDAdd");}});
+
+var CAOIDAddEx = Module.findExportByName("certca.dll", "CAOIDAddEx")
+Interceptor.attach(CAOIDAddEx, {onLeave: function (args) {send("CAOIDAddEx");}});
+
+var CAOIDCreateNew = Module.findExportByName("certca.dll", "CAOIDCreateNew")
+Interceptor.attach(CAOIDCreateNew, {onLeave: function (args) {send("CAOIDCreateNew");}});
+
+var CAOIDCreateNewEx = Module.findExportByName("certca.dll", "CAOIDCreateNewEx")
+Interceptor.attach(CAOIDCreateNewEx, {onLeave: function (args) {send("CAOIDCreateNewEx");}});
+
+var CAOIDDelete = Module.findExportByName("certca.dll", "CAOIDDelete")
+Interceptor.attach(CAOIDDelete, {onLeave: function (args) {send("CAOIDDelete");}});
+
+var CAOIDDeleteEx = Module.findExportByName("certca.dll", "CAOIDDeleteEx")
+Interceptor.attach(CAOIDDeleteEx, {onLeave: function (args) {send("CAOIDDeleteEx");}});
+
+var CAOIDFreeLdapURL = Module.findExportByName("certca.dll", "CAOIDFreeLdapURL")
+Interceptor.attach(CAOIDFreeLdapURL, {onLeave: function (args) {send("CAOIDFreeLdapURL");}});
+
+var CAOIDFreeProperty = Module.findExportByName("certca.dll", "CAOIDFreeProperty")
+Interceptor.attach(CAOIDFreeProperty, {onLeave: function (args) {send("CAOIDFreeProperty");}});
+
+var CAOIDGetLdapURL = Module.findExportByName("certca.dll", "CAOIDGetLdapURL")
+Interceptor.attach(CAOIDGetLdapURL, {onLeave: function (args) {send("CAOIDGetLdapURL");}});
+
+var CAOIDGetProperty = Module.findExportByName("certca.dll", "CAOIDGetProperty")
+Interceptor.attach(CAOIDGetProperty, {onLeave: function (args) {send("CAOIDGetProperty");}});
+
+var CAOIDGetPropertyEx = Module.findExportByName("certca.dll", "CAOIDGetPropertyEx")
+Interceptor.attach(CAOIDGetPropertyEx, {onLeave: function (args) {send("CAOIDGetPropertyEx");}});
+
+var CAOIDSetProperty = Module.findExportByName("certca.dll", "CAOIDSetProperty")
+Interceptor.attach(CAOIDSetProperty, {onLeave: function (args) {send("CAOIDSetProperty");}});
+
+var CAOIDSetPropertyEx = Module.findExportByName("certca.dll", "CAOIDSetPropertyEx")
+Interceptor.attach(CAOIDSetPropertyEx, {onLeave: function (args) {send("CAOIDSetPropertyEx");}});
+
+var CARemoveCACertificateType = Module.findExportByName("certca.dll", "CARemoveCACertificateType")
+Interceptor.attach(CARemoveCACertificateType, {onLeave: function (args) {send("CARemoveCACertificateType");}});
+
+var CARemoveCACertificateTypeEx = Module.findExportByName("certca.dll", "CARemoveCACertificateTypeEx")
+Interceptor.attach(CARemoveCACertificateTypeEx, {onLeave: function (args) {send("CARemoveCACertificateTypeEx");}});
+
+var CASetCACertificate = Module.findExportByName("certca.dll", "CASetCACertificate")
+Interceptor.attach(CASetCACertificate, {onLeave: function (args) {send("CASetCACertificate");}});
+
+var CASetCAExpiration = Module.findExportByName("certca.dll", "CASetCAExpiration")
+Interceptor.attach(CASetCAExpiration, {onLeave: function (args) {send("CASetCAExpiration");}});
+
+var CASetCAFlags = Module.findExportByName("certca.dll", "CASetCAFlags")
+Interceptor.attach(CASetCAFlags, {onLeave: function (args) {send("CASetCAFlags");}});
+
+var CASetCAProperty = Module.findExportByName("certca.dll", "CASetCAProperty")
+Interceptor.attach(CASetCAProperty, {onLeave: function (args) {send("CASetCAProperty");}});
+
+var CASetCASecurity = Module.findExportByName("certca.dll", "CASetCASecurity")
+Interceptor.attach(CASetCASecurity, {onLeave: function (args) {send("CASetCASecurity");}});
+
+var CASetCertTypeExpiration = Module.findExportByName("certca.dll", "CASetCertTypeExpiration")
+Interceptor.attach(CASetCertTypeExpiration, {onLeave: function (args) {send("CASetCertTypeExpiration");}});
+
+var CASetCertTypeExtension = Module.findExportByName("certca.dll", "CASetCertTypeExtension")
+Interceptor.attach(CASetCertTypeExtension, {onLeave: function (args) {send("CASetCertTypeExtension");}});
+
+var CASetCertTypeFlags = Module.findExportByName("certca.dll", "CASetCertTypeFlags")
+Interceptor.attach(CASetCertTypeFlags, {onLeave: function (args) {send("CASetCertTypeFlags");}});
+
+var CASetCertTypeFlagsEx = Module.findExportByName("certca.dll", "CASetCertTypeFlagsEx")
+Interceptor.attach(CASetCertTypeFlagsEx, {onLeave: function (args) {send("CASetCertTypeFlagsEx");}});
+
+var CASetCertTypeKeySpec = Module.findExportByName("certca.dll", "CASetCertTypeKeySpec")
+Interceptor.attach(CASetCertTypeKeySpec, {onLeave: function (args) {send("CASetCertTypeKeySpec");}});
+
+var CASetCertTypeProperty = Module.findExportByName("certca.dll", "CASetCertTypeProperty")
+Interceptor.attach(CASetCertTypeProperty, {onLeave: function (args) {send("CASetCertTypeProperty");}});
+
+var CASetCertTypePropertyEx = Module.findExportByName("certca.dll", "CASetCertTypePropertyEx")
+Interceptor.attach(CASetCertTypePropertyEx, {onLeave: function (args) {send("CASetCertTypePropertyEx");}});
+
+var CAUpdateCA = Module.findExportByName("certca.dll", "CAUpdateCA")
+Interceptor.attach(CAUpdateCA, {onLeave: function (args) {send("CAUpdateCA");}});
+
+var CAUpdateCAEx = Module.findExportByName("certca.dll", "CAUpdateCAEx")
+Interceptor.attach(CAUpdateCAEx, {onLeave: function (args) {send("CAUpdateCAEx");}});
+
+var CAUpdateCertType = Module.findExportByName("certca.dll", "CAUpdateCertType")
+Interceptor.attach(CAUpdateCertType, {onLeave: function (args) {send("CAUpdateCertType");}});
+
+var CAUpdateCertTypeEx = Module.findExportByName("certca.dll", "CAUpdateCertTypeEx")
+Interceptor.attach(CAUpdateCertTypeEx, {onLeave: function (args) {send("CAUpdateCertTypeEx");}});
+
+var CCFindCertificateBuildFilter = Module.findExportByName("certca.dll", "CCFindCertificateBuildFilter")
+Interceptor.attach(CCFindCertificateBuildFilter, {onLeave: function (args) {send("CCFindCertificateBuildFilter");}});
+
+var CCFindCertificateFreeFilter = Module.findExportByName("certca.dll", "CCFindCertificateFreeFilter")
+Interceptor.attach(CCFindCertificateFreeFilter, {onLeave: function (args) {send("CCFindCertificateFreeFilter");}});
+
+var CCFindCertificateFromFilter = Module.findExportByName("certca.dll", "CCFindCertificateFromFilter")
+Interceptor.attach(CCFindCertificateFromFilter, {onLeave: function (args) {send("CCFindCertificateFromFilter");}});
+
+var CCFreeStringArray = Module.findExportByName("certca.dll", "CCFreeStringArray")
+Interceptor.attach(CCFreeStringArray, {onLeave: function (args) {send("CCFreeStringArray");}});
+
+var CCGetCertNameList = Module.findExportByName("certca.dll", "CCGetCertNameList")
+Interceptor.attach(CCGetCertNameList, {onLeave: function (args) {send("CCGetCertNameList");}});
+

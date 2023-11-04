@@ -1,0 +1,24 @@
+var PAL_AppHasPackage = Module.findExportByName("ProximityCommonPal.dll", "PAL_AppHasPackage")
+Interceptor.attach(PAL_AppHasPackage, {onLeave: function (args) {send("PAL_AppHasPackage");}});
+
+var PAL_FreeTransientObjectSecurityAttribute = Module.findExportByName("ProximityCommonPal.dll", "PAL_FreeTransientObjectSecurityAttribute")
+Interceptor.attach(PAL_FreeTransientObjectSecurityAttribute, {onLeave: function (args) {send("PAL_FreeTransientObjectSecurityAttribute");}});
+
+var PAL_GetAppPlatformQualifier = Module.findExportByName("ProximityCommonPal.dll", "PAL_GetAppPlatformQualifier")
+Interceptor.attach(PAL_GetAppPlatformQualifier, {onLeave: function (args) {send("PAL_GetAppPlatformQualifier");}});
+
+var PAL_GetSupportedBrowseTypes = Module.findExportByName("ProximityCommonPal.dll", "PAL_GetSupportedBrowseTypes")
+Interceptor.attach(PAL_GetSupportedBrowseTypes, {onLeave: function (args) {send("PAL_GetSupportedBrowseTypes");}});
+
+var PAL_HoldReferenceUntilAppExit = Module.findExportByName("ProximityCommonPal.dll", "PAL_HoldReferenceUntilAppExit")
+Interceptor.attach(PAL_HoldReferenceUntilAppExit, {onLeave: function (args) {send("PAL_HoldReferenceUntilAppExit");}});
+
+var PAL_QueryTransientObjectSecurityAttribute = Module.findExportByName("ProximityCommonPal.dll", "PAL_QueryTransientObjectSecurityAttribute")
+Interceptor.attach(PAL_QueryTransientObjectSecurityAttribute, {onLeave: function (args) {send("PAL_QueryTransientObjectSecurityAttribute");}});
+
+var PAL_RegisterAppSuspendResumeCallback = Module.findExportByName("ProximityCommonPal.dll", "PAL_RegisterAppSuspendResumeCallback")
+Interceptor.attach(PAL_RegisterAppSuspendResumeCallback, {onLeave: function (args) {send("PAL_RegisterAppSuspendResumeCallback");}});
+
+var PAL_UnregisterAppSuspendResumeCallback = Module.findExportByName("ProximityCommonPal.dll", "PAL_UnregisterAppSuspendResumeCallback")
+Interceptor.attach(PAL_UnregisterAppSuspendResumeCallback, {onLeave: function (args) {send("PAL_UnregisterAppSuspendResumeCallback");}});
+

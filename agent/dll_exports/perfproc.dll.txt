@@ -1,0 +1,9 @@
+var CloseSysProcessObject = Module.findExportByName("perfproc.dll", "CloseSysProcessObject")
+Interceptor.attach(CloseSysProcessObject, {onLeave: function (args) {send("CloseSysProcessObject");}});
+
+var CollectSysProcessObjectData = Module.findExportByName("perfproc.dll", "CollectSysProcessObjectData")
+Interceptor.attach(CollectSysProcessObjectData, {onLeave: function (args) {send("CollectSysProcessObjectData");}});
+
+var OpenSysProcessObject = Module.findExportByName("perfproc.dll", "OpenSysProcessObject")
+Interceptor.attach(OpenSysProcessObject, {onLeave: function (args) {send("OpenSysProcessObject");}});
+

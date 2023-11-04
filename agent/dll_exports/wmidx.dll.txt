@@ -1,0 +1,3 @@
+var WMCreateASFChopper = Module.findExportByName("wmidx.dll", "WMCreateASFChopper")
+Interceptor.attach(WMCreateASFChopper, {onLeave: function (args) {send("WMCreateASFChopper");}});
+

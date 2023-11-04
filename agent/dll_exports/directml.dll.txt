@@ -1,0 +1,6 @@
+var DMLCreateDevice = Module.findExportByName("directml.dll", "DMLCreateDevice")
+Interceptor.attach(DMLCreateDevice, {onLeave: function (args) {send("DMLCreateDevice");}});
+
+var DMLCreateDevice1 = Module.findExportByName("directml.dll", "DMLCreateDevice1")
+Interceptor.attach(DMLCreateDevice1, {onLeave: function (args) {send("DMLCreateDevice1");}});
+

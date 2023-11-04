@@ -1,0 +1,12 @@
+var LoadGPExtension = Module.findExportByName("dnsrslvr.dll", "LoadGPExtension")
+Interceptor.attach(LoadGPExtension, {onLeave: function (args) {send("LoadGPExtension");}});
+
+var Reg_DoRegisterAdapter = Module.findExportByName("dnsrslvr.dll", "Reg_DoRegisterAdapter")
+Interceptor.attach(Reg_DoRegisterAdapter, {onLeave: function (args) {send("Reg_DoRegisterAdapter");}});
+
+var ServiceMain = Module.findExportByName("dnsrslvr.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("dnsrslvr.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

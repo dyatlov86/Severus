@@ -1,0 +1,192 @@
+var CryptsvcDllCtrl = Module.findExportByName("webauthn.dll", "CryptsvcDllCtrl")
+Interceptor.attach(CryptsvcDllCtrl, {onLeave: function (args) {send("CryptsvcDllCtrl");}});
+
+var I_WebAuthNCtapDecodeGetAssertionRpcResponse = Module.findExportByName("webauthn.dll", "I_WebAuthNCtapDecodeGetAssertionRpcResponse")
+Interceptor.attach(I_WebAuthNCtapDecodeGetAssertionRpcResponse, {onLeave: function (args) {send("I_WebAuthNCtapDecodeGetAssertionRpcResponse");}});
+
+var I_WebAuthNCtapDecodeMakeCredentialRpcResponse = Module.findExportByName("webauthn.dll", "I_WebAuthNCtapDecodeMakeCredentialRpcResponse")
+Interceptor.attach(I_WebAuthNCtapDecodeMakeCredentialRpcResponse, {onLeave: function (args) {send("I_WebAuthNCtapDecodeMakeCredentialRpcResponse");}});
+
+var I_WebAuthNCtapEncodeGetAssertionRpcRequest = Module.findExportByName("webauthn.dll", "I_WebAuthNCtapEncodeGetAssertionRpcRequest")
+Interceptor.attach(I_WebAuthNCtapEncodeGetAssertionRpcRequest, {onLeave: function (args) {send("I_WebAuthNCtapEncodeGetAssertionRpcRequest");}});
+
+var I_WebAuthNCtapEncodeMakeCredentialRpcRequest = Module.findExportByName("webauthn.dll", "I_WebAuthNCtapEncodeMakeCredentialRpcRequest")
+Interceptor.attach(I_WebAuthNCtapEncodeMakeCredentialRpcRequest, {onLeave: function (args) {send("I_WebAuthNCtapEncodeMakeCredentialRpcRequest");}});
+
+var VirtualChannelGetInstance = Module.findExportByName("webauthn.dll", "VirtualChannelGetInstance")
+Interceptor.attach(VirtualChannelGetInstance, {onLeave: function (args) {send("VirtualChannelGetInstance");}});
+
+var WebAuthNAuthenticatorGetAssertion = Module.findExportByName("webauthn.dll", "WebAuthNAuthenticatorGetAssertion")
+Interceptor.attach(WebAuthNAuthenticatorGetAssertion, {onLeave: function (args) {send("WebAuthNAuthenticatorGetAssertion");}});
+
+var WebAuthNAuthenticatorMakeCredential = Module.findExportByName("webauthn.dll", "WebAuthNAuthenticatorMakeCredential")
+Interceptor.attach(WebAuthNAuthenticatorMakeCredential, {onLeave: function (args) {send("WebAuthNAuthenticatorMakeCredential");}});
+
+var WebAuthNCancelCurrentOperation = Module.findExportByName("webauthn.dll", "WebAuthNCancelCurrentOperation")
+Interceptor.attach(WebAuthNCancelCurrentOperation, {onLeave: function (args) {send("WebAuthNCancelCurrentOperation");}});
+
+var WebAuthNCtapChangeClientPin = Module.findExportByName("webauthn.dll", "WebAuthNCtapChangeClientPin")
+Interceptor.attach(WebAuthNCtapChangeClientPin, {onLeave: function (args) {send("WebAuthNCtapChangeClientPin");}});
+
+var WebAuthNCtapChangeClientPinForSelectedDevice = Module.findExportByName("webauthn.dll", "WebAuthNCtapChangeClientPinForSelectedDevice")
+Interceptor.attach(WebAuthNCtapChangeClientPinForSelectedDevice, {onLeave: function (args) {send("WebAuthNCtapChangeClientPinForSelectedDevice");}});
+
+var WebAuthNCtapFreeSelectedDeviceInformation = Module.findExportByName("webauthn.dll", "WebAuthNCtapFreeSelectedDeviceInformation")
+Interceptor.attach(WebAuthNCtapFreeSelectedDeviceInformation, {onLeave: function (args) {send("WebAuthNCtapFreeSelectedDeviceInformation");}});
+
+var WebAuthNCtapGetAssertion = Module.findExportByName("webauthn.dll", "WebAuthNCtapGetAssertion")
+Interceptor.attach(WebAuthNCtapGetAssertion, {onLeave: function (args) {send("WebAuthNCtapGetAssertion");}});
+
+var WebAuthNCtapGetSupportedTransports = Module.findExportByName("webauthn.dll", "WebAuthNCtapGetSupportedTransports")
+Interceptor.attach(WebAuthNCtapGetSupportedTransports, {onLeave: function (args) {send("WebAuthNCtapGetSupportedTransports");}});
+
+var WebAuthNCtapGetWnfLocalizedString = Module.findExportByName("webauthn.dll", "WebAuthNCtapGetWnfLocalizedString")
+Interceptor.attach(WebAuthNCtapGetWnfLocalizedString, {onLeave: function (args) {send("WebAuthNCtapGetWnfLocalizedString");}});
+
+var WebAuthNCtapIsStopSendCommandError = Module.findExportByName("webauthn.dll", "WebAuthNCtapIsStopSendCommandError")
+Interceptor.attach(WebAuthNCtapIsStopSendCommandError, {onLeave: function (args) {send("WebAuthNCtapIsStopSendCommandError");}});
+
+var WebAuthNCtapMakeCredential = Module.findExportByName("webauthn.dll", "WebAuthNCtapMakeCredential")
+Interceptor.attach(WebAuthNCtapMakeCredential, {onLeave: function (args) {send("WebAuthNCtapMakeCredential");}});
+
+var WebAuthNCtapManageAuthenticatePin = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageAuthenticatePin")
+Interceptor.attach(WebAuthNCtapManageAuthenticatePin, {onLeave: function (args) {send("WebAuthNCtapManageAuthenticatePin");}});
+
+var WebAuthNCtapManageCancelEnrollFingerprint = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageCancelEnrollFingerprint")
+Interceptor.attach(WebAuthNCtapManageCancelEnrollFingerprint, {onLeave: function (args) {send("WebAuthNCtapManageCancelEnrollFingerprint");}});
+
+var WebAuthNCtapManageChangePin = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageChangePin")
+Interceptor.attach(WebAuthNCtapManageChangePin, {onLeave: function (args) {send("WebAuthNCtapManageChangePin");}});
+
+var WebAuthNCtapManageClose = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageClose")
+Interceptor.attach(WebAuthNCtapManageClose, {onLeave: function (args) {send("WebAuthNCtapManageClose");}});
+
+var WebAuthNCtapManageDeleteCredential = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageDeleteCredential")
+Interceptor.attach(WebAuthNCtapManageDeleteCredential, {onLeave: function (args) {send("WebAuthNCtapManageDeleteCredential");}});
+
+var WebAuthNCtapManageEnableEnterpriseAttestation = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageEnableEnterpriseAttestation")
+Interceptor.attach(WebAuthNCtapManageEnableEnterpriseAttestation, {onLeave: function (args) {send("WebAuthNCtapManageEnableEnterpriseAttestation");}});
+
+var WebAuthNCtapManageEnrollFingerprint = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageEnrollFingerprint")
+Interceptor.attach(WebAuthNCtapManageEnrollFingerprint, {onLeave: function (args) {send("WebAuthNCtapManageEnrollFingerprint");}});
+
+var WebAuthNCtapManageFreeDisplayCredentials = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageFreeDisplayCredentials")
+Interceptor.attach(WebAuthNCtapManageFreeDisplayCredentials, {onLeave: function (args) {send("WebAuthNCtapManageFreeDisplayCredentials");}});
+
+var WebAuthNCtapManageGetDisplayCredentials = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageGetDisplayCredentials")
+Interceptor.attach(WebAuthNCtapManageGetDisplayCredentials, {onLeave: function (args) {send("WebAuthNCtapManageGetDisplayCredentials");}});
+
+var WebAuthNCtapManageGetLargeBlobs = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageGetLargeBlobs")
+Interceptor.attach(WebAuthNCtapManageGetLargeBlobs, {onLeave: function (args) {send("WebAuthNCtapManageGetLargeBlobs");}});
+
+var WebAuthNCtapManageRemoveFingerprints = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageRemoveFingerprints")
+Interceptor.attach(WebAuthNCtapManageRemoveFingerprints, {onLeave: function (args) {send("WebAuthNCtapManageRemoveFingerprints");}});
+
+var WebAuthNCtapManageResetDevice = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageResetDevice")
+Interceptor.attach(WebAuthNCtapManageResetDevice, {onLeave: function (args) {send("WebAuthNCtapManageResetDevice");}});
+
+var WebAuthNCtapManageSelect = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageSelect")
+Interceptor.attach(WebAuthNCtapManageSelect, {onLeave: function (args) {send("WebAuthNCtapManageSelect");}});
+
+var WebAuthNCtapManageSetAlwaysUv = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageSetAlwaysUv")
+Interceptor.attach(WebAuthNCtapManageSetAlwaysUv, {onLeave: function (args) {send("WebAuthNCtapManageSetAlwaysUv");}});
+
+var WebAuthNCtapManageSetLargeBlobs = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageSetLargeBlobs")
+Interceptor.attach(WebAuthNCtapManageSetLargeBlobs, {onLeave: function (args) {send("WebAuthNCtapManageSetLargeBlobs");}});
+
+var WebAuthNCtapManageSetMinPinLength = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageSetMinPinLength")
+Interceptor.attach(WebAuthNCtapManageSetMinPinLength, {onLeave: function (args) {send("WebAuthNCtapManageSetMinPinLength");}});
+
+var WebAuthNCtapManageSetPin = Module.findExportByName("webauthn.dll", "WebAuthNCtapManageSetPin")
+Interceptor.attach(WebAuthNCtapManageSetPin, {onLeave: function (args) {send("WebAuthNCtapManageSetPin");}});
+
+var WebAuthNCtapParseAuthenticatorData = Module.findExportByName("webauthn.dll", "WebAuthNCtapParseAuthenticatorData")
+Interceptor.attach(WebAuthNCtapParseAuthenticatorData, {onLeave: function (args) {send("WebAuthNCtapParseAuthenticatorData");}});
+
+var WebAuthNCtapResetDevice = Module.findExportByName("webauthn.dll", "WebAuthNCtapResetDevice")
+Interceptor.attach(WebAuthNCtapResetDevice, {onLeave: function (args) {send("WebAuthNCtapResetDevice");}});
+
+var WebAuthNCtapRpcGetAssertionUserList = Module.findExportByName("webauthn.dll", "WebAuthNCtapRpcGetAssertionUserList")
+Interceptor.attach(WebAuthNCtapRpcGetAssertionUserList, {onLeave: function (args) {send("WebAuthNCtapRpcGetAssertionUserList");}});
+
+var WebAuthNCtapRpcGetCborCommand = Module.findExportByName("webauthn.dll", "WebAuthNCtapRpcGetCborCommand")
+Interceptor.attach(WebAuthNCtapRpcGetCborCommand, {onLeave: function (args) {send("WebAuthNCtapRpcGetCborCommand");}});
+
+var WebAuthNCtapRpcRenderQrCode = Module.findExportByName("webauthn.dll", "WebAuthNCtapRpcRenderQrCode")
+Interceptor.attach(WebAuthNCtapRpcRenderQrCode, {onLeave: function (args) {send("WebAuthNCtapRpcRenderQrCode");}});
+
+var WebAuthNCtapRpcSelectGetAssertion = Module.findExportByName("webauthn.dll", "WebAuthNCtapRpcSelectGetAssertion")
+Interceptor.attach(WebAuthNCtapRpcSelectGetAssertion, {onLeave: function (args) {send("WebAuthNCtapRpcSelectGetAssertion");}});
+
+var WebAuthNCtapSendCommand = Module.findExportByName("webauthn.dll", "WebAuthNCtapSendCommand")
+Interceptor.attach(WebAuthNCtapSendCommand, {onLeave: function (args) {send("WebAuthNCtapSendCommand");}});
+
+var WebAuthNCtapSetClientPin = Module.findExportByName("webauthn.dll", "WebAuthNCtapSetClientPin")
+Interceptor.attach(WebAuthNCtapSetClientPin, {onLeave: function (args) {send("WebAuthNCtapSetClientPin");}});
+
+var WebAuthNCtapStartDeviceChangeNotify = Module.findExportByName("webauthn.dll", "WebAuthNCtapStartDeviceChangeNotify")
+Interceptor.attach(WebAuthNCtapStartDeviceChangeNotify, {onLeave: function (args) {send("WebAuthNCtapStartDeviceChangeNotify");}});
+
+var WebAuthNCtapStopDeviceChangeNotify = Module.findExportByName("webauthn.dll", "WebAuthNCtapStopDeviceChangeNotify")
+Interceptor.attach(WebAuthNCtapStopDeviceChangeNotify, {onLeave: function (args) {send("WebAuthNCtapStopDeviceChangeNotify");}});
+
+var WebAuthNCtapVerifyGetAssertion = Module.findExportByName("webauthn.dll", "WebAuthNCtapVerifyGetAssertion")
+Interceptor.attach(WebAuthNCtapVerifyGetAssertion, {onLeave: function (args) {send("WebAuthNCtapVerifyGetAssertion");}});
+
+var WebAuthNDecodeAccountInformation = Module.findExportByName("webauthn.dll", "WebAuthNDecodeAccountInformation")
+Interceptor.attach(WebAuthNDecodeAccountInformation, {onLeave: function (args) {send("WebAuthNDecodeAccountInformation");}});
+
+var WebAuthNDeletePlatformCredential = Module.findExportByName("webauthn.dll", "WebAuthNDeletePlatformCredential")
+Interceptor.attach(WebAuthNDeletePlatformCredential, {onLeave: function (args) {send("WebAuthNDeletePlatformCredential");}});
+
+var WebAuthNEncodeAccountInformation = Module.findExportByName("webauthn.dll", "WebAuthNEncodeAccountInformation")
+Interceptor.attach(WebAuthNEncodeAccountInformation, {onLeave: function (args) {send("WebAuthNEncodeAccountInformation");}});
+
+var WebAuthNFreeAssertion = Module.findExportByName("webauthn.dll", "WebAuthNFreeAssertion")
+Interceptor.attach(WebAuthNFreeAssertion, {onLeave: function (args) {send("WebAuthNFreeAssertion");}});
+
+var WebAuthNFreeCredentialAttestation = Module.findExportByName("webauthn.dll", "WebAuthNFreeCredentialAttestation")
+Interceptor.attach(WebAuthNFreeCredentialAttestation, {onLeave: function (args) {send("WebAuthNFreeCredentialAttestation");}});
+
+var WebAuthNFreeDecodedAccountInformation = Module.findExportByName("webauthn.dll", "WebAuthNFreeDecodedAccountInformation")
+Interceptor.attach(WebAuthNFreeDecodedAccountInformation, {onLeave: function (args) {send("WebAuthNFreeDecodedAccountInformation");}});
+
+var WebAuthNFreeEncodedAccountInformation = Module.findExportByName("webauthn.dll", "WebAuthNFreeEncodedAccountInformation")
+Interceptor.attach(WebAuthNFreeEncodedAccountInformation, {onLeave: function (args) {send("WebAuthNFreeEncodedAccountInformation");}});
+
+var WebAuthNFreePlatformCredentialList = Module.findExportByName("webauthn.dll", "WebAuthNFreePlatformCredentialList")
+Interceptor.attach(WebAuthNFreePlatformCredentialList, {onLeave: function (args) {send("WebAuthNFreePlatformCredentialList");}});
+
+var WebAuthNFreePlatformCredentials = Module.findExportByName("webauthn.dll", "WebAuthNFreePlatformCredentials")
+Interceptor.attach(WebAuthNFreePlatformCredentials, {onLeave: function (args) {send("WebAuthNFreePlatformCredentials");}});
+
+var WebAuthNFreeUserEntityList = Module.findExportByName("webauthn.dll", "WebAuthNFreeUserEntityList")
+Interceptor.attach(WebAuthNFreeUserEntityList, {onLeave: function (args) {send("WebAuthNFreeUserEntityList");}});
+
+var WebAuthNGetApiVersionNumber = Module.findExportByName("webauthn.dll", "WebAuthNGetApiVersionNumber")
+Interceptor.attach(WebAuthNGetApiVersionNumber, {onLeave: function (args) {send("WebAuthNGetApiVersionNumber");}});
+
+var WebAuthNGetCancellationId = Module.findExportByName("webauthn.dll", "WebAuthNGetCancellationId")
+Interceptor.attach(WebAuthNGetCancellationId, {onLeave: function (args) {send("WebAuthNGetCancellationId");}});
+
+var WebAuthNGetCoseAlgorithmIdentifier = Module.findExportByName("webauthn.dll", "WebAuthNGetCoseAlgorithmIdentifier")
+Interceptor.attach(WebAuthNGetCoseAlgorithmIdentifier, {onLeave: function (args) {send("WebAuthNGetCoseAlgorithmIdentifier");}});
+
+var WebAuthNGetCredentialIdFromAuthenticatorData = Module.findExportByName("webauthn.dll", "WebAuthNGetCredentialIdFromAuthenticatorData")
+Interceptor.attach(WebAuthNGetCredentialIdFromAuthenticatorData, {onLeave: function (args) {send("WebAuthNGetCredentialIdFromAuthenticatorData");}});
+
+var WebAuthNGetErrorName = Module.findExportByName("webauthn.dll", "WebAuthNGetErrorName")
+Interceptor.attach(WebAuthNGetErrorName, {onLeave: function (args) {send("WebAuthNGetErrorName");}});
+
+var WebAuthNGetPlatformCredentialList = Module.findExportByName("webauthn.dll", "WebAuthNGetPlatformCredentialList")
+Interceptor.attach(WebAuthNGetPlatformCredentialList, {onLeave: function (args) {send("WebAuthNGetPlatformCredentialList");}});
+
+var WebAuthNGetPlatformCredentials = Module.findExportByName("webauthn.dll", "WebAuthNGetPlatformCredentials")
+Interceptor.attach(WebAuthNGetPlatformCredentials, {onLeave: function (args) {send("WebAuthNGetPlatformCredentials");}});
+
+var WebAuthNGetW3CExceptionDOMError = Module.findExportByName("webauthn.dll", "WebAuthNGetW3CExceptionDOMError")
+Interceptor.attach(WebAuthNGetW3CExceptionDOMError, {onLeave: function (args) {send("WebAuthNGetW3CExceptionDOMError");}});
+
+var WebAuthNIsUserVerifyingPlatformAuthenticatorAvailable = Module.findExportByName("webauthn.dll", "WebAuthNIsUserVerifyingPlatformAuthenticatorAvailable")
+Interceptor.attach(WebAuthNIsUserVerifyingPlatformAuthenticatorAvailable, {onLeave: function (args) {send("WebAuthNIsUserVerifyingPlatformAuthenticatorAvailable");}});
+

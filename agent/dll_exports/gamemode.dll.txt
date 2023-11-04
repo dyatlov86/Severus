@@ -1,0 +1,24 @@
+var GetExpandedResourceExclusiveCpuCount = Module.findExportByName("gamemode.dll", "GetExpandedResourceExclusiveCpuCount")
+Interceptor.attach(GetExpandedResourceExclusiveCpuCount, {onLeave: function (args) {send("GetExpandedResourceExclusiveCpuCount");}});
+
+var HasExpandedResources = Module.findExportByName("gamemode.dll", "HasExpandedResources")
+Interceptor.attach(HasExpandedResources, {onLeave: function (args) {send("HasExpandedResources");}});
+
+var MsixvcAddGameToGCS = Module.findExportByName("gamemode.dll", "MsixvcAddGameToGCS")
+Interceptor.attach(MsixvcAddGameToGCS, {onLeave: function (args) {send("MsixvcAddGameToGCS");}});
+
+var MsixvcAddPackageAsync = Module.findExportByName("gamemode.dll", "MsixvcAddPackageAsync")
+Interceptor.attach(MsixvcAddPackageAsync, {onLeave: function (args) {send("MsixvcAddPackageAsync");}});
+
+var MsixvcRemediateMutablePackagesForVolumeAsync = Module.findExportByName("gamemode.dll", "MsixvcRemediateMutablePackagesForVolumeAsync")
+Interceptor.attach(MsixvcRemediateMutablePackagesForVolumeAsync, {onLeave: function (args) {send("MsixvcRemediateMutablePackagesForVolumeAsync");}});
+
+var MsixvcUpdatePolicyString = Module.findExportByName("gamemode.dll", "MsixvcUpdatePolicyString")
+Interceptor.attach(MsixvcUpdatePolicyString, {onLeave: function (args) {send("MsixvcUpdatePolicyString");}});
+
+var MsixvcUpdatePolicyUInt64 = Module.findExportByName("gamemode.dll", "MsixvcUpdatePolicyUInt64")
+Interceptor.attach(MsixvcUpdatePolicyUInt64, {onLeave: function (args) {send("MsixvcUpdatePolicyUInt64");}});
+
+var ReleaseExclusiveCpuSets = Module.findExportByName("gamemode.dll", "ReleaseExclusiveCpuSets")
+Interceptor.attach(ReleaseExclusiveCpuSets, {onLeave: function (args) {send("ReleaseExclusiveCpuSets");}});
+

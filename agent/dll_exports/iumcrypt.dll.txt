@@ -1,0 +1,30 @@
+var iumCryptEncodeObject = Module.findExportByName("iumcrypt.dll", "iumCryptEncodeObject")
+Interceptor.attach(iumCryptEncodeObject, {onLeave: function (args) {send("iumCryptEncodeObject");}});
+
+var iumCryptEncodeObjectEx = Module.findExportByName("iumcrypt.dll", "iumCryptEncodeObjectEx")
+Interceptor.attach(iumCryptEncodeObjectEx, {onLeave: function (args) {send("iumCryptEncodeObjectEx");}});
+
+var iumCryptExportPublicKeyInfoFromBCryptKeyHandle = Module.findExportByName("iumcrypt.dll", "iumCryptExportPublicKeyInfoFromBCryptKeyHandle")
+Interceptor.attach(iumCryptExportPublicKeyInfoFromBCryptKeyHandle, {onLeave: function (args) {send("iumCryptExportPublicKeyInfoFromBCryptKeyHandle");}});
+
+var iumCryptFindOIDInfo = Module.findExportByName("iumcrypt.dll", "iumCryptFindOIDInfo")
+Interceptor.attach(iumCryptFindOIDInfo, {onLeave: function (args) {send("iumCryptFindOIDInfo");}});
+
+var iumCryptMsgClose = Module.findExportByName("iumcrypt.dll", "iumCryptMsgClose")
+Interceptor.attach(iumCryptMsgClose, {onLeave: function (args) {send("iumCryptMsgClose");}});
+
+var iumCryptMsgDuplicate = Module.findExportByName("iumcrypt.dll", "iumCryptMsgDuplicate")
+Interceptor.attach(iumCryptMsgDuplicate, {onLeave: function (args) {send("iumCryptMsgDuplicate");}});
+
+var iumCryptMsgGetParam = Module.findExportByName("iumcrypt.dll", "iumCryptMsgGetParam")
+Interceptor.attach(iumCryptMsgGetParam, {onLeave: function (args) {send("iumCryptMsgGetParam");}});
+
+var iumCryptMsgOpenToEncode = Module.findExportByName("iumcrypt.dll", "iumCryptMsgOpenToEncode")
+Interceptor.attach(iumCryptMsgOpenToEncode, {onLeave: function (args) {send("iumCryptMsgOpenToEncode");}});
+
+var iumCryptMsgUpdate = Module.findExportByName("iumcrypt.dll", "iumCryptMsgUpdate")
+Interceptor.attach(iumCryptMsgUpdate, {onLeave: function (args) {send("iumCryptMsgUpdate");}});
+
+var iumCryptSignAndEncodeCertificate = Module.findExportByName("iumcrypt.dll", "iumCryptSignAndEncodeCertificate")
+Interceptor.attach(iumCryptSignAndEncodeCertificate, {onLeave: function (args) {send("iumCryptSignAndEncodeCertificate");}});
+

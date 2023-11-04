@@ -1,0 +1,9 @@
+var DiscpEstablishServiceLinkage = Module.findExportByName("iscsiexe.dll", "DiscpEstablishServiceLinkage")
+Interceptor.attach(DiscpEstablishServiceLinkage, {onLeave: function (args) {send("DiscpEstablishServiceLinkage");}});
+
+var ServiceMain = Module.findExportByName("iscsiexe.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("iscsiexe.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

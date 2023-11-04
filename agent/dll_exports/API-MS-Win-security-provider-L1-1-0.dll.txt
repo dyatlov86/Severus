@@ -1,0 +1,18 @@
+var GetExplicitEntriesFromAclW = Module.findExportByName("API-MS-Win-security-provider-L1-1-0.dll", "GetExplicitEntriesFromAclW")
+Interceptor.attach(GetExplicitEntriesFromAclW, {onLeave: function (args) {send("GetExplicitEntriesFromAclW");}});
+
+var GetNamedSecurityInfoW = Module.findExportByName("API-MS-Win-security-provider-L1-1-0.dll", "GetNamedSecurityInfoW")
+Interceptor.attach(GetNamedSecurityInfoW, {onLeave: function (args) {send("GetNamedSecurityInfoW");}});
+
+var GetSecurityInfo = Module.findExportByName("API-MS-Win-security-provider-L1-1-0.dll", "GetSecurityInfo")
+Interceptor.attach(GetSecurityInfo, {onLeave: function (args) {send("GetSecurityInfo");}});
+
+var SetEntriesInAclW = Module.findExportByName("API-MS-Win-security-provider-L1-1-0.dll", "SetEntriesInAclW")
+Interceptor.attach(SetEntriesInAclW, {onLeave: function (args) {send("SetEntriesInAclW");}});
+
+var SetNamedSecurityInfoW = Module.findExportByName("API-MS-Win-security-provider-L1-1-0.dll", "SetNamedSecurityInfoW")
+Interceptor.attach(SetNamedSecurityInfoW, {onLeave: function (args) {send("SetNamedSecurityInfoW");}});
+
+var SetSecurityInfo = Module.findExportByName("API-MS-Win-security-provider-L1-1-0.dll", "SetSecurityInfo")
+Interceptor.attach(SetSecurityInfo, {onLeave: function (args) {send("SetSecurityInfo");}});
+

@@ -1,0 +1,411 @@
+var CallNtPowerInformation = Module.findExportByName("powrprof.dll", "CallNtPowerInformation")
+Interceptor.attach(CallNtPowerInformation, {onLeave: function (args) {send("CallNtPowerInformation");}});
+
+var CanUserWritePwrScheme = Module.findExportByName("powrprof.dll", "CanUserWritePwrScheme")
+Interceptor.attach(CanUserWritePwrScheme, {onLeave: function (args) {send("CanUserWritePwrScheme");}});
+
+var DeletePwrScheme = Module.findExportByName("powrprof.dll", "DeletePwrScheme")
+Interceptor.attach(DeletePwrScheme, {onLeave: function (args) {send("DeletePwrScheme");}});
+
+var DevicePowerClose = Module.findExportByName("powrprof.dll", "DevicePowerClose")
+Interceptor.attach(DevicePowerClose, {onLeave: function (args) {send("DevicePowerClose");}});
+
+var DevicePowerEnumDevices = Module.findExportByName("powrprof.dll", "DevicePowerEnumDevices")
+Interceptor.attach(DevicePowerEnumDevices, {onLeave: function (args) {send("DevicePowerEnumDevices");}});
+
+var DevicePowerOpen = Module.findExportByName("powrprof.dll", "DevicePowerOpen")
+Interceptor.attach(DevicePowerOpen, {onLeave: function (args) {send("DevicePowerOpen");}});
+
+var DevicePowerSetDeviceState = Module.findExportByName("powrprof.dll", "DevicePowerSetDeviceState")
+Interceptor.attach(DevicePowerSetDeviceState, {onLeave: function (args) {send("DevicePowerSetDeviceState");}});
+
+var EnumPwrSchemes = Module.findExportByName("powrprof.dll", "EnumPwrSchemes")
+Interceptor.attach(EnumPwrSchemes, {onLeave: function (args) {send("EnumPwrSchemes");}});
+
+var GUIDFormatToGlobalPowerPolicy = Module.findExportByName("powrprof.dll", "GUIDFormatToGlobalPowerPolicy")
+Interceptor.attach(GUIDFormatToGlobalPowerPolicy, {onLeave: function (args) {send("GUIDFormatToGlobalPowerPolicy");}});
+
+var GUIDFormatToPowerPolicy = Module.findExportByName("powrprof.dll", "GUIDFormatToPowerPolicy")
+Interceptor.attach(GUIDFormatToPowerPolicy, {onLeave: function (args) {send("GUIDFormatToPowerPolicy");}});
+
+var GetActivePwrScheme = Module.findExportByName("powrprof.dll", "GetActivePwrScheme")
+Interceptor.attach(GetActivePwrScheme, {onLeave: function (args) {send("GetActivePwrScheme");}});
+
+var GetCurrentPowerPolicies = Module.findExportByName("powrprof.dll", "GetCurrentPowerPolicies")
+Interceptor.attach(GetCurrentPowerPolicies, {onLeave: function (args) {send("GetCurrentPowerPolicies");}});
+
+var GetPwrCapabilities = Module.findExportByName("powrprof.dll", "GetPwrCapabilities")
+Interceptor.attach(GetPwrCapabilities, {onLeave: function (args) {send("GetPwrCapabilities");}});
+
+var GetPwrDiskSpindownRange = Module.findExportByName("powrprof.dll", "GetPwrDiskSpindownRange")
+Interceptor.attach(GetPwrDiskSpindownRange, {onLeave: function (args) {send("GetPwrDiskSpindownRange");}});
+
+var IsAdminOverrideActive = Module.findExportByName("powrprof.dll", "IsAdminOverrideActive")
+Interceptor.attach(IsAdminOverrideActive, {onLeave: function (args) {send("IsAdminOverrideActive");}});
+
+var IsPwrHibernateAllowed = Module.findExportByName("powrprof.dll", "IsPwrHibernateAllowed")
+Interceptor.attach(IsPwrHibernateAllowed, {onLeave: function (args) {send("IsPwrHibernateAllowed");}});
+
+var IsPwrShutdownAllowed = Module.findExportByName("powrprof.dll", "IsPwrShutdownAllowed")
+Interceptor.attach(IsPwrShutdownAllowed, {onLeave: function (args) {send("IsPwrShutdownAllowed");}});
+
+var IsPwrSuspendAllowed = Module.findExportByName("powrprof.dll", "IsPwrSuspendAllowed")
+Interceptor.attach(IsPwrSuspendAllowed, {onLeave: function (args) {send("IsPwrSuspendAllowed");}});
+
+var LoadCurrentPwrScheme = Module.findExportByName("powrprof.dll", "LoadCurrentPwrScheme")
+Interceptor.attach(LoadCurrentPwrScheme, {onLeave: function (args) {send("LoadCurrentPwrScheme");}});
+
+var MergeLegacyPwrScheme = Module.findExportByName("powrprof.dll", "MergeLegacyPwrScheme")
+Interceptor.attach(MergeLegacyPwrScheme, {onLeave: function (args) {send("MergeLegacyPwrScheme");}});
+
+var PowerApplyPowerRequestOverride = Module.findExportByName("powrprof.dll", "PowerApplyPowerRequestOverride")
+Interceptor.attach(PowerApplyPowerRequestOverride, {onLeave: function (args) {send("PowerApplyPowerRequestOverride");}});
+
+var PowerApplySettingChanges = Module.findExportByName("powrprof.dll", "PowerApplySettingChanges")
+Interceptor.attach(PowerApplySettingChanges, {onLeave: function (args) {send("PowerApplySettingChanges");}});
+
+var PowerCanRestoreIndividualDefaultPowerScheme = Module.findExportByName("powrprof.dll", "PowerCanRestoreIndividualDefaultPowerScheme")
+Interceptor.attach(PowerCanRestoreIndividualDefaultPowerScheme, {onLeave: function (args) {send("PowerCanRestoreIndividualDefaultPowerScheme");}});
+
+var PowerCleanupOverrides = Module.findExportByName("powrprof.dll", "PowerCleanupOverrides")
+Interceptor.attach(PowerCleanupOverrides, {onLeave: function (args) {send("PowerCleanupOverrides");}});
+
+var PowerClearUserAwayPrediction = Module.findExportByName("powrprof.dll", "PowerClearUserAwayPrediction")
+Interceptor.attach(PowerClearUserAwayPrediction, {onLeave: function (args) {send("PowerClearUserAwayPrediction");}});
+
+var PowerCloseEnvironmentalMonitor = Module.findExportByName("powrprof.dll", "PowerCloseEnvironmentalMonitor")
+Interceptor.attach(PowerCloseEnvironmentalMonitor, {onLeave: function (args) {send("PowerCloseEnvironmentalMonitor");}});
+
+var PowerCloseLimitsMitigation = Module.findExportByName("powrprof.dll", "PowerCloseLimitsMitigation")
+Interceptor.attach(PowerCloseLimitsMitigation, {onLeave: function (args) {send("PowerCloseLimitsMitigation");}});
+
+var PowerCloseLimitsPolicy = Module.findExportByName("powrprof.dll", "PowerCloseLimitsPolicy")
+Interceptor.attach(PowerCloseLimitsPolicy, {onLeave: function (args) {send("PowerCloseLimitsPolicy");}});
+
+var PowerCreatePossibleSetting = Module.findExportByName("powrprof.dll", "PowerCreatePossibleSetting")
+Interceptor.attach(PowerCreatePossibleSetting, {onLeave: function (args) {send("PowerCreatePossibleSetting");}});
+
+var PowerCreateSetting = Module.findExportByName("powrprof.dll", "PowerCreateSetting")
+Interceptor.attach(PowerCreateSetting, {onLeave: function (args) {send("PowerCreateSetting");}});
+
+var PowerDebugDifPowerPolicies = Module.findExportByName("powrprof.dll", "PowerDebugDifPowerPolicies")
+Interceptor.attach(PowerDebugDifPowerPolicies, {onLeave: function (args) {send("PowerDebugDifPowerPolicies");}});
+
+var PowerDebugDifSystemPowerPolicies = Module.findExportByName("powrprof.dll", "PowerDebugDifSystemPowerPolicies")
+Interceptor.attach(PowerDebugDifSystemPowerPolicies, {onLeave: function (args) {send("PowerDebugDifSystemPowerPolicies");}});
+
+var PowerDebugDumpPowerPolicy = Module.findExportByName("powrprof.dll", "PowerDebugDumpPowerPolicy")
+Interceptor.attach(PowerDebugDumpPowerPolicy, {onLeave: function (args) {send("PowerDebugDumpPowerPolicy");}});
+
+var PowerDebugDumpPowerScheme = Module.findExportByName("powrprof.dll", "PowerDebugDumpPowerScheme")
+Interceptor.attach(PowerDebugDumpPowerScheme, {onLeave: function (args) {send("PowerDebugDumpPowerScheme");}});
+
+var PowerDebugDumpSystemPowerCapabilities = Module.findExportByName("powrprof.dll", "PowerDebugDumpSystemPowerCapabilities")
+Interceptor.attach(PowerDebugDumpSystemPowerCapabilities, {onLeave: function (args) {send("PowerDebugDumpSystemPowerCapabilities");}});
+
+var PowerDebugDumpSystemPowerPolicy = Module.findExportByName("powrprof.dll", "PowerDebugDumpSystemPowerPolicy")
+Interceptor.attach(PowerDebugDumpSystemPowerPolicy, {onLeave: function (args) {send("PowerDebugDumpSystemPowerPolicy");}});
+
+var PowerDeleteScheme = Module.findExportByName("powrprof.dll", "PowerDeleteScheme")
+Interceptor.attach(PowerDeleteScheme, {onLeave: function (args) {send("PowerDeleteScheme");}});
+
+var PowerDeterminePlatformRole = Module.findExportByName("powrprof.dll", "PowerDeterminePlatformRole")
+Interceptor.attach(PowerDeterminePlatformRole, {onLeave: function (args) {send("PowerDeterminePlatformRole");}});
+
+var PowerDeterminePlatformRoleEx = Module.findExportByName("powrprof.dll", "PowerDeterminePlatformRoleEx")
+Interceptor.attach(PowerDeterminePlatformRoleEx, {onLeave: function (args) {send("PowerDeterminePlatformRoleEx");}});
+
+var PowerDuplicateScheme = Module.findExportByName("powrprof.dll", "PowerDuplicateScheme")
+Interceptor.attach(PowerDuplicateScheme, {onLeave: function (args) {send("PowerDuplicateScheme");}});
+
+var PowerEnumerate = Module.findExportByName("powrprof.dll", "PowerEnumerate")
+Interceptor.attach(PowerEnumerate, {onLeave: function (args) {send("PowerEnumerate");}});
+
+var PowerEnumerateSettings = Module.findExportByName("powrprof.dll", "PowerEnumerateSettings")
+Interceptor.attach(PowerEnumerateSettings, {onLeave: function (args) {send("PowerEnumerateSettings");}});
+
+var PowerGetActiveScheme = Module.findExportByName("powrprof.dll", "PowerGetActiveScheme")
+Interceptor.attach(PowerGetActiveScheme, {onLeave: function (args) {send("PowerGetActiveScheme");}});
+
+var PowerGetActualOverlayScheme = Module.findExportByName("powrprof.dll", "PowerGetActualOverlayScheme")
+Interceptor.attach(PowerGetActualOverlayScheme, {onLeave: function (args) {send("PowerGetActualOverlayScheme");}});
+
+var PowerGetAdaptiveStandbyDiagnostics = Module.findExportByName("powrprof.dll", "PowerGetAdaptiveStandbyDiagnostics")
+Interceptor.attach(PowerGetAdaptiveStandbyDiagnostics, {onLeave: function (args) {send("PowerGetAdaptiveStandbyDiagnostics");}});
+
+var PowerGetEffectiveOverlayScheme = Module.findExportByName("powrprof.dll", "PowerGetEffectiveOverlayScheme")
+Interceptor.attach(PowerGetEffectiveOverlayScheme, {onLeave: function (args) {send("PowerGetEffectiveOverlayScheme");}});
+
+var PowerGetOverlaySchemes = Module.findExportByName("powrprof.dll", "PowerGetOverlaySchemes")
+Interceptor.attach(PowerGetOverlaySchemes, {onLeave: function (args) {send("PowerGetOverlaySchemes");}});
+
+var PowerGetProfiles = Module.findExportByName("powrprof.dll", "PowerGetProfiles")
+Interceptor.attach(PowerGetProfiles, {onLeave: function (args) {send("PowerGetProfiles");}});
+
+var PowerGetUserAwayMinPredictionConfidence = Module.findExportByName("powrprof.dll", "PowerGetUserAwayMinPredictionConfidence")
+Interceptor.attach(PowerGetUserAwayMinPredictionConfidence, {onLeave: function (args) {send("PowerGetUserAwayMinPredictionConfidence");}});
+
+var PowerGetUserConfiguredOverlayScheme = Module.findExportByName("powrprof.dll", "PowerGetUserConfiguredOverlayScheme")
+Interceptor.attach(PowerGetUserConfiguredOverlayScheme, {onLeave: function (args) {send("PowerGetUserConfiguredOverlayScheme");}});
+
+var PowerImportPowerScheme = Module.findExportByName("powrprof.dll", "PowerImportPowerScheme")
+Interceptor.attach(PowerImportPowerScheme, {onLeave: function (args) {send("PowerImportPowerScheme");}});
+
+var PowerInformationWithPrivileges = Module.findExportByName("powrprof.dll", "PowerInformationWithPrivileges")
+Interceptor.attach(PowerInformationWithPrivileges, {onLeave: function (args) {send("PowerInformationWithPrivileges");}});
+
+var PowerIsSettingRangeDefined = Module.findExportByName("powrprof.dll", "PowerIsSettingRangeDefined")
+Interceptor.attach(PowerIsSettingRangeDefined, {onLeave: function (args) {send("PowerIsSettingRangeDefined");}});
+
+var PowerOpenSystemPowerKey = Module.findExportByName("powrprof.dll", "PowerOpenSystemPowerKey")
+Interceptor.attach(PowerOpenSystemPowerKey, {onLeave: function (args) {send("PowerOpenSystemPowerKey");}});
+
+var PowerOpenUserPowerKey = Module.findExportByName("powrprof.dll", "PowerOpenUserPowerKey")
+Interceptor.attach(PowerOpenUserPowerKey, {onLeave: function (args) {send("PowerOpenUserPowerKey");}});
+
+var PowerPolicyToGUIDFormat = Module.findExportByName("powrprof.dll", "PowerPolicyToGUIDFormat")
+Interceptor.attach(PowerPolicyToGUIDFormat, {onLeave: function (args) {send("PowerPolicyToGUIDFormat");}});
+
+var PowerReadACDefaultIndex = Module.findExportByName("powrprof.dll", "PowerReadACDefaultIndex")
+Interceptor.attach(PowerReadACDefaultIndex, {onLeave: function (args) {send("PowerReadACDefaultIndex");}});
+
+var PowerReadACValue = Module.findExportByName("powrprof.dll", "PowerReadACValue")
+Interceptor.attach(PowerReadACValue, {onLeave: function (args) {send("PowerReadACValue");}});
+
+var PowerReadACValueIndex = Module.findExportByName("powrprof.dll", "PowerReadACValueIndex")
+Interceptor.attach(PowerReadACValueIndex, {onLeave: function (args) {send("PowerReadACValueIndex");}});
+
+var PowerReadACValueIndexEx = Module.findExportByName("powrprof.dll", "PowerReadACValueIndexEx")
+Interceptor.attach(PowerReadACValueIndexEx, {onLeave: function (args) {send("PowerReadACValueIndexEx");}});
+
+var PowerReadDCDefaultIndex = Module.findExportByName("powrprof.dll", "PowerReadDCDefaultIndex")
+Interceptor.attach(PowerReadDCDefaultIndex, {onLeave: function (args) {send("PowerReadDCDefaultIndex");}});
+
+var PowerReadDCValue = Module.findExportByName("powrprof.dll", "PowerReadDCValue")
+Interceptor.attach(PowerReadDCValue, {onLeave: function (args) {send("PowerReadDCValue");}});
+
+var PowerReadDCValueIndex = Module.findExportByName("powrprof.dll", "PowerReadDCValueIndex")
+Interceptor.attach(PowerReadDCValueIndex, {onLeave: function (args) {send("PowerReadDCValueIndex");}});
+
+var PowerReadDCValueIndexEx = Module.findExportByName("powrprof.dll", "PowerReadDCValueIndexEx")
+Interceptor.attach(PowerReadDCValueIndexEx, {onLeave: function (args) {send("PowerReadDCValueIndexEx");}});
+
+var PowerReadDescription = Module.findExportByName("powrprof.dll", "PowerReadDescription")
+Interceptor.attach(PowerReadDescription, {onLeave: function (args) {send("PowerReadDescription");}});
+
+var PowerReadFriendlyName = Module.findExportByName("powrprof.dll", "PowerReadFriendlyName")
+Interceptor.attach(PowerReadFriendlyName, {onLeave: function (args) {send("PowerReadFriendlyName");}});
+
+var PowerReadIconResourceSpecifier = Module.findExportByName("powrprof.dll", "PowerReadIconResourceSpecifier")
+Interceptor.attach(PowerReadIconResourceSpecifier, {onLeave: function (args) {send("PowerReadIconResourceSpecifier");}});
+
+var PowerReadPossibleDescription = Module.findExportByName("powrprof.dll", "PowerReadPossibleDescription")
+Interceptor.attach(PowerReadPossibleDescription, {onLeave: function (args) {send("PowerReadPossibleDescription");}});
+
+var PowerReadPossibleFriendlyName = Module.findExportByName("powrprof.dll", "PowerReadPossibleFriendlyName")
+Interceptor.attach(PowerReadPossibleFriendlyName, {onLeave: function (args) {send("PowerReadPossibleFriendlyName");}});
+
+var PowerReadPossibleValue = Module.findExportByName("powrprof.dll", "PowerReadPossibleValue")
+Interceptor.attach(PowerReadPossibleValue, {onLeave: function (args) {send("PowerReadPossibleValue");}});
+
+var PowerReadProfileAlias = Module.findExportByName("powrprof.dll", "PowerReadProfileAlias")
+Interceptor.attach(PowerReadProfileAlias, {onLeave: function (args) {send("PowerReadProfileAlias");}});
+
+var PowerReadSecurityDescriptor = Module.findExportByName("powrprof.dll", "PowerReadSecurityDescriptor")
+Interceptor.attach(PowerReadSecurityDescriptor, {onLeave: function (args) {send("PowerReadSecurityDescriptor");}});
+
+var PowerReadSettingAttributes = Module.findExportByName("powrprof.dll", "PowerReadSettingAttributes")
+Interceptor.attach(PowerReadSettingAttributes, {onLeave: function (args) {send("PowerReadSettingAttributes");}});
+
+var PowerReadValueIncrement = Module.findExportByName("powrprof.dll", "PowerReadValueIncrement")
+Interceptor.attach(PowerReadValueIncrement, {onLeave: function (args) {send("PowerReadValueIncrement");}});
+
+var PowerReadValueMax = Module.findExportByName("powrprof.dll", "PowerReadValueMax")
+Interceptor.attach(PowerReadValueMax, {onLeave: function (args) {send("PowerReadValueMax");}});
+
+var PowerReadValueMin = Module.findExportByName("powrprof.dll", "PowerReadValueMin")
+Interceptor.attach(PowerReadValueMin, {onLeave: function (args) {send("PowerReadValueMin");}});
+
+var PowerReadValueUnitsSpecifier = Module.findExportByName("powrprof.dll", "PowerReadValueUnitsSpecifier")
+Interceptor.attach(PowerReadValueUnitsSpecifier, {onLeave: function (args) {send("PowerReadValueUnitsSpecifier");}});
+
+var PowerReapplyActiveScheme = Module.findExportByName("powrprof.dll", "PowerReapplyActiveScheme")
+Interceptor.attach(PowerReapplyActiveScheme, {onLeave: function (args) {send("PowerReapplyActiveScheme");}});
+
+var PowerRefreshProfileSettings = Module.findExportByName("powrprof.dll", "PowerRefreshProfileSettings")
+Interceptor.attach(PowerRefreshProfileSettings, {onLeave: function (args) {send("PowerRefreshProfileSettings");}});
+
+var PowerRegisterEnvironmentalMonitor = Module.findExportByName("powrprof.dll", "PowerRegisterEnvironmentalMonitor")
+Interceptor.attach(PowerRegisterEnvironmentalMonitor, {onLeave: function (args) {send("PowerRegisterEnvironmentalMonitor");}});
+
+var PowerRegisterForEffectivePowerModeNotifications = Module.findExportByName("powrprof.dll", "PowerRegisterForEffectivePowerModeNotifications")
+Interceptor.attach(PowerRegisterForEffectivePowerModeNotifications, {onLeave: function (args) {send("PowerRegisterForEffectivePowerModeNotifications");}});
+
+var PowerRegisterLimitsMitigation = Module.findExportByName("powrprof.dll", "PowerRegisterLimitsMitigation")
+Interceptor.attach(PowerRegisterLimitsMitigation, {onLeave: function (args) {send("PowerRegisterLimitsMitigation");}});
+
+var PowerRegisterLimitsPolicy = Module.findExportByName("powrprof.dll", "PowerRegisterLimitsPolicy")
+Interceptor.attach(PowerRegisterLimitsPolicy, {onLeave: function (args) {send("PowerRegisterLimitsPolicy");}});
+
+var PowerRegisterSuspendResumeNotification = Module.findExportByName("powrprof.dll", "PowerRegisterSuspendResumeNotification")
+Interceptor.attach(PowerRegisterSuspendResumeNotification, {onLeave: function (args) {send("PowerRegisterSuspendResumeNotification");}});
+
+var PowerRemovePowerSetting = Module.findExportByName("powrprof.dll", "PowerRemovePowerSetting")
+Interceptor.attach(PowerRemovePowerSetting, {onLeave: function (args) {send("PowerRemovePowerSetting");}});
+
+var PowerReplaceDefaultPowerSchemes = Module.findExportByName("powrprof.dll", "PowerReplaceDefaultPowerSchemes")
+Interceptor.attach(PowerReplaceDefaultPowerSchemes, {onLeave: function (args) {send("PowerReplaceDefaultPowerSchemes");}});
+
+var PowerReportLimitsEvent = Module.findExportByName("powrprof.dll", "PowerReportLimitsEvent")
+Interceptor.attach(PowerReportLimitsEvent, {onLeave: function (args) {send("PowerReportLimitsEvent");}});
+
+var PowerReportThermalEvent = Module.findExportByName("powrprof.dll", "PowerReportThermalEvent")
+Interceptor.attach(PowerReportThermalEvent, {onLeave: function (args) {send("PowerReportThermalEvent");}});
+
+var PowerRestoreACDefaultIndex = Module.findExportByName("powrprof.dll", "PowerRestoreACDefaultIndex")
+Interceptor.attach(PowerRestoreACDefaultIndex, {onLeave: function (args) {send("PowerRestoreACDefaultIndex");}});
+
+var PowerRestoreACProfileIndex = Module.findExportByName("powrprof.dll", "PowerRestoreACProfileIndex")
+Interceptor.attach(PowerRestoreACProfileIndex, {onLeave: function (args) {send("PowerRestoreACProfileIndex");}});
+
+var PowerRestoreDCDefaultIndex = Module.findExportByName("powrprof.dll", "PowerRestoreDCDefaultIndex")
+Interceptor.attach(PowerRestoreDCDefaultIndex, {onLeave: function (args) {send("PowerRestoreDCDefaultIndex");}});
+
+var PowerRestoreDCProfileIndex = Module.findExportByName("powrprof.dll", "PowerRestoreDCProfileIndex")
+Interceptor.attach(PowerRestoreDCProfileIndex, {onLeave: function (args) {send("PowerRestoreDCProfileIndex");}});
+
+var PowerRestoreDefaultPowerSchemes = Module.findExportByName("powrprof.dll", "PowerRestoreDefaultPowerSchemes")
+Interceptor.attach(PowerRestoreDefaultPowerSchemes, {onLeave: function (args) {send("PowerRestoreDefaultPowerSchemes");}});
+
+var PowerRestoreIndividualDefaultPowerScheme = Module.findExportByName("powrprof.dll", "PowerRestoreIndividualDefaultPowerScheme")
+Interceptor.attach(PowerRestoreIndividualDefaultPowerScheme, {onLeave: function (args) {send("PowerRestoreIndividualDefaultPowerScheme");}});
+
+var PowerSetActiveOverlayScheme = Module.findExportByName("powrprof.dll", "PowerSetActiveOverlayScheme")
+Interceptor.attach(PowerSetActiveOverlayScheme, {onLeave: function (args) {send("PowerSetActiveOverlayScheme");}});
+
+var PowerSetActiveScheme = Module.findExportByName("powrprof.dll", "PowerSetActiveScheme")
+Interceptor.attach(PowerSetActiveScheme, {onLeave: function (args) {send("PowerSetActiveScheme");}});
+
+var PowerSetAlsBrightnessOffset = Module.findExportByName("powrprof.dll", "PowerSetAlsBrightnessOffset")
+Interceptor.attach(PowerSetAlsBrightnessOffset, {onLeave: function (args) {send("PowerSetAlsBrightnessOffset");}});
+
+var PowerSetBrightnessAndTransitionTimes = Module.findExportByName("powrprof.dll", "PowerSetBrightnessAndTransitionTimes")
+Interceptor.attach(PowerSetBrightnessAndTransitionTimes, {onLeave: function (args) {send("PowerSetBrightnessAndTransitionTimes");}});
+
+var PowerSetUserAwayPrediction = Module.findExportByName("powrprof.dll", "PowerSetUserAwayPrediction")
+Interceptor.attach(PowerSetUserAwayPrediction, {onLeave: function (args) {send("PowerSetUserAwayPrediction");}});
+
+var PowerSetUserConfiguredOverlayScheme = Module.findExportByName("powrprof.dll", "PowerSetUserConfiguredOverlayScheme")
+Interceptor.attach(PowerSetUserConfiguredOverlayScheme, {onLeave: function (args) {send("PowerSetUserConfiguredOverlayScheme");}});
+
+var PowerSettingAccessCheck = Module.findExportByName("powrprof.dll", "PowerSettingAccessCheck")
+Interceptor.attach(PowerSettingAccessCheck, {onLeave: function (args) {send("PowerSettingAccessCheck");}});
+
+var PowerSettingAccessCheckEx = Module.findExportByName("powrprof.dll", "PowerSettingAccessCheckEx")
+Interceptor.attach(PowerSettingAccessCheckEx, {onLeave: function (args) {send("PowerSettingAccessCheckEx");}});
+
+var PowerSettingRegisterNotification = Module.findExportByName("powrprof.dll", "PowerSettingRegisterNotification")
+Interceptor.attach(PowerSettingRegisterNotification, {onLeave: function (args) {send("PowerSettingRegisterNotification");}});
+
+var PowerSettingRegisterNotificationEx = Module.findExportByName("powrprof.dll", "PowerSettingRegisterNotificationEx")
+Interceptor.attach(PowerSettingRegisterNotificationEx, {onLeave: function (args) {send("PowerSettingRegisterNotificationEx");}});
+
+var PowerSettingUnregisterNotification = Module.findExportByName("powrprof.dll", "PowerSettingUnregisterNotification")
+Interceptor.attach(PowerSettingUnregisterNotification, {onLeave: function (args) {send("PowerSettingUnregisterNotification");}});
+
+var PowerUnregisterFromEffectivePowerModeNotifications = Module.findExportByName("powrprof.dll", "PowerUnregisterFromEffectivePowerModeNotifications")
+Interceptor.attach(PowerUnregisterFromEffectivePowerModeNotifications, {onLeave: function (args) {send("PowerUnregisterFromEffectivePowerModeNotifications");}});
+
+var PowerUnregisterSuspendResumeNotification = Module.findExportByName("powrprof.dll", "PowerUnregisterSuspendResumeNotification")
+Interceptor.attach(PowerUnregisterSuspendResumeNotification, {onLeave: function (args) {send("PowerUnregisterSuspendResumeNotification");}});
+
+var PowerUpdateEnvironmentalMonitorState = Module.findExportByName("powrprof.dll", "PowerUpdateEnvironmentalMonitorState")
+Interceptor.attach(PowerUpdateEnvironmentalMonitorState, {onLeave: function (args) {send("PowerUpdateEnvironmentalMonitorState");}});
+
+var PowerUpdateEnvironmentalMonitorThresholds = Module.findExportByName("powrprof.dll", "PowerUpdateEnvironmentalMonitorThresholds")
+Interceptor.attach(PowerUpdateEnvironmentalMonitorThresholds, {onLeave: function (args) {send("PowerUpdateEnvironmentalMonitorThresholds");}});
+
+var PowerUpdateLimitsMitigation = Module.findExportByName("powrprof.dll", "PowerUpdateLimitsMitigation")
+Interceptor.attach(PowerUpdateLimitsMitigation, {onLeave: function (args) {send("PowerUpdateLimitsMitigation");}});
+
+var PowerWriteACDefaultIndex = Module.findExportByName("powrprof.dll", "PowerWriteACDefaultIndex")
+Interceptor.attach(PowerWriteACDefaultIndex, {onLeave: function (args) {send("PowerWriteACDefaultIndex");}});
+
+var PowerWriteACProfileIndex = Module.findExportByName("powrprof.dll", "PowerWriteACProfileIndex")
+Interceptor.attach(PowerWriteACProfileIndex, {onLeave: function (args) {send("PowerWriteACProfileIndex");}});
+
+var PowerWriteACValueIndex = Module.findExportByName("powrprof.dll", "PowerWriteACValueIndex")
+Interceptor.attach(PowerWriteACValueIndex, {onLeave: function (args) {send("PowerWriteACValueIndex");}});
+
+var PowerWriteDCDefaultIndex = Module.findExportByName("powrprof.dll", "PowerWriteDCDefaultIndex")
+Interceptor.attach(PowerWriteDCDefaultIndex, {onLeave: function (args) {send("PowerWriteDCDefaultIndex");}});
+
+var PowerWriteDCProfileIndex = Module.findExportByName("powrprof.dll", "PowerWriteDCProfileIndex")
+Interceptor.attach(PowerWriteDCProfileIndex, {onLeave: function (args) {send("PowerWriteDCProfileIndex");}});
+
+var PowerWriteDCValueIndex = Module.findExportByName("powrprof.dll", "PowerWriteDCValueIndex")
+Interceptor.attach(PowerWriteDCValueIndex, {onLeave: function (args) {send("PowerWriteDCValueIndex");}});
+
+var PowerWriteDescription = Module.findExportByName("powrprof.dll", "PowerWriteDescription")
+Interceptor.attach(PowerWriteDescription, {onLeave: function (args) {send("PowerWriteDescription");}});
+
+var PowerWriteFriendlyName = Module.findExportByName("powrprof.dll", "PowerWriteFriendlyName")
+Interceptor.attach(PowerWriteFriendlyName, {onLeave: function (args) {send("PowerWriteFriendlyName");}});
+
+var PowerWriteIconResourceSpecifier = Module.findExportByName("powrprof.dll", "PowerWriteIconResourceSpecifier")
+Interceptor.attach(PowerWriteIconResourceSpecifier, {onLeave: function (args) {send("PowerWriteIconResourceSpecifier");}});
+
+var PowerWritePossibleDescription = Module.findExportByName("powrprof.dll", "PowerWritePossibleDescription")
+Interceptor.attach(PowerWritePossibleDescription, {onLeave: function (args) {send("PowerWritePossibleDescription");}});
+
+var PowerWritePossibleFriendlyName = Module.findExportByName("powrprof.dll", "PowerWritePossibleFriendlyName")
+Interceptor.attach(PowerWritePossibleFriendlyName, {onLeave: function (args) {send("PowerWritePossibleFriendlyName");}});
+
+var PowerWritePossibleValue = Module.findExportByName("powrprof.dll", "PowerWritePossibleValue")
+Interceptor.attach(PowerWritePossibleValue, {onLeave: function (args) {send("PowerWritePossibleValue");}});
+
+var PowerWriteSecurityDescriptor = Module.findExportByName("powrprof.dll", "PowerWriteSecurityDescriptor")
+Interceptor.attach(PowerWriteSecurityDescriptor, {onLeave: function (args) {send("PowerWriteSecurityDescriptor");}});
+
+var PowerWriteSettingAttributes = Module.findExportByName("powrprof.dll", "PowerWriteSettingAttributes")
+Interceptor.attach(PowerWriteSettingAttributes, {onLeave: function (args) {send("PowerWriteSettingAttributes");}});
+
+var PowerWriteValueIncrement = Module.findExportByName("powrprof.dll", "PowerWriteValueIncrement")
+Interceptor.attach(PowerWriteValueIncrement, {onLeave: function (args) {send("PowerWriteValueIncrement");}});
+
+var PowerWriteValueMax = Module.findExportByName("powrprof.dll", "PowerWriteValueMax")
+Interceptor.attach(PowerWriteValueMax, {onLeave: function (args) {send("PowerWriteValueMax");}});
+
+var PowerWriteValueMin = Module.findExportByName("powrprof.dll", "PowerWriteValueMin")
+Interceptor.attach(PowerWriteValueMin, {onLeave: function (args) {send("PowerWriteValueMin");}});
+
+var PowerWriteValueUnitsSpecifier = Module.findExportByName("powrprof.dll", "PowerWriteValueUnitsSpecifier")
+Interceptor.attach(PowerWriteValueUnitsSpecifier, {onLeave: function (args) {send("PowerWriteValueUnitsSpecifier");}});
+
+var ReadGlobalPwrPolicy = Module.findExportByName("powrprof.dll", "ReadGlobalPwrPolicy")
+Interceptor.attach(ReadGlobalPwrPolicy, {onLeave: function (args) {send("ReadGlobalPwrPolicy");}});
+
+var ReadProcessorPwrScheme = Module.findExportByName("powrprof.dll", "ReadProcessorPwrScheme")
+Interceptor.attach(ReadProcessorPwrScheme, {onLeave: function (args) {send("ReadProcessorPwrScheme");}});
+
+var ReadPwrScheme = Module.findExportByName("powrprof.dll", "ReadPwrScheme")
+Interceptor.attach(ReadPwrScheme, {onLeave: function (args) {send("ReadPwrScheme");}});
+
+var SetActivePwrScheme = Module.findExportByName("powrprof.dll", "SetActivePwrScheme")
+Interceptor.attach(SetActivePwrScheme, {onLeave: function (args) {send("SetActivePwrScheme");}});
+
+var SetSuspendState = Module.findExportByName("powrprof.dll", "SetSuspendState")
+Interceptor.attach(SetSuspendState, {onLeave: function (args) {send("SetSuspendState");}});
+
+var ValidatePowerPolicies = Module.findExportByName("powrprof.dll", "ValidatePowerPolicies")
+Interceptor.attach(ValidatePowerPolicies, {onLeave: function (args) {send("ValidatePowerPolicies");}});
+
+var WriteGlobalPwrPolicy = Module.findExportByName("powrprof.dll", "WriteGlobalPwrPolicy")
+Interceptor.attach(WriteGlobalPwrPolicy, {onLeave: function (args) {send("WriteGlobalPwrPolicy");}});
+
+var WriteProcessorPwrScheme = Module.findExportByName("powrprof.dll", "WriteProcessorPwrScheme")
+Interceptor.attach(WriteProcessorPwrScheme, {onLeave: function (args) {send("WriteProcessorPwrScheme");}});
+
+var WritePwrScheme = Module.findExportByName("powrprof.dll", "WritePwrScheme")
+Interceptor.attach(WritePwrScheme, {onLeave: function (args) {send("WritePwrScheme");}});
+

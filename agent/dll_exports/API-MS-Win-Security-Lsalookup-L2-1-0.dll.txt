@@ -1,0 +1,18 @@
+var LookupAccountNameW = Module.findExportByName("API-MS-Win-Security-Lsalookup-L2-1-0.dll", "LookupAccountNameW")
+Interceptor.attach(LookupAccountNameW, {onLeave: function (args) {send("LookupAccountNameW");}});
+
+var LookupAccountSidW = Module.findExportByName("API-MS-Win-Security-Lsalookup-L2-1-0.dll", "LookupAccountSidW")
+Interceptor.attach(LookupAccountSidW, {onLeave: function (args) {send("LookupAccountSidW");}});
+
+var LookupPrivilegeDisplayNameW = Module.findExportByName("API-MS-Win-Security-Lsalookup-L2-1-0.dll", "LookupPrivilegeDisplayNameW")
+Interceptor.attach(LookupPrivilegeDisplayNameW, {onLeave: function (args) {send("LookupPrivilegeDisplayNameW");}});
+
+var LookupPrivilegeNameW = Module.findExportByName("API-MS-Win-Security-Lsalookup-L2-1-0.dll", "LookupPrivilegeNameW")
+Interceptor.attach(LookupPrivilegeNameW, {onLeave: function (args) {send("LookupPrivilegeNameW");}});
+
+var LookupPrivilegeValueW = Module.findExportByName("API-MS-Win-Security-Lsalookup-L2-1-0.dll", "LookupPrivilegeValueW")
+Interceptor.attach(LookupPrivilegeValueW, {onLeave: function (args) {send("LookupPrivilegeValueW");}});
+
+var LsaEnumerateTrustedDomains = Module.findExportByName("API-MS-Win-Security-Lsalookup-L2-1-0.dll", "LsaEnumerateTrustedDomains")
+Interceptor.attach(LsaEnumerateTrustedDomains, {onLeave: function (args) {send("LsaEnumerateTrustedDomains");}});
+

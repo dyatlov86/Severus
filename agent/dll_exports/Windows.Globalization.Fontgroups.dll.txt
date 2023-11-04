@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.Globalization.Fontgroups.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Globalization.Fontgroups.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Globalization.Fontgroups.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetPreferredFont = Module.findExportByName("Windows.Globalization.Fontgroups.dll", "GetPreferredFont")
+Interceptor.attach(GetPreferredFont, {onLeave: function (args) {send("GetPreferredFont");}});
+

@@ -1,0 +1,24 @@
+var DllCanUnloadNow = Module.findExportByName("dsquery.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("dsquery.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("dsquery.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("dsquery.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("dsquery.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var OpenQueryWindow = Module.findExportByName("dsquery.dll", "OpenQueryWindow")
+Interceptor.attach(OpenQueryWindow, {onLeave: function (args) {send("OpenQueryWindow");}});
+
+var OpenSavedDsQuery = Module.findExportByName("dsquery.dll", "OpenSavedDsQuery")
+Interceptor.attach(OpenSavedDsQuery, {onLeave: function (args) {send("OpenSavedDsQuery");}});
+
+var OpenSavedDsQueryW = Module.findExportByName("dsquery.dll", "OpenSavedDsQueryW")
+Interceptor.attach(OpenSavedDsQueryW, {onLeave: function (args) {send("OpenSavedDsQueryW");}});
+

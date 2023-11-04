@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("msfeeds.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("msfeeds.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var MsfeedsCreateInstance = Module.findExportByName("msfeeds.dll", "MsfeedsCreateInstance")
+Interceptor.attach(MsfeedsCreateInstance, {onLeave: function (args) {send("MsfeedsCreateInstance");}});
+

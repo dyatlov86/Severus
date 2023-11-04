@@ -1,0 +1,18 @@
+var elevoc_inference_engine_process = Module.findExportByName("ElevocGNA.dll", "elevoc_inference_engine_process")
+Interceptor.attach(elevoc_inference_engine_process, {onLeave: function (args) {send("elevoc_inference_engine_process");}});
+
+var elevoc_inference_engine_reset = Module.findExportByName("ElevocGNA.dll", "elevoc_inference_engine_reset")
+Interceptor.attach(elevoc_inference_engine_reset, {onLeave: function (args) {send("elevoc_inference_engine_reset");}});
+
+var elevoc_set_spk_em = Module.findExportByName("ElevocGNA.dll", "elevoc_set_spk_em")
+Interceptor.attach(elevoc_set_spk_em, {onLeave: function (args) {send("elevoc_set_spk_em");}});
+
+var free_gna_inference_engine = Module.findExportByName("ElevocGNA.dll", "free_gna_inference_engine")
+Interceptor.attach(free_gna_inference_engine, {onLeave: function (args) {send("free_gna_inference_engine");}});
+
+var new_gna_inference_engine = Module.findExportByName("ElevocGNA.dll", "new_gna_inference_engine")
+Interceptor.attach(new_gna_inference_engine, {onLeave: function (args) {send("new_gna_inference_engine");}});
+
+var release_gna_instance_count = Module.findExportByName("ElevocGNA.dll", "release_gna_instance_count")
+Interceptor.attach(release_gna_instance_count, {onLeave: function (args) {send("release_gna_instance_count");}});
+

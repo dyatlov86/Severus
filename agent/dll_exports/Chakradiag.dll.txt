@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("Chakradiag.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("Chakradiag.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("Chakradiag.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("Chakradiag.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var FreeDumpStreams = Module.findExportByName("Chakradiag.dll", "FreeDumpStreams")
+Interceptor.attach(FreeDumpStreams, {onLeave: function (args) {send("FreeDumpStreams");}});
+
+var GetDumpStreams = Module.findExportByName("Chakradiag.dll", "GetDumpStreams")
+Interceptor.attach(GetDumpStreams, {onLeave: function (args) {send("GetDumpStreams");}});
+

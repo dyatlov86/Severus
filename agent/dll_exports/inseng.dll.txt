@@ -1,0 +1,27 @@
+var CheckForVersionConflict = Module.findExportByName("inseng.dll", "CheckForVersionConflict")
+Interceptor.attach(CheckForVersionConflict, {onLeave: function (args) {send("CheckForVersionConflict");}});
+
+var CheckTrust = Module.findExportByName("inseng.dll", "CheckTrust")
+Interceptor.attach(CheckTrust, {onLeave: function (args) {send("CheckTrust");}});
+
+var CheckTrustEx = Module.findExportByName("inseng.dll", "CheckTrustEx")
+Interceptor.attach(CheckTrustEx, {onLeave: function (args) {send("CheckTrustEx");}});
+
+var DllCanUnloadNow = Module.findExportByName("inseng.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("inseng.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DownloadFile = Module.findExportByName("inseng.dll", "DownloadFile")
+Interceptor.attach(DownloadFile, {onLeave: function (args) {send("DownloadFile");}});
+
+var GetICifFileFromFile = Module.findExportByName("inseng.dll", "GetICifFileFromFile")
+Interceptor.attach(GetICifFileFromFile, {onLeave: function (args) {send("GetICifFileFromFile");}});
+
+var GetICifRWFileFromFile = Module.findExportByName("inseng.dll", "GetICifRWFileFromFile")
+Interceptor.attach(GetICifRWFileFromFile, {onLeave: function (args) {send("GetICifRWFileFromFile");}});
+
+var PurgeDownloadDirectory = Module.findExportByName("inseng.dll", "PurgeDownloadDirectory")
+Interceptor.attach(PurgeDownloadDirectory, {onLeave: function (args) {send("PurgeDownloadDirectory");}});
+

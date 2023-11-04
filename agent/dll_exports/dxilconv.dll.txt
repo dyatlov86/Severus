@@ -1,0 +1,6 @@
+var DxcCreateInstance = Module.findExportByName("dxilconv.dll", "DxcCreateInstance")
+Interceptor.attach(DxcCreateInstance, {onLeave: function (args) {send("DxcCreateInstance");}});
+
+var DxcCreateInstance2 = Module.findExportByName("dxilconv.dll", "DxcCreateInstance2")
+Interceptor.attach(DxcCreateInstance2, {onLeave: function (args) {send("DxcCreateInstance2");}});
+

@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("VsGraphicsProxyStub.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("VsGraphicsProxyStub.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("VsGraphicsProxyStub.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("VsGraphicsProxyStub.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var PixEngine_RegisterProxyStubClassObject = Module.findExportByName("VsGraphicsProxyStub.dll", "PixEngine_RegisterProxyStubClassObject")
+Interceptor.attach(PixEngine_RegisterProxyStubClassObject, {onLeave: function (args) {send("PixEngine_RegisterProxyStubClassObject");}});
+
+var PixEngine_RegisterProxyStubs = Module.findExportByName("VsGraphicsProxyStub.dll", "PixEngine_RegisterProxyStubs")
+Interceptor.attach(PixEngine_RegisterProxyStubs, {onLeave: function (args) {send("PixEngine_RegisterProxyStubs");}});
+
+var PixEngine_UnregisterProxyStubClassObject = Module.findExportByName("VsGraphicsProxyStub.dll", "PixEngine_UnregisterProxyStubClassObject")
+Interceptor.attach(PixEngine_UnregisterProxyStubClassObject, {onLeave: function (args) {send("PixEngine_UnregisterProxyStubClassObject");}});
+

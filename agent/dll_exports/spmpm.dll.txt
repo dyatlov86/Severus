@@ -1,0 +1,3 @@
+var Sysprep_Generalize_MountPointManager = Module.findExportByName("spmpm.dll", "Sysprep_Generalize_MountPointManager")
+Interceptor.attach(Sysprep_Generalize_MountPointManager, {onLeave: function (args) {send("Sysprep_Generalize_MountPointManager");}});
+

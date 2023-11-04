@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("OneCoreUAPCommonProxyStub.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("OneCoreUAPCommonProxyStub.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetProxyDllInfo = Module.findExportByName("OneCoreUAPCommonProxyStub.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+

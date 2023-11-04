@@ -1,0 +1,18 @@
+var WSDCHNGRChallengeDeviceClass = Module.findExportByName("wsdchngr.dll", "WSDCHNGRChallengeDeviceClass")
+Interceptor.attach(WSDCHNGRChallengeDeviceClass, {onLeave: function (args) {send("WSDCHNGRChallengeDeviceClass");}});
+
+var WSDCHNGRInitialize = Module.findExportByName("wsdchngr.dll", "WSDCHNGRInitialize")
+Interceptor.attach(WSDCHNGRInitialize, {onLeave: function (args) {send("WSDCHNGRInitialize");}});
+
+var WSDCHNGRRegisterDeviceToChallenge = Module.findExportByName("wsdchngr.dll", "WSDCHNGRRegisterDeviceToChallenge")
+Interceptor.attach(WSDCHNGRRegisterDeviceToChallenge, {onLeave: function (args) {send("WSDCHNGRRegisterDeviceToChallenge");}});
+
+var WSDCHNGRRegisterDeviceToChallengeByGlobalId = Module.findExportByName("wsdchngr.dll", "WSDCHNGRRegisterDeviceToChallengeByGlobalId")
+Interceptor.attach(WSDCHNGRRegisterDeviceToChallengeByGlobalId, {onLeave: function (args) {send("WSDCHNGRRegisterDeviceToChallengeByGlobalId");}});
+
+var WSDCHNGRRemoveDevice = Module.findExportByName("wsdchngr.dll", "WSDCHNGRRemoveDevice")
+Interceptor.attach(WSDCHNGRRemoveDevice, {onLeave: function (args) {send("WSDCHNGRRemoveDevice");}});
+
+var WSDCHNGRShutdown = Module.findExportByName("wsdchngr.dll", "WSDCHNGRShutdown")
+Interceptor.attach(WSDCHNGRShutdown, {onLeave: function (args) {send("WSDCHNGRShutdown");}});
+

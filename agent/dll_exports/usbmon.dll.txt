@@ -1,0 +1,6 @@
+var DllMain = Module.findExportByName("usbmon.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var InitializePrintMonitor2 = Module.findExportByName("usbmon.dll", "InitializePrintMonitor2")
+Interceptor.attach(InitializePrintMonitor2, {onLeave: function (args) {send("InitializePrintMonitor2");}});
+

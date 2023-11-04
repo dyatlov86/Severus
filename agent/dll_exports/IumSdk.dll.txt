@@ -1,0 +1,594 @@
+var AcquireSRWLockExclusive = Module.findExportByName("IumSdk.dll", "AcquireSRWLockExclusive")
+Interceptor.attach(AcquireSRWLockExclusive, {onLeave: function (args) {send("AcquireSRWLockExclusive");}});
+
+var AcquireSRWLockShared = Module.findExportByName("IumSdk.dll", "AcquireSRWLockShared")
+Interceptor.attach(AcquireSRWLockShared, {onLeave: function (args) {send("AcquireSRWLockShared");}});
+
+var AssignMemoryToSocDomain = Module.findExportByName("IumSdk.dll", "AssignMemoryToSocDomain")
+Interceptor.attach(AssignMemoryToSocDomain, {onLeave: function (args) {send("AssignMemoryToSocDomain");}});
+
+var AwaitSmc = Module.findExportByName("IumSdk.dll", "AwaitSmc")
+Interceptor.attach(AwaitSmc, {onLeave: function (args) {send("AwaitSmc");}});
+
+var CloseHandle = Module.findExportByName("IumSdk.dll", "CloseHandle")
+Interceptor.attach(CloseHandle, {onLeave: function (args) {send("CloseHandle");}});
+
+var CloseThreadpoolIo = Module.findExportByName("IumSdk.dll", "CloseThreadpoolIo")
+Interceptor.attach(CloseThreadpoolIo, {onLeave: function (args) {send("CloseThreadpoolIo");}});
+
+var CloseThreadpoolTimer = Module.findExportByName("IumSdk.dll", "CloseThreadpoolTimer")
+Interceptor.attach(CloseThreadpoolTimer, {onLeave: function (args) {send("CloseThreadpoolTimer");}});
+
+var CloseThreadpoolWait = Module.findExportByName("IumSdk.dll", "CloseThreadpoolWait")
+Interceptor.attach(CloseThreadpoolWait, {onLeave: function (args) {send("CloseThreadpoolWait");}});
+
+var CloseThreadpoolWork = Module.findExportByName("IumSdk.dll", "CloseThreadpoolWork")
+Interceptor.attach(CloseThreadpoolWork, {onLeave: function (args) {send("CloseThreadpoolWork");}});
+
+var CreateEventW = Module.findExportByName("IumSdk.dll", "CreateEventW")
+Interceptor.attach(CreateEventW, {onLeave: function (args) {send("CreateEventW");}});
+
+var CreateSecureDevice = Module.findExportByName("IumSdk.dll", "CreateSecureDevice")
+Interceptor.attach(CreateSecureDevice, {onLeave: function (args) {send("CreateSecureDevice");}});
+
+var CreateSecureSection = Module.findExportByName("IumSdk.dll", "CreateSecureSection")
+Interceptor.attach(CreateSecureSection, {onLeave: function (args) {send("CreateSecureSection");}});
+
+var CreateSecureSectionSpecifyPages = Module.findExportByName("IumSdk.dll", "CreateSecureSectionSpecifyPages")
+Interceptor.attach(CreateSecureSectionSpecifyPages, {onLeave: function (args) {send("CreateSecureSectionSpecifyPages");}});
+
+var CreateSemaphoreW = Module.findExportByName("IumSdk.dll", "CreateSemaphoreW")
+Interceptor.attach(CreateSemaphoreW, {onLeave: function (args) {send("CreateSemaphoreW");}});
+
+var CreateThread = Module.findExportByName("IumSdk.dll", "CreateThread")
+Interceptor.attach(CreateThread, {onLeave: function (args) {send("CreateThread");}});
+
+var CreateThreadpoolIo = Module.findExportByName("IumSdk.dll", "CreateThreadpoolIo")
+Interceptor.attach(CreateThreadpoolIo, {onLeave: function (args) {send("CreateThreadpoolIo");}});
+
+var CreateThreadpoolTimer = Module.findExportByName("IumSdk.dll", "CreateThreadpoolTimer")
+Interceptor.attach(CreateThreadpoolTimer, {onLeave: function (args) {send("CreateThreadpoolTimer");}});
+
+var CreateThreadpoolWait = Module.findExportByName("IumSdk.dll", "CreateThreadpoolWait")
+Interceptor.attach(CreateThreadpoolWait, {onLeave: function (args) {send("CreateThreadpoolWait");}});
+
+var CreateThreadpoolWork = Module.findExportByName("IumSdk.dll", "CreateThreadpoolWork")
+Interceptor.attach(CreateThreadpoolWork, {onLeave: function (args) {send("CreateThreadpoolWork");}});
+
+var DebugBreak = Module.findExportByName("IumSdk.dll", "DebugBreak")
+Interceptor.attach(DebugBreak, {onLeave: function (args) {send("DebugBreak");}});
+
+var DecryptData = Module.findExportByName("IumSdk.dll", "DecryptData")
+Interceptor.attach(DecryptData, {onLeave: function (args) {send("DecryptData");}});
+
+var DecryptISKBoundData = Module.findExportByName("IumSdk.dll", "DecryptISKBoundData")
+Interceptor.attach(DecryptISKBoundData, {onLeave: function (args) {send("DecryptISKBoundData");}});
+
+var DeleteCriticalSection = Module.findExportByName("IumSdk.dll", "DeleteCriticalSection")
+Interceptor.attach(DeleteCriticalSection, {onLeave: function (args) {send("DeleteCriticalSection");}});
+
+var DmaMapMemory = Module.findExportByName("IumSdk.dll", "DmaMapMemory")
+Interceptor.attach(DmaMapMemory, {onLeave: function (args) {send("DmaMapMemory");}});
+
+var DuplicateHandle = Module.findExportByName("IumSdk.dll", "DuplicateHandle")
+Interceptor.attach(DuplicateHandle, {onLeave: function (args) {send("DuplicateHandle");}});
+
+var EmitSmc = Module.findExportByName("IumSdk.dll", "EmitSmc")
+Interceptor.attach(EmitSmc, {onLeave: function (args) {send("EmitSmc");}});
+
+var EncryptData = Module.findExportByName("IumSdk.dll", "EncryptData")
+Interceptor.attach(EncryptData, {onLeave: function (args) {send("EncryptData");}});
+
+var EnterCriticalSection = Module.findExportByName("IumSdk.dll", "EnterCriticalSection")
+Interceptor.attach(EnterCriticalSection, {onLeave: function (args) {send("EnterCriticalSection");}});
+
+var EventRegister = Module.findExportByName("IumSdk.dll", "EventRegister")
+Interceptor.attach(EventRegister, {onLeave: function (args) {send("EventRegister");}});
+
+var EventSetInformation = Module.findExportByName("IumSdk.dll", "EventSetInformation")
+Interceptor.attach(EventSetInformation, {onLeave: function (args) {send("EventSetInformation");}});
+
+var EventUnregister = Module.findExportByName("IumSdk.dll", "EventUnregister")
+Interceptor.attach(EventUnregister, {onLeave: function (args) {send("EventUnregister");}});
+
+var EventWrite = Module.findExportByName("IumSdk.dll", "EventWrite")
+Interceptor.attach(EventWrite, {onLeave: function (args) {send("EventWrite");}});
+
+var EventWriteTransfer = Module.findExportByName("IumSdk.dll", "EventWriteTransfer")
+Interceptor.attach(EventWriteTransfer, {onLeave: function (args) {send("EventWriteTransfer");}});
+
+var ExitProcess = Module.findExportByName("IumSdk.dll", "ExitProcess")
+Interceptor.attach(ExitProcess, {onLeave: function (args) {send("ExitProcess");}});
+
+var ExitThread = Module.findExportByName("IumSdk.dll", "ExitThread")
+Interceptor.attach(ExitThread, {onLeave: function (args) {send("ExitThread");}});
+
+var FileTimeToSystemTime = Module.findExportByName("IumSdk.dll", "FileTimeToSystemTime")
+Interceptor.attach(FileTimeToSystemTime, {onLeave: function (args) {send("FileTimeToSystemTime");}});
+
+var FlushSecureSectionBuffers = Module.findExportByName("IumSdk.dll", "FlushSecureSectionBuffers")
+Interceptor.attach(FlushSecureSectionBuffers, {onLeave: function (args) {send("FlushSecureSectionBuffers");}});
+
+var FreeLibrary = Module.findExportByName("IumSdk.dll", "FreeLibrary")
+Interceptor.attach(FreeLibrary, {onLeave: function (args) {send("FreeLibrary");}});
+
+var FreeLibraryWhenCallbackReturns = Module.findExportByName("IumSdk.dll", "FreeLibraryWhenCallbackReturns")
+Interceptor.attach(FreeLibraryWhenCallbackReturns, {onLeave: function (args) {send("FreeLibraryWhenCallbackReturns");}});
+
+var GetCommandLineW = Module.findExportByName("IumSdk.dll", "GetCommandLineW")
+Interceptor.attach(GetCommandLineW, {onLeave: function (args) {send("GetCommandLineW");}});
+
+var GetCurrentProcess = Module.findExportByName("IumSdk.dll", "GetCurrentProcess")
+Interceptor.attach(GetCurrentProcess, {onLeave: function (args) {send("GetCurrentProcess");}});
+
+var GetCurrentProcessId = Module.findExportByName("IumSdk.dll", "GetCurrentProcessId")
+Interceptor.attach(GetCurrentProcessId, {onLeave: function (args) {send("GetCurrentProcessId");}});
+
+var GetCurrentThread = Module.findExportByName("IumSdk.dll", "GetCurrentThread")
+Interceptor.attach(GetCurrentThread, {onLeave: function (args) {send("GetCurrentThread");}});
+
+var GetCurrentThreadId = Module.findExportByName("IumSdk.dll", "GetCurrentThreadId")
+Interceptor.attach(GetCurrentThreadId, {onLeave: function (args) {send("GetCurrentThreadId");}});
+
+var GetDmaEnabler = Module.findExportByName("IumSdk.dll", "GetDmaEnabler")
+Interceptor.attach(GetDmaEnabler, {onLeave: function (args) {send("GetDmaEnabler");}});
+
+var GetEnvironmentStringsW = Module.findExportByName("IumSdk.dll", "GetEnvironmentStringsW")
+Interceptor.attach(GetEnvironmentStringsW, {onLeave: function (args) {send("GetEnvironmentStringsW");}});
+
+var GetEnvironmentVariableW = Module.findExportByName("IumSdk.dll", "GetEnvironmentVariableW")
+Interceptor.attach(GetEnvironmentVariableW, {onLeave: function (args) {send("GetEnvironmentVariableW");}});
+
+var GetExitCodeThread = Module.findExportByName("IumSdk.dll", "GetExitCodeThread")
+Interceptor.attach(GetExitCodeThread, {onLeave: function (args) {send("GetExitCodeThread");}});
+
+var GetExposedSecureSection = Module.findExportByName("IumSdk.dll", "GetExposedSecureSection")
+Interceptor.attach(GetExposedSecureSection, {onLeave: function (args) {send("GetExposedSecureSection");}});
+
+var GetFipsModeFromIumKernelState = Module.findExportByName("IumSdk.dll", "GetFipsModeFromIumKernelState")
+Interceptor.attach(GetFipsModeFromIumKernelState, {onLeave: function (args) {send("GetFipsModeFromIumKernelState");}});
+
+var GetLastError = Module.findExportByName("IumSdk.dll", "GetLastError")
+Interceptor.attach(GetLastError, {onLeave: function (args) {send("GetLastError");}});
+
+var GetLocalTime = Module.findExportByName("IumSdk.dll", "GetLocalTime")
+Interceptor.attach(GetLocalTime, {onLeave: function (args) {send("GetLocalTime");}});
+
+var GetModuleHandleW = Module.findExportByName("IumSdk.dll", "GetModuleHandleW")
+Interceptor.attach(GetModuleHandleW, {onLeave: function (args) {send("GetModuleHandleW");}});
+
+var GetProcAddress = Module.findExportByName("IumSdk.dll", "GetProcAddress")
+Interceptor.attach(GetProcAddress, {onLeave: function (args) {send("GetProcAddress");}});
+
+var GetProcessHeap = Module.findExportByName("IumSdk.dll", "GetProcessHeap")
+Interceptor.attach(GetProcessHeap, {onLeave: function (args) {send("GetProcessHeap");}});
+
+var GetSecureIdentityKey = Module.findExportByName("IumSdk.dll", "GetSecureIdentityKey")
+Interceptor.attach(GetSecureIdentityKey, {onLeave: function (args) {send("GetSecureIdentityKey");}});
+
+var GetSecureIdentitySigningKey = Module.findExportByName("IumSdk.dll", "GetSecureIdentitySigningKey")
+Interceptor.attach(GetSecureIdentitySigningKey, {onLeave: function (args) {send("GetSecureIdentitySigningKey");}});
+
+var GetSeedFromIumKernelState = Module.findExportByName("IumSdk.dll", "GetSeedFromIumKernelState")
+Interceptor.attach(GetSeedFromIumKernelState, {onLeave: function (args) {send("GetSeedFromIumKernelState");}});
+
+var GetSignedReport = Module.findExportByName("IumSdk.dll", "GetSignedReport")
+Interceptor.attach(GetSignedReport, {onLeave: function (args) {send("GetSignedReport");}});
+
+var GetStartupInfoW = Module.findExportByName("IumSdk.dll", "GetStartupInfoW")
+Interceptor.attach(GetStartupInfoW, {onLeave: function (args) {send("GetStartupInfoW");}});
+
+var GetSystemFirmwareTable = Module.findExportByName("IumSdk.dll", "GetSystemFirmwareTable")
+Interceptor.attach(GetSystemFirmwareTable, {onLeave: function (args) {send("GetSystemFirmwareTable");}});
+
+var GetSystemInfo = Module.findExportByName("IumSdk.dll", "GetSystemInfo")
+Interceptor.attach(GetSystemInfo, {onLeave: function (args) {send("GetSystemInfo");}});
+
+var GetSystemTime = Module.findExportByName("IumSdk.dll", "GetSystemTime")
+Interceptor.attach(GetSystemTime, {onLeave: function (args) {send("GetSystemTime");}});
+
+var GetSystemTimeAsFileTime = Module.findExportByName("IumSdk.dll", "GetSystemTimeAsFileTime")
+Interceptor.attach(GetSystemTimeAsFileTime, {onLeave: function (args) {send("GetSystemTimeAsFileTime");}});
+
+var GetTaggedData = Module.findExportByName("IumSdk.dll", "GetTaggedData")
+Interceptor.attach(GetTaggedData, {onLeave: function (args) {send("GetTaggedData");}});
+
+var GetTaggedDataSize = Module.findExportByName("IumSdk.dll", "GetTaggedDataSize")
+Interceptor.attach(GetTaggedDataSize, {onLeave: function (args) {send("GetTaggedDataSize");}});
+
+var GetThreadId = Module.findExportByName("IumSdk.dll", "GetThreadId")
+Interceptor.attach(GetThreadId, {onLeave: function (args) {send("GetThreadId");}});
+
+var GetThreadPriority = Module.findExportByName("IumSdk.dll", "GetThreadPriority")
+Interceptor.attach(GetThreadPriority, {onLeave: function (args) {send("GetThreadPriority");}});
+
+var GetTickCount = Module.findExportByName("IumSdk.dll", "GetTickCount")
+Interceptor.attach(GetTickCount, {onLeave: function (args) {send("GetTickCount");}});
+
+var GetTickCount64 = Module.findExportByName("IumSdk.dll", "GetTickCount64")
+Interceptor.attach(GetTickCount64, {onLeave: function (args) {send("GetTickCount64");}});
+
+var GetTpmBindingInfo = Module.findExportByName("IumSdk.dll", "GetTpmBindingInfo")
+Interceptor.attach(GetTpmBindingInfo, {onLeave: function (args) {send("GetTpmBindingInfo");}});
+
+var GetTraceEnableFlags = Module.findExportByName("IumSdk.dll", "GetTraceEnableFlags")
+Interceptor.attach(GetTraceEnableFlags, {onLeave: function (args) {send("GetTraceEnableFlags");}});
+
+var GetTraceEnableLevel = Module.findExportByName("IumSdk.dll", "GetTraceEnableLevel")
+Interceptor.attach(GetTraceEnableLevel, {onLeave: function (args) {send("GetTraceEnableLevel");}});
+
+var GetTraceLoggerHandle = Module.findExportByName("IumSdk.dll", "GetTraceLoggerHandle")
+Interceptor.attach(GetTraceLoggerHandle, {onLeave: function (args) {send("GetTraceLoggerHandle");}});
+
+var HeapAlloc = Module.findExportByName("IumSdk.dll", "HeapAlloc")
+Interceptor.attach(HeapAlloc, {onLeave: function (args) {send("HeapAlloc");}});
+
+var HeapCreate = Module.findExportByName("IumSdk.dll", "HeapCreate")
+Interceptor.attach(HeapCreate, {onLeave: function (args) {send("HeapCreate");}});
+
+var HeapDestroy = Module.findExportByName("IumSdk.dll", "HeapDestroy")
+Interceptor.attach(HeapDestroy, {onLeave: function (args) {send("HeapDestroy");}});
+
+var HeapFree = Module.findExportByName("IumSdk.dll", "HeapFree")
+Interceptor.attach(HeapFree, {onLeave: function (args) {send("HeapFree");}});
+
+var HeapLock = Module.findExportByName("IumSdk.dll", "HeapLock")
+Interceptor.attach(HeapLock, {onLeave: function (args) {send("HeapLock");}});
+
+var HeapQueryInformation = Module.findExportByName("IumSdk.dll", "HeapQueryInformation")
+Interceptor.attach(HeapQueryInformation, {onLeave: function (args) {send("HeapQueryInformation");}});
+
+var HeapReAlloc = Module.findExportByName("IumSdk.dll", "HeapReAlloc")
+Interceptor.attach(HeapReAlloc, {onLeave: function (args) {send("HeapReAlloc");}});
+
+var HeapSetInformation = Module.findExportByName("IumSdk.dll", "HeapSetInformation")
+Interceptor.attach(HeapSetInformation, {onLeave: function (args) {send("HeapSetInformation");}});
+
+var HeapSize = Module.findExportByName("IumSdk.dll", "HeapSize")
+Interceptor.attach(HeapSize, {onLeave: function (args) {send("HeapSize");}});
+
+var HeapUnlock = Module.findExportByName("IumSdk.dll", "HeapUnlock")
+Interceptor.attach(HeapUnlock, {onLeave: function (args) {send("HeapUnlock");}});
+
+var HeapValidate = Module.findExportByName("IumSdk.dll", "HeapValidate")
+Interceptor.attach(HeapValidate, {onLeave: function (args) {send("HeapValidate");}});
+
+var InitializeCriticalSection = Module.findExportByName("IumSdk.dll", "InitializeCriticalSection")
+Interceptor.attach(InitializeCriticalSection, {onLeave: function (args) {send("InitializeCriticalSection");}});
+
+var InitializeCriticalSectionAndSpinCount = Module.findExportByName("IumSdk.dll", "InitializeCriticalSectionAndSpinCount")
+Interceptor.attach(InitializeCriticalSectionAndSpinCount, {onLeave: function (args) {send("InitializeCriticalSectionAndSpinCount");}});
+
+var InitializeCriticalSectionEx = Module.findExportByName("IumSdk.dll", "InitializeCriticalSectionEx")
+Interceptor.attach(InitializeCriticalSectionEx, {onLeave: function (args) {send("InitializeCriticalSectionEx");}});
+
+var InitializeSListHead = Module.findExportByName("IumSdk.dll", "InitializeSListHead")
+Interceptor.attach(InitializeSListHead, {onLeave: function (args) {send("InitializeSListHead");}});
+
+var InitializeSRWLock = Module.findExportByName("IumSdk.dll", "InitializeSRWLock")
+Interceptor.attach(InitializeSRWLock, {onLeave: function (args) {send("InitializeSRWLock");}});
+
+var IsDebuggerPresent = Module.findExportByName("IumSdk.dll", "IsDebuggerPresent")
+Interceptor.attach(IsDebuggerPresent, {onLeave: function (args) {send("IsDebuggerPresent");}});
+
+var IsProcessorFeaturePresent = Module.findExportByName("IumSdk.dll", "IsProcessorFeaturePresent")
+Interceptor.attach(IsProcessorFeaturePresent, {onLeave: function (args) {send("IsProcessorFeaturePresent");}});
+
+var IsSecureProcess = Module.findExportByName("IumSdk.dll", "IsSecureProcess")
+Interceptor.attach(IsSecureProcess, {onLeave: function (args) {send("IsSecureProcess");}});
+
+var LeaveCriticalSection = Module.findExportByName("IumSdk.dll", "LeaveCriticalSection")
+Interceptor.attach(LeaveCriticalSection, {onLeave: function (args) {send("LeaveCriticalSection");}});
+
+var LeaveCriticalSectionWhenCallbackReturns = Module.findExportByName("IumSdk.dll", "LeaveCriticalSectionWhenCallbackReturns")
+Interceptor.attach(LeaveCriticalSectionWhenCallbackReturns, {onLeave: function (args) {send("LeaveCriticalSectionWhenCallbackReturns");}});
+
+var LoadLibraryExW = Module.findExportByName("IumSdk.dll", "LoadLibraryExW")
+Interceptor.attach(LoadLibraryExW, {onLeave: function (args) {send("LoadLibraryExW");}});
+
+var MapSecureIo = Module.findExportByName("IumSdk.dll", "MapSecureIo")
+Interceptor.attach(MapSecureIo, {onLeave: function (args) {send("MapSecureIo");}});
+
+var MapViewOfFile = Module.findExportByName("IumSdk.dll", "MapViewOfFile")
+Interceptor.attach(MapViewOfFile, {onLeave: function (args) {send("MapViewOfFile");}});
+
+var NdrClientCall3 = Module.findExportByName("IumSdk.dll", "NdrClientCall3")
+Interceptor.attach(NdrClientCall3, {onLeave: function (args) {send("NdrClientCall3");}});
+
+var NdrServerCall2 = Module.findExportByName("IumSdk.dll", "NdrServerCall2")
+Interceptor.attach(NdrServerCall2, {onLeave: function (args) {send("NdrServerCall2");}});
+
+var NdrServerCallAll = Module.findExportByName("IumSdk.dll", "NdrServerCallAll")
+Interceptor.attach(NdrServerCallAll, {onLeave: function (args) {send("NdrServerCallAll");}});
+
+var NtAlertThreadByThreadId = Module.findExportByName("IumSdk.dll", "NtAlertThreadByThreadId")
+Interceptor.attach(NtAlertThreadByThreadId, {onLeave: function (args) {send("NtAlertThreadByThreadId");}});
+
+var NtOpenProcessToken = Module.findExportByName("IumSdk.dll", "NtOpenProcessToken")
+Interceptor.attach(NtOpenProcessToken, {onLeave: function (args) {send("NtOpenProcessToken");}});
+
+var NtOpenThreadToken = Module.findExportByName("IumSdk.dll", "NtOpenThreadToken")
+Interceptor.attach(NtOpenThreadToken, {onLeave: function (args) {send("NtOpenThreadToken");}});
+
+var NtQueryInformationProcess = Module.findExportByName("IumSdk.dll", "NtQueryInformationProcess")
+Interceptor.attach(NtQueryInformationProcess, {onLeave: function (args) {send("NtQueryInformationProcess");}});
+
+var NtQueryInformationThread = Module.findExportByName("IumSdk.dll", "NtQueryInformationThread")
+Interceptor.attach(NtQueryInformationThread, {onLeave: function (args) {send("NtQueryInformationThread");}});
+
+var NtQueryInformationToken = Module.findExportByName("IumSdk.dll", "NtQueryInformationToken")
+Interceptor.attach(NtQueryInformationToken, {onLeave: function (args) {send("NtQueryInformationToken");}});
+
+var NtSetInformationProcess = Module.findExportByName("IumSdk.dll", "NtSetInformationProcess")
+Interceptor.attach(NtSetInformationProcess, {onLeave: function (args) {send("NtSetInformationProcess");}});
+
+var NtSetInformationThread = Module.findExportByName("IumSdk.dll", "NtSetInformationThread")
+Interceptor.attach(NtSetInformationThread, {onLeave: function (args) {send("NtSetInformationThread");}});
+
+var NtTraceControl = Module.findExportByName("IumSdk.dll", "NtTraceControl")
+Interceptor.attach(NtTraceControl, {onLeave: function (args) {send("NtTraceControl");}});
+
+var NtTraceEvent = Module.findExportByName("IumSdk.dll", "NtTraceEvent")
+Interceptor.attach(NtTraceEvent, {onLeave: function (args) {send("NtTraceEvent");}});
+
+var NtWaitForAlertByThreadId = Module.findExportByName("IumSdk.dll", "NtWaitForAlertByThreadId")
+Interceptor.attach(NtWaitForAlertByThreadId, {onLeave: function (args) {send("NtWaitForAlertByThreadId");}});
+
+var OpenCurrentExtension = Module.findExportByName("IumSdk.dll", "OpenCurrentExtension")
+Interceptor.attach(OpenCurrentExtension, {onLeave: function (args) {send("OpenCurrentExtension");}});
+
+var OpenEventW = Module.findExportByName("IumSdk.dll", "OpenEventW")
+Interceptor.attach(OpenEventW, {onLeave: function (args) {send("OpenEventW");}});
+
+var OpenSecureSection = Module.findExportByName("IumSdk.dll", "OpenSecureSection")
+Interceptor.attach(OpenSecureSection, {onLeave: function (args) {send("OpenSecureSection");}});
+
+var OutputDebugStringW = Module.findExportByName("IumSdk.dll", "OutputDebugStringW")
+Interceptor.attach(OutputDebugStringW, {onLeave: function (args) {send("OutputDebugStringW");}});
+
+var PostMailbox = Module.findExportByName("IumSdk.dll", "PostMailbox")
+Interceptor.attach(PostMailbox, {onLeave: function (args) {send("PostMailbox");}});
+
+var ProtectSecureIo = Module.findExportByName("IumSdk.dll", "ProtectSecureIo")
+Interceptor.attach(ProtectSecureIo, {onLeave: function (args) {send("ProtectSecureIo");}});
+
+var QueryPerformanceCounter = Module.findExportByName("IumSdk.dll", "QueryPerformanceCounter")
+Interceptor.attach(QueryPerformanceCounter, {onLeave: function (args) {send("QueryPerformanceCounter");}});
+
+var QueryPerformanceFrequency = Module.findExportByName("IumSdk.dll", "QueryPerformanceFrequency")
+Interceptor.attach(QueryPerformanceFrequency, {onLeave: function (args) {send("QueryPerformanceFrequency");}});
+
+var QuerySecureDeviceInformation = Module.findExportByName("IumSdk.dll", "QuerySecureDeviceInformation")
+Interceptor.attach(QuerySecureDeviceInformation, {onLeave: function (args) {send("QuerySecureDeviceInformation");}});
+
+var QueryThreadCycleTime = Module.findExportByName("IumSdk.dll", "QueryThreadCycleTime")
+Interceptor.attach(QueryThreadCycleTime, {onLeave: function (args) {send("QueryThreadCycleTime");}});
+
+var RaiseException = Module.findExportByName("IumSdk.dll", "RaiseException")
+Interceptor.attach(RaiseException, {onLeave: function (args) {send("RaiseException");}});
+
+var RaiseFailFastException = Module.findExportByName("IumSdk.dll", "RaiseFailFastException")
+Interceptor.attach(RaiseFailFastException, {onLeave: function (args) {send("RaiseFailFastException");}});
+
+var RegisterTraceGuidsW = Module.findExportByName("IumSdk.dll", "RegisterTraceGuidsW")
+Interceptor.attach(RegisterTraceGuidsW, {onLeave: function (args) {send("RegisterTraceGuidsW");}});
+
+var ReleaseSRWLockExclusive = Module.findExportByName("IumSdk.dll", "ReleaseSRWLockExclusive")
+Interceptor.attach(ReleaseSRWLockExclusive, {onLeave: function (args) {send("ReleaseSRWLockExclusive");}});
+
+var ReleaseSRWLockShared = Module.findExportByName("IumSdk.dll", "ReleaseSRWLockShared")
+Interceptor.attach(ReleaseSRWLockShared, {onLeave: function (args) {send("ReleaseSRWLockShared");}});
+
+var ReleaseSemaphore = Module.findExportByName("IumSdk.dll", "ReleaseSemaphore")
+Interceptor.attach(ReleaseSemaphore, {onLeave: function (args) {send("ReleaseSemaphore");}});
+
+var ReleaseSemaphoreWhenCallbackReturns = Module.findExportByName("IumSdk.dll", "ReleaseSemaphoreWhenCallbackReturns")
+Interceptor.attach(ReleaseSemaphoreWhenCallbackReturns, {onLeave: function (args) {send("ReleaseSemaphoreWhenCallbackReturns");}});
+
+var ResetEvent = Module.findExportByName("IumSdk.dll", "ResetEvent")
+Interceptor.attach(ResetEvent, {onLeave: function (args) {send("ResetEvent");}});
+
+var RpcExceptionFilter = Module.findExportByName("IumSdk.dll", "RpcExceptionFilter")
+Interceptor.attach(RpcExceptionFilter, {onLeave: function (args) {send("RpcExceptionFilter");}});
+
+var RpcMgmtStopServerListening = Module.findExportByName("IumSdk.dll", "RpcMgmtStopServerListening")
+Interceptor.attach(RpcMgmtStopServerListening, {onLeave: function (args) {send("RpcMgmtStopServerListening");}});
+
+var RpcMgmtWaitServerListen = Module.findExportByName("IumSdk.dll", "RpcMgmtWaitServerListen")
+Interceptor.attach(RpcMgmtWaitServerListen, {onLeave: function (args) {send("RpcMgmtWaitServerListen");}});
+
+var RpcServerInqCallAttributesW = Module.findExportByName("IumSdk.dll", "RpcServerInqCallAttributesW")
+Interceptor.attach(RpcServerInqCallAttributesW, {onLeave: function (args) {send("RpcServerInqCallAttributesW");}});
+
+var RpcServerListen = Module.findExportByName("IumSdk.dll", "RpcServerListen")
+Interceptor.attach(RpcServerListen, {onLeave: function (args) {send("RpcServerListen");}});
+
+var RpcServerRegisterIf = Module.findExportByName("IumSdk.dll", "RpcServerRegisterIf")
+Interceptor.attach(RpcServerRegisterIf, {onLeave: function (args) {send("RpcServerRegisterIf");}});
+
+var RpcServerUnregisterIf = Module.findExportByName("IumSdk.dll", "RpcServerUnregisterIf")
+Interceptor.attach(RpcServerUnregisterIf, {onLeave: function (args) {send("RpcServerUnregisterIf");}});
+
+var RpcServerUseProtseqEpW = Module.findExportByName("IumSdk.dll", "RpcServerUseProtseqEpW")
+Interceptor.attach(RpcServerUseProtseqEpW, {onLeave: function (args) {send("RpcServerUseProtseqEpW");}});
+
+var RtlAvlInsertNodeEx = Module.findExportByName("IumSdk.dll", "RtlAvlInsertNodeEx")
+Interceptor.attach(RtlAvlInsertNodeEx, {onLeave: function (args) {send("RtlAvlInsertNodeEx");}});
+
+var RtlAvlRemoveNode = Module.findExportByName("IumSdk.dll", "RtlAvlRemoveNode")
+Interceptor.attach(RtlAvlRemoveNode, {onLeave: function (args) {send("RtlAvlRemoveNode");}});
+
+var RtlCaptureContext = Module.findExportByName("IumSdk.dll", "RtlCaptureContext")
+Interceptor.attach(RtlCaptureContext, {onLeave: function (args) {send("RtlCaptureContext");}});
+
+var RtlEqualUnicodeString = Module.findExportByName("IumSdk.dll", "RtlEqualUnicodeString")
+Interceptor.attach(RtlEqualUnicodeString, {onLeave: function (args) {send("RtlEqualUnicodeString");}});
+
+var RtlGUIDFromString = Module.findExportByName("IumSdk.dll", "RtlGUIDFromString")
+Interceptor.attach(RtlGUIDFromString, {onLeave: function (args) {send("RtlGUIDFromString");}});
+
+var RtlImageNtHeader = Module.findExportByName("IumSdk.dll", "RtlImageNtHeader")
+Interceptor.attach(RtlImageNtHeader, {onLeave: function (args) {send("RtlImageNtHeader");}});
+
+var RtlInitUnicodeString = Module.findExportByName("IumSdk.dll", "RtlInitUnicodeString")
+Interceptor.attach(RtlInitUnicodeString, {onLeave: function (args) {send("RtlInitUnicodeString");}});
+
+var RtlInterlockedPushListSList = Module.findExportByName("IumSdk.dll", "RtlInterlockedPushListSList")
+Interceptor.attach(RtlInterlockedPushListSList, {onLeave: function (args) {send("RtlInterlockedPushListSList");}});
+
+var RtlLookupFunctionEntry = Module.findExportByName("IumSdk.dll", "RtlLookupFunctionEntry")
+Interceptor.attach(RtlLookupFunctionEntry, {onLeave: function (args) {send("RtlLookupFunctionEntry");}});
+
+var RtlNtStatusToDosError = Module.findExportByName("IumSdk.dll", "RtlNtStatusToDosError")
+Interceptor.attach(RtlNtStatusToDosError, {onLeave: function (args) {send("RtlNtStatusToDosError");}});
+
+var RtlRandom = Module.findExportByName("IumSdk.dll", "RtlRandom")
+Interceptor.attach(RtlRandom, {onLeave: function (args) {send("RtlRandom");}});
+
+var RtlRandomEx = Module.findExportByName("IumSdk.dll", "RtlRandomEx")
+Interceptor.attach(RtlRandomEx, {onLeave: function (args) {send("RtlRandomEx");}});
+
+var RtlTimeToTimeFields = Module.findExportByName("IumSdk.dll", "RtlTimeToTimeFields")
+Interceptor.attach(RtlTimeToTimeFields, {onLeave: function (args) {send("RtlTimeToTimeFields");}});
+
+var RtlVirtualUnwind = Module.findExportByName("IumSdk.dll", "RtlVirtualUnwind")
+Interceptor.attach(RtlVirtualUnwind, {onLeave: function (args) {send("RtlVirtualUnwind");}});
+
+var SecureStorageGet = Module.findExportByName("IumSdk.dll", "SecureStorageGet")
+Interceptor.attach(SecureStorageGet, {onLeave: function (args) {send("SecureStorageGet");}});
+
+var SecureStoragePut = Module.findExportByName("IumSdk.dll", "SecureStoragePut")
+Interceptor.attach(SecureStoragePut, {onLeave: function (args) {send("SecureStoragePut");}});
+
+var SetDmaTargetProperties = Module.findExportByName("IumSdk.dll", "SetDmaTargetProperties")
+Interceptor.attach(SetDmaTargetProperties, {onLeave: function (args) {send("SetDmaTargetProperties");}});
+
+var SetEnvironmentVariableW = Module.findExportByName("IumSdk.dll", "SetEnvironmentVariableW")
+Interceptor.attach(SetEnvironmentVariableW, {onLeave: function (args) {send("SetEnvironmentVariableW");}});
+
+var SetEvent = Module.findExportByName("IumSdk.dll", "SetEvent")
+Interceptor.attach(SetEvent, {onLeave: function (args) {send("SetEvent");}});
+
+var SetEventWhenCallbackReturns = Module.findExportByName("IumSdk.dll", "SetEventWhenCallbackReturns")
+Interceptor.attach(SetEventWhenCallbackReturns, {onLeave: function (args) {send("SetEventWhenCallbackReturns");}});
+
+var SetLastError = Module.findExportByName("IumSdk.dll", "SetLastError")
+Interceptor.attach(SetLastError, {onLeave: function (args) {send("SetLastError");}});
+
+var SetPolicyExtension = Module.findExportByName("IumSdk.dll", "SetPolicyExtension")
+Interceptor.attach(SetPolicyExtension, {onLeave: function (args) {send("SetPolicyExtension");}});
+
+var SetThreadpoolTimer = Module.findExportByName("IumSdk.dll", "SetThreadpoolTimer")
+Interceptor.attach(SetThreadpoolTimer, {onLeave: function (args) {send("SetThreadpoolTimer");}});
+
+var SetThreadpoolTimerEx = Module.findExportByName("IumSdk.dll", "SetThreadpoolTimerEx")
+Interceptor.attach(SetThreadpoolTimerEx, {onLeave: function (args) {send("SetThreadpoolTimerEx");}});
+
+var SetThreadpoolWait = Module.findExportByName("IumSdk.dll", "SetThreadpoolWait")
+Interceptor.attach(SetThreadpoolWait, {onLeave: function (args) {send("SetThreadpoolWait");}});
+
+var SetUnhandledExceptionFilter = Module.findExportByName("IumSdk.dll", "SetUnhandledExceptionFilter")
+Interceptor.attach(SetUnhandledExceptionFilter, {onLeave: function (args) {send("SetUnhandledExceptionFilter");}});
+
+var Sleep = Module.findExportByName("IumSdk.dll", "Sleep")
+Interceptor.attach(Sleep, {onLeave: function (args) {send("Sleep");}});
+
+var StartThreadpoolIo = Module.findExportByName("IumSdk.dll", "StartThreadpoolIo")
+Interceptor.attach(StartThreadpoolIo, {onLeave: function (args) {send("StartThreadpoolIo");}});
+
+var SystemTimeToFileTime = Module.findExportByName("IumSdk.dll", "SystemTimeToFileTime")
+Interceptor.attach(SystemTimeToFileTime, {onLeave: function (args) {send("SystemTimeToFileTime");}});
+
+var TerminateProcess = Module.findExportByName("IumSdk.dll", "TerminateProcess")
+Interceptor.attach(TerminateProcess, {onLeave: function (args) {send("TerminateProcess");}});
+
+var TerminateThread = Module.findExportByName("IumSdk.dll", "TerminateThread")
+Interceptor.attach(TerminateThread, {onLeave: function (args) {send("TerminateThread");}});
+
+var TlsAlloc = Module.findExportByName("IumSdk.dll", "TlsAlloc")
+Interceptor.attach(TlsAlloc, {onLeave: function (args) {send("TlsAlloc");}});
+
+var TlsFree = Module.findExportByName("IumSdk.dll", "TlsFree")
+Interceptor.attach(TlsFree, {onLeave: function (args) {send("TlsFree");}});
+
+var TlsGetValue = Module.findExportByName("IumSdk.dll", "TlsGetValue")
+Interceptor.attach(TlsGetValue, {onLeave: function (args) {send("TlsGetValue");}});
+
+var TlsSetValue = Module.findExportByName("IumSdk.dll", "TlsSetValue")
+Interceptor.attach(TlsSetValue, {onLeave: function (args) {send("TlsSetValue");}});
+
+var TraceMessage = Module.findExportByName("IumSdk.dll", "TraceMessage")
+Interceptor.attach(TraceMessage, {onLeave: function (args) {send("TraceMessage");}});
+
+var TraceMessageVa = Module.findExportByName("IumSdk.dll", "TraceMessageVa")
+Interceptor.attach(TraceMessageVa, {onLeave: function (args) {send("TraceMessageVa");}});
+
+var TryAcquireSRWLockExclusive = Module.findExportByName("IumSdk.dll", "TryAcquireSRWLockExclusive")
+Interceptor.attach(TryAcquireSRWLockExclusive, {onLeave: function (args) {send("TryAcquireSRWLockExclusive");}});
+
+var TryAcquireSRWLockShared = Module.findExportByName("IumSdk.dll", "TryAcquireSRWLockShared")
+Interceptor.attach(TryAcquireSRWLockShared, {onLeave: function (args) {send("TryAcquireSRWLockShared");}});
+
+var UnhandledExceptionFilter = Module.findExportByName("IumSdk.dll", "UnhandledExceptionFilter")
+Interceptor.attach(UnhandledExceptionFilter, {onLeave: function (args) {send("UnhandledExceptionFilter");}});
+
+var UnmapSecureIo = Module.findExportByName("IumSdk.dll", "UnmapSecureIo")
+Interceptor.attach(UnmapSecureIo, {onLeave: function (args) {send("UnmapSecureIo");}});
+
+var UnmapViewOfFile = Module.findExportByName("IumSdk.dll", "UnmapViewOfFile")
+Interceptor.attach(UnmapViewOfFile, {onLeave: function (args) {send("UnmapViewOfFile");}});
+
+var UnregisterTraceGuids = Module.findExportByName("IumSdk.dll", "UnregisterTraceGuids")
+Interceptor.attach(UnregisterTraceGuids, {onLeave: function (args) {send("UnregisterTraceGuids");}});
+
+var UpdateSecureDeviceState = Module.findExportByName("IumSdk.dll", "UpdateSecureDeviceState")
+Interceptor.attach(UpdateSecureDeviceState, {onLeave: function (args) {send("UpdateSecureDeviceState");}});
+
+var UuidCreate = Module.findExportByName("IumSdk.dll", "UuidCreate")
+Interceptor.attach(UuidCreate, {onLeave: function (args) {send("UuidCreate");}});
+
+var VbsVmSysCall = Module.findExportByName("IumSdk.dll", "VbsVmSysCall")
+Interceptor.attach(VbsVmSysCall, {onLeave: function (args) {send("VbsVmSysCall");}});
+
+var VirtualAlloc = Module.findExportByName("IumSdk.dll", "VirtualAlloc")
+Interceptor.attach(VirtualAlloc, {onLeave: function (args) {send("VirtualAlloc");}});
+
+var VirtualFree = Module.findExportByName("IumSdk.dll", "VirtualFree")
+Interceptor.attach(VirtualFree, {onLeave: function (args) {send("VirtualFree");}});
+
+var VirtualProtect = Module.findExportByName("IumSdk.dll", "VirtualProtect")
+Interceptor.attach(VirtualProtect, {onLeave: function (args) {send("VirtualProtect");}});
+
+var VirtualQuery = Module.findExportByName("IumSdk.dll", "VirtualQuery")
+Interceptor.attach(VirtualQuery, {onLeave: function (args) {send("VirtualQuery");}});
+
+var WaitForMultipleObjects = Module.findExportByName("IumSdk.dll", "WaitForMultipleObjects")
+Interceptor.attach(WaitForMultipleObjects, {onLeave: function (args) {send("WaitForMultipleObjects");}});
+
+var WaitForSingleObject = Module.findExportByName("IumSdk.dll", "WaitForSingleObject")
+Interceptor.attach(WaitForSingleObject, {onLeave: function (args) {send("WaitForSingleObject");}});
+
+var WaitForSingleObjectEx = Module.findExportByName("IumSdk.dll", "WaitForSingleObjectEx")
+Interceptor.attach(WaitForSingleObjectEx, {onLeave: function (args) {send("WaitForSingleObjectEx");}});
+
+var WaitForThreadpoolIoCallbacks = Module.findExportByName("IumSdk.dll", "WaitForThreadpoolIoCallbacks")
+Interceptor.attach(WaitForThreadpoolIoCallbacks, {onLeave: function (args) {send("WaitForThreadpoolIoCallbacks");}});
+
+var WaitForThreadpoolTimerCallbacks = Module.findExportByName("IumSdk.dll", "WaitForThreadpoolTimerCallbacks")
+Interceptor.attach(WaitForThreadpoolTimerCallbacks, {onLeave: function (args) {send("WaitForThreadpoolTimerCallbacks");}});
+
+var WaitForThreadpoolWaitCallbacks = Module.findExportByName("IumSdk.dll", "WaitForThreadpoolWaitCallbacks")
+Interceptor.attach(WaitForThreadpoolWaitCallbacks, {onLeave: function (args) {send("WaitForThreadpoolWaitCallbacks");}});
+
+var WaitForThreadpoolWorkCallbacks = Module.findExportByName("IumSdk.dll", "WaitForThreadpoolWorkCallbacks")
+Interceptor.attach(WaitForThreadpoolWorkCallbacks, {onLeave: function (args) {send("WaitForThreadpoolWorkCallbacks");}});
+
+var WideCharToMultiByte = Module.findExportByName("IumSdk.dll", "WideCharToMultiByte")
+Interceptor.attach(WideCharToMultiByte, {onLeave: function (args) {send("WideCharToMultiByte");}});
+
+var vDbgPrintEx = Module.findExportByName("IumSdk.dll", "vDbgPrintEx")
+Interceptor.attach(vDbgPrintEx, {onLeave: function (args) {send("vDbgPrintEx");}});
+
+var vDbgPrintExWithPrefix = Module.findExportByName("IumSdk.dll", "vDbgPrintExWithPrefix")
+Interceptor.attach(vDbgPrintExWithPrefix, {onLeave: function (args) {send("vDbgPrintExWithPrefix");}});
+

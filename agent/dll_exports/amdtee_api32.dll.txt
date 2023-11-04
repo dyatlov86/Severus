@@ -1,0 +1,48 @@
+var AMDTEE_FetchDebugStrings = Module.findExportByName("amdtee_api32.dll", "AMDTEE_FetchDebugStrings")
+Interceptor.attach(AMDTEE_FetchDebugStrings, {onLeave: function (args) {send("AMDTEE_FetchDebugStrings");}});
+
+var AMDTEE_GetDebugToken = Module.findExportByName("amdtee_api32.dll", "AMDTEE_GetDebugToken")
+Interceptor.attach(AMDTEE_GetDebugToken, {onLeave: function (args) {send("AMDTEE_GetDebugToken");}});
+
+var AMDTEE_LoadTA = Module.findExportByName("amdtee_api32.dll", "AMDTEE_LoadTA")
+Interceptor.attach(AMDTEE_LoadTA, {onLeave: function (args) {send("AMDTEE_LoadTA");}});
+
+var AMDTEE_StartTADebug = Module.findExportByName("amdtee_api32.dll", "AMDTEE_StartTADebug")
+Interceptor.attach(AMDTEE_StartTADebug, {onLeave: function (args) {send("AMDTEE_StartTADebug");}});
+
+var AMDTEE_StopTADebug = Module.findExportByName("amdtee_api32.dll", "AMDTEE_StopTADebug")
+Interceptor.attach(AMDTEE_StopTADebug, {onLeave: function (args) {send("AMDTEE_StopTADebug");}});
+
+var AMDTEE_UnloadTA = Module.findExportByName("amdtee_api32.dll", "AMDTEE_UnloadTA")
+Interceptor.attach(AMDTEE_UnloadTA, {onLeave: function (args) {send("AMDTEE_UnloadTA");}});
+
+var AMDTEE_VersionInfo = Module.findExportByName("amdtee_api32.dll", "AMDTEE_VersionInfo")
+Interceptor.attach(AMDTEE_VersionInfo, {onLeave: function (args) {send("AMDTEE_VersionInfo");}});
+
+var TEEC_AllocateSharedMemory = Module.findExportByName("amdtee_api32.dll", "TEEC_AllocateSharedMemory")
+Interceptor.attach(TEEC_AllocateSharedMemory, {onLeave: function (args) {send("TEEC_AllocateSharedMemory");}});
+
+var TEEC_CloseSession = Module.findExportByName("amdtee_api32.dll", "TEEC_CloseSession")
+Interceptor.attach(TEEC_CloseSession, {onLeave: function (args) {send("TEEC_CloseSession");}});
+
+var TEEC_FinalizeContext = Module.findExportByName("amdtee_api32.dll", "TEEC_FinalizeContext")
+Interceptor.attach(TEEC_FinalizeContext, {onLeave: function (args) {send("TEEC_FinalizeContext");}});
+
+var TEEC_InitializeContext = Module.findExportByName("amdtee_api32.dll", "TEEC_InitializeContext")
+Interceptor.attach(TEEC_InitializeContext, {onLeave: function (args) {send("TEEC_InitializeContext");}});
+
+var TEEC_InvokeCommand = Module.findExportByName("amdtee_api32.dll", "TEEC_InvokeCommand")
+Interceptor.attach(TEEC_InvokeCommand, {onLeave: function (args) {send("TEEC_InvokeCommand");}});
+
+var TEEC_OpenSession = Module.findExportByName("amdtee_api32.dll", "TEEC_OpenSession")
+Interceptor.attach(TEEC_OpenSession, {onLeave: function (args) {send("TEEC_OpenSession");}});
+
+var TEEC_RegisterSharedMemory = Module.findExportByName("amdtee_api32.dll", "TEEC_RegisterSharedMemory")
+Interceptor.attach(TEEC_RegisterSharedMemory, {onLeave: function (args) {send("TEEC_RegisterSharedMemory");}});
+
+var TEEC_ReleaseSharedMemory = Module.findExportByName("amdtee_api32.dll", "TEEC_ReleaseSharedMemory")
+Interceptor.attach(TEEC_ReleaseSharedMemory, {onLeave: function (args) {send("TEEC_ReleaseSharedMemory");}});
+
+var TEEC_RequestCancellation = Module.findExportByName("amdtee_api32.dll", "TEEC_RequestCancellation")
+Interceptor.attach(TEEC_RequestCancellation, {onLeave: function (args) {send("TEEC_RequestCancellation");}});
+

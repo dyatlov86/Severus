@@ -1,0 +1,6 @@
+var DDACLSys_Offline_Specialize = Module.findExportByName("DDACLSys.dll", "DDACLSys_Offline_Specialize")
+Interceptor.attach(DDACLSys_Offline_Specialize, {onLeave: function (args) {send("DDACLSys_Offline_Specialize");}});
+
+var DDACLSys_Specialize = Module.findExportByName("DDACLSys.dll", "DDACLSys_Specialize")
+Interceptor.attach(DDACLSys_Specialize, {onLeave: function (args) {send("DDACLSys_Specialize");}});
+

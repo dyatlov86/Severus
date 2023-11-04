@@ -1,0 +1,3 @@
+var UserServerDllInitializationExt = Module.findExportByName("winsrvext.dll", "UserServerDllInitializationExt")
+Interceptor.attach(UserServerDllInitializationExt, {onLeave: function (args) {send("UserServerDllInitializationExt");}});
+

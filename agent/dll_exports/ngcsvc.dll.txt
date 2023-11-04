@@ -1,0 +1,6 @@
+var NgcServiceMain = Module.findExportByName("ngcsvc.dll", "NgcServiceMain")
+Interceptor.attach(NgcServiceMain, {onLeave: function (args) {send("NgcServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("ngcsvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

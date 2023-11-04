@@ -1,0 +1,6 @@
+var PnpDiagExportSystemState = Module.findExportByName("pnpdiag.dll", "PnpDiagExportSystemState")
+Interceptor.attach(PnpDiagExportSystemState, {onLeave: function (args) {send("PnpDiagExportSystemState");}});
+
+var pPnpDiagExportSystemState = Module.findExportByName("pnpdiag.dll", "pPnpDiagExportSystemState")
+Interceptor.attach(pPnpDiagExportSystemState, {onLeave: function (args) {send("pPnpDiagExportSystemState");}});
+

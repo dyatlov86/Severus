@@ -1,0 +1,105 @@
+var CreateAndStartPsaSession = Module.findExportByName("Print.PrintSupport.Source.dll", "CreateAndStartPsaSession")
+Interceptor.attach(CreateAndStartPsaSession, {onLeave: function (args) {send("CreateAndStartPsaSession");}});
+
+var CreatePsaManagerForUserContextAbi = Module.findExportByName("Print.PrintSupport.Source.dll", "CreatePsaManagerForUserContextAbi")
+Interceptor.attach(CreatePsaManagerForUserContextAbi, {onLeave: function (args) {send("CreatePsaManagerForUserContextAbi");}});
+
+var CreatePsaSessionForUserContext = Module.findExportByName("Print.PrintSupport.Source.dll", "CreatePsaSessionForUserContext")
+Interceptor.attach(CreatePsaSessionForUserContext, {onLeave: function (args) {send("CreatePsaSessionForUserContext");}});
+
+var CreatePsaSourceStream = Module.findExportByName("Print.PrintSupport.Source.dll", "CreatePsaSourceStream")
+Interceptor.attach(CreatePsaSourceStream, {onLeave: function (args) {send("CreatePsaSourceStream");}});
+
+var CreateSoftwareDevnode = Module.findExportByName("Print.PrintSupport.Source.dll", "CreateSoftwareDevnode")
+Interceptor.attach(CreateSoftwareDevnode, {onLeave: function (args) {send("CreateSoftwareDevnode");}});
+
+var DllCanUnloadNow = Module.findExportByName("Print.PrintSupport.Source.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DoesPsaHavePdcUpdatePolicyForPrinter = Module.findExportByName("Print.PrintSupport.Source.dll", "DoesPsaHavePdcUpdatePolicyForPrinter")
+Interceptor.attach(DoesPsaHavePdcUpdatePolicyForPrinter, {onLeave: function (args) {send("DoesPsaHavePdcUpdatePolicyForPrinter");}});
+
+var GetAppUserModelId = Module.findExportByName("Print.PrintSupport.Source.dll", "GetAppUserModelId")
+Interceptor.attach(GetAppUserModelId, {onLeave: function (args) {send("GetAppUserModelId");}});
+
+var GetDeviceContainerIdByPerUserPrinterName = Module.findExportByName("Print.PrintSupport.Source.dll", "GetDeviceContainerIdByPerUserPrinterName")
+Interceptor.attach(GetDeviceContainerIdByPerUserPrinterName, {onLeave: function (args) {send("GetDeviceContainerIdByPerUserPrinterName");}});
+
+var GetEntryPoint = Module.findExportByName("Print.PrintSupport.Source.dll", "GetEntryPoint")
+Interceptor.attach(GetEntryPoint, {onLeave: function (args) {send("GetEntryPoint");}});
+
+var GetSidFromUPPrinterName = Module.findExportByName("Print.PrintSupport.Source.dll", "GetSidFromUPPrinterName")
+Interceptor.attach(GetSidFromUPPrinterName, {onLeave: function (args) {send("GetSidFromUPPrinterName");}});
+
+var HasAppWithContract = Module.findExportByName("Print.PrintSupport.Source.dll", "HasAppWithContract")
+Interceptor.attach(HasAppWithContract, {onLeave: function (args) {send("HasAppWithContract");}});
+
+var IsActivationContractSupported = Module.findExportByName("Print.PrintSupport.Source.dll", "IsActivationContractSupported")
+Interceptor.attach(IsActivationContractSupported, {onLeave: function (args) {send("IsActivationContractSupported");}});
+
+var IsIppPrinterPsaEnabledForContractAsCurrentUser = Module.findExportByName("Print.PrintSupport.Source.dll", "IsIppPrinterPsaEnabledForContractAsCurrentUser")
+Interceptor.attach(IsIppPrinterPsaEnabledForContractAsCurrentUser, {onLeave: function (args) {send("IsIppPrinterPsaEnabledForContractAsCurrentUser");}});
+
+var IsMandatoryPsaMissing = Module.findExportByName("Print.PrintSupport.Source.dll", "IsMandatoryPsaMissing")
+Interceptor.attach(IsMandatoryPsaMissing, {onLeave: function (args) {send("IsMandatoryPsaMissing");}});
+
+var IsPdcRegneratedForPrinterWithAppByPrinterName = Module.findExportByName("Print.PrintSupport.Source.dll", "IsPdcRegneratedForPrinterWithAppByPrinterName")
+Interceptor.attach(IsPdcRegneratedForPrinterWithAppByPrinterName, {onLeave: function (args) {send("IsPdcRegneratedForPrinterWithAppByPrinterName");}});
+
+var IsPrinterConnection = Module.findExportByName("Print.PrintSupport.Source.dll", "IsPrinterConnection")
+Interceptor.attach(IsPrinterConnection, {onLeave: function (args) {send("IsPrinterConnection");}});
+
+var IsPsaContractActivatableForDevice = Module.findExportByName("Print.PrintSupport.Source.dll", "IsPsaContractActivatableForDevice")
+Interceptor.attach(IsPsaContractActivatableForDevice, {onLeave: function (args) {send("IsPsaContractActivatableForDevice");}});
+
+var IsPsaEnabledForContract = Module.findExportByName("Print.PrintSupport.Source.dll", "IsPsaEnabledForContract")
+Interceptor.attach(IsPsaEnabledForContract, {onLeave: function (args) {send("IsPsaEnabledForContract");}});
+
+var IsPsaEnabledForContractAsCurrentUser = Module.findExportByName("Print.PrintSupport.Source.dll", "IsPsaEnabledForContractAsCurrentUser")
+Interceptor.attach(IsPsaEnabledForContractAsCurrentUser, {onLeave: function (args) {send("IsPsaEnabledForContractAsCurrentUser");}});
+
+var IsSameUserContextBySid = Module.findExportByName("Print.PrintSupport.Source.dll", "IsSameUserContextBySid")
+Interceptor.attach(IsSameUserContextBySid, {onLeave: function (args) {send("IsSameUserContextBySid");}});
+
+var LaunchPsaAppForError = Module.findExportByName("Print.PrintSupport.Source.dll", "LaunchPsaAppForError")
+Interceptor.attach(LaunchPsaAppForError, {onLeave: function (args) {send("LaunchPsaAppForError");}});
+
+var LaunchSystemSettingsBroker = Module.findExportByName("Print.PrintSupport.Source.dll", "LaunchSystemSettingsBroker")
+Interceptor.attach(LaunchSystemSettingsBroker, {onLeave: function (args) {send("LaunchSystemSettingsBroker");}});
+
+var OnPrinterSelected = Module.findExportByName("Print.PrintSupport.Source.dll", "OnPrinterSelected")
+Interceptor.attach(OnPrinterSelected, {onLeave: function (args) {send("OnPrinterSelected");}});
+
+var QueryAndSubscribePdmPrinterChangeNotification = Module.findExportByName("Print.PrintSupport.Source.dll", "QueryAndSubscribePdmPrinterChangeNotification")
+Interceptor.attach(QueryAndSubscribePdmPrinterChangeNotification, {onLeave: function (args) {send("QueryAndSubscribePdmPrinterChangeNotification");}});
+
+var RegeneratePdcForApp = Module.findExportByName("Print.PrintSupport.Source.dll", "RegeneratePdcForApp")
+Interceptor.attach(RegeneratePdcForApp, {onLeave: function (args) {send("RegeneratePdcForApp");}});
+
+var RemovePsaSession = Module.findExportByName("Print.PrintSupport.Source.dll", "RemovePsaSession")
+Interceptor.attach(RemovePsaSession, {onLeave: function (args) {send("RemovePsaSession");}});
+
+var RemovePsaSessionForUserContext = Module.findExportByName("Print.PrintSupport.Source.dll", "RemovePsaSessionForUserContext")
+Interceptor.attach(RemovePsaSessionForUserContext, {onLeave: function (args) {send("RemovePsaSessionForUserContext");}});
+
+var SetJobIdForPsaSession = Module.findExportByName("Print.PrintSupport.Source.dll", "SetJobIdForPsaSession")
+Interceptor.attach(SetJobIdForPsaSession, {onLeave: function (args) {send("SetJobIdForPsaSession");}});
+
+var SetPrintTicketPsa = Module.findExportByName("Print.PrintSupport.Source.dll", "SetPrintTicketPsa")
+Interceptor.attach(SetPrintTicketPsa, {onLeave: function (args) {send("SetPrintTicketPsa");}});
+
+var ShoudPdcBeUpdatedNow = Module.findExportByName("Print.PrintSupport.Source.dll", "ShoudPdcBeUpdatedNow")
+Interceptor.attach(ShoudPdcBeUpdatedNow, {onLeave: function (args) {send("ShoudPdcBeUpdatedNow");}});
+
+var UpdatePDC = Module.findExportByName("Print.PrintSupport.Source.dll", "UpdatePDC")
+Interceptor.attach(UpdatePDC, {onLeave: function (args) {send("UpdatePDC");}});
+
+var UpdatePDCAndPDR = Module.findExportByName("Print.PrintSupport.Source.dll", "UpdatePDCAndPDR")
+Interceptor.attach(UpdatePDCAndPDR, {onLeave: function (args) {send("UpdatePDCAndPDR");}});
+
+var UpdatePdcRegenerationRegKey = Module.findExportByName("Print.PrintSupport.Source.dll", "UpdatePdcRegenerationRegKey")
+Interceptor.attach(UpdatePdcRegenerationRegKey, {onLeave: function (args) {send("UpdatePdcRegenerationRegKey");}});
+
+var ValidatePrintTicket = Module.findExportByName("Print.PrintSupport.Source.dll", "ValidatePrintTicket")
+Interceptor.attach(ValidatePrintTicket, {onLeave: function (args) {send("ValidatePrintTicket");}});
+

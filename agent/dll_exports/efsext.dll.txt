@@ -1,0 +1,36 @@
+var EdpPlatform_QueryUserSessionState = Module.findExportByName("efsext.dll", "EdpPlatform_QueryUserSessionState")
+Interceptor.attach(EdpPlatform_QueryUserSessionState, {onLeave: function (args) {send("EdpPlatform_QueryUserSessionState");}});
+
+var EdpPlatform_RegisterUserSessionNotification = Module.findExportByName("efsext.dll", "EdpPlatform_RegisterUserSessionNotification")
+Interceptor.attach(EdpPlatform_RegisterUserSessionNotification, {onLeave: function (args) {send("EdpPlatform_RegisterUserSessionNotification");}});
+
+var EdpPlatform_ShowDialog = Module.findExportByName("efsext.dll", "EdpPlatform_ShowDialog")
+Interceptor.attach(EdpPlatform_ShowDialog, {onLeave: function (args) {send("EdpPlatform_ShowDialog");}});
+
+var EdpPlatform_ShowUI = Module.findExportByName("efsext.dll", "EdpPlatform_ShowUI")
+Interceptor.attach(EdpPlatform_ShowUI, {onLeave: function (args) {send("EdpPlatform_ShowUI");}});
+
+var EdpPlatform_UnregisterUserSessionNotification = Module.findExportByName("efsext.dll", "EdpPlatform_UnregisterUserSessionNotification")
+Interceptor.attach(EdpPlatform_UnregisterUserSessionNotification, {onLeave: function (args) {send("EdpPlatform_UnregisterUserSessionNotification");}});
+
+var EfsPlatform_GetCallerID = Module.findExportByName("efsext.dll", "EfsPlatform_GetCallerID")
+Interceptor.attach(EfsPlatform_GetCallerID, {onLeave: function (args) {send("EfsPlatform_GetCallerID");}});
+
+var EfsPlatform_IsCallerAutomaticallyDelegated = Module.findExportByName("efsext.dll", "EfsPlatform_IsCallerAutomaticallyDelegated")
+Interceptor.attach(EfsPlatform_IsCallerAutomaticallyDelegated, {onLeave: function (args) {send("EfsPlatform_IsCallerAutomaticallyDelegated");}});
+
+var EfsPlatform_LaunchPromptUI = Module.findExportByName("efsext.dll", "EfsPlatform_LaunchPromptUI")
+Interceptor.attach(EfsPlatform_LaunchPromptUI, {onLeave: function (args) {send("EfsPlatform_LaunchPromptUI");}});
+
+var EfsPlatform_SuspendNotificationsAndEncryptFile = Module.findExportByName("efsext.dll", "EfsPlatform_SuspendNotificationsAndEncryptFile")
+Interceptor.attach(EfsPlatform_SuspendNotificationsAndEncryptFile, {onLeave: function (args) {send("EfsPlatform_SuspendNotificationsAndEncryptFile");}});
+
+var EfsPlatform_UnpackSecurePin = Module.findExportByName("efsext.dll", "EfsPlatform_UnpackSecurePin")
+Interceptor.attach(EfsPlatform_UnpackSecurePin, {onLeave: function (args) {send("EfsPlatform_UnpackSecurePin");}});
+
+var FVE_LaunchConsentPromptUI = Module.findExportByName("efsext.dll", "FVE_LaunchConsentPromptUI")
+Interceptor.attach(FVE_LaunchConsentPromptUI, {onLeave: function (args) {send("FVE_LaunchConsentPromptUI");}});
+
+var FVE_LaunchSDCardUI = Module.findExportByName("efsext.dll", "FVE_LaunchSDCardUI")
+Interceptor.attach(FVE_LaunchSDCardUI, {onLeave: function (args) {send("FVE_LaunchSDCardUI");}});
+

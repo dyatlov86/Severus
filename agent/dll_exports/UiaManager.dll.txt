@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("UiaManager.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("UiaManager.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetProxyDllInfo = Module.findExportByName("UiaManager.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+
+var UiaInitCrossMachineConnection = Module.findExportByName("UiaManager.dll", "UiaInitCrossMachineConnection")
+Interceptor.attach(UiaInitCrossMachineConnection, {onLeave: function (args) {send("UiaInitCrossMachineConnection");}});
+
+var UiaInitCrossMachineConnectionW = Module.findExportByName("UiaManager.dll", "UiaInitCrossMachineConnectionW")
+Interceptor.attach(UiaInitCrossMachineConnectionW, {onLeave: function (args) {send("UiaInitCrossMachineConnectionW");}});
+

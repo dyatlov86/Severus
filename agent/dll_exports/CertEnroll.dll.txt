@@ -1,0 +1,63 @@
+var CreateLogonCertificateRequest = Module.findExportByName("CertEnroll.dll", "CreateLogonCertificateRequest")
+Interceptor.attach(CreateLogonCertificateRequest, {onLeave: function (args) {send("CreateLogonCertificateRequest");}});
+
+var DeleteLogonCertificateRequest = Module.findExportByName("CertEnroll.dll", "DeleteLogonCertificateRequest")
+Interceptor.attach(DeleteLogonCertificateRequest, {onLeave: function (args) {send("DeleteLogonCertificateRequest");}});
+
+var DllCanUnloadNow = Module.findExportByName("CertEnroll.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("CertEnroll.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("CertEnroll.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("CertEnroll.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("CertEnroll.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("CertEnroll.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ImportPFXToProvider = Module.findExportByName("CertEnroll.dll", "ImportPFXToProvider")
+Interceptor.attach(ImportPFXToProvider, {onLeave: function (args) {send("ImportPFXToProvider");}});
+
+var ImportPFXToProviderFreeData = Module.findExportByName("CertEnroll.dll", "ImportPFXToProviderFreeData")
+Interceptor.attach(ImportPFXToProviderFreeData, {onLeave: function (args) {send("ImportPFXToProviderFreeData");}});
+
+var InstallLogonCertificateResponse = Module.findExportByName("CertEnroll.dll", "InstallLogonCertificateResponse")
+Interceptor.attach(InstallLogonCertificateResponse, {onLeave: function (args) {send("InstallLogonCertificateResponse");}});
+
+var IsLogonCertificateTemplateAvailable = Module.findExportByName("CertEnroll.dll", "IsLogonCertificateTemplateAvailable")
+Interceptor.attach(IsLogonCertificateTemplateAvailable, {onLeave: function (args) {send("IsLogonCertificateTemplateAvailable");}});
+
+var LogCertArchive = Module.findExportByName("CertEnroll.dll", "LogCertArchive")
+Interceptor.attach(LogCertArchive, {onLeave: function (args) {send("LogCertArchive");}});
+
+var LogCertCopy = Module.findExportByName("CertEnroll.dll", "LogCertCopy")
+Interceptor.attach(LogCertCopy, {onLeave: function (args) {send("LogCertCopy");}});
+
+var LogCertDelete = Module.findExportByName("CertEnroll.dll", "LogCertDelete")
+Interceptor.attach(LogCertDelete, {onLeave: function (args) {send("LogCertDelete");}});
+
+var LogCertExpire = Module.findExportByName("CertEnroll.dll", "LogCertExpire")
+Interceptor.attach(LogCertExpire, {onLeave: function (args) {send("LogCertExpire");}});
+
+var LogCertExport = Module.findExportByName("CertEnroll.dll", "LogCertExport")
+Interceptor.attach(LogCertExport, {onLeave: function (args) {send("LogCertExport");}});
+
+var LogCertImport = Module.findExportByName("CertEnroll.dll", "LogCertImport")
+Interceptor.attach(LogCertImport, {onLeave: function (args) {send("LogCertImport");}});
+
+var LogCertInstall = Module.findExportByName("CertEnroll.dll", "LogCertInstall")
+Interceptor.attach(LogCertInstall, {onLeave: function (args) {send("LogCertInstall");}});
+
+var LogCertReplace = Module.findExportByName("CertEnroll.dll", "LogCertReplace")
+Interceptor.attach(LogCertReplace, {onLeave: function (args) {send("LogCertReplace");}});
+
+var UpdateMachinePolicyConfigurationForTemplate = Module.findExportByName("CertEnroll.dll", "UpdateMachinePolicyConfigurationForTemplate")
+Interceptor.attach(UpdateMachinePolicyConfigurationForTemplate, {onLeave: function (args) {send("UpdateMachinePolicyConfigurationForTemplate");}});
+

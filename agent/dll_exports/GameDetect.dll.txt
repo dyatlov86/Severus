@@ -1,0 +1,6 @@
+var LoadRequest = Module.findExportByName("GameDetect.dll", "LoadRequest")
+Interceptor.attach(LoadRequest, {onLeave: function (args) {send("LoadRequest");}});
+
+var UnloadRequest = Module.findExportByName("GameDetect.dll", "UnloadRequest")
+Interceptor.attach(UnloadRequest, {onLeave: function (args) {send("UnloadRequest");}});
+

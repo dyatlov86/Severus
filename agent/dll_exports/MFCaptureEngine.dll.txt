@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("MFCaptureEngine.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("MFCaptureEngine.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var MFCreateCaptureEngine = Module.findExportByName("MFCaptureEngine.dll", "MFCreateCaptureEngine")
+Interceptor.attach(MFCreateCaptureEngine, {onLeave: function (args) {send("MFCreateCaptureEngine");}});
+

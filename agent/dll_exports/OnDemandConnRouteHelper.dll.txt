@@ -1,0 +1,24 @@
+var FreeInterfaceContextTable = Module.findExportByName("OnDemandConnRouteHelper.dll", "FreeInterfaceContextTable")
+Interceptor.attach(FreeInterfaceContextTable, {onLeave: function (args) {send("FreeInterfaceContextTable");}});
+
+var GetInterfaceContextTableForHostName = Module.findExportByName("OnDemandConnRouteHelper.dll", "GetInterfaceContextTableForHostName")
+Interceptor.attach(GetInterfaceContextTableForHostName, {onLeave: function (args) {send("GetInterfaceContextTableForHostName");}});
+
+var OnDemandAddRouteRequest = Module.findExportByName("OnDemandConnRouteHelper.dll", "OnDemandAddRouteRequest")
+Interceptor.attach(OnDemandAddRouteRequest, {onLeave: function (args) {send("OnDemandAddRouteRequest");}});
+
+var OnDemandGetRoutingHint = Module.findExportByName("OnDemandConnRouteHelper.dll", "OnDemandGetRoutingHint")
+Interceptor.attach(OnDemandGetRoutingHint, {onLeave: function (args) {send("OnDemandGetRoutingHint");}});
+
+var OnDemandRegisterNotification = Module.findExportByName("OnDemandConnRouteHelper.dll", "OnDemandRegisterNotification")
+Interceptor.attach(OnDemandRegisterNotification, {onLeave: function (args) {send("OnDemandRegisterNotification");}});
+
+var OnDemandRemoveMatchingRoute = Module.findExportByName("OnDemandConnRouteHelper.dll", "OnDemandRemoveMatchingRoute")
+Interceptor.attach(OnDemandRemoveMatchingRoute, {onLeave: function (args) {send("OnDemandRemoveMatchingRoute");}});
+
+var OnDemandRemoveRouteRequest = Module.findExportByName("OnDemandConnRouteHelper.dll", "OnDemandRemoveRouteRequest")
+Interceptor.attach(OnDemandRemoveRouteRequest, {onLeave: function (args) {send("OnDemandRemoveRouteRequest");}});
+
+var OnDemandUnRegisterNotification = Module.findExportByName("OnDemandConnRouteHelper.dll", "OnDemandUnRegisterNotification")
+Interceptor.attach(OnDemandUnRegisterNotification, {onLeave: function (args) {send("OnDemandUnRegisterNotification");}});
+

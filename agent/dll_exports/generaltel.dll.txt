@@ -1,0 +1,27 @@
+var CalculateCensusId = Module.findExportByName("generaltel.dll", "CalculateCensusId")
+Interceptor.attach(CalculateCensusId, {onLeave: function (args) {send("CalculateCensusId");}});
+
+var DoCensusRun = Module.findExportByName("generaltel.dll", "DoCensusRun")
+Interceptor.attach(DoCensusRun, {onLeave: function (args) {send("DoCensusRun");}});
+
+var EnumerateOfficeAddins = Module.findExportByName("generaltel.dll", "EnumerateOfficeAddins")
+Interceptor.attach(EnumerateOfficeAddins, {onLeave: function (args) {send("EnumerateOfficeAddins");}});
+
+var EnumerateOfficeDocuments = Module.findExportByName("generaltel.dll", "EnumerateOfficeDocuments")
+Interceptor.attach(EnumerateOfficeDocuments, {onLeave: function (args) {send("EnumerateOfficeDocuments");}});
+
+var GetCITDataApr = Module.findExportByName("generaltel.dll", "GetCITDataApr")
+Interceptor.attach(GetCITDataApr, {onLeave: function (args) {send("GetCITDataApr");}});
+
+var GetCITTelemetryPoints = Module.findExportByName("generaltel.dll", "GetCITTelemetryPoints")
+Interceptor.attach(GetCITTelemetryPoints, {onLeave: function (args) {send("GetCITTelemetryPoints");}});
+
+var RunGeneralTelemetry = Module.findExportByName("generaltel.dll", "RunGeneralTelemetry")
+Interceptor.attach(RunGeneralTelemetry, {onLeave: function (args) {send("RunGeneralTelemetry");}});
+
+var RunInUserCxtW = Module.findExportByName("generaltel.dll", "RunInUserCxtW")
+Interceptor.attach(RunInUserCxtW, {onLeave: function (args) {send("RunInUserCxtW");}});
+
+var SysprepCleanupEnableCustomTrigger = Module.findExportByName("generaltel.dll", "SysprepCleanupEnableCustomTrigger")
+Interceptor.attach(SysprepCleanupEnableCustomTrigger, {onLeave: function (args) {send("SysprepCleanupEnableCustomTrigger");}});
+

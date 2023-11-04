@@ -1,0 +1,78 @@
+var AwaitAppointmentActivation = Module.findExportByName("AppointmentActivation.dll", "AwaitAppointmentActivation")
+Interceptor.attach(AwaitAppointmentActivation, {onLeave: function (args) {send("AwaitAppointmentActivation");}});
+
+var DeserializeActivationArgs = Module.findExportByName("AppointmentActivation.dll", "DeserializeActivationArgs")
+Interceptor.attach(DeserializeActivationArgs, {onLeave: function (args) {send("DeserializeActivationArgs");}});
+
+var DeserializeAppointment = Module.findExportByName("AppointmentActivation.dll", "DeserializeAppointment")
+Interceptor.attach(DeserializeAppointment, {onLeave: function (args) {send("DeserializeAppointment");}});
+
+var DllCanUnloadNow = Module.findExportByName("AppointmentActivation.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("AppointmentActivation.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("AppointmentActivation.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetAddAppointmentArgument = Module.findExportByName("AppointmentActivation.dll", "GetAddAppointmentArgument")
+Interceptor.attach(GetAddAppointmentArgument, {onLeave: function (args) {send("GetAddAppointmentArgument");}});
+
+var GetCalendarChooserArgument = Module.findExportByName("AppointmentActivation.dll", "GetCalendarChooserArgument")
+Interceptor.attach(GetCalendarChooserArgument, {onLeave: function (args) {send("GetCalendarChooserArgument");}});
+
+var GetLegacyAppointmentDetailsArgumentString = Module.findExportByName("AppointmentActivation.dll", "GetLegacyAppointmentDetailsArgumentString")
+Interceptor.attach(GetLegacyAppointmentDetailsArgumentString, {onLeave: function (args) {send("GetLegacyAppointmentDetailsArgumentString");}});
+
+var GetProxyDllInfo = Module.findExportByName("AppointmentActivation.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+
+var GetRemoveAppointmentArgument = Module.findExportByName("AppointmentActivation.dll", "GetRemoveAppointmentArgument")
+Interceptor.attach(GetRemoveAppointmentArgument, {onLeave: function (args) {send("GetRemoveAppointmentArgument");}});
+
+var GetReplaceAppointmentArgument = Module.findExportByName("AppointmentActivation.dll", "GetReplaceAppointmentArgument")
+Interceptor.attach(GetReplaceAppointmentArgument, {onLeave: function (args) {send("GetReplaceAppointmentArgument");}});
+
+var GetWindowIdOfHost = Module.findExportByName("AppointmentActivation.dll", "GetWindowIdOfHost")
+Interceptor.attach(GetWindowIdOfHost, {onLeave: function (args) {send("GetWindowIdOfHost");}});
+
+var ReleaseActivationArgs = Module.findExportByName("AppointmentActivation.dll", "ReleaseActivationArgs")
+Interceptor.attach(ReleaseActivationArgs, {onLeave: function (args) {send("ReleaseActivationArgs");}});
+
+var SerializeAppointmentIdsResult = Module.findExportByName("AppointmentActivation.dll", "SerializeAppointmentIdsResult")
+Interceptor.attach(SerializeAppointmentIdsResult, {onLeave: function (args) {send("SerializeAppointmentIdsResult");}});
+
+var SerializeCalendarIdResult = Module.findExportByName("AppointmentActivation.dll", "SerializeCalendarIdResult")
+Interceptor.attach(SerializeCalendarIdResult, {onLeave: function (args) {send("SerializeCalendarIdResult");}});
+
+var ShowAddAppointment = Module.findExportByName("AppointmentActivation.dll", "ShowAddAppointment")
+Interceptor.attach(ShowAddAppointment, {onLeave: function (args) {send("ShowAddAppointment");}});
+
+var ShowAddAppointmentAsync = Module.findExportByName("AppointmentActivation.dll", "ShowAddAppointmentAsync")
+Interceptor.attach(ShowAddAppointmentAsync, {onLeave: function (args) {send("ShowAddAppointmentAsync");}});
+
+var ShowAppointmentDetails = Module.findExportByName("AppointmentActivation.dll", "ShowAppointmentDetails")
+Interceptor.attach(ShowAppointmentDetails, {onLeave: function (args) {send("ShowAppointmentDetails");}});
+
+var ShowCalendarChooser = Module.findExportByName("AppointmentActivation.dll", "ShowCalendarChooser")
+Interceptor.attach(ShowCalendarChooser, {onLeave: function (args) {send("ShowCalendarChooser");}});
+
+var ShowCalendarChooserAsync = Module.findExportByName("AppointmentActivation.dll", "ShowCalendarChooserAsync")
+Interceptor.attach(ShowCalendarChooserAsync, {onLeave: function (args) {send("ShowCalendarChooserAsync");}});
+
+var ShowRemoveAppointment = Module.findExportByName("AppointmentActivation.dll", "ShowRemoveAppointment")
+Interceptor.attach(ShowRemoveAppointment, {onLeave: function (args) {send("ShowRemoveAppointment");}});
+
+var ShowRemoveAppointmentAsync = Module.findExportByName("AppointmentActivation.dll", "ShowRemoveAppointmentAsync")
+Interceptor.attach(ShowRemoveAppointmentAsync, {onLeave: function (args) {send("ShowRemoveAppointmentAsync");}});
+
+var ShowReplaceAppointment = Module.findExportByName("AppointmentActivation.dll", "ShowReplaceAppointment")
+Interceptor.attach(ShowReplaceAppointment, {onLeave: function (args) {send("ShowReplaceAppointment");}});
+
+var ShowReplaceAppointmentAsync = Module.findExportByName("AppointmentActivation.dll", "ShowReplaceAppointmentAsync")
+Interceptor.attach(ShowReplaceAppointmentAsync, {onLeave: function (args) {send("ShowReplaceAppointmentAsync");}});
+
+var ShowTimeFrame = Module.findExportByName("AppointmentActivation.dll", "ShowTimeFrame")
+Interceptor.attach(ShowTimeFrame, {onLeave: function (args) {send("ShowTimeFrame");}});
+

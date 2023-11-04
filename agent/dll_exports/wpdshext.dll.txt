@@ -1,0 +1,15 @@
+var CDefFolderMenu_MergeMenu = Module.findExportByName("wpdshext.dll", "CDefFolderMenu_MergeMenu")
+Interceptor.attach(CDefFolderMenu_MergeMenu, {onLeave: function (args) {send("CDefFolderMenu_MergeMenu");}});
+
+var DllCanUnloadNow = Module.findExportByName("wpdshext.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wpdshext.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("wpdshext.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wpdshext.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

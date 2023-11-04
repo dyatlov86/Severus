@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("iepeers.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllEnumClassObjects = Module.findExportByName("iepeers.dll", "DllEnumClassObjects")
+Interceptor.attach(DllEnumClassObjects, {onLeave: function (args) {send("DllEnumClassObjects");}});
+
+var DllGetClassObject = Module.findExportByName("iepeers.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("iepeers.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("iepeers.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

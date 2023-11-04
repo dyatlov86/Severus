@@ -1,0 +1,15 @@
+var DeserializeLANPolicy = Module.findExportByName("dot3gpclnt.dll", "DeserializeLANPolicy")
+Interceptor.attach(DeserializeLANPolicy, {onLeave: function (args) {send("DeserializeLANPolicy");}});
+
+var GenerateLANPolicy = Module.findExportByName("dot3gpclnt.dll", "GenerateLANPolicy")
+Interceptor.attach(GenerateLANPolicy, {onLeave: function (args) {send("GenerateLANPolicy");}});
+
+var LANGPADeInit = Module.findExportByName("dot3gpclnt.dll", "LANGPADeInit")
+Interceptor.attach(LANGPADeInit, {onLeave: function (args) {send("LANGPADeInit");}});
+
+var LANGPAInit = Module.findExportByName("dot3gpclnt.dll", "LANGPAInit")
+Interceptor.attach(LANGPAInit, {onLeave: function (args) {send("LANGPAInit");}});
+
+var ProcessLANPolicyEx = Module.findExportByName("dot3gpclnt.dll", "ProcessLANPolicyEx")
+Interceptor.attach(ProcessLANPolicyEx, {onLeave: function (args) {send("ProcessLANPolicyEx");}});
+

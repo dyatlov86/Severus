@@ -1,0 +1,9 @@
+var RmRpsInitialize = Module.findExportByName("ResourcePolicyServer.dll", "RmRpsInitialize")
+Interceptor.attach(RmRpsInitialize, {onLeave: function (args) {send("RmRpsInitialize");}});
+
+var RmRpsNotifyApplicationInterruptiveUIChange = Module.findExportByName("ResourcePolicyServer.dll", "RmRpsNotifyApplicationInterruptiveUIChange")
+Interceptor.attach(RmRpsNotifyApplicationInterruptiveUIChange, {onLeave: function (args) {send("RmRpsNotifyApplicationInterruptiveUIChange");}});
+
+var RmRpsQueryResourceSetInfo = Module.findExportByName("ResourcePolicyServer.dll", "RmRpsQueryResourceSetInfo")
+Interceptor.attach(RmRpsQueryResourceSetInfo, {onLeave: function (args) {send("RmRpsQueryResourceSetInfo");}});
+

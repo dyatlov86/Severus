@@ -1,0 +1,6 @@
+var DllMain = Module.findExportByName("odbcji32.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var IntlLibHinst = Module.findExportByName("odbcji32.dll", "IntlLibHinst")
+Interceptor.attach(IntlLibHinst, {onLeave: function (args) {send("IntlLibHinst");}});
+

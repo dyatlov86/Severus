@@ -1,0 +1,15 @@
+var DLLGetDISMProviderCLSID = Module.findExportByName("UnattendProvider.dll", "DLLGetDISMProviderCLSID")
+Interceptor.attach(DLLGetDISMProviderCLSID, {onLeave: function (args) {send("DLLGetDISMProviderCLSID");}});
+
+var DllCanUnloadNow = Module.findExportByName("UnattendProvider.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("UnattendProvider.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("UnattendProvider.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("UnattendProvider.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

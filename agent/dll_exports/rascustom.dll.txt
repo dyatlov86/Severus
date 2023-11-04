@@ -1,0 +1,21 @@
+var InitializeProtocolEngine = Module.findExportByName("rascustom.dll", "InitializeProtocolEngine")
+Interceptor.attach(InitializeProtocolEngine, {onLeave: function (args) {send("InitializeProtocolEngine");}});
+
+var SendMessageToProtocolEngine = Module.findExportByName("rascustom.dll", "SendMessageToProtocolEngine")
+Interceptor.attach(SendMessageToProtocolEngine, {onLeave: function (args) {send("SendMessageToProtocolEngine");}});
+
+var UninitializeProtocolEngine = Module.findExportByName("rascustom.dll", "UninitializeProtocolEngine")
+Interceptor.attach(UninitializeProtocolEngine, {onLeave: function (args) {send("UninitializeProtocolEngine");}});
+
+var VpnBrokerPluginIsInstalled = Module.findExportByName("rascustom.dll", "VpnBrokerPluginIsInstalled")
+Interceptor.attach(VpnBrokerPluginIsInstalled, {onLeave: function (args) {send("VpnBrokerPluginIsInstalled");}});
+
+var VpnBrokerRegisterForPluginInstallations = Module.findExportByName("rascustom.dll", "VpnBrokerRegisterForPluginInstallations")
+Interceptor.attach(VpnBrokerRegisterForPluginInstallations, {onLeave: function (args) {send("VpnBrokerRegisterForPluginInstallations");}});
+
+var VpnSmCommsPluginsNotifyLogOff = Module.findExportByName("rascustom.dll", "VpnSmCommsPluginsNotifyLogOff")
+Interceptor.attach(VpnSmCommsPluginsNotifyLogOff, {onLeave: function (args) {send("VpnSmCommsPluginsNotifyLogOff");}});
+
+var VpnSmCommsPluginsRoamToBestCostInterface = Module.findExportByName("rascustom.dll", "VpnSmCommsPluginsRoamToBestCostInterface")
+Interceptor.attach(VpnSmCommsPluginsRoamToBestCostInterface, {onLeave: function (args) {send("VpnSmCommsPluginsRoamToBestCostInterface");}});
+

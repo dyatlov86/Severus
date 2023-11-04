@@ -1,0 +1,60 @@
+var AppRegEnum = Module.findExportByName("odbcconf.dll", "AppRegEnum")
+Interceptor.attach(AppRegEnum, {onLeave: function (args) {send("AppRegEnum");}});
+
+var CloseAppRegEnum = Module.findExportByName("odbcconf.dll", "CloseAppRegEnum")
+Interceptor.attach(CloseAppRegEnum, {onLeave: function (args) {send("CloseAppRegEnum");}});
+
+var DllCanUnloadNow = Module.findExportByName("odbcconf.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("odbcconf.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("odbcconf.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("odbcconf.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ExecuteAction = Module.findExportByName("odbcconf.dll", "ExecuteAction")
+Interceptor.attach(ExecuteAction, {onLeave: function (args) {send("ExecuteAction");}});
+
+var OpenAppRegEnum = Module.findExportByName("odbcconf.dll", "OpenAppRegEnum")
+Interceptor.attach(OpenAppRegEnum, {onLeave: function (args) {send("OpenAppRegEnum");}});
+
+var QueryApplication = Module.findExportByName("odbcconf.dll", "QueryApplication")
+Interceptor.attach(QueryApplication, {onLeave: function (args) {send("QueryApplication");}});
+
+var RefreshAppRegEnum = Module.findExportByName("odbcconf.dll", "RefreshAppRegEnum")
+Interceptor.attach(RefreshAppRegEnum, {onLeave: function (args) {send("RefreshAppRegEnum");}});
+
+var RegisterApplication = Module.findExportByName("odbcconf.dll", "RegisterApplication")
+Interceptor.attach(RegisterApplication, {onLeave: function (args) {send("RegisterApplication");}});
+
+var RunDLL32_RegisterApplication = Module.findExportByName("odbcconf.dll", "RunDLL32_RegisterApplication")
+Interceptor.attach(RunDLL32_RegisterApplication, {onLeave: function (args) {send("RunDLL32_RegisterApplication");}});
+
+var RunDLL32_UnregisterApplication = Module.findExportByName("odbcconf.dll", "RunDLL32_UnregisterApplication")
+Interceptor.attach(RunDLL32_UnregisterApplication, {onLeave: function (args) {send("RunDLL32_UnregisterApplication");}});
+
+var SetActionEnum = Module.findExportByName("odbcconf.dll", "SetActionEnum")
+Interceptor.attach(SetActionEnum, {onLeave: function (args) {send("SetActionEnum");}});
+
+var SetActionLogFile = Module.findExportByName("odbcconf.dll", "SetActionLogFile")
+Interceptor.attach(SetActionLogFile, {onLeave: function (args) {send("SetActionLogFile");}});
+
+var SetActionLogMode = Module.findExportByName("odbcconf.dll", "SetActionLogMode")
+Interceptor.attach(SetActionLogMode, {onLeave: function (args) {send("SetActionLogMode");}});
+
+var SetActionLogModeSz = Module.findExportByName("odbcconf.dll", "SetActionLogModeSz")
+Interceptor.attach(SetActionLogModeSz, {onLeave: function (args) {send("SetActionLogModeSz");}});
+
+var SetActionName = Module.findExportByName("odbcconf.dll", "SetActionName")
+Interceptor.attach(SetActionName, {onLeave: function (args) {send("SetActionName");}});
+
+var SetSilent = Module.findExportByName("odbcconf.dll", "SetSilent")
+Interceptor.attach(SetSilent, {onLeave: function (args) {send("SetSilent");}});
+
+var UnregisterApplication = Module.findExportByName("odbcconf.dll", "UnregisterApplication")
+Interceptor.attach(UnregisterApplication, {onLeave: function (args) {send("UnregisterApplication");}});
+

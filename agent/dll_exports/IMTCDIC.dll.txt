@@ -1,0 +1,6 @@
+var CheckSurrogateUpdate = Module.findExportByName("IMTCDIC.dll", "CheckSurrogateUpdate")
+Interceptor.attach(CheckSurrogateUpdate, {onLeave: function (args) {send("CheckSurrogateUpdate");}});
+
+var CreateIImeSkdicInstance = Module.findExportByName("IMTCDIC.dll", "CreateIImeSkdicInstance")
+Interceptor.attach(CreateIImeSkdicInstance, {onLeave: function (args) {send("CreateIImeSkdicInstance");}});
+

@@ -1,0 +1,3 @@
+var CreateHeatProcessor = Module.findExportByName("WindowsDefaultHeatProcessor.dll", "CreateHeatProcessor")
+Interceptor.attach(CreateHeatProcessor, {onLeave: function (args) {send("CreateHeatProcessor");}});
+

@@ -1,0 +1,3 @@
+var GetIndexedDbLegacyFunctions = Module.findExportByName("IndexedDbLegacy.dll", "GetIndexedDbLegacyFunctions")
+Interceptor.attach(GetIndexedDbLegacyFunctions, {onLeave: function (args) {send("GetIndexedDbLegacyFunctions");}});
+

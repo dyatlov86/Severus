@@ -1,0 +1,12 @@
+var DebugBreak = Module.findExportByName("api-ms-win-core-debug-l1-1-0.dll", "DebugBreak")
+Interceptor.attach(DebugBreak, {onLeave: function (args) {send("DebugBreak");}});
+
+var IsDebuggerPresent = Module.findExportByName("api-ms-win-core-debug-l1-1-0.dll", "IsDebuggerPresent")
+Interceptor.attach(IsDebuggerPresent, {onLeave: function (args) {send("IsDebuggerPresent");}});
+
+var OutputDebugStringA = Module.findExportByName("api-ms-win-core-debug-l1-1-0.dll", "OutputDebugStringA")
+Interceptor.attach(OutputDebugStringA, {onLeave: function (args) {send("OutputDebugStringA");}});
+
+var OutputDebugStringW = Module.findExportByName("api-ms-win-core-debug-l1-1-0.dll", "OutputDebugStringW")
+Interceptor.attach(OutputDebugStringW, {onLeave: function (args) {send("OutputDebugStringW");}});
+

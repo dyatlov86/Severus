@@ -1,0 +1,6 @@
+var DllCanUnloadNow = Module.findExportByName("WindowsInternal.ComposableShell.Display.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("WindowsInternal.ComposableShell.Display.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+

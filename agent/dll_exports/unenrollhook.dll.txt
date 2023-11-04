@@ -1,0 +1,6 @@
+var EnterpriseResourceManager_MoveAllResources = Module.findExportByName("unenrollhook.dll", "EnterpriseResourceManager_MoveAllResources")
+Interceptor.attach(EnterpriseResourceManager_MoveAllResources, {onLeave: function (args) {send("EnterpriseResourceManager_MoveAllResources");}});
+
+var EnterpriseResourceManager_UnenrollHook = Module.findExportByName("unenrollhook.dll", "EnterpriseResourceManager_UnenrollHook")
+Interceptor.attach(EnterpriseResourceManager_UnenrollHook, {onLeave: function (args) {send("EnterpriseResourceManager_UnenrollHook");}});
+

@@ -1,0 +1,21 @@
+var ConvertMultiSzToSzA = Module.findExportByName("prxyqry.dll", "ConvertMultiSzToSzA")
+Interceptor.attach(ConvertMultiSzToSzA, {onLeave: function (args) {send("ConvertMultiSzToSzA");}});
+
+var ConvertSzToMultiSzA = Module.findExportByName("prxyqry.dll", "ConvertSzToMultiSzA")
+Interceptor.attach(ConvertSzToMultiSzA, {onLeave: function (args) {send("ConvertSzToMultiSzA");}});
+
+var GetLinkSpeedForAddress = Module.findExportByName("prxyqry.dll", "GetLinkSpeedForAddress")
+Interceptor.attach(GetLinkSpeedForAddress, {onLeave: function (args) {send("GetLinkSpeedForAddress");}});
+
+var GetSstpDestinationInfo = Module.findExportByName("prxyqry.dll", "GetSstpDestinationInfo")
+Interceptor.attach(GetSstpDestinationInfo, {onLeave: function (args) {send("GetSstpDestinationInfo");}});
+
+var GetSstpGroupIDFromQueryString = Module.findExportByName("prxyqry.dll", "GetSstpGroupIDFromQueryString")
+Interceptor.attach(GetSstpGroupIDFromQueryString, {onLeave: function (args) {send("GetSstpGroupIDFromQueryString");}});
+
+var GetSstpUrlForDestination = Module.findExportByName("prxyqry.dll", "GetSstpUrlForDestination")
+Interceptor.attach(GetSstpUrlForDestination, {onLeave: function (args) {send("GetSstpUrlForDestination");}});
+
+var ValidateMultiSzA = Module.findExportByName("prxyqry.dll", "ValidateMultiSzA")
+Interceptor.attach(ValidateMultiSzA, {onLeave: function (args) {send("ValidateMultiSzA");}});
+

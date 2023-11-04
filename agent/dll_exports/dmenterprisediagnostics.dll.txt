@@ -1,0 +1,24 @@
+var CollectDiagnosticsAutoLog = Module.findExportByName("dmenterprisediagnostics.dll", "CollectDiagnosticsAutoLog")
+Interceptor.attach(CollectDiagnosticsAutoLog, {onLeave: function (args) {send("CollectDiagnosticsAutoLog");}});
+
+var GatherAutoLogEventsFromMobile = Module.findExportByName("dmenterprisediagnostics.dll", "GatherAutoLogEventsFromMobile")
+Interceptor.attach(GatherAutoLogEventsFromMobile, {onLeave: function (args) {send("GatherAutoLogEventsFromMobile");}});
+
+var RecordDiagnosticsError = Module.findExportByName("dmenterprisediagnostics.dll", "RecordDiagnosticsError")
+Interceptor.attach(RecordDiagnosticsError, {onLeave: function (args) {send("RecordDiagnosticsError");}});
+
+var SetupAutoLog = Module.findExportByName("dmenterprisediagnostics.dll", "SetupAutoLog")
+Interceptor.attach(SetupAutoLog, {onLeave: function (args) {send("SetupAutoLog");}});
+
+var SetupAutoLogWithTraceLevel = Module.findExportByName("dmenterprisediagnostics.dll", "SetupAutoLogWithTraceLevel")
+Interceptor.attach(SetupAutoLogWithTraceLevel, {onLeave: function (args) {send("SetupAutoLogWithTraceLevel");}});
+
+var StartAutoLog = Module.findExportByName("dmenterprisediagnostics.dll", "StartAutoLog")
+Interceptor.attach(StartAutoLog, {onLeave: function (args) {send("StartAutoLog");}});
+
+var StopAutoLog = Module.findExportByName("dmenterprisediagnostics.dll", "StopAutoLog")
+Interceptor.attach(StopAutoLog, {onLeave: function (args) {send("StopAutoLog");}});
+
+var TearDownAutoLog = Module.findExportByName("dmenterprisediagnostics.dll", "TearDownAutoLog")
+Interceptor.attach(TearDownAutoLog, {onLeave: function (args) {send("TearDownAutoLog");}});
+

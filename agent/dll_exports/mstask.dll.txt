@@ -1,0 +1,39 @@
+var ConvertAtJobsToTasks = Module.findExportByName("mstask.dll", "ConvertAtJobsToTasks")
+Interceptor.attach(ConvertAtJobsToTasks, {onLeave: function (args) {send("ConvertAtJobsToTasks");}});
+
+var DllCanUnloadNow = Module.findExportByName("mstask.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mstask.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetNetScheduleAccountInformation = Module.findExportByName("mstask.dll", "GetNetScheduleAccountInformation")
+Interceptor.attach(GetNetScheduleAccountInformation, {onLeave: function (args) {send("GetNetScheduleAccountInformation");}});
+
+var NetrJobAdd = Module.findExportByName("mstask.dll", "NetrJobAdd")
+Interceptor.attach(NetrJobAdd, {onLeave: function (args) {send("NetrJobAdd");}});
+
+var NetrJobDel = Module.findExportByName("mstask.dll", "NetrJobDel")
+Interceptor.attach(NetrJobDel, {onLeave: function (args) {send("NetrJobDel");}});
+
+var NetrJobEnum = Module.findExportByName("mstask.dll", "NetrJobEnum")
+Interceptor.attach(NetrJobEnum, {onLeave: function (args) {send("NetrJobEnum");}});
+
+var NetrJobGetInfo = Module.findExportByName("mstask.dll", "NetrJobGetInfo")
+Interceptor.attach(NetrJobGetInfo, {onLeave: function (args) {send("NetrJobGetInfo");}});
+
+var SAGetAccountInformation = Module.findExportByName("mstask.dll", "SAGetAccountInformation")
+Interceptor.attach(SAGetAccountInformation, {onLeave: function (args) {send("SAGetAccountInformation");}});
+
+var SAGetNSAccountInformation = Module.findExportByName("mstask.dll", "SAGetNSAccountInformation")
+Interceptor.attach(SAGetNSAccountInformation, {onLeave: function (args) {send("SAGetNSAccountInformation");}});
+
+var SASetAccountInformation = Module.findExportByName("mstask.dll", "SASetAccountInformation")
+Interceptor.attach(SASetAccountInformation, {onLeave: function (args) {send("SASetAccountInformation");}});
+
+var SASetNSAccountInformation = Module.findExportByName("mstask.dll", "SASetNSAccountInformation")
+Interceptor.attach(SASetNSAccountInformation, {onLeave: function (args) {send("SASetNSAccountInformation");}});
+
+var SetNetScheduleAccountInformation = Module.findExportByName("mstask.dll", "SetNetScheduleAccountInformation")
+Interceptor.attach(SetNetScheduleAccountInformation, {onLeave: function (args) {send("SetNetScheduleAccountInformation");}});
+

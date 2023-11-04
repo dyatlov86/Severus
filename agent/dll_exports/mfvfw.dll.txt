@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("mfvfw.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllMain = Module.findExportByName("mfvfw.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GetVFWMFTransform = Module.findExportByName("mfvfw.dll", "GetVFWMFTransform")
+Interceptor.attach(GetVFWMFTransform, {onLeave: function (args) {send("GetVFWMFTransform");}});
+
+var IsVFWDecompressorAvailable = Module.findExportByName("mfvfw.dll", "IsVFWDecompressorAvailable")
+Interceptor.attach(IsVFWDecompressorAvailable, {onLeave: function (args) {send("IsVFWDecompressorAvailable");}});
+

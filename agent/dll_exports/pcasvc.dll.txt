@@ -1,0 +1,15 @@
+var PcaPatchSdbTask = Module.findExportByName("pcasvc.dll", "PcaPatchSdbTask")
+Interceptor.attach(PcaPatchSdbTask, {onLeave: function (args) {send("PcaPatchSdbTask");}});
+
+var QueryEncapsulationSettings = Module.findExportByName("pcasvc.dll", "QueryEncapsulationSettings")
+Interceptor.attach(QueryEncapsulationSettings, {onLeave: function (args) {send("QueryEncapsulationSettings");}});
+
+var QueryEncapsulationSettingsTC = Module.findExportByName("pcasvc.dll", "QueryEncapsulationSettingsTC")
+Interceptor.attach(QueryEncapsulationSettingsTC, {onLeave: function (args) {send("QueryEncapsulationSettingsTC");}});
+
+var ServiceMain = Module.findExportByName("pcasvc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("pcasvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

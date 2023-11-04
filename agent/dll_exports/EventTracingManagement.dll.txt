@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("EventTracingManagement.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("EventTracingManagement.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("EventTracingManagement.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("EventTracingManagement.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("EventTracingManagement.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetProviderClassID = Module.findExportByName("EventTracingManagement.dll", "GetProviderClassID")
+Interceptor.attach(GetProviderClassID, {onLeave: function (args) {send("GetProviderClassID");}});
+
+var MI_Main = Module.findExportByName("EventTracingManagement.dll", "MI_Main")
+Interceptor.attach(MI_Main, {onLeave: function (args) {send("MI_Main");}});
+

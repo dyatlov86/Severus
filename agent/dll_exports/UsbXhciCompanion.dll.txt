@@ -1,0 +1,6 @@
+var FxDriverEntryUm = Module.findExportByName("UsbXhciCompanion.dll", "FxDriverEntryUm")
+Interceptor.attach(FxDriverEntryUm, {onLeave: function (args) {send("FxDriverEntryUm");}});
+
+var __ImagePolicyMetadata = Module.findExportByName("UsbXhciCompanion.dll", "__ImagePolicyMetadata")
+Interceptor.attach(__ImagePolicyMetadata, {onLeave: function (args) {send("__ImagePolicyMetadata");}});
+

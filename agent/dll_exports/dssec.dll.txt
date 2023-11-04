@@ -1,0 +1,18 @@
+var DSCreateISecurityInfoObject = Module.findExportByName("dssec.dll", "DSCreateISecurityInfoObject")
+Interceptor.attach(DSCreateISecurityInfoObject, {onLeave: function (args) {send("DSCreateISecurityInfoObject");}});
+
+var DSCreateISecurityInfoObjectEx = Module.findExportByName("dssec.dll", "DSCreateISecurityInfoObjectEx")
+Interceptor.attach(DSCreateISecurityInfoObjectEx, {onLeave: function (args) {send("DSCreateISecurityInfoObjectEx");}});
+
+var DSCreateSecurityPage = Module.findExportByName("dssec.dll", "DSCreateSecurityPage")
+Interceptor.attach(DSCreateSecurityPage, {onLeave: function (args) {send("DSCreateSecurityPage");}});
+
+var DSEditSecurity = Module.findExportByName("dssec.dll", "DSEditSecurity")
+Interceptor.attach(DSEditSecurity, {onLeave: function (args) {send("DSEditSecurity");}});
+
+var DllCanUnloadNow = Module.findExportByName("dssec.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("dssec.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

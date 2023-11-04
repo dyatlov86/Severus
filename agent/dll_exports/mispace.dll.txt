@@ -1,0 +1,99 @@
+var DllCanUnloadNow = Module.findExportByName("mispace.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mispace.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("mispace.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("mispace.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mispace.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetProviderClassID = Module.findExportByName("mispace.dll", "GetProviderClassID")
+Interceptor.attach(GetProviderClassID, {onLeave: function (args) {send("GetProviderClassID");}});
+
+var MI_Main = Module.findExportByName("mispace.dll", "MI_Main")
+Interceptor.attach(MI_Main, {onLeave: function (args) {send("MI_Main");}});
+
+var PreShutdown = Module.findExportByName("mispace.dll", "PreShutdown")
+Interceptor.attach(PreShutdown, {onLeave: function (args) {send("PreShutdown");}});
+
+var SetShutdownCallback = Module.findExportByName("mispace.dll", "SetShutdownCallback")
+Interceptor.attach(SetShutdownCallback, {onLeave: function (args) {send("SetShutdownCallback");}});
+
+var SmpUnload = Module.findExportByName("mispace.dll", "SmpUnload")
+Interceptor.attach(SmpUnload, {onLeave: function (args) {send("SmpUnload");}});
+
+var WspCheckMinimumSubsystemVersion = Module.findExportByName("mispace.dll", "WspCheckMinimumSubsystemVersion")
+Interceptor.attach(WspCheckMinimumSubsystemVersion, {onLeave: function (args) {send("WspCheckMinimumSubsystemVersion");}});
+
+var WspCompleteMethod = Module.findExportByName("mispace.dll", "WspCompleteMethod")
+Interceptor.attach(WspCompleteMethod, {onLeave: function (args) {send("WspCompleteMethod");}});
+
+var WspCreateJob = Module.findExportByName("mispace.dll", "WspCreateJob")
+Interceptor.attach(WspCreateJob, {onLeave: function (args) {send("WspCreateJob");}});
+
+var WspEnumerateRemoteInstances = Module.findExportByName("mispace.dll", "WspEnumerateRemoteInstances")
+Interceptor.attach(WspEnumerateRemoteInstances, {onLeave: function (args) {send("WspEnumerateRemoteInstances");}});
+
+var WspFreeString = Module.findExportByName("mispace.dll", "WspFreeString")
+Interceptor.attach(WspFreeString, {onLeave: function (args) {send("WspFreeString");}});
+
+var WspGetClassName = Module.findExportByName("mispace.dll", "WspGetClassName")
+Interceptor.attach(WspGetClassName, {onLeave: function (args) {send("WspGetClassName");}});
+
+var WspGetRemoteInstance = Module.findExportByName("mispace.dll", "WspGetRemoteInstance")
+Interceptor.attach(WspGetRemoteInstance, {onLeave: function (args) {send("WspGetRemoteInstance");}});
+
+var WspGetSubsystemFilter = Module.findExportByName("mispace.dll", "WspGetSubsystemFilter")
+Interceptor.attach(WspGetSubsystemFilter, {onLeave: function (args) {send("WspGetSubsystemFilter");}});
+
+var WspGuidToString = Module.findExportByName("mispace.dll", "WspGuidToString")
+Interceptor.attach(WspGuidToString, {onLeave: function (args) {send("WspGuidToString");}});
+
+var WspInvokeRemoteMethod = Module.findExportByName("mispace.dll", "WspInvokeRemoteMethod")
+Interceptor.attach(WspInvokeRemoteMethod, {onLeave: function (args) {send("WspInvokeRemoteMethod");}});
+
+var WspIsAutomaticClusteringEnabled = Module.findExportByName("mispace.dll", "WspIsAutomaticClusteringEnabled")
+Interceptor.attach(WspIsAutomaticClusteringEnabled, {onLeave: function (args) {send("WspIsAutomaticClusteringEnabled");}});
+
+var WspIsRemoteInstance = Module.findExportByName("mispace.dll", "WspIsRemoteInstance")
+Interceptor.attach(WspIsRemoteInstance, {onLeave: function (args) {send("WspIsRemoteInstance");}});
+
+var WspIsRemoteRequest = Module.findExportByName("mispace.dll", "WspIsRemoteRequest")
+Interceptor.attach(WspIsRemoteRequest, {onLeave: function (args) {send("WspIsRemoteRequest");}});
+
+var WspPackObjectId = Module.findExportByName("mispace.dll", "WspPackObjectId")
+Interceptor.attach(WspPackObjectId, {onLeave: function (args) {send("WspPackObjectId");}});
+
+var WspPostAssociation = Module.findExportByName("mispace.dll", "WspPostAssociation")
+Interceptor.attach(WspPostAssociation, {onLeave: function (args) {send("WspPostAssociation");}});
+
+var WspPostSubsystemAssociationReferenceObject = Module.findExportByName("mispace.dll", "WspPostSubsystemAssociationReferenceObject")
+Interceptor.attach(WspPostSubsystemAssociationReferenceObject, {onLeave: function (args) {send("WspPostSubsystemAssociationReferenceObject");}});
+
+var WspProviderEnter = Module.findExportByName("mispace.dll", "WspProviderEnter")
+Interceptor.attach(WspProviderEnter, {onLeave: function (args) {send("WspProviderEnter");}});
+
+var WspProviderExit = Module.findExportByName("mispace.dll", "WspProviderExit")
+Interceptor.attach(WspProviderExit, {onLeave: function (args) {send("WspProviderExit");}});
+
+var WspReferencesOfRemoteInstance = Module.findExportByName("mispace.dll", "WspReferencesOfRemoteInstance")
+Interceptor.attach(WspReferencesOfRemoteInstance, {onLeave: function (args) {send("WspReferencesOfRemoteInstance");}});
+
+var WspRunMethodAsJob = Module.findExportByName("mispace.dll", "WspRunMethodAsJob")
+Interceptor.attach(WspRunMethodAsJob, {onLeave: function (args) {send("WspRunMethodAsJob");}});
+
+var WspSendIndication = Module.findExportByName("mispace.dll", "WspSendIndication")
+Interceptor.attach(WspSendIndication, {onLeave: function (args) {send("WspSendIndication");}});
+
+var WspUnpackObjectId = Module.findExportByName("mispace.dll", "WspUnpackObjectId")
+Interceptor.attach(WspUnpackObjectId, {onLeave: function (args) {send("WspUnpackObjectId");}});
+
+var WspUpdateMethod = Module.findExportByName("mispace.dll", "WspUpdateMethod")
+Interceptor.attach(WspUpdateMethod, {onLeave: function (args) {send("WspUpdateMethod");}});
+

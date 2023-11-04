@@ -1,0 +1,6 @@
+var D3D9GetSWInfo = Module.findExportByName("d3dref9.dll", "D3D9GetSWInfo")
+Interceptor.attach(D3D9GetSWInfo, {onLeave: function (args) {send("D3D9GetSWInfo");}});
+
+var D3D9GetSWInfoEx = Module.findExportByName("d3dref9.dll", "D3D9GetSWInfoEx")
+Interceptor.attach(D3D9GetSWInfoEx, {onLeave: function (args) {send("D3D9GetSWInfoEx");}});
+

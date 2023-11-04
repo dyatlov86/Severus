@@ -1,0 +1,33 @@
+var AppIDConstructAppxAttributes = Module.findExportByName("appidapi.dll", "AppIDConstructAppxAttributes")
+Interceptor.attach(AppIDConstructAppxAttributes, {onLeave: function (args) {send("AppIDConstructAppxAttributes");}});
+
+var AppIDDecodeAttributeString = Module.findExportByName("appidapi.dll", "AppIDDecodeAttributeString")
+Interceptor.attach(AppIDDecodeAttributeString, {onLeave: function (args) {send("AppIDDecodeAttributeString");}});
+
+var AppIDEncodeAttributeString = Module.findExportByName("appidapi.dll", "AppIDEncodeAttributeString")
+Interceptor.attach(AppIDEncodeAttributeString, {onLeave: function (args) {send("AppIDEncodeAttributeString");}});
+
+var AppIDFreeAttributeString = Module.findExportByName("appidapi.dll", "AppIDFreeAttributeString")
+Interceptor.attach(AppIDFreeAttributeString, {onLeave: function (args) {send("AppIDFreeAttributeString");}});
+
+var AppIDGetAppxFileAttributes = Module.findExportByName("appidapi.dll", "AppIDGetAppxFileAttributes")
+Interceptor.attach(AppIDGetAppxFileAttributes, {onLeave: function (args) {send("AppIDGetAppxFileAttributes");}});
+
+var AppIDGetFileAttributes = Module.findExportByName("appidapi.dll", "AppIDGetFileAttributes")
+Interceptor.attach(AppIDGetFileAttributes, {onLeave: function (args) {send("AppIDGetFileAttributes");}});
+
+var AppIDGetMsiVersionInfo = Module.findExportByName("appidapi.dll", "AppIDGetMsiVersionInfo")
+Interceptor.attach(AppIDGetMsiVersionInfo, {onLeave: function (args) {send("AppIDGetMsiVersionInfo");}});
+
+var AppIDReleaseAppxFileAttributes = Module.findExportByName("appidapi.dll", "AppIDReleaseAppxFileAttributes")
+Interceptor.attach(AppIDReleaseAppxFileAttributes, {onLeave: function (args) {send("AppIDReleaseAppxFileAttributes");}});
+
+var AppIDReleaseFileAttributes = Module.findExportByName("appidapi.dll", "AppIDReleaseFileAttributes")
+Interceptor.attach(AppIDReleaseFileAttributes, {onLeave: function (args) {send("AppIDReleaseFileAttributes");}});
+
+var CompareToSystemCIPolicy = Module.findExportByName("appidapi.dll", "CompareToSystemCIPolicy")
+Interceptor.attach(CompareToSystemCIPolicy, {onLeave: function (args) {send("CompareToSystemCIPolicy");}});
+
+var UpdateSystemCIPolicy = Module.findExportByName("appidapi.dll", "UpdateSystemCIPolicy")
+Interceptor.attach(UpdateSystemCIPolicy, {onLeave: function (args) {send("UpdateSystemCIPolicy");}});
+

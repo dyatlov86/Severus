@@ -1,0 +1,12 @@
+var AiDisableDesktopRpcInterface = Module.findExportByName("appinfo.dll", "AiDisableDesktopRpcInterface")
+Interceptor.attach(AiDisableDesktopRpcInterface, {onLeave: function (args) {send("AiDisableDesktopRpcInterface");}});
+
+var AiEnableDesktopRpcInterface = Module.findExportByName("appinfo.dll", "AiEnableDesktopRpcInterface")
+Interceptor.attach(AiEnableDesktopRpcInterface, {onLeave: function (args) {send("AiEnableDesktopRpcInterface");}});
+
+var ServiceMain = Module.findExportByName("appinfo.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("appinfo.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

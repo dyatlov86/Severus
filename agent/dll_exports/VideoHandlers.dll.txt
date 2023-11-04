@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("VideoHandlers.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var GetSetting = Module.findExportByName("VideoHandlers.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+
+var NotifyVideoHandler = Module.findExportByName("VideoHandlers.dll", "NotifyVideoHandler")
+Interceptor.attach(NotifyVideoHandler, {onLeave: function (args) {send("NotifyVideoHandler");}});
+

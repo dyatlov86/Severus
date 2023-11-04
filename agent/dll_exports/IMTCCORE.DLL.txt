@@ -1,0 +1,15 @@
+var CreateUDicProxy = Module.findExportByName("IMTCCORE.DLL", "CreateUDicProxy")
+Interceptor.attach(CreateUDicProxy, {onLeave: function (args) {send("CreateUDicProxy");}});
+
+var DllCanUnloadNow = Module.findExportByName("IMTCCORE.DLL", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("IMTCCORE.DLL", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("IMTCCORE.DLL", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("IMTCCORE.DLL", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

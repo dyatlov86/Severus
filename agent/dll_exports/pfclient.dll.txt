@@ -1,0 +1,159 @@
+var MemUtilEmptyProcess = Module.findExportByName("pfclient.dll", "MemUtilEmptyProcess")
+Interceptor.attach(MemUtilEmptyProcess, {onLeave: function (args) {send("MemUtilEmptyProcess");}});
+
+var MemUtilGetNextRegionInfo = Module.findExportByName("pfclient.dll", "MemUtilGetNextRegionInfo")
+Interceptor.attach(MemUtilGetNextRegionInfo, {onLeave: function (args) {send("MemUtilGetNextRegionInfo");}});
+
+var MemUtilIsLowMemPolicyActive = Module.findExportByName("pfclient.dll", "MemUtilIsLowMemPolicyActive")
+Interceptor.attach(MemUtilIsLowMemPolicyActive, {onLeave: function (args) {send("MemUtilIsLowMemPolicyActive");}});
+
+var MemUtilIsProcessGroupTooLargeForSwap = Module.findExportByName("pfclient.dll", "MemUtilIsProcessGroupTooLargeForSwap")
+Interceptor.attach(MemUtilIsProcessGroupTooLargeForSwap, {onLeave: function (args) {send("MemUtilIsProcessGroupTooLargeForSwap");}});
+
+var MemUtilIsWorkingSetTooLargeForSwap = Module.findExportByName("pfclient.dll", "MemUtilIsWorkingSetTooLargeForSwap")
+Interceptor.attach(MemUtilIsWorkingSetTooLargeForSwap, {onLeave: function (args) {send("MemUtilIsWorkingSetTooLargeForSwap");}});
+
+var MemUtilPrioritizeWsPages = Module.findExportByName("pfclient.dll", "MemUtilPrioritizeWsPages")
+Interceptor.attach(MemUtilPrioritizeWsPages, {onLeave: function (args) {send("MemUtilPrioritizeWsPages");}});
+
+var MemUtilQueryGpuUtilization = Module.findExportByName("pfclient.dll", "MemUtilQueryGpuUtilization")
+Interceptor.attach(MemUtilQueryGpuUtilization, {onLeave: function (args) {send("MemUtilQueryGpuUtilization");}});
+
+var MemUtilQueryProcessCommit = Module.findExportByName("pfclient.dll", "MemUtilQueryProcessCommit")
+Interceptor.attach(MemUtilQueryProcessCommit, {onLeave: function (args) {send("MemUtilQueryProcessCommit");}});
+
+var MemUtilQueryProcessMetrics = Module.findExportByName("pfclient.dll", "MemUtilQueryProcessMetrics")
+Interceptor.attach(MemUtilQueryProcessMetrics, {onLeave: function (args) {send("MemUtilQueryProcessMetrics");}});
+
+var MemUtilVAQueryCtxAdd = Module.findExportByName("pfclient.dll", "MemUtilVAQueryCtxAdd")
+Interceptor.attach(MemUtilVAQueryCtxAdd, {onLeave: function (args) {send("MemUtilVAQueryCtxAdd");}});
+
+var MemUtilVAQueryCtxCleanup = Module.findExportByName("pfclient.dll", "MemUtilVAQueryCtxCleanup")
+Interceptor.attach(MemUtilVAQueryCtxCleanup, {onLeave: function (args) {send("MemUtilVAQueryCtxCleanup");}});
+
+var MemUtilVAQueryCtxComplete = Module.findExportByName("pfclient.dll", "MemUtilVAQueryCtxComplete")
+Interceptor.attach(MemUtilVAQueryCtxComplete, {onLeave: function (args) {send("MemUtilVAQueryCtxComplete");}});
+
+var MemUtilVAQueryCtxInitialize = Module.findExportByName("pfclient.dll", "MemUtilVAQueryCtxInitialize")
+Interceptor.attach(MemUtilVAQueryCtxInitialize, {onLeave: function (args) {send("MemUtilVAQueryCtxInitialize");}});
+
+var MemUtilVAQueryCtxIssue = Module.findExportByName("pfclient.dll", "MemUtilVAQueryCtxIssue")
+Interceptor.attach(MemUtilVAQueryCtxIssue, {onLeave: function (args) {send("MemUtilVAQueryCtxIssue");}});
+
+var MemUtilVAQueryCtxStart = Module.findExportByName("pfclient.dll", "MemUtilVAQueryCtxStart")
+Interceptor.attach(MemUtilVAQueryCtxStart, {onLeave: function (args) {send("MemUtilVAQueryCtxStart");}});
+
+var MemWatcherCleanup = Module.findExportByName("pfclient.dll", "MemWatcherCleanup")
+Interceptor.attach(MemWatcherCleanup, {onLeave: function (args) {send("MemWatcherCleanup");}});
+
+var MemWatcherComputeStandbyLifetime = Module.findExportByName("pfclient.dll", "MemWatcherComputeStandbyLifetime")
+Interceptor.attach(MemWatcherComputeStandbyLifetime, {onLeave: function (args) {send("MemWatcherComputeStandbyLifetime");}});
+
+var MemWatcherInitialize = Module.findExportByName("pfclient.dll", "MemWatcherInitialize")
+Interceptor.attach(MemWatcherInitialize, {onLeave: function (args) {send("MemWatcherInitialize");}});
+
+var MemWatcherQueryMetrics = Module.findExportByName("pfclient.dll", "MemWatcherQueryMetrics")
+Interceptor.attach(MemWatcherQueryMetrics, {onLeave: function (args) {send("MemWatcherQueryMetrics");}});
+
+var MemWatcherSetThresholds = Module.findExportByName("pfclient.dll", "MemWatcherSetThresholds")
+Interceptor.attach(MemWatcherSetThresholds, {onLeave: function (args) {send("MemWatcherSetThresholds");}});
+
+var MemWatcherStart = Module.findExportByName("pfclient.dll", "MemWatcherStart")
+Interceptor.attach(MemWatcherStart, {onLeave: function (args) {send("MemWatcherStart");}});
+
+var PfIuHistoryGet = Module.findExportByName("pfclient.dll", "PfIuHistoryGet")
+Interceptor.attach(PfIuHistoryGet, {onLeave: function (args) {send("PfIuHistoryGet");}});
+
+var PfIuRestartAcceptable = Module.findExportByName("pfclient.dll", "PfIuRestartAcceptable")
+Interceptor.attach(PfIuRestartAcceptable, {onLeave: function (args) {send("PfIuRestartAcceptable");}});
+
+var PfIuUptimeStatsGet = Module.findExportByName("pfclient.dll", "PfIuUptimeStatsGet")
+Interceptor.attach(PfIuUptimeStatsGet, {onLeave: function (args) {send("PfIuUptimeStatsGet");}});
+
+var PfRpcSendCommand = Module.findExportByName("pfclient.dll", "PfRpcSendCommand")
+Interceptor.attach(PfRpcSendCommand, {onLeave: function (args) {send("PfRpcSendCommand");}});
+
+var PfRpcServiceIsRunning = Module.findExportByName("pfclient.dll", "PfRpcServiceIsRunning")
+Interceptor.attach(PfRpcServiceIsRunning, {onLeave: function (args) {send("PfRpcServiceIsRunning");}});
+
+var PfRpcSyncPrefetchforBoot = Module.findExportByName("pfclient.dll", "PfRpcSyncPrefetchforBoot")
+Interceptor.attach(PfRpcSyncPrefetchforBoot, {onLeave: function (args) {send("PfRpcSyncPrefetchforBoot");}});
+
+var PfsForceCrash = Module.findExportByName("pfclient.dll", "PfsForceCrash")
+Interceptor.attach(PfsForceCrash, {onLeave: function (args) {send("PfsForceCrash");}});
+
+var PfsGetPageCount = Module.findExportByName("pfclient.dll", "PfsGetPageCount")
+Interceptor.attach(PfsGetPageCount, {onLeave: function (args) {send("PfsGetPageCount");}});
+
+var PfsOfferMemory = Module.findExportByName("pfclient.dll", "PfsOfferMemory")
+Interceptor.attach(PfsOfferMemory, {onLeave: function (args) {send("PfsOfferMemory");}});
+
+var PfsOfferableHeapAlloc = Module.findExportByName("pfclient.dll", "PfsOfferableHeapAlloc")
+Interceptor.attach(PfsOfferableHeapAlloc, {onLeave: function (args) {send("PfsOfferableHeapAlloc");}});
+
+var PfsOfferableHeapCleanup = Module.findExportByName("pfclient.dll", "PfsOfferableHeapCleanup")
+Interceptor.attach(PfsOfferableHeapCleanup, {onLeave: function (args) {send("PfsOfferableHeapCleanup");}});
+
+var PfsOfferableHeapFree = Module.findExportByName("pfclient.dll", "PfsOfferableHeapFree")
+Interceptor.attach(PfsOfferableHeapFree, {onLeave: function (args) {send("PfsOfferableHeapFree");}});
+
+var PfsOfferableHeapInitialize = Module.findExportByName("pfclient.dll", "PfsOfferableHeapInitialize")
+Interceptor.attach(PfsOfferableHeapInitialize, {onLeave: function (args) {send("PfsOfferableHeapInitialize");}});
+
+var PfsOfferableHeapOffer = Module.findExportByName("pfclient.dll", "PfsOfferableHeapOffer")
+Interceptor.attach(PfsOfferableHeapOffer, {onLeave: function (args) {send("PfsOfferableHeapOffer");}});
+
+var PfsOfferableHeapReclaim = Module.findExportByName("pfclient.dll", "PfsOfferableHeapReclaim")
+Interceptor.attach(PfsOfferableHeapReclaim, {onLeave: function (args) {send("PfsOfferableHeapReclaim");}});
+
+var PfsOfferableHeapStart = Module.findExportByName("pfclient.dll", "PfsOfferableHeapStart")
+Interceptor.attach(PfsOfferableHeapStart, {onLeave: function (args) {send("PfsOfferableHeapStart");}});
+
+var PfsSwCtxCleanup = Module.findExportByName("pfclient.dll", "PfsSwCtxCleanup")
+Interceptor.attach(PfsSwCtxCleanup, {onLeave: function (args) {send("PfsSwCtxCleanup");}});
+
+var PfsSwCtxCommitSnapshot = Module.findExportByName("pfclient.dll", "PfsSwCtxCommitSnapshot")
+Interceptor.attach(PfsSwCtxCommitSnapshot, {onLeave: function (args) {send("PfsSwCtxCommitSnapshot");}});
+
+var PfsSwCtxInitialize = Module.findExportByName("pfclient.dll", "PfsSwCtxInitialize")
+Interceptor.attach(PfsSwCtxInitialize, {onLeave: function (args) {send("PfsSwCtxInitialize");}});
+
+var PfsSwCtxStart = Module.findExportByName("pfclient.dll", "PfsSwCtxStart")
+Interceptor.attach(PfsSwCtxStart, {onLeave: function (args) {send("PfsSwCtxStart");}});
+
+var PfsSwCtxUpdateSnapshot = Module.findExportByName("pfclient.dll", "PfsSwCtxUpdateSnapshot")
+Interceptor.attach(PfsSwCtxUpdateSnapshot, {onLeave: function (args) {send("PfsSwCtxUpdateSnapshot");}});
+
+var PfsSwGetAverageValue = Module.findExportByName("pfclient.dll", "PfsSwGetAverageValue")
+Interceptor.attach(PfsSwGetAverageValue, {onLeave: function (args) {send("PfsSwGetAverageValue");}});
+
+var PfsSwGetDeltaValue = Module.findExportByName("pfclient.dll", "PfsSwGetDeltaValue")
+Interceptor.attach(PfsSwGetDeltaValue, {onLeave: function (args) {send("PfsSwGetDeltaValue");}});
+
+var PfsVaMgrAlloc = Module.findExportByName("pfclient.dll", "PfsVaMgrAlloc")
+Interceptor.attach(PfsVaMgrAlloc, {onLeave: function (args) {send("PfsVaMgrAlloc");}});
+
+var PfsVaMgrCleanup = Module.findExportByName("pfclient.dll", "PfsVaMgrCleanup")
+Interceptor.attach(PfsVaMgrCleanup, {onLeave: function (args) {send("PfsVaMgrCleanup");}});
+
+var PfsVaMgrFree = Module.findExportByName("pfclient.dll", "PfsVaMgrFree")
+Interceptor.attach(PfsVaMgrFree, {onLeave: function (args) {send("PfsVaMgrFree");}});
+
+var PfsVaMgrInitialize = Module.findExportByName("pfclient.dll", "PfsVaMgrInitialize")
+Interceptor.attach(PfsVaMgrInitialize, {onLeave: function (args) {send("PfsVaMgrInitialize");}});
+
+var PfsVaMgrVerify = Module.findExportByName("pfclient.dll", "PfsVaMgrVerify")
+Interceptor.attach(PfsVaMgrVerify, {onLeave: function (args) {send("PfsVaMgrVerify");}});
+
+var SmuCacheHitsControl = Module.findExportByName("pfclient.dll", "SmuCacheHitsControl")
+Interceptor.attach(SmuCacheHitsControl, {onLeave: function (args) {send("SmuCacheHitsControl");}});
+
+var SmuGetControlDeviceHandle = Module.findExportByName("pfclient.dll", "SmuGetControlDeviceHandle")
+Interceptor.attach(SmuGetControlDeviceHandle, {onLeave: function (args) {send("SmuGetControlDeviceHandle");}});
+
+var SwGetPageCount = Module.findExportByName("pfclient.dll", "SwGetPageCount")
+Interceptor.attach(SwGetPageCount, {onLeave: function (args) {send("SwGetPageCount");}});
+
+var SwGetPageCount64 = Module.findExportByName("pfclient.dll", "SwGetPageCount64")
+Interceptor.attach(SwGetPageCount64, {onLeave: function (args) {send("SwGetPageCount64");}});
+

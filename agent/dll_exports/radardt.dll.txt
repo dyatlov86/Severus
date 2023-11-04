@@ -1,0 +1,15 @@
+var RdrSysprepSpecialize = Module.findExportByName("radardt.dll", "RdrSysprepSpecialize")
+Interceptor.attach(RdrSysprepSpecialize, {onLeave: function (args) {send("RdrSysprepSpecialize");}});
+
+var RdrSysprepSpecializeOffline = Module.findExportByName("radardt.dll", "RdrSysprepSpecializeOffline")
+Interceptor.attach(RdrSysprepSpecializeOffline, {onLeave: function (args) {send("RdrSysprepSpecializeOffline");}});
+
+var WdiDiagnosticModuleMain = Module.findExportByName("radardt.dll", "WdiDiagnosticModuleMain")
+Interceptor.attach(WdiDiagnosticModuleMain, {onLeave: function (args) {send("WdiDiagnosticModuleMain");}});
+
+var WdiGetDiagnosticModuleInterfaceVersion = Module.findExportByName("radardt.dll", "WdiGetDiagnosticModuleInterfaceVersion")
+Interceptor.attach(WdiGetDiagnosticModuleInterfaceVersion, {onLeave: function (args) {send("WdiGetDiagnosticModuleInterfaceVersion");}});
+
+var WdiHandleInstance = Module.findExportByName("radardt.dll", "WdiHandleInstance")
+Interceptor.attach(WdiHandleInstance, {onLeave: function (args) {send("WdiHandleInstance");}});
+

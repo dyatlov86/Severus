@@ -1,0 +1,6 @@
+var ProvMigration = Module.findExportByName("provmigrate.dll", "ProvMigration")
+Interceptor.attach(ProvMigration, {onLeave: function (args) {send("ProvMigration");}});
+
+var RunPostPowerwashOperationsStatusPagePhase = Module.findExportByName("provmigrate.dll", "RunPostPowerwashOperationsStatusPagePhase")
+Interceptor.attach(RunPostPowerwashOperationsStatusPagePhase, {onLeave: function (args) {send("RunPostPowerwashOperationsStatusPagePhase");}});
+

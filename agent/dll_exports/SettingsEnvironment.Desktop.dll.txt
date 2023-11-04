@@ -1,0 +1,6 @@
+var DllCanUnloadNow = Module.findExportByName("SettingsEnvironment.Desktop.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var GetDesktopSettingsEnvironment = Module.findExportByName("SettingsEnvironment.Desktop.dll", "GetDesktopSettingsEnvironment")
+Interceptor.attach(GetDesktopSettingsEnvironment, {onLeave: function (args) {send("GetDesktopSettingsEnvironment");}});
+

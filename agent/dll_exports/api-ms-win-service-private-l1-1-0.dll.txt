@@ -1,0 +1,51 @@
+var I_QueryTagInformation = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_QueryTagInformation")
+Interceptor.attach(I_QueryTagInformation, {onLeave: function (args) {send("I_QueryTagInformation");}});
+
+var I_ScBroadcastServiceControlMessage = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScBroadcastServiceControlMessage")
+Interceptor.attach(I_ScBroadcastServiceControlMessage, {onLeave: function (args) {send("I_ScBroadcastServiceControlMessage");}});
+
+var I_ScIsSecurityProcess = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScIsSecurityProcess")
+Interceptor.attach(I_ScIsSecurityProcess, {onLeave: function (args) {send("I_ScIsSecurityProcess");}});
+
+var I_ScPnPGetServiceName = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScPnPGetServiceName")
+Interceptor.attach(I_ScPnPGetServiceName, {onLeave: function (args) {send("I_ScPnPGetServiceName");}});
+
+var I_ScQueryServiceConfig = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScQueryServiceConfig")
+Interceptor.attach(I_ScQueryServiceConfig, {onLeave: function (args) {send("I_ScQueryServiceConfig");}});
+
+var I_ScRegisterDeviceNotification = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScRegisterDeviceNotification")
+Interceptor.attach(I_ScRegisterDeviceNotification, {onLeave: function (args) {send("I_ScRegisterDeviceNotification");}});
+
+var I_ScRpcBindA = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScRpcBindA")
+Interceptor.attach(I_ScRpcBindA, {onLeave: function (args) {send("I_ScRpcBindA");}});
+
+var I_ScRpcBindW = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScRpcBindW")
+Interceptor.attach(I_ScRpcBindW, {onLeave: function (args) {send("I_ScRpcBindW");}});
+
+var I_ScSendPnPMessage = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScSendPnPMessage")
+Interceptor.attach(I_ScSendPnPMessage, {onLeave: function (args) {send("I_ScSendPnPMessage");}});
+
+var I_ScSendTSMessage = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScSendTSMessage")
+Interceptor.attach(I_ScSendTSMessage, {onLeave: function (args) {send("I_ScSendTSMessage");}});
+
+var I_ScSetServiceBitsA = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScSetServiceBitsA")
+Interceptor.attach(I_ScSetServiceBitsA, {onLeave: function (args) {send("I_ScSetServiceBitsA");}});
+
+var I_ScSetServiceBitsW = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScSetServiceBitsW")
+Interceptor.attach(I_ScSetServiceBitsW, {onLeave: function (args) {send("I_ScSetServiceBitsW");}});
+
+var I_ScUnregisterDeviceNotification = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScUnregisterDeviceNotification")
+Interceptor.attach(I_ScUnregisterDeviceNotification, {onLeave: function (args) {send("I_ScUnregisterDeviceNotification");}});
+
+var I_ScValidatePnPService = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "I_ScValidatePnPService")
+Interceptor.attach(I_ScValidatePnPService, {onLeave: function (args) {send("I_ScValidatePnPService");}});
+
+var SubscribeServiceChangeNotifications = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "SubscribeServiceChangeNotifications")
+Interceptor.attach(SubscribeServiceChangeNotifications, {onLeave: function (args) {send("SubscribeServiceChangeNotifications");}});
+
+var UnsubscribeServiceChangeNotifications = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "UnsubscribeServiceChangeNotifications")
+Interceptor.attach(UnsubscribeServiceChangeNotifications, {onLeave: function (args) {send("UnsubscribeServiceChangeNotifications");}});
+
+var WaitServiceState = Module.findExportByName("api-ms-win-service-private-l1-1-0.dll", "WaitServiceState")
+Interceptor.attach(WaitServiceState, {onLeave: function (args) {send("WaitServiceState");}});
+

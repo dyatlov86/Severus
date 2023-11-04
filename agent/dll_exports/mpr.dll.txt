@@ -1,0 +1,255 @@
+var DoBroadcastSystemMessage = Module.findExportByName("mpr.dll", "DoBroadcastSystemMessage")
+Interceptor.attach(DoBroadcastSystemMessage, {onLeave: function (args) {send("DoBroadcastSystemMessage");}});
+
+var DoCommandLinePrompt = Module.findExportByName("mpr.dll", "DoCommandLinePrompt")
+Interceptor.attach(DoCommandLinePrompt, {onLeave: function (args) {send("DoCommandLinePrompt");}});
+
+var DoPasswordDialog = Module.findExportByName("mpr.dll", "DoPasswordDialog")
+Interceptor.attach(DoPasswordDialog, {onLeave: function (args) {send("DoPasswordDialog");}});
+
+var DoProfileErrorDialog = Module.findExportByName("mpr.dll", "DoProfileErrorDialog")
+Interceptor.attach(DoProfileErrorDialog, {onLeave: function (args) {send("DoProfileErrorDialog");}});
+
+var I_MprSaveConn = Module.findExportByName("mpr.dll", "I_MprSaveConn")
+Interceptor.attach(I_MprSaveConn, {onLeave: function (args) {send("I_MprSaveConn");}});
+
+var MultinetGetConnectionPerformanceA = Module.findExportByName("mpr.dll", "MultinetGetConnectionPerformanceA")
+Interceptor.attach(MultinetGetConnectionPerformanceA, {onLeave: function (args) {send("MultinetGetConnectionPerformanceA");}});
+
+var MultinetGetConnectionPerformanceW = Module.findExportByName("mpr.dll", "MultinetGetConnectionPerformanceW")
+Interceptor.attach(MultinetGetConnectionPerformanceW, {onLeave: function (args) {send("MultinetGetConnectionPerformanceW");}});
+
+var MultinetGetErrorTextA = Module.findExportByName("mpr.dll", "MultinetGetErrorTextA")
+Interceptor.attach(MultinetGetErrorTextA, {onLeave: function (args) {send("MultinetGetErrorTextA");}});
+
+var MultinetGetErrorTextW = Module.findExportByName("mpr.dll", "MultinetGetErrorTextW")
+Interceptor.attach(MultinetGetErrorTextW, {onLeave: function (args) {send("MultinetGetErrorTextW");}});
+
+var ShowReconnectDialog = Module.findExportByName("mpr.dll", "ShowReconnectDialog")
+Interceptor.attach(ShowReconnectDialog, {onLeave: function (args) {send("ShowReconnectDialog");}});
+
+var ShowReconnectDialogEnd = Module.findExportByName("mpr.dll", "ShowReconnectDialogEnd")
+Interceptor.attach(ShowReconnectDialogEnd, {onLeave: function (args) {send("ShowReconnectDialogEnd");}});
+
+var ShowReconnectDialogUI = Module.findExportByName("mpr.dll", "ShowReconnectDialogUI")
+Interceptor.attach(ShowReconnectDialogUI, {onLeave: function (args) {send("ShowReconnectDialogUI");}});
+
+var WNetAddConnection2A = Module.findExportByName("mpr.dll", "WNetAddConnection2A")
+Interceptor.attach(WNetAddConnection2A, {onLeave: function (args) {send("WNetAddConnection2A");}});
+
+var WNetAddConnection2W = Module.findExportByName("mpr.dll", "WNetAddConnection2W")
+Interceptor.attach(WNetAddConnection2W, {onLeave: function (args) {send("WNetAddConnection2W");}});
+
+var WNetAddConnection3A = Module.findExportByName("mpr.dll", "WNetAddConnection3A")
+Interceptor.attach(WNetAddConnection3A, {onLeave: function (args) {send("WNetAddConnection3A");}});
+
+var WNetAddConnection3W = Module.findExportByName("mpr.dll", "WNetAddConnection3W")
+Interceptor.attach(WNetAddConnection3W, {onLeave: function (args) {send("WNetAddConnection3W");}});
+
+var WNetAddConnection4A = Module.findExportByName("mpr.dll", "WNetAddConnection4A")
+Interceptor.attach(WNetAddConnection4A, {onLeave: function (args) {send("WNetAddConnection4A");}});
+
+var WNetAddConnection4W = Module.findExportByName("mpr.dll", "WNetAddConnection4W")
+Interceptor.attach(WNetAddConnection4W, {onLeave: function (args) {send("WNetAddConnection4W");}});
+
+var WNetAddConnectionA = Module.findExportByName("mpr.dll", "WNetAddConnectionA")
+Interceptor.attach(WNetAddConnectionA, {onLeave: function (args) {send("WNetAddConnectionA");}});
+
+var WNetAddConnectionW = Module.findExportByName("mpr.dll", "WNetAddConnectionW")
+Interceptor.attach(WNetAddConnectionW, {onLeave: function (args) {send("WNetAddConnectionW");}});
+
+var WNetCancelConnection2A = Module.findExportByName("mpr.dll", "WNetCancelConnection2A")
+Interceptor.attach(WNetCancelConnection2A, {onLeave: function (args) {send("WNetCancelConnection2A");}});
+
+var WNetCancelConnection2W = Module.findExportByName("mpr.dll", "WNetCancelConnection2W")
+Interceptor.attach(WNetCancelConnection2W, {onLeave: function (args) {send("WNetCancelConnection2W");}});
+
+var WNetCancelConnectionA = Module.findExportByName("mpr.dll", "WNetCancelConnectionA")
+Interceptor.attach(WNetCancelConnectionA, {onLeave: function (args) {send("WNetCancelConnectionA");}});
+
+var WNetCancelConnectionW = Module.findExportByName("mpr.dll", "WNetCancelConnectionW")
+Interceptor.attach(WNetCancelConnectionW, {onLeave: function (args) {send("WNetCancelConnectionW");}});
+
+var WNetClearConnections = Module.findExportByName("mpr.dll", "WNetClearConnections")
+Interceptor.attach(WNetClearConnections, {onLeave: function (args) {send("WNetClearConnections");}});
+
+var WNetCloseEnum = Module.findExportByName("mpr.dll", "WNetCloseEnum")
+Interceptor.attach(WNetCloseEnum, {onLeave: function (args) {send("WNetCloseEnum");}});
+
+var WNetConnectionDialog = Module.findExportByName("mpr.dll", "WNetConnectionDialog")
+Interceptor.attach(WNetConnectionDialog, {onLeave: function (args) {send("WNetConnectionDialog");}});
+
+var WNetConnectionDialog1A = Module.findExportByName("mpr.dll", "WNetConnectionDialog1A")
+Interceptor.attach(WNetConnectionDialog1A, {onLeave: function (args) {send("WNetConnectionDialog1A");}});
+
+var WNetConnectionDialog1W = Module.findExportByName("mpr.dll", "WNetConnectionDialog1W")
+Interceptor.attach(WNetConnectionDialog1W, {onLeave: function (args) {send("WNetConnectionDialog1W");}});
+
+var WNetConnectionDialog2 = Module.findExportByName("mpr.dll", "WNetConnectionDialog2")
+Interceptor.attach(WNetConnectionDialog2, {onLeave: function (args) {send("WNetConnectionDialog2");}});
+
+var WNetDirectoryNotifyA = Module.findExportByName("mpr.dll", "WNetDirectoryNotifyA")
+Interceptor.attach(WNetDirectoryNotifyA, {onLeave: function (args) {send("WNetDirectoryNotifyA");}});
+
+var WNetDirectoryNotifyW = Module.findExportByName("mpr.dll", "WNetDirectoryNotifyW")
+Interceptor.attach(WNetDirectoryNotifyW, {onLeave: function (args) {send("WNetDirectoryNotifyW");}});
+
+var WNetDisconnectDialog = Module.findExportByName("mpr.dll", "WNetDisconnectDialog")
+Interceptor.attach(WNetDisconnectDialog, {onLeave: function (args) {send("WNetDisconnectDialog");}});
+
+var WNetDisconnectDialog1A = Module.findExportByName("mpr.dll", "WNetDisconnectDialog1A")
+Interceptor.attach(WNetDisconnectDialog1A, {onLeave: function (args) {send("WNetDisconnectDialog1A");}});
+
+var WNetDisconnectDialog1W = Module.findExportByName("mpr.dll", "WNetDisconnectDialog1W")
+Interceptor.attach(WNetDisconnectDialog1W, {onLeave: function (args) {send("WNetDisconnectDialog1W");}});
+
+var WNetDisconnectDialog2 = Module.findExportByName("mpr.dll", "WNetDisconnectDialog2")
+Interceptor.attach(WNetDisconnectDialog2, {onLeave: function (args) {send("WNetDisconnectDialog2");}});
+
+var WNetEnumResourceA = Module.findExportByName("mpr.dll", "WNetEnumResourceA")
+Interceptor.attach(WNetEnumResourceA, {onLeave: function (args) {send("WNetEnumResourceA");}});
+
+var WNetEnumResourceW = Module.findExportByName("mpr.dll", "WNetEnumResourceW")
+Interceptor.attach(WNetEnumResourceW, {onLeave: function (args) {send("WNetEnumResourceW");}});
+
+var WNetFormatNetworkNameA = Module.findExportByName("mpr.dll", "WNetFormatNetworkNameA")
+Interceptor.attach(WNetFormatNetworkNameA, {onLeave: function (args) {send("WNetFormatNetworkNameA");}});
+
+var WNetFormatNetworkNameW = Module.findExportByName("mpr.dll", "WNetFormatNetworkNameW")
+Interceptor.attach(WNetFormatNetworkNameW, {onLeave: function (args) {send("WNetFormatNetworkNameW");}});
+
+var WNetGetConnection2A = Module.findExportByName("mpr.dll", "WNetGetConnection2A")
+Interceptor.attach(WNetGetConnection2A, {onLeave: function (args) {send("WNetGetConnection2A");}});
+
+var WNetGetConnection2W = Module.findExportByName("mpr.dll", "WNetGetConnection2W")
+Interceptor.attach(WNetGetConnection2W, {onLeave: function (args) {send("WNetGetConnection2W");}});
+
+var WNetGetConnection3A = Module.findExportByName("mpr.dll", "WNetGetConnection3A")
+Interceptor.attach(WNetGetConnection3A, {onLeave: function (args) {send("WNetGetConnection3A");}});
+
+var WNetGetConnection3W = Module.findExportByName("mpr.dll", "WNetGetConnection3W")
+Interceptor.attach(WNetGetConnection3W, {onLeave: function (args) {send("WNetGetConnection3W");}});
+
+var WNetGetConnectionA = Module.findExportByName("mpr.dll", "WNetGetConnectionA")
+Interceptor.attach(WNetGetConnectionA, {onLeave: function (args) {send("WNetGetConnectionA");}});
+
+var WNetGetConnectionW = Module.findExportByName("mpr.dll", "WNetGetConnectionW")
+Interceptor.attach(WNetGetConnectionW, {onLeave: function (args) {send("WNetGetConnectionW");}});
+
+var WNetGetDirectoryTypeA = Module.findExportByName("mpr.dll", "WNetGetDirectoryTypeA")
+Interceptor.attach(WNetGetDirectoryTypeA, {onLeave: function (args) {send("WNetGetDirectoryTypeA");}});
+
+var WNetGetDirectoryTypeW = Module.findExportByName("mpr.dll", "WNetGetDirectoryTypeW")
+Interceptor.attach(WNetGetDirectoryTypeW, {onLeave: function (args) {send("WNetGetDirectoryTypeW");}});
+
+var WNetGetHomeDirectoryW = Module.findExportByName("mpr.dll", "WNetGetHomeDirectoryW")
+Interceptor.attach(WNetGetHomeDirectoryW, {onLeave: function (args) {send("WNetGetHomeDirectoryW");}});
+
+var WNetGetLastErrorA = Module.findExportByName("mpr.dll", "WNetGetLastErrorA")
+Interceptor.attach(WNetGetLastErrorA, {onLeave: function (args) {send("WNetGetLastErrorA");}});
+
+var WNetGetLastErrorW = Module.findExportByName("mpr.dll", "WNetGetLastErrorW")
+Interceptor.attach(WNetGetLastErrorW, {onLeave: function (args) {send("WNetGetLastErrorW");}});
+
+var WNetGetNetworkInformationA = Module.findExportByName("mpr.dll", "WNetGetNetworkInformationA")
+Interceptor.attach(WNetGetNetworkInformationA, {onLeave: function (args) {send("WNetGetNetworkInformationA");}});
+
+var WNetGetNetworkInformationW = Module.findExportByName("mpr.dll", "WNetGetNetworkInformationW")
+Interceptor.attach(WNetGetNetworkInformationW, {onLeave: function (args) {send("WNetGetNetworkInformationW");}});
+
+var WNetGetPropertyTextA = Module.findExportByName("mpr.dll", "WNetGetPropertyTextA")
+Interceptor.attach(WNetGetPropertyTextA, {onLeave: function (args) {send("WNetGetPropertyTextA");}});
+
+var WNetGetPropertyTextW = Module.findExportByName("mpr.dll", "WNetGetPropertyTextW")
+Interceptor.attach(WNetGetPropertyTextW, {onLeave: function (args) {send("WNetGetPropertyTextW");}});
+
+var WNetGetProviderNameA = Module.findExportByName("mpr.dll", "WNetGetProviderNameA")
+Interceptor.attach(WNetGetProviderNameA, {onLeave: function (args) {send("WNetGetProviderNameA");}});
+
+var WNetGetProviderNameW = Module.findExportByName("mpr.dll", "WNetGetProviderNameW")
+Interceptor.attach(WNetGetProviderNameW, {onLeave: function (args) {send("WNetGetProviderNameW");}});
+
+var WNetGetProviderTypeA = Module.findExportByName("mpr.dll", "WNetGetProviderTypeA")
+Interceptor.attach(WNetGetProviderTypeA, {onLeave: function (args) {send("WNetGetProviderTypeA");}});
+
+var WNetGetProviderTypeW = Module.findExportByName("mpr.dll", "WNetGetProviderTypeW")
+Interceptor.attach(WNetGetProviderTypeW, {onLeave: function (args) {send("WNetGetProviderTypeW");}});
+
+var WNetGetResourceInformationA = Module.findExportByName("mpr.dll", "WNetGetResourceInformationA")
+Interceptor.attach(WNetGetResourceInformationA, {onLeave: function (args) {send("WNetGetResourceInformationA");}});
+
+var WNetGetResourceInformationW = Module.findExportByName("mpr.dll", "WNetGetResourceInformationW")
+Interceptor.attach(WNetGetResourceInformationW, {onLeave: function (args) {send("WNetGetResourceInformationW");}});
+
+var WNetGetResourceParentA = Module.findExportByName("mpr.dll", "WNetGetResourceParentA")
+Interceptor.attach(WNetGetResourceParentA, {onLeave: function (args) {send("WNetGetResourceParentA");}});
+
+var WNetGetResourceParentW = Module.findExportByName("mpr.dll", "WNetGetResourceParentW")
+Interceptor.attach(WNetGetResourceParentW, {onLeave: function (args) {send("WNetGetResourceParentW");}});
+
+var WNetGetSearchDialog = Module.findExportByName("mpr.dll", "WNetGetSearchDialog")
+Interceptor.attach(WNetGetSearchDialog, {onLeave: function (args) {send("WNetGetSearchDialog");}});
+
+var WNetGetUniversalNameA = Module.findExportByName("mpr.dll", "WNetGetUniversalNameA")
+Interceptor.attach(WNetGetUniversalNameA, {onLeave: function (args) {send("WNetGetUniversalNameA");}});
+
+var WNetGetUniversalNameW = Module.findExportByName("mpr.dll", "WNetGetUniversalNameW")
+Interceptor.attach(WNetGetUniversalNameW, {onLeave: function (args) {send("WNetGetUniversalNameW");}});
+
+var WNetGetUserA = Module.findExportByName("mpr.dll", "WNetGetUserA")
+Interceptor.attach(WNetGetUserA, {onLeave: function (args) {send("WNetGetUserA");}});
+
+var WNetGetUserW = Module.findExportByName("mpr.dll", "WNetGetUserW")
+Interceptor.attach(WNetGetUserW, {onLeave: function (args) {send("WNetGetUserW");}});
+
+var WNetLogonNotify = Module.findExportByName("mpr.dll", "WNetLogonNotify")
+Interceptor.attach(WNetLogonNotify, {onLeave: function (args) {send("WNetLogonNotify");}});
+
+var WNetOpenEnumA = Module.findExportByName("mpr.dll", "WNetOpenEnumA")
+Interceptor.attach(WNetOpenEnumA, {onLeave: function (args) {send("WNetOpenEnumA");}});
+
+var WNetOpenEnumW = Module.findExportByName("mpr.dll", "WNetOpenEnumW")
+Interceptor.attach(WNetOpenEnumW, {onLeave: function (args) {send("WNetOpenEnumW");}});
+
+var WNetPasswordChangeNotify = Module.findExportByName("mpr.dll", "WNetPasswordChangeNotify")
+Interceptor.attach(WNetPasswordChangeNotify, {onLeave: function (args) {send("WNetPasswordChangeNotify");}});
+
+var WNetPropertyDialogA = Module.findExportByName("mpr.dll", "WNetPropertyDialogA")
+Interceptor.attach(WNetPropertyDialogA, {onLeave: function (args) {send("WNetPropertyDialogA");}});
+
+var WNetPropertyDialogW = Module.findExportByName("mpr.dll", "WNetPropertyDialogW")
+Interceptor.attach(WNetPropertyDialogW, {onLeave: function (args) {send("WNetPropertyDialogW");}});
+
+var WNetRestoreAllConnectionsW = Module.findExportByName("mpr.dll", "WNetRestoreAllConnectionsW")
+Interceptor.attach(WNetRestoreAllConnectionsW, {onLeave: function (args) {send("WNetRestoreAllConnectionsW");}});
+
+var WNetRestoreSingleConnectionW = Module.findExportByName("mpr.dll", "WNetRestoreSingleConnectionW")
+Interceptor.attach(WNetRestoreSingleConnectionW, {onLeave: function (args) {send("WNetRestoreSingleConnectionW");}});
+
+var WNetSetConnectionA = Module.findExportByName("mpr.dll", "WNetSetConnectionA")
+Interceptor.attach(WNetSetConnectionA, {onLeave: function (args) {send("WNetSetConnectionA");}});
+
+var WNetSetConnectionW = Module.findExportByName("mpr.dll", "WNetSetConnectionW")
+Interceptor.attach(WNetSetConnectionW, {onLeave: function (args) {send("WNetSetConnectionW");}});
+
+var WNetSetLastErrorA = Module.findExportByName("mpr.dll", "WNetSetLastErrorA")
+Interceptor.attach(WNetSetLastErrorA, {onLeave: function (args) {send("WNetSetLastErrorA");}});
+
+var WNetSetLastErrorW = Module.findExportByName("mpr.dll", "WNetSetLastErrorW")
+Interceptor.attach(WNetSetLastErrorW, {onLeave: function (args) {send("WNetSetLastErrorW");}});
+
+var WNetSupportGlobalEnum = Module.findExportByName("mpr.dll", "WNetSupportGlobalEnum")
+Interceptor.attach(WNetSupportGlobalEnum, {onLeave: function (args) {send("WNetSupportGlobalEnum");}});
+
+var WNetUseConnection4A = Module.findExportByName("mpr.dll", "WNetUseConnection4A")
+Interceptor.attach(WNetUseConnection4A, {onLeave: function (args) {send("WNetUseConnection4A");}});
+
+var WNetUseConnection4W = Module.findExportByName("mpr.dll", "WNetUseConnection4W")
+Interceptor.attach(WNetUseConnection4W, {onLeave: function (args) {send("WNetUseConnection4W");}});
+
+var WNetUseConnectionA = Module.findExportByName("mpr.dll", "WNetUseConnectionA")
+Interceptor.attach(WNetUseConnectionA, {onLeave: function (args) {send("WNetUseConnectionA");}});
+
+var WNetUseConnectionW = Module.findExportByName("mpr.dll", "WNetUseConnectionW")
+Interceptor.attach(WNetUseConnectionW, {onLeave: function (args) {send("WNetUseConnectionW");}});
+

@@ -1,0 +1,15 @@
+var VhfAsyncOperationComplete = Module.findExportByName("VhfUm.dll", "VhfAsyncOperationComplete")
+Interceptor.attach(VhfAsyncOperationComplete, {onLeave: function (args) {send("VhfAsyncOperationComplete");}});
+
+var VhfCreate = Module.findExportByName("VhfUm.dll", "VhfCreate")
+Interceptor.attach(VhfCreate, {onLeave: function (args) {send("VhfCreate");}});
+
+var VhfDelete = Module.findExportByName("VhfUm.dll", "VhfDelete")
+Interceptor.attach(VhfDelete, {onLeave: function (args) {send("VhfDelete");}});
+
+var VhfReadReportSubmit = Module.findExportByName("VhfUm.dll", "VhfReadReportSubmit")
+Interceptor.attach(VhfReadReportSubmit, {onLeave: function (args) {send("VhfReadReportSubmit");}});
+
+var VhfStart = Module.findExportByName("VhfUm.dll", "VhfStart")
+Interceptor.attach(VhfStart, {onLeave: function (args) {send("VhfStart");}});
+

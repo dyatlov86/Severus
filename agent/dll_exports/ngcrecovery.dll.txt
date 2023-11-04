@@ -1,0 +1,21 @@
+var NgcGetPinRecoveryParams = Module.findExportByName("ngcrecovery.dll", "NgcGetPinRecoveryParams")
+Interceptor.attach(NgcGetPinRecoveryParams, {onLeave: function (args) {send("NgcGetPinRecoveryParams");}});
+
+var NgcIsPinRecoveryEnabled = Module.findExportByName("ngcrecovery.dll", "NgcIsPinRecoveryEnabled")
+Interceptor.attach(NgcIsPinRecoveryEnabled, {onLeave: function (args) {send("NgcIsPinRecoveryEnabled");}});
+
+var NgcProtectPinRecoverySecret = Module.findExportByName("ngcrecovery.dll", "NgcProtectPinRecoverySecret")
+Interceptor.attach(NgcProtectPinRecoverySecret, {onLeave: function (args) {send("NgcProtectPinRecoverySecret");}});
+
+var NgcRecoverPin = Module.findExportByName("ngcrecovery.dll", "NgcRecoverPin")
+Interceptor.attach(NgcRecoverPin, {onLeave: function (args) {send("NgcRecoverPin");}});
+
+var NgcRecoverPinSilent = Module.findExportByName("ngcrecovery.dll", "NgcRecoverPinSilent")
+Interceptor.attach(NgcRecoverPinSilent, {onLeave: function (args) {send("NgcRecoverPinSilent");}});
+
+var NgcRecoverPinSilentWithToken = Module.findExportByName("ngcrecovery.dll", "NgcRecoverPinSilentWithToken")
+Interceptor.attach(NgcRecoverPinSilentWithToken, {onLeave: function (args) {send("NgcRecoverPinSilentWithToken");}});
+
+var NgcVerifyPinRecoverySecret = Module.findExportByName("ngcrecovery.dll", "NgcVerifyPinRecoverySecret")
+Interceptor.attach(NgcVerifyPinRecoverySecret, {onLeave: function (args) {send("NgcVerifyPinRecoverySecret");}});
+

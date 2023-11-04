@@ -1,0 +1,885 @@
+var DllCanUnloadNow = Module.findExportByName("msi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("msi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllGetVersion = Module.findExportByName("msi.dll", "DllGetVersion")
+Interceptor.attach(DllGetVersion, {onLeave: function (args) {send("DllGetVersion");}});
+
+var DllRegisterServer = Module.findExportByName("msi.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msi.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var Migrate10CachedPackagesA = Module.findExportByName("msi.dll", "Migrate10CachedPackagesA")
+Interceptor.attach(Migrate10CachedPackagesA, {onLeave: function (args) {send("Migrate10CachedPackagesA");}});
+
+var Migrate10CachedPackagesW = Module.findExportByName("msi.dll", "Migrate10CachedPackagesW")
+Interceptor.attach(Migrate10CachedPackagesW, {onLeave: function (args) {send("Migrate10CachedPackagesW");}});
+
+var MsiAdvertiseProductA = Module.findExportByName("msi.dll", "MsiAdvertiseProductA")
+Interceptor.attach(MsiAdvertiseProductA, {onLeave: function (args) {send("MsiAdvertiseProductA");}});
+
+var MsiAdvertiseProductExA = Module.findExportByName("msi.dll", "MsiAdvertiseProductExA")
+Interceptor.attach(MsiAdvertiseProductExA, {onLeave: function (args) {send("MsiAdvertiseProductExA");}});
+
+var MsiAdvertiseProductExW = Module.findExportByName("msi.dll", "MsiAdvertiseProductExW")
+Interceptor.attach(MsiAdvertiseProductExW, {onLeave: function (args) {send("MsiAdvertiseProductExW");}});
+
+var MsiAdvertiseProductW = Module.findExportByName("msi.dll", "MsiAdvertiseProductW")
+Interceptor.attach(MsiAdvertiseProductW, {onLeave: function (args) {send("MsiAdvertiseProductW");}});
+
+var MsiAdvertiseScriptA = Module.findExportByName("msi.dll", "MsiAdvertiseScriptA")
+Interceptor.attach(MsiAdvertiseScriptA, {onLeave: function (args) {send("MsiAdvertiseScriptA");}});
+
+var MsiAdvertiseScriptW = Module.findExportByName("msi.dll", "MsiAdvertiseScriptW")
+Interceptor.attach(MsiAdvertiseScriptW, {onLeave: function (args) {send("MsiAdvertiseScriptW");}});
+
+var MsiApplyMultiplePatchesA = Module.findExportByName("msi.dll", "MsiApplyMultiplePatchesA")
+Interceptor.attach(MsiApplyMultiplePatchesA, {onLeave: function (args) {send("MsiApplyMultiplePatchesA");}});
+
+var MsiApplyMultiplePatchesW = Module.findExportByName("msi.dll", "MsiApplyMultiplePatchesW")
+Interceptor.attach(MsiApplyMultiplePatchesW, {onLeave: function (args) {send("MsiApplyMultiplePatchesW");}});
+
+var MsiApplyPatchA = Module.findExportByName("msi.dll", "MsiApplyPatchA")
+Interceptor.attach(MsiApplyPatchA, {onLeave: function (args) {send("MsiApplyPatchA");}});
+
+var MsiApplyPatchW = Module.findExportByName("msi.dll", "MsiApplyPatchW")
+Interceptor.attach(MsiApplyPatchW, {onLeave: function (args) {send("MsiApplyPatchW");}});
+
+var MsiBeginTransactionA = Module.findExportByName("msi.dll", "MsiBeginTransactionA")
+Interceptor.attach(MsiBeginTransactionA, {onLeave: function (args) {send("MsiBeginTransactionA");}});
+
+var MsiBeginTransactionW = Module.findExportByName("msi.dll", "MsiBeginTransactionW")
+Interceptor.attach(MsiBeginTransactionW, {onLeave: function (args) {send("MsiBeginTransactionW");}});
+
+var MsiCloseAllHandles = Module.findExportByName("msi.dll", "MsiCloseAllHandles")
+Interceptor.attach(MsiCloseAllHandles, {onLeave: function (args) {send("MsiCloseAllHandles");}});
+
+var MsiCloseHandle = Module.findExportByName("msi.dll", "MsiCloseHandle")
+Interceptor.attach(MsiCloseHandle, {onLeave: function (args) {send("MsiCloseHandle");}});
+
+var MsiCollectUserInfoA = Module.findExportByName("msi.dll", "MsiCollectUserInfoA")
+Interceptor.attach(MsiCollectUserInfoA, {onLeave: function (args) {send("MsiCollectUserInfoA");}});
+
+var MsiCollectUserInfoW = Module.findExportByName("msi.dll", "MsiCollectUserInfoW")
+Interceptor.attach(MsiCollectUserInfoW, {onLeave: function (args) {send("MsiCollectUserInfoW");}});
+
+var MsiConfigureFeatureA = Module.findExportByName("msi.dll", "MsiConfigureFeatureA")
+Interceptor.attach(MsiConfigureFeatureA, {onLeave: function (args) {send("MsiConfigureFeatureA");}});
+
+var MsiConfigureFeatureFromDescriptorA = Module.findExportByName("msi.dll", "MsiConfigureFeatureFromDescriptorA")
+Interceptor.attach(MsiConfigureFeatureFromDescriptorA, {onLeave: function (args) {send("MsiConfigureFeatureFromDescriptorA");}});
+
+var MsiConfigureFeatureFromDescriptorW = Module.findExportByName("msi.dll", "MsiConfigureFeatureFromDescriptorW")
+Interceptor.attach(MsiConfigureFeatureFromDescriptorW, {onLeave: function (args) {send("MsiConfigureFeatureFromDescriptorW");}});
+
+var MsiConfigureFeatureW = Module.findExportByName("msi.dll", "MsiConfigureFeatureW")
+Interceptor.attach(MsiConfigureFeatureW, {onLeave: function (args) {send("MsiConfigureFeatureW");}});
+
+var MsiConfigureProductA = Module.findExportByName("msi.dll", "MsiConfigureProductA")
+Interceptor.attach(MsiConfigureProductA, {onLeave: function (args) {send("MsiConfigureProductA");}});
+
+var MsiConfigureProductExA = Module.findExportByName("msi.dll", "MsiConfigureProductExA")
+Interceptor.attach(MsiConfigureProductExA, {onLeave: function (args) {send("MsiConfigureProductExA");}});
+
+var MsiConfigureProductExW = Module.findExportByName("msi.dll", "MsiConfigureProductExW")
+Interceptor.attach(MsiConfigureProductExW, {onLeave: function (args) {send("MsiConfigureProductExW");}});
+
+var MsiConfigureProductW = Module.findExportByName("msi.dll", "MsiConfigureProductW")
+Interceptor.attach(MsiConfigureProductW, {onLeave: function (args) {send("MsiConfigureProductW");}});
+
+var MsiCreateAndVerifyInstallerDirectory = Module.findExportByName("msi.dll", "MsiCreateAndVerifyInstallerDirectory")
+Interceptor.attach(MsiCreateAndVerifyInstallerDirectory, {onLeave: function (args) {send("MsiCreateAndVerifyInstallerDirectory");}});
+
+var MsiCreateRecord = Module.findExportByName("msi.dll", "MsiCreateRecord")
+Interceptor.attach(MsiCreateRecord, {onLeave: function (args) {send("MsiCreateRecord");}});
+
+var MsiCreateTransformSummaryInfoA = Module.findExportByName("msi.dll", "MsiCreateTransformSummaryInfoA")
+Interceptor.attach(MsiCreateTransformSummaryInfoA, {onLeave: function (args) {send("MsiCreateTransformSummaryInfoA");}});
+
+var MsiCreateTransformSummaryInfoW = Module.findExportByName("msi.dll", "MsiCreateTransformSummaryInfoW")
+Interceptor.attach(MsiCreateTransformSummaryInfoW, {onLeave: function (args) {send("MsiCreateTransformSummaryInfoW");}});
+
+var MsiDatabaseApplyTransformA = Module.findExportByName("msi.dll", "MsiDatabaseApplyTransformA")
+Interceptor.attach(MsiDatabaseApplyTransformA, {onLeave: function (args) {send("MsiDatabaseApplyTransformA");}});
+
+var MsiDatabaseApplyTransformW = Module.findExportByName("msi.dll", "MsiDatabaseApplyTransformW")
+Interceptor.attach(MsiDatabaseApplyTransformW, {onLeave: function (args) {send("MsiDatabaseApplyTransformW");}});
+
+var MsiDatabaseCommit = Module.findExportByName("msi.dll", "MsiDatabaseCommit")
+Interceptor.attach(MsiDatabaseCommit, {onLeave: function (args) {send("MsiDatabaseCommit");}});
+
+var MsiDatabaseExportA = Module.findExportByName("msi.dll", "MsiDatabaseExportA")
+Interceptor.attach(MsiDatabaseExportA, {onLeave: function (args) {send("MsiDatabaseExportA");}});
+
+var MsiDatabaseExportW = Module.findExportByName("msi.dll", "MsiDatabaseExportW")
+Interceptor.attach(MsiDatabaseExportW, {onLeave: function (args) {send("MsiDatabaseExportW");}});
+
+var MsiDatabaseGenerateTransformA = Module.findExportByName("msi.dll", "MsiDatabaseGenerateTransformA")
+Interceptor.attach(MsiDatabaseGenerateTransformA, {onLeave: function (args) {send("MsiDatabaseGenerateTransformA");}});
+
+var MsiDatabaseGenerateTransformW = Module.findExportByName("msi.dll", "MsiDatabaseGenerateTransformW")
+Interceptor.attach(MsiDatabaseGenerateTransformW, {onLeave: function (args) {send("MsiDatabaseGenerateTransformW");}});
+
+var MsiDatabaseGetPrimaryKeysA = Module.findExportByName("msi.dll", "MsiDatabaseGetPrimaryKeysA")
+Interceptor.attach(MsiDatabaseGetPrimaryKeysA, {onLeave: function (args) {send("MsiDatabaseGetPrimaryKeysA");}});
+
+var MsiDatabaseGetPrimaryKeysW = Module.findExportByName("msi.dll", "MsiDatabaseGetPrimaryKeysW")
+Interceptor.attach(MsiDatabaseGetPrimaryKeysW, {onLeave: function (args) {send("MsiDatabaseGetPrimaryKeysW");}});
+
+var MsiDatabaseImportA = Module.findExportByName("msi.dll", "MsiDatabaseImportA")
+Interceptor.attach(MsiDatabaseImportA, {onLeave: function (args) {send("MsiDatabaseImportA");}});
+
+var MsiDatabaseImportW = Module.findExportByName("msi.dll", "MsiDatabaseImportW")
+Interceptor.attach(MsiDatabaseImportW, {onLeave: function (args) {send("MsiDatabaseImportW");}});
+
+var MsiDatabaseIsTablePersistentA = Module.findExportByName("msi.dll", "MsiDatabaseIsTablePersistentA")
+Interceptor.attach(MsiDatabaseIsTablePersistentA, {onLeave: function (args) {send("MsiDatabaseIsTablePersistentA");}});
+
+var MsiDatabaseIsTablePersistentW = Module.findExportByName("msi.dll", "MsiDatabaseIsTablePersistentW")
+Interceptor.attach(MsiDatabaseIsTablePersistentW, {onLeave: function (args) {send("MsiDatabaseIsTablePersistentW");}});
+
+var MsiDatabaseMergeA = Module.findExportByName("msi.dll", "MsiDatabaseMergeA")
+Interceptor.attach(MsiDatabaseMergeA, {onLeave: function (args) {send("MsiDatabaseMergeA");}});
+
+var MsiDatabaseMergeW = Module.findExportByName("msi.dll", "MsiDatabaseMergeW")
+Interceptor.attach(MsiDatabaseMergeW, {onLeave: function (args) {send("MsiDatabaseMergeW");}});
+
+var MsiDatabaseOpenViewA = Module.findExportByName("msi.dll", "MsiDatabaseOpenViewA")
+Interceptor.attach(MsiDatabaseOpenViewA, {onLeave: function (args) {send("MsiDatabaseOpenViewA");}});
+
+var MsiDatabaseOpenViewW = Module.findExportByName("msi.dll", "MsiDatabaseOpenViewW")
+Interceptor.attach(MsiDatabaseOpenViewW, {onLeave: function (args) {send("MsiDatabaseOpenViewW");}});
+
+var MsiDecomposeDescriptorA = Module.findExportByName("msi.dll", "MsiDecomposeDescriptorA")
+Interceptor.attach(MsiDecomposeDescriptorA, {onLeave: function (args) {send("MsiDecomposeDescriptorA");}});
+
+var MsiDecomposeDescriptorW = Module.findExportByName("msi.dll", "MsiDecomposeDescriptorW")
+Interceptor.attach(MsiDecomposeDescriptorW, {onLeave: function (args) {send("MsiDecomposeDescriptorW");}});
+
+var MsiDeleteUserDataA = Module.findExportByName("msi.dll", "MsiDeleteUserDataA")
+Interceptor.attach(MsiDeleteUserDataA, {onLeave: function (args) {send("MsiDeleteUserDataA");}});
+
+var MsiDeleteUserDataW = Module.findExportByName("msi.dll", "MsiDeleteUserDataW")
+Interceptor.attach(MsiDeleteUserDataW, {onLeave: function (args) {send("MsiDeleteUserDataW");}});
+
+var MsiDetermineApplicablePatchesA = Module.findExportByName("msi.dll", "MsiDetermineApplicablePatchesA")
+Interceptor.attach(MsiDetermineApplicablePatchesA, {onLeave: function (args) {send("MsiDetermineApplicablePatchesA");}});
+
+var MsiDetermineApplicablePatchesW = Module.findExportByName("msi.dll", "MsiDetermineApplicablePatchesW")
+Interceptor.attach(MsiDetermineApplicablePatchesW, {onLeave: function (args) {send("MsiDetermineApplicablePatchesW");}});
+
+var MsiDeterminePatchSequenceA = Module.findExportByName("msi.dll", "MsiDeterminePatchSequenceA")
+Interceptor.attach(MsiDeterminePatchSequenceA, {onLeave: function (args) {send("MsiDeterminePatchSequenceA");}});
+
+var MsiDeterminePatchSequenceW = Module.findExportByName("msi.dll", "MsiDeterminePatchSequenceW")
+Interceptor.attach(MsiDeterminePatchSequenceW, {onLeave: function (args) {send("MsiDeterminePatchSequenceW");}});
+
+var MsiDoActionA = Module.findExportByName("msi.dll", "MsiDoActionA")
+Interceptor.attach(MsiDoActionA, {onLeave: function (args) {send("MsiDoActionA");}});
+
+var MsiDoActionW = Module.findExportByName("msi.dll", "MsiDoActionW")
+Interceptor.attach(MsiDoActionW, {onLeave: function (args) {send("MsiDoActionW");}});
+
+var MsiEnableLogA = Module.findExportByName("msi.dll", "MsiEnableLogA")
+Interceptor.attach(MsiEnableLogA, {onLeave: function (args) {send("MsiEnableLogA");}});
+
+var MsiEnableLogW = Module.findExportByName("msi.dll", "MsiEnableLogW")
+Interceptor.attach(MsiEnableLogW, {onLeave: function (args) {send("MsiEnableLogW");}});
+
+var MsiEnableUIPreview = Module.findExportByName("msi.dll", "MsiEnableUIPreview")
+Interceptor.attach(MsiEnableUIPreview, {onLeave: function (args) {send("MsiEnableUIPreview");}});
+
+var MsiEndTransaction = Module.findExportByName("msi.dll", "MsiEndTransaction")
+Interceptor.attach(MsiEndTransaction, {onLeave: function (args) {send("MsiEndTransaction");}});
+
+var MsiEnumClientsA = Module.findExportByName("msi.dll", "MsiEnumClientsA")
+Interceptor.attach(MsiEnumClientsA, {onLeave: function (args) {send("MsiEnumClientsA");}});
+
+var MsiEnumClientsExA = Module.findExportByName("msi.dll", "MsiEnumClientsExA")
+Interceptor.attach(MsiEnumClientsExA, {onLeave: function (args) {send("MsiEnumClientsExA");}});
+
+var MsiEnumClientsExW = Module.findExportByName("msi.dll", "MsiEnumClientsExW")
+Interceptor.attach(MsiEnumClientsExW, {onLeave: function (args) {send("MsiEnumClientsExW");}});
+
+var MsiEnumClientsW = Module.findExportByName("msi.dll", "MsiEnumClientsW")
+Interceptor.attach(MsiEnumClientsW, {onLeave: function (args) {send("MsiEnumClientsW");}});
+
+var MsiEnumComponentCostsA = Module.findExportByName("msi.dll", "MsiEnumComponentCostsA")
+Interceptor.attach(MsiEnumComponentCostsA, {onLeave: function (args) {send("MsiEnumComponentCostsA");}});
+
+var MsiEnumComponentCostsW = Module.findExportByName("msi.dll", "MsiEnumComponentCostsW")
+Interceptor.attach(MsiEnumComponentCostsW, {onLeave: function (args) {send("MsiEnumComponentCostsW");}});
+
+var MsiEnumComponentQualifiersA = Module.findExportByName("msi.dll", "MsiEnumComponentQualifiersA")
+Interceptor.attach(MsiEnumComponentQualifiersA, {onLeave: function (args) {send("MsiEnumComponentQualifiersA");}});
+
+var MsiEnumComponentQualifiersW = Module.findExportByName("msi.dll", "MsiEnumComponentQualifiersW")
+Interceptor.attach(MsiEnumComponentQualifiersW, {onLeave: function (args) {send("MsiEnumComponentQualifiersW");}});
+
+var MsiEnumComponentsA = Module.findExportByName("msi.dll", "MsiEnumComponentsA")
+Interceptor.attach(MsiEnumComponentsA, {onLeave: function (args) {send("MsiEnumComponentsA");}});
+
+var MsiEnumComponentsExA = Module.findExportByName("msi.dll", "MsiEnumComponentsExA")
+Interceptor.attach(MsiEnumComponentsExA, {onLeave: function (args) {send("MsiEnumComponentsExA");}});
+
+var MsiEnumComponentsExW = Module.findExportByName("msi.dll", "MsiEnumComponentsExW")
+Interceptor.attach(MsiEnumComponentsExW, {onLeave: function (args) {send("MsiEnumComponentsExW");}});
+
+var MsiEnumComponentsW = Module.findExportByName("msi.dll", "MsiEnumComponentsW")
+Interceptor.attach(MsiEnumComponentsW, {onLeave: function (args) {send("MsiEnumComponentsW");}});
+
+var MsiEnumFeaturesA = Module.findExportByName("msi.dll", "MsiEnumFeaturesA")
+Interceptor.attach(MsiEnumFeaturesA, {onLeave: function (args) {send("MsiEnumFeaturesA");}});
+
+var MsiEnumFeaturesW = Module.findExportByName("msi.dll", "MsiEnumFeaturesW")
+Interceptor.attach(MsiEnumFeaturesW, {onLeave: function (args) {send("MsiEnumFeaturesW");}});
+
+var MsiEnumPatchesA = Module.findExportByName("msi.dll", "MsiEnumPatchesA")
+Interceptor.attach(MsiEnumPatchesA, {onLeave: function (args) {send("MsiEnumPatchesA");}});
+
+var MsiEnumPatchesExA = Module.findExportByName("msi.dll", "MsiEnumPatchesExA")
+Interceptor.attach(MsiEnumPatchesExA, {onLeave: function (args) {send("MsiEnumPatchesExA");}});
+
+var MsiEnumPatchesExW = Module.findExportByName("msi.dll", "MsiEnumPatchesExW")
+Interceptor.attach(MsiEnumPatchesExW, {onLeave: function (args) {send("MsiEnumPatchesExW");}});
+
+var MsiEnumPatchesW = Module.findExportByName("msi.dll", "MsiEnumPatchesW")
+Interceptor.attach(MsiEnumPatchesW, {onLeave: function (args) {send("MsiEnumPatchesW");}});
+
+var MsiEnumProductsA = Module.findExportByName("msi.dll", "MsiEnumProductsA")
+Interceptor.attach(MsiEnumProductsA, {onLeave: function (args) {send("MsiEnumProductsA");}});
+
+var MsiEnumProductsExA = Module.findExportByName("msi.dll", "MsiEnumProductsExA")
+Interceptor.attach(MsiEnumProductsExA, {onLeave: function (args) {send("MsiEnumProductsExA");}});
+
+var MsiEnumProductsExW = Module.findExportByName("msi.dll", "MsiEnumProductsExW")
+Interceptor.attach(MsiEnumProductsExW, {onLeave: function (args) {send("MsiEnumProductsExW");}});
+
+var MsiEnumProductsW = Module.findExportByName("msi.dll", "MsiEnumProductsW")
+Interceptor.attach(MsiEnumProductsW, {onLeave: function (args) {send("MsiEnumProductsW");}});
+
+var MsiEnumRelatedProductsA = Module.findExportByName("msi.dll", "MsiEnumRelatedProductsA")
+Interceptor.attach(MsiEnumRelatedProductsA, {onLeave: function (args) {send("MsiEnumRelatedProductsA");}});
+
+var MsiEnumRelatedProductsW = Module.findExportByName("msi.dll", "MsiEnumRelatedProductsW")
+Interceptor.attach(MsiEnumRelatedProductsW, {onLeave: function (args) {send("MsiEnumRelatedProductsW");}});
+
+var MsiEvaluateConditionA = Module.findExportByName("msi.dll", "MsiEvaluateConditionA")
+Interceptor.attach(MsiEvaluateConditionA, {onLeave: function (args) {send("MsiEvaluateConditionA");}});
+
+var MsiEvaluateConditionW = Module.findExportByName("msi.dll", "MsiEvaluateConditionW")
+Interceptor.attach(MsiEvaluateConditionW, {onLeave: function (args) {send("MsiEvaluateConditionW");}});
+
+var MsiExtractPatchXMLDataA = Module.findExportByName("msi.dll", "MsiExtractPatchXMLDataA")
+Interceptor.attach(MsiExtractPatchXMLDataA, {onLeave: function (args) {send("MsiExtractPatchXMLDataA");}});
+
+var MsiExtractPatchXMLDataW = Module.findExportByName("msi.dll", "MsiExtractPatchXMLDataW")
+Interceptor.attach(MsiExtractPatchXMLDataW, {onLeave: function (args) {send("MsiExtractPatchXMLDataW");}});
+
+var MsiFormatRecordA = Module.findExportByName("msi.dll", "MsiFormatRecordA")
+Interceptor.attach(MsiFormatRecordA, {onLeave: function (args) {send("MsiFormatRecordA");}});
+
+var MsiFormatRecordW = Module.findExportByName("msi.dll", "MsiFormatRecordW")
+Interceptor.attach(MsiFormatRecordW, {onLeave: function (args) {send("MsiFormatRecordW");}});
+
+var MsiGetActiveDatabase = Module.findExportByName("msi.dll", "MsiGetActiveDatabase")
+Interceptor.attach(MsiGetActiveDatabase, {onLeave: function (args) {send("MsiGetActiveDatabase");}});
+
+var MsiGetComponentPathA = Module.findExportByName("msi.dll", "MsiGetComponentPathA")
+Interceptor.attach(MsiGetComponentPathA, {onLeave: function (args) {send("MsiGetComponentPathA");}});
+
+var MsiGetComponentPathExA = Module.findExportByName("msi.dll", "MsiGetComponentPathExA")
+Interceptor.attach(MsiGetComponentPathExA, {onLeave: function (args) {send("MsiGetComponentPathExA");}});
+
+var MsiGetComponentPathExW = Module.findExportByName("msi.dll", "MsiGetComponentPathExW")
+Interceptor.attach(MsiGetComponentPathExW, {onLeave: function (args) {send("MsiGetComponentPathExW");}});
+
+var MsiGetComponentPathW = Module.findExportByName("msi.dll", "MsiGetComponentPathW")
+Interceptor.attach(MsiGetComponentPathW, {onLeave: function (args) {send("MsiGetComponentPathW");}});
+
+var MsiGetComponentStateA = Module.findExportByName("msi.dll", "MsiGetComponentStateA")
+Interceptor.attach(MsiGetComponentStateA, {onLeave: function (args) {send("MsiGetComponentStateA");}});
+
+var MsiGetComponentStateW = Module.findExportByName("msi.dll", "MsiGetComponentStateW")
+Interceptor.attach(MsiGetComponentStateW, {onLeave: function (args) {send("MsiGetComponentStateW");}});
+
+var MsiGetDatabaseState = Module.findExportByName("msi.dll", "MsiGetDatabaseState")
+Interceptor.attach(MsiGetDatabaseState, {onLeave: function (args) {send("MsiGetDatabaseState");}});
+
+var MsiGetFeatureCostA = Module.findExportByName("msi.dll", "MsiGetFeatureCostA")
+Interceptor.attach(MsiGetFeatureCostA, {onLeave: function (args) {send("MsiGetFeatureCostA");}});
+
+var MsiGetFeatureCostW = Module.findExportByName("msi.dll", "MsiGetFeatureCostW")
+Interceptor.attach(MsiGetFeatureCostW, {onLeave: function (args) {send("MsiGetFeatureCostW");}});
+
+var MsiGetFeatureInfoA = Module.findExportByName("msi.dll", "MsiGetFeatureInfoA")
+Interceptor.attach(MsiGetFeatureInfoA, {onLeave: function (args) {send("MsiGetFeatureInfoA");}});
+
+var MsiGetFeatureInfoW = Module.findExportByName("msi.dll", "MsiGetFeatureInfoW")
+Interceptor.attach(MsiGetFeatureInfoW, {onLeave: function (args) {send("MsiGetFeatureInfoW");}});
+
+var MsiGetFeatureStateA = Module.findExportByName("msi.dll", "MsiGetFeatureStateA")
+Interceptor.attach(MsiGetFeatureStateA, {onLeave: function (args) {send("MsiGetFeatureStateA");}});
+
+var MsiGetFeatureStateW = Module.findExportByName("msi.dll", "MsiGetFeatureStateW")
+Interceptor.attach(MsiGetFeatureStateW, {onLeave: function (args) {send("MsiGetFeatureStateW");}});
+
+var MsiGetFeatureUsageA = Module.findExportByName("msi.dll", "MsiGetFeatureUsageA")
+Interceptor.attach(MsiGetFeatureUsageA, {onLeave: function (args) {send("MsiGetFeatureUsageA");}});
+
+var MsiGetFeatureUsageW = Module.findExportByName("msi.dll", "MsiGetFeatureUsageW")
+Interceptor.attach(MsiGetFeatureUsageW, {onLeave: function (args) {send("MsiGetFeatureUsageW");}});
+
+var MsiGetFeatureValidStatesA = Module.findExportByName("msi.dll", "MsiGetFeatureValidStatesA")
+Interceptor.attach(MsiGetFeatureValidStatesA, {onLeave: function (args) {send("MsiGetFeatureValidStatesA");}});
+
+var MsiGetFeatureValidStatesW = Module.findExportByName("msi.dll", "MsiGetFeatureValidStatesW")
+Interceptor.attach(MsiGetFeatureValidStatesW, {onLeave: function (args) {send("MsiGetFeatureValidStatesW");}});
+
+var MsiGetFileHashA = Module.findExportByName("msi.dll", "MsiGetFileHashA")
+Interceptor.attach(MsiGetFileHashA, {onLeave: function (args) {send("MsiGetFileHashA");}});
+
+var MsiGetFileHashW = Module.findExportByName("msi.dll", "MsiGetFileHashW")
+Interceptor.attach(MsiGetFileHashW, {onLeave: function (args) {send("MsiGetFileHashW");}});
+
+var MsiGetFileSignatureInformationA = Module.findExportByName("msi.dll", "MsiGetFileSignatureInformationA")
+Interceptor.attach(MsiGetFileSignatureInformationA, {onLeave: function (args) {send("MsiGetFileSignatureInformationA");}});
+
+var MsiGetFileSignatureInformationW = Module.findExportByName("msi.dll", "MsiGetFileSignatureInformationW")
+Interceptor.attach(MsiGetFileSignatureInformationW, {onLeave: function (args) {send("MsiGetFileSignatureInformationW");}});
+
+var MsiGetFileVersionA = Module.findExportByName("msi.dll", "MsiGetFileVersionA")
+Interceptor.attach(MsiGetFileVersionA, {onLeave: function (args) {send("MsiGetFileVersionA");}});
+
+var MsiGetFileVersionW = Module.findExportByName("msi.dll", "MsiGetFileVersionW")
+Interceptor.attach(MsiGetFileVersionW, {onLeave: function (args) {send("MsiGetFileVersionW");}});
+
+var MsiGetLanguage = Module.findExportByName("msi.dll", "MsiGetLanguage")
+Interceptor.attach(MsiGetLanguage, {onLeave: function (args) {send("MsiGetLanguage");}});
+
+var MsiGetLastErrorRecord = Module.findExportByName("msi.dll", "MsiGetLastErrorRecord")
+Interceptor.attach(MsiGetLastErrorRecord, {onLeave: function (args) {send("MsiGetLastErrorRecord");}});
+
+var MsiGetMode = Module.findExportByName("msi.dll", "MsiGetMode")
+Interceptor.attach(MsiGetMode, {onLeave: function (args) {send("MsiGetMode");}});
+
+var MsiGetPatchFileListA = Module.findExportByName("msi.dll", "MsiGetPatchFileListA")
+Interceptor.attach(MsiGetPatchFileListA, {onLeave: function (args) {send("MsiGetPatchFileListA");}});
+
+var MsiGetPatchFileListW = Module.findExportByName("msi.dll", "MsiGetPatchFileListW")
+Interceptor.attach(MsiGetPatchFileListW, {onLeave: function (args) {send("MsiGetPatchFileListW");}});
+
+var MsiGetPatchInfoA = Module.findExportByName("msi.dll", "MsiGetPatchInfoA")
+Interceptor.attach(MsiGetPatchInfoA, {onLeave: function (args) {send("MsiGetPatchInfoA");}});
+
+var MsiGetPatchInfoExA = Module.findExportByName("msi.dll", "MsiGetPatchInfoExA")
+Interceptor.attach(MsiGetPatchInfoExA, {onLeave: function (args) {send("MsiGetPatchInfoExA");}});
+
+var MsiGetPatchInfoExW = Module.findExportByName("msi.dll", "MsiGetPatchInfoExW")
+Interceptor.attach(MsiGetPatchInfoExW, {onLeave: function (args) {send("MsiGetPatchInfoExW");}});
+
+var MsiGetPatchInfoW = Module.findExportByName("msi.dll", "MsiGetPatchInfoW")
+Interceptor.attach(MsiGetPatchInfoW, {onLeave: function (args) {send("MsiGetPatchInfoW");}});
+
+var MsiGetProductCodeA = Module.findExportByName("msi.dll", "MsiGetProductCodeA")
+Interceptor.attach(MsiGetProductCodeA, {onLeave: function (args) {send("MsiGetProductCodeA");}});
+
+var MsiGetProductCodeFromPackageCodeA = Module.findExportByName("msi.dll", "MsiGetProductCodeFromPackageCodeA")
+Interceptor.attach(MsiGetProductCodeFromPackageCodeA, {onLeave: function (args) {send("MsiGetProductCodeFromPackageCodeA");}});
+
+var MsiGetProductCodeFromPackageCodeW = Module.findExportByName("msi.dll", "MsiGetProductCodeFromPackageCodeW")
+Interceptor.attach(MsiGetProductCodeFromPackageCodeW, {onLeave: function (args) {send("MsiGetProductCodeFromPackageCodeW");}});
+
+var MsiGetProductCodeW = Module.findExportByName("msi.dll", "MsiGetProductCodeW")
+Interceptor.attach(MsiGetProductCodeW, {onLeave: function (args) {send("MsiGetProductCodeW");}});
+
+var MsiGetProductInfoA = Module.findExportByName("msi.dll", "MsiGetProductInfoA")
+Interceptor.attach(MsiGetProductInfoA, {onLeave: function (args) {send("MsiGetProductInfoA");}});
+
+var MsiGetProductInfoExA = Module.findExportByName("msi.dll", "MsiGetProductInfoExA")
+Interceptor.attach(MsiGetProductInfoExA, {onLeave: function (args) {send("MsiGetProductInfoExA");}});
+
+var MsiGetProductInfoExW = Module.findExportByName("msi.dll", "MsiGetProductInfoExW")
+Interceptor.attach(MsiGetProductInfoExW, {onLeave: function (args) {send("MsiGetProductInfoExW");}});
+
+var MsiGetProductInfoFromScriptA = Module.findExportByName("msi.dll", "MsiGetProductInfoFromScriptA")
+Interceptor.attach(MsiGetProductInfoFromScriptA, {onLeave: function (args) {send("MsiGetProductInfoFromScriptA");}});
+
+var MsiGetProductInfoFromScriptW = Module.findExportByName("msi.dll", "MsiGetProductInfoFromScriptW")
+Interceptor.attach(MsiGetProductInfoFromScriptW, {onLeave: function (args) {send("MsiGetProductInfoFromScriptW");}});
+
+var MsiGetProductInfoW = Module.findExportByName("msi.dll", "MsiGetProductInfoW")
+Interceptor.attach(MsiGetProductInfoW, {onLeave: function (args) {send("MsiGetProductInfoW");}});
+
+var MsiGetProductPropertyA = Module.findExportByName("msi.dll", "MsiGetProductPropertyA")
+Interceptor.attach(MsiGetProductPropertyA, {onLeave: function (args) {send("MsiGetProductPropertyA");}});
+
+var MsiGetProductPropertyW = Module.findExportByName("msi.dll", "MsiGetProductPropertyW")
+Interceptor.attach(MsiGetProductPropertyW, {onLeave: function (args) {send("MsiGetProductPropertyW");}});
+
+var MsiGetPropertyA = Module.findExportByName("msi.dll", "MsiGetPropertyA")
+Interceptor.attach(MsiGetPropertyA, {onLeave: function (args) {send("MsiGetPropertyA");}});
+
+var MsiGetPropertyW = Module.findExportByName("msi.dll", "MsiGetPropertyW")
+Interceptor.attach(MsiGetPropertyW, {onLeave: function (args) {send("MsiGetPropertyW");}});
+
+var MsiGetShortcutTargetA = Module.findExportByName("msi.dll", "MsiGetShortcutTargetA")
+Interceptor.attach(MsiGetShortcutTargetA, {onLeave: function (args) {send("MsiGetShortcutTargetA");}});
+
+var MsiGetShortcutTargetW = Module.findExportByName("msi.dll", "MsiGetShortcutTargetW")
+Interceptor.attach(MsiGetShortcutTargetW, {onLeave: function (args) {send("MsiGetShortcutTargetW");}});
+
+var MsiGetSourcePathA = Module.findExportByName("msi.dll", "MsiGetSourcePathA")
+Interceptor.attach(MsiGetSourcePathA, {onLeave: function (args) {send("MsiGetSourcePathA");}});
+
+var MsiGetSourcePathW = Module.findExportByName("msi.dll", "MsiGetSourcePathW")
+Interceptor.attach(MsiGetSourcePathW, {onLeave: function (args) {send("MsiGetSourcePathW");}});
+
+var MsiGetSummaryInformationA = Module.findExportByName("msi.dll", "MsiGetSummaryInformationA")
+Interceptor.attach(MsiGetSummaryInformationA, {onLeave: function (args) {send("MsiGetSummaryInformationA");}});
+
+var MsiGetSummaryInformationW = Module.findExportByName("msi.dll", "MsiGetSummaryInformationW")
+Interceptor.attach(MsiGetSummaryInformationW, {onLeave: function (args) {send("MsiGetSummaryInformationW");}});
+
+var MsiGetTargetPathA = Module.findExportByName("msi.dll", "MsiGetTargetPathA")
+Interceptor.attach(MsiGetTargetPathA, {onLeave: function (args) {send("MsiGetTargetPathA");}});
+
+var MsiGetTargetPathW = Module.findExportByName("msi.dll", "MsiGetTargetPathW")
+Interceptor.attach(MsiGetTargetPathW, {onLeave: function (args) {send("MsiGetTargetPathW");}});
+
+var MsiGetUserInfoA = Module.findExportByName("msi.dll", "MsiGetUserInfoA")
+Interceptor.attach(MsiGetUserInfoA, {onLeave: function (args) {send("MsiGetUserInfoA");}});
+
+var MsiGetUserInfoW = Module.findExportByName("msi.dll", "MsiGetUserInfoW")
+Interceptor.attach(MsiGetUserInfoW, {onLeave: function (args) {send("MsiGetUserInfoW");}});
+
+var MsiInstallMissingComponentA = Module.findExportByName("msi.dll", "MsiInstallMissingComponentA")
+Interceptor.attach(MsiInstallMissingComponentA, {onLeave: function (args) {send("MsiInstallMissingComponentA");}});
+
+var MsiInstallMissingComponentW = Module.findExportByName("msi.dll", "MsiInstallMissingComponentW")
+Interceptor.attach(MsiInstallMissingComponentW, {onLeave: function (args) {send("MsiInstallMissingComponentW");}});
+
+var MsiInstallMissingFileA = Module.findExportByName("msi.dll", "MsiInstallMissingFileA")
+Interceptor.attach(MsiInstallMissingFileA, {onLeave: function (args) {send("MsiInstallMissingFileA");}});
+
+var MsiInstallMissingFileW = Module.findExportByName("msi.dll", "MsiInstallMissingFileW")
+Interceptor.attach(MsiInstallMissingFileW, {onLeave: function (args) {send("MsiInstallMissingFileW");}});
+
+var MsiInstallProductA = Module.findExportByName("msi.dll", "MsiInstallProductA")
+Interceptor.attach(MsiInstallProductA, {onLeave: function (args) {send("MsiInstallProductA");}});
+
+var MsiInstallProductW = Module.findExportByName("msi.dll", "MsiInstallProductW")
+Interceptor.attach(MsiInstallProductW, {onLeave: function (args) {send("MsiInstallProductW");}});
+
+var MsiInvalidateFeatureCache = Module.findExportByName("msi.dll", "MsiInvalidateFeatureCache")
+Interceptor.attach(MsiInvalidateFeatureCache, {onLeave: function (args) {send("MsiInvalidateFeatureCache");}});
+
+var MsiIsProductElevatedA = Module.findExportByName("msi.dll", "MsiIsProductElevatedA")
+Interceptor.attach(MsiIsProductElevatedA, {onLeave: function (args) {send("MsiIsProductElevatedA");}});
+
+var MsiIsProductElevatedW = Module.findExportByName("msi.dll", "MsiIsProductElevatedW")
+Interceptor.attach(MsiIsProductElevatedW, {onLeave: function (args) {send("MsiIsProductElevatedW");}});
+
+var MsiJoinTransaction = Module.findExportByName("msi.dll", "MsiJoinTransaction")
+Interceptor.attach(MsiJoinTransaction, {onLeave: function (args) {send("MsiJoinTransaction");}});
+
+var MsiLoadStringA = Module.findExportByName("msi.dll", "MsiLoadStringA")
+Interceptor.attach(MsiLoadStringA, {onLeave: function (args) {send("MsiLoadStringA");}});
+
+var MsiLoadStringW = Module.findExportByName("msi.dll", "MsiLoadStringW")
+Interceptor.attach(MsiLoadStringW, {onLeave: function (args) {send("MsiLoadStringW");}});
+
+var MsiLocateComponentA = Module.findExportByName("msi.dll", "MsiLocateComponentA")
+Interceptor.attach(MsiLocateComponentA, {onLeave: function (args) {send("MsiLocateComponentA");}});
+
+var MsiLocateComponentW = Module.findExportByName("msi.dll", "MsiLocateComponentW")
+Interceptor.attach(MsiLocateComponentW, {onLeave: function (args) {send("MsiLocateComponentW");}});
+
+var MsiMessageBoxA = Module.findExportByName("msi.dll", "MsiMessageBoxA")
+Interceptor.attach(MsiMessageBoxA, {onLeave: function (args) {send("MsiMessageBoxA");}});
+
+var MsiMessageBoxExA = Module.findExportByName("msi.dll", "MsiMessageBoxExA")
+Interceptor.attach(MsiMessageBoxExA, {onLeave: function (args) {send("MsiMessageBoxExA");}});
+
+var MsiMessageBoxExW = Module.findExportByName("msi.dll", "MsiMessageBoxExW")
+Interceptor.attach(MsiMessageBoxExW, {onLeave: function (args) {send("MsiMessageBoxExW");}});
+
+var MsiMessageBoxW = Module.findExportByName("msi.dll", "MsiMessageBoxW")
+Interceptor.attach(MsiMessageBoxW, {onLeave: function (args) {send("MsiMessageBoxW");}});
+
+var MsiNotifySidChangeA = Module.findExportByName("msi.dll", "MsiNotifySidChangeA")
+Interceptor.attach(MsiNotifySidChangeA, {onLeave: function (args) {send("MsiNotifySidChangeA");}});
+
+var MsiNotifySidChangeW = Module.findExportByName("msi.dll", "MsiNotifySidChangeW")
+Interceptor.attach(MsiNotifySidChangeW, {onLeave: function (args) {send("MsiNotifySidChangeW");}});
+
+var MsiOpenDatabaseA = Module.findExportByName("msi.dll", "MsiOpenDatabaseA")
+Interceptor.attach(MsiOpenDatabaseA, {onLeave: function (args) {send("MsiOpenDatabaseA");}});
+
+var MsiOpenDatabaseW = Module.findExportByName("msi.dll", "MsiOpenDatabaseW")
+Interceptor.attach(MsiOpenDatabaseW, {onLeave: function (args) {send("MsiOpenDatabaseW");}});
+
+var MsiOpenPackageA = Module.findExportByName("msi.dll", "MsiOpenPackageA")
+Interceptor.attach(MsiOpenPackageA, {onLeave: function (args) {send("MsiOpenPackageA");}});
+
+var MsiOpenPackageExA = Module.findExportByName("msi.dll", "MsiOpenPackageExA")
+Interceptor.attach(MsiOpenPackageExA, {onLeave: function (args) {send("MsiOpenPackageExA");}});
+
+var MsiOpenPackageExW = Module.findExportByName("msi.dll", "MsiOpenPackageExW")
+Interceptor.attach(MsiOpenPackageExW, {onLeave: function (args) {send("MsiOpenPackageExW");}});
+
+var MsiOpenPackageW = Module.findExportByName("msi.dll", "MsiOpenPackageW")
+Interceptor.attach(MsiOpenPackageW, {onLeave: function (args) {send("MsiOpenPackageW");}});
+
+var MsiOpenProductA = Module.findExportByName("msi.dll", "MsiOpenProductA")
+Interceptor.attach(MsiOpenProductA, {onLeave: function (args) {send("MsiOpenProductA");}});
+
+var MsiOpenProductW = Module.findExportByName("msi.dll", "MsiOpenProductW")
+Interceptor.attach(MsiOpenProductW, {onLeave: function (args) {send("MsiOpenProductW");}});
+
+var MsiPreviewBillboardA = Module.findExportByName("msi.dll", "MsiPreviewBillboardA")
+Interceptor.attach(MsiPreviewBillboardA, {onLeave: function (args) {send("MsiPreviewBillboardA");}});
+
+var MsiPreviewBillboardW = Module.findExportByName("msi.dll", "MsiPreviewBillboardW")
+Interceptor.attach(MsiPreviewBillboardW, {onLeave: function (args) {send("MsiPreviewBillboardW");}});
+
+var MsiPreviewDialogA = Module.findExportByName("msi.dll", "MsiPreviewDialogA")
+Interceptor.attach(MsiPreviewDialogA, {onLeave: function (args) {send("MsiPreviewDialogA");}});
+
+var MsiPreviewDialogW = Module.findExportByName("msi.dll", "MsiPreviewDialogW")
+Interceptor.attach(MsiPreviewDialogW, {onLeave: function (args) {send("MsiPreviewDialogW");}});
+
+var MsiProcessAdvertiseScriptA = Module.findExportByName("msi.dll", "MsiProcessAdvertiseScriptA")
+Interceptor.attach(MsiProcessAdvertiseScriptA, {onLeave: function (args) {send("MsiProcessAdvertiseScriptA");}});
+
+var MsiProcessAdvertiseScriptW = Module.findExportByName("msi.dll", "MsiProcessAdvertiseScriptW")
+Interceptor.attach(MsiProcessAdvertiseScriptW, {onLeave: function (args) {send("MsiProcessAdvertiseScriptW");}});
+
+var MsiProcessMessage = Module.findExportByName("msi.dll", "MsiProcessMessage")
+Interceptor.attach(MsiProcessMessage, {onLeave: function (args) {send("MsiProcessMessage");}});
+
+var MsiProvideAssemblyA = Module.findExportByName("msi.dll", "MsiProvideAssemblyA")
+Interceptor.attach(MsiProvideAssemblyA, {onLeave: function (args) {send("MsiProvideAssemblyA");}});
+
+var MsiProvideAssemblyW = Module.findExportByName("msi.dll", "MsiProvideAssemblyW")
+Interceptor.attach(MsiProvideAssemblyW, {onLeave: function (args) {send("MsiProvideAssemblyW");}});
+
+var MsiProvideComponentA = Module.findExportByName("msi.dll", "MsiProvideComponentA")
+Interceptor.attach(MsiProvideComponentA, {onLeave: function (args) {send("MsiProvideComponentA");}});
+
+var MsiProvideComponentFromDescriptorA = Module.findExportByName("msi.dll", "MsiProvideComponentFromDescriptorA")
+Interceptor.attach(MsiProvideComponentFromDescriptorA, {onLeave: function (args) {send("MsiProvideComponentFromDescriptorA");}});
+
+var MsiProvideComponentFromDescriptorW = Module.findExportByName("msi.dll", "MsiProvideComponentFromDescriptorW")
+Interceptor.attach(MsiProvideComponentFromDescriptorW, {onLeave: function (args) {send("MsiProvideComponentFromDescriptorW");}});
+
+var MsiProvideComponentW = Module.findExportByName("msi.dll", "MsiProvideComponentW")
+Interceptor.attach(MsiProvideComponentW, {onLeave: function (args) {send("MsiProvideComponentW");}});
+
+var MsiProvideQualifiedComponentA = Module.findExportByName("msi.dll", "MsiProvideQualifiedComponentA")
+Interceptor.attach(MsiProvideQualifiedComponentA, {onLeave: function (args) {send("MsiProvideQualifiedComponentA");}});
+
+var MsiProvideQualifiedComponentExA = Module.findExportByName("msi.dll", "MsiProvideQualifiedComponentExA")
+Interceptor.attach(MsiProvideQualifiedComponentExA, {onLeave: function (args) {send("MsiProvideQualifiedComponentExA");}});
+
+var MsiProvideQualifiedComponentExW = Module.findExportByName("msi.dll", "MsiProvideQualifiedComponentExW")
+Interceptor.attach(MsiProvideQualifiedComponentExW, {onLeave: function (args) {send("MsiProvideQualifiedComponentExW");}});
+
+var MsiProvideQualifiedComponentW = Module.findExportByName("msi.dll", "MsiProvideQualifiedComponentW")
+Interceptor.attach(MsiProvideQualifiedComponentW, {onLeave: function (args) {send("MsiProvideQualifiedComponentW");}});
+
+var MsiQueryComponentStateA = Module.findExportByName("msi.dll", "MsiQueryComponentStateA")
+Interceptor.attach(MsiQueryComponentStateA, {onLeave: function (args) {send("MsiQueryComponentStateA");}});
+
+var MsiQueryComponentStateW = Module.findExportByName("msi.dll", "MsiQueryComponentStateW")
+Interceptor.attach(MsiQueryComponentStateW, {onLeave: function (args) {send("MsiQueryComponentStateW");}});
+
+var MsiQueryFeatureStateA = Module.findExportByName("msi.dll", "MsiQueryFeatureStateA")
+Interceptor.attach(MsiQueryFeatureStateA, {onLeave: function (args) {send("MsiQueryFeatureStateA");}});
+
+var MsiQueryFeatureStateExA = Module.findExportByName("msi.dll", "MsiQueryFeatureStateExA")
+Interceptor.attach(MsiQueryFeatureStateExA, {onLeave: function (args) {send("MsiQueryFeatureStateExA");}});
+
+var MsiQueryFeatureStateExW = Module.findExportByName("msi.dll", "MsiQueryFeatureStateExW")
+Interceptor.attach(MsiQueryFeatureStateExW, {onLeave: function (args) {send("MsiQueryFeatureStateExW");}});
+
+var MsiQueryFeatureStateFromDescriptorA = Module.findExportByName("msi.dll", "MsiQueryFeatureStateFromDescriptorA")
+Interceptor.attach(MsiQueryFeatureStateFromDescriptorA, {onLeave: function (args) {send("MsiQueryFeatureStateFromDescriptorA");}});
+
+var MsiQueryFeatureStateFromDescriptorW = Module.findExportByName("msi.dll", "MsiQueryFeatureStateFromDescriptorW")
+Interceptor.attach(MsiQueryFeatureStateFromDescriptorW, {onLeave: function (args) {send("MsiQueryFeatureStateFromDescriptorW");}});
+
+var MsiQueryFeatureStateW = Module.findExportByName("msi.dll", "MsiQueryFeatureStateW")
+Interceptor.attach(MsiQueryFeatureStateW, {onLeave: function (args) {send("MsiQueryFeatureStateW");}});
+
+var MsiQueryProductStateA = Module.findExportByName("msi.dll", "MsiQueryProductStateA")
+Interceptor.attach(MsiQueryProductStateA, {onLeave: function (args) {send("MsiQueryProductStateA");}});
+
+var MsiQueryProductStateW = Module.findExportByName("msi.dll", "MsiQueryProductStateW")
+Interceptor.attach(MsiQueryProductStateW, {onLeave: function (args) {send("MsiQueryProductStateW");}});
+
+var MsiRecordClearData = Module.findExportByName("msi.dll", "MsiRecordClearData")
+Interceptor.attach(MsiRecordClearData, {onLeave: function (args) {send("MsiRecordClearData");}});
+
+var MsiRecordDataSize = Module.findExportByName("msi.dll", "MsiRecordDataSize")
+Interceptor.attach(MsiRecordDataSize, {onLeave: function (args) {send("MsiRecordDataSize");}});
+
+var MsiRecordGetFieldCount = Module.findExportByName("msi.dll", "MsiRecordGetFieldCount")
+Interceptor.attach(MsiRecordGetFieldCount, {onLeave: function (args) {send("MsiRecordGetFieldCount");}});
+
+var MsiRecordGetInteger = Module.findExportByName("msi.dll", "MsiRecordGetInteger")
+Interceptor.attach(MsiRecordGetInteger, {onLeave: function (args) {send("MsiRecordGetInteger");}});
+
+var MsiRecordGetStringA = Module.findExportByName("msi.dll", "MsiRecordGetStringA")
+Interceptor.attach(MsiRecordGetStringA, {onLeave: function (args) {send("MsiRecordGetStringA");}});
+
+var MsiRecordGetStringW = Module.findExportByName("msi.dll", "MsiRecordGetStringW")
+Interceptor.attach(MsiRecordGetStringW, {onLeave: function (args) {send("MsiRecordGetStringW");}});
+
+var MsiRecordIsNull = Module.findExportByName("msi.dll", "MsiRecordIsNull")
+Interceptor.attach(MsiRecordIsNull, {onLeave: function (args) {send("MsiRecordIsNull");}});
+
+var MsiRecordReadStream = Module.findExportByName("msi.dll", "MsiRecordReadStream")
+Interceptor.attach(MsiRecordReadStream, {onLeave: function (args) {send("MsiRecordReadStream");}});
+
+var MsiRecordSetInteger = Module.findExportByName("msi.dll", "MsiRecordSetInteger")
+Interceptor.attach(MsiRecordSetInteger, {onLeave: function (args) {send("MsiRecordSetInteger");}});
+
+var MsiRecordSetStreamA = Module.findExportByName("msi.dll", "MsiRecordSetStreamA")
+Interceptor.attach(MsiRecordSetStreamA, {onLeave: function (args) {send("MsiRecordSetStreamA");}});
+
+var MsiRecordSetStreamW = Module.findExportByName("msi.dll", "MsiRecordSetStreamW")
+Interceptor.attach(MsiRecordSetStreamW, {onLeave: function (args) {send("MsiRecordSetStreamW");}});
+
+var MsiRecordSetStringA = Module.findExportByName("msi.dll", "MsiRecordSetStringA")
+Interceptor.attach(MsiRecordSetStringA, {onLeave: function (args) {send("MsiRecordSetStringA");}});
+
+var MsiRecordSetStringW = Module.findExportByName("msi.dll", "MsiRecordSetStringW")
+Interceptor.attach(MsiRecordSetStringW, {onLeave: function (args) {send("MsiRecordSetStringW");}});
+
+var MsiReinstallFeatureA = Module.findExportByName("msi.dll", "MsiReinstallFeatureA")
+Interceptor.attach(MsiReinstallFeatureA, {onLeave: function (args) {send("MsiReinstallFeatureA");}});
+
+var MsiReinstallFeatureFromDescriptorA = Module.findExportByName("msi.dll", "MsiReinstallFeatureFromDescriptorA")
+Interceptor.attach(MsiReinstallFeatureFromDescriptorA, {onLeave: function (args) {send("MsiReinstallFeatureFromDescriptorA");}});
+
+var MsiReinstallFeatureFromDescriptorW = Module.findExportByName("msi.dll", "MsiReinstallFeatureFromDescriptorW")
+Interceptor.attach(MsiReinstallFeatureFromDescriptorW, {onLeave: function (args) {send("MsiReinstallFeatureFromDescriptorW");}});
+
+var MsiReinstallFeatureW = Module.findExportByName("msi.dll", "MsiReinstallFeatureW")
+Interceptor.attach(MsiReinstallFeatureW, {onLeave: function (args) {send("MsiReinstallFeatureW");}});
+
+var MsiReinstallProductA = Module.findExportByName("msi.dll", "MsiReinstallProductA")
+Interceptor.attach(MsiReinstallProductA, {onLeave: function (args) {send("MsiReinstallProductA");}});
+
+var MsiReinstallProductW = Module.findExportByName("msi.dll", "MsiReinstallProductW")
+Interceptor.attach(MsiReinstallProductW, {onLeave: function (args) {send("MsiReinstallProductW");}});
+
+var MsiRemovePatchesA = Module.findExportByName("msi.dll", "MsiRemovePatchesA")
+Interceptor.attach(MsiRemovePatchesA, {onLeave: function (args) {send("MsiRemovePatchesA");}});
+
+var MsiRemovePatchesW = Module.findExportByName("msi.dll", "MsiRemovePatchesW")
+Interceptor.attach(MsiRemovePatchesW, {onLeave: function (args) {send("MsiRemovePatchesW");}});
+
+var MsiSequenceA = Module.findExportByName("msi.dll", "MsiSequenceA")
+Interceptor.attach(MsiSequenceA, {onLeave: function (args) {send("MsiSequenceA");}});
+
+var MsiSequenceW = Module.findExportByName("msi.dll", "MsiSequenceW")
+Interceptor.attach(MsiSequenceW, {onLeave: function (args) {send("MsiSequenceW");}});
+
+var MsiSetComponentStateA = Module.findExportByName("msi.dll", "MsiSetComponentStateA")
+Interceptor.attach(MsiSetComponentStateA, {onLeave: function (args) {send("MsiSetComponentStateA");}});
+
+var MsiSetComponentStateW = Module.findExportByName("msi.dll", "MsiSetComponentStateW")
+Interceptor.attach(MsiSetComponentStateW, {onLeave: function (args) {send("MsiSetComponentStateW");}});
+
+var MsiSetExternalUIA = Module.findExportByName("msi.dll", "MsiSetExternalUIA")
+Interceptor.attach(MsiSetExternalUIA, {onLeave: function (args) {send("MsiSetExternalUIA");}});
+
+var MsiSetExternalUIRecord = Module.findExportByName("msi.dll", "MsiSetExternalUIRecord")
+Interceptor.attach(MsiSetExternalUIRecord, {onLeave: function (args) {send("MsiSetExternalUIRecord");}});
+
+var MsiSetExternalUIW = Module.findExportByName("msi.dll", "MsiSetExternalUIW")
+Interceptor.attach(MsiSetExternalUIW, {onLeave: function (args) {send("MsiSetExternalUIW");}});
+
+var MsiSetFeatureAttributesA = Module.findExportByName("msi.dll", "MsiSetFeatureAttributesA")
+Interceptor.attach(MsiSetFeatureAttributesA, {onLeave: function (args) {send("MsiSetFeatureAttributesA");}});
+
+var MsiSetFeatureAttributesW = Module.findExportByName("msi.dll", "MsiSetFeatureAttributesW")
+Interceptor.attach(MsiSetFeatureAttributesW, {onLeave: function (args) {send("MsiSetFeatureAttributesW");}});
+
+var MsiSetFeatureStateA = Module.findExportByName("msi.dll", "MsiSetFeatureStateA")
+Interceptor.attach(MsiSetFeatureStateA, {onLeave: function (args) {send("MsiSetFeatureStateA");}});
+
+var MsiSetFeatureStateW = Module.findExportByName("msi.dll", "MsiSetFeatureStateW")
+Interceptor.attach(MsiSetFeatureStateW, {onLeave: function (args) {send("MsiSetFeatureStateW");}});
+
+var MsiSetInstallLevel = Module.findExportByName("msi.dll", "MsiSetInstallLevel")
+Interceptor.attach(MsiSetInstallLevel, {onLeave: function (args) {send("MsiSetInstallLevel");}});
+
+var MsiSetInternalUI = Module.findExportByName("msi.dll", "MsiSetInternalUI")
+Interceptor.attach(MsiSetInternalUI, {onLeave: function (args) {send("MsiSetInternalUI");}});
+
+var MsiSetMode = Module.findExportByName("msi.dll", "MsiSetMode")
+Interceptor.attach(MsiSetMode, {onLeave: function (args) {send("MsiSetMode");}});
+
+var MsiSetOfflineContextW = Module.findExportByName("msi.dll", "MsiSetOfflineContextW")
+Interceptor.attach(MsiSetOfflineContextW, {onLeave: function (args) {send("MsiSetOfflineContextW");}});
+
+var MsiSetPropertyA = Module.findExportByName("msi.dll", "MsiSetPropertyA")
+Interceptor.attach(MsiSetPropertyA, {onLeave: function (args) {send("MsiSetPropertyA");}});
+
+var MsiSetPropertyW = Module.findExportByName("msi.dll", "MsiSetPropertyW")
+Interceptor.attach(MsiSetPropertyW, {onLeave: function (args) {send("MsiSetPropertyW");}});
+
+var MsiSetTargetPathA = Module.findExportByName("msi.dll", "MsiSetTargetPathA")
+Interceptor.attach(MsiSetTargetPathA, {onLeave: function (args) {send("MsiSetTargetPathA");}});
+
+var MsiSetTargetPathW = Module.findExportByName("msi.dll", "MsiSetTargetPathW")
+Interceptor.attach(MsiSetTargetPathW, {onLeave: function (args) {send("MsiSetTargetPathW");}});
+
+var MsiSourceListAddMediaDiskA = Module.findExportByName("msi.dll", "MsiSourceListAddMediaDiskA")
+Interceptor.attach(MsiSourceListAddMediaDiskA, {onLeave: function (args) {send("MsiSourceListAddMediaDiskA");}});
+
+var MsiSourceListAddMediaDiskW = Module.findExportByName("msi.dll", "MsiSourceListAddMediaDiskW")
+Interceptor.attach(MsiSourceListAddMediaDiskW, {onLeave: function (args) {send("MsiSourceListAddMediaDiskW");}});
+
+var MsiSourceListAddSourceA = Module.findExportByName("msi.dll", "MsiSourceListAddSourceA")
+Interceptor.attach(MsiSourceListAddSourceA, {onLeave: function (args) {send("MsiSourceListAddSourceA");}});
+
+var MsiSourceListAddSourceExA = Module.findExportByName("msi.dll", "MsiSourceListAddSourceExA")
+Interceptor.attach(MsiSourceListAddSourceExA, {onLeave: function (args) {send("MsiSourceListAddSourceExA");}});
+
+var MsiSourceListAddSourceExW = Module.findExportByName("msi.dll", "MsiSourceListAddSourceExW")
+Interceptor.attach(MsiSourceListAddSourceExW, {onLeave: function (args) {send("MsiSourceListAddSourceExW");}});
+
+var MsiSourceListAddSourceW = Module.findExportByName("msi.dll", "MsiSourceListAddSourceW")
+Interceptor.attach(MsiSourceListAddSourceW, {onLeave: function (args) {send("MsiSourceListAddSourceW");}});
+
+var MsiSourceListClearAllA = Module.findExportByName("msi.dll", "MsiSourceListClearAllA")
+Interceptor.attach(MsiSourceListClearAllA, {onLeave: function (args) {send("MsiSourceListClearAllA");}});
+
+var MsiSourceListClearAllExA = Module.findExportByName("msi.dll", "MsiSourceListClearAllExA")
+Interceptor.attach(MsiSourceListClearAllExA, {onLeave: function (args) {send("MsiSourceListClearAllExA");}});
+
+var MsiSourceListClearAllExW = Module.findExportByName("msi.dll", "MsiSourceListClearAllExW")
+Interceptor.attach(MsiSourceListClearAllExW, {onLeave: function (args) {send("MsiSourceListClearAllExW");}});
+
+var MsiSourceListClearAllW = Module.findExportByName("msi.dll", "MsiSourceListClearAllW")
+Interceptor.attach(MsiSourceListClearAllW, {onLeave: function (args) {send("MsiSourceListClearAllW");}});
+
+var MsiSourceListClearMediaDiskA = Module.findExportByName("msi.dll", "MsiSourceListClearMediaDiskA")
+Interceptor.attach(MsiSourceListClearMediaDiskA, {onLeave: function (args) {send("MsiSourceListClearMediaDiskA");}});
+
+var MsiSourceListClearMediaDiskW = Module.findExportByName("msi.dll", "MsiSourceListClearMediaDiskW")
+Interceptor.attach(MsiSourceListClearMediaDiskW, {onLeave: function (args) {send("MsiSourceListClearMediaDiskW");}});
+
+var MsiSourceListClearSourceA = Module.findExportByName("msi.dll", "MsiSourceListClearSourceA")
+Interceptor.attach(MsiSourceListClearSourceA, {onLeave: function (args) {send("MsiSourceListClearSourceA");}});
+
+var MsiSourceListClearSourceW = Module.findExportByName("msi.dll", "MsiSourceListClearSourceW")
+Interceptor.attach(MsiSourceListClearSourceW, {onLeave: function (args) {send("MsiSourceListClearSourceW");}});
+
+var MsiSourceListEnumMediaDisksA = Module.findExportByName("msi.dll", "MsiSourceListEnumMediaDisksA")
+Interceptor.attach(MsiSourceListEnumMediaDisksA, {onLeave: function (args) {send("MsiSourceListEnumMediaDisksA");}});
+
+var MsiSourceListEnumMediaDisksW = Module.findExportByName("msi.dll", "MsiSourceListEnumMediaDisksW")
+Interceptor.attach(MsiSourceListEnumMediaDisksW, {onLeave: function (args) {send("MsiSourceListEnumMediaDisksW");}});
+
+var MsiSourceListEnumSourcesA = Module.findExportByName("msi.dll", "MsiSourceListEnumSourcesA")
+Interceptor.attach(MsiSourceListEnumSourcesA, {onLeave: function (args) {send("MsiSourceListEnumSourcesA");}});
+
+var MsiSourceListEnumSourcesW = Module.findExportByName("msi.dll", "MsiSourceListEnumSourcesW")
+Interceptor.attach(MsiSourceListEnumSourcesW, {onLeave: function (args) {send("MsiSourceListEnumSourcesW");}});
+
+var MsiSourceListForceResolutionA = Module.findExportByName("msi.dll", "MsiSourceListForceResolutionA")
+Interceptor.attach(MsiSourceListForceResolutionA, {onLeave: function (args) {send("MsiSourceListForceResolutionA");}});
+
+var MsiSourceListForceResolutionExA = Module.findExportByName("msi.dll", "MsiSourceListForceResolutionExA")
+Interceptor.attach(MsiSourceListForceResolutionExA, {onLeave: function (args) {send("MsiSourceListForceResolutionExA");}});
+
+var MsiSourceListForceResolutionExW = Module.findExportByName("msi.dll", "MsiSourceListForceResolutionExW")
+Interceptor.attach(MsiSourceListForceResolutionExW, {onLeave: function (args) {send("MsiSourceListForceResolutionExW");}});
+
+var MsiSourceListForceResolutionW = Module.findExportByName("msi.dll", "MsiSourceListForceResolutionW")
+Interceptor.attach(MsiSourceListForceResolutionW, {onLeave: function (args) {send("MsiSourceListForceResolutionW");}});
+
+var MsiSourceListGetInfoA = Module.findExportByName("msi.dll", "MsiSourceListGetInfoA")
+Interceptor.attach(MsiSourceListGetInfoA, {onLeave: function (args) {send("MsiSourceListGetInfoA");}});
+
+var MsiSourceListGetInfoW = Module.findExportByName("msi.dll", "MsiSourceListGetInfoW")
+Interceptor.attach(MsiSourceListGetInfoW, {onLeave: function (args) {send("MsiSourceListGetInfoW");}});
+
+var MsiSourceListSetInfoA = Module.findExportByName("msi.dll", "MsiSourceListSetInfoA")
+Interceptor.attach(MsiSourceListSetInfoA, {onLeave: function (args) {send("MsiSourceListSetInfoA");}});
+
+var MsiSourceListSetInfoW = Module.findExportByName("msi.dll", "MsiSourceListSetInfoW")
+Interceptor.attach(MsiSourceListSetInfoW, {onLeave: function (args) {send("MsiSourceListSetInfoW");}});
+
+var MsiSummaryInfoGetPropertyA = Module.findExportByName("msi.dll", "MsiSummaryInfoGetPropertyA")
+Interceptor.attach(MsiSummaryInfoGetPropertyA, {onLeave: function (args) {send("MsiSummaryInfoGetPropertyA");}});
+
+var MsiSummaryInfoGetPropertyCount = Module.findExportByName("msi.dll", "MsiSummaryInfoGetPropertyCount")
+Interceptor.attach(MsiSummaryInfoGetPropertyCount, {onLeave: function (args) {send("MsiSummaryInfoGetPropertyCount");}});
+
+var MsiSummaryInfoGetPropertyW = Module.findExportByName("msi.dll", "MsiSummaryInfoGetPropertyW")
+Interceptor.attach(MsiSummaryInfoGetPropertyW, {onLeave: function (args) {send("MsiSummaryInfoGetPropertyW");}});
+
+var MsiSummaryInfoPersist = Module.findExportByName("msi.dll", "MsiSummaryInfoPersist")
+Interceptor.attach(MsiSummaryInfoPersist, {onLeave: function (args) {send("MsiSummaryInfoPersist");}});
+
+var MsiSummaryInfoSetPropertyA = Module.findExportByName("msi.dll", "MsiSummaryInfoSetPropertyA")
+Interceptor.attach(MsiSummaryInfoSetPropertyA, {onLeave: function (args) {send("MsiSummaryInfoSetPropertyA");}});
+
+var MsiSummaryInfoSetPropertyW = Module.findExportByName("msi.dll", "MsiSummaryInfoSetPropertyW")
+Interceptor.attach(MsiSummaryInfoSetPropertyW, {onLeave: function (args) {send("MsiSummaryInfoSetPropertyW");}});
+
+var MsiUseFeatureA = Module.findExportByName("msi.dll", "MsiUseFeatureA")
+Interceptor.attach(MsiUseFeatureA, {onLeave: function (args) {send("MsiUseFeatureA");}});
+
+var MsiUseFeatureExA = Module.findExportByName("msi.dll", "MsiUseFeatureExA")
+Interceptor.attach(MsiUseFeatureExA, {onLeave: function (args) {send("MsiUseFeatureExA");}});
+
+var MsiUseFeatureExW = Module.findExportByName("msi.dll", "MsiUseFeatureExW")
+Interceptor.attach(MsiUseFeatureExW, {onLeave: function (args) {send("MsiUseFeatureExW");}});
+
+var MsiUseFeatureW = Module.findExportByName("msi.dll", "MsiUseFeatureW")
+Interceptor.attach(MsiUseFeatureW, {onLeave: function (args) {send("MsiUseFeatureW");}});
+
+var MsiVerifyDiskSpace = Module.findExportByName("msi.dll", "MsiVerifyDiskSpace")
+Interceptor.attach(MsiVerifyDiskSpace, {onLeave: function (args) {send("MsiVerifyDiskSpace");}});
+
+var MsiVerifyPackageA = Module.findExportByName("msi.dll", "MsiVerifyPackageA")
+Interceptor.attach(MsiVerifyPackageA, {onLeave: function (args) {send("MsiVerifyPackageA");}});
+
+var MsiVerifyPackageW = Module.findExportByName("msi.dll", "MsiVerifyPackageW")
+Interceptor.attach(MsiVerifyPackageW, {onLeave: function (args) {send("MsiVerifyPackageW");}});
+
+var MsiViewClose = Module.findExportByName("msi.dll", "MsiViewClose")
+Interceptor.attach(MsiViewClose, {onLeave: function (args) {send("MsiViewClose");}});
+
+var MsiViewExecute = Module.findExportByName("msi.dll", "MsiViewExecute")
+Interceptor.attach(MsiViewExecute, {onLeave: function (args) {send("MsiViewExecute");}});
+
+var MsiViewFetch = Module.findExportByName("msi.dll", "MsiViewFetch")
+Interceptor.attach(MsiViewFetch, {onLeave: function (args) {send("MsiViewFetch");}});
+
+var MsiViewGetColumnInfo = Module.findExportByName("msi.dll", "MsiViewGetColumnInfo")
+Interceptor.attach(MsiViewGetColumnInfo, {onLeave: function (args) {send("MsiViewGetColumnInfo");}});
+
+var MsiViewGetErrorA = Module.findExportByName("msi.dll", "MsiViewGetErrorA")
+Interceptor.attach(MsiViewGetErrorA, {onLeave: function (args) {send("MsiViewGetErrorA");}});
+
+var MsiViewGetErrorW = Module.findExportByName("msi.dll", "MsiViewGetErrorW")
+Interceptor.attach(MsiViewGetErrorW, {onLeave: function (args) {send("MsiViewGetErrorW");}});
+
+var MsiViewModify = Module.findExportByName("msi.dll", "MsiViewModify")
+Interceptor.attach(MsiViewModify, {onLeave: function (args) {send("MsiViewModify");}});
+
+var QueryInstanceCount = Module.findExportByName("msi.dll", "QueryInstanceCount")
+Interceptor.attach(QueryInstanceCount, {onLeave: function (args) {send("QueryInstanceCount");}});
+

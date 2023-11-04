@@ -1,0 +1,18 @@
+var InitializeSListHead = Module.findExportByName("api-ms-win-core-interlocked-l1-1-0.dll", "InitializeSListHead")
+Interceptor.attach(InitializeSListHead, {onLeave: function (args) {send("InitializeSListHead");}});
+
+var InterlockedFlushSList = Module.findExportByName("api-ms-win-core-interlocked-l1-1-0.dll", "InterlockedFlushSList")
+Interceptor.attach(InterlockedFlushSList, {onLeave: function (args) {send("InterlockedFlushSList");}});
+
+var InterlockedPopEntrySList = Module.findExportByName("api-ms-win-core-interlocked-l1-1-0.dll", "InterlockedPopEntrySList")
+Interceptor.attach(InterlockedPopEntrySList, {onLeave: function (args) {send("InterlockedPopEntrySList");}});
+
+var InterlockedPushEntrySList = Module.findExportByName("api-ms-win-core-interlocked-l1-1-0.dll", "InterlockedPushEntrySList")
+Interceptor.attach(InterlockedPushEntrySList, {onLeave: function (args) {send("InterlockedPushEntrySList");}});
+
+var InterlockedPushListSList = Module.findExportByName("api-ms-win-core-interlocked-l1-1-0.dll", "InterlockedPushListSList")
+Interceptor.attach(InterlockedPushListSList, {onLeave: function (args) {send("InterlockedPushListSList");}});
+
+var QueryDepthSList = Module.findExportByName("api-ms-win-core-interlocked-l1-1-0.dll", "QueryDepthSList")
+Interceptor.attach(QueryDepthSList, {onLeave: function (args) {send("QueryDepthSList");}});
+

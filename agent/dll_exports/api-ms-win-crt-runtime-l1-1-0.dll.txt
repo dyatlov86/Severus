@@ -1,0 +1,312 @@
+var _Exit = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_Exit")
+Interceptor.attach(_Exit, {onLeave: function (args) {send("_Exit");}});
+
+var __doserrno = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__doserrno")
+Interceptor.attach(__doserrno, {onLeave: function (args) {send("__doserrno");}});
+
+var __fpe_flt_rounds = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__fpe_flt_rounds")
+Interceptor.attach(__fpe_flt_rounds, {onLeave: function (args) {send("__fpe_flt_rounds");}});
+
+var __fpecode = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__fpecode")
+Interceptor.attach(__fpecode, {onLeave: function (args) {send("__fpecode");}});
+
+var __p___argc = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__p___argc")
+Interceptor.attach(__p___argc, {onLeave: function (args) {send("__p___argc");}});
+
+var __p___argv = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__p___argv")
+Interceptor.attach(__p___argv, {onLeave: function (args) {send("__p___argv");}});
+
+var __p___wargv = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__p___wargv")
+Interceptor.attach(__p___wargv, {onLeave: function (args) {send("__p___wargv");}});
+
+var __p__acmdln = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__p__acmdln")
+Interceptor.attach(__p__acmdln, {onLeave: function (args) {send("__p__acmdln");}});
+
+var __p__pgmptr = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__p__pgmptr")
+Interceptor.attach(__p__pgmptr, {onLeave: function (args) {send("__p__pgmptr");}});
+
+var __p__wcmdln = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__p__wcmdln")
+Interceptor.attach(__p__wcmdln, {onLeave: function (args) {send("__p__wcmdln");}});
+
+var __p__wpgmptr = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__p__wpgmptr")
+Interceptor.attach(__p__wpgmptr, {onLeave: function (args) {send("__p__wpgmptr");}});
+
+var __pxcptinfoptrs = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__pxcptinfoptrs")
+Interceptor.attach(__pxcptinfoptrs, {onLeave: function (args) {send("__pxcptinfoptrs");}});
+
+var __sys_errlist = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__sys_errlist")
+Interceptor.attach(__sys_errlist, {onLeave: function (args) {send("__sys_errlist");}});
+
+var __sys_nerr = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__sys_nerr")
+Interceptor.attach(__sys_nerr, {onLeave: function (args) {send("__sys_nerr");}});
+
+var __threadhandle = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__threadhandle")
+Interceptor.attach(__threadhandle, {onLeave: function (args) {send("__threadhandle");}});
+
+var __threadid = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__threadid")
+Interceptor.attach(__threadid, {onLeave: function (args) {send("__threadid");}});
+
+var __wcserror = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__wcserror")
+Interceptor.attach(__wcserror, {onLeave: function (args) {send("__wcserror");}});
+
+var __wcserror_s = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "__wcserror_s")
+Interceptor.attach(__wcserror_s, {onLeave: function (args) {send("__wcserror_s");}});
+
+var _assert = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_assert")
+Interceptor.attach(_assert, {onLeave: function (args) {send("_assert");}});
+
+var _beginthread = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_beginthread")
+Interceptor.attach(_beginthread, {onLeave: function (args) {send("_beginthread");}});
+
+var _beginthreadex = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_beginthreadex")
+Interceptor.attach(_beginthreadex, {onLeave: function (args) {send("_beginthreadex");}});
+
+var _c_exit = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_c_exit")
+Interceptor.attach(_c_exit, {onLeave: function (args) {send("_c_exit");}});
+
+var _cexit = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_cexit")
+Interceptor.attach(_cexit, {onLeave: function (args) {send("_cexit");}});
+
+var _clearfp = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_clearfp")
+Interceptor.attach(_clearfp, {onLeave: function (args) {send("_clearfp");}});
+
+var _configure_narrow_argv = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_configure_narrow_argv")
+Interceptor.attach(_configure_narrow_argv, {onLeave: function (args) {send("_configure_narrow_argv");}});
+
+var _configure_wide_argv = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_configure_wide_argv")
+Interceptor.attach(_configure_wide_argv, {onLeave: function (args) {send("_configure_wide_argv");}});
+
+var _control87 = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_control87")
+Interceptor.attach(_control87, {onLeave: function (args) {send("_control87");}});
+
+var _controlfp = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_controlfp")
+Interceptor.attach(_controlfp, {onLeave: function (args) {send("_controlfp");}});
+
+var _controlfp_s = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_controlfp_s")
+Interceptor.attach(_controlfp_s, {onLeave: function (args) {send("_controlfp_s");}});
+
+var _crt_at_quick_exit = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_crt_at_quick_exit")
+Interceptor.attach(_crt_at_quick_exit, {onLeave: function (args) {send("_crt_at_quick_exit");}});
+
+var _crt_atexit = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_crt_atexit")
+Interceptor.attach(_crt_atexit, {onLeave: function (args) {send("_crt_atexit");}});
+
+var _endthread = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_endthread")
+Interceptor.attach(_endthread, {onLeave: function (args) {send("_endthread");}});
+
+var _endthreadex = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_endthreadex")
+Interceptor.attach(_endthreadex, {onLeave: function (args) {send("_endthreadex");}});
+
+var _errno = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_errno")
+Interceptor.attach(_errno, {onLeave: function (args) {send("_errno");}});
+
+var _execute_onexit_table = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_execute_onexit_table")
+Interceptor.attach(_execute_onexit_table, {onLeave: function (args) {send("_execute_onexit_table");}});
+
+var _exit = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_exit")
+Interceptor.attach(_exit, {onLeave: function (args) {send("_exit");}});
+
+var _fpieee_flt = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_fpieee_flt")
+Interceptor.attach(_fpieee_flt, {onLeave: function (args) {send("_fpieee_flt");}});
+
+var _fpreset = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_fpreset")
+Interceptor.attach(_fpreset, {onLeave: function (args) {send("_fpreset");}});
+
+var _get_doserrno = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_get_doserrno")
+Interceptor.attach(_get_doserrno, {onLeave: function (args) {send("_get_doserrno");}});
+
+var _get_errno = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_get_errno")
+Interceptor.attach(_get_errno, {onLeave: function (args) {send("_get_errno");}});
+
+var _get_initial_narrow_environment = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_get_initial_narrow_environment")
+Interceptor.attach(_get_initial_narrow_environment, {onLeave: function (args) {send("_get_initial_narrow_environment");}});
+
+var _get_initial_wide_environment = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_get_initial_wide_environment")
+Interceptor.attach(_get_initial_wide_environment, {onLeave: function (args) {send("_get_initial_wide_environment");}});
+
+var _get_invalid_parameter_handler = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_get_invalid_parameter_handler")
+Interceptor.attach(_get_invalid_parameter_handler, {onLeave: function (args) {send("_get_invalid_parameter_handler");}});
+
+var _get_narrow_winmain_command_line = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_get_narrow_winmain_command_line")
+Interceptor.attach(_get_narrow_winmain_command_line, {onLeave: function (args) {send("_get_narrow_winmain_command_line");}});
+
+var _get_pgmptr = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_get_pgmptr")
+Interceptor.attach(_get_pgmptr, {onLeave: function (args) {send("_get_pgmptr");}});
+
+var _get_terminate = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_get_terminate")
+Interceptor.attach(_get_terminate, {onLeave: function (args) {send("_get_terminate");}});
+
+var _get_thread_local_invalid_parameter_handler = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_get_thread_local_invalid_parameter_handler")
+Interceptor.attach(_get_thread_local_invalid_parameter_handler, {onLeave: function (args) {send("_get_thread_local_invalid_parameter_handler");}});
+
+var _get_wide_winmain_command_line = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_get_wide_winmain_command_line")
+Interceptor.attach(_get_wide_winmain_command_line, {onLeave: function (args) {send("_get_wide_winmain_command_line");}});
+
+var _get_wpgmptr = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_get_wpgmptr")
+Interceptor.attach(_get_wpgmptr, {onLeave: function (args) {send("_get_wpgmptr");}});
+
+var _getdllprocaddr = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_getdllprocaddr")
+Interceptor.attach(_getdllprocaddr, {onLeave: function (args) {send("_getdllprocaddr");}});
+
+var _getpid = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_getpid")
+Interceptor.attach(_getpid, {onLeave: function (args) {send("_getpid");}});
+
+var _initialize_narrow_environment = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_initialize_narrow_environment")
+Interceptor.attach(_initialize_narrow_environment, {onLeave: function (args) {send("_initialize_narrow_environment");}});
+
+var _initialize_onexit_table = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_initialize_onexit_table")
+Interceptor.attach(_initialize_onexit_table, {onLeave: function (args) {send("_initialize_onexit_table");}});
+
+var _initialize_wide_environment = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_initialize_wide_environment")
+Interceptor.attach(_initialize_wide_environment, {onLeave: function (args) {send("_initialize_wide_environment");}});
+
+var _initterm = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_initterm")
+Interceptor.attach(_initterm, {onLeave: function (args) {send("_initterm");}});
+
+var _initterm_e = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_initterm_e")
+Interceptor.attach(_initterm_e, {onLeave: function (args) {send("_initterm_e");}});
+
+var _invalid_parameter_noinfo = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_invalid_parameter_noinfo")
+Interceptor.attach(_invalid_parameter_noinfo, {onLeave: function (args) {send("_invalid_parameter_noinfo");}});
+
+var _invalid_parameter_noinfo_noreturn = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_invalid_parameter_noinfo_noreturn")
+Interceptor.attach(_invalid_parameter_noinfo_noreturn, {onLeave: function (args) {send("_invalid_parameter_noinfo_noreturn");}});
+
+var _invoke_watson = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_invoke_watson")
+Interceptor.attach(_invoke_watson, {onLeave: function (args) {send("_invoke_watson");}});
+
+var _query_app_type = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_query_app_type")
+Interceptor.attach(_query_app_type, {onLeave: function (args) {send("_query_app_type");}});
+
+var _register_onexit_function = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_register_onexit_function")
+Interceptor.attach(_register_onexit_function, {onLeave: function (args) {send("_register_onexit_function");}});
+
+var _register_thread_local_exe_atexit_callback = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_register_thread_local_exe_atexit_callback")
+Interceptor.attach(_register_thread_local_exe_atexit_callback, {onLeave: function (args) {send("_register_thread_local_exe_atexit_callback");}});
+
+var _resetstkoflw = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_resetstkoflw")
+Interceptor.attach(_resetstkoflw, {onLeave: function (args) {send("_resetstkoflw");}});
+
+var _seh_filter_dll = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_seh_filter_dll")
+Interceptor.attach(_seh_filter_dll, {onLeave: function (args) {send("_seh_filter_dll");}});
+
+var _seh_filter_exe = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_seh_filter_exe")
+Interceptor.attach(_seh_filter_exe, {onLeave: function (args) {send("_seh_filter_exe");}});
+
+var _set_abort_behavior = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_set_abort_behavior")
+Interceptor.attach(_set_abort_behavior, {onLeave: function (args) {send("_set_abort_behavior");}});
+
+var _set_app_type = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_set_app_type")
+Interceptor.attach(_set_app_type, {onLeave: function (args) {send("_set_app_type");}});
+
+var _set_controlfp = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_set_controlfp")
+Interceptor.attach(_set_controlfp, {onLeave: function (args) {send("_set_controlfp");}});
+
+var _set_doserrno = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_set_doserrno")
+Interceptor.attach(_set_doserrno, {onLeave: function (args) {send("_set_doserrno");}});
+
+var _set_errno = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_set_errno")
+Interceptor.attach(_set_errno, {onLeave: function (args) {send("_set_errno");}});
+
+var _set_error_mode = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_set_error_mode")
+Interceptor.attach(_set_error_mode, {onLeave: function (args) {send("_set_error_mode");}});
+
+var _set_invalid_parameter_handler = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_set_invalid_parameter_handler")
+Interceptor.attach(_set_invalid_parameter_handler, {onLeave: function (args) {send("_set_invalid_parameter_handler");}});
+
+var _set_new_handler = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_set_new_handler")
+Interceptor.attach(_set_new_handler, {onLeave: function (args) {send("_set_new_handler");}});
+
+var _set_thread_local_invalid_parameter_handler = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_set_thread_local_invalid_parameter_handler")
+Interceptor.attach(_set_thread_local_invalid_parameter_handler, {onLeave: function (args) {send("_set_thread_local_invalid_parameter_handler");}});
+
+var _seterrormode = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_seterrormode")
+Interceptor.attach(_seterrormode, {onLeave: function (args) {send("_seterrormode");}});
+
+var _sleep = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_sleep")
+Interceptor.attach(_sleep, {onLeave: function (args) {send("_sleep");}});
+
+var _statusfp = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_statusfp")
+Interceptor.attach(_statusfp, {onLeave: function (args) {send("_statusfp");}});
+
+var _strerror = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_strerror")
+Interceptor.attach(_strerror, {onLeave: function (args) {send("_strerror");}});
+
+var _strerror_s = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_strerror_s")
+Interceptor.attach(_strerror_s, {onLeave: function (args) {send("_strerror_s");}});
+
+var _wassert = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_wassert")
+Interceptor.attach(_wassert, {onLeave: function (args) {send("_wassert");}});
+
+var _wcserror = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_wcserror")
+Interceptor.attach(_wcserror, {onLeave: function (args) {send("_wcserror");}});
+
+var _wcserror_s = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_wcserror_s")
+Interceptor.attach(_wcserror_s, {onLeave: function (args) {send("_wcserror_s");}});
+
+var _wperror = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_wperror")
+Interceptor.attach(_wperror, {onLeave: function (args) {send("_wperror");}});
+
+var _wsystem = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "_wsystem")
+Interceptor.attach(_wsystem, {onLeave: function (args) {send("_wsystem");}});
+
+var abort = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "abort")
+Interceptor.attach(abort, {onLeave: function (args) {send("abort");}});
+
+var exit = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "exit")
+Interceptor.attach(exit, {onLeave: function (args) {send("exit");}});
+
+var feclearexcept = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "feclearexcept")
+Interceptor.attach(feclearexcept, {onLeave: function (args) {send("feclearexcept");}});
+
+var fegetenv = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "fegetenv")
+Interceptor.attach(fegetenv, {onLeave: function (args) {send("fegetenv");}});
+
+var fegetexceptflag = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "fegetexceptflag")
+Interceptor.attach(fegetexceptflag, {onLeave: function (args) {send("fegetexceptflag");}});
+
+var fegetround = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "fegetround")
+Interceptor.attach(fegetround, {onLeave: function (args) {send("fegetround");}});
+
+var feholdexcept = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "feholdexcept")
+Interceptor.attach(feholdexcept, {onLeave: function (args) {send("feholdexcept");}});
+
+var fesetenv = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "fesetenv")
+Interceptor.attach(fesetenv, {onLeave: function (args) {send("fesetenv");}});
+
+var fesetexceptflag = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "fesetexceptflag")
+Interceptor.attach(fesetexceptflag, {onLeave: function (args) {send("fesetexceptflag");}});
+
+var fesetround = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "fesetround")
+Interceptor.attach(fesetround, {onLeave: function (args) {send("fesetround");}});
+
+var fetestexcept = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "fetestexcept")
+Interceptor.attach(fetestexcept, {onLeave: function (args) {send("fetestexcept");}});
+
+var perror = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "perror")
+Interceptor.attach(perror, {onLeave: function (args) {send("perror");}});
+
+var quick_exit = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "quick_exit")
+Interceptor.attach(quick_exit, {onLeave: function (args) {send("quick_exit");}});
+
+var raise = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "raise")
+Interceptor.attach(raise, {onLeave: function (args) {send("raise");}});
+
+var set_terminate = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "set_terminate")
+Interceptor.attach(set_terminate, {onLeave: function (args) {send("set_terminate");}});
+
+var signal = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "signal")
+Interceptor.attach(signal, {onLeave: function (args) {send("signal");}});
+
+var strerror = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "strerror")
+Interceptor.attach(strerror, {onLeave: function (args) {send("strerror");}});
+
+var strerror_s = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "strerror_s")
+Interceptor.attach(strerror_s, {onLeave: function (args) {send("strerror_s");}});
+
+var system = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "system")
+Interceptor.attach(system, {onLeave: function (args) {send("system");}});
+
+var terminate = Module.findExportByName("api-ms-win-crt-runtime-l1-1-0.dll", "terminate")
+Interceptor.attach(terminate, {onLeave: function (args) {send("terminate");}});
+

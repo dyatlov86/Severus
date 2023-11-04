@@ -1,0 +1,30 @@
+var CreateCatalog = Module.findExportByName("fhshl.dll", "CreateCatalog")
+Interceptor.attach(CreateCatalog, {onLeave: function (args) {send("CreateCatalog");}});
+
+var CreateSearchBindCtx = Module.findExportByName("fhshl.dll", "CreateSearchBindCtx")
+Interceptor.attach(CreateSearchBindCtx, {onLeave: function (args) {send("CreateSearchBindCtx");}});
+
+var CreateVirtualItem = Module.findExportByName("fhshl.dll", "CreateVirtualItem")
+Interceptor.attach(CreateVirtualItem, {onLeave: function (args) {send("CreateVirtualItem");}});
+
+var DllCanUnloadNow = Module.findExportByName("fhshl.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("fhshl.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("fhshl.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("fhshl.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var FreeCatalog = Module.findExportByName("fhshl.dll", "FreeCatalog")
+Interceptor.attach(FreeCatalog, {onLeave: function (args) {send("FreeCatalog");}});
+
+var GetBackupPathFromPidl = Module.findExportByName("fhshl.dll", "GetBackupPathFromPidl")
+Interceptor.attach(GetBackupPathFromPidl, {onLeave: function (args) {send("GetBackupPathFromPidl");}});
+
+var ParsePIDL = Module.findExportByName("fhshl.dll", "ParsePIDL")
+Interceptor.attach(ParsePIDL, {onLeave: function (args) {send("ParsePIDL");}});
+

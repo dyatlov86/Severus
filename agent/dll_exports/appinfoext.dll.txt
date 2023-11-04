@@ -1,0 +1,6 @@
+var AiExtDisableDesktopRpcInterface = Module.findExportByName("appinfoext.dll", "AiExtDisableDesktopRpcInterface")
+Interceptor.attach(AiExtDisableDesktopRpcInterface, {onLeave: function (args) {send("AiExtDisableDesktopRpcInterface");}});
+
+var AiExtEnableDesktopRpcInterface = Module.findExportByName("appinfoext.dll", "AiExtEnableDesktopRpcInterface")
+Interceptor.attach(AiExtEnableDesktopRpcInterface, {onLeave: function (args) {send("AiExtEnableDesktopRpcInterface");}});
+

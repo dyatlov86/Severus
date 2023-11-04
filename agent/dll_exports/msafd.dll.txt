@@ -1,0 +1,3 @@
+var WSPStartup = Module.findExportByName("msafd.dll", "WSPStartup")
+Interceptor.attach(WSPStartup, {onLeave: function (args) {send("WSPStartup");}});
+

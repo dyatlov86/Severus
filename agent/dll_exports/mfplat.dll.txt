@@ -1,0 +1,690 @@
+var CopyPropVariant = Module.findExportByName("mfplat.dll", "CopyPropVariant")
+Interceptor.attach(CopyPropVariant, {onLeave: function (args) {send("CopyPropVariant");}});
+
+var CreatePropVariant = Module.findExportByName("mfplat.dll", "CreatePropVariant")
+Interceptor.attach(CreatePropVariant, {onLeave: function (args) {send("CreatePropVariant");}});
+
+var CreatePropertyStore = Module.findExportByName("mfplat.dll", "CreatePropertyStore")
+Interceptor.attach(CreatePropertyStore, {onLeave: function (args) {send("CreatePropertyStore");}});
+
+var DestroyPropVariant = Module.findExportByName("mfplat.dll", "DestroyPropVariant")
+Interceptor.attach(DestroyPropVariant, {onLeave: function (args) {send("DestroyPropVariant");}});
+
+var FormatTagFromWfx = Module.findExportByName("mfplat.dll", "FormatTagFromWfx")
+Interceptor.attach(FormatTagFromWfx, {onLeave: function (args) {send("FormatTagFromWfx");}});
+
+var GetAMSubtypeFromD3DFormat = Module.findExportByName("mfplat.dll", "GetAMSubtypeFromD3DFormat")
+Interceptor.attach(GetAMSubtypeFromD3DFormat, {onLeave: function (args) {send("GetAMSubtypeFromD3DFormat");}});
+
+var GetD3DFormatFromMFSubtype = Module.findExportByName("mfplat.dll", "GetD3DFormatFromMFSubtype")
+Interceptor.attach(GetD3DFormatFromMFSubtype, {onLeave: function (args) {send("GetD3DFormatFromMFSubtype");}});
+
+var MFAddPeriodicCallback = Module.findExportByName("mfplat.dll", "MFAddPeriodicCallback")
+Interceptor.attach(MFAddPeriodicCallback, {onLeave: function (args) {send("MFAddPeriodicCallback");}});
+
+var MFAllocateSerialWorkQueue = Module.findExportByName("mfplat.dll", "MFAllocateSerialWorkQueue")
+Interceptor.attach(MFAllocateSerialWorkQueue, {onLeave: function (args) {send("MFAllocateSerialWorkQueue");}});
+
+var MFAllocateWorkQueue = Module.findExportByName("mfplat.dll", "MFAllocateWorkQueue")
+Interceptor.attach(MFAllocateWorkQueue, {onLeave: function (args) {send("MFAllocateWorkQueue");}});
+
+var MFAllocateWorkQueueEx = Module.findExportByName("mfplat.dll", "MFAllocateWorkQueueEx")
+Interceptor.attach(MFAllocateWorkQueueEx, {onLeave: function (args) {send("MFAllocateWorkQueueEx");}});
+
+var MFAppendCollection = Module.findExportByName("mfplat.dll", "MFAppendCollection")
+Interceptor.attach(MFAppendCollection, {onLeave: function (args) {send("MFAppendCollection");}});
+
+var MFAverageTimePerFrameToFrameRate = Module.findExportByName("mfplat.dll", "MFAverageTimePerFrameToFrameRate")
+Interceptor.attach(MFAverageTimePerFrameToFrameRate, {onLeave: function (args) {send("MFAverageTimePerFrameToFrameRate");}});
+
+var MFBeginCreateFile = Module.findExportByName("mfplat.dll", "MFBeginCreateFile")
+Interceptor.attach(MFBeginCreateFile, {onLeave: function (args) {send("MFBeginCreateFile");}});
+
+var MFBeginGetHostByName = Module.findExportByName("mfplat.dll", "MFBeginGetHostByName")
+Interceptor.attach(MFBeginGetHostByName, {onLeave: function (args) {send("MFBeginGetHostByName");}});
+
+var MFBeginRegisterWorkQueueWithMMCSS = Module.findExportByName("mfplat.dll", "MFBeginRegisterWorkQueueWithMMCSS")
+Interceptor.attach(MFBeginRegisterWorkQueueWithMMCSS, {onLeave: function (args) {send("MFBeginRegisterWorkQueueWithMMCSS");}});
+
+var MFBeginRegisterWorkQueueWithMMCSSEx = Module.findExportByName("mfplat.dll", "MFBeginRegisterWorkQueueWithMMCSSEx")
+Interceptor.attach(MFBeginRegisterWorkQueueWithMMCSSEx, {onLeave: function (args) {send("MFBeginRegisterWorkQueueWithMMCSSEx");}});
+
+var MFBeginUnregisterWorkQueueWithMMCSS = Module.findExportByName("mfplat.dll", "MFBeginUnregisterWorkQueueWithMMCSS")
+Interceptor.attach(MFBeginUnregisterWorkQueueWithMMCSS, {onLeave: function (args) {send("MFBeginUnregisterWorkQueueWithMMCSS");}});
+
+var MFCalculateBitmapImageSize = Module.findExportByName("mfplat.dll", "MFCalculateBitmapImageSize")
+Interceptor.attach(MFCalculateBitmapImageSize, {onLeave: function (args) {send("MFCalculateBitmapImageSize");}});
+
+var MFCalculateImageSize = Module.findExportByName("mfplat.dll", "MFCalculateImageSize")
+Interceptor.attach(MFCalculateImageSize, {onLeave: function (args) {send("MFCalculateImageSize");}});
+
+var MFCallStackTracingClearSnapshot = Module.findExportByName("mfplat.dll", "MFCallStackTracingClearSnapshot")
+Interceptor.attach(MFCallStackTracingClearSnapshot, {onLeave: function (args) {send("MFCallStackTracingClearSnapshot");}});
+
+var MFCallStackTracingLogSessionErrors = Module.findExportByName("mfplat.dll", "MFCallStackTracingLogSessionErrors")
+Interceptor.attach(MFCallStackTracingLogSessionErrors, {onLeave: function (args) {send("MFCallStackTracingLogSessionErrors");}});
+
+var MFCallStackTracingRestoreSnapshot = Module.findExportByName("mfplat.dll", "MFCallStackTracingRestoreSnapshot")
+Interceptor.attach(MFCallStackTracingRestoreSnapshot, {onLeave: function (args) {send("MFCallStackTracingRestoreSnapshot");}});
+
+var MFCallStackTracingTakeSnapshot = Module.findExportByName("mfplat.dll", "MFCallStackTracingTakeSnapshot")
+Interceptor.attach(MFCallStackTracingTakeSnapshot, {onLeave: function (args) {send("MFCallStackTracingTakeSnapshot");}});
+
+var MFCancelCreateFile = Module.findExportByName("mfplat.dll", "MFCancelCreateFile")
+Interceptor.attach(MFCancelCreateFile, {onLeave: function (args) {send("MFCancelCreateFile");}});
+
+var MFCancelWorkItem = Module.findExportByName("mfplat.dll", "MFCancelWorkItem")
+Interceptor.attach(MFCancelWorkItem, {onLeave: function (args) {send("MFCancelWorkItem");}});
+
+var MFCheckEnabledViaAppService = Module.findExportByName("mfplat.dll", "MFCheckEnabledViaAppService")
+Interceptor.attach(MFCheckEnabledViaAppService, {onLeave: function (args) {send("MFCheckEnabledViaAppService");}});
+
+var MFClearLocalMFTs = Module.findExportByName("mfplat.dll", "MFClearLocalMFTs")
+Interceptor.attach(MFClearLocalMFTs, {onLeave: function (args) {send("MFClearLocalMFTs");}});
+
+var MFCombineSamples = Module.findExportByName("mfplat.dll", "MFCombineSamples")
+Interceptor.attach(MFCombineSamples, {onLeave: function (args) {send("MFCombineSamples");}});
+
+var MFCompareFullToPartialMediaType = Module.findExportByName("mfplat.dll", "MFCompareFullToPartialMediaType")
+Interceptor.attach(MFCompareFullToPartialMediaType, {onLeave: function (args) {send("MFCompareFullToPartialMediaType");}});
+
+var MFCompareSockaddrAddresses = Module.findExportByName("mfplat.dll", "MFCompareSockaddrAddresses")
+Interceptor.attach(MFCompareSockaddrAddresses, {onLeave: function (args) {send("MFCompareSockaddrAddresses");}});
+
+var MFConvertColorInfoFromDXVA = Module.findExportByName("mfplat.dll", "MFConvertColorInfoFromDXVA")
+Interceptor.attach(MFConvertColorInfoFromDXVA, {onLeave: function (args) {send("MFConvertColorInfoFromDXVA");}});
+
+var MFConvertColorInfoToDXVA = Module.findExportByName("mfplat.dll", "MFConvertColorInfoToDXVA")
+Interceptor.attach(MFConvertColorInfoToDXVA, {onLeave: function (args) {send("MFConvertColorInfoToDXVA");}});
+
+var MFConvertFromFP16Array = Module.findExportByName("mfplat.dll", "MFConvertFromFP16Array")
+Interceptor.attach(MFConvertFromFP16Array, {onLeave: function (args) {send("MFConvertFromFP16Array");}});
+
+var MFConvertToFP16Array = Module.findExportByName("mfplat.dll", "MFConvertToFP16Array")
+Interceptor.attach(MFConvertToFP16Array, {onLeave: function (args) {send("MFConvertToFP16Array");}});
+
+var MFCopyImage = Module.findExportByName("mfplat.dll", "MFCopyImage")
+Interceptor.attach(MFCopyImage, {onLeave: function (args) {send("MFCopyImage");}});
+
+var MFCreate2DMediaBuffer = Module.findExportByName("mfplat.dll", "MFCreate2DMediaBuffer")
+Interceptor.attach(MFCreate2DMediaBuffer, {onLeave: function (args) {send("MFCreate2DMediaBuffer");}});
+
+var MFCreate2DMediaBufferOn1DMediaBuffer = Module.findExportByName("mfplat.dll", "MFCreate2DMediaBufferOn1DMediaBuffer")
+Interceptor.attach(MFCreate2DMediaBufferOn1DMediaBuffer, {onLeave: function (args) {send("MFCreate2DMediaBufferOn1DMediaBuffer");}});
+
+var MFCreateAMMediaTypeFromMFMediaType = Module.findExportByName("mfplat.dll", "MFCreateAMMediaTypeFromMFMediaType")
+Interceptor.attach(MFCreateAMMediaTypeFromMFMediaType, {onLeave: function (args) {send("MFCreateAMMediaTypeFromMFMediaType");}});
+
+var MFCreateAlignedMemoryBuffer = Module.findExportByName("mfplat.dll", "MFCreateAlignedMemoryBuffer")
+Interceptor.attach(MFCreateAlignedMemoryBuffer, {onLeave: function (args) {send("MFCreateAlignedMemoryBuffer");}});
+
+var MFCreateAlignedSharedMemoryBuffer = Module.findExportByName("mfplat.dll", "MFCreateAlignedSharedMemoryBuffer")
+Interceptor.attach(MFCreateAlignedSharedMemoryBuffer, {onLeave: function (args) {send("MFCreateAlignedSharedMemoryBuffer");}});
+
+var MFCreateAsyncResult = Module.findExportByName("mfplat.dll", "MFCreateAsyncResult")
+Interceptor.attach(MFCreateAsyncResult, {onLeave: function (args) {send("MFCreateAsyncResult");}});
+
+var MFCreateAttributes = Module.findExportByName("mfplat.dll", "MFCreateAttributes")
+Interceptor.attach(MFCreateAttributes, {onLeave: function (args) {send("MFCreateAttributes");}});
+
+var MFCreateAudioMediaType = Module.findExportByName("mfplat.dll", "MFCreateAudioMediaType")
+Interceptor.attach(MFCreateAudioMediaType, {onLeave: function (args) {send("MFCreateAudioMediaType");}});
+
+var MFCreateByteStreamHandlerAppServiceActivate = Module.findExportByName("mfplat.dll", "MFCreateByteStreamHandlerAppServiceActivate")
+Interceptor.attach(MFCreateByteStreamHandlerAppServiceActivate, {onLeave: function (args) {send("MFCreateByteStreamHandlerAppServiceActivate");}});
+
+var MFCreateCollection = Module.findExportByName("mfplat.dll", "MFCreateCollection")
+Interceptor.attach(MFCreateCollection, {onLeave: function (args) {send("MFCreateCollection");}});
+
+var MFCreateContentDecryptorContext = Module.findExportByName("mfplat.dll", "MFCreateContentDecryptorContext")
+Interceptor.attach(MFCreateContentDecryptorContext, {onLeave: function (args) {send("MFCreateContentDecryptorContext");}});
+
+var MFCreateContentProtectionDevice = Module.findExportByName("mfplat.dll", "MFCreateContentProtectionDevice")
+Interceptor.attach(MFCreateContentProtectionDevice, {onLeave: function (args) {send("MFCreateContentProtectionDevice");}});
+
+var MFCreateD3D12SynchronizationObject = Module.findExportByName("mfplat.dll", "MFCreateD3D12SynchronizationObject")
+Interceptor.attach(MFCreateD3D12SynchronizationObject, {onLeave: function (args) {send("MFCreateD3D12SynchronizationObject");}});
+
+var MFCreateDXGIDeviceManager = Module.findExportByName("mfplat.dll", "MFCreateDXGIDeviceManager")
+Interceptor.attach(MFCreateDXGIDeviceManager, {onLeave: function (args) {send("MFCreateDXGIDeviceManager");}});
+
+var MFCreateDXGISurfaceBuffer = Module.findExportByName("mfplat.dll", "MFCreateDXGISurfaceBuffer")
+Interceptor.attach(MFCreateDXGISurfaceBuffer, {onLeave: function (args) {send("MFCreateDXGISurfaceBuffer");}});
+
+var MFCreateDXSurfaceBuffer = Module.findExportByName("mfplat.dll", "MFCreateDXSurfaceBuffer")
+Interceptor.attach(MFCreateDXSurfaceBuffer, {onLeave: function (args) {send("MFCreateDXSurfaceBuffer");}});
+
+var MFCreateEMEStoreObject = Module.findExportByName("mfplat.dll", "MFCreateEMEStoreObject")
+Interceptor.attach(MFCreateEMEStoreObject, {onLeave: function (args) {send("MFCreateEMEStoreObject");}});
+
+var MFCreateEventQueue = Module.findExportByName("mfplat.dll", "MFCreateEventQueue")
+Interceptor.attach(MFCreateEventQueue, {onLeave: function (args) {send("MFCreateEventQueue");}});
+
+var MFCreateFile = Module.findExportByName("mfplat.dll", "MFCreateFile")
+Interceptor.attach(MFCreateFile, {onLeave: function (args) {send("MFCreateFile");}});
+
+var MFCreateFileFromHandle = Module.findExportByName("mfplat.dll", "MFCreateFileFromHandle")
+Interceptor.attach(MFCreateFileFromHandle, {onLeave: function (args) {send("MFCreateFileFromHandle");}});
+
+var MFCreateLegacyMediaBufferOnMFMediaBuffer = Module.findExportByName("mfplat.dll", "MFCreateLegacyMediaBufferOnMFMediaBuffer")
+Interceptor.attach(MFCreateLegacyMediaBufferOnMFMediaBuffer, {onLeave: function (args) {send("MFCreateLegacyMediaBufferOnMFMediaBuffer");}});
+
+var MFCreateMFByteStreamOnIStreamWithFlags = Module.findExportByName("mfplat.dll", "MFCreateMFByteStreamOnIStreamWithFlags")
+Interceptor.attach(MFCreateMFByteStreamOnIStreamWithFlags, {onLeave: function (args) {send("MFCreateMFByteStreamOnIStreamWithFlags");}});
+
+var MFCreateMFByteStreamOnStream = Module.findExportByName("mfplat.dll", "MFCreateMFByteStreamOnStream")
+Interceptor.attach(MFCreateMFByteStreamOnStream, {onLeave: function (args) {send("MFCreateMFByteStreamOnStream");}});
+
+var MFCreateMFByteStreamOnStreamEx = Module.findExportByName("mfplat.dll", "MFCreateMFByteStreamOnStreamEx")
+Interceptor.attach(MFCreateMFByteStreamOnStreamEx, {onLeave: function (args) {send("MFCreateMFByteStreamOnStreamEx");}});
+
+var MFCreateMFByteStreamWrapper = Module.findExportByName("mfplat.dll", "MFCreateMFByteStreamWrapper")
+Interceptor.attach(MFCreateMFByteStreamWrapper, {onLeave: function (args) {send("MFCreateMFByteStreamWrapper");}});
+
+var MFCreateMFVideoFormatFromMFMediaType = Module.findExportByName("mfplat.dll", "MFCreateMFVideoFormatFromMFMediaType")
+Interceptor.attach(MFCreateMFVideoFormatFromMFMediaType, {onLeave: function (args) {send("MFCreateMFVideoFormatFromMFMediaType");}});
+
+var MFCreateMediaBufferFromMediaType = Module.findExportByName("mfplat.dll", "MFCreateMediaBufferFromMediaType")
+Interceptor.attach(MFCreateMediaBufferFromMediaType, {onLeave: function (args) {send("MFCreateMediaBufferFromMediaType");}});
+
+var MFCreateMediaBufferWrapper = Module.findExportByName("mfplat.dll", "MFCreateMediaBufferWrapper")
+Interceptor.attach(MFCreateMediaBufferWrapper, {onLeave: function (args) {send("MFCreateMediaBufferWrapper");}});
+
+var MFCreateMediaEvent = Module.findExportByName("mfplat.dll", "MFCreateMediaEvent")
+Interceptor.attach(MFCreateMediaEvent, {onLeave: function (args) {send("MFCreateMediaEvent");}});
+
+var MFCreateMediaEventResult = Module.findExportByName("mfplat.dll", "MFCreateMediaEventResult")
+Interceptor.attach(MFCreateMediaEventResult, {onLeave: function (args) {send("MFCreateMediaEventResult");}});
+
+var MFCreateMediaExtensionActivate = Module.findExportByName("mfplat.dll", "MFCreateMediaExtensionActivate")
+Interceptor.attach(MFCreateMediaExtensionActivate, {onLeave: function (args) {send("MFCreateMediaExtensionActivate");}});
+
+var MFCreateMediaExtensionActivateNoInit = Module.findExportByName("mfplat.dll", "MFCreateMediaExtensionActivateNoInit")
+Interceptor.attach(MFCreateMediaExtensionActivateNoInit, {onLeave: function (args) {send("MFCreateMediaExtensionActivateNoInit");}});
+
+var MFCreateMediaExtensionAppServiceActivate = Module.findExportByName("mfplat.dll", "MFCreateMediaExtensionAppServiceActivate")
+Interceptor.attach(MFCreateMediaExtensionAppServiceActivate, {onLeave: function (args) {send("MFCreateMediaExtensionAppServiceActivate");}});
+
+var MFCreateMediaExtensionInprocActivate = Module.findExportByName("mfplat.dll", "MFCreateMediaExtensionInprocActivate")
+Interceptor.attach(MFCreateMediaExtensionInprocActivate, {onLeave: function (args) {send("MFCreateMediaExtensionInprocActivate");}});
+
+var MFCreateMediaType = Module.findExportByName("mfplat.dll", "MFCreateMediaType")
+Interceptor.attach(MFCreateMediaType, {onLeave: function (args) {send("MFCreateMediaType");}});
+
+var MFCreateMediaTypeFromProperties = Module.findExportByName("mfplat.dll", "MFCreateMediaTypeFromProperties")
+Interceptor.attach(MFCreateMediaTypeFromProperties, {onLeave: function (args) {send("MFCreateMediaTypeFromProperties");}});
+
+var MFCreateMediaTypeFromRepresentation = Module.findExportByName("mfplat.dll", "MFCreateMediaTypeFromRepresentation")
+Interceptor.attach(MFCreateMediaTypeFromRepresentation, {onLeave: function (args) {send("MFCreateMediaTypeFromRepresentation");}});
+
+var MFCreateMemoryBuffer = Module.findExportByName("mfplat.dll", "MFCreateMemoryBuffer")
+Interceptor.attach(MFCreateMemoryBuffer, {onLeave: function (args) {send("MFCreateMemoryBuffer");}});
+
+var MFCreateMemoryBufferFromRawBuffer = Module.findExportByName("mfplat.dll", "MFCreateMemoryBufferFromRawBuffer")
+Interceptor.attach(MFCreateMemoryBufferFromRawBuffer, {onLeave: function (args) {send("MFCreateMemoryBufferFromRawBuffer");}});
+
+var MFCreateMemoryStream = Module.findExportByName("mfplat.dll", "MFCreateMemoryStream")
+Interceptor.attach(MFCreateMemoryStream, {onLeave: function (args) {send("MFCreateMemoryStream");}});
+
+var MFCreateMuxStreamAttributes = Module.findExportByName("mfplat.dll", "MFCreateMuxStreamAttributes")
+Interceptor.attach(MFCreateMuxStreamAttributes, {onLeave: function (args) {send("MFCreateMuxStreamAttributes");}});
+
+var MFCreateMuxStreamMediaType = Module.findExportByName("mfplat.dll", "MFCreateMuxStreamMediaType")
+Interceptor.attach(MFCreateMuxStreamMediaType, {onLeave: function (args) {send("MFCreateMuxStreamMediaType");}});
+
+var MFCreateMuxStreamSample = Module.findExportByName("mfplat.dll", "MFCreateMuxStreamSample")
+Interceptor.attach(MFCreateMuxStreamSample, {onLeave: function (args) {send("MFCreateMuxStreamSample");}});
+
+var MFCreateOOPMFTProxy = Module.findExportByName("mfplat.dll", "MFCreateOOPMFTProxy")
+Interceptor.attach(MFCreateOOPMFTProxy, {onLeave: function (args) {send("MFCreateOOPMFTProxy");}});
+
+var MFCreateOOPMFTRemote = Module.findExportByName("mfplat.dll", "MFCreateOOPMFTRemote")
+Interceptor.attach(MFCreateOOPMFTRemote, {onLeave: function (args) {send("MFCreateOOPMFTRemote");}});
+
+var MFCreatePathFromURL = Module.findExportByName("mfplat.dll", "MFCreatePathFromURL")
+Interceptor.attach(MFCreatePathFromURL, {onLeave: function (args) {send("MFCreatePathFromURL");}});
+
+var MFCreatePresentationDescriptor = Module.findExportByName("mfplat.dll", "MFCreatePresentationDescriptor")
+Interceptor.attach(MFCreatePresentationDescriptor, {onLeave: function (args) {send("MFCreatePresentationDescriptor");}});
+
+var MFCreatePropertiesFromMediaType = Module.findExportByName("mfplat.dll", "MFCreatePropertiesFromMediaType")
+Interceptor.attach(MFCreatePropertiesFromMediaType, {onLeave: function (args) {send("MFCreatePropertiesFromMediaType");}});
+
+var MFCreateReusableByteStream = Module.findExportByName("mfplat.dll", "MFCreateReusableByteStream")
+Interceptor.attach(MFCreateReusableByteStream, {onLeave: function (args) {send("MFCreateReusableByteStream");}});
+
+var MFCreateReusableByteStreamWithSharedLock = Module.findExportByName("mfplat.dll", "MFCreateReusableByteStreamWithSharedLock")
+Interceptor.attach(MFCreateReusableByteStreamWithSharedLock, {onLeave: function (args) {send("MFCreateReusableByteStreamWithSharedLock");}});
+
+var MFCreateSample = Module.findExportByName("mfplat.dll", "MFCreateSample")
+Interceptor.attach(MFCreateSample, {onLeave: function (args) {send("MFCreateSample");}});
+
+var MFCreateSecureBufferAllocator = Module.findExportByName("mfplat.dll", "MFCreateSecureBufferAllocator")
+Interceptor.attach(MFCreateSecureBufferAllocator, {onLeave: function (args) {send("MFCreateSecureBufferAllocator");}});
+
+var MFCreateSharedMemoryMediaBufferFromMediaType = Module.findExportByName("mfplat.dll", "MFCreateSharedMemoryMediaBufferFromMediaType")
+Interceptor.attach(MFCreateSharedMemoryMediaBufferFromMediaType, {onLeave: function (args) {send("MFCreateSharedMemoryMediaBufferFromMediaType");}});
+
+var MFCreateSocket = Module.findExportByName("mfplat.dll", "MFCreateSocket")
+Interceptor.attach(MFCreateSocket, {onLeave: function (args) {send("MFCreateSocket");}});
+
+var MFCreateSocketListener = Module.findExportByName("mfplat.dll", "MFCreateSocketListener")
+Interceptor.attach(MFCreateSocketListener, {onLeave: function (args) {send("MFCreateSocketListener");}});
+
+var MFCreateSourceResolver = Module.findExportByName("mfplat.dll", "MFCreateSourceResolver")
+Interceptor.attach(MFCreateSourceResolver, {onLeave: function (args) {send("MFCreateSourceResolver");}});
+
+var MFCreateSourceResolverInternal = Module.findExportByName("mfplat.dll", "MFCreateSourceResolverInternal")
+Interceptor.attach(MFCreateSourceResolverInternal, {onLeave: function (args) {send("MFCreateSourceResolverInternal");}});
+
+var MFCreateStagingSurfaceWrapper = Module.findExportByName("mfplat.dll", "MFCreateStagingSurfaceWrapper")
+Interceptor.attach(MFCreateStagingSurfaceWrapper, {onLeave: function (args) {send("MFCreateStagingSurfaceWrapper");}});
+
+var MFCreateStreamDescriptor = Module.findExportByName("mfplat.dll", "MFCreateStreamDescriptor")
+Interceptor.attach(MFCreateStreamDescriptor, {onLeave: function (args) {send("MFCreateStreamDescriptor");}});
+
+var MFCreateStreamOnMFByteStream = Module.findExportByName("mfplat.dll", "MFCreateStreamOnMFByteStream")
+Interceptor.attach(MFCreateStreamOnMFByteStream, {onLeave: function (args) {send("MFCreateStreamOnMFByteStream");}});
+
+var MFCreateStreamOnMFByteStreamEx = Module.findExportByName("mfplat.dll", "MFCreateStreamOnMFByteStreamEx")
+Interceptor.attach(MFCreateStreamOnMFByteStreamEx, {onLeave: function (args) {send("MFCreateStreamOnMFByteStreamEx");}});
+
+var MFCreateSystemTimeSource = Module.findExportByName("mfplat.dll", "MFCreateSystemTimeSource")
+Interceptor.attach(MFCreateSystemTimeSource, {onLeave: function (args) {send("MFCreateSystemTimeSource");}});
+
+var MFCreateTelemetrySession = Module.findExportByName("mfplat.dll", "MFCreateTelemetrySession")
+Interceptor.attach(MFCreateTelemetrySession, {onLeave: function (args) {send("MFCreateTelemetrySession");}});
+
+var MFCreateTempFile = Module.findExportByName("mfplat.dll", "MFCreateTempFile")
+Interceptor.attach(MFCreateTempFile, {onLeave: function (args) {send("MFCreateTempFile");}});
+
+var MFCreateTrackedSample = Module.findExportByName("mfplat.dll", "MFCreateTrackedSample")
+Interceptor.attach(MFCreateTrackedSample, {onLeave: function (args) {send("MFCreateTrackedSample");}});
+
+var MFCreateTransformActivate = Module.findExportByName("mfplat.dll", "MFCreateTransformActivate")
+Interceptor.attach(MFCreateTransformActivate, {onLeave: function (args) {send("MFCreateTransformActivate");}});
+
+var MFCreateURLFromPath = Module.findExportByName("mfplat.dll", "MFCreateURLFromPath")
+Interceptor.attach(MFCreateURLFromPath, {onLeave: function (args) {send("MFCreateURLFromPath");}});
+
+var MFCreateUdpSockets = Module.findExportByName("mfplat.dll", "MFCreateUdpSockets")
+Interceptor.attach(MFCreateUdpSockets, {onLeave: function (args) {send("MFCreateUdpSockets");}});
+
+var MFCreateVideoDecryptorContext = Module.findExportByName("mfplat.dll", "MFCreateVideoDecryptorContext")
+Interceptor.attach(MFCreateVideoDecryptorContext, {onLeave: function (args) {send("MFCreateVideoDecryptorContext");}});
+
+var MFCreateVideoMediaType = Module.findExportByName("mfplat.dll", "MFCreateVideoMediaType")
+Interceptor.attach(MFCreateVideoMediaType, {onLeave: function (args) {send("MFCreateVideoMediaType");}});
+
+var MFCreateVideoMediaTypeFromBitMapInfoHeader = Module.findExportByName("mfplat.dll", "MFCreateVideoMediaTypeFromBitMapInfoHeader")
+Interceptor.attach(MFCreateVideoMediaTypeFromBitMapInfoHeader, {onLeave: function (args) {send("MFCreateVideoMediaTypeFromBitMapInfoHeader");}});
+
+var MFCreateVideoMediaTypeFromBitMapInfoHeaderEx = Module.findExportByName("mfplat.dll", "MFCreateVideoMediaTypeFromBitMapInfoHeaderEx")
+Interceptor.attach(MFCreateVideoMediaTypeFromBitMapInfoHeaderEx, {onLeave: function (args) {send("MFCreateVideoMediaTypeFromBitMapInfoHeaderEx");}});
+
+var MFCreateVideoMediaTypeFromSubtype = Module.findExportByName("mfplat.dll", "MFCreateVideoMediaTypeFromSubtype")
+Interceptor.attach(MFCreateVideoMediaTypeFromSubtype, {onLeave: function (args) {send("MFCreateVideoMediaTypeFromSubtype");}});
+
+var MFCreateVideoMediaTypeFromVideoInfoHeader = Module.findExportByName("mfplat.dll", "MFCreateVideoMediaTypeFromVideoInfoHeader")
+Interceptor.attach(MFCreateVideoMediaTypeFromVideoInfoHeader, {onLeave: function (args) {send("MFCreateVideoMediaTypeFromVideoInfoHeader");}});
+
+var MFCreateVideoMediaTypeFromVideoInfoHeader2 = Module.findExportByName("mfplat.dll", "MFCreateVideoMediaTypeFromVideoInfoHeader2")
+Interceptor.attach(MFCreateVideoMediaTypeFromVideoInfoHeader2, {onLeave: function (args) {send("MFCreateVideoMediaTypeFromVideoInfoHeader2");}});
+
+var MFCreateVideoSampleAllocatorEx = Module.findExportByName("mfplat.dll", "MFCreateVideoSampleAllocatorEx")
+Interceptor.attach(MFCreateVideoSampleAllocatorEx, {onLeave: function (args) {send("MFCreateVideoSampleAllocatorEx");}});
+
+var MFCreateWICBitmapBuffer = Module.findExportByName("mfplat.dll", "MFCreateWICBitmapBuffer")
+Interceptor.attach(MFCreateWICBitmapBuffer, {onLeave: function (args) {send("MFCreateWICBitmapBuffer");}});
+
+var MFCreateWICDecoderProxy = Module.findExportByName("mfplat.dll", "MFCreateWICDecoderProxy")
+Interceptor.attach(MFCreateWICDecoderProxy, {onLeave: function (args) {send("MFCreateWICDecoderProxy");}});
+
+var MFCreateWaveFormatExFromMFMediaType = Module.findExportByName("mfplat.dll", "MFCreateWaveFormatExFromMFMediaType")
+Interceptor.attach(MFCreateWaveFormatExFromMFMediaType, {onLeave: function (args) {send("MFCreateWaveFormatExFromMFMediaType");}});
+
+var MFDeserializeAttributesFromStream = Module.findExportByName("mfplat.dll", "MFDeserializeAttributesFromStream")
+Interceptor.attach(MFDeserializeAttributesFromStream, {onLeave: function (args) {send("MFDeserializeAttributesFromStream");}});
+
+var MFDeserializeEvent = Module.findExportByName("mfplat.dll", "MFDeserializeEvent")
+Interceptor.attach(MFDeserializeEvent, {onLeave: function (args) {send("MFDeserializeEvent");}});
+
+var MFDeserializeMediaTypeFromStream = Module.findExportByName("mfplat.dll", "MFDeserializeMediaTypeFromStream")
+Interceptor.attach(MFDeserializeMediaTypeFromStream, {onLeave: function (args) {send("MFDeserializeMediaTypeFromStream");}});
+
+var MFDeserializePresentationDescriptor = Module.findExportByName("mfplat.dll", "MFDeserializePresentationDescriptor")
+Interceptor.attach(MFDeserializePresentationDescriptor, {onLeave: function (args) {send("MFDeserializePresentationDescriptor");}});
+
+var MFEndCreateFile = Module.findExportByName("mfplat.dll", "MFEndCreateFile")
+Interceptor.attach(MFEndCreateFile, {onLeave: function (args) {send("MFEndCreateFile");}});
+
+var MFEndGetHostByName = Module.findExportByName("mfplat.dll", "MFEndGetHostByName")
+Interceptor.attach(MFEndGetHostByName, {onLeave: function (args) {send("MFEndGetHostByName");}});
+
+var MFEndRegisterWorkQueueWithMMCSS = Module.findExportByName("mfplat.dll", "MFEndRegisterWorkQueueWithMMCSS")
+Interceptor.attach(MFEndRegisterWorkQueueWithMMCSS, {onLeave: function (args) {send("MFEndRegisterWorkQueueWithMMCSS");}});
+
+var MFEndUnregisterWorkQueueWithMMCSS = Module.findExportByName("mfplat.dll", "MFEndUnregisterWorkQueueWithMMCSS")
+Interceptor.attach(MFEndUnregisterWorkQueueWithMMCSS, {onLeave: function (args) {send("MFEndUnregisterWorkQueueWithMMCSS");}});
+
+var MFEnumLocalMFTRegistrations = Module.findExportByName("mfplat.dll", "MFEnumLocalMFTRegistrations")
+Interceptor.attach(MFEnumLocalMFTRegistrations, {onLeave: function (args) {send("MFEnumLocalMFTRegistrations");}});
+
+var MFFrameRateToAverageTimePerFrame = Module.findExportByName("mfplat.dll", "MFFrameRateToAverageTimePerFrame")
+Interceptor.attach(MFFrameRateToAverageTimePerFrame, {onLeave: function (args) {send("MFFrameRateToAverageTimePerFrame");}});
+
+var MFFreeAdaptersAddresses = Module.findExportByName("mfplat.dll", "MFFreeAdaptersAddresses")
+Interceptor.attach(MFFreeAdaptersAddresses, {onLeave: function (args) {send("MFFreeAdaptersAddresses");}});
+
+var MFGetAdaptersAddresses = Module.findExportByName("mfplat.dll", "MFGetAdaptersAddresses")
+Interceptor.attach(MFGetAdaptersAddresses, {onLeave: function (args) {send("MFGetAdaptersAddresses");}});
+
+var MFGetAttributesAsBlob = Module.findExportByName("mfplat.dll", "MFGetAttributesAsBlob")
+Interceptor.attach(MFGetAttributesAsBlob, {onLeave: function (args) {send("MFGetAttributesAsBlob");}});
+
+var MFGetAttributesAsBlobSize = Module.findExportByName("mfplat.dll", "MFGetAttributesAsBlobSize")
+Interceptor.attach(MFGetAttributesAsBlobSize, {onLeave: function (args) {send("MFGetAttributesAsBlobSize");}});
+
+var MFGetCallStackTracingWeakReference = Module.findExportByName("mfplat.dll", "MFGetCallStackTracingWeakReference")
+Interceptor.attach(MFGetCallStackTracingWeakReference, {onLeave: function (args) {send("MFGetCallStackTracingWeakReference");}});
+
+var MFGetConfigurationDWORD = Module.findExportByName("mfplat.dll", "MFGetConfigurationDWORD")
+Interceptor.attach(MFGetConfigurationDWORD, {onLeave: function (args) {send("MFGetConfigurationDWORD");}});
+
+var MFGetConfigurationPolicy = Module.findExportByName("mfplat.dll", "MFGetConfigurationPolicy")
+Interceptor.attach(MFGetConfigurationPolicy, {onLeave: function (args) {send("MFGetConfigurationPolicy");}});
+
+var MFGetConfigurationStore = Module.findExportByName("mfplat.dll", "MFGetConfigurationStore")
+Interceptor.attach(MFGetConfigurationStore, {onLeave: function (args) {send("MFGetConfigurationStore");}});
+
+var MFGetConfigurationString = Module.findExportByName("mfplat.dll", "MFGetConfigurationString")
+Interceptor.attach(MFGetConfigurationString, {onLeave: function (args) {send("MFGetConfigurationString");}});
+
+var MFGetContentProtectionSystemCLSID = Module.findExportByName("mfplat.dll", "MFGetContentProtectionSystemCLSID")
+Interceptor.attach(MFGetContentProtectionSystemCLSID, {onLeave: function (args) {send("MFGetContentProtectionSystemCLSID");}});
+
+var MFGetMFTMerit = Module.findExportByName("mfplat.dll", "MFGetMFTMerit")
+Interceptor.attach(MFGetMFTMerit, {onLeave: function (args) {send("MFGetMFTMerit");}});
+
+var MFGetNumericNameFromSockaddr = Module.findExportByName("mfplat.dll", "MFGetNumericNameFromSockaddr")
+Interceptor.attach(MFGetNumericNameFromSockaddr, {onLeave: function (args) {send("MFGetNumericNameFromSockaddr");}});
+
+var MFGetPlaneSize = Module.findExportByName("mfplat.dll", "MFGetPlaneSize")
+Interceptor.attach(MFGetPlaneSize, {onLeave: function (args) {send("MFGetPlaneSize");}});
+
+var MFGetPlatformFlags = Module.findExportByName("mfplat.dll", "MFGetPlatformFlags")
+Interceptor.attach(MFGetPlatformFlags, {onLeave: function (args) {send("MFGetPlatformFlags");}});
+
+var MFGetPlatformVersion = Module.findExportByName("mfplat.dll", "MFGetPlatformVersion")
+Interceptor.attach(MFGetPlatformVersion, {onLeave: function (args) {send("MFGetPlatformVersion");}});
+
+var MFGetPluginControl = Module.findExportByName("mfplat.dll", "MFGetPluginControl")
+Interceptor.attach(MFGetPluginControl, {onLeave: function (args) {send("MFGetPluginControl");}});
+
+var MFGetRandomNumber = Module.findExportByName("mfplat.dll", "MFGetRandomNumber")
+Interceptor.attach(MFGetRandomNumber, {onLeave: function (args) {send("MFGetRandomNumber");}});
+
+var MFGetSockaddrFromNumericName = Module.findExportByName("mfplat.dll", "MFGetSockaddrFromNumericName")
+Interceptor.attach(MFGetSockaddrFromNumericName, {onLeave: function (args) {send("MFGetSockaddrFromNumericName");}});
+
+var MFGetStrideForBitmapInfoHeader = Module.findExportByName("mfplat.dll", "MFGetStrideForBitmapInfoHeader")
+Interceptor.attach(MFGetStrideForBitmapInfoHeader, {onLeave: function (args) {send("MFGetStrideForBitmapInfoHeader");}});
+
+var MFGetSupportedMimeTypes = Module.findExportByName("mfplat.dll", "MFGetSupportedMimeTypes")
+Interceptor.attach(MFGetSupportedMimeTypes, {onLeave: function (args) {send("MFGetSupportedMimeTypes");}});
+
+var MFGetSupportedSchemes = Module.findExportByName("mfplat.dll", "MFGetSupportedSchemes")
+Interceptor.attach(MFGetSupportedSchemes, {onLeave: function (args) {send("MFGetSupportedSchemes");}});
+
+var MFGetSystemTime = Module.findExportByName("mfplat.dll", "MFGetSystemTime")
+Interceptor.attach(MFGetSystemTime, {onLeave: function (args) {send("MFGetSystemTime");}});
+
+var MFGetTimerPeriodicity = Module.findExportByName("mfplat.dll", "MFGetTimerPeriodicity")
+Interceptor.attach(MFGetTimerPeriodicity, {onLeave: function (args) {send("MFGetTimerPeriodicity");}});
+
+var MFGetUncompressedVideoFormat = Module.findExportByName("mfplat.dll", "MFGetUncompressedVideoFormat")
+Interceptor.attach(MFGetUncompressedVideoFormat, {onLeave: function (args) {send("MFGetUncompressedVideoFormat");}});
+
+var MFGetWorkQueueMMCSSClass = Module.findExportByName("mfplat.dll", "MFGetWorkQueueMMCSSClass")
+Interceptor.attach(MFGetWorkQueueMMCSSClass, {onLeave: function (args) {send("MFGetWorkQueueMMCSSClass");}});
+
+var MFGetWorkQueueMMCSSPriority = Module.findExportByName("mfplat.dll", "MFGetWorkQueueMMCSSPriority")
+Interceptor.attach(MFGetWorkQueueMMCSSPriority, {onLeave: function (args) {send("MFGetWorkQueueMMCSSPriority");}});
+
+var MFGetWorkQueueMMCSSTaskId = Module.findExportByName("mfplat.dll", "MFGetWorkQueueMMCSSTaskId")
+Interceptor.attach(MFGetWorkQueueMMCSSTaskId, {onLeave: function (args) {send("MFGetWorkQueueMMCSSTaskId");}});
+
+var MFHasLocallyRegisteredByteStreamHandlers = Module.findExportByName("mfplat.dll", "MFHasLocallyRegisteredByteStreamHandlers")
+Interceptor.attach(MFHasLocallyRegisteredByteStreamHandlers, {onLeave: function (args) {send("MFHasLocallyRegisteredByteStreamHandlers");}});
+
+var MFHasLocallyRegisteredSchemeHandlers = Module.findExportByName("mfplat.dll", "MFHasLocallyRegisteredSchemeHandlers")
+Interceptor.attach(MFHasLocallyRegisteredSchemeHandlers, {onLeave: function (args) {send("MFHasLocallyRegisteredSchemeHandlers");}});
+
+var MFHeapAlloc = Module.findExportByName("mfplat.dll", "MFHeapAlloc")
+Interceptor.attach(MFHeapAlloc, {onLeave: function (args) {send("MFHeapAlloc");}});
+
+var MFHeapFree = Module.findExportByName("mfplat.dll", "MFHeapFree")
+Interceptor.attach(MFHeapFree, {onLeave: function (args) {send("MFHeapFree");}});
+
+var MFInitAMMediaTypeFromMFMediaType = Module.findExportByName("mfplat.dll", "MFInitAMMediaTypeFromMFMediaType")
+Interceptor.attach(MFInitAMMediaTypeFromMFMediaType, {onLeave: function (args) {send("MFInitAMMediaTypeFromMFMediaType");}});
+
+var MFInitAttributesFromBlob = Module.findExportByName("mfplat.dll", "MFInitAttributesFromBlob")
+Interceptor.attach(MFInitAttributesFromBlob, {onLeave: function (args) {send("MFInitAttributesFromBlob");}});
+
+var MFInitMediaTypeFromAMMediaType = Module.findExportByName("mfplat.dll", "MFInitMediaTypeFromAMMediaType")
+Interceptor.attach(MFInitMediaTypeFromAMMediaType, {onLeave: function (args) {send("MFInitMediaTypeFromAMMediaType");}});
+
+var MFInitMediaTypeFromMFVideoFormat = Module.findExportByName("mfplat.dll", "MFInitMediaTypeFromMFVideoFormat")
+Interceptor.attach(MFInitMediaTypeFromMFVideoFormat, {onLeave: function (args) {send("MFInitMediaTypeFromMFVideoFormat");}});
+
+var MFInitMediaTypeFromMPEG1VideoInfo = Module.findExportByName("mfplat.dll", "MFInitMediaTypeFromMPEG1VideoInfo")
+Interceptor.attach(MFInitMediaTypeFromMPEG1VideoInfo, {onLeave: function (args) {send("MFInitMediaTypeFromMPEG1VideoInfo");}});
+
+var MFInitMediaTypeFromMPEG2VideoInfo = Module.findExportByName("mfplat.dll", "MFInitMediaTypeFromMPEG2VideoInfo")
+Interceptor.attach(MFInitMediaTypeFromMPEG2VideoInfo, {onLeave: function (args) {send("MFInitMediaTypeFromMPEG2VideoInfo");}});
+
+var MFInitMediaTypeFromVideoInfoHeader = Module.findExportByName("mfplat.dll", "MFInitMediaTypeFromVideoInfoHeader")
+Interceptor.attach(MFInitMediaTypeFromVideoInfoHeader, {onLeave: function (args) {send("MFInitMediaTypeFromVideoInfoHeader");}});
+
+var MFInitMediaTypeFromVideoInfoHeader2 = Module.findExportByName("mfplat.dll", "MFInitMediaTypeFromVideoInfoHeader2")
+Interceptor.attach(MFInitMediaTypeFromVideoInfoHeader2, {onLeave: function (args) {send("MFInitMediaTypeFromVideoInfoHeader2");}});
+
+var MFInitMediaTypeFromWaveFormatEx = Module.findExportByName("mfplat.dll", "MFInitMediaTypeFromWaveFormatEx")
+Interceptor.attach(MFInitMediaTypeFromWaveFormatEx, {onLeave: function (args) {send("MFInitMediaTypeFromWaveFormatEx");}});
+
+var MFInitVideoFormat = Module.findExportByName("mfplat.dll", "MFInitVideoFormat")
+Interceptor.attach(MFInitVideoFormat, {onLeave: function (args) {send("MFInitVideoFormat");}});
+
+var MFInitVideoFormat_RGB = Module.findExportByName("mfplat.dll", "MFInitVideoFormat_RGB")
+Interceptor.attach(MFInitVideoFormat_RGB, {onLeave: function (args) {send("MFInitVideoFormat_RGB");}});
+
+var MFInvalidateMFTEnumCache = Module.findExportByName("mfplat.dll", "MFInvalidateMFTEnumCache")
+Interceptor.attach(MFInvalidateMFTEnumCache, {onLeave: function (args) {send("MFInvalidateMFTEnumCache");}});
+
+var MFInvokeCallback = Module.findExportByName("mfplat.dll", "MFInvokeCallback")
+Interceptor.attach(MFInvokeCallback, {onLeave: function (args) {send("MFInvokeCallback");}});
+
+var MFIsBottomUpFormat = Module.findExportByName("mfplat.dll", "MFIsBottomUpFormat")
+Interceptor.attach(MFIsBottomUpFormat, {onLeave: function (args) {send("MFIsBottomUpFormat");}});
+
+var MFIsContentProtectionDeviceSupported = Module.findExportByName("mfplat.dll", "MFIsContentProtectionDeviceSupported")
+Interceptor.attach(MFIsContentProtectionDeviceSupported, {onLeave: function (args) {send("MFIsContentProtectionDeviceSupported");}});
+
+var MFIsFeatureEnabled = Module.findExportByName("mfplat.dll", "MFIsFeatureEnabled")
+Interceptor.attach(MFIsFeatureEnabled, {onLeave: function (args) {send("MFIsFeatureEnabled");}});
+
+var MFIsLocallyRegisteredMimeType = Module.findExportByName("mfplat.dll", "MFIsLocallyRegisteredMimeType")
+Interceptor.attach(MFIsLocallyRegisteredMimeType, {onLeave: function (args) {send("MFIsLocallyRegisteredMimeType");}});
+
+var MFIsLocallyRegisteredSchemeHandler = Module.findExportByName("mfplat.dll", "MFIsLocallyRegisteredSchemeHandler")
+Interceptor.attach(MFIsLocallyRegisteredSchemeHandler, {onLeave: function (args) {send("MFIsLocallyRegisteredSchemeHandler");}});
+
+var MFJoinWorkQueue = Module.findExportByName("mfplat.dll", "MFJoinWorkQueue")
+Interceptor.attach(MFJoinWorkQueue, {onLeave: function (args) {send("MFJoinWorkQueue");}});
+
+var MFLockDXGIDeviceManager = Module.findExportByName("mfplat.dll", "MFLockDXGIDeviceManager")
+Interceptor.attach(MFLockDXGIDeviceManager, {onLeave: function (args) {send("MFLockDXGIDeviceManager");}});
+
+var MFLockPlatform = Module.findExportByName("mfplat.dll", "MFLockPlatform")
+Interceptor.attach(MFLockPlatform, {onLeave: function (args) {send("MFLockPlatform");}});
+
+var MFLockSharedWorkQueue = Module.findExportByName("mfplat.dll", "MFLockSharedWorkQueue")
+Interceptor.attach(MFLockSharedWorkQueue, {onLeave: function (args) {send("MFLockSharedWorkQueue");}});
+
+var MFLockWorkQueue = Module.findExportByName("mfplat.dll", "MFLockWorkQueue")
+Interceptor.attach(MFLockWorkQueue, {onLeave: function (args) {send("MFLockWorkQueue");}});
+
+var MFMapDX9FormatToDXGIFormat = Module.findExportByName("mfplat.dll", "MFMapDX9FormatToDXGIFormat")
+Interceptor.attach(MFMapDX9FormatToDXGIFormat, {onLeave: function (args) {send("MFMapDX9FormatToDXGIFormat");}});
+
+var MFMapDXGIFormatToDX9Format = Module.findExportByName("mfplat.dll", "MFMapDXGIFormatToDX9Format")
+Interceptor.attach(MFMapDXGIFormatToDX9Format, {onLeave: function (args) {send("MFMapDXGIFormatToDX9Format");}});
+
+var MFPlatformBigEndian = Module.findExportByName("mfplat.dll", "MFPlatformBigEndian")
+Interceptor.attach(MFPlatformBigEndian, {onLeave: function (args) {send("MFPlatformBigEndian");}});
+
+var MFPlatformLittleEndian = Module.findExportByName("mfplat.dll", "MFPlatformLittleEndian")
+Interceptor.attach(MFPlatformLittleEndian, {onLeave: function (args) {send("MFPlatformLittleEndian");}});
+
+var MFPutWaitingWorkItem = Module.findExportByName("mfplat.dll", "MFPutWaitingWorkItem")
+Interceptor.attach(MFPutWaitingWorkItem, {onLeave: function (args) {send("MFPutWaitingWorkItem");}});
+
+var MFPutWorkItem = Module.findExportByName("mfplat.dll", "MFPutWorkItem")
+Interceptor.attach(MFPutWorkItem, {onLeave: function (args) {send("MFPutWorkItem");}});
+
+var MFPutWorkItem2 = Module.findExportByName("mfplat.dll", "MFPutWorkItem2")
+Interceptor.attach(MFPutWorkItem2, {onLeave: function (args) {send("MFPutWorkItem2");}});
+
+var MFPutWorkItemEx = Module.findExportByName("mfplat.dll", "MFPutWorkItemEx")
+Interceptor.attach(MFPutWorkItemEx, {onLeave: function (args) {send("MFPutWorkItemEx");}});
+
+var MFPutWorkItemEx2 = Module.findExportByName("mfplat.dll", "MFPutWorkItemEx2")
+Interceptor.attach(MFPutWorkItemEx2, {onLeave: function (args) {send("MFPutWorkItemEx2");}});
+
+var MFRegisterLocalByteStreamHandler = Module.findExportByName("mfplat.dll", "MFRegisterLocalByteStreamHandler")
+Interceptor.attach(MFRegisterLocalByteStreamHandler, {onLeave: function (args) {send("MFRegisterLocalByteStreamHandler");}});
+
+var MFRegisterLocalSchemeHandler = Module.findExportByName("mfplat.dll", "MFRegisterLocalSchemeHandler")
+Interceptor.attach(MFRegisterLocalSchemeHandler, {onLeave: function (args) {send("MFRegisterLocalSchemeHandler");}});
+
+var MFRegisterPlatformWithMMCSS = Module.findExportByName("mfplat.dll", "MFRegisterPlatformWithMMCSS")
+Interceptor.attach(MFRegisterPlatformWithMMCSS, {onLeave: function (args) {send("MFRegisterPlatformWithMMCSS");}});
+
+var MFRemovePeriodicCallback = Module.findExportByName("mfplat.dll", "MFRemovePeriodicCallback")
+Interceptor.attach(MFRemovePeriodicCallback, {onLeave: function (args) {send("MFRemovePeriodicCallback");}});
+
+var MFScheduleWorkItem = Module.findExportByName("mfplat.dll", "MFScheduleWorkItem")
+Interceptor.attach(MFScheduleWorkItem, {onLeave: function (args) {send("MFScheduleWorkItem");}});
+
+var MFScheduleWorkItemEx = Module.findExportByName("mfplat.dll", "MFScheduleWorkItemEx")
+Interceptor.attach(MFScheduleWorkItemEx, {onLeave: function (args) {send("MFScheduleWorkItemEx");}});
+
+var MFSerializeAttributesToStream = Module.findExportByName("mfplat.dll", "MFSerializeAttributesToStream")
+Interceptor.attach(MFSerializeAttributesToStream, {onLeave: function (args) {send("MFSerializeAttributesToStream");}});
+
+var MFSerializeEvent = Module.findExportByName("mfplat.dll", "MFSerializeEvent")
+Interceptor.attach(MFSerializeEvent, {onLeave: function (args) {send("MFSerializeEvent");}});
+
+var MFSerializeMediaTypeToStream = Module.findExportByName("mfplat.dll", "MFSerializeMediaTypeToStream")
+Interceptor.attach(MFSerializeMediaTypeToStream, {onLeave: function (args) {send("MFSerializeMediaTypeToStream");}});
+
+var MFSerializePresentationDescriptor = Module.findExportByName("mfplat.dll", "MFSerializePresentationDescriptor")
+Interceptor.attach(MFSerializePresentationDescriptor, {onLeave: function (args) {send("MFSerializePresentationDescriptor");}});
+
+var MFSetMinimumMemoryAlignment = Module.findExportByName("mfplat.dll", "MFSetMinimumMemoryAlignment")
+Interceptor.attach(MFSetMinimumMemoryAlignment, {onLeave: function (args) {send("MFSetMinimumMemoryAlignment");}});
+
+var MFSetSockaddrAny = Module.findExportByName("mfplat.dll", "MFSetSockaddrAny")
+Interceptor.attach(MFSetSockaddrAny, {onLeave: function (args) {send("MFSetSockaddrAny");}});
+
+var MFSetWindowForContentProtection = Module.findExportByName("mfplat.dll", "MFSetWindowForContentProtection")
+Interceptor.attach(MFSetWindowForContentProtection, {onLeave: function (args) {send("MFSetWindowForContentProtection");}});
+
+var MFShutdown = Module.findExportByName("mfplat.dll", "MFShutdown")
+Interceptor.attach(MFShutdown, {onLeave: function (args) {send("MFShutdown");}});
+
+var MFSplitSample = Module.findExportByName("mfplat.dll", "MFSplitSample")
+Interceptor.attach(MFSplitSample, {onLeave: function (args) {send("MFSplitSample");}});
+
+var MFStartup = Module.findExportByName("mfplat.dll", "MFStartup")
+Interceptor.attach(MFStartup, {onLeave: function (args) {send("MFStartup");}});
+
+var MFStreamDescriptorProtectMediaType = Module.findExportByName("mfplat.dll", "MFStreamDescriptorProtectMediaType")
+Interceptor.attach(MFStreamDescriptorProtectMediaType, {onLeave: function (args) {send("MFStreamDescriptorProtectMediaType");}});
+
+var MFTEnum = Module.findExportByName("mfplat.dll", "MFTEnum")
+Interceptor.attach(MFTEnum, {onLeave: function (args) {send("MFTEnum");}});
+
+var MFTEnum2 = Module.findExportByName("mfplat.dll", "MFTEnum2")
+Interceptor.attach(MFTEnum2, {onLeave: function (args) {send("MFTEnum2");}});
+
+var MFTEnumEx = Module.findExportByName("mfplat.dll", "MFTEnumEx")
+Interceptor.attach(MFTEnumEx, {onLeave: function (args) {send("MFTEnumEx");}});
+
+var MFTGetInfo = Module.findExportByName("mfplat.dll", "MFTGetInfo")
+Interceptor.attach(MFTGetInfo, {onLeave: function (args) {send("MFTGetInfo");}});
+
+var MFTRegister = Module.findExportByName("mfplat.dll", "MFTRegister")
+Interceptor.attach(MFTRegister, {onLeave: function (args) {send("MFTRegister");}});
+
+var MFTRegisterLocal = Module.findExportByName("mfplat.dll", "MFTRegisterLocal")
+Interceptor.attach(MFTRegisterLocal, {onLeave: function (args) {send("MFTRegisterLocal");}});
+
+var MFTRegisterLocalByCLSID = Module.findExportByName("mfplat.dll", "MFTRegisterLocalByCLSID")
+Interceptor.attach(MFTRegisterLocalByCLSID, {onLeave: function (args) {send("MFTRegisterLocalByCLSID");}});
+
+var MFTUnregister = Module.findExportByName("mfplat.dll", "MFTUnregister")
+Interceptor.attach(MFTUnregister, {onLeave: function (args) {send("MFTUnregister");}});
+
+var MFTUnregisterLocal = Module.findExportByName("mfplat.dll", "MFTUnregisterLocal")
+Interceptor.attach(MFTUnregisterLocal, {onLeave: function (args) {send("MFTUnregisterLocal");}});
+
+var MFTUnregisterLocalByCLSID = Module.findExportByName("mfplat.dll", "MFTUnregisterLocalByCLSID")
+Interceptor.attach(MFTUnregisterLocalByCLSID, {onLeave: function (args) {send("MFTUnregisterLocalByCLSID");}});
+
+var MFTraceError = Module.findExportByName("mfplat.dll", "MFTraceError")
+Interceptor.attach(MFTraceError, {onLeave: function (args) {send("MFTraceError");}});
+
+var MFTraceFuncEnter = Module.findExportByName("mfplat.dll", "MFTraceFuncEnter")
+Interceptor.attach(MFTraceFuncEnter, {onLeave: function (args) {send("MFTraceFuncEnter");}});
+
+var MFUnjoinWorkQueue = Module.findExportByName("mfplat.dll", "MFUnjoinWorkQueue")
+Interceptor.attach(MFUnjoinWorkQueue, {onLeave: function (args) {send("MFUnjoinWorkQueue");}});
+
+var MFUnlockDXGIDeviceManager = Module.findExportByName("mfplat.dll", "MFUnlockDXGIDeviceManager")
+Interceptor.attach(MFUnlockDXGIDeviceManager, {onLeave: function (args) {send("MFUnlockDXGIDeviceManager");}});
+
+var MFUnlockPlatform = Module.findExportByName("mfplat.dll", "MFUnlockPlatform")
+Interceptor.attach(MFUnlockPlatform, {onLeave: function (args) {send("MFUnlockPlatform");}});
+
+var MFUnlockWorkQueue = Module.findExportByName("mfplat.dll", "MFUnlockWorkQueue")
+Interceptor.attach(MFUnlockWorkQueue, {onLeave: function (args) {send("MFUnlockWorkQueue");}});
+
+var MFUnregisterPlatformFromMMCSS = Module.findExportByName("mfplat.dll", "MFUnregisterPlatformFromMMCSS")
+Interceptor.attach(MFUnregisterPlatformFromMMCSS, {onLeave: function (args) {send("MFUnregisterPlatformFromMMCSS");}});
+
+var MFUnwrapMediaType = Module.findExportByName("mfplat.dll", "MFUnwrapMediaType")
+Interceptor.attach(MFUnwrapMediaType, {onLeave: function (args) {send("MFUnwrapMediaType");}});
+
+var MFValidateMediaTypeSize = Module.findExportByName("mfplat.dll", "MFValidateMediaTypeSize")
+Interceptor.attach(MFValidateMediaTypeSize, {onLeave: function (args) {send("MFValidateMediaTypeSize");}});
+
+var MFWrapMediaType = Module.findExportByName("mfplat.dll", "MFWrapMediaType")
+Interceptor.attach(MFWrapMediaType, {onLeave: function (args) {send("MFWrapMediaType");}});
+
+var MFWrapSocket = Module.findExportByName("mfplat.dll", "MFWrapSocket")
+Interceptor.attach(MFWrapSocket, {onLeave: function (args) {send("MFWrapSocket");}});
+
+var MFllMulDiv = Module.findExportByName("mfplat.dll", "MFllMulDiv")
+Interceptor.attach(MFllMulDiv, {onLeave: function (args) {send("MFllMulDiv");}});
+
+var PropVariantFromStream = Module.findExportByName("mfplat.dll", "PropVariantFromStream")
+Interceptor.attach(PropVariantFromStream, {onLeave: function (args) {send("PropVariantFromStream");}});
+
+var PropVariantToStream = Module.findExportByName("mfplat.dll", "PropVariantToStream")
+Interceptor.attach(PropVariantToStream, {onLeave: function (args) {send("PropVariantToStream");}});
+
+var ValidateWaveFormat = Module.findExportByName("mfplat.dll", "ValidateWaveFormat")
+Interceptor.attach(ValidateWaveFormat, {onLeave: function (args) {send("ValidateWaveFormat");}});
+

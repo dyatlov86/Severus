@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("MixedRealityRuntime.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("MixedRealityRuntime.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("MixedRealityRuntime.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ServiceMain = Module.findExportByName("MixedRealityRuntime.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("MixedRealityRuntime.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+
+var xrNegotiateLoaderRuntimeInterface = Module.findExportByName("MixedRealityRuntime.dll", "xrNegotiateLoaderRuntimeInterface")
+Interceptor.attach(xrNegotiateLoaderRuntimeInterface, {onLeave: function (args) {send("xrNegotiateLoaderRuntimeInterface");}});
+

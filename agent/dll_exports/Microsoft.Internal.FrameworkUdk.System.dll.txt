@@ -1,0 +1,3 @@
+var GetFunctionTableById = Module.findExportByName("Microsoft.Internal.FrameworkUdk.System.dll", "GetFunctionTableById")
+Interceptor.attach(GetFunctionTableById, {onLeave: function (args) {send("GetFunctionTableById");}});
+

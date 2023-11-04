@@ -1,0 +1,3 @@
+var SLUXActivationWizard = Module.findExportByName("sppcommdlg.dll", "SLUXActivationWizard")
+Interceptor.attach(SLUXActivationWizard, {onLeave: function (args) {send("SLUXActivationWizard");}});
+

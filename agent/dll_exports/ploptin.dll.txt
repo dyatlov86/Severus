@@ -1,0 +1,21 @@
+var DeleteApplicationEligibilityForPrelaunch = Module.findExportByName("ploptin.dll", "DeleteApplicationEligibilityForPrelaunch")
+Interceptor.attach(DeleteApplicationEligibilityForPrelaunch, {onLeave: function (args) {send("DeleteApplicationEligibilityForPrelaunch");}});
+
+var DllCanUnloadNow = Module.findExportByName("ploptin.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("ploptin.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("ploptin.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var IsApplicationEligibleForPrelaunch = Module.findExportByName("ploptin.dll", "IsApplicationEligibleForPrelaunch")
+Interceptor.attach(IsApplicationEligibleForPrelaunch, {onLeave: function (args) {send("IsApplicationEligibleForPrelaunch");}});
+
+var IsApplicationOptedOutOfPrelaunch = Module.findExportByName("ploptin.dll", "IsApplicationOptedOutOfPrelaunch")
+Interceptor.attach(IsApplicationOptedOutOfPrelaunch, {onLeave: function (args) {send("IsApplicationOptedOutOfPrelaunch");}});
+
+var RecordApplicationEligibilityForPrelaunch = Module.findExportByName("ploptin.dll", "RecordApplicationEligibilityForPrelaunch")
+Interceptor.attach(RecordApplicationEligibilityForPrelaunch, {onLeave: function (args) {send("RecordApplicationEligibilityForPrelaunch");}});
+

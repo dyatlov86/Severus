@@ -1,0 +1,84 @@
+var IpcSPAttest = Module.findExportByName("winipcsecproc.dll", "IpcSPAttest")
+Interceptor.attach(IpcSPAttest, {onLeave: function (args) {send("IpcSPAttest");}});
+
+var IpcSPBindLicense = Module.findExportByName("winipcsecproc.dll", "IpcSPBindLicense")
+Interceptor.attach(IpcSPBindLicense, {onLeave: function (args) {send("IpcSPBindLicense");}});
+
+var IpcSPCheckEnvironmentSecurity = Module.findExportByName("winipcsecproc.dll", "IpcSPCheckEnvironmentSecurity")
+Interceptor.attach(IpcSPCheckEnvironmentSecurity, {onLeave: function (args) {send("IpcSPCheckEnvironmentSecurity");}});
+
+var IpcSPCloseHandle = Module.findExportByName("winipcsecproc.dll", "IpcSPCloseHandle")
+Interceptor.attach(IpcSPCloseHandle, {onLeave: function (args) {send("IpcSPCloseHandle");}});
+
+var IpcSPCommit = Module.findExportByName("winipcsecproc.dll", "IpcSPCommit")
+Interceptor.attach(IpcSPCommit, {onLeave: function (args) {send("IpcSPCommit");}});
+
+var IpcSPCreateDecryptor = Module.findExportByName("winipcsecproc.dll", "IpcSPCreateDecryptor")
+Interceptor.attach(IpcSPCreateDecryptor, {onLeave: function (args) {send("IpcSPCreateDecryptor");}});
+
+var IpcSPCreateEnablingPrincipal = Module.findExportByName("winipcsecproc.dll", "IpcSPCreateEnablingPrincipal")
+Interceptor.attach(IpcSPCreateEnablingPrincipal, {onLeave: function (args) {send("IpcSPCreateEnablingPrincipal");}});
+
+var IpcSPCreateEncryptor = Module.findExportByName("winipcsecproc.dll", "IpcSPCreateEncryptor")
+Interceptor.attach(IpcSPCreateEncryptor, {onLeave: function (args) {send("IpcSPCreateEncryptor");}});
+
+var IpcSPCreateMachineCerts = Module.findExportByName("winipcsecproc.dll", "IpcSPCreateMachineCerts")
+Interceptor.attach(IpcSPCreateMachineCerts, {onLeave: function (args) {send("IpcSPCreateMachineCerts");}});
+
+var IpcSPCreatePCE = Module.findExportByName("winipcsecproc.dll", "IpcSPCreatePCE")
+Interceptor.attach(IpcSPCreatePCE, {onLeave: function (args) {send("IpcSPCreatePCE");}});
+
+var IpcSPCreateSecurityProcessor = Module.findExportByName("winipcsecproc.dll", "IpcSPCreateSecurityProcessor")
+Interceptor.attach(IpcSPCreateSecurityProcessor, {onLeave: function (args) {send("IpcSPCreateSecurityProcessor");}});
+
+var IpcSPDecrypt = Module.findExportByName("winipcsecproc.dll", "IpcSPDecrypt")
+Interceptor.attach(IpcSPDecrypt, {onLeave: function (args) {send("IpcSPDecrypt");}});
+
+var IpcSPDecryptFinal = Module.findExportByName("winipcsecproc.dll", "IpcSPDecryptFinal")
+Interceptor.attach(IpcSPDecryptFinal, {onLeave: function (args) {send("IpcSPDecryptFinal");}});
+
+var IpcSPDecryptUpdate = Module.findExportByName("winipcsecproc.dll", "IpcSPDecryptUpdate")
+Interceptor.attach(IpcSPDecryptUpdate, {onLeave: function (args) {send("IpcSPDecryptUpdate");}});
+
+var IpcSPDecryptWithRac = Module.findExportByName("winipcsecproc.dll", "IpcSPDecryptWithRac")
+Interceptor.attach(IpcSPDecryptWithRac, {onLeave: function (args) {send("IpcSPDecryptWithRac");}});
+
+var IpcSPEnableAndEncrypt = Module.findExportByName("winipcsecproc.dll", "IpcSPEnableAndEncrypt")
+Interceptor.attach(IpcSPEnableAndEncrypt, {onLeave: function (args) {send("IpcSPEnableAndEncrypt");}});
+
+var IpcSPEnablePublishingLicense = Module.findExportByName("winipcsecproc.dll", "IpcSPEnablePublishingLicense")
+Interceptor.attach(IpcSPEnablePublishingLicense, {onLeave: function (args) {send("IpcSPEnablePublishingLicense");}});
+
+var IpcSPEncrypt = Module.findExportByName("winipcsecproc.dll", "IpcSPEncrypt")
+Interceptor.attach(IpcSPEncrypt, {onLeave: function (args) {send("IpcSPEncrypt");}});
+
+var IpcSPEncryptFinal = Module.findExportByName("winipcsecproc.dll", "IpcSPEncryptFinal")
+Interceptor.attach(IpcSPEncryptFinal, {onLeave: function (args) {send("IpcSPEncryptFinal");}});
+
+var IpcSPEncryptUpdate = Module.findExportByName("winipcsecproc.dll", "IpcSPEncryptUpdate")
+Interceptor.attach(IpcSPEncryptUpdate, {onLeave: function (args) {send("IpcSPEncryptUpdate");}});
+
+var IpcSPGetBoundRightKey = Module.findExportByName("winipcsecproc.dll", "IpcSPGetBoundRightKey")
+Interceptor.attach(IpcSPGetBoundRightKey, {onLeave: function (args) {send("IpcSPGetBoundRightKey");}});
+
+var IpcSPGetCurrentTime = Module.findExportByName("winipcsecproc.dll", "IpcSPGetCurrentTime")
+Interceptor.attach(IpcSPGetCurrentTime, {onLeave: function (args) {send("IpcSPGetCurrentTime");}});
+
+var IpcSPGetInfo = Module.findExportByName("winipcsecproc.dll", "IpcSPGetInfo")
+Interceptor.attach(IpcSPGetInfo, {onLeave: function (args) {send("IpcSPGetInfo");}});
+
+var IpcSPGetProcAddress = Module.findExportByName("winipcsecproc.dll", "IpcSPGetProcAddress")
+Interceptor.attach(IpcSPGetProcAddress, {onLeave: function (args) {send("IpcSPGetProcAddress");}});
+
+var IpcSPInitialize = Module.findExportByName("winipcsecproc.dll", "IpcSPInitialize")
+Interceptor.attach(IpcSPInitialize, {onLeave: function (args) {send("IpcSPInitialize");}});
+
+var IpcSPIsActivated = Module.findExportByName("winipcsecproc.dll", "IpcSPIsActivated")
+Interceptor.attach(IpcSPIsActivated, {onLeave: function (args) {send("IpcSPIsActivated");}});
+
+var IpcSPLoadLibrary = Module.findExportByName("winipcsecproc.dll", "IpcSPLoadLibrary")
+Interceptor.attach(IpcSPLoadLibrary, {onLeave: function (args) {send("IpcSPLoadLibrary");}});
+
+var IpcSPSign = Module.findExportByName("winipcsecproc.dll", "IpcSPSign")
+Interceptor.attach(IpcSPSign, {onLeave: function (args) {send("IpcSPSign");}});
+

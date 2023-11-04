@@ -1,0 +1,3 @@
+var SysPrepDtcOfflineSpecialize = Module.findExportByName("msdtcspoffln.dll", "SysPrepDtcOfflineSpecialize")
+Interceptor.attach(SysPrepDtcOfflineSpecialize, {onLeave: function (args) {send("SysPrepDtcOfflineSpecialize");}});
+

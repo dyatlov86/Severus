@@ -1,0 +1,63 @@
+var DllCanUnloadNow = Module.findExportByName("mfasfsrcsnk.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mfasfsrcsnk.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var MFCreateASFContentInfo = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFContentInfo")
+Interceptor.attach(MFCreateASFContentInfo, {onLeave: function (args) {send("MFCreateASFContentInfo");}});
+
+var MFCreateASFIndexer = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFIndexer")
+Interceptor.attach(MFCreateASFIndexer, {onLeave: function (args) {send("MFCreateASFIndexer");}});
+
+var MFCreateASFIndexerByteStream = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFIndexerByteStream")
+Interceptor.attach(MFCreateASFIndexerByteStream, {onLeave: function (args) {send("MFCreateASFIndexerByteStream");}});
+
+var MFCreateASFMediaSink = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFMediaSink")
+Interceptor.attach(MFCreateASFMediaSink, {onLeave: function (args) {send("MFCreateASFMediaSink");}});
+
+var MFCreateASFMediaSinkActivate = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFMediaSinkActivate")
+Interceptor.attach(MFCreateASFMediaSinkActivate, {onLeave: function (args) {send("MFCreateASFMediaSinkActivate");}});
+
+var MFCreateASFMediaSinkActivateFromByteStream = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFMediaSinkActivateFromByteStream")
+Interceptor.attach(MFCreateASFMediaSinkActivateFromByteStream, {onLeave: function (args) {send("MFCreateASFMediaSinkActivateFromByteStream");}});
+
+var MFCreateASFMediaSinkActivateNoInit = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFMediaSinkActivateNoInit")
+Interceptor.attach(MFCreateASFMediaSinkActivateNoInit, {onLeave: function (args) {send("MFCreateASFMediaSinkActivateNoInit");}});
+
+var MFCreateASFMultiplexer = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFMultiplexer")
+Interceptor.attach(MFCreateASFMultiplexer, {onLeave: function (args) {send("MFCreateASFMultiplexer");}});
+
+var MFCreateASFMutex = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFMutex")
+Interceptor.attach(MFCreateASFMutex, {onLeave: function (args) {send("MFCreateASFMutex");}});
+
+var MFCreateASFProfile = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFProfile")
+Interceptor.attach(MFCreateASFProfile, {onLeave: function (args) {send("MFCreateASFProfile");}});
+
+var MFCreateASFProfileFromPresentationDescriptor = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFProfileFromPresentationDescriptor")
+Interceptor.attach(MFCreateASFProfileFromPresentationDescriptor, {onLeave: function (args) {send("MFCreateASFProfileFromPresentationDescriptor");}});
+
+var MFCreateASFSplitter = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFSplitter")
+Interceptor.attach(MFCreateASFSplitter, {onLeave: function (args) {send("MFCreateASFSplitter");}});
+
+var MFCreateASFStreamConfig = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFStreamConfig")
+Interceptor.attach(MFCreateASFStreamConfig, {onLeave: function (args) {send("MFCreateASFStreamConfig");}});
+
+var MFCreateASFStreamPrioritization = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFStreamPrioritization")
+Interceptor.attach(MFCreateASFStreamPrioritization, {onLeave: function (args) {send("MFCreateASFStreamPrioritization");}});
+
+var MFCreateASFStreamSelector = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFStreamSelector")
+Interceptor.attach(MFCreateASFStreamSelector, {onLeave: function (args) {send("MFCreateASFStreamSelector");}});
+
+var MFCreateASFStreamingMediaSink = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFStreamingMediaSink")
+Interceptor.attach(MFCreateASFStreamingMediaSink, {onLeave: function (args) {send("MFCreateASFStreamingMediaSink");}});
+
+var MFCreateASFStreamingMediaSinkActivate = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFStreamingMediaSinkActivate")
+Interceptor.attach(MFCreateASFStreamingMediaSinkActivate, {onLeave: function (args) {send("MFCreateASFStreamingMediaSinkActivate");}});
+
+var MFCreateASFStreamingMediaSinkActivateNoInit = Module.findExportByName("mfasfsrcsnk.dll", "MFCreateASFStreamingMediaSinkActivateNoInit")
+Interceptor.attach(MFCreateASFStreamingMediaSinkActivateNoInit, {onLeave: function (args) {send("MFCreateASFStreamingMediaSinkActivateNoInit");}});
+
+var MFCreatePresentationDescriptorFromASFProfile = Module.findExportByName("mfasfsrcsnk.dll", "MFCreatePresentationDescriptorFromASFProfile")
+Interceptor.attach(MFCreatePresentationDescriptorFromASFProfile, {onLeave: function (args) {send("MFCreatePresentationDescriptorFromASFProfile");}});
+

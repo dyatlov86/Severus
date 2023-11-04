@@ -1,0 +1,3 @@
+var MetaDataGetDispenser = Module.findExportByName("rometadata.dll", "MetaDataGetDispenser")
+Interceptor.attach(MetaDataGetDispenser, {onLeave: function (args) {send("MetaDataGetDispenser");}});
+

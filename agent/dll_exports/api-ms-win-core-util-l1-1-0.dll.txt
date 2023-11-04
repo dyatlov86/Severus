@@ -1,0 +1,15 @@
+var Beep = Module.findExportByName("api-ms-win-core-util-l1-1-0.dll", "Beep")
+Interceptor.attach(Beep, {onLeave: function (args) {send("Beep");}});
+
+var DecodePointer = Module.findExportByName("api-ms-win-core-util-l1-1-0.dll", "DecodePointer")
+Interceptor.attach(DecodePointer, {onLeave: function (args) {send("DecodePointer");}});
+
+var DecodeSystemPointer = Module.findExportByName("api-ms-win-core-util-l1-1-0.dll", "DecodeSystemPointer")
+Interceptor.attach(DecodeSystemPointer, {onLeave: function (args) {send("DecodeSystemPointer");}});
+
+var EncodePointer = Module.findExportByName("api-ms-win-core-util-l1-1-0.dll", "EncodePointer")
+Interceptor.attach(EncodePointer, {onLeave: function (args) {send("EncodePointer");}});
+
+var EncodeSystemPointer = Module.findExportByName("api-ms-win-core-util-l1-1-0.dll", "EncodeSystemPointer")
+Interceptor.attach(EncodeSystemPointer, {onLeave: function (args) {send("EncodeSystemPointer");}});
+

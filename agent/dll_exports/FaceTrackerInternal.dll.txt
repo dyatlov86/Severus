@@ -1,0 +1,3 @@
+var CreateFaceTrackerInternal = Module.findExportByName("FaceTrackerInternal.dll", "CreateFaceTrackerInternal")
+Interceptor.attach(CreateFaceTrackerInternal, {onLeave: function (args) {send("CreateFaceTrackerInternal");}});
+

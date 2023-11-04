@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("themeui.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("themeui.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("themeui.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+

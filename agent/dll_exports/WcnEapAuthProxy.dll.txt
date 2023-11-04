@@ -1,0 +1,3 @@
+var WcnEapPluginGetInfo = Module.findExportByName("WcnEapAuthProxy.dll", "WcnEapPluginGetInfo")
+Interceptor.attach(WcnEapPluginGetInfo, {onLeave: function (args) {send("WcnEapPluginGetInfo");}});
+

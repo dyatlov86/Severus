@@ -1,0 +1,12 @@
+var CapabilityAccessManagerDoStoreMaintenance = Module.findExportByName("CapabilityAccessManager.dll", "CapabilityAccessManagerDoStoreMaintenance")
+Interceptor.attach(CapabilityAccessManagerDoStoreMaintenance, {onLeave: function (args) {send("CapabilityAccessManagerDoStoreMaintenance");}});
+
+var DllCanUnloadNow = Module.findExportByName("CapabilityAccessManager.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("CapabilityAccessManager.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ServiceMain = Module.findExportByName("CapabilityAccessManager.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

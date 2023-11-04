@@ -1,0 +1,84 @@
+var DllInstall = Module.findExportByName("w32time.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("w32time.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("w32time.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var SvchostEntry_W32Time = Module.findExportByName("w32time.dll", "SvchostEntry_W32Time")
+Interceptor.attach(SvchostEntry_W32Time, {onLeave: function (args) {send("SvchostEntry_W32Time");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("w32time.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+
+var TimeProvClose = Module.findExportByName("w32time.dll", "TimeProvClose")
+Interceptor.attach(TimeProvClose, {onLeave: function (args) {send("TimeProvClose");}});
+
+var TimeProvCommand = Module.findExportByName("w32time.dll", "TimeProvCommand")
+Interceptor.attach(TimeProvCommand, {onLeave: function (args) {send("TimeProvCommand");}});
+
+var TimeProvOpen = Module.findExportByName("w32time.dll", "TimeProvOpen")
+Interceptor.attach(TimeProvOpen, {onLeave: function (args) {send("TimeProvOpen");}});
+
+var W32TimeBufferFree = Module.findExportByName("w32time.dll", "W32TimeBufferFree")
+Interceptor.attach(W32TimeBufferFree, {onLeave: function (args) {send("W32TimeBufferFree");}});
+
+var W32TimeDcPromo = Module.findExportByName("w32time.dll", "W32TimeDcPromo")
+Interceptor.attach(W32TimeDcPromo, {onLeave: function (args) {send("W32TimeDcPromo");}});
+
+var W32TimeDeleteConfig = Module.findExportByName("w32time.dll", "W32TimeDeleteConfig")
+Interceptor.attach(W32TimeDeleteConfig, {onLeave: function (args) {send("W32TimeDeleteConfig");}});
+
+var W32TimeGetNetlogonServiceBits = Module.findExportByName("w32time.dll", "W32TimeGetNetlogonServiceBits")
+Interceptor.attach(W32TimeGetNetlogonServiceBits, {onLeave: function (args) {send("W32TimeGetNetlogonServiceBits");}});
+
+var W32TimeLog = Module.findExportByName("w32time.dll", "W32TimeLog")
+Interceptor.attach(W32TimeLog, {onLeave: function (args) {send("W32TimeLog");}});
+
+var W32TimeQueryConfig = Module.findExportByName("w32time.dll", "W32TimeQueryConfig")
+Interceptor.attach(W32TimeQueryConfig, {onLeave: function (args) {send("W32TimeQueryConfig");}});
+
+var W32TimeQueryConfiguration = Module.findExportByName("w32time.dll", "W32TimeQueryConfiguration")
+Interceptor.attach(W32TimeQueryConfiguration, {onLeave: function (args) {send("W32TimeQueryConfiguration");}});
+
+var W32TimeQueryHardwareProviderStatus = Module.findExportByName("w32time.dll", "W32TimeQueryHardwareProviderStatus")
+Interceptor.attach(W32TimeQueryHardwareProviderStatus, {onLeave: function (args) {send("W32TimeQueryHardwareProviderStatus");}});
+
+var W32TimeQueryNTPProviderStatus = Module.findExportByName("w32time.dll", "W32TimeQueryNTPProviderStatus")
+Interceptor.attach(W32TimeQueryNTPProviderStatus, {onLeave: function (args) {send("W32TimeQueryNTPProviderStatus");}});
+
+var W32TimeQueryNtpProviderConfiguration = Module.findExportByName("w32time.dll", "W32TimeQueryNtpProviderConfiguration")
+Interceptor.attach(W32TimeQueryNtpProviderConfiguration, {onLeave: function (args) {send("W32TimeQueryNtpProviderConfiguration");}});
+
+var W32TimeQuerySource = Module.findExportByName("w32time.dll", "W32TimeQuerySource")
+Interceptor.attach(W32TimeQuerySource, {onLeave: function (args) {send("W32TimeQuerySource");}});
+
+var W32TimeQueryStatus = Module.findExportByName("w32time.dll", "W32TimeQueryStatus")
+Interceptor.attach(W32TimeQueryStatus, {onLeave: function (args) {send("W32TimeQueryStatus");}});
+
+var W32TimeSetConfig = Module.findExportByName("w32time.dll", "W32TimeSetConfig")
+Interceptor.attach(W32TimeSetConfig, {onLeave: function (args) {send("W32TimeSetConfig");}});
+
+var W32TimeSyncNow = Module.findExportByName("w32time.dll", "W32TimeSyncNow")
+Interceptor.attach(W32TimeSyncNow, {onLeave: function (args) {send("W32TimeSyncNow");}});
+
+var W32TimeVerifyJoinConfig = Module.findExportByName("w32time.dll", "W32TimeVerifyJoinConfig")
+Interceptor.attach(W32TimeVerifyJoinConfig, {onLeave: function (args) {send("W32TimeVerifyJoinConfig");}});
+
+var W32TimeVerifyUnjoinConfig = Module.findExportByName("w32time.dll", "W32TimeVerifyUnjoinConfig")
+Interceptor.attach(W32TimeVerifyUnjoinConfig, {onLeave: function (args) {send("W32TimeVerifyUnjoinConfig");}});
+
+var W32TmServiceMain = Module.findExportByName("w32time.dll", "W32TmServiceMain")
+Interceptor.attach(W32TmServiceMain, {onLeave: function (args) {send("W32TmServiceMain");}});
+
+var fnW32TmI_ScSetServiceBits = Module.findExportByName("w32time.dll", "fnW32TmI_ScSetServiceBits")
+Interceptor.attach(fnW32TmI_ScSetServiceBits, {onLeave: function (args) {send("fnW32TmI_ScSetServiceBits");}});
+
+var fnW32TmRegisterServiceCtrlHandlerEx = Module.findExportByName("w32time.dll", "fnW32TmRegisterServiceCtrlHandlerEx")
+Interceptor.attach(fnW32TmRegisterServiceCtrlHandlerEx, {onLeave: function (args) {send("fnW32TmRegisterServiceCtrlHandlerEx");}});
+
+var fnW32TmSetServiceStatus = Module.findExportByName("w32time.dll", "fnW32TmSetServiceStatus")
+Interceptor.attach(fnW32TmSetServiceStatus, {onLeave: function (args) {send("fnW32TmSetServiceStatus");}});
+

@@ -1,0 +1,24 @@
+var IdpConfigAddPolicy = Module.findExportByName("nshwfp.dll", "IdpConfigAddPolicy")
+Interceptor.attach(IdpConfigAddPolicy, {onLeave: function (args) {send("IdpConfigAddPolicy");}});
+
+var IdpConfigAllocateAndGetPolicy = Module.findExportByName("nshwfp.dll", "IdpConfigAllocateAndGetPolicy")
+Interceptor.attach(IdpConfigAllocateAndGetPolicy, {onLeave: function (args) {send("IdpConfigAllocateAndGetPolicy");}});
+
+var IdpConfigFreePolicy = Module.findExportByName("nshwfp.dll", "IdpConfigFreePolicy")
+Interceptor.attach(IdpConfigFreePolicy, {onLeave: function (args) {send("IdpConfigFreePolicy");}});
+
+var IdpConfigInitDefaultPolicy = Module.findExportByName("nshwfp.dll", "IdpConfigInitDefaultPolicy")
+Interceptor.attach(IdpConfigInitDefaultPolicy, {onLeave: function (args) {send("IdpConfigInitDefaultPolicy");}});
+
+var IdpConfigRemovePolicy = Module.findExportByName("nshwfp.dll", "IdpConfigRemovePolicy")
+Interceptor.attach(IdpConfigRemovePolicy, {onLeave: function (args) {send("IdpConfigRemovePolicy");}});
+
+var InitHelperDll = Module.findExportByName("nshwfp.dll", "InitHelperDll")
+Interceptor.attach(InitHelperDll, {onLeave: function (args) {send("InitHelperDll");}});
+
+var WfpCaptureExportedW = Module.findExportByName("nshwfp.dll", "WfpCaptureExportedW")
+Interceptor.attach(WfpCaptureExportedW, {onLeave: function (args) {send("WfpCaptureExportedW");}});
+
+var WfpCaptureStop = Module.findExportByName("nshwfp.dll", "WfpCaptureStop")
+Interceptor.attach(WfpCaptureStop, {onLeave: function (args) {send("WfpCaptureStop");}});
+

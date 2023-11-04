@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("directmanipulation.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("directmanipulation.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("directmanipulation.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var InitializeDManipHook = Module.findExportByName("directmanipulation.dll", "InitializeDManipHook")
+Interceptor.attach(InitializeDManipHook, {onLeave: function (args) {send("InitializeDManipHook");}});
+

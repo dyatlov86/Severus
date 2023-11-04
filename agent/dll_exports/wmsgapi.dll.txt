@@ -1,0 +1,18 @@
+var WmsgBroadcastMessage = Module.findExportByName("wmsgapi.dll", "WmsgBroadcastMessage")
+Interceptor.attach(WmsgBroadcastMessage, {onLeave: function (args) {send("WmsgBroadcastMessage");}});
+
+var WmsgBroadcastNotifyMessage = Module.findExportByName("wmsgapi.dll", "WmsgBroadcastNotifyMessage")
+Interceptor.attach(WmsgBroadcastNotifyMessage, {onLeave: function (args) {send("WmsgBroadcastNotifyMessage");}});
+
+var WmsgPostMessage = Module.findExportByName("wmsgapi.dll", "WmsgPostMessage")
+Interceptor.attach(WmsgPostMessage, {onLeave: function (args) {send("WmsgPostMessage");}});
+
+var WmsgPostNotifyMessage = Module.findExportByName("wmsgapi.dll", "WmsgPostNotifyMessage")
+Interceptor.attach(WmsgPostNotifyMessage, {onLeave: function (args) {send("WmsgPostNotifyMessage");}});
+
+var WmsgSendMessage = Module.findExportByName("wmsgapi.dll", "WmsgSendMessage")
+Interceptor.attach(WmsgSendMessage, {onLeave: function (args) {send("WmsgSendMessage");}});
+
+var WmsgSendPSPMessage = Module.findExportByName("wmsgapi.dll", "WmsgSendPSPMessage")
+Interceptor.attach(WmsgSendPSPMessage, {onLeave: function (args) {send("WmsgSendPSPMessage");}});
+

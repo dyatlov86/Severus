@@ -1,0 +1,75 @@
+var MdmClearAllHashes = Module.findExportByName("MdmCommon.dll", "MdmClearAllHashes")
+Interceptor.attach(MdmClearAllHashes, {onLeave: function (args) {send("MdmClearAllHashes");}});
+
+var MdmConnectedAccountsChanged = Module.findExportByName("MdmCommon.dll", "MdmConnectedAccountsChanged")
+Interceptor.attach(MdmConnectedAccountsChanged, {onLeave: function (args) {send("MdmConnectedAccountsChanged");}});
+
+var MdmEnumerateUsers = Module.findExportByName("MdmCommon.dll", "MdmEnumerateUsers")
+Interceptor.attach(MdmEnumerateUsers, {onLeave: function (args) {send("MdmEnumerateUsers");}});
+
+var MdmGetLocation = Module.findExportByName("MdmCommon.dll", "MdmGetLocation")
+Interceptor.attach(MdmGetLocation, {onLeave: function (args) {send("MdmGetLocation");}});
+
+var MdmGetServiceTarget = Module.findExportByName("MdmCommon.dll", "MdmGetServiceTarget")
+Interceptor.attach(MdmGetServiceTarget, {onLeave: function (args) {send("MdmGetServiceTarget");}});
+
+var MdmGetSidsByConnectedCids = Module.findExportByName("MdmCommon.dll", "MdmGetSidsByConnectedCids")
+Interceptor.attach(MdmGetSidsByConnectedCids, {onLeave: function (args) {send("MdmGetSidsByConnectedCids");}});
+
+var MdmHandlePushNotification = Module.findExportByName("MdmCommon.dll", "MdmHandlePushNotification")
+Interceptor.attach(MdmHandlePushNotification, {onLeave: function (args) {send("MdmHandlePushNotification");}});
+
+var MdmIsFindMyDeviceEnabled = Module.findExportByName("MdmCommon.dll", "MdmIsFindMyDeviceEnabled")
+Interceptor.attach(MdmIsFindMyDeviceEnabled, {onLeave: function (args) {send("MdmIsFindMyDeviceEnabled");}});
+
+var MdmIsRegisteredWithService = Module.findExportByName("MdmCommon.dll", "MdmIsRegisteredWithService")
+Interceptor.attach(MdmIsRegisteredWithService, {onLeave: function (args) {send("MdmIsRegisteredWithService");}});
+
+var MdmMobileNetworksChanged = Module.findExportByName("MdmCommon.dll", "MdmMobileNetworksChanged")
+Interceptor.attach(MdmMobileNetworksChanged, {onLeave: function (args) {send("MdmMobileNetworksChanged");}});
+
+var MdmParseCommandData = Module.findExportByName("MdmCommon.dll", "MdmParseCommandData")
+Interceptor.attach(MdmParseCommandData, {onLeave: function (args) {send("MdmParseCommandData");}});
+
+var MdmParseEncryptedRequest = Module.findExportByName("MdmCommon.dll", "MdmParseEncryptedRequest")
+Interceptor.attach(MdmParseEncryptedRequest, {onLeave: function (args) {send("MdmParseEncryptedRequest");}});
+
+var MdmParseLocateCommand = Module.findExportByName("MdmCommon.dll", "MdmParseLocateCommand")
+Interceptor.attach(MdmParseLocateCommand, {onLeave: function (args) {send("MdmParseLocateCommand");}});
+
+var MdmParseLockCommand = Module.findExportByName("MdmCommon.dll", "MdmParseLockCommand")
+Interceptor.attach(MdmParseLockCommand, {onLeave: function (args) {send("MdmParseLockCommand");}});
+
+var MdmParseNonEncryptedRequest = Module.findExportByName("MdmCommon.dll", "MdmParseNonEncryptedRequest")
+Interceptor.attach(MdmParseNonEncryptedRequest, {onLeave: function (args) {send("MdmParseNonEncryptedRequest");}});
+
+var MdmProtectionStateChanged = Module.findExportByName("MdmCommon.dll", "MdmProtectionStateChanged")
+Interceptor.attach(MdmProtectionStateChanged, {onLeave: function (args) {send("MdmProtectionStateChanged");}});
+
+var MdmRegisterDevice = Module.findExportByName("MdmCommon.dll", "MdmRegisterDevice")
+Interceptor.attach(MdmRegisterDevice, {onLeave: function (args) {send("MdmRegisterDevice");}});
+
+var MdmRegisterUserDevice = Module.findExportByName("MdmCommon.dll", "MdmRegisterUserDevice")
+Interceptor.attach(MdmRegisterUserDevice, {onLeave: function (args) {send("MdmRegisterUserDevice");}});
+
+var MdmSendRequestToCS = Module.findExportByName("MdmCommon.dll", "MdmSendRequestToCS")
+Interceptor.attach(MdmSendRequestToCS, {onLeave: function (args) {send("MdmSendRequestToCS");}});
+
+var MdmSendRequestToCSWithDelegation = Module.findExportByName("MdmCommon.dll", "MdmSendRequestToCSWithDelegation")
+Interceptor.attach(MdmSendRequestToCSWithDelegation, {onLeave: function (args) {send("MdmSendRequestToCSWithDelegation");}});
+
+var MdmSetFindMyDevice = Module.findExportByName("MdmCommon.dll", "MdmSetFindMyDevice")
+Interceptor.attach(MdmSetFindMyDevice, {onLeave: function (args) {send("MdmSetFindMyDevice");}});
+
+var MdmShouldRegisterDevice = Module.findExportByName("MdmCommon.dll", "MdmShouldRegisterDevice")
+Interceptor.attach(MdmShouldRegisterDevice, {onLeave: function (args) {send("MdmShouldRegisterDevice");}});
+
+var MdmUpdateStatus = Module.findExportByName("MdmCommon.dll", "MdmUpdateStatus")
+Interceptor.attach(MdmUpdateStatus, {onLeave: function (args) {send("MdmUpdateStatus");}});
+
+var MdmUsersAuthorizedToSeeLocation = Module.findExportByName("MdmCommon.dll", "MdmUsersAuthorizedToSeeLocation")
+Interceptor.attach(MdmUsersAuthorizedToSeeLocation, {onLeave: function (args) {send("MdmUsersAuthorizedToSeeLocation");}});
+
+var MdmUsersAuthorizedToSeeLocationAsString = Module.findExportByName("MdmCommon.dll", "MdmUsersAuthorizedToSeeLocationAsString")
+Interceptor.attach(MdmUsersAuthorizedToSeeLocationAsString, {onLeave: function (args) {send("MdmUsersAuthorizedToSeeLocationAsString");}});
+

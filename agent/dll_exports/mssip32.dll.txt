@@ -1,0 +1,27 @@
+var CryptSIPCreateIndirectData = Module.findExportByName("mssip32.dll", "CryptSIPCreateIndirectData")
+Interceptor.attach(CryptSIPCreateIndirectData, {onLeave: function (args) {send("CryptSIPCreateIndirectData");}});
+
+var CryptSIPGetInfo = Module.findExportByName("mssip32.dll", "CryptSIPGetInfo")
+Interceptor.attach(CryptSIPGetInfo, {onLeave: function (args) {send("CryptSIPGetInfo");}});
+
+var CryptSIPGetRegWorkingFlags = Module.findExportByName("mssip32.dll", "CryptSIPGetRegWorkingFlags")
+Interceptor.attach(CryptSIPGetRegWorkingFlags, {onLeave: function (args) {send("CryptSIPGetRegWorkingFlags");}});
+
+var CryptSIPGetSignedDataMsg = Module.findExportByName("mssip32.dll", "CryptSIPGetSignedDataMsg")
+Interceptor.attach(CryptSIPGetSignedDataMsg, {onLeave: function (args) {send("CryptSIPGetSignedDataMsg");}});
+
+var CryptSIPPutSignedDataMsg = Module.findExportByName("mssip32.dll", "CryptSIPPutSignedDataMsg")
+Interceptor.attach(CryptSIPPutSignedDataMsg, {onLeave: function (args) {send("CryptSIPPutSignedDataMsg");}});
+
+var CryptSIPRemoveSignedDataMsg = Module.findExportByName("mssip32.dll", "CryptSIPRemoveSignedDataMsg")
+Interceptor.attach(CryptSIPRemoveSignedDataMsg, {onLeave: function (args) {send("CryptSIPRemoveSignedDataMsg");}});
+
+var CryptSIPVerifyIndirectData = Module.findExportByName("mssip32.dll", "CryptSIPVerifyIndirectData")
+Interceptor.attach(CryptSIPVerifyIndirectData, {onLeave: function (args) {send("CryptSIPVerifyIndirectData");}});
+
+var DllRegisterServer = Module.findExportByName("mssip32.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mssip32.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

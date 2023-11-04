@@ -1,0 +1,3 @@
+var sdwhcon = Module.findExportByName("wow64con.dll", "sdwhcon")
+Interceptor.attach(sdwhcon, {onLeave: function (args) {send("sdwhcon");}});
+

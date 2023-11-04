@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("mfnetsrc.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mfnetsrc.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var MFCreateByteCacheFile = Module.findExportByName("mfnetsrc.dll", "MFCreateByteCacheFile")
+Interceptor.attach(MFCreateByteCacheFile, {onLeave: function (args) {send("MFCreateByteCacheFile");}});
+
+var MFCreateCacheManager = Module.findExportByName("mfnetsrc.dll", "MFCreateCacheManager")
+Interceptor.attach(MFCreateCacheManager, {onLeave: function (args) {send("MFCreateCacheManager");}});
+
+var MFCreateFileBlockMap = Module.findExportByName("mfnetsrc.dll", "MFCreateFileBlockMap")
+Interceptor.attach(MFCreateFileBlockMap, {onLeave: function (args) {send("MFCreateFileBlockMap");}});
+

@@ -1,0 +1,21 @@
+var ?GetBootCodeVersion@@YAHPAG@Z = Module.findExportByName("eFpWbfSwitcher.dll", "?GetBootCodeVersion@@YAHPAG@Z")
+Interceptor.attach(?GetBootCodeVersion@@YAHPAG@Z, {onLeave: function (args) {send("?GetBootCodeVersion@@YAHPAG@Z");}});
+
+var ?GetMainCodeVersion@@YAHPAG@Z = Module.findExportByName("eFpWbfSwitcher.dll", "?GetMainCodeVersion@@YAHPAG@Z")
+Interceptor.attach(?GetMainCodeVersion@@YAHPAG@Z, {onLeave: function (args) {send("?GetMainCodeVersion@@YAHPAG@Z");}});
+
+var CheckDeviceStatus = Module.findExportByName("eFpWbfSwitcher.dll", "CheckDeviceStatus")
+Interceptor.attach(CheckDeviceStatus, {onLeave: function (args) {send("CheckDeviceStatus");}});
+
+var CommunicationStatus = Module.findExportByName("eFpWbfSwitcher.dll", "CommunicationStatus")
+Interceptor.attach(CommunicationStatus, {onLeave: function (args) {send("CommunicationStatus");}});
+
+var DoSwitch = Module.findExportByName("eFpWbfSwitcher.dll", "DoSwitch")
+Interceptor.attach(DoSwitch, {onLeave: function (args) {send("DoSwitch");}});
+
+var GetDeviceVersion = Module.findExportByName("eFpWbfSwitcher.dll", "GetDeviceVersion")
+Interceptor.attach(GetDeviceVersion, {onLeave: function (args) {send("GetDeviceVersion");}});
+
+var InitialSwitcher = Module.findExportByName("eFpWbfSwitcher.dll", "InitialSwitcher")
+Interceptor.attach(InitialSwitcher, {onLeave: function (args) {send("InitialSwitcher");}});
+

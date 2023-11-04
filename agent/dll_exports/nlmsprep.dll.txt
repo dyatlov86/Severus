@@ -1,0 +1,3 @@
+var NetworkListManager_Generalize = Module.findExportByName("nlmsprep.dll", "NetworkListManager_Generalize")
+Interceptor.attach(NetworkListManager_Generalize, {onLeave: function (args) {send("NetworkListManager_Generalize");}});
+

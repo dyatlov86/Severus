@@ -1,0 +1,15 @@
+var AqsFreeDevQueryFilter = Module.findExportByName("Windows.Devices.Enumeration.dll", "AqsFreeDevQueryFilter")
+Interceptor.attach(AqsFreeDevQueryFilter, {onLeave: function (args) {send("AqsFreeDevQueryFilter");}});
+
+var AqsToDevQueryFilter = Module.findExportByName("Windows.Devices.Enumeration.dll", "AqsToDevQueryFilter")
+Interceptor.attach(AqsToDevQueryFilter, {onLeave: function (args) {send("AqsToDevQueryFilter");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.Devices.Enumeration.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Devices.Enumeration.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Devices.Enumeration.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

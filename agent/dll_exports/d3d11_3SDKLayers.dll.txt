@@ -1,0 +1,6 @@
+var D3D11RegisterLayers = Module.findExportByName("d3d11_3SDKLayers.dll", "D3D11RegisterLayers")
+Interceptor.attach(D3D11RegisterLayers, {onLeave: function (args) {send("D3D11RegisterLayers");}});
+
+var D3D11TranslateCreateDevice = Module.findExportByName("d3d11_3SDKLayers.dll", "D3D11TranslateCreateDevice")
+Interceptor.attach(D3D11TranslateCreateDevice, {onLeave: function (args) {send("D3D11TranslateCreateDevice");}});
+

@@ -1,0 +1,9 @@
+var ProvPackageSysprepGeneralize = Module.findExportByName("ProvSysprep.dll", "ProvPackageSysprepGeneralize")
+Interceptor.attach(ProvPackageSysprepGeneralize, {onLeave: function (args) {send("ProvPackageSysprepGeneralize");}});
+
+var ProvPackageSysprepSpecialize = Module.findExportByName("ProvSysprep.dll", "ProvPackageSysprepSpecialize")
+Interceptor.attach(ProvPackageSysprepSpecialize, {onLeave: function (args) {send("ProvPackageSysprepSpecialize");}});
+
+var ProvPackageSysprepSpecializeOffline = Module.findExportByName("ProvSysprep.dll", "ProvPackageSysprepSpecializeOffline")
+Interceptor.attach(ProvPackageSysprepSpecializeOffline, {onLeave: function (args) {send("ProvPackageSysprepSpecializeOffline");}});
+

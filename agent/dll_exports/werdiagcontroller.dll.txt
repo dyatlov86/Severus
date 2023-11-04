@@ -1,0 +1,9 @@
+var QueryOriginalBucket = Module.findExportByName("werdiagcontroller.dll", "QueryOriginalBucket")
+Interceptor.attach(QueryOriginalBucket, {onLeave: function (args) {send("QueryOriginalBucket");}});
+
+var StartAppRecorder = Module.findExportByName("werdiagcontroller.dll", "StartAppRecorder")
+Interceptor.attach(StartAppRecorder, {onLeave: function (args) {send("StartAppRecorder");}});
+
+var StartFDR = Module.findExportByName("werdiagcontroller.dll", "StartFDR")
+Interceptor.attach(StartFDR, {onLeave: function (args) {send("StartFDR");}});
+

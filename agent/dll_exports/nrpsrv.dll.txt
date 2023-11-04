@@ -1,0 +1,6 @@
+var NrpStartRpcServer = Module.findExportByName("nrpsrv.dll", "NrpStartRpcServer")
+Interceptor.attach(NrpStartRpcServer, {onLeave: function (args) {send("NrpStartRpcServer");}});
+
+var NrpStopRpcServer = Module.findExportByName("nrpsrv.dll", "NrpStopRpcServer")
+Interceptor.attach(NrpStopRpcServer, {onLeave: function (args) {send("NrpStopRpcServer");}});
+

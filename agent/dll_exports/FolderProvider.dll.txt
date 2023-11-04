@@ -1,0 +1,15 @@
+var DLLGetDISMProviderCLSID = Module.findExportByName("FolderProvider.dll", "DLLGetDISMProviderCLSID")
+Interceptor.attach(DLLGetDISMProviderCLSID, {onLeave: function (args) {send("DLLGetDISMProviderCLSID");}});
+
+var DllCanUnloadNow = Module.findExportByName("FolderProvider.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("FolderProvider.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("FolderProvider.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("FolderProvider.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

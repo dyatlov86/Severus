@@ -1,0 +1,3 @@
+var VSCoverRegisterAssembly = Module.findExportByName("vscover170.dll", "VSCoverRegisterAssembly")
+Interceptor.attach(VSCoverRegisterAssembly, {onLeave: function (args) {send("VSCoverRegisterAssembly");}});
+

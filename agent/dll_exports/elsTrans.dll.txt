@@ -1,0 +1,18 @@
+var DoAction = Module.findExportByName("elsTrans.dll", "DoAction")
+Interceptor.attach(DoAction, {onLeave: function (args) {send("DoAction");}});
+
+var EnumServices = Module.findExportByName("elsTrans.dll", "EnumServices")
+Interceptor.attach(EnumServices, {onLeave: function (args) {send("EnumServices");}});
+
+var FreePropertyBag = Module.findExportByName("elsTrans.dll", "FreePropertyBag")
+Interceptor.attach(FreePropertyBag, {onLeave: function (args) {send("FreePropertyBag");}});
+
+var FreeService = Module.findExportByName("elsTrans.dll", "FreeService")
+Interceptor.attach(FreeService, {onLeave: function (args) {send("FreeService");}});
+
+var InitService = Module.findExportByName("elsTrans.dll", "InitService")
+Interceptor.attach(InitService, {onLeave: function (args) {send("InitService");}});
+
+var RecognizeText = Module.findExportByName("elsTrans.dll", "RecognizeText")
+Interceptor.attach(RecognizeText, {onLeave: function (args) {send("RecognizeText");}});
+

@@ -1,0 +1,15 @@
+var CreateExecutivePlatform = Module.findExportByName("mmcndmgr.dll", "CreateExecutivePlatform")
+Interceptor.attach(CreateExecutivePlatform, {onLeave: function (args) {send("CreateExecutivePlatform");}});
+
+var DllCanUnloadNow = Module.findExportByName("mmcndmgr.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mmcndmgr.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("mmcndmgr.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mmcndmgr.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

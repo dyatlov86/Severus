@@ -1,0 +1,6 @@
+var GetReadingString = Module.findExportByName("CHxReadingStringIME.dll", "GetReadingString")
+Interceptor.attach(GetReadingString, {onLeave: function (args) {send("GetReadingString");}});
+
+var ShowReadingWindow = Module.findExportByName("CHxReadingStringIME.dll", "ShowReadingWindow")
+Interceptor.attach(ShowReadingWindow, {onLeave: function (args) {send("ShowReadingWindow");}});
+

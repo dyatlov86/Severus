@@ -1,0 +1,21 @@
+var DllGetClassObject = Module.findExportByName("colbact.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("colbact.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("colbact.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetClassInfoForCurrentUser = Module.findExportByName("colbact.dll", "GetClassInfoForCurrentUser")
+Interceptor.attach(GetClassInfoForCurrentUser, {onLeave: function (args) {send("GetClassInfoForCurrentUser");}});
+
+var GetDefaultPartitionForCurrentUser = Module.findExportByName("colbact.dll", "GetDefaultPartitionForCurrentUser")
+Interceptor.attach(GetDefaultPartitionForCurrentUser, {onLeave: function (args) {send("GetDefaultPartitionForCurrentUser");}});
+
+var GetDefaultPartitionForSid = Module.findExportByName("colbact.dll", "GetDefaultPartitionForSid")
+Interceptor.attach(GetDefaultPartitionForSid, {onLeave: function (args) {send("GetDefaultPartitionForSid");}});
+
+var PartitionAccessCheck = Module.findExportByName("colbact.dll", "PartitionAccessCheck")
+Interceptor.attach(PartitionAccessCheck, {onLeave: function (args) {send("PartitionAccessCheck");}});
+

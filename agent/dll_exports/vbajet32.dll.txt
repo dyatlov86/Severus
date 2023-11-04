@@ -1,0 +1,6 @@
+var LoadExprSrvDll = Module.findExportByName("vbajet32.dll", "LoadExprSrvDll")
+Interceptor.attach(LoadExprSrvDll, {onLeave: function (args) {send("LoadExprSrvDll");}});
+
+var VBAGetExprSrv = Module.findExportByName("vbajet32.dll", "VBAGetExprSrv")
+Interceptor.attach(VBAGetExprSrv, {onLeave: function (args) {send("VBAGetExprSrv");}});
+

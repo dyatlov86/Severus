@@ -1,0 +1,3 @@
+var EfsServiceMain = Module.findExportByName("efssvc.dll", "EfsServiceMain")
+Interceptor.attach(EfsServiceMain, {onLeave: function (args) {send("EfsServiceMain");}});
+

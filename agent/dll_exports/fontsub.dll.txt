@@ -1,0 +1,6 @@
+var CreateFontPackage = Module.findExportByName("fontsub.dll", "CreateFontPackage")
+Interceptor.attach(CreateFontPackage, {onLeave: function (args) {send("CreateFontPackage");}});
+
+var MergeFontPackage = Module.findExportByName("fontsub.dll", "MergeFontPackage")
+Interceptor.attach(MergeFontPackage, {onLeave: function (args) {send("MergeFontPackage");}});
+

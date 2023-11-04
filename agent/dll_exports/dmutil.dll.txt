@@ -1,0 +1,90 @@
+var AddEntryBootFileGpt = Module.findExportByName("dmutil.dll", "AddEntryBootFileGpt")
+Interceptor.attach(AddEntryBootFileGpt, {onLeave: function (args) {send("AddEntryBootFileGpt");}});
+
+var AddEntryBootFileMbr = Module.findExportByName("dmutil.dll", "AddEntryBootFileMbr")
+Interceptor.attach(AddEntryBootFileMbr, {onLeave: function (args) {send("AddEntryBootFileMbr");}});
+
+var CoDisableDynamicVolumes = Module.findExportByName("dmutil.dll", "CoDisableDynamicVolumes")
+Interceptor.attach(CoDisableDynamicVolumes, {onLeave: function (args) {send("CoDisableDynamicVolumes");}});
+
+var DisplayError = Module.findExportByName("dmutil.dll", "DisplayError")
+Interceptor.attach(DisplayError, {onLeave: function (args) {send("DisplayError");}});
+
+var DisplayErrorRgszw = Module.findExportByName("dmutil.dll", "DisplayErrorRgszw")
+Interceptor.attach(DisplayErrorRgszw, {onLeave: function (args) {send("DisplayErrorRgszw");}});
+
+var DllMain = Module.findExportByName("dmutil.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DmCommonNtOpenFile = Module.findExportByName("dmutil.dll", "DmCommonNtOpenFile")
+Interceptor.attach(DmCommonNtOpenFile, {onLeave: function (args) {send("DmCommonNtOpenFile");}});
+
+var DynamicSupport = Module.findExportByName("dmutil.dll", "DynamicSupport")
+Interceptor.attach(DynamicSupport, {onLeave: function (args) {send("DynamicSupport");}});
+
+var FTrace = Module.findExportByName("dmutil.dll", "FTrace")
+Interceptor.attach(FTrace, {onLeave: function (args) {send("FTrace");}});
+
+var FTraceValist = Module.findExportByName("dmutil.dll", "FTraceValist")
+Interceptor.attach(FTraceValist, {onLeave: function (args) {send("FTraceValist");}});
+
+var FreeRgszw = Module.findExportByName("dmutil.dll", "FreeRgszw")
+Interceptor.attach(FreeRgszw, {onLeave: function (args) {send("FreeRgszw");}});
+
+var GetErrorData = Module.findExportByName("dmutil.dll", "GetErrorData")
+Interceptor.attach(GetErrorData, {onLeave: function (args) {send("GetErrorData");}});
+
+var GetInstallDirectoryPath = Module.findExportByName("dmutil.dll", "GetInstallDirectoryPath")
+Interceptor.attach(GetInstallDirectoryPath, {onLeave: function (args) {send("GetInstallDirectoryPath");}});
+
+var GetSystemVolume = Module.findExportByName("dmutil.dll", "GetSystemVolume")
+Interceptor.attach(GetSystemVolume, {onLeave: function (args) {send("GetSystemVolume");}});
+
+var IsPersonalSKU = Module.findExportByName("dmutil.dll", "IsPersonalSKU")
+Interceptor.attach(IsPersonalSKU, {onLeave: function (args) {send("IsPersonalSKU");}});
+
+var LowAcquirePrivilege = Module.findExportByName("dmutil.dll", "LowAcquirePrivilege")
+Interceptor.attach(LowAcquirePrivilege, {onLeave: function (args) {send("LowAcquirePrivilege");}});
+
+var LowGetPartitionInfo = Module.findExportByName("dmutil.dll", "LowGetPartitionInfo")
+Interceptor.attach(LowGetPartitionInfo, {onLeave: function (args) {send("LowGetPartitionInfo");}});
+
+var LowNtAddBootEntry = Module.findExportByName("dmutil.dll", "LowNtAddBootEntry")
+Interceptor.attach(LowNtAddBootEntry, {onLeave: function (args) {send("LowNtAddBootEntry");}});
+
+var LowNtReadFile = Module.findExportByName("dmutil.dll", "LowNtReadFile")
+Interceptor.attach(LowNtReadFile, {onLeave: function (args) {send("LowNtReadFile");}});
+
+var LowNtReadOnlyAttributeOff = Module.findExportByName("dmutil.dll", "LowNtReadOnlyAttributeOff")
+Interceptor.attach(LowNtReadOnlyAttributeOff, {onLeave: function (args) {send("LowNtReadOnlyAttributeOff");}});
+
+var LowNtWriteFile = Module.findExportByName("dmutil.dll", "LowNtWriteFile")
+Interceptor.attach(LowNtWriteFile, {onLeave: function (args) {send("LowNtWriteFile");}});
+
+var RgszwDupRgszw = Module.findExportByName("dmutil.dll", "RgszwDupRgszw")
+Interceptor.attach(RgszwDupRgszw, {onLeave: function (args) {send("RgszwDupRgszw");}});
+
+var RgszwFromArgs = Module.findExportByName("dmutil.dll", "RgszwFromArgs")
+Interceptor.attach(RgszwFromArgs, {onLeave: function (args) {send("RgszwFromArgs");}});
+
+var RgszwFromValist = Module.findExportByName("dmutil.dll", "RgszwFromValist")
+Interceptor.attach(RgszwFromValist, {onLeave: function (args) {send("RgszwFromValist");}});
+
+var SafeLoadVdsService = Module.findExportByName("dmutil.dll", "SafeLoadVdsService")
+Interceptor.attach(SafeLoadVdsService, {onLeave: function (args) {send("SafeLoadVdsService");}});
+
+var ShowMessage = Module.findExportByName("dmutil.dll", "ShowMessage")
+Interceptor.attach(ShowMessage, {onLeave: function (args) {send("ShowMessage");}});
+
+var ShowMessageValist = Module.findExportByName("dmutil.dll", "ShowMessageValist")
+Interceptor.attach(ShowMessageValist, {onLeave: function (args) {send("ShowMessageValist");}});
+
+var SzwDupSzw = Module.findExportByName("dmutil.dll", "SzwDupSzw")
+Interceptor.attach(SzwDupSzw, {onLeave: function (args) {send("SzwDupSzw");}});
+
+var SzwFromSza = Module.findExportByName("dmutil.dll", "SzwFromSza")
+Interceptor.attach(SzwFromSza, {onLeave: function (args) {send("SzwFromSza");}});
+
+var TranslateError = Module.findExportByName("dmutil.dll", "TranslateError")
+Interceptor.attach(TranslateError, {onLeave: function (args) {send("TranslateError");}});
+

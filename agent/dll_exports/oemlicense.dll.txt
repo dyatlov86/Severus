@@ -1,0 +1,18 @@
+var AddDemoAppLicense = Module.findExportByName("oemlicense.dll", "AddDemoAppLicense")
+Interceptor.attach(AddDemoAppLicense, {onLeave: function (args) {send("AddDemoAppLicense");}});
+
+var HrAddAppxLicense = Module.findExportByName("oemlicense.dll", "HrAddAppxLicense")
+Interceptor.attach(HrAddAppxLicense, {onLeave: function (args) {send("HrAddAppxLicense");}});
+
+var HrInstallClipLicense = Module.findExportByName("oemlicense.dll", "HrInstallClipLicense")
+Interceptor.attach(HrInstallClipLicense, {onLeave: function (args) {send("HrInstallClipLicense");}});
+
+var HrNotifyPhoneLicenseReady = Module.findExportByName("oemlicense.dll", "HrNotifyPhoneLicenseReady")
+Interceptor.attach(HrNotifyPhoneLicenseReady, {onLeave: function (args) {send("HrNotifyPhoneLicenseReady");}});
+
+var HrRemoveAppxLicense = Module.findExportByName("oemlicense.dll", "HrRemoveAppxLicense")
+Interceptor.attach(HrRemoveAppxLicense, {onLeave: function (args) {send("HrRemoveAppxLicense");}});
+
+var RemoveDemoAppLicense = Module.findExportByName("oemlicense.dll", "RemoveDemoAppLicense")
+Interceptor.attach(RemoveDemoAppLicense, {onLeave: function (args) {send("RemoveDemoAppLicense");}});
+

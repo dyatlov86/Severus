@@ -1,0 +1,27 @@
+var PktmonAddFilter = Module.findExportByName("PktMonApi.dll", "PktmonAddFilter")
+Interceptor.attach(PktmonAddFilter, {onLeave: function (args) {send("PktmonAddFilter");}});
+
+var PktmonGetComponentList = Module.findExportByName("PktMonApi.dll", "PktmonGetComponentList")
+Interceptor.attach(PktmonGetComponentList, {onLeave: function (args) {send("PktmonGetComponentList");}});
+
+var PktmonGetFilterList = Module.findExportByName("PktMonApi.dll", "PktmonGetFilterList")
+Interceptor.attach(PktmonGetFilterList, {onLeave: function (args) {send("PktmonGetFilterList");}});
+
+var PktmonGetStatus = Module.findExportByName("PktMonApi.dll", "PktmonGetStatus")
+Interceptor.attach(PktmonGetStatus, {onLeave: function (args) {send("PktmonGetStatus");}});
+
+var PktmonRemoveAllFilters = Module.findExportByName("PktMonApi.dll", "PktmonRemoveAllFilters")
+Interceptor.attach(PktmonRemoveAllFilters, {onLeave: function (args) {send("PktmonRemoveAllFilters");}});
+
+var PktmonResetCounters = Module.findExportByName("PktMonApi.dll", "PktmonResetCounters")
+Interceptor.attach(PktmonResetCounters, {onLeave: function (args) {send("PktmonResetCounters");}});
+
+var PktmonStart = Module.findExportByName("PktMonApi.dll", "PktmonStart")
+Interceptor.attach(PktmonStart, {onLeave: function (args) {send("PktmonStart");}});
+
+var PktmonStop = Module.findExportByName("PktMonApi.dll", "PktmonStop")
+Interceptor.attach(PktmonStop, {onLeave: function (args) {send("PktmonStop");}});
+
+var PktmonUnload = Module.findExportByName("PktMonApi.dll", "PktmonUnload")
+Interceptor.attach(PktmonUnload, {onLeave: function (args) {send("PktmonUnload");}});
+

@@ -1,0 +1,27 @@
+var CharactersInput = Module.findExportByName("SFAPE.dll", "CharactersInput")
+Interceptor.attach(CharactersInput, {onLeave: function (args) {send("CharactersInput");}});
+
+var ClipboardInput = Module.findExportByName("SFAPE.dll", "ClipboardInput")
+Interceptor.attach(ClipboardInput, {onLeave: function (args) {send("ClipboardInput");}});
+
+var CloseCcHandle = Module.findExportByName("SFAPE.dll", "CloseCcHandle")
+Interceptor.attach(CloseCcHandle, {onLeave: function (args) {send("CloseCcHandle");}});
+
+var GetCcAttributes = Module.findExportByName("SFAPE.dll", "GetCcAttributes")
+Interceptor.attach(GetCcAttributes, {onLeave: function (args) {send("GetCcAttributes");}});
+
+var Initialize = Module.findExportByName("SFAPE.dll", "Initialize")
+Interceptor.attach(Initialize, {onLeave: function (args) {send("Initialize");}});
+
+var MeasurePerformance = Module.findExportByName("SFAPE.dll", "MeasurePerformance")
+Interceptor.attach(MeasurePerformance, {onLeave: function (args) {send("MeasurePerformance");}});
+
+var SealUnsealCredentials = Module.findExportByName("SFAPE.dll", "SealUnsealCredentials")
+Interceptor.attach(SealUnsealCredentials, {onLeave: function (args) {send("SealUnsealCredentials");}});
+
+var SetCcTimeStamps = Module.findExportByName("SFAPE.dll", "SetCcTimeStamps")
+Interceptor.attach(SetCcTimeStamps, {onLeave: function (args) {send("SetCcTimeStamps");}});
+
+var UserCredentials = Module.findExportByName("SFAPE.dll", "UserCredentials")
+Interceptor.attach(UserCredentials, {onLeave: function (args) {send("UserCredentials");}});
+

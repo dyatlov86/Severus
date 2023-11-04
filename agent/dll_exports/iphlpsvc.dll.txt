@@ -1,0 +1,9 @@
+var IphlpsvcSysprepGeneralize = Module.findExportByName("iphlpsvc.dll", "IphlpsvcSysprepGeneralize")
+Interceptor.attach(IphlpsvcSysprepGeneralize, {onLeave: function (args) {send("IphlpsvcSysprepGeneralize");}});
+
+var ServiceMain = Module.findExportByName("iphlpsvc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("iphlpsvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("mfsrcsnk.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mfsrcsnk.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var MFCreateAVIMediaSink = Module.findExportByName("mfsrcsnk.dll", "MFCreateAVIMediaSink")
+Interceptor.attach(MFCreateAVIMediaSink, {onLeave: function (args) {send("MFCreateAVIMediaSink");}});
+
+var MFCreateWAVEMediaSink = Module.findExportByName("mfsrcsnk.dll", "MFCreateWAVEMediaSink")
+Interceptor.attach(MFCreateWAVEMediaSink, {onLeave: function (args) {send("MFCreateWAVEMediaSink");}});
+

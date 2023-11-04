@@ -1,0 +1,63 @@
+var ?GetPlatform@@YAAEAVIPlatform@@XZ = Module.findExportByName("Platform.dll", "?GetPlatform@@YAAEAVIPlatform@@XZ")
+Interceptor.attach(?GetPlatform@@YAAEAVIPlatform@@XZ, {onLeave: function (args) {send("?GetPlatform@@YAAEAVIPlatform@@XZ");}});
+
+var DisableOverclocking = Module.findExportByName("Platform.dll", "DisableOverclocking")
+Interceptor.attach(DisableOverclocking, {onLeave: function (args) {send("DisableOverclocking");}});
+
+var EnableDisablePBOScalar = Module.findExportByName("Platform.dll", "EnableDisablePBOScalar")
+Interceptor.attach(EnableDisablePBOScalar, {onLeave: function (args) {send("EnableDisablePBOScalar");}});
+
+var GetCapabilities = Module.findExportByName("Platform.dll", "GetCapabilities")
+Interceptor.attach(GetCapabilities, {onLeave: function (args) {send("GetCapabilities");}});
+
+var GetCurrentFMaxCPU = Module.findExportByName("Platform.dll", "GetCurrentFMaxCPU")
+Interceptor.attach(GetCurrentFMaxCPU, {onLeave: function (args) {send("GetCurrentFMaxCPU");}});
+
+var GetCurrentFMaxGPU = Module.findExportByName("Platform.dll", "GetCurrentFMaxGPU")
+Interceptor.attach(GetCurrentFMaxGPU, {onLeave: function (args) {send("GetCurrentFMaxGPU");}});
+
+var GetOCFuseStatus = Module.findExportByName("Platform.dll", "GetOCFuseStatus")
+Interceptor.attach(GetOCFuseStatus, {onLeave: function (args) {send("GetOCFuseStatus");}});
+
+var GetRmCpuParameters = Module.findExportByName("Platform.dll", "GetRmCpuParameters")
+Interceptor.attach(GetRmCpuParameters, {onLeave: function (args) {send("GetRmCpuParameters");}});
+
+var IsAPU = Module.findExportByName("Platform.dll", "IsAPU")
+Interceptor.attach(IsAPU, {onLeave: function (args) {send("IsAPU");}});
+
+var IsSupportedProcessor = Module.findExportByName("Platform.dll", "IsSupportedProcessor")
+Interceptor.attach(IsSupportedProcessor, {onLeave: function (args) {send("IsSupportedProcessor");}});
+
+var IsVBSCheckRequired = Module.findExportByName("Platform.dll", "IsVBSCheckRequired")
+Interceptor.attach(IsVBSCheckRequired, {onLeave: function (args) {send("IsVBSCheckRequired");}});
+
+var SetAutoOverClockCPU = Module.findExportByName("Platform.dll", "SetAutoOverClockCPU")
+Interceptor.attach(SetAutoOverClockCPU, {onLeave: function (args) {send("SetAutoOverClockCPU");}});
+
+var SetAutoOverClockGPU = Module.findExportByName("Platform.dll", "SetAutoOverClockGPU")
+Interceptor.attach(SetAutoOverClockGPU, {onLeave: function (args) {send("SetAutoOverClockGPU");}});
+
+var SetCurrentVoltage = Module.findExportByName("Platform.dll", "SetCurrentVoltage")
+Interceptor.attach(SetCurrentVoltage, {onLeave: function (args) {send("SetCurrentVoltage");}});
+
+var SetEDCSOCLimit = Module.findExportByName("Platform.dll", "SetEDCSOCLimit")
+Interceptor.attach(SetEDCSOCLimit, {onLeave: function (args) {send("SetEDCSOCLimit");}});
+
+var SetEDCVDDLimit = Module.findExportByName("Platform.dll", "SetEDCVDDLimit")
+Interceptor.attach(SetEDCVDDLimit, {onLeave: function (args) {send("SetEDCVDDLimit");}});
+
+var SetOCFuseStatus = Module.findExportByName("Platform.dll", "SetOCFuseStatus")
+Interceptor.attach(SetOCFuseStatus, {onLeave: function (args) {send("SetOCFuseStatus");}});
+
+var SetOverclockFreqAllCores = Module.findExportByName("Platform.dll", "SetOverclockFreqAllCores")
+Interceptor.attach(SetOverclockFreqAllCores, {onLeave: function (args) {send("SetOverclockFreqAllCores");}});
+
+var SetPPTLimit = Module.findExportByName("Platform.dll", "SetPPTLimit")
+Interceptor.attach(SetPPTLimit, {onLeave: function (args) {send("SetPPTLimit");}});
+
+var SetTDCSOCLimit = Module.findExportByName("Platform.dll", "SetTDCSOCLimit")
+Interceptor.attach(SetTDCSOCLimit, {onLeave: function (args) {send("SetTDCSOCLimit");}});
+
+var SetTDCVDDLimit = Module.findExportByName("Platform.dll", "SetTDCVDDLimit")
+Interceptor.attach(SetTDCVDDLimit, {onLeave: function (args) {send("SetTDCVDDLimit");}});
+

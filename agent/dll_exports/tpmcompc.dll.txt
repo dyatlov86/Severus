@@ -1,0 +1,6 @@
+var CHOOSER2_PickTargetComputer = Module.findExportByName("tpmcompc.dll", "CHOOSER2_PickTargetComputer")
+Interceptor.attach(CHOOSER2_PickTargetComputer, {onLeave: function (args) {send("CHOOSER2_PickTargetComputer");}});
+
+var DllMain = Module.findExportByName("tpmcompc.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+

@@ -1,0 +1,9 @@
+var DllInstall = Module.findExportByName("ntvdm64.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var NtVdm64CreateProcessInternalW = Module.findExportByName("ntvdm64.dll", "NtVdm64CreateProcessInternalW")
+Interceptor.attach(NtVdm64CreateProcessInternalW, {onLeave: function (args) {send("NtVdm64CreateProcessInternalW");}});
+
+var NtVdm64RaiseInvalid16BitError = Module.findExportByName("ntvdm64.dll", "NtVdm64RaiseInvalid16BitError")
+Interceptor.attach(NtVdm64RaiseInvalid16BitError, {onLeave: function (args) {send("NtVdm64RaiseInvalid16BitError");}});
+

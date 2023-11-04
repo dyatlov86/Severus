@@ -1,0 +1,111 @@
+var DllCanUnloadNow = Module.findExportByName("tpmvsc.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("tpmvsc.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("tpmvsc.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("tpmvsc.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var TpmVCardCreate = Module.findExportByName("tpmvsc.dll", "TpmVCardCreate")
+Interceptor.attach(TpmVCardCreate, {onLeave: function (args) {send("TpmVCardCreate");}});
+
+var TpmVCardCreateInProc = Module.findExportByName("tpmvsc.dll", "TpmVCardCreateInProc")
+Interceptor.attach(TpmVCardCreateInProc, {onLeave: function (args) {send("TpmVCardCreateInProc");}});
+
+var TpmVCardDestroy = Module.findExportByName("tpmvsc.dll", "TpmVCardDestroy")
+Interceptor.attach(TpmVCardDestroy, {onLeave: function (args) {send("TpmVCardDestroy");}});
+
+var TpmVCardDestroyInProc = Module.findExportByName("tpmvsc.dll", "TpmVCardDestroyInProc")
+Interceptor.attach(TpmVCardDestroyInProc, {onLeave: function (args) {send("TpmVCardDestroyInProc");}});
+
+var VCardAuthenticatePin = Module.findExportByName("tpmvsc.dll", "VCardAuthenticatePin")
+Interceptor.attach(VCardAuthenticatePin, {onLeave: function (args) {send("VCardAuthenticatePin");}});
+
+var VCardChangePin = Module.findExportByName("tpmvsc.dll", "VCardChangePin")
+Interceptor.attach(VCardChangePin, {onLeave: function (args) {send("VCardChangePin");}});
+
+var VCardClose = Module.findExportByName("tpmvsc.dll", "VCardClose")
+Interceptor.attach(VCardClose, {onLeave: function (args) {send("VCardClose");}});
+
+var VCardCloseChannel = Module.findExportByName("tpmvsc.dll", "VCardCloseChannel")
+Interceptor.attach(VCardCloseChannel, {onLeave: function (args) {send("VCardCloseChannel");}});
+
+var VCardCreateClaim = Module.findExportByName("tpmvsc.dll", "VCardCreateClaim")
+Interceptor.attach(VCardCreateClaim, {onLeave: function (args) {send("VCardCreateClaim");}});
+
+var VCardCreateKey = Module.findExportByName("tpmvsc.dll", "VCardCreateKey")
+Interceptor.attach(VCardCreateKey, {onLeave: function (args) {send("VCardCreateKey");}});
+
+var VCardDeauthenticate = Module.findExportByName("tpmvsc.dll", "VCardDeauthenticate")
+Interceptor.attach(VCardDeauthenticate, {onLeave: function (args) {send("VCardDeauthenticate");}});
+
+var VCardDecrypt = Module.findExportByName("tpmvsc.dll", "VCardDecrypt")
+Interceptor.attach(VCardDecrypt, {onLeave: function (args) {send("VCardDecrypt");}});
+
+var VCardDeinitialize = Module.findExportByName("tpmvsc.dll", "VCardDeinitialize")
+Interceptor.attach(VCardDeinitialize, {onLeave: function (args) {send("VCardDeinitialize");}});
+
+var VCardDeleteKey = Module.findExportByName("tpmvsc.dll", "VCardDeleteKey")
+Interceptor.attach(VCardDeleteKey, {onLeave: function (args) {send("VCardDeleteKey");}});
+
+var VCardEncrypt = Module.findExportByName("tpmvsc.dll", "VCardEncrypt")
+Interceptor.attach(VCardEncrypt, {onLeave: function (args) {send("VCardEncrypt");}});
+
+var VCardExportRsaPubKey = Module.findExportByName("tpmvsc.dll", "VCardExportRsaPubKey")
+Interceptor.attach(VCardExportRsaPubKey, {onLeave: function (args) {send("VCardExportRsaPubKey");}});
+
+var VCardGetAikCertificate = Module.findExportByName("tpmvsc.dll", "VCardGetAikCertificate")
+Interceptor.attach(VCardGetAikCertificate, {onLeave: function (args) {send("VCardGetAikCertificate");}});
+
+var VCardGetAikContainerName = Module.findExportByName("tpmvsc.dll", "VCardGetAikContainerName")
+Interceptor.attach(VCardGetAikContainerName, {onLeave: function (args) {send("VCardGetAikContainerName");}});
+
+var VCardGetChallenge = Module.findExportByName("tpmvsc.dll", "VCardGetChallenge")
+Interceptor.attach(VCardGetChallenge, {onLeave: function (args) {send("VCardGetChallenge");}});
+
+var VCardGetKeyType = Module.findExportByName("tpmvsc.dll", "VCardGetKeyType")
+Interceptor.attach(VCardGetKeyType, {onLeave: function (args) {send("VCardGetKeyType");}});
+
+var VCardGetPinLength = Module.findExportByName("tpmvsc.dll", "VCardGetPinLength")
+Interceptor.attach(VCardGetPinLength, {onLeave: function (args) {send("VCardGetPinLength");}});
+
+var VCardGetRemainingRetryCount = Module.findExportByName("tpmvsc.dll", "VCardGetRemainingRetryCount")
+Interceptor.attach(VCardGetRemainingRetryCount, {onLeave: function (args) {send("VCardGetRemainingRetryCount");}});
+
+var VCardGetTransportKeyAlg = Module.findExportByName("tpmvsc.dll", "VCardGetTransportKeyAlg")
+Interceptor.attach(VCardGetTransportKeyAlg, {onLeave: function (args) {send("VCardGetTransportKeyAlg");}});
+
+var VCardImportRsaKey = Module.findExportByName("tpmvsc.dll", "VCardImportRsaKey")
+Interceptor.attach(VCardImportRsaKey, {onLeave: function (args) {send("VCardImportRsaKey");}});
+
+var VCardImportSymKey = Module.findExportByName("tpmvsc.dll", "VCardImportSymKey")
+Interceptor.attach(VCardImportSymKey, {onLeave: function (args) {send("VCardImportSymKey");}});
+
+var VCardInitialize = Module.findExportByName("tpmvsc.dll", "VCardInitialize")
+Interceptor.attach(VCardInitialize, {onLeave: function (args) {send("VCardInitialize");}});
+
+var VCardInvalidateChallenge = Module.findExportByName("tpmvsc.dll", "VCardInvalidateChallenge")
+Interceptor.attach(VCardInvalidateChallenge, {onLeave: function (args) {send("VCardInvalidateChallenge");}});
+
+var VCardOpen = Module.findExportByName("tpmvsc.dll", "VCardOpen")
+Interceptor.attach(VCardOpen, {onLeave: function (args) {send("VCardOpen");}});
+
+var VCardOpenChannel = Module.findExportByName("tpmvsc.dll", "VCardOpenChannel")
+Interceptor.attach(VCardOpenChannel, {onLeave: function (args) {send("VCardOpenChannel");}});
+
+var VCardResetPin = Module.findExportByName("tpmvsc.dll", "VCardResetPin")
+Interceptor.attach(VCardResetPin, {onLeave: function (args) {send("VCardResetPin");}});
+
+var VCardSetResponse = Module.findExportByName("tpmvsc.dll", "VCardSetResponse")
+Interceptor.attach(VCardSetResponse, {onLeave: function (args) {send("VCardSetResponse");}});
+
+var VCardSignHash = Module.findExportByName("tpmvsc.dll", "VCardSignHash")
+Interceptor.attach(VCardSignHash, {onLeave: function (args) {send("VCardSignHash");}});
+
+var VCardUnblockPin = Module.findExportByName("tpmvsc.dll", "VCardUnblockPin")
+Interceptor.attach(VCardUnblockPin, {onLeave: function (args) {send("VCardUnblockPin");}});
+

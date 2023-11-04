@@ -1,0 +1,255 @@
+var AddUserToSsoGroup = Module.findExportByName("msidcrl40.dll", "AddUserToSsoGroup")
+Interceptor.attach(AddUserToSsoGroup, {onLeave: function (args) {send("AddUserToSsoGroup");}});
+
+var AssociateDeviceToUser = Module.findExportByName("msidcrl40.dll", "AssociateDeviceToUser")
+Interceptor.attach(AssociateDeviceToUser, {onLeave: function (args) {send("AssociateDeviceToUser");}});
+
+var AuthIdentityToService = Module.findExportByName("msidcrl40.dll", "AuthIdentityToService")
+Interceptor.attach(AuthIdentityToService, {onLeave: function (args) {send("AuthIdentityToService");}});
+
+var AuthIdentityToServiceEx = Module.findExportByName("msidcrl40.dll", "AuthIdentityToServiceEx")
+Interceptor.attach(AuthIdentityToServiceEx, {onLeave: function (args) {send("AuthIdentityToServiceEx");}});
+
+var CancelPendingRequest = Module.findExportByName("msidcrl40.dll", "CancelPendingRequest")
+Interceptor.attach(CancelPendingRequest, {onLeave: function (args) {send("CancelPendingRequest");}});
+
+var CloseEnumIdentitiesHandle = Module.findExportByName("msidcrl40.dll", "CloseEnumIdentitiesHandle")
+Interceptor.attach(CloseEnumIdentitiesHandle, {onLeave: function (args) {send("CloseEnumIdentitiesHandle");}});
+
+var CloseIdentityHandle = Module.findExportByName("msidcrl40.dll", "CloseIdentityHandle")
+Interceptor.attach(CloseIdentityHandle, {onLeave: function (args) {send("CloseIdentityHandle");}});
+
+var CreateIdentityHandle = Module.findExportByName("msidcrl40.dll", "CreateIdentityHandle")
+Interceptor.attach(CreateIdentityHandle, {onLeave: function (args) {send("CreateIdentityHandle");}});
+
+var CreateIdentityHandleEx = Module.findExportByName("msidcrl40.dll", "CreateIdentityHandleEx")
+Interceptor.attach(CreateIdentityHandleEx, {onLeave: function (args) {send("CreateIdentityHandleEx");}});
+
+var CreateLinkedIdentityHandle = Module.findExportByName("msidcrl40.dll", "CreateLinkedIdentityHandle")
+Interceptor.attach(CreateLinkedIdentityHandle, {onLeave: function (args) {send("CreateLinkedIdentityHandle");}});
+
+var DeProvisionDeviceId = Module.findExportByName("msidcrl40.dll", "DeProvisionDeviceId")
+Interceptor.attach(DeProvisionDeviceId, {onLeave: function (args) {send("DeProvisionDeviceId");}});
+
+var DecryptWithSessionKey = Module.findExportByName("msidcrl40.dll", "DecryptWithSessionKey")
+Interceptor.attach(DecryptWithSessionKey, {onLeave: function (args) {send("DecryptWithSessionKey");}});
+
+var DisassociateDeviceFromUser = Module.findExportByName("msidcrl40.dll", "DisassociateDeviceFromUser")
+Interceptor.attach(DisassociateDeviceFromUser, {onLeave: function (args) {send("DisassociateDeviceFromUser");}});
+
+var EncryptWithSessionKey = Module.findExportByName("msidcrl40.dll", "EncryptWithSessionKey")
+Interceptor.attach(EncryptWithSessionKey, {onLeave: function (args) {send("EncryptWithSessionKey");}});
+
+var EnumIdentitiesWithCachedCredentials = Module.findExportByName("msidcrl40.dll", "EnumIdentitiesWithCachedCredentials")
+Interceptor.attach(EnumIdentitiesWithCachedCredentials, {onLeave: function (args) {send("EnumIdentitiesWithCachedCredentials");}});
+
+var EnumerateCertificates = Module.findExportByName("msidcrl40.dll", "EnumerateCertificates")
+Interceptor.attach(EnumerateCertificates, {onLeave: function (args) {send("EnumerateCertificates");}});
+
+var EnumerateDeviceID = Module.findExportByName("msidcrl40.dll", "EnumerateDeviceID")
+Interceptor.attach(EnumerateDeviceID, {onLeave: function (args) {send("EnumerateDeviceID");}});
+
+var EnumerateUserAssociatedDevices = Module.findExportByName("msidcrl40.dll", "EnumerateUserAssociatedDevices")
+Interceptor.attach(EnumerateUserAssociatedDevices, {onLeave: function (args) {send("EnumerateUserAssociatedDevices");}});
+
+var FlushIDCRLTraceBuffer = Module.findExportByName("msidcrl40.dll", "FlushIDCRLTraceBuffer")
+Interceptor.attach(FlushIDCRLTraceBuffer, {onLeave: function (args) {send("FlushIDCRLTraceBuffer");}});
+
+var GenerateCertToken = Module.findExportByName("msidcrl40.dll", "GenerateCertToken")
+Interceptor.attach(GenerateCertToken, {onLeave: function (args) {send("GenerateCertToken");}});
+
+var GenerateDeviceToken = Module.findExportByName("msidcrl40.dll", "GenerateDeviceToken")
+Interceptor.attach(GenerateDeviceToken, {onLeave: function (args) {send("GenerateDeviceToken");}});
+
+var GetAssertion = Module.findExportByName("msidcrl40.dll", "GetAssertion")
+Interceptor.attach(GetAssertion, {onLeave: function (args) {send("GetAssertion");}});
+
+var GetAuthState = Module.findExportByName("msidcrl40.dll", "GetAuthState")
+Interceptor.attach(GetAuthState, {onLeave: function (args) {send("GetAuthState");}});
+
+var GetAuthStateEx = Module.findExportByName("msidcrl40.dll", "GetAuthStateEx")
+Interceptor.attach(GetAuthStateEx, {onLeave: function (args) {send("GetAuthStateEx");}});
+
+var GetAuthenticationStatus = Module.findExportByName("msidcrl40.dll", "GetAuthenticationStatus")
+Interceptor.attach(GetAuthenticationStatus, {onLeave: function (args) {send("GetAuthenticationStatus");}});
+
+var GetCertificate = Module.findExportByName("msidcrl40.dll", "GetCertificate")
+Interceptor.attach(GetCertificate, {onLeave: function (args) {send("GetCertificate");}});
+
+var GetConfigDWORDValue = Module.findExportByName("msidcrl40.dll", "GetConfigDWORDValue")
+Interceptor.attach(GetConfigDWORDValue, {onLeave: function (args) {send("GetConfigDWORDValue");}});
+
+var GetDefaultNoUISSOUser = Module.findExportByName("msidcrl40.dll", "GetDefaultNoUISSOUser")
+Interceptor.attach(GetDefaultNoUISSOUser, {onLeave: function (args) {send("GetDefaultNoUISSOUser");}});
+
+var GetDefaultUserForTarget = Module.findExportByName("msidcrl40.dll", "GetDefaultUserForTarget")
+Interceptor.attach(GetDefaultUserForTarget, {onLeave: function (args) {send("GetDefaultUserForTarget");}});
+
+var GetDeviceId = Module.findExportByName("msidcrl40.dll", "GetDeviceId")
+Interceptor.attach(GetDeviceId, {onLeave: function (args) {send("GetDeviceId");}});
+
+var GetDeviceIdEx = Module.findExportByName("msidcrl40.dll", "GetDeviceIdEx")
+Interceptor.attach(GetDeviceIdEx, {onLeave: function (args) {send("GetDeviceIdEx");}});
+
+var GetDeviceShortLivedToken = Module.findExportByName("msidcrl40.dll", "GetDeviceShortLivedToken")
+Interceptor.attach(GetDeviceShortLivedToken, {onLeave: function (args) {send("GetDeviceShortLivedToken");}});
+
+var GetExtendedError = Module.findExportByName("msidcrl40.dll", "GetExtendedError")
+Interceptor.attach(GetExtendedError, {onLeave: function (args) {send("GetExtendedError");}});
+
+var GetExtendedProperty = Module.findExportByName("msidcrl40.dll", "GetExtendedProperty")
+Interceptor.attach(GetExtendedProperty, {onLeave: function (args) {send("GetExtendedProperty");}});
+
+var GetHIPChallenge = Module.findExportByName("msidcrl40.dll", "GetHIPChallenge")
+Interceptor.attach(GetHIPChallenge, {onLeave: function (args) {send("GetHIPChallenge");}});
+
+var GetIdentityProperty = Module.findExportByName("msidcrl40.dll", "GetIdentityProperty")
+Interceptor.attach(GetIdentityProperty, {onLeave: function (args) {send("GetIdentityProperty");}});
+
+var GetIdentityPropertyByName = Module.findExportByName("msidcrl40.dll", "GetIdentityPropertyByName")
+Interceptor.attach(GetIdentityPropertyByName, {onLeave: function (args) {send("GetIdentityPropertyByName");}});
+
+var GetRealmInfo = Module.findExportByName("msidcrl40.dll", "GetRealmInfo")
+Interceptor.attach(GetRealmInfo, {onLeave: function (args) {send("GetRealmInfo");}});
+
+var GetResponseForHttpChallenge = Module.findExportByName("msidcrl40.dll", "GetResponseForHttpChallenge")
+Interceptor.attach(GetResponseForHttpChallenge, {onLeave: function (args) {send("GetResponseForHttpChallenge");}});
+
+var GetServiceConfig = Module.findExportByName("msidcrl40.dll", "GetServiceConfig")
+Interceptor.attach(GetServiceConfig, {onLeave: function (args) {send("GetServiceConfig");}});
+
+var GetUserExtendedProperty = Module.findExportByName("msidcrl40.dll", "GetUserExtendedProperty")
+Interceptor.attach(GetUserExtendedProperty, {onLeave: function (args) {send("GetUserExtendedProperty");}});
+
+var GetUsersFromSsoGroup = Module.findExportByName("msidcrl40.dll", "GetUsersFromSsoGroup")
+Interceptor.attach(GetUsersFromSsoGroup, {onLeave: function (args) {send("GetUsersFromSsoGroup");}});
+
+var GetWebAuthUrl = Module.findExportByName("msidcrl40.dll", "GetWebAuthUrl")
+Interceptor.attach(GetWebAuthUrl, {onLeave: function (args) {send("GetWebAuthUrl");}});
+
+var GetWebAuthUrlEx = Module.findExportByName("msidcrl40.dll", "GetWebAuthUrlEx")
+Interceptor.attach(GetWebAuthUrlEx, {onLeave: function (args) {send("GetWebAuthUrlEx");}});
+
+var HasPersistedCredential = Module.findExportByName("msidcrl40.dll", "HasPersistedCredential")
+Interceptor.attach(HasPersistedCredential, {onLeave: function (args) {send("HasPersistedCredential");}});
+
+var Initialize = Module.findExportByName("msidcrl40.dll", "Initialize")
+Interceptor.attach(Initialize, {onLeave: function (args) {send("Initialize");}});
+
+var InitializeApp = Module.findExportByName("msidcrl40.dll", "InitializeApp")
+Interceptor.attach(InitializeApp, {onLeave: function (args) {send("InitializeApp");}});
+
+var InitializeEx = Module.findExportByName("msidcrl40.dll", "InitializeEx")
+Interceptor.attach(InitializeEx, {onLeave: function (args) {send("InitializeEx");}});
+
+var InitializeIDCRLTraceBuffer = Module.findExportByName("msidcrl40.dll", "InitializeIDCRLTraceBuffer")
+Interceptor.attach(InitializeIDCRLTraceBuffer, {onLeave: function (args) {send("InitializeIDCRLTraceBuffer");}});
+
+var IsDeviceIDAdmin = Module.findExportByName("msidcrl40.dll", "IsDeviceIDAdmin")
+Interceptor.attach(IsDeviceIDAdmin, {onLeave: function (args) {send("IsDeviceIDAdmin");}});
+
+var IsMappedError = Module.findExportByName("msidcrl40.dll", "IsMappedError")
+Interceptor.attach(IsMappedError, {onLeave: function (args) {send("IsMappedError");}});
+
+var LogonIdentity = Module.findExportByName("msidcrl40.dll", "LogonIdentity")
+Interceptor.attach(LogonIdentity, {onLeave: function (args) {send("LogonIdentity");}});
+
+var LogonIdentityEx = Module.findExportByName("msidcrl40.dll", "LogonIdentityEx")
+Interceptor.attach(LogonIdentityEx, {onLeave: function (args) {send("LogonIdentityEx");}});
+
+var LogonIdentityExSSO = Module.findExportByName("msidcrl40.dll", "LogonIdentityExSSO")
+Interceptor.attach(LogonIdentityExSSO, {onLeave: function (args) {send("LogonIdentityExSSO");}});
+
+var LogonIdentityExWithUI = Module.findExportByName("msidcrl40.dll", "LogonIdentityExWithUI")
+Interceptor.attach(LogonIdentityExWithUI, {onLeave: function (args) {send("LogonIdentityExWithUI");}});
+
+var NextIdentity = Module.findExportByName("msidcrl40.dll", "NextIdentity")
+Interceptor.attach(NextIdentity, {onLeave: function (args) {send("NextIdentity");}});
+
+var OpenAuthenticatedBrowser = Module.findExportByName("msidcrl40.dll", "OpenAuthenticatedBrowser")
+Interceptor.attach(OpenAuthenticatedBrowser, {onLeave: function (args) {send("OpenAuthenticatedBrowser");}});
+
+var PassportFreeMemory = Module.findExportByName("msidcrl40.dll", "PassportFreeMemory")
+Interceptor.attach(PassportFreeMemory, {onLeave: function (args) {send("PassportFreeMemory");}});
+
+var PersistCredential = Module.findExportByName("msidcrl40.dll", "PersistCredential")
+Interceptor.attach(PersistCredential, {onLeave: function (args) {send("PersistCredential");}});
+
+var ProvisionDeviceId = Module.findExportByName("msidcrl40.dll", "ProvisionDeviceId")
+Interceptor.attach(ProvisionDeviceId, {onLeave: function (args) {send("ProvisionDeviceId");}});
+
+var RemoveChangeNotificationCallback = Module.findExportByName("msidcrl40.dll", "RemoveChangeNotificationCallback")
+Interceptor.attach(RemoveChangeNotificationCallback, {onLeave: function (args) {send("RemoveChangeNotificationCallback");}});
+
+var RemovePersistedCredential = Module.findExportByName("msidcrl40.dll", "RemovePersistedCredential")
+Interceptor.attach(RemovePersistedCredential, {onLeave: function (args) {send("RemovePersistedCredential");}});
+
+var RemoveUserFromSsoGroup = Module.findExportByName("msidcrl40.dll", "RemoveUserFromSsoGroup")
+Interceptor.attach(RemoveUserFromSsoGroup, {onLeave: function (args) {send("RemoveUserFromSsoGroup");}});
+
+var RenewDeviceId = Module.findExportByName("msidcrl40.dll", "RenewDeviceId")
+Interceptor.attach(RenewDeviceId, {onLeave: function (args) {send("RenewDeviceId");}});
+
+var SendOneTimeCode = Module.findExportByName("msidcrl40.dll", "SendOneTimeCode")
+Interceptor.attach(SendOneTimeCode, {onLeave: function (args) {send("SendOneTimeCode");}});
+
+var SetChangeNotificationCallback = Module.findExportByName("msidcrl40.dll", "SetChangeNotificationCallback")
+Interceptor.attach(SetChangeNotificationCallback, {onLeave: function (args) {send("SetChangeNotificationCallback");}});
+
+var SetCredential = Module.findExportByName("msidcrl40.dll", "SetCredential")
+Interceptor.attach(SetCredential, {onLeave: function (args) {send("SetCredential");}});
+
+var SetDefaultUserForTarget = Module.findExportByName("msidcrl40.dll", "SetDefaultUserForTarget")
+Interceptor.attach(SetDefaultUserForTarget, {onLeave: function (args) {send("SetDefaultUserForTarget");}});
+
+var SetDeviceConsent = Module.findExportByName("msidcrl40.dll", "SetDeviceConsent")
+Interceptor.attach(SetDeviceConsent, {onLeave: function (args) {send("SetDeviceConsent");}});
+
+var SetExtendedProperty = Module.findExportByName("msidcrl40.dll", "SetExtendedProperty")
+Interceptor.attach(SetExtendedProperty, {onLeave: function (args) {send("SetExtendedProperty");}});
+
+var SetHIPSolution = Module.findExportByName("msidcrl40.dll", "SetHIPSolution")
+Interceptor.attach(SetHIPSolution, {onLeave: function (args) {send("SetHIPSolution");}});
+
+var SetIdcrlOptions = Module.findExportByName("msidcrl40.dll", "SetIdcrlOptions")
+Interceptor.attach(SetIdcrlOptions, {onLeave: function (args) {send("SetIdcrlOptions");}});
+
+var SetIdentityCallback = Module.findExportByName("msidcrl40.dll", "SetIdentityCallback")
+Interceptor.attach(SetIdentityCallback, {onLeave: function (args) {send("SetIdentityCallback");}});
+
+var SetIdentityProperty = Module.findExportByName("msidcrl40.dll", "SetIdentityProperty")
+Interceptor.attach(SetIdentityProperty, {onLeave: function (args) {send("SetIdentityProperty");}});
+
+var SetUserExtendedProperty = Module.findExportByName("msidcrl40.dll", "SetUserExtendedProperty")
+Interceptor.attach(SetUserExtendedProperty, {onLeave: function (args) {send("SetUserExtendedProperty");}});
+
+var StartTracing = Module.findExportByName("msidcrl40.dll", "StartTracing")
+Interceptor.attach(StartTracing, {onLeave: function (args) {send("StartTracing");}});
+
+var StopTracing = Module.findExportByName("msidcrl40.dll", "StopTracing")
+Interceptor.attach(StopTracing, {onLeave: function (args) {send("StopTracing");}});
+
+var UICollectCredential = Module.findExportByName("msidcrl40.dll", "UICollectCredential")
+Interceptor.attach(UICollectCredential, {onLeave: function (args) {send("UICollectCredential");}});
+
+var UIEndWaitDialog = Module.findExportByName("msidcrl40.dll", "UIEndWaitDialog")
+Interceptor.attach(UIEndWaitDialog, {onLeave: function (args) {send("UIEndWaitDialog");}});
+
+var UIShowWaitDialog = Module.findExportByName("msidcrl40.dll", "UIShowWaitDialog")
+Interceptor.attach(UIShowWaitDialog, {onLeave: function (args) {send("UIShowWaitDialog");}});
+
+var UnPackErrorBlob = Module.findExportByName("msidcrl40.dll", "UnPackErrorBlob")
+Interceptor.attach(UnPackErrorBlob, {onLeave: function (args) {send("UnPackErrorBlob");}});
+
+var Uninitialize = Module.findExportByName("msidcrl40.dll", "Uninitialize")
+Interceptor.attach(Uninitialize, {onLeave: function (args) {send("Uninitialize");}});
+
+var UpdateUserAssociatedDeviceProperties = Module.findExportByName("msidcrl40.dll", "UpdateUserAssociatedDeviceProperties")
+Interceptor.attach(UpdateUserAssociatedDeviceProperties, {onLeave: function (args) {send("UpdateUserAssociatedDeviceProperties");}});
+
+var VerifyAssertion = Module.findExportByName("msidcrl40.dll", "VerifyAssertion")
+Interceptor.attach(VerifyAssertion, {onLeave: function (args) {send("VerifyAssertion");}});
+
+var VerifyCertificate = Module.findExportByName("msidcrl40.dll", "VerifyCertificate")
+Interceptor.attach(VerifyCertificate, {onLeave: function (args) {send("VerifyCertificate");}});
+

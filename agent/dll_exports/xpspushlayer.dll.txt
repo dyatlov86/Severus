@@ -1,0 +1,3 @@
+var DllCanUnloadNow = Module.findExportByName("xpspushlayer.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+

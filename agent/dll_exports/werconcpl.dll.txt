@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("werconcpl.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("werconcpl.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var LaunchErcAppW = Module.findExportByName("werconcpl.dll", "LaunchErcAppW")
+Interceptor.attach(LaunchErcAppW, {onLeave: function (args) {send("LaunchErcAppW");}});
+
+var ShowCEIPDialogW = Module.findExportByName("werconcpl.dll", "ShowCEIPDialogW")
+Interceptor.attach(ShowCEIPDialogW, {onLeave: function (args) {send("ShowCEIPDialogW");}});
+

@@ -1,0 +1,732 @@
+var DllCanUnloadNow = Module.findExportByName("FirewallAPI.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("FirewallAPI.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("FirewallAPI.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("FirewallAPI.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var FWAddAuthenticationSet = Module.findExportByName("FirewallAPI.dll", "FWAddAuthenticationSet")
+Interceptor.attach(FWAddAuthenticationSet, {onLeave: function (args) {send("FWAddAuthenticationSet");}});
+
+var FWAddConnectionSecurityRule = Module.findExportByName("FirewallAPI.dll", "FWAddConnectionSecurityRule")
+Interceptor.attach(FWAddConnectionSecurityRule, {onLeave: function (args) {send("FWAddConnectionSecurityRule");}});
+
+var FWAddCryptoSet = Module.findExportByName("FirewallAPI.dll", "FWAddCryptoSet")
+Interceptor.attach(FWAddCryptoSet, {onLeave: function (args) {send("FWAddCryptoSet");}});
+
+var FWAddDynamicKeywordAddress0 = Module.findExportByName("FirewallAPI.dll", "FWAddDynamicKeywordAddress0")
+Interceptor.attach(FWAddDynamicKeywordAddress0, {onLeave: function (args) {send("FWAddDynamicKeywordAddress0");}});
+
+var FWAddDynamicKeywordAddress_Int = Module.findExportByName("FirewallAPI.dll", "FWAddDynamicKeywordAddress_Int")
+Interceptor.attach(FWAddDynamicKeywordAddress_Int, {onLeave: function (args) {send("FWAddDynamicKeywordAddress_Int");}});
+
+var FWAddFirewallRule = Module.findExportByName("FirewallAPI.dll", "FWAddFirewallRule")
+Interceptor.attach(FWAddFirewallRule, {onLeave: function (args) {send("FWAddFirewallRule");}});
+
+var FWAddHyperVRule0 = Module.findExportByName("FirewallAPI.dll", "FWAddHyperVRule0")
+Interceptor.attach(FWAddHyperVRule0, {onLeave: function (args) {send("FWAddHyperVRule0");}});
+
+var FWAddHyperVRule1 = Module.findExportByName("FirewallAPI.dll", "FWAddHyperVRule1")
+Interceptor.attach(FWAddHyperVRule1, {onLeave: function (args) {send("FWAddHyperVRule1");}});
+
+var FWAddMainModeRule = Module.findExportByName("FirewallAPI.dll", "FWAddMainModeRule")
+Interceptor.attach(FWAddMainModeRule, {onLeave: function (args) {send("FWAddMainModeRule");}});
+
+var FWAddSecurityRealm = Module.findExportByName("FirewallAPI.dll", "FWAddSecurityRealm")
+Interceptor.attach(FWAddSecurityRealm, {onLeave: function (args) {send("FWAddSecurityRealm");}});
+
+var FWChangeNotificationCreate = Module.findExportByName("FirewallAPI.dll", "FWChangeNotificationCreate")
+Interceptor.attach(FWChangeNotificationCreate, {onLeave: function (args) {send("FWChangeNotificationCreate");}});
+
+var FWChangeNotificationDestroy = Module.findExportByName("FirewallAPI.dll", "FWChangeNotificationDestroy")
+Interceptor.attach(FWChangeNotificationDestroy, {onLeave: function (args) {send("FWChangeNotificationDestroy");}});
+
+var FWChangeTransactionalState = Module.findExportByName("FirewallAPI.dll", "FWChangeTransactionalState")
+Interceptor.attach(FWChangeTransactionalState, {onLeave: function (args) {send("FWChangeTransactionalState");}});
+
+var FWClosePolicyStore = Module.findExportByName("FirewallAPI.dll", "FWClosePolicyStore")
+Interceptor.attach(FWClosePolicyStore, {onLeave: function (args) {send("FWClosePolicyStore");}});
+
+var FWCopyAuthenticationSet = Module.findExportByName("FirewallAPI.dll", "FWCopyAuthenticationSet")
+Interceptor.attach(FWCopyAuthenticationSet, {onLeave: function (args) {send("FWCopyAuthenticationSet");}});
+
+var FWCopyConnectionSecurityRule = Module.findExportByName("FirewallAPI.dll", "FWCopyConnectionSecurityRule")
+Interceptor.attach(FWCopyConnectionSecurityRule, {onLeave: function (args) {send("FWCopyConnectionSecurityRule");}});
+
+var FWCopyCryptoSet = Module.findExportByName("FirewallAPI.dll", "FWCopyCryptoSet")
+Interceptor.attach(FWCopyCryptoSet, {onLeave: function (args) {send("FWCopyCryptoSet");}});
+
+var FWCopyFirewallRule = Module.findExportByName("FirewallAPI.dll", "FWCopyFirewallRule")
+Interceptor.attach(FWCopyFirewallRule, {onLeave: function (args) {send("FWCopyFirewallRule");}});
+
+var FWCreateHyperVPort0 = Module.findExportByName("FirewallAPI.dll", "FWCreateHyperVPort0")
+Interceptor.attach(FWCreateHyperVPort0, {onLeave: function (args) {send("FWCreateHyperVPort0");}});
+
+var FWCreateHyperVPort1 = Module.findExportByName("FirewallAPI.dll", "FWCreateHyperVPort1")
+Interceptor.attach(FWCreateHyperVPort1, {onLeave: function (args) {send("FWCreateHyperVPort1");}});
+
+var FWDeleteAllAuthenticationSets = Module.findExportByName("FirewallAPI.dll", "FWDeleteAllAuthenticationSets")
+Interceptor.attach(FWDeleteAllAuthenticationSets, {onLeave: function (args) {send("FWDeleteAllAuthenticationSets");}});
+
+var FWDeleteAllConnectionSecurityRules = Module.findExportByName("FirewallAPI.dll", "FWDeleteAllConnectionSecurityRules")
+Interceptor.attach(FWDeleteAllConnectionSecurityRules, {onLeave: function (args) {send("FWDeleteAllConnectionSecurityRules");}});
+
+var FWDeleteAllCryptoSets = Module.findExportByName("FirewallAPI.dll", "FWDeleteAllCryptoSets")
+Interceptor.attach(FWDeleteAllCryptoSets, {onLeave: function (args) {send("FWDeleteAllCryptoSets");}});
+
+var FWDeleteAllFirewallRules = Module.findExportByName("FirewallAPI.dll", "FWDeleteAllFirewallRules")
+Interceptor.attach(FWDeleteAllFirewallRules, {onLeave: function (args) {send("FWDeleteAllFirewallRules");}});
+
+var FWDeleteAllMainModeRules = Module.findExportByName("FirewallAPI.dll", "FWDeleteAllMainModeRules")
+Interceptor.attach(FWDeleteAllMainModeRules, {onLeave: function (args) {send("FWDeleteAllMainModeRules");}});
+
+var FWDeleteAuthenticationSet = Module.findExportByName("FirewallAPI.dll", "FWDeleteAuthenticationSet")
+Interceptor.attach(FWDeleteAuthenticationSet, {onLeave: function (args) {send("FWDeleteAuthenticationSet");}});
+
+var FWDeleteConnectionSecurityRule = Module.findExportByName("FirewallAPI.dll", "FWDeleteConnectionSecurityRule")
+Interceptor.attach(FWDeleteConnectionSecurityRule, {onLeave: function (args) {send("FWDeleteConnectionSecurityRule");}});
+
+var FWDeleteCryptoSet = Module.findExportByName("FirewallAPI.dll", "FWDeleteCryptoSet")
+Interceptor.attach(FWDeleteCryptoSet, {onLeave: function (args) {send("FWDeleteCryptoSet");}});
+
+var FWDeleteDynamicKeywordAddress0 = Module.findExportByName("FirewallAPI.dll", "FWDeleteDynamicKeywordAddress0")
+Interceptor.attach(FWDeleteDynamicKeywordAddress0, {onLeave: function (args) {send("FWDeleteDynamicKeywordAddress0");}});
+
+var FWDeleteDynamicKeywordAddress_Int = Module.findExportByName("FirewallAPI.dll", "FWDeleteDynamicKeywordAddress_Int")
+Interceptor.attach(FWDeleteDynamicKeywordAddress_Int, {onLeave: function (args) {send("FWDeleteDynamicKeywordAddress_Int");}});
+
+var FWDeleteFirewallRule = Module.findExportByName("FirewallAPI.dll", "FWDeleteFirewallRule")
+Interceptor.attach(FWDeleteFirewallRule, {onLeave: function (args) {send("FWDeleteFirewallRule");}});
+
+var FWDeleteHyperVPort0 = Module.findExportByName("FirewallAPI.dll", "FWDeleteHyperVPort0")
+Interceptor.attach(FWDeleteHyperVPort0, {onLeave: function (args) {send("FWDeleteHyperVPort0");}});
+
+var FWDeleteHyperVRule0 = Module.findExportByName("FirewallAPI.dll", "FWDeleteHyperVRule0")
+Interceptor.attach(FWDeleteHyperVRule0, {onLeave: function (args) {send("FWDeleteHyperVRule0");}});
+
+var FWDeleteMainModeRule = Module.findExportByName("FirewallAPI.dll", "FWDeleteMainModeRule")
+Interceptor.attach(FWDeleteMainModeRule, {onLeave: function (args) {send("FWDeleteMainModeRule");}});
+
+var FWDeletePhase1SAs = Module.findExportByName("FirewallAPI.dll", "FWDeletePhase1SAs")
+Interceptor.attach(FWDeletePhase1SAs, {onLeave: function (args) {send("FWDeletePhase1SAs");}});
+
+var FWDeletePhase2SAs = Module.findExportByName("FirewallAPI.dll", "FWDeletePhase2SAs")
+Interceptor.attach(FWDeletePhase2SAs, {onLeave: function (args) {send("FWDeletePhase2SAs");}});
+
+var FWDeleteSecurityRealm = Module.findExportByName("FirewallAPI.dll", "FWDeleteSecurityRealm")
+Interceptor.attach(FWDeleteSecurityRealm, {onLeave: function (args) {send("FWDeleteSecurityRealm");}});
+
+var FWDiagGetAppList = Module.findExportByName("FirewallAPI.dll", "FWDiagGetAppList")
+Interceptor.attach(FWDiagGetAppList, {onLeave: function (args) {send("FWDiagGetAppList");}});
+
+var FWEnumAdapters = Module.findExportByName("FirewallAPI.dll", "FWEnumAdapters")
+Interceptor.attach(FWEnumAdapters, {onLeave: function (args) {send("FWEnumAdapters");}});
+
+var FWEnumAuthenticationSets = Module.findExportByName("FirewallAPI.dll", "FWEnumAuthenticationSets")
+Interceptor.attach(FWEnumAuthenticationSets, {onLeave: function (args) {send("FWEnumAuthenticationSets");}});
+
+var FWEnumConnectionSecurityRules = Module.findExportByName("FirewallAPI.dll", "FWEnumConnectionSecurityRules")
+Interceptor.attach(FWEnumConnectionSecurityRules, {onLeave: function (args) {send("FWEnumConnectionSecurityRules");}});
+
+var FWEnumCryptoSets = Module.findExportByName("FirewallAPI.dll", "FWEnumCryptoSets")
+Interceptor.attach(FWEnumCryptoSets, {onLeave: function (args) {send("FWEnumCryptoSets");}});
+
+var FWEnumDynamicKeywordAddressById0 = Module.findExportByName("FirewallAPI.dll", "FWEnumDynamicKeywordAddressById0")
+Interceptor.attach(FWEnumDynamicKeywordAddressById0, {onLeave: function (args) {send("FWEnumDynamicKeywordAddressById0");}});
+
+var FWEnumDynamicKeywordAddressesByType0 = Module.findExportByName("FirewallAPI.dll", "FWEnumDynamicKeywordAddressesByType0")
+Interceptor.attach(FWEnumDynamicKeywordAddressesByType0, {onLeave: function (args) {send("FWEnumDynamicKeywordAddressesByType0");}});
+
+var FWEnumDynamicKeywordAddresses_Int = Module.findExportByName("FirewallAPI.dll", "FWEnumDynamicKeywordAddresses_Int")
+Interceptor.attach(FWEnumDynamicKeywordAddresses_Int, {onLeave: function (args) {send("FWEnumDynamicKeywordAddresses_Int");}});
+
+var FWEnumFirewallRules = Module.findExportByName("FirewallAPI.dll", "FWEnumFirewallRules")
+Interceptor.attach(FWEnumFirewallRules, {onLeave: function (args) {send("FWEnumFirewallRules");}});
+
+var FWEnumHyperVPorts0 = Module.findExportByName("FirewallAPI.dll", "FWEnumHyperVPorts0")
+Interceptor.attach(FWEnumHyperVPorts0, {onLeave: function (args) {send("FWEnumHyperVPorts0");}});
+
+var FWEnumHyperVPorts1 = Module.findExportByName("FirewallAPI.dll", "FWEnumHyperVPorts1")
+Interceptor.attach(FWEnumHyperVPorts1, {onLeave: function (args) {send("FWEnumHyperVPorts1");}});
+
+var FWEnumHyperVRules0 = Module.findExportByName("FirewallAPI.dll", "FWEnumHyperVRules0")
+Interceptor.attach(FWEnumHyperVRules0, {onLeave: function (args) {send("FWEnumHyperVRules0");}});
+
+var FWEnumHyperVRules1 = Module.findExportByName("FirewallAPI.dll", "FWEnumHyperVRules1")
+Interceptor.attach(FWEnumHyperVRules1, {onLeave: function (args) {send("FWEnumHyperVRules1");}});
+
+var FWEnumHyperVVMCreators0 = Module.findExportByName("FirewallAPI.dll", "FWEnumHyperVVMCreators0")
+Interceptor.attach(FWEnumHyperVVMCreators0, {onLeave: function (args) {send("FWEnumHyperVVMCreators0");}});
+
+var FWEnumMainModeRules = Module.findExportByName("FirewallAPI.dll", "FWEnumMainModeRules")
+Interceptor.attach(FWEnumMainModeRules, {onLeave: function (args) {send("FWEnumMainModeRules");}});
+
+var FWEnumNetworks = Module.findExportByName("FirewallAPI.dll", "FWEnumNetworks")
+Interceptor.attach(FWEnumNetworks, {onLeave: function (args) {send("FWEnumNetworks");}});
+
+var FWEnumPhase1SAs = Module.findExportByName("FirewallAPI.dll", "FWEnumPhase1SAs")
+Interceptor.attach(FWEnumPhase1SAs, {onLeave: function (args) {send("FWEnumPhase1SAs");}});
+
+var FWEnumPhase2SAs = Module.findExportByName("FirewallAPI.dll", "FWEnumPhase2SAs")
+Interceptor.attach(FWEnumPhase2SAs, {onLeave: function (args) {send("FWEnumPhase2SAs");}});
+
+var FWEnumProducts = Module.findExportByName("FirewallAPI.dll", "FWEnumProducts")
+Interceptor.attach(FWEnumProducts, {onLeave: function (args) {send("FWEnumProducts");}});
+
+var FWExportPolicy = Module.findExportByName("FirewallAPI.dll", "FWExportPolicy")
+Interceptor.attach(FWExportPolicy, {onLeave: function (args) {send("FWExportPolicy");}});
+
+var FWFreeAdapters = Module.findExportByName("FirewallAPI.dll", "FWFreeAdapters")
+Interceptor.attach(FWFreeAdapters, {onLeave: function (args) {send("FWFreeAdapters");}});
+
+var FWFreeAuthenticationSet = Module.findExportByName("FirewallAPI.dll", "FWFreeAuthenticationSet")
+Interceptor.attach(FWFreeAuthenticationSet, {onLeave: function (args) {send("FWFreeAuthenticationSet");}});
+
+var FWFreeAuthenticationSets = Module.findExportByName("FirewallAPI.dll", "FWFreeAuthenticationSets")
+Interceptor.attach(FWFreeAuthenticationSets, {onLeave: function (args) {send("FWFreeAuthenticationSets");}});
+
+var FWFreeAuthenticationSetsByHandle = Module.findExportByName("FirewallAPI.dll", "FWFreeAuthenticationSetsByHandle")
+Interceptor.attach(FWFreeAuthenticationSetsByHandle, {onLeave: function (args) {send("FWFreeAuthenticationSetsByHandle");}});
+
+var FWFreeConnectionSecurityRule = Module.findExportByName("FirewallAPI.dll", "FWFreeConnectionSecurityRule")
+Interceptor.attach(FWFreeConnectionSecurityRule, {onLeave: function (args) {send("FWFreeConnectionSecurityRule");}});
+
+var FWFreeConnectionSecurityRules = Module.findExportByName("FirewallAPI.dll", "FWFreeConnectionSecurityRules")
+Interceptor.attach(FWFreeConnectionSecurityRules, {onLeave: function (args) {send("FWFreeConnectionSecurityRules");}});
+
+var FWFreeConnectionSecurityRulesByHandle = Module.findExportByName("FirewallAPI.dll", "FWFreeConnectionSecurityRulesByHandle")
+Interceptor.attach(FWFreeConnectionSecurityRulesByHandle, {onLeave: function (args) {send("FWFreeConnectionSecurityRulesByHandle");}});
+
+var FWFreeCryptoSet = Module.findExportByName("FirewallAPI.dll", "FWFreeCryptoSet")
+Interceptor.attach(FWFreeCryptoSet, {onLeave: function (args) {send("FWFreeCryptoSet");}});
+
+var FWFreeCryptoSets = Module.findExportByName("FirewallAPI.dll", "FWFreeCryptoSets")
+Interceptor.attach(FWFreeCryptoSets, {onLeave: function (args) {send("FWFreeCryptoSets");}});
+
+var FWFreeCryptoSetsByHandle = Module.findExportByName("FirewallAPI.dll", "FWFreeCryptoSetsByHandle")
+Interceptor.attach(FWFreeCryptoSetsByHandle, {onLeave: function (args) {send("FWFreeCryptoSetsByHandle");}});
+
+var FWFreeDiagAppList = Module.findExportByName("FirewallAPI.dll", "FWFreeDiagAppList")
+Interceptor.attach(FWFreeDiagAppList, {onLeave: function (args) {send("FWFreeDiagAppList");}});
+
+var FWFreeDynamicKeywordAddressData0 = Module.findExportByName("FirewallAPI.dll", "FWFreeDynamicKeywordAddressData0")
+Interceptor.attach(FWFreeDynamicKeywordAddressData0, {onLeave: function (args) {send("FWFreeDynamicKeywordAddressData0");}});
+
+var FWFreeFirewallRule = Module.findExportByName("FirewallAPI.dll", "FWFreeFirewallRule")
+Interceptor.attach(FWFreeFirewallRule, {onLeave: function (args) {send("FWFreeFirewallRule");}});
+
+var FWFreeFirewallRules = Module.findExportByName("FirewallAPI.dll", "FWFreeFirewallRules")
+Interceptor.attach(FWFreeFirewallRules, {onLeave: function (args) {send("FWFreeFirewallRules");}});
+
+var FWFreeFirewallRulesByHandle = Module.findExportByName("FirewallAPI.dll", "FWFreeFirewallRulesByHandle")
+Interceptor.attach(FWFreeFirewallRulesByHandle, {onLeave: function (args) {send("FWFreeFirewallRulesByHandle");}});
+
+var FWFreeFirewallRulesOld = Module.findExportByName("FirewallAPI.dll", "FWFreeFirewallRulesOld")
+Interceptor.attach(FWFreeFirewallRulesOld, {onLeave: function (args) {send("FWFreeFirewallRulesOld");}});
+
+var FWFreeHyperVPorts0 = Module.findExportByName("FirewallAPI.dll", "FWFreeHyperVPorts0")
+Interceptor.attach(FWFreeHyperVPorts0, {onLeave: function (args) {send("FWFreeHyperVPorts0");}});
+
+var FWFreeHyperVPorts1 = Module.findExportByName("FirewallAPI.dll", "FWFreeHyperVPorts1")
+Interceptor.attach(FWFreeHyperVPorts1, {onLeave: function (args) {send("FWFreeHyperVPorts1");}});
+
+var FWFreeHyperVRules0 = Module.findExportByName("FirewallAPI.dll", "FWFreeHyperVRules0")
+Interceptor.attach(FWFreeHyperVRules0, {onLeave: function (args) {send("FWFreeHyperVRules0");}});
+
+var FWFreeHyperVRules1 = Module.findExportByName("FirewallAPI.dll", "FWFreeHyperVRules1")
+Interceptor.attach(FWFreeHyperVRules1, {onLeave: function (args) {send("FWFreeHyperVRules1");}});
+
+var FWFreeHyperVVMCreators0 = Module.findExportByName("FirewallAPI.dll", "FWFreeHyperVVMCreators0")
+Interceptor.attach(FWFreeHyperVVMCreators0, {onLeave: function (args) {send("FWFreeHyperVVMCreators0");}});
+
+var FWFreeMainModeRule = Module.findExportByName("FirewallAPI.dll", "FWFreeMainModeRule")
+Interceptor.attach(FWFreeMainModeRule, {onLeave: function (args) {send("FWFreeMainModeRule");}});
+
+var FWFreeMainModeRules = Module.findExportByName("FirewallAPI.dll", "FWFreeMainModeRules")
+Interceptor.attach(FWFreeMainModeRules, {onLeave: function (args) {send("FWFreeMainModeRules");}});
+
+var FWFreeMainModeRulesByHandle = Module.findExportByName("FirewallAPI.dll", "FWFreeMainModeRulesByHandle")
+Interceptor.attach(FWFreeMainModeRulesByHandle, {onLeave: function (args) {send("FWFreeMainModeRulesByHandle");}});
+
+var FWFreeNetworks = Module.findExportByName("FirewallAPI.dll", "FWFreeNetworks")
+Interceptor.attach(FWFreeNetworks, {onLeave: function (args) {send("FWFreeNetworks");}});
+
+var FWFreePhase1SAs = Module.findExportByName("FirewallAPI.dll", "FWFreePhase1SAs")
+Interceptor.attach(FWFreePhase1SAs, {onLeave: function (args) {send("FWFreePhase1SAs");}});
+
+var FWFreePhase2SAs = Module.findExportByName("FirewallAPI.dll", "FWFreePhase2SAs")
+Interceptor.attach(FWFreePhase2SAs, {onLeave: function (args) {send("FWFreePhase2SAs");}});
+
+var FWFreeProducts = Module.findExportByName("FirewallAPI.dll", "FWFreeProducts")
+Interceptor.attach(FWFreeProducts, {onLeave: function (args) {send("FWFreeProducts");}});
+
+var FWGetConfig = Module.findExportByName("FirewallAPI.dll", "FWGetConfig")
+Interceptor.attach(FWGetConfig, {onLeave: function (args) {send("FWGetConfig");}});
+
+var FWGetConfig2 = Module.findExportByName("FirewallAPI.dll", "FWGetConfig2")
+Interceptor.attach(FWGetConfig2, {onLeave: function (args) {send("FWGetConfig2");}});
+
+var FWGetGlobalConfig = Module.findExportByName("FirewallAPI.dll", "FWGetGlobalConfig")
+Interceptor.attach(FWGetGlobalConfig, {onLeave: function (args) {send("FWGetGlobalConfig");}});
+
+var FWGetGlobalConfig2 = Module.findExportByName("FirewallAPI.dll", "FWGetGlobalConfig2")
+Interceptor.attach(FWGetGlobalConfig2, {onLeave: function (args) {send("FWGetGlobalConfig2");}});
+
+var FWGetGlobalConfig3 = Module.findExportByName("FirewallAPI.dll", "FWGetGlobalConfig3")
+Interceptor.attach(FWGetGlobalConfig3, {onLeave: function (args) {send("FWGetGlobalConfig3");}});
+
+var FWGetHyperVProfileConfig0 = Module.findExportByName("FirewallAPI.dll", "FWGetHyperVProfileConfig0")
+Interceptor.attach(FWGetHyperVProfileConfig0, {onLeave: function (args) {send("FWGetHyperVProfileConfig0");}});
+
+var FWGetHyperVVMConfig0 = Module.findExportByName("FirewallAPI.dll", "FWGetHyperVVMConfig0")
+Interceptor.attach(FWGetHyperVVMConfig0, {onLeave: function (args) {send("FWGetHyperVVMConfig0");}});
+
+var FWGetIndicatedPortInUse = Module.findExportByName("FirewallAPI.dll", "FWGetIndicatedPortInUse")
+Interceptor.attach(FWGetIndicatedPortInUse, {onLeave: function (args) {send("FWGetIndicatedPortInUse");}});
+
+var FWImportPolicy = Module.findExportByName("FirewallAPI.dll", "FWImportPolicy")
+Interceptor.attach(FWImportPolicy, {onLeave: function (args) {send("FWImportPolicy");}});
+
+var FWIndicatePortInUse = Module.findExportByName("FirewallAPI.dll", "FWIndicatePortInUse")
+Interceptor.attach(FWIndicatePortInUse, {onLeave: function (args) {send("FWIndicatePortInUse");}});
+
+var FWIndicateProxyForUrl = Module.findExportByName("FirewallAPI.dll", "FWIndicateProxyForUrl")
+Interceptor.attach(FWIndicateProxyForUrl, {onLeave: function (args) {send("FWIndicateProxyForUrl");}});
+
+var FWIndicateProxyResolverRefresh = Module.findExportByName("FirewallAPI.dll", "FWIndicateProxyResolverRefresh")
+Interceptor.attach(FWIndicateProxyResolverRefresh, {onLeave: function (args) {send("FWIndicateProxyResolverRefresh");}});
+
+var FWIndicateTupleInUse = Module.findExportByName("FirewallAPI.dll", "FWIndicateTupleInUse")
+Interceptor.attach(FWIndicateTupleInUse, {onLeave: function (args) {send("FWIndicateTupleInUse");}});
+
+var FWIndicateTupleInUse2 = Module.findExportByName("FirewallAPI.dll", "FWIndicateTupleInUse2")
+Interceptor.attach(FWIndicateTupleInUse2, {onLeave: function (args) {send("FWIndicateTupleInUse2");}});
+
+var FWIsTargetAProxy = Module.findExportByName("FirewallAPI.dll", "FWIsTargetAProxy")
+Interceptor.attach(FWIsTargetAProxy, {onLeave: function (args) {send("FWIsTargetAProxy");}});
+
+var FWOpenPolicyStore = Module.findExportByName("FirewallAPI.dll", "FWOpenPolicyStore")
+Interceptor.attach(FWOpenPolicyStore, {onLeave: function (args) {send("FWOpenPolicyStore");}});
+
+var FWQueryAuthenticationSets = Module.findExportByName("FirewallAPI.dll", "FWQueryAuthenticationSets")
+Interceptor.attach(FWQueryAuthenticationSets, {onLeave: function (args) {send("FWQueryAuthenticationSets");}});
+
+var FWQueryConnectionSecurityRules = Module.findExportByName("FirewallAPI.dll", "FWQueryConnectionSecurityRules")
+Interceptor.attach(FWQueryConnectionSecurityRules, {onLeave: function (args) {send("FWQueryConnectionSecurityRules");}});
+
+var FWQueryCryptoSets = Module.findExportByName("FirewallAPI.dll", "FWQueryCryptoSets")
+Interceptor.attach(FWQueryCryptoSets, {onLeave: function (args) {send("FWQueryCryptoSets");}});
+
+var FWQueryFirewallRules = Module.findExportByName("FirewallAPI.dll", "FWQueryFirewallRules")
+Interceptor.attach(FWQueryFirewallRules, {onLeave: function (args) {send("FWQueryFirewallRules");}});
+
+var FWQueryIsolationType = Module.findExportByName("FirewallAPI.dll", "FWQueryIsolationType")
+Interceptor.attach(FWQueryIsolationType, {onLeave: function (args) {send("FWQueryIsolationType");}});
+
+var FWQueryMainModeRules = Module.findExportByName("FirewallAPI.dll", "FWQueryMainModeRules")
+Interceptor.attach(FWQueryMainModeRules, {onLeave: function (args) {send("FWQueryMainModeRules");}});
+
+var FWRefreshHyperVPorts0 = Module.findExportByName("FirewallAPI.dll", "FWRefreshHyperVPorts0")
+Interceptor.attach(FWRefreshHyperVPorts0, {onLeave: function (args) {send("FWRefreshHyperVPorts0");}});
+
+var FWRegisterHyperVVMCreator0 = Module.findExportByName("FirewallAPI.dll", "FWRegisterHyperVVMCreator0")
+Interceptor.attach(FWRegisterHyperVVMCreator0, {onLeave: function (args) {send("FWRegisterHyperVVMCreator0");}});
+
+var FWRegisterProduct = Module.findExportByName("FirewallAPI.dll", "FWRegisterProduct")
+Interceptor.attach(FWRegisterProduct, {onLeave: function (args) {send("FWRegisterProduct");}});
+
+var FWResetIndicatedPortInUse = Module.findExportByName("FirewallAPI.dll", "FWResetIndicatedPortInUse")
+Interceptor.attach(FWResetIndicatedPortInUse, {onLeave: function (args) {send("FWResetIndicatedPortInUse");}});
+
+var FWResetIndicatedTupleInUse = Module.findExportByName("FirewallAPI.dll", "FWResetIndicatedTupleInUse")
+Interceptor.attach(FWResetIndicatedTupleInUse, {onLeave: function (args) {send("FWResetIndicatedTupleInUse");}});
+
+var FWRestoreDefaults = Module.findExportByName("FirewallAPI.dll", "FWRestoreDefaults")
+Interceptor.attach(FWRestoreDefaults, {onLeave: function (args) {send("FWRestoreDefaults");}});
+
+var FWRestoreGPODefaults = Module.findExportByName("FirewallAPI.dll", "FWRestoreGPODefaults")
+Interceptor.attach(FWRestoreGPODefaults, {onLeave: function (args) {send("FWRestoreGPODefaults");}});
+
+var FWRevertTransaction = Module.findExportByName("FirewallAPI.dll", "FWRevertTransaction")
+Interceptor.attach(FWRevertTransaction, {onLeave: function (args) {send("FWRevertTransaction");}});
+
+var FWRuleDuplicateStatusByRuleID = Module.findExportByName("FirewallAPI.dll", "FWRuleDuplicateStatusByRuleID")
+Interceptor.attach(FWRuleDuplicateStatusByRuleID, {onLeave: function (args) {send("FWRuleDuplicateStatusByRuleID");}});
+
+var FWSelectConSecRule = Module.findExportByName("FirewallAPI.dll", "FWSelectConSecRule")
+Interceptor.attach(FWSelectConSecRule, {onLeave: function (args) {send("FWSelectConSecRule");}});
+
+var FWSetAuthenticationSet = Module.findExportByName("FirewallAPI.dll", "FWSetAuthenticationSet")
+Interceptor.attach(FWSetAuthenticationSet, {onLeave: function (args) {send("FWSetAuthenticationSet");}});
+
+var FWSetConfig = Module.findExportByName("FirewallAPI.dll", "FWSetConfig")
+Interceptor.attach(FWSetConfig, {onLeave: function (args) {send("FWSetConfig");}});
+
+var FWSetConnectionSecurityRule = Module.findExportByName("FirewallAPI.dll", "FWSetConnectionSecurityRule")
+Interceptor.attach(FWSetConnectionSecurityRule, {onLeave: function (args) {send("FWSetConnectionSecurityRule");}});
+
+var FWSetCryptoSet = Module.findExportByName("FirewallAPI.dll", "FWSetCryptoSet")
+Interceptor.attach(FWSetCryptoSet, {onLeave: function (args) {send("FWSetCryptoSet");}});
+
+var FWSetFirewallRule = Module.findExportByName("FirewallAPI.dll", "FWSetFirewallRule")
+Interceptor.attach(FWSetFirewallRule, {onLeave: function (args) {send("FWSetFirewallRule");}});
+
+var FWSetGlobalConfig = Module.findExportByName("FirewallAPI.dll", "FWSetGlobalConfig")
+Interceptor.attach(FWSetGlobalConfig, {onLeave: function (args) {send("FWSetGlobalConfig");}});
+
+var FWSetGlobalConfig2 = Module.findExportByName("FirewallAPI.dll", "FWSetGlobalConfig2")
+Interceptor.attach(FWSetGlobalConfig2, {onLeave: function (args) {send("FWSetGlobalConfig2");}});
+
+var FWSetHyperVPort0 = Module.findExportByName("FirewallAPI.dll", "FWSetHyperVPort0")
+Interceptor.attach(FWSetHyperVPort0, {onLeave: function (args) {send("FWSetHyperVPort0");}});
+
+var FWSetHyperVPort1 = Module.findExportByName("FirewallAPI.dll", "FWSetHyperVPort1")
+Interceptor.attach(FWSetHyperVPort1, {onLeave: function (args) {send("FWSetHyperVPort1");}});
+
+var FWSetHyperVProfileConfig0 = Module.findExportByName("FirewallAPI.dll", "FWSetHyperVProfileConfig0")
+Interceptor.attach(FWSetHyperVProfileConfig0, {onLeave: function (args) {send("FWSetHyperVProfileConfig0");}});
+
+var FWSetHyperVRule0 = Module.findExportByName("FirewallAPI.dll", "FWSetHyperVRule0")
+Interceptor.attach(FWSetHyperVRule0, {onLeave: function (args) {send("FWSetHyperVRule0");}});
+
+var FWSetHyperVRule1 = Module.findExportByName("FirewallAPI.dll", "FWSetHyperVRule1")
+Interceptor.attach(FWSetHyperVRule1, {onLeave: function (args) {send("FWSetHyperVRule1");}});
+
+var FWSetHyperVVMConfig0 = Module.findExportByName("FirewallAPI.dll", "FWSetHyperVVMConfig0")
+Interceptor.attach(FWSetHyperVVMConfig0, {onLeave: function (args) {send("FWSetHyperVVMConfig0");}});
+
+var FWSetMainModeRule = Module.findExportByName("FirewallAPI.dll", "FWSetMainModeRule")
+Interceptor.attach(FWSetMainModeRule, {onLeave: function (args) {send("FWSetMainModeRule");}});
+
+var FWStatusMessageFromStatusCode = Module.findExportByName("FirewallAPI.dll", "FWStatusMessageFromStatusCode")
+Interceptor.attach(FWStatusMessageFromStatusCode, {onLeave: function (args) {send("FWStatusMessageFromStatusCode");}});
+
+var FWUnregisterHyperVVMCreator0 = Module.findExportByName("FirewallAPI.dll", "FWUnregisterHyperVVMCreator0")
+Interceptor.attach(FWUnregisterHyperVVMCreator0, {onLeave: function (args) {send("FWUnregisterHyperVVMCreator0");}});
+
+var FWUnregisterProduct = Module.findExportByName("FirewallAPI.dll", "FWUnregisterProduct")
+Interceptor.attach(FWUnregisterProduct, {onLeave: function (args) {send("FWUnregisterProduct");}});
+
+var FWUpdateDynamicKeywordAddress0 = Module.findExportByName("FirewallAPI.dll", "FWUpdateDynamicKeywordAddress0")
+Interceptor.attach(FWUpdateDynamicKeywordAddress0, {onLeave: function (args) {send("FWUpdateDynamicKeywordAddress0");}});
+
+var FWUpdateDynamicKeywordAddress_Int = Module.findExportByName("FirewallAPI.dll", "FWUpdateDynamicKeywordAddress_Int")
+Interceptor.attach(FWUpdateDynamicKeywordAddress_Int, {onLeave: function (args) {send("FWUpdateDynamicKeywordAddress_Int");}});
+
+var FWVerifyAuthenticationSet = Module.findExportByName("FirewallAPI.dll", "FWVerifyAuthenticationSet")
+Interceptor.attach(FWVerifyAuthenticationSet, {onLeave: function (args) {send("FWVerifyAuthenticationSet");}});
+
+var FWVerifyAuthenticationSetQuery = Module.findExportByName("FirewallAPI.dll", "FWVerifyAuthenticationSetQuery")
+Interceptor.attach(FWVerifyAuthenticationSetQuery, {onLeave: function (args) {send("FWVerifyAuthenticationSetQuery");}});
+
+var FWVerifyConnectionSecurityRule = Module.findExportByName("FirewallAPI.dll", "FWVerifyConnectionSecurityRule")
+Interceptor.attach(FWVerifyConnectionSecurityRule, {onLeave: function (args) {send("FWVerifyConnectionSecurityRule");}});
+
+var FWVerifyConnectionSecurityRuleQuery = Module.findExportByName("FirewallAPI.dll", "FWVerifyConnectionSecurityRuleQuery")
+Interceptor.attach(FWVerifyConnectionSecurityRuleQuery, {onLeave: function (args) {send("FWVerifyConnectionSecurityRuleQuery");}});
+
+var FWVerifyCryptoSet = Module.findExportByName("FirewallAPI.dll", "FWVerifyCryptoSet")
+Interceptor.attach(FWVerifyCryptoSet, {onLeave: function (args) {send("FWVerifyCryptoSet");}});
+
+var FWVerifyCryptoSetQuery = Module.findExportByName("FirewallAPI.dll", "FWVerifyCryptoSetQuery")
+Interceptor.attach(FWVerifyCryptoSetQuery, {onLeave: function (args) {send("FWVerifyCryptoSetQuery");}});
+
+var FWVerifyFirewallRule = Module.findExportByName("FirewallAPI.dll", "FWVerifyFirewallRule")
+Interceptor.attach(FWVerifyFirewallRule, {onLeave: function (args) {send("FWVerifyFirewallRule");}});
+
+var FWVerifyFirewallRuleQuery = Module.findExportByName("FirewallAPI.dll", "FWVerifyFirewallRuleQuery")
+Interceptor.attach(FWVerifyFirewallRuleQuery, {onLeave: function (args) {send("FWVerifyFirewallRuleQuery");}});
+
+var FWVerifyMainModeRule = Module.findExportByName("FirewallAPI.dll", "FWVerifyMainModeRule")
+Interceptor.attach(FWVerifyMainModeRule, {onLeave: function (args) {send("FWVerifyMainModeRule");}});
+
+var FWVerifyMainModeRuleQuery = Module.findExportByName("FirewallAPI.dll", "FWVerifyMainModeRuleQuery")
+Interceptor.attach(FWVerifyMainModeRuleQuery, {onLeave: function (args) {send("FWVerifyMainModeRuleQuery");}});
+
+var FwActivate = Module.findExportByName("FirewallAPI.dll", "FwActivate")
+Interceptor.attach(FwActivate, {onLeave: function (args) {send("FwActivate");}});
+
+var FwAlloc = Module.findExportByName("FirewallAPI.dll", "FwAlloc")
+Interceptor.attach(FwAlloc, {onLeave: function (args) {send("FwAlloc");}});
+
+var FwAllocCheckSize = Module.findExportByName("FirewallAPI.dll", "FwAllocCheckSize")
+Interceptor.attach(FwAllocCheckSize, {onLeave: function (args) {send("FwAllocCheckSize");}});
+
+var FwAllowedProgramsAdd = Module.findExportByName("FirewallAPI.dll", "FwAllowedProgramsAdd")
+Interceptor.attach(FwAllowedProgramsAdd, {onLeave: function (args) {send("FwAllowedProgramsAdd");}});
+
+var FwAllowedProgramsDelete = Module.findExportByName("FirewallAPI.dll", "FwAllowedProgramsDelete")
+Interceptor.attach(FwAllowedProgramsDelete, {onLeave: function (args) {send("FwAllowedProgramsDelete");}});
+
+var FwAnalyzeFirewallPolicy = Module.findExportByName("FirewallAPI.dll", "FwAnalyzeFirewallPolicy")
+Interceptor.attach(FwAnalyzeFirewallPolicy, {onLeave: function (args) {send("FwAnalyzeFirewallPolicy");}});
+
+var FwAnalyzeFirewallPolicyOnProfile = Module.findExportByName("FirewallAPI.dll", "FwAnalyzeFirewallPolicyOnProfile")
+Interceptor.attach(FwAnalyzeFirewallPolicyOnProfile, {onLeave: function (args) {send("FwAnalyzeFirewallPolicyOnProfile");}});
+
+var FwApiHelperFree = Module.findExportByName("FirewallAPI.dll", "FwApiHelperFree")
+Interceptor.attach(FwApiHelperFree, {onLeave: function (args) {send("FwApiHelperFree");}});
+
+var FwApiHelperInit = Module.findExportByName("FirewallAPI.dll", "FwApiHelperInit")
+Interceptor.attach(FwApiHelperInit, {onLeave: function (args) {send("FwApiHelperInit");}});
+
+var FwBstrToIcmp = Module.findExportByName("FirewallAPI.dll", "FwBstrToIcmp")
+Interceptor.attach(FwBstrToIcmp, {onLeave: function (args) {send("FwBstrToIcmp");}});
+
+var FwBstrToInterfaceTypes = Module.findExportByName("FirewallAPI.dll", "FwBstrToInterfaceTypes")
+Interceptor.attach(FwBstrToInterfaceTypes, {onLeave: function (args) {send("FwBstrToInterfaceTypes");}});
+
+var FwBstrToPorts = Module.findExportByName("FirewallAPI.dll", "FwBstrToPorts")
+Interceptor.attach(FwBstrToPorts, {onLeave: function (args) {send("FwBstrToPorts");}});
+
+var FwConvertIPv6SubNetToRange = Module.findExportByName("FirewallAPI.dll", "FwConvertIPv6SubNetToRange")
+Interceptor.attach(FwConvertIPv6SubNetToRange, {onLeave: function (args) {send("FwConvertIPv6SubNetToRange");}});
+
+var FwCopyAuthSet = Module.findExportByName("FirewallAPI.dll", "FwCopyAuthSet")
+Interceptor.attach(FwCopyAuthSet, {onLeave: function (args) {send("FwCopyAuthSet");}});
+
+var FwCopyMainModeRule = Module.findExportByName("FirewallAPI.dll", "FwCopyMainModeRule")
+Interceptor.attach(FwCopyMainModeRule, {onLeave: function (args) {send("FwCopyMainModeRule");}});
+
+var FwCopyWFAddressesContents = Module.findExportByName("FirewallAPI.dll", "FwCopyWFAddressesContents")
+Interceptor.attach(FwCopyWFAddressesContents, {onLeave: function (args) {send("FwCopyWFAddressesContents");}});
+
+var FwEmptyWFAddresses = Module.findExportByName("FirewallAPI.dll", "FwEmptyWFAddresses")
+Interceptor.attach(FwEmptyWFAddresses, {onLeave: function (args) {send("FwEmptyWFAddresses");}});
+
+var FwFree = Module.findExportByName("FirewallAPI.dll", "FwFree")
+Interceptor.attach(FwFree, {onLeave: function (args) {send("FwFree");}});
+
+var FwFreeAddresses = Module.findExportByName("FirewallAPI.dll", "FwFreeAddresses")
+Interceptor.attach(FwFreeAddresses, {onLeave: function (args) {send("FwFreeAddresses");}});
+
+var FwFreePorts = Module.findExportByName("FirewallAPI.dll", "FwFreePorts")
+Interceptor.attach(FwFreePorts, {onLeave: function (args) {send("FwFreePorts");}});
+
+var FwGetAddressesAsString = Module.findExportByName("FirewallAPI.dll", "FwGetAddressesAsString")
+Interceptor.attach(FwGetAddressesAsString, {onLeave: function (args) {send("FwGetAddressesAsString");}});
+
+var FwGetCurrentProfile = Module.findExportByName("FirewallAPI.dll", "FwGetCurrentProfile")
+Interceptor.attach(FwGetCurrentProfile, {onLeave: function (args) {send("FwGetCurrentProfile");}});
+
+var FwGetVersionField = Module.findExportByName("FirewallAPI.dll", "FwGetVersionField")
+Interceptor.attach(FwGetVersionField, {onLeave: function (args) {send("FwGetVersionField");}});
+
+var FwIcmpSettingsEnum = Module.findExportByName("FirewallAPI.dll", "FwIcmpSettingsEnum")
+Interceptor.attach(FwIcmpSettingsEnum, {onLeave: function (args) {send("FwIcmpSettingsEnum");}});
+
+var FwIcmpSettingsSet = Module.findExportByName("FirewallAPI.dll", "FwIcmpSettingsSet")
+Interceptor.attach(FwIcmpSettingsSet, {onLeave: function (args) {send("FwIcmpSettingsSet");}});
+
+var FwIcmpToBstr = Module.findExportByName("FirewallAPI.dll", "FwIcmpToBstr")
+Interceptor.attach(FwIcmpToBstr, {onLeave: function (args) {send("FwIcmpToBstr");}});
+
+var FwInterfaceTypesToBstr = Module.findExportByName("FirewallAPI.dll", "FwInterfaceTypesToBstr")
+Interceptor.attach(FwInterfaceTypesToBstr, {onLeave: function (args) {send("FwInterfaceTypesToBstr");}});
+
+var FwIsGroupPolicyEnforced = Module.findExportByName("FirewallAPI.dll", "FwIsGroupPolicyEnforced")
+Interceptor.attach(FwIsGroupPolicyEnforced, {onLeave: function (args) {send("FwIsGroupPolicyEnforced");}});
+
+var FwIsRemoteManagementEnabled = Module.findExportByName("FirewallAPI.dll", "FwIsRemoteManagementEnabled")
+Interceptor.attach(FwIsRemoteManagementEnabled, {onLeave: function (args) {send("FwIsRemoteManagementEnabled");}});
+
+var FwLogSettingsSet = Module.findExportByName("FirewallAPI.dll", "FwLogSettingsSet")
+Interceptor.attach(FwLogSettingsSet, {onLeave: function (args) {send("FwLogSettingsSet");}});
+
+var FwMergeAddresses = Module.findExportByName("FirewallAPI.dll", "FwMergeAddresses")
+Interceptor.attach(FwMergeAddresses, {onLeave: function (args) {send("FwMergeAddresses");}});
+
+var FwMulticastBroadcastResponsesEnum = Module.findExportByName("FirewallAPI.dll", "FwMulticastBroadcastResponsesEnum")
+Interceptor.attach(FwMulticastBroadcastResponsesEnum, {onLeave: function (args) {send("FwMulticastBroadcastResponsesEnum");}});
+
+var FwMulticastBroadcastResponsesSet = Module.findExportByName("FirewallAPI.dll", "FwMulticastBroadcastResponsesSet")
+Interceptor.attach(FwMulticastBroadcastResponsesSet, {onLeave: function (args) {send("FwMulticastBroadcastResponsesSet");}});
+
+var FwNotificationsEnum = Module.findExportByName("FirewallAPI.dll", "FwNotificationsEnum")
+Interceptor.attach(FwNotificationsEnum, {onLeave: function (args) {send("FwNotificationsEnum");}});
+
+var FwNotificationsSet = Module.findExportByName("FirewallAPI.dll", "FwNotificationsSet")
+Interceptor.attach(FwNotificationsSet, {onLeave: function (args) {send("FwNotificationsSet");}});
+
+var FwOpModesEnum = Module.findExportByName("FirewallAPI.dll", "FwOpModesEnum")
+Interceptor.attach(FwOpModesEnum, {onLeave: function (args) {send("FwOpModesEnum");}});
+
+var FwOpModesSet = Module.findExportByName("FirewallAPI.dll", "FwOpModesSet")
+Interceptor.attach(FwOpModesSet, {onLeave: function (args) {send("FwOpModesSet");}});
+
+var FwPortOpeningsAdd = Module.findExportByName("FirewallAPI.dll", "FwPortOpeningsAdd")
+Interceptor.attach(FwPortOpeningsAdd, {onLeave: function (args) {send("FwPortOpeningsAdd");}});
+
+var FwPortOpeningsDelete = Module.findExportByName("FirewallAPI.dll", "FwPortOpeningsDelete")
+Interceptor.attach(FwPortOpeningsDelete, {onLeave: function (args) {send("FwPortOpeningsDelete");}});
+
+var FwProfileTypeCurrentGet = Module.findExportByName("FirewallAPI.dll", "FwProfileTypeCurrentGet")
+Interceptor.attach(FwProfileTypeCurrentGet, {onLeave: function (args) {send("FwProfileTypeCurrentGet");}});
+
+var FwProfileTypeGet = Module.findExportByName("FirewallAPI.dll", "FwProfileTypeGet")
+Interceptor.attach(FwProfileTypeGet, {onLeave: function (args) {send("FwProfileTypeGet");}});
+
+var FwRestoreDefaults = Module.findExportByName("FirewallAPI.dll", "FwRestoreDefaults")
+Interceptor.attach(FwRestoreDefaults, {onLeave: function (args) {send("FwRestoreDefaults");}});
+
+var FwServicesEnum = Module.findExportByName("FirewallAPI.dll", "FwServicesEnum")
+Interceptor.attach(FwServicesEnum, {onLeave: function (args) {send("FwServicesEnum");}});
+
+var FwServicesSet = Module.findExportByName("FirewallAPI.dll", "FwServicesSet")
+Interceptor.attach(FwServicesSet, {onLeave: function (args) {send("FwServicesSet");}});
+
+var FwStringToAddresses = Module.findExportByName("FirewallAPI.dll", "FwStringToAddresses")
+Interceptor.attach(FwStringToAddresses, {onLeave: function (args) {send("FwStringToAddresses");}});
+
+var FwStringToPorts = Module.findExportByName("FirewallAPI.dll", "FwStringToPorts")
+Interceptor.attach(FwStringToPorts, {onLeave: function (args) {send("FwStringToPorts");}});
+
+var GetDisabledInterfaces = Module.findExportByName("FirewallAPI.dll", "GetDisabledInterfaces")
+Interceptor.attach(GetDisabledInterfaces, {onLeave: function (args) {send("GetDisabledInterfaces");}});
+
+var IcfAddrChangeNotificationCreate = Module.findExportByName("FirewallAPI.dll", "IcfAddrChangeNotificationCreate")
+Interceptor.attach(IcfAddrChangeNotificationCreate, {onLeave: function (args) {send("IcfAddrChangeNotificationCreate");}});
+
+var IcfChangeNotificationCreate = Module.findExportByName("FirewallAPI.dll", "IcfChangeNotificationCreate")
+Interceptor.attach(IcfChangeNotificationCreate, {onLeave: function (args) {send("IcfChangeNotificationCreate");}});
+
+var IcfChangeNotificationDestroy = Module.findExportByName("FirewallAPI.dll", "IcfChangeNotificationDestroy")
+Interceptor.attach(IcfChangeNotificationDestroy, {onLeave: function (args) {send("IcfChangeNotificationDestroy");}});
+
+var IcfConnect = Module.findExportByName("FirewallAPI.dll", "IcfConnect")
+Interceptor.attach(IcfConnect, {onLeave: function (args) {send("IcfConnect");}});
+
+var IcfDisconnect = Module.findExportByName("FirewallAPI.dll", "IcfDisconnect")
+Interceptor.attach(IcfDisconnect, {onLeave: function (args) {send("IcfDisconnect");}});
+
+var IcfFreeDynamicFwPorts = Module.findExportByName("FirewallAPI.dll", "IcfFreeDynamicFwPorts")
+Interceptor.attach(IcfFreeDynamicFwPorts, {onLeave: function (args) {send("IcfFreeDynamicFwPorts");}});
+
+var IcfFreeProfile = Module.findExportByName("FirewallAPI.dll", "IcfFreeProfile")
+Interceptor.attach(IcfFreeProfile, {onLeave: function (args) {send("IcfFreeProfile");}});
+
+var IcfFreeTickets = Module.findExportByName("FirewallAPI.dll", "IcfFreeTickets")
+Interceptor.attach(IcfFreeTickets, {onLeave: function (args) {send("IcfFreeTickets");}});
+
+var IcfGetCurrentProfileType = Module.findExportByName("FirewallAPI.dll", "IcfGetCurrentProfileType")
+Interceptor.attach(IcfGetCurrentProfileType, {onLeave: function (args) {send("IcfGetCurrentProfileType");}});
+
+var IcfGetDynamicFwPorts = Module.findExportByName("FirewallAPI.dll", "IcfGetDynamicFwPorts")
+Interceptor.attach(IcfGetDynamicFwPorts, {onLeave: function (args) {send("IcfGetDynamicFwPorts");}});
+
+var IcfGetOperationalMode = Module.findExportByName("FirewallAPI.dll", "IcfGetOperationalMode")
+Interceptor.attach(IcfGetOperationalMode, {onLeave: function (args) {send("IcfGetOperationalMode");}});
+
+var IcfGetProfile = Module.findExportByName("FirewallAPI.dll", "IcfGetProfile")
+Interceptor.attach(IcfGetProfile, {onLeave: function (args) {send("IcfGetProfile");}});
+
+var IcfGetTickets = Module.findExportByName("FirewallAPI.dll", "IcfGetTickets")
+Interceptor.attach(IcfGetTickets, {onLeave: function (args) {send("IcfGetTickets");}});
+
+var IcfIsPortAllowed = Module.findExportByName("FirewallAPI.dll", "IcfIsPortAllowed")
+Interceptor.attach(IcfIsPortAllowed, {onLeave: function (args) {send("IcfIsPortAllowed");}});
+
+var IcfOpenDynamicFwPortWithoutSocket = Module.findExportByName("FirewallAPI.dll", "IcfOpenDynamicFwPortWithoutSocket")
+Interceptor.attach(IcfOpenDynamicFwPortWithoutSocket, {onLeave: function (args) {send("IcfOpenDynamicFwPortWithoutSocket");}});
+
+var IcfSubNetsGetScope = Module.findExportByName("FirewallAPI.dll", "IcfSubNetsGetScope")
+Interceptor.attach(IcfSubNetsGetScope, {onLeave: function (args) {send("IcfSubNetsGetScope");}});
+
+var IsFirewallInCoExistanceMode = Module.findExportByName("FirewallAPI.dll", "IsFirewallInCoExistanceMode")
+Interceptor.attach(IsFirewallInCoExistanceMode, {onLeave: function (args) {send("IsFirewallInCoExistanceMode");}});
+
+var IsPortOrICMPAllowed = Module.findExportByName("FirewallAPI.dll", "IsPortOrICMPAllowed")
+Interceptor.attach(IsPortOrICMPAllowed, {onLeave: function (args) {send("IsPortOrICMPAllowed");}});
+
+var NetworkIsolationAddAllowEnterpriseIdRule = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationAddAllowEnterpriseIdRule")
+Interceptor.attach(NetworkIsolationAddAllowEnterpriseIdRule, {onLeave: function (args) {send("NetworkIsolationAddAllowEnterpriseIdRule");}});
+
+var NetworkIsolationCreateAllInterfacesContainer = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationCreateAllInterfacesContainer")
+Interceptor.attach(NetworkIsolationCreateAllInterfacesContainer, {onLeave: function (args) {send("NetworkIsolationCreateAllInterfacesContainer");}});
+
+var NetworkIsolationCreateAppContainer = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationCreateAppContainer")
+Interceptor.attach(NetworkIsolationCreateAppContainer, {onLeave: function (args) {send("NetworkIsolationCreateAppContainer");}});
+
+var NetworkIsolationCreateAppContainerLoopbackRules = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationCreateAppContainerLoopbackRules")
+Interceptor.attach(NetworkIsolationCreateAppContainerLoopbackRules, {onLeave: function (args) {send("NetworkIsolationCreateAppContainerLoopbackRules");}});
+
+var NetworkIsolationCreateContainer = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationCreateContainer")
+Interceptor.attach(NetworkIsolationCreateContainer, {onLeave: function (args) {send("NetworkIsolationCreateContainer");}});
+
+var NetworkIsolationCreateInterfaceContainer = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationCreateInterfaceContainer")
+Interceptor.attach(NetworkIsolationCreateInterfaceContainer, {onLeave: function (args) {send("NetworkIsolationCreateInterfaceContainer");}});
+
+var NetworkIsolationDeleteAllInterfacesContainer = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationDeleteAllInterfacesContainer")
+Interceptor.attach(NetworkIsolationDeleteAllInterfacesContainer, {onLeave: function (args) {send("NetworkIsolationDeleteAllInterfacesContainer");}});
+
+var NetworkIsolationDeleteAllowEnterpriseIdRule = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationDeleteAllowEnterpriseIdRule")
+Interceptor.attach(NetworkIsolationDeleteAllowEnterpriseIdRule, {onLeave: function (args) {send("NetworkIsolationDeleteAllowEnterpriseIdRule");}});
+
+var NetworkIsolationDeleteAppContainer = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationDeleteAppContainer")
+Interceptor.attach(NetworkIsolationDeleteAppContainer, {onLeave: function (args) {send("NetworkIsolationDeleteAppContainer");}});
+
+var NetworkIsolationDeleteAppContainerLoopbackRules = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationDeleteAppContainerLoopbackRules")
+Interceptor.attach(NetworkIsolationDeleteAppContainerLoopbackRules, {onLeave: function (args) {send("NetworkIsolationDeleteAppContainerLoopbackRules");}});
+
+var NetworkIsolationDeleteContainer = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationDeleteContainer")
+Interceptor.attach(NetworkIsolationDeleteContainer, {onLeave: function (args) {send("NetworkIsolationDeleteContainer");}});
+
+var NetworkIsolationDeleteInterfaceContainer = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationDeleteInterfaceContainer")
+Interceptor.attach(NetworkIsolationDeleteInterfaceContainer, {onLeave: function (args) {send("NetworkIsolationDeleteInterfaceContainer");}});
+
+var NetworkIsolationDeleteUserAppContainers = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationDeleteUserAppContainers")
+Interceptor.attach(NetworkIsolationDeleteUserAppContainers, {onLeave: function (args) {send("NetworkIsolationDeleteUserAppContainers");}});
+
+var NetworkIsolationDiagnoseConnectFailure = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationDiagnoseConnectFailure")
+Interceptor.attach(NetworkIsolationDiagnoseConnectFailure, {onLeave: function (args) {send("NetworkIsolationDiagnoseConnectFailure");}});
+
+var NetworkIsolationDiagnoseConnectFailureAndGetInfo = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationDiagnoseConnectFailureAndGetInfo")
+Interceptor.attach(NetworkIsolationDiagnoseConnectFailureAndGetInfo, {onLeave: function (args) {send("NetworkIsolationDiagnoseConnectFailureAndGetInfo");}});
+
+var NetworkIsolationDiagnoseListen = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationDiagnoseListen")
+Interceptor.attach(NetworkIsolationDiagnoseListen, {onLeave: function (args) {send("NetworkIsolationDiagnoseListen");}});
+
+var NetworkIsolationDiagnoseSocketCreation = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationDiagnoseSocketCreation")
+Interceptor.attach(NetworkIsolationDiagnoseSocketCreation, {onLeave: function (args) {send("NetworkIsolationDiagnoseSocketCreation");}});
+
+var NetworkIsolationEnumAppContainers = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationEnumAppContainers")
+Interceptor.attach(NetworkIsolationEnumAppContainers, {onLeave: function (args) {send("NetworkIsolationEnumAppContainers");}});
+
+var NetworkIsolationEnumerateAppContainerRules = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationEnumerateAppContainerRules")
+Interceptor.attach(NetworkIsolationEnumerateAppContainerRules, {onLeave: function (args) {send("NetworkIsolationEnumerateAppContainerRules");}});
+
+var NetworkIsolationFreeAppContainers = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationFreeAppContainers")
+Interceptor.attach(NetworkIsolationFreeAppContainers, {onLeave: function (args) {send("NetworkIsolationFreeAppContainers");}});
+
+var NetworkIsolationGetAppContainer = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationGetAppContainer")
+Interceptor.attach(NetworkIsolationGetAppContainer, {onLeave: function (args) {send("NetworkIsolationGetAppContainer");}});
+
+var NetworkIsolationGetAppContainerConfig = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationGetAppContainerConfig")
+Interceptor.attach(NetworkIsolationGetAppContainerConfig, {onLeave: function (args) {send("NetworkIsolationGetAppContainerConfig");}});
+
+var NetworkIsolationGetEnterpriseId = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationGetEnterpriseId")
+Interceptor.attach(NetworkIsolationGetEnterpriseId, {onLeave: function (args) {send("NetworkIsolationGetEnterpriseId");}});
+
+var NetworkIsolationGetEnterpriseIdAsync = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationGetEnterpriseIdAsync")
+Interceptor.attach(NetworkIsolationGetEnterpriseIdAsync, {onLeave: function (args) {send("NetworkIsolationGetEnterpriseIdAsync");}});
+
+var NetworkIsolationGetEnterpriseIdClose = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationGetEnterpriseIdClose")
+Interceptor.attach(NetworkIsolationGetEnterpriseIdClose, {onLeave: function (args) {send("NetworkIsolationGetEnterpriseIdClose");}});
+
+var NetworkIsolationRegisterForAppContainerChanges = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationRegisterForAppContainerChanges")
+Interceptor.attach(NetworkIsolationRegisterForAppContainerChanges, {onLeave: function (args) {send("NetworkIsolationRegisterForAppContainerChanges");}});
+
+var NetworkIsolationSetAppContainerConfig = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationSetAppContainerConfig")
+Interceptor.attach(NetworkIsolationSetAppContainerConfig, {onLeave: function (args) {send("NetworkIsolationSetAppContainerConfig");}});
+
+var NetworkIsolationSetupAppContainerBinaries = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationSetupAppContainerBinaries")
+Interceptor.attach(NetworkIsolationSetupAppContainerBinaries, {onLeave: function (args) {send("NetworkIsolationSetupAppContainerBinaries");}});
+
+var NetworkIsolationUnregisterForAppContainerChanges = Module.findExportByName("FirewallAPI.dll", "NetworkIsolationUnregisterForAppContainerChanges")
+Interceptor.attach(NetworkIsolationUnregisterForAppContainerChanges, {onLeave: function (args) {send("NetworkIsolationUnregisterForAppContainerChanges");}});
+

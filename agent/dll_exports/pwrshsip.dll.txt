@@ -1,0 +1,24 @@
+var DllRegisterServer = Module.findExportByName("pwrshsip.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("pwrshsip.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var PsCreateHash = Module.findExportByName("pwrshsip.dll", "PsCreateHash")
+Interceptor.attach(PsCreateHash, {onLeave: function (args) {send("PsCreateHash");}});
+
+var PsDelSignature = Module.findExportByName("pwrshsip.dll", "PsDelSignature")
+Interceptor.attach(PsDelSignature, {onLeave: function (args) {send("PsDelSignature");}});
+
+var PsGetSignature = Module.findExportByName("pwrshsip.dll", "PsGetSignature")
+Interceptor.attach(PsGetSignature, {onLeave: function (args) {send("PsGetSignature");}});
+
+var PsIsMyFileType = Module.findExportByName("pwrshsip.dll", "PsIsMyFileType")
+Interceptor.attach(PsIsMyFileType, {onLeave: function (args) {send("PsIsMyFileType");}});
+
+var PsPutSignature = Module.findExportByName("pwrshsip.dll", "PsPutSignature")
+Interceptor.attach(PsPutSignature, {onLeave: function (args) {send("PsPutSignature");}});
+
+var PsVerifyHash = Module.findExportByName("pwrshsip.dll", "PsVerifyHash")
+Interceptor.attach(PsVerifyHash, {onLeave: function (args) {send("PsVerifyHash");}});
+

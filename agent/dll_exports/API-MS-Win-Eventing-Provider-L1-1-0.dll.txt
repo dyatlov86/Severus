@@ -1,0 +1,30 @@
+var EventActivityIdControl = Module.findExportByName("API-MS-Win-Eventing-Provider-L1-1-0.dll", "EventActivityIdControl")
+Interceptor.attach(EventActivityIdControl, {onLeave: function (args) {send("EventActivityIdControl");}});
+
+var EventEnabled = Module.findExportByName("API-MS-Win-Eventing-Provider-L1-1-0.dll", "EventEnabled")
+Interceptor.attach(EventEnabled, {onLeave: function (args) {send("EventEnabled");}});
+
+var EventProviderEnabled = Module.findExportByName("API-MS-Win-Eventing-Provider-L1-1-0.dll", "EventProviderEnabled")
+Interceptor.attach(EventProviderEnabled, {onLeave: function (args) {send("EventProviderEnabled");}});
+
+var EventRegister = Module.findExportByName("API-MS-Win-Eventing-Provider-L1-1-0.dll", "EventRegister")
+Interceptor.attach(EventRegister, {onLeave: function (args) {send("EventRegister");}});
+
+var EventSetInformation = Module.findExportByName("API-MS-Win-Eventing-Provider-L1-1-0.dll", "EventSetInformation")
+Interceptor.attach(EventSetInformation, {onLeave: function (args) {send("EventSetInformation");}});
+
+var EventUnregister = Module.findExportByName("API-MS-Win-Eventing-Provider-L1-1-0.dll", "EventUnregister")
+Interceptor.attach(EventUnregister, {onLeave: function (args) {send("EventUnregister");}});
+
+var EventWrite = Module.findExportByName("API-MS-Win-Eventing-Provider-L1-1-0.dll", "EventWrite")
+Interceptor.attach(EventWrite, {onLeave: function (args) {send("EventWrite");}});
+
+var EventWriteEx = Module.findExportByName("API-MS-Win-Eventing-Provider-L1-1-0.dll", "EventWriteEx")
+Interceptor.attach(EventWriteEx, {onLeave: function (args) {send("EventWriteEx");}});
+
+var EventWriteString = Module.findExportByName("API-MS-Win-Eventing-Provider-L1-1-0.dll", "EventWriteString")
+Interceptor.attach(EventWriteString, {onLeave: function (args) {send("EventWriteString");}});
+
+var EventWriteTransfer = Module.findExportByName("API-MS-Win-Eventing-Provider-L1-1-0.dll", "EventWriteTransfer")
+Interceptor.attach(EventWriteTransfer, {onLeave: function (args) {send("EventWriteTransfer");}});
+

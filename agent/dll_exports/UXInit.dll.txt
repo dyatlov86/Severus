@@ -1,0 +1,36 @@
+var ThemeUserLogoff = Module.findExportByName("UXInit.dll", "ThemeUserLogoff")
+Interceptor.attach(ThemeUserLogoff, {onLeave: function (args) {send("ThemeUserLogoff");}});
+
+var ThemeUserLogon = Module.findExportByName("UXInit.dll", "ThemeUserLogon")
+Interceptor.attach(ThemeUserLogon, {onLeave: function (args) {send("ThemeUserLogon");}});
+
+var ThemeUserStartShell = Module.findExportByName("UXInit.dll", "ThemeUserStartShell")
+Interceptor.attach(ThemeUserStartShell, {onLeave: function (args) {send("ThemeUserStartShell");}});
+
+var ThemeUserTSReconnect = Module.findExportByName("UXInit.dll", "ThemeUserTSReconnect")
+Interceptor.attach(ThemeUserTSReconnect, {onLeave: function (args) {send("ThemeUserTSReconnect");}});
+
+var ThemeWatchForStart = Module.findExportByName("UXInit.dll", "ThemeWatchForStart")
+Interceptor.attach(ThemeWatchForStart, {onLeave: function (args) {send("ThemeWatchForStart");}});
+
+var ThemesOnCreateSession = Module.findExportByName("UXInit.dll", "ThemesOnCreateSession")
+Interceptor.attach(ThemesOnCreateSession, {onLeave: function (args) {send("ThemesOnCreateSession");}});
+
+var ThemesOnDisconnect = Module.findExportByName("UXInit.dll", "ThemesOnDisconnect")
+Interceptor.attach(ThemesOnDisconnect, {onLeave: function (args) {send("ThemesOnDisconnect");}});
+
+var ThemesOnEarlyCreateSession = Module.findExportByName("UXInit.dll", "ThemesOnEarlyCreateSession")
+Interceptor.attach(ThemesOnEarlyCreateSession, {onLeave: function (args) {send("ThemesOnEarlyCreateSession");}});
+
+var ThemesOnLogoff = Module.findExportByName("UXInit.dll", "ThemesOnLogoff")
+Interceptor.attach(ThemesOnLogoff, {onLeave: function (args) {send("ThemesOnLogoff");}});
+
+var ThemesOnLogon = Module.findExportByName("UXInit.dll", "ThemesOnLogon")
+Interceptor.attach(ThemesOnLogon, {onLeave: function (args) {send("ThemesOnLogon");}});
+
+var ThemesOnReconnect = Module.findExportByName("UXInit.dll", "ThemesOnReconnect")
+Interceptor.attach(ThemesOnReconnect, {onLeave: function (args) {send("ThemesOnReconnect");}});
+
+var ThemesOnTerminateSession = Module.findExportByName("UXInit.dll", "ThemesOnTerminateSession")
+Interceptor.attach(ThemesOnTerminateSession, {onLeave: function (args) {send("ThemesOnTerminateSession");}});
+

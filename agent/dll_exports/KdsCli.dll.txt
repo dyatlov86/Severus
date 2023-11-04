@@ -1,0 +1,147 @@
+var CreateRootKey = Module.findExportByName("KdsCli.dll", "CreateRootKey")
+Interceptor.attach(CreateRootKey, {onLeave: function (args) {send("CreateRootKey");}});
+
+var DeleteAllCachedKeys = Module.findExportByName("KdsCli.dll", "DeleteAllCachedKeys")
+Interceptor.attach(DeleteAllCachedKeys, {onLeave: function (args) {send("DeleteAllCachedKeys");}});
+
+var FindAndReadSIDKeyInCache = Module.findExportByName("KdsCli.dll", "FindAndReadSIDKeyInCache")
+Interceptor.attach(FindAndReadSIDKeyInCache, {onLeave: function (args) {send("FindAndReadSIDKeyInCache");}});
+
+var FindKeyForOfflineUsage = Module.findExportByName("KdsCli.dll", "FindKeyForOfflineUsage")
+Interceptor.attach(FindKeyForOfflineUsage, {onLeave: function (args) {send("FindKeyForOfflineUsage");}});
+
+var FreeRootKey = Module.findExportByName("KdsCli.dll", "FreeRootKey")
+Interceptor.attach(FreeRootKey, {onLeave: function (args) {send("FreeRootKey");}});
+
+var FreeRootKeyConfig = Module.findExportByName("KdsCli.dll", "FreeRootKeyConfig")
+Interceptor.attach(FreeRootKeyConfig, {onLeave: function (args) {send("FreeRootKeyConfig");}});
+
+var FreeRootKeyMetaDataList = Module.findExportByName("KdsCli.dll", "FreeRootKeyMetaDataList")
+Interceptor.attach(FreeRootKeyMetaDataList, {onLeave: function (args) {send("FreeRootKeyMetaDataList");}});
+
+var FreeServerConfig = Module.findExportByName("KdsCli.dll", "FreeServerConfig")
+Interceptor.attach(FreeServerConfig, {onLeave: function (args) {send("FreeServerConfig");}});
+
+var GenerateDerivedKey = Module.findExportByName("KdsCli.dll", "GenerateDerivedKey")
+Interceptor.attach(GenerateDerivedKey, {onLeave: function (args) {send("GenerateDerivedKey");}});
+
+var GenerateEphemeralKeyPair = Module.findExportByName("KdsCli.dll", "GenerateEphemeralKeyPair")
+Interceptor.attach(GenerateEphemeralKeyPair, {onLeave: function (args) {send("GenerateEphemeralKeyPair");}});
+
+var GenerateKDFContext = Module.findExportByName("KdsCli.dll", "GenerateKDFContext")
+Interceptor.attach(GenerateKDFContext, {onLeave: function (args) {send("GenerateKDFContext");}});
+
+var GenerateSIDPublicKeyBlob = Module.findExportByName("KdsCli.dll", "GenerateSIDPublicKeyBlob")
+Interceptor.attach(GenerateSIDPublicKeyBlob, {onLeave: function (args) {send("GenerateSIDPublicKeyBlob");}});
+
+var GenerateSecretAgreementPrivateKey = Module.findExportByName("KdsCli.dll", "GenerateSecretAgreementPrivateKey")
+Interceptor.attach(GenerateSecretAgreementPrivateKey, {onLeave: function (args) {send("GenerateSecretAgreementPrivateKey");}});
+
+var GetAllRootKeys = Module.findExportByName("KdsCli.dll", "GetAllRootKeys")
+Interceptor.attach(GetAllRootKeys, {onLeave: function (args) {send("GetAllRootKeys");}});
+
+var GetAllRootKeysMetaData = Module.findExportByName("KdsCli.dll", "GetAllRootKeysMetaData")
+Interceptor.attach(GetAllRootKeysMetaData, {onLeave: function (args) {send("GetAllRootKeysMetaData");}});
+
+var GetAndLockCachedRPCBinding = Module.findExportByName("KdsCli.dll", "GetAndLockCachedRPCBinding")
+Interceptor.attach(GetAndLockCachedRPCBinding, {onLeave: function (args) {send("GetAndLockCachedRPCBinding");}});
+
+var GetCachedMachineDomainInfo = Module.findExportByName("KdsCli.dll", "GetCachedMachineDomainInfo")
+Interceptor.attach(GetCachedMachineDomainInfo, {onLeave: function (args) {send("GetCachedMachineDomainInfo");}});
+
+var GetCurrentIntervalID = Module.findExportByName("KdsCli.dll", "GetCurrentIntervalID")
+Interceptor.attach(GetCurrentIntervalID, {onLeave: function (args) {send("GetCurrentIntervalID");}});
+
+var GetCurrentL0ID = Module.findExportByName("KdsCli.dll", "GetCurrentL0ID")
+Interceptor.attach(GetCurrentL0ID, {onLeave: function (args) {send("GetCurrentL0ID");}});
+
+var GetCurrentTimeInULL = Module.findExportByName("KdsCli.dll", "GetCurrentTimeInULL")
+Interceptor.attach(GetCurrentTimeInULL, {onLeave: function (args) {send("GetCurrentTimeInULL");}});
+
+var GetDCInfo = Module.findExportByName("KdsCli.dll", "GetDCInfo")
+Interceptor.attach(GetDCInfo, {onLeave: function (args) {send("GetDCInfo");}});
+
+var GetDCInfoBySamAccountName = Module.findExportByName("KdsCli.dll", "GetDCInfoBySamAccountName")
+Interceptor.attach(GetDCInfoBySamAccountName, {onLeave: function (args) {send("GetDCInfoBySamAccountName");}});
+
+var GetDefaultServerConfig = Module.findExportByName("KdsCli.dll", "GetDefaultServerConfig")
+Interceptor.attach(GetDefaultServerConfig, {onLeave: function (args) {send("GetDefaultServerConfig");}});
+
+var GetFullDCName = Module.findExportByName("KdsCli.dll", "GetFullDCName")
+Interceptor.attach(GetFullDCName, {onLeave: function (args) {send("GetFullDCName");}});
+
+var GetIntervalStartTime = Module.findExportByName("KdsCli.dll", "GetIntervalStartTime")
+Interceptor.attach(GetIntervalStartTime, {onLeave: function (args) {send("GetIntervalStartTime");}});
+
+var GetKDSSrvConfigPath = Module.findExportByName("KdsCli.dll", "GetKDSSrvConfigPath")
+Interceptor.attach(GetKDSSrvConfigPath, {onLeave: function (args) {send("GetKDSSrvConfigPath");}});
+
+var GetKdsKeyCycleDuration = Module.findExportByName("KdsCli.dll", "GetKdsKeyCycleDuration")
+Interceptor.attach(GetKdsKeyCycleDuration, {onLeave: function (args) {send("GetKdsKeyCycleDuration");}});
+
+var GetKey = Module.findExportByName("KdsCli.dll", "GetKey")
+Interceptor.attach(GetKey, {onLeave: function (args) {send("GetKey");}});
+
+var GetLdapBinding = Module.findExportByName("KdsCli.dll", "GetLdapBinding")
+Interceptor.attach(GetLdapBinding, {onLeave: function (args) {send("GetLdapBinding");}});
+
+var GetMRKPath = Module.findExportByName("KdsCli.dll", "GetMRKPath")
+Interceptor.attach(GetMRKPath, {onLeave: function (args) {send("GetMRKPath");}});
+
+var GetRootKey = Module.findExportByName("KdsCli.dll", "GetRootKey")
+Interceptor.attach(GetRootKey, {onLeave: function (args) {send("GetRootKey");}});
+
+var GetSIDKeyCacheFolder = Module.findExportByName("KdsCli.dll", "GetSIDKeyCacheFolder")
+Interceptor.attach(GetSIDKeyCacheFolder, {onLeave: function (args) {send("GetSIDKeyCacheFolder");}});
+
+var GetSIDKeyFileName = Module.findExportByName("KdsCli.dll", "GetSIDKeyFileName")
+Interceptor.attach(GetSIDKeyFileName, {onLeave: function (args) {send("GetSIDKeyFileName");}});
+
+var GetServerConfig = Module.findExportByName("KdsCli.dll", "GetServerConfig")
+Interceptor.attach(GetServerConfig, {onLeave: function (args) {send("GetServerConfig");}});
+
+var GetUserSidStr = Module.findExportByName("KdsCli.dll", "GetUserSidStr")
+Interceptor.attach(GetUserSidStr, {onLeave: function (args) {send("GetUserSidStr");}});
+
+var KdsCreateClientBinding = Module.findExportByName("KdsCli.dll", "KdsCreateClientBinding")
+Interceptor.attach(KdsCreateClientBinding, {onLeave: function (args) {send("KdsCreateClientBinding");}});
+
+var KdsGetEpochLength = Module.findExportByName("KdsCli.dll", "KdsGetEpochLength")
+Interceptor.attach(KdsGetEpochLength, {onLeave: function (args) {send("KdsGetEpochLength");}});
+
+var KdsGetGmsaPasswordBasedOnKeyId = Module.findExportByName("KdsCli.dll", "KdsGetGmsaPasswordBasedOnKeyId")
+Interceptor.attach(KdsGetGmsaPasswordBasedOnKeyId, {onLeave: function (args) {send("KdsGetGmsaPasswordBasedOnKeyId");}});
+
+var KdsGetGmsaPasswordBasedOnTimestamp = Module.findExportByName("KdsCli.dll", "KdsGetGmsaPasswordBasedOnTimestamp")
+Interceptor.attach(KdsGetGmsaPasswordBasedOnTimestamp, {onLeave: function (args) {send("KdsGetGmsaPasswordBasedOnTimestamp");}});
+
+var KdsGetKeyStartTime = Module.findExportByName("KdsCli.dll", "KdsGetKeyStartTime")
+Interceptor.attach(KdsGetKeyStartTime, {onLeave: function (args) {send("KdsGetKeyStartTime");}});
+
+var SIDKeyProtect = Module.findExportByName("KdsCli.dll", "SIDKeyProtect")
+Interceptor.attach(SIDKeyProtect, {onLeave: function (args) {send("SIDKeyProtect");}});
+
+var SIDKeyProvAlloc = Module.findExportByName("KdsCli.dll", "SIDKeyProvAlloc")
+Interceptor.attach(SIDKeyProvAlloc, {onLeave: function (args) {send("SIDKeyProvAlloc");}});
+
+var SIDKeyProvFree = Module.findExportByName("KdsCli.dll", "SIDKeyProvFree")
+Interceptor.attach(SIDKeyProvFree, {onLeave: function (args) {send("SIDKeyProvFree");}});
+
+var SIDKeyUnprotect = Module.findExportByName("KdsCli.dll", "SIDKeyUnprotect")
+Interceptor.attach(SIDKeyUnprotect, {onLeave: function (args) {send("SIDKeyUnprotect");}});
+
+var SetServerConfig = Module.findExportByName("KdsCli.dll", "SetServerConfig")
+Interceptor.attach(SetServerConfig, {onLeave: function (args) {send("SetServerConfig");}});
+
+var TestServerConfig = Module.findExportByName("KdsCli.dll", "TestServerConfig")
+Interceptor.attach(TestServerConfig, {onLeave: function (args) {send("TestServerConfig");}});
+
+var UnlockRpcCache = Module.findExportByName("KdsCli.dll", "UnlockRpcCache")
+Interceptor.attach(UnlockRpcCache, {onLeave: function (args) {send("UnlockRpcCache");}});
+
+var ValidateSrvConfig = Module.findExportByName("KdsCli.dll", "ValidateSrvConfig")
+Interceptor.attach(ValidateSrvConfig, {onLeave: function (args) {send("ValidateSrvConfig");}});
+
+var WriteSIDKeyInCache = Module.findExportByName("KdsCli.dll", "WriteSIDKeyInCache")
+Interceptor.attach(WriteSIDKeyInCache, {onLeave: function (args) {send("WriteSIDKeyInCache");}});
+

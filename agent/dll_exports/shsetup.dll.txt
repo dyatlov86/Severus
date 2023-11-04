@@ -1,0 +1,15 @@
+var SHUnattendedSetup = Module.findExportByName("shsetup.dll", "SHUnattendedSetup")
+Interceptor.attach(SHUnattendedSetup, {onLeave: function (args) {send("SHUnattendedSetup");}});
+
+var SHUnattendedSetupA = Module.findExportByName("shsetup.dll", "SHUnattendedSetupA")
+Interceptor.attach(SHUnattendedSetupA, {onLeave: function (args) {send("SHUnattendedSetupA");}});
+
+var SHUnattendedSetupW = Module.findExportByName("shsetup.dll", "SHUnattendedSetupW")
+Interceptor.attach(SHUnattendedSetupW, {onLeave: function (args) {send("SHUnattendedSetupW");}});
+
+var Sysprep_Cleanup_Shell = Module.findExportByName("shsetup.dll", "Sysprep_Cleanup_Shell")
+Interceptor.attach(Sysprep_Cleanup_Shell, {onLeave: function (args) {send("Sysprep_Cleanup_Shell");}});
+
+var Sysprep_Generalize_Shell = Module.findExportByName("shsetup.dll", "Sysprep_Generalize_Shell")
+Interceptor.attach(Sysprep_Generalize_Shell, {onLeave: function (args) {send("Sysprep_Generalize_Shell");}});
+

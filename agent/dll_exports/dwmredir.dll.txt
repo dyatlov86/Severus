@@ -1,0 +1,9 @@
+var DwmInitializePort = Module.findExportByName("dwmredir.dll", "DwmInitializePort")
+Interceptor.attach(DwmInitializePort, {onLeave: function (args) {send("DwmInitializePort");}});
+
+var DwmRedirectionManagerInitialize = Module.findExportByName("dwmredir.dll", "DwmRedirectionManagerInitialize")
+Interceptor.attach(DwmRedirectionManagerInitialize, {onLeave: function (args) {send("DwmRedirectionManagerInitialize");}});
+
+var DwmRedirectionManagerShutdown = Module.findExportByName("dwmredir.dll", "DwmRedirectionManagerShutdown")
+Interceptor.attach(DwmRedirectionManagerShutdown, {onLeave: function (args) {send("DwmRedirectionManagerShutdown");}});
+

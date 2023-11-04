@@ -1,0 +1,63 @@
+var DllCanUnloadNow = Module.findExportByName("sppcext.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("sppcext.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var SLAcquireGenuineTicket = Module.findExportByName("sppcext.dll", "SLAcquireGenuineTicket")
+Interceptor.attach(SLAcquireGenuineTicket, {onLeave: function (args) {send("SLAcquireGenuineTicket");}});
+
+var SLAcquireGenuineTicketForAppId = Module.findExportByName("sppcext.dll", "SLAcquireGenuineTicketForAppId")
+Interceptor.attach(SLAcquireGenuineTicketForAppId, {onLeave: function (args) {send("SLAcquireGenuineTicketForAppId");}});
+
+var SLActivateProduct = Module.findExportByName("sppcext.dll", "SLActivateProduct")
+Interceptor.attach(SLActivateProduct, {onLeave: function (args) {send("SLActivateProduct");}});
+
+var SLDepositTokenActivationResponse = Module.findExportByName("sppcext.dll", "SLDepositTokenActivationResponse")
+Interceptor.attach(SLDepositTokenActivationResponse, {onLeave: function (args) {send("SLDepositTokenActivationResponse");}});
+
+var SLFreeTokenActivationCertificates = Module.findExportByName("sppcext.dll", "SLFreeTokenActivationCertificates")
+Interceptor.attach(SLFreeTokenActivationCertificates, {onLeave: function (args) {send("SLFreeTokenActivationCertificates");}});
+
+var SLFreeTokenActivationGrants = Module.findExportByName("sppcext.dll", "SLFreeTokenActivationGrants")
+Interceptor.attach(SLFreeTokenActivationGrants, {onLeave: function (args) {send("SLFreeTokenActivationGrants");}});
+
+var SLGenerateTokenActivationChallenge = Module.findExportByName("sppcext.dll", "SLGenerateTokenActivationChallenge")
+Interceptor.attach(SLGenerateTokenActivationChallenge, {onLeave: function (args) {send("SLGenerateTokenActivationChallenge");}});
+
+var SLGetGenuineInformationEx = Module.findExportByName("sppcext.dll", "SLGetGenuineInformationEx")
+Interceptor.attach(SLGetGenuineInformationEx, {onLeave: function (args) {send("SLGetGenuineInformationEx");}});
+
+var SLGetPackageProductKey = Module.findExportByName("sppcext.dll", "SLGetPackageProductKey")
+Interceptor.attach(SLGetPackageProductKey, {onLeave: function (args) {send("SLGetPackageProductKey");}});
+
+var SLGetPackageProperties = Module.findExportByName("sppcext.dll", "SLGetPackageProperties")
+Interceptor.attach(SLGetPackageProperties, {onLeave: function (args) {send("SLGetPackageProperties");}});
+
+var SLGetPackageToken = Module.findExportByName("sppcext.dll", "SLGetPackageToken")
+Interceptor.attach(SLGetPackageToken, {onLeave: function (args) {send("SLGetPackageToken");}});
+
+var SLGetReferralInformation = Module.findExportByName("sppcext.dll", "SLGetReferralInformation")
+Interceptor.attach(SLGetReferralInformation, {onLeave: function (args) {send("SLGetReferralInformation");}});
+
+var SLGetServerStatus = Module.findExportByName("sppcext.dll", "SLGetServerStatus")
+Interceptor.attach(SLGetServerStatus, {onLeave: function (args) {send("SLGetServerStatus");}});
+
+var SLGetTokenActivationCertificates = Module.findExportByName("sppcext.dll", "SLGetTokenActivationCertificates")
+Interceptor.attach(SLGetTokenActivationCertificates, {onLeave: function (args) {send("SLGetTokenActivationCertificates");}});
+
+var SLGetTokenActivationGrants = Module.findExportByName("sppcext.dll", "SLGetTokenActivationGrants")
+Interceptor.attach(SLGetTokenActivationGrants, {onLeave: function (args) {send("SLGetTokenActivationGrants");}});
+
+var SLInitialize = Module.findExportByName("sppcext.dll", "SLInitialize")
+Interceptor.attach(SLInitialize, {onLeave: function (args) {send("SLInitialize");}});
+
+var SLInstallPackage = Module.findExportByName("sppcext.dll", "SLInstallPackage")
+Interceptor.attach(SLInstallPackage, {onLeave: function (args) {send("SLInstallPackage");}});
+
+var SLSignTokenActivationChallenge = Module.findExportByName("sppcext.dll", "SLSignTokenActivationChallenge")
+Interceptor.attach(SLSignTokenActivationChallenge, {onLeave: function (args) {send("SLSignTokenActivationChallenge");}});
+
+var SLUninstallPackage = Module.findExportByName("sppcext.dll", "SLUninstallPackage")
+Interceptor.attach(SLUninstallPackage, {onLeave: function (args) {send("SLUninstallPackage");}});
+

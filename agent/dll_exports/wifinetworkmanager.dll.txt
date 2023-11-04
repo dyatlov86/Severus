@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("wifinetworkmanager.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wifinetworkmanager.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var PopulateFuncTable = Module.findExportByName("wifinetworkmanager.dll", "PopulateFuncTable")
+Interceptor.attach(PopulateFuncTable, {onLeave: function (args) {send("PopulateFuncTable");}});
+

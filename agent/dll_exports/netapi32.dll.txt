@@ -1,0 +1,891 @@
+var DavAddConnection = Module.findExportByName("netapi32.dll", "DavAddConnection")
+Interceptor.attach(DavAddConnection, {onLeave: function (args) {send("DavAddConnection");}});
+
+var DavDeleteConnection = Module.findExportByName("netapi32.dll", "DavDeleteConnection")
+Interceptor.attach(DavDeleteConnection, {onLeave: function (args) {send("DavDeleteConnection");}});
+
+var DavFlushFile = Module.findExportByName("netapi32.dll", "DavFlushFile")
+Interceptor.attach(DavFlushFile, {onLeave: function (args) {send("DavFlushFile");}});
+
+var DavGetExtendedError = Module.findExportByName("netapi32.dll", "DavGetExtendedError")
+Interceptor.attach(DavGetExtendedError, {onLeave: function (args) {send("DavGetExtendedError");}});
+
+var DavGetHTTPFromUNCPath = Module.findExportByName("netapi32.dll", "DavGetHTTPFromUNCPath")
+Interceptor.attach(DavGetHTTPFromUNCPath, {onLeave: function (args) {send("DavGetHTTPFromUNCPath");}});
+
+var DavGetUNCFromHTTPPath = Module.findExportByName("netapi32.dll", "DavGetUNCFromHTTPPath")
+Interceptor.attach(DavGetUNCFromHTTPPath, {onLeave: function (args) {send("DavGetUNCFromHTTPPath");}});
+
+var DsAddressToSiteNamesA = Module.findExportByName("netapi32.dll", "DsAddressToSiteNamesA")
+Interceptor.attach(DsAddressToSiteNamesA, {onLeave: function (args) {send("DsAddressToSiteNamesA");}});
+
+var DsAddressToSiteNamesExA = Module.findExportByName("netapi32.dll", "DsAddressToSiteNamesExA")
+Interceptor.attach(DsAddressToSiteNamesExA, {onLeave: function (args) {send("DsAddressToSiteNamesExA");}});
+
+var DsAddressToSiteNamesExW = Module.findExportByName("netapi32.dll", "DsAddressToSiteNamesExW")
+Interceptor.attach(DsAddressToSiteNamesExW, {onLeave: function (args) {send("DsAddressToSiteNamesExW");}});
+
+var DsAddressToSiteNamesW = Module.findExportByName("netapi32.dll", "DsAddressToSiteNamesW")
+Interceptor.attach(DsAddressToSiteNamesW, {onLeave: function (args) {send("DsAddressToSiteNamesW");}});
+
+var DsDeregisterDnsHostRecordsA = Module.findExportByName("netapi32.dll", "DsDeregisterDnsHostRecordsA")
+Interceptor.attach(DsDeregisterDnsHostRecordsA, {onLeave: function (args) {send("DsDeregisterDnsHostRecordsA");}});
+
+var DsDeregisterDnsHostRecordsW = Module.findExportByName("netapi32.dll", "DsDeregisterDnsHostRecordsW")
+Interceptor.attach(DsDeregisterDnsHostRecordsW, {onLeave: function (args) {send("DsDeregisterDnsHostRecordsW");}});
+
+var DsEnumerateDomainTrustsA = Module.findExportByName("netapi32.dll", "DsEnumerateDomainTrustsA")
+Interceptor.attach(DsEnumerateDomainTrustsA, {onLeave: function (args) {send("DsEnumerateDomainTrustsA");}});
+
+var DsEnumerateDomainTrustsW = Module.findExportByName("netapi32.dll", "DsEnumerateDomainTrustsW")
+Interceptor.attach(DsEnumerateDomainTrustsW, {onLeave: function (args) {send("DsEnumerateDomainTrustsW");}});
+
+var DsGetDcCloseW = Module.findExportByName("netapi32.dll", "DsGetDcCloseW")
+Interceptor.attach(DsGetDcCloseW, {onLeave: function (args) {send("DsGetDcCloseW");}});
+
+var DsGetDcNameA = Module.findExportByName("netapi32.dll", "DsGetDcNameA")
+Interceptor.attach(DsGetDcNameA, {onLeave: function (args) {send("DsGetDcNameA");}});
+
+var DsGetDcNameW = Module.findExportByName("netapi32.dll", "DsGetDcNameW")
+Interceptor.attach(DsGetDcNameW, {onLeave: function (args) {send("DsGetDcNameW");}});
+
+var DsGetDcNameWithAccountA = Module.findExportByName("netapi32.dll", "DsGetDcNameWithAccountA")
+Interceptor.attach(DsGetDcNameWithAccountA, {onLeave: function (args) {send("DsGetDcNameWithAccountA");}});
+
+var DsGetDcNameWithAccountW = Module.findExportByName("netapi32.dll", "DsGetDcNameWithAccountW")
+Interceptor.attach(DsGetDcNameWithAccountW, {onLeave: function (args) {send("DsGetDcNameWithAccountW");}});
+
+var DsGetDcNextA = Module.findExportByName("netapi32.dll", "DsGetDcNextA")
+Interceptor.attach(DsGetDcNextA, {onLeave: function (args) {send("DsGetDcNextA");}});
+
+var DsGetDcNextW = Module.findExportByName("netapi32.dll", "DsGetDcNextW")
+Interceptor.attach(DsGetDcNextW, {onLeave: function (args) {send("DsGetDcNextW");}});
+
+var DsGetDcOpenA = Module.findExportByName("netapi32.dll", "DsGetDcOpenA")
+Interceptor.attach(DsGetDcOpenA, {onLeave: function (args) {send("DsGetDcOpenA");}});
+
+var DsGetDcOpenW = Module.findExportByName("netapi32.dll", "DsGetDcOpenW")
+Interceptor.attach(DsGetDcOpenW, {onLeave: function (args) {send("DsGetDcOpenW");}});
+
+var DsGetDcSiteCoverageA = Module.findExportByName("netapi32.dll", "DsGetDcSiteCoverageA")
+Interceptor.attach(DsGetDcSiteCoverageA, {onLeave: function (args) {send("DsGetDcSiteCoverageA");}});
+
+var DsGetDcSiteCoverageW = Module.findExportByName("netapi32.dll", "DsGetDcSiteCoverageW")
+Interceptor.attach(DsGetDcSiteCoverageW, {onLeave: function (args) {send("DsGetDcSiteCoverageW");}});
+
+var DsGetForestTrustInformationW = Module.findExportByName("netapi32.dll", "DsGetForestTrustInformationW")
+Interceptor.attach(DsGetForestTrustInformationW, {onLeave: function (args) {send("DsGetForestTrustInformationW");}});
+
+var DsGetSiteNameA = Module.findExportByName("netapi32.dll", "DsGetSiteNameA")
+Interceptor.attach(DsGetSiteNameA, {onLeave: function (args) {send("DsGetSiteNameA");}});
+
+var DsGetSiteNameW = Module.findExportByName("netapi32.dll", "DsGetSiteNameW")
+Interceptor.attach(DsGetSiteNameW, {onLeave: function (args) {send("DsGetSiteNameW");}});
+
+var DsMergeForestTrustInformationW = Module.findExportByName("netapi32.dll", "DsMergeForestTrustInformationW")
+Interceptor.attach(DsMergeForestTrustInformationW, {onLeave: function (args) {send("DsMergeForestTrustInformationW");}});
+
+var DsRoleFreeMemory = Module.findExportByName("netapi32.dll", "DsRoleFreeMemory")
+Interceptor.attach(DsRoleFreeMemory, {onLeave: function (args) {send("DsRoleFreeMemory");}});
+
+var DsRoleGetPrimaryDomainInformation = Module.findExportByName("netapi32.dll", "DsRoleGetPrimaryDomainInformation")
+Interceptor.attach(DsRoleGetPrimaryDomainInformation, {onLeave: function (args) {send("DsRoleGetPrimaryDomainInformation");}});
+
+var DsValidateSubnetNameA = Module.findExportByName("netapi32.dll", "DsValidateSubnetNameA")
+Interceptor.attach(DsValidateSubnetNameA, {onLeave: function (args) {send("DsValidateSubnetNameA");}});
+
+var DsValidateSubnetNameW = Module.findExportByName("netapi32.dll", "DsValidateSubnetNameW")
+Interceptor.attach(DsValidateSubnetNameW, {onLeave: function (args) {send("DsValidateSubnetNameW");}});
+
+var I_BrowserSetNetlogonState = Module.findExportByName("netapi32.dll", "I_BrowserSetNetlogonState")
+Interceptor.attach(I_BrowserSetNetlogonState, {onLeave: function (args) {send("I_BrowserSetNetlogonState");}});
+
+var I_DsUpdateReadOnlyServerDnsRecords = Module.findExportByName("netapi32.dll", "I_DsUpdateReadOnlyServerDnsRecords")
+Interceptor.attach(I_DsUpdateReadOnlyServerDnsRecords, {onLeave: function (args) {send("I_DsUpdateReadOnlyServerDnsRecords");}});
+
+var I_NetAccountDeltas = Module.findExportByName("netapi32.dll", "I_NetAccountDeltas")
+Interceptor.attach(I_NetAccountDeltas, {onLeave: function (args) {send("I_NetAccountDeltas");}});
+
+var I_NetAccountSync = Module.findExportByName("netapi32.dll", "I_NetAccountSync")
+Interceptor.attach(I_NetAccountSync, {onLeave: function (args) {send("I_NetAccountSync");}});
+
+var I_NetChainSetClientAttributes = Module.findExportByName("netapi32.dll", "I_NetChainSetClientAttributes")
+Interceptor.attach(I_NetChainSetClientAttributes, {onLeave: function (args) {send("I_NetChainSetClientAttributes");}});
+
+var I_NetChainSetClientAttributes2 = Module.findExportByName("netapi32.dll", "I_NetChainSetClientAttributes2")
+Interceptor.attach(I_NetChainSetClientAttributes2, {onLeave: function (args) {send("I_NetChainSetClientAttributes2");}});
+
+var I_NetDatabaseDeltas = Module.findExportByName("netapi32.dll", "I_NetDatabaseDeltas")
+Interceptor.attach(I_NetDatabaseDeltas, {onLeave: function (args) {send("I_NetDatabaseDeltas");}});
+
+var I_NetDatabaseRedo = Module.findExportByName("netapi32.dll", "I_NetDatabaseRedo")
+Interceptor.attach(I_NetDatabaseRedo, {onLeave: function (args) {send("I_NetDatabaseRedo");}});
+
+var I_NetDatabaseSync = Module.findExportByName("netapi32.dll", "I_NetDatabaseSync")
+Interceptor.attach(I_NetDatabaseSync, {onLeave: function (args) {send("I_NetDatabaseSync");}});
+
+var I_NetDatabaseSync2 = Module.findExportByName("netapi32.dll", "I_NetDatabaseSync2")
+Interceptor.attach(I_NetDatabaseSync2, {onLeave: function (args) {send("I_NetDatabaseSync2");}});
+
+var I_NetDfsGetVersion = Module.findExportByName("netapi32.dll", "I_NetDfsGetVersion")
+Interceptor.attach(I_NetDfsGetVersion, {onLeave: function (args) {send("I_NetDfsGetVersion");}});
+
+var I_NetDfsIsThisADomainName = Module.findExportByName("netapi32.dll", "I_NetDfsIsThisADomainName")
+Interceptor.attach(I_NetDfsIsThisADomainName, {onLeave: function (args) {send("I_NetDfsIsThisADomainName");}});
+
+var I_NetGetDCList = Module.findExportByName("netapi32.dll", "I_NetGetDCList")
+Interceptor.attach(I_NetGetDCList, {onLeave: function (args) {send("I_NetGetDCList");}});
+
+var I_NetGetForestTrustInformation = Module.findExportByName("netapi32.dll", "I_NetGetForestTrustInformation")
+Interceptor.attach(I_NetGetForestTrustInformation, {onLeave: function (args) {send("I_NetGetForestTrustInformation");}});
+
+var I_NetLogonControl = Module.findExportByName("netapi32.dll", "I_NetLogonControl")
+Interceptor.attach(I_NetLogonControl, {onLeave: function (args) {send("I_NetLogonControl");}});
+
+var I_NetLogonControl2 = Module.findExportByName("netapi32.dll", "I_NetLogonControl2")
+Interceptor.attach(I_NetLogonControl2, {onLeave: function (args) {send("I_NetLogonControl2");}});
+
+var I_NetLogonGetDomainInfo = Module.findExportByName("netapi32.dll", "I_NetLogonGetDomainInfo")
+Interceptor.attach(I_NetLogonGetDomainInfo, {onLeave: function (args) {send("I_NetLogonGetDomainInfo");}});
+
+var I_NetLogonSamLogoff = Module.findExportByName("netapi32.dll", "I_NetLogonSamLogoff")
+Interceptor.attach(I_NetLogonSamLogoff, {onLeave: function (args) {send("I_NetLogonSamLogoff");}});
+
+var I_NetLogonSamLogon = Module.findExportByName("netapi32.dll", "I_NetLogonSamLogon")
+Interceptor.attach(I_NetLogonSamLogon, {onLeave: function (args) {send("I_NetLogonSamLogon");}});
+
+var I_NetLogonSamLogonEx = Module.findExportByName("netapi32.dll", "I_NetLogonSamLogonEx")
+Interceptor.attach(I_NetLogonSamLogonEx, {onLeave: function (args) {send("I_NetLogonSamLogonEx");}});
+
+var I_NetLogonSamLogonWithFlags = Module.findExportByName("netapi32.dll", "I_NetLogonSamLogonWithFlags")
+Interceptor.attach(I_NetLogonSamLogonWithFlags, {onLeave: function (args) {send("I_NetLogonSamLogonWithFlags");}});
+
+var I_NetLogonSendToSam = Module.findExportByName("netapi32.dll", "I_NetLogonSendToSam")
+Interceptor.attach(I_NetLogonSendToSam, {onLeave: function (args) {send("I_NetLogonSendToSam");}});
+
+var I_NetLogonUasLogoff = Module.findExportByName("netapi32.dll", "I_NetLogonUasLogoff")
+Interceptor.attach(I_NetLogonUasLogoff, {onLeave: function (args) {send("I_NetLogonUasLogoff");}});
+
+var I_NetLogonUasLogon = Module.findExportByName("netapi32.dll", "I_NetLogonUasLogon")
+Interceptor.attach(I_NetLogonUasLogon, {onLeave: function (args) {send("I_NetLogonUasLogon");}});
+
+var I_NetServerAuthenticate = Module.findExportByName("netapi32.dll", "I_NetServerAuthenticate")
+Interceptor.attach(I_NetServerAuthenticate, {onLeave: function (args) {send("I_NetServerAuthenticate");}});
+
+var I_NetServerAuthenticate2 = Module.findExportByName("netapi32.dll", "I_NetServerAuthenticate2")
+Interceptor.attach(I_NetServerAuthenticate2, {onLeave: function (args) {send("I_NetServerAuthenticate2");}});
+
+var I_NetServerAuthenticate3 = Module.findExportByName("netapi32.dll", "I_NetServerAuthenticate3")
+Interceptor.attach(I_NetServerAuthenticate3, {onLeave: function (args) {send("I_NetServerAuthenticate3");}});
+
+var I_NetServerAuthenticateKerberos = Module.findExportByName("netapi32.dll", "I_NetServerAuthenticateKerberos")
+Interceptor.attach(I_NetServerAuthenticateKerberos, {onLeave: function (args) {send("I_NetServerAuthenticateKerberos");}});
+
+var I_NetServerGetTrustInfo = Module.findExportByName("netapi32.dll", "I_NetServerGetTrustInfo")
+Interceptor.attach(I_NetServerGetTrustInfo, {onLeave: function (args) {send("I_NetServerGetTrustInfo");}});
+
+var I_NetServerPasswordGet = Module.findExportByName("netapi32.dll", "I_NetServerPasswordGet")
+Interceptor.attach(I_NetServerPasswordGet, {onLeave: function (args) {send("I_NetServerPasswordGet");}});
+
+var I_NetServerPasswordSet = Module.findExportByName("netapi32.dll", "I_NetServerPasswordSet")
+Interceptor.attach(I_NetServerPasswordSet, {onLeave: function (args) {send("I_NetServerPasswordSet");}});
+
+var I_NetServerPasswordSet2 = Module.findExportByName("netapi32.dll", "I_NetServerPasswordSet2")
+Interceptor.attach(I_NetServerPasswordSet2, {onLeave: function (args) {send("I_NetServerPasswordSet2");}});
+
+var I_NetServerReqChallenge = Module.findExportByName("netapi32.dll", "I_NetServerReqChallenge")
+Interceptor.attach(I_NetServerReqChallenge, {onLeave: function (args) {send("I_NetServerReqChallenge");}});
+
+var I_NetServerSetServiceBits = Module.findExportByName("netapi32.dll", "I_NetServerSetServiceBits")
+Interceptor.attach(I_NetServerSetServiceBits, {onLeave: function (args) {send("I_NetServerSetServiceBits");}});
+
+var I_NetServerSetServiceBitsEx = Module.findExportByName("netapi32.dll", "I_NetServerSetServiceBitsEx")
+Interceptor.attach(I_NetServerSetServiceBitsEx, {onLeave: function (args) {send("I_NetServerSetServiceBitsEx");}});
+
+var I_NetServerTrustPasswordsGet = Module.findExportByName("netapi32.dll", "I_NetServerTrustPasswordsGet")
+Interceptor.attach(I_NetServerTrustPasswordsGet, {onLeave: function (args) {send("I_NetServerTrustPasswordsGet");}});
+
+var I_NetlogonComputeClientDigest = Module.findExportByName("netapi32.dll", "I_NetlogonComputeClientDigest")
+Interceptor.attach(I_NetlogonComputeClientDigest, {onLeave: function (args) {send("I_NetlogonComputeClientDigest");}});
+
+var I_NetlogonComputeServerDigest = Module.findExportByName("netapi32.dll", "I_NetlogonComputeServerDigest")
+Interceptor.attach(I_NetlogonComputeServerDigest, {onLeave: function (args) {send("I_NetlogonComputeServerDigest");}});
+
+var NetAccessAdd = Module.findExportByName("netapi32.dll", "NetAccessAdd")
+Interceptor.attach(NetAccessAdd, {onLeave: function (args) {send("NetAccessAdd");}});
+
+var NetAccessDel = Module.findExportByName("netapi32.dll", "NetAccessDel")
+Interceptor.attach(NetAccessDel, {onLeave: function (args) {send("NetAccessDel");}});
+
+var NetAccessEnum = Module.findExportByName("netapi32.dll", "NetAccessEnum")
+Interceptor.attach(NetAccessEnum, {onLeave: function (args) {send("NetAccessEnum");}});
+
+var NetAccessGetInfo = Module.findExportByName("netapi32.dll", "NetAccessGetInfo")
+Interceptor.attach(NetAccessGetInfo, {onLeave: function (args) {send("NetAccessGetInfo");}});
+
+var NetAccessGetUserPerms = Module.findExportByName("netapi32.dll", "NetAccessGetUserPerms")
+Interceptor.attach(NetAccessGetUserPerms, {onLeave: function (args) {send("NetAccessGetUserPerms");}});
+
+var NetAccessSetInfo = Module.findExportByName("netapi32.dll", "NetAccessSetInfo")
+Interceptor.attach(NetAccessSetInfo, {onLeave: function (args) {send("NetAccessSetInfo");}});
+
+var NetAddAlternateComputerName = Module.findExportByName("netapi32.dll", "NetAddAlternateComputerName")
+Interceptor.attach(NetAddAlternateComputerName, {onLeave: function (args) {send("NetAddAlternateComputerName");}});
+
+var NetAddServiceAccount = Module.findExportByName("netapi32.dll", "NetAddServiceAccount")
+Interceptor.attach(NetAddServiceAccount, {onLeave: function (args) {send("NetAddServiceAccount");}});
+
+var NetAlertRaise = Module.findExportByName("netapi32.dll", "NetAlertRaise")
+Interceptor.attach(NetAlertRaise, {onLeave: function (args) {send("NetAlertRaise");}});
+
+var NetAlertRaiseEx = Module.findExportByName("netapi32.dll", "NetAlertRaiseEx")
+Interceptor.attach(NetAlertRaiseEx, {onLeave: function (args) {send("NetAlertRaiseEx");}});
+
+var NetApiBufferAllocate = Module.findExportByName("netapi32.dll", "NetApiBufferAllocate")
+Interceptor.attach(NetApiBufferAllocate, {onLeave: function (args) {send("NetApiBufferAllocate");}});
+
+var NetApiBufferFree = Module.findExportByName("netapi32.dll", "NetApiBufferFree")
+Interceptor.attach(NetApiBufferFree, {onLeave: function (args) {send("NetApiBufferFree");}});
+
+var NetApiBufferReallocate = Module.findExportByName("netapi32.dll", "NetApiBufferReallocate")
+Interceptor.attach(NetApiBufferReallocate, {onLeave: function (args) {send("NetApiBufferReallocate");}});
+
+var NetApiBufferSize = Module.findExportByName("netapi32.dll", "NetApiBufferSize")
+Interceptor.attach(NetApiBufferSize, {onLeave: function (args) {send("NetApiBufferSize");}});
+
+var NetAuditClear = Module.findExportByName("netapi32.dll", "NetAuditClear")
+Interceptor.attach(NetAuditClear, {onLeave: function (args) {send("NetAuditClear");}});
+
+var NetAuditRead = Module.findExportByName("netapi32.dll", "NetAuditRead")
+Interceptor.attach(NetAuditRead, {onLeave: function (args) {send("NetAuditRead");}});
+
+var NetAuditWrite = Module.findExportByName("netapi32.dll", "NetAuditWrite")
+Interceptor.attach(NetAuditWrite, {onLeave: function (args) {send("NetAuditWrite");}});
+
+var NetConfigGet = Module.findExportByName("netapi32.dll", "NetConfigGet")
+Interceptor.attach(NetConfigGet, {onLeave: function (args) {send("NetConfigGet");}});
+
+var NetConfigGetAll = Module.findExportByName("netapi32.dll", "NetConfigGetAll")
+Interceptor.attach(NetConfigGetAll, {onLeave: function (args) {send("NetConfigGetAll");}});
+
+var NetConfigSet = Module.findExportByName("netapi32.dll", "NetConfigSet")
+Interceptor.attach(NetConfigSet, {onLeave: function (args) {send("NetConfigSet");}});
+
+var NetConnectionEnum = Module.findExportByName("netapi32.dll", "NetConnectionEnum")
+Interceptor.attach(NetConnectionEnum, {onLeave: function (args) {send("NetConnectionEnum");}});
+
+var NetCreateProvisioningPackage = Module.findExportByName("netapi32.dll", "NetCreateProvisioningPackage")
+Interceptor.attach(NetCreateProvisioningPackage, {onLeave: function (args) {send("NetCreateProvisioningPackage");}});
+
+var NetDfsAdd = Module.findExportByName("netapi32.dll", "NetDfsAdd")
+Interceptor.attach(NetDfsAdd, {onLeave: function (args) {send("NetDfsAdd");}});
+
+var NetDfsAddFtRoot = Module.findExportByName("netapi32.dll", "NetDfsAddFtRoot")
+Interceptor.attach(NetDfsAddFtRoot, {onLeave: function (args) {send("NetDfsAddFtRoot");}});
+
+var NetDfsAddRootTarget = Module.findExportByName("netapi32.dll", "NetDfsAddRootTarget")
+Interceptor.attach(NetDfsAddRootTarget, {onLeave: function (args) {send("NetDfsAddRootTarget");}});
+
+var NetDfsAddStdRoot = Module.findExportByName("netapi32.dll", "NetDfsAddStdRoot")
+Interceptor.attach(NetDfsAddStdRoot, {onLeave: function (args) {send("NetDfsAddStdRoot");}});
+
+var NetDfsAddStdRootForced = Module.findExportByName("netapi32.dll", "NetDfsAddStdRootForced")
+Interceptor.attach(NetDfsAddStdRootForced, {onLeave: function (args) {send("NetDfsAddStdRootForced");}});
+
+var NetDfsEnum = Module.findExportByName("netapi32.dll", "NetDfsEnum")
+Interceptor.attach(NetDfsEnum, {onLeave: function (args) {send("NetDfsEnum");}});
+
+var NetDfsGetClientInfo = Module.findExportByName("netapi32.dll", "NetDfsGetClientInfo")
+Interceptor.attach(NetDfsGetClientInfo, {onLeave: function (args) {send("NetDfsGetClientInfo");}});
+
+var NetDfsGetDcAddress = Module.findExportByName("netapi32.dll", "NetDfsGetDcAddress")
+Interceptor.attach(NetDfsGetDcAddress, {onLeave: function (args) {send("NetDfsGetDcAddress");}});
+
+var NetDfsGetFtContainerSecurity = Module.findExportByName("netapi32.dll", "NetDfsGetFtContainerSecurity")
+Interceptor.attach(NetDfsGetFtContainerSecurity, {onLeave: function (args) {send("NetDfsGetFtContainerSecurity");}});
+
+var NetDfsGetInfo = Module.findExportByName("netapi32.dll", "NetDfsGetInfo")
+Interceptor.attach(NetDfsGetInfo, {onLeave: function (args) {send("NetDfsGetInfo");}});
+
+var NetDfsGetSecurity = Module.findExportByName("netapi32.dll", "NetDfsGetSecurity")
+Interceptor.attach(NetDfsGetSecurity, {onLeave: function (args) {send("NetDfsGetSecurity");}});
+
+var NetDfsGetStdContainerSecurity = Module.findExportByName("netapi32.dll", "NetDfsGetStdContainerSecurity")
+Interceptor.attach(NetDfsGetStdContainerSecurity, {onLeave: function (args) {send("NetDfsGetStdContainerSecurity");}});
+
+var NetDfsGetSupportedNamespaceVersion = Module.findExportByName("netapi32.dll", "NetDfsGetSupportedNamespaceVersion")
+Interceptor.attach(NetDfsGetSupportedNamespaceVersion, {onLeave: function (args) {send("NetDfsGetSupportedNamespaceVersion");}});
+
+var NetDfsManagerGetConfigInfo = Module.findExportByName("netapi32.dll", "NetDfsManagerGetConfigInfo")
+Interceptor.attach(NetDfsManagerGetConfigInfo, {onLeave: function (args) {send("NetDfsManagerGetConfigInfo");}});
+
+var NetDfsManagerInitialize = Module.findExportByName("netapi32.dll", "NetDfsManagerInitialize")
+Interceptor.attach(NetDfsManagerInitialize, {onLeave: function (args) {send("NetDfsManagerInitialize");}});
+
+var NetDfsManagerSendSiteInfo = Module.findExportByName("netapi32.dll", "NetDfsManagerSendSiteInfo")
+Interceptor.attach(NetDfsManagerSendSiteInfo, {onLeave: function (args) {send("NetDfsManagerSendSiteInfo");}});
+
+var NetDfsMove = Module.findExportByName("netapi32.dll", "NetDfsMove")
+Interceptor.attach(NetDfsMove, {onLeave: function (args) {send("NetDfsMove");}});
+
+var NetDfsRemove = Module.findExportByName("netapi32.dll", "NetDfsRemove")
+Interceptor.attach(NetDfsRemove, {onLeave: function (args) {send("NetDfsRemove");}});
+
+var NetDfsRemoveFtRoot = Module.findExportByName("netapi32.dll", "NetDfsRemoveFtRoot")
+Interceptor.attach(NetDfsRemoveFtRoot, {onLeave: function (args) {send("NetDfsRemoveFtRoot");}});
+
+var NetDfsRemoveFtRootForced = Module.findExportByName("netapi32.dll", "NetDfsRemoveFtRootForced")
+Interceptor.attach(NetDfsRemoveFtRootForced, {onLeave: function (args) {send("NetDfsRemoveFtRootForced");}});
+
+var NetDfsRemoveRootTarget = Module.findExportByName("netapi32.dll", "NetDfsRemoveRootTarget")
+Interceptor.attach(NetDfsRemoveRootTarget, {onLeave: function (args) {send("NetDfsRemoveRootTarget");}});
+
+var NetDfsRemoveStdRoot = Module.findExportByName("netapi32.dll", "NetDfsRemoveStdRoot")
+Interceptor.attach(NetDfsRemoveStdRoot, {onLeave: function (args) {send("NetDfsRemoveStdRoot");}});
+
+var NetDfsRename = Module.findExportByName("netapi32.dll", "NetDfsRename")
+Interceptor.attach(NetDfsRename, {onLeave: function (args) {send("NetDfsRename");}});
+
+var NetDfsSetClientInfo = Module.findExportByName("netapi32.dll", "NetDfsSetClientInfo")
+Interceptor.attach(NetDfsSetClientInfo, {onLeave: function (args) {send("NetDfsSetClientInfo");}});
+
+var NetDfsSetFtContainerSecurity = Module.findExportByName("netapi32.dll", "NetDfsSetFtContainerSecurity")
+Interceptor.attach(NetDfsSetFtContainerSecurity, {onLeave: function (args) {send("NetDfsSetFtContainerSecurity");}});
+
+var NetDfsSetInfo = Module.findExportByName("netapi32.dll", "NetDfsSetInfo")
+Interceptor.attach(NetDfsSetInfo, {onLeave: function (args) {send("NetDfsSetInfo");}});
+
+var NetDfsSetSecurity = Module.findExportByName("netapi32.dll", "NetDfsSetSecurity")
+Interceptor.attach(NetDfsSetSecurity, {onLeave: function (args) {send("NetDfsSetSecurity");}});
+
+var NetDfsSetStdContainerSecurity = Module.findExportByName("netapi32.dll", "NetDfsSetStdContainerSecurity")
+Interceptor.attach(NetDfsSetStdContainerSecurity, {onLeave: function (args) {send("NetDfsSetStdContainerSecurity");}});
+
+var NetEnumerateComputerNames = Module.findExportByName("netapi32.dll", "NetEnumerateComputerNames")
+Interceptor.attach(NetEnumerateComputerNames, {onLeave: function (args) {send("NetEnumerateComputerNames");}});
+
+var NetEnumerateServiceAccounts = Module.findExportByName("netapi32.dll", "NetEnumerateServiceAccounts")
+Interceptor.attach(NetEnumerateServiceAccounts, {onLeave: function (args) {send("NetEnumerateServiceAccounts");}});
+
+var NetEnumerateTrustedDomains = Module.findExportByName("netapi32.dll", "NetEnumerateTrustedDomains")
+Interceptor.attach(NetEnumerateTrustedDomains, {onLeave: function (args) {send("NetEnumerateTrustedDomains");}});
+
+var NetErrorLogClear = Module.findExportByName("netapi32.dll", "NetErrorLogClear")
+Interceptor.attach(NetErrorLogClear, {onLeave: function (args) {send("NetErrorLogClear");}});
+
+var NetErrorLogRead = Module.findExportByName("netapi32.dll", "NetErrorLogRead")
+Interceptor.attach(NetErrorLogRead, {onLeave: function (args) {send("NetErrorLogRead");}});
+
+var NetErrorLogWrite = Module.findExportByName("netapi32.dll", "NetErrorLogWrite")
+Interceptor.attach(NetErrorLogWrite, {onLeave: function (args) {send("NetErrorLogWrite");}});
+
+var NetFileClose = Module.findExportByName("netapi32.dll", "NetFileClose")
+Interceptor.attach(NetFileClose, {onLeave: function (args) {send("NetFileClose");}});
+
+var NetFileEnum = Module.findExportByName("netapi32.dll", "NetFileEnum")
+Interceptor.attach(NetFileEnum, {onLeave: function (args) {send("NetFileEnum");}});
+
+var NetFileGetInfo = Module.findExportByName("netapi32.dll", "NetFileGetInfo")
+Interceptor.attach(NetFileGetInfo, {onLeave: function (args) {send("NetFileGetInfo");}});
+
+var NetFreeAadJoinInformation = Module.findExportByName("netapi32.dll", "NetFreeAadJoinInformation")
+Interceptor.attach(NetFreeAadJoinInformation, {onLeave: function (args) {send("NetFreeAadJoinInformation");}});
+
+var NetGetAadJoinInformation = Module.findExportByName("netapi32.dll", "NetGetAadJoinInformation")
+Interceptor.attach(NetGetAadJoinInformation, {onLeave: function (args) {send("NetGetAadJoinInformation");}});
+
+var NetGetAnyDCName = Module.findExportByName("netapi32.dll", "NetGetAnyDCName")
+Interceptor.attach(NetGetAnyDCName, {onLeave: function (args) {send("NetGetAnyDCName");}});
+
+var NetGetDCName = Module.findExportByName("netapi32.dll", "NetGetDCName")
+Interceptor.attach(NetGetDCName, {onLeave: function (args) {send("NetGetDCName");}});
+
+var NetGetDisplayInformationIndex = Module.findExportByName("netapi32.dll", "NetGetDisplayInformationIndex")
+Interceptor.attach(NetGetDisplayInformationIndex, {onLeave: function (args) {send("NetGetDisplayInformationIndex");}});
+
+var NetGetJoinInformation = Module.findExportByName("netapi32.dll", "NetGetJoinInformation")
+Interceptor.attach(NetGetJoinInformation, {onLeave: function (args) {send("NetGetJoinInformation");}});
+
+var NetGetJoinableOUs = Module.findExportByName("netapi32.dll", "NetGetJoinableOUs")
+Interceptor.attach(NetGetJoinableOUs, {onLeave: function (args) {send("NetGetJoinableOUs");}});
+
+var NetGroupAdd = Module.findExportByName("netapi32.dll", "NetGroupAdd")
+Interceptor.attach(NetGroupAdd, {onLeave: function (args) {send("NetGroupAdd");}});
+
+var NetGroupAddUser = Module.findExportByName("netapi32.dll", "NetGroupAddUser")
+Interceptor.attach(NetGroupAddUser, {onLeave: function (args) {send("NetGroupAddUser");}});
+
+var NetGroupDel = Module.findExportByName("netapi32.dll", "NetGroupDel")
+Interceptor.attach(NetGroupDel, {onLeave: function (args) {send("NetGroupDel");}});
+
+var NetGroupDelUser = Module.findExportByName("netapi32.dll", "NetGroupDelUser")
+Interceptor.attach(NetGroupDelUser, {onLeave: function (args) {send("NetGroupDelUser");}});
+
+var NetGroupEnum = Module.findExportByName("netapi32.dll", "NetGroupEnum")
+Interceptor.attach(NetGroupEnum, {onLeave: function (args) {send("NetGroupEnum");}});
+
+var NetGroupGetInfo = Module.findExportByName("netapi32.dll", "NetGroupGetInfo")
+Interceptor.attach(NetGroupGetInfo, {onLeave: function (args) {send("NetGroupGetInfo");}});
+
+var NetGroupGetUsers = Module.findExportByName("netapi32.dll", "NetGroupGetUsers")
+Interceptor.attach(NetGroupGetUsers, {onLeave: function (args) {send("NetGroupGetUsers");}});
+
+var NetGroupSetInfo = Module.findExportByName("netapi32.dll", "NetGroupSetInfo")
+Interceptor.attach(NetGroupSetInfo, {onLeave: function (args) {send("NetGroupSetInfo");}});
+
+var NetGroupSetUsers = Module.findExportByName("netapi32.dll", "NetGroupSetUsers")
+Interceptor.attach(NetGroupSetUsers, {onLeave: function (args) {send("NetGroupSetUsers");}});
+
+var NetIsServiceAccount = Module.findExportByName("netapi32.dll", "NetIsServiceAccount")
+Interceptor.attach(NetIsServiceAccount, {onLeave: function (args) {send("NetIsServiceAccount");}});
+
+var NetJoinDomain = Module.findExportByName("netapi32.dll", "NetJoinDomain")
+Interceptor.attach(NetJoinDomain, {onLeave: function (args) {send("NetJoinDomain");}});
+
+var NetLocalGroupAdd = Module.findExportByName("netapi32.dll", "NetLocalGroupAdd")
+Interceptor.attach(NetLocalGroupAdd, {onLeave: function (args) {send("NetLocalGroupAdd");}});
+
+var NetLocalGroupAddMember = Module.findExportByName("netapi32.dll", "NetLocalGroupAddMember")
+Interceptor.attach(NetLocalGroupAddMember, {onLeave: function (args) {send("NetLocalGroupAddMember");}});
+
+var NetLocalGroupAddMembers = Module.findExportByName("netapi32.dll", "NetLocalGroupAddMembers")
+Interceptor.attach(NetLocalGroupAddMembers, {onLeave: function (args) {send("NetLocalGroupAddMembers");}});
+
+var NetLocalGroupDel = Module.findExportByName("netapi32.dll", "NetLocalGroupDel")
+Interceptor.attach(NetLocalGroupDel, {onLeave: function (args) {send("NetLocalGroupDel");}});
+
+var NetLocalGroupDelMember = Module.findExportByName("netapi32.dll", "NetLocalGroupDelMember")
+Interceptor.attach(NetLocalGroupDelMember, {onLeave: function (args) {send("NetLocalGroupDelMember");}});
+
+var NetLocalGroupDelMembers = Module.findExportByName("netapi32.dll", "NetLocalGroupDelMembers")
+Interceptor.attach(NetLocalGroupDelMembers, {onLeave: function (args) {send("NetLocalGroupDelMembers");}});
+
+var NetLocalGroupEnum = Module.findExportByName("netapi32.dll", "NetLocalGroupEnum")
+Interceptor.attach(NetLocalGroupEnum, {onLeave: function (args) {send("NetLocalGroupEnum");}});
+
+var NetLocalGroupGetInfo = Module.findExportByName("netapi32.dll", "NetLocalGroupGetInfo")
+Interceptor.attach(NetLocalGroupGetInfo, {onLeave: function (args) {send("NetLocalGroupGetInfo");}});
+
+var NetLocalGroupGetMembers = Module.findExportByName("netapi32.dll", "NetLocalGroupGetMembers")
+Interceptor.attach(NetLocalGroupGetMembers, {onLeave: function (args) {send("NetLocalGroupGetMembers");}});
+
+var NetLocalGroupSetInfo = Module.findExportByName("netapi32.dll", "NetLocalGroupSetInfo")
+Interceptor.attach(NetLocalGroupSetInfo, {onLeave: function (args) {send("NetLocalGroupSetInfo");}});
+
+var NetLocalGroupSetMembers = Module.findExportByName("netapi32.dll", "NetLocalGroupSetMembers")
+Interceptor.attach(NetLocalGroupSetMembers, {onLeave: function (args) {send("NetLocalGroupSetMembers");}});
+
+var NetLogonGetTimeServiceParentDomain = Module.findExportByName("netapi32.dll", "NetLogonGetTimeServiceParentDomain")
+Interceptor.attach(NetLogonGetTimeServiceParentDomain, {onLeave: function (args) {send("NetLogonGetTimeServiceParentDomain");}});
+
+var NetLogonSetServiceBits = Module.findExportByName("netapi32.dll", "NetLogonSetServiceBits")
+Interceptor.attach(NetLogonSetServiceBits, {onLeave: function (args) {send("NetLogonSetServiceBits");}});
+
+var NetMessageBufferSend = Module.findExportByName("netapi32.dll", "NetMessageBufferSend")
+Interceptor.attach(NetMessageBufferSend, {onLeave: function (args) {send("NetMessageBufferSend");}});
+
+var NetMessageNameAdd = Module.findExportByName("netapi32.dll", "NetMessageNameAdd")
+Interceptor.attach(NetMessageNameAdd, {onLeave: function (args) {send("NetMessageNameAdd");}});
+
+var NetMessageNameDel = Module.findExportByName("netapi32.dll", "NetMessageNameDel")
+Interceptor.attach(NetMessageNameDel, {onLeave: function (args) {send("NetMessageNameDel");}});
+
+var NetMessageNameEnum = Module.findExportByName("netapi32.dll", "NetMessageNameEnum")
+Interceptor.attach(NetMessageNameEnum, {onLeave: function (args) {send("NetMessageNameEnum");}});
+
+var NetMessageNameGetInfo = Module.findExportByName("netapi32.dll", "NetMessageNameGetInfo")
+Interceptor.attach(NetMessageNameGetInfo, {onLeave: function (args) {send("NetMessageNameGetInfo");}});
+
+var NetProvisionComputerAccount = Module.findExportByName("netapi32.dll", "NetProvisionComputerAccount")
+Interceptor.attach(NetProvisionComputerAccount, {onLeave: function (args) {send("NetProvisionComputerAccount");}});
+
+var NetQueryDisplayInformation = Module.findExportByName("netapi32.dll", "NetQueryDisplayInformation")
+Interceptor.attach(NetQueryDisplayInformation, {onLeave: function (args) {send("NetQueryDisplayInformation");}});
+
+var NetQueryServiceAccount = Module.findExportByName("netapi32.dll", "NetQueryServiceAccount")
+Interceptor.attach(NetQueryServiceAccount, {onLeave: function (args) {send("NetQueryServiceAccount");}});
+
+var NetRegisterDomainNameChangeNotification = Module.findExportByName("netapi32.dll", "NetRegisterDomainNameChangeNotification")
+Interceptor.attach(NetRegisterDomainNameChangeNotification, {onLeave: function (args) {send("NetRegisterDomainNameChangeNotification");}});
+
+var NetRemoteComputerSupports = Module.findExportByName("netapi32.dll", "NetRemoteComputerSupports")
+Interceptor.attach(NetRemoteComputerSupports, {onLeave: function (args) {send("NetRemoteComputerSupports");}});
+
+var NetRemoteTOD = Module.findExportByName("netapi32.dll", "NetRemoteTOD")
+Interceptor.attach(NetRemoteTOD, {onLeave: function (args) {send("NetRemoteTOD");}});
+
+var NetRemoveAlternateComputerName = Module.findExportByName("netapi32.dll", "NetRemoveAlternateComputerName")
+Interceptor.attach(NetRemoveAlternateComputerName, {onLeave: function (args) {send("NetRemoveAlternateComputerName");}});
+
+var NetRemoveServiceAccount = Module.findExportByName("netapi32.dll", "NetRemoveServiceAccount")
+Interceptor.attach(NetRemoveServiceAccount, {onLeave: function (args) {send("NetRemoveServiceAccount");}});
+
+var NetRenameMachineInDomain = Module.findExportByName("netapi32.dll", "NetRenameMachineInDomain")
+Interceptor.attach(NetRenameMachineInDomain, {onLeave: function (args) {send("NetRenameMachineInDomain");}});
+
+var NetReplExportDirAdd = Module.findExportByName("netapi32.dll", "NetReplExportDirAdd")
+Interceptor.attach(NetReplExportDirAdd, {onLeave: function (args) {send("NetReplExportDirAdd");}});
+
+var NetReplExportDirDel = Module.findExportByName("netapi32.dll", "NetReplExportDirDel")
+Interceptor.attach(NetReplExportDirDel, {onLeave: function (args) {send("NetReplExportDirDel");}});
+
+var NetReplExportDirEnum = Module.findExportByName("netapi32.dll", "NetReplExportDirEnum")
+Interceptor.attach(NetReplExportDirEnum, {onLeave: function (args) {send("NetReplExportDirEnum");}});
+
+var NetReplExportDirGetInfo = Module.findExportByName("netapi32.dll", "NetReplExportDirGetInfo")
+Interceptor.attach(NetReplExportDirGetInfo, {onLeave: function (args) {send("NetReplExportDirGetInfo");}});
+
+var NetReplExportDirLock = Module.findExportByName("netapi32.dll", "NetReplExportDirLock")
+Interceptor.attach(NetReplExportDirLock, {onLeave: function (args) {send("NetReplExportDirLock");}});
+
+var NetReplExportDirSetInfo = Module.findExportByName("netapi32.dll", "NetReplExportDirSetInfo")
+Interceptor.attach(NetReplExportDirSetInfo, {onLeave: function (args) {send("NetReplExportDirSetInfo");}});
+
+var NetReplExportDirUnlock = Module.findExportByName("netapi32.dll", "NetReplExportDirUnlock")
+Interceptor.attach(NetReplExportDirUnlock, {onLeave: function (args) {send("NetReplExportDirUnlock");}});
+
+var NetReplGetInfo = Module.findExportByName("netapi32.dll", "NetReplGetInfo")
+Interceptor.attach(NetReplGetInfo, {onLeave: function (args) {send("NetReplGetInfo");}});
+
+var NetReplImportDirAdd = Module.findExportByName("netapi32.dll", "NetReplImportDirAdd")
+Interceptor.attach(NetReplImportDirAdd, {onLeave: function (args) {send("NetReplImportDirAdd");}});
+
+var NetReplImportDirDel = Module.findExportByName("netapi32.dll", "NetReplImportDirDel")
+Interceptor.attach(NetReplImportDirDel, {onLeave: function (args) {send("NetReplImportDirDel");}});
+
+var NetReplImportDirEnum = Module.findExportByName("netapi32.dll", "NetReplImportDirEnum")
+Interceptor.attach(NetReplImportDirEnum, {onLeave: function (args) {send("NetReplImportDirEnum");}});
+
+var NetReplImportDirGetInfo = Module.findExportByName("netapi32.dll", "NetReplImportDirGetInfo")
+Interceptor.attach(NetReplImportDirGetInfo, {onLeave: function (args) {send("NetReplImportDirGetInfo");}});
+
+var NetReplImportDirLock = Module.findExportByName("netapi32.dll", "NetReplImportDirLock")
+Interceptor.attach(NetReplImportDirLock, {onLeave: function (args) {send("NetReplImportDirLock");}});
+
+var NetReplImportDirUnlock = Module.findExportByName("netapi32.dll", "NetReplImportDirUnlock")
+Interceptor.attach(NetReplImportDirUnlock, {onLeave: function (args) {send("NetReplImportDirUnlock");}});
+
+var NetReplSetInfo = Module.findExportByName("netapi32.dll", "NetReplSetInfo")
+Interceptor.attach(NetReplSetInfo, {onLeave: function (args) {send("NetReplSetInfo");}});
+
+var NetRequestOfflineDomainJoin = Module.findExportByName("netapi32.dll", "NetRequestOfflineDomainJoin")
+Interceptor.attach(NetRequestOfflineDomainJoin, {onLeave: function (args) {send("NetRequestOfflineDomainJoin");}});
+
+var NetRequestProvisioningPackageInstall = Module.findExportByName("netapi32.dll", "NetRequestProvisioningPackageInstall")
+Interceptor.attach(NetRequestProvisioningPackageInstall, {onLeave: function (args) {send("NetRequestProvisioningPackageInstall");}});
+
+var NetScheduleJobAdd = Module.findExportByName("netapi32.dll", "NetScheduleJobAdd")
+Interceptor.attach(NetScheduleJobAdd, {onLeave: function (args) {send("NetScheduleJobAdd");}});
+
+var NetScheduleJobDel = Module.findExportByName("netapi32.dll", "NetScheduleJobDel")
+Interceptor.attach(NetScheduleJobDel, {onLeave: function (args) {send("NetScheduleJobDel");}});
+
+var NetScheduleJobEnum = Module.findExportByName("netapi32.dll", "NetScheduleJobEnum")
+Interceptor.attach(NetScheduleJobEnum, {onLeave: function (args) {send("NetScheduleJobEnum");}});
+
+var NetScheduleJobGetInfo = Module.findExportByName("netapi32.dll", "NetScheduleJobGetInfo")
+Interceptor.attach(NetScheduleJobGetInfo, {onLeave: function (args) {send("NetScheduleJobGetInfo");}});
+
+var NetServerAliasAdd = Module.findExportByName("netapi32.dll", "NetServerAliasAdd")
+Interceptor.attach(NetServerAliasAdd, {onLeave: function (args) {send("NetServerAliasAdd");}});
+
+var NetServerAliasDel = Module.findExportByName("netapi32.dll", "NetServerAliasDel")
+Interceptor.attach(NetServerAliasDel, {onLeave: function (args) {send("NetServerAliasDel");}});
+
+var NetServerAliasEnum = Module.findExportByName("netapi32.dll", "NetServerAliasEnum")
+Interceptor.attach(NetServerAliasEnum, {onLeave: function (args) {send("NetServerAliasEnum");}});
+
+var NetServerComputerNameAdd = Module.findExportByName("netapi32.dll", "NetServerComputerNameAdd")
+Interceptor.attach(NetServerComputerNameAdd, {onLeave: function (args) {send("NetServerComputerNameAdd");}});
+
+var NetServerComputerNameDel = Module.findExportByName("netapi32.dll", "NetServerComputerNameDel")
+Interceptor.attach(NetServerComputerNameDel, {onLeave: function (args) {send("NetServerComputerNameDel");}});
+
+var NetServerDiskEnum = Module.findExportByName("netapi32.dll", "NetServerDiskEnum")
+Interceptor.attach(NetServerDiskEnum, {onLeave: function (args) {send("NetServerDiskEnum");}});
+
+var NetServerEnum = Module.findExportByName("netapi32.dll", "NetServerEnum")
+Interceptor.attach(NetServerEnum, {onLeave: function (args) {send("NetServerEnum");}});
+
+var NetServerEnumEx = Module.findExportByName("netapi32.dll", "NetServerEnumEx")
+Interceptor.attach(NetServerEnumEx, {onLeave: function (args) {send("NetServerEnumEx");}});
+
+var NetServerGetInfo = Module.findExportByName("netapi32.dll", "NetServerGetInfo")
+Interceptor.attach(NetServerGetInfo, {onLeave: function (args) {send("NetServerGetInfo");}});
+
+var NetServerSetInfo = Module.findExportByName("netapi32.dll", "NetServerSetInfo")
+Interceptor.attach(NetServerSetInfo, {onLeave: function (args) {send("NetServerSetInfo");}});
+
+var NetServerTransportAdd = Module.findExportByName("netapi32.dll", "NetServerTransportAdd")
+Interceptor.attach(NetServerTransportAdd, {onLeave: function (args) {send("NetServerTransportAdd");}});
+
+var NetServerTransportAddEx = Module.findExportByName("netapi32.dll", "NetServerTransportAddEx")
+Interceptor.attach(NetServerTransportAddEx, {onLeave: function (args) {send("NetServerTransportAddEx");}});
+
+var NetServerTransportDel = Module.findExportByName("netapi32.dll", "NetServerTransportDel")
+Interceptor.attach(NetServerTransportDel, {onLeave: function (args) {send("NetServerTransportDel");}});
+
+var NetServerTransportEnum = Module.findExportByName("netapi32.dll", "NetServerTransportEnum")
+Interceptor.attach(NetServerTransportEnum, {onLeave: function (args) {send("NetServerTransportEnum");}});
+
+var NetServiceControl = Module.findExportByName("netapi32.dll", "NetServiceControl")
+Interceptor.attach(NetServiceControl, {onLeave: function (args) {send("NetServiceControl");}});
+
+var NetServiceEnum = Module.findExportByName("netapi32.dll", "NetServiceEnum")
+Interceptor.attach(NetServiceEnum, {onLeave: function (args) {send("NetServiceEnum");}});
+
+var NetServiceGetInfo = Module.findExportByName("netapi32.dll", "NetServiceGetInfo")
+Interceptor.attach(NetServiceGetInfo, {onLeave: function (args) {send("NetServiceGetInfo");}});
+
+var NetServiceInstall = Module.findExportByName("netapi32.dll", "NetServiceInstall")
+Interceptor.attach(NetServiceInstall, {onLeave: function (args) {send("NetServiceInstall");}});
+
+var NetSessionDel = Module.findExportByName("netapi32.dll", "NetSessionDel")
+Interceptor.attach(NetSessionDel, {onLeave: function (args) {send("NetSessionDel");}});
+
+var NetSessionEnum = Module.findExportByName("netapi32.dll", "NetSessionEnum")
+Interceptor.attach(NetSessionEnum, {onLeave: function (args) {send("NetSessionEnum");}});
+
+var NetSessionGetInfo = Module.findExportByName("netapi32.dll", "NetSessionGetInfo")
+Interceptor.attach(NetSessionGetInfo, {onLeave: function (args) {send("NetSessionGetInfo");}});
+
+var NetSetPrimaryComputerName = Module.findExportByName("netapi32.dll", "NetSetPrimaryComputerName")
+Interceptor.attach(NetSetPrimaryComputerName, {onLeave: function (args) {send("NetSetPrimaryComputerName");}});
+
+var NetShareAdd = Module.findExportByName("netapi32.dll", "NetShareAdd")
+Interceptor.attach(NetShareAdd, {onLeave: function (args) {send("NetShareAdd");}});
+
+var NetShareCheck = Module.findExportByName("netapi32.dll", "NetShareCheck")
+Interceptor.attach(NetShareCheck, {onLeave: function (args) {send("NetShareCheck");}});
+
+var NetShareDel = Module.findExportByName("netapi32.dll", "NetShareDel")
+Interceptor.attach(NetShareDel, {onLeave: function (args) {send("NetShareDel");}});
+
+var NetShareDelEx = Module.findExportByName("netapi32.dll", "NetShareDelEx")
+Interceptor.attach(NetShareDelEx, {onLeave: function (args) {send("NetShareDelEx");}});
+
+var NetShareDelSticky = Module.findExportByName("netapi32.dll", "NetShareDelSticky")
+Interceptor.attach(NetShareDelSticky, {onLeave: function (args) {send("NetShareDelSticky");}});
+
+var NetShareEnum = Module.findExportByName("netapi32.dll", "NetShareEnum")
+Interceptor.attach(NetShareEnum, {onLeave: function (args) {send("NetShareEnum");}});
+
+var NetShareEnumSticky = Module.findExportByName("netapi32.dll", "NetShareEnumSticky")
+Interceptor.attach(NetShareEnumSticky, {onLeave: function (args) {send("NetShareEnumSticky");}});
+
+var NetShareGetInfo = Module.findExportByName("netapi32.dll", "NetShareGetInfo")
+Interceptor.attach(NetShareGetInfo, {onLeave: function (args) {send("NetShareGetInfo");}});
+
+var NetShareSetInfo = Module.findExportByName("netapi32.dll", "NetShareSetInfo")
+Interceptor.attach(NetShareSetInfo, {onLeave: function (args) {send("NetShareSetInfo");}});
+
+var NetStatisticsGet = Module.findExportByName("netapi32.dll", "NetStatisticsGet")
+Interceptor.attach(NetStatisticsGet, {onLeave: function (args) {send("NetStatisticsGet");}});
+
+var NetUnjoinDomain = Module.findExportByName("netapi32.dll", "NetUnjoinDomain")
+Interceptor.attach(NetUnjoinDomain, {onLeave: function (args) {send("NetUnjoinDomain");}});
+
+var NetUnregisterDomainNameChangeNotification = Module.findExportByName("netapi32.dll", "NetUnregisterDomainNameChangeNotification")
+Interceptor.attach(NetUnregisterDomainNameChangeNotification, {onLeave: function (args) {send("NetUnregisterDomainNameChangeNotification");}});
+
+var NetUseAdd = Module.findExportByName("netapi32.dll", "NetUseAdd")
+Interceptor.attach(NetUseAdd, {onLeave: function (args) {send("NetUseAdd");}});
+
+var NetUseDel = Module.findExportByName("netapi32.dll", "NetUseDel")
+Interceptor.attach(NetUseDel, {onLeave: function (args) {send("NetUseDel");}});
+
+var NetUseEnum = Module.findExportByName("netapi32.dll", "NetUseEnum")
+Interceptor.attach(NetUseEnum, {onLeave: function (args) {send("NetUseEnum");}});
+
+var NetUseGetInfo = Module.findExportByName("netapi32.dll", "NetUseGetInfo")
+Interceptor.attach(NetUseGetInfo, {onLeave: function (args) {send("NetUseGetInfo");}});
+
+var NetUserAdd = Module.findExportByName("netapi32.dll", "NetUserAdd")
+Interceptor.attach(NetUserAdd, {onLeave: function (args) {send("NetUserAdd");}});
+
+var NetUserChangePassword = Module.findExportByName("netapi32.dll", "NetUserChangePassword")
+Interceptor.attach(NetUserChangePassword, {onLeave: function (args) {send("NetUserChangePassword");}});
+
+var NetUserDel = Module.findExportByName("netapi32.dll", "NetUserDel")
+Interceptor.attach(NetUserDel, {onLeave: function (args) {send("NetUserDel");}});
+
+var NetUserEnum = Module.findExportByName("netapi32.dll", "NetUserEnum")
+Interceptor.attach(NetUserEnum, {onLeave: function (args) {send("NetUserEnum");}});
+
+var NetUserGetGroups = Module.findExportByName("netapi32.dll", "NetUserGetGroups")
+Interceptor.attach(NetUserGetGroups, {onLeave: function (args) {send("NetUserGetGroups");}});
+
+var NetUserGetInfo = Module.findExportByName("netapi32.dll", "NetUserGetInfo")
+Interceptor.attach(NetUserGetInfo, {onLeave: function (args) {send("NetUserGetInfo");}});
+
+var NetUserGetLocalGroups = Module.findExportByName("netapi32.dll", "NetUserGetLocalGroups")
+Interceptor.attach(NetUserGetLocalGroups, {onLeave: function (args) {send("NetUserGetLocalGroups");}});
+
+var NetUserModalsGet = Module.findExportByName("netapi32.dll", "NetUserModalsGet")
+Interceptor.attach(NetUserModalsGet, {onLeave: function (args) {send("NetUserModalsGet");}});
+
+var NetUserModalsSet = Module.findExportByName("netapi32.dll", "NetUserModalsSet")
+Interceptor.attach(NetUserModalsSet, {onLeave: function (args) {send("NetUserModalsSet");}});
+
+var NetUserSetGroups = Module.findExportByName("netapi32.dll", "NetUserSetGroups")
+Interceptor.attach(NetUserSetGroups, {onLeave: function (args) {send("NetUserSetGroups");}});
+
+var NetUserSetInfo = Module.findExportByName("netapi32.dll", "NetUserSetInfo")
+Interceptor.attach(NetUserSetInfo, {onLeave: function (args) {send("NetUserSetInfo");}});
+
+var NetValidateName = Module.findExportByName("netapi32.dll", "NetValidateName")
+Interceptor.attach(NetValidateName, {onLeave: function (args) {send("NetValidateName");}});
+
+var NetValidatePasswordPolicy = Module.findExportByName("netapi32.dll", "NetValidatePasswordPolicy")
+Interceptor.attach(NetValidatePasswordPolicy, {onLeave: function (args) {send("NetValidatePasswordPolicy");}});
+
+var NetValidatePasswordPolicyFree = Module.findExportByName("netapi32.dll", "NetValidatePasswordPolicyFree")
+Interceptor.attach(NetValidatePasswordPolicyFree, {onLeave: function (args) {send("NetValidatePasswordPolicyFree");}});
+
+var NetWkstaGetInfo = Module.findExportByName("netapi32.dll", "NetWkstaGetInfo")
+Interceptor.attach(NetWkstaGetInfo, {onLeave: function (args) {send("NetWkstaGetInfo");}});
+
+var NetWkstaSetInfo = Module.findExportByName("netapi32.dll", "NetWkstaSetInfo")
+Interceptor.attach(NetWkstaSetInfo, {onLeave: function (args) {send("NetWkstaSetInfo");}});
+
+var NetWkstaTransportAdd = Module.findExportByName("netapi32.dll", "NetWkstaTransportAdd")
+Interceptor.attach(NetWkstaTransportAdd, {onLeave: function (args) {send("NetWkstaTransportAdd");}});
+
+var NetWkstaTransportDel = Module.findExportByName("netapi32.dll", "NetWkstaTransportDel")
+Interceptor.attach(NetWkstaTransportDel, {onLeave: function (args) {send("NetWkstaTransportDel");}});
+
+var NetWkstaTransportEnum = Module.findExportByName("netapi32.dll", "NetWkstaTransportEnum")
+Interceptor.attach(NetWkstaTransportEnum, {onLeave: function (args) {send("NetWkstaTransportEnum");}});
+
+var NetWkstaUserEnum = Module.findExportByName("netapi32.dll", "NetWkstaUserEnum")
+Interceptor.attach(NetWkstaUserEnum, {onLeave: function (args) {send("NetWkstaUserEnum");}});
+
+var NetWkstaUserGetInfo = Module.findExportByName("netapi32.dll", "NetWkstaUserGetInfo")
+Interceptor.attach(NetWkstaUserGetInfo, {onLeave: function (args) {send("NetWkstaUserGetInfo");}});
+
+var NetWkstaUserSetInfo = Module.findExportByName("netapi32.dll", "NetWkstaUserSetInfo")
+Interceptor.attach(NetWkstaUserSetInfo, {onLeave: function (args) {send("NetWkstaUserSetInfo");}});
+
+var NetapipBufferAllocate = Module.findExportByName("netapi32.dll", "NetapipBufferAllocate")
+Interceptor.attach(NetapipBufferAllocate, {onLeave: function (args) {send("NetapipBufferAllocate");}});
+
+var Netbios = Module.findExportByName("netapi32.dll", "Netbios")
+Interceptor.attach(Netbios, {onLeave: function (args) {send("Netbios");}});
+
+var NetpAddTlnFtinfoEntry = Module.findExportByName("netapi32.dll", "NetpAddTlnFtinfoEntry")
+Interceptor.attach(NetpAddTlnFtinfoEntry, {onLeave: function (args) {send("NetpAddTlnFtinfoEntry");}});
+
+var NetpAllocFtinfoEntry = Module.findExportByName("netapi32.dll", "NetpAllocFtinfoEntry")
+Interceptor.attach(NetpAllocFtinfoEntry, {onLeave: function (args) {send("NetpAllocFtinfoEntry");}});
+
+var NetpAssertFailed = Module.findExportByName("netapi32.dll", "NetpAssertFailed")
+Interceptor.attach(NetpAssertFailed, {onLeave: function (args) {send("NetpAssertFailed");}});
+
+var NetpCleanFtinfoContext = Module.findExportByName("netapi32.dll", "NetpCleanFtinfoContext")
+Interceptor.attach(NetpCleanFtinfoContext, {onLeave: function (args) {send("NetpCleanFtinfoContext");}});
+
+var NetpCloseConfigData = Module.findExportByName("netapi32.dll", "NetpCloseConfigData")
+Interceptor.attach(NetpCloseConfigData, {onLeave: function (args) {send("NetpCloseConfigData");}});
+
+var NetpCopyFtinfoContext = Module.findExportByName("netapi32.dll", "NetpCopyFtinfoContext")
+Interceptor.attach(NetpCopyFtinfoContext, {onLeave: function (args) {send("NetpCopyFtinfoContext");}});
+
+var NetpDbgPrint = Module.findExportByName("netapi32.dll", "NetpDbgPrint")
+Interceptor.attach(NetpDbgPrint, {onLeave: function (args) {send("NetpDbgPrint");}});
+
+var NetpGetConfigBool = Module.findExportByName("netapi32.dll", "NetpGetConfigBool")
+Interceptor.attach(NetpGetConfigBool, {onLeave: function (args) {send("NetpGetConfigBool");}});
+
+var NetpGetConfigDword = Module.findExportByName("netapi32.dll", "NetpGetConfigDword")
+Interceptor.attach(NetpGetConfigDword, {onLeave: function (args) {send("NetpGetConfigDword");}});
+
+var NetpGetConfigTStrArray = Module.findExportByName("netapi32.dll", "NetpGetConfigTStrArray")
+Interceptor.attach(NetpGetConfigTStrArray, {onLeave: function (args) {send("NetpGetConfigTStrArray");}});
+
+var NetpGetConfigValue = Module.findExportByName("netapi32.dll", "NetpGetConfigValue")
+Interceptor.attach(NetpGetConfigValue, {onLeave: function (args) {send("NetpGetConfigValue");}});
+
+var NetpGetFileSecurity = Module.findExportByName("netapi32.dll", "NetpGetFileSecurity")
+Interceptor.attach(NetpGetFileSecurity, {onLeave: function (args) {send("NetpGetFileSecurity");}});
+
+var NetpHexDump = Module.findExportByName("netapi32.dll", "NetpHexDump")
+Interceptor.attach(NetpHexDump, {onLeave: function (args) {send("NetpHexDump");}});
+
+var NetpInitFtinfoContext = Module.findExportByName("netapi32.dll", "NetpInitFtinfoContext")
+Interceptor.attach(NetpInitFtinfoContext, {onLeave: function (args) {send("NetpInitFtinfoContext");}});
+
+var NetpIsRemote = Module.findExportByName("netapi32.dll", "NetpIsRemote")
+Interceptor.attach(NetpIsRemote, {onLeave: function (args) {send("NetpIsRemote");}});
+
+var NetpIsUncComputerNameValid = Module.findExportByName("netapi32.dll", "NetpIsUncComputerNameValid")
+Interceptor.attach(NetpIsUncComputerNameValid, {onLeave: function (args) {send("NetpIsUncComputerNameValid");}});
+
+var NetpMergeFtinfo = Module.findExportByName("netapi32.dll", "NetpMergeFtinfo")
+Interceptor.attach(NetpMergeFtinfo, {onLeave: function (args) {send("NetpMergeFtinfo");}});
+
+var NetpNetBiosReset = Module.findExportByName("netapi32.dll", "NetpNetBiosReset")
+Interceptor.attach(NetpNetBiosReset, {onLeave: function (args) {send("NetpNetBiosReset");}});
+
+var NetpNetBiosStatusToApiStatus = Module.findExportByName("netapi32.dll", "NetpNetBiosStatusToApiStatus")
+Interceptor.attach(NetpNetBiosStatusToApiStatus, {onLeave: function (args) {send("NetpNetBiosStatusToApiStatus");}});
+
+var NetpOpenConfigData = Module.findExportByName("netapi32.dll", "NetpOpenConfigData")
+Interceptor.attach(NetpOpenConfigData, {onLeave: function (args) {send("NetpOpenConfigData");}});
+
+var NetpSetFileSecurity = Module.findExportByName("netapi32.dll", "NetpSetFileSecurity")
+Interceptor.attach(NetpSetFileSecurity, {onLeave: function (args) {send("NetpSetFileSecurity");}});
+
+var NetpwNameCanonicalize = Module.findExportByName("netapi32.dll", "NetpwNameCanonicalize")
+Interceptor.attach(NetpwNameCanonicalize, {onLeave: function (args) {send("NetpwNameCanonicalize");}});
+
+var NetpwNameCompare = Module.findExportByName("netapi32.dll", "NetpwNameCompare")
+Interceptor.attach(NetpwNameCompare, {onLeave: function (args) {send("NetpwNameCompare");}});
+
+var NetpwNameValidate = Module.findExportByName("netapi32.dll", "NetpwNameValidate")
+Interceptor.attach(NetpwNameValidate, {onLeave: function (args) {send("NetpwNameValidate");}});
+
+var NetpwPathCanonicalize = Module.findExportByName("netapi32.dll", "NetpwPathCanonicalize")
+Interceptor.attach(NetpwPathCanonicalize, {onLeave: function (args) {send("NetpwPathCanonicalize");}});
+
+var NetpwPathCompare = Module.findExportByName("netapi32.dll", "NetpwPathCompare")
+Interceptor.attach(NetpwPathCompare, {onLeave: function (args) {send("NetpwPathCompare");}});
+
+var NetpwPathType = Module.findExportByName("netapi32.dll", "NetpwPathType")
+Interceptor.attach(NetpwPathType, {onLeave: function (args) {send("NetpwPathType");}});
+
+var NlBindingAddServerToCache = Module.findExportByName("netapi32.dll", "NlBindingAddServerToCache")
+Interceptor.attach(NlBindingAddServerToCache, {onLeave: function (args) {send("NlBindingAddServerToCache");}});
+
+var NlBindingRemoveServerFromCache = Module.findExportByName("netapi32.dll", "NlBindingRemoveServerFromCache")
+Interceptor.attach(NlBindingRemoveServerFromCache, {onLeave: function (args) {send("NlBindingRemoveServerFromCache");}});
+
+var NlBindingSetAuthInfo = Module.findExportByName("netapi32.dll", "NlBindingSetAuthInfo")
+Interceptor.attach(NlBindingSetAuthInfo, {onLeave: function (args) {send("NlBindingSetAuthInfo");}});
+
+var RxNetAccessAdd = Module.findExportByName("netapi32.dll", "RxNetAccessAdd")
+Interceptor.attach(RxNetAccessAdd, {onLeave: function (args) {send("RxNetAccessAdd");}});
+
+var RxNetAccessDel = Module.findExportByName("netapi32.dll", "RxNetAccessDel")
+Interceptor.attach(RxNetAccessDel, {onLeave: function (args) {send("RxNetAccessDel");}});
+
+var RxNetAccessEnum = Module.findExportByName("netapi32.dll", "RxNetAccessEnum")
+Interceptor.attach(RxNetAccessEnum, {onLeave: function (args) {send("RxNetAccessEnum");}});
+
+var RxNetAccessGetInfo = Module.findExportByName("netapi32.dll", "RxNetAccessGetInfo")
+Interceptor.attach(RxNetAccessGetInfo, {onLeave: function (args) {send("RxNetAccessGetInfo");}});
+
+var RxNetAccessGetUserPerms = Module.findExportByName("netapi32.dll", "RxNetAccessGetUserPerms")
+Interceptor.attach(RxNetAccessGetUserPerms, {onLeave: function (args) {send("RxNetAccessGetUserPerms");}});
+
+var RxNetAccessSetInfo = Module.findExportByName("netapi32.dll", "RxNetAccessSetInfo")
+Interceptor.attach(RxNetAccessSetInfo, {onLeave: function (args) {send("RxNetAccessSetInfo");}});
+
+var RxNetServerEnum = Module.findExportByName("netapi32.dll", "RxNetServerEnum")
+Interceptor.attach(RxNetServerEnum, {onLeave: function (args) {send("RxNetServerEnum");}});
+
+var RxNetUserPasswordSet = Module.findExportByName("netapi32.dll", "RxNetUserPasswordSet")
+Interceptor.attach(RxNetUserPasswordSet, {onLeave: function (args) {send("RxNetUserPasswordSet");}});
+
+var RxRemoteApi = Module.findExportByName("netapi32.dll", "RxRemoteApi")
+Interceptor.attach(RxRemoteApi, {onLeave: function (args) {send("RxRemoteApi");}});
+

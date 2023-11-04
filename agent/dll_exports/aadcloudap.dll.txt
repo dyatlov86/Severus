@@ -1,0 +1,9 @@
+var CloudAPPluginInitialize = Module.findExportByName("aadcloudap.dll", "CloudAPPluginInitialize")
+Interceptor.attach(CloudAPPluginInitialize, {onLeave: function (args) {send("CloudAPPluginInitialize");}});
+
+var DllRegisterServer = Module.findExportByName("aadcloudap.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("aadcloudap.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

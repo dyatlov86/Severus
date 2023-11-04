@@ -1,0 +1,3 @@
+var DXCoreCreateAdapterFactory = Module.findExportByName("DXCore.dll", "DXCoreCreateAdapterFactory")
+Interceptor.attach(DXCoreCreateAdapterFactory, {onLeave: function (args) {send("DXCoreCreateAdapterFactory");}});
+

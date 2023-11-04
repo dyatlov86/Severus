@@ -1,0 +1,33 @@
+var InitializePushRouter = Module.findExportByName("DMPushRouterCore.dll", "InitializePushRouter")
+Interceptor.attach(InitializePushRouter, {onLeave: function (args) {send("InitializePushRouter");}});
+
+var PrAreAllClientsHandled = Module.findExportByName("DMPushRouterCore.dll", "PrAreAllClientsHandled")
+Interceptor.attach(PrAreAllClientsHandled, {onLeave: function (args) {send("PrAreAllClientsHandled");}});
+
+var PrSvcDecMessageCount = Module.findExportByName("DMPushRouterCore.dll", "PrSvcDecMessageCount")
+Interceptor.attach(PrSvcDecMessageCount, {onLeave: function (args) {send("PrSvcDecMessageCount");}});
+
+var PrSvcGetMessageCount = Module.findExportByName("DMPushRouterCore.dll", "PrSvcGetMessageCount")
+Interceptor.attach(PrSvcGetMessageCount, {onLeave: function (args) {send("PrSvcGetMessageCount");}});
+
+var PrSvcIncMessageCount = Module.findExportByName("DMPushRouterCore.dll", "PrSvcIncMessageCount")
+Interceptor.attach(PrSvcIncMessageCount, {onLeave: function (args) {send("PrSvcIncMessageCount");}});
+
+var PrSvcSetMessageCount = Module.findExportByName("DMPushRouterCore.dll", "PrSvcSetMessageCount")
+Interceptor.attach(PrSvcSetMessageCount, {onLeave: function (args) {send("PrSvcSetMessageCount");}});
+
+var PushRouter_SubmitPushLocal = Module.findExportByName("DMPushRouterCore.dll", "PushRouter_SubmitPushLocal")
+Interceptor.attach(PushRouter_SubmitPushLocal, {onLeave: function (args) {send("PushRouter_SubmitPushLocal");}});
+
+var RegisterRPCInterface = Module.findExportByName("DMPushRouterCore.dll", "RegisterRPCInterface")
+Interceptor.attach(RegisterRPCInterface, {onLeave: function (args) {send("RegisterRPCInterface");}});
+
+var ShutDownPushRouter = Module.findExportByName("DMPushRouterCore.dll", "ShutDownPushRouter")
+Interceptor.attach(ShutDownPushRouter, {onLeave: function (args) {send("ShutDownPushRouter");}});
+
+var ShutDownPushRouterSynchronously = Module.findExportByName("DMPushRouterCore.dll", "ShutDownPushRouterSynchronously")
+Interceptor.attach(ShutDownPushRouterSynchronously, {onLeave: function (args) {send("ShutDownPushRouterSynchronously");}});
+
+var UnregisterRPCInterface = Module.findExportByName("DMPushRouterCore.dll", "UnregisterRPCInterface")
+Interceptor.attach(UnregisterRPCInterface, {onLeave: function (args) {send("UnregisterRPCInterface");}});
+

@@ -1,0 +1,18 @@
+var AzGenerateAudit = Module.findExportByName("AzSqlExt.dll", "AzGenerateAudit")
+Interceptor.attach(AzGenerateAudit, {onLeave: function (args) {send("AzGenerateAudit");}});
+
+var __GetXpVersion = Module.findExportByName("AzSqlExt.dll", "__GetXpVersion")
+Interceptor.attach(__GetXpVersion, {onLeave: function (args) {send("__GetXpVersion");}});
+
+var xp_AzManAddRole = Module.findExportByName("AzSqlExt.dll", "xp_AzManAddRole")
+Interceptor.attach(xp_AzManAddRole, {onLeave: function (args) {send("xp_AzManAddRole");}});
+
+var xp_AzManAddUserToRole = Module.findExportByName("AzSqlExt.dll", "xp_AzManAddUserToRole")
+Interceptor.attach(xp_AzManAddUserToRole, {onLeave: function (args) {send("xp_AzManAddUserToRole");}});
+
+var xp_AzManDeleteRole = Module.findExportByName("AzSqlExt.dll", "xp_AzManDeleteRole")
+Interceptor.attach(xp_AzManDeleteRole, {onLeave: function (args) {send("xp_AzManDeleteRole");}});
+
+var xp_AzManRemoveUserFromRole = Module.findExportByName("AzSqlExt.dll", "xp_AzManRemoveUserFromRole")
+Interceptor.attach(xp_AzManRemoveUserFromRole, {onLeave: function (args) {send("xp_AzManRemoveUserFromRole");}});
+

@@ -1,0 +1,1599 @@
+var AMD_CPU_AFFINITY = Module.findExportByName("amdhip64.dll", "AMD_CPU_AFFINITY")
+Interceptor.attach(AMD_CPU_AFFINITY, {onLeave: function (args) {send("AMD_CPU_AFFINITY");}});
+
+var AMD_DIRECT_DISPATCH = Module.findExportByName("amdhip64.dll", "AMD_DIRECT_DISPATCH")
+Interceptor.attach(AMD_DIRECT_DISPATCH, {onLeave: function (args) {send("AMD_DIRECT_DISPATCH");}});
+
+var AMD_GPU_FORCE_SINGLE_FP_DENORM = Module.findExportByName("amdhip64.dll", "AMD_GPU_FORCE_SINGLE_FP_DENORM")
+Interceptor.attach(AMD_GPU_FORCE_SINGLE_FP_DENORM, {onLeave: function (args) {send("AMD_GPU_FORCE_SINGLE_FP_DENORM");}});
+
+var AMD_LOG_LEVEL = Module.findExportByName("amdhip64.dll", "AMD_LOG_LEVEL")
+Interceptor.attach(AMD_LOG_LEVEL, {onLeave: function (args) {send("AMD_LOG_LEVEL");}});
+
+var AMD_LOG_LEVEL_FILE = Module.findExportByName("amdhip64.dll", "AMD_LOG_LEVEL_FILE")
+Interceptor.attach(AMD_LOG_LEVEL_FILE, {onLeave: function (args) {send("AMD_LOG_LEVEL_FILE");}});
+
+var AMD_LOG_MASK = Module.findExportByName("amdhip64.dll", "AMD_LOG_MASK")
+Interceptor.attach(AMD_LOG_MASK, {onLeave: function (args) {send("AMD_LOG_MASK");}});
+
+var AMD_OCL_BUILD_OPTIONS = Module.findExportByName("amdhip64.dll", "AMD_OCL_BUILD_OPTIONS")
+Interceptor.attach(AMD_OCL_BUILD_OPTIONS, {onLeave: function (args) {send("AMD_OCL_BUILD_OPTIONS");}});
+
+var AMD_OCL_BUILD_OPTIONS_APPEND = Module.findExportByName("amdhip64.dll", "AMD_OCL_BUILD_OPTIONS_APPEND")
+Interceptor.attach(AMD_OCL_BUILD_OPTIONS_APPEND, {onLeave: function (args) {send("AMD_OCL_BUILD_OPTIONS_APPEND");}});
+
+var AMD_OCL_LINK_OPTIONS = Module.findExportByName("amdhip64.dll", "AMD_OCL_LINK_OPTIONS")
+Interceptor.attach(AMD_OCL_LINK_OPTIONS, {onLeave: function (args) {send("AMD_OCL_LINK_OPTIONS");}});
+
+var AMD_OCL_LINK_OPTIONS_APPEND = Module.findExportByName("amdhip64.dll", "AMD_OCL_LINK_OPTIONS_APPEND")
+Interceptor.attach(AMD_OCL_LINK_OPTIONS_APPEND, {onLeave: function (args) {send("AMD_OCL_LINK_OPTIONS_APPEND");}});
+
+var AMD_OCL_SC_LIB = Module.findExportByName("amdhip64.dll", "AMD_OCL_SC_LIB")
+Interceptor.attach(AMD_OCL_SC_LIB, {onLeave: function (args) {send("AMD_OCL_SC_LIB");}});
+
+var AMD_OCL_WAIT_COMMAND = Module.findExportByName("amdhip64.dll", "AMD_OCL_WAIT_COMMAND")
+Interceptor.attach(AMD_OCL_WAIT_COMMAND, {onLeave: function (args) {send("AMD_OCL_WAIT_COMMAND");}});
+
+var AMD_OPT_FLUSH = Module.findExportByName("amdhip64.dll", "AMD_OPT_FLUSH")
+Interceptor.attach(AMD_OPT_FLUSH, {onLeave: function (args) {send("AMD_OPT_FLUSH");}});
+
+var AMD_SERIALIZE_COPY = Module.findExportByName("amdhip64.dll", "AMD_SERIALIZE_COPY")
+Interceptor.attach(AMD_SERIALIZE_COPY, {onLeave: function (args) {send("AMD_SERIALIZE_COPY");}});
+
+var AMD_SERIALIZE_KERNEL = Module.findExportByName("amdhip64.dll", "AMD_SERIALIZE_KERNEL")
+Interceptor.attach(AMD_SERIALIZE_KERNEL, {onLeave: function (args) {send("AMD_SERIALIZE_KERNEL");}});
+
+var AMD_THREAD_TRACE_ENABLE = Module.findExportByName("amdhip64.dll", "AMD_THREAD_TRACE_ENABLE")
+Interceptor.attach(AMD_THREAD_TRACE_ENABLE, {onLeave: function (args) {send("AMD_THREAD_TRACE_ENABLE");}});
+
+var CL_KHR_FP64 = Module.findExportByName("amdhip64.dll", "CL_KHR_FP64")
+Interceptor.attach(CL_KHR_FP64, {onLeave: function (args) {send("CL_KHR_FP64");}});
+
+var CQ_THREAD_STACK_SIZE = Module.findExportByName("amdhip64.dll", "CQ_THREAD_STACK_SIZE")
+Interceptor.attach(CQ_THREAD_STACK_SIZE, {onLeave: function (args) {send("CQ_THREAD_STACK_SIZE");}});
+
+var CUDA_VISIBLE_DEVICES = Module.findExportByName("amdhip64.dll", "CUDA_VISIBLE_DEVICES")
+Interceptor.attach(CUDA_VISIBLE_DEVICES, {onLeave: function (args) {send("CUDA_VISIBLE_DEVICES");}});
+
+var DISABLE_DEFERRED_ALLOC = Module.findExportByName("amdhip64.dll", "DISABLE_DEFERRED_ALLOC")
+Interceptor.attach(DISABLE_DEFERRED_ALLOC, {onLeave: function (args) {send("DISABLE_DEFERRED_ALLOC");}});
+
+var GPU_ADD_HBCC_SIZE = Module.findExportByName("amdhip64.dll", "GPU_ADD_HBCC_SIZE")
+Interceptor.attach(GPU_ADD_HBCC_SIZE, {onLeave: function (args) {send("GPU_ADD_HBCC_SIZE");}});
+
+var GPU_ANALYZE_HANG = Module.findExportByName("amdhip64.dll", "GPU_ANALYZE_HANG")
+Interceptor.attach(GPU_ANALYZE_HANG, {onLeave: function (args) {send("GPU_ANALYZE_HANG");}});
+
+var GPU_BLIT_ENGINE_TYPE = Module.findExportByName("amdhip64.dll", "GPU_BLIT_ENGINE_TYPE")
+Interceptor.attach(GPU_BLIT_ENGINE_TYPE, {onLeave: function (args) {send("GPU_BLIT_ENGINE_TYPE");}});
+
+var GPU_DEVICE_ORDINAL = Module.findExportByName("amdhip64.dll", "GPU_DEVICE_ORDINAL")
+Interceptor.attach(GPU_DEVICE_ORDINAL, {onLeave: function (args) {send("GPU_DEVICE_ORDINAL");}});
+
+var GPU_DUMP_BLIT_KERNELS = Module.findExportByName("amdhip64.dll", "GPU_DUMP_BLIT_KERNELS")
+Interceptor.attach(GPU_DUMP_BLIT_KERNELS, {onLeave: function (args) {send("GPU_DUMP_BLIT_KERNELS");}});
+
+var GPU_DUMP_CODE_OBJECT = Module.findExportByName("amdhip64.dll", "GPU_DUMP_CODE_OBJECT")
+Interceptor.attach(GPU_DUMP_CODE_OBJECT, {onLeave: function (args) {send("GPU_DUMP_CODE_OBJECT");}});
+
+var GPU_ENABLE_COOP_GROUPS = Module.findExportByName("amdhip64.dll", "GPU_ENABLE_COOP_GROUPS")
+Interceptor.attach(GPU_ENABLE_COOP_GROUPS, {onLeave: function (args) {send("GPU_ENABLE_COOP_GROUPS");}});
+
+var GPU_ENABLE_HW_P2P = Module.findExportByName("amdhip64.dll", "GPU_ENABLE_HW_P2P")
+Interceptor.attach(GPU_ENABLE_HW_P2P, {onLeave: function (args) {send("GPU_ENABLE_HW_P2P");}});
+
+var GPU_ENABLE_LARGE_ALLOCATION = Module.findExportByName("amdhip64.dll", "GPU_ENABLE_LARGE_ALLOCATION")
+Interceptor.attach(GPU_ENABLE_LARGE_ALLOCATION, {onLeave: function (args) {send("GPU_ENABLE_LARGE_ALLOCATION");}});
+
+var GPU_ENABLE_LC = Module.findExportByName("amdhip64.dll", "GPU_ENABLE_LC")
+Interceptor.attach(GPU_ENABLE_LC, {onLeave: function (args) {send("GPU_ENABLE_LC");}});
+
+var GPU_ENABLE_PAL = Module.findExportByName("amdhip64.dll", "GPU_ENABLE_PAL")
+Interceptor.attach(GPU_ENABLE_PAL, {onLeave: function (args) {send("GPU_ENABLE_PAL");}});
+
+var GPU_ENABLE_WAVE32_MODE = Module.findExportByName("amdhip64.dll", "GPU_ENABLE_WAVE32_MODE")
+Interceptor.attach(GPU_ENABLE_WAVE32_MODE, {onLeave: function (args) {send("GPU_ENABLE_WAVE32_MODE");}});
+
+var GPU_ENABLE_WGP_MODE = Module.findExportByName("amdhip64.dll", "GPU_ENABLE_WGP_MODE")
+Interceptor.attach(GPU_ENABLE_WGP_MODE, {onLeave: function (args) {send("GPU_ENABLE_WGP_MODE");}});
+
+var GPU_FLUSH_ON_EXECUTION = Module.findExportByName("amdhip64.dll", "GPU_FLUSH_ON_EXECUTION")
+Interceptor.attach(GPU_FLUSH_ON_EXECUTION, {onLeave: function (args) {send("GPU_FLUSH_ON_EXECUTION");}});
+
+var GPU_FORCE_64BIT_PTR = Module.findExportByName("amdhip64.dll", "GPU_FORCE_64BIT_PTR")
+Interceptor.attach(GPU_FORCE_64BIT_PTR, {onLeave: function (args) {send("GPU_FORCE_64BIT_PTR");}});
+
+var GPU_FORCE_BLIT_COPY_SIZE = Module.findExportByName("amdhip64.dll", "GPU_FORCE_BLIT_COPY_SIZE")
+Interceptor.attach(GPU_FORCE_BLIT_COPY_SIZE, {onLeave: function (args) {send("GPU_FORCE_BLIT_COPY_SIZE");}});
+
+var GPU_FORCE_OCL20_32BIT = Module.findExportByName("amdhip64.dll", "GPU_FORCE_OCL20_32BIT")
+Interceptor.attach(GPU_FORCE_OCL20_32BIT, {onLeave: function (args) {send("GPU_FORCE_OCL20_32BIT");}});
+
+var GPU_FORCE_QUEUE_PROFILING = Module.findExportByName("amdhip64.dll", "GPU_FORCE_QUEUE_PROFILING")
+Interceptor.attach(GPU_FORCE_QUEUE_PROFILING, {onLeave: function (args) {send("GPU_FORCE_QUEUE_PROFILING");}});
+
+var GPU_IFH_MODE = Module.findExportByName("amdhip64.dll", "GPU_IFH_MODE")
+Interceptor.attach(GPU_IFH_MODE, {onLeave: function (args) {send("GPU_IFH_MODE");}});
+
+var GPU_IMAGE_BUFFER_WAR = Module.findExportByName("amdhip64.dll", "GPU_IMAGE_BUFFER_WAR")
+Interceptor.attach(GPU_IMAGE_BUFFER_WAR, {onLeave: function (args) {send("GPU_IMAGE_BUFFER_WAR");}});
+
+var GPU_IMAGE_DMA = Module.findExportByName("amdhip64.dll", "GPU_IMAGE_DMA")
+Interceptor.attach(GPU_IMAGE_DMA, {onLeave: function (args) {send("GPU_IMAGE_DMA");}});
+
+var GPU_MAX_COMMAND_BUFFERS = Module.findExportByName("amdhip64.dll", "GPU_MAX_COMMAND_BUFFERS")
+Interceptor.attach(GPU_MAX_COMMAND_BUFFERS, {onLeave: function (args) {send("GPU_MAX_COMMAND_BUFFERS");}});
+
+var GPU_MAX_COMMAND_QUEUES = Module.findExportByName("amdhip64.dll", "GPU_MAX_COMMAND_QUEUES")
+Interceptor.attach(GPU_MAX_COMMAND_QUEUES, {onLeave: function (args) {send("GPU_MAX_COMMAND_QUEUES");}});
+
+var GPU_MAX_HEAP_SIZE = Module.findExportByName("amdhip64.dll", "GPU_MAX_HEAP_SIZE")
+Interceptor.attach(GPU_MAX_HEAP_SIZE, {onLeave: function (args) {send("GPU_MAX_HEAP_SIZE");}});
+
+var GPU_MAX_HW_QUEUES = Module.findExportByName("amdhip64.dll", "GPU_MAX_HW_QUEUES")
+Interceptor.attach(GPU_MAX_HW_QUEUES, {onLeave: function (args) {send("GPU_MAX_HW_QUEUES");}});
+
+var GPU_MAX_REMOTE_MEM_SIZE = Module.findExportByName("amdhip64.dll", "GPU_MAX_REMOTE_MEM_SIZE")
+Interceptor.attach(GPU_MAX_REMOTE_MEM_SIZE, {onLeave: function (args) {send("GPU_MAX_REMOTE_MEM_SIZE");}});
+
+var GPU_MAX_SUBALLOC_SIZE = Module.findExportByName("amdhip64.dll", "GPU_MAX_SUBALLOC_SIZE")
+Interceptor.attach(GPU_MAX_SUBALLOC_SIZE, {onLeave: function (args) {send("GPU_MAX_SUBALLOC_SIZE");}});
+
+var GPU_MAX_USWC_ALLOC_SIZE = Module.findExportByName("amdhip64.dll", "GPU_MAX_USWC_ALLOC_SIZE")
+Interceptor.attach(GPU_MAX_USWC_ALLOC_SIZE, {onLeave: function (args) {send("GPU_MAX_USWC_ALLOC_SIZE");}});
+
+var GPU_MAX_WORKGROUP_SIZE = Module.findExportByName("amdhip64.dll", "GPU_MAX_WORKGROUP_SIZE")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE");}});
+
+var GPU_MAX_WORKGROUP_SIZE_2D_X = Module.findExportByName("amdhip64.dll", "GPU_MAX_WORKGROUP_SIZE_2D_X")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE_2D_X, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE_2D_X");}});
+
+var GPU_MAX_WORKGROUP_SIZE_2D_Y = Module.findExportByName("amdhip64.dll", "GPU_MAX_WORKGROUP_SIZE_2D_Y")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE_2D_Y, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE_2D_Y");}});
+
+var GPU_MAX_WORKGROUP_SIZE_3D_X = Module.findExportByName("amdhip64.dll", "GPU_MAX_WORKGROUP_SIZE_3D_X")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE_3D_X, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE_3D_X");}});
+
+var GPU_MAX_WORKGROUP_SIZE_3D_Y = Module.findExportByName("amdhip64.dll", "GPU_MAX_WORKGROUP_SIZE_3D_Y")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE_3D_Y, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE_3D_Y");}});
+
+var GPU_MAX_WORKGROUP_SIZE_3D_Z = Module.findExportByName("amdhip64.dll", "GPU_MAX_WORKGROUP_SIZE_3D_Z")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE_3D_Z, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE_3D_Z");}});
+
+var GPU_MIPMAP = Module.findExportByName("amdhip64.dll", "GPU_MIPMAP")
+Interceptor.attach(GPU_MIPMAP, {onLeave: function (args) {send("GPU_MIPMAP");}});
+
+var GPU_NUM_COMPUTE_RINGS = Module.findExportByName("amdhip64.dll", "GPU_NUM_COMPUTE_RINGS")
+Interceptor.attach(GPU_NUM_COMPUTE_RINGS, {onLeave: function (args) {send("GPU_NUM_COMPUTE_RINGS");}});
+
+var GPU_NUM_MEM_DEPENDENCY = Module.findExportByName("amdhip64.dll", "GPU_NUM_MEM_DEPENDENCY")
+Interceptor.attach(GPU_NUM_MEM_DEPENDENCY, {onLeave: function (args) {send("GPU_NUM_MEM_DEPENDENCY");}});
+
+var GPU_PINNED_MIN_XFER_SIZE = Module.findExportByName("amdhip64.dll", "GPU_PINNED_MIN_XFER_SIZE")
+Interceptor.attach(GPU_PINNED_MIN_XFER_SIZE, {onLeave: function (args) {send("GPU_PINNED_MIN_XFER_SIZE");}});
+
+var GPU_PINNED_XFER_SIZE = Module.findExportByName("amdhip64.dll", "GPU_PINNED_XFER_SIZE")
+Interceptor.attach(GPU_PINNED_XFER_SIZE, {onLeave: function (args) {send("GPU_PINNED_XFER_SIZE");}});
+
+var GPU_PRINT_CHILD_KERNEL = Module.findExportByName("amdhip64.dll", "GPU_PRINT_CHILD_KERNEL")
+Interceptor.attach(GPU_PRINT_CHILD_KERNEL, {onLeave: function (args) {send("GPU_PRINT_CHILD_KERNEL");}});
+
+var GPU_RAW_TIMESTAMP = Module.findExportByName("amdhip64.dll", "GPU_RAW_TIMESTAMP")
+Interceptor.attach(GPU_RAW_TIMESTAMP, {onLeave: function (args) {send("GPU_RAW_TIMESTAMP");}});
+
+var GPU_RESOURCE_CACHE_SIZE = Module.findExportByName("amdhip64.dll", "GPU_RESOURCE_CACHE_SIZE")
+Interceptor.attach(GPU_RESOURCE_CACHE_SIZE, {onLeave: function (args) {send("GPU_RESOURCE_CACHE_SIZE");}});
+
+var GPU_SELECT_COMPUTE_RINGS_ID = Module.findExportByName("amdhip64.dll", "GPU_SELECT_COMPUTE_RINGS_ID")
+Interceptor.attach(GPU_SELECT_COMPUTE_RINGS_ID, {onLeave: function (args) {send("GPU_SELECT_COMPUTE_RINGS_ID");}});
+
+var GPU_SINGLE_ALLOC_PERCENT = Module.findExportByName("amdhip64.dll", "GPU_SINGLE_ALLOC_PERCENT")
+Interceptor.attach(GPU_SINGLE_ALLOC_PERCENT, {onLeave: function (args) {send("GPU_SINGLE_ALLOC_PERCENT");}});
+
+var GPU_STAGING_BUFFER_SIZE = Module.findExportByName("amdhip64.dll", "GPU_STAGING_BUFFER_SIZE")
+Interceptor.attach(GPU_STAGING_BUFFER_SIZE, {onLeave: function (args) {send("GPU_STAGING_BUFFER_SIZE");}});
+
+var GPU_STREAMOPS_CP_WAIT = Module.findExportByName("amdhip64.dll", "GPU_STREAMOPS_CP_WAIT")
+Interceptor.attach(GPU_STREAMOPS_CP_WAIT, {onLeave: function (args) {send("GPU_STREAMOPS_CP_WAIT");}});
+
+var GPU_USE_DEVICE_QUEUE = Module.findExportByName("amdhip64.dll", "GPU_USE_DEVICE_QUEUE")
+Interceptor.attach(GPU_USE_DEVICE_QUEUE, {onLeave: function (args) {send("GPU_USE_DEVICE_QUEUE");}});
+
+var GPU_USE_SINGLE_SCRATCH = Module.findExportByName("amdhip64.dll", "GPU_USE_SINGLE_SCRATCH")
+Interceptor.attach(GPU_USE_SINGLE_SCRATCH, {onLeave: function (args) {send("GPU_USE_SINGLE_SCRATCH");}});
+
+var GPU_USE_SYNC_OBJECTS = Module.findExportByName("amdhip64.dll", "GPU_USE_SYNC_OBJECTS")
+Interceptor.attach(GPU_USE_SYNC_OBJECTS, {onLeave: function (args) {send("GPU_USE_SYNC_OBJECTS");}});
+
+var GPU_WAVES_PER_SIMD = Module.findExportByName("amdhip64.dll", "GPU_WAVES_PER_SIMD")
+Interceptor.attach(GPU_WAVES_PER_SIMD, {onLeave: function (args) {send("GPU_WAVES_PER_SIMD");}});
+
+var GPU_WAVE_LIMIT_ENABLE = Module.findExportByName("amdhip64.dll", "GPU_WAVE_LIMIT_ENABLE")
+Interceptor.attach(GPU_WAVE_LIMIT_ENABLE, {onLeave: function (args) {send("GPU_WAVE_LIMIT_ENABLE");}});
+
+var GPU_WORKLOAD_SPLIT = Module.findExportByName("amdhip64.dll", "GPU_WORKLOAD_SPLIT")
+Interceptor.attach(GPU_WORKLOAD_SPLIT, {onLeave: function (args) {send("GPU_WORKLOAD_SPLIT");}});
+
+var GPU_XFER_BUFFER_SIZE = Module.findExportByName("amdhip64.dll", "GPU_XFER_BUFFER_SIZE")
+Interceptor.attach(GPU_XFER_BUFFER_SIZE, {onLeave: function (args) {send("GPU_XFER_BUFFER_SIZE");}});
+
+var HIP_HIDDEN_FREE_MEM = Module.findExportByName("amdhip64.dll", "HIP_HIDDEN_FREE_MEM")
+Interceptor.attach(HIP_HIDDEN_FREE_MEM, {onLeave: function (args) {send("HIP_HIDDEN_FREE_MEM");}});
+
+var HIP_HOST_COHERENT = Module.findExportByName("amdhip64.dll", "HIP_HOST_COHERENT")
+Interceptor.attach(HIP_HOST_COHERENT, {onLeave: function (args) {send("HIP_HOST_COHERENT");}});
+
+var HIP_MEM_POOL_SUPPORT = Module.findExportByName("amdhip64.dll", "HIP_MEM_POOL_SUPPORT")
+Interceptor.attach(HIP_MEM_POOL_SUPPORT, {onLeave: function (args) {send("HIP_MEM_POOL_SUPPORT");}});
+
+var HIP_VISIBLE_DEVICES = Module.findExportByName("amdhip64.dll", "HIP_VISIBLE_DEVICES")
+Interceptor.attach(HIP_VISIBLE_DEVICES, {onLeave: function (args) {send("HIP_VISIBLE_DEVICES");}});
+
+var HSA_ENABLE_COARSE_GRAIN_SVM = Module.findExportByName("amdhip64.dll", "HSA_ENABLE_COARSE_GRAIN_SVM")
+Interceptor.attach(HSA_ENABLE_COARSE_GRAIN_SVM, {onLeave: function (args) {send("HSA_ENABLE_COARSE_GRAIN_SVM");}});
+
+var HSA_KERNARG_POOL_SIZE = Module.findExportByName("amdhip64.dll", "HSA_KERNARG_POOL_SIZE")
+Interceptor.attach(HSA_KERNARG_POOL_SIZE, {onLeave: function (args) {send("HSA_KERNARG_POOL_SIZE");}});
+
+var HSA_LOCAL_MEMORY_ENABLE = Module.findExportByName("amdhip64.dll", "HSA_LOCAL_MEMORY_ENABLE")
+Interceptor.attach(HSA_LOCAL_MEMORY_ENABLE, {onLeave: function (args) {send("HSA_LOCAL_MEMORY_ENABLE");}});
+
+var OCL_CODE_CACHE_ENABLE = Module.findExportByName("amdhip64.dll", "OCL_CODE_CACHE_ENABLE")
+Interceptor.attach(OCL_CODE_CACHE_ENABLE, {onLeave: function (args) {send("OCL_CODE_CACHE_ENABLE");}});
+
+var OCL_CODE_CACHE_RESET = Module.findExportByName("amdhip64.dll", "OCL_CODE_CACHE_RESET")
+Interceptor.attach(OCL_CODE_CACHE_RESET, {onLeave: function (args) {send("OCL_CODE_CACHE_RESET");}});
+
+var OCL_SET_SVM_SIZE = Module.findExportByName("amdhip64.dll", "OCL_SET_SVM_SIZE")
+Interceptor.attach(OCL_SET_SVM_SIZE, {onLeave: function (args) {send("OCL_SET_SVM_SIZE");}});
+
+var OCL_STUB_PROGRAMS = Module.findExportByName("amdhip64.dll", "OCL_STUB_PROGRAMS")
+Interceptor.attach(OCL_STUB_PROGRAMS, {onLeave: function (args) {send("OCL_STUB_PROGRAMS");}});
+
+var OPENCL_VERSION = Module.findExportByName("amdhip64.dll", "OPENCL_VERSION")
+Interceptor.attach(OPENCL_VERSION, {onLeave: function (args) {send("OPENCL_VERSION");}});
+
+var PAL_ALWAYS_RESIDENT = Module.findExportByName("amdhip64.dll", "PAL_ALWAYS_RESIDENT")
+Interceptor.attach(PAL_ALWAYS_RESIDENT, {onLeave: function (args) {send("PAL_ALWAYS_RESIDENT");}});
+
+var PAL_DISABLE_SDMA = Module.findExportByName("amdhip64.dll", "PAL_DISABLE_SDMA")
+Interceptor.attach(PAL_DISABLE_SDMA, {onLeave: function (args) {send("PAL_DISABLE_SDMA");}});
+
+var PAL_EMBED_KERNEL_MD = Module.findExportByName("amdhip64.dll", "PAL_EMBED_KERNEL_MD")
+Interceptor.attach(PAL_EMBED_KERNEL_MD, {onLeave: function (args) {send("PAL_EMBED_KERNEL_MD");}});
+
+var PAL_FORCE_ASIC_REVISION = Module.findExportByName("amdhip64.dll", "PAL_FORCE_ASIC_REVISION")
+Interceptor.attach(PAL_FORCE_ASIC_REVISION, {onLeave: function (args) {send("PAL_FORCE_ASIC_REVISION");}});
+
+var PAL_MALL_POLICY = Module.findExportByName("amdhip64.dll", "PAL_MALL_POLICY")
+Interceptor.attach(PAL_MALL_POLICY, {onLeave: function (args) {send("PAL_MALL_POLICY");}});
+
+var PAL_PREPINNED_MEMORY_SIZE = Module.findExportByName("amdhip64.dll", "PAL_PREPINNED_MEMORY_SIZE")
+Interceptor.attach(PAL_PREPINNED_MEMORY_SIZE, {onLeave: function (args) {send("PAL_PREPINNED_MEMORY_SIZE");}});
+
+var PAL_RGP_DISP_COUNT = Module.findExportByName("amdhip64.dll", "PAL_RGP_DISP_COUNT")
+Interceptor.attach(PAL_RGP_DISP_COUNT, {onLeave: function (args) {send("PAL_RGP_DISP_COUNT");}});
+
+var REMOTE_ALLOC = Module.findExportByName("amdhip64.dll", "REMOTE_ALLOC")
+Interceptor.attach(REMOTE_ALLOC, {onLeave: function (args) {send("REMOTE_ALLOC");}});
+
+var ROC_ACTIVE_WAIT_TIMEOUT = Module.findExportByName("amdhip64.dll", "ROC_ACTIVE_WAIT_TIMEOUT")
+Interceptor.attach(ROC_ACTIVE_WAIT_TIMEOUT, {onLeave: function (args) {send("ROC_ACTIVE_WAIT_TIMEOUT");}});
+
+var ROC_AQL_QUEUE_SIZE = Module.findExportByName("amdhip64.dll", "ROC_AQL_QUEUE_SIZE")
+Interceptor.attach(ROC_AQL_QUEUE_SIZE, {onLeave: function (args) {send("ROC_AQL_QUEUE_SIZE");}});
+
+var ROC_CPU_WAIT_FOR_SIGNAL = Module.findExportByName("amdhip64.dll", "ROC_CPU_WAIT_FOR_SIGNAL")
+Interceptor.attach(ROC_CPU_WAIT_FOR_SIGNAL, {onLeave: function (args) {send("ROC_CPU_WAIT_FOR_SIGNAL");}});
+
+var ROC_ENABLE_LARGE_BAR = Module.findExportByName("amdhip64.dll", "ROC_ENABLE_LARGE_BAR")
+Interceptor.attach(ROC_ENABLE_LARGE_BAR, {onLeave: function (args) {send("ROC_ENABLE_LARGE_BAR");}});
+
+var ROC_ENABLE_PRE_VEGA = Module.findExportByName("amdhip64.dll", "ROC_ENABLE_PRE_VEGA")
+Interceptor.attach(ROC_ENABLE_PRE_VEGA, {onLeave: function (args) {send("ROC_ENABLE_PRE_VEGA");}});
+
+var ROC_GLOBAL_CU_MASK = Module.findExportByName("amdhip64.dll", "ROC_GLOBAL_CU_MASK")
+Interceptor.attach(ROC_GLOBAL_CU_MASK, {onLeave: function (args) {send("ROC_GLOBAL_CU_MASK");}});
+
+var ROC_HMM_FLAGS = Module.findExportByName("amdhip64.dll", "ROC_HMM_FLAGS")
+Interceptor.attach(ROC_HMM_FLAGS, {onLeave: function (args) {send("ROC_HMM_FLAGS");}});
+
+var ROC_P2P_SDMA_SIZE = Module.findExportByName("amdhip64.dll", "ROC_P2P_SDMA_SIZE")
+Interceptor.attach(ROC_P2P_SDMA_SIZE, {onLeave: function (args) {send("ROC_P2P_SDMA_SIZE");}});
+
+var ROC_SIGNAL_POOL_SIZE = Module.findExportByName("amdhip64.dll", "ROC_SIGNAL_POOL_SIZE")
+Interceptor.attach(ROC_SIGNAL_POOL_SIZE, {onLeave: function (args) {send("ROC_SIGNAL_POOL_SIZE");}});
+
+var ROC_SKIP_COPY_SYNC = Module.findExportByName("amdhip64.dll", "ROC_SKIP_COPY_SYNC")
+Interceptor.attach(ROC_SKIP_COPY_SYNC, {onLeave: function (args) {send("ROC_SKIP_COPY_SYNC");}});
+
+var ROC_SKIP_KERNEL_ARG_COPY = Module.findExportByName("amdhip64.dll", "ROC_SKIP_KERNEL_ARG_COPY")
+Interceptor.attach(ROC_SKIP_KERNEL_ARG_COPY, {onLeave: function (args) {send("ROC_SKIP_KERNEL_ARG_COPY");}});
+
+var ROC_SYSTEM_SCOPE_SIGNAL = Module.findExportByName("amdhip64.dll", "ROC_SYSTEM_SCOPE_SIGNAL")
+Interceptor.attach(ROC_SYSTEM_SCOPE_SIGNAL, {onLeave: function (args) {send("ROC_SYSTEM_SCOPE_SIGNAL");}});
+
+var ROC_USE_FGS_KERNARG = Module.findExportByName("amdhip64.dll", "ROC_USE_FGS_KERNARG")
+Interceptor.attach(ROC_USE_FGS_KERNARG, {onLeave: function (args) {send("ROC_USE_FGS_KERNARG");}});
+
+var __gnu_f2h_ieee = Module.findExportByName("amdhip64.dll", "__gnu_f2h_ieee")
+Interceptor.attach(__gnu_f2h_ieee, {onLeave: function (args) {send("__gnu_f2h_ieee");}});
+
+var __gnu_h2f_ieee = Module.findExportByName("amdhip64.dll", "__gnu_h2f_ieee")
+Interceptor.attach(__gnu_h2f_ieee, {onLeave: function (args) {send("__gnu_h2f_ieee");}});
+
+var __hipPopCallConfiguration = Module.findExportByName("amdhip64.dll", "__hipPopCallConfiguration")
+Interceptor.attach(__hipPopCallConfiguration, {onLeave: function (args) {send("__hipPopCallConfiguration");}});
+
+var __hipPushCallConfiguration = Module.findExportByName("amdhip64.dll", "__hipPushCallConfiguration")
+Interceptor.attach(__hipPushCallConfiguration, {onLeave: function (args) {send("__hipPushCallConfiguration");}});
+
+var __hipRegisterFatBinary = Module.findExportByName("amdhip64.dll", "__hipRegisterFatBinary")
+Interceptor.attach(__hipRegisterFatBinary, {onLeave: function (args) {send("__hipRegisterFatBinary");}});
+
+var __hipRegisterFunction = Module.findExportByName("amdhip64.dll", "__hipRegisterFunction")
+Interceptor.attach(__hipRegisterFunction, {onLeave: function (args) {send("__hipRegisterFunction");}});
+
+var __hipRegisterManagedVar = Module.findExportByName("amdhip64.dll", "__hipRegisterManagedVar")
+Interceptor.attach(__hipRegisterManagedVar, {onLeave: function (args) {send("__hipRegisterManagedVar");}});
+
+var __hipRegisterSurface = Module.findExportByName("amdhip64.dll", "__hipRegisterSurface")
+Interceptor.attach(__hipRegisterSurface, {onLeave: function (args) {send("__hipRegisterSurface");}});
+
+var __hipRegisterTexture = Module.findExportByName("amdhip64.dll", "__hipRegisterTexture")
+Interceptor.attach(__hipRegisterTexture, {onLeave: function (args) {send("__hipRegisterTexture");}});
+
+var __hipRegisterVar = Module.findExportByName("amdhip64.dll", "__hipRegisterVar")
+Interceptor.attach(__hipRegisterVar, {onLeave: function (args) {send("__hipRegisterVar");}});
+
+var __hipUnregisterFatBinary = Module.findExportByName("amdhip64.dll", "__hipUnregisterFatBinary")
+Interceptor.attach(__hipUnregisterFatBinary, {onLeave: function (args) {send("__hipUnregisterFatBinary");}});
+
+var amd_dbgapi_get_build_id = Module.findExportByName("amdhip64.dll", "amd_dbgapi_get_build_id")
+Interceptor.attach(amd_dbgapi_get_build_id, {onLeave: function (args) {send("amd_dbgapi_get_build_id");}});
+
+var amd_dbgapi_get_build_name = Module.findExportByName("amdhip64.dll", "amd_dbgapi_get_build_name")
+Interceptor.attach(amd_dbgapi_get_build_name, {onLeave: function (args) {send("amd_dbgapi_get_build_name");}});
+
+var amd_dbgapi_get_git_hash = Module.findExportByName("amdhip64.dll", "amd_dbgapi_get_git_hash")
+Interceptor.attach(amd_dbgapi_get_git_hash, {onLeave: function (args) {send("amd_dbgapi_get_git_hash");}});
+
+var hipApiName = Module.findExportByName("amdhip64.dll", "hipApiName")
+Interceptor.attach(hipApiName, {onLeave: function (args) {send("hipApiName");}});
+
+var hipArray3DCreate = Module.findExportByName("amdhip64.dll", "hipArray3DCreate")
+Interceptor.attach(hipArray3DCreate, {onLeave: function (args) {send("hipArray3DCreate");}});
+
+var hipArrayCreate = Module.findExportByName("amdhip64.dll", "hipArrayCreate")
+Interceptor.attach(hipArrayCreate, {onLeave: function (args) {send("hipArrayCreate");}});
+
+var hipArrayDestroy = Module.findExportByName("amdhip64.dll", "hipArrayDestroy")
+Interceptor.attach(hipArrayDestroy, {onLeave: function (args) {send("hipArrayDestroy");}});
+
+var hipBindTexture = Module.findExportByName("amdhip64.dll", "hipBindTexture")
+Interceptor.attach(hipBindTexture, {onLeave: function (args) {send("hipBindTexture");}});
+
+var hipBindTexture2D = Module.findExportByName("amdhip64.dll", "hipBindTexture2D")
+Interceptor.attach(hipBindTexture2D, {onLeave: function (args) {send("hipBindTexture2D");}});
+
+var hipBindTextureToArray = Module.findExportByName("amdhip64.dll", "hipBindTextureToArray")
+Interceptor.attach(hipBindTextureToArray, {onLeave: function (args) {send("hipBindTextureToArray");}});
+
+var hipBindTextureToMipmappedArray = Module.findExportByName("amdhip64.dll", "hipBindTextureToMipmappedArray")
+Interceptor.attach(hipBindTextureToMipmappedArray, {onLeave: function (args) {send("hipBindTextureToMipmappedArray");}});
+
+var hipChooseDevice = Module.findExportByName("amdhip64.dll", "hipChooseDevice")
+Interceptor.attach(hipChooseDevice, {onLeave: function (args) {send("hipChooseDevice");}});
+
+var hipConfigureCall = Module.findExportByName("amdhip64.dll", "hipConfigureCall")
+Interceptor.attach(hipConfigureCall, {onLeave: function (args) {send("hipConfigureCall");}});
+
+var hipCreateChannelDesc = Module.findExportByName("amdhip64.dll", "hipCreateChannelDesc")
+Interceptor.attach(hipCreateChannelDesc, {onLeave: function (args) {send("hipCreateChannelDesc");}});
+
+var hipCreateSurfaceObject = Module.findExportByName("amdhip64.dll", "hipCreateSurfaceObject")
+Interceptor.attach(hipCreateSurfaceObject, {onLeave: function (args) {send("hipCreateSurfaceObject");}});
+
+var hipCreateTextureObject = Module.findExportByName("amdhip64.dll", "hipCreateTextureObject")
+Interceptor.attach(hipCreateTextureObject, {onLeave: function (args) {send("hipCreateTextureObject");}});
+
+var hipCtxCreate = Module.findExportByName("amdhip64.dll", "hipCtxCreate")
+Interceptor.attach(hipCtxCreate, {onLeave: function (args) {send("hipCtxCreate");}});
+
+var hipCtxDestroy = Module.findExportByName("amdhip64.dll", "hipCtxDestroy")
+Interceptor.attach(hipCtxDestroy, {onLeave: function (args) {send("hipCtxDestroy");}});
+
+var hipCtxDisablePeerAccess = Module.findExportByName("amdhip64.dll", "hipCtxDisablePeerAccess")
+Interceptor.attach(hipCtxDisablePeerAccess, {onLeave: function (args) {send("hipCtxDisablePeerAccess");}});
+
+var hipCtxEnablePeerAccess = Module.findExportByName("amdhip64.dll", "hipCtxEnablePeerAccess")
+Interceptor.attach(hipCtxEnablePeerAccess, {onLeave: function (args) {send("hipCtxEnablePeerAccess");}});
+
+var hipCtxGetApiVersion = Module.findExportByName("amdhip64.dll", "hipCtxGetApiVersion")
+Interceptor.attach(hipCtxGetApiVersion, {onLeave: function (args) {send("hipCtxGetApiVersion");}});
+
+var hipCtxGetCacheConfig = Module.findExportByName("amdhip64.dll", "hipCtxGetCacheConfig")
+Interceptor.attach(hipCtxGetCacheConfig, {onLeave: function (args) {send("hipCtxGetCacheConfig");}});
+
+var hipCtxGetCurrent = Module.findExportByName("amdhip64.dll", "hipCtxGetCurrent")
+Interceptor.attach(hipCtxGetCurrent, {onLeave: function (args) {send("hipCtxGetCurrent");}});
+
+var hipCtxGetDevice = Module.findExportByName("amdhip64.dll", "hipCtxGetDevice")
+Interceptor.attach(hipCtxGetDevice, {onLeave: function (args) {send("hipCtxGetDevice");}});
+
+var hipCtxGetFlags = Module.findExportByName("amdhip64.dll", "hipCtxGetFlags")
+Interceptor.attach(hipCtxGetFlags, {onLeave: function (args) {send("hipCtxGetFlags");}});
+
+var hipCtxGetSharedMemConfig = Module.findExportByName("amdhip64.dll", "hipCtxGetSharedMemConfig")
+Interceptor.attach(hipCtxGetSharedMemConfig, {onLeave: function (args) {send("hipCtxGetSharedMemConfig");}});
+
+var hipCtxPopCurrent = Module.findExportByName("amdhip64.dll", "hipCtxPopCurrent")
+Interceptor.attach(hipCtxPopCurrent, {onLeave: function (args) {send("hipCtxPopCurrent");}});
+
+var hipCtxPushCurrent = Module.findExportByName("amdhip64.dll", "hipCtxPushCurrent")
+Interceptor.attach(hipCtxPushCurrent, {onLeave: function (args) {send("hipCtxPushCurrent");}});
+
+var hipCtxSetCacheConfig = Module.findExportByName("amdhip64.dll", "hipCtxSetCacheConfig")
+Interceptor.attach(hipCtxSetCacheConfig, {onLeave: function (args) {send("hipCtxSetCacheConfig");}});
+
+var hipCtxSetCurrent = Module.findExportByName("amdhip64.dll", "hipCtxSetCurrent")
+Interceptor.attach(hipCtxSetCurrent, {onLeave: function (args) {send("hipCtxSetCurrent");}});
+
+var hipCtxSetSharedMemConfig = Module.findExportByName("amdhip64.dll", "hipCtxSetSharedMemConfig")
+Interceptor.attach(hipCtxSetSharedMemConfig, {onLeave: function (args) {send("hipCtxSetSharedMemConfig");}});
+
+var hipCtxSynchronize = Module.findExportByName("amdhip64.dll", "hipCtxSynchronize")
+Interceptor.attach(hipCtxSynchronize, {onLeave: function (args) {send("hipCtxSynchronize");}});
+
+var hipDestroyExternalMemory = Module.findExportByName("amdhip64.dll", "hipDestroyExternalMemory")
+Interceptor.attach(hipDestroyExternalMemory, {onLeave: function (args) {send("hipDestroyExternalMemory");}});
+
+var hipDestroyExternalSemaphore = Module.findExportByName("amdhip64.dll", "hipDestroyExternalSemaphore")
+Interceptor.attach(hipDestroyExternalSemaphore, {onLeave: function (args) {send("hipDestroyExternalSemaphore");}});
+
+var hipDestroySurfaceObject = Module.findExportByName("amdhip64.dll", "hipDestroySurfaceObject")
+Interceptor.attach(hipDestroySurfaceObject, {onLeave: function (args) {send("hipDestroySurfaceObject");}});
+
+var hipDestroyTextureObject = Module.findExportByName("amdhip64.dll", "hipDestroyTextureObject")
+Interceptor.attach(hipDestroyTextureObject, {onLeave: function (args) {send("hipDestroyTextureObject");}});
+
+var hipDeviceCanAccessPeer = Module.findExportByName("amdhip64.dll", "hipDeviceCanAccessPeer")
+Interceptor.attach(hipDeviceCanAccessPeer, {onLeave: function (args) {send("hipDeviceCanAccessPeer");}});
+
+var hipDeviceComputeCapability = Module.findExportByName("amdhip64.dll", "hipDeviceComputeCapability")
+Interceptor.attach(hipDeviceComputeCapability, {onLeave: function (args) {send("hipDeviceComputeCapability");}});
+
+var hipDeviceDisablePeerAccess = Module.findExportByName("amdhip64.dll", "hipDeviceDisablePeerAccess")
+Interceptor.attach(hipDeviceDisablePeerAccess, {onLeave: function (args) {send("hipDeviceDisablePeerAccess");}});
+
+var hipDeviceEnablePeerAccess = Module.findExportByName("amdhip64.dll", "hipDeviceEnablePeerAccess")
+Interceptor.attach(hipDeviceEnablePeerAccess, {onLeave: function (args) {send("hipDeviceEnablePeerAccess");}});
+
+var hipDeviceGet = Module.findExportByName("amdhip64.dll", "hipDeviceGet")
+Interceptor.attach(hipDeviceGet, {onLeave: function (args) {send("hipDeviceGet");}});
+
+var hipDeviceGetAttribute = Module.findExportByName("amdhip64.dll", "hipDeviceGetAttribute")
+Interceptor.attach(hipDeviceGetAttribute, {onLeave: function (args) {send("hipDeviceGetAttribute");}});
+
+var hipDeviceGetByPCIBusId = Module.findExportByName("amdhip64.dll", "hipDeviceGetByPCIBusId")
+Interceptor.attach(hipDeviceGetByPCIBusId, {onLeave: function (args) {send("hipDeviceGetByPCIBusId");}});
+
+var hipDeviceGetCacheConfig = Module.findExportByName("amdhip64.dll", "hipDeviceGetCacheConfig")
+Interceptor.attach(hipDeviceGetCacheConfig, {onLeave: function (args) {send("hipDeviceGetCacheConfig");}});
+
+var hipDeviceGetDefaultMemPool = Module.findExportByName("amdhip64.dll", "hipDeviceGetDefaultMemPool")
+Interceptor.attach(hipDeviceGetDefaultMemPool, {onLeave: function (args) {send("hipDeviceGetDefaultMemPool");}});
+
+var hipDeviceGetGraphMemAttribute = Module.findExportByName("amdhip64.dll", "hipDeviceGetGraphMemAttribute")
+Interceptor.attach(hipDeviceGetGraphMemAttribute, {onLeave: function (args) {send("hipDeviceGetGraphMemAttribute");}});
+
+var hipDeviceGetLimit = Module.findExportByName("amdhip64.dll", "hipDeviceGetLimit")
+Interceptor.attach(hipDeviceGetLimit, {onLeave: function (args) {send("hipDeviceGetLimit");}});
+
+var hipDeviceGetMemPool = Module.findExportByName("amdhip64.dll", "hipDeviceGetMemPool")
+Interceptor.attach(hipDeviceGetMemPool, {onLeave: function (args) {send("hipDeviceGetMemPool");}});
+
+var hipDeviceGetName = Module.findExportByName("amdhip64.dll", "hipDeviceGetName")
+Interceptor.attach(hipDeviceGetName, {onLeave: function (args) {send("hipDeviceGetName");}});
+
+var hipDeviceGetP2PAttribute = Module.findExportByName("amdhip64.dll", "hipDeviceGetP2PAttribute")
+Interceptor.attach(hipDeviceGetP2PAttribute, {onLeave: function (args) {send("hipDeviceGetP2PAttribute");}});
+
+var hipDeviceGetPCIBusId = Module.findExportByName("amdhip64.dll", "hipDeviceGetPCIBusId")
+Interceptor.attach(hipDeviceGetPCIBusId, {onLeave: function (args) {send("hipDeviceGetPCIBusId");}});
+
+var hipDeviceGetSharedMemConfig = Module.findExportByName("amdhip64.dll", "hipDeviceGetSharedMemConfig")
+Interceptor.attach(hipDeviceGetSharedMemConfig, {onLeave: function (args) {send("hipDeviceGetSharedMemConfig");}});
+
+var hipDeviceGetStreamPriorityRange = Module.findExportByName("amdhip64.dll", "hipDeviceGetStreamPriorityRange")
+Interceptor.attach(hipDeviceGetStreamPriorityRange, {onLeave: function (args) {send("hipDeviceGetStreamPriorityRange");}});
+
+var hipDeviceGetUuid = Module.findExportByName("amdhip64.dll", "hipDeviceGetUuid")
+Interceptor.attach(hipDeviceGetUuid, {onLeave: function (args) {send("hipDeviceGetUuid");}});
+
+var hipDeviceGraphMemTrim = Module.findExportByName("amdhip64.dll", "hipDeviceGraphMemTrim")
+Interceptor.attach(hipDeviceGraphMemTrim, {onLeave: function (args) {send("hipDeviceGraphMemTrim");}});
+
+var hipDevicePrimaryCtxGetState = Module.findExportByName("amdhip64.dll", "hipDevicePrimaryCtxGetState")
+Interceptor.attach(hipDevicePrimaryCtxGetState, {onLeave: function (args) {send("hipDevicePrimaryCtxGetState");}});
+
+var hipDevicePrimaryCtxRelease = Module.findExportByName("amdhip64.dll", "hipDevicePrimaryCtxRelease")
+Interceptor.attach(hipDevicePrimaryCtxRelease, {onLeave: function (args) {send("hipDevicePrimaryCtxRelease");}});
+
+var hipDevicePrimaryCtxReset = Module.findExportByName("amdhip64.dll", "hipDevicePrimaryCtxReset")
+Interceptor.attach(hipDevicePrimaryCtxReset, {onLeave: function (args) {send("hipDevicePrimaryCtxReset");}});
+
+var hipDevicePrimaryCtxRetain = Module.findExportByName("amdhip64.dll", "hipDevicePrimaryCtxRetain")
+Interceptor.attach(hipDevicePrimaryCtxRetain, {onLeave: function (args) {send("hipDevicePrimaryCtxRetain");}});
+
+var hipDevicePrimaryCtxSetFlags = Module.findExportByName("amdhip64.dll", "hipDevicePrimaryCtxSetFlags")
+Interceptor.attach(hipDevicePrimaryCtxSetFlags, {onLeave: function (args) {send("hipDevicePrimaryCtxSetFlags");}});
+
+var hipDeviceReset = Module.findExportByName("amdhip64.dll", "hipDeviceReset")
+Interceptor.attach(hipDeviceReset, {onLeave: function (args) {send("hipDeviceReset");}});
+
+var hipDeviceSetCacheConfig = Module.findExportByName("amdhip64.dll", "hipDeviceSetCacheConfig")
+Interceptor.attach(hipDeviceSetCacheConfig, {onLeave: function (args) {send("hipDeviceSetCacheConfig");}});
+
+var hipDeviceSetGraphMemAttribute = Module.findExportByName("amdhip64.dll", "hipDeviceSetGraphMemAttribute")
+Interceptor.attach(hipDeviceSetGraphMemAttribute, {onLeave: function (args) {send("hipDeviceSetGraphMemAttribute");}});
+
+var hipDeviceSetLimit = Module.findExportByName("amdhip64.dll", "hipDeviceSetLimit")
+Interceptor.attach(hipDeviceSetLimit, {onLeave: function (args) {send("hipDeviceSetLimit");}});
+
+var hipDeviceSetMemPool = Module.findExportByName("amdhip64.dll", "hipDeviceSetMemPool")
+Interceptor.attach(hipDeviceSetMemPool, {onLeave: function (args) {send("hipDeviceSetMemPool");}});
+
+var hipDeviceSetSharedMemConfig = Module.findExportByName("amdhip64.dll", "hipDeviceSetSharedMemConfig")
+Interceptor.attach(hipDeviceSetSharedMemConfig, {onLeave: function (args) {send("hipDeviceSetSharedMemConfig");}});
+
+var hipDeviceSynchronize = Module.findExportByName("amdhip64.dll", "hipDeviceSynchronize")
+Interceptor.attach(hipDeviceSynchronize, {onLeave: function (args) {send("hipDeviceSynchronize");}});
+
+var hipDeviceTotalMem = Module.findExportByName("amdhip64.dll", "hipDeviceTotalMem")
+Interceptor.attach(hipDeviceTotalMem, {onLeave: function (args) {send("hipDeviceTotalMem");}});
+
+var hipDriverGetVersion = Module.findExportByName("amdhip64.dll", "hipDriverGetVersion")
+Interceptor.attach(hipDriverGetVersion, {onLeave: function (args) {send("hipDriverGetVersion");}});
+
+var hipDrvGetErrorName = Module.findExportByName("amdhip64.dll", "hipDrvGetErrorName")
+Interceptor.attach(hipDrvGetErrorName, {onLeave: function (args) {send("hipDrvGetErrorName");}});
+
+var hipDrvGetErrorString = Module.findExportByName("amdhip64.dll", "hipDrvGetErrorString")
+Interceptor.attach(hipDrvGetErrorString, {onLeave: function (args) {send("hipDrvGetErrorString");}});
+
+var hipDrvMemcpy2DUnaligned = Module.findExportByName("amdhip64.dll", "hipDrvMemcpy2DUnaligned")
+Interceptor.attach(hipDrvMemcpy2DUnaligned, {onLeave: function (args) {send("hipDrvMemcpy2DUnaligned");}});
+
+var hipDrvMemcpy3D = Module.findExportByName("amdhip64.dll", "hipDrvMemcpy3D")
+Interceptor.attach(hipDrvMemcpy3D, {onLeave: function (args) {send("hipDrvMemcpy3D");}});
+
+var hipDrvMemcpy3DAsync = Module.findExportByName("amdhip64.dll", "hipDrvMemcpy3DAsync")
+Interceptor.attach(hipDrvMemcpy3DAsync, {onLeave: function (args) {send("hipDrvMemcpy3DAsync");}});
+
+var hipDrvPointerGetAttributes = Module.findExportByName("amdhip64.dll", "hipDrvPointerGetAttributes")
+Interceptor.attach(hipDrvPointerGetAttributes, {onLeave: function (args) {send("hipDrvPointerGetAttributes");}});
+
+var hipEventCreate = Module.findExportByName("amdhip64.dll", "hipEventCreate")
+Interceptor.attach(hipEventCreate, {onLeave: function (args) {send("hipEventCreate");}});
+
+var hipEventCreateWithFlags = Module.findExportByName("amdhip64.dll", "hipEventCreateWithFlags")
+Interceptor.attach(hipEventCreateWithFlags, {onLeave: function (args) {send("hipEventCreateWithFlags");}});
+
+var hipEventDestroy = Module.findExportByName("amdhip64.dll", "hipEventDestroy")
+Interceptor.attach(hipEventDestroy, {onLeave: function (args) {send("hipEventDestroy");}});
+
+var hipEventElapsedTime = Module.findExportByName("amdhip64.dll", "hipEventElapsedTime")
+Interceptor.attach(hipEventElapsedTime, {onLeave: function (args) {send("hipEventElapsedTime");}});
+
+var hipEventQuery = Module.findExportByName("amdhip64.dll", "hipEventQuery")
+Interceptor.attach(hipEventQuery, {onLeave: function (args) {send("hipEventQuery");}});
+
+var hipEventRecord = Module.findExportByName("amdhip64.dll", "hipEventRecord")
+Interceptor.attach(hipEventRecord, {onLeave: function (args) {send("hipEventRecord");}});
+
+var hipEventRecord_spt = Module.findExportByName("amdhip64.dll", "hipEventRecord_spt")
+Interceptor.attach(hipEventRecord_spt, {onLeave: function (args) {send("hipEventRecord_spt");}});
+
+var hipEventSynchronize = Module.findExportByName("amdhip64.dll", "hipEventSynchronize")
+Interceptor.attach(hipEventSynchronize, {onLeave: function (args) {send("hipEventSynchronize");}});
+
+var hipExtGetLinkTypeAndHopCount = Module.findExportByName("amdhip64.dll", "hipExtGetLinkTypeAndHopCount")
+Interceptor.attach(hipExtGetLinkTypeAndHopCount, {onLeave: function (args) {send("hipExtGetLinkTypeAndHopCount");}});
+
+var hipExtLaunchKernel = Module.findExportByName("amdhip64.dll", "hipExtLaunchKernel")
+Interceptor.attach(hipExtLaunchKernel, {onLeave: function (args) {send("hipExtLaunchKernel");}});
+
+var hipExtLaunchMultiKernelMultiDevice = Module.findExportByName("amdhip64.dll", "hipExtLaunchMultiKernelMultiDevice")
+Interceptor.attach(hipExtLaunchMultiKernelMultiDevice, {onLeave: function (args) {send("hipExtLaunchMultiKernelMultiDevice");}});
+
+var hipExtMallocWithFlags = Module.findExportByName("amdhip64.dll", "hipExtMallocWithFlags")
+Interceptor.attach(hipExtMallocWithFlags, {onLeave: function (args) {send("hipExtMallocWithFlags");}});
+
+var hipExtModuleLaunchKernel = Module.findExportByName("amdhip64.dll", "hipExtModuleLaunchKernel")
+Interceptor.attach(hipExtModuleLaunchKernel, {onLeave: function (args) {send("hipExtModuleLaunchKernel");}});
+
+var hipExtStreamCreateWithCUMask = Module.findExportByName("amdhip64.dll", "hipExtStreamCreateWithCUMask")
+Interceptor.attach(hipExtStreamCreateWithCUMask, {onLeave: function (args) {send("hipExtStreamCreateWithCUMask");}});
+
+var hipExtStreamGetCUMask = Module.findExportByName("amdhip64.dll", "hipExtStreamGetCUMask")
+Interceptor.attach(hipExtStreamGetCUMask, {onLeave: function (args) {send("hipExtStreamGetCUMask");}});
+
+var hipExternalMemoryGetMappedBuffer = Module.findExportByName("amdhip64.dll", "hipExternalMemoryGetMappedBuffer")
+Interceptor.attach(hipExternalMemoryGetMappedBuffer, {onLeave: function (args) {send("hipExternalMemoryGetMappedBuffer");}});
+
+var hipFree = Module.findExportByName("amdhip64.dll", "hipFree")
+Interceptor.attach(hipFree, {onLeave: function (args) {send("hipFree");}});
+
+var hipFreeArray = Module.findExportByName("amdhip64.dll", "hipFreeArray")
+Interceptor.attach(hipFreeArray, {onLeave: function (args) {send("hipFreeArray");}});
+
+var hipFreeAsync = Module.findExportByName("amdhip64.dll", "hipFreeAsync")
+Interceptor.attach(hipFreeAsync, {onLeave: function (args) {send("hipFreeAsync");}});
+
+var hipFreeHost = Module.findExportByName("amdhip64.dll", "hipFreeHost")
+Interceptor.attach(hipFreeHost, {onLeave: function (args) {send("hipFreeHost");}});
+
+var hipFreeMipmappedArray = Module.findExportByName("amdhip64.dll", "hipFreeMipmappedArray")
+Interceptor.attach(hipFreeMipmappedArray, {onLeave: function (args) {send("hipFreeMipmappedArray");}});
+
+var hipFuncGetAttribute = Module.findExportByName("amdhip64.dll", "hipFuncGetAttribute")
+Interceptor.attach(hipFuncGetAttribute, {onLeave: function (args) {send("hipFuncGetAttribute");}});
+
+var hipFuncGetAttributes = Module.findExportByName("amdhip64.dll", "hipFuncGetAttributes")
+Interceptor.attach(hipFuncGetAttributes, {onLeave: function (args) {send("hipFuncGetAttributes");}});
+
+var hipFuncSetAttribute = Module.findExportByName("amdhip64.dll", "hipFuncSetAttribute")
+Interceptor.attach(hipFuncSetAttribute, {onLeave: function (args) {send("hipFuncSetAttribute");}});
+
+var hipFuncSetCacheConfig = Module.findExportByName("amdhip64.dll", "hipFuncSetCacheConfig")
+Interceptor.attach(hipFuncSetCacheConfig, {onLeave: function (args) {send("hipFuncSetCacheConfig");}});
+
+var hipFuncSetSharedMemConfig = Module.findExportByName("amdhip64.dll", "hipFuncSetSharedMemConfig")
+Interceptor.attach(hipFuncSetSharedMemConfig, {onLeave: function (args) {send("hipFuncSetSharedMemConfig");}});
+
+var hipGLGetDevices = Module.findExportByName("amdhip64.dll", "hipGLGetDevices")
+Interceptor.attach(hipGLGetDevices, {onLeave: function (args) {send("hipGLGetDevices");}});
+
+var hipGetChannelDesc = Module.findExportByName("amdhip64.dll", "hipGetChannelDesc")
+Interceptor.attach(hipGetChannelDesc, {onLeave: function (args) {send("hipGetChannelDesc");}});
+
+var hipGetCmdName = Module.findExportByName("amdhip64.dll", "hipGetCmdName")
+Interceptor.attach(hipGetCmdName, {onLeave: function (args) {send("hipGetCmdName");}});
+
+var hipGetDevice = Module.findExportByName("amdhip64.dll", "hipGetDevice")
+Interceptor.attach(hipGetDevice, {onLeave: function (args) {send("hipGetDevice");}});
+
+var hipGetDeviceCount = Module.findExportByName("amdhip64.dll", "hipGetDeviceCount")
+Interceptor.attach(hipGetDeviceCount, {onLeave: function (args) {send("hipGetDeviceCount");}});
+
+var hipGetDeviceFlags = Module.findExportByName("amdhip64.dll", "hipGetDeviceFlags")
+Interceptor.attach(hipGetDeviceFlags, {onLeave: function (args) {send("hipGetDeviceFlags");}});
+
+var hipGetDeviceProperties = Module.findExportByName("amdhip64.dll", "hipGetDeviceProperties")
+Interceptor.attach(hipGetDeviceProperties, {onLeave: function (args) {send("hipGetDeviceProperties");}});
+
+var hipGetErrorName = Module.findExportByName("amdhip64.dll", "hipGetErrorName")
+Interceptor.attach(hipGetErrorName, {onLeave: function (args) {send("hipGetErrorName");}});
+
+var hipGetErrorString = Module.findExportByName("amdhip64.dll", "hipGetErrorString")
+Interceptor.attach(hipGetErrorString, {onLeave: function (args) {send("hipGetErrorString");}});
+
+var hipGetLastError = Module.findExportByName("amdhip64.dll", "hipGetLastError")
+Interceptor.attach(hipGetLastError, {onLeave: function (args) {send("hipGetLastError");}});
+
+var hipGetMipmappedArrayLevel = Module.findExportByName("amdhip64.dll", "hipGetMipmappedArrayLevel")
+Interceptor.attach(hipGetMipmappedArrayLevel, {onLeave: function (args) {send("hipGetMipmappedArrayLevel");}});
+
+var hipGetStreamDeviceId = Module.findExportByName("amdhip64.dll", "hipGetStreamDeviceId")
+Interceptor.attach(hipGetStreamDeviceId, {onLeave: function (args) {send("hipGetStreamDeviceId");}});
+
+var hipGetSymbolAddress = Module.findExportByName("amdhip64.dll", "hipGetSymbolAddress")
+Interceptor.attach(hipGetSymbolAddress, {onLeave: function (args) {send("hipGetSymbolAddress");}});
+
+var hipGetSymbolSize = Module.findExportByName("amdhip64.dll", "hipGetSymbolSize")
+Interceptor.attach(hipGetSymbolSize, {onLeave: function (args) {send("hipGetSymbolSize");}});
+
+var hipGetTextureAlignmentOffset = Module.findExportByName("amdhip64.dll", "hipGetTextureAlignmentOffset")
+Interceptor.attach(hipGetTextureAlignmentOffset, {onLeave: function (args) {send("hipGetTextureAlignmentOffset");}});
+
+var hipGetTextureObjectResourceDesc = Module.findExportByName("amdhip64.dll", "hipGetTextureObjectResourceDesc")
+Interceptor.attach(hipGetTextureObjectResourceDesc, {onLeave: function (args) {send("hipGetTextureObjectResourceDesc");}});
+
+var hipGetTextureObjectResourceViewDesc = Module.findExportByName("amdhip64.dll", "hipGetTextureObjectResourceViewDesc")
+Interceptor.attach(hipGetTextureObjectResourceViewDesc, {onLeave: function (args) {send("hipGetTextureObjectResourceViewDesc");}});
+
+var hipGetTextureObjectTextureDesc = Module.findExportByName("amdhip64.dll", "hipGetTextureObjectTextureDesc")
+Interceptor.attach(hipGetTextureObjectTextureDesc, {onLeave: function (args) {send("hipGetTextureObjectTextureDesc");}});
+
+var hipGetTextureReference = Module.findExportByName("amdhip64.dll", "hipGetTextureReference")
+Interceptor.attach(hipGetTextureReference, {onLeave: function (args) {send("hipGetTextureReference");}});
+
+var hipGraphAddChildGraphNode = Module.findExportByName("amdhip64.dll", "hipGraphAddChildGraphNode")
+Interceptor.attach(hipGraphAddChildGraphNode, {onLeave: function (args) {send("hipGraphAddChildGraphNode");}});
+
+var hipGraphAddDependencies = Module.findExportByName("amdhip64.dll", "hipGraphAddDependencies")
+Interceptor.attach(hipGraphAddDependencies, {onLeave: function (args) {send("hipGraphAddDependencies");}});
+
+var hipGraphAddEmptyNode = Module.findExportByName("amdhip64.dll", "hipGraphAddEmptyNode")
+Interceptor.attach(hipGraphAddEmptyNode, {onLeave: function (args) {send("hipGraphAddEmptyNode");}});
+
+var hipGraphAddEventRecordNode = Module.findExportByName("amdhip64.dll", "hipGraphAddEventRecordNode")
+Interceptor.attach(hipGraphAddEventRecordNode, {onLeave: function (args) {send("hipGraphAddEventRecordNode");}});
+
+var hipGraphAddEventWaitNode = Module.findExportByName("amdhip64.dll", "hipGraphAddEventWaitNode")
+Interceptor.attach(hipGraphAddEventWaitNode, {onLeave: function (args) {send("hipGraphAddEventWaitNode");}});
+
+var hipGraphAddHostNode = Module.findExportByName("amdhip64.dll", "hipGraphAddHostNode")
+Interceptor.attach(hipGraphAddHostNode, {onLeave: function (args) {send("hipGraphAddHostNode");}});
+
+var hipGraphAddKernelNode = Module.findExportByName("amdhip64.dll", "hipGraphAddKernelNode")
+Interceptor.attach(hipGraphAddKernelNode, {onLeave: function (args) {send("hipGraphAddKernelNode");}});
+
+var hipGraphAddMemcpyNode = Module.findExportByName("amdhip64.dll", "hipGraphAddMemcpyNode")
+Interceptor.attach(hipGraphAddMemcpyNode, {onLeave: function (args) {send("hipGraphAddMemcpyNode");}});
+
+var hipGraphAddMemcpyNode1D = Module.findExportByName("amdhip64.dll", "hipGraphAddMemcpyNode1D")
+Interceptor.attach(hipGraphAddMemcpyNode1D, {onLeave: function (args) {send("hipGraphAddMemcpyNode1D");}});
+
+var hipGraphAddMemcpyNodeFromSymbol = Module.findExportByName("amdhip64.dll", "hipGraphAddMemcpyNodeFromSymbol")
+Interceptor.attach(hipGraphAddMemcpyNodeFromSymbol, {onLeave: function (args) {send("hipGraphAddMemcpyNodeFromSymbol");}});
+
+var hipGraphAddMemcpyNodeToSymbol = Module.findExportByName("amdhip64.dll", "hipGraphAddMemcpyNodeToSymbol")
+Interceptor.attach(hipGraphAddMemcpyNodeToSymbol, {onLeave: function (args) {send("hipGraphAddMemcpyNodeToSymbol");}});
+
+var hipGraphAddMemsetNode = Module.findExportByName("amdhip64.dll", "hipGraphAddMemsetNode")
+Interceptor.attach(hipGraphAddMemsetNode, {onLeave: function (args) {send("hipGraphAddMemsetNode");}});
+
+var hipGraphChildGraphNodeGetGraph = Module.findExportByName("amdhip64.dll", "hipGraphChildGraphNodeGetGraph")
+Interceptor.attach(hipGraphChildGraphNodeGetGraph, {onLeave: function (args) {send("hipGraphChildGraphNodeGetGraph");}});
+
+var hipGraphClone = Module.findExportByName("amdhip64.dll", "hipGraphClone")
+Interceptor.attach(hipGraphClone, {onLeave: function (args) {send("hipGraphClone");}});
+
+var hipGraphCreate = Module.findExportByName("amdhip64.dll", "hipGraphCreate")
+Interceptor.attach(hipGraphCreate, {onLeave: function (args) {send("hipGraphCreate");}});
+
+var hipGraphDestroy = Module.findExportByName("amdhip64.dll", "hipGraphDestroy")
+Interceptor.attach(hipGraphDestroy, {onLeave: function (args) {send("hipGraphDestroy");}});
+
+var hipGraphDestroyNode = Module.findExportByName("amdhip64.dll", "hipGraphDestroyNode")
+Interceptor.attach(hipGraphDestroyNode, {onLeave: function (args) {send("hipGraphDestroyNode");}});
+
+var hipGraphEventRecordNodeGetEvent = Module.findExportByName("amdhip64.dll", "hipGraphEventRecordNodeGetEvent")
+Interceptor.attach(hipGraphEventRecordNodeGetEvent, {onLeave: function (args) {send("hipGraphEventRecordNodeGetEvent");}});
+
+var hipGraphEventRecordNodeSetEvent = Module.findExportByName("amdhip64.dll", "hipGraphEventRecordNodeSetEvent")
+Interceptor.attach(hipGraphEventRecordNodeSetEvent, {onLeave: function (args) {send("hipGraphEventRecordNodeSetEvent");}});
+
+var hipGraphEventWaitNodeGetEvent = Module.findExportByName("amdhip64.dll", "hipGraphEventWaitNodeGetEvent")
+Interceptor.attach(hipGraphEventWaitNodeGetEvent, {onLeave: function (args) {send("hipGraphEventWaitNodeGetEvent");}});
+
+var hipGraphEventWaitNodeSetEvent = Module.findExportByName("amdhip64.dll", "hipGraphEventWaitNodeSetEvent")
+Interceptor.attach(hipGraphEventWaitNodeSetEvent, {onLeave: function (args) {send("hipGraphEventWaitNodeSetEvent");}});
+
+var hipGraphExecChildGraphNodeSetParams = Module.findExportByName("amdhip64.dll", "hipGraphExecChildGraphNodeSetParams")
+Interceptor.attach(hipGraphExecChildGraphNodeSetParams, {onLeave: function (args) {send("hipGraphExecChildGraphNodeSetParams");}});
+
+var hipGraphExecDestroy = Module.findExportByName("amdhip64.dll", "hipGraphExecDestroy")
+Interceptor.attach(hipGraphExecDestroy, {onLeave: function (args) {send("hipGraphExecDestroy");}});
+
+var hipGraphExecEventRecordNodeSetEvent = Module.findExportByName("amdhip64.dll", "hipGraphExecEventRecordNodeSetEvent")
+Interceptor.attach(hipGraphExecEventRecordNodeSetEvent, {onLeave: function (args) {send("hipGraphExecEventRecordNodeSetEvent");}});
+
+var hipGraphExecEventWaitNodeSetEvent = Module.findExportByName("amdhip64.dll", "hipGraphExecEventWaitNodeSetEvent")
+Interceptor.attach(hipGraphExecEventWaitNodeSetEvent, {onLeave: function (args) {send("hipGraphExecEventWaitNodeSetEvent");}});
+
+var hipGraphExecHostNodeSetParams = Module.findExportByName("amdhip64.dll", "hipGraphExecHostNodeSetParams")
+Interceptor.attach(hipGraphExecHostNodeSetParams, {onLeave: function (args) {send("hipGraphExecHostNodeSetParams");}});
+
+var hipGraphExecKernelNodeSetParams = Module.findExportByName("amdhip64.dll", "hipGraphExecKernelNodeSetParams")
+Interceptor.attach(hipGraphExecKernelNodeSetParams, {onLeave: function (args) {send("hipGraphExecKernelNodeSetParams");}});
+
+var hipGraphExecMemcpyNodeSetParams = Module.findExportByName("amdhip64.dll", "hipGraphExecMemcpyNodeSetParams")
+Interceptor.attach(hipGraphExecMemcpyNodeSetParams, {onLeave: function (args) {send("hipGraphExecMemcpyNodeSetParams");}});
+
+var hipGraphExecMemcpyNodeSetParams1D = Module.findExportByName("amdhip64.dll", "hipGraphExecMemcpyNodeSetParams1D")
+Interceptor.attach(hipGraphExecMemcpyNodeSetParams1D, {onLeave: function (args) {send("hipGraphExecMemcpyNodeSetParams1D");}});
+
+var hipGraphExecMemcpyNodeSetParamsFromSymbol = Module.findExportByName("amdhip64.dll", "hipGraphExecMemcpyNodeSetParamsFromSymbol")
+Interceptor.attach(hipGraphExecMemcpyNodeSetParamsFromSymbol, {onLeave: function (args) {send("hipGraphExecMemcpyNodeSetParamsFromSymbol");}});
+
+var hipGraphExecMemcpyNodeSetParamsToSymbol = Module.findExportByName("amdhip64.dll", "hipGraphExecMemcpyNodeSetParamsToSymbol")
+Interceptor.attach(hipGraphExecMemcpyNodeSetParamsToSymbol, {onLeave: function (args) {send("hipGraphExecMemcpyNodeSetParamsToSymbol");}});
+
+var hipGraphExecMemsetNodeSetParams = Module.findExportByName("amdhip64.dll", "hipGraphExecMemsetNodeSetParams")
+Interceptor.attach(hipGraphExecMemsetNodeSetParams, {onLeave: function (args) {send("hipGraphExecMemsetNodeSetParams");}});
+
+var hipGraphExecUpdate = Module.findExportByName("amdhip64.dll", "hipGraphExecUpdate")
+Interceptor.attach(hipGraphExecUpdate, {onLeave: function (args) {send("hipGraphExecUpdate");}});
+
+var hipGraphGetEdges = Module.findExportByName("amdhip64.dll", "hipGraphGetEdges")
+Interceptor.attach(hipGraphGetEdges, {onLeave: function (args) {send("hipGraphGetEdges");}});
+
+var hipGraphGetNodes = Module.findExportByName("amdhip64.dll", "hipGraphGetNodes")
+Interceptor.attach(hipGraphGetNodes, {onLeave: function (args) {send("hipGraphGetNodes");}});
+
+var hipGraphGetRootNodes = Module.findExportByName("amdhip64.dll", "hipGraphGetRootNodes")
+Interceptor.attach(hipGraphGetRootNodes, {onLeave: function (args) {send("hipGraphGetRootNodes");}});
+
+var hipGraphHostNodeGetParams = Module.findExportByName("amdhip64.dll", "hipGraphHostNodeGetParams")
+Interceptor.attach(hipGraphHostNodeGetParams, {onLeave: function (args) {send("hipGraphHostNodeGetParams");}});
+
+var hipGraphHostNodeSetParams = Module.findExportByName("amdhip64.dll", "hipGraphHostNodeSetParams")
+Interceptor.attach(hipGraphHostNodeSetParams, {onLeave: function (args) {send("hipGraphHostNodeSetParams");}});
+
+var hipGraphInstantiate = Module.findExportByName("amdhip64.dll", "hipGraphInstantiate")
+Interceptor.attach(hipGraphInstantiate, {onLeave: function (args) {send("hipGraphInstantiate");}});
+
+var hipGraphInstantiateWithFlags = Module.findExportByName("amdhip64.dll", "hipGraphInstantiateWithFlags")
+Interceptor.attach(hipGraphInstantiateWithFlags, {onLeave: function (args) {send("hipGraphInstantiateWithFlags");}});
+
+var hipGraphKernelNodeGetAttribute = Module.findExportByName("amdhip64.dll", "hipGraphKernelNodeGetAttribute")
+Interceptor.attach(hipGraphKernelNodeGetAttribute, {onLeave: function (args) {send("hipGraphKernelNodeGetAttribute");}});
+
+var hipGraphKernelNodeGetParams = Module.findExportByName("amdhip64.dll", "hipGraphKernelNodeGetParams")
+Interceptor.attach(hipGraphKernelNodeGetParams, {onLeave: function (args) {send("hipGraphKernelNodeGetParams");}});
+
+var hipGraphKernelNodeSetAttribute = Module.findExportByName("amdhip64.dll", "hipGraphKernelNodeSetAttribute")
+Interceptor.attach(hipGraphKernelNodeSetAttribute, {onLeave: function (args) {send("hipGraphKernelNodeSetAttribute");}});
+
+var hipGraphKernelNodeSetParams = Module.findExportByName("amdhip64.dll", "hipGraphKernelNodeSetParams")
+Interceptor.attach(hipGraphKernelNodeSetParams, {onLeave: function (args) {send("hipGraphKernelNodeSetParams");}});
+
+var hipGraphLaunch = Module.findExportByName("amdhip64.dll", "hipGraphLaunch")
+Interceptor.attach(hipGraphLaunch, {onLeave: function (args) {send("hipGraphLaunch");}});
+
+var hipGraphLaunch_spt = Module.findExportByName("amdhip64.dll", "hipGraphLaunch_spt")
+Interceptor.attach(hipGraphLaunch_spt, {onLeave: function (args) {send("hipGraphLaunch_spt");}});
+
+var hipGraphMemcpyNodeGetParams = Module.findExportByName("amdhip64.dll", "hipGraphMemcpyNodeGetParams")
+Interceptor.attach(hipGraphMemcpyNodeGetParams, {onLeave: function (args) {send("hipGraphMemcpyNodeGetParams");}});
+
+var hipGraphMemcpyNodeSetParams = Module.findExportByName("amdhip64.dll", "hipGraphMemcpyNodeSetParams")
+Interceptor.attach(hipGraphMemcpyNodeSetParams, {onLeave: function (args) {send("hipGraphMemcpyNodeSetParams");}});
+
+var hipGraphMemcpyNodeSetParams1D = Module.findExportByName("amdhip64.dll", "hipGraphMemcpyNodeSetParams1D")
+Interceptor.attach(hipGraphMemcpyNodeSetParams1D, {onLeave: function (args) {send("hipGraphMemcpyNodeSetParams1D");}});
+
+var hipGraphMemcpyNodeSetParamsFromSymbol = Module.findExportByName("amdhip64.dll", "hipGraphMemcpyNodeSetParamsFromSymbol")
+Interceptor.attach(hipGraphMemcpyNodeSetParamsFromSymbol, {onLeave: function (args) {send("hipGraphMemcpyNodeSetParamsFromSymbol");}});
+
+var hipGraphMemcpyNodeSetParamsToSymbol = Module.findExportByName("amdhip64.dll", "hipGraphMemcpyNodeSetParamsToSymbol")
+Interceptor.attach(hipGraphMemcpyNodeSetParamsToSymbol, {onLeave: function (args) {send("hipGraphMemcpyNodeSetParamsToSymbol");}});
+
+var hipGraphMemsetNodeGetParams = Module.findExportByName("amdhip64.dll", "hipGraphMemsetNodeGetParams")
+Interceptor.attach(hipGraphMemsetNodeGetParams, {onLeave: function (args) {send("hipGraphMemsetNodeGetParams");}});
+
+var hipGraphMemsetNodeSetParams = Module.findExportByName("amdhip64.dll", "hipGraphMemsetNodeSetParams")
+Interceptor.attach(hipGraphMemsetNodeSetParams, {onLeave: function (args) {send("hipGraphMemsetNodeSetParams");}});
+
+var hipGraphNodeFindInClone = Module.findExportByName("amdhip64.dll", "hipGraphNodeFindInClone")
+Interceptor.attach(hipGraphNodeFindInClone, {onLeave: function (args) {send("hipGraphNodeFindInClone");}});
+
+var hipGraphNodeGetDependencies = Module.findExportByName("amdhip64.dll", "hipGraphNodeGetDependencies")
+Interceptor.attach(hipGraphNodeGetDependencies, {onLeave: function (args) {send("hipGraphNodeGetDependencies");}});
+
+var hipGraphNodeGetDependentNodes = Module.findExportByName("amdhip64.dll", "hipGraphNodeGetDependentNodes")
+Interceptor.attach(hipGraphNodeGetDependentNodes, {onLeave: function (args) {send("hipGraphNodeGetDependentNodes");}});
+
+var hipGraphNodeGetType = Module.findExportByName("amdhip64.dll", "hipGraphNodeGetType")
+Interceptor.attach(hipGraphNodeGetType, {onLeave: function (args) {send("hipGraphNodeGetType");}});
+
+var hipGraphReleaseUserObject = Module.findExportByName("amdhip64.dll", "hipGraphReleaseUserObject")
+Interceptor.attach(hipGraphReleaseUserObject, {onLeave: function (args) {send("hipGraphReleaseUserObject");}});
+
+var hipGraphRemoveDependencies = Module.findExportByName("amdhip64.dll", "hipGraphRemoveDependencies")
+Interceptor.attach(hipGraphRemoveDependencies, {onLeave: function (args) {send("hipGraphRemoveDependencies");}});
+
+var hipGraphRetainUserObject = Module.findExportByName("amdhip64.dll", "hipGraphRetainUserObject")
+Interceptor.attach(hipGraphRetainUserObject, {onLeave: function (args) {send("hipGraphRetainUserObject");}});
+
+var hipGraphicsGLRegisterBuffer = Module.findExportByName("amdhip64.dll", "hipGraphicsGLRegisterBuffer")
+Interceptor.attach(hipGraphicsGLRegisterBuffer, {onLeave: function (args) {send("hipGraphicsGLRegisterBuffer");}});
+
+var hipGraphicsGLRegisterImage = Module.findExportByName("amdhip64.dll", "hipGraphicsGLRegisterImage")
+Interceptor.attach(hipGraphicsGLRegisterImage, {onLeave: function (args) {send("hipGraphicsGLRegisterImage");}});
+
+var hipGraphicsMapResources = Module.findExportByName("amdhip64.dll", "hipGraphicsMapResources")
+Interceptor.attach(hipGraphicsMapResources, {onLeave: function (args) {send("hipGraphicsMapResources");}});
+
+var hipGraphicsResourceGetMappedPointer = Module.findExportByName("amdhip64.dll", "hipGraphicsResourceGetMappedPointer")
+Interceptor.attach(hipGraphicsResourceGetMappedPointer, {onLeave: function (args) {send("hipGraphicsResourceGetMappedPointer");}});
+
+var hipGraphicsSubResourceGetMappedArray = Module.findExportByName("amdhip64.dll", "hipGraphicsSubResourceGetMappedArray")
+Interceptor.attach(hipGraphicsSubResourceGetMappedArray, {onLeave: function (args) {send("hipGraphicsSubResourceGetMappedArray");}});
+
+var hipGraphicsUnmapResources = Module.findExportByName("amdhip64.dll", "hipGraphicsUnmapResources")
+Interceptor.attach(hipGraphicsUnmapResources, {onLeave: function (args) {send("hipGraphicsUnmapResources");}});
+
+var hipGraphicsUnregisterResource = Module.findExportByName("amdhip64.dll", "hipGraphicsUnregisterResource")
+Interceptor.attach(hipGraphicsUnregisterResource, {onLeave: function (args) {send("hipGraphicsUnregisterResource");}});
+
+var hipHccModuleLaunchKernel = Module.findExportByName("amdhip64.dll", "hipHccModuleLaunchKernel")
+Interceptor.attach(hipHccModuleLaunchKernel, {onLeave: function (args) {send("hipHccModuleLaunchKernel");}});
+
+var hipHostAlloc = Module.findExportByName("amdhip64.dll", "hipHostAlloc")
+Interceptor.attach(hipHostAlloc, {onLeave: function (args) {send("hipHostAlloc");}});
+
+var hipHostFree = Module.findExportByName("amdhip64.dll", "hipHostFree")
+Interceptor.attach(hipHostFree, {onLeave: function (args) {send("hipHostFree");}});
+
+var hipHostGetDevicePointer = Module.findExportByName("amdhip64.dll", "hipHostGetDevicePointer")
+Interceptor.attach(hipHostGetDevicePointer, {onLeave: function (args) {send("hipHostGetDevicePointer");}});
+
+var hipHostGetFlags = Module.findExportByName("amdhip64.dll", "hipHostGetFlags")
+Interceptor.attach(hipHostGetFlags, {onLeave: function (args) {send("hipHostGetFlags");}});
+
+var hipHostMalloc = Module.findExportByName("amdhip64.dll", "hipHostMalloc")
+Interceptor.attach(hipHostMalloc, {onLeave: function (args) {send("hipHostMalloc");}});
+
+var hipHostRegister = Module.findExportByName("amdhip64.dll", "hipHostRegister")
+Interceptor.attach(hipHostRegister, {onLeave: function (args) {send("hipHostRegister");}});
+
+var hipHostUnregister = Module.findExportByName("amdhip64.dll", "hipHostUnregister")
+Interceptor.attach(hipHostUnregister, {onLeave: function (args) {send("hipHostUnregister");}});
+
+var hipImportExternalMemory = Module.findExportByName("amdhip64.dll", "hipImportExternalMemory")
+Interceptor.attach(hipImportExternalMemory, {onLeave: function (args) {send("hipImportExternalMemory");}});
+
+var hipImportExternalSemaphore = Module.findExportByName("amdhip64.dll", "hipImportExternalSemaphore")
+Interceptor.attach(hipImportExternalSemaphore, {onLeave: function (args) {send("hipImportExternalSemaphore");}});
+
+var hipInit = Module.findExportByName("amdhip64.dll", "hipInit")
+Interceptor.attach(hipInit, {onLeave: function (args) {send("hipInit");}});
+
+var hipIpcCloseMemHandle = Module.findExportByName("amdhip64.dll", "hipIpcCloseMemHandle")
+Interceptor.attach(hipIpcCloseMemHandle, {onLeave: function (args) {send("hipIpcCloseMemHandle");}});
+
+var hipIpcGetEventHandle = Module.findExportByName("amdhip64.dll", "hipIpcGetEventHandle")
+Interceptor.attach(hipIpcGetEventHandle, {onLeave: function (args) {send("hipIpcGetEventHandle");}});
+
+var hipIpcGetMemHandle = Module.findExportByName("amdhip64.dll", "hipIpcGetMemHandle")
+Interceptor.attach(hipIpcGetMemHandle, {onLeave: function (args) {send("hipIpcGetMemHandle");}});
+
+var hipIpcOpenEventHandle = Module.findExportByName("amdhip64.dll", "hipIpcOpenEventHandle")
+Interceptor.attach(hipIpcOpenEventHandle, {onLeave: function (args) {send("hipIpcOpenEventHandle");}});
+
+var hipIpcOpenMemHandle = Module.findExportByName("amdhip64.dll", "hipIpcOpenMemHandle")
+Interceptor.attach(hipIpcOpenMemHandle, {onLeave: function (args) {send("hipIpcOpenMemHandle");}});
+
+var hipKernelNameRef = Module.findExportByName("amdhip64.dll", "hipKernelNameRef")
+Interceptor.attach(hipKernelNameRef, {onLeave: function (args) {send("hipKernelNameRef");}});
+
+var hipLaunchByPtr = Module.findExportByName("amdhip64.dll", "hipLaunchByPtr")
+Interceptor.attach(hipLaunchByPtr, {onLeave: function (args) {send("hipLaunchByPtr");}});
+
+var hipLaunchCooperativeKernel = Module.findExportByName("amdhip64.dll", "hipLaunchCooperativeKernel")
+Interceptor.attach(hipLaunchCooperativeKernel, {onLeave: function (args) {send("hipLaunchCooperativeKernel");}});
+
+var hipLaunchCooperativeKernelMultiDevice = Module.findExportByName("amdhip64.dll", "hipLaunchCooperativeKernelMultiDevice")
+Interceptor.attach(hipLaunchCooperativeKernelMultiDevice, {onLeave: function (args) {send("hipLaunchCooperativeKernelMultiDevice");}});
+
+var hipLaunchCooperativeKernel_spt = Module.findExportByName("amdhip64.dll", "hipLaunchCooperativeKernel_spt")
+Interceptor.attach(hipLaunchCooperativeKernel_spt, {onLeave: function (args) {send("hipLaunchCooperativeKernel_spt");}});
+
+var hipLaunchHostFunc = Module.findExportByName("amdhip64.dll", "hipLaunchHostFunc")
+Interceptor.attach(hipLaunchHostFunc, {onLeave: function (args) {send("hipLaunchHostFunc");}});
+
+var hipLaunchHostFunc_spt = Module.findExportByName("amdhip64.dll", "hipLaunchHostFunc_spt")
+Interceptor.attach(hipLaunchHostFunc_spt, {onLeave: function (args) {send("hipLaunchHostFunc_spt");}});
+
+var hipLaunchKernel = Module.findExportByName("amdhip64.dll", "hipLaunchKernel")
+Interceptor.attach(hipLaunchKernel, {onLeave: function (args) {send("hipLaunchKernel");}});
+
+var hipLaunchKernel_spt = Module.findExportByName("amdhip64.dll", "hipLaunchKernel_spt")
+Interceptor.attach(hipLaunchKernel_spt, {onLeave: function (args) {send("hipLaunchKernel_spt");}});
+
+var hipMalloc = Module.findExportByName("amdhip64.dll", "hipMalloc")
+Interceptor.attach(hipMalloc, {onLeave: function (args) {send("hipMalloc");}});
+
+var hipMalloc3D = Module.findExportByName("amdhip64.dll", "hipMalloc3D")
+Interceptor.attach(hipMalloc3D, {onLeave: function (args) {send("hipMalloc3D");}});
+
+var hipMalloc3DArray = Module.findExportByName("amdhip64.dll", "hipMalloc3DArray")
+Interceptor.attach(hipMalloc3DArray, {onLeave: function (args) {send("hipMalloc3DArray");}});
+
+var hipMallocArray = Module.findExportByName("amdhip64.dll", "hipMallocArray")
+Interceptor.attach(hipMallocArray, {onLeave: function (args) {send("hipMallocArray");}});
+
+var hipMallocAsync = Module.findExportByName("amdhip64.dll", "hipMallocAsync")
+Interceptor.attach(hipMallocAsync, {onLeave: function (args) {send("hipMallocAsync");}});
+
+var hipMallocFromPoolAsync = Module.findExportByName("amdhip64.dll", "hipMallocFromPoolAsync")
+Interceptor.attach(hipMallocFromPoolAsync, {onLeave: function (args) {send("hipMallocFromPoolAsync");}});
+
+var hipMallocHost = Module.findExportByName("amdhip64.dll", "hipMallocHost")
+Interceptor.attach(hipMallocHost, {onLeave: function (args) {send("hipMallocHost");}});
+
+var hipMallocManaged = Module.findExportByName("amdhip64.dll", "hipMallocManaged")
+Interceptor.attach(hipMallocManaged, {onLeave: function (args) {send("hipMallocManaged");}});
+
+var hipMallocMipmappedArray = Module.findExportByName("amdhip64.dll", "hipMallocMipmappedArray")
+Interceptor.attach(hipMallocMipmappedArray, {onLeave: function (args) {send("hipMallocMipmappedArray");}});
+
+var hipMallocPitch = Module.findExportByName("amdhip64.dll", "hipMallocPitch")
+Interceptor.attach(hipMallocPitch, {onLeave: function (args) {send("hipMallocPitch");}});
+
+var hipMemAddressFree = Module.findExportByName("amdhip64.dll", "hipMemAddressFree")
+Interceptor.attach(hipMemAddressFree, {onLeave: function (args) {send("hipMemAddressFree");}});
+
+var hipMemAddressReserve = Module.findExportByName("amdhip64.dll", "hipMemAddressReserve")
+Interceptor.attach(hipMemAddressReserve, {onLeave: function (args) {send("hipMemAddressReserve");}});
+
+var hipMemAdvise = Module.findExportByName("amdhip64.dll", "hipMemAdvise")
+Interceptor.attach(hipMemAdvise, {onLeave: function (args) {send("hipMemAdvise");}});
+
+var hipMemAllocHost = Module.findExportByName("amdhip64.dll", "hipMemAllocHost")
+Interceptor.attach(hipMemAllocHost, {onLeave: function (args) {send("hipMemAllocHost");}});
+
+var hipMemAllocPitch = Module.findExportByName("amdhip64.dll", "hipMemAllocPitch")
+Interceptor.attach(hipMemAllocPitch, {onLeave: function (args) {send("hipMemAllocPitch");}});
+
+var hipMemCreate = Module.findExportByName("amdhip64.dll", "hipMemCreate")
+Interceptor.attach(hipMemCreate, {onLeave: function (args) {send("hipMemCreate");}});
+
+var hipMemExportToShareableHandle = Module.findExportByName("amdhip64.dll", "hipMemExportToShareableHandle")
+Interceptor.attach(hipMemExportToShareableHandle, {onLeave: function (args) {send("hipMemExportToShareableHandle");}});
+
+var hipMemGetAccess = Module.findExportByName("amdhip64.dll", "hipMemGetAccess")
+Interceptor.attach(hipMemGetAccess, {onLeave: function (args) {send("hipMemGetAccess");}});
+
+var hipMemGetAddressRange = Module.findExportByName("amdhip64.dll", "hipMemGetAddressRange")
+Interceptor.attach(hipMemGetAddressRange, {onLeave: function (args) {send("hipMemGetAddressRange");}});
+
+var hipMemGetAllocationGranularity = Module.findExportByName("amdhip64.dll", "hipMemGetAllocationGranularity")
+Interceptor.attach(hipMemGetAllocationGranularity, {onLeave: function (args) {send("hipMemGetAllocationGranularity");}});
+
+var hipMemGetAllocationPropertiesFromHandle = Module.findExportByName("amdhip64.dll", "hipMemGetAllocationPropertiesFromHandle")
+Interceptor.attach(hipMemGetAllocationPropertiesFromHandle, {onLeave: function (args) {send("hipMemGetAllocationPropertiesFromHandle");}});
+
+var hipMemGetInfo = Module.findExportByName("amdhip64.dll", "hipMemGetInfo")
+Interceptor.attach(hipMemGetInfo, {onLeave: function (args) {send("hipMemGetInfo");}});
+
+var hipMemImportFromShareableHandle = Module.findExportByName("amdhip64.dll", "hipMemImportFromShareableHandle")
+Interceptor.attach(hipMemImportFromShareableHandle, {onLeave: function (args) {send("hipMemImportFromShareableHandle");}});
+
+var hipMemMap = Module.findExportByName("amdhip64.dll", "hipMemMap")
+Interceptor.attach(hipMemMap, {onLeave: function (args) {send("hipMemMap");}});
+
+var hipMemMapArrayAsync = Module.findExportByName("amdhip64.dll", "hipMemMapArrayAsync")
+Interceptor.attach(hipMemMapArrayAsync, {onLeave: function (args) {send("hipMemMapArrayAsync");}});
+
+var hipMemPoolCreate = Module.findExportByName("amdhip64.dll", "hipMemPoolCreate")
+Interceptor.attach(hipMemPoolCreate, {onLeave: function (args) {send("hipMemPoolCreate");}});
+
+var hipMemPoolDestroy = Module.findExportByName("amdhip64.dll", "hipMemPoolDestroy")
+Interceptor.attach(hipMemPoolDestroy, {onLeave: function (args) {send("hipMemPoolDestroy");}});
+
+var hipMemPoolExportPointer = Module.findExportByName("amdhip64.dll", "hipMemPoolExportPointer")
+Interceptor.attach(hipMemPoolExportPointer, {onLeave: function (args) {send("hipMemPoolExportPointer");}});
+
+var hipMemPoolExportToShareableHandle = Module.findExportByName("amdhip64.dll", "hipMemPoolExportToShareableHandle")
+Interceptor.attach(hipMemPoolExportToShareableHandle, {onLeave: function (args) {send("hipMemPoolExportToShareableHandle");}});
+
+var hipMemPoolGetAccess = Module.findExportByName("amdhip64.dll", "hipMemPoolGetAccess")
+Interceptor.attach(hipMemPoolGetAccess, {onLeave: function (args) {send("hipMemPoolGetAccess");}});
+
+var hipMemPoolGetAttribute = Module.findExportByName("amdhip64.dll", "hipMemPoolGetAttribute")
+Interceptor.attach(hipMemPoolGetAttribute, {onLeave: function (args) {send("hipMemPoolGetAttribute");}});
+
+var hipMemPoolImportFromShareableHandle = Module.findExportByName("amdhip64.dll", "hipMemPoolImportFromShareableHandle")
+Interceptor.attach(hipMemPoolImportFromShareableHandle, {onLeave: function (args) {send("hipMemPoolImportFromShareableHandle");}});
+
+var hipMemPoolImportPointer = Module.findExportByName("amdhip64.dll", "hipMemPoolImportPointer")
+Interceptor.attach(hipMemPoolImportPointer, {onLeave: function (args) {send("hipMemPoolImportPointer");}});
+
+var hipMemPoolSetAccess = Module.findExportByName("amdhip64.dll", "hipMemPoolSetAccess")
+Interceptor.attach(hipMemPoolSetAccess, {onLeave: function (args) {send("hipMemPoolSetAccess");}});
+
+var hipMemPoolSetAttribute = Module.findExportByName("amdhip64.dll", "hipMemPoolSetAttribute")
+Interceptor.attach(hipMemPoolSetAttribute, {onLeave: function (args) {send("hipMemPoolSetAttribute");}});
+
+var hipMemPoolTrimTo = Module.findExportByName("amdhip64.dll", "hipMemPoolTrimTo")
+Interceptor.attach(hipMemPoolTrimTo, {onLeave: function (args) {send("hipMemPoolTrimTo");}});
+
+var hipMemPrefetchAsync = Module.findExportByName("amdhip64.dll", "hipMemPrefetchAsync")
+Interceptor.attach(hipMemPrefetchAsync, {onLeave: function (args) {send("hipMemPrefetchAsync");}});
+
+var hipMemPtrGetInfo = Module.findExportByName("amdhip64.dll", "hipMemPtrGetInfo")
+Interceptor.attach(hipMemPtrGetInfo, {onLeave: function (args) {send("hipMemPtrGetInfo");}});
+
+var hipMemRangeGetAttribute = Module.findExportByName("amdhip64.dll", "hipMemRangeGetAttribute")
+Interceptor.attach(hipMemRangeGetAttribute, {onLeave: function (args) {send("hipMemRangeGetAttribute");}});
+
+var hipMemRangeGetAttributes = Module.findExportByName("amdhip64.dll", "hipMemRangeGetAttributes")
+Interceptor.attach(hipMemRangeGetAttributes, {onLeave: function (args) {send("hipMemRangeGetAttributes");}});
+
+var hipMemRelease = Module.findExportByName("amdhip64.dll", "hipMemRelease")
+Interceptor.attach(hipMemRelease, {onLeave: function (args) {send("hipMemRelease");}});
+
+var hipMemRetainAllocationHandle = Module.findExportByName("amdhip64.dll", "hipMemRetainAllocationHandle")
+Interceptor.attach(hipMemRetainAllocationHandle, {onLeave: function (args) {send("hipMemRetainAllocationHandle");}});
+
+var hipMemSetAccess = Module.findExportByName("amdhip64.dll", "hipMemSetAccess")
+Interceptor.attach(hipMemSetAccess, {onLeave: function (args) {send("hipMemSetAccess");}});
+
+var hipMemUnmap = Module.findExportByName("amdhip64.dll", "hipMemUnmap")
+Interceptor.attach(hipMemUnmap, {onLeave: function (args) {send("hipMemUnmap");}});
+
+var hipMemcpy = Module.findExportByName("amdhip64.dll", "hipMemcpy")
+Interceptor.attach(hipMemcpy, {onLeave: function (args) {send("hipMemcpy");}});
+
+var hipMemcpy2D = Module.findExportByName("amdhip64.dll", "hipMemcpy2D")
+Interceptor.attach(hipMemcpy2D, {onLeave: function (args) {send("hipMemcpy2D");}});
+
+var hipMemcpy2DAsync = Module.findExportByName("amdhip64.dll", "hipMemcpy2DAsync")
+Interceptor.attach(hipMemcpy2DAsync, {onLeave: function (args) {send("hipMemcpy2DAsync");}});
+
+var hipMemcpy2DAsync_spt = Module.findExportByName("amdhip64.dll", "hipMemcpy2DAsync_spt")
+Interceptor.attach(hipMemcpy2DAsync_spt, {onLeave: function (args) {send("hipMemcpy2DAsync_spt");}});
+
+var hipMemcpy2DFromArray = Module.findExportByName("amdhip64.dll", "hipMemcpy2DFromArray")
+Interceptor.attach(hipMemcpy2DFromArray, {onLeave: function (args) {send("hipMemcpy2DFromArray");}});
+
+var hipMemcpy2DFromArrayAsync = Module.findExportByName("amdhip64.dll", "hipMemcpy2DFromArrayAsync")
+Interceptor.attach(hipMemcpy2DFromArrayAsync, {onLeave: function (args) {send("hipMemcpy2DFromArrayAsync");}});
+
+var hipMemcpy2DFromArrayAsync_spt = Module.findExportByName("amdhip64.dll", "hipMemcpy2DFromArrayAsync_spt")
+Interceptor.attach(hipMemcpy2DFromArrayAsync_spt, {onLeave: function (args) {send("hipMemcpy2DFromArrayAsync_spt");}});
+
+var hipMemcpy2DFromArray_spt = Module.findExportByName("amdhip64.dll", "hipMemcpy2DFromArray_spt")
+Interceptor.attach(hipMemcpy2DFromArray_spt, {onLeave: function (args) {send("hipMemcpy2DFromArray_spt");}});
+
+var hipMemcpy2DToArray = Module.findExportByName("amdhip64.dll", "hipMemcpy2DToArray")
+Interceptor.attach(hipMemcpy2DToArray, {onLeave: function (args) {send("hipMemcpy2DToArray");}});
+
+var hipMemcpy2DToArrayAsync = Module.findExportByName("amdhip64.dll", "hipMemcpy2DToArrayAsync")
+Interceptor.attach(hipMemcpy2DToArrayAsync, {onLeave: function (args) {send("hipMemcpy2DToArrayAsync");}});
+
+var hipMemcpy2DToArrayAsync_spt = Module.findExportByName("amdhip64.dll", "hipMemcpy2DToArrayAsync_spt")
+Interceptor.attach(hipMemcpy2DToArrayAsync_spt, {onLeave: function (args) {send("hipMemcpy2DToArrayAsync_spt");}});
+
+var hipMemcpy2DToArray_spt = Module.findExportByName("amdhip64.dll", "hipMemcpy2DToArray_spt")
+Interceptor.attach(hipMemcpy2DToArray_spt, {onLeave: function (args) {send("hipMemcpy2DToArray_spt");}});
+
+var hipMemcpy2D_spt = Module.findExportByName("amdhip64.dll", "hipMemcpy2D_spt")
+Interceptor.attach(hipMemcpy2D_spt, {onLeave: function (args) {send("hipMemcpy2D_spt");}});
+
+var hipMemcpy3D = Module.findExportByName("amdhip64.dll", "hipMemcpy3D")
+Interceptor.attach(hipMemcpy3D, {onLeave: function (args) {send("hipMemcpy3D");}});
+
+var hipMemcpy3DAsync = Module.findExportByName("amdhip64.dll", "hipMemcpy3DAsync")
+Interceptor.attach(hipMemcpy3DAsync, {onLeave: function (args) {send("hipMemcpy3DAsync");}});
+
+var hipMemcpy3DAsync_spt = Module.findExportByName("amdhip64.dll", "hipMemcpy3DAsync_spt")
+Interceptor.attach(hipMemcpy3DAsync_spt, {onLeave: function (args) {send("hipMemcpy3DAsync_spt");}});
+
+var hipMemcpy3D_spt = Module.findExportByName("amdhip64.dll", "hipMemcpy3D_spt")
+Interceptor.attach(hipMemcpy3D_spt, {onLeave: function (args) {send("hipMemcpy3D_spt");}});
+
+var hipMemcpyAsync = Module.findExportByName("amdhip64.dll", "hipMemcpyAsync")
+Interceptor.attach(hipMemcpyAsync, {onLeave: function (args) {send("hipMemcpyAsync");}});
+
+var hipMemcpyAsync_spt = Module.findExportByName("amdhip64.dll", "hipMemcpyAsync_spt")
+Interceptor.attach(hipMemcpyAsync_spt, {onLeave: function (args) {send("hipMemcpyAsync_spt");}});
+
+var hipMemcpyAtoH = Module.findExportByName("amdhip64.dll", "hipMemcpyAtoH")
+Interceptor.attach(hipMemcpyAtoH, {onLeave: function (args) {send("hipMemcpyAtoH");}});
+
+var hipMemcpyDtoD = Module.findExportByName("amdhip64.dll", "hipMemcpyDtoD")
+Interceptor.attach(hipMemcpyDtoD, {onLeave: function (args) {send("hipMemcpyDtoD");}});
+
+var hipMemcpyDtoDAsync = Module.findExportByName("amdhip64.dll", "hipMemcpyDtoDAsync")
+Interceptor.attach(hipMemcpyDtoDAsync, {onLeave: function (args) {send("hipMemcpyDtoDAsync");}});
+
+var hipMemcpyDtoH = Module.findExportByName("amdhip64.dll", "hipMemcpyDtoH")
+Interceptor.attach(hipMemcpyDtoH, {onLeave: function (args) {send("hipMemcpyDtoH");}});
+
+var hipMemcpyDtoHAsync = Module.findExportByName("amdhip64.dll", "hipMemcpyDtoHAsync")
+Interceptor.attach(hipMemcpyDtoHAsync, {onLeave: function (args) {send("hipMemcpyDtoHAsync");}});
+
+var hipMemcpyFromArray = Module.findExportByName("amdhip64.dll", "hipMemcpyFromArray")
+Interceptor.attach(hipMemcpyFromArray, {onLeave: function (args) {send("hipMemcpyFromArray");}});
+
+var hipMemcpyFromArray_spt = Module.findExportByName("amdhip64.dll", "hipMemcpyFromArray_spt")
+Interceptor.attach(hipMemcpyFromArray_spt, {onLeave: function (args) {send("hipMemcpyFromArray_spt");}});
+
+var hipMemcpyFromSymbol = Module.findExportByName("amdhip64.dll", "hipMemcpyFromSymbol")
+Interceptor.attach(hipMemcpyFromSymbol, {onLeave: function (args) {send("hipMemcpyFromSymbol");}});
+
+var hipMemcpyFromSymbolAsync = Module.findExportByName("amdhip64.dll", "hipMemcpyFromSymbolAsync")
+Interceptor.attach(hipMemcpyFromSymbolAsync, {onLeave: function (args) {send("hipMemcpyFromSymbolAsync");}});
+
+var hipMemcpyFromSymbolAsync_spt = Module.findExportByName("amdhip64.dll", "hipMemcpyFromSymbolAsync_spt")
+Interceptor.attach(hipMemcpyFromSymbolAsync_spt, {onLeave: function (args) {send("hipMemcpyFromSymbolAsync_spt");}});
+
+var hipMemcpyFromSymbol_spt = Module.findExportByName("amdhip64.dll", "hipMemcpyFromSymbol_spt")
+Interceptor.attach(hipMemcpyFromSymbol_spt, {onLeave: function (args) {send("hipMemcpyFromSymbol_spt");}});
+
+var hipMemcpyHtoA = Module.findExportByName("amdhip64.dll", "hipMemcpyHtoA")
+Interceptor.attach(hipMemcpyHtoA, {onLeave: function (args) {send("hipMemcpyHtoA");}});
+
+var hipMemcpyHtoD = Module.findExportByName("amdhip64.dll", "hipMemcpyHtoD")
+Interceptor.attach(hipMemcpyHtoD, {onLeave: function (args) {send("hipMemcpyHtoD");}});
+
+var hipMemcpyHtoDAsync = Module.findExportByName("amdhip64.dll", "hipMemcpyHtoDAsync")
+Interceptor.attach(hipMemcpyHtoDAsync, {onLeave: function (args) {send("hipMemcpyHtoDAsync");}});
+
+var hipMemcpyParam2D = Module.findExportByName("amdhip64.dll", "hipMemcpyParam2D")
+Interceptor.attach(hipMemcpyParam2D, {onLeave: function (args) {send("hipMemcpyParam2D");}});
+
+var hipMemcpyParam2DAsync = Module.findExportByName("amdhip64.dll", "hipMemcpyParam2DAsync")
+Interceptor.attach(hipMemcpyParam2DAsync, {onLeave: function (args) {send("hipMemcpyParam2DAsync");}});
+
+var hipMemcpyPeer = Module.findExportByName("amdhip64.dll", "hipMemcpyPeer")
+Interceptor.attach(hipMemcpyPeer, {onLeave: function (args) {send("hipMemcpyPeer");}});
+
+var hipMemcpyPeerAsync = Module.findExportByName("amdhip64.dll", "hipMemcpyPeerAsync")
+Interceptor.attach(hipMemcpyPeerAsync, {onLeave: function (args) {send("hipMemcpyPeerAsync");}});
+
+var hipMemcpyToArray = Module.findExportByName("amdhip64.dll", "hipMemcpyToArray")
+Interceptor.attach(hipMemcpyToArray, {onLeave: function (args) {send("hipMemcpyToArray");}});
+
+var hipMemcpyToSymbol = Module.findExportByName("amdhip64.dll", "hipMemcpyToSymbol")
+Interceptor.attach(hipMemcpyToSymbol, {onLeave: function (args) {send("hipMemcpyToSymbol");}});
+
+var hipMemcpyToSymbolAsync = Module.findExportByName("amdhip64.dll", "hipMemcpyToSymbolAsync")
+Interceptor.attach(hipMemcpyToSymbolAsync, {onLeave: function (args) {send("hipMemcpyToSymbolAsync");}});
+
+var hipMemcpyToSymbolAsync_spt = Module.findExportByName("amdhip64.dll", "hipMemcpyToSymbolAsync_spt")
+Interceptor.attach(hipMemcpyToSymbolAsync_spt, {onLeave: function (args) {send("hipMemcpyToSymbolAsync_spt");}});
+
+var hipMemcpyToSymbol_spt = Module.findExportByName("amdhip64.dll", "hipMemcpyToSymbol_spt")
+Interceptor.attach(hipMemcpyToSymbol_spt, {onLeave: function (args) {send("hipMemcpyToSymbol_spt");}});
+
+var hipMemcpyWithStream = Module.findExportByName("amdhip64.dll", "hipMemcpyWithStream")
+Interceptor.attach(hipMemcpyWithStream, {onLeave: function (args) {send("hipMemcpyWithStream");}});
+
+var hipMemcpy_spt = Module.findExportByName("amdhip64.dll", "hipMemcpy_spt")
+Interceptor.attach(hipMemcpy_spt, {onLeave: function (args) {send("hipMemcpy_spt");}});
+
+var hipMemset = Module.findExportByName("amdhip64.dll", "hipMemset")
+Interceptor.attach(hipMemset, {onLeave: function (args) {send("hipMemset");}});
+
+var hipMemset2D = Module.findExportByName("amdhip64.dll", "hipMemset2D")
+Interceptor.attach(hipMemset2D, {onLeave: function (args) {send("hipMemset2D");}});
+
+var hipMemset2DAsync = Module.findExportByName("amdhip64.dll", "hipMemset2DAsync")
+Interceptor.attach(hipMemset2DAsync, {onLeave: function (args) {send("hipMemset2DAsync");}});
+
+var hipMemset2DAsync_spt = Module.findExportByName("amdhip64.dll", "hipMemset2DAsync_spt")
+Interceptor.attach(hipMemset2DAsync_spt, {onLeave: function (args) {send("hipMemset2DAsync_spt");}});
+
+var hipMemset2D_spt = Module.findExportByName("amdhip64.dll", "hipMemset2D_spt")
+Interceptor.attach(hipMemset2D_spt, {onLeave: function (args) {send("hipMemset2D_spt");}});
+
+var hipMemset3D = Module.findExportByName("amdhip64.dll", "hipMemset3D")
+Interceptor.attach(hipMemset3D, {onLeave: function (args) {send("hipMemset3D");}});
+
+var hipMemset3DAsync = Module.findExportByName("amdhip64.dll", "hipMemset3DAsync")
+Interceptor.attach(hipMemset3DAsync, {onLeave: function (args) {send("hipMemset3DAsync");}});
+
+var hipMemset3DAsync_spt = Module.findExportByName("amdhip64.dll", "hipMemset3DAsync_spt")
+Interceptor.attach(hipMemset3DAsync_spt, {onLeave: function (args) {send("hipMemset3DAsync_spt");}});
+
+var hipMemset3D_spt = Module.findExportByName("amdhip64.dll", "hipMemset3D_spt")
+Interceptor.attach(hipMemset3D_spt, {onLeave: function (args) {send("hipMemset3D_spt");}});
+
+var hipMemsetAsync = Module.findExportByName("amdhip64.dll", "hipMemsetAsync")
+Interceptor.attach(hipMemsetAsync, {onLeave: function (args) {send("hipMemsetAsync");}});
+
+var hipMemsetAsync_spt = Module.findExportByName("amdhip64.dll", "hipMemsetAsync_spt")
+Interceptor.attach(hipMemsetAsync_spt, {onLeave: function (args) {send("hipMemsetAsync_spt");}});
+
+var hipMemsetD16 = Module.findExportByName("amdhip64.dll", "hipMemsetD16")
+Interceptor.attach(hipMemsetD16, {onLeave: function (args) {send("hipMemsetD16");}});
+
+var hipMemsetD16Async = Module.findExportByName("amdhip64.dll", "hipMemsetD16Async")
+Interceptor.attach(hipMemsetD16Async, {onLeave: function (args) {send("hipMemsetD16Async");}});
+
+var hipMemsetD32 = Module.findExportByName("amdhip64.dll", "hipMemsetD32")
+Interceptor.attach(hipMemsetD32, {onLeave: function (args) {send("hipMemsetD32");}});
+
+var hipMemsetD32Async = Module.findExportByName("amdhip64.dll", "hipMemsetD32Async")
+Interceptor.attach(hipMemsetD32Async, {onLeave: function (args) {send("hipMemsetD32Async");}});
+
+var hipMemsetD8 = Module.findExportByName("amdhip64.dll", "hipMemsetD8")
+Interceptor.attach(hipMemsetD8, {onLeave: function (args) {send("hipMemsetD8");}});
+
+var hipMemsetD8Async = Module.findExportByName("amdhip64.dll", "hipMemsetD8Async")
+Interceptor.attach(hipMemsetD8Async, {onLeave: function (args) {send("hipMemsetD8Async");}});
+
+var hipMemset_spt = Module.findExportByName("amdhip64.dll", "hipMemset_spt")
+Interceptor.attach(hipMemset_spt, {onLeave: function (args) {send("hipMemset_spt");}});
+
+var hipMipmappedArrayCreate = Module.findExportByName("amdhip64.dll", "hipMipmappedArrayCreate")
+Interceptor.attach(hipMipmappedArrayCreate, {onLeave: function (args) {send("hipMipmappedArrayCreate");}});
+
+var hipMipmappedArrayDestroy = Module.findExportByName("amdhip64.dll", "hipMipmappedArrayDestroy")
+Interceptor.attach(hipMipmappedArrayDestroy, {onLeave: function (args) {send("hipMipmappedArrayDestroy");}});
+
+var hipMipmappedArrayGetLevel = Module.findExportByName("amdhip64.dll", "hipMipmappedArrayGetLevel")
+Interceptor.attach(hipMipmappedArrayGetLevel, {onLeave: function (args) {send("hipMipmappedArrayGetLevel");}});
+
+var hipModuleGetFunction = Module.findExportByName("amdhip64.dll", "hipModuleGetFunction")
+Interceptor.attach(hipModuleGetFunction, {onLeave: function (args) {send("hipModuleGetFunction");}});
+
+var hipModuleGetGlobal = Module.findExportByName("amdhip64.dll", "hipModuleGetGlobal")
+Interceptor.attach(hipModuleGetGlobal, {onLeave: function (args) {send("hipModuleGetGlobal");}});
+
+var hipModuleGetTexRef = Module.findExportByName("amdhip64.dll", "hipModuleGetTexRef")
+Interceptor.attach(hipModuleGetTexRef, {onLeave: function (args) {send("hipModuleGetTexRef");}});
+
+var hipModuleLaunchKernel = Module.findExportByName("amdhip64.dll", "hipModuleLaunchKernel")
+Interceptor.attach(hipModuleLaunchKernel, {onLeave: function (args) {send("hipModuleLaunchKernel");}});
+
+var hipModuleLaunchKernelExt = Module.findExportByName("amdhip64.dll", "hipModuleLaunchKernelExt")
+Interceptor.attach(hipModuleLaunchKernelExt, {onLeave: function (args) {send("hipModuleLaunchKernelExt");}});
+
+var hipModuleLoad = Module.findExportByName("amdhip64.dll", "hipModuleLoad")
+Interceptor.attach(hipModuleLoad, {onLeave: function (args) {send("hipModuleLoad");}});
+
+var hipModuleLoadData = Module.findExportByName("amdhip64.dll", "hipModuleLoadData")
+Interceptor.attach(hipModuleLoadData, {onLeave: function (args) {send("hipModuleLoadData");}});
+
+var hipModuleLoadDataEx = Module.findExportByName("amdhip64.dll", "hipModuleLoadDataEx")
+Interceptor.attach(hipModuleLoadDataEx, {onLeave: function (args) {send("hipModuleLoadDataEx");}});
+
+var hipModuleOccupancyMaxActiveBlocksPerMultiprocessor = Module.findExportByName("amdhip64.dll", "hipModuleOccupancyMaxActiveBlocksPerMultiprocessor")
+Interceptor.attach(hipModuleOccupancyMaxActiveBlocksPerMultiprocessor, {onLeave: function (args) {send("hipModuleOccupancyMaxActiveBlocksPerMultiprocessor");}});
+
+var hipModuleOccupancyMaxActiveBlocksPerMultiprocessorWithFlags = Module.findExportByName("amdhip64.dll", "hipModuleOccupancyMaxActiveBlocksPerMultiprocessorWithFlags")
+Interceptor.attach(hipModuleOccupancyMaxActiveBlocksPerMultiprocessorWithFlags, {onLeave: function (args) {send("hipModuleOccupancyMaxActiveBlocksPerMultiprocessorWithFlags");}});
+
+var hipModuleOccupancyMaxPotentialBlockSize = Module.findExportByName("amdhip64.dll", "hipModuleOccupancyMaxPotentialBlockSize")
+Interceptor.attach(hipModuleOccupancyMaxPotentialBlockSize, {onLeave: function (args) {send("hipModuleOccupancyMaxPotentialBlockSize");}});
+
+var hipModuleOccupancyMaxPotentialBlockSizeWithFlags = Module.findExportByName("amdhip64.dll", "hipModuleOccupancyMaxPotentialBlockSizeWithFlags")
+Interceptor.attach(hipModuleOccupancyMaxPotentialBlockSizeWithFlags, {onLeave: function (args) {send("hipModuleOccupancyMaxPotentialBlockSizeWithFlags");}});
+
+var hipModuleUnload = Module.findExportByName("amdhip64.dll", "hipModuleUnload")
+Interceptor.attach(hipModuleUnload, {onLeave: function (args) {send("hipModuleUnload");}});
+
+var hipOccupancyMaxActiveBlocksPerMultiprocessor = Module.findExportByName("amdhip64.dll", "hipOccupancyMaxActiveBlocksPerMultiprocessor")
+Interceptor.attach(hipOccupancyMaxActiveBlocksPerMultiprocessor, {onLeave: function (args) {send("hipOccupancyMaxActiveBlocksPerMultiprocessor");}});
+
+var hipOccupancyMaxActiveBlocksPerMultiprocessorWithFlags = Module.findExportByName("amdhip64.dll", "hipOccupancyMaxActiveBlocksPerMultiprocessorWithFlags")
+Interceptor.attach(hipOccupancyMaxActiveBlocksPerMultiprocessorWithFlags, {onLeave: function (args) {send("hipOccupancyMaxActiveBlocksPerMultiprocessorWithFlags");}});
+
+var hipOccupancyMaxPotentialBlockSize = Module.findExportByName("amdhip64.dll", "hipOccupancyMaxPotentialBlockSize")
+Interceptor.attach(hipOccupancyMaxPotentialBlockSize, {onLeave: function (args) {send("hipOccupancyMaxPotentialBlockSize");}});
+
+var hipPeekAtLastError = Module.findExportByName("amdhip64.dll", "hipPeekAtLastError")
+Interceptor.attach(hipPeekAtLastError, {onLeave: function (args) {send("hipPeekAtLastError");}});
+
+var hipPointerGetAttribute = Module.findExportByName("amdhip64.dll", "hipPointerGetAttribute")
+Interceptor.attach(hipPointerGetAttribute, {onLeave: function (args) {send("hipPointerGetAttribute");}});
+
+var hipPointerGetAttributes = Module.findExportByName("amdhip64.dll", "hipPointerGetAttributes")
+Interceptor.attach(hipPointerGetAttributes, {onLeave: function (args) {send("hipPointerGetAttributes");}});
+
+var hipProfilerStart = Module.findExportByName("amdhip64.dll", "hipProfilerStart")
+Interceptor.attach(hipProfilerStart, {onLeave: function (args) {send("hipProfilerStart");}});
+
+var hipProfilerStop = Module.findExportByName("amdhip64.dll", "hipProfilerStop")
+Interceptor.attach(hipProfilerStop, {onLeave: function (args) {send("hipProfilerStop");}});
+
+var hipRegisterTracerCallback = Module.findExportByName("amdhip64.dll", "hipRegisterTracerCallback")
+Interceptor.attach(hipRegisterTracerCallback, {onLeave: function (args) {send("hipRegisterTracerCallback");}});
+
+var hipRuntimeGetVersion = Module.findExportByName("amdhip64.dll", "hipRuntimeGetVersion")
+Interceptor.attach(hipRuntimeGetVersion, {onLeave: function (args) {send("hipRuntimeGetVersion");}});
+
+var hipSetDevice = Module.findExportByName("amdhip64.dll", "hipSetDevice")
+Interceptor.attach(hipSetDevice, {onLeave: function (args) {send("hipSetDevice");}});
+
+var hipSetDeviceFlags = Module.findExportByName("amdhip64.dll", "hipSetDeviceFlags")
+Interceptor.attach(hipSetDeviceFlags, {onLeave: function (args) {send("hipSetDeviceFlags");}});
+
+var hipSetupArgument = Module.findExportByName("amdhip64.dll", "hipSetupArgument")
+Interceptor.attach(hipSetupArgument, {onLeave: function (args) {send("hipSetupArgument");}});
+
+var hipSignalExternalSemaphoresAsync = Module.findExportByName("amdhip64.dll", "hipSignalExternalSemaphoresAsync")
+Interceptor.attach(hipSignalExternalSemaphoresAsync, {onLeave: function (args) {send("hipSignalExternalSemaphoresAsync");}});
+
+var hipStreamAddCallback = Module.findExportByName("amdhip64.dll", "hipStreamAddCallback")
+Interceptor.attach(hipStreamAddCallback, {onLeave: function (args) {send("hipStreamAddCallback");}});
+
+var hipStreamAddCallback_spt = Module.findExportByName("amdhip64.dll", "hipStreamAddCallback_spt")
+Interceptor.attach(hipStreamAddCallback_spt, {onLeave: function (args) {send("hipStreamAddCallback_spt");}});
+
+var hipStreamAttachMemAsync = Module.findExportByName("amdhip64.dll", "hipStreamAttachMemAsync")
+Interceptor.attach(hipStreamAttachMemAsync, {onLeave: function (args) {send("hipStreamAttachMemAsync");}});
+
+var hipStreamBeginCapture = Module.findExportByName("amdhip64.dll", "hipStreamBeginCapture")
+Interceptor.attach(hipStreamBeginCapture, {onLeave: function (args) {send("hipStreamBeginCapture");}});
+
+var hipStreamBeginCapture_spt = Module.findExportByName("amdhip64.dll", "hipStreamBeginCapture_spt")
+Interceptor.attach(hipStreamBeginCapture_spt, {onLeave: function (args) {send("hipStreamBeginCapture_spt");}});
+
+var hipStreamCreate = Module.findExportByName("amdhip64.dll", "hipStreamCreate")
+Interceptor.attach(hipStreamCreate, {onLeave: function (args) {send("hipStreamCreate");}});
+
+var hipStreamCreateWithFlags = Module.findExportByName("amdhip64.dll", "hipStreamCreateWithFlags")
+Interceptor.attach(hipStreamCreateWithFlags, {onLeave: function (args) {send("hipStreamCreateWithFlags");}});
+
+var hipStreamCreateWithPriority = Module.findExportByName("amdhip64.dll", "hipStreamCreateWithPriority")
+Interceptor.attach(hipStreamCreateWithPriority, {onLeave: function (args) {send("hipStreamCreateWithPriority");}});
+
+var hipStreamDestroy = Module.findExportByName("amdhip64.dll", "hipStreamDestroy")
+Interceptor.attach(hipStreamDestroy, {onLeave: function (args) {send("hipStreamDestroy");}});
+
+var hipStreamEndCapture = Module.findExportByName("amdhip64.dll", "hipStreamEndCapture")
+Interceptor.attach(hipStreamEndCapture, {onLeave: function (args) {send("hipStreamEndCapture");}});
+
+var hipStreamEndCapture_spt = Module.findExportByName("amdhip64.dll", "hipStreamEndCapture_spt")
+Interceptor.attach(hipStreamEndCapture_spt, {onLeave: function (args) {send("hipStreamEndCapture_spt");}});
+
+var hipStreamGetCaptureInfo = Module.findExportByName("amdhip64.dll", "hipStreamGetCaptureInfo")
+Interceptor.attach(hipStreamGetCaptureInfo, {onLeave: function (args) {send("hipStreamGetCaptureInfo");}});
+
+var hipStreamGetCaptureInfo_spt = Module.findExportByName("amdhip64.dll", "hipStreamGetCaptureInfo_spt")
+Interceptor.attach(hipStreamGetCaptureInfo_spt, {onLeave: function (args) {send("hipStreamGetCaptureInfo_spt");}});
+
+var hipStreamGetCaptureInfo_v2 = Module.findExportByName("amdhip64.dll", "hipStreamGetCaptureInfo_v2")
+Interceptor.attach(hipStreamGetCaptureInfo_v2, {onLeave: function (args) {send("hipStreamGetCaptureInfo_v2");}});
+
+var hipStreamGetCaptureInfo_v2_spt = Module.findExportByName("amdhip64.dll", "hipStreamGetCaptureInfo_v2_spt")
+Interceptor.attach(hipStreamGetCaptureInfo_v2_spt, {onLeave: function (args) {send("hipStreamGetCaptureInfo_v2_spt");}});
+
+var hipStreamGetFlags = Module.findExportByName("amdhip64.dll", "hipStreamGetFlags")
+Interceptor.attach(hipStreamGetFlags, {onLeave: function (args) {send("hipStreamGetFlags");}});
+
+var hipStreamGetFlags_spt = Module.findExportByName("amdhip64.dll", "hipStreamGetFlags_spt")
+Interceptor.attach(hipStreamGetFlags_spt, {onLeave: function (args) {send("hipStreamGetFlags_spt");}});
+
+var hipStreamGetPriority = Module.findExportByName("amdhip64.dll", "hipStreamGetPriority")
+Interceptor.attach(hipStreamGetPriority, {onLeave: function (args) {send("hipStreamGetPriority");}});
+
+var hipStreamGetPriority_spt = Module.findExportByName("amdhip64.dll", "hipStreamGetPriority_spt")
+Interceptor.attach(hipStreamGetPriority_spt, {onLeave: function (args) {send("hipStreamGetPriority_spt");}});
+
+var hipStreamIsCapturing = Module.findExportByName("amdhip64.dll", "hipStreamIsCapturing")
+Interceptor.attach(hipStreamIsCapturing, {onLeave: function (args) {send("hipStreamIsCapturing");}});
+
+var hipStreamIsCapturing_spt = Module.findExportByName("amdhip64.dll", "hipStreamIsCapturing_spt")
+Interceptor.attach(hipStreamIsCapturing_spt, {onLeave: function (args) {send("hipStreamIsCapturing_spt");}});
+
+var hipStreamQuery = Module.findExportByName("amdhip64.dll", "hipStreamQuery")
+Interceptor.attach(hipStreamQuery, {onLeave: function (args) {send("hipStreamQuery");}});
+
+var hipStreamQuery_spt = Module.findExportByName("amdhip64.dll", "hipStreamQuery_spt")
+Interceptor.attach(hipStreamQuery_spt, {onLeave: function (args) {send("hipStreamQuery_spt");}});
+
+var hipStreamSynchronize = Module.findExportByName("amdhip64.dll", "hipStreamSynchronize")
+Interceptor.attach(hipStreamSynchronize, {onLeave: function (args) {send("hipStreamSynchronize");}});
+
+var hipStreamSynchronize_spt = Module.findExportByName("amdhip64.dll", "hipStreamSynchronize_spt")
+Interceptor.attach(hipStreamSynchronize_spt, {onLeave: function (args) {send("hipStreamSynchronize_spt");}});
+
+var hipStreamUpdateCaptureDependencies = Module.findExportByName("amdhip64.dll", "hipStreamUpdateCaptureDependencies")
+Interceptor.attach(hipStreamUpdateCaptureDependencies, {onLeave: function (args) {send("hipStreamUpdateCaptureDependencies");}});
+
+var hipStreamWaitEvent = Module.findExportByName("amdhip64.dll", "hipStreamWaitEvent")
+Interceptor.attach(hipStreamWaitEvent, {onLeave: function (args) {send("hipStreamWaitEvent");}});
+
+var hipStreamWaitEvent_spt = Module.findExportByName("amdhip64.dll", "hipStreamWaitEvent_spt")
+Interceptor.attach(hipStreamWaitEvent_spt, {onLeave: function (args) {send("hipStreamWaitEvent_spt");}});
+
+var hipStreamWaitValue32 = Module.findExportByName("amdhip64.dll", "hipStreamWaitValue32")
+Interceptor.attach(hipStreamWaitValue32, {onLeave: function (args) {send("hipStreamWaitValue32");}});
+
+var hipStreamWaitValue64 = Module.findExportByName("amdhip64.dll", "hipStreamWaitValue64")
+Interceptor.attach(hipStreamWaitValue64, {onLeave: function (args) {send("hipStreamWaitValue64");}});
+
+var hipStreamWriteValue32 = Module.findExportByName("amdhip64.dll", "hipStreamWriteValue32")
+Interceptor.attach(hipStreamWriteValue32, {onLeave: function (args) {send("hipStreamWriteValue32");}});
+
+var hipStreamWriteValue64 = Module.findExportByName("amdhip64.dll", "hipStreamWriteValue64")
+Interceptor.attach(hipStreamWriteValue64, {onLeave: function (args) {send("hipStreamWriteValue64");}});
+
+var hipTexObjectCreate = Module.findExportByName("amdhip64.dll", "hipTexObjectCreate")
+Interceptor.attach(hipTexObjectCreate, {onLeave: function (args) {send("hipTexObjectCreate");}});
+
+var hipTexObjectDestroy = Module.findExportByName("amdhip64.dll", "hipTexObjectDestroy")
+Interceptor.attach(hipTexObjectDestroy, {onLeave: function (args) {send("hipTexObjectDestroy");}});
+
+var hipTexObjectGetResourceDesc = Module.findExportByName("amdhip64.dll", "hipTexObjectGetResourceDesc")
+Interceptor.attach(hipTexObjectGetResourceDesc, {onLeave: function (args) {send("hipTexObjectGetResourceDesc");}});
+
+var hipTexObjectGetResourceViewDesc = Module.findExportByName("amdhip64.dll", "hipTexObjectGetResourceViewDesc")
+Interceptor.attach(hipTexObjectGetResourceViewDesc, {onLeave: function (args) {send("hipTexObjectGetResourceViewDesc");}});
+
+var hipTexObjectGetTextureDesc = Module.findExportByName("amdhip64.dll", "hipTexObjectGetTextureDesc")
+Interceptor.attach(hipTexObjectGetTextureDesc, {onLeave: function (args) {send("hipTexObjectGetTextureDesc");}});
+
+var hipTexRefGetAddress = Module.findExportByName("amdhip64.dll", "hipTexRefGetAddress")
+Interceptor.attach(hipTexRefGetAddress, {onLeave: function (args) {send("hipTexRefGetAddress");}});
+
+var hipTexRefGetAddressMode = Module.findExportByName("amdhip64.dll", "hipTexRefGetAddressMode")
+Interceptor.attach(hipTexRefGetAddressMode, {onLeave: function (args) {send("hipTexRefGetAddressMode");}});
+
+var hipTexRefGetArray = Module.findExportByName("amdhip64.dll", "hipTexRefGetArray")
+Interceptor.attach(hipTexRefGetArray, {onLeave: function (args) {send("hipTexRefGetArray");}});
+
+var hipTexRefGetBorderColor = Module.findExportByName("amdhip64.dll", "hipTexRefGetBorderColor")
+Interceptor.attach(hipTexRefGetBorderColor, {onLeave: function (args) {send("hipTexRefGetBorderColor");}});
+
+var hipTexRefGetFilterMode = Module.findExportByName("amdhip64.dll", "hipTexRefGetFilterMode")
+Interceptor.attach(hipTexRefGetFilterMode, {onLeave: function (args) {send("hipTexRefGetFilterMode");}});
+
+var hipTexRefGetFlags = Module.findExportByName("amdhip64.dll", "hipTexRefGetFlags")
+Interceptor.attach(hipTexRefGetFlags, {onLeave: function (args) {send("hipTexRefGetFlags");}});
+
+var hipTexRefGetFormat = Module.findExportByName("amdhip64.dll", "hipTexRefGetFormat")
+Interceptor.attach(hipTexRefGetFormat, {onLeave: function (args) {send("hipTexRefGetFormat");}});
+
+var hipTexRefGetMaxAnisotropy = Module.findExportByName("amdhip64.dll", "hipTexRefGetMaxAnisotropy")
+Interceptor.attach(hipTexRefGetMaxAnisotropy, {onLeave: function (args) {send("hipTexRefGetMaxAnisotropy");}});
+
+var hipTexRefGetMipmapFilterMode = Module.findExportByName("amdhip64.dll", "hipTexRefGetMipmapFilterMode")
+Interceptor.attach(hipTexRefGetMipmapFilterMode, {onLeave: function (args) {send("hipTexRefGetMipmapFilterMode");}});
+
+var hipTexRefGetMipmapLevelBias = Module.findExportByName("amdhip64.dll", "hipTexRefGetMipmapLevelBias")
+Interceptor.attach(hipTexRefGetMipmapLevelBias, {onLeave: function (args) {send("hipTexRefGetMipmapLevelBias");}});
+
+var hipTexRefGetMipmapLevelClamp = Module.findExportByName("amdhip64.dll", "hipTexRefGetMipmapLevelClamp")
+Interceptor.attach(hipTexRefGetMipmapLevelClamp, {onLeave: function (args) {send("hipTexRefGetMipmapLevelClamp");}});
+
+var hipTexRefGetMipmappedArray = Module.findExportByName("amdhip64.dll", "hipTexRefGetMipmappedArray")
+Interceptor.attach(hipTexRefGetMipmappedArray, {onLeave: function (args) {send("hipTexRefGetMipmappedArray");}});
+
+var hipTexRefSetAddress = Module.findExportByName("amdhip64.dll", "hipTexRefSetAddress")
+Interceptor.attach(hipTexRefSetAddress, {onLeave: function (args) {send("hipTexRefSetAddress");}});
+
+var hipTexRefSetAddress2D = Module.findExportByName("amdhip64.dll", "hipTexRefSetAddress2D")
+Interceptor.attach(hipTexRefSetAddress2D, {onLeave: function (args) {send("hipTexRefSetAddress2D");}});
+
+var hipTexRefSetAddressMode = Module.findExportByName("amdhip64.dll", "hipTexRefSetAddressMode")
+Interceptor.attach(hipTexRefSetAddressMode, {onLeave: function (args) {send("hipTexRefSetAddressMode");}});
+
+var hipTexRefSetArray = Module.findExportByName("amdhip64.dll", "hipTexRefSetArray")
+Interceptor.attach(hipTexRefSetArray, {onLeave: function (args) {send("hipTexRefSetArray");}});
+
+var hipTexRefSetBorderColor = Module.findExportByName("amdhip64.dll", "hipTexRefSetBorderColor")
+Interceptor.attach(hipTexRefSetBorderColor, {onLeave: function (args) {send("hipTexRefSetBorderColor");}});
+
+var hipTexRefSetFilterMode = Module.findExportByName("amdhip64.dll", "hipTexRefSetFilterMode")
+Interceptor.attach(hipTexRefSetFilterMode, {onLeave: function (args) {send("hipTexRefSetFilterMode");}});
+
+var hipTexRefSetFlags = Module.findExportByName("amdhip64.dll", "hipTexRefSetFlags")
+Interceptor.attach(hipTexRefSetFlags, {onLeave: function (args) {send("hipTexRefSetFlags");}});
+
+var hipTexRefSetFormat = Module.findExportByName("amdhip64.dll", "hipTexRefSetFormat")
+Interceptor.attach(hipTexRefSetFormat, {onLeave: function (args) {send("hipTexRefSetFormat");}});
+
+var hipTexRefSetMaxAnisotropy = Module.findExportByName("amdhip64.dll", "hipTexRefSetMaxAnisotropy")
+Interceptor.attach(hipTexRefSetMaxAnisotropy, {onLeave: function (args) {send("hipTexRefSetMaxAnisotropy");}});
+
+var hipTexRefSetMipmapFilterMode = Module.findExportByName("amdhip64.dll", "hipTexRefSetMipmapFilterMode")
+Interceptor.attach(hipTexRefSetMipmapFilterMode, {onLeave: function (args) {send("hipTexRefSetMipmapFilterMode");}});
+
+var hipTexRefSetMipmapLevelBias = Module.findExportByName("amdhip64.dll", "hipTexRefSetMipmapLevelBias")
+Interceptor.attach(hipTexRefSetMipmapLevelBias, {onLeave: function (args) {send("hipTexRefSetMipmapLevelBias");}});
+
+var hipTexRefSetMipmapLevelClamp = Module.findExportByName("amdhip64.dll", "hipTexRefSetMipmapLevelClamp")
+Interceptor.attach(hipTexRefSetMipmapLevelClamp, {onLeave: function (args) {send("hipTexRefSetMipmapLevelClamp");}});
+
+var hipTexRefSetMipmappedArray = Module.findExportByName("amdhip64.dll", "hipTexRefSetMipmappedArray")
+Interceptor.attach(hipTexRefSetMipmappedArray, {onLeave: function (args) {send("hipTexRefSetMipmappedArray");}});
+
+var hipThreadExchangeStreamCaptureMode = Module.findExportByName("amdhip64.dll", "hipThreadExchangeStreamCaptureMode")
+Interceptor.attach(hipThreadExchangeStreamCaptureMode, {onLeave: function (args) {send("hipThreadExchangeStreamCaptureMode");}});
+
+var hipUnbindTexture = Module.findExportByName("amdhip64.dll", "hipUnbindTexture")
+Interceptor.attach(hipUnbindTexture, {onLeave: function (args) {send("hipUnbindTexture");}});
+
+var hipUserObjectCreate = Module.findExportByName("amdhip64.dll", "hipUserObjectCreate")
+Interceptor.attach(hipUserObjectCreate, {onLeave: function (args) {send("hipUserObjectCreate");}});
+
+var hipUserObjectRelease = Module.findExportByName("amdhip64.dll", "hipUserObjectRelease")
+Interceptor.attach(hipUserObjectRelease, {onLeave: function (args) {send("hipUserObjectRelease");}});
+
+var hipUserObjectRetain = Module.findExportByName("amdhip64.dll", "hipUserObjectRetain")
+Interceptor.attach(hipUserObjectRetain, {onLeave: function (args) {send("hipUserObjectRetain");}});
+
+var hipWaitExternalSemaphoresAsync = Module.findExportByName("amdhip64.dll", "hipWaitExternalSemaphoresAsync")
+Interceptor.attach(hipWaitExternalSemaphoresAsync, {onLeave: function (args) {send("hipWaitExternalSemaphoresAsync");}});
+

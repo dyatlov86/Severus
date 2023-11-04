@@ -1,0 +1,12 @@
+var DisplayApphelpDialog = Module.findExportByName("pcaui.dll", "DisplayApphelpDialog")
+Interceptor.attach(DisplayApphelpDialog, {onLeave: function (args) {send("DisplayApphelpDialog");}});
+
+var PcaLaunchApplicationWithConsent = Module.findExportByName("pcaui.dll", "PcaLaunchApplicationWithConsent")
+Interceptor.attach(PcaLaunchApplicationWithConsent, {onLeave: function (args) {send("PcaLaunchApplicationWithConsent");}});
+
+var PcaPersistSettingsAndLaunchApplication = Module.findExportByName("pcaui.dll", "PcaPersistSettingsAndLaunchApplication")
+Interceptor.attach(PcaPersistSettingsAndLaunchApplication, {onLeave: function (args) {send("PcaPersistSettingsAndLaunchApplication");}});
+
+var PcaShowDialog = Module.findExportByName("pcaui.dll", "PcaShowDialog")
+Interceptor.attach(PcaShowDialog, {onLeave: function (args) {send("PcaShowDialog");}});
+

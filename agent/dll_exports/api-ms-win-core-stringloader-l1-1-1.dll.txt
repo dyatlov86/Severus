@@ -1,0 +1,6 @@
+var LoadStringA = Module.findExportByName("api-ms-win-core-stringloader-l1-1-1.dll", "LoadStringA")
+Interceptor.attach(LoadStringA, {onLeave: function (args) {send("LoadStringA");}});
+
+var LoadStringW = Module.findExportByName("api-ms-win-core-stringloader-l1-1-1.dll", "LoadStringW")
+Interceptor.attach(LoadStringW, {onLeave: function (args) {send("LoadStringW");}});
+

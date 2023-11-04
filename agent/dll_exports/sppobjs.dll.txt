@@ -1,0 +1,15 @@
+var SppPluginCanUnloadNow = Module.findExportByName("sppobjs.dll", "SppPluginCanUnloadNow")
+Interceptor.attach(SppPluginCanUnloadNow, {onLeave: function (args) {send("SppPluginCanUnloadNow");}});
+
+var SppPluginCreateInstance = Module.findExportByName("sppobjs.dll", "SppPluginCreateInstance")
+Interceptor.attach(SppPluginCreateInstance, {onLeave: function (args) {send("SppPluginCreateInstance");}});
+
+var SppPluginInitialize = Module.findExportByName("sppobjs.dll", "SppPluginInitialize")
+Interceptor.attach(SppPluginInitialize, {onLeave: function (args) {send("SppPluginInitialize");}});
+
+var SppPluginShutdown = Module.findExportByName("sppobjs.dll", "SppPluginShutdown")
+Interceptor.attach(SppPluginShutdown, {onLeave: function (args) {send("SppPluginShutdown");}});
+
+var SppPluginVersion = Module.findExportByName("sppobjs.dll", "SppPluginVersion")
+Interceptor.attach(SppPluginVersion, {onLeave: function (args) {send("SppPluginVersion");}});
+

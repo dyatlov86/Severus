@@ -1,0 +1,9 @@
+var NeedCurrentDirectoryForExePathA = Module.findExportByName("api-ms-win-core-processenvironment-l1-2-0.dll", "NeedCurrentDirectoryForExePathA")
+Interceptor.attach(NeedCurrentDirectoryForExePathA, {onLeave: function (args) {send("NeedCurrentDirectoryForExePathA");}});
+
+var NeedCurrentDirectoryForExePathW = Module.findExportByName("api-ms-win-core-processenvironment-l1-2-0.dll", "NeedCurrentDirectoryForExePathW")
+Interceptor.attach(NeedCurrentDirectoryForExePathW, {onLeave: function (args) {send("NeedCurrentDirectoryForExePathW");}});
+
+var SearchPathA = Module.findExportByName("api-ms-win-core-processenvironment-l1-2-0.dll", "SearchPathA")
+Interceptor.attach(SearchPathA, {onLeave: function (args) {send("SearchPathA");}});
+

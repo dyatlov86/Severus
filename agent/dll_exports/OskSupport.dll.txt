@@ -1,0 +1,6 @@
+var InitializeOSKSupport = Module.findExportByName("OskSupport.dll", "InitializeOSKSupport")
+Interceptor.attach(InitializeOSKSupport, {onLeave: function (args) {send("InitializeOSKSupport");}});
+
+var UninitializeOSKSupport = Module.findExportByName("OskSupport.dll", "UninitializeOSKSupport")
+Interceptor.attach(UninitializeOSKSupport, {onLeave: function (args) {send("UninitializeOSKSupport");}});
+

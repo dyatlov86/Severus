@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("MFPlay.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("MFPlay.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("MFPlay.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("MFPlay.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var MFPCreateMediaPlayer = Module.findExportByName("MFPlay.dll", "MFPCreateMediaPlayer")
+Interceptor.attach(MFPCreateMediaPlayer, {onLeave: function (args) {send("MFPCreateMediaPlayer");}});
+
+var MFPCreateMediaPlayerEx = Module.findExportByName("MFPlay.dll", "MFPCreateMediaPlayerEx")
+Interceptor.attach(MFPCreateMediaPlayerEx, {onLeave: function (args) {send("MFPCreateMediaPlayerEx");}});
+

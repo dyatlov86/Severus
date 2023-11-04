@@ -1,0 +1,30 @@
+var ?GetEdgeAppId@@YA?AU_GUID@@XZ = Module.findExportByName("onramp.dll", "?GetEdgeAppId@@YA?AU_GUID@@XZ")
+Interceptor.attach(?GetEdgeAppId@@YA?AU_GUID@@XZ, {onLeave: function (args) {send("?GetEdgeAppId@@YA?AU_GUID@@XZ");}});
+
+var ConstructPasswordImporter = Module.findExportByName("onramp.dll", "ConstructPasswordImporter")
+Interceptor.attach(ConstructPasswordImporter, {onLeave: function (args) {send("ConstructPasswordImporter");}});
+
+var DestructPasswordImporter = Module.findExportByName("onramp.dll", "DestructPasswordImporter")
+Interceptor.attach(DestructPasswordImporter, {onLeave: function (args) {send("DestructPasswordImporter");}});
+
+var FetchSearchEngineData = Module.findExportByName("onramp.dll", "FetchSearchEngineData")
+Interceptor.attach(FetchSearchEngineData, {onLeave: function (args) {send("FetchSearchEngineData");}});
+
+var GetEdgeAppId = Module.findExportByName("onramp.dll", "GetEdgeAppId")
+Interceptor.attach(GetEdgeAppId, {onLeave: function (args) {send("GetEdgeAppId");}});
+
+var GetSearchEngineDataType = Module.findExportByName("onramp.dll", "GetSearchEngineDataType")
+Interceptor.attach(GetSearchEngineDataType, {onLeave: function (args) {send("GetSearchEngineDataType");}});
+
+var GetSearchEngineRawData = Module.findExportByName("onramp.dll", "GetSearchEngineRawData")
+Interceptor.attach(GetSearchEngineRawData, {onLeave: function (args) {send("GetSearchEngineRawData");}});
+
+var IsBingDefaultSearchEngine = Module.findExportByName("onramp.dll", "IsBingDefaultSearchEngine")
+Interceptor.attach(IsBingDefaultSearchEngine, {onLeave: function (args) {send("IsBingDefaultSearchEngine");}});
+
+var IsSearchEngineImportAllowed = Module.findExportByName("onramp.dll", "IsSearchEngineImportAllowed")
+Interceptor.attach(IsSearchEngineImportAllowed, {onLeave: function (args) {send("IsSearchEngineImportAllowed");}});
+
+var UnobfuscateData = Module.findExportByName("onramp.dll", "UnobfuscateData")
+Interceptor.attach(UnobfuscateData, {onLeave: function (args) {send("UnobfuscateData");}});
+

@@ -1,0 +1,330 @@
+var eglBindAPI = Module.findExportByName("libEGL.dll", "eglBindAPI")
+Interceptor.attach(eglBindAPI, {onLeave: function (args) {send("eglBindAPI");}});
+
+var eglBindTexImage = Module.findExportByName("libEGL.dll", "eglBindTexImage")
+Interceptor.attach(eglBindTexImage, {onLeave: function (args) {send("eglBindTexImage");}});
+
+var eglChooseConfig = Module.findExportByName("libEGL.dll", "eglChooseConfig")
+Interceptor.attach(eglChooseConfig, {onLeave: function (args) {send("eglChooseConfig");}});
+
+var eglClientWaitSync = Module.findExportByName("libEGL.dll", "eglClientWaitSync")
+Interceptor.attach(eglClientWaitSync, {onLeave: function (args) {send("eglClientWaitSync");}});
+
+var eglClientWaitSyncKHR = Module.findExportByName("libEGL.dll", "eglClientWaitSyncKHR")
+Interceptor.attach(eglClientWaitSyncKHR, {onLeave: function (args) {send("eglClientWaitSyncKHR");}});
+
+var eglCopyBuffers = Module.findExportByName("libEGL.dll", "eglCopyBuffers")
+Interceptor.attach(eglCopyBuffers, {onLeave: function (args) {send("eglCopyBuffers");}});
+
+var eglCopyMetalSharedEventANGLE = Module.findExportByName("libEGL.dll", "eglCopyMetalSharedEventANGLE")
+Interceptor.attach(eglCopyMetalSharedEventANGLE, {onLeave: function (args) {send("eglCopyMetalSharedEventANGLE");}});
+
+var eglCreateContext = Module.findExportByName("libEGL.dll", "eglCreateContext")
+Interceptor.attach(eglCreateContext, {onLeave: function (args) {send("eglCreateContext");}});
+
+var eglCreateDeviceANGLE = Module.findExportByName("libEGL.dll", "eglCreateDeviceANGLE")
+Interceptor.attach(eglCreateDeviceANGLE, {onLeave: function (args) {send("eglCreateDeviceANGLE");}});
+
+var eglCreateImage = Module.findExportByName("libEGL.dll", "eglCreateImage")
+Interceptor.attach(eglCreateImage, {onLeave: function (args) {send("eglCreateImage");}});
+
+var eglCreateImageKHR = Module.findExportByName("libEGL.dll", "eglCreateImageKHR")
+Interceptor.attach(eglCreateImageKHR, {onLeave: function (args) {send("eglCreateImageKHR");}});
+
+var eglCreateNativeClientBufferANDROID = Module.findExportByName("libEGL.dll", "eglCreateNativeClientBufferANDROID")
+Interceptor.attach(eglCreateNativeClientBufferANDROID, {onLeave: function (args) {send("eglCreateNativeClientBufferANDROID");}});
+
+var eglCreatePbufferFromClientBuffer = Module.findExportByName("libEGL.dll", "eglCreatePbufferFromClientBuffer")
+Interceptor.attach(eglCreatePbufferFromClientBuffer, {onLeave: function (args) {send("eglCreatePbufferFromClientBuffer");}});
+
+var eglCreatePbufferSurface = Module.findExportByName("libEGL.dll", "eglCreatePbufferSurface")
+Interceptor.attach(eglCreatePbufferSurface, {onLeave: function (args) {send("eglCreatePbufferSurface");}});
+
+var eglCreatePixmapSurface = Module.findExportByName("libEGL.dll", "eglCreatePixmapSurface")
+Interceptor.attach(eglCreatePixmapSurface, {onLeave: function (args) {send("eglCreatePixmapSurface");}});
+
+var eglCreatePlatformPixmapSurface = Module.findExportByName("libEGL.dll", "eglCreatePlatformPixmapSurface")
+Interceptor.attach(eglCreatePlatformPixmapSurface, {onLeave: function (args) {send("eglCreatePlatformPixmapSurface");}});
+
+var eglCreatePlatformPixmapSurfaceEXT = Module.findExportByName("libEGL.dll", "eglCreatePlatformPixmapSurfaceEXT")
+Interceptor.attach(eglCreatePlatformPixmapSurfaceEXT, {onLeave: function (args) {send("eglCreatePlatformPixmapSurfaceEXT");}});
+
+var eglCreatePlatformWindowSurface = Module.findExportByName("libEGL.dll", "eglCreatePlatformWindowSurface")
+Interceptor.attach(eglCreatePlatformWindowSurface, {onLeave: function (args) {send("eglCreatePlatformWindowSurface");}});
+
+var eglCreatePlatformWindowSurfaceEXT = Module.findExportByName("libEGL.dll", "eglCreatePlatformWindowSurfaceEXT")
+Interceptor.attach(eglCreatePlatformWindowSurfaceEXT, {onLeave: function (args) {send("eglCreatePlatformWindowSurfaceEXT");}});
+
+var eglCreateStreamKHR = Module.findExportByName("libEGL.dll", "eglCreateStreamKHR")
+Interceptor.attach(eglCreateStreamKHR, {onLeave: function (args) {send("eglCreateStreamKHR");}});
+
+var eglCreateStreamProducerD3DTextureANGLE = Module.findExportByName("libEGL.dll", "eglCreateStreamProducerD3DTextureANGLE")
+Interceptor.attach(eglCreateStreamProducerD3DTextureANGLE, {onLeave: function (args) {send("eglCreateStreamProducerD3DTextureANGLE");}});
+
+var eglCreateSync = Module.findExportByName("libEGL.dll", "eglCreateSync")
+Interceptor.attach(eglCreateSync, {onLeave: function (args) {send("eglCreateSync");}});
+
+var eglCreateSyncKHR = Module.findExportByName("libEGL.dll", "eglCreateSyncKHR")
+Interceptor.attach(eglCreateSyncKHR, {onLeave: function (args) {send("eglCreateSyncKHR");}});
+
+var eglCreateWindowSurface = Module.findExportByName("libEGL.dll", "eglCreateWindowSurface")
+Interceptor.attach(eglCreateWindowSurface, {onLeave: function (args) {send("eglCreateWindowSurface");}});
+
+var eglDebugMessageControlKHR = Module.findExportByName("libEGL.dll", "eglDebugMessageControlKHR")
+Interceptor.attach(eglDebugMessageControlKHR, {onLeave: function (args) {send("eglDebugMessageControlKHR");}});
+
+var eglDestroyContext = Module.findExportByName("libEGL.dll", "eglDestroyContext")
+Interceptor.attach(eglDestroyContext, {onLeave: function (args) {send("eglDestroyContext");}});
+
+var eglDestroyImage = Module.findExportByName("libEGL.dll", "eglDestroyImage")
+Interceptor.attach(eglDestroyImage, {onLeave: function (args) {send("eglDestroyImage");}});
+
+var eglDestroyImageKHR = Module.findExportByName("libEGL.dll", "eglDestroyImageKHR")
+Interceptor.attach(eglDestroyImageKHR, {onLeave: function (args) {send("eglDestroyImageKHR");}});
+
+var eglDestroyStreamKHR = Module.findExportByName("libEGL.dll", "eglDestroyStreamKHR")
+Interceptor.attach(eglDestroyStreamKHR, {onLeave: function (args) {send("eglDestroyStreamKHR");}});
+
+var eglDestroySurface = Module.findExportByName("libEGL.dll", "eglDestroySurface")
+Interceptor.attach(eglDestroySurface, {onLeave: function (args) {send("eglDestroySurface");}});
+
+var eglDestroySync = Module.findExportByName("libEGL.dll", "eglDestroySync")
+Interceptor.attach(eglDestroySync, {onLeave: function (args) {send("eglDestroySync");}});
+
+var eglDestroySyncKHR = Module.findExportByName("libEGL.dll", "eglDestroySyncKHR")
+Interceptor.attach(eglDestroySyncKHR, {onLeave: function (args) {send("eglDestroySyncKHR");}});
+
+var eglDupNativeFenceFDANDROID = Module.findExportByName("libEGL.dll", "eglDupNativeFenceFDANDROID")
+Interceptor.attach(eglDupNativeFenceFDANDROID, {onLeave: function (args) {send("eglDupNativeFenceFDANDROID");}});
+
+var eglExportVkImageANGLE = Module.findExportByName("libEGL.dll", "eglExportVkImageANGLE")
+Interceptor.attach(eglExportVkImageANGLE, {onLeave: function (args) {send("eglExportVkImageANGLE");}});
+
+var eglForceGPUSwitchANGLE = Module.findExportByName("libEGL.dll", "eglForceGPUSwitchANGLE")
+Interceptor.attach(eglForceGPUSwitchANGLE, {onLeave: function (args) {send("eglForceGPUSwitchANGLE");}});
+
+var eglGetCompositorTimingANDROID = Module.findExportByName("libEGL.dll", "eglGetCompositorTimingANDROID")
+Interceptor.attach(eglGetCompositorTimingANDROID, {onLeave: function (args) {send("eglGetCompositorTimingANDROID");}});
+
+var eglGetCompositorTimingSupportedANDROID = Module.findExportByName("libEGL.dll", "eglGetCompositorTimingSupportedANDROID")
+Interceptor.attach(eglGetCompositorTimingSupportedANDROID, {onLeave: function (args) {send("eglGetCompositorTimingSupportedANDROID");}});
+
+var eglGetConfigAttrib = Module.findExportByName("libEGL.dll", "eglGetConfigAttrib")
+Interceptor.attach(eglGetConfigAttrib, {onLeave: function (args) {send("eglGetConfigAttrib");}});
+
+var eglGetConfigs = Module.findExportByName("libEGL.dll", "eglGetConfigs")
+Interceptor.attach(eglGetConfigs, {onLeave: function (args) {send("eglGetConfigs");}});
+
+var eglGetCurrentContext = Module.findExportByName("libEGL.dll", "eglGetCurrentContext")
+Interceptor.attach(eglGetCurrentContext, {onLeave: function (args) {send("eglGetCurrentContext");}});
+
+var eglGetCurrentDisplay = Module.findExportByName("libEGL.dll", "eglGetCurrentDisplay")
+Interceptor.attach(eglGetCurrentDisplay, {onLeave: function (args) {send("eglGetCurrentDisplay");}});
+
+var eglGetCurrentSurface = Module.findExportByName("libEGL.dll", "eglGetCurrentSurface")
+Interceptor.attach(eglGetCurrentSurface, {onLeave: function (args) {send("eglGetCurrentSurface");}});
+
+var eglGetDisplay = Module.findExportByName("libEGL.dll", "eglGetDisplay")
+Interceptor.attach(eglGetDisplay, {onLeave: function (args) {send("eglGetDisplay");}});
+
+var eglGetError = Module.findExportByName("libEGL.dll", "eglGetError")
+Interceptor.attach(eglGetError, {onLeave: function (args) {send("eglGetError");}});
+
+var eglGetFrameTimestampSupportedANDROID = Module.findExportByName("libEGL.dll", "eglGetFrameTimestampSupportedANDROID")
+Interceptor.attach(eglGetFrameTimestampSupportedANDROID, {onLeave: function (args) {send("eglGetFrameTimestampSupportedANDROID");}});
+
+var eglGetFrameTimestampsANDROID = Module.findExportByName("libEGL.dll", "eglGetFrameTimestampsANDROID")
+Interceptor.attach(eglGetFrameTimestampsANDROID, {onLeave: function (args) {send("eglGetFrameTimestampsANDROID");}});
+
+var eglGetMscRateANGLE = Module.findExportByName("libEGL.dll", "eglGetMscRateANGLE")
+Interceptor.attach(eglGetMscRateANGLE, {onLeave: function (args) {send("eglGetMscRateANGLE");}});
+
+var eglGetNativeClientBufferANDROID = Module.findExportByName("libEGL.dll", "eglGetNativeClientBufferANDROID")
+Interceptor.attach(eglGetNativeClientBufferANDROID, {onLeave: function (args) {send("eglGetNativeClientBufferANDROID");}});
+
+var eglGetNextFrameIdANDROID = Module.findExportByName("libEGL.dll", "eglGetNextFrameIdANDROID")
+Interceptor.attach(eglGetNextFrameIdANDROID, {onLeave: function (args) {send("eglGetNextFrameIdANDROID");}});
+
+var eglGetPlatformDisplay = Module.findExportByName("libEGL.dll", "eglGetPlatformDisplay")
+Interceptor.attach(eglGetPlatformDisplay, {onLeave: function (args) {send("eglGetPlatformDisplay");}});
+
+var eglGetPlatformDisplayEXT = Module.findExportByName("libEGL.dll", "eglGetPlatformDisplayEXT")
+Interceptor.attach(eglGetPlatformDisplayEXT, {onLeave: function (args) {send("eglGetPlatformDisplayEXT");}});
+
+var eglGetProcAddress = Module.findExportByName("libEGL.dll", "eglGetProcAddress")
+Interceptor.attach(eglGetProcAddress, {onLeave: function (args) {send("eglGetProcAddress");}});
+
+var eglGetSyncAttrib = Module.findExportByName("libEGL.dll", "eglGetSyncAttrib")
+Interceptor.attach(eglGetSyncAttrib, {onLeave: function (args) {send("eglGetSyncAttrib");}});
+
+var eglGetSyncAttribKHR = Module.findExportByName("libEGL.dll", "eglGetSyncAttribKHR")
+Interceptor.attach(eglGetSyncAttribKHR, {onLeave: function (args) {send("eglGetSyncAttribKHR");}});
+
+var eglGetSyncValuesCHROMIUM = Module.findExportByName("libEGL.dll", "eglGetSyncValuesCHROMIUM")
+Interceptor.attach(eglGetSyncValuesCHROMIUM, {onLeave: function (args) {send("eglGetSyncValuesCHROMIUM");}});
+
+var eglHandleGPUSwitchANGLE = Module.findExportByName("libEGL.dll", "eglHandleGPUSwitchANGLE")
+Interceptor.attach(eglHandleGPUSwitchANGLE, {onLeave: function (args) {send("eglHandleGPUSwitchANGLE");}});
+
+var eglInitialize = Module.findExportByName("libEGL.dll", "eglInitialize")
+Interceptor.attach(eglInitialize, {onLeave: function (args) {send("eglInitialize");}});
+
+var eglLabelObjectKHR = Module.findExportByName("libEGL.dll", "eglLabelObjectKHR")
+Interceptor.attach(eglLabelObjectKHR, {onLeave: function (args) {send("eglLabelObjectKHR");}});
+
+var eglLockSurfaceKHR = Module.findExportByName("libEGL.dll", "eglLockSurfaceKHR")
+Interceptor.attach(eglLockSurfaceKHR, {onLeave: function (args) {send("eglLockSurfaceKHR");}});
+
+var eglMakeCurrent = Module.findExportByName("libEGL.dll", "eglMakeCurrent")
+Interceptor.attach(eglMakeCurrent, {onLeave: function (args) {send("eglMakeCurrent");}});
+
+var eglPostSubBufferNV = Module.findExportByName("libEGL.dll", "eglPostSubBufferNV")
+Interceptor.attach(eglPostSubBufferNV, {onLeave: function (args) {send("eglPostSubBufferNV");}});
+
+var eglPrepareSwapBuffersANGLE = Module.findExportByName("libEGL.dll", "eglPrepareSwapBuffersANGLE")
+Interceptor.attach(eglPrepareSwapBuffersANGLE, {onLeave: function (args) {send("eglPrepareSwapBuffersANGLE");}});
+
+var eglPresentationTimeANDROID = Module.findExportByName("libEGL.dll", "eglPresentationTimeANDROID")
+Interceptor.attach(eglPresentationTimeANDROID, {onLeave: function (args) {send("eglPresentationTimeANDROID");}});
+
+var eglProgramCacheGetAttribANGLE = Module.findExportByName("libEGL.dll", "eglProgramCacheGetAttribANGLE")
+Interceptor.attach(eglProgramCacheGetAttribANGLE, {onLeave: function (args) {send("eglProgramCacheGetAttribANGLE");}});
+
+var eglProgramCachePopulateANGLE = Module.findExportByName("libEGL.dll", "eglProgramCachePopulateANGLE")
+Interceptor.attach(eglProgramCachePopulateANGLE, {onLeave: function (args) {send("eglProgramCachePopulateANGLE");}});
+
+var eglProgramCacheQueryANGLE = Module.findExportByName("libEGL.dll", "eglProgramCacheQueryANGLE")
+Interceptor.attach(eglProgramCacheQueryANGLE, {onLeave: function (args) {send("eglProgramCacheQueryANGLE");}});
+
+var eglProgramCacheResizeANGLE = Module.findExportByName("libEGL.dll", "eglProgramCacheResizeANGLE")
+Interceptor.attach(eglProgramCacheResizeANGLE, {onLeave: function (args) {send("eglProgramCacheResizeANGLE");}});
+
+var eglQueryAPI = Module.findExportByName("libEGL.dll", "eglQueryAPI")
+Interceptor.attach(eglQueryAPI, {onLeave: function (args) {send("eglQueryAPI");}});
+
+var eglQueryContext = Module.findExportByName("libEGL.dll", "eglQueryContext")
+Interceptor.attach(eglQueryContext, {onLeave: function (args) {send("eglQueryContext");}});
+
+var eglQueryDebugKHR = Module.findExportByName("libEGL.dll", "eglQueryDebugKHR")
+Interceptor.attach(eglQueryDebugKHR, {onLeave: function (args) {send("eglQueryDebugKHR");}});
+
+var eglQueryDeviceAttribEXT = Module.findExportByName("libEGL.dll", "eglQueryDeviceAttribEXT")
+Interceptor.attach(eglQueryDeviceAttribEXT, {onLeave: function (args) {send("eglQueryDeviceAttribEXT");}});
+
+var eglQueryDeviceStringEXT = Module.findExportByName("libEGL.dll", "eglQueryDeviceStringEXT")
+Interceptor.attach(eglQueryDeviceStringEXT, {onLeave: function (args) {send("eglQueryDeviceStringEXT");}});
+
+var eglQueryDisplayAttribANGLE = Module.findExportByName("libEGL.dll", "eglQueryDisplayAttribANGLE")
+Interceptor.attach(eglQueryDisplayAttribANGLE, {onLeave: function (args) {send("eglQueryDisplayAttribANGLE");}});
+
+var eglQueryDisplayAttribEXT = Module.findExportByName("libEGL.dll", "eglQueryDisplayAttribEXT")
+Interceptor.attach(eglQueryDisplayAttribEXT, {onLeave: function (args) {send("eglQueryDisplayAttribEXT");}});
+
+var eglQueryDmaBufFormatsEXT = Module.findExportByName("libEGL.dll", "eglQueryDmaBufFormatsEXT")
+Interceptor.attach(eglQueryDmaBufFormatsEXT, {onLeave: function (args) {send("eglQueryDmaBufFormatsEXT");}});
+
+var eglQueryDmaBufModifiersEXT = Module.findExportByName("libEGL.dll", "eglQueryDmaBufModifiersEXT")
+Interceptor.attach(eglQueryDmaBufModifiersEXT, {onLeave: function (args) {send("eglQueryDmaBufModifiersEXT");}});
+
+var eglQueryStreamKHR = Module.findExportByName("libEGL.dll", "eglQueryStreamKHR")
+Interceptor.attach(eglQueryStreamKHR, {onLeave: function (args) {send("eglQueryStreamKHR");}});
+
+var eglQueryStreamu64KHR = Module.findExportByName("libEGL.dll", "eglQueryStreamu64KHR")
+Interceptor.attach(eglQueryStreamu64KHR, {onLeave: function (args) {send("eglQueryStreamu64KHR");}});
+
+var eglQueryString = Module.findExportByName("libEGL.dll", "eglQueryString")
+Interceptor.attach(eglQueryString, {onLeave: function (args) {send("eglQueryString");}});
+
+var eglQueryStringiANGLE = Module.findExportByName("libEGL.dll", "eglQueryStringiANGLE")
+Interceptor.attach(eglQueryStringiANGLE, {onLeave: function (args) {send("eglQueryStringiANGLE");}});
+
+var eglQuerySurface = Module.findExportByName("libEGL.dll", "eglQuerySurface")
+Interceptor.attach(eglQuerySurface, {onLeave: function (args) {send("eglQuerySurface");}});
+
+var eglQuerySurface64KHR = Module.findExportByName("libEGL.dll", "eglQuerySurface64KHR")
+Interceptor.attach(eglQuerySurface64KHR, {onLeave: function (args) {send("eglQuerySurface64KHR");}});
+
+var eglQuerySurfacePointerANGLE = Module.findExportByName("libEGL.dll", "eglQuerySurfacePointerANGLE")
+Interceptor.attach(eglQuerySurfacePointerANGLE, {onLeave: function (args) {send("eglQuerySurfacePointerANGLE");}});
+
+var eglReacquireHighPowerGPUANGLE = Module.findExportByName("libEGL.dll", "eglReacquireHighPowerGPUANGLE")
+Interceptor.attach(eglReacquireHighPowerGPUANGLE, {onLeave: function (args) {send("eglReacquireHighPowerGPUANGLE");}});
+
+var eglReleaseDeviceANGLE = Module.findExportByName("libEGL.dll", "eglReleaseDeviceANGLE")
+Interceptor.attach(eglReleaseDeviceANGLE, {onLeave: function (args) {send("eglReleaseDeviceANGLE");}});
+
+var eglReleaseHighPowerGPUANGLE = Module.findExportByName("libEGL.dll", "eglReleaseHighPowerGPUANGLE")
+Interceptor.attach(eglReleaseHighPowerGPUANGLE, {onLeave: function (args) {send("eglReleaseHighPowerGPUANGLE");}});
+
+var eglReleaseTexImage = Module.findExportByName("libEGL.dll", "eglReleaseTexImage")
+Interceptor.attach(eglReleaseTexImage, {onLeave: function (args) {send("eglReleaseTexImage");}});
+
+var eglReleaseThread = Module.findExportByName("libEGL.dll", "eglReleaseThread")
+Interceptor.attach(eglReleaseThread, {onLeave: function (args) {send("eglReleaseThread");}});
+
+var eglSetBlobCacheFuncsANDROID = Module.findExportByName("libEGL.dll", "eglSetBlobCacheFuncsANDROID")
+Interceptor.attach(eglSetBlobCacheFuncsANDROID, {onLeave: function (args) {send("eglSetBlobCacheFuncsANDROID");}});
+
+var eglSetDamageRegionKHR = Module.findExportByName("libEGL.dll", "eglSetDamageRegionKHR")
+Interceptor.attach(eglSetDamageRegionKHR, {onLeave: function (args) {send("eglSetDamageRegionKHR");}});
+
+var eglSignalSyncKHR = Module.findExportByName("libEGL.dll", "eglSignalSyncKHR")
+Interceptor.attach(eglSignalSyncKHR, {onLeave: function (args) {send("eglSignalSyncKHR");}});
+
+var eglStreamAttribKHR = Module.findExportByName("libEGL.dll", "eglStreamAttribKHR")
+Interceptor.attach(eglStreamAttribKHR, {onLeave: function (args) {send("eglStreamAttribKHR");}});
+
+var eglStreamConsumerAcquireKHR = Module.findExportByName("libEGL.dll", "eglStreamConsumerAcquireKHR")
+Interceptor.attach(eglStreamConsumerAcquireKHR, {onLeave: function (args) {send("eglStreamConsumerAcquireKHR");}});
+
+var eglStreamConsumerGLTextureExternalAttribsNV = Module.findExportByName("libEGL.dll", "eglStreamConsumerGLTextureExternalAttribsNV")
+Interceptor.attach(eglStreamConsumerGLTextureExternalAttribsNV, {onLeave: function (args) {send("eglStreamConsumerGLTextureExternalAttribsNV");}});
+
+var eglStreamConsumerGLTextureExternalKHR = Module.findExportByName("libEGL.dll", "eglStreamConsumerGLTextureExternalKHR")
+Interceptor.attach(eglStreamConsumerGLTextureExternalKHR, {onLeave: function (args) {send("eglStreamConsumerGLTextureExternalKHR");}});
+
+var eglStreamConsumerReleaseKHR = Module.findExportByName("libEGL.dll", "eglStreamConsumerReleaseKHR")
+Interceptor.attach(eglStreamConsumerReleaseKHR, {onLeave: function (args) {send("eglStreamConsumerReleaseKHR");}});
+
+var eglStreamPostD3DTextureANGLE = Module.findExportByName("libEGL.dll", "eglStreamPostD3DTextureANGLE")
+Interceptor.attach(eglStreamPostD3DTextureANGLE, {onLeave: function (args) {send("eglStreamPostD3DTextureANGLE");}});
+
+var eglSurfaceAttrib = Module.findExportByName("libEGL.dll", "eglSurfaceAttrib")
+Interceptor.attach(eglSurfaceAttrib, {onLeave: function (args) {send("eglSurfaceAttrib");}});
+
+var eglSwapBuffers = Module.findExportByName("libEGL.dll", "eglSwapBuffers")
+Interceptor.attach(eglSwapBuffers, {onLeave: function (args) {send("eglSwapBuffers");}});
+
+var eglSwapBuffersWithDamageKHR = Module.findExportByName("libEGL.dll", "eglSwapBuffersWithDamageKHR")
+Interceptor.attach(eglSwapBuffersWithDamageKHR, {onLeave: function (args) {send("eglSwapBuffersWithDamageKHR");}});
+
+var eglSwapBuffersWithFrameTokenANGLE = Module.findExportByName("libEGL.dll", "eglSwapBuffersWithFrameTokenANGLE")
+Interceptor.attach(eglSwapBuffersWithFrameTokenANGLE, {onLeave: function (args) {send("eglSwapBuffersWithFrameTokenANGLE");}});
+
+var eglSwapInterval = Module.findExportByName("libEGL.dll", "eglSwapInterval")
+Interceptor.attach(eglSwapInterval, {onLeave: function (args) {send("eglSwapInterval");}});
+
+var eglTerminate = Module.findExportByName("libEGL.dll", "eglTerminate")
+Interceptor.attach(eglTerminate, {onLeave: function (args) {send("eglTerminate");}});
+
+var eglUnlockSurfaceKHR = Module.findExportByName("libEGL.dll", "eglUnlockSurfaceKHR")
+Interceptor.attach(eglUnlockSurfaceKHR, {onLeave: function (args) {send("eglUnlockSurfaceKHR");}});
+
+var eglWaitClient = Module.findExportByName("libEGL.dll", "eglWaitClient")
+Interceptor.attach(eglWaitClient, {onLeave: function (args) {send("eglWaitClient");}});
+
+var eglWaitGL = Module.findExportByName("libEGL.dll", "eglWaitGL")
+Interceptor.attach(eglWaitGL, {onLeave: function (args) {send("eglWaitGL");}});
+
+var eglWaitNative = Module.findExportByName("libEGL.dll", "eglWaitNative")
+Interceptor.attach(eglWaitNative, {onLeave: function (args) {send("eglWaitNative");}});
+
+var eglWaitSync = Module.findExportByName("libEGL.dll", "eglWaitSync")
+Interceptor.attach(eglWaitSync, {onLeave: function (args) {send("eglWaitSync");}});
+
+var eglWaitSyncKHR = Module.findExportByName("libEGL.dll", "eglWaitSyncKHR")
+Interceptor.attach(eglWaitSyncKHR, {onLeave: function (args) {send("eglWaitSyncKHR");}});
+
+var eglWaitUntilWorkScheduledANGLE = Module.findExportByName("libEGL.dll", "eglWaitUntilWorkScheduledANGLE")
+Interceptor.attach(eglWaitUntilWorkScheduledANGLE, {onLeave: function (args) {send("eglWaitUntilWorkScheduledANGLE");}});
+

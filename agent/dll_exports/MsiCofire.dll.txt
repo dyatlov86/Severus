@@ -1,0 +1,12 @@
+var DllMain = Module.findExportByName("MsiCofire.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var WdiDiagnosticModuleMain = Module.findExportByName("MsiCofire.dll", "WdiDiagnosticModuleMain")
+Interceptor.attach(WdiDiagnosticModuleMain, {onLeave: function (args) {send("WdiDiagnosticModuleMain");}});
+
+var WdiGetDiagnosticModuleInterfaceVersion = Module.findExportByName("MsiCofire.dll", "WdiGetDiagnosticModuleInterfaceVersion")
+Interceptor.attach(WdiGetDiagnosticModuleInterfaceVersion, {onLeave: function (args) {send("WdiGetDiagnosticModuleInterfaceVersion");}});
+
+var WdiHandleInstance = Module.findExportByName("MsiCofire.dll", "WdiHandleInstance")
+Interceptor.attach(WdiHandleInstance, {onLeave: function (args) {send("WdiHandleInstance");}});
+

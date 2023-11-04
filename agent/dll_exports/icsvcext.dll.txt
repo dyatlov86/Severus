@@ -1,0 +1,9 @@
+var DllRegisterServer = Module.findExportByName("icsvcext.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("icsvcext.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var RdvServiceMain = Module.findExportByName("icsvcext.dll", "RdvServiceMain")
+Interceptor.attach(RdvServiceMain, {onLeave: function (args) {send("RdvServiceMain");}});
+

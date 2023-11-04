@@ -1,0 +1,42 @@
+var DllCanUnloadNow = Module.findExportByName("netshell.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("netshell.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("netshell.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("netshell.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var HrCreateDesktopIcon = Module.findExportByName("netshell.dll", "HrCreateDesktopIcon")
+Interceptor.attach(HrCreateDesktopIcon, {onLeave: function (args) {send("HrCreateDesktopIcon");}});
+
+var HrGetIconFromMediaType = Module.findExportByName("netshell.dll", "HrGetIconFromMediaType")
+Interceptor.attach(HrGetIconFromMediaType, {onLeave: function (args) {send("HrGetIconFromMediaType");}});
+
+var HrGetIconFromMediaTypeEx = Module.findExportByName("netshell.dll", "HrGetIconFromMediaTypeEx")
+Interceptor.attach(HrGetIconFromMediaTypeEx, {onLeave: function (args) {send("HrGetIconFromMediaTypeEx");}});
+
+var HrLaunchConnection = Module.findExportByName("netshell.dll", "HrLaunchConnection")
+Interceptor.attach(HrLaunchConnection, {onLeave: function (args) {send("HrLaunchConnection");}});
+
+var HrLaunchConnectionEx = Module.findExportByName("netshell.dll", "HrLaunchConnectionEx")
+Interceptor.attach(HrLaunchConnectionEx, {onLeave: function (args) {send("HrLaunchConnectionEx");}});
+
+var HrLaunchPropertiesSheet = Module.findExportByName("netshell.dll", "HrLaunchPropertiesSheet")
+Interceptor.attach(HrLaunchPropertiesSheet, {onLeave: function (args) {send("HrLaunchPropertiesSheet");}});
+
+var HrRenameConnection = Module.findExportByName("netshell.dll", "HrRenameConnection")
+Interceptor.attach(HrRenameConnection, {onLeave: function (args) {send("HrRenameConnection");}});
+
+var NcFreeNetconProperties = Module.findExportByName("netshell.dll", "NcFreeNetconProperties")
+Interceptor.attach(NcFreeNetconProperties, {onLeave: function (args) {send("NcFreeNetconProperties");}});
+
+var NcIsValidConnectionName = Module.findExportByName("netshell.dll", "NcIsValidConnectionName")
+Interceptor.attach(NcIsValidConnectionName, {onLeave: function (args) {send("NcIsValidConnectionName");}});
+
+var StartNCW = Module.findExportByName("netshell.dll", "StartNCW")
+Interceptor.attach(StartNCW, {onLeave: function (args) {send("StartNCW");}});
+

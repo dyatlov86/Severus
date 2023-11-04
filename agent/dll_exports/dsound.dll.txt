@@ -1,0 +1,36 @@
+var DirectSoundCaptureCreate = Module.findExportByName("dsound.dll", "DirectSoundCaptureCreate")
+Interceptor.attach(DirectSoundCaptureCreate, {onLeave: function (args) {send("DirectSoundCaptureCreate");}});
+
+var DirectSoundCaptureCreate8 = Module.findExportByName("dsound.dll", "DirectSoundCaptureCreate8")
+Interceptor.attach(DirectSoundCaptureCreate8, {onLeave: function (args) {send("DirectSoundCaptureCreate8");}});
+
+var DirectSoundCaptureEnumerateA = Module.findExportByName("dsound.dll", "DirectSoundCaptureEnumerateA")
+Interceptor.attach(DirectSoundCaptureEnumerateA, {onLeave: function (args) {send("DirectSoundCaptureEnumerateA");}});
+
+var DirectSoundCaptureEnumerateW = Module.findExportByName("dsound.dll", "DirectSoundCaptureEnumerateW")
+Interceptor.attach(DirectSoundCaptureEnumerateW, {onLeave: function (args) {send("DirectSoundCaptureEnumerateW");}});
+
+var DirectSoundCreate = Module.findExportByName("dsound.dll", "DirectSoundCreate")
+Interceptor.attach(DirectSoundCreate, {onLeave: function (args) {send("DirectSoundCreate");}});
+
+var DirectSoundCreate8 = Module.findExportByName("dsound.dll", "DirectSoundCreate8")
+Interceptor.attach(DirectSoundCreate8, {onLeave: function (args) {send("DirectSoundCreate8");}});
+
+var DirectSoundEnumerateA = Module.findExportByName("dsound.dll", "DirectSoundEnumerateA")
+Interceptor.attach(DirectSoundEnumerateA, {onLeave: function (args) {send("DirectSoundEnumerateA");}});
+
+var DirectSoundEnumerateW = Module.findExportByName("dsound.dll", "DirectSoundEnumerateW")
+Interceptor.attach(DirectSoundEnumerateW, {onLeave: function (args) {send("DirectSoundEnumerateW");}});
+
+var DirectSoundFullDuplexCreate = Module.findExportByName("dsound.dll", "DirectSoundFullDuplexCreate")
+Interceptor.attach(DirectSoundFullDuplexCreate, {onLeave: function (args) {send("DirectSoundFullDuplexCreate");}});
+
+var DllCanUnloadNow = Module.findExportByName("dsound.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("dsound.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetDeviceID = Module.findExportByName("dsound.dll", "GetDeviceID")
+Interceptor.attach(GetDeviceID, {onLeave: function (args) {send("GetDeviceID");}});
+

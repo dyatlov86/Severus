@@ -1,0 +1,6 @@
+var DiscpLoadGPSettings = Module.findExportByName("iscsied.dll", "DiscpLoadGPSettings")
+Interceptor.attach(DiscpLoadGPSettings, {onLeave: function (args) {send("DiscpLoadGPSettings");}});
+
+var DllMain = Module.findExportByName("iscsied.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+

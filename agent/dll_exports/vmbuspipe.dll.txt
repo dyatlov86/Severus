@@ -1,0 +1,30 @@
+var VmbusPipeClientEnumeratePipes = Module.findExportByName("vmbuspipe.dll", "VmbusPipeClientEnumeratePipes")
+Interceptor.attach(VmbusPipeClientEnumeratePipes, {onLeave: function (args) {send("VmbusPipeClientEnumeratePipes");}});
+
+var VmbusPipeClientOpenChannel = Module.findExportByName("vmbuspipe.dll", "VmbusPipeClientOpenChannel")
+Interceptor.attach(VmbusPipeClientOpenChannel, {onLeave: function (args) {send("VmbusPipeClientOpenChannel");}});
+
+var VmbusPipeClientOpenChannelEx = Module.findExportByName("vmbuspipe.dll", "VmbusPipeClientOpenChannelEx")
+Interceptor.attach(VmbusPipeClientOpenChannelEx, {onLeave: function (args) {send("VmbusPipeClientOpenChannelEx");}});
+
+var VmbusPipeClientReadyForChannelNotification = Module.findExportByName("vmbuspipe.dll", "VmbusPipeClientReadyForChannelNotification")
+Interceptor.attach(VmbusPipeClientReadyForChannelNotification, {onLeave: function (args) {send("VmbusPipeClientReadyForChannelNotification");}});
+
+var VmbusPipeClientRegisterChannelNotification = Module.findExportByName("vmbuspipe.dll", "VmbusPipeClientRegisterChannelNotification")
+Interceptor.attach(VmbusPipeClientRegisterChannelNotification, {onLeave: function (args) {send("VmbusPipeClientRegisterChannelNotification");}});
+
+var VmbusPipeClientUnregisterChannelNotification = Module.findExportByName("vmbuspipe.dll", "VmbusPipeClientUnregisterChannelNotification")
+Interceptor.attach(VmbusPipeClientUnregisterChannelNotification, {onLeave: function (args) {send("VmbusPipeClientUnregisterChannelNotification");}});
+
+var VmbusPipeClientWaitChannel = Module.findExportByName("vmbuspipe.dll", "VmbusPipeClientWaitChannel")
+Interceptor.attach(VmbusPipeClientWaitChannel, {onLeave: function (args) {send("VmbusPipeClientWaitChannel");}});
+
+var VmbusPipeServerConnectPipe = Module.findExportByName("vmbuspipe.dll", "VmbusPipeServerConnectPipe")
+Interceptor.attach(VmbusPipeServerConnectPipe, {onLeave: function (args) {send("VmbusPipeServerConnectPipe");}});
+
+var VmbusPipeServerOfferChannel = Module.findExportByName("vmbuspipe.dll", "VmbusPipeServerOfferChannel")
+Interceptor.attach(VmbusPipeServerOfferChannel, {onLeave: function (args) {send("VmbusPipeServerOfferChannel");}});
+
+var VmbusPipeServerOfferChannelEx = Module.findExportByName("vmbuspipe.dll", "VmbusPipeServerOfferChannelEx")
+Interceptor.attach(VmbusPipeServerOfferChannelEx, {onLeave: function (args) {send("VmbusPipeServerOfferChannelEx");}});
+

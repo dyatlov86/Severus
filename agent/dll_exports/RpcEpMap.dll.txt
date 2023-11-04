@@ -1,0 +1,3 @@
+var ServiceMain = Module.findExportByName("RpcEpMap.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

@@ -1,0 +1,24 @@
+var AMGetErrorTextA = Module.findExportByName("quartz.dll", "AMGetErrorTextA")
+Interceptor.attach(AMGetErrorTextA, {onLeave: function (args) {send("AMGetErrorTextA");}});
+
+var AMGetErrorTextW = Module.findExportByName("quartz.dll", "AMGetErrorTextW")
+Interceptor.attach(AMGetErrorTextW, {onLeave: function (args) {send("AMGetErrorTextW");}});
+
+var AmpFactorToDB = Module.findExportByName("quartz.dll", "AmpFactorToDB")
+Interceptor.attach(AmpFactorToDB, {onLeave: function (args) {send("AmpFactorToDB");}});
+
+var DBToAmpFactor = Module.findExportByName("quartz.dll", "DBToAmpFactor")
+Interceptor.attach(DBToAmpFactor, {onLeave: function (args) {send("DBToAmpFactor");}});
+
+var DllCanUnloadNow = Module.findExportByName("quartz.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("quartz.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("quartz.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("quartz.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

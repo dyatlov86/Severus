@@ -1,0 +1,51 @@
+var DllCanUnloadNow = Module.findExportByName("occache.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("occache.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var FindControlClose = Module.findExportByName("occache.dll", "FindControlClose")
+Interceptor.attach(FindControlClose, {onLeave: function (args) {send("FindControlClose");}});
+
+var FindFirstControl = Module.findExportByName("occache.dll", "FindFirstControl")
+Interceptor.attach(FindFirstControl, {onLeave: function (args) {send("FindFirstControl");}});
+
+var FindFirstControlArch = Module.findExportByName("occache.dll", "FindFirstControlArch")
+Interceptor.attach(FindFirstControlArch, {onLeave: function (args) {send("FindFirstControlArch");}});
+
+var FindNextControl = Module.findExportByName("occache.dll", "FindNextControl")
+Interceptor.attach(FindNextControl, {onLeave: function (args) {send("FindNextControl");}});
+
+var FindNextControlArch = Module.findExportByName("occache.dll", "FindNextControlArch")
+Interceptor.attach(FindNextControlArch, {onLeave: function (args) {send("FindNextControlArch");}});
+
+var GetControlDependentFile = Module.findExportByName("occache.dll", "GetControlDependentFile")
+Interceptor.attach(GetControlDependentFile, {onLeave: function (args) {send("GetControlDependentFile");}});
+
+var GetControlInfo = Module.findExportByName("occache.dll", "GetControlInfo")
+Interceptor.attach(GetControlInfo, {onLeave: function (args) {send("GetControlInfo");}});
+
+var IsModuleRemovable = Module.findExportByName("occache.dll", "IsModuleRemovable")
+Interceptor.attach(IsModuleRemovable, {onLeave: function (args) {send("IsModuleRemovable");}});
+
+var ReleaseControlHandle = Module.findExportByName("occache.dll", "ReleaseControlHandle")
+Interceptor.attach(ReleaseControlHandle, {onLeave: function (args) {send("ReleaseControlHandle");}});
+
+var RemoveControlByHandle = Module.findExportByName("occache.dll", "RemoveControlByHandle")
+Interceptor.attach(RemoveControlByHandle, {onLeave: function (args) {send("RemoveControlByHandle");}});
+
+var RemoveControlByHandle2 = Module.findExportByName("occache.dll", "RemoveControlByHandle2")
+Interceptor.attach(RemoveControlByHandle2, {onLeave: function (args) {send("RemoveControlByHandle2");}});
+
+var RemoveControlByName = Module.findExportByName("occache.dll", "RemoveControlByName")
+Interceptor.attach(RemoveControlByName, {onLeave: function (args) {send("RemoveControlByName");}});
+
+var RemoveControlByName2 = Module.findExportByName("occache.dll", "RemoveControlByName2")
+Interceptor.attach(RemoveControlByName2, {onLeave: function (args) {send("RemoveControlByName2");}});
+
+var RemoveExpiredControls = Module.findExportByName("occache.dll", "RemoveExpiredControls")
+Interceptor.attach(RemoveExpiredControls, {onLeave: function (args) {send("RemoveExpiredControls");}});
+
+var SweepControlsByLastAccessDate = Module.findExportByName("occache.dll", "SweepControlsByLastAccessDate")
+Interceptor.attach(SweepControlsByLastAccessDate, {onLeave: function (args) {send("SweepControlsByLastAccessDate");}});
+

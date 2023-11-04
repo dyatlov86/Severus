@@ -1,0 +1,57 @@
+var CheckPackageManagerOutOfProc = Module.findExportByName("provplatformdesktop.dll", "CheckPackageManagerOutOfProc")
+Interceptor.attach(CheckPackageManagerOutOfProc, {onLeave: function (args) {send("CheckPackageManagerOutOfProc");}});
+
+var CheckUserConsent = Module.findExportByName("provplatformdesktop.dll", "CheckUserConsent")
+Interceptor.attach(CheckUserConsent, {onLeave: function (args) {send("CheckUserConsent");}});
+
+var ConfigureAppLaunch = Module.findExportByName("provplatformdesktop.dll", "ConfigureAppLaunch")
+Interceptor.attach(ConfigureAppLaunch, {onLeave: function (args) {send("ConfigureAppLaunch");}});
+
+var CreateAutomaticRedeploymentFailureNotificationTask = Module.findExportByName("provplatformdesktop.dll", "CreateAutomaticRedeploymentFailureNotificationTask")
+Interceptor.attach(CreateAutomaticRedeploymentFailureNotificationTask, {onLeave: function (args) {send("CreateAutomaticRedeploymentFailureNotificationTask");}});
+
+var DllCanUnloadNow = Module.findExportByName("provplatformdesktop.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("provplatformdesktop.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("provplatformdesktop.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetDeviceId = Module.findExportByName("provplatformdesktop.dll", "GetDeviceId")
+Interceptor.attach(GetDeviceId, {onLeave: function (args) {send("GetDeviceId");}});
+
+var GetPackagePassword = Module.findExportByName("provplatformdesktop.dll", "GetPackagePassword")
+Interceptor.attach(GetPackagePassword, {onLeave: function (args) {send("GetPackagePassword");}});
+
+var GetProvisioningTargetUser = Module.findExportByName("provplatformdesktop.dll", "GetProvisioningTargetUser")
+Interceptor.attach(GetProvisioningTargetUser, {onLeave: function (args) {send("GetProvisioningTargetUser");}});
+
+var InitiateMgmtRefresh = Module.findExportByName("provplatformdesktop.dll", "InitiateMgmtRefresh")
+Interceptor.attach(InitiateMgmtRefresh, {onLeave: function (args) {send("InitiateMgmtRefresh");}});
+
+var InitiateSystemReset = Module.findExportByName("provplatformdesktop.dll", "InitiateSystemReset")
+Interceptor.attach(InitiateSystemReset, {onLeave: function (args) {send("InitiateSystemReset");}});
+
+var MgmtRefreshPrecheck = Module.findExportByName("provplatformdesktop.dll", "MgmtRefreshPrecheck")
+Interceptor.attach(MgmtRefreshPrecheck, {onLeave: function (args) {send("MgmtRefreshPrecheck");}});
+
+var MgmtRefreshRebootSystem = Module.findExportByName("provplatformdesktop.dll", "MgmtRefreshRebootSystem")
+Interceptor.attach(MgmtRefreshRebootSystem, {onLeave: function (args) {send("MgmtRefreshRebootSystem");}});
+
+var MgmtRefreshReleaseSession = Module.findExportByName("provplatformdesktop.dll", "MgmtRefreshReleaseSession")
+Interceptor.attach(MgmtRefreshReleaseSession, {onLeave: function (args) {send("MgmtRefreshReleaseSession");}});
+
+var MgmtRefreshStageSession = Module.findExportByName("provplatformdesktop.dll", "MgmtRefreshStageSession")
+Interceptor.attach(MgmtRefreshStageSession, {onLeave: function (args) {send("MgmtRefreshStageSession");}});
+
+var MgmtRefreshUnstageSession = Module.findExportByName("provplatformdesktop.dll", "MgmtRefreshUnstageSession")
+Interceptor.attach(MgmtRefreshUnstageSession, {onLeave: function (args) {send("MgmtRefreshUnstageSession");}});
+
+var ReportInstallationError = Module.findExportByName("provplatformdesktop.dll", "ReportInstallationError")
+Interceptor.attach(ReportInstallationError, {onLeave: function (args) {send("ReportInstallationError");}});
+
+var SetDeviceName = Module.findExportByName("provplatformdesktop.dll", "SetDeviceName")
+Interceptor.attach(SetDeviceName, {onLeave: function (args) {send("SetDeviceName");}});
+

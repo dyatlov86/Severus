@@ -1,0 +1,3 @@
+var EeUtilCommand = Module.findExportByName("eeutil.dll", "EeUtilCommand")
+Interceptor.attach(EeUtilCommand, {onLeave: function (args) {send("EeUtilCommand");}});
+

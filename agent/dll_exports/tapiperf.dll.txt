@@ -1,0 +1,9 @@
+var CloseTapiPerformanceData = Module.findExportByName("tapiperf.dll", "CloseTapiPerformanceData")
+Interceptor.attach(CloseTapiPerformanceData, {onLeave: function (args) {send("CloseTapiPerformanceData");}});
+
+var CollectTapiPerformanceData = Module.findExportByName("tapiperf.dll", "CollectTapiPerformanceData")
+Interceptor.attach(CollectTapiPerformanceData, {onLeave: function (args) {send("CollectTapiPerformanceData");}});
+
+var OpenTapiPerformanceData = Module.findExportByName("tapiperf.dll", "OpenTapiPerformanceData")
+Interceptor.attach(OpenTapiPerformanceData, {onLeave: function (args) {send("OpenTapiPerformanceData");}});
+

@@ -1,0 +1,12 @@
+var CommonPropertySheetUIA = Module.findExportByName("compstui.dll", "CommonPropertySheetUIA")
+Interceptor.attach(CommonPropertySheetUIA, {onLeave: function (args) {send("CommonPropertySheetUIA");}});
+
+var CommonPropertySheetUIW = Module.findExportByName("compstui.dll", "CommonPropertySheetUIW")
+Interceptor.attach(CommonPropertySheetUIW, {onLeave: function (args) {send("CommonPropertySheetUIW");}});
+
+var GetCPSUIUserData = Module.findExportByName("compstui.dll", "GetCPSUIUserData")
+Interceptor.attach(GetCPSUIUserData, {onLeave: function (args) {send("GetCPSUIUserData");}});
+
+var SetCPSUIUserData = Module.findExportByName("compstui.dll", "SetCPSUIUserData")
+Interceptor.attach(SetCPSUIUserData, {onLeave: function (args) {send("SetCPSUIUserData");}});
+

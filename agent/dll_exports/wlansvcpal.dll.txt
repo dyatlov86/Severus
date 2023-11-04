@@ -1,0 +1,3 @@
+var WlanSvcPAL_GetFunctionTable = Module.findExportByName("wlansvcpal.dll", "WlanSvcPAL_GetFunctionTable")
+Interceptor.attach(WlanSvcPAL_GetFunctionTable, {onLeave: function (args) {send("WlanSvcPAL_GetFunctionTable");}});
+

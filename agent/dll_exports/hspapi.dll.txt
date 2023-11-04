@@ -1,0 +1,27 @@
+var HspCloseContext = Module.findExportByName("hspapi.dll", "HspCloseContext")
+Interceptor.attach(HspCloseContext, {onLeave: function (args) {send("HspCloseContext");}});
+
+var HspCreateContext = Module.findExportByName("hspapi.dll", "HspCreateContext")
+Interceptor.attach(HspCreateContext, {onLeave: function (args) {send("HspCreateContext");}});
+
+var HspGetActiveVersion = Module.findExportByName("hspapi.dll", "HspGetActiveVersion")
+Interceptor.attach(HspGetActiveVersion, {onLeave: function (args) {send("HspGetActiveVersion");}});
+
+var HspGetPlatRotHealthStatus = Module.findExportByName("hspapi.dll", "HspGetPlatRotHealthStatus")
+Interceptor.attach(HspGetPlatRotHealthStatus, {onLeave: function (args) {send("HspGetPlatRotHealthStatus");}});
+
+var HspGetPlatRotVendorId = Module.findExportByName("hspapi.dll", "HspGetPlatRotVendorId")
+Interceptor.attach(HspGetPlatRotVendorId, {onLeave: function (args) {send("HspGetPlatRotVendorId");}});
+
+var HspGetTelemetry = Module.findExportByName("hspapi.dll", "HspGetTelemetry")
+Interceptor.attach(HspGetTelemetry, {onLeave: function (args) {send("HspGetTelemetry");}});
+
+var HspIsPlatRotCapable = Module.findExportByName("hspapi.dll", "HspIsPlatRotCapable")
+Interceptor.attach(HspIsPlatRotCapable, {onLeave: function (args) {send("HspIsPlatRotCapable");}});
+
+var HspIsPlatRotEnabled = Module.findExportByName("hspapi.dll", "HspIsPlatRotEnabled")
+Interceptor.attach(HspIsPlatRotEnabled, {onLeave: function (args) {send("HspIsPlatRotEnabled");}});
+
+var IsHspPresent = Module.findExportByName("hspapi.dll", "IsHspPresent")
+Interceptor.attach(IsHspPresent, {onLeave: function (args) {send("IsHspPresent");}});
+

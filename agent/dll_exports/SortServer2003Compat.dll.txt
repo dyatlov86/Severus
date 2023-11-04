@@ -1,0 +1,6 @@
+var SortCloseHandle = Module.findExportByName("SortServer2003Compat.dll", "SortCloseHandle")
+Interceptor.attach(SortCloseHandle, {onLeave: function (args) {send("SortCloseHandle");}});
+
+var SortGetHandle = Module.findExportByName("SortServer2003Compat.dll", "SortGetHandle")
+Interceptor.attach(SortGetHandle, {onLeave: function (args) {send("SortGetHandle");}});
+

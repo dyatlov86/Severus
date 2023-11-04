@@ -1,0 +1,12 @@
+var WppAutoLogGetDefaultHandle = Module.findExportByName("WppRecorderUM.dll", "WppAutoLogGetDefaultHandle")
+Interceptor.attach(WppAutoLogGetDefaultHandle, {onLeave: function (args) {send("WppAutoLogGetDefaultHandle");}});
+
+var WppAutoLogStart = Module.findExportByName("WppRecorderUM.dll", "WppAutoLogStart")
+Interceptor.attach(WppAutoLogStart, {onLeave: function (args) {send("WppAutoLogStart");}});
+
+var WppAutoLogStop = Module.findExportByName("WppRecorderUM.dll", "WppAutoLogStop")
+Interceptor.attach(WppAutoLogStop, {onLeave: function (args) {send("WppAutoLogStop");}});
+
+var WppAutoLogTrace = Module.findExportByName("WppRecorderUM.dll", "WppAutoLogTrace")
+Interceptor.attach(WppAutoLogTrace, {onLeave: function (args) {send("WppAutoLogTrace");}});
+

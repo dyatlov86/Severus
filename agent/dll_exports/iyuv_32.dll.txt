@@ -1,0 +1,12 @@
+var AboutDialogProc = Module.findExportByName("iyuv_32.dll", "AboutDialogProc")
+Interceptor.attach(AboutDialogProc, {onLeave: function (args) {send("AboutDialogProc");}});
+
+var DllMain = Module.findExportByName("iyuv_32.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DriverDialogProc = Module.findExportByName("iyuv_32.dll", "DriverDialogProc")
+Interceptor.attach(DriverDialogProc, {onLeave: function (args) {send("DriverDialogProc");}});
+
+var DriverProc = Module.findExportByName("iyuv_32.dll", "DriverProc")
+Interceptor.attach(DriverProc, {onLeave: function (args) {send("DriverProc");}});
+

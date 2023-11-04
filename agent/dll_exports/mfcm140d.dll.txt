@@ -1,0 +1,3 @@
+var AfxmReleaseManagedReferences = Module.findExportByName("mfcm140d.dll", "AfxmReleaseManagedReferences")
+Interceptor.attach(AfxmReleaseManagedReferences, {onLeave: function (args) {send("AfxmReleaseManagedReferences");}});
+

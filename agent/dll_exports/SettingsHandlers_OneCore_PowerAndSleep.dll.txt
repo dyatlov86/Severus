@@ -1,0 +1,6 @@
+var GetSetting = Module.findExportByName("SettingsHandlers_OneCore_PowerAndSleep.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+
+var NotifyPowerAndSleep = Module.findExportByName("SettingsHandlers_OneCore_PowerAndSleep.dll", "NotifyPowerAndSleep")
+Interceptor.attach(NotifyPowerAndSleep, {onLeave: function (args) {send("NotifyPowerAndSleep");}});
+

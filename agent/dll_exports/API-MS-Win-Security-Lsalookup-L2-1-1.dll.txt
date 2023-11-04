@@ -1,0 +1,3 @@
+var LsaManageSidNameMapping = Module.findExportByName("API-MS-Win-Security-Lsalookup-L2-1-1.dll", "LsaManageSidNameMapping")
+Interceptor.attach(LsaManageSidNameMapping, {onLeave: function (args) {send("LsaManageSidNameMapping");}});
+

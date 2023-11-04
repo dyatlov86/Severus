@@ -1,0 +1,6 @@
+var EncryptDumpFile = Module.findExportByName("WerEnc.dll", "EncryptDumpFile")
+Interceptor.attach(EncryptDumpFile, {onLeave: function (args) {send("EncryptDumpFile");}});
+
+var EncryptDumpStream = Module.findExportByName("WerEnc.dll", "EncryptDumpStream")
+Interceptor.attach(EncryptDumpStream, {onLeave: function (args) {send("EncryptDumpStream");}});
+

@@ -1,0 +1,372 @@
+var DllMain = Module.findExportByName("mantle32.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var IcdDbgMessage = Module.findExportByName("mantle32.dll", "IcdDbgMessage")
+Interceptor.attach(IcdDbgMessage, {onLeave: function (args) {send("IcdDbgMessage");}});
+
+var grAllocMemory = Module.findExportByName("mantle32.dll", "grAllocMemory")
+Interceptor.attach(grAllocMemory, {onLeave: function (args) {send("grAllocMemory");}});
+
+var grAttachImageViewDescriptors = Module.findExportByName("mantle32.dll", "grAttachImageViewDescriptors")
+Interceptor.attach(grAttachImageViewDescriptors, {onLeave: function (args) {send("grAttachImageViewDescriptors");}});
+
+var grAttachMemoryViewDescriptors = Module.findExportByName("mantle32.dll", "grAttachMemoryViewDescriptors")
+Interceptor.attach(grAttachMemoryViewDescriptors, {onLeave: function (args) {send("grAttachMemoryViewDescriptors");}});
+
+var grAttachNestedDescriptors = Module.findExportByName("mantle32.dll", "grAttachNestedDescriptors")
+Interceptor.attach(grAttachNestedDescriptors, {onLeave: function (args) {send("grAttachNestedDescriptors");}});
+
+var grAttachSamplerDescriptors = Module.findExportByName("mantle32.dll", "grAttachSamplerDescriptors")
+Interceptor.attach(grAttachSamplerDescriptors, {onLeave: function (args) {send("grAttachSamplerDescriptors");}});
+
+var grBeginCommandBuffer = Module.findExportByName("mantle32.dll", "grBeginCommandBuffer")
+Interceptor.attach(grBeginCommandBuffer, {onLeave: function (args) {send("grBeginCommandBuffer");}});
+
+var grBeginDescriptorSetUpdate = Module.findExportByName("mantle32.dll", "grBeginDescriptorSetUpdate")
+Interceptor.attach(grBeginDescriptorSetUpdate, {onLeave: function (args) {send("grBeginDescriptorSetUpdate");}});
+
+var grBindObjectMemory = Module.findExportByName("mantle32.dll", "grBindObjectMemory")
+Interceptor.attach(grBindObjectMemory, {onLeave: function (args) {send("grBindObjectMemory");}});
+
+var grClearDescriptorSetSlots = Module.findExportByName("mantle32.dll", "grClearDescriptorSetSlots")
+Interceptor.attach(grClearDescriptorSetSlots, {onLeave: function (args) {send("grClearDescriptorSetSlots");}});
+
+var grCmdBeginQuery = Module.findExportByName("mantle32.dll", "grCmdBeginQuery")
+Interceptor.attach(grCmdBeginQuery, {onLeave: function (args) {send("grCmdBeginQuery");}});
+
+var grCmdBindDescriptorSet = Module.findExportByName("mantle32.dll", "grCmdBindDescriptorSet")
+Interceptor.attach(grCmdBindDescriptorSet, {onLeave: function (args) {send("grCmdBindDescriptorSet");}});
+
+var grCmdBindDynamicMemoryView = Module.findExportByName("mantle32.dll", "grCmdBindDynamicMemoryView")
+Interceptor.attach(grCmdBindDynamicMemoryView, {onLeave: function (args) {send("grCmdBindDynamicMemoryView");}});
+
+var grCmdBindIndexData = Module.findExportByName("mantle32.dll", "grCmdBindIndexData")
+Interceptor.attach(grCmdBindIndexData, {onLeave: function (args) {send("grCmdBindIndexData");}});
+
+var grCmdBindPipeline = Module.findExportByName("mantle32.dll", "grCmdBindPipeline")
+Interceptor.attach(grCmdBindPipeline, {onLeave: function (args) {send("grCmdBindPipeline");}});
+
+var grCmdBindStateObject = Module.findExportByName("mantle32.dll", "grCmdBindStateObject")
+Interceptor.attach(grCmdBindStateObject, {onLeave: function (args) {send("grCmdBindStateObject");}});
+
+var grCmdBindTargets = Module.findExportByName("mantle32.dll", "grCmdBindTargets")
+Interceptor.attach(grCmdBindTargets, {onLeave: function (args) {send("grCmdBindTargets");}});
+
+var grCmdClearColorImage = Module.findExportByName("mantle32.dll", "grCmdClearColorImage")
+Interceptor.attach(grCmdClearColorImage, {onLeave: function (args) {send("grCmdClearColorImage");}});
+
+var grCmdClearColorImageRaw = Module.findExportByName("mantle32.dll", "grCmdClearColorImageRaw")
+Interceptor.attach(grCmdClearColorImageRaw, {onLeave: function (args) {send("grCmdClearColorImageRaw");}});
+
+var grCmdClearDepthStencil = Module.findExportByName("mantle32.dll", "grCmdClearDepthStencil")
+Interceptor.attach(grCmdClearDepthStencil, {onLeave: function (args) {send("grCmdClearDepthStencil");}});
+
+var grCmdCloneImageData = Module.findExportByName("mantle32.dll", "grCmdCloneImageData")
+Interceptor.attach(grCmdCloneImageData, {onLeave: function (args) {send("grCmdCloneImageData");}});
+
+var grCmdCopyImage = Module.findExportByName("mantle32.dll", "grCmdCopyImage")
+Interceptor.attach(grCmdCopyImage, {onLeave: function (args) {send("grCmdCopyImage");}});
+
+var grCmdCopyImageToMemory = Module.findExportByName("mantle32.dll", "grCmdCopyImageToMemory")
+Interceptor.attach(grCmdCopyImageToMemory, {onLeave: function (args) {send("grCmdCopyImageToMemory");}});
+
+var grCmdCopyMemory = Module.findExportByName("mantle32.dll", "grCmdCopyMemory")
+Interceptor.attach(grCmdCopyMemory, {onLeave: function (args) {send("grCmdCopyMemory");}});
+
+var grCmdCopyMemoryToImage = Module.findExportByName("mantle32.dll", "grCmdCopyMemoryToImage")
+Interceptor.attach(grCmdCopyMemoryToImage, {onLeave: function (args) {send("grCmdCopyMemoryToImage");}});
+
+var grCmdDbgMarkerBegin = Module.findExportByName("mantle32.dll", "grCmdDbgMarkerBegin")
+Interceptor.attach(grCmdDbgMarkerBegin, {onLeave: function (args) {send("grCmdDbgMarkerBegin");}});
+
+var grCmdDbgMarkerEnd = Module.findExportByName("mantle32.dll", "grCmdDbgMarkerEnd")
+Interceptor.attach(grCmdDbgMarkerEnd, {onLeave: function (args) {send("grCmdDbgMarkerEnd");}});
+
+var grCmdDispatch = Module.findExportByName("mantle32.dll", "grCmdDispatch")
+Interceptor.attach(grCmdDispatch, {onLeave: function (args) {send("grCmdDispatch");}});
+
+var grCmdDispatchIndirect = Module.findExportByName("mantle32.dll", "grCmdDispatchIndirect")
+Interceptor.attach(grCmdDispatchIndirect, {onLeave: function (args) {send("grCmdDispatchIndirect");}});
+
+var grCmdDraw = Module.findExportByName("mantle32.dll", "grCmdDraw")
+Interceptor.attach(grCmdDraw, {onLeave: function (args) {send("grCmdDraw");}});
+
+var grCmdDrawIndexed = Module.findExportByName("mantle32.dll", "grCmdDrawIndexed")
+Interceptor.attach(grCmdDrawIndexed, {onLeave: function (args) {send("grCmdDrawIndexed");}});
+
+var grCmdDrawIndexedIndirect = Module.findExportByName("mantle32.dll", "grCmdDrawIndexedIndirect")
+Interceptor.attach(grCmdDrawIndexedIndirect, {onLeave: function (args) {send("grCmdDrawIndexedIndirect");}});
+
+var grCmdDrawIndirect = Module.findExportByName("mantle32.dll", "grCmdDrawIndirect")
+Interceptor.attach(grCmdDrawIndirect, {onLeave: function (args) {send("grCmdDrawIndirect");}});
+
+var grCmdEndQuery = Module.findExportByName("mantle32.dll", "grCmdEndQuery")
+Interceptor.attach(grCmdEndQuery, {onLeave: function (args) {send("grCmdEndQuery");}});
+
+var grCmdFillMemory = Module.findExportByName("mantle32.dll", "grCmdFillMemory")
+Interceptor.attach(grCmdFillMemory, {onLeave: function (args) {send("grCmdFillMemory");}});
+
+var grCmdInitAtomicCounters = Module.findExportByName("mantle32.dll", "grCmdInitAtomicCounters")
+Interceptor.attach(grCmdInitAtomicCounters, {onLeave: function (args) {send("grCmdInitAtomicCounters");}});
+
+var grCmdLoadAtomicCounters = Module.findExportByName("mantle32.dll", "grCmdLoadAtomicCounters")
+Interceptor.attach(grCmdLoadAtomicCounters, {onLeave: function (args) {send("grCmdLoadAtomicCounters");}});
+
+var grCmdMemoryAtomic = Module.findExportByName("mantle32.dll", "grCmdMemoryAtomic")
+Interceptor.attach(grCmdMemoryAtomic, {onLeave: function (args) {send("grCmdMemoryAtomic");}});
+
+var grCmdPrepareImages = Module.findExportByName("mantle32.dll", "grCmdPrepareImages")
+Interceptor.attach(grCmdPrepareImages, {onLeave: function (args) {send("grCmdPrepareImages");}});
+
+var grCmdPrepareMemoryRegions = Module.findExportByName("mantle32.dll", "grCmdPrepareMemoryRegions")
+Interceptor.attach(grCmdPrepareMemoryRegions, {onLeave: function (args) {send("grCmdPrepareMemoryRegions");}});
+
+var grCmdResetEvent = Module.findExportByName("mantle32.dll", "grCmdResetEvent")
+Interceptor.attach(grCmdResetEvent, {onLeave: function (args) {send("grCmdResetEvent");}});
+
+var grCmdResetQueryPool = Module.findExportByName("mantle32.dll", "grCmdResetQueryPool")
+Interceptor.attach(grCmdResetQueryPool, {onLeave: function (args) {send("grCmdResetQueryPool");}});
+
+var grCmdResolveImage = Module.findExportByName("mantle32.dll", "grCmdResolveImage")
+Interceptor.attach(grCmdResolveImage, {onLeave: function (args) {send("grCmdResolveImage");}});
+
+var grCmdSaveAtomicCounters = Module.findExportByName("mantle32.dll", "grCmdSaveAtomicCounters")
+Interceptor.attach(grCmdSaveAtomicCounters, {onLeave: function (args) {send("grCmdSaveAtomicCounters");}});
+
+var grCmdSetEvent = Module.findExportByName("mantle32.dll", "grCmdSetEvent")
+Interceptor.attach(grCmdSetEvent, {onLeave: function (args) {send("grCmdSetEvent");}});
+
+var grCmdUpdateMemory = Module.findExportByName("mantle32.dll", "grCmdUpdateMemory")
+Interceptor.attach(grCmdUpdateMemory, {onLeave: function (args) {send("grCmdUpdateMemory");}});
+
+var grCmdWriteTimestamp = Module.findExportByName("mantle32.dll", "grCmdWriteTimestamp")
+Interceptor.attach(grCmdWriteTimestamp, {onLeave: function (args) {send("grCmdWriteTimestamp");}});
+
+var grCreateColorBlendState = Module.findExportByName("mantle32.dll", "grCreateColorBlendState")
+Interceptor.attach(grCreateColorBlendState, {onLeave: function (args) {send("grCreateColorBlendState");}});
+
+var grCreateColorTargetView = Module.findExportByName("mantle32.dll", "grCreateColorTargetView")
+Interceptor.attach(grCreateColorTargetView, {onLeave: function (args) {send("grCreateColorTargetView");}});
+
+var grCreateCommandBuffer = Module.findExportByName("mantle32.dll", "grCreateCommandBuffer")
+Interceptor.attach(grCreateCommandBuffer, {onLeave: function (args) {send("grCreateCommandBuffer");}});
+
+var grCreateComputePipeline = Module.findExportByName("mantle32.dll", "grCreateComputePipeline")
+Interceptor.attach(grCreateComputePipeline, {onLeave: function (args) {send("grCreateComputePipeline");}});
+
+var grCreateDepthStencilState = Module.findExportByName("mantle32.dll", "grCreateDepthStencilState")
+Interceptor.attach(grCreateDepthStencilState, {onLeave: function (args) {send("grCreateDepthStencilState");}});
+
+var grCreateDepthStencilView = Module.findExportByName("mantle32.dll", "grCreateDepthStencilView")
+Interceptor.attach(grCreateDepthStencilView, {onLeave: function (args) {send("grCreateDepthStencilView");}});
+
+var grCreateDescriptorSet = Module.findExportByName("mantle32.dll", "grCreateDescriptorSet")
+Interceptor.attach(grCreateDescriptorSet, {onLeave: function (args) {send("grCreateDescriptorSet");}});
+
+var grCreateDevice = Module.findExportByName("mantle32.dll", "grCreateDevice")
+Interceptor.attach(grCreateDevice, {onLeave: function (args) {send("grCreateDevice");}});
+
+var grCreateEvent = Module.findExportByName("mantle32.dll", "grCreateEvent")
+Interceptor.attach(grCreateEvent, {onLeave: function (args) {send("grCreateEvent");}});
+
+var grCreateFence = Module.findExportByName("mantle32.dll", "grCreateFence")
+Interceptor.attach(grCreateFence, {onLeave: function (args) {send("grCreateFence");}});
+
+var grCreateGraphicsPipeline = Module.findExportByName("mantle32.dll", "grCreateGraphicsPipeline")
+Interceptor.attach(grCreateGraphicsPipeline, {onLeave: function (args) {send("grCreateGraphicsPipeline");}});
+
+var grCreateImage = Module.findExportByName("mantle32.dll", "grCreateImage")
+Interceptor.attach(grCreateImage, {onLeave: function (args) {send("grCreateImage");}});
+
+var grCreateImageView = Module.findExportByName("mantle32.dll", "grCreateImageView")
+Interceptor.attach(grCreateImageView, {onLeave: function (args) {send("grCreateImageView");}});
+
+var grCreateMsaaState = Module.findExportByName("mantle32.dll", "grCreateMsaaState")
+Interceptor.attach(grCreateMsaaState, {onLeave: function (args) {send("grCreateMsaaState");}});
+
+var grCreateQueryPool = Module.findExportByName("mantle32.dll", "grCreateQueryPool")
+Interceptor.attach(grCreateQueryPool, {onLeave: function (args) {send("grCreateQueryPool");}});
+
+var grCreateQueueSemaphore = Module.findExportByName("mantle32.dll", "grCreateQueueSemaphore")
+Interceptor.attach(grCreateQueueSemaphore, {onLeave: function (args) {send("grCreateQueueSemaphore");}});
+
+var grCreateRasterState = Module.findExportByName("mantle32.dll", "grCreateRasterState")
+Interceptor.attach(grCreateRasterState, {onLeave: function (args) {send("grCreateRasterState");}});
+
+var grCreateSampler = Module.findExportByName("mantle32.dll", "grCreateSampler")
+Interceptor.attach(grCreateSampler, {onLeave: function (args) {send("grCreateSampler");}});
+
+var grCreateShader = Module.findExportByName("mantle32.dll", "grCreateShader")
+Interceptor.attach(grCreateShader, {onLeave: function (args) {send("grCreateShader");}});
+
+var grCreateViewportState = Module.findExportByName("mantle32.dll", "grCreateViewportState")
+Interceptor.attach(grCreateViewportState, {onLeave: function (args) {send("grCreateViewportState");}});
+
+var grDbgRegisterMsgCallback = Module.findExportByName("mantle32.dll", "grDbgRegisterMsgCallback")
+Interceptor.attach(grDbgRegisterMsgCallback, {onLeave: function (args) {send("grDbgRegisterMsgCallback");}});
+
+var grDbgSetDeviceOption = Module.findExportByName("mantle32.dll", "grDbgSetDeviceOption")
+Interceptor.attach(grDbgSetDeviceOption, {onLeave: function (args) {send("grDbgSetDeviceOption");}});
+
+var grDbgSetGlobalOption = Module.findExportByName("mantle32.dll", "grDbgSetGlobalOption")
+Interceptor.attach(grDbgSetGlobalOption, {onLeave: function (args) {send("grDbgSetGlobalOption");}});
+
+var grDbgSetMessageFilter = Module.findExportByName("mantle32.dll", "grDbgSetMessageFilter")
+Interceptor.attach(grDbgSetMessageFilter, {onLeave: function (args) {send("grDbgSetMessageFilter");}});
+
+var grDbgSetObjectTag = Module.findExportByName("mantle32.dll", "grDbgSetObjectTag")
+Interceptor.attach(grDbgSetObjectTag, {onLeave: function (args) {send("grDbgSetObjectTag");}});
+
+var grDbgSetValidationLevel = Module.findExportByName("mantle32.dll", "grDbgSetValidationLevel")
+Interceptor.attach(grDbgSetValidationLevel, {onLeave: function (args) {send("grDbgSetValidationLevel");}});
+
+var grDbgUnregisterMsgCallback = Module.findExportByName("mantle32.dll", "grDbgUnregisterMsgCallback")
+Interceptor.attach(grDbgUnregisterMsgCallback, {onLeave: function (args) {send("grDbgUnregisterMsgCallback");}});
+
+var grDestroyDevice = Module.findExportByName("mantle32.dll", "grDestroyDevice")
+Interceptor.attach(grDestroyDevice, {onLeave: function (args) {send("grDestroyDevice");}});
+
+var grDestroyObject = Module.findExportByName("mantle32.dll", "grDestroyObject")
+Interceptor.attach(grDestroyObject, {onLeave: function (args) {send("grDestroyObject");}});
+
+var grDeviceWaitIdle = Module.findExportByName("mantle32.dll", "grDeviceWaitIdle")
+Interceptor.attach(grDeviceWaitIdle, {onLeave: function (args) {send("grDeviceWaitIdle");}});
+
+var grEndCommandBuffer = Module.findExportByName("mantle32.dll", "grEndCommandBuffer")
+Interceptor.attach(grEndCommandBuffer, {onLeave: function (args) {send("grEndCommandBuffer");}});
+
+var grEndDescriptorSetUpdate = Module.findExportByName("mantle32.dll", "grEndDescriptorSetUpdate")
+Interceptor.attach(grEndDescriptorSetUpdate, {onLeave: function (args) {send("grEndDescriptorSetUpdate");}});
+
+var grFreeMemory = Module.findExportByName("mantle32.dll", "grFreeMemory")
+Interceptor.attach(grFreeMemory, {onLeave: function (args) {send("grFreeMemory");}});
+
+var grGetDeviceQueue = Module.findExportByName("mantle32.dll", "grGetDeviceQueue")
+Interceptor.attach(grGetDeviceQueue, {onLeave: function (args) {send("grGetDeviceQueue");}});
+
+var grGetEventStatus = Module.findExportByName("mantle32.dll", "grGetEventStatus")
+Interceptor.attach(grGetEventStatus, {onLeave: function (args) {send("grGetEventStatus");}});
+
+var grGetExtensionSupport = Module.findExportByName("mantle32.dll", "grGetExtensionSupport")
+Interceptor.attach(grGetExtensionSupport, {onLeave: function (args) {send("grGetExtensionSupport");}});
+
+var grGetFenceStatus = Module.findExportByName("mantle32.dll", "grGetFenceStatus")
+Interceptor.attach(grGetFenceStatus, {onLeave: function (args) {send("grGetFenceStatus");}});
+
+var grGetFormatInfo = Module.findExportByName("mantle32.dll", "grGetFormatInfo")
+Interceptor.attach(grGetFormatInfo, {onLeave: function (args) {send("grGetFormatInfo");}});
+
+var grGetGpuInfo = Module.findExportByName("mantle32.dll", "grGetGpuInfo")
+Interceptor.attach(grGetGpuInfo, {onLeave: function (args) {send("grGetGpuInfo");}});
+
+var grGetImageSubresourceInfo = Module.findExportByName("mantle32.dll", "grGetImageSubresourceInfo")
+Interceptor.attach(grGetImageSubresourceInfo, {onLeave: function (args) {send("grGetImageSubresourceInfo");}});
+
+var grGetMemoryHeapCount = Module.findExportByName("mantle32.dll", "grGetMemoryHeapCount")
+Interceptor.attach(grGetMemoryHeapCount, {onLeave: function (args) {send("grGetMemoryHeapCount");}});
+
+var grGetMemoryHeapInfo = Module.findExportByName("mantle32.dll", "grGetMemoryHeapInfo")
+Interceptor.attach(grGetMemoryHeapInfo, {onLeave: function (args) {send("grGetMemoryHeapInfo");}});
+
+var grGetMultiGpuCompatibility = Module.findExportByName("mantle32.dll", "grGetMultiGpuCompatibility")
+Interceptor.attach(grGetMultiGpuCompatibility, {onLeave: function (args) {send("grGetMultiGpuCompatibility");}});
+
+var grGetObjectInfo = Module.findExportByName("mantle32.dll", "grGetObjectInfo")
+Interceptor.attach(grGetObjectInfo, {onLeave: function (args) {send("grGetObjectInfo");}});
+
+var grGetQueryPoolResults = Module.findExportByName("mantle32.dll", "grGetQueryPoolResults")
+Interceptor.attach(grGetQueryPoolResults, {onLeave: function (args) {send("grGetQueryPoolResults");}});
+
+var grInitAndEnumerateGpus = Module.findExportByName("mantle32.dll", "grInitAndEnumerateGpus")
+Interceptor.attach(grInitAndEnumerateGpus, {onLeave: function (args) {send("grInitAndEnumerateGpus");}});
+
+var grLoadPipeline = Module.findExportByName("mantle32.dll", "grLoadPipeline")
+Interceptor.attach(grLoadPipeline, {onLeave: function (args) {send("grLoadPipeline");}});
+
+var grMapMemory = Module.findExportByName("mantle32.dll", "grMapMemory")
+Interceptor.attach(grMapMemory, {onLeave: function (args) {send("grMapMemory");}});
+
+var grOpenPeerImage = Module.findExportByName("mantle32.dll", "grOpenPeerImage")
+Interceptor.attach(grOpenPeerImage, {onLeave: function (args) {send("grOpenPeerImage");}});
+
+var grOpenPeerMemory = Module.findExportByName("mantle32.dll", "grOpenPeerMemory")
+Interceptor.attach(grOpenPeerMemory, {onLeave: function (args) {send("grOpenPeerMemory");}});
+
+var grOpenSharedMemory = Module.findExportByName("mantle32.dll", "grOpenSharedMemory")
+Interceptor.attach(grOpenSharedMemory, {onLeave: function (args) {send("grOpenSharedMemory");}});
+
+var grOpenSharedQueueSemaphore = Module.findExportByName("mantle32.dll", "grOpenSharedQueueSemaphore")
+Interceptor.attach(grOpenSharedQueueSemaphore, {onLeave: function (args) {send("grOpenSharedQueueSemaphore");}});
+
+var grPinSystemMemory = Module.findExportByName("mantle32.dll", "grPinSystemMemory")
+Interceptor.attach(grPinSystemMemory, {onLeave: function (args) {send("grPinSystemMemory");}});
+
+var grQueueSetGlobalMemReferences = Module.findExportByName("mantle32.dll", "grQueueSetGlobalMemReferences")
+Interceptor.attach(grQueueSetGlobalMemReferences, {onLeave: function (args) {send("grQueueSetGlobalMemReferences");}});
+
+var grQueueSubmit = Module.findExportByName("mantle32.dll", "grQueueSubmit")
+Interceptor.attach(grQueueSubmit, {onLeave: function (args) {send("grQueueSubmit");}});
+
+var grQueueWaitIdle = Module.findExportByName("mantle32.dll", "grQueueWaitIdle")
+Interceptor.attach(grQueueWaitIdle, {onLeave: function (args) {send("grQueueWaitIdle");}});
+
+var grRemapVirtualMemoryPages = Module.findExportByName("mantle32.dll", "grRemapVirtualMemoryPages")
+Interceptor.attach(grRemapVirtualMemoryPages, {onLeave: function (args) {send("grRemapVirtualMemoryPages");}});
+
+var grResetCommandBuffer = Module.findExportByName("mantle32.dll", "grResetCommandBuffer")
+Interceptor.attach(grResetCommandBuffer, {onLeave: function (args) {send("grResetCommandBuffer");}});
+
+var grResetEvent = Module.findExportByName("mantle32.dll", "grResetEvent")
+Interceptor.attach(grResetEvent, {onLeave: function (args) {send("grResetEvent");}});
+
+var grSetEvent = Module.findExportByName("mantle32.dll", "grSetEvent")
+Interceptor.attach(grSetEvent, {onLeave: function (args) {send("grSetEvent");}});
+
+var grSetMemoryPriority = Module.findExportByName("mantle32.dll", "grSetMemoryPriority")
+Interceptor.attach(grSetMemoryPriority, {onLeave: function (args) {send("grSetMemoryPriority");}});
+
+var grSignalQueueSemaphore = Module.findExportByName("mantle32.dll", "grSignalQueueSemaphore")
+Interceptor.attach(grSignalQueueSemaphore, {onLeave: function (args) {send("grSignalQueueSemaphore");}});
+
+var grStorePipeline = Module.findExportByName("mantle32.dll", "grStorePipeline")
+Interceptor.attach(grStorePipeline, {onLeave: function (args) {send("grStorePipeline");}});
+
+var grUnmapMemory = Module.findExportByName("mantle32.dll", "grUnmapMemory")
+Interceptor.attach(grUnmapMemory, {onLeave: function (args) {send("grUnmapMemory");}});
+
+var grWaitForFences = Module.findExportByName("mantle32.dll", "grWaitForFences")
+Interceptor.attach(grWaitForFences, {onLeave: function (args) {send("grWaitForFences");}});
+
+var grWaitQueueSemaphore = Module.findExportByName("mantle32.dll", "grWaitQueueSemaphore")
+Interceptor.attach(grWaitQueueSemaphore, {onLeave: function (args) {send("grWaitQueueSemaphore");}});
+
+var grWsiWinCreatePresentableImage = Module.findExportByName("mantle32.dll", "grWsiWinCreatePresentableImage")
+Interceptor.attach(grWsiWinCreatePresentableImage, {onLeave: function (args) {send("grWsiWinCreatePresentableImage");}});
+
+var grWsiWinGetDisplayModeList = Module.findExportByName("mantle32.dll", "grWsiWinGetDisplayModeList")
+Interceptor.attach(grWsiWinGetDisplayModeList, {onLeave: function (args) {send("grWsiWinGetDisplayModeList");}});
+
+var grWsiWinGetDisplays = Module.findExportByName("mantle32.dll", "grWsiWinGetDisplays")
+Interceptor.attach(grWsiWinGetDisplays, {onLeave: function (args) {send("grWsiWinGetDisplays");}});
+
+var grWsiWinGetScanLine = Module.findExportByName("mantle32.dll", "grWsiWinGetScanLine")
+Interceptor.attach(grWsiWinGetScanLine, {onLeave: function (args) {send("grWsiWinGetScanLine");}});
+
+var grWsiWinQueuePresent = Module.findExportByName("mantle32.dll", "grWsiWinQueuePresent")
+Interceptor.attach(grWsiWinQueuePresent, {onLeave: function (args) {send("grWsiWinQueuePresent");}});
+
+var grWsiWinReleaseFullscreenOwnership = Module.findExportByName("mantle32.dll", "grWsiWinReleaseFullscreenOwnership")
+Interceptor.attach(grWsiWinReleaseFullscreenOwnership, {onLeave: function (args) {send("grWsiWinReleaseFullscreenOwnership");}});
+
+var grWsiWinSetGammaRamp = Module.findExportByName("mantle32.dll", "grWsiWinSetGammaRamp")
+Interceptor.attach(grWsiWinSetGammaRamp, {onLeave: function (args) {send("grWsiWinSetGammaRamp");}});
+
+var grWsiWinSetMaxQueuedFrames = Module.findExportByName("mantle32.dll", "grWsiWinSetMaxQueuedFrames")
+Interceptor.attach(grWsiWinSetMaxQueuedFrames, {onLeave: function (args) {send("grWsiWinSetMaxQueuedFrames");}});
+
+var grWsiWinTakeFullscreenOwnership = Module.findExportByName("mantle32.dll", "grWsiWinTakeFullscreenOwnership")
+Interceptor.attach(grWsiWinTakeFullscreenOwnership, {onLeave: function (args) {send("grWsiWinTakeFullscreenOwnership");}});
+
+var grWsiWinWaitForVerticalBlank = Module.findExportByName("mantle32.dll", "grWsiWinWaitForVerticalBlank")
+Interceptor.attach(grWsiWinWaitForVerticalBlank, {onLeave: function (args) {send("grWsiWinWaitForVerticalBlank");}});
+

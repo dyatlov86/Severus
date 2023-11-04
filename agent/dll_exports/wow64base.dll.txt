@@ -1,0 +1,3 @@
+var sdwhbase = Module.findExportByName("wow64base.dll", "sdwhbase")
+Interceptor.attach(sdwhbase, {onLeave: function (args) {send("sdwhbase");}});
+

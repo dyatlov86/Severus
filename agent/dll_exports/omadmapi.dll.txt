@@ -1,0 +1,288 @@
+var AcquireOmaDmClientMutex = Module.findExportByName("omadmapi.dll", "AcquireOmaDmClientMutex")
+Interceptor.attach(AcquireOmaDmClientMutex, {onLeave: function (args) {send("AcquireOmaDmClientMutex");}});
+
+var Base64StringToHexString = Module.findExportByName("omadmapi.dll", "Base64StringToHexString")
+Interceptor.attach(Base64StringToHexString, {onLeave: function (args) {send("Base64StringToHexString");}});
+
+var CalcHash = Module.findExportByName("omadmapi.dll", "CalcHash")
+Interceptor.attach(CalcHash, {onLeave: function (args) {send("CalcHash");}});
+
+var DmCreateSecurityAccount = Module.findExportByName("omadmapi.dll", "DmCreateSecurityAccount")
+Interceptor.attach(DmCreateSecurityAccount, {onLeave: function (args) {send("DmCreateSecurityAccount");}});
+
+var DmGetHighestTemplateGroup = Module.findExportByName("omadmapi.dll", "DmGetHighestTemplateGroup")
+Interceptor.attach(DmGetHighestTemplateGroup, {onLeave: function (args) {send("DmGetHighestTemplateGroup");}});
+
+var DmSecGroupSIDToRole = Module.findExportByName("omadmapi.dll", "DmSecGroupSIDToRole")
+Interceptor.attach(DmSecGroupSIDToRole, {onLeave: function (args) {send("DmSecGroupSIDToRole");}});
+
+var DmSecRoleToGroupSID = Module.findExportByName("omadmapi.dll", "DmSecRoleToGroupSID")
+Interceptor.attach(DmSecRoleToGroupSID, {onLeave: function (args) {send("DmSecRoleToGroupSID");}});
+
+var DmSecurityAccountInGroup = Module.findExportByName("omadmapi.dll", "DmSecurityAccountInGroup")
+Interceptor.attach(DmSecurityAccountInGroup, {onLeave: function (args) {send("DmSecurityAccountInGroup");}});
+
+var DmSecurityRoleFromAccountName = Module.findExportByName("omadmapi.dll", "DmSecurityRoleFromAccountName")
+Interceptor.attach(DmSecurityRoleFromAccountName, {onLeave: function (args) {send("DmSecurityRoleFromAccountName");}});
+
+var FindEndOfHeader = Module.findExportByName("omadmapi.dll", "FindEndOfHeader")
+Interceptor.attach(FindEndOfHeader, {onLeave: function (args) {send("FindEndOfHeader");}});
+
+var FindHeaderValue = Module.findExportByName("omadmapi.dll", "FindHeaderValue")
+Interceptor.attach(FindHeaderValue, {onLeave: function (args) {send("FindHeaderValue");}});
+
+var FreeCommandLineOptions = Module.findExportByName("omadmapi.dll", "FreeCommandLineOptions")
+Interceptor.attach(FreeCommandLineOptions, {onLeave: function (args) {send("FreeCommandLineOptions");}});
+
+var GetStructFromRegistry = Module.findExportByName("omadmapi.dll", "GetStructFromRegistry")
+Interceptor.attach(GetStructFromRegistry, {onLeave: function (args) {send("GetStructFromRegistry");}});
+
+var HashCert = Module.findExportByName("omadmapi.dll", "HashCert")
+Interceptor.attach(HashCert, {onLeave: function (args) {send("HashCert");}});
+
+var HexStringToBase64String = Module.findExportByName("omadmapi.dll", "HexStringToBase64String")
+Interceptor.attach(HexStringToBase64String, {onLeave: function (args) {send("HexStringToBase64String");}});
+
+var MdmSendAlert = Module.findExportByName("omadmapi.dll", "MdmSendAlert")
+Interceptor.attach(MdmSendAlert, {onLeave: function (args) {send("MdmSendAlert");}});
+
+var OmaDmAbortSession = Module.findExportByName("omadmapi.dll", "OmaDmAbortSession")
+Interceptor.attach(OmaDmAbortSession, {onLeave: function (args) {send("OmaDmAbortSession");}});
+
+var OmaDmAbortSession_Impl = Module.findExportByName("omadmapi.dll", "OmaDmAbortSession_Impl")
+Interceptor.attach(OmaDmAbortSession_Impl, {onLeave: function (args) {send("OmaDmAbortSession_Impl");}});
+
+var OmaDmCalcTriggerDigest = Module.findExportByName("omadmapi.dll", "OmaDmCalcTriggerDigest")
+Interceptor.attach(OmaDmCalcTriggerDigest, {onLeave: function (args) {send("OmaDmCalcTriggerDigest");}});
+
+var OmaDmClearAcctInfo = Module.findExportByName("omadmapi.dll", "OmaDmClearAcctInfo")
+Interceptor.attach(OmaDmClearAcctInfo, {onLeave: function (args) {send("OmaDmClearAcctInfo");}});
+
+var OmaDmClearAcctInfoValues = Module.findExportByName("omadmapi.dll", "OmaDmClearAcctInfoValues")
+Interceptor.attach(OmaDmClearAcctInfoValues, {onLeave: function (args) {send("OmaDmClearAcctInfoValues");}});
+
+var OmaDmCloseSession = Module.findExportByName("omadmapi.dll", "OmaDmCloseSession")
+Interceptor.attach(OmaDmCloseSession, {onLeave: function (args) {send("OmaDmCloseSession");}});
+
+var OmaDmCloseSession_Impl = Module.findExportByName("omadmapi.dll", "OmaDmCloseSession_Impl")
+Interceptor.attach(OmaDmCloseSession_Impl, {onLeave: function (args) {send("OmaDmCloseSession_Impl");}});
+
+var OmaDmCreateInternalAcctID = Module.findExportByName("omadmapi.dll", "OmaDmCreateInternalAcctID")
+Interceptor.attach(OmaDmCreateInternalAcctID, {onLeave: function (args) {send("OmaDmCreateInternalAcctID");}});
+
+var OmaDmCreateSecurityAccount = Module.findExportByName("omadmapi.dll", "OmaDmCreateSecurityAccount")
+Interceptor.attach(OmaDmCreateSecurityAccount, {onLeave: function (args) {send("OmaDmCreateSecurityAccount");}});
+
+var OmaDmCreateSessionPolicy = Module.findExportByName("omadmapi.dll", "OmaDmCreateSessionPolicy")
+Interceptor.attach(OmaDmCreateSessionPolicy, {onLeave: function (args) {send("OmaDmCreateSessionPolicy");}});
+
+var OmaDmDeleteAcctInfo = Module.findExportByName("omadmapi.dll", "OmaDmDeleteAcctInfo")
+Interceptor.attach(OmaDmDeleteAcctInfo, {onLeave: function (args) {send("OmaDmDeleteAcctInfo");}});
+
+var OmaDmDeleteAcctInfoWaitForCompletion = Module.findExportByName("omadmapi.dll", "OmaDmDeleteAcctInfoWaitForCompletion")
+Interceptor.attach(OmaDmDeleteAcctInfoWaitForCompletion, {onLeave: function (args) {send("OmaDmDeleteAcctInfoWaitForCompletion");}});
+
+var OmaDmDeleteAcctInfo_Impl = Module.findExportByName("omadmapi.dll", "OmaDmDeleteAcctInfo_Impl")
+Interceptor.attach(OmaDmDeleteAcctInfo_Impl, {onLeave: function (args) {send("OmaDmDeleteAcctInfo_Impl");}});
+
+var OmaDmDeleteSecurityAccount = Module.findExportByName("omadmapi.dll", "OmaDmDeleteSecurityAccount")
+Interceptor.attach(OmaDmDeleteSecurityAccount, {onLeave: function (args) {send("OmaDmDeleteSecurityAccount");}});
+
+var OmaDmDeleteSessionPolicy = Module.findExportByName("omadmapi.dll", "OmaDmDeleteSessionPolicy")
+Interceptor.attach(OmaDmDeleteSessionPolicy, {onLeave: function (args) {send("OmaDmDeleteSessionPolicy");}});
+
+var OmaDmDeleteUserInfo = Module.findExportByName("omadmapi.dll", "OmaDmDeleteUserInfo")
+Interceptor.attach(OmaDmDeleteUserInfo, {onLeave: function (args) {send("OmaDmDeleteUserInfo");}});
+
+var OmaDmEnumerateAccounts = Module.findExportByName("omadmapi.dll", "OmaDmEnumerateAccounts")
+Interceptor.attach(OmaDmEnumerateAccounts, {onLeave: function (args) {send("OmaDmEnumerateAccounts");}});
+
+var OmaDmEnumerateInitiationInfo = Module.findExportByName("omadmapi.dll", "OmaDmEnumerateInitiationInfo")
+Interceptor.attach(OmaDmEnumerateInitiationInfo, {onLeave: function (args) {send("OmaDmEnumerateInitiationInfo");}});
+
+var OmaDmEnumerateSessions = Module.findExportByName("omadmapi.dll", "OmaDmEnumerateSessions")
+Interceptor.attach(OmaDmEnumerateSessions, {onLeave: function (args) {send("OmaDmEnumerateSessions");}});
+
+var OmaDmFindAppAuthIndex = Module.findExportByName("omadmapi.dll", "OmaDmFindAppAuthIndex")
+Interceptor.attach(OmaDmFindAppAuthIndex, {onLeave: function (args) {send("OmaDmFindAppAuthIndex");}});
+
+var OmaDmFreeAcctInfo = Module.findExportByName("omadmapi.dll", "OmaDmFreeAcctInfo")
+Interceptor.attach(OmaDmFreeAcctInfo, {onLeave: function (args) {send("OmaDmFreeAcctInfo");}});
+
+var OmaDmFreeAlertInfo = Module.findExportByName("omadmapi.dll", "OmaDmFreeAlertInfo")
+Interceptor.attach(OmaDmFreeAlertInfo, {onLeave: function (args) {send("OmaDmFreeAlertInfo");}});
+
+var OmaDmFreeInitiationInfo = Module.findExportByName("omadmapi.dll", "OmaDmFreeInitiationInfo")
+Interceptor.attach(OmaDmFreeInitiationInfo, {onLeave: function (args) {send("OmaDmFreeInitiationInfo");}});
+
+var OmaDmFreeUserInfo = Module.findExportByName("omadmapi.dll", "OmaDmFreeUserInfo")
+Interceptor.attach(OmaDmFreeUserInfo, {onLeave: function (args) {send("OmaDmFreeUserInfo");}});
+
+var OmaDmGetAcctIDFromAcctUID = Module.findExportByName("omadmapi.dll", "OmaDmGetAcctIDFromAcctUID")
+Interceptor.attach(OmaDmGetAcctIDFromAcctUID, {onLeave: function (args) {send("OmaDmGetAcctIDFromAcctUID");}});
+
+var OmaDmGetAcctInfo = Module.findExportByName("omadmapi.dll", "OmaDmGetAcctInfo")
+Interceptor.attach(OmaDmGetAcctInfo, {onLeave: function (args) {send("OmaDmGetAcctInfo");}});
+
+var OmaDmGetAcctInfoFromKey = Module.findExportByName("omadmapi.dll", "OmaDmGetAcctInfoFromKey")
+Interceptor.attach(OmaDmGetAcctInfoFromKey, {onLeave: function (args) {send("OmaDmGetAcctInfoFromKey");}});
+
+var OmaDmGetAcctMemberInfo = Module.findExportByName("omadmapi.dll", "OmaDmGetAcctMemberInfo")
+Interceptor.attach(OmaDmGetAcctMemberInfo, {onLeave: function (args) {send("OmaDmGetAcctMemberInfo");}});
+
+var OmaDmGetAllAcctInfo = Module.findExportByName("omadmapi.dll", "OmaDmGetAllAcctInfo")
+Interceptor.attach(OmaDmGetAllAcctInfo, {onLeave: function (args) {send("OmaDmGetAllAcctInfo");}});
+
+var OmaDmGetDefaultAcctUID = Module.findExportByName("omadmapi.dll", "OmaDmGetDefaultAcctUID")
+Interceptor.attach(OmaDmGetDefaultAcctUID, {onLeave: function (args) {send("OmaDmGetDefaultAcctUID");}});
+
+var OmaDmGetFirstMatchingAccountID = Module.findExportByName("omadmapi.dll", "OmaDmGetFirstMatchingAccountID")
+Interceptor.attach(OmaDmGetFirstMatchingAccountID, {onLeave: function (args) {send("OmaDmGetFirstMatchingAccountID");}});
+
+var OmaDmGetInitiationInfo = Module.findExportByName("omadmapi.dll", "OmaDmGetInitiationInfo")
+Interceptor.attach(OmaDmGetInitiationInfo, {onLeave: function (args) {send("OmaDmGetInitiationInfo");}});
+
+var OmaDmGetInternalAcctID = Module.findExportByName("omadmapi.dll", "OmaDmGetInternalAcctID")
+Interceptor.attach(OmaDmGetInternalAcctID, {onLeave: function (args) {send("OmaDmGetInternalAcctID");}});
+
+var OmaDmGetInternalAcctSID = Module.findExportByName("omadmapi.dll", "OmaDmGetInternalAcctSID")
+Interceptor.attach(OmaDmGetInternalAcctSID, {onLeave: function (args) {send("OmaDmGetInternalAcctSID");}});
+
+var OmaDmGetNextSessionIDToUse = Module.findExportByName("omadmapi.dll", "OmaDmGetNextSessionIDToUse")
+Interceptor.attach(OmaDmGetNextSessionIDToUse, {onLeave: function (args) {send("OmaDmGetNextSessionIDToUse");}});
+
+var OmaDmGetUserInfo = Module.findExportByName("omadmapi.dll", "OmaDmGetUserInfo")
+Interceptor.attach(OmaDmGetUserInfo, {onLeave: function (args) {send("OmaDmGetUserInfo");}});
+
+var OmaDmGetValueFromStruct = Module.findExportByName("omadmapi.dll", "OmaDmGetValueFromStruct")
+Interceptor.attach(OmaDmGetValueFromStruct, {onLeave: function (args) {send("OmaDmGetValueFromStruct");}});
+
+var OmaDmInitiateSession = Module.findExportByName("omadmapi.dll", "OmaDmInitiateSession")
+Interceptor.attach(OmaDmInitiateSession, {onLeave: function (args) {send("OmaDmInitiateSession");}});
+
+var OmaDmInitiateSessionAsDevice = Module.findExportByName("omadmapi.dll", "OmaDmInitiateSessionAsDevice")
+Interceptor.attach(OmaDmInitiateSessionAsDevice, {onLeave: function (args) {send("OmaDmInitiateSessionAsDevice");}});
+
+var OmaDmInitiateSessionAsUser = Module.findExportByName("omadmapi.dll", "OmaDmInitiateSessionAsUser")
+Interceptor.attach(OmaDmInitiateSessionAsUser, {onLeave: function (args) {send("OmaDmInitiateSessionAsUser");}});
+
+var OmaDmInitiateSessionEx = Module.findExportByName("omadmapi.dll", "OmaDmInitiateSessionEx")
+Interceptor.attach(OmaDmInitiateSessionEx, {onLeave: function (args) {send("OmaDmInitiateSessionEx");}});
+
+var OmaDmInitiateSessionFullSync = Module.findExportByName("omadmapi.dll", "OmaDmInitiateSessionFullSync")
+Interceptor.attach(OmaDmInitiateSessionFullSync, {onLeave: function (args) {send("OmaDmInitiateSessionFullSync");}});
+
+var OmaDmInitiateSessionWithSessionID = Module.findExportByName("omadmapi.dll", "OmaDmInitiateSessionWithSessionID")
+Interceptor.attach(OmaDmInitiateSessionWithSessionID, {onLeave: function (args) {send("OmaDmInitiateSessionWithSessionID");}});
+
+var OmaDmInitiateSession_Impl = Module.findExportByName("omadmapi.dll", "OmaDmInitiateSession_Impl")
+Interceptor.attach(OmaDmInitiateSession_Impl, {onLeave: function (args) {send("OmaDmInitiateSession_Impl");}});
+
+var OmaDmIsInformativeServerSessionActive = Module.findExportByName("omadmapi.dll", "OmaDmIsInformativeServerSessionActive")
+Interceptor.attach(OmaDmIsInformativeServerSessionActive, {onLeave: function (args) {send("OmaDmIsInformativeServerSessionActive");}});
+
+var OmaDmIsNodePresent = Module.findExportByName("omadmapi.dll", "OmaDmIsNodePresent")
+Interceptor.attach(OmaDmIsNodePresent, {onLeave: function (args) {send("OmaDmIsNodePresent");}});
+
+var OmaDmIsNodeValuePresent = Module.findExportByName("omadmapi.dll", "OmaDmIsNodeValuePresent")
+Interceptor.attach(OmaDmIsNodeValuePresent, {onLeave: function (args) {send("OmaDmIsNodeValuePresent");}});
+
+var OmaDmSaveAcctInfoToKey = Module.findExportByName("omadmapi.dll", "OmaDmSaveAcctInfoToKey")
+Interceptor.attach(OmaDmSaveAcctInfoToKey, {onLeave: function (args) {send("OmaDmSaveAcctInfoToKey");}});
+
+var OmaDmSendAlertNotification = Module.findExportByName("omadmapi.dll", "OmaDmSendAlertNotification")
+Interceptor.attach(OmaDmSendAlertNotification, {onLeave: function (args) {send("OmaDmSendAlertNotification");}});
+
+var OmaDmSendAlertNotification3 = Module.findExportByName("omadmapi.dll", "OmaDmSendAlertNotification3")
+Interceptor.attach(OmaDmSendAlertNotification3, {onLeave: function (args) {send("OmaDmSendAlertNotification3");}});
+
+var OmaDmSendAlertNotificationEx = Module.findExportByName("omadmapi.dll", "OmaDmSendAlertNotificationEx")
+Interceptor.attach(OmaDmSendAlertNotificationEx, {onLeave: function (args) {send("OmaDmSendAlertNotificationEx");}});
+
+var OmaDmSetAcctInfo = Module.findExportByName("omadmapi.dll", "OmaDmSetAcctInfo")
+Interceptor.attach(OmaDmSetAcctInfo, {onLeave: function (args) {send("OmaDmSetAcctInfo");}});
+
+var OmaDmSetAcctInfoAllowed_Impl = Module.findExportByName("omadmapi.dll", "OmaDmSetAcctInfoAllowed_Impl")
+Interceptor.attach(OmaDmSetAcctInfoAllowed_Impl, {onLeave: function (args) {send("OmaDmSetAcctInfoAllowed_Impl");}});
+
+var OmaDmSetAcctInfoEx = Module.findExportByName("omadmapi.dll", "OmaDmSetAcctInfoEx")
+Interceptor.attach(OmaDmSetAcctInfoEx, {onLeave: function (args) {send("OmaDmSetAcctInfoEx");}});
+
+var OmaDmSetAcctInfo_Impl = Module.findExportByName("omadmapi.dll", "OmaDmSetAcctInfo_Impl")
+Interceptor.attach(OmaDmSetAcctInfo_Impl, {onLeave: function (args) {send("OmaDmSetAcctInfo_Impl");}});
+
+var OmaDmSetInitiationInfo = Module.findExportByName("omadmapi.dll", "OmaDmSetInitiationInfo")
+Interceptor.attach(OmaDmSetInitiationInfo, {onLeave: function (args) {send("OmaDmSetInitiationInfo");}});
+
+var OmaDmSetNodePresence = Module.findExportByName("omadmapi.dll", "OmaDmSetNodePresence")
+Interceptor.attach(OmaDmSetNodePresence, {onLeave: function (args) {send("OmaDmSetNodePresence");}});
+
+var OmaDmSetNodeValuePresence = Module.findExportByName("omadmapi.dll", "OmaDmSetNodeValuePresence")
+Interceptor.attach(OmaDmSetNodeValuePresence, {onLeave: function (args) {send("OmaDmSetNodeValuePresence");}});
+
+var OmaDmSetUserInfo = Module.findExportByName("omadmapi.dll", "OmaDmSetUserInfo")
+Interceptor.attach(OmaDmSetUserInfo, {onLeave: function (args) {send("OmaDmSetUserInfo");}});
+
+var OmaDmSetUserInfoNodeValuePresence = Module.findExportByName("omadmapi.dll", "OmaDmSetUserInfoNodeValuePresence")
+Interceptor.attach(OmaDmSetUserInfoNodeValuePresence, {onLeave: function (args) {send("OmaDmSetUserInfoNodeValuePresence");}});
+
+var OmaDmSetUserInfoValueInStruct = Module.findExportByName("omadmapi.dll", "OmaDmSetUserInfoValueInStruct")
+Interceptor.attach(OmaDmSetUserInfoValueInStruct, {onLeave: function (args) {send("OmaDmSetUserInfoValueInStruct");}});
+
+var OmaDmSetValueInStruct = Module.findExportByName("omadmapi.dll", "OmaDmSetValueInStruct")
+Interceptor.attach(OmaDmSetValueInStruct, {onLeave: function (args) {send("OmaDmSetValueInStruct");}});
+
+var OmaDmUnsetNodePresence = Module.findExportByName("omadmapi.dll", "OmaDmUnsetNodePresence")
+Interceptor.attach(OmaDmUnsetNodePresence, {onLeave: function (args) {send("OmaDmUnsetNodePresence");}});
+
+var OmaDmValidateSslCertCriteria = Module.findExportByName("omadmapi.dll", "OmaDmValidateSslCertCriteria")
+Interceptor.attach(OmaDmValidateSslCertCriteria, {onLeave: function (args) {send("OmaDmValidateSslCertCriteria");}});
+
+var OmaDmWaitForAllSessionsCompletion = Module.findExportByName("omadmapi.dll", "OmaDmWaitForAllSessionsCompletion")
+Interceptor.attach(OmaDmWaitForAllSessionsCompletion, {onLeave: function (args) {send("OmaDmWaitForAllSessionsCompletion");}});
+
+var ProcessCommandLine = Module.findExportByName("omadmapi.dll", "ProcessCommandLine")
+Interceptor.attach(ProcessCommandLine, {onLeave: function (args) {send("ProcessCommandLine");}});
+
+var ProcessCommandLineOption = Module.findExportByName("omadmapi.dll", "ProcessCommandLineOption")
+Interceptor.attach(ProcessCommandLineOption, {onLeave: function (args) {send("ProcessCommandLineOption");}});
+
+var ReadBSTRFromStream = Module.findExportByName("omadmapi.dll", "ReadBSTRFromStream")
+Interceptor.attach(ReadBSTRFromStream, {onLeave: function (args) {send("ReadBSTRFromStream");}});
+
+var ReadStringFromStream = Module.findExportByName("omadmapi.dll", "ReadStringFromStream")
+Interceptor.attach(ReadStringFromStream, {onLeave: function (args) {send("ReadStringFromStream");}});
+
+var ReadVariantFromStream = Module.findExportByName("omadmapi.dll", "ReadVariantFromStream")
+Interceptor.attach(ReadVariantFromStream, {onLeave: function (args) {send("ReadVariantFromStream");}});
+
+var ReleaseOmaDmClientMutex = Module.findExportByName("omadmapi.dll", "ReleaseOmaDmClientMutex")
+Interceptor.attach(ReleaseOmaDmClientMutex, {onLeave: function (args) {send("ReleaseOmaDmClientMutex");}});
+
+var SaveStructInRegistry = Module.findExportByName("omadmapi.dll", "SaveStructInRegistry")
+Interceptor.attach(SaveStructInRegistry, {onLeave: function (args) {send("SaveStructInRegistry");}});
+
+var SyncDmGroupMembershipToPolicy = Module.findExportByName("omadmapi.dll", "SyncDmGroupMembershipToPolicy")
+Interceptor.attach(SyncDmGroupMembershipToPolicy, {onLeave: function (args) {send("SyncDmGroupMembershipToPolicy");}});
+
+var Trim = Module.findExportByName("omadmapi.dll", "Trim")
+Interceptor.attach(Trim, {onLeave: function (args) {send("Trim");}});
+
+var TruncateTextToLength = Module.findExportByName("omadmapi.dll", "TruncateTextToLength")
+Interceptor.attach(TruncateTextToLength, {onLeave: function (args) {send("TruncateTextToLength");}});
+
+var URIEncodeSegment = Module.findExportByName("omadmapi.dll", "URIEncodeSegment")
+Interceptor.attach(URIEncodeSegment, {onLeave: function (args) {send("URIEncodeSegment");}});
+
+var ValidateStringAsFloat = Module.findExportByName("omadmapi.dll", "ValidateStringAsFloat")
+Interceptor.attach(ValidateStringAsFloat, {onLeave: function (args) {send("ValidateStringAsFloat");}});
+
+var WriteBSTRToStream = Module.findExportByName("omadmapi.dll", "WriteBSTRToStream")
+Interceptor.attach(WriteBSTRToStream, {onLeave: function (args) {send("WriteBSTRToStream");}});
+
+var WriteStringToStream = Module.findExportByName("omadmapi.dll", "WriteStringToStream")
+Interceptor.attach(WriteStringToStream, {onLeave: function (args) {send("WriteStringToStream");}});
+
+var WriteVariantToStream = Module.findExportByName("omadmapi.dll", "WriteVariantToStream")
+Interceptor.attach(WriteVariantToStream, {onLeave: function (args) {send("WriteVariantToStream");}});
+

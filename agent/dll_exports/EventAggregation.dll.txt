@@ -1,0 +1,96 @@
+var BriAllocateRpcBuffer = Module.findExportByName("EventAggregation.dll", "BriAllocateRpcBuffer")
+Interceptor.attach(BriAllocateRpcBuffer, {onLeave: function (args) {send("BriAllocateRpcBuffer");}});
+
+var BriCleanup = Module.findExportByName("EventAggregation.dll", "BriCleanup")
+Interceptor.attach(BriCleanup, {onLeave: function (args) {send("BriCleanup");}});
+
+var BriCreateBrokeredEvent = Module.findExportByName("EventAggregation.dll", "BriCreateBrokeredEvent")
+Interceptor.attach(BriCreateBrokeredEvent, {onLeave: function (args) {send("BriCreateBrokeredEvent");}});
+
+var BriCreateBrokeredEventEx = Module.findExportByName("EventAggregation.dll", "BriCreateBrokeredEventEx")
+Interceptor.attach(BriCreateBrokeredEventEx, {onLeave: function (args) {send("BriCreateBrokeredEventEx");}});
+
+var BriDeleteBrokeredEvent = Module.findExportByName("EventAggregation.dll", "BriDeleteBrokeredEvent")
+Interceptor.attach(BriDeleteBrokeredEvent, {onLeave: function (args) {send("BriDeleteBrokeredEvent");}});
+
+var BriFreeRpcBuffer = Module.findExportByName("EventAggregation.dll", "BriFreeRpcBuffer")
+Interceptor.attach(BriFreeRpcBuffer, {onLeave: function (args) {send("BriFreeRpcBuffer");}});
+
+var BriGetBrokerAvailabilityChangeStamp = Module.findExportByName("EventAggregation.dll", "BriGetBrokerAvailabilityChangeStamp")
+Interceptor.attach(BriGetBrokerAvailabilityChangeStamp, {onLeave: function (args) {send("BriGetBrokerAvailabilityChangeStamp");}});
+
+var BriIsBrokerRegistered = Module.findExportByName("EventAggregation.dll", "BriIsBrokerRegistered")
+Interceptor.attach(BriIsBrokerRegistered, {onLeave: function (args) {send("BriIsBrokerRegistered");}});
+
+var BriRegisterToBrokerAvailability = Module.findExportByName("EventAggregation.dll", "BriRegisterToBrokerAvailability")
+Interceptor.attach(BriRegisterToBrokerAvailability, {onLeave: function (args) {send("BriRegisterToBrokerAvailability");}});
+
+var BriResolveBrokerIdByEventId = Module.findExportByName("EventAggregation.dll", "BriResolveBrokerIdByEventId")
+Interceptor.attach(BriResolveBrokerIdByEventId, {onLeave: function (args) {send("BriResolveBrokerIdByEventId");}});
+
+var BriUnregisterFromBrokerAvailability = Module.findExportByName("EventAggregation.dll", "BriUnregisterFromBrokerAvailability")
+Interceptor.attach(BriUnregisterFromBrokerAvailability, {onLeave: function (args) {send("BriUnregisterFromBrokerAvailability");}});
+
+var EACreateAggregateEvent = Module.findExportByName("EventAggregation.dll", "EACreateAggregateEvent")
+Interceptor.attach(EACreateAggregateEvent, {onLeave: function (args) {send("EACreateAggregateEvent");}});
+
+var EADeleteAggregateEvent = Module.findExportByName("EventAggregation.dll", "EADeleteAggregateEvent")
+Interceptor.attach(EADeleteAggregateEvent, {onLeave: function (args) {send("EADeleteAggregateEvent");}});
+
+var EAEnumerateAggregateEvents = Module.findExportByName("EventAggregation.dll", "EAEnumerateAggregateEvents")
+Interceptor.attach(EAEnumerateAggregateEvents, {onLeave: function (args) {send("EAEnumerateAggregateEvents");}});
+
+var EAQueryAggregateEventData = Module.findExportByName("EventAggregation.dll", "EAQueryAggregateEventData")
+Interceptor.attach(EAQueryAggregateEventData, {onLeave: function (args) {send("EAQueryAggregateEventData");}});
+
+var EaCreateAggregatedEvent = Module.findExportByName("EventAggregation.dll", "EaCreateAggregatedEvent")
+Interceptor.attach(EaCreateAggregatedEvent, {onLeave: function (args) {send("EaCreateAggregatedEvent");}});
+
+var EaCreateAggregation = Module.findExportByName("EventAggregation.dll", "EaCreateAggregation")
+Interceptor.attach(EaCreateAggregation, {onLeave: function (args) {send("EaCreateAggregation");}});
+
+var EaDecodeBrokeredEvent = Module.findExportByName("EventAggregation.dll", "EaDecodeBrokeredEvent")
+Interceptor.attach(EaDecodeBrokeredEvent, {onLeave: function (args) {send("EaDecodeBrokeredEvent");}});
+
+var EaDeleteAggregatedEvent = Module.findExportByName("EventAggregation.dll", "EaDeleteAggregatedEvent")
+Interceptor.attach(EaDeleteAggregatedEvent, {onLeave: function (args) {send("EaDeleteAggregatedEvent");}});
+
+var EaDeleteAggregatedEventParameters = Module.findExportByName("EventAggregation.dll", "EaDeleteAggregatedEventParameters")
+Interceptor.attach(EaDeleteAggregatedEventParameters, {onLeave: function (args) {send("EaDeleteAggregatedEventParameters");}});
+
+var EaDeleteAggregation = Module.findExportByName("EventAggregation.dll", "EaDeleteAggregation")
+Interceptor.attach(EaDeleteAggregation, {onLeave: function (args) {send("EaDeleteAggregation");}});
+
+var EaDisableAggregatedEvent = Module.findExportByName("EventAggregation.dll", "EaDisableAggregatedEvent")
+Interceptor.attach(EaDisableAggregatedEvent, {onLeave: function (args) {send("EaDisableAggregatedEvent");}});
+
+var EaEnableAggregatedEvent = Module.findExportByName("EventAggregation.dll", "EaEnableAggregatedEvent")
+Interceptor.attach(EaEnableAggregatedEvent, {onLeave: function (args) {send("EaEnableAggregatedEvent");}});
+
+var EaEncodeBrokeredEvent = Module.findExportByName("EventAggregation.dll", "EaEncodeBrokeredEvent")
+Interceptor.attach(EaEncodeBrokeredEvent, {onLeave: function (args) {send("EaEncodeBrokeredEvent");}});
+
+var EaFreeAggregatedEventParameters = Module.findExportByName("EventAggregation.dll", "EaFreeAggregatedEventParameters")
+Interceptor.attach(EaFreeAggregatedEventParameters, {onLeave: function (args) {send("EaFreeAggregatedEventParameters");}});
+
+var EaFreeBuffer = Module.findExportByName("EventAggregation.dll", "EaFreeBuffer")
+Interceptor.attach(EaFreeBuffer, {onLeave: function (args) {send("EaFreeBuffer");}});
+
+var EaGetAggregation = Module.findExportByName("EventAggregation.dll", "EaGetAggregation")
+Interceptor.attach(EaGetAggregation, {onLeave: function (args) {send("EaGetAggregation");}});
+
+var EaQueryAggregateEventConditionState = Module.findExportByName("EventAggregation.dll", "EaQueryAggregateEventConditionState")
+Interceptor.attach(EaQueryAggregateEventConditionState, {onLeave: function (args) {send("EaQueryAggregateEventConditionState");}});
+
+var EaQueryAggregatedEvent = Module.findExportByName("EventAggregation.dll", "EaQueryAggregatedEvent")
+Interceptor.attach(EaQueryAggregatedEvent, {onLeave: function (args) {send("EaQueryAggregatedEvent");}});
+
+var EaQueryAggregatedEventParameters = Module.findExportByName("EventAggregation.dll", "EaQueryAggregatedEventParameters")
+Interceptor.attach(EaQueryAggregatedEventParameters, {onLeave: function (args) {send("EaQueryAggregatedEventParameters");}});
+
+var EaSignalAggregatedEvent = Module.findExportByName("EventAggregation.dll", "EaSignalAggregatedEvent")
+Interceptor.attach(EaSignalAggregatedEvent, {onLeave: function (args) {send("EaSignalAggregatedEvent");}});
+
+var EaStoreAggregatedEventParameters = Module.findExportByName("EventAggregation.dll", "EaStoreAggregatedEventParameters")
+Interceptor.attach(EaStoreAggregatedEventParameters, {onLeave: function (args) {send("EaStoreAggregatedEventParameters");}});
+

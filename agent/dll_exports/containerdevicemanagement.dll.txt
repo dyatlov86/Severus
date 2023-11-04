@@ -1,0 +1,6 @@
+var RegisterComputeSystem = Module.findExportByName("containerdevicemanagement.dll", "RegisterComputeSystem")
+Interceptor.attach(RegisterComputeSystem, {onLeave: function (args) {send("RegisterComputeSystem");}});
+
+var UnregisterComputeSystem = Module.findExportByName("containerdevicemanagement.dll", "UnregisterComputeSystem")
+Interceptor.attach(UnregisterComputeSystem, {onLeave: function (args) {send("UnregisterComputeSystem");}});
+

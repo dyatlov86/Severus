@@ -1,0 +1,3 @@
+var ClassInstall32 = Module.findExportByName("mdminst.dll", "ClassInstall32")
+Interceptor.attach(ClassInstall32, {onLeave: function (args) {send("ClassInstall32");}});
+

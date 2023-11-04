@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("dskquota.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("dskquota.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ProcessGroupPolicy = Module.findExportByName("dskquota.dll", "ProcessGroupPolicy")
+Interceptor.attach(ProcessGroupPolicy, {onLeave: function (args) {send("ProcessGroupPolicy");}});
+

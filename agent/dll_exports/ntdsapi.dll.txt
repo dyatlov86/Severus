@@ -1,0 +1,393 @@
+var DsAddCloneDCW = Module.findExportByName("ntdsapi.dll", "DsAddCloneDCW")
+Interceptor.attach(DsAddCloneDCW, {onLeave: function (args) {send("DsAddCloneDCW");}});
+
+var DsAddSidHistoryA = Module.findExportByName("ntdsapi.dll", "DsAddSidHistoryA")
+Interceptor.attach(DsAddSidHistoryA, {onLeave: function (args) {send("DsAddSidHistoryA");}});
+
+var DsAddSidHistoryW = Module.findExportByName("ntdsapi.dll", "DsAddSidHistoryW")
+Interceptor.attach(DsAddSidHistoryW, {onLeave: function (args) {send("DsAddSidHistoryW");}});
+
+var DsBindA = Module.findExportByName("ntdsapi.dll", "DsBindA")
+Interceptor.attach(DsBindA, {onLeave: function (args) {send("DsBindA");}});
+
+var DsBindByInstanceA = Module.findExportByName("ntdsapi.dll", "DsBindByInstanceA")
+Interceptor.attach(DsBindByInstanceA, {onLeave: function (args) {send("DsBindByInstanceA");}});
+
+var DsBindByInstanceW = Module.findExportByName("ntdsapi.dll", "DsBindByInstanceW")
+Interceptor.attach(DsBindByInstanceW, {onLeave: function (args) {send("DsBindByInstanceW");}});
+
+var DsBindToISTGA = Module.findExportByName("ntdsapi.dll", "DsBindToISTGA")
+Interceptor.attach(DsBindToISTGA, {onLeave: function (args) {send("DsBindToISTGA");}});
+
+var DsBindToISTGW = Module.findExportByName("ntdsapi.dll", "DsBindToISTGW")
+Interceptor.attach(DsBindToISTGW, {onLeave: function (args) {send("DsBindToISTGW");}});
+
+var DsBindW = Module.findExportByName("ntdsapi.dll", "DsBindW")
+Interceptor.attach(DsBindW, {onLeave: function (args) {send("DsBindW");}});
+
+var DsBindWithCredA = Module.findExportByName("ntdsapi.dll", "DsBindWithCredA")
+Interceptor.attach(DsBindWithCredA, {onLeave: function (args) {send("DsBindWithCredA");}});
+
+var DsBindWithCredW = Module.findExportByName("ntdsapi.dll", "DsBindWithCredW")
+Interceptor.attach(DsBindWithCredW, {onLeave: function (args) {send("DsBindWithCredW");}});
+
+var DsBindWithSpnA = Module.findExportByName("ntdsapi.dll", "DsBindWithSpnA")
+Interceptor.attach(DsBindWithSpnA, {onLeave: function (args) {send("DsBindWithSpnA");}});
+
+var DsBindWithSpnExA = Module.findExportByName("ntdsapi.dll", "DsBindWithSpnExA")
+Interceptor.attach(DsBindWithSpnExA, {onLeave: function (args) {send("DsBindWithSpnExA");}});
+
+var DsBindWithSpnExW = Module.findExportByName("ntdsapi.dll", "DsBindWithSpnExW")
+Interceptor.attach(DsBindWithSpnExW, {onLeave: function (args) {send("DsBindWithSpnExW");}});
+
+var DsBindWithSpnExWWorker = Module.findExportByName("ntdsapi.dll", "DsBindWithSpnExWWorker")
+Interceptor.attach(DsBindWithSpnExWWorker, {onLeave: function (args) {send("DsBindWithSpnExWWorker");}});
+
+var DsBindWithSpnW = Module.findExportByName("ntdsapi.dll", "DsBindWithSpnW")
+Interceptor.attach(DsBindWithSpnW, {onLeave: function (args) {send("DsBindWithSpnW");}});
+
+var DsBindingSetTimeout = Module.findExportByName("ntdsapi.dll", "DsBindingSetTimeout")
+Interceptor.attach(DsBindingSetTimeout, {onLeave: function (args) {send("DsBindingSetTimeout");}});
+
+var DsClientMakeSpnForTargetServerA = Module.findExportByName("ntdsapi.dll", "DsClientMakeSpnForTargetServerA")
+Interceptor.attach(DsClientMakeSpnForTargetServerA, {onLeave: function (args) {send("DsClientMakeSpnForTargetServerA");}});
+
+var DsClientMakeSpnForTargetServerW = Module.findExportByName("ntdsapi.dll", "DsClientMakeSpnForTargetServerW")
+Interceptor.attach(DsClientMakeSpnForTargetServerW, {onLeave: function (args) {send("DsClientMakeSpnForTargetServerW");}});
+
+var DsCrackNamesA = Module.findExportByName("ntdsapi.dll", "DsCrackNamesA")
+Interceptor.attach(DsCrackNamesA, {onLeave: function (args) {send("DsCrackNamesA");}});
+
+var DsCrackNamesW = Module.findExportByName("ntdsapi.dll", "DsCrackNamesW")
+Interceptor.attach(DsCrackNamesW, {onLeave: function (args) {send("DsCrackNamesW");}});
+
+var DsCrackNamesWWorker = Module.findExportByName("ntdsapi.dll", "DsCrackNamesWWorker")
+Interceptor.attach(DsCrackNamesWWorker, {onLeave: function (args) {send("DsCrackNamesWWorker");}});
+
+var DsCrackSpn2A = Module.findExportByName("ntdsapi.dll", "DsCrackSpn2A")
+Interceptor.attach(DsCrackSpn2A, {onLeave: function (args) {send("DsCrackSpn2A");}});
+
+var DsCrackSpn2W = Module.findExportByName("ntdsapi.dll", "DsCrackSpn2W")
+Interceptor.attach(DsCrackSpn2W, {onLeave: function (args) {send("DsCrackSpn2W");}});
+
+var DsCrackSpn3W = Module.findExportByName("ntdsapi.dll", "DsCrackSpn3W")
+Interceptor.attach(DsCrackSpn3W, {onLeave: function (args) {send("DsCrackSpn3W");}});
+
+var DsCrackSpn4W = Module.findExportByName("ntdsapi.dll", "DsCrackSpn4W")
+Interceptor.attach(DsCrackSpn4W, {onLeave: function (args) {send("DsCrackSpn4W");}});
+
+var DsCrackSpnA = Module.findExportByName("ntdsapi.dll", "DsCrackSpnA")
+Interceptor.attach(DsCrackSpnA, {onLeave: function (args) {send("DsCrackSpnA");}});
+
+var DsCrackSpnW = Module.findExportByName("ntdsapi.dll", "DsCrackSpnW")
+Interceptor.attach(DsCrackSpnW, {onLeave: function (args) {send("DsCrackSpnW");}});
+
+var DsCrackUnquotedMangledRdnA = Module.findExportByName("ntdsapi.dll", "DsCrackUnquotedMangledRdnA")
+Interceptor.attach(DsCrackUnquotedMangledRdnA, {onLeave: function (args) {send("DsCrackUnquotedMangledRdnA");}});
+
+var DsCrackUnquotedMangledRdnW = Module.findExportByName("ntdsapi.dll", "DsCrackUnquotedMangledRdnW")
+Interceptor.attach(DsCrackUnquotedMangledRdnW, {onLeave: function (args) {send("DsCrackUnquotedMangledRdnW");}});
+
+var DsFinishDemotionW = Module.findExportByName("ntdsapi.dll", "DsFinishDemotionW")
+Interceptor.attach(DsFinishDemotionW, {onLeave: function (args) {send("DsFinishDemotionW");}});
+
+var DsFreeCloneDcResult = Module.findExportByName("ntdsapi.dll", "DsFreeCloneDcResult")
+Interceptor.attach(DsFreeCloneDcResult, {onLeave: function (args) {send("DsFreeCloneDcResult");}});
+
+var DsFreeDomainControllerInfoA = Module.findExportByName("ntdsapi.dll", "DsFreeDomainControllerInfoA")
+Interceptor.attach(DsFreeDomainControllerInfoA, {onLeave: function (args) {send("DsFreeDomainControllerInfoA");}});
+
+var DsFreeDomainControllerInfoW = Module.findExportByName("ntdsapi.dll", "DsFreeDomainControllerInfoW")
+Interceptor.attach(DsFreeDomainControllerInfoW, {onLeave: function (args) {send("DsFreeDomainControllerInfoW");}});
+
+var DsFreeDomainControllerInfoWWorker = Module.findExportByName("ntdsapi.dll", "DsFreeDomainControllerInfoWWorker")
+Interceptor.attach(DsFreeDomainControllerInfoWWorker, {onLeave: function (args) {send("DsFreeDomainControllerInfoWWorker");}});
+
+var DsFreeNameResultA = Module.findExportByName("ntdsapi.dll", "DsFreeNameResultA")
+Interceptor.attach(DsFreeNameResultA, {onLeave: function (args) {send("DsFreeNameResultA");}});
+
+var DsFreeNameResultW = Module.findExportByName("ntdsapi.dll", "DsFreeNameResultW")
+Interceptor.attach(DsFreeNameResultW, {onLeave: function (args) {send("DsFreeNameResultW");}});
+
+var DsFreeNameResultWWorker = Module.findExportByName("ntdsapi.dll", "DsFreeNameResultWWorker")
+Interceptor.attach(DsFreeNameResultWWorker, {onLeave: function (args) {send("DsFreeNameResultWWorker");}});
+
+var DsFreeNgcKey = Module.findExportByName("ntdsapi.dll", "DsFreeNgcKey")
+Interceptor.attach(DsFreeNgcKey, {onLeave: function (args) {send("DsFreeNgcKey");}});
+
+var DsFreeNgcKeyWorker = Module.findExportByName("ntdsapi.dll", "DsFreeNgcKeyWorker")
+Interceptor.attach(DsFreeNgcKeyWorker, {onLeave: function (args) {send("DsFreeNgcKeyWorker");}});
+
+var DsFreePasswordCredentials = Module.findExportByName("ntdsapi.dll", "DsFreePasswordCredentials")
+Interceptor.attach(DsFreePasswordCredentials, {onLeave: function (args) {send("DsFreePasswordCredentials");}});
+
+var DsFreePasswordCredentialsWorker = Module.findExportByName("ntdsapi.dll", "DsFreePasswordCredentialsWorker")
+Interceptor.attach(DsFreePasswordCredentialsWorker, {onLeave: function (args) {send("DsFreePasswordCredentialsWorker");}});
+
+var DsFreeSchemaGuidMapA = Module.findExportByName("ntdsapi.dll", "DsFreeSchemaGuidMapA")
+Interceptor.attach(DsFreeSchemaGuidMapA, {onLeave: function (args) {send("DsFreeSchemaGuidMapA");}});
+
+var DsFreeSchemaGuidMapW = Module.findExportByName("ntdsapi.dll", "DsFreeSchemaGuidMapW")
+Interceptor.attach(DsFreeSchemaGuidMapW, {onLeave: function (args) {send("DsFreeSchemaGuidMapW");}});
+
+var DsFreeSpnArrayA = Module.findExportByName("ntdsapi.dll", "DsFreeSpnArrayA")
+Interceptor.attach(DsFreeSpnArrayA, {onLeave: function (args) {send("DsFreeSpnArrayA");}});
+
+var DsFreeSpnArrayW = Module.findExportByName("ntdsapi.dll", "DsFreeSpnArrayW")
+Interceptor.attach(DsFreeSpnArrayW, {onLeave: function (args) {send("DsFreeSpnArrayW");}});
+
+var DsGetBindAddrW = Module.findExportByName("ntdsapi.dll", "DsGetBindAddrW")
+Interceptor.attach(DsGetBindAddrW, {onLeave: function (args) {send("DsGetBindAddrW");}});
+
+var DsGetBindAnnotW = Module.findExportByName("ntdsapi.dll", "DsGetBindAnnotW")
+Interceptor.attach(DsGetBindAnnotW, {onLeave: function (args) {send("DsGetBindAnnotW");}});
+
+var DsGetBindInstGuid = Module.findExportByName("ntdsapi.dll", "DsGetBindInstGuid")
+Interceptor.attach(DsGetBindInstGuid, {onLeave: function (args) {send("DsGetBindInstGuid");}});
+
+var DsGetDomainControllerInfoA = Module.findExportByName("ntdsapi.dll", "DsGetDomainControllerInfoA")
+Interceptor.attach(DsGetDomainControllerInfoA, {onLeave: function (args) {send("DsGetDomainControllerInfoA");}});
+
+var DsGetDomainControllerInfoW = Module.findExportByName("ntdsapi.dll", "DsGetDomainControllerInfoW")
+Interceptor.attach(DsGetDomainControllerInfoW, {onLeave: function (args) {send("DsGetDomainControllerInfoW");}});
+
+var DsGetDomainControllerInfoWWorker = Module.findExportByName("ntdsapi.dll", "DsGetDomainControllerInfoWWorker")
+Interceptor.attach(DsGetDomainControllerInfoWWorker, {onLeave: function (args) {send("DsGetDomainControllerInfoWWorker");}});
+
+var DsGetRdnW = Module.findExportByName("ntdsapi.dll", "DsGetRdnW")
+Interceptor.attach(DsGetRdnW, {onLeave: function (args) {send("DsGetRdnW");}});
+
+var DsGetSpnA = Module.findExportByName("ntdsapi.dll", "DsGetSpnA")
+Interceptor.attach(DsGetSpnA, {onLeave: function (args) {send("DsGetSpnA");}});
+
+var DsGetSpnW = Module.findExportByName("ntdsapi.dll", "DsGetSpnW")
+Interceptor.attach(DsGetSpnW, {onLeave: function (args) {send("DsGetSpnW");}});
+
+var DsInheritSecurityIdentityA = Module.findExportByName("ntdsapi.dll", "DsInheritSecurityIdentityA")
+Interceptor.attach(DsInheritSecurityIdentityA, {onLeave: function (args) {send("DsInheritSecurityIdentityA");}});
+
+var DsInheritSecurityIdentityW = Module.findExportByName("ntdsapi.dll", "DsInheritSecurityIdentityW")
+Interceptor.attach(DsInheritSecurityIdentityW, {onLeave: function (args) {send("DsInheritSecurityIdentityW");}});
+
+var DsInitDemotionW = Module.findExportByName("ntdsapi.dll", "DsInitDemotionW")
+Interceptor.attach(DsInitDemotionW, {onLeave: function (args) {send("DsInitDemotionW");}});
+
+var DsIsMangledDnA = Module.findExportByName("ntdsapi.dll", "DsIsMangledDnA")
+Interceptor.attach(DsIsMangledDnA, {onLeave: function (args) {send("DsIsMangledDnA");}});
+
+var DsIsMangledDnW = Module.findExportByName("ntdsapi.dll", "DsIsMangledDnW")
+Interceptor.attach(DsIsMangledDnW, {onLeave: function (args) {send("DsIsMangledDnW");}});
+
+var DsIsMangledRdnValueA = Module.findExportByName("ntdsapi.dll", "DsIsMangledRdnValueA")
+Interceptor.attach(DsIsMangledRdnValueA, {onLeave: function (args) {send("DsIsMangledRdnValueA");}});
+
+var DsIsMangledRdnValueW = Module.findExportByName("ntdsapi.dll", "DsIsMangledRdnValueW")
+Interceptor.attach(DsIsMangledRdnValueW, {onLeave: function (args) {send("DsIsMangledRdnValueW");}});
+
+var DsListDomainsInSiteA = Module.findExportByName("ntdsapi.dll", "DsListDomainsInSiteA")
+Interceptor.attach(DsListDomainsInSiteA, {onLeave: function (args) {send("DsListDomainsInSiteA");}});
+
+var DsListDomainsInSiteW = Module.findExportByName("ntdsapi.dll", "DsListDomainsInSiteW")
+Interceptor.attach(DsListDomainsInSiteW, {onLeave: function (args) {send("DsListDomainsInSiteW");}});
+
+var DsListInfoForServerA = Module.findExportByName("ntdsapi.dll", "DsListInfoForServerA")
+Interceptor.attach(DsListInfoForServerA, {onLeave: function (args) {send("DsListInfoForServerA");}});
+
+var DsListInfoForServerW = Module.findExportByName("ntdsapi.dll", "DsListInfoForServerW")
+Interceptor.attach(DsListInfoForServerW, {onLeave: function (args) {send("DsListInfoForServerW");}});
+
+var DsListRolesA = Module.findExportByName("ntdsapi.dll", "DsListRolesA")
+Interceptor.attach(DsListRolesA, {onLeave: function (args) {send("DsListRolesA");}});
+
+var DsListRolesW = Module.findExportByName("ntdsapi.dll", "DsListRolesW")
+Interceptor.attach(DsListRolesW, {onLeave: function (args) {send("DsListRolesW");}});
+
+var DsListServersForDomainInSiteA = Module.findExportByName("ntdsapi.dll", "DsListServersForDomainInSiteA")
+Interceptor.attach(DsListServersForDomainInSiteA, {onLeave: function (args) {send("DsListServersForDomainInSiteA");}});
+
+var DsListServersForDomainInSiteW = Module.findExportByName("ntdsapi.dll", "DsListServersForDomainInSiteW")
+Interceptor.attach(DsListServersForDomainInSiteW, {onLeave: function (args) {send("DsListServersForDomainInSiteW");}});
+
+var DsListServersInSiteA = Module.findExportByName("ntdsapi.dll", "DsListServersInSiteA")
+Interceptor.attach(DsListServersInSiteA, {onLeave: function (args) {send("DsListServersInSiteA");}});
+
+var DsListServersInSiteW = Module.findExportByName("ntdsapi.dll", "DsListServersInSiteW")
+Interceptor.attach(DsListServersInSiteW, {onLeave: function (args) {send("DsListServersInSiteW");}});
+
+var DsListSitesA = Module.findExportByName("ntdsapi.dll", "DsListSitesA")
+Interceptor.attach(DsListSitesA, {onLeave: function (args) {send("DsListSitesA");}});
+
+var DsListSitesW = Module.findExportByName("ntdsapi.dll", "DsListSitesW")
+Interceptor.attach(DsListSitesW, {onLeave: function (args) {send("DsListSitesW");}});
+
+var DsLogEntry = Module.findExportByName("ntdsapi.dll", "DsLogEntry")
+Interceptor.attach(DsLogEntry, {onLeave: function (args) {send("DsLogEntry");}});
+
+var DsMakePasswordCredentialsA = Module.findExportByName("ntdsapi.dll", "DsMakePasswordCredentialsA")
+Interceptor.attach(DsMakePasswordCredentialsA, {onLeave: function (args) {send("DsMakePasswordCredentialsA");}});
+
+var DsMakePasswordCredentialsW = Module.findExportByName("ntdsapi.dll", "DsMakePasswordCredentialsW")
+Interceptor.attach(DsMakePasswordCredentialsW, {onLeave: function (args) {send("DsMakePasswordCredentialsW");}});
+
+var DsMakePasswordCredentialsWWorker = Module.findExportByName("ntdsapi.dll", "DsMakePasswordCredentialsWWorker")
+Interceptor.attach(DsMakePasswordCredentialsWWorker, {onLeave: function (args) {send("DsMakePasswordCredentialsWWorker");}});
+
+var DsMakeSpnA = Module.findExportByName("ntdsapi.dll", "DsMakeSpnA")
+Interceptor.attach(DsMakeSpnA, {onLeave: function (args) {send("DsMakeSpnA");}});
+
+var DsMakeSpnW = Module.findExportByName("ntdsapi.dll", "DsMakeSpnW")
+Interceptor.attach(DsMakeSpnW, {onLeave: function (args) {send("DsMakeSpnW");}});
+
+var DsMapSchemaGuidsA = Module.findExportByName("ntdsapi.dll", "DsMapSchemaGuidsA")
+Interceptor.attach(DsMapSchemaGuidsA, {onLeave: function (args) {send("DsMapSchemaGuidsA");}});
+
+var DsMapSchemaGuidsW = Module.findExportByName("ntdsapi.dll", "DsMapSchemaGuidsW")
+Interceptor.attach(DsMapSchemaGuidsW, {onLeave: function (args) {send("DsMapSchemaGuidsW");}});
+
+var DsQuerySitesByCostA = Module.findExportByName("ntdsapi.dll", "DsQuerySitesByCostA")
+Interceptor.attach(DsQuerySitesByCostA, {onLeave: function (args) {send("DsQuerySitesByCostA");}});
+
+var DsQuerySitesByCostW = Module.findExportByName("ntdsapi.dll", "DsQuerySitesByCostW")
+Interceptor.attach(DsQuerySitesByCostW, {onLeave: function (args) {send("DsQuerySitesByCostW");}});
+
+var DsQuerySitesFree = Module.findExportByName("ntdsapi.dll", "DsQuerySitesFree")
+Interceptor.attach(DsQuerySitesFree, {onLeave: function (args) {send("DsQuerySitesFree");}});
+
+var DsQuoteRdnValueA = Module.findExportByName("ntdsapi.dll", "DsQuoteRdnValueA")
+Interceptor.attach(DsQuoteRdnValueA, {onLeave: function (args) {send("DsQuoteRdnValueA");}});
+
+var DsQuoteRdnValueW = Module.findExportByName("ntdsapi.dll", "DsQuoteRdnValueW")
+Interceptor.attach(DsQuoteRdnValueW, {onLeave: function (args) {send("DsQuoteRdnValueW");}});
+
+var DsReadNgcKeyA = Module.findExportByName("ntdsapi.dll", "DsReadNgcKeyA")
+Interceptor.attach(DsReadNgcKeyA, {onLeave: function (args) {send("DsReadNgcKeyA");}});
+
+var DsReadNgcKeyW = Module.findExportByName("ntdsapi.dll", "DsReadNgcKeyW")
+Interceptor.attach(DsReadNgcKeyW, {onLeave: function (args) {send("DsReadNgcKeyW");}});
+
+var DsReadNgcKeyWWorker = Module.findExportByName("ntdsapi.dll", "DsReadNgcKeyWWorker")
+Interceptor.attach(DsReadNgcKeyWWorker, {onLeave: function (args) {send("DsReadNgcKeyWWorker");}});
+
+var DsRemoveDsDomainA = Module.findExportByName("ntdsapi.dll", "DsRemoveDsDomainA")
+Interceptor.attach(DsRemoveDsDomainA, {onLeave: function (args) {send("DsRemoveDsDomainA");}});
+
+var DsRemoveDsDomainW = Module.findExportByName("ntdsapi.dll", "DsRemoveDsDomainW")
+Interceptor.attach(DsRemoveDsDomainW, {onLeave: function (args) {send("DsRemoveDsDomainW");}});
+
+var DsRemoveDsServerA = Module.findExportByName("ntdsapi.dll", "DsRemoveDsServerA")
+Interceptor.attach(DsRemoveDsServerA, {onLeave: function (args) {send("DsRemoveDsServerA");}});
+
+var DsRemoveDsServerW = Module.findExportByName("ntdsapi.dll", "DsRemoveDsServerW")
+Interceptor.attach(DsRemoveDsServerW, {onLeave: function (args) {send("DsRemoveDsServerW");}});
+
+var DsReplicaAddA = Module.findExportByName("ntdsapi.dll", "DsReplicaAddA")
+Interceptor.attach(DsReplicaAddA, {onLeave: function (args) {send("DsReplicaAddA");}});
+
+var DsReplicaAddW = Module.findExportByName("ntdsapi.dll", "DsReplicaAddW")
+Interceptor.attach(DsReplicaAddW, {onLeave: function (args) {send("DsReplicaAddW");}});
+
+var DsReplicaConsistencyCheck = Module.findExportByName("ntdsapi.dll", "DsReplicaConsistencyCheck")
+Interceptor.attach(DsReplicaConsistencyCheck, {onLeave: function (args) {send("DsReplicaConsistencyCheck");}});
+
+var DsReplicaDelA = Module.findExportByName("ntdsapi.dll", "DsReplicaDelA")
+Interceptor.attach(DsReplicaDelA, {onLeave: function (args) {send("DsReplicaDelA");}});
+
+var DsReplicaDelW = Module.findExportByName("ntdsapi.dll", "DsReplicaDelW")
+Interceptor.attach(DsReplicaDelW, {onLeave: function (args) {send("DsReplicaDelW");}});
+
+var DsReplicaDemotionW = Module.findExportByName("ntdsapi.dll", "DsReplicaDemotionW")
+Interceptor.attach(DsReplicaDemotionW, {onLeave: function (args) {send("DsReplicaDemotionW");}});
+
+var DsReplicaFreeInfo = Module.findExportByName("ntdsapi.dll", "DsReplicaFreeInfo")
+Interceptor.attach(DsReplicaFreeInfo, {onLeave: function (args) {send("DsReplicaFreeInfo");}});
+
+var DsReplicaGetInfo2W = Module.findExportByName("ntdsapi.dll", "DsReplicaGetInfo2W")
+Interceptor.attach(DsReplicaGetInfo2W, {onLeave: function (args) {send("DsReplicaGetInfo2W");}});
+
+var DsReplicaGetInfoW = Module.findExportByName("ntdsapi.dll", "DsReplicaGetInfoW")
+Interceptor.attach(DsReplicaGetInfoW, {onLeave: function (args) {send("DsReplicaGetInfoW");}});
+
+var DsReplicaModifyA = Module.findExportByName("ntdsapi.dll", "DsReplicaModifyA")
+Interceptor.attach(DsReplicaModifyA, {onLeave: function (args) {send("DsReplicaModifyA");}});
+
+var DsReplicaModifyW = Module.findExportByName("ntdsapi.dll", "DsReplicaModifyW")
+Interceptor.attach(DsReplicaModifyW, {onLeave: function (args) {send("DsReplicaModifyW");}});
+
+var DsReplicaSyncA = Module.findExportByName("ntdsapi.dll", "DsReplicaSyncA")
+Interceptor.attach(DsReplicaSyncA, {onLeave: function (args) {send("DsReplicaSyncA");}});
+
+var DsReplicaSyncAllA = Module.findExportByName("ntdsapi.dll", "DsReplicaSyncAllA")
+Interceptor.attach(DsReplicaSyncAllA, {onLeave: function (args) {send("DsReplicaSyncAllA");}});
+
+var DsReplicaSyncAllW = Module.findExportByName("ntdsapi.dll", "DsReplicaSyncAllW")
+Interceptor.attach(DsReplicaSyncAllW, {onLeave: function (args) {send("DsReplicaSyncAllW");}});
+
+var DsReplicaSyncW = Module.findExportByName("ntdsapi.dll", "DsReplicaSyncW")
+Interceptor.attach(DsReplicaSyncW, {onLeave: function (args) {send("DsReplicaSyncW");}});
+
+var DsReplicaUpdateRefsA = Module.findExportByName("ntdsapi.dll", "DsReplicaUpdateRefsA")
+Interceptor.attach(DsReplicaUpdateRefsA, {onLeave: function (args) {send("DsReplicaUpdateRefsA");}});
+
+var DsReplicaUpdateRefsW = Module.findExportByName("ntdsapi.dll", "DsReplicaUpdateRefsW")
+Interceptor.attach(DsReplicaUpdateRefsW, {onLeave: function (args) {send("DsReplicaUpdateRefsW");}});
+
+var DsReplicaVerifyObjectsA = Module.findExportByName("ntdsapi.dll", "DsReplicaVerifyObjectsA")
+Interceptor.attach(DsReplicaVerifyObjectsA, {onLeave: function (args) {send("DsReplicaVerifyObjectsA");}});
+
+var DsReplicaVerifyObjectsW = Module.findExportByName("ntdsapi.dll", "DsReplicaVerifyObjectsW")
+Interceptor.attach(DsReplicaVerifyObjectsW, {onLeave: function (args) {send("DsReplicaVerifyObjectsW");}});
+
+var DsServerRegisterSpnA = Module.findExportByName("ntdsapi.dll", "DsServerRegisterSpnA")
+Interceptor.attach(DsServerRegisterSpnA, {onLeave: function (args) {send("DsServerRegisterSpnA");}});
+
+var DsServerRegisterSpnW = Module.findExportByName("ntdsapi.dll", "DsServerRegisterSpnW")
+Interceptor.attach(DsServerRegisterSpnW, {onLeave: function (args) {send("DsServerRegisterSpnW");}});
+
+var DsUnBindA = Module.findExportByName("ntdsapi.dll", "DsUnBindA")
+Interceptor.attach(DsUnBindA, {onLeave: function (args) {send("DsUnBindA");}});
+
+var DsUnBindW = Module.findExportByName("ntdsapi.dll", "DsUnBindW")
+Interceptor.attach(DsUnBindW, {onLeave: function (args) {send("DsUnBindW");}});
+
+var DsUnBindWWorker = Module.findExportByName("ntdsapi.dll", "DsUnBindWWorker")
+Interceptor.attach(DsUnBindWWorker, {onLeave: function (args) {send("DsUnBindWWorker");}});
+
+var DsUnquoteRdnValueA = Module.findExportByName("ntdsapi.dll", "DsUnquoteRdnValueA")
+Interceptor.attach(DsUnquoteRdnValueA, {onLeave: function (args) {send("DsUnquoteRdnValueA");}});
+
+var DsUnquoteRdnValueW = Module.findExportByName("ntdsapi.dll", "DsUnquoteRdnValueW")
+Interceptor.attach(DsUnquoteRdnValueW, {onLeave: function (args) {send("DsUnquoteRdnValueW");}});
+
+var DsWriteAccountSpnA = Module.findExportByName("ntdsapi.dll", "DsWriteAccountSpnA")
+Interceptor.attach(DsWriteAccountSpnA, {onLeave: function (args) {send("DsWriteAccountSpnA");}});
+
+var DsWriteAccountSpnW = Module.findExportByName("ntdsapi.dll", "DsWriteAccountSpnW")
+Interceptor.attach(DsWriteAccountSpnW, {onLeave: function (args) {send("DsWriteAccountSpnW");}});
+
+var DsWriteNgcKeyA = Module.findExportByName("ntdsapi.dll", "DsWriteNgcKeyA")
+Interceptor.attach(DsWriteNgcKeyA, {onLeave: function (args) {send("DsWriteNgcKeyA");}});
+
+var DsWriteNgcKeyW = Module.findExportByName("ntdsapi.dll", "DsWriteNgcKeyW")
+Interceptor.attach(DsWriteNgcKeyW, {onLeave: function (args) {send("DsWriteNgcKeyW");}});
+
+var DsWriteNgcKeyWWorker = Module.findExportByName("ntdsapi.dll", "DsWriteNgcKeyWWorker")
+Interceptor.attach(DsWriteNgcKeyWWorker, {onLeave: function (args) {send("DsWriteNgcKeyWWorker");}});
+
+var DsaopBind = Module.findExportByName("ntdsapi.dll", "DsaopBind")
+Interceptor.attach(DsaopBind, {onLeave: function (args) {send("DsaopBind");}});
+
+var DsaopBindWithCred = Module.findExportByName("ntdsapi.dll", "DsaopBindWithCred")
+Interceptor.attach(DsaopBindWithCred, {onLeave: function (args) {send("DsaopBindWithCred");}});
+
+var DsaopBindWithSpn = Module.findExportByName("ntdsapi.dll", "DsaopBindWithSpn")
+Interceptor.attach(DsaopBindWithSpn, {onLeave: function (args) {send("DsaopBindWithSpn");}});
+
+var DsaopExecuteScript = Module.findExportByName("ntdsapi.dll", "DsaopExecuteScript")
+Interceptor.attach(DsaopExecuteScript, {onLeave: function (args) {send("DsaopExecuteScript");}});
+
+var DsaopPrepareScript = Module.findExportByName("ntdsapi.dll", "DsaopPrepareScript")
+Interceptor.attach(DsaopPrepareScript, {onLeave: function (args) {send("DsaopPrepareScript");}});
+
+var DsaopUnBind = Module.findExportByName("ntdsapi.dll", "DsaopUnBind")
+Interceptor.attach(DsaopUnBind, {onLeave: function (args) {send("DsaopUnBind");}});
+

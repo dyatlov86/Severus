@@ -1,0 +1,21 @@
+var AdhEngineClose = Module.findExportByName("adhapi.dll", "AdhEngineClose")
+Interceptor.attach(AdhEngineClose, {onLeave: function (args) {send("AdhEngineClose");}});
+
+var AdhEngineOpen = Module.findExportByName("adhapi.dll", "AdhEngineOpen")
+Interceptor.attach(AdhEngineOpen, {onLeave: function (args) {send("AdhEngineOpen");}});
+
+var AdhGetConfig = Module.findExportByName("adhapi.dll", "AdhGetConfig")
+Interceptor.attach(AdhGetConfig, {onLeave: function (args) {send("AdhGetConfig");}});
+
+var AdhGetEvidenceCollectorResult = Module.findExportByName("adhapi.dll", "AdhGetEvidenceCollectorResult")
+Interceptor.attach(AdhGetEvidenceCollectorResult, {onLeave: function (args) {send("AdhGetEvidenceCollectorResult");}});
+
+var AdhStatusEventSubscribe = Module.findExportByName("adhapi.dll", "AdhStatusEventSubscribe")
+Interceptor.attach(AdhStatusEventSubscribe, {onLeave: function (args) {send("AdhStatusEventSubscribe");}});
+
+var AdhStatusEventUnsubscribe = Module.findExportByName("adhapi.dll", "AdhStatusEventUnsubscribe")
+Interceptor.attach(AdhStatusEventUnsubscribe, {onLeave: function (args) {send("AdhStatusEventUnsubscribe");}});
+
+var DllMain = Module.findExportByName("adhapi.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+

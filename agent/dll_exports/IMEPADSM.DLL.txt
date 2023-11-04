@@ -1,0 +1,24 @@
+var CreateObject = Module.findExportByName("IMEPADSM.DLL", "CreateObject")
+Interceptor.attach(CreateObject, {onLeave: function (args) {send("CreateObject");}});
+
+var CreateObject2 = Module.findExportByName("IMEPADSM.DLL", "CreateObject2")
+Interceptor.attach(CreateObject2, {onLeave: function (args) {send("CreateObject2");}});
+
+var DllCanUnloadNow = Module.findExportByName("IMEPADSM.DLL", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("IMEPADSM.DLL", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("IMEPADSM.DLL", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("IMEPADSM.DLL", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var RegClass = Module.findExportByName("IMEPADSM.DLL", "RegClass")
+Interceptor.attach(RegClass, {onLeave: function (args) {send("RegClass");}});
+
+var UnregClass = Module.findExportByName("IMEPADSM.DLL", "UnregClass")
+Interceptor.attach(UnregClass, {onLeave: function (args) {send("UnregClass");}});
+

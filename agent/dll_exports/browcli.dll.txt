@@ -1,0 +1,36 @@
+var I_BrowserDebugCall = Module.findExportByName("browcli.dll", "I_BrowserDebugCall")
+Interceptor.attach(I_BrowserDebugCall, {onLeave: function (args) {send("I_BrowserDebugCall");}});
+
+var I_BrowserDebugTrace = Module.findExportByName("browcli.dll", "I_BrowserDebugTrace")
+Interceptor.attach(I_BrowserDebugTrace, {onLeave: function (args) {send("I_BrowserDebugTrace");}});
+
+var I_BrowserQueryEmulatedDomains = Module.findExportByName("browcli.dll", "I_BrowserQueryEmulatedDomains")
+Interceptor.attach(I_BrowserQueryEmulatedDomains, {onLeave: function (args) {send("I_BrowserQueryEmulatedDomains");}});
+
+var I_BrowserQueryOtherDomains = Module.findExportByName("browcli.dll", "I_BrowserQueryOtherDomains")
+Interceptor.attach(I_BrowserQueryOtherDomains, {onLeave: function (args) {send("I_BrowserQueryOtherDomains");}});
+
+var I_BrowserQueryStatistics = Module.findExportByName("browcli.dll", "I_BrowserQueryStatistics")
+Interceptor.attach(I_BrowserQueryStatistics, {onLeave: function (args) {send("I_BrowserQueryStatistics");}});
+
+var I_BrowserResetNetlogonState = Module.findExportByName("browcli.dll", "I_BrowserResetNetlogonState")
+Interceptor.attach(I_BrowserResetNetlogonState, {onLeave: function (args) {send("I_BrowserResetNetlogonState");}});
+
+var I_BrowserResetStatistics = Module.findExportByName("browcli.dll", "I_BrowserResetStatistics")
+Interceptor.attach(I_BrowserResetStatistics, {onLeave: function (args) {send("I_BrowserResetStatistics");}});
+
+var I_BrowserServerEnum = Module.findExportByName("browcli.dll", "I_BrowserServerEnum")
+Interceptor.attach(I_BrowserServerEnum, {onLeave: function (args) {send("I_BrowserServerEnum");}});
+
+var I_BrowserSetNetlogonState = Module.findExportByName("browcli.dll", "I_BrowserSetNetlogonState")
+Interceptor.attach(I_BrowserSetNetlogonState, {onLeave: function (args) {send("I_BrowserSetNetlogonState");}});
+
+var NetBrowserStatisticsGet = Module.findExportByName("browcli.dll", "NetBrowserStatisticsGet")
+Interceptor.attach(NetBrowserStatisticsGet, {onLeave: function (args) {send("NetBrowserStatisticsGet");}});
+
+var NetServerEnum = Module.findExportByName("browcli.dll", "NetServerEnum")
+Interceptor.attach(NetServerEnum, {onLeave: function (args) {send("NetServerEnum");}});
+
+var NetServerEnumEx = Module.findExportByName("browcli.dll", "NetServerEnumEx")
+Interceptor.attach(NetServerEnumEx, {onLeave: function (args) {send("NetServerEnumEx");}});
+

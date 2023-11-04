@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("DavSyncProvider.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("DavSyncProvider.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ForceCalDavCollectionsListRefreshDuringNextSync = Module.findExportByName("DavSyncProvider.dll", "ForceCalDavCollectionsListRefreshDuringNextSync")
+Interceptor.attach(ForceCalDavCollectionsListRefreshDuringNextSync, {onLeave: function (args) {send("ForceCalDavCollectionsListRefreshDuringNextSync");}});
+
+var HandleWebDavMeetingResponseForAppointment = Module.findExportByName("DavSyncProvider.dll", "HandleWebDavMeetingResponseForAppointment")
+Interceptor.attach(HandleWebDavMeetingResponseForAppointment, {onLeave: function (args) {send("HandleWebDavMeetingResponseForAppointment");}});
+
+var HandleWebDavMeetingResponseForMeetingNotification = Module.findExportByName("DavSyncProvider.dll", "HandleWebDavMeetingResponseForMeetingNotification")
+Interceptor.attach(HandleWebDavMeetingResponseForMeetingNotification, {onLeave: function (args) {send("HandleWebDavMeetingResponseForMeetingNotification");}});
+
+var UpdateCalDavTrackingSchema = Module.findExportByName("DavSyncProvider.dll", "UpdateCalDavTrackingSchema")
+Interceptor.attach(UpdateCalDavTrackingSchema, {onLeave: function (args) {send("UpdateCalDavTrackingSchema");}});
+
+var UpdateGMailContactSyncPartner = Module.findExportByName("DavSyncProvider.dll", "UpdateGMailContactSyncPartner")
+Interceptor.attach(UpdateGMailContactSyncPartner, {onLeave: function (args) {send("UpdateGMailContactSyncPartner");}});
+

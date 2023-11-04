@@ -1,0 +1,3 @@
+var Sysprep_Clean_WinSAT = Module.findExportByName("spwinsat.dll", "Sysprep_Clean_WinSAT")
+Interceptor.attach(Sysprep_Clean_WinSAT, {onLeave: function (args) {send("Sysprep_Clean_WinSAT");}});
+

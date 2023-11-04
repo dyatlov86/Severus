@@ -1,0 +1,24 @@
+var DllCanUnloadNow = Module.findExportByName("msctfmig.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("msctfmig.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("msctfmig.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msctfmig.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var LoadBinFromEnabledLayoutOrTipFile = Module.findExportByName("msctfmig.dll", "LoadBinFromEnabledLayoutOrTipFile")
+Interceptor.attach(LoadBinFromEnabledLayoutOrTipFile, {onLeave: function (args) {send("LoadBinFromEnabledLayoutOrTipFile");}});
+
+var LoadRegFromFile = Module.findExportByName("msctfmig.dll", "LoadRegFromFile")
+Interceptor.attach(LoadRegFromFile, {onLeave: function (args) {send("LoadRegFromFile");}});
+
+var LogMessageLayoutOrTip = Module.findExportByName("msctfmig.dll", "LogMessageLayoutOrTip")
+Interceptor.attach(LogMessageLayoutOrTip, {onLeave: function (args) {send("LogMessageLayoutOrTip");}});
+
+var SaveKeysToFile = Module.findExportByName("msctfmig.dll", "SaveKeysToFile")
+Interceptor.attach(SaveKeysToFile, {onLeave: function (args) {send("SaveKeysToFile");}});
+

@@ -1,0 +1,51 @@
+var IpNatHlpFree = Module.findExportByName("IpNatHlpClient.dll", "IpNatHlpFree")
+Interceptor.attach(IpNatHlpFree, {onLeave: function (args) {send("IpNatHlpFree");}});
+
+var IpNatHlpGetConnectedDevices = Module.findExportByName("IpNatHlpClient.dll", "IpNatHlpGetConnectedDevices")
+Interceptor.attach(IpNatHlpGetConnectedDevices, {onLeave: function (args) {send("IpNatHlpGetConnectedDevices");}});
+
+var IpNatHlpStartDhcpServer = Module.findExportByName("IpNatHlpClient.dll", "IpNatHlpStartDhcpServer")
+Interceptor.attach(IpNatHlpStartDhcpServer, {onLeave: function (args) {send("IpNatHlpStartDhcpServer");}});
+
+var IpNatHlpStartSharing = Module.findExportByName("IpNatHlpClient.dll", "IpNatHlpStartSharing")
+Interceptor.attach(IpNatHlpStartSharing, {onLeave: function (args) {send("IpNatHlpStartSharing");}});
+
+var IpNatHlpStopDhcpServer = Module.findExportByName("IpNatHlpClient.dll", "IpNatHlpStopDhcpServer")
+Interceptor.attach(IpNatHlpStopDhcpServer, {onLeave: function (args) {send("IpNatHlpStopDhcpServer");}});
+
+var IpNatHlpStopSharing = Module.findExportByName("IpNatHlpClient.dll", "IpNatHlpStopSharing")
+Interceptor.attach(IpNatHlpStopSharing, {onLeave: function (args) {send("IpNatHlpStopSharing");}});
+
+var IpNatHlpUpdateSharingSettingsFromStorage = Module.findExportByName("IpNatHlpClient.dll", "IpNatHlpUpdateSharingSettingsFromStorage")
+Interceptor.attach(IpNatHlpUpdateSharingSettingsFromStorage, {onLeave: function (args) {send("IpNatHlpUpdateSharingSettingsFromStorage");}});
+
+var V2IpNatHlpCreateStaticMapping = Module.findExportByName("IpNatHlpClient.dll", "V2IpNatHlpCreateStaticMapping")
+Interceptor.attach(V2IpNatHlpCreateStaticMapping, {onLeave: function (args) {send("V2IpNatHlpCreateStaticMapping");}});
+
+var V2IpNatHlpDeleteStaticMapping = Module.findExportByName("IpNatHlpClient.dll", "V2IpNatHlpDeleteStaticMapping")
+Interceptor.attach(V2IpNatHlpDeleteStaticMapping, {onLeave: function (args) {send("V2IpNatHlpDeleteStaticMapping");}});
+
+var V2IpNatHlpEnumDhcpState = Module.findExportByName("IpNatHlpClient.dll", "V2IpNatHlpEnumDhcpState")
+Interceptor.attach(V2IpNatHlpEnumDhcpState, {onLeave: function (args) {send("V2IpNatHlpEnumDhcpState");}});
+
+var V2IpNatHlpEnumDnsState = Module.findExportByName("IpNatHlpClient.dll", "V2IpNatHlpEnumDnsState")
+Interceptor.attach(V2IpNatHlpEnumDnsState, {onLeave: function (args) {send("V2IpNatHlpEnumDnsState");}});
+
+var V2IpNatHlpStartDhcpServer = Module.findExportByName("IpNatHlpClient.dll", "V2IpNatHlpStartDhcpServer")
+Interceptor.attach(V2IpNatHlpStartDhcpServer, {onLeave: function (args) {send("V2IpNatHlpStartDhcpServer");}});
+
+var V2IpNatHlpStartDnsServer = Module.findExportByName("IpNatHlpClient.dll", "V2IpNatHlpStartDnsServer")
+Interceptor.attach(V2IpNatHlpStartDnsServer, {onLeave: function (args) {send("V2IpNatHlpStartDnsServer");}});
+
+var V2IpNatHlpStartSharingInternalPrefix = Module.findExportByName("IpNatHlpClient.dll", "V2IpNatHlpStartSharingInternalPrefix")
+Interceptor.attach(V2IpNatHlpStartSharingInternalPrefix, {onLeave: function (args) {send("V2IpNatHlpStartSharingInternalPrefix");}});
+
+var V2IpNatHlpStopDhcpServer = Module.findExportByName("IpNatHlpClient.dll", "V2IpNatHlpStopDhcpServer")
+Interceptor.attach(V2IpNatHlpStopDhcpServer, {onLeave: function (args) {send("V2IpNatHlpStopDhcpServer");}});
+
+var V2IpNatHlpStopDnsServer = Module.findExportByName("IpNatHlpClient.dll", "V2IpNatHlpStopDnsServer")
+Interceptor.attach(V2IpNatHlpStopDnsServer, {onLeave: function (args) {send("V2IpNatHlpStopDnsServer");}});
+
+var V2IpNatHlpStopSharingInternalPrefix = Module.findExportByName("IpNatHlpClient.dll", "V2IpNatHlpStopSharingInternalPrefix")
+Interceptor.attach(V2IpNatHlpStopSharingInternalPrefix, {onLeave: function (args) {send("V2IpNatHlpStopSharingInternalPrefix");}});
+

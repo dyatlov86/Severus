@@ -1,0 +1,9 @@
+var mmCompileProgramForDeviceName = Module.findExportByName("amdmmcl6.dll", "mmCompileProgramForDeviceName")
+Interceptor.attach(mmCompileProgramForDeviceName, {onLeave: function (args) {send("mmCompileProgramForDeviceName");}});
+
+var mmCompileProgramForDxDevice = Module.findExportByName("amdmmcl6.dll", "mmCompileProgramForDxDevice")
+Interceptor.attach(mmCompileProgramForDxDevice, {onLeave: function (args) {send("mmCompileProgramForDxDevice");}});
+
+var mmFree = Module.findExportByName("amdmmcl6.dll", "mmFree")
+Interceptor.attach(mmFree, {onLeave: function (args) {send("mmFree");}});
+

@@ -1,0 +1,3 @@
+var COMServerDllMain = Module.findExportByName("browserbroker.dll", "COMServerDllMain")
+Interceptor.attach(COMServerDllMain, {onLeave: function (args) {send("COMServerDllMain");}});
+

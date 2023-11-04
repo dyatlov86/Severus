@@ -1,0 +1,21 @@
+var DllGetClassObject = Module.findExportByName("msdtcuiu.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("msdtcuiu.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msdtcuiu.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DtcPerfClose = Module.findExportByName("msdtcuiu.dll", "DtcPerfClose")
+Interceptor.attach(DtcPerfClose, {onLeave: function (args) {send("DtcPerfClose");}});
+
+var DtcPerfCollect = Module.findExportByName("msdtcuiu.dll", "DtcPerfCollect")
+Interceptor.attach(DtcPerfCollect, {onLeave: function (args) {send("DtcPerfCollect");}});
+
+var DtcPerfOpen = Module.findExportByName("msdtcuiu.dll", "DtcPerfOpen")
+Interceptor.attach(DtcPerfOpen, {onLeave: function (args) {send("DtcPerfOpen");}});
+
+var PerfDllRegisterServer = Module.findExportByName("msdtcuiu.dll", "PerfDllRegisterServer")
+Interceptor.attach(PerfDllRegisterServer, {onLeave: function (args) {send("PerfDllRegisterServer");}});
+

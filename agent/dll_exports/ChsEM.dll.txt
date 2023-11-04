@@ -1,0 +1,18 @@
+var DestroyMtf = Module.findExportByName("ChsEM.dll", "DestroyMtf")
+Interceptor.attach(DestroyMtf, {onLeave: function (args) {send("DestroyMtf");}});
+
+var DllCanUnloadNow = Module.findExportByName("ChsEM.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("ChsEM.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("ChsEM.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("ChsEM.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var SetupMtf = Module.findExportByName("ChsEM.dll", "SetupMtf")
+Interceptor.attach(SetupMtf, {onLeave: function (args) {send("SetupMtf");}});
+

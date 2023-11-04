@@ -1,0 +1,768 @@
+var create_sqlite3_impersonation_vfs = Module.findExportByName("SearchIndexerCore.dll", "create_sqlite3_impersonation_vfs")
+Interceptor.attach(create_sqlite3_impersonation_vfs, {onLeave: function (args) {send("create_sqlite3_impersonation_vfs");}});
+
+var delete_sqlite3_impersonation_vfs = Module.findExportByName("SearchIndexerCore.dll", "delete_sqlite3_impersonation_vfs")
+Interceptor.attach(delete_sqlite3_impersonation_vfs, {onLeave: function (args) {send("delete_sqlite3_impersonation_vfs");}});
+
+var sqlite3GetVarint = Module.findExportByName("SearchIndexerCore.dll", "sqlite3GetVarint")
+Interceptor.attach(sqlite3GetVarint, {onLeave: function (args) {send("sqlite3GetVarint");}});
+
+var sqlite3PutVarint = Module.findExportByName("SearchIndexerCore.dll", "sqlite3PutVarint")
+Interceptor.attach(sqlite3PutVarint, {onLeave: function (args) {send("sqlite3PutVarint");}});
+
+var sqlite3VarintLen = Module.findExportByName("SearchIndexerCore.dll", "sqlite3VarintLen")
+Interceptor.attach(sqlite3VarintLen, {onLeave: function (args) {send("sqlite3VarintLen");}});
+
+var sqlite3_aggregate_context = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_aggregate_context")
+Interceptor.attach(sqlite3_aggregate_context, {onLeave: function (args) {send("sqlite3_aggregate_context");}});
+
+var sqlite3_aggregate_count = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_aggregate_count")
+Interceptor.attach(sqlite3_aggregate_count, {onLeave: function (args) {send("sqlite3_aggregate_count");}});
+
+var sqlite3_auto_extension = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_auto_extension")
+Interceptor.attach(sqlite3_auto_extension, {onLeave: function (args) {send("sqlite3_auto_extension");}});
+
+var sqlite3_autovacuum_pages = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_autovacuum_pages")
+Interceptor.attach(sqlite3_autovacuum_pages, {onLeave: function (args) {send("sqlite3_autovacuum_pages");}});
+
+var sqlite3_backup_finish = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_backup_finish")
+Interceptor.attach(sqlite3_backup_finish, {onLeave: function (args) {send("sqlite3_backup_finish");}});
+
+var sqlite3_backup_init = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_backup_init")
+Interceptor.attach(sqlite3_backup_init, {onLeave: function (args) {send("sqlite3_backup_init");}});
+
+var sqlite3_backup_pagecount = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_backup_pagecount")
+Interceptor.attach(sqlite3_backup_pagecount, {onLeave: function (args) {send("sqlite3_backup_pagecount");}});
+
+var sqlite3_backup_remaining = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_backup_remaining")
+Interceptor.attach(sqlite3_backup_remaining, {onLeave: function (args) {send("sqlite3_backup_remaining");}});
+
+var sqlite3_backup_step = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_backup_step")
+Interceptor.attach(sqlite3_backup_step, {onLeave: function (args) {send("sqlite3_backup_step");}});
+
+var sqlite3_bind_blob = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_blob")
+Interceptor.attach(sqlite3_bind_blob, {onLeave: function (args) {send("sqlite3_bind_blob");}});
+
+var sqlite3_bind_blob64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_blob64")
+Interceptor.attach(sqlite3_bind_blob64, {onLeave: function (args) {send("sqlite3_bind_blob64");}});
+
+var sqlite3_bind_double = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_double")
+Interceptor.attach(sqlite3_bind_double, {onLeave: function (args) {send("sqlite3_bind_double");}});
+
+var sqlite3_bind_int = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_int")
+Interceptor.attach(sqlite3_bind_int, {onLeave: function (args) {send("sqlite3_bind_int");}});
+
+var sqlite3_bind_int64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_int64")
+Interceptor.attach(sqlite3_bind_int64, {onLeave: function (args) {send("sqlite3_bind_int64");}});
+
+var sqlite3_bind_null = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_null")
+Interceptor.attach(sqlite3_bind_null, {onLeave: function (args) {send("sqlite3_bind_null");}});
+
+var sqlite3_bind_parameter_count = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_parameter_count")
+Interceptor.attach(sqlite3_bind_parameter_count, {onLeave: function (args) {send("sqlite3_bind_parameter_count");}});
+
+var sqlite3_bind_parameter_index = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_parameter_index")
+Interceptor.attach(sqlite3_bind_parameter_index, {onLeave: function (args) {send("sqlite3_bind_parameter_index");}});
+
+var sqlite3_bind_parameter_name = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_parameter_name")
+Interceptor.attach(sqlite3_bind_parameter_name, {onLeave: function (args) {send("sqlite3_bind_parameter_name");}});
+
+var sqlite3_bind_pointer = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_pointer")
+Interceptor.attach(sqlite3_bind_pointer, {onLeave: function (args) {send("sqlite3_bind_pointer");}});
+
+var sqlite3_bind_text = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_text")
+Interceptor.attach(sqlite3_bind_text, {onLeave: function (args) {send("sqlite3_bind_text");}});
+
+var sqlite3_bind_text16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_text16")
+Interceptor.attach(sqlite3_bind_text16, {onLeave: function (args) {send("sqlite3_bind_text16");}});
+
+var sqlite3_bind_text64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_text64")
+Interceptor.attach(sqlite3_bind_text64, {onLeave: function (args) {send("sqlite3_bind_text64");}});
+
+var sqlite3_bind_value = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_value")
+Interceptor.attach(sqlite3_bind_value, {onLeave: function (args) {send("sqlite3_bind_value");}});
+
+var sqlite3_bind_zeroblob = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_zeroblob")
+Interceptor.attach(sqlite3_bind_zeroblob, {onLeave: function (args) {send("sqlite3_bind_zeroblob");}});
+
+var sqlite3_bind_zeroblob64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_bind_zeroblob64")
+Interceptor.attach(sqlite3_bind_zeroblob64, {onLeave: function (args) {send("sqlite3_bind_zeroblob64");}});
+
+var sqlite3_blob_bytes = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_blob_bytes")
+Interceptor.attach(sqlite3_blob_bytes, {onLeave: function (args) {send("sqlite3_blob_bytes");}});
+
+var sqlite3_blob_close = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_blob_close")
+Interceptor.attach(sqlite3_blob_close, {onLeave: function (args) {send("sqlite3_blob_close");}});
+
+var sqlite3_blob_open = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_blob_open")
+Interceptor.attach(sqlite3_blob_open, {onLeave: function (args) {send("sqlite3_blob_open");}});
+
+var sqlite3_blob_read = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_blob_read")
+Interceptor.attach(sqlite3_blob_read, {onLeave: function (args) {send("sqlite3_blob_read");}});
+
+var sqlite3_blob_reopen = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_blob_reopen")
+Interceptor.attach(sqlite3_blob_reopen, {onLeave: function (args) {send("sqlite3_blob_reopen");}});
+
+var sqlite3_blob_write = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_blob_write")
+Interceptor.attach(sqlite3_blob_write, {onLeave: function (args) {send("sqlite3_blob_write");}});
+
+var sqlite3_busy_handler = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_busy_handler")
+Interceptor.attach(sqlite3_busy_handler, {onLeave: function (args) {send("sqlite3_busy_handler");}});
+
+var sqlite3_busy_timeout = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_busy_timeout")
+Interceptor.attach(sqlite3_busy_timeout, {onLeave: function (args) {send("sqlite3_busy_timeout");}});
+
+var sqlite3_cancel_auto_extension = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_cancel_auto_extension")
+Interceptor.attach(sqlite3_cancel_auto_extension, {onLeave: function (args) {send("sqlite3_cancel_auto_extension");}});
+
+var sqlite3_changes = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_changes")
+Interceptor.attach(sqlite3_changes, {onLeave: function (args) {send("sqlite3_changes");}});
+
+var sqlite3_changes64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_changes64")
+Interceptor.attach(sqlite3_changes64, {onLeave: function (args) {send("sqlite3_changes64");}});
+
+var sqlite3_clear_bindings = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_clear_bindings")
+Interceptor.attach(sqlite3_clear_bindings, {onLeave: function (args) {send("sqlite3_clear_bindings");}});
+
+var sqlite3_close = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_close")
+Interceptor.attach(sqlite3_close, {onLeave: function (args) {send("sqlite3_close");}});
+
+var sqlite3_close_v2 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_close_v2")
+Interceptor.attach(sqlite3_close_v2, {onLeave: function (args) {send("sqlite3_close_v2");}});
+
+var sqlite3_collation_needed = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_collation_needed")
+Interceptor.attach(sqlite3_collation_needed, {onLeave: function (args) {send("sqlite3_collation_needed");}});
+
+var sqlite3_collation_needed16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_collation_needed16")
+Interceptor.attach(sqlite3_collation_needed16, {onLeave: function (args) {send("sqlite3_collation_needed16");}});
+
+var sqlite3_column_blob = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_blob")
+Interceptor.attach(sqlite3_column_blob, {onLeave: function (args) {send("sqlite3_column_blob");}});
+
+var sqlite3_column_bytes = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_bytes")
+Interceptor.attach(sqlite3_column_bytes, {onLeave: function (args) {send("sqlite3_column_bytes");}});
+
+var sqlite3_column_bytes16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_bytes16")
+Interceptor.attach(sqlite3_column_bytes16, {onLeave: function (args) {send("sqlite3_column_bytes16");}});
+
+var sqlite3_column_count = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_count")
+Interceptor.attach(sqlite3_column_count, {onLeave: function (args) {send("sqlite3_column_count");}});
+
+var sqlite3_column_decltype = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_decltype")
+Interceptor.attach(sqlite3_column_decltype, {onLeave: function (args) {send("sqlite3_column_decltype");}});
+
+var sqlite3_column_decltype16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_decltype16")
+Interceptor.attach(sqlite3_column_decltype16, {onLeave: function (args) {send("sqlite3_column_decltype16");}});
+
+var sqlite3_column_double = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_double")
+Interceptor.attach(sqlite3_column_double, {onLeave: function (args) {send("sqlite3_column_double");}});
+
+var sqlite3_column_int = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_int")
+Interceptor.attach(sqlite3_column_int, {onLeave: function (args) {send("sqlite3_column_int");}});
+
+var sqlite3_column_int64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_int64")
+Interceptor.attach(sqlite3_column_int64, {onLeave: function (args) {send("sqlite3_column_int64");}});
+
+var sqlite3_column_name = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_name")
+Interceptor.attach(sqlite3_column_name, {onLeave: function (args) {send("sqlite3_column_name");}});
+
+var sqlite3_column_name16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_name16")
+Interceptor.attach(sqlite3_column_name16, {onLeave: function (args) {send("sqlite3_column_name16");}});
+
+var sqlite3_column_text = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_text")
+Interceptor.attach(sqlite3_column_text, {onLeave: function (args) {send("sqlite3_column_text");}});
+
+var sqlite3_column_text16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_text16")
+Interceptor.attach(sqlite3_column_text16, {onLeave: function (args) {send("sqlite3_column_text16");}});
+
+var sqlite3_column_type = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_type")
+Interceptor.attach(sqlite3_column_type, {onLeave: function (args) {send("sqlite3_column_type");}});
+
+var sqlite3_column_value = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_column_value")
+Interceptor.attach(sqlite3_column_value, {onLeave: function (args) {send("sqlite3_column_value");}});
+
+var sqlite3_commit_hook = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_commit_hook")
+Interceptor.attach(sqlite3_commit_hook, {onLeave: function (args) {send("sqlite3_commit_hook");}});
+
+var sqlite3_compileoption_get = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_compileoption_get")
+Interceptor.attach(sqlite3_compileoption_get, {onLeave: function (args) {send("sqlite3_compileoption_get");}});
+
+var sqlite3_compileoption_used = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_compileoption_used")
+Interceptor.attach(sqlite3_compileoption_used, {onLeave: function (args) {send("sqlite3_compileoption_used");}});
+
+var sqlite3_complete = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_complete")
+Interceptor.attach(sqlite3_complete, {onLeave: function (args) {send("sqlite3_complete");}});
+
+var sqlite3_complete16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_complete16")
+Interceptor.attach(sqlite3_complete16, {onLeave: function (args) {send("sqlite3_complete16");}});
+
+var sqlite3_context_db_handle = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_context_db_handle")
+Interceptor.attach(sqlite3_context_db_handle, {onLeave: function (args) {send("sqlite3_context_db_handle");}});
+
+var sqlite3_create_collation = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_create_collation")
+Interceptor.attach(sqlite3_create_collation, {onLeave: function (args) {send("sqlite3_create_collation");}});
+
+var sqlite3_create_collation16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_create_collation16")
+Interceptor.attach(sqlite3_create_collation16, {onLeave: function (args) {send("sqlite3_create_collation16");}});
+
+var sqlite3_create_collation_v2 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_create_collation_v2")
+Interceptor.attach(sqlite3_create_collation_v2, {onLeave: function (args) {send("sqlite3_create_collation_v2");}});
+
+var sqlite3_create_filename = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_create_filename")
+Interceptor.attach(sqlite3_create_filename, {onLeave: function (args) {send("sqlite3_create_filename");}});
+
+var sqlite3_create_function = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_create_function")
+Interceptor.attach(sqlite3_create_function, {onLeave: function (args) {send("sqlite3_create_function");}});
+
+var sqlite3_create_function16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_create_function16")
+Interceptor.attach(sqlite3_create_function16, {onLeave: function (args) {send("sqlite3_create_function16");}});
+
+var sqlite3_create_function_v2 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_create_function_v2")
+Interceptor.attach(sqlite3_create_function_v2, {onLeave: function (args) {send("sqlite3_create_function_v2");}});
+
+var sqlite3_create_module = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_create_module")
+Interceptor.attach(sqlite3_create_module, {onLeave: function (args) {send("sqlite3_create_module");}});
+
+var sqlite3_create_module_v2 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_create_module_v2")
+Interceptor.attach(sqlite3_create_module_v2, {onLeave: function (args) {send("sqlite3_create_module_v2");}});
+
+var sqlite3_create_window_function = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_create_window_function")
+Interceptor.attach(sqlite3_create_window_function, {onLeave: function (args) {send("sqlite3_create_window_function");}});
+
+var sqlite3_data_count = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_data_count")
+Interceptor.attach(sqlite3_data_count, {onLeave: function (args) {send("sqlite3_data_count");}});
+
+var sqlite3_database_file_object = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_database_file_object")
+Interceptor.attach(sqlite3_database_file_object, {onLeave: function (args) {send("sqlite3_database_file_object");}});
+
+var sqlite3_db_cacheflush = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_db_cacheflush")
+Interceptor.attach(sqlite3_db_cacheflush, {onLeave: function (args) {send("sqlite3_db_cacheflush");}});
+
+var sqlite3_db_config = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_db_config")
+Interceptor.attach(sqlite3_db_config, {onLeave: function (args) {send("sqlite3_db_config");}});
+
+var sqlite3_db_filename = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_db_filename")
+Interceptor.attach(sqlite3_db_filename, {onLeave: function (args) {send("sqlite3_db_filename");}});
+
+var sqlite3_db_handle = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_db_handle")
+Interceptor.attach(sqlite3_db_handle, {onLeave: function (args) {send("sqlite3_db_handle");}});
+
+var sqlite3_db_mutex = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_db_mutex")
+Interceptor.attach(sqlite3_db_mutex, {onLeave: function (args) {send("sqlite3_db_mutex");}});
+
+var sqlite3_db_readonly = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_db_readonly")
+Interceptor.attach(sqlite3_db_readonly, {onLeave: function (args) {send("sqlite3_db_readonly");}});
+
+var sqlite3_db_release_memory = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_db_release_memory")
+Interceptor.attach(sqlite3_db_release_memory, {onLeave: function (args) {send("sqlite3_db_release_memory");}});
+
+var sqlite3_db_status = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_db_status")
+Interceptor.attach(sqlite3_db_status, {onLeave: function (args) {send("sqlite3_db_status");}});
+
+var sqlite3_declare_vtab = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_declare_vtab")
+Interceptor.attach(sqlite3_declare_vtab, {onLeave: function (args) {send("sqlite3_declare_vtab");}});
+
+var sqlite3_drop_modules = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_drop_modules")
+Interceptor.attach(sqlite3_drop_modules, {onLeave: function (args) {send("sqlite3_drop_modules");}});
+
+var sqlite3_enable_shared_cache = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_enable_shared_cache")
+Interceptor.attach(sqlite3_enable_shared_cache, {onLeave: function (args) {send("sqlite3_enable_shared_cache");}});
+
+var sqlite3_errcode = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_errcode")
+Interceptor.attach(sqlite3_errcode, {onLeave: function (args) {send("sqlite3_errcode");}});
+
+var sqlite3_errmsg = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_errmsg")
+Interceptor.attach(sqlite3_errmsg, {onLeave: function (args) {send("sqlite3_errmsg");}});
+
+var sqlite3_errmsg16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_errmsg16")
+Interceptor.attach(sqlite3_errmsg16, {onLeave: function (args) {send("sqlite3_errmsg16");}});
+
+var sqlite3_errstr = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_errstr")
+Interceptor.attach(sqlite3_errstr, {onLeave: function (args) {send("sqlite3_errstr");}});
+
+var sqlite3_exec = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_exec")
+Interceptor.attach(sqlite3_exec, {onLeave: function (args) {send("sqlite3_exec");}});
+
+var sqlite3_expanded_sql = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_expanded_sql")
+Interceptor.attach(sqlite3_expanded_sql, {onLeave: function (args) {send("sqlite3_expanded_sql");}});
+
+var sqlite3_expired = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_expired")
+Interceptor.attach(sqlite3_expired, {onLeave: function (args) {send("sqlite3_expired");}});
+
+var sqlite3_extended_errcode = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_extended_errcode")
+Interceptor.attach(sqlite3_extended_errcode, {onLeave: function (args) {send("sqlite3_extended_errcode");}});
+
+var sqlite3_extended_result_codes = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_extended_result_codes")
+Interceptor.attach(sqlite3_extended_result_codes, {onLeave: function (args) {send("sqlite3_extended_result_codes");}});
+
+var sqlite3_file_control = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_file_control")
+Interceptor.attach(sqlite3_file_control, {onLeave: function (args) {send("sqlite3_file_control");}});
+
+var sqlite3_filename_database = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_filename_database")
+Interceptor.attach(sqlite3_filename_database, {onLeave: function (args) {send("sqlite3_filename_database");}});
+
+var sqlite3_filename_journal = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_filename_journal")
+Interceptor.attach(sqlite3_filename_journal, {onLeave: function (args) {send("sqlite3_filename_journal");}});
+
+var sqlite3_filename_wal = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_filename_wal")
+Interceptor.attach(sqlite3_filename_wal, {onLeave: function (args) {send("sqlite3_filename_wal");}});
+
+var sqlite3_finalize = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_finalize")
+Interceptor.attach(sqlite3_finalize, {onLeave: function (args) {send("sqlite3_finalize");}});
+
+var sqlite3_free = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_free")
+Interceptor.attach(sqlite3_free, {onLeave: function (args) {send("sqlite3_free");}});
+
+var sqlite3_free_filename = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_free_filename")
+Interceptor.attach(sqlite3_free_filename, {onLeave: function (args) {send("sqlite3_free_filename");}});
+
+var sqlite3_free_table = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_free_table")
+Interceptor.attach(sqlite3_free_table, {onLeave: function (args) {send("sqlite3_free_table");}});
+
+var sqlite3_get_autocommit = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_get_autocommit")
+Interceptor.attach(sqlite3_get_autocommit, {onLeave: function (args) {send("sqlite3_get_autocommit");}});
+
+var sqlite3_get_auxdata = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_get_auxdata")
+Interceptor.attach(sqlite3_get_auxdata, {onLeave: function (args) {send("sqlite3_get_auxdata");}});
+
+var sqlite3_get_table = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_get_table")
+Interceptor.attach(sqlite3_get_table, {onLeave: function (args) {send("sqlite3_get_table");}});
+
+var sqlite3_global_recover = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_global_recover")
+Interceptor.attach(sqlite3_global_recover, {onLeave: function (args) {send("sqlite3_global_recover");}});
+
+var sqlite3_hard_heap_limit64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_hard_heap_limit64")
+Interceptor.attach(sqlite3_hard_heap_limit64, {onLeave: function (args) {send("sqlite3_hard_heap_limit64");}});
+
+var sqlite3_indexer_extensions_init = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_indexer_extensions_init")
+Interceptor.attach(sqlite3_indexer_extensions_init, {onLeave: function (args) {send("sqlite3_indexer_extensions_init");}});
+
+var sqlite3_interrupt = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_interrupt")
+Interceptor.attach(sqlite3_interrupt, {onLeave: function (args) {send("sqlite3_interrupt");}});
+
+var sqlite3_keyword_check = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_keyword_check")
+Interceptor.attach(sqlite3_keyword_check, {onLeave: function (args) {send("sqlite3_keyword_check");}});
+
+var sqlite3_keyword_count = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_keyword_count")
+Interceptor.attach(sqlite3_keyword_count, {onLeave: function (args) {send("sqlite3_keyword_count");}});
+
+var sqlite3_keyword_name = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_keyword_name")
+Interceptor.attach(sqlite3_keyword_name, {onLeave: function (args) {send("sqlite3_keyword_name");}});
+
+var sqlite3_last_insert_rowid = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_last_insert_rowid")
+Interceptor.attach(sqlite3_last_insert_rowid, {onLeave: function (args) {send("sqlite3_last_insert_rowid");}});
+
+var sqlite3_libversion = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_libversion")
+Interceptor.attach(sqlite3_libversion, {onLeave: function (args) {send("sqlite3_libversion");}});
+
+var sqlite3_libversion_number = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_libversion_number")
+Interceptor.attach(sqlite3_libversion_number, {onLeave: function (args) {send("sqlite3_libversion_number");}});
+
+var sqlite3_limit = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_limit")
+Interceptor.attach(sqlite3_limit, {onLeave: function (args) {send("sqlite3_limit");}});
+
+var sqlite3_load_extension = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_load_extension")
+Interceptor.attach(sqlite3_load_extension, {onLeave: function (args) {send("sqlite3_load_extension");}});
+
+var sqlite3_log = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_log")
+Interceptor.attach(sqlite3_log, {onLeave: function (args) {send("sqlite3_log");}});
+
+var sqlite3_malloc = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_malloc")
+Interceptor.attach(sqlite3_malloc, {onLeave: function (args) {send("sqlite3_malloc");}});
+
+var sqlite3_malloc64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_malloc64")
+Interceptor.attach(sqlite3_malloc64, {onLeave: function (args) {send("sqlite3_malloc64");}});
+
+var sqlite3_memory_highwater = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_memory_highwater")
+Interceptor.attach(sqlite3_memory_highwater, {onLeave: function (args) {send("sqlite3_memory_highwater");}});
+
+var sqlite3_memory_used = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_memory_used")
+Interceptor.attach(sqlite3_memory_used, {onLeave: function (args) {send("sqlite3_memory_used");}});
+
+var sqlite3_mprintf = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_mprintf")
+Interceptor.attach(sqlite3_mprintf, {onLeave: function (args) {send("sqlite3_mprintf");}});
+
+var sqlite3_msize = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_msize")
+Interceptor.attach(sqlite3_msize, {onLeave: function (args) {send("sqlite3_msize");}});
+
+var sqlite3_multi_value_extension_init = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_multi_value_extension_init")
+Interceptor.attach(sqlite3_multi_value_extension_init, {onLeave: function (args) {send("sqlite3_multi_value_extension_init");}});
+
+var sqlite3_mutex_alloc = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_mutex_alloc")
+Interceptor.attach(sqlite3_mutex_alloc, {onLeave: function (args) {send("sqlite3_mutex_alloc");}});
+
+var sqlite3_mutex_enter = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_mutex_enter")
+Interceptor.attach(sqlite3_mutex_enter, {onLeave: function (args) {send("sqlite3_mutex_enter");}});
+
+var sqlite3_mutex_free = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_mutex_free")
+Interceptor.attach(sqlite3_mutex_free, {onLeave: function (args) {send("sqlite3_mutex_free");}});
+
+var sqlite3_mutex_leave = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_mutex_leave")
+Interceptor.attach(sqlite3_mutex_leave, {onLeave: function (args) {send("sqlite3_mutex_leave");}});
+
+var sqlite3_mutex_try = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_mutex_try")
+Interceptor.attach(sqlite3_mutex_try, {onLeave: function (args) {send("sqlite3_mutex_try");}});
+
+var sqlite3_next_stmt = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_next_stmt")
+Interceptor.attach(sqlite3_next_stmt, {onLeave: function (args) {send("sqlite3_next_stmt");}});
+
+var sqlite3_open = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_open")
+Interceptor.attach(sqlite3_open, {onLeave: function (args) {send("sqlite3_open");}});
+
+var sqlite3_open16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_open16")
+Interceptor.attach(sqlite3_open16, {onLeave: function (args) {send("sqlite3_open16");}});
+
+var sqlite3_open_v2 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_open_v2")
+Interceptor.attach(sqlite3_open_v2, {onLeave: function (args) {send("sqlite3_open_v2");}});
+
+var sqlite3_overload_function = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_overload_function")
+Interceptor.attach(sqlite3_overload_function, {onLeave: function (args) {send("sqlite3_overload_function");}});
+
+var sqlite3_prepare = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_prepare")
+Interceptor.attach(sqlite3_prepare, {onLeave: function (args) {send("sqlite3_prepare");}});
+
+var sqlite3_prepare16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_prepare16")
+Interceptor.attach(sqlite3_prepare16, {onLeave: function (args) {send("sqlite3_prepare16");}});
+
+var sqlite3_prepare16_v2 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_prepare16_v2")
+Interceptor.attach(sqlite3_prepare16_v2, {onLeave: function (args) {send("sqlite3_prepare16_v2");}});
+
+var sqlite3_prepare16_v3 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_prepare16_v3")
+Interceptor.attach(sqlite3_prepare16_v3, {onLeave: function (args) {send("sqlite3_prepare16_v3");}});
+
+var sqlite3_prepare_v2 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_prepare_v2")
+Interceptor.attach(sqlite3_prepare_v2, {onLeave: function (args) {send("sqlite3_prepare_v2");}});
+
+var sqlite3_prepare_v3 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_prepare_v3")
+Interceptor.attach(sqlite3_prepare_v3, {onLeave: function (args) {send("sqlite3_prepare_v3");}});
+
+var sqlite3_profile = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_profile")
+Interceptor.attach(sqlite3_profile, {onLeave: function (args) {send("sqlite3_profile");}});
+
+var sqlite3_progress_handler = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_progress_handler")
+Interceptor.attach(sqlite3_progress_handler, {onLeave: function (args) {send("sqlite3_progress_handler");}});
+
+var sqlite3_randomness = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_randomness")
+Interceptor.attach(sqlite3_randomness, {onLeave: function (args) {send("sqlite3_randomness");}});
+
+var sqlite3_realloc = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_realloc")
+Interceptor.attach(sqlite3_realloc, {onLeave: function (args) {send("sqlite3_realloc");}});
+
+var sqlite3_realloc64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_realloc64")
+Interceptor.attach(sqlite3_realloc64, {onLeave: function (args) {send("sqlite3_realloc64");}});
+
+var sqlite3_release_memory = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_release_memory")
+Interceptor.attach(sqlite3_release_memory, {onLeave: function (args) {send("sqlite3_release_memory");}});
+
+var sqlite3_reset = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_reset")
+Interceptor.attach(sqlite3_reset, {onLeave: function (args) {send("sqlite3_reset");}});
+
+var sqlite3_reset_auto_extension = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_reset_auto_extension")
+Interceptor.attach(sqlite3_reset_auto_extension, {onLeave: function (args) {send("sqlite3_reset_auto_extension");}});
+
+var sqlite3_result_blob = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_blob")
+Interceptor.attach(sqlite3_result_blob, {onLeave: function (args) {send("sqlite3_result_blob");}});
+
+var sqlite3_result_blob64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_blob64")
+Interceptor.attach(sqlite3_result_blob64, {onLeave: function (args) {send("sqlite3_result_blob64");}});
+
+var sqlite3_result_double = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_double")
+Interceptor.attach(sqlite3_result_double, {onLeave: function (args) {send("sqlite3_result_double");}});
+
+var sqlite3_result_error = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_error")
+Interceptor.attach(sqlite3_result_error, {onLeave: function (args) {send("sqlite3_result_error");}});
+
+var sqlite3_result_error16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_error16")
+Interceptor.attach(sqlite3_result_error16, {onLeave: function (args) {send("sqlite3_result_error16");}});
+
+var sqlite3_result_error_code = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_error_code")
+Interceptor.attach(sqlite3_result_error_code, {onLeave: function (args) {send("sqlite3_result_error_code");}});
+
+var sqlite3_result_error_nomem = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_error_nomem")
+Interceptor.attach(sqlite3_result_error_nomem, {onLeave: function (args) {send("sqlite3_result_error_nomem");}});
+
+var sqlite3_result_error_toobig = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_error_toobig")
+Interceptor.attach(sqlite3_result_error_toobig, {onLeave: function (args) {send("sqlite3_result_error_toobig");}});
+
+var sqlite3_result_int = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_int")
+Interceptor.attach(sqlite3_result_int, {onLeave: function (args) {send("sqlite3_result_int");}});
+
+var sqlite3_result_int64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_int64")
+Interceptor.attach(sqlite3_result_int64, {onLeave: function (args) {send("sqlite3_result_int64");}});
+
+var sqlite3_result_null = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_null")
+Interceptor.attach(sqlite3_result_null, {onLeave: function (args) {send("sqlite3_result_null");}});
+
+var sqlite3_result_pointer = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_pointer")
+Interceptor.attach(sqlite3_result_pointer, {onLeave: function (args) {send("sqlite3_result_pointer");}});
+
+var sqlite3_result_subtype = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_subtype")
+Interceptor.attach(sqlite3_result_subtype, {onLeave: function (args) {send("sqlite3_result_subtype");}});
+
+var sqlite3_result_text = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_text")
+Interceptor.attach(sqlite3_result_text, {onLeave: function (args) {send("sqlite3_result_text");}});
+
+var sqlite3_result_text16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_text16")
+Interceptor.attach(sqlite3_result_text16, {onLeave: function (args) {send("sqlite3_result_text16");}});
+
+var sqlite3_result_text16be = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_text16be")
+Interceptor.attach(sqlite3_result_text16be, {onLeave: function (args) {send("sqlite3_result_text16be");}});
+
+var sqlite3_result_text16le = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_text16le")
+Interceptor.attach(sqlite3_result_text16le, {onLeave: function (args) {send("sqlite3_result_text16le");}});
+
+var sqlite3_result_text64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_text64")
+Interceptor.attach(sqlite3_result_text64, {onLeave: function (args) {send("sqlite3_result_text64");}});
+
+var sqlite3_result_value = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_value")
+Interceptor.attach(sqlite3_result_value, {onLeave: function (args) {send("sqlite3_result_value");}});
+
+var sqlite3_result_zeroblob = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_zeroblob")
+Interceptor.attach(sqlite3_result_zeroblob, {onLeave: function (args) {send("sqlite3_result_zeroblob");}});
+
+var sqlite3_result_zeroblob64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_result_zeroblob64")
+Interceptor.attach(sqlite3_result_zeroblob64, {onLeave: function (args) {send("sqlite3_result_zeroblob64");}});
+
+var sqlite3_rollback_hook = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_rollback_hook")
+Interceptor.attach(sqlite3_rollback_hook, {onLeave: function (args) {send("sqlite3_rollback_hook");}});
+
+var sqlite3_set_authorizer = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_set_authorizer")
+Interceptor.attach(sqlite3_set_authorizer, {onLeave: function (args) {send("sqlite3_set_authorizer");}});
+
+var sqlite3_set_auxdata = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_set_auxdata")
+Interceptor.attach(sqlite3_set_auxdata, {onLeave: function (args) {send("sqlite3_set_auxdata");}});
+
+var sqlite3_set_last_insert_rowid = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_set_last_insert_rowid")
+Interceptor.attach(sqlite3_set_last_insert_rowid, {onLeave: function (args) {send("sqlite3_set_last_insert_rowid");}});
+
+var sqlite3_sleep = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_sleep")
+Interceptor.attach(sqlite3_sleep, {onLeave: function (args) {send("sqlite3_sleep");}});
+
+var sqlite3_snprintf = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_snprintf")
+Interceptor.attach(sqlite3_snprintf, {onLeave: function (args) {send("sqlite3_snprintf");}});
+
+var sqlite3_soft_heap_limit = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_soft_heap_limit")
+Interceptor.attach(sqlite3_soft_heap_limit, {onLeave: function (args) {send("sqlite3_soft_heap_limit");}});
+
+var sqlite3_soft_heap_limit64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_soft_heap_limit64")
+Interceptor.attach(sqlite3_soft_heap_limit64, {onLeave: function (args) {send("sqlite3_soft_heap_limit64");}});
+
+var sqlite3_sourceid = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_sourceid")
+Interceptor.attach(sqlite3_sourceid, {onLeave: function (args) {send("sqlite3_sourceid");}});
+
+var sqlite3_sql = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_sql")
+Interceptor.attach(sqlite3_sql, {onLeave: function (args) {send("sqlite3_sql");}});
+
+var sqlite3_status = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_status")
+Interceptor.attach(sqlite3_status, {onLeave: function (args) {send("sqlite3_status");}});
+
+var sqlite3_status64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_status64")
+Interceptor.attach(sqlite3_status64, {onLeave: function (args) {send("sqlite3_status64");}});
+
+var sqlite3_step = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_step")
+Interceptor.attach(sqlite3_step, {onLeave: function (args) {send("sqlite3_step");}});
+
+var sqlite3_stmt_busy = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_stmt_busy")
+Interceptor.attach(sqlite3_stmt_busy, {onLeave: function (args) {send("sqlite3_stmt_busy");}});
+
+var sqlite3_stmt_isexplain = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_stmt_isexplain")
+Interceptor.attach(sqlite3_stmt_isexplain, {onLeave: function (args) {send("sqlite3_stmt_isexplain");}});
+
+var sqlite3_stmt_readonly = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_stmt_readonly")
+Interceptor.attach(sqlite3_stmt_readonly, {onLeave: function (args) {send("sqlite3_stmt_readonly");}});
+
+var sqlite3_stmt_status = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_stmt_status")
+Interceptor.attach(sqlite3_stmt_status, {onLeave: function (args) {send("sqlite3_stmt_status");}});
+
+var sqlite3_str_append = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_str_append")
+Interceptor.attach(sqlite3_str_append, {onLeave: function (args) {send("sqlite3_str_append");}});
+
+var sqlite3_str_appendall = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_str_appendall")
+Interceptor.attach(sqlite3_str_appendall, {onLeave: function (args) {send("sqlite3_str_appendall");}});
+
+var sqlite3_str_appendchar = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_str_appendchar")
+Interceptor.attach(sqlite3_str_appendchar, {onLeave: function (args) {send("sqlite3_str_appendchar");}});
+
+var sqlite3_str_appendf = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_str_appendf")
+Interceptor.attach(sqlite3_str_appendf, {onLeave: function (args) {send("sqlite3_str_appendf");}});
+
+var sqlite3_str_errcode = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_str_errcode")
+Interceptor.attach(sqlite3_str_errcode, {onLeave: function (args) {send("sqlite3_str_errcode");}});
+
+var sqlite3_str_finish = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_str_finish")
+Interceptor.attach(sqlite3_str_finish, {onLeave: function (args) {send("sqlite3_str_finish");}});
+
+var sqlite3_str_length = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_str_length")
+Interceptor.attach(sqlite3_str_length, {onLeave: function (args) {send("sqlite3_str_length");}});
+
+var sqlite3_str_new = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_str_new")
+Interceptor.attach(sqlite3_str_new, {onLeave: function (args) {send("sqlite3_str_new");}});
+
+var sqlite3_str_reset = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_str_reset")
+Interceptor.attach(sqlite3_str_reset, {onLeave: function (args) {send("sqlite3_str_reset");}});
+
+var sqlite3_str_value = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_str_value")
+Interceptor.attach(sqlite3_str_value, {onLeave: function (args) {send("sqlite3_str_value");}});
+
+var sqlite3_str_vappendf = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_str_vappendf")
+Interceptor.attach(sqlite3_str_vappendf, {onLeave: function (args) {send("sqlite3_str_vappendf");}});
+
+var sqlite3_strglob = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_strglob")
+Interceptor.attach(sqlite3_strglob, {onLeave: function (args) {send("sqlite3_strglob");}});
+
+var sqlite3_stricmp = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_stricmp")
+Interceptor.attach(sqlite3_stricmp, {onLeave: function (args) {send("sqlite3_stricmp");}});
+
+var sqlite3_strlike = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_strlike")
+Interceptor.attach(sqlite3_strlike, {onLeave: function (args) {send("sqlite3_strlike");}});
+
+var sqlite3_strnicmp = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_strnicmp")
+Interceptor.attach(sqlite3_strnicmp, {onLeave: function (args) {send("sqlite3_strnicmp");}});
+
+var sqlite3_system_errno = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_system_errno")
+Interceptor.attach(sqlite3_system_errno, {onLeave: function (args) {send("sqlite3_system_errno");}});
+
+var sqlite3_table_column_metadata = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_table_column_metadata")
+Interceptor.attach(sqlite3_table_column_metadata, {onLeave: function (args) {send("sqlite3_table_column_metadata");}});
+
+var sqlite3_test_control = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_test_control")
+Interceptor.attach(sqlite3_test_control, {onLeave: function (args) {send("sqlite3_test_control");}});
+
+var sqlite3_thread_cleanup = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_thread_cleanup")
+Interceptor.attach(sqlite3_thread_cleanup, {onLeave: function (args) {send("sqlite3_thread_cleanup");}});
+
+var sqlite3_threadsafe = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_threadsafe")
+Interceptor.attach(sqlite3_threadsafe, {onLeave: function (args) {send("sqlite3_threadsafe");}});
+
+var sqlite3_total_changes = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_total_changes")
+Interceptor.attach(sqlite3_total_changes, {onLeave: function (args) {send("sqlite3_total_changes");}});
+
+var sqlite3_total_changes64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_total_changes64")
+Interceptor.attach(sqlite3_total_changes64, {onLeave: function (args) {send("sqlite3_total_changes64");}});
+
+var sqlite3_trace = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_trace")
+Interceptor.attach(sqlite3_trace, {onLeave: function (args) {send("sqlite3_trace");}});
+
+var sqlite3_trace_v2 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_trace_v2")
+Interceptor.attach(sqlite3_trace_v2, {onLeave: function (args) {send("sqlite3_trace_v2");}});
+
+var sqlite3_transfer_bindings = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_transfer_bindings")
+Interceptor.attach(sqlite3_transfer_bindings, {onLeave: function (args) {send("sqlite3_transfer_bindings");}});
+
+var sqlite3_txn_state = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_txn_state")
+Interceptor.attach(sqlite3_txn_state, {onLeave: function (args) {send("sqlite3_txn_state");}});
+
+var sqlite3_unicode_collations_extension_init = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_unicode_collations_extension_init")
+Interceptor.attach(sqlite3_unicode_collations_extension_init, {onLeave: function (args) {send("sqlite3_unicode_collations_extension_init");}});
+
+var sqlite3_update_hook = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_update_hook")
+Interceptor.attach(sqlite3_update_hook, {onLeave: function (args) {send("sqlite3_update_hook");}});
+
+var sqlite3_uri_boolean = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_uri_boolean")
+Interceptor.attach(sqlite3_uri_boolean, {onLeave: function (args) {send("sqlite3_uri_boolean");}});
+
+var sqlite3_uri_int64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_uri_int64")
+Interceptor.attach(sqlite3_uri_int64, {onLeave: function (args) {send("sqlite3_uri_int64");}});
+
+var sqlite3_uri_key = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_uri_key")
+Interceptor.attach(sqlite3_uri_key, {onLeave: function (args) {send("sqlite3_uri_key");}});
+
+var sqlite3_uri_parameter = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_uri_parameter")
+Interceptor.attach(sqlite3_uri_parameter, {onLeave: function (args) {send("sqlite3_uri_parameter");}});
+
+var sqlite3_user_data = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_user_data")
+Interceptor.attach(sqlite3_user_data, {onLeave: function (args) {send("sqlite3_user_data");}});
+
+var sqlite3_value_blob = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_blob")
+Interceptor.attach(sqlite3_value_blob, {onLeave: function (args) {send("sqlite3_value_blob");}});
+
+var sqlite3_value_bytes = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_bytes")
+Interceptor.attach(sqlite3_value_bytes, {onLeave: function (args) {send("sqlite3_value_bytes");}});
+
+var sqlite3_value_bytes16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_bytes16")
+Interceptor.attach(sqlite3_value_bytes16, {onLeave: function (args) {send("sqlite3_value_bytes16");}});
+
+var sqlite3_value_double = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_double")
+Interceptor.attach(sqlite3_value_double, {onLeave: function (args) {send("sqlite3_value_double");}});
+
+var sqlite3_value_dup = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_dup")
+Interceptor.attach(sqlite3_value_dup, {onLeave: function (args) {send("sqlite3_value_dup");}});
+
+var sqlite3_value_free = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_free")
+Interceptor.attach(sqlite3_value_free, {onLeave: function (args) {send("sqlite3_value_free");}});
+
+var sqlite3_value_frombind = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_frombind")
+Interceptor.attach(sqlite3_value_frombind, {onLeave: function (args) {send("sqlite3_value_frombind");}});
+
+var sqlite3_value_int = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_int")
+Interceptor.attach(sqlite3_value_int, {onLeave: function (args) {send("sqlite3_value_int");}});
+
+var sqlite3_value_int64 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_int64")
+Interceptor.attach(sqlite3_value_int64, {onLeave: function (args) {send("sqlite3_value_int64");}});
+
+var sqlite3_value_nochange = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_nochange")
+Interceptor.attach(sqlite3_value_nochange, {onLeave: function (args) {send("sqlite3_value_nochange");}});
+
+var sqlite3_value_numeric_type = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_numeric_type")
+Interceptor.attach(sqlite3_value_numeric_type, {onLeave: function (args) {send("sqlite3_value_numeric_type");}});
+
+var sqlite3_value_pointer = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_pointer")
+Interceptor.attach(sqlite3_value_pointer, {onLeave: function (args) {send("sqlite3_value_pointer");}});
+
+var sqlite3_value_subtype = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_subtype")
+Interceptor.attach(sqlite3_value_subtype, {onLeave: function (args) {send("sqlite3_value_subtype");}});
+
+var sqlite3_value_text = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_text")
+Interceptor.attach(sqlite3_value_text, {onLeave: function (args) {send("sqlite3_value_text");}});
+
+var sqlite3_value_text16 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_text16")
+Interceptor.attach(sqlite3_value_text16, {onLeave: function (args) {send("sqlite3_value_text16");}});
+
+var sqlite3_value_text16be = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_text16be")
+Interceptor.attach(sqlite3_value_text16be, {onLeave: function (args) {send("sqlite3_value_text16be");}});
+
+var sqlite3_value_text16le = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_text16le")
+Interceptor.attach(sqlite3_value_text16le, {onLeave: function (args) {send("sqlite3_value_text16le");}});
+
+var sqlite3_value_type = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_value_type")
+Interceptor.attach(sqlite3_value_type, {onLeave: function (args) {send("sqlite3_value_type");}});
+
+var sqlite3_vfs_find = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_vfs_find")
+Interceptor.attach(sqlite3_vfs_find, {onLeave: function (args) {send("sqlite3_vfs_find");}});
+
+var sqlite3_vfs_register = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_vfs_register")
+Interceptor.attach(sqlite3_vfs_register, {onLeave: function (args) {send("sqlite3_vfs_register");}});
+
+var sqlite3_vfs_unregister = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_vfs_unregister")
+Interceptor.attach(sqlite3_vfs_unregister, {onLeave: function (args) {send("sqlite3_vfs_unregister");}});
+
+var sqlite3_vmprintf = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_vmprintf")
+Interceptor.attach(sqlite3_vmprintf, {onLeave: function (args) {send("sqlite3_vmprintf");}});
+
+var sqlite3_vsnprintf = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_vsnprintf")
+Interceptor.attach(sqlite3_vsnprintf, {onLeave: function (args) {send("sqlite3_vsnprintf");}});
+
+var sqlite3_vtab_collation = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_vtab_collation")
+Interceptor.attach(sqlite3_vtab_collation, {onLeave: function (args) {send("sqlite3_vtab_collation");}});
+
+var sqlite3_vtab_config = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_vtab_config")
+Interceptor.attach(sqlite3_vtab_config, {onLeave: function (args) {send("sqlite3_vtab_config");}});
+
+var sqlite3_vtab_nochange = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_vtab_nochange")
+Interceptor.attach(sqlite3_vtab_nochange, {onLeave: function (args) {send("sqlite3_vtab_nochange");}});
+
+var sqlite3_vtab_on_conflict = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_vtab_on_conflict")
+Interceptor.attach(sqlite3_vtab_on_conflict, {onLeave: function (args) {send("sqlite3_vtab_on_conflict");}});
+
+var sqlite3_wal_autocheckpoint = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_wal_autocheckpoint")
+Interceptor.attach(sqlite3_wal_autocheckpoint, {onLeave: function (args) {send("sqlite3_wal_autocheckpoint");}});
+
+var sqlite3_wal_checkpoint = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_wal_checkpoint")
+Interceptor.attach(sqlite3_wal_checkpoint, {onLeave: function (args) {send("sqlite3_wal_checkpoint");}});
+
+var sqlite3_wal_checkpoint_v2 = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_wal_checkpoint_v2")
+Interceptor.attach(sqlite3_wal_checkpoint_v2, {onLeave: function (args) {send("sqlite3_wal_checkpoint_v2");}});
+
+var sqlite3_wal_hook = Module.findExportByName("SearchIndexerCore.dll", "sqlite3_wal_hook")
+Interceptor.attach(sqlite3_wal_hook, {onLeave: function (args) {send("sqlite3_wal_hook");}});
+

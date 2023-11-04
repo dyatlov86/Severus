@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("wpnsruprov.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wpnsruprov.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var SruInitializeProvider = Module.findExportByName("wpnsruprov.dll", "SruInitializeProvider")
+Interceptor.attach(SruInitializeProvider, {onLeave: function (args) {send("SruInitializeProvider");}});
+
+var SruUninitializeProvider = Module.findExportByName("wpnsruprov.dll", "SruUninitializeProvider")
+Interceptor.attach(SruUninitializeProvider, {onLeave: function (args) {send("SruUninitializeProvider");}});
+

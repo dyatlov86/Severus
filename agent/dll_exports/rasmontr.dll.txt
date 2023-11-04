@@ -1,0 +1,42 @@
+var GetDiagnosticFunctions = Module.findExportByName("rasmontr.dll", "GetDiagnosticFunctions")
+Interceptor.attach(GetDiagnosticFunctions, {onLeave: function (args) {send("GetDiagnosticFunctions");}});
+
+var InitHelperDll = Module.findExportByName("rasmontr.dll", "InitHelperDll")
+Interceptor.attach(InitHelperDll, {onLeave: function (args) {send("InitHelperDll");}});
+
+var RutlAlloc = Module.findExportByName("rasmontr.dll", "RutlAlloc")
+Interceptor.attach(RutlAlloc, {onLeave: function (args) {send("RutlAlloc");}});
+
+var RutlAssignmentFromTokenAndDword = Module.findExportByName("rasmontr.dll", "RutlAssignmentFromTokenAndDword")
+Interceptor.attach(RutlAssignmentFromTokenAndDword, {onLeave: function (args) {send("RutlAssignmentFromTokenAndDword");}});
+
+var RutlAssignmentFromTokens = Module.findExportByName("rasmontr.dll", "RutlAssignmentFromTokens")
+Interceptor.attach(RutlAssignmentFromTokens, {onLeave: function (args) {send("RutlAssignmentFromTokens");}});
+
+var RutlCloseDumpFile = Module.findExportByName("rasmontr.dll", "RutlCloseDumpFile")
+Interceptor.attach(RutlCloseDumpFile, {onLeave: function (args) {send("RutlCloseDumpFile");}});
+
+var RutlCreateDumpFile = Module.findExportByName("rasmontr.dll", "RutlCreateDumpFile")
+Interceptor.attach(RutlCreateDumpFile, {onLeave: function (args) {send("RutlCreateDumpFile");}});
+
+var RutlDwordDup = Module.findExportByName("rasmontr.dll", "RutlDwordDup")
+Interceptor.attach(RutlDwordDup, {onLeave: function (args) {send("RutlDwordDup");}});
+
+var RutlFree = Module.findExportByName("rasmontr.dll", "RutlFree")
+Interceptor.attach(RutlFree, {onLeave: function (args) {send("RutlFree");}});
+
+var RutlGetOsVersion = Module.findExportByName("rasmontr.dll", "RutlGetOsVersion")
+Interceptor.attach(RutlGetOsVersion, {onLeave: function (args) {send("RutlGetOsVersion");}});
+
+var RutlGetTagToken = Module.findExportByName("rasmontr.dll", "RutlGetTagToken")
+Interceptor.attach(RutlGetTagToken, {onLeave: function (args) {send("RutlGetTagToken");}});
+
+var RutlIsHelpToken = Module.findExportByName("rasmontr.dll", "RutlIsHelpToken")
+Interceptor.attach(RutlIsHelpToken, {onLeave: function (args) {send("RutlIsHelpToken");}});
+
+var RutlParse = Module.findExportByName("rasmontr.dll", "RutlParse")
+Interceptor.attach(RutlParse, {onLeave: function (args) {send("RutlParse");}});
+
+var RutlStrDup = Module.findExportByName("rasmontr.dll", "RutlStrDup")
+Interceptor.attach(RutlStrDup, {onLeave: function (args) {send("RutlStrDup");}});
+

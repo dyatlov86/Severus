@@ -1,0 +1,24 @@
+var DllMain = Module.findExportByName("appsruprov.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var LogMemoryPerfCounters = Module.findExportByName("appsruprov.dll", "LogMemoryPerfCounters")
+Interceptor.attach(LogMemoryPerfCounters, {onLeave: function (args) {send("LogMemoryPerfCounters");}});
+
+var LogMemoryPerfCountersPeriodically = Module.findExportByName("appsruprov.dll", "LogMemoryPerfCountersPeriodically")
+Interceptor.attach(LogMemoryPerfCountersPeriodically, {onLeave: function (args) {send("LogMemoryPerfCountersPeriodically");}});
+
+var PsmQueryApplicationPerformanceInformation = Module.findExportByName("appsruprov.dll", "PsmQueryApplicationPerformanceInformation")
+Interceptor.attach(PsmQueryApplicationPerformanceInformation, {onLeave: function (args) {send("PsmQueryApplicationPerformanceInformation");}});
+
+var PsmQueryApplicationPerformanceInformation2 = Module.findExportByName("appsruprov.dll", "PsmQueryApplicationPerformanceInformation2")
+Interceptor.attach(PsmQueryApplicationPerformanceInformation2, {onLeave: function (args) {send("PsmQueryApplicationPerformanceInformation2");}});
+
+var PsmQueryQuotaInformation = Module.findExportByName("appsruprov.dll", "PsmQueryQuotaInformation")
+Interceptor.attach(PsmQueryQuotaInformation, {onLeave: function (args) {send("PsmQueryQuotaInformation");}});
+
+var SruInitializeProvider = Module.findExportByName("appsruprov.dll", "SruInitializeProvider")
+Interceptor.attach(SruInitializeProvider, {onLeave: function (args) {send("SruInitializeProvider");}});
+
+var SruUninitializeProvider = Module.findExportByName("appsruprov.dll", "SruUninitializeProvider")
+Interceptor.attach(SruUninitializeProvider, {onLeave: function (args) {send("SruUninitializeProvider");}});
+

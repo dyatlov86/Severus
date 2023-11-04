@@ -1,0 +1,15 @@
+var NgcLocalAddCredential = Module.findExportByName("ngclocal.dll", "NgcLocalAddCredential")
+Interceptor.attach(NgcLocalAddCredential, {onLeave: function (args) {send("NgcLocalAddCredential");}});
+
+var NgcLocalAddCredentialSilent = Module.findExportByName("ngclocal.dll", "NgcLocalAddCredentialSilent")
+Interceptor.attach(NgcLocalAddCredentialSilent, {onLeave: function (args) {send("NgcLocalAddCredentialSilent");}});
+
+var NgcLocalChangeCredential = Module.findExportByName("ngclocal.dll", "NgcLocalChangeCredential")
+Interceptor.attach(NgcLocalChangeCredential, {onLeave: function (args) {send("NgcLocalChangeCredential");}});
+
+var NgcLocalFindCredential = Module.findExportByName("ngclocal.dll", "NgcLocalFindCredential")
+Interceptor.attach(NgcLocalFindCredential, {onLeave: function (args) {send("NgcLocalFindCredential");}});
+
+var NgcLocalRemoveCredential = Module.findExportByName("ngclocal.dll", "NgcLocalRemoveCredential")
+Interceptor.attach(NgcLocalRemoveCredential, {onLeave: function (args) {send("NgcLocalRemoveCredential");}});
+

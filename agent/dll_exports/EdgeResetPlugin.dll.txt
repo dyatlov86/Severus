@@ -1,0 +1,3 @@
+var Reset_Edge = Module.findExportByName("EdgeResetPlugin.dll", "Reset_Edge")
+Interceptor.attach(Reset_Edge, {onLeave: function (args) {send("Reset_Edge");}});
+

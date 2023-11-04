@@ -1,0 +1,204 @@
+var AuthzAccessCheck = Module.findExportByName("authz.dll", "AuthzAccessCheck")
+Interceptor.attach(AuthzAccessCheck, {onLeave: function (args) {send("AuthzAccessCheck");}});
+
+var AuthzAddSidsToContext = Module.findExportByName("authz.dll", "AuthzAddSidsToContext")
+Interceptor.attach(AuthzAddSidsToContext, {onLeave: function (args) {send("AuthzAddSidsToContext");}});
+
+var AuthzCachedAccessCheck = Module.findExportByName("authz.dll", "AuthzCachedAccessCheck")
+Interceptor.attach(AuthzCachedAccessCheck, {onLeave: function (args) {send("AuthzCachedAccessCheck");}});
+
+var AuthzComputeEffectivePermission = Module.findExportByName("authz.dll", "AuthzComputeEffectivePermission")
+Interceptor.attach(AuthzComputeEffectivePermission, {onLeave: function (args) {send("AuthzComputeEffectivePermission");}});
+
+var AuthzEnumerateSecurityEventSources = Module.findExportByName("authz.dll", "AuthzEnumerateSecurityEventSources")
+Interceptor.attach(AuthzEnumerateSecurityEventSources, {onLeave: function (args) {send("AuthzEnumerateSecurityEventSources");}});
+
+var AuthzEvaluateSacl = Module.findExportByName("authz.dll", "AuthzEvaluateSacl")
+Interceptor.attach(AuthzEvaluateSacl, {onLeave: function (args) {send("AuthzEvaluateSacl");}});
+
+var AuthzFreeAuditEvent = Module.findExportByName("authz.dll", "AuthzFreeAuditEvent")
+Interceptor.attach(AuthzFreeAuditEvent, {onLeave: function (args) {send("AuthzFreeAuditEvent");}});
+
+var AuthzFreeCentralAccessPolicyCache = Module.findExportByName("authz.dll", "AuthzFreeCentralAccessPolicyCache")
+Interceptor.attach(AuthzFreeCentralAccessPolicyCache, {onLeave: function (args) {send("AuthzFreeCentralAccessPolicyCache");}});
+
+var AuthzFreeContext = Module.findExportByName("authz.dll", "AuthzFreeContext")
+Interceptor.attach(AuthzFreeContext, {onLeave: function (args) {send("AuthzFreeContext");}});
+
+var AuthzFreeHandle = Module.findExportByName("authz.dll", "AuthzFreeHandle")
+Interceptor.attach(AuthzFreeHandle, {onLeave: function (args) {send("AuthzFreeHandle");}});
+
+var AuthzFreeResourceManager = Module.findExportByName("authz.dll", "AuthzFreeResourceManager")
+Interceptor.attach(AuthzFreeResourceManager, {onLeave: function (args) {send("AuthzFreeResourceManager");}});
+
+var AuthzGetInformationFromContext = Module.findExportByName("authz.dll", "AuthzGetInformationFromContext")
+Interceptor.attach(AuthzGetInformationFromContext, {onLeave: function (args) {send("AuthzGetInformationFromContext");}});
+
+var AuthzInitializeCompoundContext = Module.findExportByName("authz.dll", "AuthzInitializeCompoundContext")
+Interceptor.attach(AuthzInitializeCompoundContext, {onLeave: function (args) {send("AuthzInitializeCompoundContext");}});
+
+var AuthzInitializeContextFromAuthzContext = Module.findExportByName("authz.dll", "AuthzInitializeContextFromAuthzContext")
+Interceptor.attach(AuthzInitializeContextFromAuthzContext, {onLeave: function (args) {send("AuthzInitializeContextFromAuthzContext");}});
+
+var AuthzInitializeContextFromSid = Module.findExportByName("authz.dll", "AuthzInitializeContextFromSid")
+Interceptor.attach(AuthzInitializeContextFromSid, {onLeave: function (args) {send("AuthzInitializeContextFromSid");}});
+
+var AuthzInitializeContextFromToken = Module.findExportByName("authz.dll", "AuthzInitializeContextFromToken")
+Interceptor.attach(AuthzInitializeContextFromToken, {onLeave: function (args) {send("AuthzInitializeContextFromToken");}});
+
+var AuthzInitializeObjectAccessAuditEvent = Module.findExportByName("authz.dll", "AuthzInitializeObjectAccessAuditEvent")
+Interceptor.attach(AuthzInitializeObjectAccessAuditEvent, {onLeave: function (args) {send("AuthzInitializeObjectAccessAuditEvent");}});
+
+var AuthzInitializeObjectAccessAuditEvent2 = Module.findExportByName("authz.dll", "AuthzInitializeObjectAccessAuditEvent2")
+Interceptor.attach(AuthzInitializeObjectAccessAuditEvent2, {onLeave: function (args) {send("AuthzInitializeObjectAccessAuditEvent2");}});
+
+var AuthzInitializeRemoteAccessCheck = Module.findExportByName("authz.dll", "AuthzInitializeRemoteAccessCheck")
+Interceptor.attach(AuthzInitializeRemoteAccessCheck, {onLeave: function (args) {send("AuthzInitializeRemoteAccessCheck");}});
+
+var AuthzInitializeRemoteResourceManager = Module.findExportByName("authz.dll", "AuthzInitializeRemoteResourceManager")
+Interceptor.attach(AuthzInitializeRemoteResourceManager, {onLeave: function (args) {send("AuthzInitializeRemoteResourceManager");}});
+
+var AuthzInitializeResourceManager = Module.findExportByName("authz.dll", "AuthzInitializeResourceManager")
+Interceptor.attach(AuthzInitializeResourceManager, {onLeave: function (args) {send("AuthzInitializeResourceManager");}});
+
+var AuthzInitializeResourceManagerEx = Module.findExportByName("authz.dll", "AuthzInitializeResourceManagerEx")
+Interceptor.attach(AuthzInitializeResourceManagerEx, {onLeave: function (args) {send("AuthzInitializeResourceManagerEx");}});
+
+var AuthzInstallSecurityEventSource = Module.findExportByName("authz.dll", "AuthzInstallSecurityEventSource")
+Interceptor.attach(AuthzInstallSecurityEventSource, {onLeave: function (args) {send("AuthzInstallSecurityEventSource");}});
+
+var AuthzModifyClaims = Module.findExportByName("authz.dll", "AuthzModifyClaims")
+Interceptor.attach(AuthzModifyClaims, {onLeave: function (args) {send("AuthzModifyClaims");}});
+
+var AuthzModifySecurityAttributes = Module.findExportByName("authz.dll", "AuthzModifySecurityAttributes")
+Interceptor.attach(AuthzModifySecurityAttributes, {onLeave: function (args) {send("AuthzModifySecurityAttributes");}});
+
+var AuthzModifySids = Module.findExportByName("authz.dll", "AuthzModifySids")
+Interceptor.attach(AuthzModifySids, {onLeave: function (args) {send("AuthzModifySids");}});
+
+var AuthzOpenObjectAudit = Module.findExportByName("authz.dll", "AuthzOpenObjectAudit")
+Interceptor.attach(AuthzOpenObjectAudit, {onLeave: function (args) {send("AuthzOpenObjectAudit");}});
+
+var AuthzRegisterCapChangeNotification = Module.findExportByName("authz.dll", "AuthzRegisterCapChangeNotification")
+Interceptor.attach(AuthzRegisterCapChangeNotification, {onLeave: function (args) {send("AuthzRegisterCapChangeNotification");}});
+
+var AuthzRegisterSecurityEventSource = Module.findExportByName("authz.dll", "AuthzRegisterSecurityEventSource")
+Interceptor.attach(AuthzRegisterSecurityEventSource, {onLeave: function (args) {send("AuthzRegisterSecurityEventSource");}});
+
+var AuthzReportSecurityEvent = Module.findExportByName("authz.dll", "AuthzReportSecurityEvent")
+Interceptor.attach(AuthzReportSecurityEvent, {onLeave: function (args) {send("AuthzReportSecurityEvent");}});
+
+var AuthzReportSecurityEventFromParams = Module.findExportByName("authz.dll", "AuthzReportSecurityEventFromParams")
+Interceptor.attach(AuthzReportSecurityEventFromParams, {onLeave: function (args) {send("AuthzReportSecurityEventFromParams");}});
+
+var AuthzSetAppContainerInformation = Module.findExportByName("authz.dll", "AuthzSetAppContainerInformation")
+Interceptor.attach(AuthzSetAppContainerInformation, {onLeave: function (args) {send("AuthzSetAppContainerInformation");}});
+
+var AuthzShutdownRemoteAccessCheck = Module.findExportByName("authz.dll", "AuthzShutdownRemoteAccessCheck")
+Interceptor.attach(AuthzShutdownRemoteAccessCheck, {onLeave: function (args) {send("AuthzShutdownRemoteAccessCheck");}});
+
+var AuthzUninstallSecurityEventSource = Module.findExportByName("authz.dll", "AuthzUninstallSecurityEventSource")
+Interceptor.attach(AuthzUninstallSecurityEventSource, {onLeave: function (args) {send("AuthzUninstallSecurityEventSource");}});
+
+var AuthzUnregisterCapChangeNotification = Module.findExportByName("authz.dll", "AuthzUnregisterCapChangeNotification")
+Interceptor.attach(AuthzUnregisterCapChangeNotification, {onLeave: function (args) {send("AuthzUnregisterCapChangeNotification");}});
+
+var AuthzUnregisterSecurityEventSource = Module.findExportByName("authz.dll", "AuthzUnregisterSecurityEventSource")
+Interceptor.attach(AuthzUnregisterSecurityEventSource, {onLeave: function (args) {send("AuthzUnregisterSecurityEventSource");}});
+
+var AuthziAccessCheckEx = Module.findExportByName("authz.dll", "AuthziAccessCheckEx")
+Interceptor.attach(AuthziAccessCheckEx, {onLeave: function (args) {send("AuthziAccessCheckEx");}});
+
+var AuthziAllocateAuditParams = Module.findExportByName("authz.dll", "AuthziAllocateAuditParams")
+Interceptor.attach(AuthziAllocateAuditParams, {onLeave: function (args) {send("AuthziAllocateAuditParams");}});
+
+var AuthziCheckContextMembership = Module.findExportByName("authz.dll", "AuthziCheckContextMembership")
+Interceptor.attach(AuthziCheckContextMembership, {onLeave: function (args) {send("AuthziCheckContextMembership");}});
+
+var AuthziFreeAuditEventType = Module.findExportByName("authz.dll", "AuthziFreeAuditEventType")
+Interceptor.attach(AuthziFreeAuditEventType, {onLeave: function (args) {send("AuthziFreeAuditEventType");}});
+
+var AuthziFreeAuditParams = Module.findExportByName("authz.dll", "AuthziFreeAuditParams")
+Interceptor.attach(AuthziFreeAuditParams, {onLeave: function (args) {send("AuthziFreeAuditParams");}});
+
+var AuthziFreeAuditQueue = Module.findExportByName("authz.dll", "AuthziFreeAuditQueue")
+Interceptor.attach(AuthziFreeAuditQueue, {onLeave: function (args) {send("AuthziFreeAuditQueue");}});
+
+var AuthziGenerateAdminAlertAuditW = Module.findExportByName("authz.dll", "AuthziGenerateAdminAlertAuditW")
+Interceptor.attach(AuthziGenerateAdminAlertAuditW, {onLeave: function (args) {send("AuthziGenerateAdminAlertAuditW");}});
+
+var AuthziInitializeAuditEvent = Module.findExportByName("authz.dll", "AuthziInitializeAuditEvent")
+Interceptor.attach(AuthziInitializeAuditEvent, {onLeave: function (args) {send("AuthziInitializeAuditEvent");}});
+
+var AuthziInitializeAuditEventType = Module.findExportByName("authz.dll", "AuthziInitializeAuditEventType")
+Interceptor.attach(AuthziInitializeAuditEventType, {onLeave: function (args) {send("AuthziInitializeAuditEventType");}});
+
+var AuthziInitializeAuditParams = Module.findExportByName("authz.dll", "AuthziInitializeAuditParams")
+Interceptor.attach(AuthziInitializeAuditParams, {onLeave: function (args) {send("AuthziInitializeAuditParams");}});
+
+var AuthziInitializeAuditParamsFromArray = Module.findExportByName("authz.dll", "AuthziInitializeAuditParamsFromArray")
+Interceptor.attach(AuthziInitializeAuditParamsFromArray, {onLeave: function (args) {send("AuthziInitializeAuditParamsFromArray");}});
+
+var AuthziInitializeAuditParamsWithRM = Module.findExportByName("authz.dll", "AuthziInitializeAuditParamsWithRM")
+Interceptor.attach(AuthziInitializeAuditParamsWithRM, {onLeave: function (args) {send("AuthziInitializeAuditParamsWithRM");}});
+
+var AuthziInitializeAuditQueue = Module.findExportByName("authz.dll", "AuthziInitializeAuditQueue")
+Interceptor.attach(AuthziInitializeAuditQueue, {onLeave: function (args) {send("AuthziInitializeAuditQueue");}});
+
+var AuthziInitializeContextFromSid = Module.findExportByName("authz.dll", "AuthziInitializeContextFromSid")
+Interceptor.attach(AuthziInitializeContextFromSid, {onLeave: function (args) {send("AuthziInitializeContextFromSid");}});
+
+var AuthziLogAuditEvent = Module.findExportByName("authz.dll", "AuthziLogAuditEvent")
+Interceptor.attach(AuthziLogAuditEvent, {onLeave: function (args) {send("AuthziLogAuditEvent");}});
+
+var AuthziModifyAuditEvent = Module.findExportByName("authz.dll", "AuthziModifyAuditEvent")
+Interceptor.attach(AuthziModifyAuditEvent, {onLeave: function (args) {send("AuthziModifyAuditEvent");}});
+
+var AuthziModifyAuditEvent2 = Module.findExportByName("authz.dll", "AuthziModifyAuditEvent2")
+Interceptor.attach(AuthziModifyAuditEvent2, {onLeave: function (args) {send("AuthziModifyAuditEvent2");}});
+
+var AuthziModifyAuditEventType = Module.findExportByName("authz.dll", "AuthziModifyAuditEventType")
+Interceptor.attach(AuthziModifyAuditEventType, {onLeave: function (args) {send("AuthziModifyAuditEventType");}});
+
+var AuthziModifyAuditQueue = Module.findExportByName("authz.dll", "AuthziModifyAuditQueue")
+Interceptor.attach(AuthziModifyAuditQueue, {onLeave: function (args) {send("AuthziModifyAuditQueue");}});
+
+var AuthziModifySecurityAttributes = Module.findExportByName("authz.dll", "AuthziModifySecurityAttributes")
+Interceptor.attach(AuthziModifySecurityAttributes, {onLeave: function (args) {send("AuthziModifySecurityAttributes");}});
+
+var AuthziQuerySecurityAttributes = Module.findExportByName("authz.dll", "AuthziQuerySecurityAttributes")
+Interceptor.attach(AuthziQuerySecurityAttributes, {onLeave: function (args) {send("AuthziQuerySecurityAttributes");}});
+
+var AuthziSourceAudit = Module.findExportByName("authz.dll", "AuthziSourceAudit")
+Interceptor.attach(AuthziSourceAudit, {onLeave: function (args) {send("AuthziSourceAudit");}});
+
+var FreeClaimDefinitions = Module.findExportByName("authz.dll", "FreeClaimDefinitions")
+Interceptor.attach(FreeClaimDefinitions, {onLeave: function (args) {send("FreeClaimDefinitions");}});
+
+var FreeClaimDictionary = Module.findExportByName("authz.dll", "FreeClaimDictionary")
+Interceptor.attach(FreeClaimDictionary, {onLeave: function (args) {send("FreeClaimDictionary");}});
+
+var GenerateNewCAPID = Module.findExportByName("authz.dll", "GenerateNewCAPID")
+Interceptor.attach(GenerateNewCAPID, {onLeave: function (args) {send("GenerateNewCAPID");}});
+
+var GetCentralAccessPoliciesByCapID = Module.findExportByName("authz.dll", "GetCentralAccessPoliciesByCapID")
+Interceptor.attach(GetCentralAccessPoliciesByCapID, {onLeave: function (args) {send("GetCentralAccessPoliciesByCapID");}});
+
+var GetCentralAccessPoliciesByDN = Module.findExportByName("authz.dll", "GetCentralAccessPoliciesByDN")
+Interceptor.attach(GetCentralAccessPoliciesByDN, {onLeave: function (args) {send("GetCentralAccessPoliciesByDN");}});
+
+var GetClaimDefinitions = Module.findExportByName("authz.dll", "GetClaimDefinitions")
+Interceptor.attach(GetClaimDefinitions, {onLeave: function (args) {send("GetClaimDefinitions");}});
+
+var GetClaimDomainInfo = Module.findExportByName("authz.dll", "GetClaimDomainInfo")
+Interceptor.attach(GetClaimDomainInfo, {onLeave: function (args) {send("GetClaimDomainInfo");}});
+
+var GetDefaultCAPESecurityDescriptor = Module.findExportByName("authz.dll", "GetDefaultCAPESecurityDescriptor")
+Interceptor.attach(GetDefaultCAPESecurityDescriptor, {onLeave: function (args) {send("GetDefaultCAPESecurityDescriptor");}});
+
+var InitializeClaimDictionary = Module.findExportByName("authz.dll", "InitializeClaimDictionary")
+Interceptor.attach(InitializeClaimDictionary, {onLeave: function (args) {send("InitializeClaimDictionary");}});
+
+var RefreshClaimDictionary = Module.findExportByName("authz.dll", "RefreshClaimDictionary")
+Interceptor.attach(RefreshClaimDictionary, {onLeave: function (args) {send("RefreshClaimDictionary");}});
+

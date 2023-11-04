@@ -1,0 +1,3 @@
+var LangDataCall = Module.findExportByName("NlsData0000.dll", "LangDataCall")
+Interceptor.attach(LangDataCall, {onLeave: function (args) {send("LangDataCall");}});
+

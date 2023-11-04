@@ -1,0 +1,15 @@
+var DnsHostnameToComputerNameExW = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-1.dll", "DnsHostnameToComputerNameExW")
+Interceptor.attach(DnsHostnameToComputerNameExW, {onLeave: function (args) {send("DnsHostnameToComputerNameExW");}});
+
+var GetPhysicallyInstalledSystemMemory = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-1.dll", "GetPhysicallyInstalledSystemMemory")
+Interceptor.attach(GetPhysicallyInstalledSystemMemory, {onLeave: function (args) {send("GetPhysicallyInstalledSystemMemory");}});
+
+var InstallELAMCertificateInfo = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-1.dll", "InstallELAMCertificateInfo")
+Interceptor.attach(InstallELAMCertificateInfo, {onLeave: function (args) {send("InstallELAMCertificateInfo");}});
+
+var SetComputerNameEx2W = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-1.dll", "SetComputerNameEx2W")
+Interceptor.attach(SetComputerNameEx2W, {onLeave: function (args) {send("SetComputerNameEx2W");}});
+
+var SetSystemTimeAdjustment = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-1.dll", "SetSystemTimeAdjustment")
+Interceptor.attach(SetSystemTimeAdjustment, {onLeave: function (args) {send("SetSystemTimeAdjustment");}});
+

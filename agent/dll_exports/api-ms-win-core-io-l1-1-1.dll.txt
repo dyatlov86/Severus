@@ -1,0 +1,9 @@
+var CancelIo = Module.findExportByName("api-ms-win-core-io-l1-1-1.dll", "CancelIo")
+Interceptor.attach(CancelIo, {onLeave: function (args) {send("CancelIo");}});
+
+var CancelSynchronousIo = Module.findExportByName("api-ms-win-core-io-l1-1-1.dll", "CancelSynchronousIo")
+Interceptor.attach(CancelSynchronousIo, {onLeave: function (args) {send("CancelSynchronousIo");}});
+
+var GetOverlappedResultEx = Module.findExportByName("api-ms-win-core-io-l1-1-1.dll", "GetOverlappedResultEx")
+Interceptor.attach(GetOverlappedResultEx, {onLeave: function (args) {send("GetOverlappedResultEx");}});
+

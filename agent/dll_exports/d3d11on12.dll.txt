@@ -1,0 +1,3 @@
+var OpenAdapter_D3D11On12 = Module.findExportByName("d3d11on12.dll", "OpenAdapter_D3D11On12")
+Interceptor.attach(OpenAdapter_D3D11On12, {onLeave: function (args) {send("OpenAdapter_D3D11On12");}});
+

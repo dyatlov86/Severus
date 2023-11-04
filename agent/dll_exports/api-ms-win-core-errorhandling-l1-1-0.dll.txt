@@ -1,0 +1,21 @@
+var GetErrorMode = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-0.dll", "GetErrorMode")
+Interceptor.attach(GetErrorMode, {onLeave: function (args) {send("GetErrorMode");}});
+
+var GetLastError = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-0.dll", "GetLastError")
+Interceptor.attach(GetLastError, {onLeave: function (args) {send("GetLastError");}});
+
+var RaiseException = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-0.dll", "RaiseException")
+Interceptor.attach(RaiseException, {onLeave: function (args) {send("RaiseException");}});
+
+var SetErrorMode = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-0.dll", "SetErrorMode")
+Interceptor.attach(SetErrorMode, {onLeave: function (args) {send("SetErrorMode");}});
+
+var SetLastError = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-0.dll", "SetLastError")
+Interceptor.attach(SetLastError, {onLeave: function (args) {send("SetLastError");}});
+
+var SetUnhandledExceptionFilter = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-0.dll", "SetUnhandledExceptionFilter")
+Interceptor.attach(SetUnhandledExceptionFilter, {onLeave: function (args) {send("SetUnhandledExceptionFilter");}});
+
+var UnhandledExceptionFilter = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-0.dll", "UnhandledExceptionFilter")
+Interceptor.attach(UnhandledExceptionFilter, {onLeave: function (args) {send("UnhandledExceptionFilter");}});
+

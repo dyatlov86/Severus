@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("mfreadwrite.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mfreadwrite.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var MFCreateSinkWriterFromMediaSink = Module.findExportByName("mfreadwrite.dll", "MFCreateSinkWriterFromMediaSink")
+Interceptor.attach(MFCreateSinkWriterFromMediaSink, {onLeave: function (args) {send("MFCreateSinkWriterFromMediaSink");}});
+
+var MFCreateSinkWriterFromURL = Module.findExportByName("mfreadwrite.dll", "MFCreateSinkWriterFromURL")
+Interceptor.attach(MFCreateSinkWriterFromURL, {onLeave: function (args) {send("MFCreateSinkWriterFromURL");}});
+
+var MFCreateSourceReaderFromByteStream = Module.findExportByName("mfreadwrite.dll", "MFCreateSourceReaderFromByteStream")
+Interceptor.attach(MFCreateSourceReaderFromByteStream, {onLeave: function (args) {send("MFCreateSourceReaderFromByteStream");}});
+
+var MFCreateSourceReaderFromMediaSource = Module.findExportByName("mfreadwrite.dll", "MFCreateSourceReaderFromMediaSource")
+Interceptor.attach(MFCreateSourceReaderFromMediaSource, {onLeave: function (args) {send("MFCreateSourceReaderFromMediaSource");}});
+
+var MFCreateSourceReaderFromURL = Module.findExportByName("mfreadwrite.dll", "MFCreateSourceReaderFromURL")
+Interceptor.attach(MFCreateSourceReaderFromURL, {onLeave: function (args) {send("MFCreateSourceReaderFromURL");}});
+

@@ -1,0 +1,24 @@
+var DllCanUnloadNow = Module.findExportByName("eapphost.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("eapphost.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("eapphost.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("eapphost.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var InitializeEapHost = Module.findExportByName("eapphost.dll", "InitializeEapHost")
+Interceptor.attach(InitializeEapHost, {onLeave: function (args) {send("InitializeEapHost");}});
+
+var OnSessionChange = Module.findExportByName("eapphost.dll", "OnSessionChange")
+Interceptor.attach(OnSessionChange, {onLeave: function (args) {send("OnSessionChange");}});
+
+var StopServiceOnLowPower = Module.findExportByName("eapphost.dll", "StopServiceOnLowPower")
+Interceptor.attach(StopServiceOnLowPower, {onLeave: function (args) {send("StopServiceOnLowPower");}});
+
+var UninitializeEapHost = Module.findExportByName("eapphost.dll", "UninitializeEapHost")
+Interceptor.attach(UninitializeEapHost, {onLeave: function (args) {send("UninitializeEapHost");}});
+

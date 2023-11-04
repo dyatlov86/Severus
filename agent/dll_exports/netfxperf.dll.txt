@@ -1,0 +1,12 @@
+var ClosePerformanceData = Module.findExportByName("netfxperf.dll", "ClosePerformanceData")
+Interceptor.attach(ClosePerformanceData, {onLeave: function (args) {send("ClosePerformanceData");}});
+
+var CollectPerformanceData = Module.findExportByName("netfxperf.dll", "CollectPerformanceData")
+Interceptor.attach(CollectPerformanceData, {onLeave: function (args) {send("CollectPerformanceData");}});
+
+var OpenPerformanceData = Module.findExportByName("netfxperf.dll", "OpenPerformanceData")
+Interceptor.attach(OpenPerformanceData, {onLeave: function (args) {send("OpenPerformanceData");}});
+
+var TraceServiceStart = Module.findExportByName("netfxperf.dll", "TraceServiceStart")
+Interceptor.attach(TraceServiceStart, {onLeave: function (args) {send("TraceServiceStart");}});
+

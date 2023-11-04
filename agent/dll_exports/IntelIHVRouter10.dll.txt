@@ -1,0 +1,9 @@
+var Dot11ExtIhvGetVersionInfo = Module.findExportByName("IntelIHVRouter10.dll", "Dot11ExtIhvGetVersionInfo")
+Interceptor.attach(Dot11ExtIhvGetVersionInfo, {onLeave: function (args) {send("Dot11ExtIhvGetVersionInfo");}});
+
+var Dot11ExtIhvInitService = Module.findExportByName("IntelIHVRouter10.dll", "Dot11ExtIhvInitService")
+Interceptor.attach(Dot11ExtIhvInitService, {onLeave: function (args) {send("Dot11ExtIhvInitService");}});
+
+var Dot11ExtIhvInitVirtualStation = Module.findExportByName("IntelIHVRouter10.dll", "Dot11ExtIhvInitVirtualStation")
+Interceptor.attach(Dot11ExtIhvInitVirtualStation, {onLeave: function (args) {send("Dot11ExtIhvInitVirtualStation");}});
+

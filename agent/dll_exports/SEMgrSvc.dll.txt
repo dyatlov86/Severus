@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("SEMgrSvc.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SEMgrSvc.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var LaunchModernNfcEventSession = Module.findExportByName("SEMgrSvc.dll", "LaunchModernNfcEventSession")
+Interceptor.attach(LaunchModernNfcEventSession, {onLeave: function (args) {send("LaunchModernNfcEventSession");}});
+
+var ServiceMain = Module.findExportByName("SEMgrSvc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("SEMgrSvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

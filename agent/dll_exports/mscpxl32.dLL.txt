@@ -1,0 +1,12 @@
+var ConfigTranslator = Module.findExportByName("mscpxl32.dLL", "ConfigTranslator")
+Interceptor.attach(ConfigTranslator, {onLeave: function (args) {send("ConfigTranslator");}});
+
+var ConfigureDlgProc = Module.findExportByName("mscpxl32.dLL", "ConfigureDlgProc")
+Interceptor.attach(ConfigureDlgProc, {onLeave: function (args) {send("ConfigureDlgProc");}});
+
+var SQLDataSourceToDriver = Module.findExportByName("mscpxl32.dLL", "SQLDataSourceToDriver")
+Interceptor.attach(SQLDataSourceToDriver, {onLeave: function (args) {send("SQLDataSourceToDriver");}});
+
+var SQLDriverToDataSource = Module.findExportByName("mscpxl32.dLL", "SQLDriverToDataSource")
+Interceptor.attach(SQLDriverToDataSource, {onLeave: function (args) {send("SQLDriverToDataSource");}});
+

@@ -1,0 +1,3 @@
+var DWriteCoreCreateFactory = Module.findExportByName("dwritemin.dll", "DWriteCoreCreateFactory")
+Interceptor.attach(DWriteCoreCreateFactory, {onLeave: function (args) {send("DWriteCoreCreateFactory");}});
+

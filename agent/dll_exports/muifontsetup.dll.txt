@@ -1,0 +1,9 @@
+var ChangeFontLocaleSettingsForVAIL = Module.findExportByName("muifontsetup.dll", "ChangeFontLocaleSettingsForVAIL")
+Interceptor.attach(ChangeFontLocaleSettingsForVAIL, {onLeave: function (args) {send("ChangeFontLocaleSettingsForVAIL");}});
+
+var OnMachineUILanguageInit = Module.findExportByName("muifontsetup.dll", "OnMachineUILanguageInit")
+Interceptor.attach(OnMachineUILanguageInit, {onLeave: function (args) {send("OnMachineUILanguageInit");}});
+
+var OnMachineUILanguageSwitch = Module.findExportByName("muifontsetup.dll", "OnMachineUILanguageSwitch")
+Interceptor.attach(OnMachineUILanguageSwitch, {onLeave: function (args) {send("OnMachineUILanguageSwitch");}});
+

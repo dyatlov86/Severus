@@ -1,0 +1,15 @@
+var CreateAndSetCoreAppModel = Module.findExportByName("WindowManagementAPI.dll", "CreateAndSetCoreAppModel")
+Interceptor.attach(CreateAndSetCoreAppModel, {onLeave: function (args) {send("CreateAndSetCoreAppModel");}});
+
+var CreateWindowInformation = Module.findExportByName("WindowManagementAPI.dll", "CreateWindowInformation")
+Interceptor.attach(CreateWindowInformation, {onLeave: function (args) {send("CreateWindowInformation");}});
+
+var CreateWindowLayout = Module.findExportByName("WindowManagementAPI.dll", "CreateWindowLayout")
+Interceptor.attach(CreateWindowLayout, {onLeave: function (args) {send("CreateWindowLayout");}});
+
+var DllGetActivationFactory = Module.findExportByName("WindowManagementAPI.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("WindowManagementAPI.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

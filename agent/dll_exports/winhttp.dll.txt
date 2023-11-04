@@ -1,0 +1,246 @@
+var DllCanUnloadNow = Module.findExportByName("winhttp.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("winhttp.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var Private1 = Module.findExportByName("winhttp.dll", "Private1")
+Interceptor.attach(Private1, {onLeave: function (args) {send("Private1");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("winhttp.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+
+var WinHttpAddRequestHeaders = Module.findExportByName("winhttp.dll", "WinHttpAddRequestHeaders")
+Interceptor.attach(WinHttpAddRequestHeaders, {onLeave: function (args) {send("WinHttpAddRequestHeaders");}});
+
+var WinHttpAddRequestHeadersEx = Module.findExportByName("winhttp.dll", "WinHttpAddRequestHeadersEx")
+Interceptor.attach(WinHttpAddRequestHeadersEx, {onLeave: function (args) {send("WinHttpAddRequestHeadersEx");}});
+
+var WinHttpAutoProxySvcMain = Module.findExportByName("winhttp.dll", "WinHttpAutoProxySvcMain")
+Interceptor.attach(WinHttpAutoProxySvcMain, {onLeave: function (args) {send("WinHttpAutoProxySvcMain");}});
+
+var WinHttpCheckPlatform = Module.findExportByName("winhttp.dll", "WinHttpCheckPlatform")
+Interceptor.attach(WinHttpCheckPlatform, {onLeave: function (args) {send("WinHttpCheckPlatform");}});
+
+var WinHttpCloseHandle = Module.findExportByName("winhttp.dll", "WinHttpCloseHandle")
+Interceptor.attach(WinHttpCloseHandle, {onLeave: function (args) {send("WinHttpCloseHandle");}});
+
+var WinHttpConnect = Module.findExportByName("winhttp.dll", "WinHttpConnect")
+Interceptor.attach(WinHttpConnect, {onLeave: function (args) {send("WinHttpConnect");}});
+
+var WinHttpConnectionDeletePolicyEntries = Module.findExportByName("winhttp.dll", "WinHttpConnectionDeletePolicyEntries")
+Interceptor.attach(WinHttpConnectionDeletePolicyEntries, {onLeave: function (args) {send("WinHttpConnectionDeletePolicyEntries");}});
+
+var WinHttpConnectionDeleteProxyInfo = Module.findExportByName("winhttp.dll", "WinHttpConnectionDeleteProxyInfo")
+Interceptor.attach(WinHttpConnectionDeleteProxyInfo, {onLeave: function (args) {send("WinHttpConnectionDeleteProxyInfo");}});
+
+var WinHttpConnectionFreeNameList = Module.findExportByName("winhttp.dll", "WinHttpConnectionFreeNameList")
+Interceptor.attach(WinHttpConnectionFreeNameList, {onLeave: function (args) {send("WinHttpConnectionFreeNameList");}});
+
+var WinHttpConnectionFreeProxyInfo = Module.findExportByName("winhttp.dll", "WinHttpConnectionFreeProxyInfo")
+Interceptor.attach(WinHttpConnectionFreeProxyInfo, {onLeave: function (args) {send("WinHttpConnectionFreeProxyInfo");}});
+
+var WinHttpConnectionFreeProxyList = Module.findExportByName("winhttp.dll", "WinHttpConnectionFreeProxyList")
+Interceptor.attach(WinHttpConnectionFreeProxyList, {onLeave: function (args) {send("WinHttpConnectionFreeProxyList");}});
+
+var WinHttpConnectionGetNameList = Module.findExportByName("winhttp.dll", "WinHttpConnectionGetNameList")
+Interceptor.attach(WinHttpConnectionGetNameList, {onLeave: function (args) {send("WinHttpConnectionGetNameList");}});
+
+var WinHttpConnectionGetProxyInfo = Module.findExportByName("winhttp.dll", "WinHttpConnectionGetProxyInfo")
+Interceptor.attach(WinHttpConnectionGetProxyInfo, {onLeave: function (args) {send("WinHttpConnectionGetProxyInfo");}});
+
+var WinHttpConnectionGetProxyList = Module.findExportByName("winhttp.dll", "WinHttpConnectionGetProxyList")
+Interceptor.attach(WinHttpConnectionGetProxyList, {onLeave: function (args) {send("WinHttpConnectionGetProxyList");}});
+
+var WinHttpConnectionOnlyConvert = Module.findExportByName("winhttp.dll", "WinHttpConnectionOnlyConvert")
+Interceptor.attach(WinHttpConnectionOnlyConvert, {onLeave: function (args) {send("WinHttpConnectionOnlyConvert");}});
+
+var WinHttpConnectionOnlyReceive = Module.findExportByName("winhttp.dll", "WinHttpConnectionOnlyReceive")
+Interceptor.attach(WinHttpConnectionOnlyReceive, {onLeave: function (args) {send("WinHttpConnectionOnlyReceive");}});
+
+var WinHttpConnectionOnlySend = Module.findExportByName("winhttp.dll", "WinHttpConnectionOnlySend")
+Interceptor.attach(WinHttpConnectionOnlySend, {onLeave: function (args) {send("WinHttpConnectionOnlySend");}});
+
+var WinHttpConnectionSetPolicyEntries = Module.findExportByName("winhttp.dll", "WinHttpConnectionSetPolicyEntries")
+Interceptor.attach(WinHttpConnectionSetPolicyEntries, {onLeave: function (args) {send("WinHttpConnectionSetPolicyEntries");}});
+
+var WinHttpConnectionSetProxyInfo = Module.findExportByName("winhttp.dll", "WinHttpConnectionSetProxyInfo")
+Interceptor.attach(WinHttpConnectionSetProxyInfo, {onLeave: function (args) {send("WinHttpConnectionSetProxyInfo");}});
+
+var WinHttpConnectionUpdateIfIndexTable = Module.findExportByName("winhttp.dll", "WinHttpConnectionUpdateIfIndexTable")
+Interceptor.attach(WinHttpConnectionUpdateIfIndexTable, {onLeave: function (args) {send("WinHttpConnectionUpdateIfIndexTable");}});
+
+var WinHttpCrackUrl = Module.findExportByName("winhttp.dll", "WinHttpCrackUrl")
+Interceptor.attach(WinHttpCrackUrl, {onLeave: function (args) {send("WinHttpCrackUrl");}});
+
+var WinHttpCreateProxyResolver = Module.findExportByName("winhttp.dll", "WinHttpCreateProxyResolver")
+Interceptor.attach(WinHttpCreateProxyResolver, {onLeave: function (args) {send("WinHttpCreateProxyResolver");}});
+
+var WinHttpCreateUrl = Module.findExportByName("winhttp.dll", "WinHttpCreateUrl")
+Interceptor.attach(WinHttpCreateUrl, {onLeave: function (args) {send("WinHttpCreateUrl");}});
+
+var WinHttpDetectAutoProxyConfigUrl = Module.findExportByName("winhttp.dll", "WinHttpDetectAutoProxyConfigUrl")
+Interceptor.attach(WinHttpDetectAutoProxyConfigUrl, {onLeave: function (args) {send("WinHttpDetectAutoProxyConfigUrl");}});
+
+var WinHttpFreeProxyResult = Module.findExportByName("winhttp.dll", "WinHttpFreeProxyResult")
+Interceptor.attach(WinHttpFreeProxyResult, {onLeave: function (args) {send("WinHttpFreeProxyResult");}});
+
+var WinHttpFreeProxyResultEx = Module.findExportByName("winhttp.dll", "WinHttpFreeProxyResultEx")
+Interceptor.attach(WinHttpFreeProxyResultEx, {onLeave: function (args) {send("WinHttpFreeProxyResultEx");}});
+
+var WinHttpFreeProxySettings = Module.findExportByName("winhttp.dll", "WinHttpFreeProxySettings")
+Interceptor.attach(WinHttpFreeProxySettings, {onLeave: function (args) {send("WinHttpFreeProxySettings");}});
+
+var WinHttpFreeProxySettingsEx = Module.findExportByName("winhttp.dll", "WinHttpFreeProxySettingsEx")
+Interceptor.attach(WinHttpFreeProxySettingsEx, {onLeave: function (args) {send("WinHttpFreeProxySettingsEx");}});
+
+var WinHttpFreeQueryConnectionGroupResult = Module.findExportByName("winhttp.dll", "WinHttpFreeQueryConnectionGroupResult")
+Interceptor.attach(WinHttpFreeQueryConnectionGroupResult, {onLeave: function (args) {send("WinHttpFreeQueryConnectionGroupResult");}});
+
+var WinHttpGetDefaultProxyConfiguration = Module.findExportByName("winhttp.dll", "WinHttpGetDefaultProxyConfiguration")
+Interceptor.attach(WinHttpGetDefaultProxyConfiguration, {onLeave: function (args) {send("WinHttpGetDefaultProxyConfiguration");}});
+
+var WinHttpGetIEProxyConfigForCurrentUser = Module.findExportByName("winhttp.dll", "WinHttpGetIEProxyConfigForCurrentUser")
+Interceptor.attach(WinHttpGetIEProxyConfigForCurrentUser, {onLeave: function (args) {send("WinHttpGetIEProxyConfigForCurrentUser");}});
+
+var WinHttpGetProxyForUrl = Module.findExportByName("winhttp.dll", "WinHttpGetProxyForUrl")
+Interceptor.attach(WinHttpGetProxyForUrl, {onLeave: function (args) {send("WinHttpGetProxyForUrl");}});
+
+var WinHttpGetProxyForUrlEx = Module.findExportByName("winhttp.dll", "WinHttpGetProxyForUrlEx")
+Interceptor.attach(WinHttpGetProxyForUrlEx, {onLeave: function (args) {send("WinHttpGetProxyForUrlEx");}});
+
+var WinHttpGetProxyForUrlEx2 = Module.findExportByName("winhttp.dll", "WinHttpGetProxyForUrlEx2")
+Interceptor.attach(WinHttpGetProxyForUrlEx2, {onLeave: function (args) {send("WinHttpGetProxyForUrlEx2");}});
+
+var WinHttpGetProxyForUrlHvsi = Module.findExportByName("winhttp.dll", "WinHttpGetProxyForUrlHvsi")
+Interceptor.attach(WinHttpGetProxyForUrlHvsi, {onLeave: function (args) {send("WinHttpGetProxyForUrlHvsi");}});
+
+var WinHttpGetProxyResult = Module.findExportByName("winhttp.dll", "WinHttpGetProxyResult")
+Interceptor.attach(WinHttpGetProxyResult, {onLeave: function (args) {send("WinHttpGetProxyResult");}});
+
+var WinHttpGetProxyResultEx = Module.findExportByName("winhttp.dll", "WinHttpGetProxyResultEx")
+Interceptor.attach(WinHttpGetProxyResultEx, {onLeave: function (args) {send("WinHttpGetProxyResultEx");}});
+
+var WinHttpGetProxySettingsEx = Module.findExportByName("winhttp.dll", "WinHttpGetProxySettingsEx")
+Interceptor.attach(WinHttpGetProxySettingsEx, {onLeave: function (args) {send("WinHttpGetProxySettingsEx");}});
+
+var WinHttpGetProxySettingsResultEx = Module.findExportByName("winhttp.dll", "WinHttpGetProxySettingsResultEx")
+Interceptor.attach(WinHttpGetProxySettingsResultEx, {onLeave: function (args) {send("WinHttpGetProxySettingsResultEx");}});
+
+var WinHttpGetProxySettingsVersion = Module.findExportByName("winhttp.dll", "WinHttpGetProxySettingsVersion")
+Interceptor.attach(WinHttpGetProxySettingsVersion, {onLeave: function (args) {send("WinHttpGetProxySettingsVersion");}});
+
+var WinHttpGetTunnelSocket = Module.findExportByName("winhttp.dll", "WinHttpGetTunnelSocket")
+Interceptor.attach(WinHttpGetTunnelSocket, {onLeave: function (args) {send("WinHttpGetTunnelSocket");}});
+
+var WinHttpOpen = Module.findExportByName("winhttp.dll", "WinHttpOpen")
+Interceptor.attach(WinHttpOpen, {onLeave: function (args) {send("WinHttpOpen");}});
+
+var WinHttpOpenRequest = Module.findExportByName("winhttp.dll", "WinHttpOpenRequest")
+Interceptor.attach(WinHttpOpenRequest, {onLeave: function (args) {send("WinHttpOpenRequest");}});
+
+var WinHttpPacJsWorkerMain = Module.findExportByName("winhttp.dll", "WinHttpPacJsWorkerMain")
+Interceptor.attach(WinHttpPacJsWorkerMain, {onLeave: function (args) {send("WinHttpPacJsWorkerMain");}});
+
+var WinHttpProbeConnectivity = Module.findExportByName("winhttp.dll", "WinHttpProbeConnectivity")
+Interceptor.attach(WinHttpProbeConnectivity, {onLeave: function (args) {send("WinHttpProbeConnectivity");}});
+
+var WinHttpQueryAuthSchemes = Module.findExportByName("winhttp.dll", "WinHttpQueryAuthSchemes")
+Interceptor.attach(WinHttpQueryAuthSchemes, {onLeave: function (args) {send("WinHttpQueryAuthSchemes");}});
+
+var WinHttpQueryConnectionGroup = Module.findExportByName("winhttp.dll", "WinHttpQueryConnectionGroup")
+Interceptor.attach(WinHttpQueryConnectionGroup, {onLeave: function (args) {send("WinHttpQueryConnectionGroup");}});
+
+var WinHttpQueryDataAvailable = Module.findExportByName("winhttp.dll", "WinHttpQueryDataAvailable")
+Interceptor.attach(WinHttpQueryDataAvailable, {onLeave: function (args) {send("WinHttpQueryDataAvailable");}});
+
+var WinHttpQueryHeaders = Module.findExportByName("winhttp.dll", "WinHttpQueryHeaders")
+Interceptor.attach(WinHttpQueryHeaders, {onLeave: function (args) {send("WinHttpQueryHeaders");}});
+
+var WinHttpQueryHeadersEx = Module.findExportByName("winhttp.dll", "WinHttpQueryHeadersEx")
+Interceptor.attach(WinHttpQueryHeadersEx, {onLeave: function (args) {send("WinHttpQueryHeadersEx");}});
+
+var WinHttpQueryOption = Module.findExportByName("winhttp.dll", "WinHttpQueryOption")
+Interceptor.attach(WinHttpQueryOption, {onLeave: function (args) {send("WinHttpQueryOption");}});
+
+var WinHttpReadData = Module.findExportByName("winhttp.dll", "WinHttpReadData")
+Interceptor.attach(WinHttpReadData, {onLeave: function (args) {send("WinHttpReadData");}});
+
+var WinHttpReadDataEx = Module.findExportByName("winhttp.dll", "WinHttpReadDataEx")
+Interceptor.attach(WinHttpReadDataEx, {onLeave: function (args) {send("WinHttpReadDataEx");}});
+
+var WinHttpReadProxySettings = Module.findExportByName("winhttp.dll", "WinHttpReadProxySettings")
+Interceptor.attach(WinHttpReadProxySettings, {onLeave: function (args) {send("WinHttpReadProxySettings");}});
+
+var WinHttpReadProxySettingsHvsi = Module.findExportByName("winhttp.dll", "WinHttpReadProxySettingsHvsi")
+Interceptor.attach(WinHttpReadProxySettingsHvsi, {onLeave: function (args) {send("WinHttpReadProxySettingsHvsi");}});
+
+var WinHttpReceiveResponse = Module.findExportByName("winhttp.dll", "WinHttpReceiveResponse")
+Interceptor.attach(WinHttpReceiveResponse, {onLeave: function (args) {send("WinHttpReceiveResponse");}});
+
+var WinHttpRegisterProxyChangeNotification = Module.findExportByName("winhttp.dll", "WinHttpRegisterProxyChangeNotification")
+Interceptor.attach(WinHttpRegisterProxyChangeNotification, {onLeave: function (args) {send("WinHttpRegisterProxyChangeNotification");}});
+
+var WinHttpResetAutoProxy = Module.findExportByName("winhttp.dll", "WinHttpResetAutoProxy")
+Interceptor.attach(WinHttpResetAutoProxy, {onLeave: function (args) {send("WinHttpResetAutoProxy");}});
+
+var WinHttpSaveProxyCredentials = Module.findExportByName("winhttp.dll", "WinHttpSaveProxyCredentials")
+Interceptor.attach(WinHttpSaveProxyCredentials, {onLeave: function (args) {send("WinHttpSaveProxyCredentials");}});
+
+var WinHttpSendRequest = Module.findExportByName("winhttp.dll", "WinHttpSendRequest")
+Interceptor.attach(WinHttpSendRequest, {onLeave: function (args) {send("WinHttpSendRequest");}});
+
+var WinHttpSetCredentials = Module.findExportByName("winhttp.dll", "WinHttpSetCredentials")
+Interceptor.attach(WinHttpSetCredentials, {onLeave: function (args) {send("WinHttpSetCredentials");}});
+
+var WinHttpSetDefaultProxyConfiguration = Module.findExportByName("winhttp.dll", "WinHttpSetDefaultProxyConfiguration")
+Interceptor.attach(WinHttpSetDefaultProxyConfiguration, {onLeave: function (args) {send("WinHttpSetDefaultProxyConfiguration");}});
+
+var WinHttpSetOption = Module.findExportByName("winhttp.dll", "WinHttpSetOption")
+Interceptor.attach(WinHttpSetOption, {onLeave: function (args) {send("WinHttpSetOption");}});
+
+var WinHttpSetProxySettingsPerUser = Module.findExportByName("winhttp.dll", "WinHttpSetProxySettingsPerUser")
+Interceptor.attach(WinHttpSetProxySettingsPerUser, {onLeave: function (args) {send("WinHttpSetProxySettingsPerUser");}});
+
+var WinHttpSetSecureLegacyServersAppCompat = Module.findExportByName("winhttp.dll", "WinHttpSetSecureLegacyServersAppCompat")
+Interceptor.attach(WinHttpSetSecureLegacyServersAppCompat, {onLeave: function (args) {send("WinHttpSetSecureLegacyServersAppCompat");}});
+
+var WinHttpSetStatusCallback = Module.findExportByName("winhttp.dll", "WinHttpSetStatusCallback")
+Interceptor.attach(WinHttpSetStatusCallback, {onLeave: function (args) {send("WinHttpSetStatusCallback");}});
+
+var WinHttpSetTimeouts = Module.findExportByName("winhttp.dll", "WinHttpSetTimeouts")
+Interceptor.attach(WinHttpSetTimeouts, {onLeave: function (args) {send("WinHttpSetTimeouts");}});
+
+var WinHttpTimeFromSystemTime = Module.findExportByName("winhttp.dll", "WinHttpTimeFromSystemTime")
+Interceptor.attach(WinHttpTimeFromSystemTime, {onLeave: function (args) {send("WinHttpTimeFromSystemTime");}});
+
+var WinHttpTimeToSystemTime = Module.findExportByName("winhttp.dll", "WinHttpTimeToSystemTime")
+Interceptor.attach(WinHttpTimeToSystemTime, {onLeave: function (args) {send("WinHttpTimeToSystemTime");}});
+
+var WinHttpUnregisterProxyChangeNotification = Module.findExportByName("winhttp.dll", "WinHttpUnregisterProxyChangeNotification")
+Interceptor.attach(WinHttpUnregisterProxyChangeNotification, {onLeave: function (args) {send("WinHttpUnregisterProxyChangeNotification");}});
+
+var WinHttpWebSocketClose = Module.findExportByName("winhttp.dll", "WinHttpWebSocketClose")
+Interceptor.attach(WinHttpWebSocketClose, {onLeave: function (args) {send("WinHttpWebSocketClose");}});
+
+var WinHttpWebSocketCompleteUpgrade = Module.findExportByName("winhttp.dll", "WinHttpWebSocketCompleteUpgrade")
+Interceptor.attach(WinHttpWebSocketCompleteUpgrade, {onLeave: function (args) {send("WinHttpWebSocketCompleteUpgrade");}});
+
+var WinHttpWebSocketQueryCloseStatus = Module.findExportByName("winhttp.dll", "WinHttpWebSocketQueryCloseStatus")
+Interceptor.attach(WinHttpWebSocketQueryCloseStatus, {onLeave: function (args) {send("WinHttpWebSocketQueryCloseStatus");}});
+
+var WinHttpWebSocketReceive = Module.findExportByName("winhttp.dll", "WinHttpWebSocketReceive")
+Interceptor.attach(WinHttpWebSocketReceive, {onLeave: function (args) {send("WinHttpWebSocketReceive");}});
+
+var WinHttpWebSocketSend = Module.findExportByName("winhttp.dll", "WinHttpWebSocketSend")
+Interceptor.attach(WinHttpWebSocketSend, {onLeave: function (args) {send("WinHttpWebSocketSend");}});
+
+var WinHttpWebSocketShutdown = Module.findExportByName("winhttp.dll", "WinHttpWebSocketShutdown")
+Interceptor.attach(WinHttpWebSocketShutdown, {onLeave: function (args) {send("WinHttpWebSocketShutdown");}});
+
+var WinHttpWriteData = Module.findExportByName("winhttp.dll", "WinHttpWriteData")
+Interceptor.attach(WinHttpWriteData, {onLeave: function (args) {send("WinHttpWriteData");}});
+
+var WinHttpWriteProxySettings = Module.findExportByName("winhttp.dll", "WinHttpWriteProxySettings")
+Interceptor.attach(WinHttpWriteProxySettings, {onLeave: function (args) {send("WinHttpWriteProxySettings");}});
+

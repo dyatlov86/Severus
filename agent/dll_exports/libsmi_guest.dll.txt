@@ -1,0 +1,78 @@
+var gpuvsmi_fini = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_fini")
+Interceptor.attach(gpuvsmi_fini, {onLeave: function (args) {send("gpuvsmi_fini");}});
+
+var gpuvsmi_get_asic_info = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_asic_info")
+Interceptor.attach(gpuvsmi_get_asic_info, {onLeave: function (args) {send("gpuvsmi_get_asic_info");}});
+
+var gpuvsmi_get_bus_info = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_bus_info")
+Interceptor.attach(gpuvsmi_get_bus_info, {onLeave: function (args) {send("gpuvsmi_get_bus_info");}});
+
+var gpuvsmi_get_caps_info = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_caps_info")
+Interceptor.attach(gpuvsmi_get_caps_info, {onLeave: function (args) {send("gpuvsmi_get_caps_info");}});
+
+var gpuvsmi_get_clock_measure = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_clock_measure")
+Interceptor.attach(gpuvsmi_get_clock_measure, {onLeave: function (args) {send("gpuvsmi_get_clock_measure");}});
+
+var gpuvsmi_get_device_bdf = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_device_bdf")
+Interceptor.attach(gpuvsmi_get_device_bdf, {onLeave: function (args) {send("gpuvsmi_get_device_bdf");}});
+
+var gpuvsmi_get_device_count = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_device_count")
+Interceptor.attach(gpuvsmi_get_device_count, {onLeave: function (args) {send("gpuvsmi_get_device_count");}});
+
+var gpuvsmi_get_device_handle = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_device_handle")
+Interceptor.attach(gpuvsmi_get_device_handle, {onLeave: function (args) {send("gpuvsmi_get_device_handle");}});
+
+var gpuvsmi_get_device_uuid = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_device_uuid")
+Interceptor.attach(gpuvsmi_get_device_uuid, {onLeave: function (args) {send("gpuvsmi_get_device_uuid");}});
+
+var gpuvsmi_get_devices = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_devices")
+Interceptor.attach(gpuvsmi_get_devices, {onLeave: function (args) {send("gpuvsmi_get_devices");}});
+
+var gpuvsmi_get_driver_version = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_driver_version")
+Interceptor.attach(gpuvsmi_get_driver_version, {onLeave: function (args) {send("gpuvsmi_get_driver_version");}});
+
+var gpuvsmi_get_ecc_error_count = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_ecc_error_count")
+Interceptor.attach(gpuvsmi_get_ecc_error_count, {onLeave: function (args) {send("gpuvsmi_get_ecc_error_count");}});
+
+var gpuvsmi_get_fb_usage = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_fb_usage")
+Interceptor.attach(gpuvsmi_get_fb_usage, {onLeave: function (args) {send("gpuvsmi_get_fb_usage");}});
+
+var gpuvsmi_get_gpu_activity = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_gpu_activity")
+Interceptor.attach(gpuvsmi_get_gpu_activity, {onLeave: function (args) {send("gpuvsmi_get_gpu_activity");}});
+
+var gpuvsmi_get_pcie_link_status = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_pcie_link_status")
+Interceptor.attach(gpuvsmi_get_pcie_link_status, {onLeave: function (args) {send("gpuvsmi_get_pcie_link_status");}});
+
+var gpuvsmi_get_power_info = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_power_info")
+Interceptor.attach(gpuvsmi_get_power_info, {onLeave: function (args) {send("gpuvsmi_get_power_info");}});
+
+var gpuvsmi_get_power_measure = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_power_measure")
+Interceptor.attach(gpuvsmi_get_power_measure, {onLeave: function (args) {send("gpuvsmi_get_power_measure");}});
+
+var gpuvsmi_get_process_info = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_process_info")
+Interceptor.attach(gpuvsmi_get_process_info, {onLeave: function (args) {send("gpuvsmi_get_process_info");}});
+
+var gpuvsmi_get_process_list = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_process_list")
+Interceptor.attach(gpuvsmi_get_process_list, {onLeave: function (args) {send("gpuvsmi_get_process_list");}});
+
+var gpuvsmi_get_ras_features_enabled = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_ras_features_enabled")
+Interceptor.attach(gpuvsmi_get_ras_features_enabled, {onLeave: function (args) {send("gpuvsmi_get_ras_features_enabled");}});
+
+var gpuvsmi_get_ras_features_supported = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_ras_features_supported")
+Interceptor.attach(gpuvsmi_get_ras_features_supported, {onLeave: function (args) {send("gpuvsmi_get_ras_features_supported");}});
+
+var gpuvsmi_get_thermal_measure = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_thermal_measure")
+Interceptor.attach(gpuvsmi_get_thermal_measure, {onLeave: function (args) {send("gpuvsmi_get_thermal_measure");}});
+
+var gpuvsmi_get_throttling_status = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_throttling_status")
+Interceptor.attach(gpuvsmi_get_throttling_status, {onLeave: function (args) {send("gpuvsmi_get_throttling_status");}});
+
+var gpuvsmi_get_ucode_info = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_ucode_info")
+Interceptor.attach(gpuvsmi_get_ucode_info, {onLeave: function (args) {send("gpuvsmi_get_ucode_info");}});
+
+var gpuvsmi_get_vbios_info = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_get_vbios_info")
+Interceptor.attach(gpuvsmi_get_vbios_info, {onLeave: function (args) {send("gpuvsmi_get_vbios_info");}});
+
+var gpuvsmi_init = Module.findExportByName("libsmi_guest.dll", "gpuvsmi_init")
+Interceptor.attach(gpuvsmi_init, {onLeave: function (args) {send("gpuvsmi_init");}});
+

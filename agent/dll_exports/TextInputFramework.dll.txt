@@ -1,0 +1,51 @@
+var DllCanUnloadNow = Module.findExportByName("TextInputFramework.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("TextInputFramework.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("TextInputFramework.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var InputFocusChanged = Module.findExportByName("TextInputFramework.dll", "InputFocusChanged")
+Interceptor.attach(InputFocusChanged, {onLeave: function (args) {send("InputFocusChanged");}});
+
+var NavigateFocusInfoCreate = Module.findExportByName("TextInputFramework.dll", "NavigateFocusInfoCreate")
+Interceptor.attach(NavigateFocusInfoCreate, {onLeave: function (args) {send("NavigateFocusInfoCreate");}});
+
+var TextInputClientCreate = Module.findExportByName("TextInputFramework.dll", "TextInputClientCreate")
+Interceptor.attach(TextInputClientCreate, {onLeave: function (args) {send("TextInputClientCreate");}});
+
+var TextInputClientCreate2 = Module.findExportByName("TextInputFramework.dll", "TextInputClientCreate2")
+Interceptor.attach(TextInputClientCreate2, {onLeave: function (args) {send("TextInputClientCreate2");}});
+
+var TextInputHostCreate = Module.findExportByName("TextInputFramework.dll", "TextInputHostCreate")
+Interceptor.attach(TextInputHostCreate, {onLeave: function (args) {send("TextInputHostCreate");}});
+
+var TextInputHostCreateEx = Module.findExportByName("TextInputFramework.dll", "TextInputHostCreateEx")
+Interceptor.attach(TextInputHostCreateEx, {onLeave: function (args) {send("TextInputHostCreateEx");}});
+
+var TextInputHostGetCurrent = Module.findExportByName("TextInputFramework.dll", "TextInputHostGetCurrent")
+Interceptor.attach(TextInputHostGetCurrent, {onLeave: function (args) {send("TextInputHostGetCurrent");}});
+
+var TextInputHostGetForHwnd = Module.findExportByName("TextInputFramework.dll", "TextInputHostGetForHwnd")
+Interceptor.attach(TextInputHostGetForHwnd, {onLeave: function (args) {send("TextInputHostGetForHwnd");}});
+
+var TextInputHostSiteCreate = Module.findExportByName("TextInputFramework.dll", "TextInputHostSiteCreate")
+Interceptor.attach(TextInputHostSiteCreate, {onLeave: function (args) {send("TextInputHostSiteCreate");}});
+
+var TextInputServerCreate = Module.findExportByName("TextInputFramework.dll", "TextInputServerCreate")
+Interceptor.attach(TextInputServerCreate, {onLeave: function (args) {send("TextInputServerCreate");}});
+
+var TsfOneCreate = Module.findExportByName("TextInputFramework.dll", "TsfOneCreate")
+Interceptor.attach(TsfOneCreate, {onLeave: function (args) {send("TsfOneCreate");}});
+
+var tsfGetAsyncKeyState = Module.findExportByName("TextInputFramework.dll", "tsfGetAsyncKeyState")
+Interceptor.attach(tsfGetAsyncKeyState, {onLeave: function (args) {send("tsfGetAsyncKeyState");}});
+
+var tsfGetKeyState = Module.findExportByName("TextInputFramework.dll", "tsfGetKeyState")
+Interceptor.attach(tsfGetKeyState, {onLeave: function (args) {send("tsfGetKeyState");}});
+
+var tsfGetKeyboardState = Module.findExportByName("TextInputFramework.dll", "tsfGetKeyboardState")
+Interceptor.attach(tsfGetKeyboardState, {onLeave: function (args) {send("tsfGetKeyboardState");}});
+

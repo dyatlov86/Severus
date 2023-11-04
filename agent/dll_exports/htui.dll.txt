@@ -1,0 +1,21 @@
+var DllMain = Module.findExportByName("htui.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var HTUI_ColorAdjustment = Module.findExportByName("htui.dll", "HTUI_ColorAdjustment")
+Interceptor.attach(HTUI_ColorAdjustment, {onLeave: function (args) {send("HTUI_ColorAdjustment");}});
+
+var HTUI_ColorAdjustmentA = Module.findExportByName("htui.dll", "HTUI_ColorAdjustmentA")
+Interceptor.attach(HTUI_ColorAdjustmentA, {onLeave: function (args) {send("HTUI_ColorAdjustmentA");}});
+
+var HTUI_ColorAdjustmentW = Module.findExportByName("htui.dll", "HTUI_ColorAdjustmentW")
+Interceptor.attach(HTUI_ColorAdjustmentW, {onLeave: function (args) {send("HTUI_ColorAdjustmentW");}});
+
+var HTUI_DeviceColorAdjustment = Module.findExportByName("htui.dll", "HTUI_DeviceColorAdjustment")
+Interceptor.attach(HTUI_DeviceColorAdjustment, {onLeave: function (args) {send("HTUI_DeviceColorAdjustment");}});
+
+var HTUI_DeviceColorAdjustmentA = Module.findExportByName("htui.dll", "HTUI_DeviceColorAdjustmentA")
+Interceptor.attach(HTUI_DeviceColorAdjustmentA, {onLeave: function (args) {send("HTUI_DeviceColorAdjustmentA");}});
+
+var HTUI_DeviceColorAdjustmentW = Module.findExportByName("htui.dll", "HTUI_DeviceColorAdjustmentW")
+Interceptor.attach(HTUI_DeviceColorAdjustmentW, {onLeave: function (args) {send("HTUI_DeviceColorAdjustmentW");}});
+

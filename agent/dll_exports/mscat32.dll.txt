@@ -1,0 +1,108 @@
+var CatalogCompactHashDatabase = Module.findExportByName("mscat32.dll", "CatalogCompactHashDatabase")
+Interceptor.attach(CatalogCompactHashDatabase, {onLeave: function (args) {send("CatalogCompactHashDatabase");}});
+
+var CryptCATAdminAcquireContext = Module.findExportByName("mscat32.dll", "CryptCATAdminAcquireContext")
+Interceptor.attach(CryptCATAdminAcquireContext, {onLeave: function (args) {send("CryptCATAdminAcquireContext");}});
+
+var CryptCATAdminAddCatalog = Module.findExportByName("mscat32.dll", "CryptCATAdminAddCatalog")
+Interceptor.attach(CryptCATAdminAddCatalog, {onLeave: function (args) {send("CryptCATAdminAddCatalog");}});
+
+var CryptCATAdminCalcHashFromFileHandle = Module.findExportByName("mscat32.dll", "CryptCATAdminCalcHashFromFileHandle")
+Interceptor.attach(CryptCATAdminCalcHashFromFileHandle, {onLeave: function (args) {send("CryptCATAdminCalcHashFromFileHandle");}});
+
+var CryptCATAdminEnumCatalogFromHash = Module.findExportByName("mscat32.dll", "CryptCATAdminEnumCatalogFromHash")
+Interceptor.attach(CryptCATAdminEnumCatalogFromHash, {onLeave: function (args) {send("CryptCATAdminEnumCatalogFromHash");}});
+
+var CryptCATAdminReleaseCatalogContext = Module.findExportByName("mscat32.dll", "CryptCATAdminReleaseCatalogContext")
+Interceptor.attach(CryptCATAdminReleaseCatalogContext, {onLeave: function (args) {send("CryptCATAdminReleaseCatalogContext");}});
+
+var CryptCATAdminReleaseContext = Module.findExportByName("mscat32.dll", "CryptCATAdminReleaseContext")
+Interceptor.attach(CryptCATAdminReleaseContext, {onLeave: function (args) {send("CryptCATAdminReleaseContext");}});
+
+var CryptCATCDFClose = Module.findExportByName("mscat32.dll", "CryptCATCDFClose")
+Interceptor.attach(CryptCATCDFClose, {onLeave: function (args) {send("CryptCATCDFClose");}});
+
+var CryptCATCDFEnumAttributes = Module.findExportByName("mscat32.dll", "CryptCATCDFEnumAttributes")
+Interceptor.attach(CryptCATCDFEnumAttributes, {onLeave: function (args) {send("CryptCATCDFEnumAttributes");}});
+
+var CryptCATCDFEnumAttributesWithCDFTag = Module.findExportByName("mscat32.dll", "CryptCATCDFEnumAttributesWithCDFTag")
+Interceptor.attach(CryptCATCDFEnumAttributesWithCDFTag, {onLeave: function (args) {send("CryptCATCDFEnumAttributesWithCDFTag");}});
+
+var CryptCATCDFEnumCatAttributes = Module.findExportByName("mscat32.dll", "CryptCATCDFEnumCatAttributes")
+Interceptor.attach(CryptCATCDFEnumCatAttributes, {onLeave: function (args) {send("CryptCATCDFEnumCatAttributes");}});
+
+var CryptCATCDFEnumMembers = Module.findExportByName("mscat32.dll", "CryptCATCDFEnumMembers")
+Interceptor.attach(CryptCATCDFEnumMembers, {onLeave: function (args) {send("CryptCATCDFEnumMembers");}});
+
+var CryptCATCDFEnumMembersByCDFTag = Module.findExportByName("mscat32.dll", "CryptCATCDFEnumMembersByCDFTag")
+Interceptor.attach(CryptCATCDFEnumMembersByCDFTag, {onLeave: function (args) {send("CryptCATCDFEnumMembersByCDFTag");}});
+
+var CryptCATCDFEnumMembersByCDFTagEx = Module.findExportByName("mscat32.dll", "CryptCATCDFEnumMembersByCDFTagEx")
+Interceptor.attach(CryptCATCDFEnumMembersByCDFTagEx, {onLeave: function (args) {send("CryptCATCDFEnumMembersByCDFTagEx");}});
+
+var CryptCATCDFOpen = Module.findExportByName("mscat32.dll", "CryptCATCDFOpen")
+Interceptor.attach(CryptCATCDFOpen, {onLeave: function (args) {send("CryptCATCDFOpen");}});
+
+var CryptCATCatalogInfoFromContext = Module.findExportByName("mscat32.dll", "CryptCATCatalogInfoFromContext")
+Interceptor.attach(CryptCATCatalogInfoFromContext, {onLeave: function (args) {send("CryptCATCatalogInfoFromContext");}});
+
+var CryptCATClose = Module.findExportByName("mscat32.dll", "CryptCATClose")
+Interceptor.attach(CryptCATClose, {onLeave: function (args) {send("CryptCATClose");}});
+
+var CryptCATEnumerateAttr = Module.findExportByName("mscat32.dll", "CryptCATEnumerateAttr")
+Interceptor.attach(CryptCATEnumerateAttr, {onLeave: function (args) {send("CryptCATEnumerateAttr");}});
+
+var CryptCATEnumerateCatAttr = Module.findExportByName("mscat32.dll", "CryptCATEnumerateCatAttr")
+Interceptor.attach(CryptCATEnumerateCatAttr, {onLeave: function (args) {send("CryptCATEnumerateCatAttr");}});
+
+var CryptCATEnumerateMember = Module.findExportByName("mscat32.dll", "CryptCATEnumerateMember")
+Interceptor.attach(CryptCATEnumerateMember, {onLeave: function (args) {send("CryptCATEnumerateMember");}});
+
+var CryptCATGetAttrInfo = Module.findExportByName("mscat32.dll", "CryptCATGetAttrInfo")
+Interceptor.attach(CryptCATGetAttrInfo, {onLeave: function (args) {send("CryptCATGetAttrInfo");}});
+
+var CryptCATGetCatAttrInfo = Module.findExportByName("mscat32.dll", "CryptCATGetCatAttrInfo")
+Interceptor.attach(CryptCATGetCatAttrInfo, {onLeave: function (args) {send("CryptCATGetCatAttrInfo");}});
+
+var CryptCATGetMemberInfo = Module.findExportByName("mscat32.dll", "CryptCATGetMemberInfo")
+Interceptor.attach(CryptCATGetMemberInfo, {onLeave: function (args) {send("CryptCATGetMemberInfo");}});
+
+var CryptCATHandleFromStore = Module.findExportByName("mscat32.dll", "CryptCATHandleFromStore")
+Interceptor.attach(CryptCATHandleFromStore, {onLeave: function (args) {send("CryptCATHandleFromStore");}});
+
+var CryptCATOpen = Module.findExportByName("mscat32.dll", "CryptCATOpen")
+Interceptor.attach(CryptCATOpen, {onLeave: function (args) {send("CryptCATOpen");}});
+
+var CryptCATPersistStore = Module.findExportByName("mscat32.dll", "CryptCATPersistStore")
+Interceptor.attach(CryptCATPersistStore, {onLeave: function (args) {send("CryptCATPersistStore");}});
+
+var CryptCATPutAttrInfo = Module.findExportByName("mscat32.dll", "CryptCATPutAttrInfo")
+Interceptor.attach(CryptCATPutAttrInfo, {onLeave: function (args) {send("CryptCATPutAttrInfo");}});
+
+var CryptCATPutCatAttrInfo = Module.findExportByName("mscat32.dll", "CryptCATPutCatAttrInfo")
+Interceptor.attach(CryptCATPutCatAttrInfo, {onLeave: function (args) {send("CryptCATPutCatAttrInfo");}});
+
+var CryptCATPutMemberInfo = Module.findExportByName("mscat32.dll", "CryptCATPutMemberInfo")
+Interceptor.attach(CryptCATPutMemberInfo, {onLeave: function (args) {send("CryptCATPutMemberInfo");}});
+
+var CryptCATStoreFromHandle = Module.findExportByName("mscat32.dll", "CryptCATStoreFromHandle")
+Interceptor.attach(CryptCATStoreFromHandle, {onLeave: function (args) {send("CryptCATStoreFromHandle");}});
+
+var CryptCATVerifyMember = Module.findExportByName("mscat32.dll", "CryptCATVerifyMember")
+Interceptor.attach(CryptCATVerifyMember, {onLeave: function (args) {send("CryptCATVerifyMember");}});
+
+var DllRegisterServer = Module.findExportByName("mscat32.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mscat32.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var IsCatalogFile = Module.findExportByName("mscat32.dll", "IsCatalogFile")
+Interceptor.attach(IsCatalogFile, {onLeave: function (args) {send("IsCatalogFile");}});
+
+var MsCatConstructHashTag = Module.findExportByName("mscat32.dll", "MsCatConstructHashTag")
+Interceptor.attach(MsCatConstructHashTag, {onLeave: function (args) {send("MsCatConstructHashTag");}});
+
+var MsCatFreeHashTag = Module.findExportByName("mscat32.dll", "MsCatFreeHashTag")
+Interceptor.attach(MsCatFreeHashTag, {onLeave: function (args) {send("MsCatFreeHashTag");}});
+

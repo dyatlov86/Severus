@@ -1,0 +1,9 @@
+var Disable464xlat = Module.findExportByName("ipxlatcfg.dll", "Disable464xlat")
+Interceptor.attach(Disable464xlat, {onLeave: function (args) {send("Disable464xlat");}});
+
+var Enable464xlat = Module.findExportByName("ipxlatcfg.dll", "Enable464xlat")
+Interceptor.attach(Enable464xlat, {onLeave: function (args) {send("Enable464xlat");}});
+
+var ServiceMain = Module.findExportByName("ipxlatcfg.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

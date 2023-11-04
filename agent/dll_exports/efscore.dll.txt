@@ -1,0 +1,219 @@
+var EdpDllAllowFileAccessForProcess = Module.findExportByName("efscore.dll", "EdpDllAllowFileAccessForProcess")
+Interceptor.attach(EdpDllAllowFileAccessForProcess, {onLeave: function (args) {send("EdpDllAllowFileAccessForProcess");}});
+
+var EdpDllCredSvcControl = Module.findExportByName("efscore.dll", "EdpDllCredSvcControl")
+Interceptor.attach(EdpDllCredSvcControl, {onLeave: function (args) {send("EdpDllCredSvcControl");}});
+
+var EdpDllCredentialCreate = Module.findExportByName("efscore.dll", "EdpDllCredentialCreate")
+Interceptor.attach(EdpDllCredentialCreate, {onLeave: function (args) {send("EdpDllCredentialCreate");}});
+
+var EdpDllCredentialDelete = Module.findExportByName("efscore.dll", "EdpDllCredentialDelete")
+Interceptor.attach(EdpDllCredentialDelete, {onLeave: function (args) {send("EdpDllCredentialDelete");}});
+
+var EdpDllCredentialExists = Module.findExportByName("efscore.dll", "EdpDllCredentialExists")
+Interceptor.attach(EdpDllCredentialExists, {onLeave: function (args) {send("EdpDllCredentialExists");}});
+
+var EdpDllCredentialQuery = Module.findExportByName("efscore.dll", "EdpDllCredentialQuery")
+Interceptor.attach(EdpDllCredentialQuery, {onLeave: function (args) {send("EdpDllCredentialQuery");}});
+
+var EdpDllDplUpgradePinInfo = Module.findExportByName("efscore.dll", "EdpDllDplUpgradePinInfo")
+Interceptor.attach(EdpDllDplUpgradePinInfo, {onLeave: function (args) {send("EdpDllDplUpgradePinInfo");}});
+
+var EdpDllDplUpgradeVerifyUser = Module.findExportByName("efscore.dll", "EdpDllDplUpgradeVerifyUser")
+Interceptor.attach(EdpDllDplUpgradeVerifyUser, {onLeave: function (args) {send("EdpDllDplUpgradeVerifyUser");}});
+
+var EdpDllDplUserCredentialsSet = Module.findExportByName("efscore.dll", "EdpDllDplUserCredentialsSet")
+Interceptor.attach(EdpDllDplUserCredentialsSet, {onLeave: function (args) {send("EdpDllDplUserCredentialsSet");}});
+
+var EdpDllDplUserUnlockComplete = Module.findExportByName("efscore.dll", "EdpDllDplUserUnlockComplete")
+Interceptor.attach(EdpDllDplUserUnlockComplete, {onLeave: function (args) {send("EdpDllDplUserUnlockComplete");}});
+
+var EdpDllDplUserUnlockStart = Module.findExportByName("efscore.dll", "EdpDllDplUserUnlockStart")
+Interceptor.attach(EdpDllDplUserUnlockStart, {onLeave: function (args) {send("EdpDllDplUserUnlockStart");}});
+
+var EdpDllGetCredServiceState = Module.findExportByName("efscore.dll", "EdpDllGetCredServiceState")
+Interceptor.attach(EdpDllGetCredServiceState, {onLeave: function (args) {send("EdpDllGetCredServiceState");}});
+
+var EdpDllGetLockSessionUnwrappedKey = Module.findExportByName("efscore.dll", "EdpDllGetLockSessionUnwrappedKey")
+Interceptor.attach(EdpDllGetLockSessionUnwrappedKey, {onLeave: function (args) {send("EdpDllGetLockSessionUnwrappedKey");}});
+
+var EdpDllGetLockSessionWrappedKey = Module.findExportByName("efscore.dll", "EdpDllGetLockSessionWrappedKey")
+Interceptor.attach(EdpDllGetLockSessionWrappedKey, {onLeave: function (args) {send("EdpDllGetLockSessionWrappedKey");}});
+
+var EdpDllGetTfaCache = Module.findExportByName("efscore.dll", "EdpDllGetTfaCache")
+Interceptor.attach(EdpDllGetTfaCache, {onLeave: function (args) {send("EdpDllGetTfaCache");}});
+
+var EdpDllPurgeAppLearningEvents = Module.findExportByName("efscore.dll", "EdpDllPurgeAppLearningEvents")
+Interceptor.attach(EdpDllPurgeAppLearningEvents, {onLeave: function (args) {send("EdpDllPurgeAppLearningEvents");}});
+
+var EdpDllQueryDplEnforcedPolicyOwnerIds = Module.findExportByName("efscore.dll", "EdpDllQueryDplEnforcedPolicyOwnerIds")
+Interceptor.attach(EdpDllQueryDplEnforcedPolicyOwnerIds, {onLeave: function (args) {send("EdpDllQueryDplEnforcedPolicyOwnerIds");}});
+
+var EdpDllQueryRevokedPolicyOwnerIds = Module.findExportByName("efscore.dll", "EdpDllQueryRevokedPolicyOwnerIds")
+Interceptor.attach(EdpDllQueryRevokedPolicyOwnerIds, {onLeave: function (args) {send("EdpDllQueryRevokedPolicyOwnerIds");}});
+
+var EdpDllQueueFileForEncryption = Module.findExportByName("efscore.dll", "EdpDllQueueFileForEncryption")
+Interceptor.attach(EdpDllQueueFileForEncryption, {onLeave: function (args) {send("EdpDllQueueFileForEncryption");}});
+
+var EdpDllRmsClearKeys = Module.findExportByName("efscore.dll", "EdpDllRmsClearKeys")
+Interceptor.attach(EdpDllRmsClearKeys, {onLeave: function (args) {send("EdpDllRmsClearKeys");}});
+
+var EdpDllRmsContainerizeFile = Module.findExportByName("efscore.dll", "EdpDllRmsContainerizeFile")
+Interceptor.attach(EdpDllRmsContainerizeFile, {onLeave: function (args) {send("EdpDllRmsContainerizeFile");}});
+
+var EdpDllRmsDecontainerizeFile = Module.findExportByName("efscore.dll", "EdpDllRmsDecontainerizeFile")
+Interceptor.attach(EdpDllRmsDecontainerizeFile, {onLeave: function (args) {send("EdpDllRmsDecontainerizeFile");}});
+
+var EdpDllRmsGetContainerIdentity = Module.findExportByName("efscore.dll", "EdpDllRmsGetContainerIdentity")
+Interceptor.attach(EdpDllRmsGetContainerIdentity, {onLeave: function (args) {send("EdpDllRmsGetContainerIdentity");}});
+
+var EdpDllServiceFileEncryptionQueue = Module.findExportByName("efscore.dll", "EdpDllServiceFileEncryptionQueue")
+Interceptor.attach(EdpDllServiceFileEncryptionQueue, {onLeave: function (args) {send("EdpDllServiceFileEncryptionQueue");}});
+
+var EdpWriteAppLearningLog = Module.findExportByName("efscore.dll", "EdpWriteAppLearningLog")
+Interceptor.attach(EdpWriteAppLearningLog, {onLeave: function (args) {send("EdpWriteAppLearningLog");}});
+
+var EdpWriteSiteLearningLog = Module.findExportByName("efscore.dll", "EdpWriteSiteLearningLog")
+Interceptor.attach(EdpWriteSiteLearningLog, {onLeave: function (args) {send("EdpWriteSiteLearningLog");}});
+
+var EfsDllAddUsersToFileSrv = Module.findExportByName("efscore.dll", "EfsDllAddUsersToFileSrv")
+Interceptor.attach(EfsDllAddUsersToFileSrv, {onLeave: function (args) {send("EfsDllAddUsersToFileSrv");}});
+
+var EfsDllAllocateHeap = Module.findExportByName("efscore.dll", "EfsDllAllocateHeap")
+Interceptor.attach(EfsDllAllocateHeap, {onLeave: function (args) {send("EfsDllAllocateHeap");}});
+
+var EfsDllCheckFileAccess = Module.findExportByName("efscore.dll", "EfsDllCheckFileAccess")
+Interceptor.attach(EfsDllCheckFileAccess, {onLeave: function (args) {send("EfsDllCheckFileAccess");}});
+
+var EfsDllCloseFileRaw = Module.findExportByName("efscore.dll", "EfsDllCloseFileRaw")
+Interceptor.attach(EfsDllCloseFileRaw, {onLeave: function (args) {send("EfsDllCloseFileRaw");}});
+
+var EfsDllConstructEFS = Module.findExportByName("efscore.dll", "EfsDllConstructEFS")
+Interceptor.attach(EfsDllConstructEFS, {onLeave: function (args) {send("EfsDllConstructEFS");}});
+
+var EfsDllDecryptFek = Module.findExportByName("efscore.dll", "EfsDllDecryptFek")
+Interceptor.attach(EfsDllDecryptFek, {onLeave: function (args) {send("EfsDllDecryptFek");}});
+
+var EfsDllDecryptFileSrv = Module.findExportByName("efscore.dll", "EfsDllDecryptFileSrv")
+Interceptor.attach(EfsDllDecryptFileSrv, {onLeave: function (args) {send("EfsDllDecryptFileSrv");}});
+
+var EfsDllDisabled = Module.findExportByName("efscore.dll", "EfsDllDisabled")
+Interceptor.attach(EfsDllDisabled, {onLeave: function (args) {send("EfsDllDisabled");}});
+
+var EfsDllDplAppKeyCachingFeatureEnabled = Module.findExportByName("efscore.dll", "EfsDllDplAppKeyCachingFeatureEnabled")
+Interceptor.attach(EfsDllDplAppKeyCachingFeatureEnabled, {onLeave: function (args) {send("EfsDllDplAppKeyCachingFeatureEnabled");}});
+
+var EfsDllDuplicateEncryptionInfoFileSrv = Module.findExportByName("efscore.dll", "EfsDllDuplicateEncryptionInfoFileSrv")
+Interceptor.attach(EfsDllDuplicateEncryptionInfoFileSrv, {onLeave: function (args) {send("EfsDllDuplicateEncryptionInfoFileSrv");}});
+
+var EfsDllEncryptFileSrv = Module.findExportByName("efscore.dll", "EfsDllEncryptFileSrv")
+Interceptor.attach(EfsDllEncryptFileSrv, {onLeave: function (args) {send("EfsDllEncryptFileSrv");}});
+
+var EfsDllErrorToNtStatus = Module.findExportByName("efscore.dll", "EfsDllErrorToNtStatus")
+Interceptor.attach(EfsDllErrorToNtStatus, {onLeave: function (args) {send("EfsDllErrorToNtStatus");}});
+
+var EfsDllFileKeyInfoSrv = Module.findExportByName("efscore.dll", "EfsDllFileKeyInfoSrv")
+Interceptor.attach(EfsDllFileKeyInfoSrv, {onLeave: function (args) {send("EfsDllFileKeyInfoSrv");}});
+
+var EfsDllFreeHeap = Module.findExportByName("efscore.dll", "EfsDllFreeHeap")
+Interceptor.attach(EfsDllFreeHeap, {onLeave: function (args) {send("EfsDllFreeHeap");}});
+
+var EfsDllFreeUserInfo = Module.findExportByName("efscore.dll", "EfsDllFreeUserInfo")
+Interceptor.attach(EfsDllFreeUserInfo, {onLeave: function (args) {send("EfsDllFreeUserInfo");}});
+
+var EfsDllGetLocalFileName = Module.findExportByName("efscore.dll", "EfsDllGetLocalFileName")
+Interceptor.attach(EfsDllGetLocalFileName, {onLeave: function (args) {send("EfsDllGetLocalFileName");}});
+
+var EfsDllGetLogFile = Module.findExportByName("efscore.dll", "EfsDllGetLogFile")
+Interceptor.attach(EfsDllGetLogFile, {onLeave: function (args) {send("EfsDllGetLogFile");}});
+
+var EfsDllGetUserInfo = Module.findExportByName("efscore.dll", "EfsDllGetUserInfo")
+Interceptor.attach(EfsDllGetUserInfo, {onLeave: function (args) {send("EfsDllGetUserInfo");}});
+
+var EfsDllGetVolumeRoot = Module.findExportByName("efscore.dll", "EfsDllGetVolumeRoot")
+Interceptor.attach(EfsDllGetVolumeRoot, {onLeave: function (args) {send("EfsDllGetVolumeRoot");}});
+
+var EfsDllIsConsumerProtectionEnforced = Module.findExportByName("efscore.dll", "EfsDllIsConsumerProtectionEnforced")
+Interceptor.attach(EfsDllIsConsumerProtectionEnforced, {onLeave: function (args) {send("EfsDllIsConsumerProtectionEnforced");}});
+
+var EfsDllIsNonEfsSKU = Module.findExportByName("efscore.dll", "EfsDllIsNonEfsSKU")
+Interceptor.attach(EfsDllIsNonEfsSKU, {onLeave: function (args) {send("EfsDllIsNonEfsSKU");}});
+
+var EfsDllLoadUserProfile = Module.findExportByName("efscore.dll", "EfsDllLoadUserProfile")
+Interceptor.attach(EfsDllLoadUserProfile, {onLeave: function (args) {send("EfsDllLoadUserProfile");}});
+
+var EfsDllMarkFileForDelete = Module.findExportByName("efscore.dll", "EfsDllMarkFileForDelete")
+Interceptor.attach(EfsDllMarkFileForDelete, {onLeave: function (args) {send("EfsDllMarkFileForDelete");}});
+
+var EfsDllOefsAcquireExclusiveOperation = Module.findExportByName("efscore.dll", "EfsDllOefsAcquireExclusiveOperation")
+Interceptor.attach(EfsDllOefsAcquireExclusiveOperation, {onLeave: function (args) {send("EfsDllOefsAcquireExclusiveOperation");}});
+
+var EfsDllOefsCheckSupportByFilePath = Module.findExportByName("efscore.dll", "EfsDllOefsCheckSupportByFilePath")
+Interceptor.attach(EfsDllOefsCheckSupportByFilePath, {onLeave: function (args) {send("EfsDllOefsCheckSupportByFilePath");}});
+
+var EfsDllOefsReleaseExclusiveOperation = Module.findExportByName("efscore.dll", "EfsDllOefsReleaseExclusiveOperation")
+Interceptor.attach(EfsDllOefsReleaseExclusiveOperation, {onLeave: function (args) {send("EfsDllOefsReleaseExclusiveOperation");}});
+
+var EfsDllOnSessionChange = Module.findExportByName("efscore.dll", "EfsDllOnSessionChange")
+Interceptor.attach(EfsDllOnSessionChange, {onLeave: function (args) {send("EfsDllOnSessionChange");}});
+
+var EfsDllOnSessionUserChange = Module.findExportByName("efscore.dll", "EfsDllOnSessionUserChange")
+Interceptor.attach(EfsDllOnSessionUserChange, {onLeave: function (args) {send("EfsDllOnSessionUserChange");}});
+
+var EfsDllOpenFileRaw = Module.findExportByName("efscore.dll", "EfsDllOpenFileRaw")
+Interceptor.attach(EfsDllOpenFileRaw, {onLeave: function (args) {send("EfsDllOpenFileRaw");}});
+
+var EfsDllQueryProtectorsSrv = Module.findExportByName("efscore.dll", "EfsDllQueryProtectorsSrv")
+Interceptor.attach(EfsDllQueryProtectorsSrv, {onLeave: function (args) {send("EfsDllQueryProtectorsSrv");}});
+
+var EfsDllQueryRecoveryAgentsSrv = Module.findExportByName("efscore.dll", "EfsDllQueryRecoveryAgentsSrv")
+Interceptor.attach(EfsDllQueryRecoveryAgentsSrv, {onLeave: function (args) {send("EfsDllQueryRecoveryAgentsSrv");}});
+
+var EfsDllQueryUsersOnFileSrv = Module.findExportByName("efscore.dll", "EfsDllQueryUsersOnFileSrv")
+Interceptor.attach(EfsDllQueryUsersOnFileSrv, {onLeave: function (args) {send("EfsDllQueryUsersOnFileSrv");}});
+
+var EfsDllReadFileRaw = Module.findExportByName("efscore.dll", "EfsDllReadFileRaw")
+Interceptor.attach(EfsDllReadFileRaw, {onLeave: function (args) {send("EfsDllReadFileRaw");}});
+
+var EfsDllRemoveUsersFromFileSrv = Module.findExportByName("efscore.dll", "EfsDllRemoveUsersFromFileSrv")
+Interceptor.attach(EfsDllRemoveUsersFromFileSrv, {onLeave: function (args) {send("EfsDllRemoveUsersFromFileSrv");}});
+
+var EfsDllReprotectFile = Module.findExportByName("efscore.dll", "EfsDllReprotectFile")
+Interceptor.attach(EfsDllReprotectFile, {onLeave: function (args) {send("EfsDllReprotectFile");}});
+
+var EfsDllSetFileEncryptionKeySrv = Module.findExportByName("efscore.dll", "EfsDllSetFileEncryptionKeySrv")
+Interceptor.attach(EfsDllSetFileEncryptionKeySrv, {onLeave: function (args) {send("EfsDllSetFileEncryptionKeySrv");}});
+
+var EfsDllShareDecline = Module.findExportByName("efscore.dll", "EfsDllShareDecline")
+Interceptor.attach(EfsDllShareDecline, {onLeave: function (args) {send("EfsDllShareDecline");}});
+
+var EfsDllSsoFlushUserCache = Module.findExportByName("efscore.dll", "EfsDllSsoFlushUserCache")
+Interceptor.attach(EfsDllSsoFlushUserCache, {onLeave: function (args) {send("EfsDllSsoFlushUserCache");}});
+
+var EfsDllUnloadUserProfile = Module.findExportByName("efscore.dll", "EfsDllUnloadUserProfile")
+Interceptor.attach(EfsDllUnloadUserProfile, {onLeave: function (args) {send("EfsDllUnloadUserProfile");}});
+
+var EfsDllUsePinForEncryptedFilesSrv = Module.findExportByName("efscore.dll", "EfsDllUsePinForEncryptedFilesSrv")
+Interceptor.attach(EfsDllUsePinForEncryptedFilesSrv, {onLeave: function (args) {send("EfsDllUsePinForEncryptedFilesSrv");}});
+
+var EfsDllValidateEfsStream = Module.findExportByName("efscore.dll", "EfsDllValidateEfsStream")
+Interceptor.attach(EfsDllValidateEfsStream, {onLeave: function (args) {send("EfsDllValidateEfsStream");}});
+
+var EfsDllWriteEncryptedFileWithHeader = Module.findExportByName("efscore.dll", "EfsDllWriteEncryptedFileWithHeader")
+Interceptor.attach(EfsDllWriteEncryptedFileWithHeader, {onLeave: function (args) {send("EfsDllWriteEncryptedFileWithHeader");}});
+
+var EfsDllWriteFileRaw = Module.findExportByName("efscore.dll", "EfsDllWriteFileRaw")
+Interceptor.attach(EfsDllWriteFileRaw, {onLeave: function (args) {send("EfsDllWriteFileRaw");}});
+
+var EfsInitialize = Module.findExportByName("efscore.dll", "EfsInitialize")
+Interceptor.attach(EfsInitialize, {onLeave: function (args) {send("EfsInitialize");}});
+
+var EfsProcessRecoveryPolicy = Module.findExportByName("efscore.dll", "EfsProcessRecoveryPolicy")
+Interceptor.attach(EfsProcessRecoveryPolicy, {onLeave: function (args) {send("EfsProcessRecoveryPolicy");}});
+
+var EfsUnInitialize = Module.findExportByName("efscore.dll", "EfsUnInitialize")
+Interceptor.attach(EfsUnInitialize, {onLeave: function (args) {send("EfsUnInitialize");}});
+
+var EfsValidateEfsStream = Module.findExportByName("efscore.dll", "EfsValidateEfsStream")
+Interceptor.attach(EfsValidateEfsStream, {onLeave: function (args) {send("EfsValidateEfsStream");}});
+

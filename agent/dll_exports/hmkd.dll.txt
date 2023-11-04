@@ -1,0 +1,12 @@
+var HMKDCreateHmacKey = Module.findExportByName("hmkd.dll", "HMKDCreateHmacKey")
+Interceptor.attach(HMKDCreateHmacKey, {onLeave: function (args) {send("HMKDCreateHmacKey");}});
+
+var HMKDDeriveKey = Module.findExportByName("hmkd.dll", "HMKDDeriveKey")
+Interceptor.attach(HMKDDeriveKey, {onLeave: function (args) {send("HMKDDeriveKey");}});
+
+var HMKDGetHmacStatus = Module.findExportByName("hmkd.dll", "HMKDGetHmacStatus")
+Interceptor.attach(HMKDGetHmacStatus, {onLeave: function (args) {send("HMKDGetHmacStatus");}});
+
+var HMKDImportHmacKey = Module.findExportByName("hmkd.dll", "HMKDImportHmacKey")
+Interceptor.attach(HMKDImportHmacKey, {onLeave: function (args) {send("HMKDImportHmacKey");}});
+

@@ -1,0 +1,15 @@
+var DebugSetMute = Module.findExportByName("d3d8.dll", "DebugSetMute")
+Interceptor.attach(DebugSetMute, {onLeave: function (args) {send("DebugSetMute");}});
+
+var Direct3D8EnableMaximizedWindowedModeShim = Module.findExportByName("d3d8.dll", "Direct3D8EnableMaximizedWindowedModeShim")
+Interceptor.attach(Direct3D8EnableMaximizedWindowedModeShim, {onLeave: function (args) {send("Direct3D8EnableMaximizedWindowedModeShim");}});
+
+var Direct3DCreate8 = Module.findExportByName("d3d8.dll", "Direct3DCreate8")
+Interceptor.attach(Direct3DCreate8, {onLeave: function (args) {send("Direct3DCreate8");}});
+
+var ValidatePixelShader = Module.findExportByName("d3d8.dll", "ValidatePixelShader")
+Interceptor.attach(ValidatePixelShader, {onLeave: function (args) {send("ValidatePixelShader");}});
+
+var ValidateVertexShader = Module.findExportByName("d3d8.dll", "ValidateVertexShader")
+Interceptor.attach(ValidateVertexShader, {onLeave: function (args) {send("ValidateVertexShader");}});
+

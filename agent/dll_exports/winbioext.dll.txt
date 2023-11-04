@@ -1,0 +1,75 @@
+var DllCanUnloadNow = Module.findExportByName("winbioext.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("winbioext.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var WinBioAcquireFocus = Module.findExportByName("winbioext.dll", "WinBioAcquireFocus")
+Interceptor.attach(WinBioAcquireFocus, {onLeave: function (args) {send("WinBioAcquireFocus");}});
+
+var WinBioAsyncEnumDatabases = Module.findExportByName("winbioext.dll", "WinBioAsyncEnumDatabases")
+Interceptor.attach(WinBioAsyncEnumDatabases, {onLeave: function (args) {send("WinBioAsyncEnumDatabases");}});
+
+var WinBioAsyncMonitorFrameworkChanges = Module.findExportByName("winbioext.dll", "WinBioAsyncMonitorFrameworkChanges")
+Interceptor.attach(WinBioAsyncMonitorFrameworkChanges, {onLeave: function (args) {send("WinBioAsyncMonitorFrameworkChanges");}});
+
+var WinBioCaptureSample = Module.findExportByName("winbioext.dll", "WinBioCaptureSample")
+Interceptor.attach(WinBioCaptureSample, {onLeave: function (args) {send("WinBioCaptureSample");}});
+
+var WinBioCaptureSampleWithCallback = Module.findExportByName("winbioext.dll", "WinBioCaptureSampleWithCallback")
+Interceptor.attach(WinBioCaptureSampleWithCallback, {onLeave: function (args) {send("WinBioCaptureSampleWithCallback");}});
+
+var WinBioEnrollCaptureWithCallback = Module.findExportByName("winbioext.dll", "WinBioEnrollCaptureWithCallback")
+Interceptor.attach(WinBioEnrollCaptureWithCallback, {onLeave: function (args) {send("WinBioEnrollCaptureWithCallback");}});
+
+var WinBioEnumDatabases = Module.findExportByName("winbioext.dll", "WinBioEnumDatabases")
+Interceptor.attach(WinBioEnumDatabases, {onLeave: function (args) {send("WinBioEnumDatabases");}});
+
+var WinBioGetDomainLogonSetting = Module.findExportByName("winbioext.dll", "WinBioGetDomainLogonSetting")
+Interceptor.attach(WinBioGetDomainLogonSetting, {onLeave: function (args) {send("WinBioGetDomainLogonSetting");}});
+
+var WinBioGetEnabledSetting = Module.findExportByName("winbioext.dll", "WinBioGetEnabledSetting")
+Interceptor.attach(WinBioGetEnabledSetting, {onLeave: function (args) {send("WinBioGetEnabledSetting");}});
+
+var WinBioGetLogonSetting = Module.findExportByName("winbioext.dll", "WinBioGetLogonSetting")
+Interceptor.attach(WinBioGetLogonSetting, {onLeave: function (args) {send("WinBioGetLogonSetting");}});
+
+var WinBioIdentifyWithCallback = Module.findExportByName("winbioext.dll", "WinBioIdentifyWithCallback")
+Interceptor.attach(WinBioIdentifyWithCallback, {onLeave: function (args) {send("WinBioIdentifyWithCallback");}});
+
+var WinBioIsLegacy = Module.findExportByName("winbioext.dll", "WinBioIsLegacy")
+Interceptor.attach(WinBioIsLegacy, {onLeave: function (args) {send("WinBioIsLegacy");}});
+
+var WinBioLocateSensor = Module.findExportByName("winbioext.dll", "WinBioLocateSensor")
+Interceptor.attach(WinBioLocateSensor, {onLeave: function (args) {send("WinBioLocateSensor");}});
+
+var WinBioLocateSensorWithCallback = Module.findExportByName("winbioext.dll", "WinBioLocateSensorWithCallback")
+Interceptor.attach(WinBioLocateSensorWithCallback, {onLeave: function (args) {send("WinBioLocateSensorWithCallback");}});
+
+var WinBioLogonIdentifiedUser = Module.findExportByName("winbioext.dll", "WinBioLogonIdentifiedUser")
+Interceptor.attach(WinBioLogonIdentifiedUser, {onLeave: function (args) {send("WinBioLogonIdentifiedUser");}});
+
+var WinBioNotifyPasswordChange = Module.findExportByName("winbioext.dll", "WinBioNotifyPasswordChange")
+Interceptor.attach(WinBioNotifyPasswordChange, {onLeave: function (args) {send("WinBioNotifyPasswordChange");}});
+
+var WinBioOpenSession = Module.findExportByName("winbioext.dll", "WinBioOpenSession")
+Interceptor.attach(WinBioOpenSession, {onLeave: function (args) {send("WinBioOpenSession");}});
+
+var WinBioRegisterEventMonitor = Module.findExportByName("winbioext.dll", "WinBioRegisterEventMonitor")
+Interceptor.attach(WinBioRegisterEventMonitor, {onLeave: function (args) {send("WinBioRegisterEventMonitor");}});
+
+var WinBioRegisterServiceMonitor = Module.findExportByName("winbioext.dll", "WinBioRegisterServiceMonitor")
+Interceptor.attach(WinBioRegisterServiceMonitor, {onLeave: function (args) {send("WinBioRegisterServiceMonitor");}});
+
+var WinBioReleaseFocus = Module.findExportByName("winbioext.dll", "WinBioReleaseFocus")
+Interceptor.attach(WinBioReleaseFocus, {onLeave: function (args) {send("WinBioReleaseFocus");}});
+
+var WinBioUnregisterEventMonitor = Module.findExportByName("winbioext.dll", "WinBioUnregisterEventMonitor")
+Interceptor.attach(WinBioUnregisterEventMonitor, {onLeave: function (args) {send("WinBioUnregisterEventMonitor");}});
+
+var WinBioUnregisterServiceMonitor = Module.findExportByName("winbioext.dll", "WinBioUnregisterServiceMonitor")
+Interceptor.attach(WinBioUnregisterServiceMonitor, {onLeave: function (args) {send("WinBioUnregisterServiceMonitor");}});
+
+var WinBioVerifyWithCallback = Module.findExportByName("winbioext.dll", "WinBioVerifyWithCallback")
+Interceptor.attach(WinBioVerifyWithCallback, {onLeave: function (args) {send("WinBioVerifyWithCallback");}});
+

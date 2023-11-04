@@ -1,0 +1,60 @@
+var DllCanUnloadNow = Module.findExportByName("LicenseManager.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("LicenseManager.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("LicenseManager.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var LmCreateLicenseManager = Module.findExportByName("LicenseManager.dll", "LmCreateLicenseManager")
+Interceptor.attach(LmCreateLicenseManager, {onLeave: function (args) {send("LmCreateLicenseManager");}});
+
+var LmCreateStandardServiceProvider = Module.findExportByName("LicenseManager.dll", "LmCreateStandardServiceProvider")
+Interceptor.attach(LmCreateStandardServiceProvider, {onLeave: function (args) {send("LmCreateStandardServiceProvider");}});
+
+var ServiceBeginAcquireLicense = Module.findExportByName("LicenseManager.dll", "ServiceBeginAcquireLicense")
+Interceptor.attach(ServiceBeginAcquireLicense, {onLeave: function (args) {send("ServiceBeginAcquireLicense");}});
+
+var ServiceCleanup = Module.findExportByName("LicenseManager.dll", "ServiceCleanup")
+Interceptor.attach(ServiceCleanup, {onLeave: function (args) {send("ServiceCleanup");}});
+
+var ServiceCreateApplicationLicenseManager = Module.findExportByName("LicenseManager.dll", "ServiceCreateApplicationLicenseManager")
+Interceptor.attach(ServiceCreateApplicationLicenseManager, {onLeave: function (args) {send("ServiceCreateApplicationLicenseManager");}});
+
+var ServiceEnsureLicenseForOptionalPackageUsage = Module.findExportByName("LicenseManager.dll", "ServiceEnsureLicenseForOptionalPackageUsage")
+Interceptor.attach(ServiceEnsureLicenseForOptionalPackageUsage, {onLeave: function (args) {send("ServiceEnsureLicenseForOptionalPackageUsage");}});
+
+var ServiceEnsureLicenseForPackageActivation = Module.findExportByName("LicenseManager.dll", "ServiceEnsureLicenseForPackageActivation")
+Interceptor.attach(ServiceEnsureLicenseForPackageActivation, {onLeave: function (args) {send("ServiceEnsureLicenseForPackageActivation");}});
+
+var ServiceInitialize = Module.findExportByName("LicenseManager.dll", "ServiceInitialize")
+Interceptor.attach(ServiceInitialize, {onLeave: function (args) {send("ServiceInitialize");}});
+
+var ServiceOptionalPackageRundownNotification = Module.findExportByName("LicenseManager.dll", "ServiceOptionalPackageRundownNotification")
+Interceptor.attach(ServiceOptionalPackageRundownNotification, {onLeave: function (args) {send("ServiceOptionalPackageRundownNotification");}});
+
+var ServicePackageRundownNotification = Module.findExportByName("LicenseManager.dll", "ServicePackageRundownNotification")
+Interceptor.attach(ServicePackageRundownNotification, {onLeave: function (args) {send("ServicePackageRundownNotification");}});
+
+var ServicePackageSuspendedNotification = Module.findExportByName("LicenseManager.dll", "ServicePackageSuspendedNotification")
+Interceptor.attach(ServicePackageSuspendedNotification, {onLeave: function (args) {send("ServicePackageSuspendedNotification");}});
+
+var ServicePrecacheLicenseForPackageResume = Module.findExportByName("LicenseManager.dll", "ServicePrecacheLicenseForPackageResume")
+Interceptor.attach(ServicePrecacheLicenseForPackageResume, {onLeave: function (args) {send("ServicePrecacheLicenseForPackageResume");}});
+
+var ServiceReset = Module.findExportByName("LicenseManager.dll", "ServiceReset")
+Interceptor.attach(ServiceReset, {onLeave: function (args) {send("ServiceReset");}});
+
+var SetServiceStatusHandle = Module.findExportByName("LicenseManager.dll", "SetServiceStatusHandle")
+Interceptor.attach(SetServiceStatusHandle, {onLeave: function (args) {send("SetServiceStatusHandle");}});
+
+var WnfEventHandlerForDeviceIdChange = Module.findExportByName("LicenseManager.dll", "WnfEventHandlerForDeviceIdChange")
+Interceptor.attach(WnfEventHandlerForDeviceIdChange, {onLeave: function (args) {send("WnfEventHandlerForDeviceIdChange");}});
+
+var WnfEventHandlerForOfflinePcChange = Module.findExportByName("LicenseManager.dll", "WnfEventHandlerForOfflinePcChange")
+Interceptor.attach(WnfEventHandlerForOfflinePcChange, {onLeave: function (args) {send("WnfEventHandlerForOfflinePcChange");}});
+
+var WnfEventHandlerForXboxTestNetworkConnectionComplete = Module.findExportByName("LicenseManager.dll", "WnfEventHandlerForXboxTestNetworkConnectionComplete")
+Interceptor.attach(WnfEventHandlerForXboxTestNetworkConnectionComplete, {onLeave: function (args) {send("WnfEventHandlerForXboxTestNetworkConnectionComplete");}});
+

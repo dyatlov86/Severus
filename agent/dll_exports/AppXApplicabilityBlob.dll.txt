@@ -1,0 +1,21 @@
+var CreateSerializedBundleManifestStatement = Module.findExportByName("AppXApplicabilityBlob.dll", "CreateSerializedBundleManifestStatement")
+Interceptor.attach(CreateSerializedBundleManifestStatement, {onLeave: function (args) {send("CreateSerializedBundleManifestStatement");}});
+
+var GetApplicabilityFactory = Module.findExportByName("AppXApplicabilityBlob.dll", "GetApplicabilityFactory")
+Interceptor.attach(GetApplicabilityFactory, {onLeave: function (args) {send("GetApplicabilityFactory");}});
+
+var IsAppx = Module.findExportByName("AppXApplicabilityBlob.dll", "IsAppx")
+Interceptor.attach(IsAppx, {onLeave: function (args) {send("IsAppx");}});
+
+var IsModernApp = Module.findExportByName("AppXApplicabilityBlob.dll", "IsModernApp")
+Interceptor.attach(IsModernApp, {onLeave: function (args) {send("IsModernApp");}});
+
+var IsPreThresholdDesktop = Module.findExportByName("AppXApplicabilityBlob.dll", "IsPreThresholdDesktop")
+Interceptor.attach(IsPreThresholdDesktop, {onLeave: function (args) {send("IsPreThresholdDesktop");}});
+
+var IsPreThresholdPhone = Module.findExportByName("AppXApplicabilityBlob.dll", "IsPreThresholdPhone")
+Interceptor.attach(IsPreThresholdPhone, {onLeave: function (args) {send("IsPreThresholdPhone");}});
+
+var IsXAP = Module.findExportByName("AppXApplicabilityBlob.dll", "IsXAP")
+Interceptor.attach(IsXAP, {onLeave: function (args) {send("IsXAP");}});
+

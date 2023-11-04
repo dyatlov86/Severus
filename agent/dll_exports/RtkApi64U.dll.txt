@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("RtkApi64U.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("RtkApi64U.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("RtkApi64U.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("RtkApi64U.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ParseAddWriteDS1PCDAT = Module.findExportByName("RtkApi64U.dll", "ParseAddWriteDS1PCDAT")
+Interceptor.attach(ParseAddWriteDS1PCDAT, {onLeave: function (args) {send("ParseAddWriteDS1PCDAT");}});
+
+var ParseAddWritePCEE4DAT = Module.findExportByName("RtkApi64U.dll", "ParseAddWritePCEE4DAT")
+Interceptor.attach(ParseAddWritePCEE4DAT, {onLeave: function (args) {send("ParseAddWritePCEE4DAT");}});
+

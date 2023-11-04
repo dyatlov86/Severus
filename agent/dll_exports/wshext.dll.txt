@@ -1,0 +1,30 @@
+var CreateIndirectData = Module.findExportByName("wshext.dll", "CreateIndirectData")
+Interceptor.attach(CreateIndirectData, {onLeave: function (args) {send("CreateIndirectData");}});
+
+var DllCanUnloadNow = Module.findExportByName("wshext.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wshext.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("wshext.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wshext.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetSignedDataMsg = Module.findExportByName("wshext.dll", "GetSignedDataMsg")
+Interceptor.attach(GetSignedDataMsg, {onLeave: function (args) {send("GetSignedDataMsg");}});
+
+var IsFileSupportedName = Module.findExportByName("wshext.dll", "IsFileSupportedName")
+Interceptor.attach(IsFileSupportedName, {onLeave: function (args) {send("IsFileSupportedName");}});
+
+var PutSignedDataMsg = Module.findExportByName("wshext.dll", "PutSignedDataMsg")
+Interceptor.attach(PutSignedDataMsg, {onLeave: function (args) {send("PutSignedDataMsg");}});
+
+var RemoveSignedDataMsg = Module.findExportByName("wshext.dll", "RemoveSignedDataMsg")
+Interceptor.attach(RemoveSignedDataMsg, {onLeave: function (args) {send("RemoveSignedDataMsg");}});
+
+var VerifyIndirectData = Module.findExportByName("wshext.dll", "VerifyIndirectData")
+Interceptor.attach(VerifyIndirectData, {onLeave: function (args) {send("VerifyIndirectData");}});
+

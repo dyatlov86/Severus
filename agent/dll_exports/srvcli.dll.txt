@@ -1,0 +1,186 @@
+var I_NetDfsGetVersion = Module.findExportByName("srvcli.dll", "I_NetDfsGetVersion")
+Interceptor.attach(I_NetDfsGetVersion, {onLeave: function (args) {send("I_NetDfsGetVersion");}});
+
+var I_NetServerSetServiceBits = Module.findExportByName("srvcli.dll", "I_NetServerSetServiceBits")
+Interceptor.attach(I_NetServerSetServiceBits, {onLeave: function (args) {send("I_NetServerSetServiceBits");}});
+
+var I_NetServerSetServiceBitsEx = Module.findExportByName("srvcli.dll", "I_NetServerSetServiceBitsEx")
+Interceptor.attach(I_NetServerSetServiceBitsEx, {onLeave: function (args) {send("I_NetServerSetServiceBitsEx");}});
+
+var LocalAliasGet = Module.findExportByName("srvcli.dll", "LocalAliasGet")
+Interceptor.attach(LocalAliasGet, {onLeave: function (args) {send("LocalAliasGet");}});
+
+var LocalFileClose = Module.findExportByName("srvcli.dll", "LocalFileClose")
+Interceptor.attach(LocalFileClose, {onLeave: function (args) {send("LocalFileClose");}});
+
+var LocalFileEnum = Module.findExportByName("srvcli.dll", "LocalFileEnum")
+Interceptor.attach(LocalFileEnum, {onLeave: function (args) {send("LocalFileEnum");}});
+
+var LocalFileEnumEx = Module.findExportByName("srvcli.dll", "LocalFileEnumEx")
+Interceptor.attach(LocalFileEnumEx, {onLeave: function (args) {send("LocalFileEnumEx");}});
+
+var LocalFileGetInfo = Module.findExportByName("srvcli.dll", "LocalFileGetInfo")
+Interceptor.attach(LocalFileGetInfo, {onLeave: function (args) {send("LocalFileGetInfo");}});
+
+var LocalFileGetInfoEx = Module.findExportByName("srvcli.dll", "LocalFileGetInfoEx")
+Interceptor.attach(LocalFileGetInfoEx, {onLeave: function (args) {send("LocalFileGetInfoEx");}});
+
+var LocalServerCertificateMappingAdd = Module.findExportByName("srvcli.dll", "LocalServerCertificateMappingAdd")
+Interceptor.attach(LocalServerCertificateMappingAdd, {onLeave: function (args) {send("LocalServerCertificateMappingAdd");}});
+
+var LocalServerCertificateMappingEnum = Module.findExportByName("srvcli.dll", "LocalServerCertificateMappingEnum")
+Interceptor.attach(LocalServerCertificateMappingEnum, {onLeave: function (args) {send("LocalServerCertificateMappingEnum");}});
+
+var LocalServerCertificateMappingGet = Module.findExportByName("srvcli.dll", "LocalServerCertificateMappingGet")
+Interceptor.attach(LocalServerCertificateMappingGet, {onLeave: function (args) {send("LocalServerCertificateMappingGet");}});
+
+var LocalServerCertificateMappingModify = Module.findExportByName("srvcli.dll", "LocalServerCertificateMappingModify")
+Interceptor.attach(LocalServerCertificateMappingModify, {onLeave: function (args) {send("LocalServerCertificateMappingModify");}});
+
+var LocalServerCertificateMappingRemove = Module.findExportByName("srvcli.dll", "LocalServerCertificateMappingRemove")
+Interceptor.attach(LocalServerCertificateMappingRemove, {onLeave: function (args) {send("LocalServerCertificateMappingRemove");}});
+
+var LocalSessionDel = Module.findExportByName("srvcli.dll", "LocalSessionDel")
+Interceptor.attach(LocalSessionDel, {onLeave: function (args) {send("LocalSessionDel");}});
+
+var LocalSessionEnum = Module.findExportByName("srvcli.dll", "LocalSessionEnum")
+Interceptor.attach(LocalSessionEnum, {onLeave: function (args) {send("LocalSessionEnum");}});
+
+var LocalSessionEnumEx = Module.findExportByName("srvcli.dll", "LocalSessionEnumEx")
+Interceptor.attach(LocalSessionEnumEx, {onLeave: function (args) {send("LocalSessionEnumEx");}});
+
+var LocalSessionGetInfo = Module.findExportByName("srvcli.dll", "LocalSessionGetInfo")
+Interceptor.attach(LocalSessionGetInfo, {onLeave: function (args) {send("LocalSessionGetInfo");}});
+
+var LocalSessionGetInfoEx = Module.findExportByName("srvcli.dll", "LocalSessionGetInfoEx")
+Interceptor.attach(LocalSessionGetInfoEx, {onLeave: function (args) {send("LocalSessionGetInfoEx");}});
+
+var LocalShareAdd = Module.findExportByName("srvcli.dll", "LocalShareAdd")
+Interceptor.attach(LocalShareAdd, {onLeave: function (args) {send("LocalShareAdd");}});
+
+var LocalShareDelEx = Module.findExportByName("srvcli.dll", "LocalShareDelEx")
+Interceptor.attach(LocalShareDelEx, {onLeave: function (args) {send("LocalShareDelEx");}});
+
+var LocalShareEnum = Module.findExportByName("srvcli.dll", "LocalShareEnum")
+Interceptor.attach(LocalShareEnum, {onLeave: function (args) {send("LocalShareEnum");}});
+
+var LocalShareEnumEx = Module.findExportByName("srvcli.dll", "LocalShareEnumEx")
+Interceptor.attach(LocalShareEnumEx, {onLeave: function (args) {send("LocalShareEnumEx");}});
+
+var LocalShareGetInfo = Module.findExportByName("srvcli.dll", "LocalShareGetInfo")
+Interceptor.attach(LocalShareGetInfo, {onLeave: function (args) {send("LocalShareGetInfo");}});
+
+var LocalShareGetInfoEx = Module.findExportByName("srvcli.dll", "LocalShareGetInfoEx")
+Interceptor.attach(LocalShareGetInfoEx, {onLeave: function (args) {send("LocalShareGetInfoEx");}});
+
+var LocalShareSetInfo = Module.findExportByName("srvcli.dll", "LocalShareSetInfo")
+Interceptor.attach(LocalShareSetInfo, {onLeave: function (args) {send("LocalShareSetInfo");}});
+
+var NetConnectionEnum = Module.findExportByName("srvcli.dll", "NetConnectionEnum")
+Interceptor.attach(NetConnectionEnum, {onLeave: function (args) {send("NetConnectionEnum");}});
+
+var NetFileClose = Module.findExportByName("srvcli.dll", "NetFileClose")
+Interceptor.attach(NetFileClose, {onLeave: function (args) {send("NetFileClose");}});
+
+var NetFileEnum = Module.findExportByName("srvcli.dll", "NetFileEnum")
+Interceptor.attach(NetFileEnum, {onLeave: function (args) {send("NetFileEnum");}});
+
+var NetFileGetInfo = Module.findExportByName("srvcli.dll", "NetFileGetInfo")
+Interceptor.attach(NetFileGetInfo, {onLeave: function (args) {send("NetFileGetInfo");}});
+
+var NetRemoteTOD = Module.findExportByName("srvcli.dll", "NetRemoteTOD")
+Interceptor.attach(NetRemoteTOD, {onLeave: function (args) {send("NetRemoteTOD");}});
+
+var NetServerAliasAdd = Module.findExportByName("srvcli.dll", "NetServerAliasAdd")
+Interceptor.attach(NetServerAliasAdd, {onLeave: function (args) {send("NetServerAliasAdd");}});
+
+var NetServerAliasDel = Module.findExportByName("srvcli.dll", "NetServerAliasDel")
+Interceptor.attach(NetServerAliasDel, {onLeave: function (args) {send("NetServerAliasDel");}});
+
+var NetServerAliasEnum = Module.findExportByName("srvcli.dll", "NetServerAliasEnum")
+Interceptor.attach(NetServerAliasEnum, {onLeave: function (args) {send("NetServerAliasEnum");}});
+
+var NetServerComputerNameAdd = Module.findExportByName("srvcli.dll", "NetServerComputerNameAdd")
+Interceptor.attach(NetServerComputerNameAdd, {onLeave: function (args) {send("NetServerComputerNameAdd");}});
+
+var NetServerComputerNameDel = Module.findExportByName("srvcli.dll", "NetServerComputerNameDel")
+Interceptor.attach(NetServerComputerNameDel, {onLeave: function (args) {send("NetServerComputerNameDel");}});
+
+var NetServerDiskEnum = Module.findExportByName("srvcli.dll", "NetServerDiskEnum")
+Interceptor.attach(NetServerDiskEnum, {onLeave: function (args) {send("NetServerDiskEnum");}});
+
+var NetServerGetInfo = Module.findExportByName("srvcli.dll", "NetServerGetInfo")
+Interceptor.attach(NetServerGetInfo, {onLeave: function (args) {send("NetServerGetInfo");}});
+
+var NetServerSetInfo = Module.findExportByName("srvcli.dll", "NetServerSetInfo")
+Interceptor.attach(NetServerSetInfo, {onLeave: function (args) {send("NetServerSetInfo");}});
+
+var NetServerStatisticsGet = Module.findExportByName("srvcli.dll", "NetServerStatisticsGet")
+Interceptor.attach(NetServerStatisticsGet, {onLeave: function (args) {send("NetServerStatisticsGet");}});
+
+var NetServerTransportAdd = Module.findExportByName("srvcli.dll", "NetServerTransportAdd")
+Interceptor.attach(NetServerTransportAdd, {onLeave: function (args) {send("NetServerTransportAdd");}});
+
+var NetServerTransportAddEx = Module.findExportByName("srvcli.dll", "NetServerTransportAddEx")
+Interceptor.attach(NetServerTransportAddEx, {onLeave: function (args) {send("NetServerTransportAddEx");}});
+
+var NetServerTransportDel = Module.findExportByName("srvcli.dll", "NetServerTransportDel")
+Interceptor.attach(NetServerTransportDel, {onLeave: function (args) {send("NetServerTransportDel");}});
+
+var NetServerTransportEnum = Module.findExportByName("srvcli.dll", "NetServerTransportEnum")
+Interceptor.attach(NetServerTransportEnum, {onLeave: function (args) {send("NetServerTransportEnum");}});
+
+var NetSessionDel = Module.findExportByName("srvcli.dll", "NetSessionDel")
+Interceptor.attach(NetSessionDel, {onLeave: function (args) {send("NetSessionDel");}});
+
+var NetSessionEnum = Module.findExportByName("srvcli.dll", "NetSessionEnum")
+Interceptor.attach(NetSessionEnum, {onLeave: function (args) {send("NetSessionEnum");}});
+
+var NetSessionGetInfo = Module.findExportByName("srvcli.dll", "NetSessionGetInfo")
+Interceptor.attach(NetSessionGetInfo, {onLeave: function (args) {send("NetSessionGetInfo");}});
+
+var NetShareAdd = Module.findExportByName("srvcli.dll", "NetShareAdd")
+Interceptor.attach(NetShareAdd, {onLeave: function (args) {send("NetShareAdd");}});
+
+var NetShareCheck = Module.findExportByName("srvcli.dll", "NetShareCheck")
+Interceptor.attach(NetShareCheck, {onLeave: function (args) {send("NetShareCheck");}});
+
+var NetShareDel = Module.findExportByName("srvcli.dll", "NetShareDel")
+Interceptor.attach(NetShareDel, {onLeave: function (args) {send("NetShareDel");}});
+
+var NetShareDelEx = Module.findExportByName("srvcli.dll", "NetShareDelEx")
+Interceptor.attach(NetShareDelEx, {onLeave: function (args) {send("NetShareDelEx");}});
+
+var NetShareDelSticky = Module.findExportByName("srvcli.dll", "NetShareDelSticky")
+Interceptor.attach(NetShareDelSticky, {onLeave: function (args) {send("NetShareDelSticky");}});
+
+var NetShareEnum = Module.findExportByName("srvcli.dll", "NetShareEnum")
+Interceptor.attach(NetShareEnum, {onLeave: function (args) {send("NetShareEnum");}});
+
+var NetShareEnumSticky = Module.findExportByName("srvcli.dll", "NetShareEnumSticky")
+Interceptor.attach(NetShareEnumSticky, {onLeave: function (args) {send("NetShareEnumSticky");}});
+
+var NetShareGetInfo = Module.findExportByName("srvcli.dll", "NetShareGetInfo")
+Interceptor.attach(NetShareGetInfo, {onLeave: function (args) {send("NetShareGetInfo");}});
+
+var NetShareSetInfo = Module.findExportByName("srvcli.dll", "NetShareSetInfo")
+Interceptor.attach(NetShareSetInfo, {onLeave: function (args) {send("NetShareSetInfo");}});
+
+var NetpsNameCanonicalize = Module.findExportByName("srvcli.dll", "NetpsNameCanonicalize")
+Interceptor.attach(NetpsNameCanonicalize, {onLeave: function (args) {send("NetpsNameCanonicalize");}});
+
+var NetpsNameCompare = Module.findExportByName("srvcli.dll", "NetpsNameCompare")
+Interceptor.attach(NetpsNameCompare, {onLeave: function (args) {send("NetpsNameCompare");}});
+
+var NetpsNameValidate = Module.findExportByName("srvcli.dll", "NetpsNameValidate")
+Interceptor.attach(NetpsNameValidate, {onLeave: function (args) {send("NetpsNameValidate");}});
+
+var NetpsPathCanonicalize = Module.findExportByName("srvcli.dll", "NetpsPathCanonicalize")
+Interceptor.attach(NetpsPathCanonicalize, {onLeave: function (args) {send("NetpsPathCanonicalize");}});
+
+var NetpsPathCompare = Module.findExportByName("srvcli.dll", "NetpsPathCompare")
+Interceptor.attach(NetpsPathCompare, {onLeave: function (args) {send("NetpsPathCompare");}});
+
+var NetpsPathType = Module.findExportByName("srvcli.dll", "NetpsPathType")
+Interceptor.attach(NetpsPathType, {onLeave: function (args) {send("NetpsPathType");}});
+

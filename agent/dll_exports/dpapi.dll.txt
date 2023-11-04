@@ -1,0 +1,21 @@
+var CryptProtectDataNoUI = Module.findExportByName("dpapi.dll", "CryptProtectDataNoUI")
+Interceptor.attach(CryptProtectDataNoUI, {onLeave: function (args) {send("CryptProtectDataNoUI");}});
+
+var CryptProtectMemory = Module.findExportByName("dpapi.dll", "CryptProtectMemory")
+Interceptor.attach(CryptProtectMemory, {onLeave: function (args) {send("CryptProtectMemory");}});
+
+var CryptResetMachineCredentials = Module.findExportByName("dpapi.dll", "CryptResetMachineCredentials")
+Interceptor.attach(CryptResetMachineCredentials, {onLeave: function (args) {send("CryptResetMachineCredentials");}});
+
+var CryptUnprotectDataNoUI = Module.findExportByName("dpapi.dll", "CryptUnprotectDataNoUI")
+Interceptor.attach(CryptUnprotectDataNoUI, {onLeave: function (args) {send("CryptUnprotectDataNoUI");}});
+
+var CryptUnprotectMemory = Module.findExportByName("dpapi.dll", "CryptUnprotectMemory")
+Interceptor.attach(CryptUnprotectMemory, {onLeave: function (args) {send("CryptUnprotectMemory");}});
+
+var CryptUpdateProtectedState = Module.findExportByName("dpapi.dll", "CryptUpdateProtectedState")
+Interceptor.attach(CryptUpdateProtectedState, {onLeave: function (args) {send("CryptUpdateProtectedState");}});
+
+var iCryptIdentifyProtection = Module.findExportByName("dpapi.dll", "iCryptIdentifyProtection")
+Interceptor.attach(iCryptIdentifyProtection, {onLeave: function (args) {send("iCryptIdentifyProtection");}});
+

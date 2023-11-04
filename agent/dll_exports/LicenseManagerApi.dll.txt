@@ -1,0 +1,36 @@
+var BeginAcquireStoreLicenseForPackageActivation = Module.findExportByName("LicenseManagerApi.dll", "BeginAcquireStoreLicenseForPackageActivation")
+Interceptor.attach(BeginAcquireStoreLicenseForPackageActivation, {onLeave: function (args) {send("BeginAcquireStoreLicenseForPackageActivation");}});
+
+var BeginAcquireStoreLicenseForPackageActivation2 = Module.findExportByName("LicenseManagerApi.dll", "BeginAcquireStoreLicenseForPackageActivation2")
+Interceptor.attach(BeginAcquireStoreLicenseForPackageActivation2, {onLeave: function (args) {send("BeginAcquireStoreLicenseForPackageActivation2");}});
+
+var DllMain = Module.findExportByName("LicenseManagerApi.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var EnsureStoreLicenseForPackageActivation = Module.findExportByName("LicenseManagerApi.dll", "EnsureStoreLicenseForPackageActivation")
+Interceptor.attach(EnsureStoreLicenseForPackageActivation, {onLeave: function (args) {send("EnsureStoreLicenseForPackageActivation");}});
+
+var EnsureStoreLicenseForPackageActivation2 = Module.findExportByName("LicenseManagerApi.dll", "EnsureStoreLicenseForPackageActivation2")
+Interceptor.attach(EnsureStoreLicenseForPackageActivation2, {onLeave: function (args) {send("EnsureStoreLicenseForPackageActivation2");}});
+
+var PackageRundownNotificationForStoreLicense = Module.findExportByName("LicenseManagerApi.dll", "PackageRundownNotificationForStoreLicense")
+Interceptor.attach(PackageRundownNotificationForStoreLicense, {onLeave: function (args) {send("PackageRundownNotificationForStoreLicense");}});
+
+var PackageRundownNotificationForStoreLicense2 = Module.findExportByName("LicenseManagerApi.dll", "PackageRundownNotificationForStoreLicense2")
+Interceptor.attach(PackageRundownNotificationForStoreLicense2, {onLeave: function (args) {send("PackageRundownNotificationForStoreLicense2");}});
+
+var PackageSuspendedNotificationForStoreLicense = Module.findExportByName("LicenseManagerApi.dll", "PackageSuspendedNotificationForStoreLicense")
+Interceptor.attach(PackageSuspendedNotificationForStoreLicense, {onLeave: function (args) {send("PackageSuspendedNotificationForStoreLicense");}});
+
+var PackageSuspendedNotificationForStoreLicense2 = Module.findExportByName("LicenseManagerApi.dll", "PackageSuspendedNotificationForStoreLicense2")
+Interceptor.attach(PackageSuspendedNotificationForStoreLicense2, {onLeave: function (args) {send("PackageSuspendedNotificationForStoreLicense2");}});
+
+var PrecacheStoreLicenseForPackageResume = Module.findExportByName("LicenseManagerApi.dll", "PrecacheStoreLicenseForPackageResume")
+Interceptor.attach(PrecacheStoreLicenseForPackageResume, {onLeave: function (args) {send("PrecacheStoreLicenseForPackageResume");}});
+
+var PrecacheStoreLicenseForPackageResume2 = Module.findExportByName("LicenseManagerApi.dll", "PrecacheStoreLicenseForPackageResume2")
+Interceptor.attach(PrecacheStoreLicenseForPackageResume2, {onLeave: function (args) {send("PrecacheStoreLicenseForPackageResume2");}});
+
+var Reset = Module.findExportByName("LicenseManagerApi.dll", "Reset")
+Interceptor.attach(Reset, {onLeave: function (args) {send("Reset");}});
+

@@ -1,0 +1,3 @@
+var StartMonitor = Module.findExportByName("CaptureStreamMonitor.dll", "StartMonitor")
+Interceptor.attach(StartMonitor, {onLeave: function (args) {send("StartMonitor");}});
+

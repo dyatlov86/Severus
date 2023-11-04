@@ -1,0 +1,15 @@
+var CreateInternetMailSyncServiceLayer = Module.findExportByName("internetmail.dll", "CreateInternetMailSyncServiceLayer")
+Interceptor.attach(CreateInternetMailSyncServiceLayer, {onLeave: function (args) {send("CreateInternetMailSyncServiceLayer");}});
+
+var DllCanUnloadNow = Module.findExportByName("internetmail.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("internetmail.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetAutoConfigManager = Module.findExportByName("internetmail.dll", "GetAutoConfigManager")
+Interceptor.attach(GetAutoConfigManager, {onLeave: function (args) {send("GetAutoConfigManager");}});
+
+var OneStopFactory = Module.findExportByName("internetmail.dll", "OneStopFactory")
+Interceptor.attach(OneStopFactory, {onLeave: function (args) {send("OneStopFactory");}});
+

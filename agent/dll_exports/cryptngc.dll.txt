@@ -1,0 +1,213 @@
+var FidoCreateCredential = Module.findExportByName("cryptngc.dll", "FidoCreateCredential")
+Interceptor.attach(FidoCreateCredential, {onLeave: function (args) {send("FidoCreateCredential");}});
+
+var FidoGetCredential = Module.findExportByName("cryptngc.dll", "FidoGetCredential")
+Interceptor.attach(FidoGetCredential, {onLeave: function (args) {send("FidoGetCredential");}});
+
+var FidoSignWithCredential = Module.findExportByName("cryptngc.dll", "FidoSignWithCredential")
+Interceptor.attach(FidoSignWithCredential, {onLeave: function (args) {send("FidoSignWithCredential");}});
+
+var NgcAddBioProtector = Module.findExportByName("cryptngc.dll", "NgcAddBioProtector")
+Interceptor.attach(NgcAddBioProtector, {onLeave: function (args) {send("NgcAddBioProtector");}});
+
+var NgcAddCompanionDeviceProtector = Module.findExportByName("cryptngc.dll", "NgcAddCompanionDeviceProtector")
+Interceptor.attach(NgcAddCompanionDeviceProtector, {onLeave: function (args) {send("NgcAddCompanionDeviceProtector");}});
+
+var NgcAddPrebootProtector = Module.findExportByName("cryptngc.dll", "NgcAddPrebootProtector")
+Interceptor.attach(NgcAddPrebootProtector, {onLeave: function (args) {send("NgcAddPrebootProtector");}});
+
+var NgcCancelPendingUIRequest = Module.findExportByName("cryptngc.dll", "NgcCancelPendingUIRequest")
+Interceptor.attach(NgcCancelPendingUIRequest, {onLeave: function (args) {send("NgcCancelPendingUIRequest");}});
+
+var NgcChangePin = Module.findExportByName("cryptngc.dll", "NgcChangePin")
+Interceptor.attach(NgcChangePin, {onLeave: function (args) {send("NgcChangePin");}});
+
+var NgcChangePinSilent = Module.findExportByName("cryptngc.dll", "NgcChangePinSilent")
+Interceptor.attach(NgcChangePinSilent, {onLeave: function (args) {send("NgcChangePinSilent");}});
+
+var NgcCreateContainer = Module.findExportByName("cryptngc.dll", "NgcCreateContainer")
+Interceptor.attach(NgcCreateContainer, {onLeave: function (args) {send("NgcCreateContainer");}});
+
+var NgcCreateContainerSilent = Module.findExportByName("cryptngc.dll", "NgcCreateContainerSilent")
+Interceptor.attach(NgcCreateContainerSilent, {onLeave: function (args) {send("NgcCreateContainerSilent");}});
+
+var NgcCreateTicketForSmartCardKeyOperation = Module.findExportByName("cryptngc.dll", "NgcCreateTicketForSmartCardKeyOperation")
+Interceptor.attach(NgcCreateTicketForSmartCardKeyOperation, {onLeave: function (args) {send("NgcCreateTicketForSmartCardKeyOperation");}});
+
+var NgcCreateTicketForSmartCardVpn = Module.findExportByName("cryptngc.dll", "NgcCreateTicketForSmartCardVpn")
+Interceptor.attach(NgcCreateTicketForSmartCardVpn, {onLeave: function (args) {send("NgcCreateTicketForSmartCardVpn");}});
+
+var NgcCreateUserIdKey = Module.findExportByName("cryptngc.dll", "NgcCreateUserIdKey")
+Interceptor.attach(NgcCreateUserIdKey, {onLeave: function (args) {send("NgcCreateUserIdKey");}});
+
+var NgcCreateUserIdKeyEx = Module.findExportByName("cryptngc.dll", "NgcCreateUserIdKeyEx")
+Interceptor.attach(NgcCreateUserIdKeyEx, {onLeave: function (args) {send("NgcCreateUserIdKeyEx");}});
+
+var NgcCreateUserIdKeyHandle = Module.findExportByName("cryptngc.dll", "NgcCreateUserIdKeyHandle")
+Interceptor.attach(NgcCreateUserIdKeyHandle, {onLeave: function (args) {send("NgcCreateUserIdKeyHandle");}});
+
+var NgcDecryptWithSymmetricGcmPopKey = Module.findExportByName("cryptngc.dll", "NgcDecryptWithSymmetricGcmPopKey")
+Interceptor.attach(NgcDecryptWithSymmetricGcmPopKey, {onLeave: function (args) {send("NgcDecryptWithSymmetricGcmPopKey");}});
+
+var NgcDecryptWithSymmetricPopKey = Module.findExportByName("cryptngc.dll", "NgcDecryptWithSymmetricPopKey")
+Interceptor.attach(NgcDecryptWithSymmetricPopKey, {onLeave: function (args) {send("NgcDecryptWithSymmetricPopKey");}});
+
+var NgcDecryptWithUserIdKey = Module.findExportByName("cryptngc.dll", "NgcDecryptWithUserIdKey")
+Interceptor.attach(NgcDecryptWithUserIdKey, {onLeave: function (args) {send("NgcDecryptWithUserIdKey");}});
+
+var NgcDecryptWithUserIdKeySilent = Module.findExportByName("cryptngc.dll", "NgcDecryptWithUserIdKeySilent")
+Interceptor.attach(NgcDecryptWithUserIdKeySilent, {onLeave: function (args) {send("NgcDecryptWithUserIdKeySilent");}});
+
+var NgcDeleteContainer = Module.findExportByName("cryptngc.dll", "NgcDeleteContainer")
+Interceptor.attach(NgcDeleteContainer, {onLeave: function (args) {send("NgcDeleteContainer");}});
+
+var NgcDeleteContainerEx = Module.findExportByName("cryptngc.dll", "NgcDeleteContainerEx")
+Interceptor.attach(NgcDeleteContainerEx, {onLeave: function (args) {send("NgcDeleteContainerEx");}});
+
+var NgcDeleteSymmetricPopKeyTransportKey = Module.findExportByName("cryptngc.dll", "NgcDeleteSymmetricPopKeyTransportKey")
+Interceptor.attach(NgcDeleteSymmetricPopKeyTransportKey, {onLeave: function (args) {send("NgcDeleteSymmetricPopKeyTransportKey");}});
+
+var NgcDeleteUserIdKey = Module.findExportByName("cryptngc.dll", "NgcDeleteUserIdKey")
+Interceptor.attach(NgcDeleteUserIdKey, {onLeave: function (args) {send("NgcDeleteUserIdKey");}});
+
+var NgcEncryptWithAsymmetricKey = Module.findExportByName("cryptngc.dll", "NgcEncryptWithAsymmetricKey")
+Interceptor.attach(NgcEncryptWithAsymmetricKey, {onLeave: function (args) {send("NgcEncryptWithAsymmetricKey");}});
+
+var NgcEncryptWithSymmetricGcmPopKey = Module.findExportByName("cryptngc.dll", "NgcEncryptWithSymmetricGcmPopKey")
+Interceptor.attach(NgcEncryptWithSymmetricGcmPopKey, {onLeave: function (args) {send("NgcEncryptWithSymmetricGcmPopKey");}});
+
+var NgcEncryptWithSymmetricPopKey = Module.findExportByName("cryptngc.dll", "NgcEncryptWithSymmetricPopKey")
+Interceptor.attach(NgcEncryptWithSymmetricPopKey, {onLeave: function (args) {send("NgcEncryptWithSymmetricPopKey");}});
+
+var NgcEnumContainers = Module.findExportByName("cryptngc.dll", "NgcEnumContainers")
+Interceptor.attach(NgcEnumContainers, {onLeave: function (args) {send("NgcEnumContainers");}});
+
+var NgcEnumUserIdKeys = Module.findExportByName("cryptngc.dll", "NgcEnumUserIdKeys")
+Interceptor.attach(NgcEnumUserIdKeys, {onLeave: function (args) {send("NgcEnumUserIdKeys");}});
+
+var NgcFreeEnumState = Module.findExportByName("cryptngc.dll", "NgcFreeEnumState")
+Interceptor.attach(NgcFreeEnumState, {onLeave: function (args) {send("NgcFreeEnumState");}});
+
+var NgcGetDefaultDecryptionKeyName = Module.findExportByName("cryptngc.dll", "NgcGetDefaultDecryptionKeyName")
+Interceptor.attach(NgcGetDefaultDecryptionKeyName, {onLeave: function (args) {send("NgcGetDefaultDecryptionKeyName");}});
+
+var NgcGetEventInterface = Module.findExportByName("cryptngc.dll", "NgcGetEventInterface")
+Interceptor.attach(NgcGetEventInterface, {onLeave: function (args) {send("NgcGetEventInterface");}});
+
+var NgcGetKeyAttestationForContainerService = Module.findExportByName("cryptngc.dll", "NgcGetKeyAttestationForContainerService")
+Interceptor.attach(NgcGetKeyAttestationForContainerService, {onLeave: function (args) {send("NgcGetKeyAttestationForContainerService");}});
+
+var NgcGetKeyAttestationForUserIdKey = Module.findExportByName("cryptngc.dll", "NgcGetKeyAttestationForUserIdKey")
+Interceptor.attach(NgcGetKeyAttestationForUserIdKey, {onLeave: function (args) {send("NgcGetKeyAttestationForUserIdKey");}});
+
+var NgcGetKeyAttestationForUserIdKey2 = Module.findExportByName("cryptngc.dll", "NgcGetKeyAttestationForUserIdKey2")
+Interceptor.attach(NgcGetKeyAttestationForUserIdKey2, {onLeave: function (args) {send("NgcGetKeyAttestationForUserIdKey2");}});
+
+var NgcGetKeyImplType = Module.findExportByName("cryptngc.dll", "NgcGetKeyImplType")
+Interceptor.attach(NgcGetKeyImplType, {onLeave: function (args) {send("NgcGetKeyImplType");}});
+
+var NgcGetLogonDecryptionKeyName = Module.findExportByName("cryptngc.dll", "NgcGetLogonDecryptionKeyName")
+Interceptor.attach(NgcGetLogonDecryptionKeyName, {onLeave: function (args) {send("NgcGetLogonDecryptionKeyName");}});
+
+var NgcGetLogonDecryptionKeyNameForFirstLogonAfterUpgradeFromThreshold = Module.findExportByName("cryptngc.dll", "NgcGetLogonDecryptionKeyNameForFirstLogonAfterUpgradeFromThreshold")
+Interceptor.attach(NgcGetLogonDecryptionKeyNameForFirstLogonAfterUpgradeFromThreshold, {onLeave: function (args) {send("NgcGetLogonDecryptionKeyNameForFirstLogonAfterUpgradeFromThreshold");}});
+
+var NgcGetPkcs7ChainBlobFromCertificateBlob = Module.findExportByName("cryptngc.dll", "NgcGetPkcs7ChainBlobFromCertificateBlob")
+Interceptor.attach(NgcGetPkcs7ChainBlobFromCertificateBlob, {onLeave: function (args) {send("NgcGetPkcs7ChainBlobFromCertificateBlob");}});
+
+var NgcGetPolicy = Module.findExportByName("cryptngc.dll", "NgcGetPolicy")
+Interceptor.attach(NgcGetPolicy, {onLeave: function (args) {send("NgcGetPolicy");}});
+
+var NgcGetPregenKeyState = Module.findExportByName("cryptngc.dll", "NgcGetPregenKeyState")
+Interceptor.attach(NgcGetPregenKeyState, {onLeave: function (args) {send("NgcGetPregenKeyState");}});
+
+var NgcGetPregenUserKey = Module.findExportByName("cryptngc.dll", "NgcGetPregenUserKey")
+Interceptor.attach(NgcGetPregenUserKey, {onLeave: function (args) {send("NgcGetPregenUserKey");}});
+
+var NgcGetSymmetricPopKeyTransportKey = Module.findExportByName("cryptngc.dll", "NgcGetSymmetricPopKeyTransportKey")
+Interceptor.attach(NgcGetSymmetricPopKeyTransportKey, {onLeave: function (args) {send("NgcGetSymmetricPopKeyTransportKey");}});
+
+var NgcGetSymmetricPopKeyTransportKeyName = Module.findExportByName("cryptngc.dll", "NgcGetSymmetricPopKeyTransportKeyName")
+Interceptor.attach(NgcGetSymmetricPopKeyTransportKeyName, {onLeave: function (args) {send("NgcGetSymmetricPopKeyTransportKeyName");}});
+
+var NgcGetUserIdKeyCertificate = Module.findExportByName("cryptngc.dll", "NgcGetUserIdKeyCertificate")
+Interceptor.attach(NgcGetUserIdKeyCertificate, {onLeave: function (args) {send("NgcGetUserIdKeyCertificate");}});
+
+var NgcGetUserIdKeyContainerStatus = Module.findExportByName("cryptngc.dll", "NgcGetUserIdKeyContainerStatus")
+Interceptor.attach(NgcGetUserIdKeyContainerStatus, {onLeave: function (args) {send("NgcGetUserIdKeyContainerStatus");}});
+
+var NgcGetUserIdKeyName = Module.findExportByName("cryptngc.dll", "NgcGetUserIdKeyName")
+Interceptor.attach(NgcGetUserIdKeyName, {onLeave: function (args) {send("NgcGetUserIdKeyName");}});
+
+var NgcGetUserIdKeyPublicKey = Module.findExportByName("cryptngc.dll", "NgcGetUserIdKeyPublicKey")
+Interceptor.attach(NgcGetUserIdKeyPublicKey, {onLeave: function (args) {send("NgcGetUserIdKeyPublicKey");}});
+
+var NgcImportSymmetricPopKey = Module.findExportByName("cryptngc.dll", "NgcImportSymmetricPopKey")
+Interceptor.attach(NgcImportSymmetricPopKey, {onLeave: function (args) {send("NgcImportSymmetricPopKey");}});
+
+var NgcIsAnyContainerInVsm = Module.findExportByName("cryptngc.dll", "NgcIsAnyContainerInVsm")
+Interceptor.attach(NgcIsAnyContainerInVsm, {onLeave: function (args) {send("NgcIsAnyContainerInVsm");}});
+
+var NgcIsPinRemovable = Module.findExportByName("cryptngc.dll", "NgcIsPinRemovable")
+Interceptor.attach(NgcIsPinRemovable, {onLeave: function (args) {send("NgcIsPinRemovable");}});
+
+var NgcNotifyVscProvisioned = Module.findExportByName("cryptngc.dll", "NgcNotifyVscProvisioned")
+Interceptor.attach(NgcNotifyVscProvisioned, {onLeave: function (args) {send("NgcNotifyVscProvisioned");}});
+
+var NgcOpenUserIdKey = Module.findExportByName("cryptngc.dll", "NgcOpenUserIdKey")
+Interceptor.attach(NgcOpenUserIdKey, {onLeave: function (args) {send("NgcOpenUserIdKey");}});
+
+var NgcPackAuthBuffer = Module.findExportByName("cryptngc.dll", "NgcPackAuthBuffer")
+Interceptor.attach(NgcPackAuthBuffer, {onLeave: function (args) {send("NgcPackAuthBuffer");}});
+
+var NgcPackPasswordChangeAuthBuffer = Module.findExportByName("cryptngc.dll", "NgcPackPasswordChangeAuthBuffer")
+Interceptor.attach(NgcPackPasswordChangeAuthBuffer, {onLeave: function (args) {send("NgcPackPasswordChangeAuthBuffer");}});
+
+var NgcQueryEffectiveCertPolicy = Module.findExportByName("cryptngc.dll", "NgcQueryEffectiveCertPolicy")
+Interceptor.attach(NgcQueryEffectiveCertPolicy, {onLeave: function (args) {send("NgcQueryEffectiveCertPolicy");}});
+
+var NgcQueryEnabled = Module.findExportByName("cryptngc.dll", "NgcQueryEnabled")
+Interceptor.attach(NgcQueryEnabled, {onLeave: function (args) {send("NgcQueryEnabled");}});
+
+var NgcQueryHardwarePolicy = Module.findExportByName("cryptngc.dll", "NgcQueryHardwarePolicy")
+Interceptor.attach(NgcQueryHardwarePolicy, {onLeave: function (args) {send("NgcQueryHardwarePolicy");}});
+
+var NgcRemoveBioProtector = Module.findExportByName("cryptngc.dll", "NgcRemoveBioProtector")
+Interceptor.attach(NgcRemoveBioProtector, {onLeave: function (args) {send("NgcRemoveBioProtector");}});
+
+var NgcRemoveCompanionDeviceProtector = Module.findExportByName("cryptngc.dll", "NgcRemoveCompanionDeviceProtector")
+Interceptor.attach(NgcRemoveCompanionDeviceProtector, {onLeave: function (args) {send("NgcRemoveCompanionDeviceProtector");}});
+
+var NgcRemovePrebootProtector = Module.findExportByName("cryptngc.dll", "NgcRemovePrebootProtector")
+Interceptor.attach(NgcRemovePrebootProtector, {onLeave: function (args) {send("NgcRemovePrebootProtector");}});
+
+var NgcRenewKeyAttestation = Module.findExportByName("cryptngc.dll", "NgcRenewKeyAttestation")
+Interceptor.attach(NgcRenewKeyAttestation, {onLeave: function (args) {send("NgcRenewKeyAttestation");}});
+
+var NgcSignWithSymmetricPopKey = Module.findExportByName("cryptngc.dll", "NgcSignWithSymmetricPopKey")
+Interceptor.attach(NgcSignWithSymmetricPopKey, {onLeave: function (args) {send("NgcSignWithSymmetricPopKey");}});
+
+var NgcSignWithUserIdKey = Module.findExportByName("cryptngc.dll", "NgcSignWithUserIdKey")
+Interceptor.attach(NgcSignWithUserIdKey, {onLeave: function (args) {send("NgcSignWithUserIdKey");}});
+
+var NgcSignWithUserIdKeyAndPadding = Module.findExportByName("cryptngc.dll", "NgcSignWithUserIdKeyAndPadding")
+Interceptor.attach(NgcSignWithUserIdKeyAndPadding, {onLeave: function (args) {send("NgcSignWithUserIdKeyAndPadding");}});
+
+var NgcSignWithUserIdKeyEx = Module.findExportByName("cryptngc.dll", "NgcSignWithUserIdKeyEx")
+Interceptor.attach(NgcSignWithUserIdKeyEx, {onLeave: function (args) {send("NgcSignWithUserIdKeyEx");}});
+
+var NgcSignWithUserIdKeySilent = Module.findExportByName("cryptngc.dll", "NgcSignWithUserIdKeySilent")
+Interceptor.attach(NgcSignWithUserIdKeySilent, {onLeave: function (args) {send("NgcSignWithUserIdKeySilent");}});
+
+var NgcUnpackAuthBuffer = Module.findExportByName("cryptngc.dll", "NgcUnpackAuthBuffer")
+Interceptor.attach(NgcUnpackAuthBuffer, {onLeave: function (args) {send("NgcUnpackAuthBuffer");}});
+
+var NgcUnpackCredData = Module.findExportByName("cryptngc.dll", "NgcUnpackCredData")
+Interceptor.attach(NgcUnpackCredData, {onLeave: function (args) {send("NgcUnpackCredData");}});
+
+var NgcUnpackPasswordChangeAuthBuffer = Module.findExportByName("cryptngc.dll", "NgcUnpackPasswordChangeAuthBuffer")
+Interceptor.attach(NgcUnpackPasswordChangeAuthBuffer, {onLeave: function (args) {send("NgcUnpackPasswordChangeAuthBuffer");}});
+
+var NgcVerifyWithSymmetricPopKey = Module.findExportByName("cryptngc.dll", "NgcVerifyWithSymmetricPopKey")
+Interceptor.attach(NgcVerifyWithSymmetricPopKey, {onLeave: function (args) {send("NgcVerifyWithSymmetricPopKey");}});
+

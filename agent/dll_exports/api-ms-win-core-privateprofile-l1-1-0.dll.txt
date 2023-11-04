@@ -1,0 +1,42 @@
+var GetPrivateProfileIntA = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "GetPrivateProfileIntA")
+Interceptor.attach(GetPrivateProfileIntA, {onLeave: function (args) {send("GetPrivateProfileIntA");}});
+
+var GetPrivateProfileIntW = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "GetPrivateProfileIntW")
+Interceptor.attach(GetPrivateProfileIntW, {onLeave: function (args) {send("GetPrivateProfileIntW");}});
+
+var GetPrivateProfileSectionW = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "GetPrivateProfileSectionW")
+Interceptor.attach(GetPrivateProfileSectionW, {onLeave: function (args) {send("GetPrivateProfileSectionW");}});
+
+var GetPrivateProfileStringA = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "GetPrivateProfileStringA")
+Interceptor.attach(GetPrivateProfileStringA, {onLeave: function (args) {send("GetPrivateProfileStringA");}});
+
+var GetPrivateProfileStringW = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "GetPrivateProfileStringW")
+Interceptor.attach(GetPrivateProfileStringW, {onLeave: function (args) {send("GetPrivateProfileStringW");}});
+
+var GetProfileIntA = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "GetProfileIntA")
+Interceptor.attach(GetProfileIntA, {onLeave: function (args) {send("GetProfileIntA");}});
+
+var GetProfileIntW = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "GetProfileIntW")
+Interceptor.attach(GetProfileIntW, {onLeave: function (args) {send("GetProfileIntW");}});
+
+var GetProfileSectionA = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "GetProfileSectionA")
+Interceptor.attach(GetProfileSectionA, {onLeave: function (args) {send("GetProfileSectionA");}});
+
+var GetProfileSectionW = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "GetProfileSectionW")
+Interceptor.attach(GetProfileSectionW, {onLeave: function (args) {send("GetProfileSectionW");}});
+
+var GetProfileStringA = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "GetProfileStringA")
+Interceptor.attach(GetProfileStringA, {onLeave: function (args) {send("GetProfileStringA");}});
+
+var GetProfileStringW = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "GetProfileStringW")
+Interceptor.attach(GetProfileStringW, {onLeave: function (args) {send("GetProfileStringW");}});
+
+var WritePrivateProfileSectionA = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "WritePrivateProfileSectionA")
+Interceptor.attach(WritePrivateProfileSectionA, {onLeave: function (args) {send("WritePrivateProfileSectionA");}});
+
+var WritePrivateProfileStringA = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "WritePrivateProfileStringA")
+Interceptor.attach(WritePrivateProfileStringA, {onLeave: function (args) {send("WritePrivateProfileStringA");}});
+
+var WritePrivateProfileStringW = Module.findExportByName("api-ms-win-core-privateprofile-l1-1-0.dll", "WritePrivateProfileStringW")
+Interceptor.attach(WritePrivateProfileStringW, {onLeave: function (args) {send("WritePrivateProfileStringW");}});
+

@@ -1,0 +1,36 @@
+var CallbackInitOnline = Module.findExportByName("spprgrss.dll", "CallbackInitOnline")
+Interceptor.attach(CallbackInitOnline, {onLeave: function (args) {send("CallbackInitOnline");}});
+
+var CallbackInitWin32 = Module.findExportByName("spprgrss.dll", "CallbackInitWin32")
+Interceptor.attach(CallbackInitWin32, {onLeave: function (args) {send("CallbackInitWin32");}});
+
+var CallbackInitWinPE = Module.findExportByName("spprgrss.dll", "CallbackInitWinPE")
+Interceptor.attach(CallbackInitWinPE, {onLeave: function (args) {send("CallbackInitWinPE");}});
+
+var CallbackRegisterAllTasks = Module.findExportByName("spprgrss.dll", "CallbackRegisterAllTasks")
+Interceptor.attach(CallbackRegisterAllTasks, {onLeave: function (args) {send("CallbackRegisterAllTasks");}});
+
+var CallbackReportEstimates = Module.findExportByName("spprgrss.dll", "CallbackReportEstimates")
+Interceptor.attach(CallbackReportEstimates, {onLeave: function (args) {send("CallbackReportEstimates");}});
+
+var CallbackTerminate = Module.findExportByName("spprgrss.dll", "CallbackTerminate")
+Interceptor.attach(CallbackTerminate, {onLeave: function (args) {send("CallbackTerminate");}});
+
+var GetProgressObject = Module.findExportByName("spprgrss.dll", "GetProgressObject")
+Interceptor.attach(GetProgressObject, {onLeave: function (args) {send("GetProgressObject");}});
+
+var ModuleInitialize = Module.findExportByName("spprgrss.dll", "ModuleInitialize")
+Interceptor.attach(ModuleInitialize, {onLeave: function (args) {send("ModuleInitialize");}});
+
+var OnlineProgress = Module.findExportByName("spprgrss.dll", "OnlineProgress")
+Interceptor.attach(OnlineProgress, {onLeave: function (args) {send("OnlineProgress");}});
+
+var PutProgressEstimateOnBlackboard = Module.findExportByName("spprgrss.dll", "PutProgressEstimateOnBlackboard")
+Interceptor.attach(PutProgressEstimateOnBlackboard, {onLeave: function (args) {send("PutProgressEstimateOnBlackboard");}});
+
+var Win32Progress = Module.findExportByName("spprgrss.dll", "Win32Progress")
+Interceptor.attach(Win32Progress, {onLeave: function (args) {send("Win32Progress");}});
+
+var WinPEProgress = Module.findExportByName("spprgrss.dll", "WinPEProgress")
+Interceptor.attach(WinPEProgress, {onLeave: function (args) {send("WinPEProgress");}});
+

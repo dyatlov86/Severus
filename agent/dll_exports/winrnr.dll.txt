@@ -1,0 +1,9 @@
+var InstallNTDSProvider = Module.findExportByName("winrnr.dll", "InstallNTDSProvider")
+Interceptor.attach(InstallNTDSProvider, {onLeave: function (args) {send("InstallNTDSProvider");}});
+
+var NSPStartup = Module.findExportByName("winrnr.dll", "NSPStartup")
+Interceptor.attach(NSPStartup, {onLeave: function (args) {send("NSPStartup");}});
+
+var RemoveNTDSProvider = Module.findExportByName("winrnr.dll", "RemoveNTDSProvider")
+Interceptor.attach(RemoveNTDSProvider, {onLeave: function (args) {send("RemoveNTDSProvider");}});
+

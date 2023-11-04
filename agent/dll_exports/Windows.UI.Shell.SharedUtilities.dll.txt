@@ -1,0 +1,6 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.UI.Shell.SharedUtilities.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.UI.Shell.SharedUtilities.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+

@@ -1,0 +1,63 @@
+var DrtClose = Module.findExportByName("drt.dll", "DrtClose")
+Interceptor.attach(DrtClose, {onLeave: function (args) {send("DrtClose");}});
+
+var DrtContinueSearch = Module.findExportByName("drt.dll", "DrtContinueSearch")
+Interceptor.attach(DrtContinueSearch, {onLeave: function (args) {send("DrtContinueSearch");}});
+
+var DrtEndSearch = Module.findExportByName("drt.dll", "DrtEndSearch")
+Interceptor.attach(DrtEndSearch, {onLeave: function (args) {send("DrtEndSearch");}});
+
+var DrtFlushCache = Module.findExportByName("drt.dll", "DrtFlushCache")
+Interceptor.attach(DrtFlushCache, {onLeave: function (args) {send("DrtFlushCache");}});
+
+var DrtGetCacheStatsEx = Module.findExportByName("drt.dll", "DrtGetCacheStatsEx")
+Interceptor.attach(DrtGetCacheStatsEx, {onLeave: function (args) {send("DrtGetCacheStatsEx");}});
+
+var DrtGetEventData = Module.findExportByName("drt.dll", "DrtGetEventData")
+Interceptor.attach(DrtGetEventData, {onLeave: function (args) {send("DrtGetEventData");}});
+
+var DrtGetEventDataSize = Module.findExportByName("drt.dll", "DrtGetEventDataSize")
+Interceptor.attach(DrtGetEventDataSize, {onLeave: function (args) {send("DrtGetEventDataSize");}});
+
+var DrtGetInstanceName = Module.findExportByName("drt.dll", "DrtGetInstanceName")
+Interceptor.attach(DrtGetInstanceName, {onLeave: function (args) {send("DrtGetInstanceName");}});
+
+var DrtGetInstanceNameSize = Module.findExportByName("drt.dll", "DrtGetInstanceNameSize")
+Interceptor.attach(DrtGetInstanceNameSize, {onLeave: function (args) {send("DrtGetInstanceNameSize");}});
+
+var DrtGetSearchPath = Module.findExportByName("drt.dll", "DrtGetSearchPath")
+Interceptor.attach(DrtGetSearchPath, {onLeave: function (args) {send("DrtGetSearchPath");}});
+
+var DrtGetSearchPathSize = Module.findExportByName("drt.dll", "DrtGetSearchPathSize")
+Interceptor.attach(DrtGetSearchPathSize, {onLeave: function (args) {send("DrtGetSearchPathSize");}});
+
+var DrtGetSearchResult = Module.findExportByName("drt.dll", "DrtGetSearchResult")
+Interceptor.attach(DrtGetSearchResult, {onLeave: function (args) {send("DrtGetSearchResult");}});
+
+var DrtGetSearchResultSize = Module.findExportByName("drt.dll", "DrtGetSearchResultSize")
+Interceptor.attach(DrtGetSearchResultSize, {onLeave: function (args) {send("DrtGetSearchResultSize");}});
+
+var DrtHandlePowerEvent = Module.findExportByName("drt.dll", "DrtHandlePowerEvent")
+Interceptor.attach(DrtHandlePowerEvent, {onLeave: function (args) {send("DrtHandlePowerEvent");}});
+
+var DrtOpen = Module.findExportByName("drt.dll", "DrtOpen")
+Interceptor.attach(DrtOpen, {onLeave: function (args) {send("DrtOpen");}});
+
+var DrtPingPeer = Module.findExportByName("drt.dll", "DrtPingPeer")
+Interceptor.attach(DrtPingPeer, {onLeave: function (args) {send("DrtPingPeer");}});
+
+var DrtRegisterKey = Module.findExportByName("drt.dll", "DrtRegisterKey")
+Interceptor.attach(DrtRegisterKey, {onLeave: function (args) {send("DrtRegisterKey");}});
+
+var DrtStartPartitionDetection = Module.findExportByName("drt.dll", "DrtStartPartitionDetection")
+Interceptor.attach(DrtStartPartitionDetection, {onLeave: function (args) {send("DrtStartPartitionDetection");}});
+
+var DrtStartSearch = Module.findExportByName("drt.dll", "DrtStartSearch")
+Interceptor.attach(DrtStartSearch, {onLeave: function (args) {send("DrtStartSearch");}});
+
+var DrtUnregisterKey = Module.findExportByName("drt.dll", "DrtUnregisterKey")
+Interceptor.attach(DrtUnregisterKey, {onLeave: function (args) {send("DrtUnregisterKey");}});
+
+var DrtUpdateKey = Module.findExportByName("drt.dll", "DrtUpdateKey")
+Interceptor.attach(DrtUpdateKey, {onLeave: function (args) {send("DrtUpdateKey");}});
+

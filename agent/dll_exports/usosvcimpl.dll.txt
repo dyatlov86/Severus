@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("usosvcimpl.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("usosvcimpl.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ServiceMain_Impl = Module.findExportByName("usosvcimpl.dll", "ServiceMain_Impl")
+Interceptor.attach(ServiceMain_Impl, {onLeave: function (args) {send("ServiceMain_Impl");}});
+
+var SvchostPushServiceGlobals_Impl = Module.findExportByName("usosvcimpl.dll", "SvchostPushServiceGlobals_Impl")
+Interceptor.attach(SvchostPushServiceGlobals_Impl, {onLeave: function (args) {send("SvchostPushServiceGlobals_Impl");}});
+

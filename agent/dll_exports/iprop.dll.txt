@@ -1,0 +1,24 @@
+var FmtIdToPropStgName = Module.findExportByName("iprop.dll", "FmtIdToPropStgName")
+Interceptor.attach(FmtIdToPropStgName, {onLeave: function (args) {send("FmtIdToPropStgName");}});
+
+var FreePropVariantArray = Module.findExportByName("iprop.dll", "FreePropVariantArray")
+Interceptor.attach(FreePropVariantArray, {onLeave: function (args) {send("FreePropVariantArray");}});
+
+var PropStgNameToFmtId = Module.findExportByName("iprop.dll", "PropStgNameToFmtId")
+Interceptor.attach(PropStgNameToFmtId, {onLeave: function (args) {send("PropStgNameToFmtId");}});
+
+var PropVariantClear = Module.findExportByName("iprop.dll", "PropVariantClear")
+Interceptor.attach(PropVariantClear, {onLeave: function (args) {send("PropVariantClear");}});
+
+var PropVariantCopy = Module.findExportByName("iprop.dll", "PropVariantCopy")
+Interceptor.attach(PropVariantCopy, {onLeave: function (args) {send("PropVariantCopy");}});
+
+var StgCreatePropSetStg = Module.findExportByName("iprop.dll", "StgCreatePropSetStg")
+Interceptor.attach(StgCreatePropSetStg, {onLeave: function (args) {send("StgCreatePropSetStg");}});
+
+var StgCreatePropStg = Module.findExportByName("iprop.dll", "StgCreatePropStg")
+Interceptor.attach(StgCreatePropStg, {onLeave: function (args) {send("StgCreatePropStg");}});
+
+var StgOpenPropStg = Module.findExportByName("iprop.dll", "StgOpenPropStg")
+Interceptor.attach(StgOpenPropStg, {onLeave: function (args) {send("StgOpenPropStg");}});
+

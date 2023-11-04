@@ -1,0 +1,6 @@
+var PnrpAutoSVCServiceMain = Module.findExportByName("pnrpauto.dll", "PnrpAutoSVCServiceMain")
+Interceptor.attach(PnrpAutoSVCServiceMain, {onLeave: function (args) {send("PnrpAutoSVCServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("pnrpauto.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

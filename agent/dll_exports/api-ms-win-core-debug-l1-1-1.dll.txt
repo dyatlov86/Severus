@@ -1,0 +1,15 @@
+var CheckRemoteDebuggerPresent = Module.findExportByName("api-ms-win-core-debug-l1-1-1.dll", "CheckRemoteDebuggerPresent")
+Interceptor.attach(CheckRemoteDebuggerPresent, {onLeave: function (args) {send("CheckRemoteDebuggerPresent");}});
+
+var ContinueDebugEvent = Module.findExportByName("api-ms-win-core-debug-l1-1-1.dll", "ContinueDebugEvent")
+Interceptor.attach(ContinueDebugEvent, {onLeave: function (args) {send("ContinueDebugEvent");}});
+
+var DebugActiveProcess = Module.findExportByName("api-ms-win-core-debug-l1-1-1.dll", "DebugActiveProcess")
+Interceptor.attach(DebugActiveProcess, {onLeave: function (args) {send("DebugActiveProcess");}});
+
+var DebugActiveProcessStop = Module.findExportByName("api-ms-win-core-debug-l1-1-1.dll", "DebugActiveProcessStop")
+Interceptor.attach(DebugActiveProcessStop, {onLeave: function (args) {send("DebugActiveProcessStop");}});
+
+var WaitForDebugEvent = Module.findExportByName("api-ms-win-core-debug-l1-1-1.dll", "WaitForDebugEvent")
+Interceptor.attach(WaitForDebugEvent, {onLeave: function (args) {send("WaitForDebugEvent");}});
+

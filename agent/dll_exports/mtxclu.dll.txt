@@ -1,0 +1,114 @@
+var FailedClusterAPIToEventLog = Module.findExportByName("mtxclu.dll", "FailedClusterAPIToEventLog")
+Interceptor.attach(FailedClusterAPIToEventLog, {onLeave: function (args) {send("FailedClusterAPIToEventLog");}});
+
+var MtxCluBringOnlineDTCW = Module.findExportByName("mtxclu.dll", "MtxCluBringOnlineDTCW")
+Interceptor.attach(MtxCluBringOnlineDTCW, {onLeave: function (args) {send("MtxCluBringOnlineDTCW");}});
+
+var MtxCluClearClusterTmMappings = Module.findExportByName("mtxclu.dll", "MtxCluClearClusterTmMappings")
+Interceptor.attach(MtxCluClearClusterTmMappings, {onLeave: function (args) {send("MtxCluClearClusterTmMappings");}});
+
+var MtxCluCreateClusterProxyTmInstance = Module.findExportByName("mtxclu.dll", "MtxCluCreateClusterProxyTmInstance")
+Interceptor.attach(MtxCluCreateClusterProxyTmInstance, {onLeave: function (args) {send("MtxCluCreateClusterProxyTmInstance");}});
+
+var MtxCluCreateClusterTmInstance = Module.findExportByName("mtxclu.dll", "MtxCluCreateClusterTmInstance")
+Interceptor.attach(MtxCluCreateClusterTmInstance, {onLeave: function (args) {send("MtxCluCreateClusterTmInstance");}});
+
+var MtxCluCreateTmInstanceForVirtualServer = Module.findExportByName("mtxclu.dll", "MtxCluCreateTmInstanceForVirtualServer")
+Interceptor.attach(MtxCluCreateTmInstanceForVirtualServer, {onLeave: function (args) {send("MtxCluCreateTmInstanceForVirtualServer");}});
+
+var MtxCluEnumerateClusterTmMappings = Module.findExportByName("mtxclu.dll", "MtxCluEnumerateClusterTmMappings")
+Interceptor.attach(MtxCluEnumerateClusterTmMappings, {onLeave: function (args) {send("MtxCluEnumerateClusterTmMappings");}});
+
+var MtxCluEnumerateDtcResources = Module.findExportByName("mtxclu.dll", "MtxCluEnumerateDtcResources")
+Interceptor.attach(MtxCluEnumerateDtcResources, {onLeave: function (args) {send("MtxCluEnumerateDtcResources");}});
+
+var MtxCluEnumerateDtcResourcesEx = Module.findExportByName("mtxclu.dll", "MtxCluEnumerateDtcResourcesEx")
+Interceptor.attach(MtxCluEnumerateDtcResourcesEx, {onLeave: function (args) {send("MtxCluEnumerateDtcResourcesEx");}});
+
+var MtxCluGetActiveClusterNode = Module.findExportByName("mtxclu.dll", "MtxCluGetActiveClusterNode")
+Interceptor.attach(MtxCluGetActiveClusterNode, {onLeave: function (args) {send("MtxCluGetActiveClusterNode");}});
+
+var MtxCluGetClusterResourceIdFromName = Module.findExportByName("mtxclu.dll", "MtxCluGetClusterResourceIdFromName")
+Interceptor.attach(MtxCluGetClusterResourceIdFromName, {onLeave: function (args) {send("MtxCluGetClusterResourceIdFromName");}});
+
+var MtxCluGetComputerNameW = Module.findExportByName("mtxclu.dll", "MtxCluGetComputerNameW")
+Interceptor.attach(MtxCluGetComputerNameW, {onLeave: function (args) {send("MtxCluGetComputerNameW");}});
+
+var MtxCluGetDTCResourceForResource = Module.findExportByName("mtxclu.dll", "MtxCluGetDTCResourceForResource")
+Interceptor.attach(MtxCluGetDTCResourceForResource, {onLeave: function (args) {send("MtxCluGetDTCResourceForResource");}});
+
+var MtxCluGetDTCStatusW = Module.findExportByName("mtxclu.dll", "MtxCluGetDTCStatusW")
+Interceptor.attach(MtxCluGetDTCStatusW, {onLeave: function (args) {send("MtxCluGetDTCStatusW");}});
+
+var MtxCluGetDTCVirtualServerNameW = Module.findExportByName("mtxclu.dll", "MtxCluGetDTCVirtualServerNameW")
+Interceptor.attach(MtxCluGetDTCVirtualServerNameW, {onLeave: function (args) {send("MtxCluGetDTCVirtualServerNameW");}});
+
+var MtxCluGetDefaultClusterResource = Module.findExportByName("mtxclu.dll", "MtxCluGetDefaultClusterResource")
+Interceptor.attach(MtxCluGetDefaultClusterResource, {onLeave: function (args) {send("MtxCluGetDefaultClusterResource");}});
+
+var MtxCluGetDefaultClusterResourceNonAdmin = Module.findExportByName("mtxclu.dll", "MtxCluGetDefaultClusterResourceNonAdmin")
+Interceptor.attach(MtxCluGetDefaultClusterResourceNonAdmin, {onLeave: function (args) {send("MtxCluGetDefaultClusterResourceNonAdmin");}});
+
+var MtxCluGetDtcDiskResourceDrive = Module.findExportByName("mtxclu.dll", "MtxCluGetDtcDiskResourceDrive")
+Interceptor.attach(MtxCluGetDtcDiskResourceDrive, {onLeave: function (args) {send("MtxCluGetDtcDiskResourceDrive");}});
+
+var MtxCluGetNameFromResourceIdString = Module.findExportByName("mtxclu.dll", "MtxCluGetNameFromResourceIdString")
+Interceptor.attach(MtxCluGetNameFromResourceIdString, {onLeave: function (args) {send("MtxCluGetNameFromResourceIdString");}});
+
+var MtxCluGetNameFromResourceIdStringNonAdmin = Module.findExportByName("mtxclu.dll", "MtxCluGetNameFromResourceIdStringNonAdmin")
+Interceptor.attach(MtxCluGetNameFromResourceIdStringNonAdmin, {onLeave: function (args) {send("MtxCluGetNameFromResourceIdStringNonAdmin");}});
+
+var MtxCluGetResourceId = Module.findExportByName("mtxclu.dll", "MtxCluGetResourceId")
+Interceptor.attach(MtxCluGetResourceId, {onLeave: function (args) {send("MtxCluGetResourceId");}});
+
+var MtxCluGetResourceIdStringFromName = Module.findExportByName("mtxclu.dll", "MtxCluGetResourceIdStringFromName")
+Interceptor.attach(MtxCluGetResourceIdStringFromName, {onLeave: function (args) {send("MtxCluGetResourceIdStringFromName");}});
+
+var MtxCluGetSecurityRegValue = Module.findExportByName("mtxclu.dll", "MtxCluGetSecurityRegValue")
+Interceptor.attach(MtxCluGetSecurityRegValue, {onLeave: function (args) {send("MtxCluGetSecurityRegValue");}});
+
+var MtxCluGetTmResource = Module.findExportByName("mtxclu.dll", "MtxCluGetTmResource")
+Interceptor.attach(MtxCluGetTmResource, {onLeave: function (args) {send("MtxCluGetTmResource");}});
+
+var MtxCluGetVirtualServerToken = Module.findExportByName("mtxclu.dll", "MtxCluGetVirtualServerToken")
+Interceptor.attach(MtxCluGetVirtualServerToken, {onLeave: function (args) {send("MtxCluGetVirtualServerToken");}});
+
+var MtxCluIsClusterPresent = Module.findExportByName("mtxclu.dll", "MtxCluIsClusterPresent")
+Interceptor.attach(MtxCluIsClusterPresent, {onLeave: function (args) {send("MtxCluIsClusterPresent");}});
+
+var MtxCluIsClusterPresentExW = Module.findExportByName("mtxclu.dll", "MtxCluIsClusterPresentExW")
+Interceptor.attach(MtxCluIsClusterPresentExW, {onLeave: function (args) {send("MtxCluIsClusterPresentExW");}});
+
+var MtxCluIsNetworkNameInLocalClusterW = Module.findExportByName("mtxclu.dll", "MtxCluIsNetworkNameInLocalClusterW")
+Interceptor.attach(MtxCluIsNetworkNameInLocalClusterW, {onLeave: function (args) {send("MtxCluIsNetworkNameInLocalClusterW");}});
+
+var MtxCluIsSameClusterW = Module.findExportByName("mtxclu.dll", "MtxCluIsSameClusterW")
+Interceptor.attach(MtxCluIsSameClusterW, {onLeave: function (args) {send("MtxCluIsSameClusterW");}});
+
+var MtxCluIsSameNodeW = Module.findExportByName("mtxclu.dll", "MtxCluIsSameNodeW")
+Interceptor.attach(MtxCluIsSameNodeW, {onLeave: function (args) {send("MtxCluIsSameNodeW");}});
+
+var MtxCluRemoveClusterTmMappingByName = Module.findExportByName("mtxclu.dll", "MtxCluRemoveClusterTmMappingByName")
+Interceptor.attach(MtxCluRemoveClusterTmMappingByName, {onLeave: function (args) {send("MtxCluRemoveClusterTmMappingByName");}});
+
+var MtxCluSetClusterTmMapping = Module.findExportByName("mtxclu.dll", "MtxCluSetClusterTmMapping")
+Interceptor.attach(MtxCluSetClusterTmMapping, {onLeave: function (args) {send("MtxCluSetClusterTmMapping");}});
+
+var MtxCluSetDefaultClusterResource = Module.findExportByName("mtxclu.dll", "MtxCluSetDefaultClusterResource")
+Interceptor.attach(MtxCluSetDefaultClusterResource, {onLeave: function (args) {send("MtxCluSetDefaultClusterResource");}});
+
+var MtxCluSetSecurityRegValue = Module.findExportByName("mtxclu.dll", "MtxCluSetSecurityRegValue")
+Interceptor.attach(MtxCluSetSecurityRegValue, {onLeave: function (args) {send("MtxCluSetSecurityRegValue");}});
+
+var MtxCluTakeOfflineDTCW = Module.findExportByName("mtxclu.dll", "MtxCluTakeOfflineDTCW")
+Interceptor.attach(MtxCluTakeOfflineDTCW, {onLeave: function (args) {send("MtxCluTakeOfflineDTCW");}});
+
+var MtxCluVerifyLogPathInDependantDiskResource = Module.findExportByName("mtxclu.dll", "MtxCluVerifyLogPathInDependantDiskResource")
+Interceptor.attach(MtxCluVerifyLogPathInDependantDiskResource, {onLeave: function (args) {send("MtxCluVerifyLogPathInDependantDiskResource");}});
+
+var MtxCluVerifyLogPathIsValidCSV = Module.findExportByName("mtxclu.dll", "MtxCluVerifyLogPathIsValidCSV")
+Interceptor.attach(MtxCluVerifyLogPathIsValidCSV, {onLeave: function (args) {send("MtxCluVerifyLogPathIsValidCSV");}});
+
+var Startup = Module.findExportByName("mtxclu.dll", "Startup")
+Interceptor.attach(Startup, {onLeave: function (args) {send("Startup");}});
+

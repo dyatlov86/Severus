@@ -1,0 +1,18 @@
+var DllGetClassObject = Module.findExportByName("wlanui.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var WLFreeProfile = Module.findExportByName("wlanui.dll", "WLFreeProfile")
+Interceptor.attach(WLFreeProfile, {onLeave: function (args) {send("WLFreeProfile");}});
+
+var WLFreeProfileXml = Module.findExportByName("wlanui.dll", "WLFreeProfileXml")
+Interceptor.attach(WLFreeProfileXml, {onLeave: function (args) {send("WLFreeProfileXml");}});
+
+var WLInvokeProfileUI = Module.findExportByName("wlanui.dll", "WLInvokeProfileUI")
+Interceptor.attach(WLInvokeProfileUI, {onLeave: function (args) {send("WLInvokeProfileUI");}});
+
+var WLInvokeProfileUIFromXMLFile = Module.findExportByName("wlanui.dll", "WLInvokeProfileUIFromXMLFile")
+Interceptor.attach(WLInvokeProfileUIFromXMLFile, {onLeave: function (args) {send("WLInvokeProfileUIFromXMLFile");}});
+
+var WlanUIEditProfile = Module.findExportByName("wlanui.dll", "WlanUIEditProfile")
+Interceptor.attach(WlanUIEditProfile, {onLeave: function (args) {send("WlanUIEditProfile");}});
+

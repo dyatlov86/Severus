@@ -1,0 +1,18 @@
+var CreatePerceptionSimulationManager = Module.findExportByName("PerceptionSimulationManager.dll", "CreatePerceptionSimulationManager")
+Interceptor.attach(CreatePerceptionSimulationManager, {onLeave: function (args) {send("CreatePerceptionSimulationManager");}});
+
+var CreatePerceptionSimulationRecording = Module.findExportByName("PerceptionSimulationManager.dll", "CreatePerceptionSimulationRecording")
+Interceptor.attach(CreatePerceptionSimulationRecording, {onLeave: function (args) {send("CreatePerceptionSimulationRecording");}});
+
+var GetControlMode = Module.findExportByName("PerceptionSimulationManager.dll", "GetControlMode")
+Interceptor.attach(GetControlMode, {onLeave: function (args) {send("GetControlMode");}});
+
+var GetIsUsingDriver = Module.findExportByName("PerceptionSimulationManager.dll", "GetIsUsingDriver")
+Interceptor.attach(GetIsUsingDriver, {onLeave: function (args) {send("GetIsUsingDriver");}});
+
+var LoadPerceptionSimulationRecording = Module.findExportByName("PerceptionSimulationManager.dll", "LoadPerceptionSimulationRecording")
+Interceptor.attach(LoadPerceptionSimulationRecording, {onLeave: function (args) {send("LoadPerceptionSimulationRecording");}});
+
+var SetControlMode = Module.findExportByName("PerceptionSimulationManager.dll", "SetControlMode")
+Interceptor.attach(SetControlMode, {onLeave: function (args) {send("SetControlMode");}});
+

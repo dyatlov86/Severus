@@ -1,0 +1,6 @@
+var DllMain = Module.findExportByName("scksp.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GetKeyStorageInterface = Module.findExportByName("scksp.dll", "GetKeyStorageInterface")
+Interceptor.attach(GetKeyStorageInterface, {onLeave: function (args) {send("GetKeyStorageInterface");}});
+

@@ -1,0 +1,18 @@
+var BthCollectFingerprintInfo = Module.findExportByName("BthTelemetry.dll", "BthCollectFingerprintInfo")
+Interceptor.attach(BthCollectFingerprintInfo, {onLeave: function (args) {send("BthCollectFingerprintInfo");}});
+
+var BthProcessEventDataDword = Module.findExportByName("BthTelemetry.dll", "BthProcessEventDataDword")
+Interceptor.attach(BthProcessEventDataDword, {onLeave: function (args) {send("BthProcessEventDataDword");}});
+
+var BthProcessEventOccurrence = Module.findExportByName("BthTelemetry.dll", "BthProcessEventOccurrence")
+Interceptor.attach(BthProcessEventOccurrence, {onLeave: function (args) {send("BthProcessEventOccurrence");}});
+
+var BthProcessEventOccurrenceBthaddr = Module.findExportByName("BthTelemetry.dll", "BthProcessEventOccurrenceBthaddr")
+Interceptor.attach(BthProcessEventOccurrenceBthaddr, {onLeave: function (args) {send("BthProcessEventOccurrenceBthaddr");}});
+
+var BthProcessEventOccurrenceResult = Module.findExportByName("BthTelemetry.dll", "BthProcessEventOccurrenceResult")
+Interceptor.attach(BthProcessEventOccurrenceResult, {onLeave: function (args) {send("BthProcessEventOccurrenceResult");}});
+
+var BthProcessEventOccurrenceResultBthaddr = Module.findExportByName("BthTelemetry.dll", "BthProcessEventOccurrenceResultBthaddr")
+Interceptor.attach(BthProcessEventOccurrenceResultBthaddr, {onLeave: function (args) {send("BthProcessEventOccurrenceResultBthaddr");}});
+

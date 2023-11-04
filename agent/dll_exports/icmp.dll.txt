@@ -1,0 +1,24 @@
+var IcmpCloseHandle = Module.findExportByName("icmp.dll", "IcmpCloseHandle")
+Interceptor.attach(IcmpCloseHandle, {onLeave: function (args) {send("IcmpCloseHandle");}});
+
+var IcmpCreateFile = Module.findExportByName("icmp.dll", "IcmpCreateFile")
+Interceptor.attach(IcmpCreateFile, {onLeave: function (args) {send("IcmpCreateFile");}});
+
+var IcmpParseReplies = Module.findExportByName("icmp.dll", "IcmpParseReplies")
+Interceptor.attach(IcmpParseReplies, {onLeave: function (args) {send("IcmpParseReplies");}});
+
+var IcmpSendEcho = Module.findExportByName("icmp.dll", "IcmpSendEcho")
+Interceptor.attach(IcmpSendEcho, {onLeave: function (args) {send("IcmpSendEcho");}});
+
+var IcmpSendEcho2 = Module.findExportByName("icmp.dll", "IcmpSendEcho2")
+Interceptor.attach(IcmpSendEcho2, {onLeave: function (args) {send("IcmpSendEcho2");}});
+
+var do_echo_rep = Module.findExportByName("icmp.dll", "do_echo_rep")
+Interceptor.attach(do_echo_rep, {onLeave: function (args) {send("do_echo_rep");}});
+
+var do_echo_req = Module.findExportByName("icmp.dll", "do_echo_req")
+Interceptor.attach(do_echo_req, {onLeave: function (args) {send("do_echo_req");}});
+
+var register_icmp = Module.findExportByName("icmp.dll", "register_icmp")
+Interceptor.attach(register_icmp, {onLeave: function (args) {send("register_icmp");}});
+

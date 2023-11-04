@@ -1,0 +1,3 @@
+var DllGetVersion = Module.findExportByName("browseui.dll", "DllGetVersion")
+Interceptor.attach(DllGetVersion, {onLeave: function (args) {send("DllGetVersion");}});
+

@@ -1,0 +1,21 @@
+var AttachTools = Module.findExportByName("F12AppFrame2.dll", "AttachTools")
+Interceptor.attach(AttachTools, {onLeave: function (args) {send("AttachTools");}});
+
+var AttachToolsToDiagnosticsTarget = Module.findExportByName("F12AppFrame2.dll", "AttachToolsToDiagnosticsTarget")
+Interceptor.attach(AttachToolsToDiagnosticsTarget, {onLeave: function (args) {send("AttachToolsToDiagnosticsTarget");}});
+
+var DllCanUnloadNow = Module.findExportByName("F12AppFrame2.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("F12AppFrame2.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("F12AppFrame2.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("F12AppFrame2.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("F12AppFrame2.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

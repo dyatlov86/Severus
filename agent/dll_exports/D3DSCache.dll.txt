@@ -1,0 +1,33 @@
+var DllCanUnloadNow = Module.findExportByName("D3DSCache.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("D3DSCache.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ShaderCache_AddValue = Module.findExportByName("D3DSCache.dll", "ShaderCache_AddValue")
+Interceptor.attach(ShaderCache_AddValue, {onLeave: function (args) {send("ShaderCache_AddValue");}});
+
+var ShaderCache_Clear = Module.findExportByName("D3DSCache.dll", "ShaderCache_Clear")
+Interceptor.attach(ShaderCache_Clear, {onLeave: function (args) {send("ShaderCache_Clear");}});
+
+var ShaderCache_Create = Module.findExportByName("D3DSCache.dll", "ShaderCache_Create")
+Interceptor.attach(ShaderCache_Create, {onLeave: function (args) {send("ShaderCache_Create");}});
+
+var ShaderCache_Delete = Module.findExportByName("D3DSCache.dll", "ShaderCache_Delete")
+Interceptor.attach(ShaderCache_Delete, {onLeave: function (args) {send("ShaderCache_Delete");}});
+
+var ShaderCache_Destroy = Module.findExportByName("D3DSCache.dll", "ShaderCache_Destroy")
+Interceptor.attach(ShaderCache_Destroy, {onLeave: function (args) {send("ShaderCache_Destroy");}});
+
+var ShaderCache_FindValue = Module.findExportByName("D3DSCache.dll", "ShaderCache_FindValue")
+Interceptor.attach(ShaderCache_FindValue, {onLeave: function (args) {send("ShaderCache_FindValue");}});
+
+var ShaderCache_Flush = Module.findExportByName("D3DSCache.dll", "ShaderCache_Flush")
+Interceptor.attach(ShaderCache_Flush, {onLeave: function (args) {send("ShaderCache_Flush");}});
+
+var ShaderCache_FreeValue = Module.findExportByName("D3DSCache.dll", "ShaderCache_FreeValue")
+Interceptor.attach(ShaderCache_FreeValue, {onLeave: function (args) {send("ShaderCache_FreeValue");}});
+
+var ShaderCache_GetDesc = Module.findExportByName("D3DSCache.dll", "ShaderCache_GetDesc")
+Interceptor.attach(ShaderCache_GetDesc, {onLeave: function (args) {send("ShaderCache_GetDesc");}});
+

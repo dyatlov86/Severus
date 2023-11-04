@@ -1,0 +1,51 @@
+var AddDevice = Module.findExportByName("sti_ci.dll", "AddDevice")
+Interceptor.attach(AddDevice, {onLeave: function (args) {send("AddDevice");}});
+
+var ClassInstall = Module.findExportByName("sti_ci.dll", "ClassInstall")
+Interceptor.attach(ClassInstall, {onLeave: function (args) {send("ClassInstall");}});
+
+var CoinstallerEntry = Module.findExportByName("sti_ci.dll", "CoinstallerEntry")
+Interceptor.attach(CoinstallerEntry, {onLeave: function (args) {send("CoinstallerEntry");}});
+
+var CreateWiaDeviceList = Module.findExportByName("sti_ci.dll", "CreateWiaDeviceList")
+Interceptor.attach(CreateWiaDeviceList, {onLeave: function (args) {send("CreateWiaDeviceList");}});
+
+var DestroyWiaDeviceList = Module.findExportByName("sti_ci.dll", "DestroyWiaDeviceList")
+Interceptor.attach(DestroyWiaDeviceList, {onLeave: function (args) {send("DestroyWiaDeviceList");}});
+
+var DisableWiaDevice = Module.findExportByName("sti_ci.dll", "DisableWiaDevice")
+Interceptor.attach(DisableWiaDevice, {onLeave: function (args) {send("DisableWiaDevice");}});
+
+var EnableWiaDevice = Module.findExportByName("sti_ci.dll", "EnableWiaDevice")
+Interceptor.attach(EnableWiaDevice, {onLeave: function (args) {send("EnableWiaDevice");}});
+
+var GetWiaDeviceProperty = Module.findExportByName("sti_ci.dll", "GetWiaDeviceProperty")
+Interceptor.attach(GetWiaDeviceProperty, {onLeave: function (args) {send("GetWiaDeviceProperty");}});
+
+var InstallWiaDevice = Module.findExportByName("sti_ci.dll", "InstallWiaDevice")
+Interceptor.attach(InstallWiaDevice, {onLeave: function (args) {send("InstallWiaDevice");}});
+
+var InstallWiaService = Module.findExportByName("sti_ci.dll", "InstallWiaService")
+Interceptor.attach(InstallWiaService, {onLeave: function (args) {send("InstallWiaService");}});
+
+var SetWiaDeviceProperty = Module.findExportByName("sti_ci.dll", "SetWiaDeviceProperty")
+Interceptor.attach(SetWiaDeviceProperty, {onLeave: function (args) {send("SetWiaDeviceProperty");}});
+
+var UninstallWiaDevice = Module.findExportByName("sti_ci.dll", "UninstallWiaDevice")
+Interceptor.attach(UninstallWiaDevice, {onLeave: function (args) {send("UninstallWiaDevice");}});
+
+var WiaAddDevice = Module.findExportByName("sti_ci.dll", "WiaAddDevice")
+Interceptor.attach(WiaAddDevice, {onLeave: function (args) {send("WiaAddDevice");}});
+
+var WiaCreatePortList = Module.findExportByName("sti_ci.dll", "WiaCreatePortList")
+Interceptor.attach(WiaCreatePortList, {onLeave: function (args) {send("WiaCreatePortList");}});
+
+var WiaDestroyPortList = Module.findExportByName("sti_ci.dll", "WiaDestroyPortList")
+Interceptor.attach(WiaDestroyPortList, {onLeave: function (args) {send("WiaDestroyPortList");}});
+
+var WiaDeviceEnum = Module.findExportByName("sti_ci.dll", "WiaDeviceEnum")
+Interceptor.attach(WiaDeviceEnum, {onLeave: function (args) {send("WiaDeviceEnum");}});
+
+var WiaRemoveDevice = Module.findExportByName("sti_ci.dll", "WiaRemoveDevice")
+Interceptor.attach(WiaRemoveDevice, {onLeave: function (args) {send("WiaRemoveDevice");}});
+

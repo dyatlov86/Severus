@@ -1,0 +1,6 @@
+var SysNotifyStartServer = Module.findExportByName("sysntfy.dll", "SysNotifyStartServer")
+Interceptor.attach(SysNotifyStartServer, {onLeave: function (args) {send("SysNotifyStartServer");}});
+
+var SysNotifyStopServer = Module.findExportByName("sysntfy.dll", "SysNotifyStopServer")
+Interceptor.attach(SysNotifyStopServer, {onLeave: function (args) {send("SysNotifyStopServer");}});
+

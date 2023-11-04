@@ -1,0 +1,24 @@
+var InitPlugin = Module.findExportByName("pspluginwkr.dll", "InitPlugin")
+Interceptor.attach(InitPlugin, {onLeave: function (args) {send("InitPlugin");}});
+
+var WSManPluginCommand = Module.findExportByName("pspluginwkr.dll", "WSManPluginCommand")
+Interceptor.attach(WSManPluginCommand, {onLeave: function (args) {send("WSManPluginCommand");}});
+
+var WSManPluginReceive = Module.findExportByName("pspluginwkr.dll", "WSManPluginReceive")
+Interceptor.attach(WSManPluginReceive, {onLeave: function (args) {send("WSManPluginReceive");}});
+
+var WSManPluginReleaseCommandContext = Module.findExportByName("pspluginwkr.dll", "WSManPluginReleaseCommandContext")
+Interceptor.attach(WSManPluginReleaseCommandContext, {onLeave: function (args) {send("WSManPluginReleaseCommandContext");}});
+
+var WSManPluginReleaseShellContext = Module.findExportByName("pspluginwkr.dll", "WSManPluginReleaseShellContext")
+Interceptor.attach(WSManPluginReleaseShellContext, {onLeave: function (args) {send("WSManPluginReleaseShellContext");}});
+
+var WSManPluginSend = Module.findExportByName("pspluginwkr.dll", "WSManPluginSend")
+Interceptor.attach(WSManPluginSend, {onLeave: function (args) {send("WSManPluginSend");}});
+
+var WSManPluginShell = Module.findExportByName("pspluginwkr.dll", "WSManPluginShell")
+Interceptor.attach(WSManPluginShell, {onLeave: function (args) {send("WSManPluginShell");}});
+
+var WSManPluginSignal = Module.findExportByName("pspluginwkr.dll", "WSManPluginSignal")
+Interceptor.attach(WSManPluginSignal, {onLeave: function (args) {send("WSManPluginSignal");}});
+

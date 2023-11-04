@@ -1,0 +1,27 @@
+var DllCanUnloadNow = Module.findExportByName("IMEFILES.DLL", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("IMEFILES.DLL", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("IMEFILES.DLL", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("IMEFILES.DLL", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var FNRM_CleanupGarbageFiles = Module.findExportByName("IMEFILES.DLL", "FNRM_CleanupGarbageFiles")
+Interceptor.attach(FNRM_CleanupGarbageFiles, {onLeave: function (args) {send("FNRM_CleanupGarbageFiles");}});
+
+var FNRM_GetActiveFile = Module.findExportByName("IMEFILES.DLL", "FNRM_GetActiveFile")
+Interceptor.attach(FNRM_GetActiveFile, {onLeave: function (args) {send("FNRM_GetActiveFile");}});
+
+var FNRM_GetRegistrationLevel = Module.findExportByName("IMEFILES.DLL", "FNRM_GetRegistrationLevel")
+Interceptor.attach(FNRM_GetRegistrationLevel, {onLeave: function (args) {send("FNRM_GetRegistrationLevel");}});
+
+var FNRM_SetActiveFile = Module.findExportByName("IMEFILES.DLL", "FNRM_SetActiveFile")
+Interceptor.attach(FNRM_SetActiveFile, {onLeave: function (args) {send("FNRM_SetActiveFile");}});
+
+var FNRM_UnregisterAllPerUserFilesExcept = Module.findExportByName("IMEFILES.DLL", "FNRM_UnregisterAllPerUserFilesExcept")
+Interceptor.attach(FNRM_UnregisterAllPerUserFilesExcept, {onLeave: function (args) {send("FNRM_UnregisterAllPerUserFilesExcept");}});
+

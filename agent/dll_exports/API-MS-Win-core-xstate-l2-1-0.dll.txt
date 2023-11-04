@@ -1,0 +1,18 @@
+var CopyContext = Module.findExportByName("API-MS-Win-core-xstate-l2-1-0.dll", "CopyContext")
+Interceptor.attach(CopyContext, {onLeave: function (args) {send("CopyContext");}});
+
+var GetEnabledXStateFeatures = Module.findExportByName("API-MS-Win-core-xstate-l2-1-0.dll", "GetEnabledXStateFeatures")
+Interceptor.attach(GetEnabledXStateFeatures, {onLeave: function (args) {send("GetEnabledXStateFeatures");}});
+
+var GetXStateFeaturesMask = Module.findExportByName("API-MS-Win-core-xstate-l2-1-0.dll", "GetXStateFeaturesMask")
+Interceptor.attach(GetXStateFeaturesMask, {onLeave: function (args) {send("GetXStateFeaturesMask");}});
+
+var InitializeContext = Module.findExportByName("API-MS-Win-core-xstate-l2-1-0.dll", "InitializeContext")
+Interceptor.attach(InitializeContext, {onLeave: function (args) {send("InitializeContext");}});
+
+var LocateXStateFeature = Module.findExportByName("API-MS-Win-core-xstate-l2-1-0.dll", "LocateXStateFeature")
+Interceptor.attach(LocateXStateFeature, {onLeave: function (args) {send("LocateXStateFeature");}});
+
+var SetXStateFeaturesMask = Module.findExportByName("API-MS-Win-core-xstate-l2-1-0.dll", "SetXStateFeaturesMask")
+Interceptor.attach(SetXStateFeaturesMask, {onLeave: function (args) {send("SetXStateFeaturesMask");}});
+

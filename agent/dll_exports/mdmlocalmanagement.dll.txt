@@ -1,0 +1,9 @@
+var ApplyLocalManagementSyncML = Module.findExportByName("mdmlocalmanagement.dll", "ApplyLocalManagementSyncML")
+Interceptor.attach(ApplyLocalManagementSyncML, {onLeave: function (args) {send("ApplyLocalManagementSyncML");}});
+
+var RegisterDeviceWithLocalManagement = Module.findExportByName("mdmlocalmanagement.dll", "RegisterDeviceWithLocalManagement")
+Interceptor.attach(RegisterDeviceWithLocalManagement, {onLeave: function (args) {send("RegisterDeviceWithLocalManagement");}});
+
+var UnregisterDeviceWithLocalManagement = Module.findExportByName("mdmlocalmanagement.dll", "UnregisterDeviceWithLocalManagement")
+Interceptor.attach(UnregisterDeviceWithLocalManagement, {onLeave: function (args) {send("UnregisterDeviceWithLocalManagement");}});
+

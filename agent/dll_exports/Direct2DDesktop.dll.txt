@@ -1,0 +1,3 @@
+var CreateMetafileRenderer = Module.findExportByName("Direct2DDesktop.dll", "CreateMetafileRenderer")
+Interceptor.attach(CreateMetafileRenderer, {onLeave: function (args) {send("CreateMetafileRenderer");}});
+

@@ -1,0 +1,6 @@
+var StartXpsPrintJob = Module.findExportByName("XpsPrint.dll", "StartXpsPrintJob")
+Interceptor.attach(StartXpsPrintJob, {onLeave: function (args) {send("StartXpsPrintJob");}});
+
+var StartXpsPrintJob1 = Module.findExportByName("XpsPrint.dll", "StartXpsPrintJob1")
+Interceptor.attach(StartXpsPrintJob1, {onLeave: function (args) {send("StartXpsPrintJob1");}});
+

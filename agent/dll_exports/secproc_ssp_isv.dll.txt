@@ -1,0 +1,90 @@
+var SPAttest = Module.findExportByName("secproc_ssp_isv.dll", "SPAttest")
+Interceptor.attach(SPAttest, {onLeave: function (args) {send("SPAttest");}});
+
+var SPBindLicense = Module.findExportByName("secproc_ssp_isv.dll", "SPBindLicense")
+Interceptor.attach(SPBindLicense, {onLeave: function (args) {send("SPBindLicense");}});
+
+var SPCheckEnvironmentSecurity = Module.findExportByName("secproc_ssp_isv.dll", "SPCheckEnvironmentSecurity")
+Interceptor.attach(SPCheckEnvironmentSecurity, {onLeave: function (args) {send("SPCheckEnvironmentSecurity");}});
+
+var SPCloseHandle = Module.findExportByName("secproc_ssp_isv.dll", "SPCloseHandle")
+Interceptor.attach(SPCloseHandle, {onLeave: function (args) {send("SPCloseHandle");}});
+
+var SPCommit = Module.findExportByName("secproc_ssp_isv.dll", "SPCommit")
+Interceptor.attach(SPCommit, {onLeave: function (args) {send("SPCommit");}});
+
+var SPCreateDecryptor = Module.findExportByName("secproc_ssp_isv.dll", "SPCreateDecryptor")
+Interceptor.attach(SPCreateDecryptor, {onLeave: function (args) {send("SPCreateDecryptor");}});
+
+var SPCreateEnablingPrincipal = Module.findExportByName("secproc_ssp_isv.dll", "SPCreateEnablingPrincipal")
+Interceptor.attach(SPCreateEnablingPrincipal, {onLeave: function (args) {send("SPCreateEnablingPrincipal");}});
+
+var SPCreateEncryptor = Module.findExportByName("secproc_ssp_isv.dll", "SPCreateEncryptor")
+Interceptor.attach(SPCreateEncryptor, {onLeave: function (args) {send("SPCreateEncryptor");}});
+
+var SPCreatePCE = Module.findExportByName("secproc_ssp_isv.dll", "SPCreatePCE")
+Interceptor.attach(SPCreatePCE, {onLeave: function (args) {send("SPCreatePCE");}});
+
+var SPCreateSecurityProcessor = Module.findExportByName("secproc_ssp_isv.dll", "SPCreateSecurityProcessor")
+Interceptor.attach(SPCreateSecurityProcessor, {onLeave: function (args) {send("SPCreateSecurityProcessor");}});
+
+var SPDecrypt = Module.findExportByName("secproc_ssp_isv.dll", "SPDecrypt")
+Interceptor.attach(SPDecrypt, {onLeave: function (args) {send("SPDecrypt");}});
+
+var SPDecryptFinal = Module.findExportByName("secproc_ssp_isv.dll", "SPDecryptFinal")
+Interceptor.attach(SPDecryptFinal, {onLeave: function (args) {send("SPDecryptFinal");}});
+
+var SPDecryptUpdate = Module.findExportByName("secproc_ssp_isv.dll", "SPDecryptUpdate")
+Interceptor.attach(SPDecryptUpdate, {onLeave: function (args) {send("SPDecryptUpdate");}});
+
+var SPEnableAndEncrypt = Module.findExportByName("secproc_ssp_isv.dll", "SPEnableAndEncrypt")
+Interceptor.attach(SPEnableAndEncrypt, {onLeave: function (args) {send("SPEnableAndEncrypt");}});
+
+var SPEnablePublishingLicense = Module.findExportByName("secproc_ssp_isv.dll", "SPEnablePublishingLicense")
+Interceptor.attach(SPEnablePublishingLicense, {onLeave: function (args) {send("SPEnablePublishingLicense");}});
+
+var SPEncrypt = Module.findExportByName("secproc_ssp_isv.dll", "SPEncrypt")
+Interceptor.attach(SPEncrypt, {onLeave: function (args) {send("SPEncrypt");}});
+
+var SPEncryptFinal = Module.findExportByName("secproc_ssp_isv.dll", "SPEncryptFinal")
+Interceptor.attach(SPEncryptFinal, {onLeave: function (args) {send("SPEncryptFinal");}});
+
+var SPEncryptUpdate = Module.findExportByName("secproc_ssp_isv.dll", "SPEncryptUpdate")
+Interceptor.attach(SPEncryptUpdate, {onLeave: function (args) {send("SPEncryptUpdate");}});
+
+var SPGetBoundRightKey = Module.findExportByName("secproc_ssp_isv.dll", "SPGetBoundRightKey")
+Interceptor.attach(SPGetBoundRightKey, {onLeave: function (args) {send("SPGetBoundRightKey");}});
+
+var SPGetCurrentTime = Module.findExportByName("secproc_ssp_isv.dll", "SPGetCurrentTime")
+Interceptor.attach(SPGetCurrentTime, {onLeave: function (args) {send("SPGetCurrentTime");}});
+
+var SPGetInfo = Module.findExportByName("secproc_ssp_isv.dll", "SPGetInfo")
+Interceptor.attach(SPGetInfo, {onLeave: function (args) {send("SPGetInfo");}});
+
+var SPGetLicenseAttribute = Module.findExportByName("secproc_ssp_isv.dll", "SPGetLicenseAttribute")
+Interceptor.attach(SPGetLicenseAttribute, {onLeave: function (args) {send("SPGetLicenseAttribute");}});
+
+var SPGetLicenseAttributeCount = Module.findExportByName("secproc_ssp_isv.dll", "SPGetLicenseAttributeCount")
+Interceptor.attach(SPGetLicenseAttributeCount, {onLeave: function (args) {send("SPGetLicenseAttributeCount");}});
+
+var SPGetLicenseObject = Module.findExportByName("secproc_ssp_isv.dll", "SPGetLicenseObject")
+Interceptor.attach(SPGetLicenseObject, {onLeave: function (args) {send("SPGetLicenseObject");}});
+
+var SPGetLicenseObjectCount = Module.findExportByName("secproc_ssp_isv.dll", "SPGetLicenseObjectCount")
+Interceptor.attach(SPGetLicenseObjectCount, {onLeave: function (args) {send("SPGetLicenseObjectCount");}});
+
+var SPGetProcAddress = Module.findExportByName("secproc_ssp_isv.dll", "SPGetProcAddress")
+Interceptor.attach(SPGetProcAddress, {onLeave: function (args) {send("SPGetProcAddress");}});
+
+var SPIsActivated = Module.findExportByName("secproc_ssp_isv.dll", "SPIsActivated")
+Interceptor.attach(SPIsActivated, {onLeave: function (args) {send("SPIsActivated");}});
+
+var SPLoadLibrary = Module.findExportByName("secproc_ssp_isv.dll", "SPLoadLibrary")
+Interceptor.attach(SPLoadLibrary, {onLeave: function (args) {send("SPLoadLibrary");}});
+
+var SPRegisterRevocationList = Module.findExportByName("secproc_ssp_isv.dll", "SPRegisterRevocationList")
+Interceptor.attach(SPRegisterRevocationList, {onLeave: function (args) {send("SPRegisterRevocationList");}});
+
+var SPSign = Module.findExportByName("secproc_ssp_isv.dll", "SPSign")
+Interceptor.attach(SPSign, {onLeave: function (args) {send("SPSign");}});
+

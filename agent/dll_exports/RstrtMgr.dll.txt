@@ -1,0 +1,36 @@
+var RmAddFilter = Module.findExportByName("RstrtMgr.dll", "RmAddFilter")
+Interceptor.attach(RmAddFilter, {onLeave: function (args) {send("RmAddFilter");}});
+
+var RmCancelCurrentTask = Module.findExportByName("RstrtMgr.dll", "RmCancelCurrentTask")
+Interceptor.attach(RmCancelCurrentTask, {onLeave: function (args) {send("RmCancelCurrentTask");}});
+
+var RmEndSession = Module.findExportByName("RstrtMgr.dll", "RmEndSession")
+Interceptor.attach(RmEndSession, {onLeave: function (args) {send("RmEndSession");}});
+
+var RmGetFilterList = Module.findExportByName("RstrtMgr.dll", "RmGetFilterList")
+Interceptor.attach(RmGetFilterList, {onLeave: function (args) {send("RmGetFilterList");}});
+
+var RmGetList = Module.findExportByName("RstrtMgr.dll", "RmGetList")
+Interceptor.attach(RmGetList, {onLeave: function (args) {send("RmGetList");}});
+
+var RmJoinSession = Module.findExportByName("RstrtMgr.dll", "RmJoinSession")
+Interceptor.attach(RmJoinSession, {onLeave: function (args) {send("RmJoinSession");}});
+
+var RmRegisterResources = Module.findExportByName("RstrtMgr.dll", "RmRegisterResources")
+Interceptor.attach(RmRegisterResources, {onLeave: function (args) {send("RmRegisterResources");}});
+
+var RmRemoveFilter = Module.findExportByName("RstrtMgr.dll", "RmRemoveFilter")
+Interceptor.attach(RmRemoveFilter, {onLeave: function (args) {send("RmRemoveFilter");}});
+
+var RmReserveHeap = Module.findExportByName("RstrtMgr.dll", "RmReserveHeap")
+Interceptor.attach(RmReserveHeap, {onLeave: function (args) {send("RmReserveHeap");}});
+
+var RmRestart = Module.findExportByName("RstrtMgr.dll", "RmRestart")
+Interceptor.attach(RmRestart, {onLeave: function (args) {send("RmRestart");}});
+
+var RmShutdown = Module.findExportByName("RstrtMgr.dll", "RmShutdown")
+Interceptor.attach(RmShutdown, {onLeave: function (args) {send("RmShutdown");}});
+
+var RmStartSession = Module.findExportByName("RstrtMgr.dll", "RmStartSession")
+Interceptor.attach(RmStartSession, {onLeave: function (args) {send("RmStartSession");}});
+

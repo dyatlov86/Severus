@@ -1,0 +1,297 @@
+var ConstructPartialMsgIfA = Module.findExportByName("wdscore.dll", "ConstructPartialMsgIfA")
+Interceptor.attach(ConstructPartialMsgIfA, {onLeave: function (args) {send("ConstructPartialMsgIfA");}});
+
+var ConstructPartialMsgIfW = Module.findExportByName("wdscore.dll", "ConstructPartialMsgIfW")
+Interceptor.attach(ConstructPartialMsgIfW, {onLeave: function (args) {send("ConstructPartialMsgIfW");}});
+
+var ConstructPartialMsgVA = Module.findExportByName("wdscore.dll", "ConstructPartialMsgVA")
+Interceptor.attach(ConstructPartialMsgVA, {onLeave: function (args) {send("ConstructPartialMsgVA");}});
+
+var ConstructPartialMsgVW = Module.findExportByName("wdscore.dll", "ConstructPartialMsgVW")
+Interceptor.attach(ConstructPartialMsgVW, {onLeave: function (args) {send("ConstructPartialMsgVW");}});
+
+var CurrentIP = Module.findExportByName("wdscore.dll", "CurrentIP")
+Interceptor.attach(CurrentIP, {onLeave: function (args) {send("CurrentIP");}});
+
+var DecrementPartialMsgIndent = Module.findExportByName("wdscore.dll", "DecrementPartialMsgIndent")
+Interceptor.attach(DecrementPartialMsgIndent, {onLeave: function (args) {send("DecrementPartialMsgIndent");}});
+
+var DestructPartialMsg = Module.findExportByName("wdscore.dll", "DestructPartialMsg")
+Interceptor.attach(DestructPartialMsg, {onLeave: function (args) {send("DestructPartialMsg");}});
+
+var EndMajorTask = Module.findExportByName("wdscore.dll", "EndMajorTask")
+Interceptor.attach(EndMajorTask, {onLeave: function (args) {send("EndMajorTask");}});
+
+var EndMinorTask = Module.findExportByName("wdscore.dll", "EndMinorTask")
+Interceptor.attach(EndMinorTask, {onLeave: function (args) {send("EndMinorTask");}});
+
+var GetMajorTask = Module.findExportByName("wdscore.dll", "GetMajorTask")
+Interceptor.attach(GetMajorTask, {onLeave: function (args) {send("GetMajorTask");}});
+
+var GetMajorTaskA = Module.findExportByName("wdscore.dll", "GetMajorTaskA")
+Interceptor.attach(GetMajorTaskA, {onLeave: function (args) {send("GetMajorTaskA");}});
+
+var GetMinorTask = Module.findExportByName("wdscore.dll", "GetMinorTask")
+Interceptor.attach(GetMinorTask, {onLeave: function (args) {send("GetMinorTask");}});
+
+var GetMinorTaskA = Module.findExportByName("wdscore.dll", "GetMinorTaskA")
+Interceptor.attach(GetMinorTaskA, {onLeave: function (args) {send("GetMinorTaskA");}});
+
+var GetPartialMsgIndent = Module.findExportByName("wdscore.dll", "GetPartialMsgIndent")
+Interceptor.attach(GetPartialMsgIndent, {onLeave: function (args) {send("GetPartialMsgIndent");}});
+
+var IncrementPartialMsgIndent = Module.findExportByName("wdscore.dll", "IncrementPartialMsgIndent")
+Interceptor.attach(IncrementPartialMsgIndent, {onLeave: function (args) {send("IncrementPartialMsgIndent");}});
+
+var StartMajorTask = Module.findExportByName("wdscore.dll", "StartMajorTask")
+Interceptor.attach(StartMajorTask, {onLeave: function (args) {send("StartMajorTask");}});
+
+var StartMinorTask = Module.findExportByName("wdscore.dll", "StartMinorTask")
+Interceptor.attach(StartMinorTask, {onLeave: function (args) {send("StartMinorTask");}});
+
+var WdsAbortBlackboardItemEnum = Module.findExportByName("wdscore.dll", "WdsAbortBlackboardItemEnum")
+Interceptor.attach(WdsAbortBlackboardItemEnum, {onLeave: function (args) {send("WdsAbortBlackboardItemEnum");}});
+
+var WdsAddModule = Module.findExportByName("wdscore.dll", "WdsAddModule")
+Interceptor.attach(WdsAddModule, {onLeave: function (args) {send("WdsAddModule");}});
+
+var WdsAddUsmtLogStack = Module.findExportByName("wdscore.dll", "WdsAddUsmtLogStack")
+Interceptor.attach(WdsAddUsmtLogStack, {onLeave: function (args) {send("WdsAddUsmtLogStack");}});
+
+var WdsAllocCollection = Module.findExportByName("wdscore.dll", "WdsAllocCollection")
+Interceptor.attach(WdsAllocCollection, {onLeave: function (args) {send("WdsAllocCollection");}});
+
+var WdsCollectionAddValue = Module.findExportByName("wdscore.dll", "WdsCollectionAddValue")
+Interceptor.attach(WdsCollectionAddValue, {onLeave: function (args) {send("WdsCollectionAddValue");}});
+
+var WdsCollectionGetValue = Module.findExportByName("wdscore.dll", "WdsCollectionGetValue")
+Interceptor.attach(WdsCollectionGetValue, {onLeave: function (args) {send("WdsCollectionGetValue");}});
+
+var WdsCopyBlackboardItems = Module.findExportByName("wdscore.dll", "WdsCopyBlackboardItems")
+Interceptor.attach(WdsCopyBlackboardItems, {onLeave: function (args) {send("WdsCopyBlackboardItems");}});
+
+var WdsCopyBlackboardItemsEx = Module.findExportByName("wdscore.dll", "WdsCopyBlackboardItemsEx")
+Interceptor.attach(WdsCopyBlackboardItemsEx, {onLeave: function (args) {send("WdsCopyBlackboardItemsEx");}});
+
+var WdsCreateBlackboard = Module.findExportByName("wdscore.dll", "WdsCreateBlackboard")
+Interceptor.attach(WdsCreateBlackboard, {onLeave: function (args) {send("WdsCreateBlackboard");}});
+
+var WdsDeleteBlackboardValue = Module.findExportByName("wdscore.dll", "WdsDeleteBlackboardValue")
+Interceptor.attach(WdsDeleteBlackboardValue, {onLeave: function (args) {send("WdsDeleteBlackboardValue");}});
+
+var WdsDeleteEvent = Module.findExportByName("wdscore.dll", "WdsDeleteEvent")
+Interceptor.attach(WdsDeleteEvent, {onLeave: function (args) {send("WdsDeleteEvent");}});
+
+var WdsDestroyBlackboard = Module.findExportByName("wdscore.dll", "WdsDestroyBlackboard")
+Interceptor.attach(WdsDestroyBlackboard, {onLeave: function (args) {send("WdsDestroyBlackboard");}});
+
+var WdsDuplicateData = Module.findExportByName("wdscore.dll", "WdsDuplicateData")
+Interceptor.attach(WdsDuplicateData, {onLeave: function (args) {send("WdsDuplicateData");}});
+
+var WdsEnableDiagnosticMode = Module.findExportByName("wdscore.dll", "WdsEnableDiagnosticMode")
+Interceptor.attach(WdsEnableDiagnosticMode, {onLeave: function (args) {send("WdsEnableDiagnosticMode");}});
+
+var WdsEnableExit = Module.findExportByName("wdscore.dll", "WdsEnableExit")
+Interceptor.attach(WdsEnableExit, {onLeave: function (args) {send("WdsEnableExit");}});
+
+var WdsEnableExitEx = Module.findExportByName("wdscore.dll", "WdsEnableExitEx")
+Interceptor.attach(WdsEnableExitEx, {onLeave: function (args) {send("WdsEnableExitEx");}});
+
+var WdsEnumFirstBlackboardItem = Module.findExportByName("wdscore.dll", "WdsEnumFirstBlackboardItem")
+Interceptor.attach(WdsEnumFirstBlackboardItem, {onLeave: function (args) {send("WdsEnumFirstBlackboardItem");}});
+
+var WdsEnumFirstCollectionValue = Module.findExportByName("wdscore.dll", "WdsEnumFirstCollectionValue")
+Interceptor.attach(WdsEnumFirstCollectionValue, {onLeave: function (args) {send("WdsEnumFirstCollectionValue");}});
+
+var WdsEnumNextBlackboardItem = Module.findExportByName("wdscore.dll", "WdsEnumNextBlackboardItem")
+Interceptor.attach(WdsEnumNextBlackboardItem, {onLeave: function (args) {send("WdsEnumNextBlackboardItem");}});
+
+var WdsEnumNextCollectionValue = Module.findExportByName("wdscore.dll", "WdsEnumNextCollectionValue")
+Interceptor.attach(WdsEnumNextCollectionValue, {onLeave: function (args) {send("WdsEnumNextCollectionValue");}});
+
+var WdsExecuteWorkQueue = Module.findExportByName("wdscore.dll", "WdsExecuteWorkQueue")
+Interceptor.attach(WdsExecuteWorkQueue, {onLeave: function (args) {send("WdsExecuteWorkQueue");}});
+
+var WdsExecuteWorkQueue2 = Module.findExportByName("wdscore.dll", "WdsExecuteWorkQueue2")
+Interceptor.attach(WdsExecuteWorkQueue2, {onLeave: function (args) {send("WdsExecuteWorkQueue2");}});
+
+var WdsExecuteWorkQueueEx = Module.findExportByName("wdscore.dll", "WdsExecuteWorkQueueEx")
+Interceptor.attach(WdsExecuteWorkQueueEx, {onLeave: function (args) {send("WdsExecuteWorkQueueEx");}});
+
+var WdsExitImmediately = Module.findExportByName("wdscore.dll", "WdsExitImmediately")
+Interceptor.attach(WdsExitImmediately, {onLeave: function (args) {send("WdsExitImmediately");}});
+
+var WdsExitImmediatelyEx = Module.findExportByName("wdscore.dll", "WdsExitImmediatelyEx")
+Interceptor.attach(WdsExitImmediatelyEx, {onLeave: function (args) {send("WdsExitImmediatelyEx");}});
+
+var WdsFreeCollection = Module.findExportByName("wdscore.dll", "WdsFreeCollection")
+Interceptor.attach(WdsFreeCollection, {onLeave: function (args) {send("WdsFreeCollection");}});
+
+var WdsFreeData = Module.findExportByName("wdscore.dll", "WdsFreeData")
+Interceptor.attach(WdsFreeData, {onLeave: function (args) {send("WdsFreeData");}});
+
+var WdsGenericSetupLogInit = Module.findExportByName("wdscore.dll", "WdsGenericSetupLogInit")
+Interceptor.attach(WdsGenericSetupLogInit, {onLeave: function (args) {send("WdsGenericSetupLogInit");}});
+
+var WdsGetAssertFlags = Module.findExportByName("wdscore.dll", "WdsGetAssertFlags")
+Interceptor.attach(WdsGetAssertFlags, {onLeave: function (args) {send("WdsGetAssertFlags");}});
+
+var WdsGetBlackboardBinaryData = Module.findExportByName("wdscore.dll", "WdsGetBlackboardBinaryData")
+Interceptor.attach(WdsGetBlackboardBinaryData, {onLeave: function (args) {send("WdsGetBlackboardBinaryData");}});
+
+var WdsGetBlackboardStringA = Module.findExportByName("wdscore.dll", "WdsGetBlackboardStringA")
+Interceptor.attach(WdsGetBlackboardStringA, {onLeave: function (args) {send("WdsGetBlackboardStringA");}});
+
+var WdsGetBlackboardStringW = Module.findExportByName("wdscore.dll", "WdsGetBlackboardStringW")
+Interceptor.attach(WdsGetBlackboardStringW, {onLeave: function (args) {send("WdsGetBlackboardStringW");}});
+
+var WdsGetBlackboardUintPtr = Module.findExportByName("wdscore.dll", "WdsGetBlackboardUintPtr")
+Interceptor.attach(WdsGetBlackboardUintPtr, {onLeave: function (args) {send("WdsGetBlackboardUintPtr");}});
+
+var WdsGetBlackboardValue = Module.findExportByName("wdscore.dll", "WdsGetBlackboardValue")
+Interceptor.attach(WdsGetBlackboardValue, {onLeave: function (args) {send("WdsGetBlackboardValue");}});
+
+var WdsGetCurrentExecutionGroup = Module.findExportByName("wdscore.dll", "WdsGetCurrentExecutionGroup")
+Interceptor.attach(WdsGetCurrentExecutionGroup, {onLeave: function (args) {send("WdsGetCurrentExecutionGroup");}});
+
+var WdsGetPointer = Module.findExportByName("wdscore.dll", "WdsGetPointer")
+Interceptor.attach(WdsGetPointer, {onLeave: function (args) {send("WdsGetPointer");}});
+
+var WdsGetSetupLog = Module.findExportByName("wdscore.dll", "WdsGetSetupLog")
+Interceptor.attach(WdsGetSetupLog, {onLeave: function (args) {send("WdsGetSetupLog");}});
+
+var WdsGetTempDir = Module.findExportByName("wdscore.dll", "WdsGetTempDir")
+Interceptor.attach(WdsGetTempDir, {onLeave: function (args) {send("WdsGetTempDir");}});
+
+var WdsInitialize = Module.findExportByName("wdscore.dll", "WdsInitialize")
+Interceptor.attach(WdsInitialize, {onLeave: function (args) {send("WdsInitialize");}});
+
+var WdsInitializeCallbackArray = Module.findExportByName("wdscore.dll", "WdsInitializeCallbackArray")
+Interceptor.attach(WdsInitializeCallbackArray, {onLeave: function (args) {send("WdsInitializeCallbackArray");}});
+
+var WdsInitializeDataBinary = Module.findExportByName("wdscore.dll", "WdsInitializeDataBinary")
+Interceptor.attach(WdsInitializeDataBinary, {onLeave: function (args) {send("WdsInitializeDataBinary");}});
+
+var WdsInitializeDataStringA = Module.findExportByName("wdscore.dll", "WdsInitializeDataStringA")
+Interceptor.attach(WdsInitializeDataStringA, {onLeave: function (args) {send("WdsInitializeDataStringA");}});
+
+var WdsInitializeDataStringW = Module.findExportByName("wdscore.dll", "WdsInitializeDataStringW")
+Interceptor.attach(WdsInitializeDataStringW, {onLeave: function (args) {send("WdsInitializeDataStringW");}});
+
+var WdsInitializeDataUInt32 = Module.findExportByName("wdscore.dll", "WdsInitializeDataUInt32")
+Interceptor.attach(WdsInitializeDataUInt32, {onLeave: function (args) {send("WdsInitializeDataUInt32");}});
+
+var WdsInitializeDataUInt64 = Module.findExportByName("wdscore.dll", "WdsInitializeDataUInt64")
+Interceptor.attach(WdsInitializeDataUInt64, {onLeave: function (args) {send("WdsInitializeDataUInt64");}});
+
+var WdsIsDiagnosticModeEnabled = Module.findExportByName("wdscore.dll", "WdsIsDiagnosticModeEnabled")
+Interceptor.attach(WdsIsDiagnosticModeEnabled, {onLeave: function (args) {send("WdsIsDiagnosticModeEnabled");}});
+
+var WdsIterateOfflineQueue = Module.findExportByName("wdscore.dll", "WdsIterateOfflineQueue")
+Interceptor.attach(WdsIterateOfflineQueue, {onLeave: function (args) {send("WdsIterateOfflineQueue");}});
+
+var WdsIterateQueue = Module.findExportByName("wdscore.dll", "WdsIterateQueue")
+Interceptor.attach(WdsIterateQueue, {onLeave: function (args) {send("WdsIterateQueue");}});
+
+var WdsLockBlackboardValue = Module.findExportByName("wdscore.dll", "WdsLockBlackboardValue")
+Interceptor.attach(WdsLockBlackboardValue, {onLeave: function (args) {send("WdsLockBlackboardValue");}});
+
+var WdsLockExecutionGroup = Module.findExportByName("wdscore.dll", "WdsLockExecutionGroup")
+Interceptor.attach(WdsLockExecutionGroup, {onLeave: function (args) {send("WdsLockExecutionGroup");}});
+
+var WdsLogCreate = Module.findExportByName("wdscore.dll", "WdsLogCreate")
+Interceptor.attach(WdsLogCreate, {onLeave: function (args) {send("WdsLogCreate");}});
+
+var WdsLogDestroy = Module.findExportByName("wdscore.dll", "WdsLogDestroy")
+Interceptor.attach(WdsLogDestroy, {onLeave: function (args) {send("WdsLogDestroy");}});
+
+var WdsLogRegStockProviders = Module.findExportByName("wdscore.dll", "WdsLogRegStockProviders")
+Interceptor.attach(WdsLogRegStockProviders, {onLeave: function (args) {send("WdsLogRegStockProviders");}});
+
+var WdsLogRegisterProvider = Module.findExportByName("wdscore.dll", "WdsLogRegisterProvider")
+Interceptor.attach(WdsLogRegisterProvider, {onLeave: function (args) {send("WdsLogRegisterProvider");}});
+
+var WdsLogStructuredException = Module.findExportByName("wdscore.dll", "WdsLogStructuredException")
+Interceptor.attach(WdsLogStructuredException, {onLeave: function (args) {send("WdsLogStructuredException");}});
+
+var WdsLogUnRegStockProviders = Module.findExportByName("wdscore.dll", "WdsLogUnRegStockProviders")
+Interceptor.attach(WdsLogUnRegStockProviders, {onLeave: function (args) {send("WdsLogUnRegStockProviders");}});
+
+var WdsLogUnRegisterProvider = Module.findExportByName("wdscore.dll", "WdsLogUnRegisterProvider")
+Interceptor.attach(WdsLogUnRegisterProvider, {onLeave: function (args) {send("WdsLogUnRegisterProvider");}});
+
+var WdsPackCollection = Module.findExportByName("wdscore.dll", "WdsPackCollection")
+Interceptor.attach(WdsPackCollection, {onLeave: function (args) {send("WdsPackCollection");}});
+
+var WdsPublish = Module.findExportByName("wdscore.dll", "WdsPublish")
+Interceptor.attach(WdsPublish, {onLeave: function (args) {send("WdsPublish");}});
+
+var WdsPublishEx = Module.findExportByName("wdscore.dll", "WdsPublishEx")
+Interceptor.attach(WdsPublishEx, {onLeave: function (args) {send("WdsPublishEx");}});
+
+var WdsPublishImmediateAsync = Module.findExportByName("wdscore.dll", "WdsPublishImmediateAsync")
+Interceptor.attach(WdsPublishImmediateAsync, {onLeave: function (args) {send("WdsPublishImmediateAsync");}});
+
+var WdsPublishImmediateEx = Module.findExportByName("wdscore.dll", "WdsPublishImmediateEx")
+Interceptor.attach(WdsPublishImmediateEx, {onLeave: function (args) {send("WdsPublishImmediateEx");}});
+
+var WdsPublishOffline = Module.findExportByName("wdscore.dll", "WdsPublishOffline")
+Interceptor.attach(WdsPublishOffline, {onLeave: function (args) {send("WdsPublishOffline");}});
+
+var WdsSeqAlloc = Module.findExportByName("wdscore.dll", "WdsSeqAlloc")
+Interceptor.attach(WdsSeqAlloc, {onLeave: function (args) {send("WdsSeqAlloc");}});
+
+var WdsSeqFree = Module.findExportByName("wdscore.dll", "WdsSeqFree")
+Interceptor.attach(WdsSeqFree, {onLeave: function (args) {send("WdsSeqFree");}});
+
+var WdsSetAssertFlags = Module.findExportByName("wdscore.dll", "WdsSetAssertFlags")
+Interceptor.attach(WdsSetAssertFlags, {onLeave: function (args) {send("WdsSetAssertFlags");}});
+
+var WdsSetBlackboardValue = Module.findExportByName("wdscore.dll", "WdsSetBlackboardValue")
+Interceptor.attach(WdsSetBlackboardValue, {onLeave: function (args) {send("WdsSetBlackboardValue");}});
+
+var WdsSetNextExecutionGroup = Module.findExportByName("wdscore.dll", "WdsSetNextExecutionGroup")
+Interceptor.attach(WdsSetNextExecutionGroup, {onLeave: function (args) {send("WdsSetNextExecutionGroup");}});
+
+var WdsSetUILanguage = Module.findExportByName("wdscore.dll", "WdsSetUILanguage")
+Interceptor.attach(WdsSetUILanguage, {onLeave: function (args) {send("WdsSetUILanguage");}});
+
+var WdsSetupLogDestroy = Module.findExportByName("wdscore.dll", "WdsSetupLogDestroy")
+Interceptor.attach(WdsSetupLogDestroy, {onLeave: function (args) {send("WdsSetupLogDestroy");}});
+
+var WdsSetupLogInit = Module.findExportByName("wdscore.dll", "WdsSetupLogInit")
+Interceptor.attach(WdsSetupLogInit, {onLeave: function (args) {send("WdsSetupLogInit");}});
+
+var WdsSetupLogMessageA = Module.findExportByName("wdscore.dll", "WdsSetupLogMessageA")
+Interceptor.attach(WdsSetupLogMessageA, {onLeave: function (args) {send("WdsSetupLogMessageA");}});
+
+var WdsSetupLogMessageW = Module.findExportByName("wdscore.dll", "WdsSetupLogMessageW")
+Interceptor.attach(WdsSetupLogMessageW, {onLeave: function (args) {send("WdsSetupLogMessageW");}});
+
+var WdsSubscribeEx = Module.findExportByName("wdscore.dll", "WdsSubscribeEx")
+Interceptor.attach(WdsSubscribeEx, {onLeave: function (args) {send("WdsSubscribeEx");}});
+
+var WdsTerminate = Module.findExportByName("wdscore.dll", "WdsTerminate")
+Interceptor.attach(WdsTerminate, {onLeave: function (args) {send("WdsTerminate");}});
+
+var WdsUnlockExecutionGroup = Module.findExportByName("wdscore.dll", "WdsUnlockExecutionGroup")
+Interceptor.attach(WdsUnlockExecutionGroup, {onLeave: function (args) {send("WdsUnlockExecutionGroup");}});
+
+var WdsUnpackCollection = Module.findExportByName("wdscore.dll", "WdsUnpackCollection")
+Interceptor.attach(WdsUnpackCollection, {onLeave: function (args) {send("WdsUnpackCollection");}});
+
+var WdsUnsubscribe = Module.findExportByName("wdscore.dll", "WdsUnsubscribe")
+Interceptor.attach(WdsUnsubscribe, {onLeave: function (args) {send("WdsUnsubscribe");}});
+
+var WdsUnsubscribeEx = Module.findExportByName("wdscore.dll", "WdsUnsubscribeEx")
+Interceptor.attach(WdsUnsubscribeEx, {onLeave: function (args) {send("WdsUnsubscribeEx");}});
+
+var WdsValidBlackboard = Module.findExportByName("wdscore.dll", "WdsValidBlackboard")
+Interceptor.attach(WdsValidBlackboard, {onLeave: function (args) {send("WdsValidBlackboard");}});
+
+var g_Kernel32 = Module.findExportByName("wdscore.dll", "g_Kernel32")
+Interceptor.attach(g_Kernel32, {onLeave: function (args) {send("g_Kernel32");}});
+
+var g_bEnableDiagnosticMode = Module.findExportByName("wdscore.dll", "g_bEnableDiagnosticMode")
+Interceptor.attach(g_bEnableDiagnosticMode, {onLeave: function (args) {send("g_bEnableDiagnosticMode");}});
+

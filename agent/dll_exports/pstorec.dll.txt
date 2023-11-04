@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("pstorec.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("pstorec.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("pstorec.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("pstorec.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var PStoreCreateInstance = Module.findExportByName("pstorec.dll", "PStoreCreateInstance")
+Interceptor.attach(PStoreCreateInstance, {onLeave: function (args) {send("PStoreCreateInstance");}});
+
+var PStoreEnumProviders = Module.findExportByName("pstorec.dll", "PStoreEnumProviders")
+Interceptor.attach(PStoreEnumProviders, {onLeave: function (args) {send("PStoreEnumProviders");}});
+

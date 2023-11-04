@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("pnpui.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("pnpui.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var InstallSecurityPrompt = Module.findExportByName("pnpui.dll", "InstallSecurityPrompt")
+Interceptor.attach(InstallSecurityPrompt, {onLeave: function (args) {send("InstallSecurityPrompt");}});
+
+var InstallSecurityPromptLUA = Module.findExportByName("pnpui.dll", "InstallSecurityPromptLUA")
+Interceptor.attach(InstallSecurityPromptLUA, {onLeave: function (args) {send("InstallSecurityPromptLUA");}});
+
+var InstallSecurityPromptRunDllW = Module.findExportByName("pnpui.dll", "InstallSecurityPromptRunDllW")
+Interceptor.attach(InstallSecurityPromptRunDllW, {onLeave: function (args) {send("InstallSecurityPromptRunDllW");}});
+
+var NotifyDevicesNeedRebootRunDllW = Module.findExportByName("pnpui.dll", "NotifyDevicesNeedRebootRunDllW")
+Interceptor.attach(NotifyDevicesNeedRebootRunDllW, {onLeave: function (args) {send("NotifyDevicesNeedRebootRunDllW");}});
+
+var SimplifiedDINotificationW = Module.findExportByName("pnpui.dll", "SimplifiedDINotificationW")
+Interceptor.attach(SimplifiedDINotificationW, {onLeave: function (args) {send("SimplifiedDINotificationW");}});
+

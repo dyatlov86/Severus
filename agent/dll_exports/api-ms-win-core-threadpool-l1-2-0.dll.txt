@@ -1,0 +1,111 @@
+var CallbackMayRunLong = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CallbackMayRunLong")
+Interceptor.attach(CallbackMayRunLong, {onLeave: function (args) {send("CallbackMayRunLong");}});
+
+var CancelThreadpoolIo = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CancelThreadpoolIo")
+Interceptor.attach(CancelThreadpoolIo, {onLeave: function (args) {send("CancelThreadpoolIo");}});
+
+var CloseThreadpool = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CloseThreadpool")
+Interceptor.attach(CloseThreadpool, {onLeave: function (args) {send("CloseThreadpool");}});
+
+var CloseThreadpoolCleanupGroup = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CloseThreadpoolCleanupGroup")
+Interceptor.attach(CloseThreadpoolCleanupGroup, {onLeave: function (args) {send("CloseThreadpoolCleanupGroup");}});
+
+var CloseThreadpoolCleanupGroupMembers = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CloseThreadpoolCleanupGroupMembers")
+Interceptor.attach(CloseThreadpoolCleanupGroupMembers, {onLeave: function (args) {send("CloseThreadpoolCleanupGroupMembers");}});
+
+var CloseThreadpoolIo = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CloseThreadpoolIo")
+Interceptor.attach(CloseThreadpoolIo, {onLeave: function (args) {send("CloseThreadpoolIo");}});
+
+var CloseThreadpoolTimer = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CloseThreadpoolTimer")
+Interceptor.attach(CloseThreadpoolTimer, {onLeave: function (args) {send("CloseThreadpoolTimer");}});
+
+var CloseThreadpoolWait = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CloseThreadpoolWait")
+Interceptor.attach(CloseThreadpoolWait, {onLeave: function (args) {send("CloseThreadpoolWait");}});
+
+var CloseThreadpoolWork = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CloseThreadpoolWork")
+Interceptor.attach(CloseThreadpoolWork, {onLeave: function (args) {send("CloseThreadpoolWork");}});
+
+var CreateThreadpool = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CreateThreadpool")
+Interceptor.attach(CreateThreadpool, {onLeave: function (args) {send("CreateThreadpool");}});
+
+var CreateThreadpoolCleanupGroup = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CreateThreadpoolCleanupGroup")
+Interceptor.attach(CreateThreadpoolCleanupGroup, {onLeave: function (args) {send("CreateThreadpoolCleanupGroup");}});
+
+var CreateThreadpoolIo = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CreateThreadpoolIo")
+Interceptor.attach(CreateThreadpoolIo, {onLeave: function (args) {send("CreateThreadpoolIo");}});
+
+var CreateThreadpoolTimer = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CreateThreadpoolTimer")
+Interceptor.attach(CreateThreadpoolTimer, {onLeave: function (args) {send("CreateThreadpoolTimer");}});
+
+var CreateThreadpoolWait = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CreateThreadpoolWait")
+Interceptor.attach(CreateThreadpoolWait, {onLeave: function (args) {send("CreateThreadpoolWait");}});
+
+var CreateThreadpoolWork = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "CreateThreadpoolWork")
+Interceptor.attach(CreateThreadpoolWork, {onLeave: function (args) {send("CreateThreadpoolWork");}});
+
+var DisassociateCurrentThreadFromCallback = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "DisassociateCurrentThreadFromCallback")
+Interceptor.attach(DisassociateCurrentThreadFromCallback, {onLeave: function (args) {send("DisassociateCurrentThreadFromCallback");}});
+
+var FreeLibraryWhenCallbackReturns = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "FreeLibraryWhenCallbackReturns")
+Interceptor.attach(FreeLibraryWhenCallbackReturns, {onLeave: function (args) {send("FreeLibraryWhenCallbackReturns");}});
+
+var IsThreadpoolTimerSet = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "IsThreadpoolTimerSet")
+Interceptor.attach(IsThreadpoolTimerSet, {onLeave: function (args) {send("IsThreadpoolTimerSet");}});
+
+var LeaveCriticalSectionWhenCallbackReturns = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "LeaveCriticalSectionWhenCallbackReturns")
+Interceptor.attach(LeaveCriticalSectionWhenCallbackReturns, {onLeave: function (args) {send("LeaveCriticalSectionWhenCallbackReturns");}});
+
+var QueryThreadpoolStackInformation = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "QueryThreadpoolStackInformation")
+Interceptor.attach(QueryThreadpoolStackInformation, {onLeave: function (args) {send("QueryThreadpoolStackInformation");}});
+
+var ReleaseMutexWhenCallbackReturns = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "ReleaseMutexWhenCallbackReturns")
+Interceptor.attach(ReleaseMutexWhenCallbackReturns, {onLeave: function (args) {send("ReleaseMutexWhenCallbackReturns");}});
+
+var ReleaseSemaphoreWhenCallbackReturns = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "ReleaseSemaphoreWhenCallbackReturns")
+Interceptor.attach(ReleaseSemaphoreWhenCallbackReturns, {onLeave: function (args) {send("ReleaseSemaphoreWhenCallbackReturns");}});
+
+var SetEventWhenCallbackReturns = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "SetEventWhenCallbackReturns")
+Interceptor.attach(SetEventWhenCallbackReturns, {onLeave: function (args) {send("SetEventWhenCallbackReturns");}});
+
+var SetThreadpoolStackInformation = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "SetThreadpoolStackInformation")
+Interceptor.attach(SetThreadpoolStackInformation, {onLeave: function (args) {send("SetThreadpoolStackInformation");}});
+
+var SetThreadpoolThreadMaximum = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "SetThreadpoolThreadMaximum")
+Interceptor.attach(SetThreadpoolThreadMaximum, {onLeave: function (args) {send("SetThreadpoolThreadMaximum");}});
+
+var SetThreadpoolThreadMinimum = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "SetThreadpoolThreadMinimum")
+Interceptor.attach(SetThreadpoolThreadMinimum, {onLeave: function (args) {send("SetThreadpoolThreadMinimum");}});
+
+var SetThreadpoolTimer = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "SetThreadpoolTimer")
+Interceptor.attach(SetThreadpoolTimer, {onLeave: function (args) {send("SetThreadpoolTimer");}});
+
+var SetThreadpoolTimerEx = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "SetThreadpoolTimerEx")
+Interceptor.attach(SetThreadpoolTimerEx, {onLeave: function (args) {send("SetThreadpoolTimerEx");}});
+
+var SetThreadpoolWait = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "SetThreadpoolWait")
+Interceptor.attach(SetThreadpoolWait, {onLeave: function (args) {send("SetThreadpoolWait");}});
+
+var SetThreadpoolWaitEx = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "SetThreadpoolWaitEx")
+Interceptor.attach(SetThreadpoolWaitEx, {onLeave: function (args) {send("SetThreadpoolWaitEx");}});
+
+var StartThreadpoolIo = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "StartThreadpoolIo")
+Interceptor.attach(StartThreadpoolIo, {onLeave: function (args) {send("StartThreadpoolIo");}});
+
+var SubmitThreadpoolWork = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "SubmitThreadpoolWork")
+Interceptor.attach(SubmitThreadpoolWork, {onLeave: function (args) {send("SubmitThreadpoolWork");}});
+
+var TrySubmitThreadpoolCallback = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "TrySubmitThreadpoolCallback")
+Interceptor.attach(TrySubmitThreadpoolCallback, {onLeave: function (args) {send("TrySubmitThreadpoolCallback");}});
+
+var WaitForThreadpoolIoCallbacks = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "WaitForThreadpoolIoCallbacks")
+Interceptor.attach(WaitForThreadpoolIoCallbacks, {onLeave: function (args) {send("WaitForThreadpoolIoCallbacks");}});
+
+var WaitForThreadpoolTimerCallbacks = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "WaitForThreadpoolTimerCallbacks")
+Interceptor.attach(WaitForThreadpoolTimerCallbacks, {onLeave: function (args) {send("WaitForThreadpoolTimerCallbacks");}});
+
+var WaitForThreadpoolWaitCallbacks = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "WaitForThreadpoolWaitCallbacks")
+Interceptor.attach(WaitForThreadpoolWaitCallbacks, {onLeave: function (args) {send("WaitForThreadpoolWaitCallbacks");}});
+
+var WaitForThreadpoolWorkCallbacks = Module.findExportByName("api-ms-win-core-threadpool-l1-2-0.dll", "WaitForThreadpoolWorkCallbacks")
+Interceptor.attach(WaitForThreadpoolWorkCallbacks, {onLeave: function (args) {send("WaitForThreadpoolWorkCallbacks");}});
+

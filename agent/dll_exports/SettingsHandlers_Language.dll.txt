@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("SettingsHandlers_Language.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SettingsHandlers_Language.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetSettingForUser = Module.findExportByName("SettingsHandlers_Language.dll", "GetSettingForUser")
+Interceptor.attach(GetSettingForUser, {onLeave: function (args) {send("GetSettingForUser");}});
+

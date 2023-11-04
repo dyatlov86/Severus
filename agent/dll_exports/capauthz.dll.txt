@@ -1,0 +1,27 @@
+var DeprovisionApplicationCapabilities = Module.findExportByName("capauthz.dll", "DeprovisionApplicationCapabilities")
+Interceptor.attach(DeprovisionApplicationCapabilities, {onLeave: function (args) {send("DeprovisionApplicationCapabilities");}});
+
+var ProvisionApplicationCapabilities = Module.findExportByName("capauthz.dll", "ProvisionApplicationCapabilities")
+Interceptor.attach(ProvisionApplicationCapabilities, {onLeave: function (args) {send("ProvisionApplicationCapabilities");}});
+
+var ProvisionApplicationCapabilitiesEx = Module.findExportByName("capauthz.dll", "ProvisionApplicationCapabilitiesEx")
+Interceptor.attach(ProvisionApplicationCapabilitiesEx, {onLeave: function (args) {send("ProvisionApplicationCapabilitiesEx");}});
+
+var QueryApplicationCapabilities = Module.findExportByName("capauthz.dll", "QueryApplicationCapabilities")
+Interceptor.attach(QueryApplicationCapabilities, {onLeave: function (args) {send("QueryApplicationCapabilities");}});
+
+var QueryApplicationCapabilitiesEx = Module.findExportByName("capauthz.dll", "QueryApplicationCapabilitiesEx")
+Interceptor.attach(QueryApplicationCapabilitiesEx, {onLeave: function (args) {send("QueryApplicationCapabilitiesEx");}});
+
+var SCCDFreeParsedElements = Module.findExportByName("capauthz.dll", "SCCDFreeParsedElements")
+Interceptor.attach(SCCDFreeParsedElements, {onLeave: function (args) {send("SCCDFreeParsedElements");}});
+
+var SCCDParseFile = Module.findExportByName("capauthz.dll", "SCCDParseFile")
+Interceptor.attach(SCCDParseFile, {onLeave: function (args) {send("SCCDParseFile");}});
+
+var SCCDValidateAppxFile = Module.findExportByName("capauthz.dll", "SCCDValidateAppxFile")
+Interceptor.attach(SCCDValidateAppxFile, {onLeave: function (args) {send("SCCDValidateAppxFile");}});
+
+var SCCDValidateCatalogFile = Module.findExportByName("capauthz.dll", "SCCDValidateCatalogFile")
+Interceptor.attach(SCCDValidateCatalogFile, {onLeave: function (args) {send("SCCDValidateCatalogFile");}});
+

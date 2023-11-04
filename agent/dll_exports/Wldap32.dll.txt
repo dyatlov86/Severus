@@ -1,0 +1,735 @@
+var LdapGetLastError = Module.findExportByName("Wldap32.dll", "LdapGetLastError")
+Interceptor.attach(LdapGetLastError, {onLeave: function (args) {send("LdapGetLastError");}});
+
+var LdapMapErrorToWin32 = Module.findExportByName("Wldap32.dll", "LdapMapErrorToWin32")
+Interceptor.attach(LdapMapErrorToWin32, {onLeave: function (args) {send("LdapMapErrorToWin32");}});
+
+var LdapUTF8ToUnicode = Module.findExportByName("Wldap32.dll", "LdapUTF8ToUnicode")
+Interceptor.attach(LdapUTF8ToUnicode, {onLeave: function (args) {send("LdapUTF8ToUnicode");}});
+
+var LdapUnicodeToUTF8 = Module.findExportByName("Wldap32.dll", "LdapUnicodeToUTF8")
+Interceptor.attach(LdapUnicodeToUTF8, {onLeave: function (args) {send("LdapUnicodeToUTF8");}});
+
+var ber_alloc_t = Module.findExportByName("Wldap32.dll", "ber_alloc_t")
+Interceptor.attach(ber_alloc_t, {onLeave: function (args) {send("ber_alloc_t");}});
+
+var ber_bvdup = Module.findExportByName("Wldap32.dll", "ber_bvdup")
+Interceptor.attach(ber_bvdup, {onLeave: function (args) {send("ber_bvdup");}});
+
+var ber_bvecfree = Module.findExportByName("Wldap32.dll", "ber_bvecfree")
+Interceptor.attach(ber_bvecfree, {onLeave: function (args) {send("ber_bvecfree");}});
+
+var ber_bvfree = Module.findExportByName("Wldap32.dll", "ber_bvfree")
+Interceptor.attach(ber_bvfree, {onLeave: function (args) {send("ber_bvfree");}});
+
+var ber_first_element = Module.findExportByName("Wldap32.dll", "ber_first_element")
+Interceptor.attach(ber_first_element, {onLeave: function (args) {send("ber_first_element");}});
+
+var ber_flatten = Module.findExportByName("Wldap32.dll", "ber_flatten")
+Interceptor.attach(ber_flatten, {onLeave: function (args) {send("ber_flatten");}});
+
+var ber_free = Module.findExportByName("Wldap32.dll", "ber_free")
+Interceptor.attach(ber_free, {onLeave: function (args) {send("ber_free");}});
+
+var ber_init = Module.findExportByName("Wldap32.dll", "ber_init")
+Interceptor.attach(ber_init, {onLeave: function (args) {send("ber_init");}});
+
+var ber_next_element = Module.findExportByName("Wldap32.dll", "ber_next_element")
+Interceptor.attach(ber_next_element, {onLeave: function (args) {send("ber_next_element");}});
+
+var ber_peek_tag = Module.findExportByName("Wldap32.dll", "ber_peek_tag")
+Interceptor.attach(ber_peek_tag, {onLeave: function (args) {send("ber_peek_tag");}});
+
+var ber_printf = Module.findExportByName("Wldap32.dll", "ber_printf")
+Interceptor.attach(ber_printf, {onLeave: function (args) {send("ber_printf");}});
+
+var ber_scanf = Module.findExportByName("Wldap32.dll", "ber_scanf")
+Interceptor.attach(ber_scanf, {onLeave: function (args) {send("ber_scanf");}});
+
+var ber_skip_tag = Module.findExportByName("Wldap32.dll", "ber_skip_tag")
+Interceptor.attach(ber_skip_tag, {onLeave: function (args) {send("ber_skip_tag");}});
+
+var cldap_open = Module.findExportByName("Wldap32.dll", "cldap_open")
+Interceptor.attach(cldap_open, {onLeave: function (args) {send("cldap_open");}});
+
+var cldap_openA = Module.findExportByName("Wldap32.dll", "cldap_openA")
+Interceptor.attach(cldap_openA, {onLeave: function (args) {send("cldap_openA");}});
+
+var cldap_openW = Module.findExportByName("Wldap32.dll", "cldap_openW")
+Interceptor.attach(cldap_openW, {onLeave: function (args) {send("cldap_openW");}});
+
+var ldap_abandon = Module.findExportByName("Wldap32.dll", "ldap_abandon")
+Interceptor.attach(ldap_abandon, {onLeave: function (args) {send("ldap_abandon");}});
+
+var ldap_add = Module.findExportByName("Wldap32.dll", "ldap_add")
+Interceptor.attach(ldap_add, {onLeave: function (args) {send("ldap_add");}});
+
+var ldap_addA = Module.findExportByName("Wldap32.dll", "ldap_addA")
+Interceptor.attach(ldap_addA, {onLeave: function (args) {send("ldap_addA");}});
+
+var ldap_addW = Module.findExportByName("Wldap32.dll", "ldap_addW")
+Interceptor.attach(ldap_addW, {onLeave: function (args) {send("ldap_addW");}});
+
+var ldap_add_ext = Module.findExportByName("Wldap32.dll", "ldap_add_ext")
+Interceptor.attach(ldap_add_ext, {onLeave: function (args) {send("ldap_add_ext");}});
+
+var ldap_add_extA = Module.findExportByName("Wldap32.dll", "ldap_add_extA")
+Interceptor.attach(ldap_add_extA, {onLeave: function (args) {send("ldap_add_extA");}});
+
+var ldap_add_extW = Module.findExportByName("Wldap32.dll", "ldap_add_extW")
+Interceptor.attach(ldap_add_extW, {onLeave: function (args) {send("ldap_add_extW");}});
+
+var ldap_add_ext_s = Module.findExportByName("Wldap32.dll", "ldap_add_ext_s")
+Interceptor.attach(ldap_add_ext_s, {onLeave: function (args) {send("ldap_add_ext_s");}});
+
+var ldap_add_ext_sA = Module.findExportByName("Wldap32.dll", "ldap_add_ext_sA")
+Interceptor.attach(ldap_add_ext_sA, {onLeave: function (args) {send("ldap_add_ext_sA");}});
+
+var ldap_add_ext_sW = Module.findExportByName("Wldap32.dll", "ldap_add_ext_sW")
+Interceptor.attach(ldap_add_ext_sW, {onLeave: function (args) {send("ldap_add_ext_sW");}});
+
+var ldap_add_s = Module.findExportByName("Wldap32.dll", "ldap_add_s")
+Interceptor.attach(ldap_add_s, {onLeave: function (args) {send("ldap_add_s");}});
+
+var ldap_add_sA = Module.findExportByName("Wldap32.dll", "ldap_add_sA")
+Interceptor.attach(ldap_add_sA, {onLeave: function (args) {send("ldap_add_sA");}});
+
+var ldap_add_sW = Module.findExportByName("Wldap32.dll", "ldap_add_sW")
+Interceptor.attach(ldap_add_sW, {onLeave: function (args) {send("ldap_add_sW");}});
+
+var ldap_bind = Module.findExportByName("Wldap32.dll", "ldap_bind")
+Interceptor.attach(ldap_bind, {onLeave: function (args) {send("ldap_bind");}});
+
+var ldap_bindA = Module.findExportByName("Wldap32.dll", "ldap_bindA")
+Interceptor.attach(ldap_bindA, {onLeave: function (args) {send("ldap_bindA");}});
+
+var ldap_bindW = Module.findExportByName("Wldap32.dll", "ldap_bindW")
+Interceptor.attach(ldap_bindW, {onLeave: function (args) {send("ldap_bindW");}});
+
+var ldap_bind_s = Module.findExportByName("Wldap32.dll", "ldap_bind_s")
+Interceptor.attach(ldap_bind_s, {onLeave: function (args) {send("ldap_bind_s");}});
+
+var ldap_bind_sA = Module.findExportByName("Wldap32.dll", "ldap_bind_sA")
+Interceptor.attach(ldap_bind_sA, {onLeave: function (args) {send("ldap_bind_sA");}});
+
+var ldap_bind_sW = Module.findExportByName("Wldap32.dll", "ldap_bind_sW")
+Interceptor.attach(ldap_bind_sW, {onLeave: function (args) {send("ldap_bind_sW");}});
+
+var ldap_check_filterA = Module.findExportByName("Wldap32.dll", "ldap_check_filterA")
+Interceptor.attach(ldap_check_filterA, {onLeave: function (args) {send("ldap_check_filterA");}});
+
+var ldap_check_filterW = Module.findExportByName("Wldap32.dll", "ldap_check_filterW")
+Interceptor.attach(ldap_check_filterW, {onLeave: function (args) {send("ldap_check_filterW");}});
+
+var ldap_cleanup = Module.findExportByName("Wldap32.dll", "ldap_cleanup")
+Interceptor.attach(ldap_cleanup, {onLeave: function (args) {send("ldap_cleanup");}});
+
+var ldap_close_extended_op = Module.findExportByName("Wldap32.dll", "ldap_close_extended_op")
+Interceptor.attach(ldap_close_extended_op, {onLeave: function (args) {send("ldap_close_extended_op");}});
+
+var ldap_compare = Module.findExportByName("Wldap32.dll", "ldap_compare")
+Interceptor.attach(ldap_compare, {onLeave: function (args) {send("ldap_compare");}});
+
+var ldap_compareA = Module.findExportByName("Wldap32.dll", "ldap_compareA")
+Interceptor.attach(ldap_compareA, {onLeave: function (args) {send("ldap_compareA");}});
+
+var ldap_compareW = Module.findExportByName("Wldap32.dll", "ldap_compareW")
+Interceptor.attach(ldap_compareW, {onLeave: function (args) {send("ldap_compareW");}});
+
+var ldap_compare_ext = Module.findExportByName("Wldap32.dll", "ldap_compare_ext")
+Interceptor.attach(ldap_compare_ext, {onLeave: function (args) {send("ldap_compare_ext");}});
+
+var ldap_compare_extA = Module.findExportByName("Wldap32.dll", "ldap_compare_extA")
+Interceptor.attach(ldap_compare_extA, {onLeave: function (args) {send("ldap_compare_extA");}});
+
+var ldap_compare_extW = Module.findExportByName("Wldap32.dll", "ldap_compare_extW")
+Interceptor.attach(ldap_compare_extW, {onLeave: function (args) {send("ldap_compare_extW");}});
+
+var ldap_compare_ext_s = Module.findExportByName("Wldap32.dll", "ldap_compare_ext_s")
+Interceptor.attach(ldap_compare_ext_s, {onLeave: function (args) {send("ldap_compare_ext_s");}});
+
+var ldap_compare_ext_sA = Module.findExportByName("Wldap32.dll", "ldap_compare_ext_sA")
+Interceptor.attach(ldap_compare_ext_sA, {onLeave: function (args) {send("ldap_compare_ext_sA");}});
+
+var ldap_compare_ext_sW = Module.findExportByName("Wldap32.dll", "ldap_compare_ext_sW")
+Interceptor.attach(ldap_compare_ext_sW, {onLeave: function (args) {send("ldap_compare_ext_sW");}});
+
+var ldap_compare_s = Module.findExportByName("Wldap32.dll", "ldap_compare_s")
+Interceptor.attach(ldap_compare_s, {onLeave: function (args) {send("ldap_compare_s");}});
+
+var ldap_compare_sA = Module.findExportByName("Wldap32.dll", "ldap_compare_sA")
+Interceptor.attach(ldap_compare_sA, {onLeave: function (args) {send("ldap_compare_sA");}});
+
+var ldap_compare_sW = Module.findExportByName("Wldap32.dll", "ldap_compare_sW")
+Interceptor.attach(ldap_compare_sW, {onLeave: function (args) {send("ldap_compare_sW");}});
+
+var ldap_conn_from_msg = Module.findExportByName("Wldap32.dll", "ldap_conn_from_msg")
+Interceptor.attach(ldap_conn_from_msg, {onLeave: function (args) {send("ldap_conn_from_msg");}});
+
+var ldap_connect = Module.findExportByName("Wldap32.dll", "ldap_connect")
+Interceptor.attach(ldap_connect, {onLeave: function (args) {send("ldap_connect");}});
+
+var ldap_control_free = Module.findExportByName("Wldap32.dll", "ldap_control_free")
+Interceptor.attach(ldap_control_free, {onLeave: function (args) {send("ldap_control_free");}});
+
+var ldap_control_freeA = Module.findExportByName("Wldap32.dll", "ldap_control_freeA")
+Interceptor.attach(ldap_control_freeA, {onLeave: function (args) {send("ldap_control_freeA");}});
+
+var ldap_control_freeW = Module.findExportByName("Wldap32.dll", "ldap_control_freeW")
+Interceptor.attach(ldap_control_freeW, {onLeave: function (args) {send("ldap_control_freeW");}});
+
+var ldap_controls_free = Module.findExportByName("Wldap32.dll", "ldap_controls_free")
+Interceptor.attach(ldap_controls_free, {onLeave: function (args) {send("ldap_controls_free");}});
+
+var ldap_controls_freeA = Module.findExportByName("Wldap32.dll", "ldap_controls_freeA")
+Interceptor.attach(ldap_controls_freeA, {onLeave: function (args) {send("ldap_controls_freeA");}});
+
+var ldap_controls_freeW = Module.findExportByName("Wldap32.dll", "ldap_controls_freeW")
+Interceptor.attach(ldap_controls_freeW, {onLeave: function (args) {send("ldap_controls_freeW");}});
+
+var ldap_count_entries = Module.findExportByName("Wldap32.dll", "ldap_count_entries")
+Interceptor.attach(ldap_count_entries, {onLeave: function (args) {send("ldap_count_entries");}});
+
+var ldap_count_references = Module.findExportByName("Wldap32.dll", "ldap_count_references")
+Interceptor.attach(ldap_count_references, {onLeave: function (args) {send("ldap_count_references");}});
+
+var ldap_count_values = Module.findExportByName("Wldap32.dll", "ldap_count_values")
+Interceptor.attach(ldap_count_values, {onLeave: function (args) {send("ldap_count_values");}});
+
+var ldap_count_valuesA = Module.findExportByName("Wldap32.dll", "ldap_count_valuesA")
+Interceptor.attach(ldap_count_valuesA, {onLeave: function (args) {send("ldap_count_valuesA");}});
+
+var ldap_count_valuesW = Module.findExportByName("Wldap32.dll", "ldap_count_valuesW")
+Interceptor.attach(ldap_count_valuesW, {onLeave: function (args) {send("ldap_count_valuesW");}});
+
+var ldap_count_values_len = Module.findExportByName("Wldap32.dll", "ldap_count_values_len")
+Interceptor.attach(ldap_count_values_len, {onLeave: function (args) {send("ldap_count_values_len");}});
+
+var ldap_create_page_control = Module.findExportByName("Wldap32.dll", "ldap_create_page_control")
+Interceptor.attach(ldap_create_page_control, {onLeave: function (args) {send("ldap_create_page_control");}});
+
+var ldap_create_page_controlA = Module.findExportByName("Wldap32.dll", "ldap_create_page_controlA")
+Interceptor.attach(ldap_create_page_controlA, {onLeave: function (args) {send("ldap_create_page_controlA");}});
+
+var ldap_create_page_controlW = Module.findExportByName("Wldap32.dll", "ldap_create_page_controlW")
+Interceptor.attach(ldap_create_page_controlW, {onLeave: function (args) {send("ldap_create_page_controlW");}});
+
+var ldap_create_sort_control = Module.findExportByName("Wldap32.dll", "ldap_create_sort_control")
+Interceptor.attach(ldap_create_sort_control, {onLeave: function (args) {send("ldap_create_sort_control");}});
+
+var ldap_create_sort_controlA = Module.findExportByName("Wldap32.dll", "ldap_create_sort_controlA")
+Interceptor.attach(ldap_create_sort_controlA, {onLeave: function (args) {send("ldap_create_sort_controlA");}});
+
+var ldap_create_sort_controlW = Module.findExportByName("Wldap32.dll", "ldap_create_sort_controlW")
+Interceptor.attach(ldap_create_sort_controlW, {onLeave: function (args) {send("ldap_create_sort_controlW");}});
+
+var ldap_create_vlv_controlA = Module.findExportByName("Wldap32.dll", "ldap_create_vlv_controlA")
+Interceptor.attach(ldap_create_vlv_controlA, {onLeave: function (args) {send("ldap_create_vlv_controlA");}});
+
+var ldap_create_vlv_controlW = Module.findExportByName("Wldap32.dll", "ldap_create_vlv_controlW")
+Interceptor.attach(ldap_create_vlv_controlW, {onLeave: function (args) {send("ldap_create_vlv_controlW");}});
+
+var ldap_delete = Module.findExportByName("Wldap32.dll", "ldap_delete")
+Interceptor.attach(ldap_delete, {onLeave: function (args) {send("ldap_delete");}});
+
+var ldap_deleteA = Module.findExportByName("Wldap32.dll", "ldap_deleteA")
+Interceptor.attach(ldap_deleteA, {onLeave: function (args) {send("ldap_deleteA");}});
+
+var ldap_deleteW = Module.findExportByName("Wldap32.dll", "ldap_deleteW")
+Interceptor.attach(ldap_deleteW, {onLeave: function (args) {send("ldap_deleteW");}});
+
+var ldap_delete_ext = Module.findExportByName("Wldap32.dll", "ldap_delete_ext")
+Interceptor.attach(ldap_delete_ext, {onLeave: function (args) {send("ldap_delete_ext");}});
+
+var ldap_delete_extA = Module.findExportByName("Wldap32.dll", "ldap_delete_extA")
+Interceptor.attach(ldap_delete_extA, {onLeave: function (args) {send("ldap_delete_extA");}});
+
+var ldap_delete_extW = Module.findExportByName("Wldap32.dll", "ldap_delete_extW")
+Interceptor.attach(ldap_delete_extW, {onLeave: function (args) {send("ldap_delete_extW");}});
+
+var ldap_delete_ext_s = Module.findExportByName("Wldap32.dll", "ldap_delete_ext_s")
+Interceptor.attach(ldap_delete_ext_s, {onLeave: function (args) {send("ldap_delete_ext_s");}});
+
+var ldap_delete_ext_sA = Module.findExportByName("Wldap32.dll", "ldap_delete_ext_sA")
+Interceptor.attach(ldap_delete_ext_sA, {onLeave: function (args) {send("ldap_delete_ext_sA");}});
+
+var ldap_delete_ext_sW = Module.findExportByName("Wldap32.dll", "ldap_delete_ext_sW")
+Interceptor.attach(ldap_delete_ext_sW, {onLeave: function (args) {send("ldap_delete_ext_sW");}});
+
+var ldap_delete_s = Module.findExportByName("Wldap32.dll", "ldap_delete_s")
+Interceptor.attach(ldap_delete_s, {onLeave: function (args) {send("ldap_delete_s");}});
+
+var ldap_delete_sA = Module.findExportByName("Wldap32.dll", "ldap_delete_sA")
+Interceptor.attach(ldap_delete_sA, {onLeave: function (args) {send("ldap_delete_sA");}});
+
+var ldap_delete_sW = Module.findExportByName("Wldap32.dll", "ldap_delete_sW")
+Interceptor.attach(ldap_delete_sW, {onLeave: function (args) {send("ldap_delete_sW");}});
+
+var ldap_dn2ufn = Module.findExportByName("Wldap32.dll", "ldap_dn2ufn")
+Interceptor.attach(ldap_dn2ufn, {onLeave: function (args) {send("ldap_dn2ufn");}});
+
+var ldap_dn2ufnA = Module.findExportByName("Wldap32.dll", "ldap_dn2ufnA")
+Interceptor.attach(ldap_dn2ufnA, {onLeave: function (args) {send("ldap_dn2ufnA");}});
+
+var ldap_dn2ufnW = Module.findExportByName("Wldap32.dll", "ldap_dn2ufnW")
+Interceptor.attach(ldap_dn2ufnW, {onLeave: function (args) {send("ldap_dn2ufnW");}});
+
+var ldap_encode_sort_controlA = Module.findExportByName("Wldap32.dll", "ldap_encode_sort_controlA")
+Interceptor.attach(ldap_encode_sort_controlA, {onLeave: function (args) {send("ldap_encode_sort_controlA");}});
+
+var ldap_encode_sort_controlW = Module.findExportByName("Wldap32.dll", "ldap_encode_sort_controlW")
+Interceptor.attach(ldap_encode_sort_controlW, {onLeave: function (args) {send("ldap_encode_sort_controlW");}});
+
+var ldap_err2string = Module.findExportByName("Wldap32.dll", "ldap_err2string")
+Interceptor.attach(ldap_err2string, {onLeave: function (args) {send("ldap_err2string");}});
+
+var ldap_err2stringA = Module.findExportByName("Wldap32.dll", "ldap_err2stringA")
+Interceptor.attach(ldap_err2stringA, {onLeave: function (args) {send("ldap_err2stringA");}});
+
+var ldap_err2stringW = Module.findExportByName("Wldap32.dll", "ldap_err2stringW")
+Interceptor.attach(ldap_err2stringW, {onLeave: function (args) {send("ldap_err2stringW");}});
+
+var ldap_escape_filter_element = Module.findExportByName("Wldap32.dll", "ldap_escape_filter_element")
+Interceptor.attach(ldap_escape_filter_element, {onLeave: function (args) {send("ldap_escape_filter_element");}});
+
+var ldap_escape_filter_elementA = Module.findExportByName("Wldap32.dll", "ldap_escape_filter_elementA")
+Interceptor.attach(ldap_escape_filter_elementA, {onLeave: function (args) {send("ldap_escape_filter_elementA");}});
+
+var ldap_escape_filter_elementW = Module.findExportByName("Wldap32.dll", "ldap_escape_filter_elementW")
+Interceptor.attach(ldap_escape_filter_elementW, {onLeave: function (args) {send("ldap_escape_filter_elementW");}});
+
+var ldap_explode_dn = Module.findExportByName("Wldap32.dll", "ldap_explode_dn")
+Interceptor.attach(ldap_explode_dn, {onLeave: function (args) {send("ldap_explode_dn");}});
+
+var ldap_explode_dnA = Module.findExportByName("Wldap32.dll", "ldap_explode_dnA")
+Interceptor.attach(ldap_explode_dnA, {onLeave: function (args) {send("ldap_explode_dnA");}});
+
+var ldap_explode_dnW = Module.findExportByName("Wldap32.dll", "ldap_explode_dnW")
+Interceptor.attach(ldap_explode_dnW, {onLeave: function (args) {send("ldap_explode_dnW");}});
+
+var ldap_extended_operation = Module.findExportByName("Wldap32.dll", "ldap_extended_operation")
+Interceptor.attach(ldap_extended_operation, {onLeave: function (args) {send("ldap_extended_operation");}});
+
+var ldap_extended_operationA = Module.findExportByName("Wldap32.dll", "ldap_extended_operationA")
+Interceptor.attach(ldap_extended_operationA, {onLeave: function (args) {send("ldap_extended_operationA");}});
+
+var ldap_extended_operationW = Module.findExportByName("Wldap32.dll", "ldap_extended_operationW")
+Interceptor.attach(ldap_extended_operationW, {onLeave: function (args) {send("ldap_extended_operationW");}});
+
+var ldap_extended_operation_sA = Module.findExportByName("Wldap32.dll", "ldap_extended_operation_sA")
+Interceptor.attach(ldap_extended_operation_sA, {onLeave: function (args) {send("ldap_extended_operation_sA");}});
+
+var ldap_extended_operation_sW = Module.findExportByName("Wldap32.dll", "ldap_extended_operation_sW")
+Interceptor.attach(ldap_extended_operation_sW, {onLeave: function (args) {send("ldap_extended_operation_sW");}});
+
+var ldap_first_attribute = Module.findExportByName("Wldap32.dll", "ldap_first_attribute")
+Interceptor.attach(ldap_first_attribute, {onLeave: function (args) {send("ldap_first_attribute");}});
+
+var ldap_first_attributeA = Module.findExportByName("Wldap32.dll", "ldap_first_attributeA")
+Interceptor.attach(ldap_first_attributeA, {onLeave: function (args) {send("ldap_first_attributeA");}});
+
+var ldap_first_attributeW = Module.findExportByName("Wldap32.dll", "ldap_first_attributeW")
+Interceptor.attach(ldap_first_attributeW, {onLeave: function (args) {send("ldap_first_attributeW");}});
+
+var ldap_first_entry = Module.findExportByName("Wldap32.dll", "ldap_first_entry")
+Interceptor.attach(ldap_first_entry, {onLeave: function (args) {send("ldap_first_entry");}});
+
+var ldap_first_reference = Module.findExportByName("Wldap32.dll", "ldap_first_reference")
+Interceptor.attach(ldap_first_reference, {onLeave: function (args) {send("ldap_first_reference");}});
+
+var ldap_free_controls = Module.findExportByName("Wldap32.dll", "ldap_free_controls")
+Interceptor.attach(ldap_free_controls, {onLeave: function (args) {send("ldap_free_controls");}});
+
+var ldap_free_controlsA = Module.findExportByName("Wldap32.dll", "ldap_free_controlsA")
+Interceptor.attach(ldap_free_controlsA, {onLeave: function (args) {send("ldap_free_controlsA");}});
+
+var ldap_free_controlsW = Module.findExportByName("Wldap32.dll", "ldap_free_controlsW")
+Interceptor.attach(ldap_free_controlsW, {onLeave: function (args) {send("ldap_free_controlsW");}});
+
+var ldap_get_dn = Module.findExportByName("Wldap32.dll", "ldap_get_dn")
+Interceptor.attach(ldap_get_dn, {onLeave: function (args) {send("ldap_get_dn");}});
+
+var ldap_get_dnA = Module.findExportByName("Wldap32.dll", "ldap_get_dnA")
+Interceptor.attach(ldap_get_dnA, {onLeave: function (args) {send("ldap_get_dnA");}});
+
+var ldap_get_dnW = Module.findExportByName("Wldap32.dll", "ldap_get_dnW")
+Interceptor.attach(ldap_get_dnW, {onLeave: function (args) {send("ldap_get_dnW");}});
+
+var ldap_get_next_page = Module.findExportByName("Wldap32.dll", "ldap_get_next_page")
+Interceptor.attach(ldap_get_next_page, {onLeave: function (args) {send("ldap_get_next_page");}});
+
+var ldap_get_next_page_s = Module.findExportByName("Wldap32.dll", "ldap_get_next_page_s")
+Interceptor.attach(ldap_get_next_page_s, {onLeave: function (args) {send("ldap_get_next_page_s");}});
+
+var ldap_get_option = Module.findExportByName("Wldap32.dll", "ldap_get_option")
+Interceptor.attach(ldap_get_option, {onLeave: function (args) {send("ldap_get_option");}});
+
+var ldap_get_optionA = Module.findExportByName("Wldap32.dll", "ldap_get_optionA")
+Interceptor.attach(ldap_get_optionA, {onLeave: function (args) {send("ldap_get_optionA");}});
+
+var ldap_get_optionW = Module.findExportByName("Wldap32.dll", "ldap_get_optionW")
+Interceptor.attach(ldap_get_optionW, {onLeave: function (args) {send("ldap_get_optionW");}});
+
+var ldap_get_paged_count = Module.findExportByName("Wldap32.dll", "ldap_get_paged_count")
+Interceptor.attach(ldap_get_paged_count, {onLeave: function (args) {send("ldap_get_paged_count");}});
+
+var ldap_get_values = Module.findExportByName("Wldap32.dll", "ldap_get_values")
+Interceptor.attach(ldap_get_values, {onLeave: function (args) {send("ldap_get_values");}});
+
+var ldap_get_valuesA = Module.findExportByName("Wldap32.dll", "ldap_get_valuesA")
+Interceptor.attach(ldap_get_valuesA, {onLeave: function (args) {send("ldap_get_valuesA");}});
+
+var ldap_get_valuesW = Module.findExportByName("Wldap32.dll", "ldap_get_valuesW")
+Interceptor.attach(ldap_get_valuesW, {onLeave: function (args) {send("ldap_get_valuesW");}});
+
+var ldap_get_values_len = Module.findExportByName("Wldap32.dll", "ldap_get_values_len")
+Interceptor.attach(ldap_get_values_len, {onLeave: function (args) {send("ldap_get_values_len");}});
+
+var ldap_get_values_lenA = Module.findExportByName("Wldap32.dll", "ldap_get_values_lenA")
+Interceptor.attach(ldap_get_values_lenA, {onLeave: function (args) {send("ldap_get_values_lenA");}});
+
+var ldap_get_values_lenW = Module.findExportByName("Wldap32.dll", "ldap_get_values_lenW")
+Interceptor.attach(ldap_get_values_lenW, {onLeave: function (args) {send("ldap_get_values_lenW");}});
+
+var ldap_init = Module.findExportByName("Wldap32.dll", "ldap_init")
+Interceptor.attach(ldap_init, {onLeave: function (args) {send("ldap_init");}});
+
+var ldap_initA = Module.findExportByName("Wldap32.dll", "ldap_initA")
+Interceptor.attach(ldap_initA, {onLeave: function (args) {send("ldap_initA");}});
+
+var ldap_initW = Module.findExportByName("Wldap32.dll", "ldap_initW")
+Interceptor.attach(ldap_initW, {onLeave: function (args) {send("ldap_initW");}});
+
+var ldap_memfree = Module.findExportByName("Wldap32.dll", "ldap_memfree")
+Interceptor.attach(ldap_memfree, {onLeave: function (args) {send("ldap_memfree");}});
+
+var ldap_memfreeA = Module.findExportByName("Wldap32.dll", "ldap_memfreeA")
+Interceptor.attach(ldap_memfreeA, {onLeave: function (args) {send("ldap_memfreeA");}});
+
+var ldap_memfreeW = Module.findExportByName("Wldap32.dll", "ldap_memfreeW")
+Interceptor.attach(ldap_memfreeW, {onLeave: function (args) {send("ldap_memfreeW");}});
+
+var ldap_modify = Module.findExportByName("Wldap32.dll", "ldap_modify")
+Interceptor.attach(ldap_modify, {onLeave: function (args) {send("ldap_modify");}});
+
+var ldap_modifyA = Module.findExportByName("Wldap32.dll", "ldap_modifyA")
+Interceptor.attach(ldap_modifyA, {onLeave: function (args) {send("ldap_modifyA");}});
+
+var ldap_modifyW = Module.findExportByName("Wldap32.dll", "ldap_modifyW")
+Interceptor.attach(ldap_modifyW, {onLeave: function (args) {send("ldap_modifyW");}});
+
+var ldap_modify_ext = Module.findExportByName("Wldap32.dll", "ldap_modify_ext")
+Interceptor.attach(ldap_modify_ext, {onLeave: function (args) {send("ldap_modify_ext");}});
+
+var ldap_modify_extA = Module.findExportByName("Wldap32.dll", "ldap_modify_extA")
+Interceptor.attach(ldap_modify_extA, {onLeave: function (args) {send("ldap_modify_extA");}});
+
+var ldap_modify_extW = Module.findExportByName("Wldap32.dll", "ldap_modify_extW")
+Interceptor.attach(ldap_modify_extW, {onLeave: function (args) {send("ldap_modify_extW");}});
+
+var ldap_modify_ext_s = Module.findExportByName("Wldap32.dll", "ldap_modify_ext_s")
+Interceptor.attach(ldap_modify_ext_s, {onLeave: function (args) {send("ldap_modify_ext_s");}});
+
+var ldap_modify_ext_sA = Module.findExportByName("Wldap32.dll", "ldap_modify_ext_sA")
+Interceptor.attach(ldap_modify_ext_sA, {onLeave: function (args) {send("ldap_modify_ext_sA");}});
+
+var ldap_modify_ext_sW = Module.findExportByName("Wldap32.dll", "ldap_modify_ext_sW")
+Interceptor.attach(ldap_modify_ext_sW, {onLeave: function (args) {send("ldap_modify_ext_sW");}});
+
+var ldap_modify_s = Module.findExportByName("Wldap32.dll", "ldap_modify_s")
+Interceptor.attach(ldap_modify_s, {onLeave: function (args) {send("ldap_modify_s");}});
+
+var ldap_modify_sA = Module.findExportByName("Wldap32.dll", "ldap_modify_sA")
+Interceptor.attach(ldap_modify_sA, {onLeave: function (args) {send("ldap_modify_sA");}});
+
+var ldap_modify_sW = Module.findExportByName("Wldap32.dll", "ldap_modify_sW")
+Interceptor.attach(ldap_modify_sW, {onLeave: function (args) {send("ldap_modify_sW");}});
+
+var ldap_modrdn = Module.findExportByName("Wldap32.dll", "ldap_modrdn")
+Interceptor.attach(ldap_modrdn, {onLeave: function (args) {send("ldap_modrdn");}});
+
+var ldap_modrdn2 = Module.findExportByName("Wldap32.dll", "ldap_modrdn2")
+Interceptor.attach(ldap_modrdn2, {onLeave: function (args) {send("ldap_modrdn2");}});
+
+var ldap_modrdn2A = Module.findExportByName("Wldap32.dll", "ldap_modrdn2A")
+Interceptor.attach(ldap_modrdn2A, {onLeave: function (args) {send("ldap_modrdn2A");}});
+
+var ldap_modrdn2W = Module.findExportByName("Wldap32.dll", "ldap_modrdn2W")
+Interceptor.attach(ldap_modrdn2W, {onLeave: function (args) {send("ldap_modrdn2W");}});
+
+var ldap_modrdn2_s = Module.findExportByName("Wldap32.dll", "ldap_modrdn2_s")
+Interceptor.attach(ldap_modrdn2_s, {onLeave: function (args) {send("ldap_modrdn2_s");}});
+
+var ldap_modrdn2_sA = Module.findExportByName("Wldap32.dll", "ldap_modrdn2_sA")
+Interceptor.attach(ldap_modrdn2_sA, {onLeave: function (args) {send("ldap_modrdn2_sA");}});
+
+var ldap_modrdn2_sW = Module.findExportByName("Wldap32.dll", "ldap_modrdn2_sW")
+Interceptor.attach(ldap_modrdn2_sW, {onLeave: function (args) {send("ldap_modrdn2_sW");}});
+
+var ldap_modrdnA = Module.findExportByName("Wldap32.dll", "ldap_modrdnA")
+Interceptor.attach(ldap_modrdnA, {onLeave: function (args) {send("ldap_modrdnA");}});
+
+var ldap_modrdnW = Module.findExportByName("Wldap32.dll", "ldap_modrdnW")
+Interceptor.attach(ldap_modrdnW, {onLeave: function (args) {send("ldap_modrdnW");}});
+
+var ldap_modrdn_s = Module.findExportByName("Wldap32.dll", "ldap_modrdn_s")
+Interceptor.attach(ldap_modrdn_s, {onLeave: function (args) {send("ldap_modrdn_s");}});
+
+var ldap_modrdn_sA = Module.findExportByName("Wldap32.dll", "ldap_modrdn_sA")
+Interceptor.attach(ldap_modrdn_sA, {onLeave: function (args) {send("ldap_modrdn_sA");}});
+
+var ldap_modrdn_sW = Module.findExportByName("Wldap32.dll", "ldap_modrdn_sW")
+Interceptor.attach(ldap_modrdn_sW, {onLeave: function (args) {send("ldap_modrdn_sW");}});
+
+var ldap_msgfree = Module.findExportByName("Wldap32.dll", "ldap_msgfree")
+Interceptor.attach(ldap_msgfree, {onLeave: function (args) {send("ldap_msgfree");}});
+
+var ldap_next_attribute = Module.findExportByName("Wldap32.dll", "ldap_next_attribute")
+Interceptor.attach(ldap_next_attribute, {onLeave: function (args) {send("ldap_next_attribute");}});
+
+var ldap_next_attributeA = Module.findExportByName("Wldap32.dll", "ldap_next_attributeA")
+Interceptor.attach(ldap_next_attributeA, {onLeave: function (args) {send("ldap_next_attributeA");}});
+
+var ldap_next_attributeW = Module.findExportByName("Wldap32.dll", "ldap_next_attributeW")
+Interceptor.attach(ldap_next_attributeW, {onLeave: function (args) {send("ldap_next_attributeW");}});
+
+var ldap_next_entry = Module.findExportByName("Wldap32.dll", "ldap_next_entry")
+Interceptor.attach(ldap_next_entry, {onLeave: function (args) {send("ldap_next_entry");}});
+
+var ldap_next_reference = Module.findExportByName("Wldap32.dll", "ldap_next_reference")
+Interceptor.attach(ldap_next_reference, {onLeave: function (args) {send("ldap_next_reference");}});
+
+var ldap_open = Module.findExportByName("Wldap32.dll", "ldap_open")
+Interceptor.attach(ldap_open, {onLeave: function (args) {send("ldap_open");}});
+
+var ldap_openA = Module.findExportByName("Wldap32.dll", "ldap_openA")
+Interceptor.attach(ldap_openA, {onLeave: function (args) {send("ldap_openA");}});
+
+var ldap_openW = Module.findExportByName("Wldap32.dll", "ldap_openW")
+Interceptor.attach(ldap_openW, {onLeave: function (args) {send("ldap_openW");}});
+
+var ldap_parse_extended_resultA = Module.findExportByName("Wldap32.dll", "ldap_parse_extended_resultA")
+Interceptor.attach(ldap_parse_extended_resultA, {onLeave: function (args) {send("ldap_parse_extended_resultA");}});
+
+var ldap_parse_extended_resultW = Module.findExportByName("Wldap32.dll", "ldap_parse_extended_resultW")
+Interceptor.attach(ldap_parse_extended_resultW, {onLeave: function (args) {send("ldap_parse_extended_resultW");}});
+
+var ldap_parse_page_control = Module.findExportByName("Wldap32.dll", "ldap_parse_page_control")
+Interceptor.attach(ldap_parse_page_control, {onLeave: function (args) {send("ldap_parse_page_control");}});
+
+var ldap_parse_page_controlA = Module.findExportByName("Wldap32.dll", "ldap_parse_page_controlA")
+Interceptor.attach(ldap_parse_page_controlA, {onLeave: function (args) {send("ldap_parse_page_controlA");}});
+
+var ldap_parse_page_controlW = Module.findExportByName("Wldap32.dll", "ldap_parse_page_controlW")
+Interceptor.attach(ldap_parse_page_controlW, {onLeave: function (args) {send("ldap_parse_page_controlW");}});
+
+var ldap_parse_reference = Module.findExportByName("Wldap32.dll", "ldap_parse_reference")
+Interceptor.attach(ldap_parse_reference, {onLeave: function (args) {send("ldap_parse_reference");}});
+
+var ldap_parse_referenceA = Module.findExportByName("Wldap32.dll", "ldap_parse_referenceA")
+Interceptor.attach(ldap_parse_referenceA, {onLeave: function (args) {send("ldap_parse_referenceA");}});
+
+var ldap_parse_referenceW = Module.findExportByName("Wldap32.dll", "ldap_parse_referenceW")
+Interceptor.attach(ldap_parse_referenceW, {onLeave: function (args) {send("ldap_parse_referenceW");}});
+
+var ldap_parse_result = Module.findExportByName("Wldap32.dll", "ldap_parse_result")
+Interceptor.attach(ldap_parse_result, {onLeave: function (args) {send("ldap_parse_result");}});
+
+var ldap_parse_resultA = Module.findExportByName("Wldap32.dll", "ldap_parse_resultA")
+Interceptor.attach(ldap_parse_resultA, {onLeave: function (args) {send("ldap_parse_resultA");}});
+
+var ldap_parse_resultW = Module.findExportByName("Wldap32.dll", "ldap_parse_resultW")
+Interceptor.attach(ldap_parse_resultW, {onLeave: function (args) {send("ldap_parse_resultW");}});
+
+var ldap_parse_sort_control = Module.findExportByName("Wldap32.dll", "ldap_parse_sort_control")
+Interceptor.attach(ldap_parse_sort_control, {onLeave: function (args) {send("ldap_parse_sort_control");}});
+
+var ldap_parse_sort_controlA = Module.findExportByName("Wldap32.dll", "ldap_parse_sort_controlA")
+Interceptor.attach(ldap_parse_sort_controlA, {onLeave: function (args) {send("ldap_parse_sort_controlA");}});
+
+var ldap_parse_sort_controlW = Module.findExportByName("Wldap32.dll", "ldap_parse_sort_controlW")
+Interceptor.attach(ldap_parse_sort_controlW, {onLeave: function (args) {send("ldap_parse_sort_controlW");}});
+
+var ldap_parse_vlv_controlA = Module.findExportByName("Wldap32.dll", "ldap_parse_vlv_controlA")
+Interceptor.attach(ldap_parse_vlv_controlA, {onLeave: function (args) {send("ldap_parse_vlv_controlA");}});
+
+var ldap_parse_vlv_controlW = Module.findExportByName("Wldap32.dll", "ldap_parse_vlv_controlW")
+Interceptor.attach(ldap_parse_vlv_controlW, {onLeave: function (args) {send("ldap_parse_vlv_controlW");}});
+
+var ldap_perror = Module.findExportByName("Wldap32.dll", "ldap_perror")
+Interceptor.attach(ldap_perror, {onLeave: function (args) {send("ldap_perror");}});
+
+var ldap_rename_ext = Module.findExportByName("Wldap32.dll", "ldap_rename_ext")
+Interceptor.attach(ldap_rename_ext, {onLeave: function (args) {send("ldap_rename_ext");}});
+
+var ldap_rename_extA = Module.findExportByName("Wldap32.dll", "ldap_rename_extA")
+Interceptor.attach(ldap_rename_extA, {onLeave: function (args) {send("ldap_rename_extA");}});
+
+var ldap_rename_extW = Module.findExportByName("Wldap32.dll", "ldap_rename_extW")
+Interceptor.attach(ldap_rename_extW, {onLeave: function (args) {send("ldap_rename_extW");}});
+
+var ldap_rename_ext_s = Module.findExportByName("Wldap32.dll", "ldap_rename_ext_s")
+Interceptor.attach(ldap_rename_ext_s, {onLeave: function (args) {send("ldap_rename_ext_s");}});
+
+var ldap_rename_ext_sA = Module.findExportByName("Wldap32.dll", "ldap_rename_ext_sA")
+Interceptor.attach(ldap_rename_ext_sA, {onLeave: function (args) {send("ldap_rename_ext_sA");}});
+
+var ldap_rename_ext_sW = Module.findExportByName("Wldap32.dll", "ldap_rename_ext_sW")
+Interceptor.attach(ldap_rename_ext_sW, {onLeave: function (args) {send("ldap_rename_ext_sW");}});
+
+var ldap_result = Module.findExportByName("Wldap32.dll", "ldap_result")
+Interceptor.attach(ldap_result, {onLeave: function (args) {send("ldap_result");}});
+
+var ldap_result2error = Module.findExportByName("Wldap32.dll", "ldap_result2error")
+Interceptor.attach(ldap_result2error, {onLeave: function (args) {send("ldap_result2error");}});
+
+var ldap_sasl_bindA = Module.findExportByName("Wldap32.dll", "ldap_sasl_bindA")
+Interceptor.attach(ldap_sasl_bindA, {onLeave: function (args) {send("ldap_sasl_bindA");}});
+
+var ldap_sasl_bindW = Module.findExportByName("Wldap32.dll", "ldap_sasl_bindW")
+Interceptor.attach(ldap_sasl_bindW, {onLeave: function (args) {send("ldap_sasl_bindW");}});
+
+var ldap_sasl_bind_sA = Module.findExportByName("Wldap32.dll", "ldap_sasl_bind_sA")
+Interceptor.attach(ldap_sasl_bind_sA, {onLeave: function (args) {send("ldap_sasl_bind_sA");}});
+
+var ldap_sasl_bind_sW = Module.findExportByName("Wldap32.dll", "ldap_sasl_bind_sW")
+Interceptor.attach(ldap_sasl_bind_sW, {onLeave: function (args) {send("ldap_sasl_bind_sW");}});
+
+var ldap_search = Module.findExportByName("Wldap32.dll", "ldap_search")
+Interceptor.attach(ldap_search, {onLeave: function (args) {send("ldap_search");}});
+
+var ldap_searchA = Module.findExportByName("Wldap32.dll", "ldap_searchA")
+Interceptor.attach(ldap_searchA, {onLeave: function (args) {send("ldap_searchA");}});
+
+var ldap_searchW = Module.findExportByName("Wldap32.dll", "ldap_searchW")
+Interceptor.attach(ldap_searchW, {onLeave: function (args) {send("ldap_searchW");}});
+
+var ldap_search_abandon_page = Module.findExportByName("Wldap32.dll", "ldap_search_abandon_page")
+Interceptor.attach(ldap_search_abandon_page, {onLeave: function (args) {send("ldap_search_abandon_page");}});
+
+var ldap_search_ext = Module.findExportByName("Wldap32.dll", "ldap_search_ext")
+Interceptor.attach(ldap_search_ext, {onLeave: function (args) {send("ldap_search_ext");}});
+
+var ldap_search_extA = Module.findExportByName("Wldap32.dll", "ldap_search_extA")
+Interceptor.attach(ldap_search_extA, {onLeave: function (args) {send("ldap_search_extA");}});
+
+var ldap_search_extW = Module.findExportByName("Wldap32.dll", "ldap_search_extW")
+Interceptor.attach(ldap_search_extW, {onLeave: function (args) {send("ldap_search_extW");}});
+
+var ldap_search_ext_s = Module.findExportByName("Wldap32.dll", "ldap_search_ext_s")
+Interceptor.attach(ldap_search_ext_s, {onLeave: function (args) {send("ldap_search_ext_s");}});
+
+var ldap_search_ext_sA = Module.findExportByName("Wldap32.dll", "ldap_search_ext_sA")
+Interceptor.attach(ldap_search_ext_sA, {onLeave: function (args) {send("ldap_search_ext_sA");}});
+
+var ldap_search_ext_sW = Module.findExportByName("Wldap32.dll", "ldap_search_ext_sW")
+Interceptor.attach(ldap_search_ext_sW, {onLeave: function (args) {send("ldap_search_ext_sW");}});
+
+var ldap_search_init_page = Module.findExportByName("Wldap32.dll", "ldap_search_init_page")
+Interceptor.attach(ldap_search_init_page, {onLeave: function (args) {send("ldap_search_init_page");}});
+
+var ldap_search_init_pageA = Module.findExportByName("Wldap32.dll", "ldap_search_init_pageA")
+Interceptor.attach(ldap_search_init_pageA, {onLeave: function (args) {send("ldap_search_init_pageA");}});
+
+var ldap_search_init_pageW = Module.findExportByName("Wldap32.dll", "ldap_search_init_pageW")
+Interceptor.attach(ldap_search_init_pageW, {onLeave: function (args) {send("ldap_search_init_pageW");}});
+
+var ldap_search_s = Module.findExportByName("Wldap32.dll", "ldap_search_s")
+Interceptor.attach(ldap_search_s, {onLeave: function (args) {send("ldap_search_s");}});
+
+var ldap_search_sA = Module.findExportByName("Wldap32.dll", "ldap_search_sA")
+Interceptor.attach(ldap_search_sA, {onLeave: function (args) {send("ldap_search_sA");}});
+
+var ldap_search_sW = Module.findExportByName("Wldap32.dll", "ldap_search_sW")
+Interceptor.attach(ldap_search_sW, {onLeave: function (args) {send("ldap_search_sW");}});
+
+var ldap_search_st = Module.findExportByName("Wldap32.dll", "ldap_search_st")
+Interceptor.attach(ldap_search_st, {onLeave: function (args) {send("ldap_search_st");}});
+
+var ldap_search_stA = Module.findExportByName("Wldap32.dll", "ldap_search_stA")
+Interceptor.attach(ldap_search_stA, {onLeave: function (args) {send("ldap_search_stA");}});
+
+var ldap_search_stW = Module.findExportByName("Wldap32.dll", "ldap_search_stW")
+Interceptor.attach(ldap_search_stW, {onLeave: function (args) {send("ldap_search_stW");}});
+
+var ldap_set_dbg_flags = Module.findExportByName("Wldap32.dll", "ldap_set_dbg_flags")
+Interceptor.attach(ldap_set_dbg_flags, {onLeave: function (args) {send("ldap_set_dbg_flags");}});
+
+var ldap_set_dbg_routine = Module.findExportByName("Wldap32.dll", "ldap_set_dbg_routine")
+Interceptor.attach(ldap_set_dbg_routine, {onLeave: function (args) {send("ldap_set_dbg_routine");}});
+
+var ldap_set_option = Module.findExportByName("Wldap32.dll", "ldap_set_option")
+Interceptor.attach(ldap_set_option, {onLeave: function (args) {send("ldap_set_option");}});
+
+var ldap_set_optionA = Module.findExportByName("Wldap32.dll", "ldap_set_optionA")
+Interceptor.attach(ldap_set_optionA, {onLeave: function (args) {send("ldap_set_optionA");}});
+
+var ldap_set_optionW = Module.findExportByName("Wldap32.dll", "ldap_set_optionW")
+Interceptor.attach(ldap_set_optionW, {onLeave: function (args) {send("ldap_set_optionW");}});
+
+var ldap_simple_bind = Module.findExportByName("Wldap32.dll", "ldap_simple_bind")
+Interceptor.attach(ldap_simple_bind, {onLeave: function (args) {send("ldap_simple_bind");}});
+
+var ldap_simple_bindA = Module.findExportByName("Wldap32.dll", "ldap_simple_bindA")
+Interceptor.attach(ldap_simple_bindA, {onLeave: function (args) {send("ldap_simple_bindA");}});
+
+var ldap_simple_bindW = Module.findExportByName("Wldap32.dll", "ldap_simple_bindW")
+Interceptor.attach(ldap_simple_bindW, {onLeave: function (args) {send("ldap_simple_bindW");}});
+
+var ldap_simple_bind_s = Module.findExportByName("Wldap32.dll", "ldap_simple_bind_s")
+Interceptor.attach(ldap_simple_bind_s, {onLeave: function (args) {send("ldap_simple_bind_s");}});
+
+var ldap_simple_bind_sA = Module.findExportByName("Wldap32.dll", "ldap_simple_bind_sA")
+Interceptor.attach(ldap_simple_bind_sA, {onLeave: function (args) {send("ldap_simple_bind_sA");}});
+
+var ldap_simple_bind_sW = Module.findExportByName("Wldap32.dll", "ldap_simple_bind_sW")
+Interceptor.attach(ldap_simple_bind_sW, {onLeave: function (args) {send("ldap_simple_bind_sW");}});
+
+var ldap_sslinit = Module.findExportByName("Wldap32.dll", "ldap_sslinit")
+Interceptor.attach(ldap_sslinit, {onLeave: function (args) {send("ldap_sslinit");}});
+
+var ldap_sslinitA = Module.findExportByName("Wldap32.dll", "ldap_sslinitA")
+Interceptor.attach(ldap_sslinitA, {onLeave: function (args) {send("ldap_sslinitA");}});
+
+var ldap_sslinitW = Module.findExportByName("Wldap32.dll", "ldap_sslinitW")
+Interceptor.attach(ldap_sslinitW, {onLeave: function (args) {send("ldap_sslinitW");}});
+
+var ldap_start_tls_sA = Module.findExportByName("Wldap32.dll", "ldap_start_tls_sA")
+Interceptor.attach(ldap_start_tls_sA, {onLeave: function (args) {send("ldap_start_tls_sA");}});
+
+var ldap_start_tls_sW = Module.findExportByName("Wldap32.dll", "ldap_start_tls_sW")
+Interceptor.attach(ldap_start_tls_sW, {onLeave: function (args) {send("ldap_start_tls_sW");}});
+
+var ldap_startup = Module.findExportByName("Wldap32.dll", "ldap_startup")
+Interceptor.attach(ldap_startup, {onLeave: function (args) {send("ldap_startup");}});
+
+var ldap_stop_tls_s = Module.findExportByName("Wldap32.dll", "ldap_stop_tls_s")
+Interceptor.attach(ldap_stop_tls_s, {onLeave: function (args) {send("ldap_stop_tls_s");}});
+
+var ldap_ufn2dn = Module.findExportByName("Wldap32.dll", "ldap_ufn2dn")
+Interceptor.attach(ldap_ufn2dn, {onLeave: function (args) {send("ldap_ufn2dn");}});
+
+var ldap_ufn2dnA = Module.findExportByName("Wldap32.dll", "ldap_ufn2dnA")
+Interceptor.attach(ldap_ufn2dnA, {onLeave: function (args) {send("ldap_ufn2dnA");}});
+
+var ldap_ufn2dnW = Module.findExportByName("Wldap32.dll", "ldap_ufn2dnW")
+Interceptor.attach(ldap_ufn2dnW, {onLeave: function (args) {send("ldap_ufn2dnW");}});
+
+var ldap_unbind = Module.findExportByName("Wldap32.dll", "ldap_unbind")
+Interceptor.attach(ldap_unbind, {onLeave: function (args) {send("ldap_unbind");}});
+
+var ldap_unbind_s = Module.findExportByName("Wldap32.dll", "ldap_unbind_s")
+Interceptor.attach(ldap_unbind_s, {onLeave: function (args) {send("ldap_unbind_s");}});
+
+var ldap_value_free = Module.findExportByName("Wldap32.dll", "ldap_value_free")
+Interceptor.attach(ldap_value_free, {onLeave: function (args) {send("ldap_value_free");}});
+
+var ldap_value_freeA = Module.findExportByName("Wldap32.dll", "ldap_value_freeA")
+Interceptor.attach(ldap_value_freeA, {onLeave: function (args) {send("ldap_value_freeA");}});
+
+var ldap_value_freeW = Module.findExportByName("Wldap32.dll", "ldap_value_freeW")
+Interceptor.attach(ldap_value_freeW, {onLeave: function (args) {send("ldap_value_freeW");}});
+
+var ldap_value_free_len = Module.findExportByName("Wldap32.dll", "ldap_value_free_len")
+Interceptor.attach(ldap_value_free_len, {onLeave: function (args) {send("ldap_value_free_len");}});
+

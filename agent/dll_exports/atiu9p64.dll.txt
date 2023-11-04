@@ -1,0 +1,12 @@
+var OpenAdapter = Module.findExportByName("atiu9p64.dll", "OpenAdapter")
+Interceptor.attach(OpenAdapter, {onLeave: function (args) {send("OpenAdapter");}});
+
+var XopOpenAdapter9 = Module.findExportByName("atiu9p64.dll", "XopOpenAdapter9")
+Interceptor.attach(XopOpenAdapter9, {onLeave: function (args) {send("XopOpenAdapter9");}});
+
+var XopOpenAdapters9 = Module.findExportByName("atiu9p64.dll", "XopOpenAdapters9")
+Interceptor.attach(XopOpenAdapters9, {onLeave: function (args) {send("XopOpenAdapters9");}});
+
+var XopQueryAdapters9 = Module.findExportByName("atiu9p64.dll", "XopQueryAdapters9")
+Interceptor.attach(XopQueryAdapters9, {onLeave: function (args) {send("XopQueryAdapters9");}});
+

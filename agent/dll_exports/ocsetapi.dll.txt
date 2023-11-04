@@ -1,0 +1,6 @@
+var CopyMspFilesToSystemMsiCache = Module.findExportByName("ocsetapi.dll", "CopyMspFilesToSystemMsiCache")
+Interceptor.attach(CopyMspFilesToSystemMsiCache, {onLeave: function (args) {send("CopyMspFilesToSystemMsiCache");}});
+
+var RemoveMspFilesFromSystemMsiCache = Module.findExportByName("ocsetapi.dll", "RemoveMspFilesFromSystemMsiCache")
+Interceptor.attach(RemoveMspFilesFromSystemMsiCache, {onLeave: function (args) {send("RemoveMspFilesFromSystemMsiCache");}});
+

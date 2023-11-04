@@ -1,0 +1,9 @@
+var EnumDependentServicesW = Module.findExportByName("api-ms-win-service-core-l1-1-1.dll", "EnumDependentServicesW")
+Interceptor.attach(EnumDependentServicesW, {onLeave: function (args) {send("EnumDependentServicesW");}});
+
+var EnumServicesStatusExW = Module.findExportByName("api-ms-win-service-core-l1-1-1.dll", "EnumServicesStatusExW")
+Interceptor.attach(EnumServicesStatusExW, {onLeave: function (args) {send("EnumServicesStatusExW");}});
+
+var QueryServiceDynamicInformation = Module.findExportByName("api-ms-win-service-core-l1-1-1.dll", "QueryServiceDynamicInformation")
+Interceptor.attach(QueryServiceDynamicInformation, {onLeave: function (args) {send("QueryServiceDynamicInformation");}});
+

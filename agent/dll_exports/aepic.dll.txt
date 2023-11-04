@@ -1,0 +1,36 @@
+var DllCanUnloadNow = Module.findExportByName("aepic.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("aepic.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var GetAppInventoryCore = Module.findExportByName("aepic.dll", "GetAppInventoryCore")
+Interceptor.attach(GetAppInventoryCore, {onLeave: function (args) {send("GetAppInventoryCore");}});
+
+var GetPrivacyLevel = Module.findExportByName("aepic.dll", "GetPrivacyLevel")
+Interceptor.attach(GetPrivacyLevel, {onLeave: function (args) {send("GetPrivacyLevel");}});
+
+var PicAmiClose = Module.findExportByName("aepic.dll", "PicAmiClose")
+Interceptor.attach(PicAmiClose, {onLeave: function (args) {send("PicAmiClose");}});
+
+var PicAmiInitialize = Module.findExportByName("aepic.dll", "PicAmiInitialize")
+Interceptor.attach(PicAmiInitialize, {onLeave: function (args) {send("PicAmiInitialize");}});
+
+var PicFreeFileInfo = Module.findExportByName("aepic.dll", "PicFreeFileInfo")
+Interceptor.attach(PicFreeFileInfo, {onLeave: function (args) {send("PicFreeFileInfo");}});
+
+var PicRetrieveFileInfo = Module.findExportByName("aepic.dll", "PicRetrieveFileInfo")
+Interceptor.attach(PicRetrieveFileInfo, {onLeave: function (args) {send("PicRetrieveFileInfo");}});
+
+var PicRetrieveFileInfoAppx = Module.findExportByName("aepic.dll", "PicRetrieveFileInfoAppx")
+Interceptor.attach(PicRetrieveFileInfoAppx, {onLeave: function (args) {send("PicRetrieveFileInfoAppx");}});
+
+var PicRetrieveFileLastRunTime = Module.findExportByName("aepic.dll", "PicRetrieveFileLastRunTime")
+Interceptor.attach(PicRetrieveFileLastRunTime, {onLeave: function (args) {send("PicRetrieveFileLastRunTime");}});
+
+var PicUpdateFileLastRunTime = Module.findExportByName("aepic.dll", "PicUpdateFileLastRunTime")
+Interceptor.attach(PicUpdateFileLastRunTime, {onLeave: function (args) {send("PicUpdateFileLastRunTime");}});
+
+var UpdateSoftwareInventoryTC2 = Module.findExportByName("aepic.dll", "UpdateSoftwareInventoryTC2")
+Interceptor.attach(UpdateSoftwareInventoryTC2, {onLeave: function (args) {send("UpdateSoftwareInventoryTC2");}});
+

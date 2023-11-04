@@ -1,0 +1,9 @@
+var PlugPlayServiceMain = Module.findExportByName("umpnpmgr.dll", "PlugPlayServiceMain")
+Interceptor.attach(PlugPlayServiceMain, {onLeave: function (args) {send("PlugPlayServiceMain");}});
+
+var ServiceMain = Module.findExportByName("umpnpmgr.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("umpnpmgr.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

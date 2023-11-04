@@ -1,0 +1,36 @@
+var AreDvdCodecsEnabled = Module.findExportByName("CompPkgSup.dll", "AreDvdCodecsEnabled")
+Interceptor.attach(AreDvdCodecsEnabled, {onLeave: function (args) {send("AreDvdCodecsEnabled");}});
+
+var GetMediaComponentPackageInfo = Module.findExportByName("CompPkgSup.dll", "GetMediaComponentPackageInfo")
+Interceptor.attach(GetMediaComponentPackageInfo, {onLeave: function (args) {send("GetMediaComponentPackageInfo");}});
+
+var GetMediaComponentPackageInfoInternal = Module.findExportByName("CompPkgSup.dll", "GetMediaComponentPackageInfoInternal")
+Interceptor.attach(GetMediaComponentPackageInfoInternal, {onLeave: function (args) {send("GetMediaComponentPackageInfoInternal");}});
+
+var GetMediaExtensionCommunicationFactory = Module.findExportByName("CompPkgSup.dll", "GetMediaExtensionCommunicationFactory")
+Interceptor.attach(GetMediaExtensionCommunicationFactory, {onLeave: function (args) {send("GetMediaExtensionCommunicationFactory");}});
+
+var GetNetworkRequestCount = Module.findExportByName("CompPkgSup.dll", "GetNetworkRequestCount")
+Interceptor.attach(GetNetworkRequestCount, {onLeave: function (args) {send("GetNetworkRequestCount");}});
+
+var GetServerForPMP = Module.findExportByName("CompPkgSup.dll", "GetServerForPMP")
+Interceptor.attach(GetServerForPMP, {onLeave: function (args) {send("GetServerForPMP");}});
+
+var GetSystemNativeProcessorSignature = Module.findExportByName("CompPkgSup.dll", "GetSystemNativeProcessorSignature")
+Interceptor.attach(GetSystemNativeProcessorSignature, {onLeave: function (args) {send("GetSystemNativeProcessorSignature");}});
+
+var InstantiateComponentFromPackage = Module.findExportByName("CompPkgSup.dll", "InstantiateComponentFromPackage")
+Interceptor.attach(InstantiateComponentFromPackage, {onLeave: function (args) {send("InstantiateComponentFromPackage");}});
+
+var IsMediaBehaviorEnabled = Module.findExportByName("CompPkgSup.dll", "IsMediaBehaviorEnabled")
+Interceptor.attach(IsMediaBehaviorEnabled, {onLeave: function (args) {send("IsMediaBehaviorEnabled");}});
+
+var RegisterServerForPMP = Module.findExportByName("CompPkgSup.dll", "RegisterServerForPMP")
+Interceptor.attach(RegisterServerForPMP, {onLeave: function (args) {send("RegisterServerForPMP");}});
+
+var RequireNetworkDuringMediaTaskCompletion = Module.findExportByName("CompPkgSup.dll", "RequireNetworkDuringMediaTaskCompletion")
+Interceptor.attach(RequireNetworkDuringMediaTaskCompletion, {onLeave: function (args) {send("RequireNetworkDuringMediaTaskCompletion");}});
+
+var UnregisterServerForPMP = Module.findExportByName("CompPkgSup.dll", "UnregisterServerForPMP")
+Interceptor.attach(UnregisterServerForPMP, {onLeave: function (args) {send("UnregisterServerForPMP");}});
+

@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("wlansvc.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wlansvc.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("wlansvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+
+var VsIeProviderGetFunctionTable = Module.findExportByName("wlansvc.dll", "VsIeProviderGetFunctionTable")
+Interceptor.attach(VsIeProviderGetFunctionTable, {onLeave: function (args) {send("VsIeProviderGetFunctionTable");}});
+
+var WLNotifyOnLogoff = Module.findExportByName("wlansvc.dll", "WLNotifyOnLogoff")
+Interceptor.attach(WLNotifyOnLogoff, {onLeave: function (args) {send("WLNotifyOnLogoff");}});
+
+var WLNotifyOnLogon = Module.findExportByName("wlansvc.dll", "WLNotifyOnLogon")
+Interceptor.attach(WLNotifyOnLogon, {onLeave: function (args) {send("WLNotifyOnLogon");}});
+
+var WlanSvcMain = Module.findExportByName("wlansvc.dll", "WlanSvcMain")
+Interceptor.attach(WlanSvcMain, {onLeave: function (args) {send("WlanSvcMain");}});
+

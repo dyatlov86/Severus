@@ -1,0 +1,15 @@
+var CreateMergedTraceFile = Module.findExportByName("KernelTraceControl.dll", "CreateMergedTraceFile")
+Interceptor.attach(CreateMergedTraceFile, {onLeave: function (args) {send("CreateMergedTraceFile");}});
+
+var DllCanUnloadNow = Module.findExportByName("KernelTraceControl.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var StartHeapTrace = Module.findExportByName("KernelTraceControl.dll", "StartHeapTrace")
+Interceptor.attach(StartHeapTrace, {onLeave: function (args) {send("StartHeapTrace");}});
+
+var StartKernelTrace = Module.findExportByName("KernelTraceControl.dll", "StartKernelTrace")
+Interceptor.attach(StartKernelTrace, {onLeave: function (args) {send("StartKernelTrace");}});
+
+var UpdateHeapTrace = Module.findExportByName("KernelTraceControl.dll", "UpdateHeapTrace")
+Interceptor.attach(UpdateHeapTrace, {onLeave: function (args) {send("UpdateHeapTrace");}});
+

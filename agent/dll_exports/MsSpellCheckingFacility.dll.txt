@@ -1,0 +1,36 @@
+var DllCanUnloadNow = Module.findExportByName("MsSpellCheckingFacility.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("MsSpellCheckingFacility.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("MsSpellCheckingFacility.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("MsSpellCheckingFacility.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("MsSpellCheckingFacility.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var SpellerCheck = Module.findExportByName("MsSpellCheckingFacility.dll", "SpellerCheck")
+Interceptor.attach(SpellerCheck, {onLeave: function (args) {send("SpellerCheck");}});
+
+var SpellerCloseLex = Module.findExportByName("MsSpellCheckingFacility.dll", "SpellerCloseLex")
+Interceptor.attach(SpellerCloseLex, {onLeave: function (args) {send("SpellerCloseLex");}});
+
+var SpellerGetOptions = Module.findExportByName("MsSpellCheckingFacility.dll", "SpellerGetOptions")
+Interceptor.attach(SpellerGetOptions, {onLeave: function (args) {send("SpellerGetOptions");}});
+
+var SpellerInit = Module.findExportByName("MsSpellCheckingFacility.dll", "SpellerInit")
+Interceptor.attach(SpellerInit, {onLeave: function (args) {send("SpellerInit");}});
+
+var SpellerOpenLex = Module.findExportByName("MsSpellCheckingFacility.dll", "SpellerOpenLex")
+Interceptor.attach(SpellerOpenLex, {onLeave: function (args) {send("SpellerOpenLex");}});
+
+var SpellerSetOptions = Module.findExportByName("MsSpellCheckingFacility.dll", "SpellerSetOptions")
+Interceptor.attach(SpellerSetOptions, {onLeave: function (args) {send("SpellerSetOptions");}});
+
+var SpellerTerminate = Module.findExportByName("MsSpellCheckingFacility.dll", "SpellerTerminate")
+Interceptor.attach(SpellerTerminate, {onLeave: function (args) {send("SpellerTerminate");}});
+

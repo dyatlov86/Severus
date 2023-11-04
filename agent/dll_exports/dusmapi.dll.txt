@@ -1,0 +1,81 @@
+var DusmEnumConnectionList = Module.findExportByName("dusmapi.dll", "DusmEnumConnectionList")
+Interceptor.attach(DusmEnumConnectionList, {onLeave: function (args) {send("DusmEnumConnectionList");}});
+
+var DusmEnumProfileList = Module.findExportByName("dusmapi.dll", "DusmEnumProfileList")
+Interceptor.attach(DusmEnumProfileList, {onLeave: function (args) {send("DusmEnumProfileList");}});
+
+var DusmFlushCostCache = Module.findExportByName("dusmapi.dll", "DusmFlushCostCache")
+Interceptor.attach(DusmFlushCostCache, {onLeave: function (args) {send("DusmFlushCostCache");}});
+
+var DusmFree = Module.findExportByName("dusmapi.dll", "DusmFree")
+Interceptor.attach(DusmFree, {onLeave: function (args) {send("DusmFree");}});
+
+var DusmGetAttributedNetworkUsage = Module.findExportByName("dusmapi.dll", "DusmGetAttributedNetworkUsage")
+Interceptor.attach(DusmGetAttributedNetworkUsage, {onLeave: function (args) {send("DusmGetAttributedNetworkUsage");}});
+
+var DusmGetConnectionListNetworkUsage = Module.findExportByName("dusmapi.dll", "DusmGetConnectionListNetworkUsage")
+Interceptor.attach(DusmGetConnectionListNetworkUsage, {onLeave: function (args) {send("DusmGetConnectionListNetworkUsage");}});
+
+var DusmGetNetworkUsage = Module.findExportByName("dusmapi.dll", "DusmGetNetworkUsage")
+Interceptor.attach(DusmGetNetworkUsage, {onLeave: function (args) {send("DusmGetNetworkUsage");}});
+
+var DusmGetProviderNetworkUsage = Module.findExportByName("dusmapi.dll", "DusmGetProviderNetworkUsage")
+Interceptor.attach(DusmGetProviderNetworkUsage, {onLeave: function (args) {send("DusmGetProviderNetworkUsage");}});
+
+var DusmQueryBackgroundRestriction = Module.findExportByName("dusmapi.dll", "DusmQueryBackgroundRestriction")
+Interceptor.attach(DusmQueryBackgroundRestriction, {onLeave: function (args) {send("DusmQueryBackgroundRestriction");}});
+
+var DusmQueryConnectionProperties = Module.findExportByName("dusmapi.dll", "DusmQueryConnectionProperties")
+Interceptor.attach(DusmQueryConnectionProperties, {onLeave: function (args) {send("DusmQueryConnectionProperties");}});
+
+var DusmQueryCost = Module.findExportByName("dusmapi.dll", "DusmQueryCost")
+Interceptor.attach(DusmQueryCost, {onLeave: function (args) {send("DusmQueryCost");}});
+
+var DusmQueryDataPlan = Module.findExportByName("dusmapi.dll", "DusmQueryDataPlan")
+Interceptor.attach(DusmQueryDataPlan, {onLeave: function (args) {send("DusmQueryDataPlan");}});
+
+var DusmQueryGlobalDpuState = Module.findExportByName("dusmapi.dll", "DusmQueryGlobalDpuState")
+Interceptor.attach(DusmQueryGlobalDpuState, {onLeave: function (args) {send("DusmQueryGlobalDpuState");}});
+
+var DusmQueryOperatorCost = Module.findExportByName("dusmapi.dll", "DusmQueryOperatorCost")
+Interceptor.attach(DusmQueryOperatorCost, {onLeave: function (args) {send("DusmQueryOperatorCost");}});
+
+var DusmQueryOperatorDataPlan = Module.findExportByName("dusmapi.dll", "DusmQueryOperatorDataPlan")
+Interceptor.attach(DusmQueryOperatorDataPlan, {onLeave: function (args) {send("DusmQueryOperatorDataPlan");}});
+
+var DusmQuerySource = Module.findExportByName("dusmapi.dll", "DusmQuerySource")
+Interceptor.attach(DusmQuerySource, {onLeave: function (args) {send("DusmQuerySource");}});
+
+var DusmQueryUserCost = Module.findExportByName("dusmapi.dll", "DusmQueryUserCost")
+Interceptor.attach(DusmQueryUserCost, {onLeave: function (args) {send("DusmQueryUserCost");}});
+
+var DusmQueryUserDataPlan = Module.findExportByName("dusmapi.dll", "DusmQueryUserDataPlan")
+Interceptor.attach(DusmQueryUserDataPlan, {onLeave: function (args) {send("DusmQueryUserDataPlan");}});
+
+var DusmResetNetworkUsage = Module.findExportByName("dusmapi.dll", "DusmResetNetworkUsage")
+Interceptor.attach(DusmResetNetworkUsage, {onLeave: function (args) {send("DusmResetNetworkUsage");}});
+
+var DusmSetAttributionMapping = Module.findExportByName("dusmapi.dll", "DusmSetAttributionMapping")
+Interceptor.attach(DusmSetAttributionMapping, {onLeave: function (args) {send("DusmSetAttributionMapping");}});
+
+var DusmSetBackgroundRestriction = Module.findExportByName("dusmapi.dll", "DusmSetBackgroundRestriction")
+Interceptor.attach(DusmSetBackgroundRestriction, {onLeave: function (args) {send("DusmSetBackgroundRestriction");}});
+
+var DusmSetOperatorCost = Module.findExportByName("dusmapi.dll", "DusmSetOperatorCost")
+Interceptor.attach(DusmSetOperatorCost, {onLeave: function (args) {send("DusmSetOperatorCost");}});
+
+var DusmSetOperatorDataPlan = Module.findExportByName("dusmapi.dll", "DusmSetOperatorDataPlan")
+Interceptor.attach(DusmSetOperatorDataPlan, {onLeave: function (args) {send("DusmSetOperatorDataPlan");}});
+
+var DusmSetProperty = Module.findExportByName("dusmapi.dll", "DusmSetProperty")
+Interceptor.attach(DusmSetProperty, {onLeave: function (args) {send("DusmSetProperty");}});
+
+var DusmSetSource = Module.findExportByName("dusmapi.dll", "DusmSetSource")
+Interceptor.attach(DusmSetSource, {onLeave: function (args) {send("DusmSetSource");}});
+
+var DusmSetUserCost = Module.findExportByName("dusmapi.dll", "DusmSetUserCost")
+Interceptor.attach(DusmSetUserCost, {onLeave: function (args) {send("DusmSetUserCost");}});
+
+var DusmSetUserDataPlan = Module.findExportByName("dusmapi.dll", "DusmSetUserDataPlan")
+Interceptor.attach(DusmSetUserDataPlan, {onLeave: function (args) {send("DusmSetUserDataPlan");}});
+

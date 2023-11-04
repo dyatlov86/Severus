@@ -1,0 +1,189 @@
+var CloseFindStorage = Module.findExportByName("StorageUsage.dll", "CloseFindStorage")
+Interceptor.attach(CloseFindStorage, {onLeave: function (args) {send("CloseFindStorage");}});
+
+var CloseFindStorageSearch = Module.findExportByName("StorageUsage.dll", "CloseFindStorageSearch")
+Interceptor.attach(CloseFindStorageSearch, {onLeave: function (args) {send("CloseFindStorageSearch");}});
+
+var DismountVolume = Module.findExportByName("StorageUsage.dll", "DismountVolume")
+Interceptor.attach(DismountVolume, {onLeave: function (args) {send("DismountVolume");}});
+
+var DllCanUnloadNow = Module.findExportByName("StorageUsage.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("StorageUsage.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("StorageUsage.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("StorageUsage.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ExecuteDehydrateUserFiles = Module.findExportByName("StorageUsage.dll", "ExecuteDehydrateUserFiles")
+Interceptor.attach(ExecuteDehydrateUserFiles, {onLeave: function (args) {send("ExecuteDehydrateUserFiles");}});
+
+var ExecuteRemoveUserFiles = Module.findExportByName("StorageUsage.dll", "ExecuteRemoveUserFiles")
+Interceptor.attach(ExecuteRemoveUserFiles, {onLeave: function (args) {send("ExecuteRemoveUserFiles");}});
+
+var FinalizeVolume = Module.findExportByName("StorageUsage.dll", "FinalizeVolume")
+Interceptor.attach(FinalizeVolume, {onLeave: function (args) {send("FinalizeVolume");}});
+
+var FindNextStorageType = Module.findExportByName("StorageUsage.dll", "FindNextStorageType")
+Interceptor.attach(FindNextStorageType, {onLeave: function (args) {send("FindNextStorageType");}});
+
+var FindNextStorageTypeEx = Module.findExportByName("StorageUsage.dll", "FindNextStorageTypeEx")
+Interceptor.attach(FindNextStorageTypeEx, {onLeave: function (args) {send("FindNextStorageTypeEx");}});
+
+var FindNextStorageTypeExAsync = Module.findExportByName("StorageUsage.dll", "FindNextStorageTypeExAsync")
+Interceptor.attach(FindNextStorageTypeExAsync, {onLeave: function (args) {send("FindNextStorageTypeExAsync");}});
+
+var FormatVolume = Module.findExportByName("StorageUsage.dll", "FormatVolume")
+Interceptor.attach(FormatVolume, {onLeave: function (args) {send("FormatVolume");}});
+
+var GetAppSize = Module.findExportByName("StorageUsage.dll", "GetAppSize")
+Interceptor.attach(GetAppSize, {onLeave: function (args) {send("GetAppSize");}});
+
+var GetLastFailedSaveLocationPath = Module.findExportByName("StorageUsage.dll", "GetLastFailedSaveLocationPath")
+Interceptor.attach(GetLastFailedSaveLocationPath, {onLeave: function (args) {send("GetLastFailedSaveLocationPath");}});
+
+var GetSmartAttributes = Module.findExportByName("StorageUsage.dll", "GetSmartAttributes")
+Interceptor.attach(GetSmartAttributes, {onLeave: function (args) {send("GetSmartAttributes");}});
+
+var GetStorageDebugInfo = Module.findExportByName("StorageUsage.dll", "GetStorageDebugInfo")
+Interceptor.attach(GetStorageDebugInfo, {onLeave: function (args) {send("GetStorageDebugInfo");}});
+
+var GetStorageDeviceInfo = Module.findExportByName("StorageUsage.dll", "GetStorageDeviceInfo")
+Interceptor.attach(GetStorageDeviceInfo, {onLeave: function (args) {send("GetStorageDeviceInfo");}});
+
+var GetStorageDeviceLowDiskState = Module.findExportByName("StorageUsage.dll", "GetStorageDeviceLowDiskState")
+Interceptor.attach(GetStorageDeviceLowDiskState, {onLeave: function (args) {send("GetStorageDeviceLowDiskState");}});
+
+var GetStorageDeviceLowDiskState2 = Module.findExportByName("StorageUsage.dll", "GetStorageDeviceLowDiskState2")
+Interceptor.attach(GetStorageDeviceLowDiskState2, {onLeave: function (args) {send("GetStorageDeviceLowDiskState2");}});
+
+var GetStorageDeviceSize = Module.findExportByName("StorageUsage.dll", "GetStorageDeviceSize")
+Interceptor.attach(GetStorageDeviceSize, {onLeave: function (args) {send("GetStorageDeviceSize");}});
+
+var GetStorageExecutionInfo = Module.findExportByName("StorageUsage.dll", "GetStorageExecutionInfo")
+Interceptor.attach(GetStorageExecutionInfo, {onLeave: function (args) {send("GetStorageExecutionInfo");}});
+
+var GetStorageInstanceCount = Module.findExportByName("StorageUsage.dll", "GetStorageInstanceCount")
+Interceptor.attach(GetStorageInstanceCount, {onLeave: function (args) {send("GetStorageInstanceCount");}});
+
+var GetStorageInstanceCountForMaps = Module.findExportByName("StorageUsage.dll", "GetStorageInstanceCountForMaps")
+Interceptor.attach(GetStorageInstanceCountForMaps, {onLeave: function (args) {send("GetStorageInstanceCountForMaps");}});
+
+var GetStoragePoliciesLastTriggerTime = Module.findExportByName("StorageUsage.dll", "GetStoragePoliciesLastTriggerTime")
+Interceptor.attach(GetStoragePoliciesLastTriggerTime, {onLeave: function (args) {send("GetStoragePoliciesLastTriggerTime");}});
+
+var GetStoragePolicyDefaultValue = Module.findExportByName("StorageUsage.dll", "GetStoragePolicyDefaultValue")
+Interceptor.attach(GetStoragePolicyDefaultValue, {onLeave: function (args) {send("GetStoragePolicyDefaultValue");}});
+
+var GetStoragePolicySettings = Module.findExportByName("StorageUsage.dll", "GetStoragePolicySettings")
+Interceptor.attach(GetStoragePolicySettings, {onLeave: function (args) {send("GetStoragePolicySettings");}});
+
+var GetStorageSettings = Module.findExportByName("StorageUsage.dll", "GetStorageSettings")
+Interceptor.attach(GetStorageSettings, {onLeave: function (args) {send("GetStorageSettings");}});
+
+var GetStorageStateName = Module.findExportByName("StorageUsage.dll", "GetStorageStateName")
+Interceptor.attach(GetStorageStateName, {onLeave: function (args) {send("GetStorageStateName");}});
+
+var GetStorageUsageInfo = Module.findExportByName("StorageUsage.dll", "GetStorageUsageInfo")
+Interceptor.attach(GetStorageUsageInfo, {onLeave: function (args) {send("GetStorageUsageInfo");}});
+
+var GetSystemFilesInfo = Module.findExportByName("StorageUsage.dll", "GetSystemFilesInfo")
+Interceptor.attach(GetSystemFilesInfo, {onLeave: function (args) {send("GetSystemFilesInfo");}});
+
+var GetTopFolders = Module.findExportByName("StorageUsage.dll", "GetTopFolders")
+Interceptor.attach(GetTopFolders, {onLeave: function (args) {send("GetTopFolders");}});
+
+var MIDL_user_allocate = Module.findExportByName("StorageUsage.dll", "MIDL_user_allocate")
+Interceptor.attach(MIDL_user_allocate, {onLeave: function (args) {send("MIDL_user_allocate");}});
+
+var MIDL_user_free = Module.findExportByName("StorageUsage.dll", "MIDL_user_free")
+Interceptor.attach(MIDL_user_free, {onLeave: function (args) {send("MIDL_user_free");}});
+
+var MountVolume = Module.findExportByName("StorageUsage.dll", "MountVolume")
+Interceptor.attach(MountVolume, {onLeave: function (args) {send("MountVolume");}});
+
+var MoveFileInheritSecurityW = Module.findExportByName("StorageUsage.dll", "MoveFileInheritSecurityW")
+Interceptor.attach(MoveFileInheritSecurityW, {onLeave: function (args) {send("MoveFileInheritSecurityW");}});
+
+var OpenStorageTypeSearch = Module.findExportByName("StorageUsage.dll", "OpenStorageTypeSearch")
+Interceptor.attach(OpenStorageTypeSearch, {onLeave: function (args) {send("OpenStorageTypeSearch");}});
+
+var PredictStorageHealth = Module.findExportByName("StorageUsage.dll", "PredictStorageHealth")
+Interceptor.attach(PredictStorageHealth, {onLeave: function (args) {send("PredictStorageHealth");}});
+
+var ProcessStorageCardChange = Module.findExportByName("StorageUsage.dll", "ProcessStorageCardChange")
+Interceptor.attach(ProcessStorageCardChange, {onLeave: function (args) {send("ProcessStorageCardChange");}});
+
+var ProvisionForAppInstall = Module.findExportByName("StorageUsage.dll", "ProvisionForAppInstall")
+Interceptor.attach(ProvisionForAppInstall, {onLeave: function (args) {send("ProvisionForAppInstall");}});
+
+var QueryStorageReserveEx = Module.findExportByName("StorageUsage.dll", "QueryStorageReserveEx")
+Interceptor.attach(QueryStorageReserveEx, {onLeave: function (args) {send("QueryStorageReserveEx");}});
+
+var RebootToFlashingMode = Module.findExportByName("StorageUsage.dll", "RebootToFlashingMode")
+Interceptor.attach(RebootToFlashingMode, {onLeave: function (args) {send("RebootToFlashingMode");}});
+
+var RebootToUosFlashing = Module.findExportByName("StorageUsage.dll", "RebootToUosFlashing")
+Interceptor.attach(RebootToUosFlashing, {onLeave: function (args) {send("RebootToUosFlashing");}});
+
+var ResetPhoneEx = Module.findExportByName("StorageUsage.dll", "ResetPhoneEx")
+Interceptor.attach(ResetPhoneEx, {onLeave: function (args) {send("ResetPhoneEx");}});
+
+var ResetStoragePolicySettings = Module.findExportByName("StorageUsage.dll", "ResetStoragePolicySettings")
+Interceptor.attach(ResetStoragePolicySettings, {onLeave: function (args) {send("ResetStoragePolicySettings");}});
+
+var RunStorageGroveler = Module.findExportByName("StorageUsage.dll", "RunStorageGroveler")
+Interceptor.attach(RunStorageGroveler, {onLeave: function (args) {send("RunStorageGroveler");}});
+
+var ScanVolume = Module.findExportByName("StorageUsage.dll", "ScanVolume")
+Interceptor.attach(ScanVolume, {onLeave: function (args) {send("ScanVolume");}});
+
+var SelectStorageVolume = Module.findExportByName("StorageUsage.dll", "SelectStorageVolume")
+Interceptor.attach(SelectStorageVolume, {onLeave: function (args) {send("SelectStorageVolume");}});
+
+var SelectStorageVolumeEx = Module.findExportByName("StorageUsage.dll", "SelectStorageVolumeEx")
+Interceptor.attach(SelectStorageVolumeEx, {onLeave: function (args) {send("SelectStorageVolumeEx");}});
+
+var SetStoragePoliciesLastTriggerTime = Module.findExportByName("StorageUsage.dll", "SetStoragePoliciesLastTriggerTime")
+Interceptor.attach(SetStoragePoliciesLastTriggerTime, {onLeave: function (args) {send("SetStoragePoliciesLastTriggerTime");}});
+
+var SetStoragePolicySettings = Module.findExportByName("StorageUsage.dll", "SetStoragePolicySettings")
+Interceptor.attach(SetStoragePolicySettings, {onLeave: function (args) {send("SetStoragePolicySettings");}});
+
+var SetStorageSettings = Module.findExportByName("StorageUsage.dll", "SetStorageSettings")
+Interceptor.attach(SetStorageSettings, {onLeave: function (args) {send("SetStorageSettings");}});
+
+var SilentCleanupTaskGetEnabledState = Module.findExportByName("StorageUsage.dll", "SilentCleanupTaskGetEnabledState")
+Interceptor.attach(SilentCleanupTaskGetEnabledState, {onLeave: function (args) {send("SilentCleanupTaskGetEnabledState");}});
+
+var SilentCleanupTaskSetEnabledState = Module.findExportByName("StorageUsage.dll", "SilentCleanupTaskSetEnabledState")
+Interceptor.attach(SilentCleanupTaskSetEnabledState, {onLeave: function (args) {send("SilentCleanupTaskSetEnabledState");}});
+
+var TriggerBlinkCleanup = Module.findExportByName("StorageUsage.dll", "TriggerBlinkCleanup")
+Interceptor.attach(TriggerBlinkCleanup, {onLeave: function (args) {send("TriggerBlinkCleanup");}});
+
+var TriggerDownloadsCleanup = Module.findExportByName("StorageUsage.dll", "TriggerDownloadsCleanup")
+Interceptor.attach(TriggerDownloadsCleanup, {onLeave: function (args) {send("TriggerDownloadsCleanup");}});
+
+var TriggerLowStorageNotification = Module.findExportByName("StorageUsage.dll", "TriggerLowStorageNotification")
+Interceptor.attach(TriggerLowStorageNotification, {onLeave: function (args) {send("TriggerLowStorageNotification");}});
+
+var TriggerStorageCleanup = Module.findExportByName("StorageUsage.dll", "TriggerStorageCleanup")
+Interceptor.attach(TriggerStorageCleanup, {onLeave: function (args) {send("TriggerStorageCleanup");}});
+
+var TriggerStorageOptimization = Module.findExportByName("StorageUsage.dll", "TriggerStorageOptimization")
+Interceptor.attach(TriggerStorageOptimization, {onLeave: function (args) {send("TriggerStorageOptimization");}});
+
+var TriggerStoragePolicies = Module.findExportByName("StorageUsage.dll", "TriggerStoragePolicies")
+Interceptor.attach(TriggerStoragePolicies, {onLeave: function (args) {send("TriggerStoragePolicies");}});
+
+var TriggerStorageTypeRefresh = Module.findExportByName("StorageUsage.dll", "TriggerStorageTypeRefresh")
+Interceptor.attach(TriggerStorageTypeRefresh, {onLeave: function (args) {send("TriggerStorageTypeRefresh");}});
+
+var TriggerTempFileCleanup = Module.findExportByName("StorageUsage.dll", "TriggerTempFileCleanup")
+Interceptor.attach(TriggerTempFileCleanup, {onLeave: function (args) {send("TriggerTempFileCleanup");}});
+

@@ -1,0 +1,1647 @@
+var BindMoniker = Module.findExportByName("ole32.dll", "BindMoniker")
+Interceptor.attach(BindMoniker, {onLeave: function (args) {send("BindMoniker");}});
+
+var CLIPFORMAT_UserFree = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserFree")
+Interceptor.attach(CLIPFORMAT_UserFree, {onLeave: function (args) {send("CLIPFORMAT_UserFree");}});
+
+var CLIPFORMAT_UserFree64 = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserFree64")
+Interceptor.attach(CLIPFORMAT_UserFree64, {onLeave: function (args) {send("CLIPFORMAT_UserFree64");}});
+
+var CLIPFORMAT_UserFreeExt = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserFreeExt")
+Interceptor.attach(CLIPFORMAT_UserFreeExt, {onLeave: function (args) {send("CLIPFORMAT_UserFreeExt");}});
+
+var CLIPFORMAT_UserMarshal = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserMarshal")
+Interceptor.attach(CLIPFORMAT_UserMarshal, {onLeave: function (args) {send("CLIPFORMAT_UserMarshal");}});
+
+var CLIPFORMAT_UserMarshal64 = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserMarshal64")
+Interceptor.attach(CLIPFORMAT_UserMarshal64, {onLeave: function (args) {send("CLIPFORMAT_UserMarshal64");}});
+
+var CLIPFORMAT_UserMarshalExt = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserMarshalExt")
+Interceptor.attach(CLIPFORMAT_UserMarshalExt, {onLeave: function (args) {send("CLIPFORMAT_UserMarshalExt");}});
+
+var CLIPFORMAT_UserSize = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserSize")
+Interceptor.attach(CLIPFORMAT_UserSize, {onLeave: function (args) {send("CLIPFORMAT_UserSize");}});
+
+var CLIPFORMAT_UserSize64 = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserSize64")
+Interceptor.attach(CLIPFORMAT_UserSize64, {onLeave: function (args) {send("CLIPFORMAT_UserSize64");}});
+
+var CLIPFORMAT_UserSizeExt = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserSizeExt")
+Interceptor.attach(CLIPFORMAT_UserSizeExt, {onLeave: function (args) {send("CLIPFORMAT_UserSizeExt");}});
+
+var CLIPFORMAT_UserUnmarshal = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserUnmarshal")
+Interceptor.attach(CLIPFORMAT_UserUnmarshal, {onLeave: function (args) {send("CLIPFORMAT_UserUnmarshal");}});
+
+var CLIPFORMAT_UserUnmarshal64 = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserUnmarshal64")
+Interceptor.attach(CLIPFORMAT_UserUnmarshal64, {onLeave: function (args) {send("CLIPFORMAT_UserUnmarshal64");}});
+
+var CLIPFORMAT_UserUnmarshalExt = Module.findExportByName("ole32.dll", "CLIPFORMAT_UserUnmarshalExt")
+Interceptor.attach(CLIPFORMAT_UserUnmarshalExt, {onLeave: function (args) {send("CLIPFORMAT_UserUnmarshalExt");}});
+
+var CLSIDFromOle1Class = Module.findExportByName("ole32.dll", "CLSIDFromOle1Class")
+Interceptor.attach(CLSIDFromOle1Class, {onLeave: function (args) {send("CLSIDFromOle1Class");}});
+
+var CLSIDFromProgID = Module.findExportByName("ole32.dll", "CLSIDFromProgID")
+Interceptor.attach(CLSIDFromProgID, {onLeave: function (args) {send("CLSIDFromProgID");}});
+
+var CLSIDFromProgIDEx = Module.findExportByName("ole32.dll", "CLSIDFromProgIDEx")
+Interceptor.attach(CLSIDFromProgIDEx, {onLeave: function (args) {send("CLSIDFromProgIDEx");}});
+
+var CLSIDFromString = Module.findExportByName("ole32.dll", "CLSIDFromString")
+Interceptor.attach(CLSIDFromString, {onLeave: function (args) {send("CLSIDFromString");}});
+
+var CStdAsyncStubBuffer2_Connect = Module.findExportByName("ole32.dll", "CStdAsyncStubBuffer2_Connect")
+Interceptor.attach(CStdAsyncStubBuffer2_Connect, {onLeave: function (args) {send("CStdAsyncStubBuffer2_Connect");}});
+
+var CStdAsyncStubBuffer2_Disconnect = Module.findExportByName("ole32.dll", "CStdAsyncStubBuffer2_Disconnect")
+Interceptor.attach(CStdAsyncStubBuffer2_Disconnect, {onLeave: function (args) {send("CStdAsyncStubBuffer2_Disconnect");}});
+
+var CStdAsyncStubBuffer2_Release = Module.findExportByName("ole32.dll", "CStdAsyncStubBuffer2_Release")
+Interceptor.attach(CStdAsyncStubBuffer2_Release, {onLeave: function (args) {send("CStdAsyncStubBuffer2_Release");}});
+
+var CStdAsyncStubBuffer_AddRef = Module.findExportByName("ole32.dll", "CStdAsyncStubBuffer_AddRef")
+Interceptor.attach(CStdAsyncStubBuffer_AddRef, {onLeave: function (args) {send("CStdAsyncStubBuffer_AddRef");}});
+
+var CStdAsyncStubBuffer_Connect = Module.findExportByName("ole32.dll", "CStdAsyncStubBuffer_Connect")
+Interceptor.attach(CStdAsyncStubBuffer_Connect, {onLeave: function (args) {send("CStdAsyncStubBuffer_Connect");}});
+
+var CStdAsyncStubBuffer_Disconnect = Module.findExportByName("ole32.dll", "CStdAsyncStubBuffer_Disconnect")
+Interceptor.attach(CStdAsyncStubBuffer_Disconnect, {onLeave: function (args) {send("CStdAsyncStubBuffer_Disconnect");}});
+
+var CStdAsyncStubBuffer_Invoke = Module.findExportByName("ole32.dll", "CStdAsyncStubBuffer_Invoke")
+Interceptor.attach(CStdAsyncStubBuffer_Invoke, {onLeave: function (args) {send("CStdAsyncStubBuffer_Invoke");}});
+
+var CStdAsyncStubBuffer_QueryInterface = Module.findExportByName("ole32.dll", "CStdAsyncStubBuffer_QueryInterface")
+Interceptor.attach(CStdAsyncStubBuffer_QueryInterface, {onLeave: function (args) {send("CStdAsyncStubBuffer_QueryInterface");}});
+
+var CStdAsyncStubBuffer_Release = Module.findExportByName("ole32.dll", "CStdAsyncStubBuffer_Release")
+Interceptor.attach(CStdAsyncStubBuffer_Release, {onLeave: function (args) {send("CStdAsyncStubBuffer_Release");}});
+
+var CStdStubBuffer2_Connect = Module.findExportByName("ole32.dll", "CStdStubBuffer2_Connect")
+Interceptor.attach(CStdStubBuffer2_Connect, {onLeave: function (args) {send("CStdStubBuffer2_Connect");}});
+
+var CStdStubBuffer2_CountRefs = Module.findExportByName("ole32.dll", "CStdStubBuffer2_CountRefs")
+Interceptor.attach(CStdStubBuffer2_CountRefs, {onLeave: function (args) {send("CStdStubBuffer2_CountRefs");}});
+
+var CStdStubBuffer2_Disconnect = Module.findExportByName("ole32.dll", "CStdStubBuffer2_Disconnect")
+Interceptor.attach(CStdStubBuffer2_Disconnect, {onLeave: function (args) {send("CStdStubBuffer2_Disconnect");}});
+
+var CStdStubBuffer2_QueryInterface = Module.findExportByName("ole32.dll", "CStdStubBuffer2_QueryInterface")
+Interceptor.attach(CStdStubBuffer2_QueryInterface, {onLeave: function (args) {send("CStdStubBuffer2_QueryInterface");}});
+
+var CheckInitDde = Module.findExportByName("ole32.dll", "CheckInitDde")
+Interceptor.attach(CheckInitDde, {onLeave: function (args) {send("CheckInitDde");}});
+
+var CleanROTForApartment = Module.findExportByName("ole32.dll", "CleanROTForApartment")
+Interceptor.attach(CleanROTForApartment, {onLeave: function (args) {send("CleanROTForApartment");}});
+
+var ClipboardProcessUninitialize = Module.findExportByName("ole32.dll", "ClipboardProcessUninitialize")
+Interceptor.attach(ClipboardProcessUninitialize, {onLeave: function (args) {send("ClipboardProcessUninitialize");}});
+
+var CoAddRefServerProcess = Module.findExportByName("ole32.dll", "CoAddRefServerProcess")
+Interceptor.attach(CoAddRefServerProcess, {onLeave: function (args) {send("CoAddRefServerProcess");}});
+
+var CoAicGetTokenForCOM = Module.findExportByName("ole32.dll", "CoAicGetTokenForCOM")
+Interceptor.attach(CoAicGetTokenForCOM, {onLeave: function (args) {send("CoAicGetTokenForCOM");}});
+
+var CoAllowSetForegroundWindow = Module.findExportByName("ole32.dll", "CoAllowSetForegroundWindow")
+Interceptor.attach(CoAllowSetForegroundWindow, {onLeave: function (args) {send("CoAllowSetForegroundWindow");}});
+
+var CoAllowUnmarshalerCLSID = Module.findExportByName("ole32.dll", "CoAllowUnmarshalerCLSID")
+Interceptor.attach(CoAllowUnmarshalerCLSID, {onLeave: function (args) {send("CoAllowUnmarshalerCLSID");}});
+
+var CoBuildVersion = Module.findExportByName("ole32.dll", "CoBuildVersion")
+Interceptor.attach(CoBuildVersion, {onLeave: function (args) {send("CoBuildVersion");}});
+
+var CoCancelCall = Module.findExportByName("ole32.dll", "CoCancelCall")
+Interceptor.attach(CoCancelCall, {onLeave: function (args) {send("CoCancelCall");}});
+
+var CoCheckElevationEnabled = Module.findExportByName("ole32.dll", "CoCheckElevationEnabled")
+Interceptor.attach(CoCheckElevationEnabled, {onLeave: function (args) {send("CoCheckElevationEnabled");}});
+
+var CoCopyProxy = Module.findExportByName("ole32.dll", "CoCopyProxy")
+Interceptor.attach(CoCopyProxy, {onLeave: function (args) {send("CoCopyProxy");}});
+
+var CoCreateFreeThreadedMarshaler = Module.findExportByName("ole32.dll", "CoCreateFreeThreadedMarshaler")
+Interceptor.attach(CoCreateFreeThreadedMarshaler, {onLeave: function (args) {send("CoCreateFreeThreadedMarshaler");}});
+
+var CoCreateGuid = Module.findExportByName("ole32.dll", "CoCreateGuid")
+Interceptor.attach(CoCreateGuid, {onLeave: function (args) {send("CoCreateGuid");}});
+
+var CoCreateInstance = Module.findExportByName("ole32.dll", "CoCreateInstance")
+Interceptor.attach(CoCreateInstance, {onLeave: function (args) {send("CoCreateInstance");}});
+
+var CoCreateInstanceEx = Module.findExportByName("ole32.dll", "CoCreateInstanceEx")
+Interceptor.attach(CoCreateInstanceEx, {onLeave: function (args) {send("CoCreateInstanceEx");}});
+
+var CoCreateInstanceFromApp = Module.findExportByName("ole32.dll", "CoCreateInstanceFromApp")
+Interceptor.attach(CoCreateInstanceFromApp, {onLeave: function (args) {send("CoCreateInstanceFromApp");}});
+
+var CoCreateObjectInContext = Module.findExportByName("ole32.dll", "CoCreateObjectInContext")
+Interceptor.attach(CoCreateObjectInContext, {onLeave: function (args) {send("CoCreateObjectInContext");}});
+
+var CoDeactivateObject = Module.findExportByName("ole32.dll", "CoDeactivateObject")
+Interceptor.attach(CoDeactivateObject, {onLeave: function (args) {send("CoDeactivateObject");}});
+
+var CoDecodeProxy = Module.findExportByName("ole32.dll", "CoDecodeProxy")
+Interceptor.attach(CoDecodeProxy, {onLeave: function (args) {send("CoDecodeProxy");}});
+
+var CoDecrementMTAUsage = Module.findExportByName("ole32.dll", "CoDecrementMTAUsage")
+Interceptor.attach(CoDecrementMTAUsage, {onLeave: function (args) {send("CoDecrementMTAUsage");}});
+
+var CoDisableCallCancellation = Module.findExportByName("ole32.dll", "CoDisableCallCancellation")
+Interceptor.attach(CoDisableCallCancellation, {onLeave: function (args) {send("CoDisableCallCancellation");}});
+
+var CoDisconnectContext = Module.findExportByName("ole32.dll", "CoDisconnectContext")
+Interceptor.attach(CoDisconnectContext, {onLeave: function (args) {send("CoDisconnectContext");}});
+
+var CoDisconnectObject = Module.findExportByName("ole32.dll", "CoDisconnectObject")
+Interceptor.attach(CoDisconnectObject, {onLeave: function (args) {send("CoDisconnectObject");}});
+
+var CoDosDateTimeToFileTime = Module.findExportByName("ole32.dll", "CoDosDateTimeToFileTime")
+Interceptor.attach(CoDosDateTimeToFileTime, {onLeave: function (args) {send("CoDosDateTimeToFileTime");}});
+
+var CoEnableCallCancellation = Module.findExportByName("ole32.dll", "CoEnableCallCancellation")
+Interceptor.attach(CoEnableCallCancellation, {onLeave: function (args) {send("CoEnableCallCancellation");}});
+
+var CoFileTimeNow = Module.findExportByName("ole32.dll", "CoFileTimeNow")
+Interceptor.attach(CoFileTimeNow, {onLeave: function (args) {send("CoFileTimeNow");}});
+
+var CoFileTimeToDosDateTime = Module.findExportByName("ole32.dll", "CoFileTimeToDosDateTime")
+Interceptor.attach(CoFileTimeToDosDateTime, {onLeave: function (args) {send("CoFileTimeToDosDateTime");}});
+
+var CoFreeAllLibraries = Module.findExportByName("ole32.dll", "CoFreeAllLibraries")
+Interceptor.attach(CoFreeAllLibraries, {onLeave: function (args) {send("CoFreeAllLibraries");}});
+
+var CoFreeLibrary = Module.findExportByName("ole32.dll", "CoFreeLibrary")
+Interceptor.attach(CoFreeLibrary, {onLeave: function (args) {send("CoFreeLibrary");}});
+
+var CoFreeUnusedLibraries = Module.findExportByName("ole32.dll", "CoFreeUnusedLibraries")
+Interceptor.attach(CoFreeUnusedLibraries, {onLeave: function (args) {send("CoFreeUnusedLibraries");}});
+
+var CoFreeUnusedLibrariesEx = Module.findExportByName("ole32.dll", "CoFreeUnusedLibrariesEx")
+Interceptor.attach(CoFreeUnusedLibrariesEx, {onLeave: function (args) {send("CoFreeUnusedLibrariesEx");}});
+
+var CoGetActivationState = Module.findExportByName("ole32.dll", "CoGetActivationState")
+Interceptor.attach(CoGetActivationState, {onLeave: function (args) {send("CoGetActivationState");}});
+
+var CoGetApartmentID = Module.findExportByName("ole32.dll", "CoGetApartmentID")
+Interceptor.attach(CoGetApartmentID, {onLeave: function (args) {send("CoGetApartmentID");}});
+
+var CoGetApartmentType = Module.findExportByName("ole32.dll", "CoGetApartmentType")
+Interceptor.attach(CoGetApartmentType, {onLeave: function (args) {send("CoGetApartmentType");}});
+
+var CoGetCallContext = Module.findExportByName("ole32.dll", "CoGetCallContext")
+Interceptor.attach(CoGetCallContext, {onLeave: function (args) {send("CoGetCallContext");}});
+
+var CoGetCallState = Module.findExportByName("ole32.dll", "CoGetCallState")
+Interceptor.attach(CoGetCallState, {onLeave: function (args) {send("CoGetCallState");}});
+
+var CoGetCallerTID = Module.findExportByName("ole32.dll", "CoGetCallerTID")
+Interceptor.attach(CoGetCallerTID, {onLeave: function (args) {send("CoGetCallerTID");}});
+
+var CoGetCancelObject = Module.findExportByName("ole32.dll", "CoGetCancelObject")
+Interceptor.attach(CoGetCancelObject, {onLeave: function (args) {send("CoGetCancelObject");}});
+
+var CoGetClassObject = Module.findExportByName("ole32.dll", "CoGetClassObject")
+Interceptor.attach(CoGetClassObject, {onLeave: function (args) {send("CoGetClassObject");}});
+
+var CoGetClassVersion = Module.findExportByName("ole32.dll", "CoGetClassVersion")
+Interceptor.attach(CoGetClassVersion, {onLeave: function (args) {send("CoGetClassVersion");}});
+
+var CoGetComCatalog = Module.findExportByName("ole32.dll", "CoGetComCatalog")
+Interceptor.attach(CoGetComCatalog, {onLeave: function (args) {send("CoGetComCatalog");}});
+
+var CoGetContextToken = Module.findExportByName("ole32.dll", "CoGetContextToken")
+Interceptor.attach(CoGetContextToken, {onLeave: function (args) {send("CoGetContextToken");}});
+
+var CoGetCurrentLogicalThreadId = Module.findExportByName("ole32.dll", "CoGetCurrentLogicalThreadId")
+Interceptor.attach(CoGetCurrentLogicalThreadId, {onLeave: function (args) {send("CoGetCurrentLogicalThreadId");}});
+
+var CoGetCurrentProcess = Module.findExportByName("ole32.dll", "CoGetCurrentProcess")
+Interceptor.attach(CoGetCurrentProcess, {onLeave: function (args) {send("CoGetCurrentProcess");}});
+
+var CoGetDefaultContext = Module.findExportByName("ole32.dll", "CoGetDefaultContext")
+Interceptor.attach(CoGetDefaultContext, {onLeave: function (args) {send("CoGetDefaultContext");}});
+
+var CoGetInstanceFromFile = Module.findExportByName("ole32.dll", "CoGetInstanceFromFile")
+Interceptor.attach(CoGetInstanceFromFile, {onLeave: function (args) {send("CoGetInstanceFromFile");}});
+
+var CoGetInstanceFromIStorage = Module.findExportByName("ole32.dll", "CoGetInstanceFromIStorage")
+Interceptor.attach(CoGetInstanceFromIStorage, {onLeave: function (args) {send("CoGetInstanceFromIStorage");}});
+
+var CoGetInterceptor = Module.findExportByName("ole32.dll", "CoGetInterceptor")
+Interceptor.attach(CoGetInterceptor, {onLeave: function (args) {send("CoGetInterceptor");}});
+
+var CoGetInterceptorForOle32 = Module.findExportByName("ole32.dll", "CoGetInterceptorForOle32")
+Interceptor.attach(CoGetInterceptorForOle32, {onLeave: function (args) {send("CoGetInterceptorForOle32");}});
+
+var CoGetInterceptorFromTypeInfo = Module.findExportByName("ole32.dll", "CoGetInterceptorFromTypeInfo")
+Interceptor.attach(CoGetInterceptorFromTypeInfo, {onLeave: function (args) {send("CoGetInterceptorFromTypeInfo");}});
+
+var CoGetInterfaceAndReleaseStream = Module.findExportByName("ole32.dll", "CoGetInterfaceAndReleaseStream")
+Interceptor.attach(CoGetInterfaceAndReleaseStream, {onLeave: function (args) {send("CoGetInterfaceAndReleaseStream");}});
+
+var CoGetMalloc = Module.findExportByName("ole32.dll", "CoGetMalloc")
+Interceptor.attach(CoGetMalloc, {onLeave: function (args) {send("CoGetMalloc");}});
+
+var CoGetMarshalSizeMax = Module.findExportByName("ole32.dll", "CoGetMarshalSizeMax")
+Interceptor.attach(CoGetMarshalSizeMax, {onLeave: function (args) {send("CoGetMarshalSizeMax");}});
+
+var CoGetModuleType = Module.findExportByName("ole32.dll", "CoGetModuleType")
+Interceptor.attach(CoGetModuleType, {onLeave: function (args) {send("CoGetModuleType");}});
+
+var CoGetObject = Module.findExportByName("ole32.dll", "CoGetObject")
+Interceptor.attach(CoGetObject, {onLeave: function (args) {send("CoGetObject");}});
+
+var CoGetObjectContext = Module.findExportByName("ole32.dll", "CoGetObjectContext")
+Interceptor.attach(CoGetObjectContext, {onLeave: function (args) {send("CoGetObjectContext");}});
+
+var CoGetPSClsid = Module.findExportByName("ole32.dll", "CoGetPSClsid")
+Interceptor.attach(CoGetPSClsid, {onLeave: function (args) {send("CoGetPSClsid");}});
+
+var CoGetProcessIdentifier = Module.findExportByName("ole32.dll", "CoGetProcessIdentifier")
+Interceptor.attach(CoGetProcessIdentifier, {onLeave: function (args) {send("CoGetProcessIdentifier");}});
+
+var CoGetStandardMarshal = Module.findExportByName("ole32.dll", "CoGetStandardMarshal")
+Interceptor.attach(CoGetStandardMarshal, {onLeave: function (args) {send("CoGetStandardMarshal");}});
+
+var CoGetStdMarshalEx = Module.findExportByName("ole32.dll", "CoGetStdMarshalEx")
+Interceptor.attach(CoGetStdMarshalEx, {onLeave: function (args) {send("CoGetStdMarshalEx");}});
+
+var CoGetSystemSecurityPermissions = Module.findExportByName("ole32.dll", "CoGetSystemSecurityPermissions")
+Interceptor.attach(CoGetSystemSecurityPermissions, {onLeave: function (args) {send("CoGetSystemSecurityPermissions");}});
+
+var CoGetSystemWow64DirectoryW = Module.findExportByName("ole32.dll", "CoGetSystemWow64DirectoryW")
+Interceptor.attach(CoGetSystemWow64DirectoryW, {onLeave: function (args) {send("CoGetSystemWow64DirectoryW");}});
+
+var CoGetTreatAsClass = Module.findExportByName("ole32.dll", "CoGetTreatAsClass")
+Interceptor.attach(CoGetTreatAsClass, {onLeave: function (args) {send("CoGetTreatAsClass");}});
+
+var CoHandlePriorityEventsFromMessagePump = Module.findExportByName("ole32.dll", "CoHandlePriorityEventsFromMessagePump")
+Interceptor.attach(CoHandlePriorityEventsFromMessagePump, {onLeave: function (args) {send("CoHandlePriorityEventsFromMessagePump");}});
+
+var CoImpersonateClient = Module.findExportByName("ole32.dll", "CoImpersonateClient")
+Interceptor.attach(CoImpersonateClient, {onLeave: function (args) {send("CoImpersonateClient");}});
+
+var CoIncrementMTAUsage = Module.findExportByName("ole32.dll", "CoIncrementMTAUsage")
+Interceptor.attach(CoIncrementMTAUsage, {onLeave: function (args) {send("CoIncrementMTAUsage");}});
+
+var CoInitialize = Module.findExportByName("ole32.dll", "CoInitialize")
+Interceptor.attach(CoInitialize, {onLeave: function (args) {send("CoInitialize");}});
+
+var CoInitializeEx = Module.findExportByName("ole32.dll", "CoInitializeEx")
+Interceptor.attach(CoInitializeEx, {onLeave: function (args) {send("CoInitializeEx");}});
+
+var CoInitializeSecurity = Module.findExportByName("ole32.dll", "CoInitializeSecurity")
+Interceptor.attach(CoInitializeSecurity, {onLeave: function (args) {send("CoInitializeSecurity");}});
+
+var CoInitializeWOW = Module.findExportByName("ole32.dll", "CoInitializeWOW")
+Interceptor.attach(CoInitializeWOW, {onLeave: function (args) {send("CoInitializeWOW");}});
+
+var CoInstall = Module.findExportByName("ole32.dll", "CoInstall")
+Interceptor.attach(CoInstall, {onLeave: function (args) {send("CoInstall");}});
+
+var CoInvalidateRemoteMachineBindings = Module.findExportByName("ole32.dll", "CoInvalidateRemoteMachineBindings")
+Interceptor.attach(CoInvalidateRemoteMachineBindings, {onLeave: function (args) {send("CoInvalidateRemoteMachineBindings");}});
+
+var CoIsHandlerConnected = Module.findExportByName("ole32.dll", "CoIsHandlerConnected")
+Interceptor.attach(CoIsHandlerConnected, {onLeave: function (args) {send("CoIsHandlerConnected");}});
+
+var CoIsOle1Class = Module.findExportByName("ole32.dll", "CoIsOle1Class")
+Interceptor.attach(CoIsOle1Class, {onLeave: function (args) {send("CoIsOle1Class");}});
+
+var CoLoadLibrary = Module.findExportByName("ole32.dll", "CoLoadLibrary")
+Interceptor.attach(CoLoadLibrary, {onLeave: function (args) {send("CoLoadLibrary");}});
+
+var CoLockObjectExternal = Module.findExportByName("ole32.dll", "CoLockObjectExternal")
+Interceptor.attach(CoLockObjectExternal, {onLeave: function (args) {send("CoLockObjectExternal");}});
+
+var CoMarshalHresult = Module.findExportByName("ole32.dll", "CoMarshalHresult")
+Interceptor.attach(CoMarshalHresult, {onLeave: function (args) {send("CoMarshalHresult");}});
+
+var CoMarshalInterThreadInterfaceInStream = Module.findExportByName("ole32.dll", "CoMarshalInterThreadInterfaceInStream")
+Interceptor.attach(CoMarshalInterThreadInterfaceInStream, {onLeave: function (args) {send("CoMarshalInterThreadInterfaceInStream");}});
+
+var CoMarshalInterface = Module.findExportByName("ole32.dll", "CoMarshalInterface")
+Interceptor.attach(CoMarshalInterface, {onLeave: function (args) {send("CoMarshalInterface");}});
+
+var CoPopServiceDomain = Module.findExportByName("ole32.dll", "CoPopServiceDomain")
+Interceptor.attach(CoPopServiceDomain, {onLeave: function (args) {send("CoPopServiceDomain");}});
+
+var CoPushServiceDomain = Module.findExportByName("ole32.dll", "CoPushServiceDomain")
+Interceptor.attach(CoPushServiceDomain, {onLeave: function (args) {send("CoPushServiceDomain");}});
+
+var CoQueryAuthenticationServices = Module.findExportByName("ole32.dll", "CoQueryAuthenticationServices")
+Interceptor.attach(CoQueryAuthenticationServices, {onLeave: function (args) {send("CoQueryAuthenticationServices");}});
+
+var CoQueryClientBlanket = Module.findExportByName("ole32.dll", "CoQueryClientBlanket")
+Interceptor.attach(CoQueryClientBlanket, {onLeave: function (args) {send("CoQueryClientBlanket");}});
+
+var CoQueryProxyBlanket = Module.findExportByName("ole32.dll", "CoQueryProxyBlanket")
+Interceptor.attach(CoQueryProxyBlanket, {onLeave: function (args) {send("CoQueryProxyBlanket");}});
+
+var CoQueryReleaseObject = Module.findExportByName("ole32.dll", "CoQueryReleaseObject")
+Interceptor.attach(CoQueryReleaseObject, {onLeave: function (args) {send("CoQueryReleaseObject");}});
+
+var CoReactivateObject = Module.findExportByName("ole32.dll", "CoReactivateObject")
+Interceptor.attach(CoReactivateObject, {onLeave: function (args) {send("CoReactivateObject");}});
+
+var CoRegisterActivationFilter = Module.findExportByName("ole32.dll", "CoRegisterActivationFilter")
+Interceptor.attach(CoRegisterActivationFilter, {onLeave: function (args) {send("CoRegisterActivationFilter");}});
+
+var CoRegisterChannelHook = Module.findExportByName("ole32.dll", "CoRegisterChannelHook")
+Interceptor.attach(CoRegisterChannelHook, {onLeave: function (args) {send("CoRegisterChannelHook");}});
+
+var CoRegisterClassObject = Module.findExportByName("ole32.dll", "CoRegisterClassObject")
+Interceptor.attach(CoRegisterClassObject, {onLeave: function (args) {send("CoRegisterClassObject");}});
+
+var CoRegisterInitializeSpy = Module.findExportByName("ole32.dll", "CoRegisterInitializeSpy")
+Interceptor.attach(CoRegisterInitializeSpy, {onLeave: function (args) {send("CoRegisterInitializeSpy");}});
+
+var CoRegisterMallocSpy = Module.findExportByName("ole32.dll", "CoRegisterMallocSpy")
+Interceptor.attach(CoRegisterMallocSpy, {onLeave: function (args) {send("CoRegisterMallocSpy");}});
+
+var CoRegisterMessageFilter = Module.findExportByName("ole32.dll", "CoRegisterMessageFilter")
+Interceptor.attach(CoRegisterMessageFilter, {onLeave: function (args) {send("CoRegisterMessageFilter");}});
+
+var CoRegisterPSClsid = Module.findExportByName("ole32.dll", "CoRegisterPSClsid")
+Interceptor.attach(CoRegisterPSClsid, {onLeave: function (args) {send("CoRegisterPSClsid");}});
+
+var CoRegisterSurrogate = Module.findExportByName("ole32.dll", "CoRegisterSurrogate")
+Interceptor.attach(CoRegisterSurrogate, {onLeave: function (args) {send("CoRegisterSurrogate");}});
+
+var CoRegisterSurrogateEx = Module.findExportByName("ole32.dll", "CoRegisterSurrogateEx")
+Interceptor.attach(CoRegisterSurrogateEx, {onLeave: function (args) {send("CoRegisterSurrogateEx");}});
+
+var CoReleaseMarshalData = Module.findExportByName("ole32.dll", "CoReleaseMarshalData")
+Interceptor.attach(CoReleaseMarshalData, {onLeave: function (args) {send("CoReleaseMarshalData");}});
+
+var CoReleaseServerProcess = Module.findExportByName("ole32.dll", "CoReleaseServerProcess")
+Interceptor.attach(CoReleaseServerProcess, {onLeave: function (args) {send("CoReleaseServerProcess");}});
+
+var CoResumeClassObjects = Module.findExportByName("ole32.dll", "CoResumeClassObjects")
+Interceptor.attach(CoResumeClassObjects, {onLeave: function (args) {send("CoResumeClassObjects");}});
+
+var CoRetireServer = Module.findExportByName("ole32.dll", "CoRetireServer")
+Interceptor.attach(CoRetireServer, {onLeave: function (args) {send("CoRetireServer");}});
+
+var CoRevertToSelf = Module.findExportByName("ole32.dll", "CoRevertToSelf")
+Interceptor.attach(CoRevertToSelf, {onLeave: function (args) {send("CoRevertToSelf");}});
+
+var CoRevokeClassObject = Module.findExportByName("ole32.dll", "CoRevokeClassObject")
+Interceptor.attach(CoRevokeClassObject, {onLeave: function (args) {send("CoRevokeClassObject");}});
+
+var CoRevokeInitializeSpy = Module.findExportByName("ole32.dll", "CoRevokeInitializeSpy")
+Interceptor.attach(CoRevokeInitializeSpy, {onLeave: function (args) {send("CoRevokeInitializeSpy");}});
+
+var CoRevokeMallocSpy = Module.findExportByName("ole32.dll", "CoRevokeMallocSpy")
+Interceptor.attach(CoRevokeMallocSpy, {onLeave: function (args) {send("CoRevokeMallocSpy");}});
+
+var CoSetCancelObject = Module.findExportByName("ole32.dll", "CoSetCancelObject")
+Interceptor.attach(CoSetCancelObject, {onLeave: function (args) {send("CoSetCancelObject");}});
+
+var CoSetMessageDispatcher = Module.findExportByName("ole32.dll", "CoSetMessageDispatcher")
+Interceptor.attach(CoSetMessageDispatcher, {onLeave: function (args) {send("CoSetMessageDispatcher");}});
+
+var CoSetProxyBlanket = Module.findExportByName("ole32.dll", "CoSetProxyBlanket")
+Interceptor.attach(CoSetProxyBlanket, {onLeave: function (args) {send("CoSetProxyBlanket");}});
+
+var CoSetState = Module.findExportByName("ole32.dll", "CoSetState")
+Interceptor.attach(CoSetState, {onLeave: function (args) {send("CoSetState");}});
+
+var CoSuspendClassObjects = Module.findExportByName("ole32.dll", "CoSuspendClassObjects")
+Interceptor.attach(CoSuspendClassObjects, {onLeave: function (args) {send("CoSuspendClassObjects");}});
+
+var CoSwitchCallContext = Module.findExportByName("ole32.dll", "CoSwitchCallContext")
+Interceptor.attach(CoSwitchCallContext, {onLeave: function (args) {send("CoSwitchCallContext");}});
+
+var CoTaskMemAlloc = Module.findExportByName("ole32.dll", "CoTaskMemAlloc")
+Interceptor.attach(CoTaskMemAlloc, {onLeave: function (args) {send("CoTaskMemAlloc");}});
+
+var CoTaskMemFree = Module.findExportByName("ole32.dll", "CoTaskMemFree")
+Interceptor.attach(CoTaskMemFree, {onLeave: function (args) {send("CoTaskMemFree");}});
+
+var CoTaskMemRealloc = Module.findExportByName("ole32.dll", "CoTaskMemRealloc")
+Interceptor.attach(CoTaskMemRealloc, {onLeave: function (args) {send("CoTaskMemRealloc");}});
+
+var CoTestCancel = Module.findExportByName("ole32.dll", "CoTestCancel")
+Interceptor.attach(CoTestCancel, {onLeave: function (args) {send("CoTestCancel");}});
+
+var CoTreatAsClass = Module.findExportByName("ole32.dll", "CoTreatAsClass")
+Interceptor.attach(CoTreatAsClass, {onLeave: function (args) {send("CoTreatAsClass");}});
+
+var CoTryGetInterceptorForAppModelVirtualization = Module.findExportByName("ole32.dll", "CoTryGetInterceptorForAppModelVirtualization")
+Interceptor.attach(CoTryGetInterceptorForAppModelVirtualization, {onLeave: function (args) {send("CoTryGetInterceptorForAppModelVirtualization");}});
+
+var CoUninitialize = Module.findExportByName("ole32.dll", "CoUninitialize")
+Interceptor.attach(CoUninitialize, {onLeave: function (args) {send("CoUninitialize");}});
+
+var CoUnloadingWOW = Module.findExportByName("ole32.dll", "CoUnloadingWOW")
+Interceptor.attach(CoUnloadingWOW, {onLeave: function (args) {send("CoUnloadingWOW");}});
+
+var CoUnmarshalHresult = Module.findExportByName("ole32.dll", "CoUnmarshalHresult")
+Interceptor.attach(CoUnmarshalHresult, {onLeave: function (args) {send("CoUnmarshalHresult");}});
+
+var CoUnmarshalInterface = Module.findExportByName("ole32.dll", "CoUnmarshalInterface")
+Interceptor.attach(CoUnmarshalInterface, {onLeave: function (args) {send("CoUnmarshalInterface");}});
+
+var CoVrfCheckThreadState = Module.findExportByName("ole32.dll", "CoVrfCheckThreadState")
+Interceptor.attach(CoVrfCheckThreadState, {onLeave: function (args) {send("CoVrfCheckThreadState");}});
+
+var CoVrfGetThreadState = Module.findExportByName("ole32.dll", "CoVrfGetThreadState")
+Interceptor.attach(CoVrfGetThreadState, {onLeave: function (args) {send("CoVrfGetThreadState");}});
+
+var CoVrfReleaseThreadState = Module.findExportByName("ole32.dll", "CoVrfReleaseThreadState")
+Interceptor.attach(CoVrfReleaseThreadState, {onLeave: function (args) {send("CoVrfReleaseThreadState");}});
+
+var CoWaitForMultipleHandles = Module.findExportByName("ole32.dll", "CoWaitForMultipleHandles")
+Interceptor.attach(CoWaitForMultipleHandles, {onLeave: function (args) {send("CoWaitForMultipleHandles");}});
+
+var CoWaitForMultipleObjects = Module.findExportByName("ole32.dll", "CoWaitForMultipleObjects")
+Interceptor.attach(CoWaitForMultipleObjects, {onLeave: function (args) {send("CoWaitForMultipleObjects");}});
+
+var ComPs_NdrDllCanUnloadNow = Module.findExportByName("ole32.dll", "ComPs_NdrDllCanUnloadNow")
+Interceptor.attach(ComPs_NdrDllCanUnloadNow, {onLeave: function (args) {send("ComPs_NdrDllCanUnloadNow");}});
+
+var ComPs_NdrDllGetClassObject = Module.findExportByName("ole32.dll", "ComPs_NdrDllGetClassObject")
+Interceptor.attach(ComPs_NdrDllGetClassObject, {onLeave: function (args) {send("ComPs_NdrDllGetClassObject");}});
+
+var ComPs_NdrDllRegisterProxy = Module.findExportByName("ole32.dll", "ComPs_NdrDllRegisterProxy")
+Interceptor.attach(ComPs_NdrDllRegisterProxy, {onLeave: function (args) {send("ComPs_NdrDllRegisterProxy");}});
+
+var ComPs_NdrDllUnregisterProxy = Module.findExportByName("ole32.dll", "ComPs_NdrDllUnregisterProxy")
+Interceptor.attach(ComPs_NdrDllUnregisterProxy, {onLeave: function (args) {send("ComPs_NdrDllUnregisterProxy");}});
+
+var CreateAntiMoniker = Module.findExportByName("ole32.dll", "CreateAntiMoniker")
+Interceptor.attach(CreateAntiMoniker, {onLeave: function (args) {send("CreateAntiMoniker");}});
+
+var CreateBindCtx = Module.findExportByName("ole32.dll", "CreateBindCtx")
+Interceptor.attach(CreateBindCtx, {onLeave: function (args) {send("CreateBindCtx");}});
+
+var CreateClassMoniker = Module.findExportByName("ole32.dll", "CreateClassMoniker")
+Interceptor.attach(CreateClassMoniker, {onLeave: function (args) {send("CreateClassMoniker");}});
+
+var CreateDataAdviseHolder = Module.findExportByName("ole32.dll", "CreateDataAdviseHolder")
+Interceptor.attach(CreateDataAdviseHolder, {onLeave: function (args) {send("CreateDataAdviseHolder");}});
+
+var CreateDataCache = Module.findExportByName("ole32.dll", "CreateDataCache")
+Interceptor.attach(CreateDataCache, {onLeave: function (args) {send("CreateDataCache");}});
+
+var CreateErrorInfo = Module.findExportByName("ole32.dll", "CreateErrorInfo")
+Interceptor.attach(CreateErrorInfo, {onLeave: function (args) {send("CreateErrorInfo");}});
+
+var CreateFileMoniker = Module.findExportByName("ole32.dll", "CreateFileMoniker")
+Interceptor.attach(CreateFileMoniker, {onLeave: function (args) {send("CreateFileMoniker");}});
+
+var CreateGenericComposite = Module.findExportByName("ole32.dll", "CreateGenericComposite")
+Interceptor.attach(CreateGenericComposite, {onLeave: function (args) {send("CreateGenericComposite");}});
+
+var CreateILockBytesOnHGlobal = Module.findExportByName("ole32.dll", "CreateILockBytesOnHGlobal")
+Interceptor.attach(CreateILockBytesOnHGlobal, {onLeave: function (args) {send("CreateILockBytesOnHGlobal");}});
+
+var CreateItemMoniker = Module.findExportByName("ole32.dll", "CreateItemMoniker")
+Interceptor.attach(CreateItemMoniker, {onLeave: function (args) {send("CreateItemMoniker");}});
+
+var CreateObjrefMoniker = Module.findExportByName("ole32.dll", "CreateObjrefMoniker")
+Interceptor.attach(CreateObjrefMoniker, {onLeave: function (args) {send("CreateObjrefMoniker");}});
+
+var CreateOleAdviseHolder = Module.findExportByName("ole32.dll", "CreateOleAdviseHolder")
+Interceptor.attach(CreateOleAdviseHolder, {onLeave: function (args) {send("CreateOleAdviseHolder");}});
+
+var CreatePointerMoniker = Module.findExportByName("ole32.dll", "CreatePointerMoniker")
+Interceptor.attach(CreatePointerMoniker, {onLeave: function (args) {send("CreatePointerMoniker");}});
+
+var CreateStdProgressIndicator = Module.findExportByName("ole32.dll", "CreateStdProgressIndicator")
+Interceptor.attach(CreateStdProgressIndicator, {onLeave: function (args) {send("CreateStdProgressIndicator");}});
+
+var CreateStreamOnHGlobal = Module.findExportByName("ole32.dll", "CreateStreamOnHGlobal")
+Interceptor.attach(CreateStreamOnHGlobal, {onLeave: function (args) {send("CreateStreamOnHGlobal");}});
+
+var DcomChannelSetHResult = Module.findExportByName("ole32.dll", "DcomChannelSetHResult")
+Interceptor.attach(DcomChannelSetHResult, {onLeave: function (args) {send("DcomChannelSetHResult");}});
+
+var DdeBindToObject = Module.findExportByName("ole32.dll", "DdeBindToObject")
+Interceptor.attach(DdeBindToObject, {onLeave: function (args) {send("DdeBindToObject");}});
+
+var DeletePatternAndExtensionTables = Module.findExportByName("ole32.dll", "DeletePatternAndExtensionTables")
+Interceptor.attach(DeletePatternAndExtensionTables, {onLeave: function (args) {send("DeletePatternAndExtensionTables");}});
+
+var DestroyRunningObjectTable = Module.findExportByName("ole32.dll", "DestroyRunningObjectTable")
+Interceptor.attach(DestroyRunningObjectTable, {onLeave: function (args) {send("DestroyRunningObjectTable");}});
+
+var DllDebugObjectRPCHook = Module.findExportByName("ole32.dll", "DllDebugObjectRPCHook")
+Interceptor.attach(DllDebugObjectRPCHook, {onLeave: function (args) {send("DllDebugObjectRPCHook");}});
+
+var DllGetClassObject = Module.findExportByName("ole32.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllGetClassObjectWOW = Module.findExportByName("ole32.dll", "DllGetClassObjectWOW")
+Interceptor.attach(DllGetClassObjectWOW, {onLeave: function (args) {send("DllGetClassObjectWOW");}});
+
+var DllRegisterServer = Module.findExportByName("ole32.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DoDragDrop = Module.findExportByName("ole32.dll", "DoDragDrop")
+Interceptor.attach(DoDragDrop, {onLeave: function (args) {send("DoDragDrop");}});
+
+var DragDropSetFDT = Module.findExportByName("ole32.dll", "DragDropSetFDT")
+Interceptor.attach(DragDropSetFDT, {onLeave: function (args) {send("DragDropSetFDT");}});
+
+var EnableHookObject = Module.findExportByName("ole32.dll", "EnableHookObject")
+Interceptor.attach(EnableHookObject, {onLeave: function (args) {send("EnableHookObject");}});
+
+var FindExt = Module.findExportByName("ole32.dll", "FindExt")
+Interceptor.attach(FindExt, {onLeave: function (args) {send("FindExt");}});
+
+var FmtIdToPropStgName = Module.findExportByName("ole32.dll", "FmtIdToPropStgName")
+Interceptor.attach(FmtIdToPropStgName, {onLeave: function (args) {send("FmtIdToPropStgName");}});
+
+var FreePropVariantArray = Module.findExportByName("ole32.dll", "FreePropVariantArray")
+Interceptor.attach(FreePropVariantArray, {onLeave: function (args) {send("FreePropVariantArray");}});
+
+var GetActiveObjectExt = Module.findExportByName("ole32.dll", "GetActiveObjectExt")
+Interceptor.attach(GetActiveObjectExt, {onLeave: function (args) {send("GetActiveObjectExt");}});
+
+var GetClassFile = Module.findExportByName("ole32.dll", "GetClassFile")
+Interceptor.attach(GetClassFile, {onLeave: function (args) {send("GetClassFile");}});
+
+var GetConvertStg = Module.findExportByName("ole32.dll", "GetConvertStg")
+Interceptor.attach(GetConvertStg, {onLeave: function (args) {send("GetConvertStg");}});
+
+var GetDocumentBitStg = Module.findExportByName("ole32.dll", "GetDocumentBitStg")
+Interceptor.attach(GetDocumentBitStg, {onLeave: function (args) {send("GetDocumentBitStg");}});
+
+var GetErrorInfo = Module.findExportByName("ole32.dll", "GetErrorInfo")
+Interceptor.attach(GetErrorInfo, {onLeave: function (args) {send("GetErrorInfo");}});
+
+var GetHGlobalFromILockBytes = Module.findExportByName("ole32.dll", "GetHGlobalFromILockBytes")
+Interceptor.attach(GetHGlobalFromILockBytes, {onLeave: function (args) {send("GetHGlobalFromILockBytes");}});
+
+var GetHGlobalFromStream = Module.findExportByName("ole32.dll", "GetHGlobalFromStream")
+Interceptor.attach(GetHGlobalFromStream, {onLeave: function (args) {send("GetHGlobalFromStream");}});
+
+var GetHookInterface = Module.findExportByName("ole32.dll", "GetHookInterface")
+Interceptor.attach(GetHookInterface, {onLeave: function (args) {send("GetHookInterface");}});
+
+var GetObjectFromRotByPath = Module.findExportByName("ole32.dll", "GetObjectFromRotByPath")
+Interceptor.attach(GetObjectFromRotByPath, {onLeave: function (args) {send("GetObjectFromRotByPath");}});
+
+var GetRunningObjectTable = Module.findExportByName("ole32.dll", "GetRunningObjectTable")
+Interceptor.attach(GetRunningObjectTable, {onLeave: function (args) {send("GetRunningObjectTable");}});
+
+var HACCEL_UserFree = Module.findExportByName("ole32.dll", "HACCEL_UserFree")
+Interceptor.attach(HACCEL_UserFree, {onLeave: function (args) {send("HACCEL_UserFree");}});
+
+var HACCEL_UserFree64 = Module.findExportByName("ole32.dll", "HACCEL_UserFree64")
+Interceptor.attach(HACCEL_UserFree64, {onLeave: function (args) {send("HACCEL_UserFree64");}});
+
+var HACCEL_UserMarshal = Module.findExportByName("ole32.dll", "HACCEL_UserMarshal")
+Interceptor.attach(HACCEL_UserMarshal, {onLeave: function (args) {send("HACCEL_UserMarshal");}});
+
+var HACCEL_UserMarshal64 = Module.findExportByName("ole32.dll", "HACCEL_UserMarshal64")
+Interceptor.attach(HACCEL_UserMarshal64, {onLeave: function (args) {send("HACCEL_UserMarshal64");}});
+
+var HACCEL_UserSize = Module.findExportByName("ole32.dll", "HACCEL_UserSize")
+Interceptor.attach(HACCEL_UserSize, {onLeave: function (args) {send("HACCEL_UserSize");}});
+
+var HACCEL_UserSize64 = Module.findExportByName("ole32.dll", "HACCEL_UserSize64")
+Interceptor.attach(HACCEL_UserSize64, {onLeave: function (args) {send("HACCEL_UserSize64");}});
+
+var HACCEL_UserUnmarshal = Module.findExportByName("ole32.dll", "HACCEL_UserUnmarshal")
+Interceptor.attach(HACCEL_UserUnmarshal, {onLeave: function (args) {send("HACCEL_UserUnmarshal");}});
+
+var HACCEL_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HACCEL_UserUnmarshal64")
+Interceptor.attach(HACCEL_UserUnmarshal64, {onLeave: function (args) {send("HACCEL_UserUnmarshal64");}});
+
+var HBITMAP_UserFree = Module.findExportByName("ole32.dll", "HBITMAP_UserFree")
+Interceptor.attach(HBITMAP_UserFree, {onLeave: function (args) {send("HBITMAP_UserFree");}});
+
+var HBITMAP_UserFree64 = Module.findExportByName("ole32.dll", "HBITMAP_UserFree64")
+Interceptor.attach(HBITMAP_UserFree64, {onLeave: function (args) {send("HBITMAP_UserFree64");}});
+
+var HBITMAP_UserMarshal = Module.findExportByName("ole32.dll", "HBITMAP_UserMarshal")
+Interceptor.attach(HBITMAP_UserMarshal, {onLeave: function (args) {send("HBITMAP_UserMarshal");}});
+
+var HBITMAP_UserMarshal64 = Module.findExportByName("ole32.dll", "HBITMAP_UserMarshal64")
+Interceptor.attach(HBITMAP_UserMarshal64, {onLeave: function (args) {send("HBITMAP_UserMarshal64");}});
+
+var HBITMAP_UserSize = Module.findExportByName("ole32.dll", "HBITMAP_UserSize")
+Interceptor.attach(HBITMAP_UserSize, {onLeave: function (args) {send("HBITMAP_UserSize");}});
+
+var HBITMAP_UserSize64 = Module.findExportByName("ole32.dll", "HBITMAP_UserSize64")
+Interceptor.attach(HBITMAP_UserSize64, {onLeave: function (args) {send("HBITMAP_UserSize64");}});
+
+var HBITMAP_UserUnmarshal = Module.findExportByName("ole32.dll", "HBITMAP_UserUnmarshal")
+Interceptor.attach(HBITMAP_UserUnmarshal, {onLeave: function (args) {send("HBITMAP_UserUnmarshal");}});
+
+var HBITMAP_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HBITMAP_UserUnmarshal64")
+Interceptor.attach(HBITMAP_UserUnmarshal64, {onLeave: function (args) {send("HBITMAP_UserUnmarshal64");}});
+
+var HBRUSH_UserFree = Module.findExportByName("ole32.dll", "HBRUSH_UserFree")
+Interceptor.attach(HBRUSH_UserFree, {onLeave: function (args) {send("HBRUSH_UserFree");}});
+
+var HBRUSH_UserFree64 = Module.findExportByName("ole32.dll", "HBRUSH_UserFree64")
+Interceptor.attach(HBRUSH_UserFree64, {onLeave: function (args) {send("HBRUSH_UserFree64");}});
+
+var HBRUSH_UserMarshal = Module.findExportByName("ole32.dll", "HBRUSH_UserMarshal")
+Interceptor.attach(HBRUSH_UserMarshal, {onLeave: function (args) {send("HBRUSH_UserMarshal");}});
+
+var HBRUSH_UserMarshal64 = Module.findExportByName("ole32.dll", "HBRUSH_UserMarshal64")
+Interceptor.attach(HBRUSH_UserMarshal64, {onLeave: function (args) {send("HBRUSH_UserMarshal64");}});
+
+var HBRUSH_UserSize = Module.findExportByName("ole32.dll", "HBRUSH_UserSize")
+Interceptor.attach(HBRUSH_UserSize, {onLeave: function (args) {send("HBRUSH_UserSize");}});
+
+var HBRUSH_UserSize64 = Module.findExportByName("ole32.dll", "HBRUSH_UserSize64")
+Interceptor.attach(HBRUSH_UserSize64, {onLeave: function (args) {send("HBRUSH_UserSize64");}});
+
+var HBRUSH_UserUnmarshal = Module.findExportByName("ole32.dll", "HBRUSH_UserUnmarshal")
+Interceptor.attach(HBRUSH_UserUnmarshal, {onLeave: function (args) {send("HBRUSH_UserUnmarshal");}});
+
+var HBRUSH_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HBRUSH_UserUnmarshal64")
+Interceptor.attach(HBRUSH_UserUnmarshal64, {onLeave: function (args) {send("HBRUSH_UserUnmarshal64");}});
+
+var HDC_UserFree = Module.findExportByName("ole32.dll", "HDC_UserFree")
+Interceptor.attach(HDC_UserFree, {onLeave: function (args) {send("HDC_UserFree");}});
+
+var HDC_UserFree64 = Module.findExportByName("ole32.dll", "HDC_UserFree64")
+Interceptor.attach(HDC_UserFree64, {onLeave: function (args) {send("HDC_UserFree64");}});
+
+var HDC_UserMarshal = Module.findExportByName("ole32.dll", "HDC_UserMarshal")
+Interceptor.attach(HDC_UserMarshal, {onLeave: function (args) {send("HDC_UserMarshal");}});
+
+var HDC_UserMarshal64 = Module.findExportByName("ole32.dll", "HDC_UserMarshal64")
+Interceptor.attach(HDC_UserMarshal64, {onLeave: function (args) {send("HDC_UserMarshal64");}});
+
+var HDC_UserSize = Module.findExportByName("ole32.dll", "HDC_UserSize")
+Interceptor.attach(HDC_UserSize, {onLeave: function (args) {send("HDC_UserSize");}});
+
+var HDC_UserSize64 = Module.findExportByName("ole32.dll", "HDC_UserSize64")
+Interceptor.attach(HDC_UserSize64, {onLeave: function (args) {send("HDC_UserSize64");}});
+
+var HDC_UserUnmarshal = Module.findExportByName("ole32.dll", "HDC_UserUnmarshal")
+Interceptor.attach(HDC_UserUnmarshal, {onLeave: function (args) {send("HDC_UserUnmarshal");}});
+
+var HDC_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HDC_UserUnmarshal64")
+Interceptor.attach(HDC_UserUnmarshal64, {onLeave: function (args) {send("HDC_UserUnmarshal64");}});
+
+var HENHMETAFILE_UserFree = Module.findExportByName("ole32.dll", "HENHMETAFILE_UserFree")
+Interceptor.attach(HENHMETAFILE_UserFree, {onLeave: function (args) {send("HENHMETAFILE_UserFree");}});
+
+var HENHMETAFILE_UserFree64 = Module.findExportByName("ole32.dll", "HENHMETAFILE_UserFree64")
+Interceptor.attach(HENHMETAFILE_UserFree64, {onLeave: function (args) {send("HENHMETAFILE_UserFree64");}});
+
+var HENHMETAFILE_UserMarshal = Module.findExportByName("ole32.dll", "HENHMETAFILE_UserMarshal")
+Interceptor.attach(HENHMETAFILE_UserMarshal, {onLeave: function (args) {send("HENHMETAFILE_UserMarshal");}});
+
+var HENHMETAFILE_UserMarshal64 = Module.findExportByName("ole32.dll", "HENHMETAFILE_UserMarshal64")
+Interceptor.attach(HENHMETAFILE_UserMarshal64, {onLeave: function (args) {send("HENHMETAFILE_UserMarshal64");}});
+
+var HENHMETAFILE_UserSize = Module.findExportByName("ole32.dll", "HENHMETAFILE_UserSize")
+Interceptor.attach(HENHMETAFILE_UserSize, {onLeave: function (args) {send("HENHMETAFILE_UserSize");}});
+
+var HENHMETAFILE_UserSize64 = Module.findExportByName("ole32.dll", "HENHMETAFILE_UserSize64")
+Interceptor.attach(HENHMETAFILE_UserSize64, {onLeave: function (args) {send("HENHMETAFILE_UserSize64");}});
+
+var HENHMETAFILE_UserUnmarshal = Module.findExportByName("ole32.dll", "HENHMETAFILE_UserUnmarshal")
+Interceptor.attach(HENHMETAFILE_UserUnmarshal, {onLeave: function (args) {send("HENHMETAFILE_UserUnmarshal");}});
+
+var HENHMETAFILE_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HENHMETAFILE_UserUnmarshal64")
+Interceptor.attach(HENHMETAFILE_UserUnmarshal64, {onLeave: function (args) {send("HENHMETAFILE_UserUnmarshal64");}});
+
+var HGLOBAL_UserFree = Module.findExportByName("ole32.dll", "HGLOBAL_UserFree")
+Interceptor.attach(HGLOBAL_UserFree, {onLeave: function (args) {send("HGLOBAL_UserFree");}});
+
+var HGLOBAL_UserFree64 = Module.findExportByName("ole32.dll", "HGLOBAL_UserFree64")
+Interceptor.attach(HGLOBAL_UserFree64, {onLeave: function (args) {send("HGLOBAL_UserFree64");}});
+
+var HGLOBAL_UserMarshal = Module.findExportByName("ole32.dll", "HGLOBAL_UserMarshal")
+Interceptor.attach(HGLOBAL_UserMarshal, {onLeave: function (args) {send("HGLOBAL_UserMarshal");}});
+
+var HGLOBAL_UserMarshal64 = Module.findExportByName("ole32.dll", "HGLOBAL_UserMarshal64")
+Interceptor.attach(HGLOBAL_UserMarshal64, {onLeave: function (args) {send("HGLOBAL_UserMarshal64");}});
+
+var HGLOBAL_UserSize = Module.findExportByName("ole32.dll", "HGLOBAL_UserSize")
+Interceptor.attach(HGLOBAL_UserSize, {onLeave: function (args) {send("HGLOBAL_UserSize");}});
+
+var HGLOBAL_UserSize64 = Module.findExportByName("ole32.dll", "HGLOBAL_UserSize64")
+Interceptor.attach(HGLOBAL_UserSize64, {onLeave: function (args) {send("HGLOBAL_UserSize64");}});
+
+var HGLOBAL_UserUnmarshal = Module.findExportByName("ole32.dll", "HGLOBAL_UserUnmarshal")
+Interceptor.attach(HGLOBAL_UserUnmarshal, {onLeave: function (args) {send("HGLOBAL_UserUnmarshal");}});
+
+var HGLOBAL_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HGLOBAL_UserUnmarshal64")
+Interceptor.attach(HGLOBAL_UserUnmarshal64, {onLeave: function (args) {send("HGLOBAL_UserUnmarshal64");}});
+
+var HICON_UserFree = Module.findExportByName("ole32.dll", "HICON_UserFree")
+Interceptor.attach(HICON_UserFree, {onLeave: function (args) {send("HICON_UserFree");}});
+
+var HICON_UserFree64 = Module.findExportByName("ole32.dll", "HICON_UserFree64")
+Interceptor.attach(HICON_UserFree64, {onLeave: function (args) {send("HICON_UserFree64");}});
+
+var HICON_UserMarshal = Module.findExportByName("ole32.dll", "HICON_UserMarshal")
+Interceptor.attach(HICON_UserMarshal, {onLeave: function (args) {send("HICON_UserMarshal");}});
+
+var HICON_UserMarshal64 = Module.findExportByName("ole32.dll", "HICON_UserMarshal64")
+Interceptor.attach(HICON_UserMarshal64, {onLeave: function (args) {send("HICON_UserMarshal64");}});
+
+var HICON_UserSize = Module.findExportByName("ole32.dll", "HICON_UserSize")
+Interceptor.attach(HICON_UserSize, {onLeave: function (args) {send("HICON_UserSize");}});
+
+var HICON_UserSize64 = Module.findExportByName("ole32.dll", "HICON_UserSize64")
+Interceptor.attach(HICON_UserSize64, {onLeave: function (args) {send("HICON_UserSize64");}});
+
+var HICON_UserUnmarshal = Module.findExportByName("ole32.dll", "HICON_UserUnmarshal")
+Interceptor.attach(HICON_UserUnmarshal, {onLeave: function (args) {send("HICON_UserUnmarshal");}});
+
+var HICON_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HICON_UserUnmarshal64")
+Interceptor.attach(HICON_UserUnmarshal64, {onLeave: function (args) {send("HICON_UserUnmarshal64");}});
+
+var HMENU_UserFree = Module.findExportByName("ole32.dll", "HMENU_UserFree")
+Interceptor.attach(HMENU_UserFree, {onLeave: function (args) {send("HMENU_UserFree");}});
+
+var HMENU_UserFree64 = Module.findExportByName("ole32.dll", "HMENU_UserFree64")
+Interceptor.attach(HMENU_UserFree64, {onLeave: function (args) {send("HMENU_UserFree64");}});
+
+var HMENU_UserMarshal = Module.findExportByName("ole32.dll", "HMENU_UserMarshal")
+Interceptor.attach(HMENU_UserMarshal, {onLeave: function (args) {send("HMENU_UserMarshal");}});
+
+var HMENU_UserMarshal64 = Module.findExportByName("ole32.dll", "HMENU_UserMarshal64")
+Interceptor.attach(HMENU_UserMarshal64, {onLeave: function (args) {send("HMENU_UserMarshal64");}});
+
+var HMENU_UserSize = Module.findExportByName("ole32.dll", "HMENU_UserSize")
+Interceptor.attach(HMENU_UserSize, {onLeave: function (args) {send("HMENU_UserSize");}});
+
+var HMENU_UserSize64 = Module.findExportByName("ole32.dll", "HMENU_UserSize64")
+Interceptor.attach(HMENU_UserSize64, {onLeave: function (args) {send("HMENU_UserSize64");}});
+
+var HMENU_UserUnmarshal = Module.findExportByName("ole32.dll", "HMENU_UserUnmarshal")
+Interceptor.attach(HMENU_UserUnmarshal, {onLeave: function (args) {send("HMENU_UserUnmarshal");}});
+
+var HMENU_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HMENU_UserUnmarshal64")
+Interceptor.attach(HMENU_UserUnmarshal64, {onLeave: function (args) {send("HMENU_UserUnmarshal64");}});
+
+var HMETAFILEPICT_UserFree = Module.findExportByName("ole32.dll", "HMETAFILEPICT_UserFree")
+Interceptor.attach(HMETAFILEPICT_UserFree, {onLeave: function (args) {send("HMETAFILEPICT_UserFree");}});
+
+var HMETAFILEPICT_UserFree64 = Module.findExportByName("ole32.dll", "HMETAFILEPICT_UserFree64")
+Interceptor.attach(HMETAFILEPICT_UserFree64, {onLeave: function (args) {send("HMETAFILEPICT_UserFree64");}});
+
+var HMETAFILEPICT_UserMarshal = Module.findExportByName("ole32.dll", "HMETAFILEPICT_UserMarshal")
+Interceptor.attach(HMETAFILEPICT_UserMarshal, {onLeave: function (args) {send("HMETAFILEPICT_UserMarshal");}});
+
+var HMETAFILEPICT_UserMarshal64 = Module.findExportByName("ole32.dll", "HMETAFILEPICT_UserMarshal64")
+Interceptor.attach(HMETAFILEPICT_UserMarshal64, {onLeave: function (args) {send("HMETAFILEPICT_UserMarshal64");}});
+
+var HMETAFILEPICT_UserSize = Module.findExportByName("ole32.dll", "HMETAFILEPICT_UserSize")
+Interceptor.attach(HMETAFILEPICT_UserSize, {onLeave: function (args) {send("HMETAFILEPICT_UserSize");}});
+
+var HMETAFILEPICT_UserSize64 = Module.findExportByName("ole32.dll", "HMETAFILEPICT_UserSize64")
+Interceptor.attach(HMETAFILEPICT_UserSize64, {onLeave: function (args) {send("HMETAFILEPICT_UserSize64");}});
+
+var HMETAFILEPICT_UserUnmarshal = Module.findExportByName("ole32.dll", "HMETAFILEPICT_UserUnmarshal")
+Interceptor.attach(HMETAFILEPICT_UserUnmarshal, {onLeave: function (args) {send("HMETAFILEPICT_UserUnmarshal");}});
+
+var HMETAFILEPICT_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HMETAFILEPICT_UserUnmarshal64")
+Interceptor.attach(HMETAFILEPICT_UserUnmarshal64, {onLeave: function (args) {send("HMETAFILEPICT_UserUnmarshal64");}});
+
+var HMETAFILE_UserFree = Module.findExportByName("ole32.dll", "HMETAFILE_UserFree")
+Interceptor.attach(HMETAFILE_UserFree, {onLeave: function (args) {send("HMETAFILE_UserFree");}});
+
+var HMETAFILE_UserFree64 = Module.findExportByName("ole32.dll", "HMETAFILE_UserFree64")
+Interceptor.attach(HMETAFILE_UserFree64, {onLeave: function (args) {send("HMETAFILE_UserFree64");}});
+
+var HMETAFILE_UserMarshal = Module.findExportByName("ole32.dll", "HMETAFILE_UserMarshal")
+Interceptor.attach(HMETAFILE_UserMarshal, {onLeave: function (args) {send("HMETAFILE_UserMarshal");}});
+
+var HMETAFILE_UserMarshal64 = Module.findExportByName("ole32.dll", "HMETAFILE_UserMarshal64")
+Interceptor.attach(HMETAFILE_UserMarshal64, {onLeave: function (args) {send("HMETAFILE_UserMarshal64");}});
+
+var HMETAFILE_UserSize = Module.findExportByName("ole32.dll", "HMETAFILE_UserSize")
+Interceptor.attach(HMETAFILE_UserSize, {onLeave: function (args) {send("HMETAFILE_UserSize");}});
+
+var HMETAFILE_UserSize64 = Module.findExportByName("ole32.dll", "HMETAFILE_UserSize64")
+Interceptor.attach(HMETAFILE_UserSize64, {onLeave: function (args) {send("HMETAFILE_UserSize64");}});
+
+var HMETAFILE_UserUnmarshal = Module.findExportByName("ole32.dll", "HMETAFILE_UserUnmarshal")
+Interceptor.attach(HMETAFILE_UserUnmarshal, {onLeave: function (args) {send("HMETAFILE_UserUnmarshal");}});
+
+var HMETAFILE_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HMETAFILE_UserUnmarshal64")
+Interceptor.attach(HMETAFILE_UserUnmarshal64, {onLeave: function (args) {send("HMETAFILE_UserUnmarshal64");}});
+
+var HMONITOR_UserFree = Module.findExportByName("ole32.dll", "HMONITOR_UserFree")
+Interceptor.attach(HMONITOR_UserFree, {onLeave: function (args) {send("HMONITOR_UserFree");}});
+
+var HMONITOR_UserFree64 = Module.findExportByName("ole32.dll", "HMONITOR_UserFree64")
+Interceptor.attach(HMONITOR_UserFree64, {onLeave: function (args) {send("HMONITOR_UserFree64");}});
+
+var HMONITOR_UserMarshal = Module.findExportByName("ole32.dll", "HMONITOR_UserMarshal")
+Interceptor.attach(HMONITOR_UserMarshal, {onLeave: function (args) {send("HMONITOR_UserMarshal");}});
+
+var HMONITOR_UserMarshal64 = Module.findExportByName("ole32.dll", "HMONITOR_UserMarshal64")
+Interceptor.attach(HMONITOR_UserMarshal64, {onLeave: function (args) {send("HMONITOR_UserMarshal64");}});
+
+var HMONITOR_UserSize = Module.findExportByName("ole32.dll", "HMONITOR_UserSize")
+Interceptor.attach(HMONITOR_UserSize, {onLeave: function (args) {send("HMONITOR_UserSize");}});
+
+var HMONITOR_UserSize64 = Module.findExportByName("ole32.dll", "HMONITOR_UserSize64")
+Interceptor.attach(HMONITOR_UserSize64, {onLeave: function (args) {send("HMONITOR_UserSize64");}});
+
+var HMONITOR_UserUnmarshal = Module.findExportByName("ole32.dll", "HMONITOR_UserUnmarshal")
+Interceptor.attach(HMONITOR_UserUnmarshal, {onLeave: function (args) {send("HMONITOR_UserUnmarshal");}});
+
+var HMONITOR_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HMONITOR_UserUnmarshal64")
+Interceptor.attach(HMONITOR_UserUnmarshal64, {onLeave: function (args) {send("HMONITOR_UserUnmarshal64");}});
+
+var HPALETTE_UserFree = Module.findExportByName("ole32.dll", "HPALETTE_UserFree")
+Interceptor.attach(HPALETTE_UserFree, {onLeave: function (args) {send("HPALETTE_UserFree");}});
+
+var HPALETTE_UserFree64 = Module.findExportByName("ole32.dll", "HPALETTE_UserFree64")
+Interceptor.attach(HPALETTE_UserFree64, {onLeave: function (args) {send("HPALETTE_UserFree64");}});
+
+var HPALETTE_UserFreeExt = Module.findExportByName("ole32.dll", "HPALETTE_UserFreeExt")
+Interceptor.attach(HPALETTE_UserFreeExt, {onLeave: function (args) {send("HPALETTE_UserFreeExt");}});
+
+var HPALETTE_UserMarshal = Module.findExportByName("ole32.dll", "HPALETTE_UserMarshal")
+Interceptor.attach(HPALETTE_UserMarshal, {onLeave: function (args) {send("HPALETTE_UserMarshal");}});
+
+var HPALETTE_UserMarshal64 = Module.findExportByName("ole32.dll", "HPALETTE_UserMarshal64")
+Interceptor.attach(HPALETTE_UserMarshal64, {onLeave: function (args) {send("HPALETTE_UserMarshal64");}});
+
+var HPALETTE_UserMarshalExt = Module.findExportByName("ole32.dll", "HPALETTE_UserMarshalExt")
+Interceptor.attach(HPALETTE_UserMarshalExt, {onLeave: function (args) {send("HPALETTE_UserMarshalExt");}});
+
+var HPALETTE_UserSize = Module.findExportByName("ole32.dll", "HPALETTE_UserSize")
+Interceptor.attach(HPALETTE_UserSize, {onLeave: function (args) {send("HPALETTE_UserSize");}});
+
+var HPALETTE_UserSize64 = Module.findExportByName("ole32.dll", "HPALETTE_UserSize64")
+Interceptor.attach(HPALETTE_UserSize64, {onLeave: function (args) {send("HPALETTE_UserSize64");}});
+
+var HPALETTE_UserSizeExt = Module.findExportByName("ole32.dll", "HPALETTE_UserSizeExt")
+Interceptor.attach(HPALETTE_UserSizeExt, {onLeave: function (args) {send("HPALETTE_UserSizeExt");}});
+
+var HPALETTE_UserUnmarshal = Module.findExportByName("ole32.dll", "HPALETTE_UserUnmarshal")
+Interceptor.attach(HPALETTE_UserUnmarshal, {onLeave: function (args) {send("HPALETTE_UserUnmarshal");}});
+
+var HPALETTE_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HPALETTE_UserUnmarshal64")
+Interceptor.attach(HPALETTE_UserUnmarshal64, {onLeave: function (args) {send("HPALETTE_UserUnmarshal64");}});
+
+var HPALETTE_UserUnmarshalExt = Module.findExportByName("ole32.dll", "HPALETTE_UserUnmarshalExt")
+Interceptor.attach(HPALETTE_UserUnmarshalExt, {onLeave: function (args) {send("HPALETTE_UserUnmarshalExt");}});
+
+var HRGN_UserFree = Module.findExportByName("ole32.dll", "HRGN_UserFree")
+Interceptor.attach(HRGN_UserFree, {onLeave: function (args) {send("HRGN_UserFree");}});
+
+var HRGN_UserMarshal = Module.findExportByName("ole32.dll", "HRGN_UserMarshal")
+Interceptor.attach(HRGN_UserMarshal, {onLeave: function (args) {send("HRGN_UserMarshal");}});
+
+var HRGN_UserSize = Module.findExportByName("ole32.dll", "HRGN_UserSize")
+Interceptor.attach(HRGN_UserSize, {onLeave: function (args) {send("HRGN_UserSize");}});
+
+var HRGN_UserUnmarshal = Module.findExportByName("ole32.dll", "HRGN_UserUnmarshal")
+Interceptor.attach(HRGN_UserUnmarshal, {onLeave: function (args) {send("HRGN_UserUnmarshal");}});
+
+var HWND_UserFree = Module.findExportByName("ole32.dll", "HWND_UserFree")
+Interceptor.attach(HWND_UserFree, {onLeave: function (args) {send("HWND_UserFree");}});
+
+var HWND_UserFree64 = Module.findExportByName("ole32.dll", "HWND_UserFree64")
+Interceptor.attach(HWND_UserFree64, {onLeave: function (args) {send("HWND_UserFree64");}});
+
+var HWND_UserFree64Ext = Module.findExportByName("ole32.dll", "HWND_UserFree64Ext")
+Interceptor.attach(HWND_UserFree64Ext, {onLeave: function (args) {send("HWND_UserFree64Ext");}});
+
+var HWND_UserFreeExt = Module.findExportByName("ole32.dll", "HWND_UserFreeExt")
+Interceptor.attach(HWND_UserFreeExt, {onLeave: function (args) {send("HWND_UserFreeExt");}});
+
+var HWND_UserMarshal = Module.findExportByName("ole32.dll", "HWND_UserMarshal")
+Interceptor.attach(HWND_UserMarshal, {onLeave: function (args) {send("HWND_UserMarshal");}});
+
+var HWND_UserMarshal64 = Module.findExportByName("ole32.dll", "HWND_UserMarshal64")
+Interceptor.attach(HWND_UserMarshal64, {onLeave: function (args) {send("HWND_UserMarshal64");}});
+
+var HWND_UserMarshal64Ext = Module.findExportByName("ole32.dll", "HWND_UserMarshal64Ext")
+Interceptor.attach(HWND_UserMarshal64Ext, {onLeave: function (args) {send("HWND_UserMarshal64Ext");}});
+
+var HWND_UserMarshalExt = Module.findExportByName("ole32.dll", "HWND_UserMarshalExt")
+Interceptor.attach(HWND_UserMarshalExt, {onLeave: function (args) {send("HWND_UserMarshalExt");}});
+
+var HWND_UserSize = Module.findExportByName("ole32.dll", "HWND_UserSize")
+Interceptor.attach(HWND_UserSize, {onLeave: function (args) {send("HWND_UserSize");}});
+
+var HWND_UserSize64 = Module.findExportByName("ole32.dll", "HWND_UserSize64")
+Interceptor.attach(HWND_UserSize64, {onLeave: function (args) {send("HWND_UserSize64");}});
+
+var HWND_UserSize64Ext = Module.findExportByName("ole32.dll", "HWND_UserSize64Ext")
+Interceptor.attach(HWND_UserSize64Ext, {onLeave: function (args) {send("HWND_UserSize64Ext");}});
+
+var HWND_UserSizeExt = Module.findExportByName("ole32.dll", "HWND_UserSizeExt")
+Interceptor.attach(HWND_UserSizeExt, {onLeave: function (args) {send("HWND_UserSizeExt");}});
+
+var HWND_UserUnmarshal = Module.findExportByName("ole32.dll", "HWND_UserUnmarshal")
+Interceptor.attach(HWND_UserUnmarshal, {onLeave: function (args) {send("HWND_UserUnmarshal");}});
+
+var HWND_UserUnmarshal64 = Module.findExportByName("ole32.dll", "HWND_UserUnmarshal64")
+Interceptor.attach(HWND_UserUnmarshal64, {onLeave: function (args) {send("HWND_UserUnmarshal64");}});
+
+var HWND_UserUnmarshal64Ext = Module.findExportByName("ole32.dll", "HWND_UserUnmarshal64Ext")
+Interceptor.attach(HWND_UserUnmarshal64Ext, {onLeave: function (args) {send("HWND_UserUnmarshal64Ext");}});
+
+var HWND_UserUnmarshalExt = Module.findExportByName("ole32.dll", "HWND_UserUnmarshalExt")
+Interceptor.attach(HWND_UserUnmarshalExt, {onLeave: function (args) {send("HWND_UserUnmarshalExt");}});
+
+var HkOleRegisterObject = Module.findExportByName("ole32.dll", "HkOleRegisterObject")
+Interceptor.attach(HkOleRegisterObject, {onLeave: function (args) {send("HkOleRegisterObject");}});
+
+var IIDFromString = Module.findExportByName("ole32.dll", "IIDFromString")
+Interceptor.attach(IIDFromString, {onLeave: function (args) {send("IIDFromString");}});
+
+var IsAccelerator = Module.findExportByName("ole32.dll", "IsAccelerator")
+Interceptor.attach(IsAccelerator, {onLeave: function (args) {send("IsAccelerator");}});
+
+var IsEqualGUID = Module.findExportByName("ole32.dll", "IsEqualGUID")
+Interceptor.attach(IsEqualGUID, {onLeave: function (args) {send("IsEqualGUID");}});
+
+var IsRoInitializeASTAAllowedInDesktop = Module.findExportByName("ole32.dll", "IsRoInitializeASTAAllowedInDesktop")
+Interceptor.attach(IsRoInitializeASTAAllowedInDesktop, {onLeave: function (args) {send("IsRoInitializeASTAAllowedInDesktop");}});
+
+var IsValidIid = Module.findExportByName("ole32.dll", "IsValidIid")
+Interceptor.attach(IsValidIid, {onLeave: function (args) {send("IsValidIid");}});
+
+var IsValidInterface = Module.findExportByName("ole32.dll", "IsValidInterface")
+Interceptor.attach(IsValidInterface, {onLeave: function (args) {send("IsValidInterface");}});
+
+var IsValidPtrIn = Module.findExportByName("ole32.dll", "IsValidPtrIn")
+Interceptor.attach(IsValidPtrIn, {onLeave: function (args) {send("IsValidPtrIn");}});
+
+var IsValidPtrOut = Module.findExportByName("ole32.dll", "IsValidPtrOut")
+Interceptor.attach(IsValidPtrOut, {onLeave: function (args) {send("IsValidPtrOut");}});
+
+var MkParseDisplayName = Module.findExportByName("ole32.dll", "MkParseDisplayName")
+Interceptor.attach(MkParseDisplayName, {onLeave: function (args) {send("MkParseDisplayName");}});
+
+var MonikerCommonPrefixWith = Module.findExportByName("ole32.dll", "MonikerCommonPrefixWith")
+Interceptor.attach(MonikerCommonPrefixWith, {onLeave: function (args) {send("MonikerCommonPrefixWith");}});
+
+var MonikerLoadTypeLib = Module.findExportByName("ole32.dll", "MonikerLoadTypeLib")
+Interceptor.attach(MonikerLoadTypeLib, {onLeave: function (args) {send("MonikerLoadTypeLib");}});
+
+var MonikerRelativePathTo = Module.findExportByName("ole32.dll", "MonikerRelativePathTo")
+Interceptor.attach(MonikerRelativePathTo, {onLeave: function (args) {send("MonikerRelativePathTo");}});
+
+var NdrOleInitializeExtension = Module.findExportByName("ole32.dll", "NdrOleInitializeExtension")
+Interceptor.attach(NdrOleInitializeExtension, {onLeave: function (args) {send("NdrOleInitializeExtension");}});
+
+var NdrProxyForwardingFunction10 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction10")
+Interceptor.attach(NdrProxyForwardingFunction10, {onLeave: function (args) {send("NdrProxyForwardingFunction10");}});
+
+var NdrProxyForwardingFunction11 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction11")
+Interceptor.attach(NdrProxyForwardingFunction11, {onLeave: function (args) {send("NdrProxyForwardingFunction11");}});
+
+var NdrProxyForwardingFunction12 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction12")
+Interceptor.attach(NdrProxyForwardingFunction12, {onLeave: function (args) {send("NdrProxyForwardingFunction12");}});
+
+var NdrProxyForwardingFunction13 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction13")
+Interceptor.attach(NdrProxyForwardingFunction13, {onLeave: function (args) {send("NdrProxyForwardingFunction13");}});
+
+var NdrProxyForwardingFunction14 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction14")
+Interceptor.attach(NdrProxyForwardingFunction14, {onLeave: function (args) {send("NdrProxyForwardingFunction14");}});
+
+var NdrProxyForwardingFunction15 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction15")
+Interceptor.attach(NdrProxyForwardingFunction15, {onLeave: function (args) {send("NdrProxyForwardingFunction15");}});
+
+var NdrProxyForwardingFunction16 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction16")
+Interceptor.attach(NdrProxyForwardingFunction16, {onLeave: function (args) {send("NdrProxyForwardingFunction16");}});
+
+var NdrProxyForwardingFunction17 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction17")
+Interceptor.attach(NdrProxyForwardingFunction17, {onLeave: function (args) {send("NdrProxyForwardingFunction17");}});
+
+var NdrProxyForwardingFunction18 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction18")
+Interceptor.attach(NdrProxyForwardingFunction18, {onLeave: function (args) {send("NdrProxyForwardingFunction18");}});
+
+var NdrProxyForwardingFunction19 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction19")
+Interceptor.attach(NdrProxyForwardingFunction19, {onLeave: function (args) {send("NdrProxyForwardingFunction19");}});
+
+var NdrProxyForwardingFunction20 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction20")
+Interceptor.attach(NdrProxyForwardingFunction20, {onLeave: function (args) {send("NdrProxyForwardingFunction20");}});
+
+var NdrProxyForwardingFunction21 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction21")
+Interceptor.attach(NdrProxyForwardingFunction21, {onLeave: function (args) {send("NdrProxyForwardingFunction21");}});
+
+var NdrProxyForwardingFunction22 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction22")
+Interceptor.attach(NdrProxyForwardingFunction22, {onLeave: function (args) {send("NdrProxyForwardingFunction22");}});
+
+var NdrProxyForwardingFunction23 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction23")
+Interceptor.attach(NdrProxyForwardingFunction23, {onLeave: function (args) {send("NdrProxyForwardingFunction23");}});
+
+var NdrProxyForwardingFunction24 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction24")
+Interceptor.attach(NdrProxyForwardingFunction24, {onLeave: function (args) {send("NdrProxyForwardingFunction24");}});
+
+var NdrProxyForwardingFunction25 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction25")
+Interceptor.attach(NdrProxyForwardingFunction25, {onLeave: function (args) {send("NdrProxyForwardingFunction25");}});
+
+var NdrProxyForwardingFunction26 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction26")
+Interceptor.attach(NdrProxyForwardingFunction26, {onLeave: function (args) {send("NdrProxyForwardingFunction26");}});
+
+var NdrProxyForwardingFunction27 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction27")
+Interceptor.attach(NdrProxyForwardingFunction27, {onLeave: function (args) {send("NdrProxyForwardingFunction27");}});
+
+var NdrProxyForwardingFunction28 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction28")
+Interceptor.attach(NdrProxyForwardingFunction28, {onLeave: function (args) {send("NdrProxyForwardingFunction28");}});
+
+var NdrProxyForwardingFunction29 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction29")
+Interceptor.attach(NdrProxyForwardingFunction29, {onLeave: function (args) {send("NdrProxyForwardingFunction29");}});
+
+var NdrProxyForwardingFunction3 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction3")
+Interceptor.attach(NdrProxyForwardingFunction3, {onLeave: function (args) {send("NdrProxyForwardingFunction3");}});
+
+var NdrProxyForwardingFunction30 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction30")
+Interceptor.attach(NdrProxyForwardingFunction30, {onLeave: function (args) {send("NdrProxyForwardingFunction30");}});
+
+var NdrProxyForwardingFunction31 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction31")
+Interceptor.attach(NdrProxyForwardingFunction31, {onLeave: function (args) {send("NdrProxyForwardingFunction31");}});
+
+var NdrProxyForwardingFunction32 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction32")
+Interceptor.attach(NdrProxyForwardingFunction32, {onLeave: function (args) {send("NdrProxyForwardingFunction32");}});
+
+var NdrProxyForwardingFunction4 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction4")
+Interceptor.attach(NdrProxyForwardingFunction4, {onLeave: function (args) {send("NdrProxyForwardingFunction4");}});
+
+var NdrProxyForwardingFunction5 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction5")
+Interceptor.attach(NdrProxyForwardingFunction5, {onLeave: function (args) {send("NdrProxyForwardingFunction5");}});
+
+var NdrProxyForwardingFunction6 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction6")
+Interceptor.attach(NdrProxyForwardingFunction6, {onLeave: function (args) {send("NdrProxyForwardingFunction6");}});
+
+var NdrProxyForwardingFunction7 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction7")
+Interceptor.attach(NdrProxyForwardingFunction7, {onLeave: function (args) {send("NdrProxyForwardingFunction7");}});
+
+var NdrProxyForwardingFunction8 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction8")
+Interceptor.attach(NdrProxyForwardingFunction8, {onLeave: function (args) {send("NdrProxyForwardingFunction8");}});
+
+var NdrProxyForwardingFunction9 = Module.findExportByName("ole32.dll", "NdrProxyForwardingFunction9")
+Interceptor.attach(NdrProxyForwardingFunction9, {onLeave: function (args) {send("NdrProxyForwardingFunction9");}});
+
+var ObjectStublessClient10 = Module.findExportByName("ole32.dll", "ObjectStublessClient10")
+Interceptor.attach(ObjectStublessClient10, {onLeave: function (args) {send("ObjectStublessClient10");}});
+
+var ObjectStublessClient11 = Module.findExportByName("ole32.dll", "ObjectStublessClient11")
+Interceptor.attach(ObjectStublessClient11, {onLeave: function (args) {send("ObjectStublessClient11");}});
+
+var ObjectStublessClient12 = Module.findExportByName("ole32.dll", "ObjectStublessClient12")
+Interceptor.attach(ObjectStublessClient12, {onLeave: function (args) {send("ObjectStublessClient12");}});
+
+var ObjectStublessClient13 = Module.findExportByName("ole32.dll", "ObjectStublessClient13")
+Interceptor.attach(ObjectStublessClient13, {onLeave: function (args) {send("ObjectStublessClient13");}});
+
+var ObjectStublessClient14 = Module.findExportByName("ole32.dll", "ObjectStublessClient14")
+Interceptor.attach(ObjectStublessClient14, {onLeave: function (args) {send("ObjectStublessClient14");}});
+
+var ObjectStublessClient15 = Module.findExportByName("ole32.dll", "ObjectStublessClient15")
+Interceptor.attach(ObjectStublessClient15, {onLeave: function (args) {send("ObjectStublessClient15");}});
+
+var ObjectStublessClient16 = Module.findExportByName("ole32.dll", "ObjectStublessClient16")
+Interceptor.attach(ObjectStublessClient16, {onLeave: function (args) {send("ObjectStublessClient16");}});
+
+var ObjectStublessClient17 = Module.findExportByName("ole32.dll", "ObjectStublessClient17")
+Interceptor.attach(ObjectStublessClient17, {onLeave: function (args) {send("ObjectStublessClient17");}});
+
+var ObjectStublessClient18 = Module.findExportByName("ole32.dll", "ObjectStublessClient18")
+Interceptor.attach(ObjectStublessClient18, {onLeave: function (args) {send("ObjectStublessClient18");}});
+
+var ObjectStublessClient19 = Module.findExportByName("ole32.dll", "ObjectStublessClient19")
+Interceptor.attach(ObjectStublessClient19, {onLeave: function (args) {send("ObjectStublessClient19");}});
+
+var ObjectStublessClient20 = Module.findExportByName("ole32.dll", "ObjectStublessClient20")
+Interceptor.attach(ObjectStublessClient20, {onLeave: function (args) {send("ObjectStublessClient20");}});
+
+var ObjectStublessClient21 = Module.findExportByName("ole32.dll", "ObjectStublessClient21")
+Interceptor.attach(ObjectStublessClient21, {onLeave: function (args) {send("ObjectStublessClient21");}});
+
+var ObjectStublessClient22 = Module.findExportByName("ole32.dll", "ObjectStublessClient22")
+Interceptor.attach(ObjectStublessClient22, {onLeave: function (args) {send("ObjectStublessClient22");}});
+
+var ObjectStublessClient23 = Module.findExportByName("ole32.dll", "ObjectStublessClient23")
+Interceptor.attach(ObjectStublessClient23, {onLeave: function (args) {send("ObjectStublessClient23");}});
+
+var ObjectStublessClient24 = Module.findExportByName("ole32.dll", "ObjectStublessClient24")
+Interceptor.attach(ObjectStublessClient24, {onLeave: function (args) {send("ObjectStublessClient24");}});
+
+var ObjectStublessClient25 = Module.findExportByName("ole32.dll", "ObjectStublessClient25")
+Interceptor.attach(ObjectStublessClient25, {onLeave: function (args) {send("ObjectStublessClient25");}});
+
+var ObjectStublessClient26 = Module.findExportByName("ole32.dll", "ObjectStublessClient26")
+Interceptor.attach(ObjectStublessClient26, {onLeave: function (args) {send("ObjectStublessClient26");}});
+
+var ObjectStublessClient27 = Module.findExportByName("ole32.dll", "ObjectStublessClient27")
+Interceptor.attach(ObjectStublessClient27, {onLeave: function (args) {send("ObjectStublessClient27");}});
+
+var ObjectStublessClient28 = Module.findExportByName("ole32.dll", "ObjectStublessClient28")
+Interceptor.attach(ObjectStublessClient28, {onLeave: function (args) {send("ObjectStublessClient28");}});
+
+var ObjectStublessClient29 = Module.findExportByName("ole32.dll", "ObjectStublessClient29")
+Interceptor.attach(ObjectStublessClient29, {onLeave: function (args) {send("ObjectStublessClient29");}});
+
+var ObjectStublessClient3 = Module.findExportByName("ole32.dll", "ObjectStublessClient3")
+Interceptor.attach(ObjectStublessClient3, {onLeave: function (args) {send("ObjectStublessClient3");}});
+
+var ObjectStublessClient30 = Module.findExportByName("ole32.dll", "ObjectStublessClient30")
+Interceptor.attach(ObjectStublessClient30, {onLeave: function (args) {send("ObjectStublessClient30");}});
+
+var ObjectStublessClient31 = Module.findExportByName("ole32.dll", "ObjectStublessClient31")
+Interceptor.attach(ObjectStublessClient31, {onLeave: function (args) {send("ObjectStublessClient31");}});
+
+var ObjectStublessClient32 = Module.findExportByName("ole32.dll", "ObjectStublessClient32")
+Interceptor.attach(ObjectStublessClient32, {onLeave: function (args) {send("ObjectStublessClient32");}});
+
+var ObjectStublessClient4 = Module.findExportByName("ole32.dll", "ObjectStublessClient4")
+Interceptor.attach(ObjectStublessClient4, {onLeave: function (args) {send("ObjectStublessClient4");}});
+
+var ObjectStublessClient5 = Module.findExportByName("ole32.dll", "ObjectStublessClient5")
+Interceptor.attach(ObjectStublessClient5, {onLeave: function (args) {send("ObjectStublessClient5");}});
+
+var ObjectStublessClient6 = Module.findExportByName("ole32.dll", "ObjectStublessClient6")
+Interceptor.attach(ObjectStublessClient6, {onLeave: function (args) {send("ObjectStublessClient6");}});
+
+var ObjectStublessClient7 = Module.findExportByName("ole32.dll", "ObjectStublessClient7")
+Interceptor.attach(ObjectStublessClient7, {onLeave: function (args) {send("ObjectStublessClient7");}});
+
+var ObjectStublessClient8 = Module.findExportByName("ole32.dll", "ObjectStublessClient8")
+Interceptor.attach(ObjectStublessClient8, {onLeave: function (args) {send("ObjectStublessClient8");}});
+
+var ObjectStublessClient9 = Module.findExportByName("ole32.dll", "ObjectStublessClient9")
+Interceptor.attach(ObjectStublessClient9, {onLeave: function (args) {send("ObjectStublessClient9");}});
+
+var Ole32DllGetClassObject = Module.findExportByName("ole32.dll", "Ole32DllGetClassObject")
+Interceptor.attach(Ole32DllGetClassObject, {onLeave: function (args) {send("Ole32DllGetClassObject");}});
+
+var OleBuildVersion = Module.findExportByName("ole32.dll", "OleBuildVersion")
+Interceptor.attach(OleBuildVersion, {onLeave: function (args) {send("OleBuildVersion");}});
+
+var OleConvertIStorageToOLESTREAM = Module.findExportByName("ole32.dll", "OleConvertIStorageToOLESTREAM")
+Interceptor.attach(OleConvertIStorageToOLESTREAM, {onLeave: function (args) {send("OleConvertIStorageToOLESTREAM");}});
+
+var OleConvertIStorageToOLESTREAMEx = Module.findExportByName("ole32.dll", "OleConvertIStorageToOLESTREAMEx")
+Interceptor.attach(OleConvertIStorageToOLESTREAMEx, {onLeave: function (args) {send("OleConvertIStorageToOLESTREAMEx");}});
+
+var OleConvertOLESTREAMToIStorage = Module.findExportByName("ole32.dll", "OleConvertOLESTREAMToIStorage")
+Interceptor.attach(OleConvertOLESTREAMToIStorage, {onLeave: function (args) {send("OleConvertOLESTREAMToIStorage");}});
+
+var OleConvertOLESTREAMToIStorage2 = Module.findExportByName("ole32.dll", "OleConvertOLESTREAMToIStorage2")
+Interceptor.attach(OleConvertOLESTREAMToIStorage2, {onLeave: function (args) {send("OleConvertOLESTREAMToIStorage2");}});
+
+var OleConvertOLESTREAMToIStorageEx = Module.findExportByName("ole32.dll", "OleConvertOLESTREAMToIStorageEx")
+Interceptor.attach(OleConvertOLESTREAMToIStorageEx, {onLeave: function (args) {send("OleConvertOLESTREAMToIStorageEx");}});
+
+var OleConvertOLESTREAMToIStorageEx2 = Module.findExportByName("ole32.dll", "OleConvertOLESTREAMToIStorageEx2")
+Interceptor.attach(OleConvertOLESTREAMToIStorageEx2, {onLeave: function (args) {send("OleConvertOLESTREAMToIStorageEx2");}});
+
+var OleCreate = Module.findExportByName("ole32.dll", "OleCreate")
+Interceptor.attach(OleCreate, {onLeave: function (args) {send("OleCreate");}});
+
+var OleCreateDefaultHandler = Module.findExportByName("ole32.dll", "OleCreateDefaultHandler")
+Interceptor.attach(OleCreateDefaultHandler, {onLeave: function (args) {send("OleCreateDefaultHandler");}});
+
+var OleCreateEmbeddingHelper = Module.findExportByName("ole32.dll", "OleCreateEmbeddingHelper")
+Interceptor.attach(OleCreateEmbeddingHelper, {onLeave: function (args) {send("OleCreateEmbeddingHelper");}});
+
+var OleCreateEx = Module.findExportByName("ole32.dll", "OleCreateEx")
+Interceptor.attach(OleCreateEx, {onLeave: function (args) {send("OleCreateEx");}});
+
+var OleCreateFontIndirectExt = Module.findExportByName("ole32.dll", "OleCreateFontIndirectExt")
+Interceptor.attach(OleCreateFontIndirectExt, {onLeave: function (args) {send("OleCreateFontIndirectExt");}});
+
+var OleCreateFromData = Module.findExportByName("ole32.dll", "OleCreateFromData")
+Interceptor.attach(OleCreateFromData, {onLeave: function (args) {send("OleCreateFromData");}});
+
+var OleCreateFromDataEx = Module.findExportByName("ole32.dll", "OleCreateFromDataEx")
+Interceptor.attach(OleCreateFromDataEx, {onLeave: function (args) {send("OleCreateFromDataEx");}});
+
+var OleCreateFromFile = Module.findExportByName("ole32.dll", "OleCreateFromFile")
+Interceptor.attach(OleCreateFromFile, {onLeave: function (args) {send("OleCreateFromFile");}});
+
+var OleCreateFromFileEx = Module.findExportByName("ole32.dll", "OleCreateFromFileEx")
+Interceptor.attach(OleCreateFromFileEx, {onLeave: function (args) {send("OleCreateFromFileEx");}});
+
+var OleCreateLink = Module.findExportByName("ole32.dll", "OleCreateLink")
+Interceptor.attach(OleCreateLink, {onLeave: function (args) {send("OleCreateLink");}});
+
+var OleCreateLinkEx = Module.findExportByName("ole32.dll", "OleCreateLinkEx")
+Interceptor.attach(OleCreateLinkEx, {onLeave: function (args) {send("OleCreateLinkEx");}});
+
+var OleCreateLinkFromData = Module.findExportByName("ole32.dll", "OleCreateLinkFromData")
+Interceptor.attach(OleCreateLinkFromData, {onLeave: function (args) {send("OleCreateLinkFromData");}});
+
+var OleCreateLinkFromDataEx = Module.findExportByName("ole32.dll", "OleCreateLinkFromDataEx")
+Interceptor.attach(OleCreateLinkFromDataEx, {onLeave: function (args) {send("OleCreateLinkFromDataEx");}});
+
+var OleCreateLinkToFile = Module.findExportByName("ole32.dll", "OleCreateLinkToFile")
+Interceptor.attach(OleCreateLinkToFile, {onLeave: function (args) {send("OleCreateLinkToFile");}});
+
+var OleCreateLinkToFileEx = Module.findExportByName("ole32.dll", "OleCreateLinkToFileEx")
+Interceptor.attach(OleCreateLinkToFileEx, {onLeave: function (args) {send("OleCreateLinkToFileEx");}});
+
+var OleCreateMenuDescriptor = Module.findExportByName("ole32.dll", "OleCreateMenuDescriptor")
+Interceptor.attach(OleCreateMenuDescriptor, {onLeave: function (args) {send("OleCreateMenuDescriptor");}});
+
+var OleCreatePictureIndirectExt = Module.findExportByName("ole32.dll", "OleCreatePictureIndirectExt")
+Interceptor.attach(OleCreatePictureIndirectExt, {onLeave: function (args) {send("OleCreatePictureIndirectExt");}});
+
+var OleCreatePropertyFrameIndirectExt = Module.findExportByName("ole32.dll", "OleCreatePropertyFrameIndirectExt")
+Interceptor.attach(OleCreatePropertyFrameIndirectExt, {onLeave: function (args) {send("OleCreatePropertyFrameIndirectExt");}});
+
+var OleCreateStaticFromData = Module.findExportByName("ole32.dll", "OleCreateStaticFromData")
+Interceptor.attach(OleCreateStaticFromData, {onLeave: function (args) {send("OleCreateStaticFromData");}});
+
+var OleDestroyMenuDescriptor = Module.findExportByName("ole32.dll", "OleDestroyMenuDescriptor")
+Interceptor.attach(OleDestroyMenuDescriptor, {onLeave: function (args) {send("OleDestroyMenuDescriptor");}});
+
+var OleDoAutoConvert = Module.findExportByName("ole32.dll", "OleDoAutoConvert")
+Interceptor.attach(OleDoAutoConvert, {onLeave: function (args) {send("OleDoAutoConvert");}});
+
+var OleDraw = Module.findExportByName("ole32.dll", "OleDraw")
+Interceptor.attach(OleDraw, {onLeave: function (args) {send("OleDraw");}});
+
+var OleDuplicateData = Module.findExportByName("ole32.dll", "OleDuplicateData")
+Interceptor.attach(OleDuplicateData, {onLeave: function (args) {send("OleDuplicateData");}});
+
+var OleFlushClipboard = Module.findExportByName("ole32.dll", "OleFlushClipboard")
+Interceptor.attach(OleFlushClipboard, {onLeave: function (args) {send("OleFlushClipboard");}});
+
+var OleGetAutoConvert = Module.findExportByName("ole32.dll", "OleGetAutoConvert")
+Interceptor.attach(OleGetAutoConvert, {onLeave: function (args) {send("OleGetAutoConvert");}});
+
+var OleGetClipboard = Module.findExportByName("ole32.dll", "OleGetClipboard")
+Interceptor.attach(OleGetClipboard, {onLeave: function (args) {send("OleGetClipboard");}});
+
+var OleGetClipboardWithEnterpriseInfo = Module.findExportByName("ole32.dll", "OleGetClipboardWithEnterpriseInfo")
+Interceptor.attach(OleGetClipboardWithEnterpriseInfo, {onLeave: function (args) {send("OleGetClipboardWithEnterpriseInfo");}});
+
+var OleGetIconOfClass = Module.findExportByName("ole32.dll", "OleGetIconOfClass")
+Interceptor.attach(OleGetIconOfClass, {onLeave: function (args) {send("OleGetIconOfClass");}});
+
+var OleGetIconOfFile = Module.findExportByName("ole32.dll", "OleGetIconOfFile")
+Interceptor.attach(OleGetIconOfFile, {onLeave: function (args) {send("OleGetIconOfFile");}});
+
+var OleGetPackageClipboardOwner = Module.findExportByName("ole32.dll", "OleGetPackageClipboardOwner")
+Interceptor.attach(OleGetPackageClipboardOwner, {onLeave: function (args) {send("OleGetPackageClipboardOwner");}});
+
+var OleIconToCursorExt = Module.findExportByName("ole32.dll", "OleIconToCursorExt")
+Interceptor.attach(OleIconToCursorExt, {onLeave: function (args) {send("OleIconToCursorExt");}});
+
+var OleInitialize = Module.findExportByName("ole32.dll", "OleInitialize")
+Interceptor.attach(OleInitialize, {onLeave: function (args) {send("OleInitialize");}});
+
+var OleInitializeWOW = Module.findExportByName("ole32.dll", "OleInitializeWOW")
+Interceptor.attach(OleInitializeWOW, {onLeave: function (args) {send("OleInitializeWOW");}});
+
+var OleIsCurrentClipboard = Module.findExportByName("ole32.dll", "OleIsCurrentClipboard")
+Interceptor.attach(OleIsCurrentClipboard, {onLeave: function (args) {send("OleIsCurrentClipboard");}});
+
+var OleIsRunning = Module.findExportByName("ole32.dll", "OleIsRunning")
+Interceptor.attach(OleIsRunning, {onLeave: function (args) {send("OleIsRunning");}});
+
+var OleLoad = Module.findExportByName("ole32.dll", "OleLoad")
+Interceptor.attach(OleLoad, {onLeave: function (args) {send("OleLoad");}});
+
+var OleLoadFromStream = Module.findExportByName("ole32.dll", "OleLoadFromStream")
+Interceptor.attach(OleLoadFromStream, {onLeave: function (args) {send("OleLoadFromStream");}});
+
+var OleLoadPictureExt = Module.findExportByName("ole32.dll", "OleLoadPictureExt")
+Interceptor.attach(OleLoadPictureExt, {onLeave: function (args) {send("OleLoadPictureExt");}});
+
+var OleLoadPictureFileExt = Module.findExportByName("ole32.dll", "OleLoadPictureFileExt")
+Interceptor.attach(OleLoadPictureFileExt, {onLeave: function (args) {send("OleLoadPictureFileExt");}});
+
+var OleLoadPicturePathExt = Module.findExportByName("ole32.dll", "OleLoadPicturePathExt")
+Interceptor.attach(OleLoadPicturePathExt, {onLeave: function (args) {send("OleLoadPicturePathExt");}});
+
+var OleLockRunning = Module.findExportByName("ole32.dll", "OleLockRunning")
+Interceptor.attach(OleLockRunning, {onLeave: function (args) {send("OleLockRunning");}});
+
+var OleMetafilePictFromIconAndLabel = Module.findExportByName("ole32.dll", "OleMetafilePictFromIconAndLabel")
+Interceptor.attach(OleMetafilePictFromIconAndLabel, {onLeave: function (args) {send("OleMetafilePictFromIconAndLabel");}});
+
+var OleNoteObjectVisible = Module.findExportByName("ole32.dll", "OleNoteObjectVisible")
+Interceptor.attach(OleNoteObjectVisible, {onLeave: function (args) {send("OleNoteObjectVisible");}});
+
+var OleQueryCreateFromData = Module.findExportByName("ole32.dll", "OleQueryCreateFromData")
+Interceptor.attach(OleQueryCreateFromData, {onLeave: function (args) {send("OleQueryCreateFromData");}});
+
+var OleQueryLinkFromData = Module.findExportByName("ole32.dll", "OleQueryLinkFromData")
+Interceptor.attach(OleQueryLinkFromData, {onLeave: function (args) {send("OleQueryLinkFromData");}});
+
+var OleRegEnumFormatEtc = Module.findExportByName("ole32.dll", "OleRegEnumFormatEtc")
+Interceptor.attach(OleRegEnumFormatEtc, {onLeave: function (args) {send("OleRegEnumFormatEtc");}});
+
+var OleRegEnumVerbs = Module.findExportByName("ole32.dll", "OleRegEnumVerbs")
+Interceptor.attach(OleRegEnumVerbs, {onLeave: function (args) {send("OleRegEnumVerbs");}});
+
+var OleRegGetMiscStatus = Module.findExportByName("ole32.dll", "OleRegGetMiscStatus")
+Interceptor.attach(OleRegGetMiscStatus, {onLeave: function (args) {send("OleRegGetMiscStatus");}});
+
+var OleRegGetUserType = Module.findExportByName("ole32.dll", "OleRegGetUserType")
+Interceptor.attach(OleRegGetUserType, {onLeave: function (args) {send("OleRegGetUserType");}});
+
+var OleReleaseEnumVerbCache = Module.findExportByName("ole32.dll", "OleReleaseEnumVerbCache")
+Interceptor.attach(OleReleaseEnumVerbCache, {onLeave: function (args) {send("OleReleaseEnumVerbCache");}});
+
+var OleRun = Module.findExportByName("ole32.dll", "OleRun")
+Interceptor.attach(OleRun, {onLeave: function (args) {send("OleRun");}});
+
+var OleSave = Module.findExportByName("ole32.dll", "OleSave")
+Interceptor.attach(OleSave, {onLeave: function (args) {send("OleSave");}});
+
+var OleSavePictureFileExt = Module.findExportByName("ole32.dll", "OleSavePictureFileExt")
+Interceptor.attach(OleSavePictureFileExt, {onLeave: function (args) {send("OleSavePictureFileExt");}});
+
+var OleSaveToStream = Module.findExportByName("ole32.dll", "OleSaveToStream")
+Interceptor.attach(OleSaveToStream, {onLeave: function (args) {send("OleSaveToStream");}});
+
+var OleSetAutoConvert = Module.findExportByName("ole32.dll", "OleSetAutoConvert")
+Interceptor.attach(OleSetAutoConvert, {onLeave: function (args) {send("OleSetAutoConvert");}});
+
+var OleSetClipboard = Module.findExportByName("ole32.dll", "OleSetClipboard")
+Interceptor.attach(OleSetClipboard, {onLeave: function (args) {send("OleSetClipboard");}});
+
+var OleSetContainedObject = Module.findExportByName("ole32.dll", "OleSetContainedObject")
+Interceptor.attach(OleSetContainedObject, {onLeave: function (args) {send("OleSetContainedObject");}});
+
+var OleSetMenuDescriptor = Module.findExportByName("ole32.dll", "OleSetMenuDescriptor")
+Interceptor.attach(OleSetMenuDescriptor, {onLeave: function (args) {send("OleSetMenuDescriptor");}});
+
+var OleTranslateAccelerator = Module.findExportByName("ole32.dll", "OleTranslateAccelerator")
+Interceptor.attach(OleTranslateAccelerator, {onLeave: function (args) {send("OleTranslateAccelerator");}});
+
+var OleTranslateColorExt = Module.findExportByName("ole32.dll", "OleTranslateColorExt")
+Interceptor.attach(OleTranslateColorExt, {onLeave: function (args) {send("OleTranslateColorExt");}});
+
+var OleUninitialize = Module.findExportByName("ole32.dll", "OleUninitialize")
+Interceptor.attach(OleUninitialize, {onLeave: function (args) {send("OleUninitialize");}});
+
+var OpenOrCreateStream = Module.findExportByName("ole32.dll", "OpenOrCreateStream")
+Interceptor.attach(OpenOrCreateStream, {onLeave: function (args) {send("OpenOrCreateStream");}});
+
+var ProgIDFromCLSID = Module.findExportByName("ole32.dll", "ProgIDFromCLSID")
+Interceptor.attach(ProgIDFromCLSID, {onLeave: function (args) {send("ProgIDFromCLSID");}});
+
+var PropStgNameToFmtId = Module.findExportByName("ole32.dll", "PropStgNameToFmtId")
+Interceptor.attach(PropStgNameToFmtId, {onLeave: function (args) {send("PropStgNameToFmtId");}});
+
+var PropSysAllocString = Module.findExportByName("ole32.dll", "PropSysAllocString")
+Interceptor.attach(PropSysAllocString, {onLeave: function (args) {send("PropSysAllocString");}});
+
+var PropSysFreeString = Module.findExportByName("ole32.dll", "PropSysFreeString")
+Interceptor.attach(PropSysFreeString, {onLeave: function (args) {send("PropSysFreeString");}});
+
+var PropVariantChangeType = Module.findExportByName("ole32.dll", "PropVariantChangeType")
+Interceptor.attach(PropVariantChangeType, {onLeave: function (args) {send("PropVariantChangeType");}});
+
+var PropVariantClear = Module.findExportByName("ole32.dll", "PropVariantClear")
+Interceptor.attach(PropVariantClear, {onLeave: function (args) {send("PropVariantClear");}});
+
+var PropVariantCopy = Module.findExportByName("ole32.dll", "PropVariantCopy")
+Interceptor.attach(PropVariantCopy, {onLeave: function (args) {send("PropVariantCopy");}});
+
+var ReadClassStg = Module.findExportByName("ole32.dll", "ReadClassStg")
+Interceptor.attach(ReadClassStg, {onLeave: function (args) {send("ReadClassStg");}});
+
+var ReadClassStm = Module.findExportByName("ole32.dll", "ReadClassStm")
+Interceptor.attach(ReadClassStm, {onLeave: function (args) {send("ReadClassStm");}});
+
+var ReadFmtUserTypeStg = Module.findExportByName("ole32.dll", "ReadFmtUserTypeStg")
+Interceptor.attach(ReadFmtUserTypeStg, {onLeave: function (args) {send("ReadFmtUserTypeStg");}});
+
+var ReadOleStg = Module.findExportByName("ole32.dll", "ReadOleStg")
+Interceptor.attach(ReadOleStg, {onLeave: function (args) {send("ReadOleStg");}});
+
+var ReadStorageProperties = Module.findExportByName("ole32.dll", "ReadStorageProperties")
+Interceptor.attach(ReadStorageProperties, {onLeave: function (args) {send("ReadStorageProperties");}});
+
+var ReadStringStream = Module.findExportByName("ole32.dll", "ReadStringStream")
+Interceptor.attach(ReadStringStream, {onLeave: function (args) {send("ReadStringStream");}});
+
+var RegisterActiveObjectExt = Module.findExportByName("ole32.dll", "RegisterActiveObjectExt")
+Interceptor.attach(RegisterActiveObjectExt, {onLeave: function (args) {send("RegisterActiveObjectExt");}});
+
+var RegisterDragDrop = Module.findExportByName("ole32.dll", "RegisterDragDrop")
+Interceptor.attach(RegisterDragDrop, {onLeave: function (args) {send("RegisterDragDrop");}});
+
+var ReleaseStgMedium = Module.findExportByName("ole32.dll", "ReleaseStgMedium")
+Interceptor.attach(ReleaseStgMedium, {onLeave: function (args) {send("ReleaseStgMedium");}});
+
+var RevokeActiveObjectExt = Module.findExportByName("ole32.dll", "RevokeActiveObjectExt")
+Interceptor.attach(RevokeActiveObjectExt, {onLeave: function (args) {send("RevokeActiveObjectExt");}});
+
+var RevokeDragDrop = Module.findExportByName("ole32.dll", "RevokeDragDrop")
+Interceptor.attach(RevokeDragDrop, {onLeave: function (args) {send("RevokeDragDrop");}});
+
+var RoGetAgileReference = Module.findExportByName("ole32.dll", "RoGetAgileReference")
+Interceptor.attach(RoGetAgileReference, {onLeave: function (args) {send("RoGetAgileReference");}});
+
+var SNB_UserFree = Module.findExportByName("ole32.dll", "SNB_UserFree")
+Interceptor.attach(SNB_UserFree, {onLeave: function (args) {send("SNB_UserFree");}});
+
+var SNB_UserFree64 = Module.findExportByName("ole32.dll", "SNB_UserFree64")
+Interceptor.attach(SNB_UserFree64, {onLeave: function (args) {send("SNB_UserFree64");}});
+
+var SNB_UserMarshal = Module.findExportByName("ole32.dll", "SNB_UserMarshal")
+Interceptor.attach(SNB_UserMarshal, {onLeave: function (args) {send("SNB_UserMarshal");}});
+
+var SNB_UserMarshal64 = Module.findExportByName("ole32.dll", "SNB_UserMarshal64")
+Interceptor.attach(SNB_UserMarshal64, {onLeave: function (args) {send("SNB_UserMarshal64");}});
+
+var SNB_UserSize = Module.findExportByName("ole32.dll", "SNB_UserSize")
+Interceptor.attach(SNB_UserSize, {onLeave: function (args) {send("SNB_UserSize");}});
+
+var SNB_UserSize64 = Module.findExportByName("ole32.dll", "SNB_UserSize64")
+Interceptor.attach(SNB_UserSize64, {onLeave: function (args) {send("SNB_UserSize64");}});
+
+var SNB_UserUnmarshal = Module.findExportByName("ole32.dll", "SNB_UserUnmarshal")
+Interceptor.attach(SNB_UserUnmarshal, {onLeave: function (args) {send("SNB_UserUnmarshal");}});
+
+var SNB_UserUnmarshal64 = Module.findExportByName("ole32.dll", "SNB_UserUnmarshal64")
+Interceptor.attach(SNB_UserUnmarshal64, {onLeave: function (args) {send("SNB_UserUnmarshal64");}});
+
+var STGMEDIUM_UserFree = Module.findExportByName("ole32.dll", "STGMEDIUM_UserFree")
+Interceptor.attach(STGMEDIUM_UserFree, {onLeave: function (args) {send("STGMEDIUM_UserFree");}});
+
+var STGMEDIUM_UserFree64 = Module.findExportByName("ole32.dll", "STGMEDIUM_UserFree64")
+Interceptor.attach(STGMEDIUM_UserFree64, {onLeave: function (args) {send("STGMEDIUM_UserFree64");}});
+
+var STGMEDIUM_UserFreeExt = Module.findExportByName("ole32.dll", "STGMEDIUM_UserFreeExt")
+Interceptor.attach(STGMEDIUM_UserFreeExt, {onLeave: function (args) {send("STGMEDIUM_UserFreeExt");}});
+
+var STGMEDIUM_UserMarshal = Module.findExportByName("ole32.dll", "STGMEDIUM_UserMarshal")
+Interceptor.attach(STGMEDIUM_UserMarshal, {onLeave: function (args) {send("STGMEDIUM_UserMarshal");}});
+
+var STGMEDIUM_UserMarshal64 = Module.findExportByName("ole32.dll", "STGMEDIUM_UserMarshal64")
+Interceptor.attach(STGMEDIUM_UserMarshal64, {onLeave: function (args) {send("STGMEDIUM_UserMarshal64");}});
+
+var STGMEDIUM_UserMarshalExt = Module.findExportByName("ole32.dll", "STGMEDIUM_UserMarshalExt")
+Interceptor.attach(STGMEDIUM_UserMarshalExt, {onLeave: function (args) {send("STGMEDIUM_UserMarshalExt");}});
+
+var STGMEDIUM_UserSize = Module.findExportByName("ole32.dll", "STGMEDIUM_UserSize")
+Interceptor.attach(STGMEDIUM_UserSize, {onLeave: function (args) {send("STGMEDIUM_UserSize");}});
+
+var STGMEDIUM_UserSize64 = Module.findExportByName("ole32.dll", "STGMEDIUM_UserSize64")
+Interceptor.attach(STGMEDIUM_UserSize64, {onLeave: function (args) {send("STGMEDIUM_UserSize64");}});
+
+var STGMEDIUM_UserSizeExt = Module.findExportByName("ole32.dll", "STGMEDIUM_UserSizeExt")
+Interceptor.attach(STGMEDIUM_UserSizeExt, {onLeave: function (args) {send("STGMEDIUM_UserSizeExt");}});
+
+var STGMEDIUM_UserUnmarshal = Module.findExportByName("ole32.dll", "STGMEDIUM_UserUnmarshal")
+Interceptor.attach(STGMEDIUM_UserUnmarshal, {onLeave: function (args) {send("STGMEDIUM_UserUnmarshal");}});
+
+var STGMEDIUM_UserUnmarshal64 = Module.findExportByName("ole32.dll", "STGMEDIUM_UserUnmarshal64")
+Interceptor.attach(STGMEDIUM_UserUnmarshal64, {onLeave: function (args) {send("STGMEDIUM_UserUnmarshal64");}});
+
+var STGMEDIUM_UserUnmarshalExt = Module.findExportByName("ole32.dll", "STGMEDIUM_UserUnmarshalExt")
+Interceptor.attach(STGMEDIUM_UserUnmarshalExt, {onLeave: function (args) {send("STGMEDIUM_UserUnmarshalExt");}});
+
+var SetConvertStg = Module.findExportByName("ole32.dll", "SetConvertStg")
+Interceptor.attach(SetConvertStg, {onLeave: function (args) {send("SetConvertStg");}});
+
+var SetDocumentBitStg = Module.findExportByName("ole32.dll", "SetDocumentBitStg")
+Interceptor.attach(SetDocumentBitStg, {onLeave: function (args) {send("SetDocumentBitStg");}});
+
+var SetErrorInfo = Module.findExportByName("ole32.dll", "SetErrorInfo")
+Interceptor.attach(SetErrorInfo, {onLeave: function (args) {send("SetErrorInfo");}});
+
+var SetOleautModule = Module.findExportByName("ole32.dll", "SetOleautModule")
+Interceptor.attach(SetOleautModule, {onLeave: function (args) {send("SetOleautModule");}});
+
+var SetWOWThunkGlobalPtr = Module.findExportByName("ole32.dll", "SetWOWThunkGlobalPtr")
+Interceptor.attach(SetWOWThunkGlobalPtr, {onLeave: function (args) {send("SetWOWThunkGlobalPtr");}});
+
+var StdTypesGetClassObject = Module.findExportByName("ole32.dll", "StdTypesGetClassObject")
+Interceptor.attach(StdTypesGetClassObject, {onLeave: function (args) {send("StdTypesGetClassObject");}});
+
+var StdTypesRegisterServer = Module.findExportByName("ole32.dll", "StdTypesRegisterServer")
+Interceptor.attach(StdTypesRegisterServer, {onLeave: function (args) {send("StdTypesRegisterServer");}});
+
+var StgConvertPropertyToVariant = Module.findExportByName("ole32.dll", "StgConvertPropertyToVariant")
+Interceptor.attach(StgConvertPropertyToVariant, {onLeave: function (args) {send("StgConvertPropertyToVariant");}});
+
+var StgConvertVariantToProperty = Module.findExportByName("ole32.dll", "StgConvertVariantToProperty")
+Interceptor.attach(StgConvertVariantToProperty, {onLeave: function (args) {send("StgConvertVariantToProperty");}});
+
+var StgCreateDocfile = Module.findExportByName("ole32.dll", "StgCreateDocfile")
+Interceptor.attach(StgCreateDocfile, {onLeave: function (args) {send("StgCreateDocfile");}});
+
+var StgCreateDocfileOnILockBytes = Module.findExportByName("ole32.dll", "StgCreateDocfileOnILockBytes")
+Interceptor.attach(StgCreateDocfileOnILockBytes, {onLeave: function (args) {send("StgCreateDocfileOnILockBytes");}});
+
+var StgCreatePropSetStg = Module.findExportByName("ole32.dll", "StgCreatePropSetStg")
+Interceptor.attach(StgCreatePropSetStg, {onLeave: function (args) {send("StgCreatePropSetStg");}});
+
+var StgCreatePropStg = Module.findExportByName("ole32.dll", "StgCreatePropStg")
+Interceptor.attach(StgCreatePropStg, {onLeave: function (args) {send("StgCreatePropStg");}});
+
+var StgCreateStorageEx = Module.findExportByName("ole32.dll", "StgCreateStorageEx")
+Interceptor.attach(StgCreateStorageEx, {onLeave: function (args) {send("StgCreateStorageEx");}});
+
+var StgGetIFillLockBytesOnFile = Module.findExportByName("ole32.dll", "StgGetIFillLockBytesOnFile")
+Interceptor.attach(StgGetIFillLockBytesOnFile, {onLeave: function (args) {send("StgGetIFillLockBytesOnFile");}});
+
+var StgGetIFillLockBytesOnILockBytes = Module.findExportByName("ole32.dll", "StgGetIFillLockBytesOnILockBytes")
+Interceptor.attach(StgGetIFillLockBytesOnILockBytes, {onLeave: function (args) {send("StgGetIFillLockBytesOnILockBytes");}});
+
+var StgIsStorageFile = Module.findExportByName("ole32.dll", "StgIsStorageFile")
+Interceptor.attach(StgIsStorageFile, {onLeave: function (args) {send("StgIsStorageFile");}});
+
+var StgIsStorageILockBytes = Module.findExportByName("ole32.dll", "StgIsStorageILockBytes")
+Interceptor.attach(StgIsStorageILockBytes, {onLeave: function (args) {send("StgIsStorageILockBytes");}});
+
+var StgOpenAsyncDocfileOnIFillLockBytes = Module.findExportByName("ole32.dll", "StgOpenAsyncDocfileOnIFillLockBytes")
+Interceptor.attach(StgOpenAsyncDocfileOnIFillLockBytes, {onLeave: function (args) {send("StgOpenAsyncDocfileOnIFillLockBytes");}});
+
+var StgOpenPropStg = Module.findExportByName("ole32.dll", "StgOpenPropStg")
+Interceptor.attach(StgOpenPropStg, {onLeave: function (args) {send("StgOpenPropStg");}});
+
+var StgOpenStorage = Module.findExportByName("ole32.dll", "StgOpenStorage")
+Interceptor.attach(StgOpenStorage, {onLeave: function (args) {send("StgOpenStorage");}});
+
+var StgOpenStorageEx = Module.findExportByName("ole32.dll", "StgOpenStorageEx")
+Interceptor.attach(StgOpenStorageEx, {onLeave: function (args) {send("StgOpenStorageEx");}});
+
+var StgOpenStorageOnHandle = Module.findExportByName("ole32.dll", "StgOpenStorageOnHandle")
+Interceptor.attach(StgOpenStorageOnHandle, {onLeave: function (args) {send("StgOpenStorageOnHandle");}});
+
+var StgOpenStorageOnILockBytes = Module.findExportByName("ole32.dll", "StgOpenStorageOnILockBytes")
+Interceptor.attach(StgOpenStorageOnILockBytes, {onLeave: function (args) {send("StgOpenStorageOnILockBytes");}});
+
+var StgPropertyLengthAsVariant = Module.findExportByName("ole32.dll", "StgPropertyLengthAsVariant")
+Interceptor.attach(StgPropertyLengthAsVariant, {onLeave: function (args) {send("StgPropertyLengthAsVariant");}});
+
+var StgSetTimes = Module.findExportByName("ole32.dll", "StgSetTimes")
+Interceptor.attach(StgSetTimes, {onLeave: function (args) {send("StgSetTimes");}});
+
+var StringFromCLSID = Module.findExportByName("ole32.dll", "StringFromCLSID")
+Interceptor.attach(StringFromCLSID, {onLeave: function (args) {send("StringFromCLSID");}});
+
+var StringFromGUID2 = Module.findExportByName("ole32.dll", "StringFromGUID2")
+Interceptor.attach(StringFromGUID2, {onLeave: function (args) {send("StringFromGUID2");}});
+
+var StringFromIID = Module.findExportByName("ole32.dll", "StringFromIID")
+Interceptor.attach(StringFromIID, {onLeave: function (args) {send("StringFromIID");}});
+
+var UpdateDCOMSettings = Module.findExportByName("ole32.dll", "UpdateDCOMSettings")
+Interceptor.attach(UpdateDCOMSettings, {onLeave: function (args) {send("UpdateDCOMSettings");}});
+
+var UpdateProcessTracing = Module.findExportByName("ole32.dll", "UpdateProcessTracing")
+Interceptor.attach(UpdateProcessTracing, {onLeave: function (args) {send("UpdateProcessTracing");}});
+
+var UtConvertDvtd16toDvtd32 = Module.findExportByName("ole32.dll", "UtConvertDvtd16toDvtd32")
+Interceptor.attach(UtConvertDvtd16toDvtd32, {onLeave: function (args) {send("UtConvertDvtd16toDvtd32");}});
+
+var UtConvertDvtd32toDvtd16 = Module.findExportByName("ole32.dll", "UtConvertDvtd32toDvtd16")
+Interceptor.attach(UtConvertDvtd32toDvtd16, {onLeave: function (args) {send("UtConvertDvtd32toDvtd16");}});
+
+var UtGetDvtd16Info = Module.findExportByName("ole32.dll", "UtGetDvtd16Info")
+Interceptor.attach(UtGetDvtd16Info, {onLeave: function (args) {send("UtGetDvtd16Info");}});
+
+var UtGetDvtd32Info = Module.findExportByName("ole32.dll", "UtGetDvtd32Info")
+Interceptor.attach(UtGetDvtd32Info, {onLeave: function (args) {send("UtGetDvtd32Info");}});
+
+var WdtpInterfacePointer_UserFree = Module.findExportByName("ole32.dll", "WdtpInterfacePointer_UserFree")
+Interceptor.attach(WdtpInterfacePointer_UserFree, {onLeave: function (args) {send("WdtpInterfacePointer_UserFree");}});
+
+var WdtpInterfacePointer_UserFree64 = Module.findExportByName("ole32.dll", "WdtpInterfacePointer_UserFree64")
+Interceptor.attach(WdtpInterfacePointer_UserFree64, {onLeave: function (args) {send("WdtpInterfacePointer_UserFree64");}});
+
+var WdtpInterfacePointer_UserMarshal = Module.findExportByName("ole32.dll", "WdtpInterfacePointer_UserMarshal")
+Interceptor.attach(WdtpInterfacePointer_UserMarshal, {onLeave: function (args) {send("WdtpInterfacePointer_UserMarshal");}});
+
+var WdtpInterfacePointer_UserMarshal64 = Module.findExportByName("ole32.dll", "WdtpInterfacePointer_UserMarshal64")
+Interceptor.attach(WdtpInterfacePointer_UserMarshal64, {onLeave: function (args) {send("WdtpInterfacePointer_UserMarshal64");}});
+
+var WdtpInterfacePointer_UserSize = Module.findExportByName("ole32.dll", "WdtpInterfacePointer_UserSize")
+Interceptor.attach(WdtpInterfacePointer_UserSize, {onLeave: function (args) {send("WdtpInterfacePointer_UserSize");}});
+
+var WdtpInterfacePointer_UserSize64 = Module.findExportByName("ole32.dll", "WdtpInterfacePointer_UserSize64")
+Interceptor.attach(WdtpInterfacePointer_UserSize64, {onLeave: function (args) {send("WdtpInterfacePointer_UserSize64");}});
+
+var WdtpInterfacePointer_UserUnmarshal = Module.findExportByName("ole32.dll", "WdtpInterfacePointer_UserUnmarshal")
+Interceptor.attach(WdtpInterfacePointer_UserUnmarshal, {onLeave: function (args) {send("WdtpInterfacePointer_UserUnmarshal");}});
+
+var WdtpInterfacePointer_UserUnmarshal64 = Module.findExportByName("ole32.dll", "WdtpInterfacePointer_UserUnmarshal64")
+Interceptor.attach(WdtpInterfacePointer_UserUnmarshal64, {onLeave: function (args) {send("WdtpInterfacePointer_UserUnmarshal64");}});
+
+var WriteClassStg = Module.findExportByName("ole32.dll", "WriteClassStg")
+Interceptor.attach(WriteClassStg, {onLeave: function (args) {send("WriteClassStg");}});
+
+var WriteClassStm = Module.findExportByName("ole32.dll", "WriteClassStm")
+Interceptor.attach(WriteClassStm, {onLeave: function (args) {send("WriteClassStm");}});
+
+var WriteFmtUserTypeStg = Module.findExportByName("ole32.dll", "WriteFmtUserTypeStg")
+Interceptor.attach(WriteFmtUserTypeStg, {onLeave: function (args) {send("WriteFmtUserTypeStg");}});
+
+var WriteOleStg = Module.findExportByName("ole32.dll", "WriteOleStg")
+Interceptor.attach(WriteOleStg, {onLeave: function (args) {send("WriteOleStg");}});
+
+var WriteStorageProperties = Module.findExportByName("ole32.dll", "WriteStorageProperties")
+Interceptor.attach(WriteStorageProperties, {onLeave: function (args) {send("WriteStorageProperties");}});
+
+var WriteStringStream = Module.findExportByName("ole32.dll", "WriteStringStream")
+Interceptor.attach(WriteStringStream, {onLeave: function (args) {send("WriteStringStream");}});
+

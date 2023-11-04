@@ -1,0 +1,27 @@
+var SnmpMgrClose = Module.findExportByName("mgmtapi.dll", "SnmpMgrClose")
+Interceptor.attach(SnmpMgrClose, {onLeave: function (args) {send("SnmpMgrClose");}});
+
+var SnmpMgrCtl = Module.findExportByName("mgmtapi.dll", "SnmpMgrCtl")
+Interceptor.attach(SnmpMgrCtl, {onLeave: function (args) {send("SnmpMgrCtl");}});
+
+var SnmpMgrGetTrap = Module.findExportByName("mgmtapi.dll", "SnmpMgrGetTrap")
+Interceptor.attach(SnmpMgrGetTrap, {onLeave: function (args) {send("SnmpMgrGetTrap");}});
+
+var SnmpMgrGetTrapEx = Module.findExportByName("mgmtapi.dll", "SnmpMgrGetTrapEx")
+Interceptor.attach(SnmpMgrGetTrapEx, {onLeave: function (args) {send("SnmpMgrGetTrapEx");}});
+
+var SnmpMgrOidToStr = Module.findExportByName("mgmtapi.dll", "SnmpMgrOidToStr")
+Interceptor.attach(SnmpMgrOidToStr, {onLeave: function (args) {send("SnmpMgrOidToStr");}});
+
+var SnmpMgrOpen = Module.findExportByName("mgmtapi.dll", "SnmpMgrOpen")
+Interceptor.attach(SnmpMgrOpen, {onLeave: function (args) {send("SnmpMgrOpen");}});
+
+var SnmpMgrRequest = Module.findExportByName("mgmtapi.dll", "SnmpMgrRequest")
+Interceptor.attach(SnmpMgrRequest, {onLeave: function (args) {send("SnmpMgrRequest");}});
+
+var SnmpMgrStrToOid = Module.findExportByName("mgmtapi.dll", "SnmpMgrStrToOid")
+Interceptor.attach(SnmpMgrStrToOid, {onLeave: function (args) {send("SnmpMgrStrToOid");}});
+
+var SnmpMgrTrapListen = Module.findExportByName("mgmtapi.dll", "SnmpMgrTrapListen")
+Interceptor.attach(SnmpMgrTrapListen, {onLeave: function (args) {send("SnmpMgrTrapListen");}});
+

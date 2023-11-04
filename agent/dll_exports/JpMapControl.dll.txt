@@ -1,0 +1,51 @@
+var DllCanUnloadNow = Module.findExportByName("JpMapControl.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("JpMapControl.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("JpMapControl.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var JpIs3DSupported = Module.findExportByName("JpMapControl.dll", "JpIs3DSupported")
+Interceptor.attach(JpIs3DSupported, {onLeave: function (args) {send("JpIs3DSupported");}});
+
+var JpIsUnifiedMapsStack = Module.findExportByName("JpMapControl.dll", "JpIsUnifiedMapsStack")
+Interceptor.attach(JpIsUnifiedMapsStack, {onLeave: function (args) {send("JpIsUnifiedMapsStack");}});
+
+var JpMapControlSettings_Create = Module.findExportByName("JpMapControl.dll", "JpMapControlSettings_Create")
+Interceptor.attach(JpMapControlSettings_Create, {onLeave: function (args) {send("JpMapControlSettings_Create");}});
+
+var JpMapControl_Create = Module.findExportByName("JpMapControl.dll", "JpMapControl_Create")
+Interceptor.attach(JpMapControl_Create, {onLeave: function (args) {send("JpMapControl_Create");}});
+
+var JpMapFactory_Create = Module.findExportByName("JpMapControl.dll", "JpMapFactory_Create")
+Interceptor.attach(JpMapFactory_Create, {onLeave: function (args) {send("JpMapFactory_Create");}});
+
+var JpMapModel3DFrom3MFStreamOperation_Create = Module.findExportByName("JpMapControl.dll", "JpMapModel3DFrom3MFStreamOperation_Create")
+Interceptor.attach(JpMapModel3DFrom3MFStreamOperation_Create, {onLeave: function (args) {send("JpMapModel3DFrom3MFStreamOperation_Create");}});
+
+var JpMapOverlayModel_Create = Module.findExportByName("JpMapControl.dll", "JpMapOverlayModel_Create")
+Interceptor.attach(JpMapOverlayModel_Create, {onLeave: function (args) {send("JpMapOverlayModel_Create");}});
+
+var JpMapStyleSheetFactory_Create = Module.findExportByName("JpMapControl.dll", "JpMapStyleSheetFactory_Create")
+Interceptor.attach(JpMapStyleSheetFactory_Create, {onLeave: function (args) {send("JpMapStyleSheetFactory_Create");}});
+
+var JpOverviewMapControl_Create = Module.findExportByName("JpMapControl.dll", "JpOverviewMapControl_Create")
+Interceptor.attach(JpOverviewMapControl_Create, {onLeave: function (args) {send("JpOverviewMapControl_Create");}});
+
+var JpRestrictedApiAccessCheck = Module.findExportByName("JpMapControl.dll", "JpRestrictedApiAccessCheck")
+Interceptor.attach(JpRestrictedApiAccessCheck, {onLeave: function (args) {send("JpRestrictedApiAccessCheck");}});
+
+var JpStreetsideExperience_Create = Module.findExportByName("JpMapControl.dll", "JpStreetsideExperience_Create")
+Interceptor.attach(JpStreetsideExperience_Create, {onLeave: function (args) {send("JpStreetsideExperience_Create");}});
+
+var JpStreetsidePanoramaOperation_Create = Module.findExportByName("JpMapControl.dll", "JpStreetsidePanoramaOperation_Create")
+Interceptor.attach(JpStreetsidePanoramaOperation_Create, {onLeave: function (args) {send("JpStreetsidePanoramaOperation_Create");}});
+
+var MapSettings_GetMosBingMapsKey = Module.findExportByName("JpMapControl.dll", "MapSettings_GetMosBingMapsKey")
+Interceptor.attach(MapSettings_GetMosBingMapsKey, {onLeave: function (args) {send("MapSettings_GetMosBingMapsKey");}});
+
+var MapSettings_ResetMosKeys = Module.findExportByName("JpMapControl.dll", "MapSettings_ResetMosKeys")
+Interceptor.attach(MapSettings_ResetMosKeys, {onLeave: function (args) {send("MapSettings_ResetMosKeys");}});
+

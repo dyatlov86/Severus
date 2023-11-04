@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("comsnap.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("comsnap.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("comsnap.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("comsnap.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var InstallDsExtension = Module.findExportByName("comsnap.dll", "InstallDsExtension")
+Interceptor.attach(InstallDsExtension, {onLeave: function (args) {send("InstallDsExtension");}});
+

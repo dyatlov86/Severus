@@ -1,0 +1,132 @@
+var BiHamExtHostQueryResourceUsage = Module.findExportByName("PsmServiceExtHost.dll", "BiHamExtHostQueryResourceUsage")
+Interceptor.attach(BiHamExtHostQueryResourceUsage, {onLeave: function (args) {send("BiHamExtHostQueryResourceUsage");}});
+
+var CrmpInProcActivityAllocate = Module.findExportByName("PsmServiceExtHost.dll", "CrmpInProcActivityAllocate")
+Interceptor.attach(CrmpInProcActivityAllocate, {onLeave: function (args) {send("CrmpInProcActivityAllocate");}});
+
+var CrmpInProcActivityFree = Module.findExportByName("PsmServiceExtHost.dll", "CrmpInProcActivityFree")
+Interceptor.attach(CrmpInProcActivityFree, {onLeave: function (args) {send("CrmpInProcActivityFree");}});
+
+var CrmpInProcActivityQueryWindowClosedReasons = Module.findExportByName("PsmServiceExtHost.dll", "CrmpInProcActivityQueryWindowClosedReasons")
+Interceptor.attach(CrmpInProcActivityQueryWindowClosedReasons, {onLeave: function (args) {send("CrmpInProcActivityQueryWindowClosedReasons");}});
+
+var CrmpInProcActivityStart = Module.findExportByName("PsmServiceExtHost.dll", "CrmpInProcActivityStart")
+Interceptor.attach(CrmpInProcActivityStart, {onLeave: function (args) {send("CrmpInProcActivityStart");}});
+
+var CrmpInProcActivityStop = Module.findExportByName("PsmServiceExtHost.dll", "CrmpInProcActivityStop")
+Interceptor.attach(CrmpInProcActivityStop, {onLeave: function (args) {send("CrmpInProcActivityStop");}});
+
+var CrmpInProcActivityWindowClosedReasonSubscribe = Module.findExportByName("PsmServiceExtHost.dll", "CrmpInProcActivityWindowClosedReasonSubscribe")
+Interceptor.attach(CrmpInProcActivityWindowClosedReasonSubscribe, {onLeave: function (args) {send("CrmpInProcActivityWindowClosedReasonSubscribe");}});
+
+var CrmpInProcActivityWindowClosedReasonUnsubscribe = Module.findExportByName("PsmServiceExtHost.dll", "CrmpInProcActivityWindowClosedReasonUnsubscribe")
+Interceptor.attach(CrmpInProcActivityWindowClosedReasonUnsubscribe, {onLeave: function (args) {send("CrmpInProcActivityWindowClosedReasonUnsubscribe");}});
+
+var HampInProcCloseActivity = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcCloseActivity")
+Interceptor.attach(HampInProcCloseActivity, {onLeave: function (args) {send("HampInProcCloseActivity");}});
+
+var HampInProcCompleteConnection = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcCompleteConnection")
+Interceptor.attach(HampInProcCompleteConnection, {onLeave: function (args) {send("HampInProcCompleteConnection");}});
+
+var HampInProcCreateActivity = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcCreateActivity")
+Interceptor.attach(HampInProcCreateActivity, {onLeave: function (args) {send("HampInProcCreateActivity");}});
+
+var HampInProcCreateActivityForProcess = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcCreateActivityForProcess")
+Interceptor.attach(HampInProcCreateActivityForProcess, {onLeave: function (args) {send("HampInProcCreateActivityForProcess");}});
+
+var HampInProcIsHostBeingDebugged = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcIsHostBeingDebugged")
+Interceptor.attach(HampInProcIsHostBeingDebugged, {onLeave: function (args) {send("HampInProcIsHostBeingDebugged");}});
+
+var HampInProcQueryActivityPendDiagnostics = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcQueryActivityPendDiagnostics")
+Interceptor.attach(HampInProcQueryActivityPendDiagnostics, {onLeave: function (args) {send("HampInProcQueryActivityPendDiagnostics");}});
+
+var HampInProcResetExternalResourcePriority = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcResetExternalResourcePriority")
+Interceptor.attach(HampInProcResetExternalResourcePriority, {onLeave: function (args) {send("HampInProcResetExternalResourcePriority");}});
+
+var HampInProcSetExternalResourcePriority = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcSetExternalResourcePriority")
+Interceptor.attach(HampInProcSetExternalResourcePriority, {onLeave: function (args) {send("HampInProcSetExternalResourcePriority");}});
+
+var HampInProcStartActivityAsync = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcStartActivityAsync")
+Interceptor.attach(HampInProcStartActivityAsync, {onLeave: function (args) {send("HampInProcStartActivityAsync");}});
+
+var HampInProcStopActivity = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcStopActivity")
+Interceptor.attach(HampInProcStopActivity, {onLeave: function (args) {send("HampInProcStopActivity");}});
+
+var HampInProcTerminateActivityHost = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcTerminateActivityHost")
+Interceptor.attach(HampInProcTerminateActivityHost, {onLeave: function (args) {send("HampInProcTerminateActivityHost");}});
+
+var HampInProcTerminateApplicationHost = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcTerminateApplicationHost")
+Interceptor.attach(HampInProcTerminateApplicationHost, {onLeave: function (args) {send("HampInProcTerminateApplicationHost");}});
+
+var HampInProcTerminateHostOnProcessExit = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcTerminateHostOnProcessExit")
+Interceptor.attach(HampInProcTerminateHostOnProcessExit, {onLeave: function (args) {send("HampInProcTerminateHostOnProcessExit");}});
+
+var HampInProcUpdateActivityProperties = Module.findExportByName("PsmServiceExtHost.dll", "HampInProcUpdateActivityProperties")
+Interceptor.attach(HampInProcUpdateActivityProperties, {onLeave: function (args) {send("HampInProcUpdateActivityProperties");}});
+
+var PsmApplicationStateNotification = Module.findExportByName("PsmServiceExtHost.dll", "PsmApplicationStateNotification")
+Interceptor.attach(PsmApplicationStateNotification, {onLeave: function (args) {send("PsmApplicationStateNotification");}});
+
+var PsmCrmCleanup = Module.findExportByName("PsmServiceExtHost.dll", "PsmCrmCleanup")
+Interceptor.attach(PsmCrmCleanup, {onLeave: function (args) {send("PsmCrmCleanup");}});
+
+var PsmCrmSessionUserNotification = Module.findExportByName("PsmServiceExtHost.dll", "PsmCrmSessionUserNotification")
+Interceptor.attach(PsmCrmSessionUserNotification, {onLeave: function (args) {send("PsmCrmSessionUserNotification");}});
+
+var PsmCrmStart = Module.findExportByName("PsmServiceExtHost.dll", "PsmCrmStart")
+Interceptor.attach(PsmCrmStart, {onLeave: function (args) {send("PsmCrmStart");}});
+
+var PsmCrmSuspendNotification = Module.findExportByName("PsmServiceExtHost.dll", "PsmCrmSuspendNotification")
+Interceptor.attach(PsmCrmSuspendNotification, {onLeave: function (args) {send("PsmCrmSuspendNotification");}});
+
+var PsmHamDereferenceHostId = Module.findExportByName("PsmServiceExtHost.dll", "PsmHamDereferenceHostId")
+Interceptor.attach(PsmHamDereferenceHostId, {onLeave: function (args) {send("PsmHamDereferenceHostId");}});
+
+var PsmHamGetPackageDebugMode = Module.findExportByName("PsmServiceExtHost.dll", "PsmHamGetPackageDebugMode")
+Interceptor.attach(PsmHamGetPackageDebugMode, {onLeave: function (args) {send("PsmHamGetPackageDebugMode");}});
+
+var PsmHamReferenceHostId = Module.findExportByName("PsmServiceExtHost.dll", "PsmHamReferenceHostId")
+Interceptor.attach(PsmHamReferenceHostId, {onLeave: function (args) {send("PsmHamReferenceHostId");}});
+
+var PsmHamRegisterProcess = Module.findExportByName("PsmServiceExtHost.dll", "PsmHamRegisterProcess")
+Interceptor.attach(PsmHamRegisterProcess, {onLeave: function (args) {send("PsmHamRegisterProcess");}});
+
+var PsmHamTerminateApplication = Module.findExportByName("PsmServiceExtHost.dll", "PsmHamTerminateApplication")
+Interceptor.attach(PsmHamTerminateApplication, {onLeave: function (args) {send("PsmHamTerminateApplication");}});
+
+var PsmHamTerminateHost = Module.findExportByName("PsmServiceExtHost.dll", "PsmHamTerminateHost")
+Interceptor.attach(PsmHamTerminateHost, {onLeave: function (args) {send("PsmHamTerminateHost");}});
+
+var PsmHamTerminatePackage = Module.findExportByName("PsmServiceExtHost.dll", "PsmHamTerminatePackage")
+Interceptor.attach(PsmHamTerminatePackage, {onLeave: function (args) {send("PsmHamTerminatePackage");}});
+
+var PsmHangNotification = Module.findExportByName("PsmServiceExtHost.dll", "PsmHangNotification")
+Interceptor.attach(PsmHangNotification, {onLeave: function (args) {send("PsmHangNotification");}});
+
+var PsmHangNotification2 = Module.findExportByName("PsmServiceExtHost.dll", "PsmHangNotification2")
+Interceptor.attach(PsmHangNotification2, {onLeave: function (args) {send("PsmHangNotification2");}});
+
+var PsmHostStateNotification = Module.findExportByName("PsmServiceExtHost.dll", "PsmHostStateNotification")
+Interceptor.attach(PsmHostStateNotification, {onLeave: function (args) {send("PsmHostStateNotification");}});
+
+var PsmHostStateNotification2 = Module.findExportByName("PsmServiceExtHost.dll", "PsmHostStateNotification2")
+Interceptor.attach(PsmHostStateNotification2, {onLeave: function (args) {send("PsmHostStateNotification2");}});
+
+var PsmInitializeServiceExtension = Module.findExportByName("PsmServiceExtHost.dll", "PsmInitializeServiceExtension")
+Interceptor.attach(PsmInitializeServiceExtension, {onLeave: function (args) {send("PsmInitializeServiceExtension");}});
+
+var PsmInitializeServiceExtension2 = Module.findExportByName("PsmServiceExtHost.dll", "PsmInitializeServiceExtension2")
+Interceptor.attach(PsmInitializeServiceExtension2, {onLeave: function (args) {send("PsmInitializeServiceExtension2");}});
+
+var PsmInitializeServiceExtension3 = Module.findExportByName("PsmServiceExtHost.dll", "PsmInitializeServiceExtension3")
+Interceptor.attach(PsmInitializeServiceExtension3, {onLeave: function (args) {send("PsmInitializeServiceExtension3");}});
+
+var PsmInitializeServiceExtension4 = Module.findExportByName("PsmServiceExtHost.dll", "PsmInitializeServiceExtension4")
+Interceptor.attach(PsmInitializeServiceExtension4, {onLeave: function (args) {send("PsmInitializeServiceExtension4");}});
+
+var PsmMemoryLimitNotification = Module.findExportByName("PsmServiceExtHost.dll", "PsmMemoryLimitNotification")
+Interceptor.attach(PsmMemoryLimitNotification, {onLeave: function (args) {send("PsmMemoryLimitNotification");}});
+
+var PsmMemoryLimitNotification2 = Module.findExportByName("PsmServiceExtHost.dll", "PsmMemoryLimitNotification2")
+Interceptor.attach(PsmMemoryLimitNotification2, {onLeave: function (args) {send("PsmMemoryLimitNotification2");}});
+

@@ -1,0 +1,12 @@
+var DllMain = Module.findExportByName("MXDWDRV.DLL", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DrvDisableDriver = Module.findExportByName("MXDWDRV.DLL", "DrvDisableDriver")
+Interceptor.attach(DrvDisableDriver, {onLeave: function (args) {send("DrvDisableDriver");}});
+
+var DrvEnableDriver = Module.findExportByName("MXDWDRV.DLL", "DrvEnableDriver")
+Interceptor.attach(DrvEnableDriver, {onLeave: function (args) {send("DrvEnableDriver");}});
+
+var DrvQueryDriverInfo = Module.findExportByName("MXDWDRV.DLL", "DrvQueryDriverInfo")
+Interceptor.attach(DrvQueryDriverInfo, {onLeave: function (args) {send("DrvQueryDriverInfo");}});
+

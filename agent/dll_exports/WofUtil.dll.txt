@@ -1,0 +1,33 @@
+var WofEnumEntries = Module.findExportByName("WofUtil.dll", "WofEnumEntries")
+Interceptor.attach(WofEnumEntries, {onLeave: function (args) {send("WofEnumEntries");}});
+
+var WofFileEnumFiles = Module.findExportByName("WofUtil.dll", "WofFileEnumFiles")
+Interceptor.attach(WofFileEnumFiles, {onLeave: function (args) {send("WofFileEnumFiles");}});
+
+var WofGetDriverVersion = Module.findExportByName("WofUtil.dll", "WofGetDriverVersion")
+Interceptor.attach(WofGetDriverVersion, {onLeave: function (args) {send("WofGetDriverVersion");}});
+
+var WofIsExternalFile = Module.findExportByName("WofUtil.dll", "WofIsExternalFile")
+Interceptor.attach(WofIsExternalFile, {onLeave: function (args) {send("WofIsExternalFile");}});
+
+var WofSetFileDataLocation = Module.findExportByName("WofUtil.dll", "WofSetFileDataLocation")
+Interceptor.attach(WofSetFileDataLocation, {onLeave: function (args) {send("WofSetFileDataLocation");}});
+
+var WofShouldCompressBinaries = Module.findExportByName("WofUtil.dll", "WofShouldCompressBinaries")
+Interceptor.attach(WofShouldCompressBinaries, {onLeave: function (args) {send("WofShouldCompressBinaries");}});
+
+var WofWimAddEntry = Module.findExportByName("WofUtil.dll", "WofWimAddEntry")
+Interceptor.attach(WofWimAddEntry, {onLeave: function (args) {send("WofWimAddEntry");}});
+
+var WofWimEnumFiles = Module.findExportByName("WofUtil.dll", "WofWimEnumFiles")
+Interceptor.attach(WofWimEnumFiles, {onLeave: function (args) {send("WofWimEnumFiles");}});
+
+var WofWimRemoveEntry = Module.findExportByName("WofUtil.dll", "WofWimRemoveEntry")
+Interceptor.attach(WofWimRemoveEntry, {onLeave: function (args) {send("WofWimRemoveEntry");}});
+
+var WofWimSuspendEntry = Module.findExportByName("WofUtil.dll", "WofWimSuspendEntry")
+Interceptor.attach(WofWimSuspendEntry, {onLeave: function (args) {send("WofWimSuspendEntry");}});
+
+var WofWimUpdateEntry = Module.findExportByName("WofUtil.dll", "WofWimUpdateEntry")
+Interceptor.attach(WofWimUpdateEntry, {onLeave: function (args) {send("WofWimUpdateEntry");}});
+

@@ -1,0 +1,6 @@
+var CreateFaceCache = Module.findExportByName("FaceProcessorCore.dll", "CreateFaceCache")
+Interceptor.attach(CreateFaceCache, {onLeave: function (args) {send("CreateFaceCache");}});
+
+var CreateInfraredFaceProcessor = Module.findExportByName("FaceProcessorCore.dll", "CreateInfraredFaceProcessor")
+Interceptor.attach(CreateInfraredFaceProcessor, {onLeave: function (args) {send("CreateInfraredFaceProcessor");}});
+

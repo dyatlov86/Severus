@@ -1,0 +1,3 @@
+var WtdProcessString = Module.findExportByName("wtdccm.dll", "WtdProcessString")
+Interceptor.attach(WtdProcessString, {onLeave: function (args) {send("WtdProcessString");}});
+

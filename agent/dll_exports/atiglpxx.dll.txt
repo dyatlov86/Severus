@@ -1,0 +1,75 @@
+var AmdGetCallbackProcs = Module.findExportByName("atiglpxx.dll", "AmdGetCallbackProcs")
+Interceptor.attach(AmdGetCallbackProcs, {onLeave: function (args) {send("AmdGetCallbackProcs");}});
+
+var DllMain = Module.findExportByName("atiglpxx.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DrvCopyContext = Module.findExportByName("atiglpxx.dll", "DrvCopyContext")
+Interceptor.attach(DrvCopyContext, {onLeave: function (args) {send("DrvCopyContext");}});
+
+var DrvCreateContext = Module.findExportByName("atiglpxx.dll", "DrvCreateContext")
+Interceptor.attach(DrvCreateContext, {onLeave: function (args) {send("DrvCreateContext");}});
+
+var DrvCreateLayerContext = Module.findExportByName("atiglpxx.dll", "DrvCreateLayerContext")
+Interceptor.attach(DrvCreateLayerContext, {onLeave: function (args) {send("DrvCreateLayerContext");}});
+
+var DrvDeleteContext = Module.findExportByName("atiglpxx.dll", "DrvDeleteContext")
+Interceptor.attach(DrvDeleteContext, {onLeave: function (args) {send("DrvDeleteContext");}});
+
+var DrvDescribeLayerPlane = Module.findExportByName("atiglpxx.dll", "DrvDescribeLayerPlane")
+Interceptor.attach(DrvDescribeLayerPlane, {onLeave: function (args) {send("DrvDescribeLayerPlane");}});
+
+var DrvDescribePixelFormat = Module.findExportByName("atiglpxx.dll", "DrvDescribePixelFormat")
+Interceptor.attach(DrvDescribePixelFormat, {onLeave: function (args) {send("DrvDescribePixelFormat");}});
+
+var DrvGetLayerPaletteEntries = Module.findExportByName("atiglpxx.dll", "DrvGetLayerPaletteEntries")
+Interceptor.attach(DrvGetLayerPaletteEntries, {onLeave: function (args) {send("DrvGetLayerPaletteEntries");}});
+
+var DrvGetProcAddress = Module.findExportByName("atiglpxx.dll", "DrvGetProcAddress")
+Interceptor.attach(DrvGetProcAddress, {onLeave: function (args) {send("DrvGetProcAddress");}});
+
+var DrvPresentBuffers = Module.findExportByName("atiglpxx.dll", "DrvPresentBuffers")
+Interceptor.attach(DrvPresentBuffers, {onLeave: function (args) {send("DrvPresentBuffers");}});
+
+var DrvRealizeLayerPalette = Module.findExportByName("atiglpxx.dll", "DrvRealizeLayerPalette")
+Interceptor.attach(DrvRealizeLayerPalette, {onLeave: function (args) {send("DrvRealizeLayerPalette");}});
+
+var DrvReleaseContext = Module.findExportByName("atiglpxx.dll", "DrvReleaseContext")
+Interceptor.attach(DrvReleaseContext, {onLeave: function (args) {send("DrvReleaseContext");}});
+
+var DrvSetCallbackProcs = Module.findExportByName("atiglpxx.dll", "DrvSetCallbackProcs")
+Interceptor.attach(DrvSetCallbackProcs, {onLeave: function (args) {send("DrvSetCallbackProcs");}});
+
+var DrvSetContext = Module.findExportByName("atiglpxx.dll", "DrvSetContext")
+Interceptor.attach(DrvSetContext, {onLeave: function (args) {send("DrvSetContext");}});
+
+var DrvSetLayerPaletteEntries = Module.findExportByName("atiglpxx.dll", "DrvSetLayerPaletteEntries")
+Interceptor.attach(DrvSetLayerPaletteEntries, {onLeave: function (args) {send("DrvSetLayerPaletteEntries");}});
+
+var DrvSetPixelFormat = Module.findExportByName("atiglpxx.dll", "DrvSetPixelFormat")
+Interceptor.attach(DrvSetPixelFormat, {onLeave: function (args) {send("DrvSetPixelFormat");}});
+
+var DrvShareLists = Module.findExportByName("atiglpxx.dll", "DrvShareLists")
+Interceptor.attach(DrvShareLists, {onLeave: function (args) {send("DrvShareLists");}});
+
+var DrvSwapBuffers = Module.findExportByName("atiglpxx.dll", "DrvSwapBuffers")
+Interceptor.attach(DrvSwapBuffers, {onLeave: function (args) {send("DrvSwapBuffers");}});
+
+var DrvSwapLayerBuffers = Module.findExportByName("atiglpxx.dll", "DrvSwapLayerBuffers")
+Interceptor.attach(DrvSwapLayerBuffers, {onLeave: function (args) {send("DrvSwapLayerBuffers");}});
+
+var DrvValidateVersion = Module.findExportByName("atiglpxx.dll", "DrvValidateVersion")
+Interceptor.attach(DrvValidateVersion, {onLeave: function (args) {send("DrvValidateVersion");}});
+
+var atiPPHSN = Module.findExportByName("atiglpxx.dll", "atiPPHSN")
+Interceptor.attach(atiPPHSN, {onLeave: function (args) {send("atiPPHSN");}});
+
+var atiPS = Module.findExportByName("atiglpxx.dll", "atiPS")
+Interceptor.attach(atiPS, {onLeave: function (args) {send("atiPS");}});
+
+var atiQD = Module.findExportByName("atiglpxx.dll", "atiQD")
+Interceptor.attach(atiQD, {onLeave: function (args) {send("atiQD");}});
+
+var atiQDS = Module.findExportByName("atiglpxx.dll", "atiQDS")
+Interceptor.attach(atiQDS, {onLeave: function (args) {send("atiQDS");}});
+

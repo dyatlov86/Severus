@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("PrinterProtocolProvider.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("PrinterProtocolProvider.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetPointOfServiceProtocolMetadata = Module.findExportByName("PrinterProtocolProvider.dll", "GetPointOfServiceProtocolMetadata")
+Interceptor.attach(GetPointOfServiceProtocolMetadata, {onLeave: function (args) {send("GetPointOfServiceProtocolMetadata");}});
+

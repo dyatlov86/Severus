@@ -1,0 +1,24 @@
+var WpxCreateConfig = Module.findExportByName("wpx.dll", "WpxCreateConfig")
+Interceptor.attach(WpxCreateConfig, {onLeave: function (args) {send("WpxCreateConfig");}});
+
+var WpxCreateWriteOpt = Module.findExportByName("wpx.dll", "WpxCreateWriteOpt")
+Interceptor.attach(WpxCreateWriteOpt, {onLeave: function (args) {send("WpxCreateWriteOpt");}});
+
+var WpxGetAnswerFileType = Module.findExportByName("wpx.dll", "WpxGetAnswerFileType")
+Interceptor.attach(WpxGetAnswerFileType, {onLeave: function (args) {send("WpxGetAnswerFileType");}});
+
+var WpxGetDeplSettings = Module.findExportByName("wpx.dll", "WpxGetDeplSettings")
+Interceptor.attach(WpxGetDeplSettings, {onLeave: function (args) {send("WpxGetDeplSettings");}});
+
+var WpxResetDeplSettings = Module.findExportByName("wpx.dll", "WpxResetDeplSettings")
+Interceptor.attach(WpxResetDeplSettings, {onLeave: function (args) {send("WpxResetDeplSettings");}});
+
+var WpxSetDeplSettings = Module.findExportByName("wpx.dll", "WpxSetDeplSettings")
+Interceptor.attach(WpxSetDeplSettings, {onLeave: function (args) {send("WpxSetDeplSettings");}});
+
+var WpxSetLogger = Module.findExportByName("wpx.dll", "WpxSetLogger")
+Interceptor.attach(WpxSetLogger, {onLeave: function (args) {send("WpxSetLogger");}});
+
+var WpxSetScratchDirectory = Module.findExportByName("wpx.dll", "WpxSetScratchDirectory")
+Interceptor.attach(WpxSetScratchDirectory, {onLeave: function (args) {send("WpxSetScratchDirectory");}});
+

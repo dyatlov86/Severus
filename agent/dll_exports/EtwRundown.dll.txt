@@ -1,0 +1,6 @@
+var EtwLogHeapRundown = Module.findExportByName("EtwRundown.dll", "EtwLogHeapRundown")
+Interceptor.attach(EtwLogHeapRundown, {onLeave: function (args) {send("EtwLogHeapRundown");}});
+
+var EtwLogSysConfigRundown = Module.findExportByName("EtwRundown.dll", "EtwLogSysConfigRundown")
+Interceptor.attach(EtwLogSysConfigRundown, {onLeave: function (args) {send("EtwLogSysConfigRundown");}});
+

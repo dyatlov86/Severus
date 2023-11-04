@@ -1,0 +1,855 @@
+var InitializeLsaExtension = Module.findExportByName("lsasrv.dll", "InitializeLsaExtension")
+Interceptor.attach(InitializeLsaExtension, {onLeave: function (args) {send("InitializeLsaExtension");}});
+
+var IsTraceLevelEnabled = Module.findExportByName("lsasrv.dll", "IsTraceLevelEnabled")
+Interceptor.attach(IsTraceLevelEnabled, {onLeave: function (args) {send("IsTraceLevelEnabled");}});
+
+var LsaDbLookupSidChainRequest = Module.findExportByName("lsasrv.dll", "LsaDbLookupSidChainRequest")
+Interceptor.attach(LsaDbLookupSidChainRequest, {onLeave: function (args) {send("LsaDbLookupSidChainRequest");}});
+
+var LsaIAddNamesToLogonSession = Module.findExportByName("lsasrv.dll", "LsaIAddNamesToLogonSession")
+Interceptor.attach(LsaIAddNamesToLogonSession, {onLeave: function (args) {send("LsaIAddNamesToLogonSession");}});
+
+var LsaIAdjustTokenObjectIntegrity = Module.findExportByName("lsasrv.dll", "LsaIAdjustTokenObjectIntegrity")
+Interceptor.attach(LsaIAdjustTokenObjectIntegrity, {onLeave: function (args) {send("LsaIAdjustTokenObjectIntegrity");}});
+
+var LsaIAdtAuditingEnabledByCategory = Module.findExportByName("lsasrv.dll", "LsaIAdtAuditingEnabledByCategory")
+Interceptor.attach(LsaIAdtAuditingEnabledByCategory, {onLeave: function (args) {send("LsaIAdtAuditingEnabledByCategory");}});
+
+var LsaIAdtAuditingEnabledBySubCategory = Module.findExportByName("lsasrv.dll", "LsaIAdtAuditingEnabledBySubCategory")
+Interceptor.attach(LsaIAdtAuditingEnabledBySubCategory, {onLeave: function (args) {send("LsaIAdtAuditingEnabledBySubCategory");}});
+
+var LsaIAllocateHeap = Module.findExportByName("lsasrv.dll", "LsaIAllocateHeap")
+Interceptor.attach(LsaIAllocateHeap, {onLeave: function (args) {send("LsaIAllocateHeap");}});
+
+var LsaIAllocateHeapZero = Module.findExportByName("lsasrv.dll", "LsaIAllocateHeapZero")
+Interceptor.attach(LsaIAllocateHeapZero, {onLeave: function (args) {send("LsaIAllocateHeapZero");}});
+
+var LsaIAllowProtectedCredLogon = Module.findExportByName("lsasrv.dll", "LsaIAllowProtectedCredLogon")
+Interceptor.attach(LsaIAllowProtectedCredLogon, {onLeave: function (args) {send("LsaIAllowProtectedCredLogon");}});
+
+var LsaIAuditAccountLogon = Module.findExportByName("lsasrv.dll", "LsaIAuditAccountLogon")
+Interceptor.attach(LsaIAuditAccountLogon, {onLeave: function (args) {send("LsaIAuditAccountLogon");}});
+
+var LsaIAuditAccountLogonEx = Module.findExportByName("lsasrv.dll", "LsaIAuditAccountLogonEx")
+Interceptor.attach(LsaIAuditAccountLogonEx, {onLeave: function (args) {send("LsaIAuditAccountLogonEx");}});
+
+var LsaIAuditInitializeParametersAndWriteEvent = Module.findExportByName("lsasrv.dll", "LsaIAuditInitializeParametersAndWriteEvent")
+Interceptor.attach(LsaIAuditInitializeParametersAndWriteEvent, {onLeave: function (args) {send("LsaIAuditInitializeParametersAndWriteEvent");}});
+
+var LsaIAuditKdcEvent = Module.findExportByName("lsasrv.dll", "LsaIAuditKdcEvent")
+Interceptor.attach(LsaIAuditKdcEvent, {onLeave: function (args) {send("LsaIAuditKdcEvent");}});
+
+var LsaIAuditKerberosLogon = Module.findExportByName("lsasrv.dll", "LsaIAuditKerberosLogon")
+Interceptor.attach(LsaIAuditKerberosLogon, {onLeave: function (args) {send("LsaIAuditKerberosLogon");}});
+
+var LsaIAuditLogonEx = Module.findExportByName("lsasrv.dll", "LsaIAuditLogonEx")
+Interceptor.attach(LsaIAuditLogonEx, {onLeave: function (args) {send("LsaIAuditLogonEx");}});
+
+var LsaIAuditLogonUsingExplicitCreds = Module.findExportByName("lsasrv.dll", "LsaIAuditLogonUsingExplicitCreds")
+Interceptor.attach(LsaIAuditLogonUsingExplicitCreds, {onLeave: function (args) {send("LsaIAuditLogonUsingExplicitCreds");}});
+
+var LsaIAuditNotifyPackageLoad = Module.findExportByName("lsasrv.dll", "LsaIAuditNotifyPackageLoad")
+Interceptor.attach(LsaIAuditNotifyPackageLoad, {onLeave: function (args) {send("LsaIAuditNotifyPackageLoad");}});
+
+var LsaIAuditPasswordAccessEvent = Module.findExportByName("lsasrv.dll", "LsaIAuditPasswordAccessEvent")
+Interceptor.attach(LsaIAuditPasswordAccessEvent, {onLeave: function (args) {send("LsaIAuditPasswordAccessEvent");}});
+
+var LsaIAuditReplay = Module.findExportByName("lsasrv.dll", "LsaIAuditReplay")
+Interceptor.attach(LsaIAuditReplay, {onLeave: function (args) {send("LsaIAuditReplay");}});
+
+var LsaIAuditSamEvent = Module.findExportByName("lsasrv.dll", "LsaIAuditSamEvent")
+Interceptor.attach(LsaIAuditSamEvent, {onLeave: function (args) {send("LsaIAuditSamEvent");}});
+
+var LsaICallPackage = Module.findExportByName("lsasrv.dll", "LsaICallPackage")
+Interceptor.attach(LsaICallPackage, {onLeave: function (args) {send("LsaICallPackage");}});
+
+var LsaICallPackageEx = Module.findExportByName("lsasrv.dll", "LsaICallPackageEx")
+Interceptor.attach(LsaICallPackageEx, {onLeave: function (args) {send("LsaICallPackageEx");}});
+
+var LsaICallPackagePassthrough = Module.findExportByName("lsasrv.dll", "LsaICallPackagePassthrough")
+Interceptor.attach(LsaICallPackagePassthrough, {onLeave: function (args) {send("LsaICallPackagePassthrough");}});
+
+var LsaICancelNotification = Module.findExportByName("lsasrv.dll", "LsaICancelNotification")
+Interceptor.attach(LsaICancelNotification, {onLeave: function (args) {send("LsaICancelNotification");}});
+
+var LsaIChangeSecretCipherKey = Module.findExportByName("lsasrv.dll", "LsaIChangeSecretCipherKey")
+Interceptor.attach(LsaIChangeSecretCipherKey, {onLeave: function (args) {send("LsaIChangeSecretCipherKey");}});
+
+var LsaICheckProtectedUserByTokenInfo = Module.findExportByName("lsasrv.dll", "LsaICheckProtectedUserByTokenInfo")
+Interceptor.attach(LsaICheckProtectedUserByTokenInfo, {onLeave: function (args) {send("LsaICheckProtectedUserByTokenInfo");}});
+
+var LsaICheckRestrictedMode = Module.findExportByName("lsasrv.dll", "LsaICheckRestrictedMode")
+Interceptor.attach(LsaICheckRestrictedMode, {onLeave: function (args) {send("LsaICheckRestrictedMode");}});
+
+var LsaIClearOldSyskey = Module.findExportByName("lsasrv.dll", "LsaIClearOldSyskey")
+Interceptor.attach(LsaIClearOldSyskey, {onLeave: function (args) {send("LsaIClearOldSyskey");}});
+
+var LsaIContextToHandleNoRef = Module.findExportByName("lsasrv.dll", "LsaIContextToHandleNoRef")
+Interceptor.attach(LsaIContextToHandleNoRef, {onLeave: function (args) {send("LsaIContextToHandleNoRef");}});
+
+var LsaICopyToTokenInfoFromHandle = Module.findExportByName("lsasrv.dll", "LsaICopyToTokenInfoFromHandle")
+Interceptor.attach(LsaICopyToTokenInfoFromHandle, {onLeave: function (args) {send("LsaICopyToTokenInfoFromHandle");}});
+
+var LsaICryptProtectData = Module.findExportByName("lsasrv.dll", "LsaICryptProtectData")
+Interceptor.attach(LsaICryptProtectData, {onLeave: function (args) {send("LsaICryptProtectData");}});
+
+var LsaICryptProtectDataEx = Module.findExportByName("lsasrv.dll", "LsaICryptProtectDataEx")
+Interceptor.attach(LsaICryptProtectDataEx, {onLeave: function (args) {send("LsaICryptProtectDataEx");}});
+
+var LsaICryptUnprotectData = Module.findExportByName("lsasrv.dll", "LsaICryptUnprotectData")
+Interceptor.attach(LsaICryptUnprotectData, {onLeave: function (args) {send("LsaICryptUnprotectData");}});
+
+var LsaICryptUnprotectDataEx = Module.findExportByName("lsasrv.dll", "LsaICryptUnprotectDataEx")
+Interceptor.attach(LsaICryptUnprotectDataEx, {onLeave: function (args) {send("LsaICryptUnprotectDataEx");}});
+
+var LsaIDereferenceCredHandle = Module.findExportByName("lsasrv.dll", "LsaIDereferenceCredHandle")
+Interceptor.attach(LsaIDereferenceCredHandle, {onLeave: function (args) {send("LsaIDereferenceCredHandle");}});
+
+var LsaIDereferenceCtxtHandle = Module.findExportByName("lsasrv.dll", "LsaIDereferenceCtxtHandle")
+Interceptor.attach(LsaIDereferenceCtxtHandle, {onLeave: function (args) {send("LsaIDereferenceCtxtHandle");}});
+
+var LsaIDeriveCredentialKey = Module.findExportByName("lsasrv.dll", "LsaIDeriveCredentialKey")
+Interceptor.attach(LsaIDeriveCredentialKey, {onLeave: function (args) {send("LsaIDeriveCredentialKey");}});
+
+var LsaIDsNotifiedObjectChange = Module.findExportByName("lsasrv.dll", "LsaIDsNotifiedObjectChange")
+Interceptor.attach(LsaIDsNotifiedObjectChange, {onLeave: function (args) {send("LsaIDsNotifiedObjectChange");}});
+
+var LsaIEfsAcceptSmartcardCredentials = Module.findExportByName("lsasrv.dll", "LsaIEfsAcceptSmartcardCredentials")
+Interceptor.attach(LsaIEfsAcceptSmartcardCredentials, {onLeave: function (args) {send("LsaIEfsAcceptSmartcardCredentials");}});
+
+var LsaIEqualLogonProcessName = Module.findExportByName("lsasrv.dll", "LsaIEqualLogonProcessName")
+Interceptor.attach(LsaIEqualLogonProcessName, {onLeave: function (args) {send("LsaIEqualLogonProcessName");}});
+
+var LsaIEqualSupplementalTokenInfo = Module.findExportByName("lsasrv.dll", "LsaIEqualSupplementalTokenInfo")
+Interceptor.attach(LsaIEqualSupplementalTokenInfo, {onLeave: function (args) {send("LsaIEqualSupplementalTokenInfo");}});
+
+var LsaIEventWritePackageNoCredential = Module.findExportByName("lsasrv.dll", "LsaIEventWritePackageNoCredential")
+Interceptor.attach(LsaIEventWritePackageNoCredential, {onLeave: function (args) {send("LsaIEventWritePackageNoCredential");}});
+
+var LsaIEventWritePackageNotCacheLogonUser = Module.findExportByName("lsasrv.dll", "LsaIEventWritePackageNotCacheLogonUser")
+Interceptor.attach(LsaIEventWritePackageNotCacheLogonUser, {onLeave: function (args) {send("LsaIEventWritePackageNotCacheLogonUser");}});
+
+var LsaIExtractTargetInfo = Module.findExportByName("lsasrv.dll", "LsaIExtractTargetInfo")
+Interceptor.attach(LsaIExtractTargetInfo, {onLeave: function (args) {send("LsaIExtractTargetInfo");}});
+
+var LsaIFilterInboundNamespace = Module.findExportByName("lsasrv.dll", "LsaIFilterInboundNamespace")
+Interceptor.attach(LsaIFilterInboundNamespace, {onLeave: function (args) {send("LsaIFilterInboundNamespace");}});
+
+var LsaIFilterNamespace = Module.findExportByName("lsasrv.dll", "LsaIFilterNamespace")
+Interceptor.attach(LsaIFilterNamespace, {onLeave: function (args) {send("LsaIFilterNamespace");}});
+
+var LsaIFilterSids = Module.findExportByName("lsasrv.dll", "LsaIFilterSids")
+Interceptor.attach(LsaIFilterSids, {onLeave: function (args) {send("LsaIFilterSids");}});
+
+var LsaIFlushIdentityCacheForSid = Module.findExportByName("lsasrv.dll", "LsaIFlushIdentityCacheForSid")
+Interceptor.attach(LsaIFlushIdentityCacheForSid, {onLeave: function (args) {send("LsaIFlushIdentityCacheForSid");}});
+
+var LsaIForestTrustFindMatch = Module.findExportByName("lsasrv.dll", "LsaIForestTrustFindMatch")
+Interceptor.attach(LsaIForestTrustFindMatch, {onLeave: function (args) {send("LsaIForestTrustFindMatch");}});
+
+var LsaIFreeFilterInboundNamespaceResult = Module.findExportByName("lsasrv.dll", "LsaIFreeFilterInboundNamespaceResult")
+Interceptor.attach(LsaIFreeFilterInboundNamespaceResult, {onLeave: function (args) {send("LsaIFreeFilterInboundNamespaceResult");}});
+
+var LsaIFreeForestTrustInfo = Module.findExportByName("lsasrv.dll", "LsaIFreeForestTrustInfo")
+Interceptor.attach(LsaIFreeForestTrustInfo, {onLeave: function (args) {send("LsaIFreeForestTrustInfo");}});
+
+var LsaIFreeHeap = Module.findExportByName("lsasrv.dll", "LsaIFreeHeap")
+Interceptor.attach(LsaIFreeHeap, {onLeave: function (args) {send("LsaIFreeHeap");}});
+
+var LsaIFreeReturnBuffer = Module.findExportByName("lsasrv.dll", "LsaIFreeReturnBuffer")
+Interceptor.attach(LsaIFreeReturnBuffer, {onLeave: function (args) {send("LsaIFreeReturnBuffer");}});
+
+var LsaIFreeSupplementalTokenInfo = Module.findExportByName("lsasrv.dll", "LsaIFreeSupplementalTokenInfo")
+Interceptor.attach(LsaIFreeSupplementalTokenInfo, {onLeave: function (args) {send("LsaIFreeSupplementalTokenInfo");}});
+
+var LsaIFree_LSAI_PRIVATE_DATA = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAI_PRIVATE_DATA")
+Interceptor.attach(LsaIFree_LSAI_PRIVATE_DATA, {onLeave: function (args) {send("LsaIFree_LSAI_PRIVATE_DATA");}});
+
+var LsaIFree_LSAI_SECRET_ENUM_BUFFER = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAI_SECRET_ENUM_BUFFER")
+Interceptor.attach(LsaIFree_LSAI_SECRET_ENUM_BUFFER, {onLeave: function (args) {send("LsaIFree_LSAI_SECRET_ENUM_BUFFER");}});
+
+var LsaIFree_LSAPR_ACCOUNT_ENUM_BUFFER = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_ACCOUNT_ENUM_BUFFER")
+Interceptor.attach(LsaIFree_LSAPR_ACCOUNT_ENUM_BUFFER, {onLeave: function (args) {send("LsaIFree_LSAPR_ACCOUNT_ENUM_BUFFER");}});
+
+var LsaIFree_LSAPR_CR_CIPHER_VALUE = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_CR_CIPHER_VALUE")
+Interceptor.attach(LsaIFree_LSAPR_CR_CIPHER_VALUE, {onLeave: function (args) {send("LsaIFree_LSAPR_CR_CIPHER_VALUE");}});
+
+var LsaIFree_LSAPR_POLICY_DOMAIN_INFORMATION = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_POLICY_DOMAIN_INFORMATION")
+Interceptor.attach(LsaIFree_LSAPR_POLICY_DOMAIN_INFORMATION, {onLeave: function (args) {send("LsaIFree_LSAPR_POLICY_DOMAIN_INFORMATION");}});
+
+var LsaIFree_LSAPR_POLICY_INFORMATION = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_POLICY_INFORMATION")
+Interceptor.attach(LsaIFree_LSAPR_POLICY_INFORMATION, {onLeave: function (args) {send("LsaIFree_LSAPR_POLICY_INFORMATION");}});
+
+var LsaIFree_LSAPR_PRIVILEGE_ENUM_BUFFER = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_PRIVILEGE_ENUM_BUFFER")
+Interceptor.attach(LsaIFree_LSAPR_PRIVILEGE_ENUM_BUFFER, {onLeave: function (args) {send("LsaIFree_LSAPR_PRIVILEGE_ENUM_BUFFER");}});
+
+var LsaIFree_LSAPR_PRIVILEGE_SET = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_PRIVILEGE_SET")
+Interceptor.attach(LsaIFree_LSAPR_PRIVILEGE_SET, {onLeave: function (args) {send("LsaIFree_LSAPR_PRIVILEGE_SET");}});
+
+var LsaIFree_LSAPR_REFERENCED_DOMAIN_LIST = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_REFERENCED_DOMAIN_LIST")
+Interceptor.attach(LsaIFree_LSAPR_REFERENCED_DOMAIN_LIST, {onLeave: function (args) {send("LsaIFree_LSAPR_REFERENCED_DOMAIN_LIST");}});
+
+var LsaIFree_LSAPR_SR_SECURITY_DESCRIPTOR = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_SR_SECURITY_DESCRIPTOR")
+Interceptor.attach(LsaIFree_LSAPR_SR_SECURITY_DESCRIPTOR, {onLeave: function (args) {send("LsaIFree_LSAPR_SR_SECURITY_DESCRIPTOR");}});
+
+var LsaIFree_LSAPR_TRANSLATED_NAMES = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_TRANSLATED_NAMES")
+Interceptor.attach(LsaIFree_LSAPR_TRANSLATED_NAMES, {onLeave: function (args) {send("LsaIFree_LSAPR_TRANSLATED_NAMES");}});
+
+var LsaIFree_LSAPR_TRANSLATED_SIDS = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_TRANSLATED_SIDS")
+Interceptor.attach(LsaIFree_LSAPR_TRANSLATED_SIDS, {onLeave: function (args) {send("LsaIFree_LSAPR_TRANSLATED_SIDS");}});
+
+var LsaIFree_LSAPR_TRUSTED_DOMAIN_INFO = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_TRUSTED_DOMAIN_INFO")
+Interceptor.attach(LsaIFree_LSAPR_TRUSTED_DOMAIN_INFO, {onLeave: function (args) {send("LsaIFree_LSAPR_TRUSTED_DOMAIN_INFO");}});
+
+var LsaIFree_LSAPR_TRUSTED_ENUM_BUFFER = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_TRUSTED_ENUM_BUFFER")
+Interceptor.attach(LsaIFree_LSAPR_TRUSTED_ENUM_BUFFER, {onLeave: function (args) {send("LsaIFree_LSAPR_TRUSTED_ENUM_BUFFER");}});
+
+var LsaIFree_LSAPR_TRUSTED_ENUM_BUFFER_EX = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_TRUSTED_ENUM_BUFFER_EX")
+Interceptor.attach(LsaIFree_LSAPR_TRUSTED_ENUM_BUFFER_EX, {onLeave: function (args) {send("LsaIFree_LSAPR_TRUSTED_ENUM_BUFFER_EX");}});
+
+var LsaIFree_LSAPR_TRUST_INFORMATION = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_TRUST_INFORMATION")
+Interceptor.attach(LsaIFree_LSAPR_TRUST_INFORMATION, {onLeave: function (args) {send("LsaIFree_LSAPR_TRUST_INFORMATION");}});
+
+var LsaIFree_LSAPR_UNICODE_STRING = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_UNICODE_STRING")
+Interceptor.attach(LsaIFree_LSAPR_UNICODE_STRING, {onLeave: function (args) {send("LsaIFree_LSAPR_UNICODE_STRING");}});
+
+var LsaIFree_LSAPR_UNICODE_STRING_BUFFER = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAPR_UNICODE_STRING_BUFFER")
+Interceptor.attach(LsaIFree_LSAPR_UNICODE_STRING_BUFFER, {onLeave: function (args) {send("LsaIFree_LSAPR_UNICODE_STRING_BUFFER");}});
+
+var LsaIFree_LSAP_SITENAME_INFO = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAP_SITENAME_INFO")
+Interceptor.attach(LsaIFree_LSAP_SITENAME_INFO, {onLeave: function (args) {send("LsaIFree_LSAP_SITENAME_INFO");}});
+
+var LsaIFree_LSAP_SITE_INFO = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAP_SITE_INFO")
+Interceptor.attach(LsaIFree_LSAP_SITE_INFO, {onLeave: function (args) {send("LsaIFree_LSAP_SITE_INFO");}});
+
+var LsaIFree_LSAP_SUBNET_INFO = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAP_SUBNET_INFO")
+Interceptor.attach(LsaIFree_LSAP_SUBNET_INFO, {onLeave: function (args) {send("LsaIFree_LSAP_SUBNET_INFO");}});
+
+var LsaIFree_LSAP_UPN_SUFFIXES = Module.findExportByName("lsasrv.dll", "LsaIFree_LSAP_UPN_SUFFIXES")
+Interceptor.attach(LsaIFree_LSAP_UPN_SUFFIXES, {onLeave: function (args) {send("LsaIFree_LSAP_UPN_SUFFIXES");}});
+
+var LsaIFree_LSA_FOREST_TRUST_COLLISION_INFORMATION = Module.findExportByName("lsasrv.dll", "LsaIFree_LSA_FOREST_TRUST_COLLISION_INFORMATION")
+Interceptor.attach(LsaIFree_LSA_FOREST_TRUST_COLLISION_INFORMATION, {onLeave: function (args) {send("LsaIFree_LSA_FOREST_TRUST_COLLISION_INFORMATION");}});
+
+var LsaIFree_LSA_FOREST_TRUST_INFORMATION = Module.findExportByName("lsasrv.dll", "LsaIFree_LSA_FOREST_TRUST_INFORMATION")
+Interceptor.attach(LsaIFree_LSA_FOREST_TRUST_INFORMATION, {onLeave: function (args) {send("LsaIFree_LSA_FOREST_TRUST_INFORMATION");}});
+
+var LsaIGetCallInfo = Module.findExportByName("lsasrv.dll", "LsaIGetCallInfo")
+Interceptor.attach(LsaIGetCallInfo, {onLeave: function (args) {send("LsaIGetCallInfo");}});
+
+var LsaIGetCcgClient = Module.findExportByName("lsasrv.dll", "LsaIGetCcgClient")
+Interceptor.attach(LsaIGetCcgClient, {onLeave: function (args) {send("LsaIGetCcgClient");}});
+
+var LsaIGetClientOsInfo = Module.findExportByName("lsasrv.dll", "LsaIGetClientOsInfo")
+Interceptor.attach(LsaIGetClientOsInfo, {onLeave: function (args) {send("LsaIGetClientOsInfo");}});
+
+var LsaIGetForestTrustInformation = Module.findExportByName("lsasrv.dll", "LsaIGetForestTrustInformation")
+Interceptor.attach(LsaIGetForestTrustInformation, {onLeave: function (args) {send("LsaIGetForestTrustInformation");}});
+
+var LsaIGetLogonGuid = Module.findExportByName("lsasrv.dll", "LsaIGetLogonGuid")
+Interceptor.attach(LsaIGetLogonGuid, {onLeave: function (args) {send("LsaIGetLogonGuid");}});
+
+var LsaIGetNameFromLuid = Module.findExportByName("lsasrv.dll", "LsaIGetNameFromLuid")
+Interceptor.attach(LsaIGetNameFromLuid, {onLeave: function (args) {send("LsaIGetNameFromLuid");}});
+
+var LsaIGetNbAndDnsDomainNames = Module.findExportByName("lsasrv.dll", "LsaIGetNbAndDnsDomainNames")
+Interceptor.attach(LsaIGetNbAndDnsDomainNames, {onLeave: function (args) {send("LsaIGetNbAndDnsDomainNames");}});
+
+var LsaIGetNego2Package = Module.findExportByName("lsasrv.dll", "LsaIGetNego2Package")
+Interceptor.attach(LsaIGetNego2Package, {onLeave: function (args) {send("LsaIGetNego2Package");}});
+
+var LsaIGetRemoteCredGuardLogonBuffer = Module.findExportByName("lsasrv.dll", "LsaIGetRemoteCredGuardLogonBuffer")
+Interceptor.attach(LsaIGetRemoteCredGuardLogonBuffer, {onLeave: function (args) {send("LsaIGetRemoteCredGuardLogonBuffer");}});
+
+var LsaIGetRemoteCredGuardSupplementalCreds = Module.findExportByName("lsasrv.dll", "LsaIGetRemoteCredGuardSupplementalCreds")
+Interceptor.attach(LsaIGetRemoteCredGuardSupplementalCreds, {onLeave: function (args) {send("LsaIGetRemoteCredGuardSupplementalCreds");}});
+
+var LsaIGetSiteName = Module.findExportByName("lsasrv.dll", "LsaIGetSiteName")
+Interceptor.attach(LsaIGetSiteName, {onLeave: function (args) {send("LsaIGetSiteName");}});
+
+var LsaIGetSupplementalTokenInfo = Module.findExportByName("lsasrv.dll", "LsaIGetSupplementalTokenInfo")
+Interceptor.attach(LsaIGetSupplementalTokenInfo, {onLeave: function (args) {send("LsaIGetSupplementalTokenInfo");}});
+
+var LsaIGetTokenInformationForLocalUser = Module.findExportByName("lsasrv.dll", "LsaIGetTokenInformationForLocalUser")
+Interceptor.attach(LsaIGetTokenInformationForLocalUser, {onLeave: function (args) {send("LsaIGetTokenInformationForLocalUser");}});
+
+var LsaIHealthCheck = Module.findExportByName("lsasrv.dll", "LsaIHealthCheck")
+Interceptor.attach(LsaIHealthCheck, {onLeave: function (args) {send("LsaIHealthCheck");}});
+
+var LsaIImpersonateClient = Module.findExportByName("lsasrv.dll", "LsaIImpersonateClient")
+Interceptor.attach(LsaIImpersonateClient, {onLeave: function (args) {send("LsaIImpersonateClient");}});
+
+var LsaIInitializeNetlogonFuncPtrs = Module.findExportByName("lsasrv.dll", "LsaIInitializeNetlogonFuncPtrs")
+Interceptor.attach(LsaIInitializeNetlogonFuncPtrs, {onLeave: function (args) {send("LsaIInitializeNetlogonFuncPtrs");}});
+
+var LsaIIsContainerized = Module.findExportByName("lsasrv.dll", "LsaIIsContainerized")
+Interceptor.attach(LsaIIsContainerized, {onLeave: function (args) {send("LsaIIsContainerized");}});
+
+var LsaIIsDomainWithinForest = Module.findExportByName("lsasrv.dll", "LsaIIsDomainWithinForest")
+Interceptor.attach(LsaIIsDomainWithinForest, {onLeave: function (args) {send("LsaIIsDomainWithinForest");}});
+
+var LsaIIsDsPaused = Module.findExportByName("lsasrv.dll", "LsaIIsDsPaused")
+Interceptor.attach(LsaIIsDsPaused, {onLeave: function (args) {send("LsaIIsDsPaused");}});
+
+var LsaIIsInEmulatedDomainJoinMode = Module.findExportByName("lsasrv.dll", "LsaIIsInEmulatedDomainJoinMode")
+Interceptor.attach(LsaIIsInEmulatedDomainJoinMode, {onLeave: function (args) {send("LsaIIsInEmulatedDomainJoinMode");}});
+
+var LsaIIsLastInteractiveLogonInfoEnabled = Module.findExportByName("lsasrv.dll", "LsaIIsLastInteractiveLogonInfoEnabled")
+Interceptor.attach(LsaIIsLastInteractiveLogonInfoEnabled, {onLeave: function (args) {send("LsaIIsLastInteractiveLogonInfoEnabled");}});
+
+var LsaIIsLocalHost = Module.findExportByName("lsasrv.dll", "LsaIIsLocalHost")
+Interceptor.attach(LsaIIsLocalHost, {onLeave: function (args) {send("LsaIIsLocalHost");}});
+
+var LsaIIsMachineSecureByDefault = Module.findExportByName("lsasrv.dll", "LsaIIsMachineSecureByDefault")
+Interceptor.attach(LsaIIsMachineSecureByDefault, {onLeave: function (args) {send("LsaIIsMachineSecureByDefault");}});
+
+var LsaIIsSuppressChannelBindingInfo = Module.findExportByName("lsasrv.dll", "LsaIIsSuppressChannelBindingInfo")
+Interceptor.attach(LsaIIsSuppressChannelBindingInfo, {onLeave: function (args) {send("LsaIIsSuppressChannelBindingInfo");}});
+
+var LsaIIsTargetPrivate = Module.findExportByName("lsasrv.dll", "LsaIIsTargetPrivate")
+Interceptor.attach(LsaIIsTargetPrivate, {onLeave: function (args) {send("LsaIIsTargetPrivate");}});
+
+var LsaIIsTrustedDomainsEnabled = Module.findExportByName("lsasrv.dll", "LsaIIsTrustedDomainsEnabled")
+Interceptor.attach(LsaIIsTrustedDomainsEnabled, {onLeave: function (args) {send("LsaIIsTrustedDomainsEnabled");}});
+
+var LsaIIsUserMSA = Module.findExportByName("lsasrv.dll", "LsaIIsUserMSA")
+Interceptor.attach(LsaIIsUserMSA, {onLeave: function (args) {send("LsaIIsUserMSA");}});
+
+var LsaIKerberosRegisterTrustNotification = Module.findExportByName("lsasrv.dll", "LsaIKerberosRegisterTrustNotification")
+Interceptor.attach(LsaIKerberosRegisterTrustNotification, {onLeave: function (args) {send("LsaIKerberosRegisterTrustNotification");}});
+
+var LsaILookupUserAccountType = Module.findExportByName("lsasrv.dll", "LsaILookupUserAccountType")
+Interceptor.attach(LsaILookupUserAccountType, {onLeave: function (args) {send("LsaILookupUserAccountType");}});
+
+var LsaILookupWellKnownName = Module.findExportByName("lsasrv.dll", "LsaILookupWellKnownName")
+Interceptor.attach(LsaILookupWellKnownName, {onLeave: function (args) {send("LsaILookupWellKnownName");}});
+
+var LsaIModifyPerformanceCounter = Module.findExportByName("lsasrv.dll", "LsaIModifyPerformanceCounter")
+Interceptor.attach(LsaIModifyPerformanceCounter, {onLeave: function (args) {send("LsaIModifyPerformanceCounter");}});
+
+var LsaINoConnectedUserPolicy = Module.findExportByName("lsasrv.dll", "LsaINoConnectedUserPolicy")
+Interceptor.attach(LsaINoConnectedUserPolicy, {onLeave: function (args) {send("LsaINoConnectedUserPolicy");}});
+
+var LsaINoMoreWin2KDomain = Module.findExportByName("lsasrv.dll", "LsaINoMoreWin2KDomain")
+Interceptor.attach(LsaINoMoreWin2KDomain, {onLeave: function (args) {send("LsaINoMoreWin2KDomain");}});
+
+var LsaINotifyChangeNotification = Module.findExportByName("lsasrv.dll", "LsaINotifyChangeNotification")
+Interceptor.attach(LsaINotifyChangeNotification, {onLeave: function (args) {send("LsaINotifyChangeNotification");}});
+
+var LsaINotifyGCStatusChange = Module.findExportByName("lsasrv.dll", "LsaINotifyGCStatusChange")
+Interceptor.attach(LsaINotifyGCStatusChange, {onLeave: function (args) {send("LsaINotifyGCStatusChange");}});
+
+var LsaINotifyNetlogonParametersChangeW = Module.findExportByName("lsasrv.dll", "LsaINotifyNetlogonParametersChangeW")
+Interceptor.attach(LsaINotifyNetlogonParametersChangeW, {onLeave: function (args) {send("LsaINotifyNetlogonParametersChangeW");}});
+
+var LsaINotifyNewPassword = Module.findExportByName("lsasrv.dll", "LsaINotifyNewPassword")
+Interceptor.attach(LsaINotifyNewPassword, {onLeave: function (args) {send("LsaINotifyNewPassword");}});
+
+var LsaINotifyPasswordChanged = Module.findExportByName("lsasrv.dll", "LsaINotifyPasswordChanged")
+Interceptor.attach(LsaINotifyPasswordChanged, {onLeave: function (args) {send("LsaINotifyPasswordChanged");}});
+
+var LsaIOpenPolicyTrusted = Module.findExportByName("lsasrv.dll", "LsaIOpenPolicyTrusted")
+Interceptor.attach(LsaIOpenPolicyTrusted, {onLeave: function (args) {send("LsaIOpenPolicyTrusted");}});
+
+var LsaIQueryForestTrustInfo = Module.findExportByName("lsasrv.dll", "LsaIQueryForestTrustInfo")
+Interceptor.attach(LsaIQueryForestTrustInfo, {onLeave: function (args) {send("LsaIQueryForestTrustInfo");}});
+
+var LsaIQueryForestTrustInformation = Module.findExportByName("lsasrv.dll", "LsaIQueryForestTrustInformation")
+Interceptor.attach(LsaIQueryForestTrustInformation, {onLeave: function (args) {send("LsaIQueryForestTrustInformation");}});
+
+var LsaIQueryInformationPolicyTrusted = Module.findExportByName("lsasrv.dll", "LsaIQueryInformationPolicyTrusted")
+Interceptor.attach(LsaIQueryInformationPolicyTrusted, {onLeave: function (args) {send("LsaIQueryInformationPolicyTrusted");}});
+
+var LsaIQueryPackageAttrInLogonSession = Module.findExportByName("lsasrv.dll", "LsaIQueryPackageAttrInLogonSession")
+Interceptor.attach(LsaIQueryPackageAttrInLogonSession, {onLeave: function (args) {send("LsaIQueryPackageAttrInLogonSession");}});
+
+var LsaIQuerySiteInfo = Module.findExportByName("lsasrv.dll", "LsaIQuerySiteInfo")
+Interceptor.attach(LsaIQuerySiteInfo, {onLeave: function (args) {send("LsaIQuerySiteInfo");}});
+
+var LsaIQuerySubnetInfo = Module.findExportByName("lsasrv.dll", "LsaIQuerySubnetInfo")
+Interceptor.attach(LsaIQuerySubnetInfo, {onLeave: function (args) {send("LsaIQuerySubnetInfo");}});
+
+var LsaIQueryUpnSuffixes = Module.findExportByName("lsasrv.dll", "LsaIQueryUpnSuffixes")
+Interceptor.attach(LsaIQueryUpnSuffixes, {onLeave: function (args) {send("LsaIQueryUpnSuffixes");}});
+
+var LsaIReferenceCredHandle = Module.findExportByName("lsasrv.dll", "LsaIReferenceCredHandle")
+Interceptor.attach(LsaIReferenceCredHandle, {onLeave: function (args) {send("LsaIReferenceCredHandle");}});
+
+var LsaIReferenceCtxtHandle = Module.findExportByName("lsasrv.dll", "LsaIReferenceCtxtHandle")
+Interceptor.attach(LsaIReferenceCtxtHandle, {onLeave: function (args) {send("LsaIReferenceCtxtHandle");}});
+
+var LsaIRegisterLogonSessionCallback = Module.findExportByName("lsasrv.dll", "LsaIRegisterLogonSessionCallback")
+Interceptor.attach(LsaIRegisterLogonSessionCallback, {onLeave: function (args) {send("LsaIRegisterLogonSessionCallback");}});
+
+var LsaIRegisterNotification = Module.findExportByName("lsasrv.dll", "LsaIRegisterNotification")
+Interceptor.attach(LsaIRegisterNotification, {onLeave: function (args) {send("LsaIRegisterNotification");}});
+
+var LsaIRegisterPolicyChangeNotificationCallback = Module.findExportByName("lsasrv.dll", "LsaIRegisterPolicyChangeNotificationCallback")
+Interceptor.attach(LsaIRegisterPolicyChangeNotificationCallback, {onLeave: function (args) {send("LsaIRegisterPolicyChangeNotificationCallback");}});
+
+var LsaIRenewCertificate = Module.findExportByName("lsasrv.dll", "LsaIRenewCertificate")
+Interceptor.attach(LsaIRenewCertificate, {onLeave: function (args) {send("LsaIRenewCertificate");}});
+
+var LsaIReplicateClientObject = Module.findExportByName("lsasrv.dll", "LsaIReplicateClientObject")
+Interceptor.attach(LsaIReplicateClientObject, {onLeave: function (args) {send("LsaIReplicateClientObject");}});
+
+var LsaIRetrieveCurrentUserSid = Module.findExportByName("lsasrv.dll", "LsaIRetrieveCurrentUserSid")
+Interceptor.attach(LsaIRetrieveCurrentUserSid, {onLeave: function (args) {send("LsaIRetrieveCurrentUserSid");}});
+
+var LsaISafeMode = Module.findExportByName("lsasrv.dll", "LsaISafeMode")
+Interceptor.attach(LsaISafeMode, {onLeave: function (args) {send("LsaISafeMode");}});
+
+var LsaISamIndicatedDsStarted = Module.findExportByName("lsasrv.dll", "LsaISamIndicatedDsStarted")
+Interceptor.attach(LsaISamIndicatedDsStarted, {onLeave: function (args) {send("LsaISamIndicatedDsStarted");}});
+
+var LsaISanitizeSAMName = Module.findExportByName("lsasrv.dll", "LsaISanitizeSAMName")
+Interceptor.attach(LsaISanitizeSAMName, {onLeave: function (args) {send("LsaISanitizeSAMName");}});
+
+var LsaISetClientDnsHostName = Module.findExportByName("lsasrv.dll", "LsaISetClientDnsHostName")
+Interceptor.attach(LsaISetClientDnsHostName, {onLeave: function (args) {send("LsaISetClientDnsHostName");}});
+
+var LsaISetLogonGuidInLogonSession = Module.findExportByName("lsasrv.dll", "LsaISetLogonGuidInLogonSession")
+Interceptor.attach(LsaISetLogonGuidInLogonSession, {onLeave: function (args) {send("LsaISetLogonGuidInLogonSession");}});
+
+var LsaISetLogonInfo = Module.findExportByName("lsasrv.dll", "LsaISetLogonInfo")
+Interceptor.attach(LsaISetLogonInfo, {onLeave: function (args) {send("LsaISetLogonInfo");}});
+
+var LsaISetNewSyskey = Module.findExportByName("lsasrv.dll", "LsaISetNewSyskey")
+Interceptor.attach(LsaISetNewSyskey, {onLeave: function (args) {send("LsaISetNewSyskey");}});
+
+var LsaISetPackageAttrInLogonSession = Module.findExportByName("lsasrv.dll", "LsaISetPackageAttrInLogonSession")
+Interceptor.attach(LsaISetPackageAttrInLogonSession, {onLeave: function (args) {send("LsaISetPackageAttrInLogonSession");}});
+
+var LsaISetSupplementalTokenInfo = Module.findExportByName("lsasrv.dll", "LsaISetSupplementalTokenInfo")
+Interceptor.attach(LsaISetSupplementalTokenInfo, {onLeave: function (args) {send("LsaISetSupplementalTokenInfo");}});
+
+var LsaISetTokenDacl = Module.findExportByName("lsasrv.dll", "LsaISetTokenDacl")
+Interceptor.attach(LsaISetTokenDacl, {onLeave: function (args) {send("LsaISetTokenDacl");}});
+
+var LsaISetUserFlags = Module.findExportByName("lsasrv.dll", "LsaISetUserFlags")
+Interceptor.attach(LsaISetUserFlags, {onLeave: function (args) {send("LsaISetUserFlags");}});
+
+var LsaITransformAuthorizationData = Module.findExportByName("lsasrv.dll", "LsaITransformAuthorizationData")
+Interceptor.attach(LsaITransformAuthorizationData, {onLeave: function (args) {send("LsaITransformAuthorizationData");}});
+
+var LsaIUnregisterAllPolicyChangeNotificationCallback = Module.findExportByName("lsasrv.dll", "LsaIUnregisterAllPolicyChangeNotificationCallback")
+Interceptor.attach(LsaIUnregisterAllPolicyChangeNotificationCallback, {onLeave: function (args) {send("LsaIUnregisterAllPolicyChangeNotificationCallback");}});
+
+var LsaIUnregisterLogonSessionCallback = Module.findExportByName("lsasrv.dll", "LsaIUnregisterLogonSessionCallback")
+Interceptor.attach(LsaIUnregisterLogonSessionCallback, {onLeave: function (args) {send("LsaIUnregisterLogonSessionCallback");}});
+
+var LsaIUnregisterPolicyChangeNotificationCallback = Module.findExportByName("lsasrv.dll", "LsaIUnregisterPolicyChangeNotificationCallback")
+Interceptor.attach(LsaIUnregisterPolicyChangeNotificationCallback, {onLeave: function (args) {send("LsaIUnregisterPolicyChangeNotificationCallback");}});
+
+var LsaIUpdateForestTrustInformation = Module.findExportByName("lsasrv.dll", "LsaIUpdateForestTrustInformation")
+Interceptor.attach(LsaIUpdateForestTrustInformation, {onLeave: function (args) {send("LsaIUpdateForestTrustInformation");}});
+
+var LsaIUpdateKerbMaxTokenSize = Module.findExportByName("lsasrv.dll", "LsaIUpdateKerbMaxTokenSize")
+Interceptor.attach(LsaIUpdateKerbMaxTokenSize, {onLeave: function (args) {send("LsaIUpdateKerbMaxTokenSize");}});
+
+var LsaIUpdateLogonSession = Module.findExportByName("lsasrv.dll", "LsaIUpdateLogonSession")
+Interceptor.attach(LsaIUpdateLogonSession, {onLeave: function (args) {send("LsaIUpdateLogonSession");}});
+
+var LsaIValidateTargetInfo = Module.findExportByName("lsasrv.dll", "LsaIValidateTargetInfo")
+Interceptor.attach(LsaIValidateTargetInfo, {onLeave: function (args) {send("LsaIValidateTargetInfo");}});
+
+var LsaIVerifyCachability = Module.findExportByName("lsasrv.dll", "LsaIVerifyCachability")
+Interceptor.attach(LsaIVerifyCachability, {onLeave: function (args) {send("LsaIVerifyCachability");}});
+
+var LsaIVerifyCachabilityEx = Module.findExportByName("lsasrv.dll", "LsaIVerifyCachabilityEx")
+Interceptor.attach(LsaIVerifyCachabilityEx, {onLeave: function (args) {send("LsaIVerifyCachabilityEx");}});
+
+var LsaIWasLogonNotifiedOfProfileLoad = Module.findExportByName("lsasrv.dll", "LsaIWasLogonNotifiedOfProfileLoad")
+Interceptor.attach(LsaIWasLogonNotifiedOfProfileLoad, {onLeave: function (args) {send("LsaIWasLogonNotifiedOfProfileLoad");}});
+
+var LsaIWriteAuditEvent = Module.findExportByName("lsasrv.dll", "LsaIWriteAuditEvent")
+Interceptor.attach(LsaIWriteAuditEvent, {onLeave: function (args) {send("LsaIWriteAuditEvent");}});
+
+var LsaIWriteKdcAuthenticationEvent = Module.findExportByName("lsasrv.dll", "LsaIWriteKdcAuthenticationEvent")
+Interceptor.attach(LsaIWriteKdcAuthenticationEvent, {onLeave: function (args) {send("LsaIWriteKdcAuthenticationEvent");}});
+
+var LsapAdtGetCallerProcessInfo = Module.findExportByName("lsasrv.dll", "LsapAdtGetCallerProcessInfo")
+Interceptor.attach(LsapAdtGetCallerProcessInfo, {onLeave: function (args) {send("LsapAdtGetCallerProcessInfo");}});
+
+var LsapAdtWriteLog = Module.findExportByName("lsasrv.dll", "LsapAdtWriteLog")
+Interceptor.attach(LsapAdtWriteLog, {onLeave: function (args) {send("LsapAdtWriteLog");}});
+
+var LsapAllocateLsaHeap = Module.findExportByName("lsasrv.dll", "LsapAllocateLsaHeap")
+Interceptor.attach(LsapAllocateLsaHeap, {onLeave: function (args) {send("LsapAllocateLsaHeap");}});
+
+var LsapAllocatePrivateHeap = Module.findExportByName("lsasrv.dll", "LsapAllocatePrivateHeap")
+Interceptor.attach(LsapAllocatePrivateHeap, {onLeave: function (args) {send("LsapAllocatePrivateHeap");}});
+
+var LsapAuOpenSam = Module.findExportByName("lsasrv.dll", "LsapAuOpenSam")
+Interceptor.attach(LsapAuOpenSam, {onLeave: function (args) {send("LsapAuOpenSam");}});
+
+var LsapAuditFailed = Module.findExportByName("lsasrv.dll", "LsapAuditFailed")
+Interceptor.attach(LsapAuditFailed, {onLeave: function (args) {send("LsapAuditFailed");}});
+
+var LsapBuildPrivilegeAuditString = Module.findExportByName("lsasrv.dll", "LsapBuildPrivilegeAuditString")
+Interceptor.attach(LsapBuildPrivilegeAuditString, {onLeave: function (args) {send("LsapBuildPrivilegeAuditString");}});
+
+var LsapCheckBootMode = Module.findExportByName("lsasrv.dll", "LsapCheckBootMode")
+Interceptor.attach(LsapCheckBootMode, {onLeave: function (args) {send("LsapCheckBootMode");}});
+
+var LsapCloseHandle = Module.findExportByName("lsasrv.dll", "LsapCloseHandle")
+Interceptor.attach(LsapCloseHandle, {onLeave: function (args) {send("LsapCloseHandle");}});
+
+var LsapCompareDomainNames = Module.findExportByName("lsasrv.dll", "LsapCompareDomainNames")
+Interceptor.attach(LsapCompareDomainNames, {onLeave: function (args) {send("LsapCompareDomainNames");}});
+
+var LsapCrServerGetSessionKey = Module.findExportByName("lsasrv.dll", "LsapCrServerGetSessionKey")
+Interceptor.attach(LsapCrServerGetSessionKey, {onLeave: function (args) {send("LsapCrServerGetSessionKey");}});
+
+var LsapCrServerGetSessionKeySafe = Module.findExportByName("lsasrv.dll", "LsapCrServerGetSessionKeySafe")
+Interceptor.attach(LsapCrServerGetSessionKeySafe, {onLeave: function (args) {send("LsapCrServerGetSessionKeySafe");}});
+
+var LsapDbAcquireLockEx = Module.findExportByName("lsasrv.dll", "LsapDbAcquireLockEx")
+Interceptor.attach(LsapDbAcquireLockEx, {onLeave: function (args) {send("LsapDbAcquireLockEx");}});
+
+var LsapDbApplyTransaction = Module.findExportByName("lsasrv.dll", "LsapDbApplyTransaction")
+Interceptor.attach(LsapDbApplyTransaction, {onLeave: function (args) {send("LsapDbApplyTransaction");}});
+
+var LsapDbBuildObjectCaches = Module.findExportByName("lsasrv.dll", "LsapDbBuildObjectCaches")
+Interceptor.attach(LsapDbBuildObjectCaches, {onLeave: function (args) {send("LsapDbBuildObjectCaches");}});
+
+var LsapDbCloseHandle = Module.findExportByName("lsasrv.dll", "LsapDbCloseHandle")
+Interceptor.attach(LsapDbCloseHandle, {onLeave: function (args) {send("LsapDbCloseHandle");}});
+
+var LsapDbCloseObject = Module.findExportByName("lsasrv.dll", "LsapDbCloseObject")
+Interceptor.attach(LsapDbCloseObject, {onLeave: function (args) {send("LsapDbCloseObject");}});
+
+var LsapDbCopyUnicodeAttribute = Module.findExportByName("lsasrv.dll", "LsapDbCopyUnicodeAttribute")
+Interceptor.attach(LsapDbCopyUnicodeAttribute, {onLeave: function (args) {send("LsapDbCopyUnicodeAttribute");}});
+
+var LsapDbCopyUnicodeAttributeNoAlloc = Module.findExportByName("lsasrv.dll", "LsapDbCopyUnicodeAttributeNoAlloc")
+Interceptor.attach(LsapDbCopyUnicodeAttributeNoAlloc, {onLeave: function (args) {send("LsapDbCopyUnicodeAttributeNoAlloc");}});
+
+var LsapDbCreateObject = Module.findExportByName("lsasrv.dll", "LsapDbCreateObject")
+Interceptor.attach(LsapDbCreateObject, {onLeave: function (args) {send("LsapDbCreateObject");}});
+
+var LsapDbDeleteAttributesObject = Module.findExportByName("lsasrv.dll", "LsapDbDeleteAttributesObject")
+Interceptor.attach(LsapDbDeleteAttributesObject, {onLeave: function (args) {send("LsapDbDeleteAttributesObject");}});
+
+var LsapDbDeleteObject = Module.findExportByName("lsasrv.dll", "LsapDbDeleteObject")
+Interceptor.attach(LsapDbDeleteObject, {onLeave: function (args) {send("LsapDbDeleteObject");}});
+
+var LsapDbDereferenceHandle = Module.findExportByName("lsasrv.dll", "LsapDbDereferenceHandle")
+Interceptor.attach(LsapDbDereferenceHandle, {onLeave: function (args) {send("LsapDbDereferenceHandle");}});
+
+var LsapDbDereferenceObject = Module.findExportByName("lsasrv.dll", "LsapDbDereferenceObject")
+Interceptor.attach(LsapDbDereferenceObject, {onLeave: function (args) {send("LsapDbDereferenceObject");}});
+
+var LsapDbEnumerateSids = Module.findExportByName("lsasrv.dll", "LsapDbEnumerateSids")
+Interceptor.attach(LsapDbEnumerateSids, {onLeave: function (args) {send("LsapDbEnumerateSids");}});
+
+var LsapDbEnumerateTrustedDomainsEx = Module.findExportByName("lsasrv.dll", "LsapDbEnumerateTrustedDomainsEx")
+Interceptor.attach(LsapDbEnumerateTrustedDomainsEx, {onLeave: function (args) {send("LsapDbEnumerateTrustedDomainsEx");}});
+
+var LsapDbExpAcquireReadLockTrustedDomainList = Module.findExportByName("lsasrv.dll", "LsapDbExpAcquireReadLockTrustedDomainList")
+Interceptor.attach(LsapDbExpAcquireReadLockTrustedDomainList, {onLeave: function (args) {send("LsapDbExpAcquireReadLockTrustedDomainList");}});
+
+var LsapDbExpAcquireWriteLockTrustedDomainList = Module.findExportByName("lsasrv.dll", "LsapDbExpAcquireWriteLockTrustedDomainList")
+Interceptor.attach(LsapDbExpAcquireWriteLockTrustedDomainList, {onLeave: function (args) {send("LsapDbExpAcquireWriteLockTrustedDomainList");}});
+
+var LsapDbExpConvertReadLockTrustedDomainListToExclusive = Module.findExportByName("lsasrv.dll", "LsapDbExpConvertReadLockTrustedDomainListToExclusive")
+Interceptor.attach(LsapDbExpConvertReadLockTrustedDomainListToExclusive, {onLeave: function (args) {send("LsapDbExpConvertReadLockTrustedDomainListToExclusive");}});
+
+var LsapDbExpConvertWriteLockTrustedDomainListToShared = Module.findExportByName("lsasrv.dll", "LsapDbExpConvertWriteLockTrustedDomainListToShared")
+Interceptor.attach(LsapDbExpConvertWriteLockTrustedDomainListToShared, {onLeave: function (args) {send("LsapDbExpConvertWriteLockTrustedDomainListToShared");}});
+
+var LsapDbExpIsCacheBuilding = Module.findExportByName("lsasrv.dll", "LsapDbExpIsCacheBuilding")
+Interceptor.attach(LsapDbExpIsCacheBuilding, {onLeave: function (args) {send("LsapDbExpIsCacheBuilding");}});
+
+var LsapDbExpIsCacheValid = Module.findExportByName("lsasrv.dll", "LsapDbExpIsCacheValid")
+Interceptor.attach(LsapDbExpIsCacheValid, {onLeave: function (args) {send("LsapDbExpIsCacheValid");}});
+
+var LsapDbExpIsLockedTrustedDomainList = Module.findExportByName("lsasrv.dll", "LsapDbExpIsLockedTrustedDomainList")
+Interceptor.attach(LsapDbExpIsLockedTrustedDomainList, {onLeave: function (args) {send("LsapDbExpIsLockedTrustedDomainList");}});
+
+var LsapDbExpMakeCacheBuilding = Module.findExportByName("lsasrv.dll", "LsapDbExpMakeCacheBuilding")
+Interceptor.attach(LsapDbExpMakeCacheBuilding, {onLeave: function (args) {send("LsapDbExpMakeCacheBuilding");}});
+
+var LsapDbExpMakeCacheInvalid = Module.findExportByName("lsasrv.dll", "LsapDbExpMakeCacheInvalid")
+Interceptor.attach(LsapDbExpMakeCacheInvalid, {onLeave: function (args) {send("LsapDbExpMakeCacheInvalid");}});
+
+var LsapDbExpMakeCacheValid = Module.findExportByName("lsasrv.dll", "LsapDbExpMakeCacheValid")
+Interceptor.attach(LsapDbExpMakeCacheValid, {onLeave: function (args) {send("LsapDbExpMakeCacheValid");}});
+
+var LsapDbExpReleaseLockTrustedDomainList = Module.findExportByName("lsasrv.dll", "LsapDbExpReleaseLockTrustedDomainList")
+Interceptor.attach(LsapDbExpReleaseLockTrustedDomainList, {onLeave: function (args) {send("LsapDbExpReleaseLockTrustedDomainList");}});
+
+var LsapDbFreeAttributes = Module.findExportByName("lsasrv.dll", "LsapDbFreeAttributes")
+Interceptor.attach(LsapDbFreeAttributes, {onLeave: function (args) {send("LsapDbFreeAttributes");}});
+
+var LsapDbFreeTrustedDomainsEx = Module.findExportByName("lsasrv.dll", "LsapDbFreeTrustedDomainsEx")
+Interceptor.attach(LsapDbFreeTrustedDomainsEx, {onLeave: function (args) {send("LsapDbFreeTrustedDomainsEx");}});
+
+var LsapDbGetDbObjectTypeName = Module.findExportByName("lsasrv.dll", "LsapDbGetDbObjectTypeName")
+Interceptor.attach(LsapDbGetDbObjectTypeName, {onLeave: function (args) {send("LsapDbGetDbObjectTypeName");}});
+
+var LsapDbGetDbPolicyHandle = Module.findExportByName("lsasrv.dll", "LsapDbGetDbPolicyHandle")
+Interceptor.attach(LsapDbGetDbPolicyHandle, {onLeave: function (args) {send("LsapDbGetDbPolicyHandle");}});
+
+var LsapDbGetSecretType = Module.findExportByName("lsasrv.dll", "LsapDbGetSecretType")
+Interceptor.attach(LsapDbGetSecretType, {onLeave: function (args) {send("LsapDbGetSecretType");}});
+
+var LsapDbInitializeAttribute = Module.findExportByName("lsasrv.dll", "LsapDbInitializeAttribute")
+Interceptor.attach(LsapDbInitializeAttribute, {onLeave: function (args) {send("LsapDbInitializeAttribute");}});
+
+var LsapDbIsStatusConnectionFailure = Module.findExportByName("lsasrv.dll", "LsapDbIsStatusConnectionFailure")
+Interceptor.attach(LsapDbIsStatusConnectionFailure, {onLeave: function (args) {send("LsapDbIsStatusConnectionFailure");}});
+
+var LsapDbLookupAddListReferencedDomains = Module.findExportByName("lsasrv.dll", "LsapDbLookupAddListReferencedDomains")
+Interceptor.attach(LsapDbLookupAddListReferencedDomains, {onLeave: function (args) {send("LsapDbLookupAddListReferencedDomains");}});
+
+var LsapDbLookupCreateListReferencedDomains = Module.findExportByName("lsasrv.dll", "LsapDbLookupCreateListReferencedDomains")
+Interceptor.attach(LsapDbLookupCreateListReferencedDomains, {onLeave: function (args) {send("LsapDbLookupCreateListReferencedDomains");}});
+
+var LsapDbLookupGetDomainInfo = Module.findExportByName("lsasrv.dll", "LsapDbLookupGetDomainInfo")
+Interceptor.attach(LsapDbLookupGetDomainInfo, {onLeave: function (args) {send("LsapDbLookupGetDomainInfo");}});
+
+var LsapDbLookupListReferencedDomains = Module.findExportByName("lsasrv.dll", "LsapDbLookupListReferencedDomains")
+Interceptor.attach(LsapDbLookupListReferencedDomains, {onLeave: function (args) {send("LsapDbLookupListReferencedDomains");}});
+
+var LsapDbLookupMergeDisjointReferencedDomains = Module.findExportByName("lsasrv.dll", "LsapDbLookupMergeDisjointReferencedDomains")
+Interceptor.attach(LsapDbLookupMergeDisjointReferencedDomains, {onLeave: function (args) {send("LsapDbLookupMergeDisjointReferencedDomains");}});
+
+var LsapDbLookupNameChainRequest = Module.findExportByName("lsasrv.dll", "LsapDbLookupNameChainRequest")
+Interceptor.attach(LsapDbLookupNameChainRequest, {onLeave: function (args) {send("LsapDbLookupNameChainRequest");}});
+
+var LsapDbLookupNamesInPrimaryDomain = Module.findExportByName("lsasrv.dll", "LsapDbLookupNamesInPrimaryDomain")
+Interceptor.attach(LsapDbLookupNamesInPrimaryDomain, {onLeave: function (args) {send("LsapDbLookupNamesInPrimaryDomain");}});
+
+var LsapDbLookupSidsInPrimaryDomain = Module.findExportByName("lsasrv.dll", "LsapDbLookupSidsInPrimaryDomain")
+Interceptor.attach(LsapDbLookupSidsInPrimaryDomain, {onLeave: function (args) {send("LsapDbLookupSidsInPrimaryDomain");}});
+
+var LsapDbMakeGuidAttribute = Module.findExportByName("lsasrv.dll", "LsapDbMakeGuidAttribute")
+Interceptor.attach(LsapDbMakeGuidAttribute, {onLeave: function (args) {send("LsapDbMakeGuidAttribute");}});
+
+var LsapDbMakeSidAttribute = Module.findExportByName("lsasrv.dll", "LsapDbMakeSidAttribute")
+Interceptor.attach(LsapDbMakeSidAttribute, {onLeave: function (args) {send("LsapDbMakeSidAttribute");}});
+
+var LsapDbMakeUnicodeAttribute = Module.findExportByName("lsasrv.dll", "LsapDbMakeUnicodeAttribute")
+Interceptor.attach(LsapDbMakeUnicodeAttribute, {onLeave: function (args) {send("LsapDbMakeUnicodeAttribute");}});
+
+var LsapDbOpenObject = Module.findExportByName("lsasrv.dll", "LsapDbOpenObject")
+Interceptor.attach(LsapDbOpenObject, {onLeave: function (args) {send("LsapDbOpenObject");}});
+
+var LsapDbQueryInformationPolicy = Module.findExportByName("lsasrv.dll", "LsapDbQueryInformationPolicy")
+Interceptor.attach(LsapDbQueryInformationPolicy, {onLeave: function (args) {send("LsapDbQueryInformationPolicy");}});
+
+var LsapDbReadAttribute = Module.findExportByName("lsasrv.dll", "LsapDbReadAttribute")
+Interceptor.attach(LsapDbReadAttribute, {onLeave: function (args) {send("LsapDbReadAttribute");}});
+
+var LsapDbReadAttributesObject = Module.findExportByName("lsasrv.dll", "LsapDbReadAttributesObject")
+Interceptor.attach(LsapDbReadAttributesObject, {onLeave: function (args) {send("LsapDbReadAttributesObject");}});
+
+var LsapDbReferenceObject = Module.findExportByName("lsasrv.dll", "LsapDbReferenceObject")
+Interceptor.attach(LsapDbReferenceObject, {onLeave: function (args) {send("LsapDbReferenceObject");}});
+
+var LsapDbReleaseLockEx = Module.findExportByName("lsasrv.dll", "LsapDbReleaseLockEx")
+Interceptor.attach(LsapDbReleaseLockEx, {onLeave: function (args) {send("LsapDbReleaseLockEx");}});
+
+var LsapDbSecretIsMachineAcc = Module.findExportByName("lsasrv.dll", "LsapDbSecretIsMachineAcc")
+Interceptor.attach(LsapDbSecretIsMachineAcc, {onLeave: function (args) {send("LsapDbSecretIsMachineAcc");}});
+
+var LsapDbSidToLogicalNameObject = Module.findExportByName("lsasrv.dll", "LsapDbSidToLogicalNameObject")
+Interceptor.attach(LsapDbSidToLogicalNameObject, {onLeave: function (args) {send("LsapDbSidToLogicalNameObject");}});
+
+var LsapDbSlowEnumerateTrustedDomains = Module.findExportByName("lsasrv.dll", "LsapDbSlowEnumerateTrustedDomains")
+Interceptor.attach(LsapDbSlowEnumerateTrustedDomains, {onLeave: function (args) {send("LsapDbSlowEnumerateTrustedDomains");}});
+
+var LsapDbUpdateCountCompUnmappedNames = Module.findExportByName("lsasrv.dll", "LsapDbUpdateCountCompUnmappedNames")
+Interceptor.attach(LsapDbUpdateCountCompUnmappedNames, {onLeave: function (args) {send("LsapDbUpdateCountCompUnmappedNames");}});
+
+var LsapDbVerifyHandle = Module.findExportByName("lsasrv.dll", "LsapDbVerifyHandle")
+Interceptor.attach(LsapDbVerifyHandle, {onLeave: function (args) {send("LsapDbVerifyHandle");}});
+
+var LsapDbVerifyInfoQueryTrustedDomain = Module.findExportByName("lsasrv.dll", "LsapDbVerifyInfoQueryTrustedDomain")
+Interceptor.attach(LsapDbVerifyInfoQueryTrustedDomain, {onLeave: function (args) {send("LsapDbVerifyInfoQueryTrustedDomain");}});
+
+var LsapDbVerifyInfoSetTrustedDomain = Module.findExportByName("lsasrv.dll", "LsapDbVerifyInfoSetTrustedDomain")
+Interceptor.attach(LsapDbVerifyInfoSetTrustedDomain, {onLeave: function (args) {send("LsapDbVerifyInfoSetTrustedDomain");}});
+
+var LsapDbWriteAttributesObject = Module.findExportByName("lsasrv.dll", "LsapDbWriteAttributesObject")
+Interceptor.attach(LsapDbWriteAttributesObject, {onLeave: function (args) {send("LsapDbWriteAttributesObject");}});
+
+var LsapDomainRenameHandlerForLogonSessions = Module.findExportByName("lsasrv.dll", "LsapDomainRenameHandlerForLogonSessions")
+Interceptor.attach(LsapDomainRenameHandlerForLogonSessions, {onLeave: function (args) {send("LsapDomainRenameHandlerForLogonSessions");}});
+
+var LsapDsInitializeDsStateInfo = Module.findExportByName("lsasrv.dll", "LsapDsInitializeDsStateInfo")
+Interceptor.attach(LsapDsInitializeDsStateInfo, {onLeave: function (args) {send("LsapDsInitializeDsStateInfo");}});
+
+var LsapDsUnitializeDsStateInfo = Module.findExportByName("lsasrv.dll", "LsapDsUnitializeDsStateInfo")
+Interceptor.attach(LsapDsUnitializeDsStateInfo, {onLeave: function (args) {send("LsapDsUnitializeDsStateInfo");}});
+
+var LsapDssetupInitializeGetPrimaryDomainInformationOpState = Module.findExportByName("lsasrv.dll", "LsapDssetupInitializeGetPrimaryDomainInformationOpState")
+Interceptor.attach(LsapDssetupInitializeGetPrimaryDomainInformationOpState, {onLeave: function (args) {send("LsapDssetupInitializeGetPrimaryDomainInformationOpState");}});
+
+var LsapDuplicateSid = Module.findExportByName("lsasrv.dll", "LsapDuplicateSid")
+Interceptor.attach(LsapDuplicateSid, {onLeave: function (args) {send("LsapDuplicateSid");}});
+
+var LsapDuplicateString = Module.findExportByName("lsasrv.dll", "LsapDuplicateString")
+Interceptor.attach(LsapDuplicateString, {onLeave: function (args) {send("LsapDuplicateString");}});
+
+var LsapFreeLsaHeap = Module.findExportByName("lsasrv.dll", "LsapFreeLsaHeap")
+Interceptor.attach(LsapFreeLsaHeap, {onLeave: function (args) {send("LsapFreeLsaHeap");}});
+
+var LsapFreePrivateHeap = Module.findExportByName("lsasrv.dll", "LsapFreePrivateHeap")
+Interceptor.attach(LsapFreePrivateHeap, {onLeave: function (args) {send("LsapFreePrivateHeap");}});
+
+var LsapFreeString = Module.findExportByName("lsasrv.dll", "LsapFreeString")
+Interceptor.attach(LsapFreeString, {onLeave: function (args) {send("LsapFreeString");}});
+
+var LsapGetAccountDomainHandle = Module.findExportByName("lsasrv.dll", "LsapGetAccountDomainHandle")
+Interceptor.attach(LsapGetAccountDomainHandle, {onLeave: function (args) {send("LsapGetAccountDomainHandle");}});
+
+var LsapGetCapeNamesForCap = Module.findExportByName("lsasrv.dll", "LsapGetCapeNamesForCap")
+Interceptor.attach(LsapGetCapeNamesForCap, {onLeave: function (args) {send("LsapGetCapeNamesForCap");}});
+
+var LsapGetGlobalRestrictAnonymous = Module.findExportByName("lsasrv.dll", "LsapGetGlobalRestrictAnonymous")
+Interceptor.attach(LsapGetGlobalRestrictAnonymous, {onLeave: function (args) {send("LsapGetGlobalRestrictAnonymous");}});
+
+var LsapGetHourlyLogLevel = Module.findExportByName("lsasrv.dll", "LsapGetHourlyLogLevel")
+Interceptor.attach(LsapGetHourlyLogLevel, {onLeave: function (args) {send("LsapGetHourlyLogLevel");}});
+
+var LsapGetLogonSessionAccountInfoEx = Module.findExportByName("lsasrv.dll", "LsapGetLogonSessionAccountInfoEx")
+Interceptor.attach(LsapGetLogonSessionAccountInfoEx, {onLeave: function (args) {send("LsapGetLogonSessionAccountInfoEx");}});
+
+var LsapGetLookupRestrictIsolatedNameLevel = Module.findExportByName("lsasrv.dll", "LsapGetLookupRestrictIsolatedNameLevel")
+Interceptor.attach(LsapGetLookupRestrictIsolatedNameLevel, {onLeave: function (args) {send("LsapGetLookupRestrictIsolatedNameLevel");}});
+
+var LsapGetPolicyHandle = Module.findExportByName("lsasrv.dll", "LsapGetPolicyHandle")
+Interceptor.attach(LsapGetPolicyHandle, {onLeave: function (args) {send("LsapGetPolicyHandle");}});
+
+var LsapGetWellKnownSid = Module.findExportByName("lsasrv.dll", "LsapGetWellKnownSid")
+Interceptor.attach(LsapGetWellKnownSid, {onLeave: function (args) {send("LsapGetWellKnownSid");}});
+
+var LsapInitLsa = Module.findExportByName("lsasrv.dll", "LsapInitLsa")
+Interceptor.attach(LsapInitLsa, {onLeave: function (args) {send("LsapInitLsa");}});
+
+var LsapInitializeLsaDb = Module.findExportByName("lsasrv.dll", "LsapInitializeLsaDb")
+Interceptor.attach(LsapInitializeLsaDb, {onLeave: function (args) {send("LsapInitializeLsaDb");}});
+
+var LsapIsBuiltinDomain = Module.findExportByName("lsasrv.dll", "LsapIsBuiltinDomain")
+Interceptor.attach(LsapIsBuiltinDomain, {onLeave: function (args) {send("LsapIsBuiltinDomain");}});
+
+var LsapIsSamOpened = Module.findExportByName("lsasrv.dll", "LsapIsSamOpened")
+Interceptor.attach(LsapIsSamOpened, {onLeave: function (args) {send("LsapIsSamOpened");}});
+
+var LsapOpenSam = Module.findExportByName("lsasrv.dll", "LsapOpenSam")
+Interceptor.attach(LsapOpenSam, {onLeave: function (args) {send("LsapOpenSam");}});
+
+var LsapQueryClientInfo = Module.findExportByName("lsasrv.dll", "LsapQueryClientInfo")
+Interceptor.attach(LsapQueryClientInfo, {onLeave: function (args) {send("LsapQueryClientInfo");}});
+
+var LsapRemoveTrailingDot = Module.findExportByName("lsasrv.dll", "LsapRemoveTrailingDot")
+Interceptor.attach(LsapRemoveTrailingDot, {onLeave: function (args) {send("LsapRemoveTrailingDot");}});
+
+var LsapRpcCopySid = Module.findExportByName("lsasrv.dll", "LsapRpcCopySid")
+Interceptor.attach(LsapRpcCopySid, {onLeave: function (args) {send("LsapRpcCopySid");}});
+
+var LsapRpcCopyUnicodeString = Module.findExportByName("lsasrv.dll", "LsapRpcCopyUnicodeString")
+Interceptor.attach(LsapRpcCopyUnicodeString, {onLeave: function (args) {send("LsapRpcCopyUnicodeString");}});
+
+var LsapRtlValidateControllerTrustedDomain = Module.findExportByName("lsasrv.dll", "LsapRtlValidateControllerTrustedDomain")
+Interceptor.attach(LsapRtlValidateControllerTrustedDomain, {onLeave: function (args) {send("LsapRtlValidateControllerTrustedDomain");}});
+
+var LsapRtlValidateControllerTrustedDomainByHandle = Module.findExportByName("lsasrv.dll", "LsapRtlValidateControllerTrustedDomainByHandle")
+Interceptor.attach(LsapRtlValidateControllerTrustedDomainByHandle, {onLeave: function (args) {send("LsapRtlValidateControllerTrustedDomainByHandle");}});
+
+var LsapSetErrorInfo = Module.findExportByName("lsasrv.dll", "LsapSetErrorInfo")
+Interceptor.attach(LsapSetErrorInfo, {onLeave: function (args) {send("LsapSetErrorInfo");}});
+
+var LsapSidListSize = Module.findExportByName("lsasrv.dll", "LsapSidListSize")
+Interceptor.attach(LsapSidListSize, {onLeave: function (args) {send("LsapSidListSize");}});
+
+var LsapTraceEvent = Module.findExportByName("lsasrv.dll", "LsapTraceEvent")
+Interceptor.attach(LsapTraceEvent, {onLeave: function (args) {send("LsapTraceEvent");}});
+
+var LsapTraceEventWithData = Module.findExportByName("lsasrv.dll", "LsapTraceEventWithData")
+Interceptor.attach(LsapTraceEventWithData, {onLeave: function (args) {send("LsapTraceEventWithData");}});
+
+var LsapTruncateUnicodeString = Module.findExportByName("lsasrv.dll", "LsapTruncateUnicodeString")
+Interceptor.attach(LsapTruncateUnicodeString, {onLeave: function (args) {send("LsapTruncateUnicodeString");}});
+
+var LsarClose = Module.findExportByName("lsasrv.dll", "LsarClose")
+Interceptor.attach(LsarClose, {onLeave: function (args) {send("LsarClose");}});
+
+var LsarCreateSecret = Module.findExportByName("lsasrv.dll", "LsarCreateSecret")
+Interceptor.attach(LsarCreateSecret, {onLeave: function (args) {send("LsarCreateSecret");}});
+
+var LsarDeleteObject = Module.findExportByName("lsasrv.dll", "LsarDeleteObject")
+Interceptor.attach(LsarDeleteObject, {onLeave: function (args) {send("LsarDeleteObject");}});
+
+var LsarEnumerateTrustedDomainsEx = Module.findExportByName("lsasrv.dll", "LsarEnumerateTrustedDomainsEx")
+Interceptor.attach(LsarEnumerateTrustedDomainsEx, {onLeave: function (args) {send("LsarEnumerateTrustedDomainsEx");}});
+
+var LsarLookupSids = Module.findExportByName("lsasrv.dll", "LsarLookupSids")
+Interceptor.attach(LsarLookupSids, {onLeave: function (args) {send("LsarLookupSids");}});
+
+var LsarOpenPolicy = Module.findExportByName("lsasrv.dll", "LsarOpenPolicy")
+Interceptor.attach(LsarOpenPolicy, {onLeave: function (args) {send("LsarOpenPolicy");}});
+
+var LsarOpenSecret = Module.findExportByName("lsasrv.dll", "LsarOpenSecret")
+Interceptor.attach(LsarOpenSecret, {onLeave: function (args) {send("LsarOpenSecret");}});
+
+var LsarQueryDomainInformationPolicy = Module.findExportByName("lsasrv.dll", "LsarQueryDomainInformationPolicy")
+Interceptor.attach(LsarQueryDomainInformationPolicy, {onLeave: function (args) {send("LsarQueryDomainInformationPolicy");}});
+
+var LsarQueryInformationPolicy = Module.findExportByName("lsasrv.dll", "LsarQueryInformationPolicy")
+Interceptor.attach(LsarQueryInformationPolicy, {onLeave: function (args) {send("LsarQueryInformationPolicy");}});
+
+var LsarQuerySecret = Module.findExportByName("lsasrv.dll", "LsarQuerySecret")
+Interceptor.attach(LsarQuerySecret, {onLeave: function (args) {send("LsarQuerySecret");}});
+
+var LsarQueryTrustedDomainInfoByName = Module.findExportByName("lsasrv.dll", "LsarQueryTrustedDomainInfoByName")
+Interceptor.attach(LsarQueryTrustedDomainInfoByName, {onLeave: function (args) {send("LsarQueryTrustedDomainInfoByName");}});
+
+var LsarRetrievePrivateData = Module.findExportByName("lsasrv.dll", "LsarRetrievePrivateData")
+Interceptor.attach(LsarRetrievePrivateData, {onLeave: function (args) {send("LsarRetrievePrivateData");}});
+
+var LsarSetInformationPolicy = Module.findExportByName("lsasrv.dll", "LsarSetInformationPolicy")
+Interceptor.attach(LsarSetInformationPolicy, {onLeave: function (args) {send("LsarSetInformationPolicy");}});
+
+var LsarSetSecret = Module.findExportByName("lsasrv.dll", "LsarSetSecret")
+Interceptor.attach(LsarSetSecret, {onLeave: function (args) {send("LsarSetSecret");}});
+
+var LsarSetTrustedDomainInfoByName = Module.findExportByName("lsasrv.dll", "LsarSetTrustedDomainInfoByName")
+Interceptor.attach(LsarSetTrustedDomainInfoByName, {onLeave: function (args) {send("LsarSetTrustedDomainInfoByName");}});
+
+var LsarStorePrivateData = Module.findExportByName("lsasrv.dll", "LsarStorePrivateData")
+Interceptor.attach(LsarStorePrivateData, {onLeave: function (args) {send("LsarStorePrivateData");}});
+
+var QueryLsaInterface = Module.findExportByName("lsasrv.dll", "QueryLsaInterface")
+Interceptor.attach(QueryLsaInterface, {onLeave: function (args) {send("QueryLsaInterface");}});
+
+var ServiceInit = Module.findExportByName("lsasrv.dll", "ServiceInit")
+Interceptor.attach(ServiceInit, {onLeave: function (args) {send("ServiceInit");}});
+
+var TracePrint = Module.findExportByName("lsasrv.dll", "TracePrint")
+Interceptor.attach(TracePrint, {onLeave: function (args) {send("TracePrint");}});
+
+var TracePrintCallerInformation = Module.findExportByName("lsasrv.dll", "TracePrintCallerInformation")
+Interceptor.attach(TracePrintCallerInformation, {onLeave: function (args) {send("TracePrintCallerInformation");}});
+
+var _fgs__LSAPR_TRUSTED_DOMAIN_FULL_INFORMATION2 = Module.findExportByName("lsasrv.dll", "_fgs__LSAPR_TRUSTED_DOMAIN_FULL_INFORMATION2")
+Interceptor.attach(_fgs__LSAPR_TRUSTED_DOMAIN_FULL_INFORMATION2, {onLeave: function (args) {send("_fgs__LSAPR_TRUSTED_DOMAIN_FULL_INFORMATION2");}});
+
+var _fgs__LSAPR_TRUSTED_DOMAIN_INFORMATION_EX2 = Module.findExportByName("lsasrv.dll", "_fgs__LSAPR_TRUSTED_DOMAIN_INFORMATION_EX2")
+Interceptor.attach(_fgs__LSAPR_TRUSTED_DOMAIN_INFORMATION_EX2, {onLeave: function (args) {send("_fgs__LSAPR_TRUSTED_DOMAIN_INFORMATION_EX2");}});
+
+var _fgs__LSAPR_TRUSTED_ENUM_BUFFER = Module.findExportByName("lsasrv.dll", "_fgs__LSAPR_TRUSTED_ENUM_BUFFER")
+Interceptor.attach(_fgs__LSAPR_TRUSTED_ENUM_BUFFER, {onLeave: function (args) {send("_fgs__LSAPR_TRUSTED_ENUM_BUFFER");}});
+
+var _fgs__LSAPR_TRUSTED_ENUM_BUFFER_EX = Module.findExportByName("lsasrv.dll", "_fgs__LSAPR_TRUSTED_ENUM_BUFFER_EX")
+Interceptor.attach(_fgs__LSAPR_TRUSTED_ENUM_BUFFER_EX, {onLeave: function (args) {send("_fgs__LSAPR_TRUSTED_ENUM_BUFFER_EX");}});
+
+var _fgs__LSAPR_TRUST_INFORMATION = Module.findExportByName("lsasrv.dll", "_fgs__LSAPR_TRUST_INFORMATION")
+Interceptor.attach(_fgs__LSAPR_TRUST_INFORMATION, {onLeave: function (args) {send("_fgs__LSAPR_TRUST_INFORMATION");}});
+
+var _fgu__LSAPR_TRUSTED_DOMAIN_INFO = Module.findExportByName("lsasrv.dll", "_fgu__LSAPR_TRUSTED_DOMAIN_INFO")
+Interceptor.attach(_fgu__LSAPR_TRUSTED_DOMAIN_INFO, {onLeave: function (args) {send("_fgu__LSAPR_TRUSTED_DOMAIN_INFO");}});
+

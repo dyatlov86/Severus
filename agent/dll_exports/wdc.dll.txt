@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("wdc.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wdc.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("wdc.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wdc.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var WdcParseLegacyFile = Module.findExportByName("wdc.dll", "WdcParseLegacyFile")
+Interceptor.attach(WdcParseLegacyFile, {onLeave: function (args) {send("WdcParseLegacyFile");}});
+
+var WdcRunTaskAsInteractiveUser = Module.findExportByName("wdc.dll", "WdcRunTaskAsInteractiveUser")
+Interceptor.attach(WdcRunTaskAsInteractiveUser, {onLeave: function (args) {send("WdcRunTaskAsInteractiveUser");}});
+

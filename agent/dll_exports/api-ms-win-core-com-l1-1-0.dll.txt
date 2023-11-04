@@ -1,0 +1,240 @@
+var CLSIDFromProgID = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CLSIDFromProgID")
+Interceptor.attach(CLSIDFromProgID, {onLeave: function (args) {send("CLSIDFromProgID");}});
+
+var CLSIDFromString = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CLSIDFromString")
+Interceptor.attach(CLSIDFromString, {onLeave: function (args) {send("CLSIDFromString");}});
+
+var CoAddRefServerProcess = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoAddRefServerProcess")
+Interceptor.attach(CoAddRefServerProcess, {onLeave: function (args) {send("CoAddRefServerProcess");}});
+
+var CoAllowUnmarshalerCLSID = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoAllowUnmarshalerCLSID")
+Interceptor.attach(CoAllowUnmarshalerCLSID, {onLeave: function (args) {send("CoAllowUnmarshalerCLSID");}});
+
+var CoCancelCall = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoCancelCall")
+Interceptor.attach(CoCancelCall, {onLeave: function (args) {send("CoCancelCall");}});
+
+var CoCopyProxy = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoCopyProxy")
+Interceptor.attach(CoCopyProxy, {onLeave: function (args) {send("CoCopyProxy");}});
+
+var CoCreateFreeThreadedMarshaler = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoCreateFreeThreadedMarshaler")
+Interceptor.attach(CoCreateFreeThreadedMarshaler, {onLeave: function (args) {send("CoCreateFreeThreadedMarshaler");}});
+
+var CoCreateGuid = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoCreateGuid")
+Interceptor.attach(CoCreateGuid, {onLeave: function (args) {send("CoCreateGuid");}});
+
+var CoCreateInstance = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoCreateInstance")
+Interceptor.attach(CoCreateInstance, {onLeave: function (args) {send("CoCreateInstance");}});
+
+var CoCreateInstanceEx = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoCreateInstanceEx")
+Interceptor.attach(CoCreateInstanceEx, {onLeave: function (args) {send("CoCreateInstanceEx");}});
+
+var CoCreateInstanceFromApp = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoCreateInstanceFromApp")
+Interceptor.attach(CoCreateInstanceFromApp, {onLeave: function (args) {send("CoCreateInstanceFromApp");}});
+
+var CoDecodeProxy = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoDecodeProxy")
+Interceptor.attach(CoDecodeProxy, {onLeave: function (args) {send("CoDecodeProxy");}});
+
+var CoDecrementMTAUsage = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoDecrementMTAUsage")
+Interceptor.attach(CoDecrementMTAUsage, {onLeave: function (args) {send("CoDecrementMTAUsage");}});
+
+var CoDisableCallCancellation = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoDisableCallCancellation")
+Interceptor.attach(CoDisableCallCancellation, {onLeave: function (args) {send("CoDisableCallCancellation");}});
+
+var CoDisconnectContext = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoDisconnectContext")
+Interceptor.attach(CoDisconnectContext, {onLeave: function (args) {send("CoDisconnectContext");}});
+
+var CoDisconnectObject = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoDisconnectObject")
+Interceptor.attach(CoDisconnectObject, {onLeave: function (args) {send("CoDisconnectObject");}});
+
+var CoEnableCallCancellation = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoEnableCallCancellation")
+Interceptor.attach(CoEnableCallCancellation, {onLeave: function (args) {send("CoEnableCallCancellation");}});
+
+var CoFreeUnusedLibraries = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoFreeUnusedLibraries")
+Interceptor.attach(CoFreeUnusedLibraries, {onLeave: function (args) {send("CoFreeUnusedLibraries");}});
+
+var CoFreeUnusedLibrariesEx = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoFreeUnusedLibrariesEx")
+Interceptor.attach(CoFreeUnusedLibrariesEx, {onLeave: function (args) {send("CoFreeUnusedLibrariesEx");}});
+
+var CoGetApartmentType = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetApartmentType")
+Interceptor.attach(CoGetApartmentType, {onLeave: function (args) {send("CoGetApartmentType");}});
+
+var CoGetCallContext = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetCallContext")
+Interceptor.attach(CoGetCallContext, {onLeave: function (args) {send("CoGetCallContext");}});
+
+var CoGetCallerTID = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetCallerTID")
+Interceptor.attach(CoGetCallerTID, {onLeave: function (args) {send("CoGetCallerTID");}});
+
+var CoGetCancelObject = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetCancelObject")
+Interceptor.attach(CoGetCancelObject, {onLeave: function (args) {send("CoGetCancelObject");}});
+
+var CoGetClassObject = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetClassObject")
+Interceptor.attach(CoGetClassObject, {onLeave: function (args) {send("CoGetClassObject");}});
+
+var CoGetContextToken = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetContextToken")
+Interceptor.attach(CoGetContextToken, {onLeave: function (args) {send("CoGetContextToken");}});
+
+var CoGetCurrentLogicalThreadId = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetCurrentLogicalThreadId")
+Interceptor.attach(CoGetCurrentLogicalThreadId, {onLeave: function (args) {send("CoGetCurrentLogicalThreadId");}});
+
+var CoGetCurrentProcess = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetCurrentProcess")
+Interceptor.attach(CoGetCurrentProcess, {onLeave: function (args) {send("CoGetCurrentProcess");}});
+
+var CoGetDefaultContext = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetDefaultContext")
+Interceptor.attach(CoGetDefaultContext, {onLeave: function (args) {send("CoGetDefaultContext");}});
+
+var CoGetInterfaceAndReleaseStream = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetInterfaceAndReleaseStream")
+Interceptor.attach(CoGetInterfaceAndReleaseStream, {onLeave: function (args) {send("CoGetInterfaceAndReleaseStream");}});
+
+var CoGetMalloc = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetMalloc")
+Interceptor.attach(CoGetMalloc, {onLeave: function (args) {send("CoGetMalloc");}});
+
+var CoGetMarshalSizeMax = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetMarshalSizeMax")
+Interceptor.attach(CoGetMarshalSizeMax, {onLeave: function (args) {send("CoGetMarshalSizeMax");}});
+
+var CoGetObjectContext = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetObjectContext")
+Interceptor.attach(CoGetObjectContext, {onLeave: function (args) {send("CoGetObjectContext");}});
+
+var CoGetPSClsid = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetPSClsid")
+Interceptor.attach(CoGetPSClsid, {onLeave: function (args) {send("CoGetPSClsid");}});
+
+var CoGetStandardMarshal = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetStandardMarshal")
+Interceptor.attach(CoGetStandardMarshal, {onLeave: function (args) {send("CoGetStandardMarshal");}});
+
+var CoGetStdMarshalEx = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetStdMarshalEx")
+Interceptor.attach(CoGetStdMarshalEx, {onLeave: function (args) {send("CoGetStdMarshalEx");}});
+
+var CoGetTreatAsClass = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoGetTreatAsClass")
+Interceptor.attach(CoGetTreatAsClass, {onLeave: function (args) {send("CoGetTreatAsClass");}});
+
+var CoImpersonateClient = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoImpersonateClient")
+Interceptor.attach(CoImpersonateClient, {onLeave: function (args) {send("CoImpersonateClient");}});
+
+var CoIncrementMTAUsage = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoIncrementMTAUsage")
+Interceptor.attach(CoIncrementMTAUsage, {onLeave: function (args) {send("CoIncrementMTAUsage");}});
+
+var CoInitializeEx = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoInitializeEx")
+Interceptor.attach(CoInitializeEx, {onLeave: function (args) {send("CoInitializeEx");}});
+
+var CoInitializeSecurity = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoInitializeSecurity")
+Interceptor.attach(CoInitializeSecurity, {onLeave: function (args) {send("CoInitializeSecurity");}});
+
+var CoInvalidateRemoteMachineBindings = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoInvalidateRemoteMachineBindings")
+Interceptor.attach(CoInvalidateRemoteMachineBindings, {onLeave: function (args) {send("CoInvalidateRemoteMachineBindings");}});
+
+var CoIsHandlerConnected = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoIsHandlerConnected")
+Interceptor.attach(CoIsHandlerConnected, {onLeave: function (args) {send("CoIsHandlerConnected");}});
+
+var CoLockObjectExternal = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoLockObjectExternal")
+Interceptor.attach(CoLockObjectExternal, {onLeave: function (args) {send("CoLockObjectExternal");}});
+
+var CoMarshalHresult = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoMarshalHresult")
+Interceptor.attach(CoMarshalHresult, {onLeave: function (args) {send("CoMarshalHresult");}});
+
+var CoMarshalInterThreadInterfaceInStream = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoMarshalInterThreadInterfaceInStream")
+Interceptor.attach(CoMarshalInterThreadInterfaceInStream, {onLeave: function (args) {send("CoMarshalInterThreadInterfaceInStream");}});
+
+var CoMarshalInterface = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoMarshalInterface")
+Interceptor.attach(CoMarshalInterface, {onLeave: function (args) {send("CoMarshalInterface");}});
+
+var CoQueryAuthenticationServices = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoQueryAuthenticationServices")
+Interceptor.attach(CoQueryAuthenticationServices, {onLeave: function (args) {send("CoQueryAuthenticationServices");}});
+
+var CoQueryClientBlanket = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoQueryClientBlanket")
+Interceptor.attach(CoQueryClientBlanket, {onLeave: function (args) {send("CoQueryClientBlanket");}});
+
+var CoQueryProxyBlanket = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoQueryProxyBlanket")
+Interceptor.attach(CoQueryProxyBlanket, {onLeave: function (args) {send("CoQueryProxyBlanket");}});
+
+var CoRegisterClassObject = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoRegisterClassObject")
+Interceptor.attach(CoRegisterClassObject, {onLeave: function (args) {send("CoRegisterClassObject");}});
+
+var CoRegisterPSClsid = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoRegisterPSClsid")
+Interceptor.attach(CoRegisterPSClsid, {onLeave: function (args) {send("CoRegisterPSClsid");}});
+
+var CoRegisterSurrogate = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoRegisterSurrogate")
+Interceptor.attach(CoRegisterSurrogate, {onLeave: function (args) {send("CoRegisterSurrogate");}});
+
+var CoReleaseMarshalData = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoReleaseMarshalData")
+Interceptor.attach(CoReleaseMarshalData, {onLeave: function (args) {send("CoReleaseMarshalData");}});
+
+var CoReleaseServerProcess = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoReleaseServerProcess")
+Interceptor.attach(CoReleaseServerProcess, {onLeave: function (args) {send("CoReleaseServerProcess");}});
+
+var CoResumeClassObjects = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoResumeClassObjects")
+Interceptor.attach(CoResumeClassObjects, {onLeave: function (args) {send("CoResumeClassObjects");}});
+
+var CoRevertToSelf = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoRevertToSelf")
+Interceptor.attach(CoRevertToSelf, {onLeave: function (args) {send("CoRevertToSelf");}});
+
+var CoRevokeClassObject = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoRevokeClassObject")
+Interceptor.attach(CoRevokeClassObject, {onLeave: function (args) {send("CoRevokeClassObject");}});
+
+var CoSetCancelObject = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoSetCancelObject")
+Interceptor.attach(CoSetCancelObject, {onLeave: function (args) {send("CoSetCancelObject");}});
+
+var CoSetProxyBlanket = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoSetProxyBlanket")
+Interceptor.attach(CoSetProxyBlanket, {onLeave: function (args) {send("CoSetProxyBlanket");}});
+
+var CoSuspendClassObjects = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoSuspendClassObjects")
+Interceptor.attach(CoSuspendClassObjects, {onLeave: function (args) {send("CoSuspendClassObjects");}});
+
+var CoSwitchCallContext = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoSwitchCallContext")
+Interceptor.attach(CoSwitchCallContext, {onLeave: function (args) {send("CoSwitchCallContext");}});
+
+var CoTaskMemAlloc = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoTaskMemAlloc")
+Interceptor.attach(CoTaskMemAlloc, {onLeave: function (args) {send("CoTaskMemAlloc");}});
+
+var CoTaskMemFree = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoTaskMemFree")
+Interceptor.attach(CoTaskMemFree, {onLeave: function (args) {send("CoTaskMemFree");}});
+
+var CoTaskMemRealloc = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoTaskMemRealloc")
+Interceptor.attach(CoTaskMemRealloc, {onLeave: function (args) {send("CoTaskMemRealloc");}});
+
+var CoTestCancel = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoTestCancel")
+Interceptor.attach(CoTestCancel, {onLeave: function (args) {send("CoTestCancel");}});
+
+var CoUninitialize = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoUninitialize")
+Interceptor.attach(CoUninitialize, {onLeave: function (args) {send("CoUninitialize");}});
+
+var CoUnmarshalHresult = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoUnmarshalHresult")
+Interceptor.attach(CoUnmarshalHresult, {onLeave: function (args) {send("CoUnmarshalHresult");}});
+
+var CoUnmarshalInterface = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoUnmarshalInterface")
+Interceptor.attach(CoUnmarshalInterface, {onLeave: function (args) {send("CoUnmarshalInterface");}});
+
+var CoWaitForMultipleHandles = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoWaitForMultipleHandles")
+Interceptor.attach(CoWaitForMultipleHandles, {onLeave: function (args) {send("CoWaitForMultipleHandles");}});
+
+var CoWaitForMultipleObjects = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CoWaitForMultipleObjects")
+Interceptor.attach(CoWaitForMultipleObjects, {onLeave: function (args) {send("CoWaitForMultipleObjects");}});
+
+var CreateStreamOnHGlobal = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "CreateStreamOnHGlobal")
+Interceptor.attach(CreateStreamOnHGlobal, {onLeave: function (args) {send("CreateStreamOnHGlobal");}});
+
+var FreePropVariantArray = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "FreePropVariantArray")
+Interceptor.attach(FreePropVariantArray, {onLeave: function (args) {send("FreePropVariantArray");}});
+
+var GetHGlobalFromStream = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "GetHGlobalFromStream")
+Interceptor.attach(GetHGlobalFromStream, {onLeave: function (args) {send("GetHGlobalFromStream");}});
+
+var IIDFromString = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "IIDFromString")
+Interceptor.attach(IIDFromString, {onLeave: function (args) {send("IIDFromString");}});
+
+var ProgIDFromCLSID = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "ProgIDFromCLSID")
+Interceptor.attach(ProgIDFromCLSID, {onLeave: function (args) {send("ProgIDFromCLSID");}});
+
+var PropVariantClear = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "PropVariantClear")
+Interceptor.attach(PropVariantClear, {onLeave: function (args) {send("PropVariantClear");}});
+
+var PropVariantCopy = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "PropVariantCopy")
+Interceptor.attach(PropVariantCopy, {onLeave: function (args) {send("PropVariantCopy");}});
+
+var StringFromCLSID = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "StringFromCLSID")
+Interceptor.attach(StringFromCLSID, {onLeave: function (args) {send("StringFromCLSID");}});
+
+var StringFromGUID2 = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "StringFromGUID2")
+Interceptor.attach(StringFromGUID2, {onLeave: function (args) {send("StringFromGUID2");}});
+
+var StringFromIID = Module.findExportByName("api-ms-win-core-com-l1-1-0.dll", "StringFromIID")
+Interceptor.attach(StringFromIID, {onLeave: function (args) {send("StringFromIID");}});
+

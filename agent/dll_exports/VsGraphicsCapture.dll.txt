@@ -1,0 +1,27 @@
+var PixCapture_BeginCommunication = Module.findExportByName("VsGraphicsCapture.dll", "PixCapture_BeginCommunication")
+Interceptor.attach(PixCapture_BeginCommunication, {onLeave: function (args) {send("PixCapture_BeginCommunication");}});
+
+var PixCapture_BeginCommunication_2 = Module.findExportByName("VsGraphicsCapture.dll", "PixCapture_BeginCommunication_2")
+Interceptor.attach(PixCapture_BeginCommunication_2, {onLeave: function (args) {send("PixCapture_BeginCommunication_2");}});
+
+var PixCapture_EndCommunication = Module.findExportByName("VsGraphicsCapture.dll", "PixCapture_EndCommunication")
+Interceptor.attach(PixCapture_EndCommunication, {onLeave: function (args) {send("PixCapture_EndCommunication");}});
+
+var PixCapture_ExitProcess = Module.findExportByName("VsGraphicsCapture.dll", "PixCapture_ExitProcess")
+Interceptor.attach(PixCapture_ExitProcess, {onLeave: function (args) {send("PixCapture_ExitProcess");}});
+
+var PixCapture_IsLegacyMachine = Module.findExportByName("VsGraphicsCapture.dll", "PixCapture_IsLegacyMachine")
+Interceptor.attach(PixCapture_IsLegacyMachine, {onLeave: function (args) {send("PixCapture_IsLegacyMachine");}});
+
+var PixCapture_RunAction = Module.findExportByName("VsGraphicsCapture.dll", "PixCapture_RunAction")
+Interceptor.attach(PixCapture_RunAction, {onLeave: function (args) {send("PixCapture_RunAction");}});
+
+var PixCapture_RunAction_2 = Module.findExportByName("VsGraphicsCapture.dll", "PixCapture_RunAction_2")
+Interceptor.attach(PixCapture_RunAction_2, {onLeave: function (args) {send("PixCapture_RunAction_2");}});
+
+var PixCapture_RunAction_3 = Module.findExportByName("VsGraphicsCapture.dll", "PixCapture_RunAction_3")
+Interceptor.attach(PixCapture_RunAction_3, {onLeave: function (args) {send("PixCapture_RunAction_3");}});
+
+var PixCapture_RunExperiment = Module.findExportByName("VsGraphicsCapture.dll", "PixCapture_RunExperiment")
+Interceptor.attach(PixCapture_RunExperiment, {onLeave: function (args) {send("PixCapture_RunExperiment");}});
+

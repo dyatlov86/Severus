@@ -1,0 +1,15 @@
+var DllMain = Module.findExportByName("XInput9_1_0.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var XInputGetCapabilities = Module.findExportByName("XInput9_1_0.dll", "XInputGetCapabilities")
+Interceptor.attach(XInputGetCapabilities, {onLeave: function (args) {send("XInputGetCapabilities");}});
+
+var XInputGetDSoundAudioDeviceGuids = Module.findExportByName("XInput9_1_0.dll", "XInputGetDSoundAudioDeviceGuids")
+Interceptor.attach(XInputGetDSoundAudioDeviceGuids, {onLeave: function (args) {send("XInputGetDSoundAudioDeviceGuids");}});
+
+var XInputGetState = Module.findExportByName("XInput9_1_0.dll", "XInputGetState")
+Interceptor.attach(XInputGetState, {onLeave: function (args) {send("XInputGetState");}});
+
+var XInputSetState = Module.findExportByName("XInput9_1_0.dll", "XInputSetState")
+Interceptor.attach(XInputSetState, {onLeave: function (args) {send("XInputSetState");}});
+

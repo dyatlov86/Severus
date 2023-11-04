@@ -1,0 +1,12 @@
+var RunDll32Main = Module.findExportByName("diagtrack.dll", "RunDll32Main")
+Interceptor.attach(RunDll32Main, {onLeave: function (args) {send("RunDll32Main");}});
+
+var ServiceMain = Module.findExportByName("diagtrack.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("diagtrack.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+
+var UtcSysprepGeneralize = Module.findExportByName("diagtrack.dll", "UtcSysprepGeneralize")
+Interceptor.attach(UtcSysprepGeneralize, {onLeave: function (args) {send("UtcSysprepGeneralize");}});
+

@@ -1,0 +1,3 @@
+var CLRDataCreateInstance = Module.findExportByName("mrt_map.dll", "CLRDataCreateInstance")
+Interceptor.attach(CLRDataCreateInstance, {onLeave: function (args) {send("CLRDataCreateInstance");}});
+

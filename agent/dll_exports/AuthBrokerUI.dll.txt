@@ -1,0 +1,27 @@
+var CreateWndMgmt = Module.findExportByName("AuthBrokerUI.dll", "CreateWndMgmt")
+Interceptor.attach(CreateWndMgmt, {onLeave: function (args) {send("CreateWndMgmt");}});
+
+var DirectUIInitProc = Module.findExportByName("AuthBrokerUI.dll", "DirectUIInitProc")
+Interceptor.attach(DirectUIInitProc, {onLeave: function (args) {send("DirectUIInitProc");}});
+
+var DirectUIInitThread = Module.findExportByName("AuthBrokerUI.dll", "DirectUIInitThread")
+Interceptor.attach(DirectUIInitThread, {onLeave: function (args) {send("DirectUIInitThread");}});
+
+var DirectUIUnInitProc = Module.findExportByName("AuthBrokerUI.dll", "DirectUIUnInitProc")
+Interceptor.attach(DirectUIUnInitProc, {onLeave: function (args) {send("DirectUIUnInitProc");}});
+
+var DirectUIUnInitThread = Module.findExportByName("AuthBrokerUI.dll", "DirectUIUnInitThread")
+Interceptor.attach(DirectUIUnInitThread, {onLeave: function (args) {send("DirectUIUnInitThread");}});
+
+var FreeWndMgmt = Module.findExportByName("AuthBrokerUI.dll", "FreeWndMgmt")
+Interceptor.attach(FreeWndMgmt, {onLeave: function (args) {send("FreeWndMgmt");}});
+
+var WabCreateWebRuntimeCoreControl = Module.findExportByName("AuthBrokerUI.dll", "WabCreateWebRuntimeCoreControl")
+Interceptor.attach(WabCreateWebRuntimeCoreControl, {onLeave: function (args) {send("WabCreateWebRuntimeCoreControl");}});
+
+var WabCreateWebRuntimeCoreVisualViewport = Module.findExportByName("AuthBrokerUI.dll", "WabCreateWebRuntimeCoreVisualViewport")
+Interceptor.attach(WabCreateWebRuntimeCoreVisualViewport, {onLeave: function (args) {send("WabCreateWebRuntimeCoreVisualViewport");}});
+
+var WabImmDisableLegacyIME = Module.findExportByName("AuthBrokerUI.dll", "WabImmDisableLegacyIME")
+Interceptor.attach(WabImmDisableLegacyIME, {onLeave: function (args) {send("WabImmDisableLegacyIME");}});
+

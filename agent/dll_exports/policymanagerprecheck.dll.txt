@@ -1,0 +1,15 @@
+var PolicyManagerTranslationProxy_GetPolicyValue = Module.findExportByName("policymanagerprecheck.dll", "PolicyManagerTranslationProxy_GetPolicyValue")
+Interceptor.attach(PolicyManagerTranslationProxy_GetPolicyValue, {onLeave: function (args) {send("PolicyManagerTranslationProxy_GetPolicyValue");}});
+
+var PolicyManagerTranslationProxy_SetPolicyValue = Module.findExportByName("policymanagerprecheck.dll", "PolicyManagerTranslationProxy_SetPolicyValue")
+Interceptor.attach(PolicyManagerTranslationProxy_SetPolicyValue, {onLeave: function (args) {send("PolicyManagerTranslationProxy_SetPolicyValue");}});
+
+var PolicyManager_Apply = Module.findExportByName("policymanagerprecheck.dll", "PolicyManager_Apply")
+Interceptor.attach(PolicyManager_Apply, {onLeave: function (args) {send("PolicyManager_Apply");}});
+
+var PolicyManager_PostApply = Module.findExportByName("policymanagerprecheck.dll", "PolicyManager_PostApply")
+Interceptor.attach(PolicyManager_PostApply, {onLeave: function (args) {send("PolicyManager_PostApply");}});
+
+var PolicyManager_PreCheck = Module.findExportByName("policymanagerprecheck.dll", "PolicyManager_PreCheck")
+Interceptor.attach(PolicyManager_PreCheck, {onLeave: function (args) {send("PolicyManager_PreCheck");}});
+

@@ -1,0 +1,33 @@
+var ComDBClaimNextFreePort = Module.findExportByName("msports.dll", "ComDBClaimNextFreePort")
+Interceptor.attach(ComDBClaimNextFreePort, {onLeave: function (args) {send("ComDBClaimNextFreePort");}});
+
+var ComDBClaimPort = Module.findExportByName("msports.dll", "ComDBClaimPort")
+Interceptor.attach(ComDBClaimPort, {onLeave: function (args) {send("ComDBClaimPort");}});
+
+var ComDBClose = Module.findExportByName("msports.dll", "ComDBClose")
+Interceptor.attach(ComDBClose, {onLeave: function (args) {send("ComDBClose");}});
+
+var ComDBGetCurrentPortUsage = Module.findExportByName("msports.dll", "ComDBGetCurrentPortUsage")
+Interceptor.attach(ComDBGetCurrentPortUsage, {onLeave: function (args) {send("ComDBGetCurrentPortUsage");}});
+
+var ComDBOpen = Module.findExportByName("msports.dll", "ComDBOpen")
+Interceptor.attach(ComDBOpen, {onLeave: function (args) {send("ComDBOpen");}});
+
+var ComDBReleasePort = Module.findExportByName("msports.dll", "ComDBReleasePort")
+Interceptor.attach(ComDBReleasePort, {onLeave: function (args) {send("ComDBReleasePort");}});
+
+var ComDBResizeDatabase = Module.findExportByName("msports.dll", "ComDBResizeDatabase")
+Interceptor.attach(ComDBResizeDatabase, {onLeave: function (args) {send("ComDBResizeDatabase");}});
+
+var ParallelPortPropPageProvider = Module.findExportByName("msports.dll", "ParallelPortPropPageProvider")
+Interceptor.attach(ParallelPortPropPageProvider, {onLeave: function (args) {send("ParallelPortPropPageProvider");}});
+
+var PortsClassInstaller = Module.findExportByName("msports.dll", "PortsClassInstaller")
+Interceptor.attach(PortsClassInstaller, {onLeave: function (args) {send("PortsClassInstaller");}});
+
+var SerialDisplayAdvancedSettings = Module.findExportByName("msports.dll", "SerialDisplayAdvancedSettings")
+Interceptor.attach(SerialDisplayAdvancedSettings, {onLeave: function (args) {send("SerialDisplayAdvancedSettings");}});
+
+var SerialPortPropPageProvider = Module.findExportByName("msports.dll", "SerialPortPropPageProvider")
+Interceptor.attach(SerialPortPropPageProvider, {onLeave: function (args) {send("SerialPortPropPageProvider");}});
+

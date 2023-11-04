@@ -1,0 +1,21 @@
+var BinaryDataVerifyProcess = Module.findExportByName("IAPController.dll", "BinaryDataVerifyProcess")
+Interceptor.attach(BinaryDataVerifyProcess, {onLeave: function (args) {send("BinaryDataVerifyProcess");}});
+
+var ChecksumComparison = Module.findExportByName("IAPController.dll", "ChecksumComparison")
+Interceptor.attach(ChecksumComparison, {onLeave: function (args) {send("ChecksumComparison");}});
+
+var DestroyIAPController = Module.findExportByName("IAPController.dll", "DestroyIAPController")
+Interceptor.attach(DestroyIAPController, {onLeave: function (args) {send("DestroyIAPController");}});
+
+var InitialIAPController = Module.findExportByName("IAPController.dll", "InitialIAPController")
+Interceptor.attach(InitialIAPController, {onLeave: function (args) {send("InitialIAPController");}});
+
+var IsBootDeviceConnected = Module.findExportByName("IAPController.dll", "IsBootDeviceConnected")
+Interceptor.attach(IsBootDeviceConnected, {onLeave: function (args) {send("IsBootDeviceConnected");}});
+
+var RomDataComparison = Module.findExportByName("IAPController.dll", "RomDataComparison")
+Interceptor.attach(RomDataComparison, {onLeave: function (args) {send("RomDataComparison");}});
+
+var RunIAPProcess = Module.findExportByName("IAPController.dll", "RunIAPProcess")
+Interceptor.attach(RunIAPProcess, {onLeave: function (args) {send("RunIAPProcess");}});
+

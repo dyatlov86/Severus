@@ -1,0 +1,9 @@
+var CallBack_ConfigureWindowsFoundationImage = Module.findExportByName("cmisetup.dll", "CallBack_ConfigureWindowsFoundationImage")
+Interceptor.attach(CallBack_ConfigureWindowsFoundationImage, {onLeave: function (args) {send("CallBack_ConfigureWindowsFoundationImage");}});
+
+var Module_Init_Cmi = Module.findExportByName("cmisetup.dll", "Module_Init_Cmi")
+Interceptor.attach(Module_Init_Cmi, {onLeave: function (args) {send("Module_Init_Cmi");}});
+
+var Module_Init_SkuAssembly = Module.findExportByName("cmisetup.dll", "Module_Init_SkuAssembly")
+Interceptor.attach(Module_Init_SkuAssembly, {onLeave: function (args) {send("Module_Init_SkuAssembly");}});
+

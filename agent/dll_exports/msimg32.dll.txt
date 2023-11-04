@@ -1,0 +1,15 @@
+var AlphaBlend = Module.findExportByName("msimg32.dll", "AlphaBlend")
+Interceptor.attach(AlphaBlend, {onLeave: function (args) {send("AlphaBlend");}});
+
+var DllInitialize = Module.findExportByName("msimg32.dll", "DllInitialize")
+Interceptor.attach(DllInitialize, {onLeave: function (args) {send("DllInitialize");}});
+
+var GradientFill = Module.findExportByName("msimg32.dll", "GradientFill")
+Interceptor.attach(GradientFill, {onLeave: function (args) {send("GradientFill");}});
+
+var TransparentBlt = Module.findExportByName("msimg32.dll", "TransparentBlt")
+Interceptor.attach(TransparentBlt, {onLeave: function (args) {send("TransparentBlt");}});
+
+var vSetDdrawflag = Module.findExportByName("msimg32.dll", "vSetDdrawflag")
+Interceptor.attach(vSetDdrawflag, {onLeave: function (args) {send("vSetDdrawflag");}});
+

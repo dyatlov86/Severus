@@ -1,0 +1,36 @@
+var DllCanUnloadNow = Module.findExportByName("raschapext.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("raschapext.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("raschapext.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("raschapext.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var RasChapExt_FreeMemory = Module.findExportByName("raschapext.dll", "RasChapExt_FreeMemory")
+Interceptor.attach(RasChapExt_FreeMemory, {onLeave: function (args) {send("RasChapExt_FreeMemory");}});
+
+var RasChapExt_GetConfigForceNotDomainJoined = Module.findExportByName("raschapext.dll", "RasChapExt_GetConfigForceNotDomainJoined")
+Interceptor.attach(RasChapExt_GetConfigForceNotDomainJoined, {onLeave: function (args) {send("RasChapExt_GetConfigForceNotDomainJoined");}});
+
+var RasChapExt_GetConfigIgnoreIASLogon = Module.findExportByName("raschapext.dll", "RasChapExt_GetConfigIgnoreIASLogon")
+Interceptor.attach(RasChapExt_GetConfigIgnoreIASLogon, {onLeave: function (args) {send("RasChapExt_GetConfigIgnoreIASLogon");}});
+
+var RasChapExt_GetConfigKeepCredentialsOnFailure = Module.findExportByName("raschapext.dll", "RasChapExt_GetConfigKeepCredentialsOnFailure")
+Interceptor.attach(RasChapExt_GetConfigKeepCredentialsOnFailure, {onLeave: function (args) {send("RasChapExt_GetConfigKeepCredentialsOnFailure");}});
+
+var RasChapExt_GetUserCredentials = Module.findExportByName("raschapext.dll", "RasChapExt_GetUserCredentials")
+Interceptor.attach(RasChapExt_GetUserCredentials, {onLeave: function (args) {send("RasChapExt_GetUserCredentials");}});
+
+var RasChapExt_InvokeConfigUI = Module.findExportByName("raschapext.dll", "RasChapExt_InvokeConfigUI")
+Interceptor.attach(RasChapExt_InvokeConfigUI, {onLeave: function (args) {send("RasChapExt_InvokeConfigUI");}});
+
+var RasChapExt_InvokeInteractiveUI = Module.findExportByName("raschapext.dll", "RasChapExt_InvokeInteractiveUI")
+Interceptor.attach(RasChapExt_InvokeInteractiveUI, {onLeave: function (args) {send("RasChapExt_InvokeInteractiveUI");}});
+
+var RasChapExt_ShowHelp = Module.findExportByName("raschapext.dll", "RasChapExt_ShowHelp")
+Interceptor.attach(RasChapExt_ShowHelp, {onLeave: function (args) {send("RasChapExt_ShowHelp");}});
+

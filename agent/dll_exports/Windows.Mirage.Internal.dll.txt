@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.Mirage.Internal.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Mirage.Internal.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetActivationFactoryMirageInternal = Module.findExportByName("Windows.Mirage.Internal.dll", "DllGetActivationFactoryMirageInternal")
+Interceptor.attach(DllGetActivationFactoryMirageInternal, {onLeave: function (args) {send("DllGetActivationFactoryMirageInternal");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Mirage.Internal.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var InjectDependencyInternal = Module.findExportByName("Windows.Mirage.Internal.dll", "InjectDependencyInternal")
+Interceptor.attach(InjectDependencyInternal, {onLeave: function (args) {send("InjectDependencyInternal");}});
+

@@ -1,0 +1,12 @@
+var DWMGhostCleanup = Module.findExportByName("dwmghost.dll", "DWMGhostCleanup")
+Interceptor.attach(DWMGhostCleanup, {onLeave: function (args) {send("DWMGhostCleanup");}});
+
+var DWMGhostHandleGhostMsg = Module.findExportByName("dwmghost.dll", "DWMGhostHandleGhostMsg")
+Interceptor.attach(DWMGhostHandleGhostMsg, {onLeave: function (args) {send("DWMGhostHandleGhostMsg");}});
+
+var DWMGhostInitialize = Module.findExportByName("dwmghost.dll", "DWMGhostInitialize")
+Interceptor.attach(DWMGhostInitialize, {onLeave: function (args) {send("DWMGhostInitialize");}});
+
+var DWMGhostSetInShutdown = Module.findExportByName("dwmghost.dll", "DWMGhostSetInShutdown")
+Interceptor.attach(DWMGhostSetInShutdown, {onLeave: function (args) {send("DWMGhostSetInShutdown");}});
+

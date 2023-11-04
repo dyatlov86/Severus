@@ -1,0 +1,21 @@
+var SRSetRestorePoint = Module.findExportByName("sfc.dll", "SRSetRestorePoint")
+Interceptor.attach(SRSetRestorePoint, {onLeave: function (args) {send("SRSetRestorePoint");}});
+
+var SRSetRestorePointA = Module.findExportByName("sfc.dll", "SRSetRestorePointA")
+Interceptor.attach(SRSetRestorePointA, {onLeave: function (args) {send("SRSetRestorePointA");}});
+
+var SRSetRestorePointW = Module.findExportByName("sfc.dll", "SRSetRestorePointW")
+Interceptor.attach(SRSetRestorePointW, {onLeave: function (args) {send("SRSetRestorePointW");}});
+
+var SfcGetNextProtectedFile = Module.findExportByName("sfc.dll", "SfcGetNextProtectedFile")
+Interceptor.attach(SfcGetNextProtectedFile, {onLeave: function (args) {send("SfcGetNextProtectedFile");}});
+
+var SfcIsFileProtected = Module.findExportByName("sfc.dll", "SfcIsFileProtected")
+Interceptor.attach(SfcIsFileProtected, {onLeave: function (args) {send("SfcIsFileProtected");}});
+
+var SfcIsKeyProtected = Module.findExportByName("sfc.dll", "SfcIsKeyProtected")
+Interceptor.attach(SfcIsKeyProtected, {onLeave: function (args) {send("SfcIsKeyProtected");}});
+
+var SfpVerifyFile = Module.findExportByName("sfc.dll", "SfpVerifyFile")
+Interceptor.attach(SfpVerifyFile, {onLeave: function (args) {send("SfpVerifyFile");}});
+

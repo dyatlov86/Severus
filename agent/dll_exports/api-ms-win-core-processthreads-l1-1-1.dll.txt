@@ -1,0 +1,42 @@
+var FlushInstructionCache = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "FlushInstructionCache")
+Interceptor.attach(FlushInstructionCache, {onLeave: function (args) {send("FlushInstructionCache");}});
+
+var GetCurrentProcessorNumber = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "GetCurrentProcessorNumber")
+Interceptor.attach(GetCurrentProcessorNumber, {onLeave: function (args) {send("GetCurrentProcessorNumber");}});
+
+var GetCurrentProcessorNumberEx = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "GetCurrentProcessorNumberEx")
+Interceptor.attach(GetCurrentProcessorNumberEx, {onLeave: function (args) {send("GetCurrentProcessorNumberEx");}});
+
+var GetCurrentThreadStackLimits = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "GetCurrentThreadStackLimits")
+Interceptor.attach(GetCurrentThreadStackLimits, {onLeave: function (args) {send("GetCurrentThreadStackLimits");}});
+
+var GetProcessHandleCount = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "GetProcessHandleCount")
+Interceptor.attach(GetProcessHandleCount, {onLeave: function (args) {send("GetProcessHandleCount");}});
+
+var GetProcessMitigationPolicy = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "GetProcessMitigationPolicy")
+Interceptor.attach(GetProcessMitigationPolicy, {onLeave: function (args) {send("GetProcessMitigationPolicy");}});
+
+var GetThreadContext = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "GetThreadContext")
+Interceptor.attach(GetThreadContext, {onLeave: function (args) {send("GetThreadContext");}});
+
+var GetThreadIdealProcessorEx = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "GetThreadIdealProcessorEx")
+Interceptor.attach(GetThreadIdealProcessorEx, {onLeave: function (args) {send("GetThreadIdealProcessorEx");}});
+
+var GetThreadTimes = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "GetThreadTimes")
+Interceptor.attach(GetThreadTimes, {onLeave: function (args) {send("GetThreadTimes");}});
+
+var IsProcessorFeaturePresent = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "IsProcessorFeaturePresent")
+Interceptor.attach(IsProcessorFeaturePresent, {onLeave: function (args) {send("IsProcessorFeaturePresent");}});
+
+var OpenProcess = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "OpenProcess")
+Interceptor.attach(OpenProcess, {onLeave: function (args) {send("OpenProcess");}});
+
+var SetProcessMitigationPolicy = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "SetProcessMitigationPolicy")
+Interceptor.attach(SetProcessMitigationPolicy, {onLeave: function (args) {send("SetProcessMitigationPolicy");}});
+
+var SetThreadContext = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "SetThreadContext")
+Interceptor.attach(SetThreadContext, {onLeave: function (args) {send("SetThreadContext");}});
+
+var SetThreadIdealProcessorEx = Module.findExportByName("api-ms-win-core-processthreads-l1-1-1.dll", "SetThreadIdealProcessorEx")
+Interceptor.attach(SetThreadIdealProcessorEx, {onLeave: function (args) {send("SetThreadIdealProcessorEx");}});
+

@@ -1,0 +1,3 @@
+var GetKeyProtectionInterface = Module.findExportByName("mskeyprotcli.dll", "GetKeyProtectionInterface")
+Interceptor.attach(GetKeyProtectionInterface, {onLeave: function (args) {send("GetKeyProtectionInterface");}});
+

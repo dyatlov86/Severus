@@ -1,0 +1,33 @@
+var BfAttachFilter = Module.findExportByName("bindfltapi.dll", "BfAttachFilter")
+Interceptor.attach(BfAttachFilter, {onLeave: function (args) {send("BfAttachFilter");}});
+
+var BfConfigureFilter = Module.findExportByName("bindfltapi.dll", "BfConfigureFilter")
+Interceptor.attach(BfConfigureFilter, {onLeave: function (args) {send("BfConfigureFilter");}});
+
+var BfGenerateBatchedConfig = Module.findExportByName("bindfltapi.dll", "BfGenerateBatchedConfig")
+Interceptor.attach(BfGenerateBatchedConfig, {onLeave: function (args) {send("BfGenerateBatchedConfig");}});
+
+var BfGenerateMappingConfiguration = Module.findExportByName("bindfltapi.dll", "BfGenerateMappingConfiguration")
+Interceptor.attach(BfGenerateMappingConfiguration, {onLeave: function (args) {send("BfGenerateMappingConfiguration");}});
+
+var BfGetMappings = Module.findExportByName("bindfltapi.dll", "BfGetMappings")
+Interceptor.attach(BfGetMappings, {onLeave: function (args) {send("BfGetMappings");}});
+
+var BfRemoveMapping = Module.findExportByName("bindfltapi.dll", "BfRemoveMapping")
+Interceptor.attach(BfRemoveMapping, {onLeave: function (args) {send("BfRemoveMapping");}});
+
+var BfRemoveMappingEx = Module.findExportByName("bindfltapi.dll", "BfRemoveMappingEx")
+Interceptor.attach(BfRemoveMappingEx, {onLeave: function (args) {send("BfRemoveMappingEx");}});
+
+var BfSetupFilter = Module.findExportByName("bindfltapi.dll", "BfSetupFilter")
+Interceptor.attach(BfSetupFilter, {onLeave: function (args) {send("BfSetupFilter");}});
+
+var BfSetupFilterBatched = Module.findExportByName("bindfltapi.dll", "BfSetupFilterBatched")
+Interceptor.attach(BfSetupFilterBatched, {onLeave: function (args) {send("BfSetupFilterBatched");}});
+
+var BfSetupFilterEx = Module.findExportByName("bindfltapi.dll", "BfSetupFilterEx")
+Interceptor.attach(BfSetupFilterEx, {onLeave: function (args) {send("BfSetupFilterEx");}});
+
+var BfTrackWritesFromSilo = Module.findExportByName("bindfltapi.dll", "BfTrackWritesFromSilo")
+Interceptor.attach(BfTrackWritesFromSilo, {onLeave: function (args) {send("BfTrackWritesFromSilo");}});
+

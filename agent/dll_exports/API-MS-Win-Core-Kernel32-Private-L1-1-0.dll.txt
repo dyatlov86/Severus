@@ -1,0 +1,51 @@
+var BaseSetLastNTError = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "BaseSetLastNTError")
+Interceptor.attach(BaseSetLastNTError, {onLeave: function (args) {send("BaseSetLastNTError");}});
+
+var CheckElevation = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "CheckElevation")
+Interceptor.attach(CheckElevation, {onLeave: function (args) {send("CheckElevation");}});
+
+var CheckElevationEnabled = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "CheckElevationEnabled")
+Interceptor.attach(CheckElevationEnabled, {onLeave: function (args) {send("CheckElevationEnabled");}});
+
+var CompareCalendarDates = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "CompareCalendarDates")
+Interceptor.attach(CompareCalendarDates, {onLeave: function (args) {send("CompareCalendarDates");}});
+
+var DosPathToSessionPathW = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "DosPathToSessionPathW")
+Interceptor.attach(DosPathToSessionPathW, {onLeave: function (args) {send("DosPathToSessionPathW");}});
+
+var EnumerateLocalComputerNamesW = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "EnumerateLocalComputerNamesW")
+Interceptor.attach(EnumerateLocalComputerNamesW, {onLeave: function (args) {send("EnumerateLocalComputerNamesW");}});
+
+var GetCalendarMonthsInYear = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "GetCalendarMonthsInYear")
+Interceptor.attach(GetCalendarMonthsInYear, {onLeave: function (args) {send("GetCalendarMonthsInYear");}});
+
+var RegisterWaitForInputIdle = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "RegisterWaitForInputIdle")
+Interceptor.attach(RegisterWaitForInputIdle, {onLeave: function (args) {send("RegisterWaitForInputIdle");}});
+
+var RemoveLocalAlternateComputerNameW = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "RemoveLocalAlternateComputerNameW")
+Interceptor.attach(RemoveLocalAlternateComputerNameW, {onLeave: function (args) {send("RemoveLocalAlternateComputerNameW");}});
+
+var SetLocalPrimaryComputerNameW = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "SetLocalPrimaryComputerNameW")
+Interceptor.attach(SetLocalPrimaryComputerNameW, {onLeave: function (args) {send("SetLocalPrimaryComputerNameW");}});
+
+var Wow64EnableWow64FsRedirection = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "Wow64EnableWow64FsRedirection")
+Interceptor.attach(Wow64EnableWow64FsRedirection, {onLeave: function (args) {send("Wow64EnableWow64FsRedirection");}});
+
+var _lclose = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "_lclose")
+Interceptor.attach(_lclose, {onLeave: function (args) {send("_lclose");}});
+
+var _lcreat = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "_lcreat")
+Interceptor.attach(_lcreat, {onLeave: function (args) {send("_lcreat");}});
+
+var _llseek = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "_llseek")
+Interceptor.attach(_llseek, {onLeave: function (args) {send("_llseek");}});
+
+var _lopen = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "_lopen")
+Interceptor.attach(_lopen, {onLeave: function (args) {send("_lopen");}});
+
+var _lread = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "_lread")
+Interceptor.attach(_lread, {onLeave: function (args) {send("_lread");}});
+
+var _lwrite = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-0.dll", "_lwrite")
+Interceptor.attach(_lwrite, {onLeave: function (args) {send("_lwrite");}});
+

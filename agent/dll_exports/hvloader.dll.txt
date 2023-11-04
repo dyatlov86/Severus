@@ -1,0 +1,24 @@
+var HvlCancelHypervisorLaunch = Module.findExportByName("hvloader.dll", "HvlCancelHypervisorLaunch")
+Interceptor.attach(HvlCancelHypervisorLaunch, {onLeave: function (args) {send("HvlCancelHypervisorLaunch");}});
+
+var HvlExchangeDispatchInterface = Module.findExportByName("hvloader.dll", "HvlExchangeDispatchInterface")
+Interceptor.attach(HvlExchangeDispatchInterface, {onLeave: function (args) {send("HvlExchangeDispatchInterface");}});
+
+var HvlLaunchHypervisor = Module.findExportByName("hvloader.dll", "HvlLaunchHypervisor")
+Interceptor.attach(HvlLaunchHypervisor, {onLeave: function (args) {send("HvlLaunchHypervisor");}});
+
+var HvlLoadHypervisor = Module.findExportByName("hvloader.dll", "HvlLoadHypervisor")
+Interceptor.attach(HvlLoadHypervisor, {onLeave: function (args) {send("HvlLoadHypervisor");}});
+
+var HvlPreloadHypervisor = Module.findExportByName("hvloader.dll", "HvlPreloadHypervisor")
+Interceptor.attach(HvlPreloadHypervisor, {onLeave: function (args) {send("HvlPreloadHypervisor");}});
+
+var HvlRegisterRuntimeRange = Module.findExportByName("hvloader.dll", "HvlRegisterRuntimeRange")
+Interceptor.attach(HvlRegisterRuntimeRange, {onLeave: function (args) {send("HvlRegisterRuntimeRange");}});
+
+var HvlRescindVsm = Module.findExportByName("hvloader.dll", "HvlRescindVsm")
+Interceptor.attach(HvlRescindVsm, {onLeave: function (args) {send("HvlRescindVsm");}});
+
+var HvlUpdateMcUpdateStatus = Module.findExportByName("hvloader.dll", "HvlUpdateMcUpdateStatus")
+Interceptor.attach(HvlUpdateMcUpdateStatus, {onLeave: function (args) {send("HvlUpdateMcUpdateStatus");}});
+

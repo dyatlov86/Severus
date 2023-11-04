@@ -1,0 +1,33 @@
+var MosHostCacheStateGetSizes = Module.findExportByName("moshost.dll", "MosHostCacheStateGetSizes")
+Interceptor.attach(MosHostCacheStateGetSizes, {onLeave: function (args) {send("MosHostCacheStateGetSizes");}});
+
+var MosHostCacheStateGetSlotToCleanup = Module.findExportByName("moshost.dll", "MosHostCacheStateGetSlotToCleanup")
+Interceptor.attach(MosHostCacheStateGetSlotToCleanup, {onLeave: function (args) {send("MosHostCacheStateGetSlotToCleanup");}});
+
+var MosHostCacheStateSetMaxSize = Module.findExportByName("moshost.dll", "MosHostCacheStateSetMaxSize")
+Interceptor.attach(MosHostCacheStateSetMaxSize, {onLeave: function (args) {send("MosHostCacheStateSetMaxSize");}});
+
+var MosHostCacheStateSetSlotSize = Module.findExportByName("moshost.dll", "MosHostCacheStateSetSlotSize")
+Interceptor.attach(MosHostCacheStateSetSlotSize, {onLeave: function (args) {send("MosHostCacheStateSetSlotSize");}});
+
+var MosHostCacheStateSnapshot = Module.findExportByName("moshost.dll", "MosHostCacheStateSnapshot")
+Interceptor.attach(MosHostCacheStateSnapshot, {onLeave: function (args) {send("MosHostCacheStateSnapshot");}});
+
+var MosHostCacheStateUnuseSlot = Module.findExportByName("moshost.dll", "MosHostCacheStateUnuseSlot")
+Interceptor.attach(MosHostCacheStateUnuseSlot, {onLeave: function (args) {send("MosHostCacheStateUnuseSlot");}});
+
+var MosHostCacheStateUseSlot = Module.findExportByName("moshost.dll", "MosHostCacheStateUseSlot")
+Interceptor.attach(MosHostCacheStateUseSlot, {onLeave: function (args) {send("MosHostCacheStateUseSlot");}});
+
+var MosHostRequestResourceLock = Module.findExportByName("moshost.dll", "MosHostRequestResourceLock")
+Interceptor.attach(MosHostRequestResourceLock, {onLeave: function (args) {send("MosHostRequestResourceLock");}});
+
+var MosHostRequestResourceUnlock = Module.findExportByName("moshost.dll", "MosHostRequestResourceUnlock")
+Interceptor.attach(MosHostRequestResourceUnlock, {onLeave: function (args) {send("MosHostRequestResourceUnlock");}});
+
+var ServiceMain = Module.findExportByName("moshost.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("moshost.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

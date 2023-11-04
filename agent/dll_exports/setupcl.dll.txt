@@ -1,0 +1,33 @@
+var SclAcquireRequiredPrivileges = Module.findExportByName("setupcl.dll", "SclAcquireRequiredPrivileges")
+Interceptor.attach(SclAcquireRequiredPrivileges, {onLeave: function (args) {send("SclAcquireRequiredPrivileges");}});
+
+var SclClearPendedRequest = Module.findExportByName("setupcl.dll", "SclClearPendedRequest")
+Interceptor.attach(SclClearPendedRequest, {onLeave: function (args) {send("SclClearPendedRequest");}});
+
+var SclExecutePendedRequests = Module.findExportByName("setupcl.dll", "SclExecutePendedRequests")
+Interceptor.attach(SclExecutePendedRequests, {onLeave: function (args) {send("SclExecutePendedRequests");}});
+
+var SclExecuteRequest = Module.findExportByName("setupcl.dll", "SclExecuteRequest")
+Interceptor.attach(SclExecuteRequest, {onLeave: function (args) {send("SclExecuteRequest");}});
+
+var SclFreeRequest = Module.findExportByName("setupcl.dll", "SclFreeRequest")
+Interceptor.attach(SclFreeRequest, {onLeave: function (args) {send("SclFreeRequest");}});
+
+var SclGetPendedRequest = Module.findExportByName("setupcl.dll", "SclGetPendedRequest")
+Interceptor.attach(SclGetPendedRequest, {onLeave: function (args) {send("SclGetPendedRequest");}});
+
+var SclLoadStringResource = Module.findExportByName("setupcl.dll", "SclLoadStringResource")
+Interceptor.attach(SclLoadStringResource, {onLeave: function (args) {send("SclLoadStringResource");}});
+
+var SclPendRequest = Module.findExportByName("setupcl.dll", "SclPendRequest")
+Interceptor.attach(SclPendRequest, {onLeave: function (args) {send("SclPendRequest");}});
+
+var SclPendedRequestExists = Module.findExportByName("setupcl.dll", "SclPendedRequestExists")
+Interceptor.attach(SclPendedRequestExists, {onLeave: function (args) {send("SclPendedRequestExists");}});
+
+var SclPreCompilePendedRequests = Module.findExportByName("setupcl.dll", "SclPreCompilePendedRequests")
+Interceptor.attach(SclPreCompilePendedRequests, {onLeave: function (args) {send("SclPreCompilePendedRequests");}});
+
+var SclReleasePrivileges = Module.findExportByName("setupcl.dll", "SclReleasePrivileges")
+Interceptor.attach(SclReleasePrivileges, {onLeave: function (args) {send("SclReleasePrivileges");}});
+

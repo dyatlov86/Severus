@@ -1,0 +1,3 @@
+var DynamoCheckIfAreaIsDynamicallyManaged = Module.findExportByName("dynamoapi.dll", "DynamoCheckIfAreaIsDynamicallyManaged")
+Interceptor.attach(DynamoCheckIfAreaIsDynamicallyManaged, {onLeave: function (args) {send("DynamoCheckIfAreaIsDynamicallyManaged");}});
+

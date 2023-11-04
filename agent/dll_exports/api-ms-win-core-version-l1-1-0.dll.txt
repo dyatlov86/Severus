@@ -1,0 +1,12 @@
+var GetFileVersionInfoExW = Module.findExportByName("api-ms-win-core-version-l1-1-0.dll", "GetFileVersionInfoExW")
+Interceptor.attach(GetFileVersionInfoExW, {onLeave: function (args) {send("GetFileVersionInfoExW");}});
+
+var GetFileVersionInfoSizeExW = Module.findExportByName("api-ms-win-core-version-l1-1-0.dll", "GetFileVersionInfoSizeExW")
+Interceptor.attach(GetFileVersionInfoSizeExW, {onLeave: function (args) {send("GetFileVersionInfoSizeExW");}});
+
+var VerFindFileW = Module.findExportByName("api-ms-win-core-version-l1-1-0.dll", "VerFindFileW")
+Interceptor.attach(VerFindFileW, {onLeave: function (args) {send("VerFindFileW");}});
+
+var VerQueryValueW = Module.findExportByName("api-ms-win-core-version-l1-1-0.dll", "VerQueryValueW")
+Interceptor.attach(VerQueryValueW, {onLeave: function (args) {send("VerQueryValueW");}});
+

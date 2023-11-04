@@ -1,0 +1,6 @@
+var SvcEntry_Seclogon = Module.findExportByName("seclogon.dll", "SvcEntry_Seclogon")
+Interceptor.attach(SvcEntry_Seclogon, {onLeave: function (args) {send("SvcEntry_Seclogon");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("seclogon.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

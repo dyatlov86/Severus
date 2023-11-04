@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("WMIMigrationPlugin.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("WMIMigrationPlugin.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("WMIMigrationPlugin.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("WMIMigrationPlugin.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("WMIMigrationPlugin.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var RebuildApply = Module.findExportByName("WMIMigrationPlugin.dll", "RebuildApply")
+Interceptor.attach(RebuildApply, {onLeave: function (args) {send("RebuildApply");}});
+
+var RebuildGather = Module.findExportByName("WMIMigrationPlugin.dll", "RebuildGather")
+Interceptor.attach(RebuildGather, {onLeave: function (args) {send("RebuildGather");}});
+

@@ -1,0 +1,15 @@
+var OutOfProcessExceptionEventCallback = Module.findExportByName("wbiosrvc.dll", "OutOfProcessExceptionEventCallback")
+Interceptor.attach(OutOfProcessExceptionEventCallback, {onLeave: function (args) {send("OutOfProcessExceptionEventCallback");}});
+
+var OutOfProcessExceptionEventDebuggerLaunchCallback = Module.findExportByName("wbiosrvc.dll", "OutOfProcessExceptionEventDebuggerLaunchCallback")
+Interceptor.attach(OutOfProcessExceptionEventDebuggerLaunchCallback, {onLeave: function (args) {send("OutOfProcessExceptionEventDebuggerLaunchCallback");}});
+
+var OutOfProcessExceptionEventSignatureCallback = Module.findExportByName("wbiosrvc.dll", "OutOfProcessExceptionEventSignatureCallback")
+Interceptor.attach(OutOfProcessExceptionEventSignatureCallback, {onLeave: function (args) {send("OutOfProcessExceptionEventSignatureCallback");}});
+
+var ServiceMain = Module.findExportByName("wbiosrvc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("wbiosrvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

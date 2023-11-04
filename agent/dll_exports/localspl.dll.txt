@@ -1,0 +1,369 @@
+var ClosePrintProcessor = Module.findExportByName("localspl.dll", "ClosePrintProcessor")
+Interceptor.attach(ClosePrintProcessor, {onLeave: function (args) {send("ClosePrintProcessor");}});
+
+var ControlPrintProcessor = Module.findExportByName("localspl.dll", "ControlPrintProcessor")
+Interceptor.attach(ControlPrintProcessor, {onLeave: function (args) {send("ControlPrintProcessor");}});
+
+var DllMain = Module.findExportByName("localspl.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var EnumPrintProcessorDatatypesW = Module.findExportByName("localspl.dll", "EnumPrintProcessorDatatypesW")
+Interceptor.attach(EnumPrintProcessorDatatypesW, {onLeave: function (args) {send("EnumPrintProcessorDatatypesW");}});
+
+var GetPrintProcessorCapabilities = Module.findExportByName("localspl.dll", "GetPrintProcessorCapabilities")
+Interceptor.attach(GetPrintProcessorCapabilities, {onLeave: function (args) {send("GetPrintProcessorCapabilities");}});
+
+var InitializePrintMonitor2 = Module.findExportByName("localspl.dll", "InitializePrintMonitor2")
+Interceptor.attach(InitializePrintMonitor2, {onLeave: function (args) {send("InitializePrintMonitor2");}});
+
+var InitializePrintProvidor = Module.findExportByName("localspl.dll", "InitializePrintProvidor")
+Interceptor.attach(InitializePrintProvidor, {onLeave: function (args) {send("InitializePrintProvidor");}});
+
+var LclIsSessionZero = Module.findExportByName("localspl.dll", "LclIsSessionZero")
+Interceptor.attach(LclIsSessionZero, {onLeave: function (args) {send("LclIsSessionZero");}});
+
+var LclPromptUIPerSessionUser = Module.findExportByName("localspl.dll", "LclPromptUIPerSessionUser")
+Interceptor.attach(LclPromptUIPerSessionUser, {onLeave: function (args) {send("LclPromptUIPerSessionUser");}});
+
+var LocalAddForm = Module.findExportByName("localspl.dll", "LocalAddForm")
+Interceptor.attach(LocalAddForm, {onLeave: function (args) {send("LocalAddForm");}});
+
+var LocalDeleteForm = Module.findExportByName("localspl.dll", "LocalDeleteForm")
+Interceptor.attach(LocalDeleteForm, {onLeave: function (args) {send("LocalDeleteForm");}});
+
+var LocalEnumForms = Module.findExportByName("localspl.dll", "LocalEnumForms")
+Interceptor.attach(LocalEnumForms, {onLeave: function (args) {send("LocalEnumForms");}});
+
+var LocalReadPrinter = Module.findExportByName("localspl.dll", "LocalReadPrinter")
+Interceptor.attach(LocalReadPrinter, {onLeave: function (args) {send("LocalReadPrinter");}});
+
+var LocalSetForm = Module.findExportByName("localspl.dll", "LocalSetForm")
+Interceptor.attach(LocalSetForm, {onLeave: function (args) {send("LocalSetForm");}});
+
+var OpenPrintProcessor = Module.findExportByName("localspl.dll", "OpenPrintProcessor")
+Interceptor.attach(OpenPrintProcessor, {onLeave: function (args) {send("OpenPrintProcessor");}});
+
+var PrintDocumentOnPrintProcessor = Module.findExportByName("localspl.dll", "PrintDocumentOnPrintProcessor")
+Interceptor.attach(PrintDocumentOnPrintProcessor, {onLeave: function (args) {send("PrintDocumentOnPrintProcessor");}});
+
+var SplAbortPrinter = Module.findExportByName("localspl.dll", "SplAbortPrinter")
+Interceptor.attach(SplAbortPrinter, {onLeave: function (args) {send("SplAbortPrinter");}});
+
+var SplAddCSRPrinter = Module.findExportByName("localspl.dll", "SplAddCSRPrinter")
+Interceptor.attach(SplAddCSRPrinter, {onLeave: function (args) {send("SplAddCSRPrinter");}});
+
+var SplAddForm = Module.findExportByName("localspl.dll", "SplAddForm")
+Interceptor.attach(SplAddForm, {onLeave: function (args) {send("SplAddForm");}});
+
+var SplAddJob = Module.findExportByName("localspl.dll", "SplAddJob")
+Interceptor.attach(SplAddJob, {onLeave: function (args) {send("SplAddJob");}});
+
+var SplAddMonitor = Module.findExportByName("localspl.dll", "SplAddMonitor")
+Interceptor.attach(SplAddMonitor, {onLeave: function (args) {send("SplAddMonitor");}});
+
+var SplAddPort = Module.findExportByName("localspl.dll", "SplAddPort")
+Interceptor.attach(SplAddPort, {onLeave: function (args) {send("SplAddPort");}});
+
+var SplAddPortEx = Module.findExportByName("localspl.dll", "SplAddPortEx")
+Interceptor.attach(SplAddPortEx, {onLeave: function (args) {send("SplAddPortEx");}});
+
+var SplAddPrintProcessor = Module.findExportByName("localspl.dll", "SplAddPrintProcessor")
+Interceptor.attach(SplAddPrintProcessor, {onLeave: function (args) {send("SplAddPrintProcessor");}});
+
+var SplAddPrinter = Module.findExportByName("localspl.dll", "SplAddPrinter")
+Interceptor.attach(SplAddPrinter, {onLeave: function (args) {send("SplAddPrinter");}});
+
+var SplAddPrinterDriverEx = Module.findExportByName("localspl.dll", "SplAddPrinterDriverEx")
+Interceptor.attach(SplAddPrinterDriverEx, {onLeave: function (args) {send("SplAddPrinterDriverEx");}});
+
+var SplClosePrinter = Module.findExportByName("localspl.dll", "SplClosePrinter")
+Interceptor.attach(SplClosePrinter, {onLeave: function (args) {send("SplClosePrinter");}});
+
+var SplCloseSpooler = Module.findExportByName("localspl.dll", "SplCloseSpooler")
+Interceptor.attach(SplCloseSpooler, {onLeave: function (args) {send("SplCloseSpooler");}});
+
+var SplConfigChange = Module.findExportByName("localspl.dll", "SplConfigChange")
+Interceptor.attach(SplConfigChange, {onLeave: function (args) {send("SplConfigChange");}});
+
+var SplCopyFileEvent = Module.findExportByName("localspl.dll", "SplCopyFileEvent")
+Interceptor.attach(SplCopyFileEvent, {onLeave: function (args) {send("SplCopyFileEvent");}});
+
+var SplCopyNumberOfFiles = Module.findExportByName("localspl.dll", "SplCopyNumberOfFiles")
+Interceptor.attach(SplCopyNumberOfFiles, {onLeave: function (args) {send("SplCopyNumberOfFiles");}});
+
+var SplCreatePrinterIC = Module.findExportByName("localspl.dll", "SplCreatePrinterIC")
+Interceptor.attach(SplCreatePrinterIC, {onLeave: function (args) {send("SplCreatePrinterIC");}});
+
+var SplCreateSpooler = Module.findExportByName("localspl.dll", "SplCreateSpooler")
+Interceptor.attach(SplCreateSpooler, {onLeave: function (args) {send("SplCreateSpooler");}});
+
+var SplDeleteForm = Module.findExportByName("localspl.dll", "SplDeleteForm")
+Interceptor.attach(SplDeleteForm, {onLeave: function (args) {send("SplDeleteForm");}});
+
+var SplDeleteJobNamedProperty = Module.findExportByName("localspl.dll", "SplDeleteJobNamedProperty")
+Interceptor.attach(SplDeleteJobNamedProperty, {onLeave: function (args) {send("SplDeleteJobNamedProperty");}});
+
+var SplDeleteMonitor = Module.findExportByName("localspl.dll", "SplDeleteMonitor")
+Interceptor.attach(SplDeleteMonitor, {onLeave: function (args) {send("SplDeleteMonitor");}});
+
+var SplDeletePort = Module.findExportByName("localspl.dll", "SplDeletePort")
+Interceptor.attach(SplDeletePort, {onLeave: function (args) {send("SplDeletePort");}});
+
+var SplDeletePrintProcCacheData = Module.findExportByName("localspl.dll", "SplDeletePrintProcCacheData")
+Interceptor.attach(SplDeletePrintProcCacheData, {onLeave: function (args) {send("SplDeletePrintProcCacheData");}});
+
+var SplDeletePrintProcessor = Module.findExportByName("localspl.dll", "SplDeletePrintProcessor")
+Interceptor.attach(SplDeletePrintProcessor, {onLeave: function (args) {send("SplDeletePrintProcessor");}});
+
+var SplDeletePrinter = Module.findExportByName("localspl.dll", "SplDeletePrinter")
+Interceptor.attach(SplDeletePrinter, {onLeave: function (args) {send("SplDeletePrinter");}});
+
+var SplDeletePrinterData = Module.findExportByName("localspl.dll", "SplDeletePrinterData")
+Interceptor.attach(SplDeletePrinterData, {onLeave: function (args) {send("SplDeletePrinterData");}});
+
+var SplDeletePrinterDataEx = Module.findExportByName("localspl.dll", "SplDeletePrinterDataEx")
+Interceptor.attach(SplDeletePrinterDataEx, {onLeave: function (args) {send("SplDeletePrinterDataEx");}});
+
+var SplDeletePrinterDriverEx = Module.findExportByName("localspl.dll", "SplDeletePrinterDriverEx")
+Interceptor.attach(SplDeletePrinterDriverEx, {onLeave: function (args) {send("SplDeletePrinterDriverEx");}});
+
+var SplDeletePrinterIC = Module.findExportByName("localspl.dll", "SplDeletePrinterIC")
+Interceptor.attach(SplDeletePrinterIC, {onLeave: function (args) {send("SplDeletePrinterIC");}});
+
+var SplDeletePrinterKey = Module.findExportByName("localspl.dll", "SplDeletePrinterKey")
+Interceptor.attach(SplDeletePrinterKey, {onLeave: function (args) {send("SplDeletePrinterKey");}});
+
+var SplDeletePrinterWithJobs = Module.findExportByName("localspl.dll", "SplDeletePrinterWithJobs")
+Interceptor.attach(SplDeletePrinterWithJobs, {onLeave: function (args) {send("SplDeletePrinterWithJobs");}});
+
+var SplDeleteSpooler = Module.findExportByName("localspl.dll", "SplDeleteSpooler")
+Interceptor.attach(SplDeleteSpooler, {onLeave: function (args) {send("SplDeleteSpooler");}});
+
+var SplDoesCSRPrinterDevnodeExist = Module.findExportByName("localspl.dll", "SplDoesCSRPrinterDevnodeExist")
+Interceptor.attach(SplDoesCSRPrinterDevnodeExist, {onLeave: function (args) {send("SplDoesCSRPrinterDevnodeExist");}});
+
+var SplDriverEvent = Module.findExportByName("localspl.dll", "SplDriverEvent")
+Interceptor.attach(SplDriverEvent, {onLeave: function (args) {send("SplDriverEvent");}});
+
+var SplEnableCSRPrinterDeviceInterface = Module.findExportByName("localspl.dll", "SplEnableCSRPrinterDeviceInterface")
+Interceptor.attach(SplEnableCSRPrinterDeviceInterface, {onLeave: function (args) {send("SplEnableCSRPrinterDeviceInterface");}});
+
+var SplEndDocPrinter = Module.findExportByName("localspl.dll", "SplEndDocPrinter")
+Interceptor.attach(SplEndDocPrinter, {onLeave: function (args) {send("SplEndDocPrinter");}});
+
+var SplEndPagePrinter = Module.findExportByName("localspl.dll", "SplEndPagePrinter")
+Interceptor.attach(SplEndPagePrinter, {onLeave: function (args) {send("SplEndPagePrinter");}});
+
+var SplEnumForms = Module.findExportByName("localspl.dll", "SplEnumForms")
+Interceptor.attach(SplEnumForms, {onLeave: function (args) {send("SplEnumForms");}});
+
+var SplEnumJobNamedProperties = Module.findExportByName("localspl.dll", "SplEnumJobNamedProperties")
+Interceptor.attach(SplEnumJobNamedProperties, {onLeave: function (args) {send("SplEnumJobNamedProperties");}});
+
+var SplEnumJobs = Module.findExportByName("localspl.dll", "SplEnumJobs")
+Interceptor.attach(SplEnumJobs, {onLeave: function (args) {send("SplEnumJobs");}});
+
+var SplEnumMonitors = Module.findExportByName("localspl.dll", "SplEnumMonitors")
+Interceptor.attach(SplEnumMonitors, {onLeave: function (args) {send("SplEnumMonitors");}});
+
+var SplEnumPorts = Module.findExportByName("localspl.dll", "SplEnumPorts")
+Interceptor.attach(SplEnumPorts, {onLeave: function (args) {send("SplEnumPorts");}});
+
+var SplEnumPrintProcCacheData = Module.findExportByName("localspl.dll", "SplEnumPrintProcCacheData")
+Interceptor.attach(SplEnumPrintProcCacheData, {onLeave: function (args) {send("SplEnumPrintProcCacheData");}});
+
+var SplEnumPrintProcessorDatatypes = Module.findExportByName("localspl.dll", "SplEnumPrintProcessorDatatypes")
+Interceptor.attach(SplEnumPrintProcessorDatatypes, {onLeave: function (args) {send("SplEnumPrintProcessorDatatypes");}});
+
+var SplEnumPrintProcessors = Module.findExportByName("localspl.dll", "SplEnumPrintProcessors")
+Interceptor.attach(SplEnumPrintProcessors, {onLeave: function (args) {send("SplEnumPrintProcessors");}});
+
+var SplEnumPrinterData = Module.findExportByName("localspl.dll", "SplEnumPrinterData")
+Interceptor.attach(SplEnumPrinterData, {onLeave: function (args) {send("SplEnumPrinterData");}});
+
+var SplEnumPrinterDataEx = Module.findExportByName("localspl.dll", "SplEnumPrinterDataEx")
+Interceptor.attach(SplEnumPrinterDataEx, {onLeave: function (args) {send("SplEnumPrinterDataEx");}});
+
+var SplEnumPrinterDrivers = Module.findExportByName("localspl.dll", "SplEnumPrinterDrivers")
+Interceptor.attach(SplEnumPrinterDrivers, {onLeave: function (args) {send("SplEnumPrinterDrivers");}});
+
+var SplEnumPrinterKey = Module.findExportByName("localspl.dll", "SplEnumPrinterKey")
+Interceptor.attach(SplEnumPrinterKey, {onLeave: function (args) {send("SplEnumPrinterKey");}});
+
+var SplEnumPrinters = Module.findExportByName("localspl.dll", "SplEnumPrinters")
+Interceptor.attach(SplEnumPrinters, {onLeave: function (args) {send("SplEnumPrinters");}});
+
+var SplGetDriverDir = Module.findExportByName("localspl.dll", "SplGetDriverDir")
+Interceptor.attach(SplGetDriverDir, {onLeave: function (args) {send("SplGetDriverDir");}});
+
+var SplGetDriverUpdateStatus = Module.findExportByName("localspl.dll", "SplGetDriverUpdateStatus")
+Interceptor.attach(SplGetDriverUpdateStatus, {onLeave: function (args) {send("SplGetDriverUpdateStatus");}});
+
+var SplGetForm = Module.findExportByName("localspl.dll", "SplGetForm")
+Interceptor.attach(SplGetForm, {onLeave: function (args) {send("SplGetForm");}});
+
+var SplGetJob = Module.findExportByName("localspl.dll", "SplGetJob")
+Interceptor.attach(SplGetJob, {onLeave: function (args) {send("SplGetJob");}});
+
+var SplGetJobExtra = Module.findExportByName("localspl.dll", "SplGetJobExtra")
+Interceptor.attach(SplGetJobExtra, {onLeave: function (args) {send("SplGetJobExtra");}});
+
+var SplGetJobNamedPropertyValue = Module.findExportByName("localspl.dll", "SplGetJobNamedPropertyValue")
+Interceptor.attach(SplGetJobNamedPropertyValue, {onLeave: function (args) {send("SplGetJobNamedPropertyValue");}});
+
+var SplGetLocalDevMode = Module.findExportByName("localspl.dll", "SplGetLocalDevMode")
+Interceptor.attach(SplGetLocalDevMode, {onLeave: function (args) {send("SplGetLocalDevMode");}});
+
+var SplGetPrintClassObject = Module.findExportByName("localspl.dll", "SplGetPrintClassObject")
+Interceptor.attach(SplGetPrintClassObject, {onLeave: function (args) {send("SplGetPrintClassObject");}});
+
+var SplGetPrintClassObject_4CSR = Module.findExportByName("localspl.dll", "SplGetPrintClassObject_4CSR")
+Interceptor.attach(SplGetPrintClassObject_4CSR, {onLeave: function (args) {send("SplGetPrintClassObject_4CSR");}});
+
+var SplGetPrintProcCacheData = Module.findExportByName("localspl.dll", "SplGetPrintProcCacheData")
+Interceptor.attach(SplGetPrintProcCacheData, {onLeave: function (args) {send("SplGetPrintProcCacheData");}});
+
+var SplGetPrintProcessorDirectory = Module.findExportByName("localspl.dll", "SplGetPrintProcessorDirectory")
+Interceptor.attach(SplGetPrintProcessorDirectory, {onLeave: function (args) {send("SplGetPrintProcessorDirectory");}});
+
+var SplGetPrinter = Module.findExportByName("localspl.dll", "SplGetPrinter")
+Interceptor.attach(SplGetPrinter, {onLeave: function (args) {send("SplGetPrinter");}});
+
+var SplGetPrinterData = Module.findExportByName("localspl.dll", "SplGetPrinterData")
+Interceptor.attach(SplGetPrinterData, {onLeave: function (args) {send("SplGetPrinterData");}});
+
+var SplGetPrinterDataEx = Module.findExportByName("localspl.dll", "SplGetPrinterDataEx")
+Interceptor.attach(SplGetPrinterDataEx, {onLeave: function (args) {send("SplGetPrinterDataEx");}});
+
+var SplGetPrinterDriver = Module.findExportByName("localspl.dll", "SplGetPrinterDriver")
+Interceptor.attach(SplGetPrinterDriver, {onLeave: function (args) {send("SplGetPrinterDriver");}});
+
+var SplGetPrinterDriverDirectory = Module.findExportByName("localspl.dll", "SplGetPrinterDriverDirectory")
+Interceptor.attach(SplGetPrinterDriverDirectory, {onLeave: function (args) {send("SplGetPrinterDriverDirectory");}});
+
+var SplGetPrinterDriverEx = Module.findExportByName("localspl.dll", "SplGetPrinterDriverEx")
+Interceptor.attach(SplGetPrinterDriverEx, {onLeave: function (args) {send("SplGetPrinterDriverEx");}});
+
+var SplGetPrinterExtra = Module.findExportByName("localspl.dll", "SplGetPrinterExtra")
+Interceptor.attach(SplGetPrinterExtra, {onLeave: function (args) {send("SplGetPrinterExtra");}});
+
+var SplGetPrinterExtraEx = Module.findExportByName("localspl.dll", "SplGetPrinterExtraEx")
+Interceptor.attach(SplGetPrinterExtraEx, {onLeave: function (args) {send("SplGetPrinterExtraEx");}});
+
+var SplGetUserPropertyBag = Module.findExportByName("localspl.dll", "SplGetUserPropertyBag")
+Interceptor.attach(SplGetUserPropertyBag, {onLeave: function (args) {send("SplGetUserPropertyBag");}});
+
+var SplIppCreateJobOnPrinter = Module.findExportByName("localspl.dll", "SplIppCreateJobOnPrinter")
+Interceptor.attach(SplIppCreateJobOnPrinter, {onLeave: function (args) {send("SplIppCreateJobOnPrinter");}});
+
+var SplIppCreateJobOnPrinterWithAttributes = Module.findExportByName("localspl.dll", "SplIppCreateJobOnPrinterWithAttributes")
+Interceptor.attach(SplIppCreateJobOnPrinterWithAttributes, {onLeave: function (args) {send("SplIppCreateJobOnPrinterWithAttributes");}});
+
+var SplIppGetJobAttributes = Module.findExportByName("localspl.dll", "SplIppGetJobAttributes")
+Interceptor.attach(SplIppGetJobAttributes, {onLeave: function (args) {send("SplIppGetJobAttributes");}});
+
+var SplIppGetPrinterAttributes = Module.findExportByName("localspl.dll", "SplIppGetPrinterAttributes")
+Interceptor.attach(SplIppGetPrinterAttributes, {onLeave: function (args) {send("SplIppGetPrinterAttributes");}});
+
+var SplIppSetJobAttributes = Module.findExportByName("localspl.dll", "SplIppSetJobAttributes")
+Interceptor.attach(SplIppSetJobAttributes, {onLeave: function (args) {send("SplIppSetJobAttributes");}});
+
+var SplIppSetPrinterAttributes = Module.findExportByName("localspl.dll", "SplIppSetPrinterAttributes")
+Interceptor.attach(SplIppSetPrinterAttributes, {onLeave: function (args) {send("SplIppSetPrinterAttributes");}});
+
+var SplIsCompatibleDriver = Module.findExportByName("localspl.dll", "SplIsCompatibleDriver")
+Interceptor.attach(SplIsCompatibleDriver, {onLeave: function (args) {send("SplIsCompatibleDriver");}});
+
+var SplIsDriverInstalled = Module.findExportByName("localspl.dll", "SplIsDriverInstalled")
+Interceptor.attach(SplIsDriverInstalled, {onLeave: function (args) {send("SplIsDriverInstalled");}});
+
+var SplIsLocalDriverAvailable = Module.findExportByName("localspl.dll", "SplIsLocalDriverAvailable")
+Interceptor.attach(SplIsLocalDriverAvailable, {onLeave: function (args) {send("SplIsLocalDriverAvailable");}});
+
+var SplIsValidUserPropertyBag = Module.findExportByName("localspl.dll", "SplIsValidUserPropertyBag")
+Interceptor.attach(SplIsValidUserPropertyBag, {onLeave: function (args) {send("SplIsValidUserPropertyBag");}});
+
+var SplLoadLibraryTheCopyFileModule = Module.findExportByName("localspl.dll", "SplLoadLibraryTheCopyFileModule")
+Interceptor.attach(SplLoadLibraryTheCopyFileModule, {onLeave: function (args) {send("SplLoadLibraryTheCopyFileModule");}});
+
+var SplMonitorIsInstalled = Module.findExportByName("localspl.dll", "SplMonitorIsInstalled")
+Interceptor.attach(SplMonitorIsInstalled, {onLeave: function (args) {send("SplMonitorIsInstalled");}});
+
+var SplNotifyServerStatus = Module.findExportByName("localspl.dll", "SplNotifyServerStatus")
+Interceptor.attach(SplNotifyServerStatus, {onLeave: function (args) {send("SplNotifyServerStatus");}});
+
+var SplOpenPrinter = Module.findExportByName("localspl.dll", "SplOpenPrinter")
+Interceptor.attach(SplOpenPrinter, {onLeave: function (args) {send("SplOpenPrinter");}});
+
+var SplPlayGdiScriptOnPrinterIC = Module.findExportByName("localspl.dll", "SplPlayGdiScriptOnPrinterIC")
+Interceptor.attach(SplPlayGdiScriptOnPrinterIC, {onLeave: function (args) {send("SplPlayGdiScriptOnPrinterIC");}});
+
+var SplPrintSupportOperation = Module.findExportByName("localspl.dll", "SplPrintSupportOperation")
+Interceptor.attach(SplPrintSupportOperation, {onLeave: function (args) {send("SplPrintSupportOperation");}});
+
+var SplReenumeratePorts = Module.findExportByName("localspl.dll", "SplReenumeratePorts")
+Interceptor.attach(SplReenumeratePorts, {onLeave: function (args) {send("SplReenumeratePorts");}});
+
+var SplRegeneratePrintDeviceCapabilities = Module.findExportByName("localspl.dll", "SplRegeneratePrintDeviceCapabilities")
+Interceptor.attach(SplRegeneratePrintDeviceCapabilities, {onLeave: function (args) {send("SplRegeneratePrintDeviceCapabilities");}});
+
+var SplReportJobProcessingProgress = Module.findExportByName("localspl.dll", "SplReportJobProcessingProgress")
+Interceptor.attach(SplReportJobProcessingProgress, {onLeave: function (args) {send("SplReportJobProcessingProgress");}});
+
+var SplResetPrinter = Module.findExportByName("localspl.dll", "SplResetPrinter")
+Interceptor.attach(SplResetPrinter, {onLeave: function (args) {send("SplResetPrinter");}});
+
+var SplScheduleJob = Module.findExportByName("localspl.dll", "SplScheduleJob")
+Interceptor.attach(SplScheduleJob, {onLeave: function (args) {send("SplScheduleJob");}});
+
+var SplSetCSRPrinterDevnode = Module.findExportByName("localspl.dll", "SplSetCSRPrinterDevnode")
+Interceptor.attach(SplSetCSRPrinterDevnode, {onLeave: function (args) {send("SplSetCSRPrinterDevnode");}});
+
+var SplSetDriverUpdateStatus = Module.findExportByName("localspl.dll", "SplSetDriverUpdateStatus")
+Interceptor.attach(SplSetDriverUpdateStatus, {onLeave: function (args) {send("SplSetDriverUpdateStatus");}});
+
+var SplSetForm = Module.findExportByName("localspl.dll", "SplSetForm")
+Interceptor.attach(SplSetForm, {onLeave: function (args) {send("SplSetForm");}});
+
+var SplSetJob = Module.findExportByName("localspl.dll", "SplSetJob")
+Interceptor.attach(SplSetJob, {onLeave: function (args) {send("SplSetJob");}});
+
+var SplSetJobError = Module.findExportByName("localspl.dll", "SplSetJobError")
+Interceptor.attach(SplSetJobError, {onLeave: function (args) {send("SplSetJobError");}});
+
+var SplSetJobExtra = Module.findExportByName("localspl.dll", "SplSetJobExtra")
+Interceptor.attach(SplSetJobExtra, {onLeave: function (args) {send("SplSetJobExtra");}});
+
+var SplSetJobNamedProperty = Module.findExportByName("localspl.dll", "SplSetJobNamedProperty")
+Interceptor.attach(SplSetJobNamedProperty, {onLeave: function (args) {send("SplSetJobNamedProperty");}});
+
+var SplSetPrintProcCacheData = Module.findExportByName("localspl.dll", "SplSetPrintProcCacheData")
+Interceptor.attach(SplSetPrintProcCacheData, {onLeave: function (args) {send("SplSetPrintProcCacheData");}});
+
+var SplSetPrinter = Module.findExportByName("localspl.dll", "SplSetPrinter")
+Interceptor.attach(SplSetPrinter, {onLeave: function (args) {send("SplSetPrinter");}});
+
+var SplSetPrinterData = Module.findExportByName("localspl.dll", "SplSetPrinterData")
+Interceptor.attach(SplSetPrinterData, {onLeave: function (args) {send("SplSetPrinterData");}});
+
+var SplSetPrinterDataEx = Module.findExportByName("localspl.dll", "SplSetPrinterDataEx")
+Interceptor.attach(SplSetPrinterDataEx, {onLeave: function (args) {send("SplSetPrinterDataEx");}});
+
+var SplSetPrinterExtra = Module.findExportByName("localspl.dll", "SplSetPrinterExtra")
+Interceptor.attach(SplSetPrinterExtra, {onLeave: function (args) {send("SplSetPrinterExtra");}});
+
+var SplSetPrinterExtraEx = Module.findExportByName("localspl.dll", "SplSetPrinterExtraEx")
+Interceptor.attach(SplSetPrinterExtraEx, {onLeave: function (args) {send("SplSetPrinterExtraEx");}});
+
+var SplStartDocPrinter = Module.findExportByName("localspl.dll", "SplStartDocPrinter")
+Interceptor.attach(SplStartDocPrinter, {onLeave: function (args) {send("SplStartDocPrinter");}});
+
+var SplStartPagePrinter = Module.findExportByName("localspl.dll", "SplStartPagePrinter")
+Interceptor.attach(SplStartPagePrinter, {onLeave: function (args) {send("SplStartPagePrinter");}});
+
+var SplWritePrinter = Module.findExportByName("localspl.dll", "SplWritePrinter")
+Interceptor.attach(SplWritePrinter, {onLeave: function (args) {send("SplWritePrinter");}});
+
+var SplXcvData = Module.findExportByName("localspl.dll", "SplXcvData")
+Interceptor.attach(SplXcvData, {onLeave: function (args) {send("SplXcvData");}});
+

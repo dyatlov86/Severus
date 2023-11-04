@@ -1,0 +1,15 @@
+var AddVectoredContinueHandler = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-1.dll", "AddVectoredContinueHandler")
+Interceptor.attach(AddVectoredContinueHandler, {onLeave: function (args) {send("AddVectoredContinueHandler");}});
+
+var AddVectoredExceptionHandler = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-1.dll", "AddVectoredExceptionHandler")
+Interceptor.attach(AddVectoredExceptionHandler, {onLeave: function (args) {send("AddVectoredExceptionHandler");}});
+
+var RemoveVectoredContinueHandler = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-1.dll", "RemoveVectoredContinueHandler")
+Interceptor.attach(RemoveVectoredContinueHandler, {onLeave: function (args) {send("RemoveVectoredContinueHandler");}});
+
+var RemoveVectoredExceptionHandler = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-1.dll", "RemoveVectoredExceptionHandler")
+Interceptor.attach(RemoveVectoredExceptionHandler, {onLeave: function (args) {send("RemoveVectoredExceptionHandler");}});
+
+var RestoreLastError = Module.findExportByName("api-ms-win-core-errorhandling-l1-1-1.dll", "RestoreLastError")
+Interceptor.attach(RestoreLastError, {onLeave: function (args) {send("RestoreLastError");}});
+

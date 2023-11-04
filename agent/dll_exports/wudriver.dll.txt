@@ -1,0 +1,30 @@
+var CancelCDMOperation = Module.findExportByName("wudriver.dll", "CancelCDMOperation")
+Interceptor.attach(CancelCDMOperation, {onLeave: function (args) {send("CancelCDMOperation");}});
+
+var CloseCDMContext = Module.findExportByName("wudriver.dll", "CloseCDMContext")
+Interceptor.attach(CloseCDMContext, {onLeave: function (args) {send("CloseCDMContext");}});
+
+var DetFilesDownloaded = Module.findExportByName("wudriver.dll", "DetFilesDownloaded")
+Interceptor.attach(DetFilesDownloaded, {onLeave: function (args) {send("DetFilesDownloaded");}});
+
+var DownloadIsInternetAvailable = Module.findExportByName("wudriver.dll", "DownloadIsInternetAvailable")
+Interceptor.attach(DownloadIsInternetAvailable, {onLeave: function (args) {send("DownloadIsInternetAvailable");}});
+
+var DownloadUpdatedFiles = Module.findExportByName("wudriver.dll", "DownloadUpdatedFiles")
+Interceptor.attach(DownloadUpdatedFiles, {onLeave: function (args) {send("DownloadUpdatedFiles");}});
+
+var FindMatchingDriver = Module.findExportByName("wudriver.dll", "FindMatchingDriver")
+Interceptor.attach(FindMatchingDriver, {onLeave: function (args) {send("FindMatchingDriver");}});
+
+var LogDriverNotFound = Module.findExportByName("wudriver.dll", "LogDriverNotFound")
+Interceptor.attach(LogDriverNotFound, {onLeave: function (args) {send("LogDriverNotFound");}});
+
+var OpenCDMContext = Module.findExportByName("wudriver.dll", "OpenCDMContext")
+Interceptor.attach(OpenCDMContext, {onLeave: function (args) {send("OpenCDMContext");}});
+
+var OpenCDMContextEx = Module.findExportByName("wudriver.dll", "OpenCDMContextEx")
+Interceptor.attach(OpenCDMContextEx, {onLeave: function (args) {send("OpenCDMContextEx");}});
+
+var QueryDetectionFiles = Module.findExportByName("wudriver.dll", "QueryDetectionFiles")
+Interceptor.attach(QueryDetectionFiles, {onLeave: function (args) {send("QueryDetectionFiles");}});
+

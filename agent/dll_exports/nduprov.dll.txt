@@ -1,0 +1,24 @@
+var CommitStatsHelperCollectContainerData = Module.findExportByName("nduprov.dll", "CommitStatsHelperCollectContainerData")
+Interceptor.attach(CommitStatsHelperCollectContainerData, {onLeave: function (args) {send("CommitStatsHelperCollectContainerData");}});
+
+var CommitStatsHelperDedupHostData = Module.findExportByName("nduprov.dll", "CommitStatsHelperDedupHostData")
+Interceptor.attach(CommitStatsHelperDedupHostData, {onLeave: function (args) {send("CommitStatsHelperDedupHostData");}});
+
+var DedupDoubleCountedData = Module.findExportByName("nduprov.dll", "DedupDoubleCountedData")
+Interceptor.attach(DedupDoubleCountedData, {onLeave: function (args) {send("DedupDoubleCountedData");}});
+
+var NduProvPopulateStatsFromRecord = Module.findExportByName("nduprov.dll", "NduProvPopulateStatsFromRecord")
+Interceptor.attach(NduProvPopulateStatsFromRecord, {onLeave: function (args) {send("NduProvPopulateStatsFromRecord");}});
+
+var OverflowCheckOnBytesFromContainers = Module.findExportByName("nduprov.dll", "OverflowCheckOnBytesFromContainers")
+Interceptor.attach(OverflowCheckOnBytesFromContainers, {onLeave: function (args) {send("OverflowCheckOnBytesFromContainers");}});
+
+var PopulateUserName = Module.findExportByName("nduprov.dll", "PopulateUserName")
+Interceptor.attach(PopulateUserName, {onLeave: function (args) {send("PopulateUserName");}});
+
+var SruInitializeProvider = Module.findExportByName("nduprov.dll", "SruInitializeProvider")
+Interceptor.attach(SruInitializeProvider, {onLeave: function (args) {send("SruInitializeProvider");}});
+
+var SruUninitializeProvider = Module.findExportByName("nduprov.dll", "SruUninitializeProvider")
+Interceptor.attach(SruUninitializeProvider, {onLeave: function (args) {send("SruUninitializeProvider");}});
+

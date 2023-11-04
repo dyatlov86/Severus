@@ -1,0 +1,9 @@
+var DllMain = Module.findExportByName("wuaueng.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GeneralizeForImaging = Module.findExportByName("wuaueng.dll", "GeneralizeForImaging")
+Interceptor.attach(GeneralizeForImaging, {onLeave: function (args) {send("GeneralizeForImaging");}});
+
+var WUServiceMain = Module.findExportByName("wuaueng.dll", "WUServiceMain")
+Interceptor.attach(WUServiceMain, {onLeave: function (args) {send("WUServiceMain");}});
+

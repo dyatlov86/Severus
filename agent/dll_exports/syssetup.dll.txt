@@ -1,0 +1,33 @@
+var AsrAddSifEntryA = Module.findExportByName("syssetup.dll", "AsrAddSifEntryA")
+Interceptor.attach(AsrAddSifEntryA, {onLeave: function (args) {send("AsrAddSifEntryA");}});
+
+var AsrAddSifEntryW = Module.findExportByName("syssetup.dll", "AsrAddSifEntryW")
+Interceptor.attach(AsrAddSifEntryW, {onLeave: function (args) {send("AsrAddSifEntryW");}});
+
+var AsrCreateStateFileA = Module.findExportByName("syssetup.dll", "AsrCreateStateFileA")
+Interceptor.attach(AsrCreateStateFileA, {onLeave: function (args) {send("AsrCreateStateFileA");}});
+
+var AsrCreateStateFileW = Module.findExportByName("syssetup.dll", "AsrCreateStateFileW")
+Interceptor.attach(AsrCreateStateFileW, {onLeave: function (args) {send("AsrCreateStateFileW");}});
+
+var AsrFreeContext = Module.findExportByName("syssetup.dll", "AsrFreeContext")
+Interceptor.attach(AsrFreeContext, {onLeave: function (args) {send("AsrFreeContext");}});
+
+var AsrRestorePlugPlayRegistryData = Module.findExportByName("syssetup.dll", "AsrRestorePlugPlayRegistryData")
+Interceptor.attach(AsrRestorePlugPlayRegistryData, {onLeave: function (args) {send("AsrRestorePlugPlayRegistryData");}});
+
+var GetAnswerFileSetting = Module.findExportByName("syssetup.dll", "GetAnswerFileSetting")
+Interceptor.attach(GetAnswerFileSetting, {onLeave: function (args) {send("GetAnswerFileSetting");}});
+
+var SetupChangeFontSize = Module.findExportByName("syssetup.dll", "SetupChangeFontSize")
+Interceptor.attach(SetupChangeFontSize, {onLeave: function (args) {send("SetupChangeFontSize");}});
+
+var SetupInfObjectInstallActionW = Module.findExportByName("syssetup.dll", "SetupInfObjectInstallActionW")
+Interceptor.attach(SetupInfObjectInstallActionW, {onLeave: function (args) {send("SetupInfObjectInstallActionW");}});
+
+var SetupSetDisplay = Module.findExportByName("syssetup.dll", "SetupSetDisplay")
+Interceptor.attach(SetupSetDisplay, {onLeave: function (args) {send("SetupSetDisplay");}});
+
+var WaitForSamService = Module.findExportByName("syssetup.dll", "WaitForSamService")
+Interceptor.attach(WaitForSamService, {onLeave: function (args) {send("WaitForSamService");}});
+

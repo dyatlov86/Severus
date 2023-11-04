@@ -1,0 +1,66 @@
+var LsaAddAccountRights = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaAddAccountRights")
+Interceptor.attach(LsaAddAccountRights, {onLeave: function (args) {send("LsaAddAccountRights");}});
+
+var LsaClose = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaClose")
+Interceptor.attach(LsaClose, {onLeave: function (args) {send("LsaClose");}});
+
+var LsaCreateSecret = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaCreateSecret")
+Interceptor.attach(LsaCreateSecret, {onLeave: function (args) {send("LsaCreateSecret");}});
+
+var LsaEnumerateAccountRights = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaEnumerateAccountRights")
+Interceptor.attach(LsaEnumerateAccountRights, {onLeave: function (args) {send("LsaEnumerateAccountRights");}});
+
+var LsaEnumerateAccountsWithUserRight = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaEnumerateAccountsWithUserRight")
+Interceptor.attach(LsaEnumerateAccountsWithUserRight, {onLeave: function (args) {send("LsaEnumerateAccountsWithUserRight");}});
+
+var LsaFreeMemory = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaFreeMemory")
+Interceptor.attach(LsaFreeMemory, {onLeave: function (args) {send("LsaFreeMemory");}});
+
+var LsaICLookupNames = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaICLookupNames")
+Interceptor.attach(LsaICLookupNames, {onLeave: function (args) {send("LsaICLookupNames");}});
+
+var LsaICLookupNamesWithCreds = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaICLookupNamesWithCreds")
+Interceptor.attach(LsaICLookupNamesWithCreds, {onLeave: function (args) {send("LsaICLookupNamesWithCreds");}});
+
+var LsaICLookupSids = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaICLookupSids")
+Interceptor.attach(LsaICLookupSids, {onLeave: function (args) {send("LsaICLookupSids");}});
+
+var LsaICLookupSidsWithCreds = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaICLookupSidsWithCreds")
+Interceptor.attach(LsaICLookupSidsWithCreds, {onLeave: function (args) {send("LsaICLookupSidsWithCreds");}});
+
+var LsaLookupNames2 = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaLookupNames2")
+Interceptor.attach(LsaLookupNames2, {onLeave: function (args) {send("LsaLookupNames2");}});
+
+var LsaLookupSids = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaLookupSids")
+Interceptor.attach(LsaLookupSids, {onLeave: function (args) {send("LsaLookupSids");}});
+
+var LsaLookupSids2 = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaLookupSids2")
+Interceptor.attach(LsaLookupSids2, {onLeave: function (args) {send("LsaLookupSids2");}});
+
+var LsaOpenPolicy = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaOpenPolicy")
+Interceptor.attach(LsaOpenPolicy, {onLeave: function (args) {send("LsaOpenPolicy");}});
+
+var LsaOpenSecret = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaOpenSecret")
+Interceptor.attach(LsaOpenSecret, {onLeave: function (args) {send("LsaOpenSecret");}});
+
+var LsaQueryInformationPolicy = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaQueryInformationPolicy")
+Interceptor.attach(LsaQueryInformationPolicy, {onLeave: function (args) {send("LsaQueryInformationPolicy");}});
+
+var LsaQuerySecret = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaQuerySecret")
+Interceptor.attach(LsaQuerySecret, {onLeave: function (args) {send("LsaQuerySecret");}});
+
+var LsaRemoveAccountRights = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaRemoveAccountRights")
+Interceptor.attach(LsaRemoveAccountRights, {onLeave: function (args) {send("LsaRemoveAccountRights");}});
+
+var LsaRetrievePrivateData = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaRetrievePrivateData")
+Interceptor.attach(LsaRetrievePrivateData, {onLeave: function (args) {send("LsaRetrievePrivateData");}});
+
+var LsaSetInformationPolicy = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaSetInformationPolicy")
+Interceptor.attach(LsaSetInformationPolicy, {onLeave: function (args) {send("LsaSetInformationPolicy");}});
+
+var LsaSetSecret = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaSetSecret")
+Interceptor.attach(LsaSetSecret, {onLeave: function (args) {send("LsaSetSecret");}});
+
+var LsaStorePrivateData = Module.findExportByName("API-MS-Win-security-lsapolicy-l1-1-0.dll", "LsaStorePrivateData")
+Interceptor.attach(LsaStorePrivateData, {onLeave: function (args) {send("LsaStorePrivateData");}});
+

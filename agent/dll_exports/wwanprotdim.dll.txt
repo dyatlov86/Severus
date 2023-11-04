@@ -1,0 +1,3 @@
+var DimInitialize = Module.findExportByName("wwanprotdim.dll", "DimInitialize")
+Interceptor.attach(DimInitialize, {onLeave: function (args) {send("DimInitialize");}});
+

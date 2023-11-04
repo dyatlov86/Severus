@@ -1,0 +1,15 @@
+var ExecuteUninstall = Module.findExportByName("osuninst.dll", "ExecuteUninstall")
+Interceptor.attach(ExecuteUninstall, {onLeave: function (args) {send("ExecuteUninstall");}});
+
+var GetUninstallImageSize = Module.findExportByName("osuninst.dll", "GetUninstallImageSize")
+Interceptor.attach(GetUninstallImageSize, {onLeave: function (args) {send("GetUninstallImageSize");}});
+
+var IsUninstallImageValid = Module.findExportByName("osuninst.dll", "IsUninstallImageValid")
+Interceptor.attach(IsUninstallImageValid, {onLeave: function (args) {send("IsUninstallImageValid");}});
+
+var ProvideUiAlerts = Module.findExportByName("osuninst.dll", "ProvideUiAlerts")
+Interceptor.attach(ProvideUiAlerts, {onLeave: function (args) {send("ProvideUiAlerts");}});
+
+var RemoveUninstallImage = Module.findExportByName("osuninst.dll", "RemoveUninstallImage")
+Interceptor.attach(RemoveUninstallImage, {onLeave: function (args) {send("RemoveUninstallImage");}});
+

@@ -1,0 +1,6 @@
+var ApHostServerStatus_EnsureServerReady = Module.findExportByName("APHostClient.dll", "ApHostServerStatus_EnsureServerReady")
+Interceptor.attach(ApHostServerStatus_EnsureServerReady, {onLeave: function (args) {send("ApHostServerStatus_EnsureServerReady");}});
+
+var CreateAPHostClient = Module.findExportByName("APHostClient.dll", "CreateAPHostClient")
+Interceptor.attach(CreateAPHostClient, {onLeave: function (args) {send("CreateAPHostClient");}});
+

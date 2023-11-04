@@ -1,0 +1,195 @@
+var CheckSignatureInFile = Module.findExportByName("cryptsp.dll", "CheckSignatureInFile")
+Interceptor.attach(CheckSignatureInFile, {onLeave: function (args) {send("CheckSignatureInFile");}});
+
+var CryptAcquireContextA = Module.findExportByName("cryptsp.dll", "CryptAcquireContextA")
+Interceptor.attach(CryptAcquireContextA, {onLeave: function (args) {send("CryptAcquireContextA");}});
+
+var CryptAcquireContextW = Module.findExportByName("cryptsp.dll", "CryptAcquireContextW")
+Interceptor.attach(CryptAcquireContextW, {onLeave: function (args) {send("CryptAcquireContextW");}});
+
+var CryptContextAddRef = Module.findExportByName("cryptsp.dll", "CryptContextAddRef")
+Interceptor.attach(CryptContextAddRef, {onLeave: function (args) {send("CryptContextAddRef");}});
+
+var CryptCreateHash = Module.findExportByName("cryptsp.dll", "CryptCreateHash")
+Interceptor.attach(CryptCreateHash, {onLeave: function (args) {send("CryptCreateHash");}});
+
+var CryptDecrypt = Module.findExportByName("cryptsp.dll", "CryptDecrypt")
+Interceptor.attach(CryptDecrypt, {onLeave: function (args) {send("CryptDecrypt");}});
+
+var CryptDeriveKey = Module.findExportByName("cryptsp.dll", "CryptDeriveKey")
+Interceptor.attach(CryptDeriveKey, {onLeave: function (args) {send("CryptDeriveKey");}});
+
+var CryptDestroyHash = Module.findExportByName("cryptsp.dll", "CryptDestroyHash")
+Interceptor.attach(CryptDestroyHash, {onLeave: function (args) {send("CryptDestroyHash");}});
+
+var CryptDestroyKey = Module.findExportByName("cryptsp.dll", "CryptDestroyKey")
+Interceptor.attach(CryptDestroyKey, {onLeave: function (args) {send("CryptDestroyKey");}});
+
+var CryptDuplicateHash = Module.findExportByName("cryptsp.dll", "CryptDuplicateHash")
+Interceptor.attach(CryptDuplicateHash, {onLeave: function (args) {send("CryptDuplicateHash");}});
+
+var CryptDuplicateKey = Module.findExportByName("cryptsp.dll", "CryptDuplicateKey")
+Interceptor.attach(CryptDuplicateKey, {onLeave: function (args) {send("CryptDuplicateKey");}});
+
+var CryptEncrypt = Module.findExportByName("cryptsp.dll", "CryptEncrypt")
+Interceptor.attach(CryptEncrypt, {onLeave: function (args) {send("CryptEncrypt");}});
+
+var CryptEnumProviderTypesA = Module.findExportByName("cryptsp.dll", "CryptEnumProviderTypesA")
+Interceptor.attach(CryptEnumProviderTypesA, {onLeave: function (args) {send("CryptEnumProviderTypesA");}});
+
+var CryptEnumProviderTypesW = Module.findExportByName("cryptsp.dll", "CryptEnumProviderTypesW")
+Interceptor.attach(CryptEnumProviderTypesW, {onLeave: function (args) {send("CryptEnumProviderTypesW");}});
+
+var CryptEnumProvidersA = Module.findExportByName("cryptsp.dll", "CryptEnumProvidersA")
+Interceptor.attach(CryptEnumProvidersA, {onLeave: function (args) {send("CryptEnumProvidersA");}});
+
+var CryptEnumProvidersW = Module.findExportByName("cryptsp.dll", "CryptEnumProvidersW")
+Interceptor.attach(CryptEnumProvidersW, {onLeave: function (args) {send("CryptEnumProvidersW");}});
+
+var CryptExportKey = Module.findExportByName("cryptsp.dll", "CryptExportKey")
+Interceptor.attach(CryptExportKey, {onLeave: function (args) {send("CryptExportKey");}});
+
+var CryptGenKey = Module.findExportByName("cryptsp.dll", "CryptGenKey")
+Interceptor.attach(CryptGenKey, {onLeave: function (args) {send("CryptGenKey");}});
+
+var CryptGenRandom = Module.findExportByName("cryptsp.dll", "CryptGenRandom")
+Interceptor.attach(CryptGenRandom, {onLeave: function (args) {send("CryptGenRandom");}});
+
+var CryptGetDefaultProviderA = Module.findExportByName("cryptsp.dll", "CryptGetDefaultProviderA")
+Interceptor.attach(CryptGetDefaultProviderA, {onLeave: function (args) {send("CryptGetDefaultProviderA");}});
+
+var CryptGetDefaultProviderW = Module.findExportByName("cryptsp.dll", "CryptGetDefaultProviderW")
+Interceptor.attach(CryptGetDefaultProviderW, {onLeave: function (args) {send("CryptGetDefaultProviderW");}});
+
+var CryptGetHashParam = Module.findExportByName("cryptsp.dll", "CryptGetHashParam")
+Interceptor.attach(CryptGetHashParam, {onLeave: function (args) {send("CryptGetHashParam");}});
+
+var CryptGetKeyParam = Module.findExportByName("cryptsp.dll", "CryptGetKeyParam")
+Interceptor.attach(CryptGetKeyParam, {onLeave: function (args) {send("CryptGetKeyParam");}});
+
+var CryptGetProvParam = Module.findExportByName("cryptsp.dll", "CryptGetProvParam")
+Interceptor.attach(CryptGetProvParam, {onLeave: function (args) {send("CryptGetProvParam");}});
+
+var CryptGetUserKey = Module.findExportByName("cryptsp.dll", "CryptGetUserKey")
+Interceptor.attach(CryptGetUserKey, {onLeave: function (args) {send("CryptGetUserKey");}});
+
+var CryptHashData = Module.findExportByName("cryptsp.dll", "CryptHashData")
+Interceptor.attach(CryptHashData, {onLeave: function (args) {send("CryptHashData");}});
+
+var CryptHashSessionKey = Module.findExportByName("cryptsp.dll", "CryptHashSessionKey")
+Interceptor.attach(CryptHashSessionKey, {onLeave: function (args) {send("CryptHashSessionKey");}});
+
+var CryptImportKey = Module.findExportByName("cryptsp.dll", "CryptImportKey")
+Interceptor.attach(CryptImportKey, {onLeave: function (args) {send("CryptImportKey");}});
+
+var CryptReleaseContext = Module.findExportByName("cryptsp.dll", "CryptReleaseContext")
+Interceptor.attach(CryptReleaseContext, {onLeave: function (args) {send("CryptReleaseContext");}});
+
+var CryptSetHashParam = Module.findExportByName("cryptsp.dll", "CryptSetHashParam")
+Interceptor.attach(CryptSetHashParam, {onLeave: function (args) {send("CryptSetHashParam");}});
+
+var CryptSetKeyParam = Module.findExportByName("cryptsp.dll", "CryptSetKeyParam")
+Interceptor.attach(CryptSetKeyParam, {onLeave: function (args) {send("CryptSetKeyParam");}});
+
+var CryptSetProvParam = Module.findExportByName("cryptsp.dll", "CryptSetProvParam")
+Interceptor.attach(CryptSetProvParam, {onLeave: function (args) {send("CryptSetProvParam");}});
+
+var CryptSetProviderA = Module.findExportByName("cryptsp.dll", "CryptSetProviderA")
+Interceptor.attach(CryptSetProviderA, {onLeave: function (args) {send("CryptSetProviderA");}});
+
+var CryptSetProviderExA = Module.findExportByName("cryptsp.dll", "CryptSetProviderExA")
+Interceptor.attach(CryptSetProviderExA, {onLeave: function (args) {send("CryptSetProviderExA");}});
+
+var CryptSetProviderExW = Module.findExportByName("cryptsp.dll", "CryptSetProviderExW")
+Interceptor.attach(CryptSetProviderExW, {onLeave: function (args) {send("CryptSetProviderExW");}});
+
+var CryptSetProviderW = Module.findExportByName("cryptsp.dll", "CryptSetProviderW")
+Interceptor.attach(CryptSetProviderW, {onLeave: function (args) {send("CryptSetProviderW");}});
+
+var CryptSignHashA = Module.findExportByName("cryptsp.dll", "CryptSignHashA")
+Interceptor.attach(CryptSignHashA, {onLeave: function (args) {send("CryptSignHashA");}});
+
+var CryptSignHashW = Module.findExportByName("cryptsp.dll", "CryptSignHashW")
+Interceptor.attach(CryptSignHashW, {onLeave: function (args) {send("CryptSignHashW");}});
+
+var CryptVerifySignatureA = Module.findExportByName("cryptsp.dll", "CryptVerifySignatureA")
+Interceptor.attach(CryptVerifySignatureA, {onLeave: function (args) {send("CryptVerifySignatureA");}});
+
+var CryptVerifySignatureW = Module.findExportByName("cryptsp.dll", "CryptVerifySignatureW")
+Interceptor.attach(CryptVerifySignatureW, {onLeave: function (args) {send("CryptVerifySignatureW");}});
+
+var SystemFunction006 = Module.findExportByName("cryptsp.dll", "SystemFunction006")
+Interceptor.attach(SystemFunction006, {onLeave: function (args) {send("SystemFunction006");}});
+
+var SystemFunction007 = Module.findExportByName("cryptsp.dll", "SystemFunction007")
+Interceptor.attach(SystemFunction007, {onLeave: function (args) {send("SystemFunction007");}});
+
+var SystemFunction008 = Module.findExportByName("cryptsp.dll", "SystemFunction008")
+Interceptor.attach(SystemFunction008, {onLeave: function (args) {send("SystemFunction008");}});
+
+var SystemFunction009 = Module.findExportByName("cryptsp.dll", "SystemFunction009")
+Interceptor.attach(SystemFunction009, {onLeave: function (args) {send("SystemFunction009");}});
+
+var SystemFunction010 = Module.findExportByName("cryptsp.dll", "SystemFunction010")
+Interceptor.attach(SystemFunction010, {onLeave: function (args) {send("SystemFunction010");}});
+
+var SystemFunction011 = Module.findExportByName("cryptsp.dll", "SystemFunction011")
+Interceptor.attach(SystemFunction011, {onLeave: function (args) {send("SystemFunction011");}});
+
+var SystemFunction012 = Module.findExportByName("cryptsp.dll", "SystemFunction012")
+Interceptor.attach(SystemFunction012, {onLeave: function (args) {send("SystemFunction012");}});
+
+var SystemFunction013 = Module.findExportByName("cryptsp.dll", "SystemFunction013")
+Interceptor.attach(SystemFunction013, {onLeave: function (args) {send("SystemFunction013");}});
+
+var SystemFunction014 = Module.findExportByName("cryptsp.dll", "SystemFunction014")
+Interceptor.attach(SystemFunction014, {onLeave: function (args) {send("SystemFunction014");}});
+
+var SystemFunction015 = Module.findExportByName("cryptsp.dll", "SystemFunction015")
+Interceptor.attach(SystemFunction015, {onLeave: function (args) {send("SystemFunction015");}});
+
+var SystemFunction016 = Module.findExportByName("cryptsp.dll", "SystemFunction016")
+Interceptor.attach(SystemFunction016, {onLeave: function (args) {send("SystemFunction016");}});
+
+var SystemFunction018 = Module.findExportByName("cryptsp.dll", "SystemFunction018")
+Interceptor.attach(SystemFunction018, {onLeave: function (args) {send("SystemFunction018");}});
+
+var SystemFunction020 = Module.findExportByName("cryptsp.dll", "SystemFunction020")
+Interceptor.attach(SystemFunction020, {onLeave: function (args) {send("SystemFunction020");}});
+
+var SystemFunction021 = Module.findExportByName("cryptsp.dll", "SystemFunction021")
+Interceptor.attach(SystemFunction021, {onLeave: function (args) {send("SystemFunction021");}});
+
+var SystemFunction022 = Module.findExportByName("cryptsp.dll", "SystemFunction022")
+Interceptor.attach(SystemFunction022, {onLeave: function (args) {send("SystemFunction022");}});
+
+var SystemFunction023 = Module.findExportByName("cryptsp.dll", "SystemFunction023")
+Interceptor.attach(SystemFunction023, {onLeave: function (args) {send("SystemFunction023");}});
+
+var SystemFunction024 = Module.findExportByName("cryptsp.dll", "SystemFunction024")
+Interceptor.attach(SystemFunction024, {onLeave: function (args) {send("SystemFunction024");}});
+
+var SystemFunction025 = Module.findExportByName("cryptsp.dll", "SystemFunction025")
+Interceptor.attach(SystemFunction025, {onLeave: function (args) {send("SystemFunction025");}});
+
+var SystemFunction026 = Module.findExportByName("cryptsp.dll", "SystemFunction026")
+Interceptor.attach(SystemFunction026, {onLeave: function (args) {send("SystemFunction026");}});
+
+var SystemFunction027 = Module.findExportByName("cryptsp.dll", "SystemFunction027")
+Interceptor.attach(SystemFunction027, {onLeave: function (args) {send("SystemFunction027");}});
+
+var SystemFunction030 = Module.findExportByName("cryptsp.dll", "SystemFunction030")
+Interceptor.attach(SystemFunction030, {onLeave: function (args) {send("SystemFunction030");}});
+
+var SystemFunction031 = Module.findExportByName("cryptsp.dll", "SystemFunction031")
+Interceptor.attach(SystemFunction031, {onLeave: function (args) {send("SystemFunction031");}});
+
+var SystemFunction032 = Module.findExportByName("cryptsp.dll", "SystemFunction032")
+Interceptor.attach(SystemFunction032, {onLeave: function (args) {send("SystemFunction032");}});
+
+var SystemFunction033 = Module.findExportByName("cryptsp.dll", "SystemFunction033")
+Interceptor.attach(SystemFunction033, {onLeave: function (args) {send("SystemFunction033");}});
+
+var SystemFunction035 = Module.findExportByName("cryptsp.dll", "SystemFunction035")
+Interceptor.attach(SystemFunction035, {onLeave: function (args) {send("SystemFunction035");}});
+

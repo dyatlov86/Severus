@@ -1,0 +1,15 @@
+var CreateInstance = Module.findExportByName("WMSPDMOD.DLL", "CreateInstance")
+Interceptor.attach(CreateInstance, {onLeave: function (args) {send("CreateInstance");}});
+
+var DllCanUnloadNow = Module.findExportByName("WMSPDMOD.DLL", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("WMSPDMOD.DLL", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("WMSPDMOD.DLL", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("WMSPDMOD.DLL", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

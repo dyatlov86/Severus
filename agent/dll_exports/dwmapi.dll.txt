@@ -1,0 +1,132 @@
+var DllCanUnloadNow = Module.findExportByName("dwmapi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("dwmapi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DwmAttachMilContent = Module.findExportByName("dwmapi.dll", "DwmAttachMilContent")
+Interceptor.attach(DwmAttachMilContent, {onLeave: function (args) {send("DwmAttachMilContent");}});
+
+var DwmDefWindowProc = Module.findExportByName("dwmapi.dll", "DwmDefWindowProc")
+Interceptor.attach(DwmDefWindowProc, {onLeave: function (args) {send("DwmDefWindowProc");}});
+
+var DwmDetachMilContent = Module.findExportByName("dwmapi.dll", "DwmDetachMilContent")
+Interceptor.attach(DwmDetachMilContent, {onLeave: function (args) {send("DwmDetachMilContent");}});
+
+var DwmEnableBlurBehindWindow = Module.findExportByName("dwmapi.dll", "DwmEnableBlurBehindWindow")
+Interceptor.attach(DwmEnableBlurBehindWindow, {onLeave: function (args) {send("DwmEnableBlurBehindWindow");}});
+
+var DwmEnableComposition = Module.findExportByName("dwmapi.dll", "DwmEnableComposition")
+Interceptor.attach(DwmEnableComposition, {onLeave: function (args) {send("DwmEnableComposition");}});
+
+var DwmEnableMMCSS = Module.findExportByName("dwmapi.dll", "DwmEnableMMCSS")
+Interceptor.attach(DwmEnableMMCSS, {onLeave: function (args) {send("DwmEnableMMCSS");}});
+
+var DwmExtendFrameIntoClientArea = Module.findExportByName("dwmapi.dll", "DwmExtendFrameIntoClientArea")
+Interceptor.attach(DwmExtendFrameIntoClientArea, {onLeave: function (args) {send("DwmExtendFrameIntoClientArea");}});
+
+var DwmFlush = Module.findExportByName("dwmapi.dll", "DwmFlush")
+Interceptor.attach(DwmFlush, {onLeave: function (args) {send("DwmFlush");}});
+
+var DwmGetColorizationColor = Module.findExportByName("dwmapi.dll", "DwmGetColorizationColor")
+Interceptor.attach(DwmGetColorizationColor, {onLeave: function (args) {send("DwmGetColorizationColor");}});
+
+var DwmGetCompositionTimingInfo = Module.findExportByName("dwmapi.dll", "DwmGetCompositionTimingInfo")
+Interceptor.attach(DwmGetCompositionTimingInfo, {onLeave: function (args) {send("DwmGetCompositionTimingInfo");}});
+
+var DwmGetGraphicsStreamClient = Module.findExportByName("dwmapi.dll", "DwmGetGraphicsStreamClient")
+Interceptor.attach(DwmGetGraphicsStreamClient, {onLeave: function (args) {send("DwmGetGraphicsStreamClient");}});
+
+var DwmGetGraphicsStreamTransformHint = Module.findExportByName("dwmapi.dll", "DwmGetGraphicsStreamTransformHint")
+Interceptor.attach(DwmGetGraphicsStreamTransformHint, {onLeave: function (args) {send("DwmGetGraphicsStreamTransformHint");}});
+
+var DwmGetTransportAttributes = Module.findExportByName("dwmapi.dll", "DwmGetTransportAttributes")
+Interceptor.attach(DwmGetTransportAttributes, {onLeave: function (args) {send("DwmGetTransportAttributes");}});
+
+var DwmGetUnmetTabRequirements = Module.findExportByName("dwmapi.dll", "DwmGetUnmetTabRequirements")
+Interceptor.attach(DwmGetUnmetTabRequirements, {onLeave: function (args) {send("DwmGetUnmetTabRequirements");}});
+
+var DwmGetWindowAttribute = Module.findExportByName("dwmapi.dll", "DwmGetWindowAttribute")
+Interceptor.attach(DwmGetWindowAttribute, {onLeave: function (args) {send("DwmGetWindowAttribute");}});
+
+var DwmInvalidateIconicBitmaps = Module.findExportByName("dwmapi.dll", "DwmInvalidateIconicBitmaps")
+Interceptor.attach(DwmInvalidateIconicBitmaps, {onLeave: function (args) {send("DwmInvalidateIconicBitmaps");}});
+
+var DwmIsCompositionEnabled = Module.findExportByName("dwmapi.dll", "DwmIsCompositionEnabled")
+Interceptor.attach(DwmIsCompositionEnabled, {onLeave: function (args) {send("DwmIsCompositionEnabled");}});
+
+var DwmModifyPreviousDxFrameDuration = Module.findExportByName("dwmapi.dll", "DwmModifyPreviousDxFrameDuration")
+Interceptor.attach(DwmModifyPreviousDxFrameDuration, {onLeave: function (args) {send("DwmModifyPreviousDxFrameDuration");}});
+
+var DwmQueryThumbnailSourceSize = Module.findExportByName("dwmapi.dll", "DwmQueryThumbnailSourceSize")
+Interceptor.attach(DwmQueryThumbnailSourceSize, {onLeave: function (args) {send("DwmQueryThumbnailSourceSize");}});
+
+var DwmRegisterThumbnail = Module.findExportByName("dwmapi.dll", "DwmRegisterThumbnail")
+Interceptor.attach(DwmRegisterThumbnail, {onLeave: function (args) {send("DwmRegisterThumbnail");}});
+
+var DwmRenderGesture = Module.findExportByName("dwmapi.dll", "DwmRenderGesture")
+Interceptor.attach(DwmRenderGesture, {onLeave: function (args) {send("DwmRenderGesture");}});
+
+var DwmSetDxFrameDuration = Module.findExportByName("dwmapi.dll", "DwmSetDxFrameDuration")
+Interceptor.attach(DwmSetDxFrameDuration, {onLeave: function (args) {send("DwmSetDxFrameDuration");}});
+
+var DwmSetIconicLivePreviewBitmap = Module.findExportByName("dwmapi.dll", "DwmSetIconicLivePreviewBitmap")
+Interceptor.attach(DwmSetIconicLivePreviewBitmap, {onLeave: function (args) {send("DwmSetIconicLivePreviewBitmap");}});
+
+var DwmSetIconicThumbnail = Module.findExportByName("dwmapi.dll", "DwmSetIconicThumbnail")
+Interceptor.attach(DwmSetIconicThumbnail, {onLeave: function (args) {send("DwmSetIconicThumbnail");}});
+
+var DwmSetPresentParameters = Module.findExportByName("dwmapi.dll", "DwmSetPresentParameters")
+Interceptor.attach(DwmSetPresentParameters, {onLeave: function (args) {send("DwmSetPresentParameters");}});
+
+var DwmSetWindowAttribute = Module.findExportByName("dwmapi.dll", "DwmSetWindowAttribute")
+Interceptor.attach(DwmSetWindowAttribute, {onLeave: function (args) {send("DwmSetWindowAttribute");}});
+
+var DwmShowContact = Module.findExportByName("dwmapi.dll", "DwmShowContact")
+Interceptor.attach(DwmShowContact, {onLeave: function (args) {send("DwmShowContact");}});
+
+var DwmTetherContact = Module.findExportByName("dwmapi.dll", "DwmTetherContact")
+Interceptor.attach(DwmTetherContact, {onLeave: function (args) {send("DwmTetherContact");}});
+
+var DwmTetherTextContact = Module.findExportByName("dwmapi.dll", "DwmTetherTextContact")
+Interceptor.attach(DwmTetherTextContact, {onLeave: function (args) {send("DwmTetherTextContact");}});
+
+var DwmTransitionOwnedWindow = Module.findExportByName("dwmapi.dll", "DwmTransitionOwnedWindow")
+Interceptor.attach(DwmTransitionOwnedWindow, {onLeave: function (args) {send("DwmTransitionOwnedWindow");}});
+
+var DwmUnregisterThumbnail = Module.findExportByName("dwmapi.dll", "DwmUnregisterThumbnail")
+Interceptor.attach(DwmUnregisterThumbnail, {onLeave: function (args) {send("DwmUnregisterThumbnail");}});
+
+var DwmUpdateThumbnailProperties = Module.findExportByName("dwmapi.dll", "DwmUpdateThumbnailProperties")
+Interceptor.attach(DwmUpdateThumbnailProperties, {onLeave: function (args) {send("DwmUpdateThumbnailProperties");}});
+
+var DwmpAllocateSecurityDescriptor = Module.findExportByName("dwmapi.dll", "DwmpAllocateSecurityDescriptor")
+Interceptor.attach(DwmpAllocateSecurityDescriptor, {onLeave: function (args) {send("DwmpAllocateSecurityDescriptor");}});
+
+var DwmpDxGetWindowSharedSurface = Module.findExportByName("dwmapi.dll", "DwmpDxGetWindowSharedSurface")
+Interceptor.attach(DwmpDxGetWindowSharedSurface, {onLeave: function (args) {send("DwmpDxGetWindowSharedSurface");}});
+
+var DwmpDxUpdateWindowSharedSurface = Module.findExportByName("dwmapi.dll", "DwmpDxUpdateWindowSharedSurface")
+Interceptor.attach(DwmpDxUpdateWindowSharedSurface, {onLeave: function (args) {send("DwmpDxUpdateWindowSharedSurface");}});
+
+var DwmpDxgiIsThreadDesktopComposited = Module.findExportByName("dwmapi.dll", "DwmpDxgiIsThreadDesktopComposited")
+Interceptor.attach(DwmpDxgiIsThreadDesktopComposited, {onLeave: function (args) {send("DwmpDxgiIsThreadDesktopComposited");}});
+
+var DwmpEnableDDASupport = Module.findExportByName("dwmapi.dll", "DwmpEnableDDASupport")
+Interceptor.attach(DwmpEnableDDASupport, {onLeave: function (args) {send("DwmpEnableDDASupport");}});
+
+var DwmpFreeSecurityDescriptor = Module.findExportByName("dwmapi.dll", "DwmpFreeSecurityDescriptor")
+Interceptor.attach(DwmpFreeSecurityDescriptor, {onLeave: function (args) {send("DwmpFreeSecurityDescriptor");}});
+
+var DwmpGetColorizationParameters = Module.findExportByName("dwmapi.dll", "DwmpGetColorizationParameters")
+Interceptor.attach(DwmpGetColorizationParameters, {onLeave: function (args) {send("DwmpGetColorizationParameters");}});
+
+var DwmpRenderFlick = Module.findExportByName("dwmapi.dll", "DwmpRenderFlick")
+Interceptor.attach(DwmpRenderFlick, {onLeave: function (args) {send("DwmpRenderFlick");}});
+
+var DwmpSetColorizationParameters = Module.findExportByName("dwmapi.dll", "DwmpSetColorizationParameters")
+Interceptor.attach(DwmpSetColorizationParameters, {onLeave: function (args) {send("DwmpSetColorizationParameters");}});
+
+var DwmpUpdateProxyWindowForCapture = Module.findExportByName("dwmapi.dll", "DwmpUpdateProxyWindowForCapture")
+Interceptor.attach(DwmpUpdateProxyWindowForCapture, {onLeave: function (args) {send("DwmpUpdateProxyWindowForCapture");}});
+

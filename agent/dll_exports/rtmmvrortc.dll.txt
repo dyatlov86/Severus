@@ -1,0 +1,15 @@
+var MediaVRCreateORTCRenderer = Module.findExportByName("rtmmvrortc.dll", "MediaVRCreateORTCRenderer")
+Interceptor.attach(MediaVRCreateORTCRenderer, {onLeave: function (args) {send("MediaVRCreateORTCRenderer");}});
+
+var MediaVRDestroyORTCRenderer = Module.findExportByName("rtmmvrortc.dll", "MediaVRDestroyORTCRenderer")
+Interceptor.attach(MediaVRDestroyORTCRenderer, {onLeave: function (args) {send("MediaVRDestroyORTCRenderer");}});
+
+var MediaVRGetORTCRenderContext = Module.findExportByName("rtmmvrortc.dll", "MediaVRGetORTCRenderContext")
+Interceptor.attach(MediaVRGetORTCRenderContext, {onLeave: function (args) {send("MediaVRGetORTCRenderContext");}});
+
+var MediaVRRequestKeyFrame = Module.findExportByName("rtmmvrortc.dll", "MediaVRRequestKeyFrame")
+Interceptor.attach(MediaVRRequestKeyFrame, {onLeave: function (args) {send("MediaVRRequestKeyFrame");}});
+
+var MediaVRSetDecodingHealth = Module.findExportByName("rtmmvrortc.dll", "MediaVRSetDecodingHealth")
+Interceptor.attach(MediaVRSetDecodingHealth, {onLeave: function (args) {send("MediaVRSetDecodingHealth");}});
+

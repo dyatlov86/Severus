@@ -1,0 +1,24 @@
+var StreamingDeviceClassInstaller = Module.findExportByName("streamci.dll", "StreamingDeviceClassInstaller")
+Interceptor.attach(StreamingDeviceClassInstaller, {onLeave: function (args) {send("StreamingDeviceClassInstaller");}});
+
+var StreamingDeviceRemove = Module.findExportByName("streamci.dll", "StreamingDeviceRemove")
+Interceptor.attach(StreamingDeviceRemove, {onLeave: function (args) {send("StreamingDeviceRemove");}});
+
+var StreamingDeviceRemoveA = Module.findExportByName("streamci.dll", "StreamingDeviceRemoveA")
+Interceptor.attach(StreamingDeviceRemoveA, {onLeave: function (args) {send("StreamingDeviceRemoveA");}});
+
+var StreamingDeviceRemoveW = Module.findExportByName("streamci.dll", "StreamingDeviceRemoveW")
+Interceptor.attach(StreamingDeviceRemoveW, {onLeave: function (args) {send("StreamingDeviceRemoveW");}});
+
+var StreamingDeviceSetup = Module.findExportByName("streamci.dll", "StreamingDeviceSetup")
+Interceptor.attach(StreamingDeviceSetup, {onLeave: function (args) {send("StreamingDeviceSetup");}});
+
+var StreamingDeviceSetupA = Module.findExportByName("streamci.dll", "StreamingDeviceSetupA")
+Interceptor.attach(StreamingDeviceSetupA, {onLeave: function (args) {send("StreamingDeviceSetupA");}});
+
+var StreamingDeviceSetupW = Module.findExportByName("streamci.dll", "StreamingDeviceSetupW")
+Interceptor.attach(StreamingDeviceSetupW, {onLeave: function (args) {send("StreamingDeviceSetupW");}});
+
+var SwEnumCoInstaller = Module.findExportByName("streamci.dll", "SwEnumCoInstaller")
+Interceptor.attach(SwEnumCoInstaller, {onLeave: function (args) {send("SwEnumCoInstaller");}});
+

@@ -1,0 +1,30 @@
+var CreateSystemInputHost = Module.findExportByName("ISM.dll", "CreateSystemInputHost")
+Interceptor.attach(CreateSystemInputHost, {onLeave: function (args) {send("CreateSystemInputHost");}});
+
+var IsSystemInputHostStandalone = Module.findExportByName("ISM.dll", "IsSystemInputHostStandalone")
+Interceptor.attach(IsSystemInputHostStandalone, {onLeave: function (args) {send("IsSystemInputHostStandalone");}});
+
+var NotifyInputSinkParented = Module.findExportByName("ISM.dll", "NotifyInputSinkParented")
+Interceptor.attach(NotifyInputSinkParented, {onLeave: function (args) {send("NotifyInputSinkParented");}});
+
+var NotifyInputSinkRemoved = Module.findExportByName("ISM.dll", "NotifyInputSinkRemoved")
+Interceptor.attach(NotifyInputSinkRemoved, {onLeave: function (args) {send("NotifyInputSinkRemoved");}});
+
+var NotifyInputSinkTransformChanged = Module.findExportByName("ISM.dll", "NotifyInputSinkTransformChanged")
+Interceptor.attach(NotifyInputSinkTransformChanged, {onLeave: function (args) {send("NotifyInputSinkTransformChanged");}});
+
+var Register3DCompositor = Module.findExportByName("ISM.dll", "Register3DCompositor")
+Interceptor.attach(Register3DCompositor, {onLeave: function (args) {send("Register3DCompositor");}});
+
+var RegisterManipulationThread = Module.findExportByName("ISM.dll", "RegisterManipulationThread")
+Interceptor.attach(RegisterManipulationThread, {onLeave: function (args) {send("RegisterManipulationThread");}});
+
+var SetManipulationInputTarget = Module.findExportByName("ISM.dll", "SetManipulationInputTarget")
+Interceptor.attach(SetManipulationInputTarget, {onLeave: function (args) {send("SetManipulationInputTarget");}});
+
+var StopAndEndInertia = Module.findExportByName("ISM.dll", "StopAndEndInertia")
+Interceptor.attach(StopAndEndInertia, {onLeave: function (args) {send("StopAndEndInertia");}});
+
+var Unregister3DCompositor = Module.findExportByName("ISM.dll", "Unregister3DCompositor")
+Interceptor.attach(Unregister3DCompositor, {onLeave: function (args) {send("Unregister3DCompositor");}});
+

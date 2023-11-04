@@ -1,0 +1,96 @@
+var DllCanUnloadNow = Module.findExportByName("hlink.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("hlink.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("hlink.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("hlink.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var HlinkClone = Module.findExportByName("hlink.dll", "HlinkClone")
+Interceptor.attach(HlinkClone, {onLeave: function (args) {send("HlinkClone");}});
+
+var HlinkCreateBrowseContext = Module.findExportByName("hlink.dll", "HlinkCreateBrowseContext")
+Interceptor.attach(HlinkCreateBrowseContext, {onLeave: function (args) {send("HlinkCreateBrowseContext");}});
+
+var HlinkCreateExtensionServices = Module.findExportByName("hlink.dll", "HlinkCreateExtensionServices")
+Interceptor.attach(HlinkCreateExtensionServices, {onLeave: function (args) {send("HlinkCreateExtensionServices");}});
+
+var HlinkCreateFromData = Module.findExportByName("hlink.dll", "HlinkCreateFromData")
+Interceptor.attach(HlinkCreateFromData, {onLeave: function (args) {send("HlinkCreateFromData");}});
+
+var HlinkCreateFromMoniker = Module.findExportByName("hlink.dll", "HlinkCreateFromMoniker")
+Interceptor.attach(HlinkCreateFromMoniker, {onLeave: function (args) {send("HlinkCreateFromMoniker");}});
+
+var HlinkCreateFromString = Module.findExportByName("hlink.dll", "HlinkCreateFromString")
+Interceptor.attach(HlinkCreateFromString, {onLeave: function (args) {send("HlinkCreateFromString");}});
+
+var HlinkCreateShortcut = Module.findExportByName("hlink.dll", "HlinkCreateShortcut")
+Interceptor.attach(HlinkCreateShortcut, {onLeave: function (args) {send("HlinkCreateShortcut");}});
+
+var HlinkCreateShortcutFromMoniker = Module.findExportByName("hlink.dll", "HlinkCreateShortcutFromMoniker")
+Interceptor.attach(HlinkCreateShortcutFromMoniker, {onLeave: function (args) {send("HlinkCreateShortcutFromMoniker");}});
+
+var HlinkCreateShortcutFromString = Module.findExportByName("hlink.dll", "HlinkCreateShortcutFromString")
+Interceptor.attach(HlinkCreateShortcutFromString, {onLeave: function (args) {send("HlinkCreateShortcutFromString");}});
+
+var HlinkGetSpecialReference = Module.findExportByName("hlink.dll", "HlinkGetSpecialReference")
+Interceptor.attach(HlinkGetSpecialReference, {onLeave: function (args) {send("HlinkGetSpecialReference");}});
+
+var HlinkGetValueFromParams = Module.findExportByName("hlink.dll", "HlinkGetValueFromParams")
+Interceptor.attach(HlinkGetValueFromParams, {onLeave: function (args) {send("HlinkGetValueFromParams");}});
+
+var HlinkIsShortcut = Module.findExportByName("hlink.dll", "HlinkIsShortcut")
+Interceptor.attach(HlinkIsShortcut, {onLeave: function (args) {send("HlinkIsShortcut");}});
+
+var HlinkNavigate = Module.findExportByName("hlink.dll", "HlinkNavigate")
+Interceptor.attach(HlinkNavigate, {onLeave: function (args) {send("HlinkNavigate");}});
+
+var HlinkNavigateToStringReference = Module.findExportByName("hlink.dll", "HlinkNavigateToStringReference")
+Interceptor.attach(HlinkNavigateToStringReference, {onLeave: function (args) {send("HlinkNavigateToStringReference");}});
+
+var HlinkOnNavigate = Module.findExportByName("hlink.dll", "HlinkOnNavigate")
+Interceptor.attach(HlinkOnNavigate, {onLeave: function (args) {send("HlinkOnNavigate");}});
+
+var HlinkOnRenameDocument = Module.findExportByName("hlink.dll", "HlinkOnRenameDocument")
+Interceptor.attach(HlinkOnRenameDocument, {onLeave: function (args) {send("HlinkOnRenameDocument");}});
+
+var HlinkParseDisplayName = Module.findExportByName("hlink.dll", "HlinkParseDisplayName")
+Interceptor.attach(HlinkParseDisplayName, {onLeave: function (args) {send("HlinkParseDisplayName");}});
+
+var HlinkPreprocessMoniker = Module.findExportByName("hlink.dll", "HlinkPreprocessMoniker")
+Interceptor.attach(HlinkPreprocessMoniker, {onLeave: function (args) {send("HlinkPreprocessMoniker");}});
+
+var HlinkQueryCreateFromData = Module.findExportByName("hlink.dll", "HlinkQueryCreateFromData")
+Interceptor.attach(HlinkQueryCreateFromData, {onLeave: function (args) {send("HlinkQueryCreateFromData");}});
+
+var HlinkResolveMonikerForData = Module.findExportByName("hlink.dll", "HlinkResolveMonikerForData")
+Interceptor.attach(HlinkResolveMonikerForData, {onLeave: function (args) {send("HlinkResolveMonikerForData");}});
+
+var HlinkResolveShortcut = Module.findExportByName("hlink.dll", "HlinkResolveShortcut")
+Interceptor.attach(HlinkResolveShortcut, {onLeave: function (args) {send("HlinkResolveShortcut");}});
+
+var HlinkResolveShortcutToMoniker = Module.findExportByName("hlink.dll", "HlinkResolveShortcutToMoniker")
+Interceptor.attach(HlinkResolveShortcutToMoniker, {onLeave: function (args) {send("HlinkResolveShortcutToMoniker");}});
+
+var HlinkResolveShortcutToString = Module.findExportByName("hlink.dll", "HlinkResolveShortcutToString")
+Interceptor.attach(HlinkResolveShortcutToString, {onLeave: function (args) {send("HlinkResolveShortcutToString");}});
+
+var HlinkResolveStringForData = Module.findExportByName("hlink.dll", "HlinkResolveStringForData")
+Interceptor.attach(HlinkResolveStringForData, {onLeave: function (args) {send("HlinkResolveStringForData");}});
+
+var HlinkSetSpecialReference = Module.findExportByName("hlink.dll", "HlinkSetSpecialReference")
+Interceptor.attach(HlinkSetSpecialReference, {onLeave: function (args) {send("HlinkSetSpecialReference");}});
+
+var HlinkTranslateURL = Module.findExportByName("hlink.dll", "HlinkTranslateURL")
+Interceptor.attach(HlinkTranslateURL, {onLeave: function (args) {send("HlinkTranslateURL");}});
+
+var HlinkUpdateStackItem = Module.findExportByName("hlink.dll", "HlinkUpdateStackItem")
+Interceptor.attach(HlinkUpdateStackItem, {onLeave: function (args) {send("HlinkUpdateStackItem");}});
+
+var OleSaveToStreamEx = Module.findExportByName("hlink.dll", "OleSaveToStreamEx")
+Interceptor.attach(OleSaveToStreamEx, {onLeave: function (args) {send("OleSaveToStreamEx");}});
+

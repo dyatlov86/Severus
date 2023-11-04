@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("cabview.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("cabview.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var Uninstall = Module.findExportByName("cabview.dll", "Uninstall")
+Interceptor.attach(Uninstall, {onLeave: function (args) {send("Uninstall");}});
+

@@ -1,0 +1,72 @@
+var DllCanUnloadNow = Module.findExportByName("iassvcs.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("iassvcs.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("iassvcs.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("iassvcs.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var IASAdler32 = Module.findExportByName("iassvcs.dll", "IASAdler32")
+Interceptor.attach(IASAdler32, {onLeave: function (args) {send("IASAdler32");}});
+
+var IASAllocateUniqueID = Module.findExportByName("iassvcs.dll", "IASAllocateUniqueID")
+Interceptor.attach(IASAllocateUniqueID, {onLeave: function (args) {send("IASAllocateUniqueID");}});
+
+var IASGetDictionary = Module.findExportByName("iassvcs.dll", "IASGetDictionary")
+Interceptor.attach(IASGetDictionary, {onLeave: function (args) {send("IASGetDictionary");}});
+
+var IASGetHostByName = Module.findExportByName("iassvcs.dll", "IASGetHostByName")
+Interceptor.attach(IASGetHostByName, {onLeave: function (args) {send("IASGetHostByName");}});
+
+var IASGetLocalDictionary = Module.findExportByName("iassvcs.dll", "IASGetLocalDictionary")
+Interceptor.attach(IASGetLocalDictionary, {onLeave: function (args) {send("IASGetLocalDictionary");}});
+
+var IASGetProductLimits = Module.findExportByName("iassvcs.dll", "IASGetProductLimits")
+Interceptor.attach(IASGetProductLimits, {onLeave: function (args) {send("IASGetProductLimits");}});
+
+var IASGlobalLock = Module.findExportByName("iassvcs.dll", "IASGlobalLock")
+Interceptor.attach(IASGlobalLock, {onLeave: function (args) {send("IASGlobalLock");}});
+
+var IASGlobalUnlock = Module.findExportByName("iassvcs.dll", "IASGlobalUnlock")
+Interceptor.attach(IASGlobalUnlock, {onLeave: function (args) {send("IASGlobalUnlock");}});
+
+var IASInitialize = Module.findExportByName("iassvcs.dll", "IASInitialize")
+Interceptor.attach(IASInitialize, {onLeave: function (args) {send("IASInitialize");}});
+
+var IASRadiusCrypt = Module.findExportByName("iassvcs.dll", "IASRadiusCrypt")
+Interceptor.attach(IASRadiusCrypt, {onLeave: function (args) {send("IASRadiusCrypt");}});
+
+var IASRegisterComponent = Module.findExportByName("iassvcs.dll", "IASRegisterComponent")
+Interceptor.attach(IASRegisterComponent, {onLeave: function (args) {send("IASRegisterComponent");}});
+
+var IASReportEvent = Module.findExportByName("iassvcs.dll", "IASReportEvent")
+Interceptor.attach(IASReportEvent, {onLeave: function (args) {send("IASReportEvent");}});
+
+var IASReportLicenseViolation = Module.findExportByName("iassvcs.dll", "IASReportLicenseViolation")
+Interceptor.attach(IASReportLicenseViolation, {onLeave: function (args) {send("IASReportLicenseViolation");}});
+
+var IASReportSecurityEvent = Module.findExportByName("iassvcs.dll", "IASReportSecurityEvent")
+Interceptor.attach(IASReportSecurityEvent, {onLeave: function (args) {send("IASReportSecurityEvent");}});
+
+var IASRequestThread = Module.findExportByName("iassvcs.dll", "IASRequestThread")
+Interceptor.attach(IASRequestThread, {onLeave: function (args) {send("IASRequestThread");}});
+
+var IASSetMaxNumberOfThreads = Module.findExportByName("iassvcs.dll", "IASSetMaxNumberOfThreads")
+Interceptor.attach(IASSetMaxNumberOfThreads, {onLeave: function (args) {send("IASSetMaxNumberOfThreads");}});
+
+var IASSetMaxThreadIdle = Module.findExportByName("iassvcs.dll", "IASSetMaxThreadIdle")
+Interceptor.attach(IASSetMaxThreadIdle, {onLeave: function (args) {send("IASSetMaxThreadIdle");}});
+
+var IASShutdown = Module.findExportByName("iassvcs.dll", "IASShutdown")
+Interceptor.attach(IASShutdown, {onLeave: function (args) {send("IASShutdown");}});
+
+var IASUninitialize = Module.findExportByName("iassvcs.dll", "IASUninitialize")
+Interceptor.attach(IASUninitialize, {onLeave: function (args) {send("IASUninitialize");}});
+
+var IASVariantChangeType = Module.findExportByName("iassvcs.dll", "IASVariantChangeType")
+Interceptor.attach(IASVariantChangeType, {onLeave: function (args) {send("IASVariantChangeType");}});
+

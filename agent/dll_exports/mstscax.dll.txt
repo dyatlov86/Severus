@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("mstscax.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mstscax.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllGetTscCtlVer = Module.findExportByName("mstscax.dll", "DllGetTscCtlVer")
+Interceptor.attach(DllGetTscCtlVer, {onLeave: function (args) {send("DllGetTscCtlVer");}});
+
+var DllRegisterServer = Module.findExportByName("mstscax.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mstscax.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

@@ -1,0 +1,12 @@
+var CreateCmtStoreObject = Module.findExportByName("AdmTmpl.dll", "CreateCmtStoreObject")
+Interceptor.attach(CreateCmtStoreObject, {onLeave: function (args) {send("CreateCmtStoreObject");}});
+
+var CreateParserObject = Module.findExportByName("AdmTmpl.dll", "CreateParserObject")
+Interceptor.attach(CreateParserObject, {onLeave: function (args) {send("CreateParserObject");}});
+
+var DllCanUnloadNow = Module.findExportByName("AdmTmpl.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("AdmTmpl.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

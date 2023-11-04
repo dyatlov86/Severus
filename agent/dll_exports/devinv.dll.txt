@@ -1,0 +1,27 @@
+var CreateDeviceInventory = Module.findExportByName("devinv.dll", "CreateDeviceInventory")
+Interceptor.attach(CreateDeviceInventory, {onLeave: function (args) {send("CreateDeviceInventory");}});
+
+var CreateDeviceInventoryTC = Module.findExportByName("devinv.dll", "CreateDeviceInventoryTC")
+Interceptor.attach(CreateDeviceInventoryTC, {onLeave: function (args) {send("CreateDeviceInventoryTC");}});
+
+var CreateDeviceInventoryTC2 = Module.findExportByName("devinv.dll", "CreateDeviceInventoryTC2")
+Interceptor.attach(CreateDeviceInventoryTC2, {onLeave: function (args) {send("CreateDeviceInventoryTC2");}});
+
+var GetAndSendSigningInfo = Module.findExportByName("devinv.dll", "GetAndSendSigningInfo")
+Interceptor.attach(GetAndSendSigningInfo, {onLeave: function (args) {send("GetAndSendSigningInfo");}});
+
+var GetDevInventory = Module.findExportByName("devinv.dll", "GetDevInventory")
+Interceptor.attach(GetDevInventory, {onLeave: function (args) {send("GetDevInventory");}});
+
+var ReportDeviceAdd = Module.findExportByName("devinv.dll", "ReportDeviceAdd")
+Interceptor.attach(ReportDeviceAdd, {onLeave: function (args) {send("ReportDeviceAdd");}});
+
+var ReportDeviceRemove = Module.findExportByName("devinv.dll", "ReportDeviceRemove")
+Interceptor.attach(ReportDeviceRemove, {onLeave: function (args) {send("ReportDeviceRemove");}});
+
+var RunDeviceInventoryW = Module.findExportByName("devinv.dll", "RunDeviceInventoryW")
+Interceptor.attach(RunDeviceInventoryW, {onLeave: function (args) {send("RunDeviceInventoryW");}});
+
+var SetDevInvDebugCorrelationVector = Module.findExportByName("devinv.dll", "SetDevInvDebugCorrelationVector")
+Interceptor.attach(SetDevInvDebugCorrelationVector, {onLeave: function (args) {send("SetDevInvDebugCorrelationVector");}});
+

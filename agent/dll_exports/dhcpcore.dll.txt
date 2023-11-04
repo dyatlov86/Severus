@@ -1,0 +1,12 @@
+var DhcpGlobalIsShuttingDown = Module.findExportByName("dhcpcore.dll", "DhcpGlobalIsShuttingDown")
+Interceptor.attach(DhcpGlobalIsShuttingDown, {onLeave: function (args) {send("DhcpGlobalIsShuttingDown");}});
+
+var DhcpGlobalServiceSyncEvent = Module.findExportByName("dhcpcore.dll", "DhcpGlobalServiceSyncEvent")
+Interceptor.attach(DhcpGlobalServiceSyncEvent, {onLeave: function (args) {send("DhcpGlobalServiceSyncEvent");}});
+
+var DhcpGlobalTerminateEvent = Module.findExportByName("dhcpcore.dll", "DhcpGlobalTerminateEvent")
+Interceptor.attach(DhcpGlobalTerminateEvent, {onLeave: function (args) {send("DhcpGlobalTerminateEvent");}});
+
+var ServiceMain = Module.findExportByName("dhcpcore.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

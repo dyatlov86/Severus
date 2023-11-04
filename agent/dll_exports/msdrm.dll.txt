@@ -1,0 +1,285 @@
+var DRMAcquireAdvisories = Module.findExportByName("msdrm.dll", "DRMAcquireAdvisories")
+Interceptor.attach(DRMAcquireAdvisories, {onLeave: function (args) {send("DRMAcquireAdvisories");}});
+
+var DRMAcquireIssuanceLicenseTemplate = Module.findExportByName("msdrm.dll", "DRMAcquireIssuanceLicenseTemplate")
+Interceptor.attach(DRMAcquireIssuanceLicenseTemplate, {onLeave: function (args) {send("DRMAcquireIssuanceLicenseTemplate");}});
+
+var DRMAcquireLicense = Module.findExportByName("msdrm.dll", "DRMAcquireLicense")
+Interceptor.attach(DRMAcquireLicense, {onLeave: function (args) {send("DRMAcquireLicense");}});
+
+var DRMActivate = Module.findExportByName("msdrm.dll", "DRMActivate")
+Interceptor.attach(DRMActivate, {onLeave: function (args) {send("DRMActivate");}});
+
+var DRMAddLicense = Module.findExportByName("msdrm.dll", "DRMAddLicense")
+Interceptor.attach(DRMAddLicense, {onLeave: function (args) {send("DRMAddLicense");}});
+
+var DRMAddRightWithUser = Module.findExportByName("msdrm.dll", "DRMAddRightWithUser")
+Interceptor.attach(DRMAddRightWithUser, {onLeave: function (args) {send("DRMAddRightWithUser");}});
+
+var DRMAttest = Module.findExportByName("msdrm.dll", "DRMAttest")
+Interceptor.attach(DRMAttest, {onLeave: function (args) {send("DRMAttest");}});
+
+var DRMCheckSecurity = Module.findExportByName("msdrm.dll", "DRMCheckSecurity")
+Interceptor.attach(DRMCheckSecurity, {onLeave: function (args) {send("DRMCheckSecurity");}});
+
+var DRMClearAllRights = Module.findExportByName("msdrm.dll", "DRMClearAllRights")
+Interceptor.attach(DRMClearAllRights, {onLeave: function (args) {send("DRMClearAllRights");}});
+
+var DRMCloseEnvironmentHandle = Module.findExportByName("msdrm.dll", "DRMCloseEnvironmentHandle")
+Interceptor.attach(DRMCloseEnvironmentHandle, {onLeave: function (args) {send("DRMCloseEnvironmentHandle");}});
+
+var DRMCloseHandle = Module.findExportByName("msdrm.dll", "DRMCloseHandle")
+Interceptor.attach(DRMCloseHandle, {onLeave: function (args) {send("DRMCloseHandle");}});
+
+var DRMClosePubHandle = Module.findExportByName("msdrm.dll", "DRMClosePubHandle")
+Interceptor.attach(DRMClosePubHandle, {onLeave: function (args) {send("DRMClosePubHandle");}});
+
+var DRMCloseQueryHandle = Module.findExportByName("msdrm.dll", "DRMCloseQueryHandle")
+Interceptor.attach(DRMCloseQueryHandle, {onLeave: function (args) {send("DRMCloseQueryHandle");}});
+
+var DRMCloseSession = Module.findExportByName("msdrm.dll", "DRMCloseSession")
+Interceptor.attach(DRMCloseSession, {onLeave: function (args) {send("DRMCloseSession");}});
+
+var DRMConstructCertificateChain = Module.findExportByName("msdrm.dll", "DRMConstructCertificateChain")
+Interceptor.attach(DRMConstructCertificateChain, {onLeave: function (args) {send("DRMConstructCertificateChain");}});
+
+var DRMCreateBoundLicense = Module.findExportByName("msdrm.dll", "DRMCreateBoundLicense")
+Interceptor.attach(DRMCreateBoundLicense, {onLeave: function (args) {send("DRMCreateBoundLicense");}});
+
+var DRMCreateClientSession = Module.findExportByName("msdrm.dll", "DRMCreateClientSession")
+Interceptor.attach(DRMCreateClientSession, {onLeave: function (args) {send("DRMCreateClientSession");}});
+
+var DRMCreateEnablingBitsDecryptor = Module.findExportByName("msdrm.dll", "DRMCreateEnablingBitsDecryptor")
+Interceptor.attach(DRMCreateEnablingBitsDecryptor, {onLeave: function (args) {send("DRMCreateEnablingBitsDecryptor");}});
+
+var DRMCreateEnablingBitsEncryptor = Module.findExportByName("msdrm.dll", "DRMCreateEnablingBitsEncryptor")
+Interceptor.attach(DRMCreateEnablingBitsEncryptor, {onLeave: function (args) {send("DRMCreateEnablingBitsEncryptor");}});
+
+var DRMCreateEnablingPrincipal = Module.findExportByName("msdrm.dll", "DRMCreateEnablingPrincipal")
+Interceptor.attach(DRMCreateEnablingPrincipal, {onLeave: function (args) {send("DRMCreateEnablingPrincipal");}});
+
+var DRMCreateIssuanceLicense = Module.findExportByName("msdrm.dll", "DRMCreateIssuanceLicense")
+Interceptor.attach(DRMCreateIssuanceLicense, {onLeave: function (args) {send("DRMCreateIssuanceLicense");}});
+
+var DRMCreateLicenseStorageSession = Module.findExportByName("msdrm.dll", "DRMCreateLicenseStorageSession")
+Interceptor.attach(DRMCreateLicenseStorageSession, {onLeave: function (args) {send("DRMCreateLicenseStorageSession");}});
+
+var DRMCreateRight = Module.findExportByName("msdrm.dll", "DRMCreateRight")
+Interceptor.attach(DRMCreateRight, {onLeave: function (args) {send("DRMCreateRight");}});
+
+var DRMCreateUser = Module.findExportByName("msdrm.dll", "DRMCreateUser")
+Interceptor.attach(DRMCreateUser, {onLeave: function (args) {send("DRMCreateUser");}});
+
+var DRMDecode = Module.findExportByName("msdrm.dll", "DRMDecode")
+Interceptor.attach(DRMDecode, {onLeave: function (args) {send("DRMDecode");}});
+
+var DRMDeconstructCertificateChain = Module.findExportByName("msdrm.dll", "DRMDeconstructCertificateChain")
+Interceptor.attach(DRMDeconstructCertificateChain, {onLeave: function (args) {send("DRMDeconstructCertificateChain");}});
+
+var DRMDecrypt = Module.findExportByName("msdrm.dll", "DRMDecrypt")
+Interceptor.attach(DRMDecrypt, {onLeave: function (args) {send("DRMDecrypt");}});
+
+var DRMDeleteLicense = Module.findExportByName("msdrm.dll", "DRMDeleteLicense")
+Interceptor.attach(DRMDeleteLicense, {onLeave: function (args) {send("DRMDeleteLicense");}});
+
+var DRMDuplicateEnvironmentHandle = Module.findExportByName("msdrm.dll", "DRMDuplicateEnvironmentHandle")
+Interceptor.attach(DRMDuplicateEnvironmentHandle, {onLeave: function (args) {send("DRMDuplicateEnvironmentHandle");}});
+
+var DRMDuplicateHandle = Module.findExportByName("msdrm.dll", "DRMDuplicateHandle")
+Interceptor.attach(DRMDuplicateHandle, {onLeave: function (args) {send("DRMDuplicateHandle");}});
+
+var DRMDuplicatePubHandle = Module.findExportByName("msdrm.dll", "DRMDuplicatePubHandle")
+Interceptor.attach(DRMDuplicatePubHandle, {onLeave: function (args) {send("DRMDuplicatePubHandle");}});
+
+var DRMDuplicateSession = Module.findExportByName("msdrm.dll", "DRMDuplicateSession")
+Interceptor.attach(DRMDuplicateSession, {onLeave: function (args) {send("DRMDuplicateSession");}});
+
+var DRMEncode = Module.findExportByName("msdrm.dll", "DRMEncode")
+Interceptor.attach(DRMEncode, {onLeave: function (args) {send("DRMEncode");}});
+
+var DRMEncrypt = Module.findExportByName("msdrm.dll", "DRMEncrypt")
+Interceptor.attach(DRMEncrypt, {onLeave: function (args) {send("DRMEncrypt");}});
+
+var DRMEnumerateLicense = Module.findExportByName("msdrm.dll", "DRMEnumerateLicense")
+Interceptor.attach(DRMEnumerateLicense, {onLeave: function (args) {send("DRMEnumerateLicense");}});
+
+var DRMGetApplicationSpecificData = Module.findExportByName("msdrm.dll", "DRMGetApplicationSpecificData")
+Interceptor.attach(DRMGetApplicationSpecificData, {onLeave: function (args) {send("DRMGetApplicationSpecificData");}});
+
+var DRMGetBoundLicenseAttribute = Module.findExportByName("msdrm.dll", "DRMGetBoundLicenseAttribute")
+Interceptor.attach(DRMGetBoundLicenseAttribute, {onLeave: function (args) {send("DRMGetBoundLicenseAttribute");}});
+
+var DRMGetBoundLicenseAttributeCount = Module.findExportByName("msdrm.dll", "DRMGetBoundLicenseAttributeCount")
+Interceptor.attach(DRMGetBoundLicenseAttributeCount, {onLeave: function (args) {send("DRMGetBoundLicenseAttributeCount");}});
+
+var DRMGetBoundLicenseObject = Module.findExportByName("msdrm.dll", "DRMGetBoundLicenseObject")
+Interceptor.attach(DRMGetBoundLicenseObject, {onLeave: function (args) {send("DRMGetBoundLicenseObject");}});
+
+var DRMGetBoundLicenseObjectCount = Module.findExportByName("msdrm.dll", "DRMGetBoundLicenseObjectCount")
+Interceptor.attach(DRMGetBoundLicenseObjectCount, {onLeave: function (args) {send("DRMGetBoundLicenseObjectCount");}});
+
+var DRMGetCertificateChainCount = Module.findExportByName("msdrm.dll", "DRMGetCertificateChainCount")
+Interceptor.attach(DRMGetCertificateChainCount, {onLeave: function (args) {send("DRMGetCertificateChainCount");}});
+
+var DRMGetClientVersion = Module.findExportByName("msdrm.dll", "DRMGetClientVersion")
+Interceptor.attach(DRMGetClientVersion, {onLeave: function (args) {send("DRMGetClientVersion");}});
+
+var DRMGetEnvironmentInfo = Module.findExportByName("msdrm.dll", "DRMGetEnvironmentInfo")
+Interceptor.attach(DRMGetEnvironmentInfo, {onLeave: function (args) {send("DRMGetEnvironmentInfo");}});
+
+var DRMGetInfo = Module.findExportByName("msdrm.dll", "DRMGetInfo")
+Interceptor.attach(DRMGetInfo, {onLeave: function (args) {send("DRMGetInfo");}});
+
+var DRMGetIntervalTime = Module.findExportByName("msdrm.dll", "DRMGetIntervalTime")
+Interceptor.attach(DRMGetIntervalTime, {onLeave: function (args) {send("DRMGetIntervalTime");}});
+
+var DRMGetIssuanceLicenseInfo = Module.findExportByName("msdrm.dll", "DRMGetIssuanceLicenseInfo")
+Interceptor.attach(DRMGetIssuanceLicenseInfo, {onLeave: function (args) {send("DRMGetIssuanceLicenseInfo");}});
+
+var DRMGetIssuanceLicenseTemplate = Module.findExportByName("msdrm.dll", "DRMGetIssuanceLicenseTemplate")
+Interceptor.attach(DRMGetIssuanceLicenseTemplate, {onLeave: function (args) {send("DRMGetIssuanceLicenseTemplate");}});
+
+var DRMGetMetaData = Module.findExportByName("msdrm.dll", "DRMGetMetaData")
+Interceptor.attach(DRMGetMetaData, {onLeave: function (args) {send("DRMGetMetaData");}});
+
+var DRMGetNameAndDescription = Module.findExportByName("msdrm.dll", "DRMGetNameAndDescription")
+Interceptor.attach(DRMGetNameAndDescription, {onLeave: function (args) {send("DRMGetNameAndDescription");}});
+
+var DRMGetOwnerLicense = Module.findExportByName("msdrm.dll", "DRMGetOwnerLicense")
+Interceptor.attach(DRMGetOwnerLicense, {onLeave: function (args) {send("DRMGetOwnerLicense");}});
+
+var DRMGetProcAddress = Module.findExportByName("msdrm.dll", "DRMGetProcAddress")
+Interceptor.attach(DRMGetProcAddress, {onLeave: function (args) {send("DRMGetProcAddress");}});
+
+var DRMGetRevocationPoint = Module.findExportByName("msdrm.dll", "DRMGetRevocationPoint")
+Interceptor.attach(DRMGetRevocationPoint, {onLeave: function (args) {send("DRMGetRevocationPoint");}});
+
+var DRMGetRightExtendedInfo = Module.findExportByName("msdrm.dll", "DRMGetRightExtendedInfo")
+Interceptor.attach(DRMGetRightExtendedInfo, {onLeave: function (args) {send("DRMGetRightExtendedInfo");}});
+
+var DRMGetRightInfo = Module.findExportByName("msdrm.dll", "DRMGetRightInfo")
+Interceptor.attach(DRMGetRightInfo, {onLeave: function (args) {send("DRMGetRightInfo");}});
+
+var DRMGetSecurityProvider = Module.findExportByName("msdrm.dll", "DRMGetSecurityProvider")
+Interceptor.attach(DRMGetSecurityProvider, {onLeave: function (args) {send("DRMGetSecurityProvider");}});
+
+var DRMGetServiceLocation = Module.findExportByName("msdrm.dll", "DRMGetServiceLocation")
+Interceptor.attach(DRMGetServiceLocation, {onLeave: function (args) {send("DRMGetServiceLocation");}});
+
+var DRMGetSignedIssuanceLicense = Module.findExportByName("msdrm.dll", "DRMGetSignedIssuanceLicense")
+Interceptor.attach(DRMGetSignedIssuanceLicense, {onLeave: function (args) {send("DRMGetSignedIssuanceLicense");}});
+
+var DRMGetSignedIssuanceLicenseEx = Module.findExportByName("msdrm.dll", "DRMGetSignedIssuanceLicenseEx")
+Interceptor.attach(DRMGetSignedIssuanceLicenseEx, {onLeave: function (args) {send("DRMGetSignedIssuanceLicenseEx");}});
+
+var DRMGetTime = Module.findExportByName("msdrm.dll", "DRMGetTime")
+Interceptor.attach(DRMGetTime, {onLeave: function (args) {send("DRMGetTime");}});
+
+var DRMGetUnboundLicenseAttribute = Module.findExportByName("msdrm.dll", "DRMGetUnboundLicenseAttribute")
+Interceptor.attach(DRMGetUnboundLicenseAttribute, {onLeave: function (args) {send("DRMGetUnboundLicenseAttribute");}});
+
+var DRMGetUnboundLicenseAttributeCount = Module.findExportByName("msdrm.dll", "DRMGetUnboundLicenseAttributeCount")
+Interceptor.attach(DRMGetUnboundLicenseAttributeCount, {onLeave: function (args) {send("DRMGetUnboundLicenseAttributeCount");}});
+
+var DRMGetUnboundLicenseObject = Module.findExportByName("msdrm.dll", "DRMGetUnboundLicenseObject")
+Interceptor.attach(DRMGetUnboundLicenseObject, {onLeave: function (args) {send("DRMGetUnboundLicenseObject");}});
+
+var DRMGetUnboundLicenseObjectCount = Module.findExportByName("msdrm.dll", "DRMGetUnboundLicenseObjectCount")
+Interceptor.attach(DRMGetUnboundLicenseObjectCount, {onLeave: function (args) {send("DRMGetUnboundLicenseObjectCount");}});
+
+var DRMGetUsagePolicy = Module.findExportByName("msdrm.dll", "DRMGetUsagePolicy")
+Interceptor.attach(DRMGetUsagePolicy, {onLeave: function (args) {send("DRMGetUsagePolicy");}});
+
+var DRMGetUserInfo = Module.findExportByName("msdrm.dll", "DRMGetUserInfo")
+Interceptor.attach(DRMGetUserInfo, {onLeave: function (args) {send("DRMGetUserInfo");}});
+
+var DRMGetUserRights = Module.findExportByName("msdrm.dll", "DRMGetUserRights")
+Interceptor.attach(DRMGetUserRights, {onLeave: function (args) {send("DRMGetUserRights");}});
+
+var DRMGetUsers = Module.findExportByName("msdrm.dll", "DRMGetUsers")
+Interceptor.attach(DRMGetUsers, {onLeave: function (args) {send("DRMGetUsers");}});
+
+var DRMInitEnvironment = Module.findExportByName("msdrm.dll", "DRMInitEnvironment")
+Interceptor.attach(DRMInitEnvironment, {onLeave: function (args) {send("DRMInitEnvironment");}});
+
+var DRMIsActivated = Module.findExportByName("msdrm.dll", "DRMIsActivated")
+Interceptor.attach(DRMIsActivated, {onLeave: function (args) {send("DRMIsActivated");}});
+
+var DRMIsWindowProtected = Module.findExportByName("msdrm.dll", "DRMIsWindowProtected")
+Interceptor.attach(DRMIsWindowProtected, {onLeave: function (args) {send("DRMIsWindowProtected");}});
+
+var DRMLoadLibrary = Module.findExportByName("msdrm.dll", "DRMLoadLibrary")
+Interceptor.attach(DRMLoadLibrary, {onLeave: function (args) {send("DRMLoadLibrary");}});
+
+var DRMParseUnboundLicense = Module.findExportByName("msdrm.dll", "DRMParseUnboundLicense")
+Interceptor.attach(DRMParseUnboundLicense, {onLeave: function (args) {send("DRMParseUnboundLicense");}});
+
+var DRMRegisterContent = Module.findExportByName("msdrm.dll", "DRMRegisterContent")
+Interceptor.attach(DRMRegisterContent, {onLeave: function (args) {send("DRMRegisterContent");}});
+
+var DRMRegisterProtectedWindow = Module.findExportByName("msdrm.dll", "DRMRegisterProtectedWindow")
+Interceptor.attach(DRMRegisterProtectedWindow, {onLeave: function (args) {send("DRMRegisterProtectedWindow");}});
+
+var DRMRegisterRevocationList = Module.findExportByName("msdrm.dll", "DRMRegisterRevocationList")
+Interceptor.attach(DRMRegisterRevocationList, {onLeave: function (args) {send("DRMRegisterRevocationList");}});
+
+var DRMRepair = Module.findExportByName("msdrm.dll", "DRMRepair")
+Interceptor.attach(DRMRepair, {onLeave: function (args) {send("DRMRepair");}});
+
+var DRMSetApplicationSpecificData = Module.findExportByName("msdrm.dll", "DRMSetApplicationSpecificData")
+Interceptor.attach(DRMSetApplicationSpecificData, {onLeave: function (args) {send("DRMSetApplicationSpecificData");}});
+
+var DRMSetGlobalOptions = Module.findExportByName("msdrm.dll", "DRMSetGlobalOptions")
+Interceptor.attach(DRMSetGlobalOptions, {onLeave: function (args) {send("DRMSetGlobalOptions");}});
+
+var DRMSetIntervalTime = Module.findExportByName("msdrm.dll", "DRMSetIntervalTime")
+Interceptor.attach(DRMSetIntervalTime, {onLeave: function (args) {send("DRMSetIntervalTime");}});
+
+var DRMSetMetaData = Module.findExportByName("msdrm.dll", "DRMSetMetaData")
+Interceptor.attach(DRMSetMetaData, {onLeave: function (args) {send("DRMSetMetaData");}});
+
+var DRMSetNameAndDescription = Module.findExportByName("msdrm.dll", "DRMSetNameAndDescription")
+Interceptor.attach(DRMSetNameAndDescription, {onLeave: function (args) {send("DRMSetNameAndDescription");}});
+
+var DRMSetRevocationPoint = Module.findExportByName("msdrm.dll", "DRMSetRevocationPoint")
+Interceptor.attach(DRMSetRevocationPoint, {onLeave: function (args) {send("DRMSetRevocationPoint");}});
+
+var DRMSetUsagePolicy = Module.findExportByName("msdrm.dll", "DRMSetUsagePolicy")
+Interceptor.attach(DRMSetUsagePolicy, {onLeave: function (args) {send("DRMSetUsagePolicy");}});
+
+var DRMVerify = Module.findExportByName("msdrm.dll", "DRMVerify")
+Interceptor.attach(DRMVerify, {onLeave: function (args) {send("DRMVerify");}});
+
+var DRMpCloseFile = Module.findExportByName("msdrm.dll", "DRMpCloseFile")
+Interceptor.attach(DRMpCloseFile, {onLeave: function (args) {send("DRMpCloseFile");}});
+
+var DRMpFileInitialize = Module.findExportByName("msdrm.dll", "DRMpFileInitialize")
+Interceptor.attach(DRMpFileInitialize, {onLeave: function (args) {send("DRMpFileInitialize");}});
+
+var DRMpFileIsProtected = Module.findExportByName("msdrm.dll", "DRMpFileIsProtected")
+Interceptor.attach(DRMpFileIsProtected, {onLeave: function (args) {send("DRMpFileIsProtected");}});
+
+var DRMpFileProtect = Module.findExportByName("msdrm.dll", "DRMpFileProtect")
+Interceptor.attach(DRMpFileProtect, {onLeave: function (args) {send("DRMpFileProtect");}});
+
+var DRMpFileUnprotect = Module.findExportByName("msdrm.dll", "DRMpFileUnprotect")
+Interceptor.attach(DRMpFileUnprotect, {onLeave: function (args) {send("DRMpFileUnprotect");}});
+
+var DRMpFreeMemory = Module.findExportByName("msdrm.dll", "DRMpFreeMemory")
+Interceptor.attach(DRMpFreeMemory, {onLeave: function (args) {send("DRMpFreeMemory");}});
+
+var DllCanUnloadNow = Module.findExportByName("msdrm.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("msdrm.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("msdrm.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msdrm.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var __AddMachineCertToLicenseStore = Module.findExportByName("msdrm.dll", "__AddMachineCertToLicenseStore")
+Interceptor.attach(__AddMachineCertToLicenseStore, {onLeave: function (args) {send("__AddMachineCertToLicenseStore");}});
+

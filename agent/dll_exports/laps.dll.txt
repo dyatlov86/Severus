@@ -1,0 +1,21 @@
+var LAPSExtAcceptDSRMPasswordModification = Module.findExportByName("laps.dll", "LAPSExtAcceptDSRMPasswordModification")
+Interceptor.attach(LAPSExtAcceptDSRMPasswordModification, {onLeave: function (args) {send("LAPSExtAcceptDSRMPasswordModification");}});
+
+var LAPSExtAcceptPasswordModification = Module.findExportByName("laps.dll", "LAPSExtAcceptPasswordModification")
+Interceptor.attach(LAPSExtAcceptPasswordModification, {onLeave: function (args) {send("LAPSExtAcceptPasswordModification");}});
+
+var LAPSExtInitialize = Module.findExportByName("laps.dll", "LAPSExtInitialize")
+Interceptor.attach(LAPSExtInitialize, {onLeave: function (args) {send("LAPSExtInitialize");}});
+
+var LAPSExtIsDSRMAccountManaged = Module.findExportByName("laps.dll", "LAPSExtIsDSRMAccountManaged")
+Interceptor.attach(LAPSExtIsDSRMAccountManaged, {onLeave: function (args) {send("LAPSExtIsDSRMAccountManaged");}});
+
+var LAPSExtIsLocalAccountManaged = Module.findExportByName("laps.dll", "LAPSExtIsLocalAccountManaged")
+Interceptor.attach(LAPSExtIsLocalAccountManaged, {onLeave: function (args) {send("LAPSExtIsLocalAccountManaged");}});
+
+var LAPSExtNotifyLocalAccountAuthentication = Module.findExportByName("laps.dll", "LAPSExtNotifyLocalAccountAuthentication")
+Interceptor.attach(LAPSExtNotifyLocalAccountAuthentication, {onLeave: function (args) {send("LAPSExtNotifyLocalAccountAuthentication");}});
+
+var LAPSExtUninitialize = Module.findExportByName("laps.dll", "LAPSExtUninitialize")
+Interceptor.attach(LAPSExtUninitialize, {onLeave: function (args) {send("LAPSExtUninitialize");}});
+

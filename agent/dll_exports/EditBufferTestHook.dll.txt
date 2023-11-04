@@ -1,0 +1,12 @@
+var CreateEditBufferTestHook = Module.findExportByName("EditBufferTestHook.dll", "CreateEditBufferTestHook")
+Interceptor.attach(CreateEditBufferTestHook, {onLeave: function (args) {send("CreateEditBufferTestHook");}});
+
+var CreateEditBufferTestHookClient = Module.findExportByName("EditBufferTestHook.dll", "CreateEditBufferTestHookClient")
+Interceptor.attach(CreateEditBufferTestHookClient, {onLeave: function (args) {send("CreateEditBufferTestHookClient");}});
+
+var EnableTestHook = Module.findExportByName("EditBufferTestHook.dll", "EnableTestHook")
+Interceptor.attach(EnableTestHook, {onLeave: function (args) {send("EnableTestHook");}});
+
+var GetTestHookEnabled = Module.findExportByName("EditBufferTestHook.dll", "GetTestHookEnabled")
+Interceptor.attach(GetTestHookEnabled, {onLeave: function (args) {send("GetTestHookEnabled");}});
+

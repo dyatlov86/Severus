@@ -1,0 +1,423 @@
+var CloseDriver = Module.findExportByName("winmmbase.dll", "CloseDriver")
+Interceptor.attach(CloseDriver, {onLeave: function (args) {send("CloseDriver");}});
+
+var DefDriverProc = Module.findExportByName("winmmbase.dll", "DefDriverProc")
+Interceptor.attach(DefDriverProc, {onLeave: function (args) {send("DefDriverProc");}});
+
+var DriverCallback = Module.findExportByName("winmmbase.dll", "DriverCallback")
+Interceptor.attach(DriverCallback, {onLeave: function (args) {send("DriverCallback");}});
+
+var DrvGetModuleHandle = Module.findExportByName("winmmbase.dll", "DrvGetModuleHandle")
+Interceptor.attach(DrvGetModuleHandle, {onLeave: function (args) {send("DrvGetModuleHandle");}});
+
+var GetDriverModuleHandle = Module.findExportByName("winmmbase.dll", "GetDriverModuleHandle")
+Interceptor.attach(GetDriverModuleHandle, {onLeave: function (args) {send("GetDriverModuleHandle");}});
+
+var OpenDriver = Module.findExportByName("winmmbase.dll", "OpenDriver")
+Interceptor.attach(OpenDriver, {onLeave: function (args) {send("OpenDriver");}});
+
+var SendDriverMessage = Module.findExportByName("winmmbase.dll", "SendDriverMessage")
+Interceptor.attach(SendDriverMessage, {onLeave: function (args) {send("SendDriverMessage");}});
+
+var auxGetDevCapsA = Module.findExportByName("winmmbase.dll", "auxGetDevCapsA")
+Interceptor.attach(auxGetDevCapsA, {onLeave: function (args) {send("auxGetDevCapsA");}});
+
+var auxGetDevCapsW = Module.findExportByName("winmmbase.dll", "auxGetDevCapsW")
+Interceptor.attach(auxGetDevCapsW, {onLeave: function (args) {send("auxGetDevCapsW");}});
+
+var auxGetNumDevs = Module.findExportByName("winmmbase.dll", "auxGetNumDevs")
+Interceptor.attach(auxGetNumDevs, {onLeave: function (args) {send("auxGetNumDevs");}});
+
+var auxGetVolume = Module.findExportByName("winmmbase.dll", "auxGetVolume")
+Interceptor.attach(auxGetVolume, {onLeave: function (args) {send("auxGetVolume");}});
+
+var auxOutMessage = Module.findExportByName("winmmbase.dll", "auxOutMessage")
+Interceptor.attach(auxOutMessage, {onLeave: function (args) {send("auxOutMessage");}});
+
+var auxSetVolume = Module.findExportByName("winmmbase.dll", "auxSetVolume")
+Interceptor.attach(auxSetVolume, {onLeave: function (args) {send("auxSetVolume");}});
+
+var midiConnect = Module.findExportByName("winmmbase.dll", "midiConnect")
+Interceptor.attach(midiConnect, {onLeave: function (args) {send("midiConnect");}});
+
+var midiDisconnect = Module.findExportByName("winmmbase.dll", "midiDisconnect")
+Interceptor.attach(midiDisconnect, {onLeave: function (args) {send("midiDisconnect");}});
+
+var midiInAddBuffer = Module.findExportByName("winmmbase.dll", "midiInAddBuffer")
+Interceptor.attach(midiInAddBuffer, {onLeave: function (args) {send("midiInAddBuffer");}});
+
+var midiInClose = Module.findExportByName("winmmbase.dll", "midiInClose")
+Interceptor.attach(midiInClose, {onLeave: function (args) {send("midiInClose");}});
+
+var midiInGetDevCapsA = Module.findExportByName("winmmbase.dll", "midiInGetDevCapsA")
+Interceptor.attach(midiInGetDevCapsA, {onLeave: function (args) {send("midiInGetDevCapsA");}});
+
+var midiInGetDevCapsW = Module.findExportByName("winmmbase.dll", "midiInGetDevCapsW")
+Interceptor.attach(midiInGetDevCapsW, {onLeave: function (args) {send("midiInGetDevCapsW");}});
+
+var midiInGetErrorTextA = Module.findExportByName("winmmbase.dll", "midiInGetErrorTextA")
+Interceptor.attach(midiInGetErrorTextA, {onLeave: function (args) {send("midiInGetErrorTextA");}});
+
+var midiInGetErrorTextW = Module.findExportByName("winmmbase.dll", "midiInGetErrorTextW")
+Interceptor.attach(midiInGetErrorTextW, {onLeave: function (args) {send("midiInGetErrorTextW");}});
+
+var midiInGetID = Module.findExportByName("winmmbase.dll", "midiInGetID")
+Interceptor.attach(midiInGetID, {onLeave: function (args) {send("midiInGetID");}});
+
+var midiInGetNumDevs = Module.findExportByName("winmmbase.dll", "midiInGetNumDevs")
+Interceptor.attach(midiInGetNumDevs, {onLeave: function (args) {send("midiInGetNumDevs");}});
+
+var midiInMessage = Module.findExportByName("winmmbase.dll", "midiInMessage")
+Interceptor.attach(midiInMessage, {onLeave: function (args) {send("midiInMessage");}});
+
+var midiInOpen = Module.findExportByName("winmmbase.dll", "midiInOpen")
+Interceptor.attach(midiInOpen, {onLeave: function (args) {send("midiInOpen");}});
+
+var midiInPrepareHeader = Module.findExportByName("winmmbase.dll", "midiInPrepareHeader")
+Interceptor.attach(midiInPrepareHeader, {onLeave: function (args) {send("midiInPrepareHeader");}});
+
+var midiInReset = Module.findExportByName("winmmbase.dll", "midiInReset")
+Interceptor.attach(midiInReset, {onLeave: function (args) {send("midiInReset");}});
+
+var midiInStart = Module.findExportByName("winmmbase.dll", "midiInStart")
+Interceptor.attach(midiInStart, {onLeave: function (args) {send("midiInStart");}});
+
+var midiInStop = Module.findExportByName("winmmbase.dll", "midiInStop")
+Interceptor.attach(midiInStop, {onLeave: function (args) {send("midiInStop");}});
+
+var midiInUnprepareHeader = Module.findExportByName("winmmbase.dll", "midiInUnprepareHeader")
+Interceptor.attach(midiInUnprepareHeader, {onLeave: function (args) {send("midiInUnprepareHeader");}});
+
+var midiOutCacheDrumPatches = Module.findExportByName("winmmbase.dll", "midiOutCacheDrumPatches")
+Interceptor.attach(midiOutCacheDrumPatches, {onLeave: function (args) {send("midiOutCacheDrumPatches");}});
+
+var midiOutCachePatches = Module.findExportByName("winmmbase.dll", "midiOutCachePatches")
+Interceptor.attach(midiOutCachePatches, {onLeave: function (args) {send("midiOutCachePatches");}});
+
+var midiOutClose = Module.findExportByName("winmmbase.dll", "midiOutClose")
+Interceptor.attach(midiOutClose, {onLeave: function (args) {send("midiOutClose");}});
+
+var midiOutGetDevCapsA = Module.findExportByName("winmmbase.dll", "midiOutGetDevCapsA")
+Interceptor.attach(midiOutGetDevCapsA, {onLeave: function (args) {send("midiOutGetDevCapsA");}});
+
+var midiOutGetDevCapsW = Module.findExportByName("winmmbase.dll", "midiOutGetDevCapsW")
+Interceptor.attach(midiOutGetDevCapsW, {onLeave: function (args) {send("midiOutGetDevCapsW");}});
+
+var midiOutGetErrorTextA = Module.findExportByName("winmmbase.dll", "midiOutGetErrorTextA")
+Interceptor.attach(midiOutGetErrorTextA, {onLeave: function (args) {send("midiOutGetErrorTextA");}});
+
+var midiOutGetErrorTextW = Module.findExportByName("winmmbase.dll", "midiOutGetErrorTextW")
+Interceptor.attach(midiOutGetErrorTextW, {onLeave: function (args) {send("midiOutGetErrorTextW");}});
+
+var midiOutGetID = Module.findExportByName("winmmbase.dll", "midiOutGetID")
+Interceptor.attach(midiOutGetID, {onLeave: function (args) {send("midiOutGetID");}});
+
+var midiOutGetNumDevs = Module.findExportByName("winmmbase.dll", "midiOutGetNumDevs")
+Interceptor.attach(midiOutGetNumDevs, {onLeave: function (args) {send("midiOutGetNumDevs");}});
+
+var midiOutGetVolume = Module.findExportByName("winmmbase.dll", "midiOutGetVolume")
+Interceptor.attach(midiOutGetVolume, {onLeave: function (args) {send("midiOutGetVolume");}});
+
+var midiOutLongMsg = Module.findExportByName("winmmbase.dll", "midiOutLongMsg")
+Interceptor.attach(midiOutLongMsg, {onLeave: function (args) {send("midiOutLongMsg");}});
+
+var midiOutMessage = Module.findExportByName("winmmbase.dll", "midiOutMessage")
+Interceptor.attach(midiOutMessage, {onLeave: function (args) {send("midiOutMessage");}});
+
+var midiOutOpen = Module.findExportByName("winmmbase.dll", "midiOutOpen")
+Interceptor.attach(midiOutOpen, {onLeave: function (args) {send("midiOutOpen");}});
+
+var midiOutPrepareHeader = Module.findExportByName("winmmbase.dll", "midiOutPrepareHeader")
+Interceptor.attach(midiOutPrepareHeader, {onLeave: function (args) {send("midiOutPrepareHeader");}});
+
+var midiOutReset = Module.findExportByName("winmmbase.dll", "midiOutReset")
+Interceptor.attach(midiOutReset, {onLeave: function (args) {send("midiOutReset");}});
+
+var midiOutSetVolume = Module.findExportByName("winmmbase.dll", "midiOutSetVolume")
+Interceptor.attach(midiOutSetVolume, {onLeave: function (args) {send("midiOutSetVolume");}});
+
+var midiOutShortMsg = Module.findExportByName("winmmbase.dll", "midiOutShortMsg")
+Interceptor.attach(midiOutShortMsg, {onLeave: function (args) {send("midiOutShortMsg");}});
+
+var midiOutUnprepareHeader = Module.findExportByName("winmmbase.dll", "midiOutUnprepareHeader")
+Interceptor.attach(midiOutUnprepareHeader, {onLeave: function (args) {send("midiOutUnprepareHeader");}});
+
+var midiStreamClose = Module.findExportByName("winmmbase.dll", "midiStreamClose")
+Interceptor.attach(midiStreamClose, {onLeave: function (args) {send("midiStreamClose");}});
+
+var midiStreamOpen = Module.findExportByName("winmmbase.dll", "midiStreamOpen")
+Interceptor.attach(midiStreamOpen, {onLeave: function (args) {send("midiStreamOpen");}});
+
+var midiStreamOut = Module.findExportByName("winmmbase.dll", "midiStreamOut")
+Interceptor.attach(midiStreamOut, {onLeave: function (args) {send("midiStreamOut");}});
+
+var midiStreamPause = Module.findExportByName("winmmbase.dll", "midiStreamPause")
+Interceptor.attach(midiStreamPause, {onLeave: function (args) {send("midiStreamPause");}});
+
+var midiStreamPosition = Module.findExportByName("winmmbase.dll", "midiStreamPosition")
+Interceptor.attach(midiStreamPosition, {onLeave: function (args) {send("midiStreamPosition");}});
+
+var midiStreamProperty = Module.findExportByName("winmmbase.dll", "midiStreamProperty")
+Interceptor.attach(midiStreamProperty, {onLeave: function (args) {send("midiStreamProperty");}});
+
+var midiStreamRestart = Module.findExportByName("winmmbase.dll", "midiStreamRestart")
+Interceptor.attach(midiStreamRestart, {onLeave: function (args) {send("midiStreamRestart");}});
+
+var midiStreamStop = Module.findExportByName("winmmbase.dll", "midiStreamStop")
+Interceptor.attach(midiStreamStop, {onLeave: function (args) {send("midiStreamStop");}});
+
+var mixerClose = Module.findExportByName("winmmbase.dll", "mixerClose")
+Interceptor.attach(mixerClose, {onLeave: function (args) {send("mixerClose");}});
+
+var mixerGetControlDetailsA = Module.findExportByName("winmmbase.dll", "mixerGetControlDetailsA")
+Interceptor.attach(mixerGetControlDetailsA, {onLeave: function (args) {send("mixerGetControlDetailsA");}});
+
+var mixerGetControlDetailsW = Module.findExportByName("winmmbase.dll", "mixerGetControlDetailsW")
+Interceptor.attach(mixerGetControlDetailsW, {onLeave: function (args) {send("mixerGetControlDetailsW");}});
+
+var mixerGetDevCapsA = Module.findExportByName("winmmbase.dll", "mixerGetDevCapsA")
+Interceptor.attach(mixerGetDevCapsA, {onLeave: function (args) {send("mixerGetDevCapsA");}});
+
+var mixerGetDevCapsW = Module.findExportByName("winmmbase.dll", "mixerGetDevCapsW")
+Interceptor.attach(mixerGetDevCapsW, {onLeave: function (args) {send("mixerGetDevCapsW");}});
+
+var mixerGetID = Module.findExportByName("winmmbase.dll", "mixerGetID")
+Interceptor.attach(mixerGetID, {onLeave: function (args) {send("mixerGetID");}});
+
+var mixerGetLineControlsA = Module.findExportByName("winmmbase.dll", "mixerGetLineControlsA")
+Interceptor.attach(mixerGetLineControlsA, {onLeave: function (args) {send("mixerGetLineControlsA");}});
+
+var mixerGetLineControlsW = Module.findExportByName("winmmbase.dll", "mixerGetLineControlsW")
+Interceptor.attach(mixerGetLineControlsW, {onLeave: function (args) {send("mixerGetLineControlsW");}});
+
+var mixerGetLineInfoA = Module.findExportByName("winmmbase.dll", "mixerGetLineInfoA")
+Interceptor.attach(mixerGetLineInfoA, {onLeave: function (args) {send("mixerGetLineInfoA");}});
+
+var mixerGetLineInfoW = Module.findExportByName("winmmbase.dll", "mixerGetLineInfoW")
+Interceptor.attach(mixerGetLineInfoW, {onLeave: function (args) {send("mixerGetLineInfoW");}});
+
+var mixerGetNumDevs = Module.findExportByName("winmmbase.dll", "mixerGetNumDevs")
+Interceptor.attach(mixerGetNumDevs, {onLeave: function (args) {send("mixerGetNumDevs");}});
+
+var mixerMessage = Module.findExportByName("winmmbase.dll", "mixerMessage")
+Interceptor.attach(mixerMessage, {onLeave: function (args) {send("mixerMessage");}});
+
+var mixerOpen = Module.findExportByName("winmmbase.dll", "mixerOpen")
+Interceptor.attach(mixerOpen, {onLeave: function (args) {send("mixerOpen");}});
+
+var mixerSetControlDetails = Module.findExportByName("winmmbase.dll", "mixerSetControlDetails")
+Interceptor.attach(mixerSetControlDetails, {onLeave: function (args) {send("mixerSetControlDetails");}});
+
+var mmDrvInstall = Module.findExportByName("winmmbase.dll", "mmDrvInstall")
+Interceptor.attach(mmDrvInstall, {onLeave: function (args) {send("mmDrvInstall");}});
+
+var mmGetCurrentTask = Module.findExportByName("winmmbase.dll", "mmGetCurrentTask")
+Interceptor.attach(mmGetCurrentTask, {onLeave: function (args) {send("mmGetCurrentTask");}});
+
+var mmTaskBlock = Module.findExportByName("winmmbase.dll", "mmTaskBlock")
+Interceptor.attach(mmTaskBlock, {onLeave: function (args) {send("mmTaskBlock");}});
+
+var mmTaskCreate = Module.findExportByName("winmmbase.dll", "mmTaskCreate")
+Interceptor.attach(mmTaskCreate, {onLeave: function (args) {send("mmTaskCreate");}});
+
+var mmTaskSignal = Module.findExportByName("winmmbase.dll", "mmTaskSignal")
+Interceptor.attach(mmTaskSignal, {onLeave: function (args) {send("mmTaskSignal");}});
+
+var mmTaskYield = Module.findExportByName("winmmbase.dll", "mmTaskYield")
+Interceptor.attach(mmTaskYield, {onLeave: function (args) {send("mmTaskYield");}});
+
+var mmioAdvance = Module.findExportByName("winmmbase.dll", "mmioAdvance")
+Interceptor.attach(mmioAdvance, {onLeave: function (args) {send("mmioAdvance");}});
+
+var mmioAscend = Module.findExportByName("winmmbase.dll", "mmioAscend")
+Interceptor.attach(mmioAscend, {onLeave: function (args) {send("mmioAscend");}});
+
+var mmioClose = Module.findExportByName("winmmbase.dll", "mmioClose")
+Interceptor.attach(mmioClose, {onLeave: function (args) {send("mmioClose");}});
+
+var mmioCreateChunk = Module.findExportByName("winmmbase.dll", "mmioCreateChunk")
+Interceptor.attach(mmioCreateChunk, {onLeave: function (args) {send("mmioCreateChunk");}});
+
+var mmioDescend = Module.findExportByName("winmmbase.dll", "mmioDescend")
+Interceptor.attach(mmioDescend, {onLeave: function (args) {send("mmioDescend");}});
+
+var mmioFlush = Module.findExportByName("winmmbase.dll", "mmioFlush")
+Interceptor.attach(mmioFlush, {onLeave: function (args) {send("mmioFlush");}});
+
+var mmioGetInfo = Module.findExportByName("winmmbase.dll", "mmioGetInfo")
+Interceptor.attach(mmioGetInfo, {onLeave: function (args) {send("mmioGetInfo");}});
+
+var mmioInstallIOProcA = Module.findExportByName("winmmbase.dll", "mmioInstallIOProcA")
+Interceptor.attach(mmioInstallIOProcA, {onLeave: function (args) {send("mmioInstallIOProcA");}});
+
+var mmioInstallIOProcW = Module.findExportByName("winmmbase.dll", "mmioInstallIOProcW")
+Interceptor.attach(mmioInstallIOProcW, {onLeave: function (args) {send("mmioInstallIOProcW");}});
+
+var mmioOpenA = Module.findExportByName("winmmbase.dll", "mmioOpenA")
+Interceptor.attach(mmioOpenA, {onLeave: function (args) {send("mmioOpenA");}});
+
+var mmioOpenW = Module.findExportByName("winmmbase.dll", "mmioOpenW")
+Interceptor.attach(mmioOpenW, {onLeave: function (args) {send("mmioOpenW");}});
+
+var mmioRead = Module.findExportByName("winmmbase.dll", "mmioRead")
+Interceptor.attach(mmioRead, {onLeave: function (args) {send("mmioRead");}});
+
+var mmioRenameA = Module.findExportByName("winmmbase.dll", "mmioRenameA")
+Interceptor.attach(mmioRenameA, {onLeave: function (args) {send("mmioRenameA");}});
+
+var mmioRenameW = Module.findExportByName("winmmbase.dll", "mmioRenameW")
+Interceptor.attach(mmioRenameW, {onLeave: function (args) {send("mmioRenameW");}});
+
+var mmioSeek = Module.findExportByName("winmmbase.dll", "mmioSeek")
+Interceptor.attach(mmioSeek, {onLeave: function (args) {send("mmioSeek");}});
+
+var mmioSendMessage = Module.findExportByName("winmmbase.dll", "mmioSendMessage")
+Interceptor.attach(mmioSendMessage, {onLeave: function (args) {send("mmioSendMessage");}});
+
+var mmioSetBuffer = Module.findExportByName("winmmbase.dll", "mmioSetBuffer")
+Interceptor.attach(mmioSetBuffer, {onLeave: function (args) {send("mmioSetBuffer");}});
+
+var mmioSetInfo = Module.findExportByName("winmmbase.dll", "mmioSetInfo")
+Interceptor.attach(mmioSetInfo, {onLeave: function (args) {send("mmioSetInfo");}});
+
+var mmioStringToFOURCCA = Module.findExportByName("winmmbase.dll", "mmioStringToFOURCCA")
+Interceptor.attach(mmioStringToFOURCCA, {onLeave: function (args) {send("mmioStringToFOURCCA");}});
+
+var mmioStringToFOURCCW = Module.findExportByName("winmmbase.dll", "mmioStringToFOURCCW")
+Interceptor.attach(mmioStringToFOURCCW, {onLeave: function (args) {send("mmioStringToFOURCCW");}});
+
+var mmioWrite = Module.findExportByName("winmmbase.dll", "mmioWrite")
+Interceptor.attach(mmioWrite, {onLeave: function (args) {send("mmioWrite");}});
+
+var sndOpenSound = Module.findExportByName("winmmbase.dll", "sndOpenSound")
+Interceptor.attach(sndOpenSound, {onLeave: function (args) {send("sndOpenSound");}});
+
+var waveInAddBuffer = Module.findExportByName("winmmbase.dll", "waveInAddBuffer")
+Interceptor.attach(waveInAddBuffer, {onLeave: function (args) {send("waveInAddBuffer");}});
+
+var waveInClose = Module.findExportByName("winmmbase.dll", "waveInClose")
+Interceptor.attach(waveInClose, {onLeave: function (args) {send("waveInClose");}});
+
+var waveInGetDevCapsA = Module.findExportByName("winmmbase.dll", "waveInGetDevCapsA")
+Interceptor.attach(waveInGetDevCapsA, {onLeave: function (args) {send("waveInGetDevCapsA");}});
+
+var waveInGetDevCapsW = Module.findExportByName("winmmbase.dll", "waveInGetDevCapsW")
+Interceptor.attach(waveInGetDevCapsW, {onLeave: function (args) {send("waveInGetDevCapsW");}});
+
+var waveInGetErrorTextA = Module.findExportByName("winmmbase.dll", "waveInGetErrorTextA")
+Interceptor.attach(waveInGetErrorTextA, {onLeave: function (args) {send("waveInGetErrorTextA");}});
+
+var waveInGetErrorTextW = Module.findExportByName("winmmbase.dll", "waveInGetErrorTextW")
+Interceptor.attach(waveInGetErrorTextW, {onLeave: function (args) {send("waveInGetErrorTextW");}});
+
+var waveInGetID = Module.findExportByName("winmmbase.dll", "waveInGetID")
+Interceptor.attach(waveInGetID, {onLeave: function (args) {send("waveInGetID");}});
+
+var waveInGetNumDevs = Module.findExportByName("winmmbase.dll", "waveInGetNumDevs")
+Interceptor.attach(waveInGetNumDevs, {onLeave: function (args) {send("waveInGetNumDevs");}});
+
+var waveInGetPosition = Module.findExportByName("winmmbase.dll", "waveInGetPosition")
+Interceptor.attach(waveInGetPosition, {onLeave: function (args) {send("waveInGetPosition");}});
+
+var waveInMessage = Module.findExportByName("winmmbase.dll", "waveInMessage")
+Interceptor.attach(waveInMessage, {onLeave: function (args) {send("waveInMessage");}});
+
+var waveInOpen = Module.findExportByName("winmmbase.dll", "waveInOpen")
+Interceptor.attach(waveInOpen, {onLeave: function (args) {send("waveInOpen");}});
+
+var waveInPrepareHeader = Module.findExportByName("winmmbase.dll", "waveInPrepareHeader")
+Interceptor.attach(waveInPrepareHeader, {onLeave: function (args) {send("waveInPrepareHeader");}});
+
+var waveInReset = Module.findExportByName("winmmbase.dll", "waveInReset")
+Interceptor.attach(waveInReset, {onLeave: function (args) {send("waveInReset");}});
+
+var waveInStart = Module.findExportByName("winmmbase.dll", "waveInStart")
+Interceptor.attach(waveInStart, {onLeave: function (args) {send("waveInStart");}});
+
+var waveInStop = Module.findExportByName("winmmbase.dll", "waveInStop")
+Interceptor.attach(waveInStop, {onLeave: function (args) {send("waveInStop");}});
+
+var waveInUnprepareHeader = Module.findExportByName("winmmbase.dll", "waveInUnprepareHeader")
+Interceptor.attach(waveInUnprepareHeader, {onLeave: function (args) {send("waveInUnprepareHeader");}});
+
+var waveOutBreakLoop = Module.findExportByName("winmmbase.dll", "waveOutBreakLoop")
+Interceptor.attach(waveOutBreakLoop, {onLeave: function (args) {send("waveOutBreakLoop");}});
+
+var waveOutClose = Module.findExportByName("winmmbase.dll", "waveOutClose")
+Interceptor.attach(waveOutClose, {onLeave: function (args) {send("waveOutClose");}});
+
+var waveOutGetDevCapsA = Module.findExportByName("winmmbase.dll", "waveOutGetDevCapsA")
+Interceptor.attach(waveOutGetDevCapsA, {onLeave: function (args) {send("waveOutGetDevCapsA");}});
+
+var waveOutGetDevCapsW = Module.findExportByName("winmmbase.dll", "waveOutGetDevCapsW")
+Interceptor.attach(waveOutGetDevCapsW, {onLeave: function (args) {send("waveOutGetDevCapsW");}});
+
+var waveOutGetErrorTextA = Module.findExportByName("winmmbase.dll", "waveOutGetErrorTextA")
+Interceptor.attach(waveOutGetErrorTextA, {onLeave: function (args) {send("waveOutGetErrorTextA");}});
+
+var waveOutGetErrorTextW = Module.findExportByName("winmmbase.dll", "waveOutGetErrorTextW")
+Interceptor.attach(waveOutGetErrorTextW, {onLeave: function (args) {send("waveOutGetErrorTextW");}});
+
+var waveOutGetID = Module.findExportByName("winmmbase.dll", "waveOutGetID")
+Interceptor.attach(waveOutGetID, {onLeave: function (args) {send("waveOutGetID");}});
+
+var waveOutGetNumDevs = Module.findExportByName("winmmbase.dll", "waveOutGetNumDevs")
+Interceptor.attach(waveOutGetNumDevs, {onLeave: function (args) {send("waveOutGetNumDevs");}});
+
+var waveOutGetPitch = Module.findExportByName("winmmbase.dll", "waveOutGetPitch")
+Interceptor.attach(waveOutGetPitch, {onLeave: function (args) {send("waveOutGetPitch");}});
+
+var waveOutGetPlaybackRate = Module.findExportByName("winmmbase.dll", "waveOutGetPlaybackRate")
+Interceptor.attach(waveOutGetPlaybackRate, {onLeave: function (args) {send("waveOutGetPlaybackRate");}});
+
+var waveOutGetPosition = Module.findExportByName("winmmbase.dll", "waveOutGetPosition")
+Interceptor.attach(waveOutGetPosition, {onLeave: function (args) {send("waveOutGetPosition");}});
+
+var waveOutGetVolume = Module.findExportByName("winmmbase.dll", "waveOutGetVolume")
+Interceptor.attach(waveOutGetVolume, {onLeave: function (args) {send("waveOutGetVolume");}});
+
+var waveOutMessage = Module.findExportByName("winmmbase.dll", "waveOutMessage")
+Interceptor.attach(waveOutMessage, {onLeave: function (args) {send("waveOutMessage");}});
+
+var waveOutOpen = Module.findExportByName("winmmbase.dll", "waveOutOpen")
+Interceptor.attach(waveOutOpen, {onLeave: function (args) {send("waveOutOpen");}});
+
+var waveOutPause = Module.findExportByName("winmmbase.dll", "waveOutPause")
+Interceptor.attach(waveOutPause, {onLeave: function (args) {send("waveOutPause");}});
+
+var waveOutPrepareHeader = Module.findExportByName("winmmbase.dll", "waveOutPrepareHeader")
+Interceptor.attach(waveOutPrepareHeader, {onLeave: function (args) {send("waveOutPrepareHeader");}});
+
+var waveOutReset = Module.findExportByName("winmmbase.dll", "waveOutReset")
+Interceptor.attach(waveOutReset, {onLeave: function (args) {send("waveOutReset");}});
+
+var waveOutRestart = Module.findExportByName("winmmbase.dll", "waveOutRestart")
+Interceptor.attach(waveOutRestart, {onLeave: function (args) {send("waveOutRestart");}});
+
+var waveOutSetPitch = Module.findExportByName("winmmbase.dll", "waveOutSetPitch")
+Interceptor.attach(waveOutSetPitch, {onLeave: function (args) {send("waveOutSetPitch");}});
+
+var waveOutSetPlaybackRate = Module.findExportByName("winmmbase.dll", "waveOutSetPlaybackRate")
+Interceptor.attach(waveOutSetPlaybackRate, {onLeave: function (args) {send("waveOutSetPlaybackRate");}});
+
+var waveOutSetVolume = Module.findExportByName("winmmbase.dll", "waveOutSetVolume")
+Interceptor.attach(waveOutSetVolume, {onLeave: function (args) {send("waveOutSetVolume");}});
+
+var waveOutUnprepareHeader = Module.findExportByName("winmmbase.dll", "waveOutUnprepareHeader")
+Interceptor.attach(waveOutUnprepareHeader, {onLeave: function (args) {send("waveOutUnprepareHeader");}});
+
+var waveOutWrite = Module.findExportByName("winmmbase.dll", "waveOutWrite")
+Interceptor.attach(waveOutWrite, {onLeave: function (args) {send("waveOutWrite");}});
+
+var winmmbaseFreeMMEHandles = Module.findExportByName("winmmbase.dll", "winmmbaseFreeMMEHandles")
+Interceptor.attach(winmmbaseFreeMMEHandles, {onLeave: function (args) {send("winmmbaseFreeMMEHandles");}});
+
+var winmmbaseGetWOWHandle = Module.findExportByName("winmmbase.dll", "winmmbaseGetWOWHandle")
+Interceptor.attach(winmmbaseGetWOWHandle, {onLeave: function (args) {send("winmmbaseGetWOWHandle");}});
+
+var winmmbaseHandle32FromHandle16 = Module.findExportByName("winmmbase.dll", "winmmbaseHandle32FromHandle16")
+Interceptor.attach(winmmbaseHandle32FromHandle16, {onLeave: function (args) {send("winmmbaseHandle32FromHandle16");}});
+
+var winmmbaseSetWOWHandle = Module.findExportByName("winmmbase.dll", "winmmbaseSetWOWHandle")
+Interceptor.attach(winmmbaseSetWOWHandle, {onLeave: function (args) {send("winmmbaseSetWOWHandle");}});
+

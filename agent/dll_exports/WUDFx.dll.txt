@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("WUDFx.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("WUDFx.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var Microsoft_WDF_UMDF_Version = Module.findExportByName("WUDFx.dll", "Microsoft_WDF_UMDF_Version")
+Interceptor.attach(Microsoft_WDF_UMDF_Version, {onLeave: function (args) {send("Microsoft_WDF_UMDF_Version");}});
+

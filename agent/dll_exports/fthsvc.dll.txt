@@ -1,0 +1,15 @@
+var FthSysprepSpecialize = Module.findExportByName("fthsvc.dll", "FthSysprepSpecialize")
+Interceptor.attach(FthSysprepSpecialize, {onLeave: function (args) {send("FthSysprepSpecialize");}});
+
+var FthSysprepSpecializeOffline = Module.findExportByName("fthsvc.dll", "FthSysprepSpecializeOffline")
+Interceptor.attach(FthSysprepSpecializeOffline, {onLeave: function (args) {send("FthSysprepSpecializeOffline");}});
+
+var WdiDiagnosticModuleMain = Module.findExportByName("fthsvc.dll", "WdiDiagnosticModuleMain")
+Interceptor.attach(WdiDiagnosticModuleMain, {onLeave: function (args) {send("WdiDiagnosticModuleMain");}});
+
+var WdiGetDiagnosticModuleInterfaceVersion = Module.findExportByName("fthsvc.dll", "WdiGetDiagnosticModuleInterfaceVersion")
+Interceptor.attach(WdiGetDiagnosticModuleInterfaceVersion, {onLeave: function (args) {send("WdiGetDiagnosticModuleInterfaceVersion");}});
+
+var WdiHandleInstance = Module.findExportByName("fthsvc.dll", "WdiHandleInstance")
+Interceptor.attach(WdiHandleInstance, {onLeave: function (args) {send("WdiHandleInstance");}});
+

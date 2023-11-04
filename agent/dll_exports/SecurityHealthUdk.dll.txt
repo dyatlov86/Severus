@@ -1,0 +1,255 @@
+var DllMain = Module.findExportByName("SecurityHealthUdk.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var Shield_ApplicationGuardRefreshState = Module.findExportByName("SecurityHealthUdk.dll", "Shield_ApplicationGuardRefreshState")
+Interceptor.attach(Shield_ApplicationGuardRefreshState, {onLeave: function (args) {send("Shield_ApplicationGuardRefreshState");}});
+
+var Shield_CmsCloseActivity = Module.findExportByName("SecurityHealthUdk.dll", "Shield_CmsCloseActivity")
+Interceptor.attach(Shield_CmsCloseActivity, {onLeave: function (args) {send("Shield_CmsCloseActivity");}});
+
+var Shield_CmsCloseContainer = Module.findExportByName("SecurityHealthUdk.dll", "Shield_CmsCloseContainer")
+Interceptor.attach(Shield_CmsCloseContainer, {onLeave: function (args) {send("Shield_CmsCloseContainer");}});
+
+var Shield_CmsCreateActivity = Module.findExportByName("SecurityHealthUdk.dll", "Shield_CmsCreateActivity")
+Interceptor.attach(Shield_CmsCreateActivity, {onLeave: function (args) {send("Shield_CmsCreateActivity");}});
+
+var Shield_CmsOpenContainer = Module.findExportByName("SecurityHealthUdk.dll", "Shield_CmsOpenContainer")
+Interceptor.attach(Shield_CmsOpenContainer, {onLeave: function (args) {send("Shield_CmsOpenContainer");}});
+
+var Shield_CmsRegisterForContainerNotifications = Module.findExportByName("SecurityHealthUdk.dll", "Shield_CmsRegisterForContainerNotifications")
+Interceptor.attach(Shield_CmsRegisterForContainerNotifications, {onLeave: function (args) {send("Shield_CmsRegisterForContainerNotifications");}});
+
+var Shield_CmsStartActivityAsync = Module.findExportByName("SecurityHealthUdk.dll", "Shield_CmsStartActivityAsync")
+Interceptor.attach(Shield_CmsStartActivityAsync, {onLeave: function (args) {send("Shield_CmsStartActivityAsync");}});
+
+var Shield_CpmcGetContainerIdForUser = Module.findExportByName("SecurityHealthUdk.dll", "Shield_CpmcGetContainerIdForUser")
+Interceptor.attach(Shield_CpmcGetContainerIdForUser, {onLeave: function (args) {send("Shield_CpmcGetContainerIdForUser");}});
+
+var Shield_DriverStoreClose = Module.findExportByName("SecurityHealthUdk.dll", "Shield_DriverStoreClose")
+Interceptor.attach(Shield_DriverStoreClose, {onLeave: function (args) {send("Shield_DriverStoreClose");}});
+
+var Shield_DriverStoreFindW = Module.findExportByName("SecurityHealthUdk.dll", "Shield_DriverStoreFindW")
+Interceptor.attach(Shield_DriverStoreFindW, {onLeave: function (args) {send("Shield_DriverStoreFindW");}});
+
+var Shield_DriverStoreGetObjectPropertyW = Module.findExportByName("SecurityHealthUdk.dll", "Shield_DriverStoreGetObjectPropertyW")
+Interceptor.attach(Shield_DriverStoreGetObjectPropertyW, {onLeave: function (args) {send("Shield_DriverStoreGetObjectPropertyW");}});
+
+var Shield_DriverStoreOpenW = Module.findExportByName("SecurityHealthUdk.dll", "Shield_DriverStoreOpenW")
+Interceptor.attach(Shield_DriverStoreOpenW, {onLeave: function (args) {send("Shield_DriverStoreOpenW");}});
+
+var Shield_DsrCanCurrentUserProvisionNgcKey = Module.findExportByName("SecurityHealthUdk.dll", "Shield_DsrCanCurrentUserProvisionNgcKey")
+Interceptor.attach(Shield_DsrCanCurrentUserProvisionNgcKey, {onLeave: function (args) {send("Shield_DsrCanCurrentUserProvisionNgcKey");}});
+
+var Shield_DsrFreeCxhScenarioInfo = Module.findExportByName("SecurityHealthUdk.dll", "Shield_DsrFreeCxhScenarioInfo")
+Interceptor.attach(Shield_DsrFreeCxhScenarioInfo, {onLeave: function (args) {send("Shield_DsrFreeCxhScenarioInfo");}});
+
+var Shield_DsrFreeJoinInfo = Module.findExportByName("SecurityHealthUdk.dll", "Shield_DsrFreeJoinInfo")
+Interceptor.attach(Shield_DsrFreeJoinInfo, {onLeave: function (args) {send("Shield_DsrFreeJoinInfo");}});
+
+var Shield_DsrGetCxhScenarioInfo = Module.findExportByName("SecurityHealthUdk.dll", "Shield_DsrGetCxhScenarioInfo")
+Interceptor.attach(Shield_DsrGetCxhScenarioInfo, {onLeave: function (args) {send("Shield_DsrGetCxhScenarioInfo");}});
+
+var Shield_DsrGetJoinInfo = Module.findExportByName("SecurityHealthUdk.dll", "Shield_DsrGetJoinInfo")
+Interceptor.attach(Shield_DsrGetJoinInfo, {onLeave: function (args) {send("Shield_DsrGetJoinInfo");}});
+
+var Shield_DsrIsDeviceJoined = Module.findExportByName("SecurityHealthUdk.dll", "Shield_DsrIsDeviceJoined")
+Interceptor.attach(Shield_DsrIsDeviceJoined, {onLeave: function (args) {send("Shield_DsrIsDeviceJoined");}});
+
+var Shield_EnumerateImageNames = Module.findExportByName("SecurityHealthUdk.dll", "Shield_EnumerateImageNames")
+Interceptor.attach(Shield_EnumerateImageNames, {onLeave: function (args) {send("Shield_EnumerateImageNames");}});
+
+var Shield_EvtClose = Module.findExportByName("SecurityHealthUdk.dll", "Shield_EvtClose")
+Interceptor.attach(Shield_EvtClose, {onLeave: function (args) {send("Shield_EvtClose");}});
+
+var Shield_EvtCreateRenderContext = Module.findExportByName("SecurityHealthUdk.dll", "Shield_EvtCreateRenderContext")
+Interceptor.attach(Shield_EvtCreateRenderContext, {onLeave: function (args) {send("Shield_EvtCreateRenderContext");}});
+
+var Shield_EvtNext = Module.findExportByName("SecurityHealthUdk.dll", "Shield_EvtNext")
+Interceptor.attach(Shield_EvtNext, {onLeave: function (args) {send("Shield_EvtNext");}});
+
+var Shield_EvtQuery = Module.findExportByName("SecurityHealthUdk.dll", "Shield_EvtQuery")
+Interceptor.attach(Shield_EvtQuery, {onLeave: function (args) {send("Shield_EvtQuery");}});
+
+var Shield_EvtRender = Module.findExportByName("SecurityHealthUdk.dll", "Shield_EvtRender")
+Interceptor.attach(Shield_EvtRender, {onLeave: function (args) {send("Shield_EvtRender");}});
+
+var Shield_ExportMitigationPoliciesToXmlFile = Module.findExportByName("SecurityHealthUdk.dll", "Shield_ExportMitigationPoliciesToXmlFile")
+Interceptor.attach(Shield_ExportMitigationPoliciesToXmlFile, {onLeave: function (args) {send("Shield_ExportMitigationPoliciesToXmlFile");}});
+
+var Shield_FWClosePolicyStore = Module.findExportByName("SecurityHealthUdk.dll", "Shield_FWClosePolicyStore")
+Interceptor.attach(Shield_FWClosePolicyStore, {onLeave: function (args) {send("Shield_FWClosePolicyStore");}});
+
+var Shield_FWGetConfig = Module.findExportByName("SecurityHealthUdk.dll", "Shield_FWGetConfig")
+Interceptor.attach(Shield_FWGetConfig, {onLeave: function (args) {send("Shield_FWGetConfig");}});
+
+var Shield_FWOpenPolicyStore = Module.findExportByName("SecurityHealthUdk.dll", "Shield_FWOpenPolicyStore")
+Interceptor.attach(Shield_FWOpenPolicyStore, {onLeave: function (args) {send("Shield_FWOpenPolicyStore");}});
+
+var Shield_FwActivate = Module.findExportByName("SecurityHealthUdk.dll", "Shield_FwActivate")
+Interceptor.attach(Shield_FwActivate, {onLeave: function (args) {send("Shield_FwActivate");}});
+
+var Shield_FwAnalyzeFirewallPolicy = Module.findExportByName("SecurityHealthUdk.dll", "Shield_FwAnalyzeFirewallPolicy")
+Interceptor.attach(Shield_FwAnalyzeFirewallPolicy, {onLeave: function (args) {send("Shield_FwAnalyzeFirewallPolicy");}});
+
+var Shield_FwIsGroupPolicyEnforced = Module.findExportByName("SecurityHealthUdk.dll", "Shield_FwIsGroupPolicyEnforced")
+Interceptor.attach(Shield_FwIsGroupPolicyEnforced, {onLeave: function (args) {send("Shield_FwIsGroupPolicyEnforced");}});
+
+var Shield_GetApplicationGuardPolicy = Module.findExportByName("SecurityHealthUdk.dll", "Shield_GetApplicationGuardPolicy")
+Interceptor.attach(Shield_GetApplicationGuardPolicy, {onLeave: function (args) {send("Shield_GetApplicationGuardPolicy");}});
+
+var Shield_GetImageMitigationPolicy = Module.findExportByName("SecurityHealthUdk.dll", "Shield_GetImageMitigationPolicy")
+Interceptor.attach(Shield_GetImageMitigationPolicy, {onLeave: function (args) {send("Shield_GetImageMitigationPolicy");}});
+
+var Shield_GetImageMitigationPolicyEx = Module.findExportByName("SecurityHealthUdk.dll", "Shield_GetImageMitigationPolicyEx")
+Interceptor.attach(Shield_GetImageMitigationPolicyEx, {onLeave: function (args) {send("Shield_GetImageMitigationPolicyEx");}});
+
+var Shield_GetIsBuiltAsScpcUefiVariable = Module.findExportByName("SecurityHealthUdk.dll", "Shield_GetIsBuiltAsScpcUefiVariable")
+Interceptor.attach(Shield_GetIsBuiltAsScpcUefiVariable, {onLeave: function (args) {send("Shield_GetIsBuiltAsScpcUefiVariable");}});
+
+var Shield_GetIsTpmPresent = Module.findExportByName("SecurityHealthUdk.dll", "Shield_GetIsTpmPresent")
+Interceptor.attach(Shield_GetIsTpmPresent, {onLeave: function (args) {send("Shield_GetIsTpmPresent");}});
+
+var Shield_GetOSVolumeEnablementStatus = Module.findExportByName("SecurityHealthUdk.dll", "Shield_GetOSVolumeEnablementStatus")
+Interceptor.attach(Shield_GetOSVolumeEnablementStatus, {onLeave: function (args) {send("Shield_GetOSVolumeEnablementStatus");}});
+
+var Shield_GetOsDefaultMitigationPolicy = Module.findExportByName("SecurityHealthUdk.dll", "Shield_GetOsDefaultMitigationPolicy")
+Interceptor.attach(Shield_GetOsDefaultMitigationPolicy, {onLeave: function (args) {send("Shield_GetOsDefaultMitigationPolicy");}});
+
+var Shield_GetOsDefaultMitigationPolicyEx = Module.findExportByName("SecurityHealthUdk.dll", "Shield_GetOsDefaultMitigationPolicyEx")
+Interceptor.attach(Shield_GetOsDefaultMitigationPolicyEx, {onLeave: function (args) {send("Shield_GetOsDefaultMitigationPolicyEx");}});
+
+var Shield_GetStoragePolicySettings = Module.findExportByName("SecurityHealthUdk.dll", "Shield_GetStoragePolicySettings")
+Interceptor.attach(Shield_GetStoragePolicySettings, {onLeave: function (args) {send("Shield_GetStoragePolicySettings");}});
+
+var Shield_HspGetActiveVersion = Module.findExportByName("SecurityHealthUdk.dll", "Shield_HspGetActiveVersion")
+Interceptor.attach(Shield_HspGetActiveVersion, {onLeave: function (args) {send("Shield_HspGetActiveVersion");}});
+
+var Shield_HspGetPlatRotHealthStatus = Module.findExportByName("SecurityHealthUdk.dll", "Shield_HspGetPlatRotHealthStatus")
+Interceptor.attach(Shield_HspGetPlatRotHealthStatus, {onLeave: function (args) {send("Shield_HspGetPlatRotHealthStatus");}});
+
+var Shield_HspGetPlatRotVendorId = Module.findExportByName("SecurityHealthUdk.dll", "Shield_HspGetPlatRotVendorId")
+Interceptor.attach(Shield_HspGetPlatRotVendorId, {onLeave: function (args) {send("Shield_HspGetPlatRotVendorId");}});
+
+var Shield_HspIsCapable = Module.findExportByName("SecurityHealthUdk.dll", "Shield_HspIsCapable")
+Interceptor.attach(Shield_HspIsCapable, {onLeave: function (args) {send("Shield_HspIsCapable");}});
+
+var Shield_HvciGetConfig = Module.findExportByName("SecurityHealthUdk.dll", "Shield_HvciGetConfig")
+Interceptor.attach(Shield_HvciGetConfig, {onLeave: function (args) {send("Shield_HvciGetConfig");}});
+
+var Shield_HvciIsActive = Module.findExportByName("SecurityHealthUdk.dll", "Shield_HvciIsActive")
+Interceptor.attach(Shield_HvciIsActive, {onLeave: function (args) {send("Shield_HvciIsActive");}});
+
+var Shield_IcfChangeNotificationCreate = Module.findExportByName("SecurityHealthUdk.dll", "Shield_IcfChangeNotificationCreate")
+Interceptor.attach(Shield_IcfChangeNotificationCreate, {onLeave: function (args) {send("Shield_IcfChangeNotificationCreate");}});
+
+var Shield_IcfChangeNotificationDestroy = Module.findExportByName("SecurityHealthUdk.dll", "Shield_IcfChangeNotificationDestroy")
+Interceptor.attach(Shield_IcfChangeNotificationDestroy, {onLeave: function (args) {send("Shield_IcfChangeNotificationDestroy");}});
+
+var Shield_ImportMitigationPoliciesFromXmlFile = Module.findExportByName("SecurityHealthUdk.dll", "Shield_ImportMitigationPoliciesFromXmlFile")
+Interceptor.attach(Shield_ImportMitigationPoliciesFromXmlFile, {onLeave: function (args) {send("Shield_ImportMitigationPoliciesFromXmlFile");}});
+
+var Shield_IsHspPresent = Module.findExportByName("SecurityHealthUdk.dll", "Shield_IsHspPresent")
+Interceptor.attach(Shield_IsHspPresent, {onLeave: function (args) {send("Shield_IsHspPresent");}});
+
+var Shield_IsQueryWin32SubsystemHostPresent = Module.findExportByName("SecurityHealthUdk.dll", "Shield_IsQueryWin32SubsystemHostPresent")
+Interceptor.attach(Shield_IsQueryWin32SubsystemHostPresent, {onLeave: function (args) {send("Shield_IsQueryWin32SubsystemHostPresent");}});
+
+var Shield_IsUMgrEnumerateSessionUsersPresent = Module.findExportByName("SecurityHealthUdk.dll", "Shield_IsUMgrEnumerateSessionUsersPresent")
+Interceptor.attach(Shield_IsUMgrEnumerateSessionUsersPresent, {onLeave: function (args) {send("Shield_IsUMgrEnumerateSessionUsersPresent");}});
+
+var Shield_IsUMgrQueryUserTokenPresent = Module.findExportByName("SecurityHealthUdk.dll", "Shield_IsUMgrQueryUserTokenPresent")
+Interceptor.attach(Shield_IsUMgrQueryUserTokenPresent, {onLeave: function (args) {send("Shield_IsUMgrQueryUserTokenPresent");}});
+
+var Shield_KeyCredentialManagerGetOperationErrorStates = Module.findExportByName("SecurityHealthUdk.dll", "Shield_KeyCredentialManagerGetOperationErrorStates")
+Interceptor.attach(Shield_KeyCredentialManagerGetOperationErrorStates, {onLeave: function (args) {send("Shield_KeyCredentialManagerGetOperationErrorStates");}});
+
+var Shield_LsaLookupUserAccountType = Module.findExportByName("SecurityHealthUdk.dll", "Shield_LsaLookupUserAccountType")
+Interceptor.attach(Shield_LsaLookupUserAccountType, {onLeave: function (args) {send("Shield_LsaLookupUserAccountType");}});
+
+var Shield_MpGetWindowsLockdownMode = Module.findExportByName("SecurityHealthUdk.dll", "Shield_MpGetWindowsLockdownMode")
+Interceptor.attach(Shield_MpGetWindowsLockdownMode, {onLeave: function (args) {send("Shield_MpGetWindowsLockdownMode");}});
+
+var Shield_MpIsAccountPasswordLess = Module.findExportByName("SecurityHealthUdk.dll", "Shield_MpIsAccountPasswordLess")
+Interceptor.attach(Shield_MpIsAccountPasswordLess, {onLeave: function (args) {send("Shield_MpIsAccountPasswordLess");}});
+
+var Shield_MpIsBrowserReplacementFeaturePresent = Module.findExportByName("SecurityHealthUdk.dll", "Shield_MpIsBrowserReplacementFeaturePresent")
+Interceptor.attach(Shield_MpIsBrowserReplacementFeaturePresent, {onLeave: function (args) {send("Shield_MpIsBrowserReplacementFeaturePresent");}});
+
+var Shield_MpIsWcosProductionConfiguration = Module.findExportByName("SecurityHealthUdk.dll", "Shield_MpIsWcosProductionConfiguration")
+Interceptor.attach(Shield_MpIsWcosProductionConfiguration, {onLeave: function (args) {send("Shield_MpIsWcosProductionConfiguration");}});
+
+var Shield_MpIsWindowsLockdownMode = Module.findExportByName("SecurityHealthUdk.dll", "Shield_MpIsWindowsLockdownMode")
+Interceptor.attach(Shield_MpIsWindowsLockdownMode, {onLeave: function (args) {send("Shield_MpIsWindowsLockdownMode");}});
+
+var Shield_MpRegisterWaitForSingleObjectEx = Module.findExportByName("SecurityHealthUdk.dll", "Shield_MpRegisterWaitForSingleObjectEx")
+Interceptor.attach(Shield_MpRegisterWaitForSingleObjectEx, {onLeave: function (args) {send("Shield_MpRegisterWaitForSingleObjectEx");}});
+
+var Shield_NgcEnumContainers = Module.findExportByName("SecurityHealthUdk.dll", "Shield_NgcEnumContainers")
+Interceptor.attach(Shield_NgcEnumContainers, {onLeave: function (args) {send("Shield_NgcEnumContainers");}});
+
+var Shield_NgcFreeEnumState = Module.findExportByName("SecurityHealthUdk.dll", "Shield_NgcFreeEnumState")
+Interceptor.attach(Shield_NgcFreeEnumState, {onLeave: function (args) {send("Shield_NgcFreeEnumState");}});
+
+var Shield_NgcIsAnyContainerInVsm = Module.findExportByName("SecurityHealthUdk.dll", "Shield_NgcIsAnyContainerInVsm")
+Interceptor.attach(Shield_NgcIsAnyContainerInVsm, {onLeave: function (args) {send("Shield_NgcIsAnyContainerInVsm");}});
+
+var Shield_NgcQueryEnabled = Module.findExportByName("SecurityHealthUdk.dll", "Shield_NgcQueryEnabled")
+Interceptor.attach(Shield_NgcQueryEnabled, {onLeave: function (args) {send("Shield_NgcQueryEnabled");}});
+
+var Shield_QueryWin32SubsystemHost = Module.findExportByName("SecurityHealthUdk.dll", "Shield_QueryWin32SubsystemHost")
+Interceptor.attach(Shield_QueryWin32SubsystemHost, {onLeave: function (args) {send("Shield_QueryWin32SubsystemHost");}});
+
+var Shield_RemoveImageNameAndItsMitigationPolicies = Module.findExportByName("SecurityHealthUdk.dll", "Shield_RemoveImageNameAndItsMitigationPolicies")
+Interceptor.attach(Shield_RemoveImageNameAndItsMitigationPolicies, {onLeave: function (args) {send("Shield_RemoveImageNameAndItsMitigationPolicies");}});
+
+var Shield_SetApplicationGuardPolicy = Module.findExportByName("SecurityHealthUdk.dll", "Shield_SetApplicationGuardPolicy")
+Interceptor.attach(Shield_SetApplicationGuardPolicy, {onLeave: function (args) {send("Shield_SetApplicationGuardPolicy");}});
+
+var Shield_SetImageMitigationPolicyEx = Module.findExportByName("SecurityHealthUdk.dll", "Shield_SetImageMitigationPolicyEx")
+Interceptor.attach(Shield_SetImageMitigationPolicyEx, {onLeave: function (args) {send("Shield_SetImageMitigationPolicyEx");}});
+
+var Shield_TpmClearWithPolicyOrPPI = Module.findExportByName("SecurityHealthUdk.dll", "Shield_TpmClearWithPolicyOrPPI")
+Interceptor.attach(Shield_TpmClearWithPolicyOrPPI, {onLeave: function (args) {send("Shield_TpmClearWithPolicyOrPPI");}});
+
+var Shield_TpmGatherLogs = Module.findExportByName("SecurityHealthUdk.dll", "Shield_TpmGatherLogs")
+Interceptor.attach(Shield_TpmGatherLogs, {onLeave: function (args) {send("Shield_TpmGatherLogs");}});
+
+var Shield_TpmGetCapLockoutInfo = Module.findExportByName("SecurityHealthUdk.dll", "Shield_TpmGetCapLockoutInfo")
+Interceptor.attach(Shield_TpmGetCapLockoutInfo, {onLeave: function (args) {send("Shield_TpmGetCapLockoutInfo");}});
+
+var Shield_TpmGetDeviceInformation = Module.findExportByName("SecurityHealthUdk.dll", "Shield_TpmGetDeviceInformation")
+Interceptor.attach(Shield_TpmGetDeviceInformation, {onLeave: function (args) {send("Shield_TpmGetDeviceInformation");}});
+
+var Shield_UMgrEnumerateSessionUsers = Module.findExportByName("SecurityHealthUdk.dll", "Shield_UMgrEnumerateSessionUsers")
+Interceptor.attach(Shield_UMgrEnumerateSessionUsers, {onLeave: function (args) {send("Shield_UMgrEnumerateSessionUsers");}});
+
+var Shield_UMgrFreeSessionUsers = Module.findExportByName("SecurityHealthUdk.dll", "Shield_UMgrFreeSessionUsers")
+Interceptor.attach(Shield_UMgrFreeSessionUsers, {onLeave: function (args) {send("Shield_UMgrFreeSessionUsers");}});
+
+var Shield_UMgrQueryUserToken = Module.findExportByName("SecurityHealthUdk.dll", "Shield_UMgrQueryUserToken")
+Interceptor.attach(Shield_UMgrQueryUserToken, {onLeave: function (args) {send("Shield_UMgrQueryUserToken");}});
+
+var Shield_VbsGetIssues = Module.findExportByName("SecurityHealthUdk.dll", "Shield_VbsGetIssues")
+Interceptor.attach(Shield_VbsGetIssues, {onLeave: function (args) {send("Shield_VbsGetIssues");}});
+
+var Shield_VbsIsCapable = Module.findExportByName("SecurityHealthUdk.dll", "Shield_VbsIsCapable")
+Interceptor.attach(Shield_VbsIsCapable, {onLeave: function (args) {send("Shield_VbsIsCapable");}});
+
+var Shield_VbsIsRecommended = Module.findExportByName("SecurityHealthUdk.dll", "Shield_VbsIsRecommended")
+Interceptor.attach(Shield_VbsIsRecommended, {onLeave: function (args) {send("Shield_VbsIsRecommended");}});
+
+var Shield_VbsSetScenarioEnable = Module.findExportByName("SecurityHealthUdk.dll", "Shield_VbsSetScenarioEnable")
+Interceptor.attach(Shield_VbsSetScenarioEnable, {onLeave: function (args) {send("Shield_VbsSetScenarioEnable");}});
+
+var Shield_WldpChangeVulnerableDriverBlocklistState = Module.findExportByName("SecurityHealthUdk.dll", "Shield_WldpChangeVulnerableDriverBlocklistState")
+Interceptor.attach(Shield_WldpChangeVulnerableDriverBlocklistState, {onLeave: function (args) {send("Shield_WldpChangeVulnerableDriverBlocklistState");}});
+
+var Shield_WldpIsVulnerableDriverBlocklistDisabled = Module.findExportByName("SecurityHealthUdk.dll", "Shield_WldpIsVulnerableDriverBlocklistDisabled")
+Interceptor.attach(Shield_WldpIsVulnerableDriverBlocklistDisabled, {onLeave: function (args) {send("Shield_WldpIsVulnerableDriverBlocklistDisabled");}});
+
+var Shield_WldpIsVulnerableDriverBlocklistEligibleToDisable = Module.findExportByName("SecurityHealthUdk.dll", "Shield_WldpIsVulnerableDriverBlocklistEligibleToDisable")
+Interceptor.attach(Shield_WldpIsVulnerableDriverBlocklistEligibleToDisable, {onLeave: function (args) {send("Shield_WldpIsVulnerableDriverBlocklistEligibleToDisable");}});
+
+var Shield_WldpQueryPolicySettingEnabled2 = Module.findExportByName("SecurityHealthUdk.dll", "Shield_WldpQueryPolicySettingEnabled2")
+Interceptor.attach(Shield_WldpQueryPolicySettingEnabled2, {onLeave: function (args) {send("Shield_WldpQueryPolicySettingEnabled2");}});
+

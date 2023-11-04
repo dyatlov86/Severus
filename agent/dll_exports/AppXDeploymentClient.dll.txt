@@ -1,0 +1,267 @@
+var AppInstallerUpdateAllTask = Module.findExportByName("AppXDeploymentClient.dll", "AppInstallerUpdateAllTask")
+Interceptor.attach(AppInstallerUpdateAllTask, {onLeave: function (args) {send("AppInstallerUpdateAllTask");}});
+
+var AppxAddPackageToAllUserStoreForPbr = Module.findExportByName("AppXDeploymentClient.dll", "AppxAddPackageToAllUserStoreForPbr")
+Interceptor.attach(AppxAddPackageToAllUserStoreForPbr, {onLeave: function (args) {send("AppxAddPackageToAllUserStoreForPbr");}});
+
+var AppxCleanupOrphanPackages = Module.findExportByName("AppXDeploymentClient.dll", "AppxCleanupOrphanPackages")
+Interceptor.attach(AppxCleanupOrphanPackages, {onLeave: function (args) {send("AppxCleanupOrphanPackages");}});
+
+var AppxCleanupSystemAppsMigratedToFOD = Module.findExportByName("AppXDeploymentClient.dll", "AppxCleanupSystemAppsMigratedToFOD")
+Interceptor.attach(AppxCleanupSystemAppsMigratedToFOD, {onLeave: function (args) {send("AppxCleanupSystemAppsMigratedToFOD");}});
+
+var AppxCleanupWCIReparsePoints = Module.findExportByName("AppXDeploymentClient.dll", "AppxCleanupWCIReparsePoints")
+Interceptor.attach(AppxCleanupWCIReparsePoints, {onLeave: function (args) {send("AppxCleanupWCIReparsePoints");}});
+
+var AppxCreateSharedLocalFolder = Module.findExportByName("AppXDeploymentClient.dll", "AppxCreateSharedLocalFolder")
+Interceptor.attach(AppxCreateSharedLocalFolder, {onLeave: function (args) {send("AppxCreateSharedLocalFolder");}});
+
+var AppxCreateSharedLocalFolderForFamilyName = Module.findExportByName("AppXDeploymentClient.dll", "AppxCreateSharedLocalFolderForFamilyName")
+Interceptor.attach(AppxCreateSharedLocalFolderForFamilyName, {onLeave: function (args) {send("AppxCreateSharedLocalFolderForFamilyName");}});
+
+var AppxDeletePackageFiles = Module.findExportByName("AppXDeploymentClient.dll", "AppxDeletePackageFiles")
+Interceptor.attach(AppxDeletePackageFiles, {onLeave: function (args) {send("AppxDeletePackageFiles");}});
+
+var AppxDestagePackage = Module.findExportByName("AppXDeploymentClient.dll", "AppxDestagePackage")
+Interceptor.attach(AppxDestagePackage, {onLeave: function (args) {send("AppxDestagePackage");}});
+
+var AppxDoesSharedLocalFolderExistForFamilyName = Module.findExportByName("AppXDeploymentClient.dll", "AppxDoesSharedLocalFolderExistForFamilyName")
+Interceptor.attach(AppxDoesSharedLocalFolderExistForFamilyName, {onLeave: function (args) {send("AppxDoesSharedLocalFolderExistForFamilyName");}});
+
+var AppxGetPackageInstalledLocation = Module.findExportByName("AppXDeploymentClient.dll", "AppxGetPackageInstalledLocation")
+Interceptor.attach(AppxGetPackageInstalledLocation, {onLeave: function (args) {send("AppxGetPackageInstalledLocation");}});
+
+var AppxGetStagedPackageFullNameFromFamilyName = Module.findExportByName("AppXDeploymentClient.dll", "AppxGetStagedPackageFullNameFromFamilyName")
+Interceptor.attach(AppxGetStagedPackageFullNameFromFamilyName, {onLeave: function (args) {send("AppxGetStagedPackageFullNameFromFamilyName");}});
+
+var AppxIsStagedPackageStoreSigned = Module.findExportByName("AppXDeploymentClient.dll", "AppxIsStagedPackageStoreSigned")
+Interceptor.attach(AppxIsStagedPackageStoreSigned, {onLeave: function (args) {send("AppxIsStagedPackageStoreSigned");}});
+
+var AppxPackageRepositoryRecoverStagedPackages = Module.findExportByName("AppXDeploymentClient.dll", "AppxPackageRepositoryRecoverStagedPackages")
+Interceptor.attach(AppxPackageRepositoryRecoverStagedPackages, {onLeave: function (args) {send("AppxPackageRepositoryRecoverStagedPackages");}});
+
+var AppxPackageRepositoryRecoverUserInstalls = Module.findExportByName("AppXDeploymentClient.dll", "AppxPackageRepositoryRecoverUserInstalls")
+Interceptor.attach(AppxPackageRepositoryRecoverUserInstalls, {onLeave: function (args) {send("AppxPackageRepositoryRecoverUserInstalls");}});
+
+var AppxPreRegisterAllInboxPackages = Module.findExportByName("AppXDeploymentClient.dll", "AppxPreRegisterAllInboxPackages")
+Interceptor.attach(AppxPreRegisterAllInboxPackages, {onLeave: function (args) {send("AppxPreRegisterAllInboxPackages");}});
+
+var AppxPreRegisterPackage = Module.findExportByName("AppXDeploymentClient.dll", "AppxPreRegisterPackage")
+Interceptor.attach(AppxPreRegisterPackage, {onLeave: function (args) {send("AppxPreRegisterPackage");}});
+
+var AppxPreStageCleanupRunTask = Module.findExportByName("AppXDeploymentClient.dll", "AppxPreStageCleanupRunTask")
+Interceptor.attach(AppxPreStageCleanupRunTask, {onLeave: function (args) {send("AppxPreStageCleanupRunTask");}});
+
+var AppxRecoverUserInstallsForUpgrade = Module.findExportByName("AppXDeploymentClient.dll", "AppxRecoverUserInstallsForUpgrade")
+Interceptor.attach(AppxRecoverUserInstallsForUpgrade, {onLeave: function (args) {send("AppxRecoverUserInstallsForUpgrade");}});
+
+var AppxRegisterPackage = Module.findExportByName("AppXDeploymentClient.dll", "AppxRegisterPackage")
+Interceptor.attach(AppxRegisterPackage, {onLeave: function (args) {send("AppxRegisterPackage");}});
+
+var AppxRemoveAllPackagesForUserSid = Module.findExportByName("AppXDeploymentClient.dll", "AppxRemoveAllPackagesForUserSid")
+Interceptor.attach(AppxRemoveAllPackagesForUserSid, {onLeave: function (args) {send("AppxRemoveAllPackagesForUserSid");}});
+
+var AppxRemovePackageForAllUsers = Module.findExportByName("AppXDeploymentClient.dll", "AppxRemovePackageForAllUsers")
+Interceptor.attach(AppxRemovePackageForAllUsers, {onLeave: function (args) {send("AppxRemovePackageForAllUsers");}});
+
+var AppxRemovePackageForUserSid = Module.findExportByName("AppXDeploymentClient.dll", "AppxRemovePackageForUserSid")
+Interceptor.attach(AppxRemovePackageForUserSid, {onLeave: function (args) {send("AppxRemovePackageForUserSid");}});
+
+var AppxRequestRemovePackageForUser = Module.findExportByName("AppXDeploymentClient.dll", "AppxRequestRemovePackageForUser")
+Interceptor.attach(AppxRequestRemovePackageForUser, {onLeave: function (args) {send("AppxRequestRemovePackageForUser");}});
+
+var AppxResetPackage = Module.findExportByName("AppXDeploymentClient.dll", "AppxResetPackage")
+Interceptor.attach(AppxResetPackage, {onLeave: function (args) {send("AppxResetPackage");}});
+
+var AppxStagePackage = Module.findExportByName("AppXDeploymentClient.dll", "AppxStagePackage")
+Interceptor.attach(AppxStagePackage, {onLeave: function (args) {send("AppxStagePackage");}});
+
+var AppxValidatePackages = Module.findExportByName("AppXDeploymentClient.dll", "AppxValidatePackages")
+Interceptor.attach(AppxValidatePackages, {onLeave: function (args) {send("AppxValidatePackages");}});
+
+var AppxValidatePackagesWithOptions = Module.findExportByName("AppXDeploymentClient.dll", "AppxValidatePackagesWithOptions")
+Interceptor.attach(AppxValidatePackagesWithOptions, {onLeave: function (args) {send("AppxValidatePackagesWithOptions");}});
+
+var CheckAppInstallerUpdateAvailability = Module.findExportByName("AppXDeploymentClient.dll", "CheckAppInstallerUpdateAvailability")
+Interceptor.attach(CheckAppInstallerUpdateAvailability, {onLeave: function (args) {send("CheckAppInstallerUpdateAvailability");}});
+
+var CheckComCallerHasCapabilities = Module.findExportByName("AppXDeploymentClient.dll", "CheckComCallerHasCapabilities")
+Interceptor.attach(CheckComCallerHasCapabilities, {onLeave: function (args) {send("CheckComCallerHasCapabilities");}});
+
+var CheckForUpdatesAndWaitForInstallerIfNeeded = Module.findExportByName("AppXDeploymentClient.dll", "CheckForUpdatesAndWaitForInstallerIfNeeded")
+Interceptor.attach(CheckForUpdatesAndWaitForInstallerIfNeeded, {onLeave: function (args) {send("CheckForUpdatesAndWaitForInstallerIfNeeded");}});
+
+var CleanupProfileForUser = Module.findExportByName("AppXDeploymentClient.dll", "CleanupProfileForUser")
+Interceptor.attach(CleanupProfileForUser, {onLeave: function (args) {send("CleanupProfileForUser");}});
+
+var ClientDeleteAllPackagesFromMainPackageArray = Module.findExportByName("AppXDeploymentClient.dll", "ClientDeleteAllPackagesFromMainPackageArray")
+Interceptor.attach(ClientDeleteAllPackagesFromMainPackageArray, {onLeave: function (args) {send("ClientDeleteAllPackagesFromMainPackageArray");}});
+
+var ClientGetAllPackagesToBeInstalledForUser = Module.findExportByName("AppXDeploymentClient.dll", "ClientGetAllPackagesToBeInstalledForUser")
+Interceptor.attach(ClientGetAllPackagesToBeInstalledForUser, {onLeave: function (args) {send("ClientGetAllPackagesToBeInstalledForUser");}});
+
+var CreateCanonicalPriFile = Module.findExportByName("AppXDeploymentClient.dll", "CreateCanonicalPriFile")
+Interceptor.attach(CreateCanonicalPriFile, {onLeave: function (args) {send("CreateCanonicalPriFile");}});
+
+var DeleteApplicabilityInfoArray = Module.findExportByName("AppXDeploymentClient.dll", "DeleteApplicabilityInfoArray")
+Interceptor.attach(DeleteApplicabilityInfoArray, {onLeave: function (args) {send("DeleteApplicabilityInfoArray");}});
+
+var DeleteAutoUpdateSettings = Module.findExportByName("AppXDeploymentClient.dll", "DeleteAutoUpdateSettings")
+Interceptor.attach(DeleteAutoUpdateSettings, {onLeave: function (args) {send("DeleteAutoUpdateSettings");}});
+
+var DllCanUnloadNow = Module.findExportByName("AppXDeploymentClient.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("AppXDeploymentClient.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("AppXDeploymentClient.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var EnsurePackageFamilyIsRegisteredBeforeActivation = Module.findExportByName("AppXDeploymentClient.dll", "EnsurePackageFamilyIsRegisteredBeforeActivation")
+Interceptor.attach(EnsurePackageFamilyIsRegisteredBeforeActivation, {onLeave: function (args) {send("EnsurePackageFamilyIsRegisteredBeforeActivation");}});
+
+var EnsurePackageIsRegisteredInContainer = Module.findExportByName("AppXDeploymentClient.dll", "EnsurePackageIsRegisteredInContainer")
+Interceptor.attach(EnsurePackageIsRegisteredInContainer, {onLeave: function (args) {send("EnsurePackageIsRegisteredInContainer");}});
+
+var FixJunctionsForAppsIfNecessary = Module.findExportByName("AppXDeploymentClient.dll", "FixJunctionsForAppsIfNecessary")
+Interceptor.attach(FixJunctionsForAppsIfNecessary, {onLeave: function (args) {send("FixJunctionsForAppsIfNecessary");}});
+
+var GeneratePreInstalledPriFiles = Module.findExportByName("AppXDeploymentClient.dll", "GeneratePreInstalledPriFiles")
+Interceptor.attach(GeneratePreInstalledPriFiles, {onLeave: function (args) {send("GeneratePreInstalledPriFiles");}});
+
+var GetApplicability = Module.findExportByName("AppXDeploymentClient.dll", "GetApplicability")
+Interceptor.attach(GetApplicability, {onLeave: function (args) {send("GetApplicability");}});
+
+var GetApplicability2 = Module.findExportByName("AppXDeploymentClient.dll", "GetApplicability2")
+Interceptor.attach(GetApplicability2, {onLeave: function (args) {send("GetApplicability2");}});
+
+var GetApplicability4 = Module.findExportByName("AppXDeploymentClient.dll", "GetApplicability4")
+Interceptor.attach(GetApplicability4, {onLeave: function (args) {send("GetApplicability4");}});
+
+var GetApplicability5 = Module.findExportByName("AppXDeploymentClient.dll", "GetApplicability5")
+Interceptor.attach(GetApplicability5, {onLeave: function (args) {send("GetApplicability5");}});
+
+var GetApplicabilityForPackage = Module.findExportByName("AppXDeploymentClient.dll", "GetApplicabilityForPackage")
+Interceptor.attach(GetApplicabilityForPackage, {onLeave: function (args) {send("GetApplicabilityForPackage");}});
+
+var GetBundleApplicablePackages = Module.findExportByName("AppXDeploymentClient.dll", "GetBundleApplicablePackages")
+Interceptor.attach(GetBundleApplicablePackages, {onLeave: function (args) {send("GetBundleApplicablePackages");}});
+
+var GetMetadataRootForPackage = Module.findExportByName("AppXDeploymentClient.dll", "GetMetadataRootForPackage")
+Interceptor.attach(GetMetadataRootForPackage, {onLeave: function (args) {send("GetMetadataRootForPackage");}});
+
+var GetNotificationPayload = Module.findExportByName("AppXDeploymentClient.dll", "GetNotificationPayload")
+Interceptor.attach(GetNotificationPayload, {onLeave: function (args) {send("GetNotificationPayload");}});
+
+var GetNotificationPayloadForUser = Module.findExportByName("AppXDeploymentClient.dll", "GetNotificationPayloadForUser")
+Interceptor.attach(GetNotificationPayloadForUser, {onLeave: function (args) {send("GetNotificationPayloadForUser");}});
+
+var GetPackageRegistrationStatusForUser = Module.findExportByName("AppXDeploymentClient.dll", "GetPackageRegistrationStatusForUser")
+Interceptor.attach(GetPackageRegistrationStatusForUser, {onLeave: function (args) {send("GetPackageRegistrationStatusForUser");}});
+
+var GetPackageRegistrationStatusForUserAndDefaultAccount = Module.findExportByName("AppXDeploymentClient.dll", "GetPackageRegistrationStatusForUserAndDefaultAccount")
+Interceptor.attach(GetPackageRegistrationStatusForUserAndDefaultAccount, {onLeave: function (args) {send("GetPackageRegistrationStatusForUserAndDefaultAccount");}});
+
+var HasPackageFamilyBeenRegisteredForUser = Module.findExportByName("AppXDeploymentClient.dll", "HasPackageFamilyBeenRegisteredForUser")
+Interceptor.attach(HasPackageFamilyBeenRegisteredForUser, {onLeave: function (args) {send("HasPackageFamilyBeenRegisteredForUser");}});
+
+var IsPackageInstalled = Module.findExportByName("AppXDeploymentClient.dll", "IsPackageInstalled")
+Interceptor.attach(IsPackageInstalled, {onLeave: function (args) {send("IsPackageInstalled");}});
+
+var IsPackageMetadataUnderSystemMetadata = Module.findExportByName("AppXDeploymentClient.dll", "IsPackageMetadataUnderSystemMetadata")
+Interceptor.attach(IsPackageMetadataUnderSystemMetadata, {onLeave: function (args) {send("IsPackageMetadataUnderSystemMetadata");}});
+
+var IsSharedAppsEnabled = Module.findExportByName("AppXDeploymentClient.dll", "IsSharedAppsEnabled")
+Interceptor.attach(IsSharedAppsEnabled, {onLeave: function (args) {send("IsSharedAppsEnabled");}});
+
+var MSIXForceReRegisterPackage = Module.findExportByName("AppXDeploymentClient.dll", "MSIXForceReRegisterPackage")
+Interceptor.attach(MSIXForceReRegisterPackage, {onLeave: function (args) {send("MSIXForceReRegisterPackage");}});
+
+var MsixEnsurePackageIsRegistered = Module.findExportByName("AppXDeploymentClient.dll", "MsixEnsurePackageIsRegistered")
+Interceptor.attach(MsixEnsurePackageIsRegistered, {onLeave: function (args) {send("MsixEnsurePackageIsRegistered");}});
+
+var NotifyPackageStatusChanged = Module.findExportByName("AppXDeploymentClient.dll", "NotifyPackageStatusChanged")
+Interceptor.attach(NotifyPackageStatusChanged, {onLeave: function (args) {send("NotifyPackageStatusChanged");}});
+
+var PauseAutoUpdateSettings = Module.findExportByName("AppXDeploymentClient.dll", "PauseAutoUpdateSettings")
+Interceptor.attach(PauseAutoUpdateSettings, {onLeave: function (args) {send("PauseAutoUpdateSettings");}});
+
+var PopulateProtocolAndFTA = Module.findExportByName("AppXDeploymentClient.dll", "PopulateProtocolAndFTA")
+Interceptor.attach(PopulateProtocolAndFTA, {onLeave: function (args) {send("PopulateProtocolAndFTA");}});
+
+var RDSRecoverRequests = Module.findExportByName("AppXDeploymentClient.dll", "RDSRecoverRequests")
+Interceptor.attach(RDSRecoverRequests, {onLeave: function (args) {send("RDSRecoverRequests");}});
+
+var ReArmAppxPreStageCleanupTask = Module.findExportByName("AppXDeploymentClient.dll", "ReArmAppxPreStageCleanupTask")
+Interceptor.attach(ReArmAppxPreStageCleanupTask, {onLeave: function (args) {send("ReArmAppxPreStageCleanupTask");}});
+
+var RegisterNotification = Module.findExportByName("AppXDeploymentClient.dll", "RegisterNotification")
+Interceptor.attach(RegisterNotification, {onLeave: function (args) {send("RegisterNotification");}});
+
+var RegisterNotificationForUser = Module.findExportByName("AppXDeploymentClient.dll", "RegisterNotificationForUser")
+Interceptor.attach(RegisterNotificationForUser, {onLeave: function (args) {send("RegisterNotificationForUser");}});
+
+var RemovePackageFromContainer = Module.findExportByName("AppXDeploymentClient.dll", "RemovePackageFromContainer")
+Interceptor.attach(RemovePackageFromContainer, {onLeave: function (args) {send("RemovePackageFromContainer");}});
+
+var RepairPackageFileAcls = Module.findExportByName("AppXDeploymentClient.dll", "RepairPackageFileAcls")
+Interceptor.attach(RepairPackageFileAcls, {onLeave: function (args) {send("RepairPackageFileAcls");}});
+
+var RequestContentGroups = Module.findExportByName("AppXDeploymentClient.dll", "RequestContentGroups")
+Interceptor.attach(RequestContentGroups, {onLeave: function (args) {send("RequestContentGroups");}});
+
+var RequestContentGroupsForFullTrust = Module.findExportByName("AppXDeploymentClient.dll", "RequestContentGroupsForFullTrust")
+Interceptor.attach(RequestContentGroupsForFullTrust, {onLeave: function (args) {send("RequestContentGroupsForFullTrust");}});
+
+var ScheduleAppInstallerBackgroundUpdate = Module.findExportByName("AppXDeploymentClient.dll", "ScheduleAppInstallerBackgroundUpdate")
+Interceptor.attach(ScheduleAppInstallerBackgroundUpdate, {onLeave: function (args) {send("ScheduleAppInstallerBackgroundUpdate");}});
+
+var SetPackageStatusInContainer = Module.findExportByName("AppXDeploymentClient.dll", "SetPackageStatusInContainer")
+Interceptor.attach(SetPackageStatusInContainer, {onLeave: function (args) {send("SetPackageStatusInContainer");}});
+
+var UnregisterNotification = Module.findExportByName("AppXDeploymentClient.dll", "UnregisterNotification")
+Interceptor.attach(UnregisterNotification, {onLeave: function (args) {send("UnregisterNotification");}});
+
+var UnregisterNotificationForUser = Module.findExportByName("AppXDeploymentClient.dll", "UnregisterNotificationForUser")
+Interceptor.attach(UnregisterNotificationForUser, {onLeave: function (args) {send("UnregisterNotificationForUser");}});
+
+var UpdateAgentCancelAllDownloads = Module.findExportByName("AppXDeploymentClient.dll", "UpdateAgentCancelAllDownloads")
+Interceptor.attach(UpdateAgentCancelAllDownloads, {onLeave: function (args) {send("UpdateAgentCancelAllDownloads");}});
+
+var UpdateAgentCancelDownload = Module.findExportByName("AppXDeploymentClient.dll", "UpdateAgentCancelDownload")
+Interceptor.attach(UpdateAgentCancelDownload, {onLeave: function (args) {send("UpdateAgentCancelDownload");}});
+
+var UpdateAgentCreateDownload = Module.findExportByName("AppXDeploymentClient.dll", "UpdateAgentCreateDownload")
+Interceptor.attach(UpdateAgentCreateDownload, {onLeave: function (args) {send("UpdateAgentCreateDownload");}});
+
+var UpdateAgentFreeDownloadRanges = Module.findExportByName("AppXDeploymentClient.dll", "UpdateAgentFreeDownloadRanges")
+Interceptor.attach(UpdateAgentFreeDownloadRanges, {onLeave: function (args) {send("UpdateAgentFreeDownloadRanges");}});
+
+var UpdateAgentGetDownloadPackageReturnValue = Module.findExportByName("AppXDeploymentClient.dll", "UpdateAgentGetDownloadPackageReturnValue")
+Interceptor.attach(UpdateAgentGetDownloadPackageReturnValue, {onLeave: function (args) {send("UpdateAgentGetDownloadPackageReturnValue");}});
+
+var UpdateAgentGetDownloadRanges = Module.findExportByName("AppXDeploymentClient.dll", "UpdateAgentGetDownloadRanges")
+Interceptor.attach(UpdateAgentGetDownloadRanges, {onLeave: function (args) {send("UpdateAgentGetDownloadRanges");}});
+
+var UpdateAgentGetDownloadingPackageCount = Module.findExportByName("AppXDeploymentClient.dll", "UpdateAgentGetDownloadingPackageCount")
+Interceptor.attach(UpdateAgentGetDownloadingPackageCount, {onLeave: function (args) {send("UpdateAgentGetDownloadingPackageCount");}});
+
+var UpdateAppInstallerSettings = Module.findExportByName("AppXDeploymentClient.dll", "UpdateAppInstallerSettings")
+Interceptor.attach(UpdateAppInstallerSettings, {onLeave: function (args) {send("UpdateAppInstallerSettings");}});
+
+var UpdateDataSourceAddRange = Module.findExportByName("AppXDeploymentClient.dll", "UpdateDataSourceAddRange")
+Interceptor.attach(UpdateDataSourceAddRange, {onLeave: function (args) {send("UpdateDataSourceAddRange");}});
+
+var UpdateDataSourceCancelRun = Module.findExportByName("AppXDeploymentClient.dll", "UpdateDataSourceCancelRun")
+Interceptor.attach(UpdateDataSourceCancelRun, {onLeave: function (args) {send("UpdateDataSourceCancelRun");}});
+
+var UpdateDataSourceRegister = Module.findExportByName("AppXDeploymentClient.dll", "UpdateDataSourceRegister")
+Interceptor.attach(UpdateDataSourceRegister, {onLeave: function (args) {send("UpdateDataSourceRegister");}});
+
+var UpdateDataSourceRun = Module.findExportByName("AppXDeploymentClient.dll", "UpdateDataSourceRun")
+Interceptor.attach(UpdateDataSourceRun, {onLeave: function (args) {send("UpdateDataSourceRun");}});
+
+var VerifyPackage = Module.findExportByName("AppXDeploymentClient.dll", "VerifyPackage")
+Interceptor.attach(VerifyPackage, {onLeave: function (args) {send("VerifyPackage");}});
+

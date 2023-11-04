@@ -1,0 +1,12 @@
+var DllRegisterServer = Module.findExportByName("wlidnsp.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wlidnsp.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var NSPCleanup = Module.findExportByName("wlidnsp.dll", "NSPCleanup")
+Interceptor.attach(NSPCleanup, {onLeave: function (args) {send("NSPCleanup");}});
+
+var NSPStartup = Module.findExportByName("wlidnsp.dll", "NSPStartup")
+Interceptor.attach(NSPStartup, {onLeave: function (args) {send("NSPStartup");}});
+

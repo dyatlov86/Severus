@@ -1,0 +1,6 @@
+var WerMergeEtl = Module.findExportByName("weretw.dll", "WerMergeEtl")
+Interceptor.attach(WerMergeEtl, {onLeave: function (args) {send("WerMergeEtl");}});
+
+var WerMergeEtlEx = Module.findExportByName("weretw.dll", "WerMergeEtlEx")
+Interceptor.attach(WerMergeEtlEx, {onLeave: function (args) {send("WerMergeEtlEx");}});
+

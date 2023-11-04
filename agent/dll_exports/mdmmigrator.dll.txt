@@ -1,0 +1,6 @@
+var MigrateBlueToThreshold = Module.findExportByName("mdmmigrator.dll", "MigrateBlueToThreshold")
+Interceptor.attach(MigrateBlueToThreshold, {onLeave: function (args) {send("MigrateBlueToThreshold");}});
+
+var MigrateBlueToThresholdNeeded = Module.findExportByName("mdmmigrator.dll", "MigrateBlueToThresholdNeeded")
+Interceptor.attach(MigrateBlueToThresholdNeeded, {onLeave: function (args) {send("MigrateBlueToThresholdNeeded");}});
+

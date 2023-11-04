@@ -1,0 +1,6 @@
+var CreateHardwareEventMoniker = Module.findExportByName("shsvcs.dll", "CreateHardwareEventMoniker")
+Interceptor.attach(CreateHardwareEventMoniker, {onLeave: function (args) {send("CreateHardwareEventMoniker");}});
+
+var HardwareDetectionServiceMain = Module.findExportByName("shsvcs.dll", "HardwareDetectionServiceMain")
+Interceptor.attach(HardwareDetectionServiceMain, {onLeave: function (args) {send("HardwareDetectionServiceMain");}});
+

@@ -1,0 +1,24 @@
+var ClosePopupTipbar = Module.findExportByName("msutb.dll", "ClosePopupTipbar")
+Interceptor.attach(ClosePopupTipbar, {onLeave: function (args) {send("ClosePopupTipbar");}});
+
+var DllCanUnloadNow = Module.findExportByName("msutb.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("msutb.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("msutb.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msutb.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetChildTipbar = Module.findExportByName("msutb.dll", "GetChildTipbar")
+Interceptor.attach(GetChildTipbar, {onLeave: function (args) {send("GetChildTipbar");}});
+
+var GetPopupTipbar = Module.findExportByName("msutb.dll", "GetPopupTipbar")
+Interceptor.attach(GetPopupTipbar, {onLeave: function (args) {send("GetPopupTipbar");}});
+
+var SetRegisterLangBand = Module.findExportByName("msutb.dll", "SetRegisterLangBand")
+Interceptor.attach(SetRegisterLangBand, {onLeave: function (args) {send("SetRegisterLangBand");}});
+

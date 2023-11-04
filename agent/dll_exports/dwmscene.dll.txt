@@ -1,0 +1,3 @@
+var CreateDwmSceneRenderer = Module.findExportByName("dwmscene.dll", "CreateDwmSceneRenderer")
+Interceptor.attach(CreateDwmSceneRenderer, {onLeave: function (args) {send("CreateDwmSceneRenderer");}});
+

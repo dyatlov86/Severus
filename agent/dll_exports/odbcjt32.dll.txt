@@ -1,0 +1,225 @@
+var AdvancedDialogProc = Module.findExportByName("odbcjt32.dll", "AdvancedDialogProc")
+Interceptor.attach(AdvancedDialogProc, {onLeave: function (args) {send("AdvancedDialogProc");}});
+
+var ConfigDSN = Module.findExportByName("odbcjt32.dll", "ConfigDSN")
+Interceptor.attach(ConfigDSN, {onLeave: function (args) {send("ConfigDSN");}});
+
+var ConfigDSNExW = Module.findExportByName("odbcjt32.dll", "ConfigDSNExW")
+Interceptor.attach(ConfigDSNExW, {onLeave: function (args) {send("ConfigDSNExW");}});
+
+var ConfigDSNW = Module.findExportByName("odbcjt32.dll", "ConfigDSNW")
+Interceptor.attach(ConfigDSNW, {onLeave: function (args) {send("ConfigDSNW");}});
+
+var ConfigDialogProc = Module.findExportByName("odbcjt32.dll", "ConfigDialogProc")
+Interceptor.attach(ConfigDialogProc, {onLeave: function (args) {send("ConfigDialogProc");}});
+
+var ConfigDriverW = Module.findExportByName("odbcjt32.dll", "ConfigDriverW")
+Interceptor.attach(ConfigDriverW, {onLeave: function (args) {send("ConfigDriverW");}});
+
+var DefTxtFmtDlgProc = Module.findExportByName("odbcjt32.dll", "DefTxtFmtDlgProc")
+Interceptor.attach(DefTxtFmtDlgProc, {onLeave: function (args) {send("DefTxtFmtDlgProc");}});
+
+var DllMain = Module.findExportByName("odbcjt32.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var InitDialogAgain = Module.findExportByName("odbcjt32.dll", "InitDialogAgain")
+Interceptor.attach(InitDialogAgain, {onLeave: function (args) {send("InitDialogAgain");}});
+
+var InitializeLoginDialog = Module.findExportByName("odbcjt32.dll", "InitializeLoginDialog")
+Interceptor.attach(InitializeLoginDialog, {onLeave: function (args) {send("InitializeLoginDialog");}});
+
+var InvisibleSelectDb = Module.findExportByName("odbcjt32.dll", "InvisibleSelectDb")
+Interceptor.attach(InvisibleSelectDb, {onLeave: function (args) {send("InvisibleSelectDb");}});
+
+var LoadByOrdinal = Module.findExportByName("odbcjt32.dll", "LoadByOrdinal")
+Interceptor.attach(LoadByOrdinal, {onLeave: function (args) {send("LoadByOrdinal");}});
+
+var LoginDialogProc = Module.findExportByName("odbcjt32.dll", "LoginDialogProc")
+Interceptor.attach(LoginDialogProc, {onLeave: function (args) {send("LoginDialogProc");}});
+
+var OpenDirHook = Module.findExportByName("odbcjt32.dll", "OpenDirHook")
+Interceptor.attach(OpenDirHook, {onLeave: function (args) {send("OpenDirHook");}});
+
+var RepairCompactProc = Module.findExportByName("odbcjt32.dll", "RepairCompactProc")
+Interceptor.attach(RepairCompactProc, {onLeave: function (args) {send("RepairCompactProc");}});
+
+var SQLAllocConnect = Module.findExportByName("odbcjt32.dll", "SQLAllocConnect")
+Interceptor.attach(SQLAllocConnect, {onLeave: function (args) {send("SQLAllocConnect");}});
+
+var SQLAllocEnv = Module.findExportByName("odbcjt32.dll", "SQLAllocEnv")
+Interceptor.attach(SQLAllocEnv, {onLeave: function (args) {send("SQLAllocEnv");}});
+
+var SQLAllocHandle = Module.findExportByName("odbcjt32.dll", "SQLAllocHandle")
+Interceptor.attach(SQLAllocHandle, {onLeave: function (args) {send("SQLAllocHandle");}});
+
+var SQLAllocStmt = Module.findExportByName("odbcjt32.dll", "SQLAllocStmt")
+Interceptor.attach(SQLAllocStmt, {onLeave: function (args) {send("SQLAllocStmt");}});
+
+var SQLBindCol = Module.findExportByName("odbcjt32.dll", "SQLBindCol")
+Interceptor.attach(SQLBindCol, {onLeave: function (args) {send("SQLBindCol");}});
+
+var SQLBindParameter = Module.findExportByName("odbcjt32.dll", "SQLBindParameter")
+Interceptor.attach(SQLBindParameter, {onLeave: function (args) {send("SQLBindParameter");}});
+
+var SQLBulkOperations = Module.findExportByName("odbcjt32.dll", "SQLBulkOperations")
+Interceptor.attach(SQLBulkOperations, {onLeave: function (args) {send("SQLBulkOperations");}});
+
+var SQLCancel = Module.findExportByName("odbcjt32.dll", "SQLCancel")
+Interceptor.attach(SQLCancel, {onLeave: function (args) {send("SQLCancel");}});
+
+var SQLCloseCursor = Module.findExportByName("odbcjt32.dll", "SQLCloseCursor")
+Interceptor.attach(SQLCloseCursor, {onLeave: function (args) {send("SQLCloseCursor");}});
+
+var SQLColAttributeW = Module.findExportByName("odbcjt32.dll", "SQLColAttributeW")
+Interceptor.attach(SQLColAttributeW, {onLeave: function (args) {send("SQLColAttributeW");}});
+
+var SQLColumnsW = Module.findExportByName("odbcjt32.dll", "SQLColumnsW")
+Interceptor.attach(SQLColumnsW, {onLeave: function (args) {send("SQLColumnsW");}});
+
+var SQLConnectW = Module.findExportByName("odbcjt32.dll", "SQLConnectW")
+Interceptor.attach(SQLConnectW, {onLeave: function (args) {send("SQLConnectW");}});
+
+var SQLCopyDesc = Module.findExportByName("odbcjt32.dll", "SQLCopyDesc")
+Interceptor.attach(SQLCopyDesc, {onLeave: function (args) {send("SQLCopyDesc");}});
+
+var SQLDescribeColW = Module.findExportByName("odbcjt32.dll", "SQLDescribeColW")
+Interceptor.attach(SQLDescribeColW, {onLeave: function (args) {send("SQLDescribeColW");}});
+
+var SQLDisconnect = Module.findExportByName("odbcjt32.dll", "SQLDisconnect")
+Interceptor.attach(SQLDisconnect, {onLeave: function (args) {send("SQLDisconnect");}});
+
+var SQLDriverConnectW = Module.findExportByName("odbcjt32.dll", "SQLDriverConnectW")
+Interceptor.attach(SQLDriverConnectW, {onLeave: function (args) {send("SQLDriverConnectW");}});
+
+var SQLEndTran = Module.findExportByName("odbcjt32.dll", "SQLEndTran")
+Interceptor.attach(SQLEndTran, {onLeave: function (args) {send("SQLEndTran");}});
+
+var SQLExecDirectW = Module.findExportByName("odbcjt32.dll", "SQLExecDirectW")
+Interceptor.attach(SQLExecDirectW, {onLeave: function (args) {send("SQLExecDirectW");}});
+
+var SQLExecute = Module.findExportByName("odbcjt32.dll", "SQLExecute")
+Interceptor.attach(SQLExecute, {onLeave: function (args) {send("SQLExecute");}});
+
+var SQLExtendedFetch = Module.findExportByName("odbcjt32.dll", "SQLExtendedFetch")
+Interceptor.attach(SQLExtendedFetch, {onLeave: function (args) {send("SQLExtendedFetch");}});
+
+var SQLFetch = Module.findExportByName("odbcjt32.dll", "SQLFetch")
+Interceptor.attach(SQLFetch, {onLeave: function (args) {send("SQLFetch");}});
+
+var SQLFetchScroll = Module.findExportByName("odbcjt32.dll", "SQLFetchScroll")
+Interceptor.attach(SQLFetchScroll, {onLeave: function (args) {send("SQLFetchScroll");}});
+
+var SQLFreeConnect = Module.findExportByName("odbcjt32.dll", "SQLFreeConnect")
+Interceptor.attach(SQLFreeConnect, {onLeave: function (args) {send("SQLFreeConnect");}});
+
+var SQLFreeEnv = Module.findExportByName("odbcjt32.dll", "SQLFreeEnv")
+Interceptor.attach(SQLFreeEnv, {onLeave: function (args) {send("SQLFreeEnv");}});
+
+var SQLFreeHandle = Module.findExportByName("odbcjt32.dll", "SQLFreeHandle")
+Interceptor.attach(SQLFreeHandle, {onLeave: function (args) {send("SQLFreeHandle");}});
+
+var SQLFreeStmt = Module.findExportByName("odbcjt32.dll", "SQLFreeStmt")
+Interceptor.attach(SQLFreeStmt, {onLeave: function (args) {send("SQLFreeStmt");}});
+
+var SQLGetConnectAttrW = Module.findExportByName("odbcjt32.dll", "SQLGetConnectAttrW")
+Interceptor.attach(SQLGetConnectAttrW, {onLeave: function (args) {send("SQLGetConnectAttrW");}});
+
+var SQLGetCursorNameW = Module.findExportByName("odbcjt32.dll", "SQLGetCursorNameW")
+Interceptor.attach(SQLGetCursorNameW, {onLeave: function (args) {send("SQLGetCursorNameW");}});
+
+var SQLGetData = Module.findExportByName("odbcjt32.dll", "SQLGetData")
+Interceptor.attach(SQLGetData, {onLeave: function (args) {send("SQLGetData");}});
+
+var SQLGetDescFieldW = Module.findExportByName("odbcjt32.dll", "SQLGetDescFieldW")
+Interceptor.attach(SQLGetDescFieldW, {onLeave: function (args) {send("SQLGetDescFieldW");}});
+
+var SQLGetDescRecW = Module.findExportByName("odbcjt32.dll", "SQLGetDescRecW")
+Interceptor.attach(SQLGetDescRecW, {onLeave: function (args) {send("SQLGetDescRecW");}});
+
+var SQLGetDiagFieldW = Module.findExportByName("odbcjt32.dll", "SQLGetDiagFieldW")
+Interceptor.attach(SQLGetDiagFieldW, {onLeave: function (args) {send("SQLGetDiagFieldW");}});
+
+var SQLGetDiagRecW = Module.findExportByName("odbcjt32.dll", "SQLGetDiagRecW")
+Interceptor.attach(SQLGetDiagRecW, {onLeave: function (args) {send("SQLGetDiagRecW");}});
+
+var SQLGetFunctions = Module.findExportByName("odbcjt32.dll", "SQLGetFunctions")
+Interceptor.attach(SQLGetFunctions, {onLeave: function (args) {send("SQLGetFunctions");}});
+
+var SQLGetInfoW = Module.findExportByName("odbcjt32.dll", "SQLGetInfoW")
+Interceptor.attach(SQLGetInfoW, {onLeave: function (args) {send("SQLGetInfoW");}});
+
+var SQLGetStmtAttrW = Module.findExportByName("odbcjt32.dll", "SQLGetStmtAttrW")
+Interceptor.attach(SQLGetStmtAttrW, {onLeave: function (args) {send("SQLGetStmtAttrW");}});
+
+var SQLGetTypeInfoW = Module.findExportByName("odbcjt32.dll", "SQLGetTypeInfoW")
+Interceptor.attach(SQLGetTypeInfoW, {onLeave: function (args) {send("SQLGetTypeInfoW");}});
+
+var SQLMoreResults = Module.findExportByName("odbcjt32.dll", "SQLMoreResults")
+Interceptor.attach(SQLMoreResults, {onLeave: function (args) {send("SQLMoreResults");}});
+
+var SQLNativeSqlW = Module.findExportByName("odbcjt32.dll", "SQLNativeSqlW")
+Interceptor.attach(SQLNativeSqlW, {onLeave: function (args) {send("SQLNativeSqlW");}});
+
+var SQLNumParams = Module.findExportByName("odbcjt32.dll", "SQLNumParams")
+Interceptor.attach(SQLNumParams, {onLeave: function (args) {send("SQLNumParams");}});
+
+var SQLNumResultCols = Module.findExportByName("odbcjt32.dll", "SQLNumResultCols")
+Interceptor.attach(SQLNumResultCols, {onLeave: function (args) {send("SQLNumResultCols");}});
+
+var SQLParamData = Module.findExportByName("odbcjt32.dll", "SQLParamData")
+Interceptor.attach(SQLParamData, {onLeave: function (args) {send("SQLParamData");}});
+
+var SQLPrepareW = Module.findExportByName("odbcjt32.dll", "SQLPrepareW")
+Interceptor.attach(SQLPrepareW, {onLeave: function (args) {send("SQLPrepareW");}});
+
+var SQLProcedureColumnsW = Module.findExportByName("odbcjt32.dll", "SQLProcedureColumnsW")
+Interceptor.attach(SQLProcedureColumnsW, {onLeave: function (args) {send("SQLProcedureColumnsW");}});
+
+var SQLProceduresW = Module.findExportByName("odbcjt32.dll", "SQLProceduresW")
+Interceptor.attach(SQLProceduresW, {onLeave: function (args) {send("SQLProceduresW");}});
+
+var SQLPutData = Module.findExportByName("odbcjt32.dll", "SQLPutData")
+Interceptor.attach(SQLPutData, {onLeave: function (args) {send("SQLPutData");}});
+
+var SQLRowCount = Module.findExportByName("odbcjt32.dll", "SQLRowCount")
+Interceptor.attach(SQLRowCount, {onLeave: function (args) {send("SQLRowCount");}});
+
+var SQLSetConnectAttrW = Module.findExportByName("odbcjt32.dll", "SQLSetConnectAttrW")
+Interceptor.attach(SQLSetConnectAttrW, {onLeave: function (args) {send("SQLSetConnectAttrW");}});
+
+var SQLSetCursorNameW = Module.findExportByName("odbcjt32.dll", "SQLSetCursorNameW")
+Interceptor.attach(SQLSetCursorNameW, {onLeave: function (args) {send("SQLSetCursorNameW");}});
+
+var SQLSetDescFieldW = Module.findExportByName("odbcjt32.dll", "SQLSetDescFieldW")
+Interceptor.attach(SQLSetDescFieldW, {onLeave: function (args) {send("SQLSetDescFieldW");}});
+
+var SQLSetDescRec = Module.findExportByName("odbcjt32.dll", "SQLSetDescRec")
+Interceptor.attach(SQLSetDescRec, {onLeave: function (args) {send("SQLSetDescRec");}});
+
+var SQLSetEnvAttr = Module.findExportByName("odbcjt32.dll", "SQLSetEnvAttr")
+Interceptor.attach(SQLSetEnvAttr, {onLeave: function (args) {send("SQLSetEnvAttr");}});
+
+var SQLSetPos = Module.findExportByName("odbcjt32.dll", "SQLSetPos")
+Interceptor.attach(SQLSetPos, {onLeave: function (args) {send("SQLSetPos");}});
+
+var SQLSetScrollOptions = Module.findExportByName("odbcjt32.dll", "SQLSetScrollOptions")
+Interceptor.attach(SQLSetScrollOptions, {onLeave: function (args) {send("SQLSetScrollOptions");}});
+
+var SQLSetStmtAttrW = Module.findExportByName("odbcjt32.dll", "SQLSetStmtAttrW")
+Interceptor.attach(SQLSetStmtAttrW, {onLeave: function (args) {send("SQLSetStmtAttrW");}});
+
+var SQLSpecialColumnsW = Module.findExportByName("odbcjt32.dll", "SQLSpecialColumnsW")
+Interceptor.attach(SQLSpecialColumnsW, {onLeave: function (args) {send("SQLSpecialColumnsW");}});
+
+var SQLStatisticsW = Module.findExportByName("odbcjt32.dll", "SQLStatisticsW")
+Interceptor.attach(SQLStatisticsW, {onLeave: function (args) {send("SQLStatisticsW");}});
+
+var SQLTablesW = Module.findExportByName("odbcjt32.dll", "SQLTablesW")
+Interceptor.attach(SQLTablesW, {onLeave: function (args) {send("SQLTablesW");}});
+
+var SelectIndexDlgProc = Module.findExportByName("odbcjt32.dll", "SelectIndexDlgProc")
+Interceptor.attach(SelectIndexDlgProc, {onLeave: function (args) {send("SelectIndexDlgProc");}});
+
+var SelectUIdxDlgProc = Module.findExportByName("odbcjt32.dll", "SelectUIdxDlgProc")
+Interceptor.attach(SelectUIdxDlgProc, {onLeave: function (args) {send("SelectUIdxDlgProc");}});
+

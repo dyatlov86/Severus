@@ -1,0 +1,18 @@
+var DecryptNormalMode = Module.findExportByName("lapsutil.dll", "DecryptNormalMode")
+Interceptor.attach(DecryptNormalMode, {onLeave: function (args) {send("DecryptNormalMode");}});
+
+var DecryptRecoveryMode = Module.findExportByName("lapsutil.dll", "DecryptRecoveryMode")
+Interceptor.attach(DecryptRecoveryMode, {onLeave: function (args) {send("DecryptRecoveryMode");}});
+
+var GetSidProtectionString = Module.findExportByName("lapsutil.dll", "GetSidProtectionString")
+Interceptor.attach(GetSidProtectionString, {onLeave: function (args) {send("GetSidProtectionString");}});
+
+var LogonWithCredentials = Module.findExportByName("lapsutil.dll", "LogonWithCredentials")
+Interceptor.attach(LogonWithCredentials, {onLeave: function (args) {send("LogonWithCredentials");}});
+
+var ProcessCurrentPolicy = Module.findExportByName("lapsutil.dll", "ProcessCurrentPolicy")
+Interceptor.attach(ProcessCurrentPolicy, {onLeave: function (args) {send("ProcessCurrentPolicy");}});
+
+var ResetPassword = Module.findExportByName("lapsutil.dll", "ResetPassword")
+Interceptor.attach(ResetPassword, {onLeave: function (args) {send("ResetPassword");}});
+

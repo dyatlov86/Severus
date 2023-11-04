@@ -1,0 +1,165 @@
+var HcnCloseEndpoint = Module.findExportByName("computenetwork.dll", "HcnCloseEndpoint")
+Interceptor.attach(HcnCloseEndpoint, {onLeave: function (args) {send("HcnCloseEndpoint");}});
+
+var HcnCloseGuestNetworkService = Module.findExportByName("computenetwork.dll", "HcnCloseGuestNetworkService")
+Interceptor.attach(HcnCloseGuestNetworkService, {onLeave: function (args) {send("HcnCloseGuestNetworkService");}});
+
+var HcnCloseLoadBalancer = Module.findExportByName("computenetwork.dll", "HcnCloseLoadBalancer")
+Interceptor.attach(HcnCloseLoadBalancer, {onLeave: function (args) {send("HcnCloseLoadBalancer");}});
+
+var HcnCloseNamespace = Module.findExportByName("computenetwork.dll", "HcnCloseNamespace")
+Interceptor.attach(HcnCloseNamespace, {onLeave: function (args) {send("HcnCloseNamespace");}});
+
+var HcnCloseNetwork = Module.findExportByName("computenetwork.dll", "HcnCloseNetwork")
+Interceptor.attach(HcnCloseNetwork, {onLeave: function (args) {send("HcnCloseNetwork");}});
+
+var HcnCloseSdnRoute = Module.findExportByName("computenetwork.dll", "HcnCloseSdnRoute")
+Interceptor.attach(HcnCloseSdnRoute, {onLeave: function (args) {send("HcnCloseSdnRoute");}});
+
+var HcnCreateEndpoint = Module.findExportByName("computenetwork.dll", "HcnCreateEndpoint")
+Interceptor.attach(HcnCreateEndpoint, {onLeave: function (args) {send("HcnCreateEndpoint");}});
+
+var HcnCreateGuestNetworkService = Module.findExportByName("computenetwork.dll", "HcnCreateGuestNetworkService")
+Interceptor.attach(HcnCreateGuestNetworkService, {onLeave: function (args) {send("HcnCreateGuestNetworkService");}});
+
+var HcnCreateLoadBalancer = Module.findExportByName("computenetwork.dll", "HcnCreateLoadBalancer")
+Interceptor.attach(HcnCreateLoadBalancer, {onLeave: function (args) {send("HcnCreateLoadBalancer");}});
+
+var HcnCreateNamespace = Module.findExportByName("computenetwork.dll", "HcnCreateNamespace")
+Interceptor.attach(HcnCreateNamespace, {onLeave: function (args) {send("HcnCreateNamespace");}});
+
+var HcnCreateNetwork = Module.findExportByName("computenetwork.dll", "HcnCreateNetwork")
+Interceptor.attach(HcnCreateNetwork, {onLeave: function (args) {send("HcnCreateNetwork");}});
+
+var HcnCreateSdnRoute = Module.findExportByName("computenetwork.dll", "HcnCreateSdnRoute")
+Interceptor.attach(HcnCreateSdnRoute, {onLeave: function (args) {send("HcnCreateSdnRoute");}});
+
+var HcnDeleteEndpoint = Module.findExportByName("computenetwork.dll", "HcnDeleteEndpoint")
+Interceptor.attach(HcnDeleteEndpoint, {onLeave: function (args) {send("HcnDeleteEndpoint");}});
+
+var HcnDeleteGuestNetworkService = Module.findExportByName("computenetwork.dll", "HcnDeleteGuestNetworkService")
+Interceptor.attach(HcnDeleteGuestNetworkService, {onLeave: function (args) {send("HcnDeleteGuestNetworkService");}});
+
+var HcnDeleteLoadBalancer = Module.findExportByName("computenetwork.dll", "HcnDeleteLoadBalancer")
+Interceptor.attach(HcnDeleteLoadBalancer, {onLeave: function (args) {send("HcnDeleteLoadBalancer");}});
+
+var HcnDeleteNamespace = Module.findExportByName("computenetwork.dll", "HcnDeleteNamespace")
+Interceptor.attach(HcnDeleteNamespace, {onLeave: function (args) {send("HcnDeleteNamespace");}});
+
+var HcnDeleteNetwork = Module.findExportByName("computenetwork.dll", "HcnDeleteNetwork")
+Interceptor.attach(HcnDeleteNetwork, {onLeave: function (args) {send("HcnDeleteNetwork");}});
+
+var HcnDeleteSdnRoute = Module.findExportByName("computenetwork.dll", "HcnDeleteSdnRoute")
+Interceptor.attach(HcnDeleteSdnRoute, {onLeave: function (args) {send("HcnDeleteSdnRoute");}});
+
+var HcnEnumerateEndpoints = Module.findExportByName("computenetwork.dll", "HcnEnumerateEndpoints")
+Interceptor.attach(HcnEnumerateEndpoints, {onLeave: function (args) {send("HcnEnumerateEndpoints");}});
+
+var HcnEnumerateGuestNetworkPortReservations = Module.findExportByName("computenetwork.dll", "HcnEnumerateGuestNetworkPortReservations")
+Interceptor.attach(HcnEnumerateGuestNetworkPortReservations, {onLeave: function (args) {send("HcnEnumerateGuestNetworkPortReservations");}});
+
+var HcnEnumerateGuestNetworkServices = Module.findExportByName("computenetwork.dll", "HcnEnumerateGuestNetworkServices")
+Interceptor.attach(HcnEnumerateGuestNetworkServices, {onLeave: function (args) {send("HcnEnumerateGuestNetworkServices");}});
+
+var HcnEnumerateLoadBalancers = Module.findExportByName("computenetwork.dll", "HcnEnumerateLoadBalancers")
+Interceptor.attach(HcnEnumerateLoadBalancers, {onLeave: function (args) {send("HcnEnumerateLoadBalancers");}});
+
+var HcnEnumerateNamespaces = Module.findExportByName("computenetwork.dll", "HcnEnumerateNamespaces")
+Interceptor.attach(HcnEnumerateNamespaces, {onLeave: function (args) {send("HcnEnumerateNamespaces");}});
+
+var HcnEnumerateNetworks = Module.findExportByName("computenetwork.dll", "HcnEnumerateNetworks")
+Interceptor.attach(HcnEnumerateNetworks, {onLeave: function (args) {send("HcnEnumerateNetworks");}});
+
+var HcnEnumerateSdnRoutes = Module.findExportByName("computenetwork.dll", "HcnEnumerateSdnRoutes")
+Interceptor.attach(HcnEnumerateSdnRoutes, {onLeave: function (args) {send("HcnEnumerateSdnRoutes");}});
+
+var HcnFreeGuestNetworkPortReservations = Module.findExportByName("computenetwork.dll", "HcnFreeGuestNetworkPortReservations")
+Interceptor.attach(HcnFreeGuestNetworkPortReservations, {onLeave: function (args) {send("HcnFreeGuestNetworkPortReservations");}});
+
+var HcnModifyEndpoint = Module.findExportByName("computenetwork.dll", "HcnModifyEndpoint")
+Interceptor.attach(HcnModifyEndpoint, {onLeave: function (args) {send("HcnModifyEndpoint");}});
+
+var HcnModifyGuestNetworkService = Module.findExportByName("computenetwork.dll", "HcnModifyGuestNetworkService")
+Interceptor.attach(HcnModifyGuestNetworkService, {onLeave: function (args) {send("HcnModifyGuestNetworkService");}});
+
+var HcnModifyLoadBalancer = Module.findExportByName("computenetwork.dll", "HcnModifyLoadBalancer")
+Interceptor.attach(HcnModifyLoadBalancer, {onLeave: function (args) {send("HcnModifyLoadBalancer");}});
+
+var HcnModifyNamespace = Module.findExportByName("computenetwork.dll", "HcnModifyNamespace")
+Interceptor.attach(HcnModifyNamespace, {onLeave: function (args) {send("HcnModifyNamespace");}});
+
+var HcnModifyNetwork = Module.findExportByName("computenetwork.dll", "HcnModifyNetwork")
+Interceptor.attach(HcnModifyNetwork, {onLeave: function (args) {send("HcnModifyNetwork");}});
+
+var HcnModifySdnRoute = Module.findExportByName("computenetwork.dll", "HcnModifySdnRoute")
+Interceptor.attach(HcnModifySdnRoute, {onLeave: function (args) {send("HcnModifySdnRoute");}});
+
+var HcnOpenEndpoint = Module.findExportByName("computenetwork.dll", "HcnOpenEndpoint")
+Interceptor.attach(HcnOpenEndpoint, {onLeave: function (args) {send("HcnOpenEndpoint");}});
+
+var HcnOpenGuestNetworkService = Module.findExportByName("computenetwork.dll", "HcnOpenGuestNetworkService")
+Interceptor.attach(HcnOpenGuestNetworkService, {onLeave: function (args) {send("HcnOpenGuestNetworkService");}});
+
+var HcnOpenLoadBalancer = Module.findExportByName("computenetwork.dll", "HcnOpenLoadBalancer")
+Interceptor.attach(HcnOpenLoadBalancer, {onLeave: function (args) {send("HcnOpenLoadBalancer");}});
+
+var HcnOpenNamespace = Module.findExportByName("computenetwork.dll", "HcnOpenNamespace")
+Interceptor.attach(HcnOpenNamespace, {onLeave: function (args) {send("HcnOpenNamespace");}});
+
+var HcnOpenNetwork = Module.findExportByName("computenetwork.dll", "HcnOpenNetwork")
+Interceptor.attach(HcnOpenNetwork, {onLeave: function (args) {send("HcnOpenNetwork");}});
+
+var HcnOpenSdnRoute = Module.findExportByName("computenetwork.dll", "HcnOpenSdnRoute")
+Interceptor.attach(HcnOpenSdnRoute, {onLeave: function (args) {send("HcnOpenSdnRoute");}});
+
+var HcnQueryEndpointAddresses = Module.findExportByName("computenetwork.dll", "HcnQueryEndpointAddresses")
+Interceptor.attach(HcnQueryEndpointAddresses, {onLeave: function (args) {send("HcnQueryEndpointAddresses");}});
+
+var HcnQueryEndpointProperties = Module.findExportByName("computenetwork.dll", "HcnQueryEndpointProperties")
+Interceptor.attach(HcnQueryEndpointProperties, {onLeave: function (args) {send("HcnQueryEndpointProperties");}});
+
+var HcnQueryEndpointStats = Module.findExportByName("computenetwork.dll", "HcnQueryEndpointStats")
+Interceptor.attach(HcnQueryEndpointStats, {onLeave: function (args) {send("HcnQueryEndpointStats");}});
+
+var HcnQueryGuestNetworkServiceProperties = Module.findExportByName("computenetwork.dll", "HcnQueryGuestNetworkServiceProperties")
+Interceptor.attach(HcnQueryGuestNetworkServiceProperties, {onLeave: function (args) {send("HcnQueryGuestNetworkServiceProperties");}});
+
+var HcnQueryLoadBalancerProperties = Module.findExportByName("computenetwork.dll", "HcnQueryLoadBalancerProperties")
+Interceptor.attach(HcnQueryLoadBalancerProperties, {onLeave: function (args) {send("HcnQueryLoadBalancerProperties");}});
+
+var HcnQueryNamespaceProperties = Module.findExportByName("computenetwork.dll", "HcnQueryNamespaceProperties")
+Interceptor.attach(HcnQueryNamespaceProperties, {onLeave: function (args) {send("HcnQueryNamespaceProperties");}});
+
+var HcnQueryNetworkProperties = Module.findExportByName("computenetwork.dll", "HcnQueryNetworkProperties")
+Interceptor.attach(HcnQueryNetworkProperties, {onLeave: function (args) {send("HcnQueryNetworkProperties");}});
+
+var HcnQuerySdnRouteProperties = Module.findExportByName("computenetwork.dll", "HcnQuerySdnRouteProperties")
+Interceptor.attach(HcnQuerySdnRouteProperties, {onLeave: function (args) {send("HcnQuerySdnRouteProperties");}});
+
+var HcnRegisterGuestNetworkServiceCallback = Module.findExportByName("computenetwork.dll", "HcnRegisterGuestNetworkServiceCallback")
+Interceptor.attach(HcnRegisterGuestNetworkServiceCallback, {onLeave: function (args) {send("HcnRegisterGuestNetworkServiceCallback");}});
+
+var HcnRegisterNetworkCallback = Module.findExportByName("computenetwork.dll", "HcnRegisterNetworkCallback")
+Interceptor.attach(HcnRegisterNetworkCallback, {onLeave: function (args) {send("HcnRegisterNetworkCallback");}});
+
+var HcnRegisterServiceCallback = Module.findExportByName("computenetwork.dll", "HcnRegisterServiceCallback")
+Interceptor.attach(HcnRegisterServiceCallback, {onLeave: function (args) {send("HcnRegisterServiceCallback");}});
+
+var HcnReleaseGuestNetworkServicePortReservationHandle = Module.findExportByName("computenetwork.dll", "HcnReleaseGuestNetworkServicePortReservationHandle")
+Interceptor.attach(HcnReleaseGuestNetworkServicePortReservationHandle, {onLeave: function (args) {send("HcnReleaseGuestNetworkServicePortReservationHandle");}});
+
+var HcnReserveGuestNetworkServicePort = Module.findExportByName("computenetwork.dll", "HcnReserveGuestNetworkServicePort")
+Interceptor.attach(HcnReserveGuestNetworkServicePort, {onLeave: function (args) {send("HcnReserveGuestNetworkServicePort");}});
+
+var HcnReserveGuestNetworkServicePortRange = Module.findExportByName("computenetwork.dll", "HcnReserveGuestNetworkServicePortRange")
+Interceptor.attach(HcnReserveGuestNetworkServicePortRange, {onLeave: function (args) {send("HcnReserveGuestNetworkServicePortRange");}});
+
+var HcnUnregisterGuestNetworkServiceCallback = Module.findExportByName("computenetwork.dll", "HcnUnregisterGuestNetworkServiceCallback")
+Interceptor.attach(HcnUnregisterGuestNetworkServiceCallback, {onLeave: function (args) {send("HcnUnregisterGuestNetworkServiceCallback");}});
+
+var HcnUnregisterNetworkCallback = Module.findExportByName("computenetwork.dll", "HcnUnregisterNetworkCallback")
+Interceptor.attach(HcnUnregisterNetworkCallback, {onLeave: function (args) {send("HcnUnregisterNetworkCallback");}});
+
+var HcnUnregisterServiceCallback = Module.findExportByName("computenetwork.dll", "HcnUnregisterServiceCallback")
+Interceptor.attach(HcnUnregisterServiceCallback, {onLeave: function (args) {send("HcnUnregisterServiceCallback");}});
+

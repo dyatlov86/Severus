@@ -1,0 +1,633 @@
+var VidAdjustNestedTlbSize = Module.findExportByName("vid.dll", "VidAdjustNestedTlbSize")
+Interceptor.attach(VidAdjustNestedTlbSize, {onLeave: function (args) {send("VidAdjustNestedTlbSize");}});
+
+var VidAllocateMemoryBlockReadWriteBuffers = Module.findExportByName("vid.dll", "VidAllocateMemoryBlockReadWriteBuffers")
+Interceptor.attach(VidAllocateMemoryBlockReadWriteBuffers, {onLeave: function (args) {send("VidAllocateMemoryBlockReadWriteBuffers");}});
+
+var VidAssertVirtualProcessorInterrupt = Module.findExportByName("vid.dll", "VidAssertVirtualProcessorInterrupt")
+Interceptor.attach(VidAssertVirtualProcessorInterrupt, {onLeave: function (args) {send("VidAssertVirtualProcessorInterrupt");}});
+
+var VidAttachPartition = Module.findExportByName("vid.dll", "VidAttachPartition")
+Interceptor.attach(VidAttachPartition, {onLeave: function (args) {send("VidAttachPartition");}});
+
+var VidChangePartitionLifeState = Module.findExportByName("vid.dll", "VidChangePartitionLifeState")
+Interceptor.attach(VidChangePartitionLifeState, {onLeave: function (args) {send("VidChangePartitionLifeState");}});
+
+var VidCheckForIoIntercept = Module.findExportByName("vid.dll", "VidCheckForIoIntercept")
+Interceptor.attach(VidCheckForIoIntercept, {onLeave: function (args) {send("VidCheckForIoIntercept");}});
+
+var VidClearVirtualProcessorInterrupt = Module.findExportByName("vid.dll", "VidClearVirtualProcessorInterrupt")
+Interceptor.attach(VidClearVirtualProcessorInterrupt, {onLeave: function (args) {send("VidClearVirtualProcessorInterrupt");}});
+
+var VidCloneTemplateCreate = Module.findExportByName("vid.dll", "VidCloneTemplateCreate")
+Interceptor.attach(VidCloneTemplateCreate, {onLeave: function (args) {send("VidCloneTemplateCreate");}});
+
+var VidCloneTemplateDestroy = Module.findExportByName("vid.dll", "VidCloneTemplateDestroy")
+Interceptor.attach(VidCloneTemplateDestroy, {onLeave: function (args) {send("VidCloneTemplateDestroy");}});
+
+var VidCloneTemplateDestroyDetached = Module.findExportByName("vid.dll", "VidCloneTemplateDestroyDetached")
+Interceptor.attach(VidCloneTemplateDestroyDetached, {onLeave: function (args) {send("VidCloneTemplateDestroyDetached");}});
+
+var VidCloneTemplateDetach = Module.findExportByName("vid.dll", "VidCloneTemplateDetach")
+Interceptor.attach(VidCloneTemplateDetach, {onLeave: function (args) {send("VidCloneTemplateDetach");}});
+
+var VidCloseStatisticsHandle = Module.findExportByName("vid.dll", "VidCloseStatisticsHandle")
+Interceptor.attach(VidCloseStatisticsHandle, {onLeave: function (args) {send("VidCloseStatisticsHandle");}});
+
+var VidControlGpaAccessTracking = Module.findExportByName("vid.dll", "VidControlGpaAccessTracking")
+Interceptor.attach(VidControlGpaAccessTracking, {onLeave: function (args) {send("VidControlGpaAccessTracking");}});
+
+var VidCreateCpuGroup = Module.findExportByName("vid.dll", "VidCreateCpuGroup")
+Interceptor.attach(VidCreateCpuGroup, {onLeave: function (args) {send("VidCreateCpuGroup");}});
+
+var VidCreateDaxFileMemoryBlock = Module.findExportByName("vid.dll", "VidCreateDaxFileMemoryBlock")
+Interceptor.attach(VidCreateDaxFileMemoryBlock, {onLeave: function (args) {send("VidCreateDaxFileMemoryBlock");}});
+
+var VidCreateExoPartition = Module.findExportByName("vid.dll", "VidCreateExoPartition")
+Interceptor.attach(VidCreateExoPartition, {onLeave: function (args) {send("VidCreateExoPartition");}});
+
+var VidCreateMemoryBlock = Module.findExportByName("vid.dll", "VidCreateMemoryBlock")
+Interceptor.attach(VidCreateMemoryBlock, {onLeave: function (args) {send("VidCreateMemoryBlock");}});
+
+var VidCreateMemoryBlockGpaRange = Module.findExportByName("vid.dll", "VidCreateMemoryBlockGpaRange")
+Interceptor.attach(VidCreateMemoryBlockGpaRange, {onLeave: function (args) {send("VidCreateMemoryBlockGpaRange");}});
+
+var VidCreateMmioGpaRange = Module.findExportByName("vid.dll", "VidCreateMmioGpaRange")
+Interceptor.attach(VidCreateMmioGpaRange, {onLeave: function (args) {send("VidCreateMmioGpaRange");}});
+
+var VidCreatePartition = Module.findExportByName("vid.dll", "VidCreatePartition")
+Interceptor.attach(VidCreatePartition, {onLeave: function (args) {send("VidCreatePartition");}});
+
+var VidCreateSynicPort = Module.findExportByName("vid.dll", "VidCreateSynicPort")
+Interceptor.attach(VidCreateSynicPort, {onLeave: function (args) {send("VidCreateSynicPort");}});
+
+var VidCreateVaGpaRange = Module.findExportByName("vid.dll", "VidCreateVaGpaRange")
+Interceptor.attach(VidCreateVaGpaRange, {onLeave: function (args) {send("VidCreateVaGpaRange");}});
+
+var VidDeleteCpuGroup = Module.findExportByName("vid.dll", "VidDeleteCpuGroup")
+Interceptor.attach(VidDeleteCpuGroup, {onLeave: function (args) {send("VidDeleteCpuGroup");}});
+
+var VidDeletePartition = Module.findExportByName("vid.dll", "VidDeletePartition")
+Interceptor.attach(VidDeletePartition, {onLeave: function (args) {send("VidDeletePartition");}});
+
+var VidDepositPartitionMemory = Module.findExportByName("vid.dll", "VidDepositPartitionMemory")
+Interceptor.attach(VidDepositPartitionMemory, {onLeave: function (args) {send("VidDepositPartitionMemory");}});
+
+var VidDestroyGpaRange = Module.findExportByName("vid.dll", "VidDestroyGpaRange")
+Interceptor.attach(VidDestroyGpaRange, {onLeave: function (args) {send("VidDestroyGpaRange");}});
+
+var VidDestroyGpaRangeCheckSecure = Module.findExportByName("vid.dll", "VidDestroyGpaRangeCheckSecure")
+Interceptor.attach(VidDestroyGpaRangeCheckSecure, {onLeave: function (args) {send("VidDestroyGpaRangeCheckSecure");}});
+
+var VidDestroyMemoryBlock = Module.findExportByName("vid.dll", "VidDestroyMemoryBlock")
+Interceptor.attach(VidDestroyMemoryBlock, {onLeave: function (args) {send("VidDestroyMemoryBlock");}});
+
+var VidDestroyMemoryBlockReadWriteBuffers = Module.findExportByName("vid.dll", "VidDestroyMemoryBlockReadWriteBuffers")
+Interceptor.attach(VidDestroyMemoryBlockReadWriteBuffers, {onLeave: function (args) {send("VidDestroyMemoryBlockReadWriteBuffers");}});
+
+var VidDestroySynicPort = Module.findExportByName("vid.dll", "VidDestroySynicPort")
+Interceptor.attach(VidDestroySynicPort, {onLeave: function (args) {send("VidDestroySynicPort");}});
+
+var VidDetachPartition = Module.findExportByName("vid.dll", "VidDetachPartition")
+Interceptor.attach(VidDetachPartition, {onLeave: function (args) {send("VidDetachPartition");}});
+
+var VidDllStatsGetPartitionCounters = Module.findExportByName("vid.dll", "VidDllStatsGetPartitionCounters")
+Interceptor.attach(VidDllStatsGetPartitionCounters, {onLeave: function (args) {send("VidDllStatsGetPartitionCounters");}});
+
+var VidDllStatsGetSharedBuffer = Module.findExportByName("vid.dll", "VidDllStatsGetSharedBuffer")
+Interceptor.attach(VidDllStatsGetSharedBuffer, {onLeave: function (args) {send("VidDllStatsGetSharedBuffer");}});
+
+var VidDllStatsGetVmPerfRootInstance = Module.findExportByName("vid.dll", "VidDllStatsGetVmPerfRootInstance")
+Interceptor.attach(VidDllStatsGetVmPerfRootInstance, {onLeave: function (args) {send("VidDllStatsGetVmPerfRootInstance");}});
+
+var VidDmBalloon = Module.findExportByName("vid.dll", "VidDmBalloon")
+Interceptor.attach(VidDmBalloon, {onLeave: function (args) {send("VidDmBalloon");}});
+
+var VidDmConsolidationDisable = Module.findExportByName("vid.dll", "VidDmConsolidationDisable")
+Interceptor.attach(VidDmConsolidationDisable, {onLeave: function (args) {send("VidDmConsolidationDisable");}});
+
+var VidDmConsolidationEnable = Module.findExportByName("vid.dll", "VidDmConsolidationEnable")
+Interceptor.attach(VidDmConsolidationEnable, {onLeave: function (args) {send("VidDmConsolidationEnable");}});
+
+var VidDmHotAdd = Module.findExportByName("vid.dll", "VidDmHotAdd")
+Interceptor.attach(VidDmHotAdd, {onLeave: function (args) {send("VidDmHotAdd");}});
+
+var VidDmHotAddUndo = Module.findExportByName("vid.dll", "VidDmHotAddUndo")
+Interceptor.attach(VidDmHotAddUndo, {onLeave: function (args) {send("VidDmHotAddUndo");}});
+
+var VidDmMemoryBlockQueryTopology = Module.findExportByName("vid.dll", "VidDmMemoryBlockQueryTopology")
+Interceptor.attach(VidDmMemoryBlockQueryTopology, {onLeave: function (args) {send("VidDmMemoryBlockQueryTopology");}});
+
+var VidDmSlpDisable = Module.findExportByName("vid.dll", "VidDmSlpDisable")
+Interceptor.attach(VidDmSlpDisable, {onLeave: function (args) {send("VidDmSlpDisable");}});
+
+var VidDmSlpQuery = Module.findExportByName("vid.dll", "VidDmSlpQuery")
+Interceptor.attach(VidDmSlpQuery, {onLeave: function (args) {send("VidDmSlpQuery");}});
+
+var VidDmSlpSetup = Module.findExportByName("vid.dll", "VidDmSlpSetup")
+Interceptor.attach(VidDmSlpSetup, {onLeave: function (args) {send("VidDmSlpSetup");}});
+
+var VidDmSlpWaitForDisable = Module.findExportByName("vid.dll", "VidDmSlpWaitForDisable")
+Interceptor.attach(VidDmSlpWaitForDisable, {onLeave: function (args) {send("VidDmSlpWaitForDisable");}});
+
+var VidDmUnBalloon = Module.findExportByName("vid.dll", "VidDmUnBalloon")
+Interceptor.attach(VidDmUnBalloon, {onLeave: function (args) {send("VidDmUnBalloon");}});
+
+var VidDmWorkingSetModify = Module.findExportByName("vid.dll", "VidDmWorkingSetModify")
+Interceptor.attach(VidDmWorkingSetModify, {onLeave: function (args) {send("VidDmWorkingSetModify");}});
+
+var VidEncryptDecryptData = Module.findExportByName("vid.dll", "VidEncryptDecryptData")
+Interceptor.attach(VidEncryptDecryptData, {onLeave: function (args) {send("VidEncryptDecryptData");}});
+
+var VidEpfRestore = Module.findExportByName("vid.dll", "VidEpfRestore")
+Interceptor.attach(VidEpfRestore, {onLeave: function (args) {send("VidEpfRestore");}});
+
+var VidEpfSave = Module.findExportByName("vid.dll", "VidEpfSave")
+Interceptor.attach(VidEpfSave, {onLeave: function (args) {send("VidEpfSave");}});
+
+var VidEpfSuspendBegin = Module.findExportByName("vid.dll", "VidEpfSuspendBegin")
+Interceptor.attach(VidEpfSuspendBegin, {onLeave: function (args) {send("VidEpfSuspendBegin");}});
+
+var VidEpfSuspendEnd = Module.findExportByName("vid.dll", "VidEpfSuspendEnd")
+Interceptor.attach(VidEpfSuspendEnd, {onLeave: function (args) {send("VidEpfSuspendEnd");}});
+
+var VidExoAccessVaFault = Module.findExportByName("vid.dll", "VidExoAccessVaFault")
+Interceptor.attach(VidExoAccessVaFault, {onLeave: function (args) {send("VidExoAccessVaFault");}});
+
+var VidExoBrokerReceive = Module.findExportByName("vid.dll", "VidExoBrokerReceive")
+Interceptor.attach(VidExoBrokerReceive, {onLeave: function (args) {send("VidExoBrokerReceive");}});
+
+var VidExoBrokerSend = Module.findExportByName("vid.dll", "VidExoBrokerSend")
+Interceptor.attach(VidExoBrokerSend, {onLeave: function (args) {send("VidExoBrokerSend");}});
+
+var VidExoControlGpaAccessTracking = Module.findExportByName("vid.dll", "VidExoControlGpaAccessTracking")
+Interceptor.attach(VidExoControlGpaAccessTracking, {onLeave: function (args) {send("VidExoControlGpaAccessTracking");}});
+
+var VidExoGetVpState = Module.findExportByName("vid.dll", "VidExoGetVpState")
+Interceptor.attach(VidExoGetVpState, {onLeave: function (args) {send("VidExoGetVpState");}});
+
+var VidExoInstallIntercept = Module.findExportByName("vid.dll", "VidExoInstallIntercept")
+Interceptor.attach(VidExoInstallIntercept, {onLeave: function (args) {send("VidExoInstallIntercept");}});
+
+var VidExoMapGpaRange = Module.findExportByName("vid.dll", "VidExoMapGpaRange")
+Interceptor.attach(VidExoMapGpaRange, {onLeave: function (args) {send("VidExoMapGpaRange");}});
+
+var VidExoPinGpaRanges = Module.findExportByName("vid.dll", "VidExoPinGpaRanges")
+Interceptor.attach(VidExoPinGpaRanges, {onLeave: function (args) {send("VidExoPinGpaRanges");}});
+
+var VidExoRegisterInterceptResult = Module.findExportByName("vid.dll", "VidExoRegisterInterceptResult")
+Interceptor.attach(VidExoRegisterInterceptResult, {onLeave: function (args) {send("VidExoRegisterInterceptResult");}});
+
+var VidExoSetVpState = Module.findExportByName("vid.dll", "VidExoSetVpState")
+Interceptor.attach(VidExoSetVpState, {onLeave: function (args) {send("VidExoSetVpState");}});
+
+var VidExoUnmapGpaRange = Module.findExportByName("vid.dll", "VidExoUnmapGpaRange")
+Interceptor.attach(VidExoUnmapGpaRange, {onLeave: function (args) {send("VidExoUnmapGpaRange");}});
+
+var VidExoUnpinGpaRanges = Module.findExportByName("vid.dll", "VidExoUnpinGpaRanges")
+Interceptor.attach(VidExoUnpinGpaRanges, {onLeave: function (args) {send("VidExoUnpinGpaRanges");}});
+
+var VidExoVpCreate = Module.findExportByName("vid.dll", "VidExoVpCreate")
+Interceptor.attach(VidExoVpCreate, {onLeave: function (args) {send("VidExoVpCreate");}});
+
+var VidExoVpDestroy = Module.findExportByName("vid.dll", "VidExoVpDestroy")
+Interceptor.attach(VidExoVpDestroy, {onLeave: function (args) {send("VidExoVpDestroy");}});
+
+var VidExoVpMap = Module.findExportByName("vid.dll", "VidExoVpMap")
+Interceptor.attach(VidExoVpMap, {onLeave: function (args) {send("VidExoVpMap");}});
+
+var VidFlushMemoryBlockMapping = Module.findExportByName("vid.dll", "VidFlushMemoryBlockMapping")
+Interceptor.attach(VidFlushMemoryBlockMapping, {onLeave: function (args) {send("VidFlushMemoryBlockMapping");}});
+
+var VidFlushMemoryBlockPageRange = Module.findExportByName("vid.dll", "VidFlushMemoryBlockPageRange")
+Interceptor.attach(VidFlushMemoryBlockPageRange, {onLeave: function (args) {send("VidFlushMemoryBlockPageRange");}});
+
+var VidGetCpuGroupProperty = Module.findExportByName("vid.dll", "VidGetCpuGroupProperty")
+Interceptor.attach(VidGetCpuGroupProperty, {onLeave: function (args) {send("VidGetCpuGroupProperty");}});
+
+var VidGetExoPartitionProperty = Module.findExportByName("vid.dll", "VidGetExoPartitionProperty")
+Interceptor.attach(VidGetExoPartitionProperty, {onLeave: function (args) {send("VidGetExoPartitionProperty");}});
+
+var VidGetExoSystemInformation = Module.findExportByName("vid.dll", "VidGetExoSystemInformation")
+Interceptor.attach(VidGetExoSystemInformation, {onLeave: function (args) {send("VidGetExoSystemInformation");}});
+
+var VidGetExoSystemTopology = Module.findExportByName("vid.dll", "VidGetExoSystemTopology")
+Interceptor.attach(VidGetExoSystemTopology, {onLeave: function (args) {send("VidGetExoSystemTopology");}});
+
+var VidGetHvLogicalProcessorCount = Module.findExportByName("vid.dll", "VidGetHvLogicalProcessorCount")
+Interceptor.attach(VidGetHvLogicalProcessorCount, {onLeave: function (args) {send("VidGetHvLogicalProcessorCount");}});
+
+var VidGetHvLogicalProcessorRuntime = Module.findExportByName("vid.dll", "VidGetHvLogicalProcessorRuntime")
+Interceptor.attach(VidGetHvLogicalProcessorRuntime, {onLeave: function (args) {send("VidGetHvLogicalProcessorRuntime");}});
+
+var VidGetHvMemoryBalance = Module.findExportByName("vid.dll", "VidGetHvMemoryBalance")
+Interceptor.attach(VidGetHvMemoryBalance, {onLeave: function (args) {send("VidGetHvMemoryBalance");}});
+
+var VidGetHvPartitionId = Module.findExportByName("vid.dll", "VidGetHvPartitionId")
+Interceptor.attach(VidGetHvPartitionId, {onLeave: function (args) {send("VidGetHvPartitionId");}});
+
+var VidGetHvVpRuntime = Module.findExportByName("vid.dll", "VidGetHvVpRuntime")
+Interceptor.attach(VidGetHvVpRuntime, {onLeave: function (args) {send("VidGetHvVpRuntime");}});
+
+var VidGetIsolationLuid = Module.findExportByName("vid.dll", "VidGetIsolationLuid")
+Interceptor.attach(VidGetIsolationLuid, {onLeave: function (args) {send("VidGetIsolationLuid");}});
+
+var VidGetMemoryBlockProtectionBitmap = Module.findExportByName("vid.dll", "VidGetMemoryBlockProtectionBitmap")
+Interceptor.attach(VidGetMemoryBlockProtectionBitmap, {onLeave: function (args) {send("VidGetMemoryBlockProtectionBitmap");}});
+
+var VidGetPartitionIds = Module.findExportByName("vid.dll", "VidGetPartitionIds")
+Interceptor.attach(VidGetPartitionIds, {onLeave: function (args) {send("VidGetPartitionIds");}});
+
+var VidGetPartitionProperty = Module.findExportByName("vid.dll", "VidGetPartitionProperty")
+Interceptor.attach(VidGetPartitionProperty, {onLeave: function (args) {send("VidGetPartitionProperty");}});
+
+var VidGetProcessorTopology = Module.findExportByName("vid.dll", "VidGetProcessorTopology")
+Interceptor.attach(VidGetProcessorTopology, {onLeave: function (args) {send("VidGetProcessorTopology");}});
+
+var VidGetRootReferenceTime = Module.findExportByName("vid.dll", "VidGetRootReferenceTime")
+Interceptor.attach(VidGetRootReferenceTime, {onLeave: function (args) {send("VidGetRootReferenceTime");}});
+
+var VidGetRpcSession = Module.findExportByName("vid.dll", "VidGetRpcSession")
+Interceptor.attach(VidGetRpcSession, {onLeave: function (args) {send("VidGetRpcSession");}});
+
+var VidGetSecurityCookie = Module.findExportByName("vid.dll", "VidGetSecurityCookie")
+Interceptor.attach(VidGetSecurityCookie, {onLeave: function (args) {send("VidGetSecurityCookie");}});
+
+var VidGetSystemInformation = Module.findExportByName("vid.dll", "VidGetSystemInformation")
+Interceptor.attach(VidGetSystemInformation, {onLeave: function (args) {send("VidGetSystemInformation");}});
+
+var VidGetSystemTopology = Module.findExportByName("vid.dll", "VidGetSystemTopology")
+Interceptor.attach(VidGetSystemTopology, {onLeave: function (args) {send("VidGetSystemTopology");}});
+
+var VidGetVirtualProcessorRunningStatus = Module.findExportByName("vid.dll", "VidGetVirtualProcessorRunningStatus")
+Interceptor.attach(VidGetVirtualProcessorRunningStatus, {onLeave: function (args) {send("VidGetVirtualProcessorRunningStatus");}});
+
+var VidGetVirtualProcessorState = Module.findExportByName("vid.dll", "VidGetVirtualProcessorState")
+Interceptor.attach(VidGetVirtualProcessorState, {onLeave: function (args) {send("VidGetVirtualProcessorState");}});
+
+var VidGetVirtualProcessorStateEx = Module.findExportByName("vid.dll", "VidGetVirtualProcessorStateEx")
+Interceptor.attach(VidGetVirtualProcessorStateEx, {onLeave: function (args) {send("VidGetVirtualProcessorStateEx");}});
+
+var VidGpaAccessTrackingDisable = Module.findExportByName("vid.dll", "VidGpaAccessTrackingDisable")
+Interceptor.attach(VidGpaAccessTrackingDisable, {onLeave: function (args) {send("VidGpaAccessTrackingDisable");}});
+
+var VidGpaAccessTrackingEnable = Module.findExportByName("vid.dll", "VidGpaAccessTrackingEnable")
+Interceptor.attach(VidGpaAccessTrackingEnable, {onLeave: function (args) {send("VidGpaAccessTrackingEnable");}});
+
+var VidHandleMessageAndGetNextMessage = Module.findExportByName("vid.dll", "VidHandleMessageAndGetNextMessage")
+Interceptor.attach(VidHandleMessageAndGetNextMessage, {onLeave: function (args) {send("VidHandleMessageAndGetNextMessage");}});
+
+var VidInitEncryptionKeys = Module.findExportByName("vid.dll", "VidInitEncryptionKeys")
+Interceptor.attach(VidInitEncryptionKeys, {onLeave: function (args) {send("VidInitEncryptionKeys");}});
+
+var VidInjectSyntheticMachineCheckEvent = Module.findExportByName("vid.dll", "VidInjectSyntheticMachineCheckEvent")
+Interceptor.attach(VidInjectSyntheticMachineCheckEvent, {onLeave: function (args) {send("VidInjectSyntheticMachineCheckEvent");}});
+
+var VidIsolatedInsertPages = Module.findExportByName("vid.dll", "VidIsolatedInsertPages")
+Interceptor.attach(VidIsolatedInsertPages, {onLeave: function (args) {send("VidIsolatedInsertPages");}});
+
+var VidMapHvGlobalStatsPage = Module.findExportByName("vid.dll", "VidMapHvGlobalStatsPage")
+Interceptor.attach(VidMapHvGlobalStatsPage, {onLeave: function (args) {send("VidMapHvGlobalStatsPage");}});
+
+var VidMapHvLocalStatsPage = Module.findExportByName("vid.dll", "VidMapHvLocalStatsPage")
+Interceptor.attach(VidMapHvLocalStatsPage, {onLeave: function (args) {send("VidMapHvLocalStatsPage");}});
+
+var VidMapHvRootStatsPage = Module.findExportByName("vid.dll", "VidMapHvRootStatsPage")
+Interceptor.attach(VidMapHvRootStatsPage, {onLeave: function (args) {send("VidMapHvRootStatsPage");}});
+
+var VidMapHypercallDoorbellPage = Module.findExportByName("vid.dll", "VidMapHypercallDoorbellPage")
+Interceptor.attach(VidMapHypercallDoorbellPage, {onLeave: function (args) {send("VidMapHypercallDoorbellPage");}});
+
+var VidMapMemoryBlockPageRange = Module.findExportByName("vid.dll", "VidMapMemoryBlockPageRange")
+Interceptor.attach(VidMapMemoryBlockPageRange, {onLeave: function (args) {send("VidMapMemoryBlockPageRange");}});
+
+var VidMapMemoryBlockPageRangeEx = Module.findExportByName("vid.dll", "VidMapMemoryBlockPageRangeEx")
+Interceptor.attach(VidMapMemoryBlockPageRangeEx, {onLeave: function (args) {send("VidMapMemoryBlockPageRangeEx");}});
+
+var VidMapVpStatePage = Module.findExportByName("vid.dll", "VidMapVpStatePage")
+Interceptor.attach(VidMapVpStatePage, {onLeave: function (args) {send("VidMapVpStatePage");}});
+
+var VidMarkPagePoisoned = Module.findExportByName("vid.dll", "VidMarkPagePoisoned")
+Interceptor.attach(VidMarkPagePoisoned, {onLeave: function (args) {send("VidMarkPagePoisoned");}});
+
+var VidMemPartEnumerate = Module.findExportByName("vid.dll", "VidMemPartEnumerate")
+Interceptor.attach(VidMemPartEnumerate, {onLeave: function (args) {send("VidMemPartEnumerate");}});
+
+var VidMemPartGetIndexFromName = Module.findExportByName("vid.dll", "VidMemPartGetIndexFromName")
+Interceptor.attach(VidMemPartGetIndexFromName, {onLeave: function (args) {send("VidMemPartGetIndexFromName");}});
+
+var VidMemPartGetNameFromIndex = Module.findExportByName("vid.dll", "VidMemPartGetNameFromIndex")
+Interceptor.attach(VidMemPartGetNameFromIndex, {onLeave: function (args) {send("VidMemPartGetNameFromIndex");}});
+
+var VidMemReserveGetTarget = Module.findExportByName("vid.dll", "VidMemReserveGetTarget")
+Interceptor.attach(VidMemReserveGetTarget, {onLeave: function (args) {send("VidMemReserveGetTarget");}});
+
+var VidMemReserveIoSpaceConvert = Module.findExportByName("vid.dll", "VidMemReserveIoSpaceConvert")
+Interceptor.attach(VidMemReserveIoSpaceConvert, {onLeave: function (args) {send("VidMemReserveIoSpaceConvert");}});
+
+var VidMemReserveIoSpacePagesAdd = Module.findExportByName("vid.dll", "VidMemReserveIoSpacePagesAdd")
+Interceptor.attach(VidMemReserveIoSpacePagesAdd, {onLeave: function (args) {send("VidMemReserveIoSpacePagesAdd");}});
+
+var VidMemReserveIoSpacePagesRelease = Module.findExportByName("vid.dll", "VidMemReserveIoSpacePagesRelease")
+Interceptor.attach(VidMemReserveIoSpacePagesRelease, {onLeave: function (args) {send("VidMemReserveIoSpacePagesRelease");}});
+
+var VidMemReservePagesAdd = Module.findExportByName("vid.dll", "VidMemReservePagesAdd")
+Interceptor.attach(VidMemReservePagesAdd, {onLeave: function (args) {send("VidMemReservePagesAdd");}});
+
+var VidMemReservePagesRelease = Module.findExportByName("vid.dll", "VidMemReservePagesRelease")
+Interceptor.attach(VidMemReservePagesRelease, {onLeave: function (args) {send("VidMemReservePagesRelease");}});
+
+var VidMemReserveSetTarget = Module.findExportByName("vid.dll", "VidMemReserveSetTarget")
+Interceptor.attach(VidMemReserveSetTarget, {onLeave: function (args) {send("VidMemReserveSetTarget");}});
+
+var VidMemXferConnectClose = Module.findExportByName("vid.dll", "VidMemXferConnectClose")
+Interceptor.attach(VidMemXferConnectClose, {onLeave: function (args) {send("VidMemXferConnectClose");}});
+
+var VidMemXferConnectDisable = Module.findExportByName("vid.dll", "VidMemXferConnectDisable")
+Interceptor.attach(VidMemXferConnectDisable, {onLeave: function (args) {send("VidMemXferConnectDisable");}});
+
+var VidMemXferConnectEnable = Module.findExportByName("vid.dll", "VidMemXferConnectEnable")
+Interceptor.attach(VidMemXferConnectEnable, {onLeave: function (args) {send("VidMemXferConnectEnable");}});
+
+var VidMemXferConnectOpen = Module.findExportByName("vid.dll", "VidMemXferConnectOpen")
+Interceptor.attach(VidMemXferConnectOpen, {onLeave: function (args) {send("VidMemXferConnectOpen");}});
+
+var VidMemXferSendAsync = Module.findExportByName("vid.dll", "VidMemXferSendAsync")
+Interceptor.attach(VidMemXferSendAsync, {onLeave: function (args) {send("VidMemXferSendAsync");}});
+
+var VidMessageSlotHandleAndGetNext = Module.findExportByName("vid.dll", "VidMessageSlotHandleAndGetNext")
+Interceptor.attach(VidMessageSlotHandleAndGetNext, {onLeave: function (args) {send("VidMessageSlotHandleAndGetNext");}});
+
+var VidMessageSlotMap = Module.findExportByName("vid.dll", "VidMessageSlotMap")
+Interceptor.attach(VidMessageSlotMap, {onLeave: function (args) {send("VidMessageSlotMap");}});
+
+var VidOpenStatisticsHandle = Module.findExportByName("vid.dll", "VidOpenStatisticsHandle")
+Interceptor.attach(VidOpenStatisticsHandle, {onLeave: function (args) {send("VidOpenStatisticsHandle");}});
+
+var VidPhuBegin = Module.findExportByName("vid.dll", "VidPhuBegin")
+Interceptor.attach(VidPhuBegin, {onLeave: function (args) {send("VidPhuBegin");}});
+
+var VidPhuCommit = Module.findExportByName("vid.dll", "VidPhuCommit")
+Interceptor.attach(VidPhuCommit, {onLeave: function (args) {send("VidPhuCommit");}});
+
+var VidPhuEnd = Module.findExportByName("vid.dll", "VidPhuEnd")
+Interceptor.attach(VidPhuEnd, {onLeave: function (args) {send("VidPhuEnd");}});
+
+var VidPhuFreePersistedData = Module.findExportByName("vid.dll", "VidPhuFreePersistedData")
+Interceptor.attach(VidPhuFreePersistedData, {onLeave: function (args) {send("VidPhuFreePersistedData");}});
+
+var VidPhuOpenMemoryBlockFile = Module.findExportByName("vid.dll", "VidPhuOpenMemoryBlockFile")
+Interceptor.attach(VidPhuOpenMemoryBlockFile, {onLeave: function (args) {send("VidPhuOpenMemoryBlockFile");}});
+
+var VidPhuPersistGpaRange = Module.findExportByName("vid.dll", "VidPhuPersistGpaRange")
+Interceptor.attach(VidPhuPersistGpaRange, {onLeave: function (args) {send("VidPhuPersistGpaRange");}});
+
+var VidPhuPersistMemoryBlock = Module.findExportByName("vid.dll", "VidPhuPersistMemoryBlock")
+Interceptor.attach(VidPhuPersistMemoryBlock, {onLeave: function (args) {send("VidPhuPersistMemoryBlock");}});
+
+var VidPopulateCpuidInformation = Module.findExportByName("vid.dll", "VidPopulateCpuidInformation")
+Interceptor.attach(VidPopulateCpuidInformation, {onLeave: function (args) {send("VidPopulateCpuidInformation");}});
+
+var VidPrefetchDirectMapRanges = Module.findExportByName("vid.dll", "VidPrefetchDirectMapRanges")
+Interceptor.attach(VidPrefetchDirectMapRanges, {onLeave: function (args) {send("VidPrefetchDirectMapRanges");}});
+
+var VidPreparePartitionOperation = Module.findExportByName("vid.dll", "VidPreparePartitionOperation")
+Interceptor.attach(VidPreparePartitionOperation, {onLeave: function (args) {send("VidPreparePartitionOperation");}});
+
+var VidProtectMemoryBlockPages = Module.findExportByName("vid.dll", "VidProtectMemoryBlockPages")
+Interceptor.attach(VidProtectMemoryBlockPages, {onLeave: function (args) {send("VidProtectMemoryBlockPages");}});
+
+var VidQueryMemoryBlockFaultClusterInfo = Module.findExportByName("vid.dll", "VidQueryMemoryBlockFaultClusterInfo")
+Interceptor.attach(VidQueryMemoryBlockFaultClusterInfo, {onLeave: function (args) {send("VidQueryMemoryBlockFaultClusterInfo");}});
+
+var VidQueryPartitionInformation = Module.findExportByName("vid.dll", "VidQueryPartitionInformation")
+Interceptor.attach(VidQueryPartitionInformation, {onLeave: function (args) {send("VidQueryPartitionInformation");}});
+
+var VidQueryVaGpaRangeWorkingSetInfo = Module.findExportByName("vid.dll", "VidQueryVaGpaRangeWorkingSetInfo")
+Interceptor.attach(VidQueryVaGpaRangeWorkingSetInfo, {onLeave: function (args) {send("VidQueryVaGpaRangeWorkingSetInfo");}});
+
+var VidReadMemoryBlockPageRange = Module.findExportByName("vid.dll", "VidReadMemoryBlockPageRange")
+Interceptor.attach(VidReadMemoryBlockPageRange, {onLeave: function (args) {send("VidReadMemoryBlockPageRange");}});
+
+var VidReadWriteMappedMemoryBlockPageRange = Module.findExportByName("vid.dll", "VidReadWriteMappedMemoryBlockPageRange")
+Interceptor.attach(VidReadWriteMappedMemoryBlockPageRange, {onLeave: function (args) {send("VidReadWriteMappedMemoryBlockPageRange");}});
+
+var VidReadWriteMemoryBlockPageRange = Module.findExportByName("vid.dll", "VidReadWriteMemoryBlockPageRange")
+Interceptor.attach(VidReadWriteMemoryBlockPageRange, {onLeave: function (args) {send("VidReadWriteMemoryBlockPageRange");}});
+
+var VidRegisterApicEoiHandler = Module.findExportByName("vid.dll", "VidRegisterApicEoiHandler")
+Interceptor.attach(VidRegisterApicEoiHandler, {onLeave: function (args) {send("VidRegisterApicEoiHandler");}});
+
+var VidRegisterCpuidHandler = Module.findExportByName("vid.dll", "VidRegisterCpuidHandler")
+Interceptor.attach(VidRegisterCpuidHandler, {onLeave: function (args) {send("VidRegisterCpuidHandler");}});
+
+var VidRegisterCpuidResult = Module.findExportByName("vid.dll", "VidRegisterCpuidResult")
+Interceptor.attach(VidRegisterCpuidResult, {onLeave: function (args) {send("VidRegisterCpuidResult");}});
+
+var VidRegisterExceptionHandler = Module.findExportByName("vid.dll", "VidRegisterExceptionHandler")
+Interceptor.attach(VidRegisterExceptionHandler, {onLeave: function (args) {send("VidRegisterExceptionHandler");}});
+
+var VidRegisterHypervisorRestartHandler = Module.findExportByName("vid.dll", "VidRegisterHypervisorRestartHandler")
+Interceptor.attach(VidRegisterHypervisorRestartHandler, {onLeave: function (args) {send("VidRegisterHypervisorRestartHandler");}});
+
+var VidRegisterIoPortHandler = Module.findExportByName("vid.dll", "VidRegisterIoPortHandler")
+Interceptor.attach(VidRegisterIoPortHandler, {onLeave: function (args) {send("VidRegisterIoPortHandler");}});
+
+var VidRegisterMsrAddressHandler = Module.findExportByName("vid.dll", "VidRegisterMsrAddressHandler")
+Interceptor.attach(VidRegisterMsrAddressHandler, {onLeave: function (args) {send("VidRegisterMsrAddressHandler");}});
+
+var VidRegisterMsrHandler = Module.findExportByName("vid.dll", "VidRegisterMsrHandler")
+Interceptor.attach(VidRegisterMsrHandler, {onLeave: function (args) {send("VidRegisterMsrHandler");}});
+
+var VidRegisterTripleFaultHandler = Module.findExportByName("vid.dll", "VidRegisterTripleFaultHandler")
+Interceptor.attach(VidRegisterTripleFaultHandler, {onLeave: function (args) {send("VidRegisterTripleFaultHandler");}});
+
+var VidReleaseEncryptionKeys = Module.findExportByName("vid.dll", "VidReleaseEncryptionKeys")
+Interceptor.attach(VidReleaseEncryptionKeys, {onLeave: function (args) {send("VidReleaseEncryptionKeys");}});
+
+var VidReleasePages = Module.findExportByName("vid.dll", "VidReleasePages")
+Interceptor.attach(VidReleasePages, {onLeave: function (args) {send("VidReleasePages");}});
+
+var VidReopenExoPartition = Module.findExportByName("vid.dll", "VidReopenExoPartition")
+Interceptor.attach(VidReopenExoPartition, {onLeave: function (args) {send("VidReopenExoPartition");}});
+
+var VidReservePages = Module.findExportByName("vid.dll", "VidReservePages")
+Interceptor.attach(VidReservePages, {onLeave: function (args) {send("VidReservePages");}});
+
+var VidResetPartition = Module.findExportByName("vid.dll", "VidResetPartition")
+Interceptor.attach(VidResetPartition, {onLeave: function (args) {send("VidResetPartition");}});
+
+var VidResetPoisonedPage = Module.findExportByName("vid.dll", "VidResetPoisonedPage")
+Interceptor.attach(VidResetPoisonedPage, {onLeave: function (args) {send("VidResetPoisonedPage");}});
+
+var VidRestorePartitionState = Module.findExportByName("vid.dll", "VidRestorePartitionState")
+Interceptor.attach(VidRestorePartitionState, {onLeave: function (args) {send("VidRestorePartitionState");}});
+
+var VidSavePartitionState = Module.findExportByName("vid.dll", "VidSavePartitionState")
+Interceptor.attach(VidSavePartitionState, {onLeave: function (args) {send("VidSavePartitionState");}});
+
+var VidSchedulerAssistRestore = Module.findExportByName("vid.dll", "VidSchedulerAssistRestore")
+Interceptor.attach(VidSchedulerAssistRestore, {onLeave: function (args) {send("VidSchedulerAssistRestore");}});
+
+var VidSchedulerAssistSave = Module.findExportByName("vid.dll", "VidSchedulerAssistSave")
+Interceptor.attach(VidSchedulerAssistSave, {onLeave: function (args) {send("VidSchedulerAssistSave");}});
+
+var VidSchedulerAssistSuspend = Module.findExportByName("vid.dll", "VidSchedulerAssistSuspend")
+Interceptor.attach(VidSchedulerAssistSuspend, {onLeave: function (args) {send("VidSchedulerAssistSuspend");}});
+
+var VidSetCpuGroupProperty = Module.findExportByName("vid.dll", "VidSetCpuGroupProperty")
+Interceptor.attach(VidSetCpuGroupProperty, {onLeave: function (args) {send("VidSetCpuGroupProperty");}});
+
+var VidSetMailboxKey = Module.findExportByName("vid.dll", "VidSetMailboxKey")
+Interceptor.attach(VidSetMailboxKey, {onLeave: function (args) {send("VidSetMailboxKey");}});
+
+var VidSetMemoryBlockClientNotifications = Module.findExportByName("vid.dll", "VidSetMemoryBlockClientNotifications")
+Interceptor.attach(VidSetMemoryBlockClientNotifications, {onLeave: function (args) {send("VidSetMemoryBlockClientNotifications");}});
+
+var VidSetMemoryBlockFlushAfterWrite = Module.findExportByName("vid.dll", "VidSetMemoryBlockFlushAfterWrite")
+Interceptor.attach(VidSetMemoryBlockFlushAfterWrite, {onLeave: function (args) {send("VidSetMemoryBlockFlushAfterWrite");}});
+
+var VidSetMemoryBlockNotificationQueue = Module.findExportByName("vid.dll", "VidSetMemoryBlockNotificationQueue")
+Interceptor.attach(VidSetMemoryBlockNotificationQueue, {onLeave: function (args) {send("VidSetMemoryBlockNotificationQueue");}});
+
+var VidSetPartitionCpuFrequencyCap = Module.findExportByName("vid.dll", "VidSetPartitionCpuFrequencyCap")
+Interceptor.attach(VidSetPartitionCpuFrequencyCap, {onLeave: function (args) {send("VidSetPartitionCpuFrequencyCap");}});
+
+var VidSetPartitionFriendlyName = Module.findExportByName("vid.dll", "VidSetPartitionFriendlyName")
+Interceptor.attach(VidSetPartitionFriendlyName, {onLeave: function (args) {send("VidSetPartitionFriendlyName");}});
+
+var VidSetPartitionProperty = Module.findExportByName("vid.dll", "VidSetPartitionProperty")
+Interceptor.attach(VidSetPartitionProperty, {onLeave: function (args) {send("VidSetPartitionProperty");}});
+
+var VidSetPeerProcess = Module.findExportByName("vid.dll", "VidSetPeerProcess")
+Interceptor.attach(VidSetPeerProcess, {onLeave: function (args) {send("VidSetPeerProcess");}});
+
+var VidSetPropertySynicPort = Module.findExportByName("vid.dll", "VidSetPropertySynicPort")
+Interceptor.attach(VidSetPropertySynicPort, {onLeave: function (args) {send("VidSetPropertySynicPort");}});
+
+var VidSetSystemInformation = Module.findExportByName("vid.dll", "VidSetSystemInformation")
+Interceptor.attach(VidSetSystemInformation, {onLeave: function (args) {send("VidSetSystemInformation");}});
+
+var VidSetVirtualProcessorState = Module.findExportByName("vid.dll", "VidSetVirtualProcessorState")
+Interceptor.attach(VidSetVirtualProcessorState, {onLeave: function (args) {send("VidSetVirtualProcessorState");}});
+
+var VidSetVirtualProcessorStateEx = Module.findExportByName("vid.dll", "VidSetVirtualProcessorStateEx")
+Interceptor.attach(VidSetVirtualProcessorStateEx, {onLeave: function (args) {send("VidSetVirtualProcessorStateEx");}});
+
+var VidSetupMessageQueue = Module.findExportByName("vid.dll", "VidSetupMessageQueue")
+Interceptor.attach(VidSetupMessageQueue, {onLeave: function (args) {send("VidSetupMessageQueue");}});
+
+var VidSevSnpControlStateRestore = Module.findExportByName("vid.dll", "VidSevSnpControlStateRestore")
+Interceptor.attach(VidSevSnpControlStateRestore, {onLeave: function (args) {send("VidSevSnpControlStateRestore");}});
+
+var VidSevSnpControlStateSave = Module.findExportByName("vid.dll", "VidSevSnpControlStateSave")
+Interceptor.attach(VidSevSnpControlStateSave, {onLeave: function (args) {send("VidSevSnpControlStateSave");}});
+
+var VidSevSnpIssueNestedPspRequests = Module.findExportByName("vid.dll", "VidSevSnpIssueNestedPspRequests")
+Interceptor.attach(VidSevSnpIssueNestedPspRequests, {onLeave: function (args) {send("VidSevSnpIssueNestedPspRequests");}});
+
+var VidSgxResetMemoryBlocks = Module.findExportByName("vid.dll", "VidSgxResetMemoryBlocks")
+Interceptor.attach(VidSgxResetMemoryBlocks, {onLeave: function (args) {send("VidSgxResetMemoryBlocks");}});
+
+var VidStartVirtualProcessor = Module.findExportByName("vid.dll", "VidStartVirtualProcessor")
+Interceptor.attach(VidStartVirtualProcessor, {onLeave: function (args) {send("VidStartVirtualProcessor");}});
+
+var VidStatsMap = Module.findExportByName("vid.dll", "VidStatsMap")
+Interceptor.attach(VidStatsMap, {onLeave: function (args) {send("VidStatsMap");}});
+
+var VidStatsMapMemoryPartition = Module.findExportByName("vid.dll", "VidStatsMapMemoryPartition")
+Interceptor.attach(VidStatsMapMemoryPartition, {onLeave: function (args) {send("VidStatsMapMemoryPartition");}});
+
+var VidStatsMapNuma = Module.findExportByName("vid.dll", "VidStatsMapNuma")
+Interceptor.attach(VidStatsMapNuma, {onLeave: function (args) {send("VidStatsMapNuma");}});
+
+var VidStatsUnMap = Module.findExportByName("vid.dll", "VidStatsUnMap")
+Interceptor.attach(VidStatsUnMap, {onLeave: function (args) {send("VidStatsUnMap");}});
+
+var VidStatsUnMapMemoryPartition = Module.findExportByName("vid.dll", "VidStatsUnMapMemoryPartition")
+Interceptor.attach(VidStatsUnMapMemoryPartition, {onLeave: function (args) {send("VidStatsUnMapMemoryPartition");}});
+
+var VidStatsUnMapNuma = Module.findExportByName("vid.dll", "VidStatsUnMapNuma")
+Interceptor.attach(VidStatsUnMapNuma, {onLeave: function (args) {send("VidStatsUnMapNuma");}});
+
+var VidStopVirtualProcessor = Module.findExportByName("vid.dll", "VidStopVirtualProcessor")
+Interceptor.attach(VidStopVirtualProcessor, {onLeave: function (args) {send("VidStopVirtualProcessor");}});
+
+var VidSuspendApply = Module.findExportByName("vid.dll", "VidSuspendApply")
+Interceptor.attach(VidSuspendApply, {onLeave: function (args) {send("VidSuspendApply");}});
+
+var VidSuspendClear = Module.findExportByName("vid.dll", "VidSuspendClear")
+Interceptor.attach(VidSuspendClear, {onLeave: function (args) {send("VidSuspendClear");}});
+
+var VidTeardownPartitionOperation = Module.findExportByName("vid.dll", "VidTeardownPartitionOperation")
+Interceptor.attach(VidTeardownPartitionOperation, {onLeave: function (args) {send("VidTeardownPartitionOperation");}});
+
+var VidTranslateGpa = Module.findExportByName("vid.dll", "VidTranslateGpa")
+Interceptor.attach(VidTranslateGpa, {onLeave: function (args) {send("VidTranslateGpa");}});
+
+var VidTranslateGvaToGpa = Module.findExportByName("vid.dll", "VidTranslateGvaToGpa")
+Interceptor.attach(VidTranslateGvaToGpa, {onLeave: function (args) {send("VidTranslateGvaToGpa");}});
+
+var VidTriggerCreate = Module.findExportByName("vid.dll", "VidTriggerCreate")
+Interceptor.attach(VidTriggerCreate, {onLeave: function (args) {send("VidTriggerCreate");}});
+
+var VidTriggerDestroy = Module.findExportByName("vid.dll", "VidTriggerDestroy")
+Interceptor.attach(VidTriggerDestroy, {onLeave: function (args) {send("VidTriggerDestroy");}});
+
+var VidTriggerUpdateParameters = Module.findExportByName("vid.dll", "VidTriggerUpdateParameters")
+Interceptor.attach(VidTriggerUpdateParameters, {onLeave: function (args) {send("VidTriggerUpdateParameters");}});
+
+var VidTrimPartitionMemory = Module.findExportByName("vid.dll", "VidTrimPartitionMemory")
+Interceptor.attach(VidTrimPartitionMemory, {onLeave: function (args) {send("VidTrimPartitionMemory");}});
+
+var VidUnmapHvGlobalStatsPage = Module.findExportByName("vid.dll", "VidUnmapHvGlobalStatsPage")
+Interceptor.attach(VidUnmapHvGlobalStatsPage, {onLeave: function (args) {send("VidUnmapHvGlobalStatsPage");}});
+
+var VidUnmapHvLocalStatsPage = Module.findExportByName("vid.dll", "VidUnmapHvLocalStatsPage")
+Interceptor.attach(VidUnmapHvLocalStatsPage, {onLeave: function (args) {send("VidUnmapHvLocalStatsPage");}});
+
+var VidUnmapHvRootStatsPage = Module.findExportByName("vid.dll", "VidUnmapHvRootStatsPage")
+Interceptor.attach(VidUnmapHvRootStatsPage, {onLeave: function (args) {send("VidUnmapHvRootStatsPage");}});
+
+var VidUnmapMemoryBlockPageRange = Module.findExportByName("vid.dll", "VidUnmapMemoryBlockPageRange")
+Interceptor.attach(VidUnmapMemoryBlockPageRange, {onLeave: function (args) {send("VidUnmapMemoryBlockPageRange");}});
+
+var VidUnprotectMemoryBlockPages = Module.findExportByName("vid.dll", "VidUnprotectMemoryBlockPages")
+Interceptor.attach(VidUnprotectMemoryBlockPages, {onLeave: function (args) {send("VidUnprotectMemoryBlockPages");}});
+
+var VidUnregisterCpuidResult = Module.findExportByName("vid.dll", "VidUnregisterCpuidResult")
+Interceptor.attach(VidUnregisterCpuidResult, {onLeave: function (args) {send("VidUnregisterCpuidResult");}});
+
+var VidUnregisterHandler = Module.findExportByName("vid.dll", "VidUnregisterHandler")
+Interceptor.attach(VidUnregisterHandler, {onLeave: function (args) {send("VidUnregisterHandler");}});
+
+var VidVsmCheckGpaPageVtlAccess = Module.findExportByName("vid.dll", "VidVsmCheckGpaPageVtlAccess")
+Interceptor.attach(VidVsmCheckGpaPageVtlAccess, {onLeave: function (args) {send("VidVsmCheckGpaPageVtlAccess");}});
+
+var VidVsmEnableVpVtl = Module.findExportByName("vid.dll", "VidVsmEnableVpVtl")
+Interceptor.attach(VidVsmEnableVpVtl, {onLeave: function (args) {send("VidVsmEnableVpVtl");}});
+
+var VidVsmGetMemoryBlockProtections = Module.findExportByName("vid.dll", "VidVsmGetMemoryBlockProtections")
+Interceptor.attach(VidVsmGetMemoryBlockProtections, {onLeave: function (args) {send("VidVsmGetMemoryBlockProtections");}});
+
+var VidVsmGetPartitionConfig = Module.findExportByName("vid.dll", "VidVsmGetPartitionConfig")
+Interceptor.attach(VidVsmGetPartitionConfig, {onLeave: function (args) {send("VidVsmGetPartitionConfig");}});
+
+var VidVsmPrecommitMgmtVtlPageRange = Module.findExportByName("vid.dll", "VidVsmPrecommitMgmtVtlPageRange")
+Interceptor.attach(VidVsmPrecommitMgmtVtlPageRange, {onLeave: function (args) {send("VidVsmPrecommitMgmtVtlPageRange");}});
+
+var VidVsmQueryMemoryBlockProtections = Module.findExportByName("vid.dll", "VidVsmQueryMemoryBlockProtections")
+Interceptor.attach(VidVsmQueryMemoryBlockProtections, {onLeave: function (args) {send("VidVsmQueryMemoryBlockProtections");}});
+
+var VidVsmQueryProtectionsDirty = Module.findExportByName("vid.dll", "VidVsmQueryProtectionsDirty")
+Interceptor.attach(VidVsmQueryProtectionsDirty, {onLeave: function (args) {send("VidVsmQueryProtectionsDirty");}});
+
+var VidVsmSetMemoryBlockProtections = Module.findExportByName("vid.dll", "VidVsmSetMemoryBlockProtections")
+Interceptor.attach(VidVsmSetMemoryBlockProtections, {onLeave: function (args) {send("VidVsmSetMemoryBlockProtections");}});
+
+var VidVsmSetPartitionConfig = Module.findExportByName("vid.dll", "VidVsmSetPartitionConfig")
+Interceptor.attach(VidVsmSetPartitionConfig, {onLeave: function (args) {send("VidVsmSetPartitionConfig");}});
+
+var VidWriteMemoryBlockPageRange = Module.findExportByName("vid.dll", "VidWriteMemoryBlockPageRange")
+Interceptor.attach(VidWriteMemoryBlockPageRange, {onLeave: function (args) {send("VidWriteMemoryBlockPageRange");}});
+

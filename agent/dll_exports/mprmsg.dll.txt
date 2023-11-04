@@ -1,0 +1,6 @@
+var MprmsgGetErrorString = Module.findExportByName("mprmsg.dll", "MprmsgGetErrorString")
+Interceptor.attach(MprmsgGetErrorString, {onLeave: function (args) {send("MprmsgGetErrorString");}});
+
+var MprmsgGetErrorStringWithArgs = Module.findExportByName("mprmsg.dll", "MprmsgGetErrorStringWithArgs")
+Interceptor.attach(MprmsgGetErrorStringWithArgs, {onLeave: function (args) {send("MprmsgGetErrorStringWithArgs");}});
+

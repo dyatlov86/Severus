@@ -1,0 +1,3 @@
+var DllMain = Module.findExportByName("dpnathlp.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+

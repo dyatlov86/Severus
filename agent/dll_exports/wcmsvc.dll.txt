@@ -1,0 +1,15 @@
+var CdeGetProfileList = Module.findExportByName("wcmsvc.dll", "CdeGetProfileList")
+Interceptor.attach(CdeGetProfileList, {onLeave: function (args) {send("CdeGetProfileList");}});
+
+var CdeQueryParameter = Module.findExportByName("wcmsvc.dll", "CdeQueryParameter")
+Interceptor.attach(CdeQueryParameter, {onLeave: function (args) {send("CdeQueryParameter");}});
+
+var CdeSetParameter = Module.findExportByName("wcmsvc.dll", "CdeSetParameter")
+Interceptor.attach(CdeSetParameter, {onLeave: function (args) {send("CdeSetParameter");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("wcmsvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+
+var WcmSvcMain = Module.findExportByName("wcmsvc.dll", "WcmSvcMain")
+Interceptor.attach(WcmSvcMain, {onLeave: function (args) {send("WcmSvcMain");}});
+

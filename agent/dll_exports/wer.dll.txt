@@ -1,0 +1,438 @@
+var CloseThreadWaitChainSession = Module.findExportByName("wer.dll", "CloseThreadWaitChainSession")
+Interceptor.attach(CloseThreadWaitChainSession, {onLeave: function (args) {send("CloseThreadWaitChainSession");}});
+
+var GetThreadWaitChain = Module.findExportByName("wer.dll", "GetThreadWaitChain")
+Interceptor.attach(GetThreadWaitChain, {onLeave: function (args) {send("GetThreadWaitChain");}});
+
+var OpenThreadWaitChainSession = Module.findExportByName("wer.dll", "OpenThreadWaitChainSession")
+Interceptor.attach(OpenThreadWaitChainSession, {onLeave: function (args) {send("OpenThreadWaitChainSession");}});
+
+var RegisterWaitChainCOMCallback = Module.findExportByName("wer.dll", "RegisterWaitChainCOMCallback")
+Interceptor.attach(RegisterWaitChainCOMCallback, {onLeave: function (args) {send("RegisterWaitChainCOMCallback");}});
+
+var WerAddExcludedApplication = Module.findExportByName("wer.dll", "WerAddExcludedApplication")
+Interceptor.attach(WerAddExcludedApplication, {onLeave: function (args) {send("WerAddExcludedApplication");}});
+
+var WerFreeString = Module.findExportByName("wer.dll", "WerFreeString")
+Interceptor.attach(WerFreeString, {onLeave: function (args) {send("WerFreeString");}});
+
+var WerRemoveExcludedApplication = Module.findExportByName("wer.dll", "WerRemoveExcludedApplication")
+Interceptor.attach(WerRemoveExcludedApplication, {onLeave: function (args) {send("WerRemoveExcludedApplication");}});
+
+var WerReportAddDump = Module.findExportByName("wer.dll", "WerReportAddDump")
+Interceptor.attach(WerReportAddDump, {onLeave: function (args) {send("WerReportAddDump");}});
+
+var WerReportAddFile = Module.findExportByName("wer.dll", "WerReportAddFile")
+Interceptor.attach(WerReportAddFile, {onLeave: function (args) {send("WerReportAddFile");}});
+
+var WerReportCloseHandle = Module.findExportByName("wer.dll", "WerReportCloseHandle")
+Interceptor.attach(WerReportCloseHandle, {onLeave: function (args) {send("WerReportCloseHandle");}});
+
+var WerReportCreate = Module.findExportByName("wer.dll", "WerReportCreate")
+Interceptor.attach(WerReportCreate, {onLeave: function (args) {send("WerReportCreate");}});
+
+var WerReportSetParameter = Module.findExportByName("wer.dll", "WerReportSetParameter")
+Interceptor.attach(WerReportSetParameter, {onLeave: function (args) {send("WerReportSetParameter");}});
+
+var WerReportSetUIOption = Module.findExportByName("wer.dll", "WerReportSetUIOption")
+Interceptor.attach(WerReportSetUIOption, {onLeave: function (args) {send("WerReportSetUIOption");}});
+
+var WerReportSubmit = Module.findExportByName("wer.dll", "WerReportSubmit")
+Interceptor.attach(WerReportSubmit, {onLeave: function (args) {send("WerReportSubmit");}});
+
+var WerStoreClose = Module.findExportByName("wer.dll", "WerStoreClose")
+Interceptor.attach(WerStoreClose, {onLeave: function (args) {send("WerStoreClose");}});
+
+var WerStoreGetFirstReportKey = Module.findExportByName("wer.dll", "WerStoreGetFirstReportKey")
+Interceptor.attach(WerStoreGetFirstReportKey, {onLeave: function (args) {send("WerStoreGetFirstReportKey");}});
+
+var WerStoreGetNextReportKey = Module.findExportByName("wer.dll", "WerStoreGetNextReportKey")
+Interceptor.attach(WerStoreGetNextReportKey, {onLeave: function (args) {send("WerStoreGetNextReportKey");}});
+
+var WerStoreGetReportCount = Module.findExportByName("wer.dll", "WerStoreGetReportCount")
+Interceptor.attach(WerStoreGetReportCount, {onLeave: function (args) {send("WerStoreGetReportCount");}});
+
+var WerStoreGetSizeOnDisk = Module.findExportByName("wer.dll", "WerStoreGetSizeOnDisk")
+Interceptor.attach(WerStoreGetSizeOnDisk, {onLeave: function (args) {send("WerStoreGetSizeOnDisk");}});
+
+var WerStoreOpen = Module.findExportByName("wer.dll", "WerStoreOpen")
+Interceptor.attach(WerStoreOpen, {onLeave: function (args) {send("WerStoreOpen");}});
+
+var WerStorePurge = Module.findExportByName("wer.dll", "WerStorePurge")
+Interceptor.attach(WerStorePurge, {onLeave: function (args) {send("WerStorePurge");}});
+
+var WerStoreQueryReportMetadataV1 = Module.findExportByName("wer.dll", "WerStoreQueryReportMetadataV1")
+Interceptor.attach(WerStoreQueryReportMetadataV1, {onLeave: function (args) {send("WerStoreQueryReportMetadataV1");}});
+
+var WerStoreQueryReportMetadataV2 = Module.findExportByName("wer.dll", "WerStoreQueryReportMetadataV2")
+Interceptor.attach(WerStoreQueryReportMetadataV2, {onLeave: function (args) {send("WerStoreQueryReportMetadataV2");}});
+
+var WerStoreQueryReportMetadataV3 = Module.findExportByName("wer.dll", "WerStoreQueryReportMetadataV3")
+Interceptor.attach(WerStoreQueryReportMetadataV3, {onLeave: function (args) {send("WerStoreQueryReportMetadataV3");}});
+
+var WerStoreUploadReport = Module.findExportByName("wer.dll", "WerStoreUploadReport")
+Interceptor.attach(WerStoreUploadReport, {onLeave: function (args) {send("WerStoreUploadReport");}});
+
+var WerSysprepCleanup = Module.findExportByName("wer.dll", "WerSysprepCleanup")
+Interceptor.attach(WerSysprepCleanup, {onLeave: function (args) {send("WerSysprepCleanup");}});
+
+var WerSysprepGeneralize = Module.findExportByName("wer.dll", "WerSysprepGeneralize")
+Interceptor.attach(WerSysprepGeneralize, {onLeave: function (args) {send("WerSysprepGeneralize");}});
+
+var WerUnattendedSetup = Module.findExportByName("wer.dll", "WerUnattendedSetup")
+Interceptor.attach(WerUnattendedSetup, {onLeave: function (args) {send("WerUnattendedSetup");}});
+
+var WerpAddAppCompatData = Module.findExportByName("wer.dll", "WerpAddAppCompatData")
+Interceptor.attach(WerpAddAppCompatData, {onLeave: function (args) {send("WerpAddAppCompatData");}});
+
+var WerpAddFile = Module.findExportByName("wer.dll", "WerpAddFile")
+Interceptor.attach(WerpAddFile, {onLeave: function (args) {send("WerpAddFile");}});
+
+var WerpAddFileBuffer = Module.findExportByName("wer.dll", "WerpAddFileBuffer")
+Interceptor.attach(WerpAddFileBuffer, {onLeave: function (args) {send("WerpAddFileBuffer");}});
+
+var WerpAddFileCallback = Module.findExportByName("wer.dll", "WerpAddFileCallback")
+Interceptor.attach(WerpAddFileCallback, {onLeave: function (args) {send("WerpAddFileCallback");}});
+
+var WerpAddIfRegisteredForAppLocalDump = Module.findExportByName("wer.dll", "WerpAddIfRegisteredForAppLocalDump")
+Interceptor.attach(WerpAddIfRegisteredForAppLocalDump, {onLeave: function (args) {send("WerpAddIfRegisteredForAppLocalDump");}});
+
+var WerpAddMemoryBlock = Module.findExportByName("wer.dll", "WerpAddMemoryBlock")
+Interceptor.attach(WerpAddMemoryBlock, {onLeave: function (args) {send("WerpAddMemoryBlock");}});
+
+var WerpAddRegisteredDataToReport = Module.findExportByName("wer.dll", "WerpAddRegisteredDataToReport")
+Interceptor.attach(WerpAddRegisteredDataToReport, {onLeave: function (args) {send("WerpAddRegisteredDataToReport");}});
+
+var WerpAddRegisteredDumpsToReport = Module.findExportByName("wer.dll", "WerpAddRegisteredDumpsToReport")
+Interceptor.attach(WerpAddRegisteredDumpsToReport, {onLeave: function (args) {send("WerpAddRegisteredDumpsToReport");}});
+
+var WerpAddRegisteredMetadataToReport = Module.findExportByName("wer.dll", "WerpAddRegisteredMetadataToReport")
+Interceptor.attach(WerpAddRegisteredMetadataToReport, {onLeave: function (args) {send("WerpAddRegisteredMetadataToReport");}});
+
+var WerpAddTerminationReason = Module.findExportByName("wer.dll", "WerpAddTerminationReason")
+Interceptor.attach(WerpAddTerminationReason, {onLeave: function (args) {send("WerpAddTerminationReason");}});
+
+var WerpArchiveReport = Module.findExportByName("wer.dll", "WerpArchiveReport")
+Interceptor.attach(WerpArchiveReport, {onLeave: function (args) {send("WerpArchiveReport");}});
+
+var WerpAuxmdDumpProcessImages = Module.findExportByName("wer.dll", "WerpAuxmdDumpProcessImages")
+Interceptor.attach(WerpAuxmdDumpProcessImages, {onLeave: function (args) {send("WerpAuxmdDumpProcessImages");}});
+
+var WerpAuxmdDumpRegisteredBlocks = Module.findExportByName("wer.dll", "WerpAuxmdDumpRegisteredBlocks")
+Interceptor.attach(WerpAuxmdDumpRegisteredBlocks, {onLeave: function (args) {send("WerpAuxmdDumpRegisteredBlocks");}});
+
+var WerpAuxmdFree = Module.findExportByName("wer.dll", "WerpAuxmdFree")
+Interceptor.attach(WerpAuxmdFree, {onLeave: function (args) {send("WerpAuxmdFree");}});
+
+var WerpAuxmdFreeCopyBuffer = Module.findExportByName("wer.dll", "WerpAuxmdFreeCopyBuffer")
+Interceptor.attach(WerpAuxmdFreeCopyBuffer, {onLeave: function (args) {send("WerpAuxmdFreeCopyBuffer");}});
+
+var WerpAuxmdHashVaRanges = Module.findExportByName("wer.dll", "WerpAuxmdHashVaRanges")
+Interceptor.attach(WerpAuxmdHashVaRanges, {onLeave: function (args) {send("WerpAuxmdHashVaRanges");}});
+
+var WerpAuxmdInitialize = Module.findExportByName("wer.dll", "WerpAuxmdInitialize")
+Interceptor.attach(WerpAuxmdInitialize, {onLeave: function (args) {send("WerpAuxmdInitialize");}});
+
+var WerpAuxmdMapFile = Module.findExportByName("wer.dll", "WerpAuxmdMapFile")
+Interceptor.attach(WerpAuxmdMapFile, {onLeave: function (args) {send("WerpAuxmdMapFile");}});
+
+var WerpCancelUpload = Module.findExportByName("wer.dll", "WerpCancelUpload")
+Interceptor.attach(WerpCancelUpload, {onLeave: function (args) {send("WerpCancelUpload");}});
+
+var WerpCleanWer = Module.findExportByName("wer.dll", "WerpCleanWer")
+Interceptor.attach(WerpCleanWer, {onLeave: function (args) {send("WerpCleanWer");}});
+
+var WerpCloseStore = Module.findExportByName("wer.dll", "WerpCloseStore")
+Interceptor.attach(WerpCloseStore, {onLeave: function (args) {send("WerpCloseStore");}});
+
+var WerpCreateIntegratorReportId = Module.findExportByName("wer.dll", "WerpCreateIntegratorReportId")
+Interceptor.attach(WerpCreateIntegratorReportId, {onLeave: function (args) {send("WerpCreateIntegratorReportId");}});
+
+var WerpCreateMachineStore = Module.findExportByName("wer.dll", "WerpCreateMachineStore")
+Interceptor.attach(WerpCreateMachineStore, {onLeave: function (args) {send("WerpCreateMachineStore");}});
+
+var WerpDeleteReport = Module.findExportByName("wer.dll", "WerpDeleteReport")
+Interceptor.attach(WerpDeleteReport, {onLeave: function (args) {send("WerpDeleteReport");}});
+
+var WerpDestroyWerString = Module.findExportByName("wer.dll", "WerpDestroyWerString")
+Interceptor.attach(WerpDestroyWerString, {onLeave: function (args) {send("WerpDestroyWerString");}});
+
+var WerpEnumerateStoreNext = Module.findExportByName("wer.dll", "WerpEnumerateStoreNext")
+Interceptor.attach(WerpEnumerateStoreNext, {onLeave: function (args) {send("WerpEnumerateStoreNext");}});
+
+var WerpEnumerateStoreStart = Module.findExportByName("wer.dll", "WerpEnumerateStoreStart")
+Interceptor.attach(WerpEnumerateStoreStart, {onLeave: function (args) {send("WerpEnumerateStoreStart");}});
+
+var WerpExtractReportFiles = Module.findExportByName("wer.dll", "WerpExtractReportFiles")
+Interceptor.attach(WerpExtractReportFiles, {onLeave: function (args) {send("WerpExtractReportFiles");}});
+
+var WerpFlushImageCache = Module.findExportByName("wer.dll", "WerpFlushImageCache")
+Interceptor.attach(WerpFlushImageCache, {onLeave: function (args) {send("WerpFlushImageCache");}});
+
+var WerpForceDeferredCollection = Module.findExportByName("wer.dll", "WerpForceDeferredCollection")
+Interceptor.attach(WerpForceDeferredCollection, {onLeave: function (args) {send("WerpForceDeferredCollection");}});
+
+var WerpFreeString = Module.findExportByName("wer.dll", "WerpFreeString")
+Interceptor.attach(WerpFreeString, {onLeave: function (args) {send("WerpFreeString");}});
+
+var WerpFreeUnmappedVaRanges = Module.findExportByName("wer.dll", "WerpFreeUnmappedVaRanges")
+Interceptor.attach(WerpFreeUnmappedVaRanges, {onLeave: function (args) {send("WerpFreeUnmappedVaRanges");}});
+
+var WerpGetBucketId = Module.findExportByName("wer.dll", "WerpGetBucketId")
+Interceptor.attach(WerpGetBucketId, {onLeave: function (args) {send("WerpGetBucketId");}});
+
+var WerpGetDynamicParameter = Module.findExportByName("wer.dll", "WerpGetDynamicParameter")
+Interceptor.attach(WerpGetDynamicParameter, {onLeave: function (args) {send("WerpGetDynamicParameter");}});
+
+var WerpGetEventType = Module.findExportByName("wer.dll", "WerpGetEventType")
+Interceptor.attach(WerpGetEventType, {onLeave: function (args) {send("WerpGetEventType");}});
+
+var WerpGetExtendedDiagData = Module.findExportByName("wer.dll", "WerpGetExtendedDiagData")
+Interceptor.attach(WerpGetExtendedDiagData, {onLeave: function (args) {send("WerpGetExtendedDiagData");}});
+
+var WerpGetFileByIndex = Module.findExportByName("wer.dll", "WerpGetFileByIndex")
+Interceptor.attach(WerpGetFileByIndex, {onLeave: function (args) {send("WerpGetFileByIndex");}});
+
+var WerpGetFilePathByIndex = Module.findExportByName("wer.dll", "WerpGetFilePathByIndex")
+Interceptor.attach(WerpGetFilePathByIndex, {onLeave: function (args) {send("WerpGetFilePathByIndex");}});
+
+var WerpGetIntegratorReportId = Module.findExportByName("wer.dll", "WerpGetIntegratorReportId")
+Interceptor.attach(WerpGetIntegratorReportId, {onLeave: function (args) {send("WerpGetIntegratorReportId");}});
+
+var WerpGetLegacyBucketId = Module.findExportByName("wer.dll", "WerpGetLegacyBucketId")
+Interceptor.attach(WerpGetLegacyBucketId, {onLeave: function (args) {send("WerpGetLegacyBucketId");}});
+
+var WerpGetLoadedModuleByIndex = Module.findExportByName("wer.dll", "WerpGetLoadedModuleByIndex")
+Interceptor.attach(WerpGetLoadedModuleByIndex, {onLeave: function (args) {send("WerpGetLoadedModuleByIndex");}});
+
+var WerpGetNumFiles = Module.findExportByName("wer.dll", "WerpGetNumFiles")
+Interceptor.attach(WerpGetNumFiles, {onLeave: function (args) {send("WerpGetNumFiles");}});
+
+var WerpGetNumLoadedModules = Module.findExportByName("wer.dll", "WerpGetNumLoadedModules")
+Interceptor.attach(WerpGetNumLoadedModules, {onLeave: function (args) {send("WerpGetNumLoadedModules");}});
+
+var WerpGetNumSigParams = Module.findExportByName("wer.dll", "WerpGetNumSigParams")
+Interceptor.attach(WerpGetNumSigParams, {onLeave: function (args) {send("WerpGetNumSigParams");}});
+
+var WerpGetPathOfWERTempDirectory = Module.findExportByName("wer.dll", "WerpGetPathOfWERTempDirectory")
+Interceptor.attach(WerpGetPathOfWERTempDirectory, {onLeave: function (args) {send("WerpGetPathOfWERTempDirectory");}});
+
+var WerpGetReportConsent = Module.findExportByName("wer.dll", "WerpGetReportConsent")
+Interceptor.attach(WerpGetReportConsent, {onLeave: function (args) {send("WerpGetReportConsent");}});
+
+var WerpGetReportCount = Module.findExportByName("wer.dll", "WerpGetReportCount")
+Interceptor.attach(WerpGetReportCount, {onLeave: function (args) {send("WerpGetReportCount");}});
+
+var WerpGetReportFinalConsent = Module.findExportByName("wer.dll", "WerpGetReportFinalConsent")
+Interceptor.attach(WerpGetReportFinalConsent, {onLeave: function (args) {send("WerpGetReportFinalConsent");}});
+
+var WerpGetReportFlags = Module.findExportByName("wer.dll", "WerpGetReportFlags")
+Interceptor.attach(WerpGetReportFlags, {onLeave: function (args) {send("WerpGetReportFlags");}});
+
+var WerpGetReportId = Module.findExportByName("wer.dll", "WerpGetReportId")
+Interceptor.attach(WerpGetReportId, {onLeave: function (args) {send("WerpGetReportId");}});
+
+var WerpGetReportInformation = Module.findExportByName("wer.dll", "WerpGetReportInformation")
+Interceptor.attach(WerpGetReportInformation, {onLeave: function (args) {send("WerpGetReportInformation");}});
+
+var WerpGetReportSettings = Module.findExportByName("wer.dll", "WerpGetReportSettings")
+Interceptor.attach(WerpGetReportSettings, {onLeave: function (args) {send("WerpGetReportSettings");}});
+
+var WerpGetReportTime = Module.findExportByName("wer.dll", "WerpGetReportTime")
+Interceptor.attach(WerpGetReportTime, {onLeave: function (args) {send("WerpGetReportTime");}});
+
+var WerpGetReportType = Module.findExportByName("wer.dll", "WerpGetReportType")
+Interceptor.attach(WerpGetReportType, {onLeave: function (args) {send("WerpGetReportType");}});
+
+var WerpGetResponseId = Module.findExportByName("wer.dll", "WerpGetResponseId")
+Interceptor.attach(WerpGetResponseId, {onLeave: function (args) {send("WerpGetResponseId");}});
+
+var WerpGetSigParamByIndex = Module.findExportByName("wer.dll", "WerpGetSigParamByIndex")
+Interceptor.attach(WerpGetSigParamByIndex, {onLeave: function (args) {send("WerpGetSigParamByIndex");}});
+
+var WerpGetStoreLocation = Module.findExportByName("wer.dll", "WerpGetStoreLocation")
+Interceptor.attach(WerpGetStoreLocation, {onLeave: function (args) {send("WerpGetStoreLocation");}});
+
+var WerpGetStorePath = Module.findExportByName("wer.dll", "WerpGetStorePath")
+Interceptor.attach(WerpGetStorePath, {onLeave: function (args) {send("WerpGetStorePath");}});
+
+var WerpGetStoreType = Module.findExportByName("wer.dll", "WerpGetStoreType")
+Interceptor.attach(WerpGetStoreType, {onLeave: function (args) {send("WerpGetStoreType");}});
+
+var WerpGetTextFromReport = Module.findExportByName("wer.dll", "WerpGetTextFromReport")
+Interceptor.attach(WerpGetTextFromReport, {onLeave: function (args) {send("WerpGetTextFromReport");}});
+
+var WerpGetUIParamByIndex = Module.findExportByName("wer.dll", "WerpGetUIParamByIndex")
+Interceptor.attach(WerpGetUIParamByIndex, {onLeave: function (args) {send("WerpGetUIParamByIndex");}});
+
+var WerpGetUploadTime = Module.findExportByName("wer.dll", "WerpGetUploadTime")
+Interceptor.attach(WerpGetUploadTime, {onLeave: function (args) {send("WerpGetUploadTime");}});
+
+var WerpGetWerStringData = Module.findExportByName("wer.dll", "WerpGetWerStringData")
+Interceptor.attach(WerpGetWerStringData, {onLeave: function (args) {send("WerpGetWerStringData");}});
+
+var WerpGetWow64Process = Module.findExportByName("wer.dll", "WerpGetWow64Process")
+Interceptor.attach(WerpGetWow64Process, {onLeave: function (args) {send("WerpGetWow64Process");}});
+
+var WerpHasOobeCompleted = Module.findExportByName("wer.dll", "WerpHasOobeCompleted")
+Interceptor.attach(WerpHasOobeCompleted, {onLeave: function (args) {send("WerpHasOobeCompleted");}});
+
+var WerpHashApplicationParameters = Module.findExportByName("wer.dll", "WerpHashApplicationParameters")
+Interceptor.attach(WerpHashApplicationParameters, {onLeave: function (args) {send("WerpHashApplicationParameters");}});
+
+var WerpInitializeImageCache = Module.findExportByName("wer.dll", "WerpInitializeImageCache")
+Interceptor.attach(WerpInitializeImageCache, {onLeave: function (args) {send("WerpInitializeImageCache");}});
+
+var WerpIsDisabled = Module.findExportByName("wer.dll", "WerpIsDisabled")
+Interceptor.attach(WerpIsDisabled, {onLeave: function (args) {send("WerpIsDisabled");}});
+
+var WerpIsOnBattery = Module.findExportByName("wer.dll", "WerpIsOnBattery")
+Interceptor.attach(WerpIsOnBattery, {onLeave: function (args) {send("WerpIsOnBattery");}});
+
+var WerpIsTransportAvailable = Module.findExportByName("wer.dll", "WerpIsTransportAvailable")
+Interceptor.attach(WerpIsTransportAvailable, {onLeave: function (args) {send("WerpIsTransportAvailable");}});
+
+var WerpLoadReport = Module.findExportByName("wer.dll", "WerpLoadReport")
+Interceptor.attach(WerpLoadReport, {onLeave: function (args) {send("WerpLoadReport");}});
+
+var WerpLoadReportFromBuffer = Module.findExportByName("wer.dll", "WerpLoadReportFromBuffer")
+Interceptor.attach(WerpLoadReportFromBuffer, {onLeave: function (args) {send("WerpLoadReportFromBuffer");}});
+
+var WerpOpenMachineArchive = Module.findExportByName("wer.dll", "WerpOpenMachineArchive")
+Interceptor.attach(WerpOpenMachineArchive, {onLeave: function (args) {send("WerpOpenMachineArchive");}});
+
+var WerpOpenMachineQueue = Module.findExportByName("wer.dll", "WerpOpenMachineQueue")
+Interceptor.attach(WerpOpenMachineQueue, {onLeave: function (args) {send("WerpOpenMachineQueue");}});
+
+var WerpPromptUser = Module.findExportByName("wer.dll", "WerpPromptUser")
+Interceptor.attach(WerpPromptUser, {onLeave: function (args) {send("WerpPromptUser");}});
+
+var WerpPruneStore = Module.findExportByName("wer.dll", "WerpPruneStore")
+Interceptor.attach(WerpPruneStore, {onLeave: function (args) {send("WerpPruneStore");}});
+
+var WerpReportCancel = Module.findExportByName("wer.dll", "WerpReportCancel")
+Interceptor.attach(WerpReportCancel, {onLeave: function (args) {send("WerpReportCancel");}});
+
+var WerpReportSetMaxProcessHoldMilliseconds = Module.findExportByName("wer.dll", "WerpReportSetMaxProcessHoldMilliseconds")
+Interceptor.attach(WerpReportSetMaxProcessHoldMilliseconds, {onLeave: function (args) {send("WerpReportSetMaxProcessHoldMilliseconds");}});
+
+var WerpReportSprintfParameter = Module.findExportByName("wer.dll", "WerpReportSprintfParameter")
+Interceptor.attach(WerpReportSprintfParameter, {onLeave: function (args) {send("WerpReportSprintfParameter");}});
+
+var WerpReserveMachineQueueReportDir = Module.findExportByName("wer.dll", "WerpReserveMachineQueueReportDir")
+Interceptor.attach(WerpReserveMachineQueueReportDir, {onLeave: function (args) {send("WerpReserveMachineQueueReportDir");}});
+
+var WerpResetTransientImageCacheStatistics = Module.findExportByName("wer.dll", "WerpResetTransientImageCacheStatistics")
+Interceptor.attach(WerpResetTransientImageCacheStatistics, {onLeave: function (args) {send("WerpResetTransientImageCacheStatistics");}});
+
+var WerpRestartApplication = Module.findExportByName("wer.dll", "WerpRestartApplication")
+Interceptor.attach(WerpRestartApplication, {onLeave: function (args) {send("WerpRestartApplication");}});
+
+var WerpSetAuxiliaryArchivePath = Module.findExportByName("wer.dll", "WerpSetAuxiliaryArchivePath")
+Interceptor.attach(WerpSetAuxiliaryArchivePath, {onLeave: function (args) {send("WerpSetAuxiliaryArchivePath");}});
+
+var WerpSetCallBack = Module.findExportByName("wer.dll", "WerpSetCallBack")
+Interceptor.attach(WerpSetCallBack, {onLeave: function (args) {send("WerpSetCallBack");}});
+
+var WerpSetDefaultUserConsent = Module.findExportByName("wer.dll", "WerpSetDefaultUserConsent")
+Interceptor.attach(WerpSetDefaultUserConsent, {onLeave: function (args) {send("WerpSetDefaultUserConsent");}});
+
+var WerpSetDynamicParameter = Module.findExportByName("wer.dll", "WerpSetDynamicParameter")
+Interceptor.attach(WerpSetDynamicParameter, {onLeave: function (args) {send("WerpSetDynamicParameter");}});
+
+var WerpSetEventName = Module.findExportByName("wer.dll", "WerpSetEventName")
+Interceptor.attach(WerpSetEventName, {onLeave: function (args) {send("WerpSetEventName");}});
+
+var WerpSetExitListeners = Module.findExportByName("wer.dll", "WerpSetExitListeners")
+Interceptor.attach(WerpSetExitListeners, {onLeave: function (args) {send("WerpSetExitListeners");}});
+
+var WerpSetIntegratorReportId = Module.findExportByName("wer.dll", "WerpSetIntegratorReportId")
+Interceptor.attach(WerpSetIntegratorReportId, {onLeave: function (args) {send("WerpSetIntegratorReportId");}});
+
+var WerpSetIptEnabled = Module.findExportByName("wer.dll", "WerpSetIptEnabled")
+Interceptor.attach(WerpSetIptEnabled, {onLeave: function (args) {send("WerpSetIptEnabled");}});
+
+var WerpSetProcessTimelines = Module.findExportByName("wer.dll", "WerpSetProcessTimelines")
+Interceptor.attach(WerpSetProcessTimelines, {onLeave: function (args) {send("WerpSetProcessTimelines");}});
+
+var WerpSetQuickDumpType = Module.findExportByName("wer.dll", "WerpSetQuickDumpType")
+Interceptor.attach(WerpSetQuickDumpType, {onLeave: function (args) {send("WerpSetQuickDumpType");}});
+
+var WerpSetReportApplicationIdentity = Module.findExportByName("wer.dll", "WerpSetReportApplicationIdentity")
+Interceptor.attach(WerpSetReportApplicationIdentity, {onLeave: function (args) {send("WerpSetReportApplicationIdentity");}});
+
+var WerpSetReportFlags = Module.findExportByName("wer.dll", "WerpSetReportFlags")
+Interceptor.attach(WerpSetReportFlags, {onLeave: function (args) {send("WerpSetReportFlags");}});
+
+var WerpSetReportInformation = Module.findExportByName("wer.dll", "WerpSetReportInformation")
+Interceptor.attach(WerpSetReportInformation, {onLeave: function (args) {send("WerpSetReportInformation");}});
+
+var WerpSetReportIsFatal = Module.findExportByName("wer.dll", "WerpSetReportIsFatal")
+Interceptor.attach(WerpSetReportIsFatal, {onLeave: function (args) {send("WerpSetReportIsFatal");}});
+
+var WerpSetReportNamespaceParameter = Module.findExportByName("wer.dll", "WerpSetReportNamespaceParameter")
+Interceptor.attach(WerpSetReportNamespaceParameter, {onLeave: function (args) {send("WerpSetReportNamespaceParameter");}});
+
+var WerpSetReportOption = Module.findExportByName("wer.dll", "WerpSetReportOption")
+Interceptor.attach(WerpSetReportOption, {onLeave: function (args) {send("WerpSetReportOption");}});
+
+var WerpSetReportTime = Module.findExportByName("wer.dll", "WerpSetReportTime")
+Interceptor.attach(WerpSetReportTime, {onLeave: function (args) {send("WerpSetReportTime");}});
+
+var WerpSetReportUploadContextToken = Module.findExportByName("wer.dll", "WerpSetReportUploadContextToken")
+Interceptor.attach(WerpSetReportUploadContextToken, {onLeave: function (args) {send("WerpSetReportUploadContextToken");}});
+
+var WerpSetTelemetryAppParams = Module.findExportByName("wer.dll", "WerpSetTelemetryAppParams")
+Interceptor.attach(WerpSetTelemetryAppParams, {onLeave: function (args) {send("WerpSetTelemetryAppParams");}});
+
+var WerpSetTelemetryKernelParams = Module.findExportByName("wer.dll", "WerpSetTelemetryKernelParams")
+Interceptor.attach(WerpSetTelemetryKernelParams, {onLeave: function (args) {send("WerpSetTelemetryKernelParams");}});
+
+var WerpSetTelemetryServiceParams = Module.findExportByName("wer.dll", "WerpSetTelemetryServiceParams")
+Interceptor.attach(WerpSetTelemetryServiceParams, {onLeave: function (args) {send("WerpSetTelemetryServiceParams");}});
+
+var WerpSetTtdStatus = Module.findExportByName("wer.dll", "WerpSetTtdStatus")
+Interceptor.attach(WerpSetTtdStatus, {onLeave: function (args) {send("WerpSetTtdStatus");}});
+
+var WerpShowUpsellUI = Module.findExportByName("wer.dll", "WerpShowUpsellUI")
+Interceptor.attach(WerpShowUpsellUI, {onLeave: function (args) {send("WerpShowUpsellUI");}});
+
+var WerpStitchedMinidumpVmPostReadCallback = Module.findExportByName("wer.dll", "WerpStitchedMinidumpVmPostReadCallback")
+Interceptor.attach(WerpStitchedMinidumpVmPostReadCallback, {onLeave: function (args) {send("WerpStitchedMinidumpVmPostReadCallback");}});
+
+var WerpStitchedMinidumpVmPreReadCallback = Module.findExportByName("wer.dll", "WerpStitchedMinidumpVmPreReadCallback")
+Interceptor.attach(WerpStitchedMinidumpVmPreReadCallback, {onLeave: function (args) {send("WerpStitchedMinidumpVmPreReadCallback");}});
+
+var WerpStitchedMinidumpVmQueryCallback = Module.findExportByName("wer.dll", "WerpStitchedMinidumpVmQueryCallback")
+Interceptor.attach(WerpStitchedMinidumpVmQueryCallback, {onLeave: function (args) {send("WerpStitchedMinidumpVmQueryCallback");}});
+
+var WerpSubmitReportFromStore = Module.findExportByName("wer.dll", "WerpSubmitReportFromStore")
+Interceptor.attach(WerpSubmitReportFromStore, {onLeave: function (args) {send("WerpSubmitReportFromStore");}});
+
+var WerpTraceAuxMemDumpStatistics = Module.findExportByName("wer.dll", "WerpTraceAuxMemDumpStatistics")
+Interceptor.attach(WerpTraceAuxMemDumpStatistics, {onLeave: function (args) {send("WerpTraceAuxMemDumpStatistics");}});
+
+var WerpTraceDuration = Module.findExportByName("wer.dll", "WerpTraceDuration")
+Interceptor.attach(WerpTraceDuration, {onLeave: function (args) {send("WerpTraceDuration");}});
+
+var WerpTraceImageCacheStatistics = Module.findExportByName("wer.dll", "WerpTraceImageCacheStatistics")
+Interceptor.attach(WerpTraceImageCacheStatistics, {onLeave: function (args) {send("WerpTraceImageCacheStatistics");}});
+
+var WerpTraceSnapshotStatistics = Module.findExportByName("wer.dll", "WerpTraceSnapshotStatistics")
+Interceptor.attach(WerpTraceSnapshotStatistics, {onLeave: function (args) {send("WerpTraceSnapshotStatistics");}});
+
+var WerpTraceStitchedDumpWriterStatistics = Module.findExportByName("wer.dll", "WerpTraceStitchedDumpWriterStatistics")
+Interceptor.attach(WerpTraceStitchedDumpWriterStatistics, {onLeave: function (args) {send("WerpTraceStitchedDumpWriterStatistics");}});
+
+var WerpTraceUnmappedVaRangesStatistics = Module.findExportByName("wer.dll", "WerpTraceUnmappedVaRangesStatistics")
+Interceptor.attach(WerpTraceUnmappedVaRangesStatistics, {onLeave: function (args) {send("WerpTraceUnmappedVaRangesStatistics");}});
+
+var WerpUnmapProcessViews = Module.findExportByName("wer.dll", "WerpUnmapProcessViews")
+Interceptor.attach(WerpUnmapProcessViews, {onLeave: function (args) {send("WerpUnmapProcessViews");}});
+
+var WerpValidateReportKey = Module.findExportByName("wer.dll", "WerpValidateReportKey")
+Interceptor.attach(WerpValidateReportKey, {onLeave: function (args) {send("WerpValidateReportKey");}});
+
+var WerpWalkGatherBlocks = Module.findExportByName("wer.dll", "WerpWalkGatherBlocks")
+Interceptor.attach(WerpWalkGatherBlocks, {onLeave: function (args) {send("WerpWalkGatherBlocks");}});
+

@@ -1,0 +1,369 @@
+var clBuildProgram = Module.findExportByName("OpenCL.dll", "clBuildProgram")
+Interceptor.attach(clBuildProgram, {onLeave: function (args) {send("clBuildProgram");}});
+
+var clCloneKernel = Module.findExportByName("OpenCL.dll", "clCloneKernel")
+Interceptor.attach(clCloneKernel, {onLeave: function (args) {send("clCloneKernel");}});
+
+var clCompileProgram = Module.findExportByName("OpenCL.dll", "clCompileProgram")
+Interceptor.attach(clCompileProgram, {onLeave: function (args) {send("clCompileProgram");}});
+
+var clCreateBuffer = Module.findExportByName("OpenCL.dll", "clCreateBuffer")
+Interceptor.attach(clCreateBuffer, {onLeave: function (args) {send("clCreateBuffer");}});
+
+var clCreateBufferWithProperties = Module.findExportByName("OpenCL.dll", "clCreateBufferWithProperties")
+Interceptor.attach(clCreateBufferWithProperties, {onLeave: function (args) {send("clCreateBufferWithProperties");}});
+
+var clCreateCommandQueue = Module.findExportByName("OpenCL.dll", "clCreateCommandQueue")
+Interceptor.attach(clCreateCommandQueue, {onLeave: function (args) {send("clCreateCommandQueue");}});
+
+var clCreateCommandQueueWithProperties = Module.findExportByName("OpenCL.dll", "clCreateCommandQueueWithProperties")
+Interceptor.attach(clCreateCommandQueueWithProperties, {onLeave: function (args) {send("clCreateCommandQueueWithProperties");}});
+
+var clCreateContext = Module.findExportByName("OpenCL.dll", "clCreateContext")
+Interceptor.attach(clCreateContext, {onLeave: function (args) {send("clCreateContext");}});
+
+var clCreateContextFromType = Module.findExportByName("OpenCL.dll", "clCreateContextFromType")
+Interceptor.attach(clCreateContextFromType, {onLeave: function (args) {send("clCreateContextFromType");}});
+
+var clCreateFromGLBuffer = Module.findExportByName("OpenCL.dll", "clCreateFromGLBuffer")
+Interceptor.attach(clCreateFromGLBuffer, {onLeave: function (args) {send("clCreateFromGLBuffer");}});
+
+var clCreateFromGLRenderbuffer = Module.findExportByName("OpenCL.dll", "clCreateFromGLRenderbuffer")
+Interceptor.attach(clCreateFromGLRenderbuffer, {onLeave: function (args) {send("clCreateFromGLRenderbuffer");}});
+
+var clCreateFromGLTexture = Module.findExportByName("OpenCL.dll", "clCreateFromGLTexture")
+Interceptor.attach(clCreateFromGLTexture, {onLeave: function (args) {send("clCreateFromGLTexture");}});
+
+var clCreateFromGLTexture2D = Module.findExportByName("OpenCL.dll", "clCreateFromGLTexture2D")
+Interceptor.attach(clCreateFromGLTexture2D, {onLeave: function (args) {send("clCreateFromGLTexture2D");}});
+
+var clCreateFromGLTexture3D = Module.findExportByName("OpenCL.dll", "clCreateFromGLTexture3D")
+Interceptor.attach(clCreateFromGLTexture3D, {onLeave: function (args) {send("clCreateFromGLTexture3D");}});
+
+var clCreateImage = Module.findExportByName("OpenCL.dll", "clCreateImage")
+Interceptor.attach(clCreateImage, {onLeave: function (args) {send("clCreateImage");}});
+
+var clCreateImage2D = Module.findExportByName("OpenCL.dll", "clCreateImage2D")
+Interceptor.attach(clCreateImage2D, {onLeave: function (args) {send("clCreateImage2D");}});
+
+var clCreateImage3D = Module.findExportByName("OpenCL.dll", "clCreateImage3D")
+Interceptor.attach(clCreateImage3D, {onLeave: function (args) {send("clCreateImage3D");}});
+
+var clCreateImageWithProperties = Module.findExportByName("OpenCL.dll", "clCreateImageWithProperties")
+Interceptor.attach(clCreateImageWithProperties, {onLeave: function (args) {send("clCreateImageWithProperties");}});
+
+var clCreateKernel = Module.findExportByName("OpenCL.dll", "clCreateKernel")
+Interceptor.attach(clCreateKernel, {onLeave: function (args) {send("clCreateKernel");}});
+
+var clCreateKernelsInProgram = Module.findExportByName("OpenCL.dll", "clCreateKernelsInProgram")
+Interceptor.attach(clCreateKernelsInProgram, {onLeave: function (args) {send("clCreateKernelsInProgram");}});
+
+var clCreatePipe = Module.findExportByName("OpenCL.dll", "clCreatePipe")
+Interceptor.attach(clCreatePipe, {onLeave: function (args) {send("clCreatePipe");}});
+
+var clCreateProgramWithBinary = Module.findExportByName("OpenCL.dll", "clCreateProgramWithBinary")
+Interceptor.attach(clCreateProgramWithBinary, {onLeave: function (args) {send("clCreateProgramWithBinary");}});
+
+var clCreateProgramWithBuiltInKernels = Module.findExportByName("OpenCL.dll", "clCreateProgramWithBuiltInKernels")
+Interceptor.attach(clCreateProgramWithBuiltInKernels, {onLeave: function (args) {send("clCreateProgramWithBuiltInKernels");}});
+
+var clCreateProgramWithIL = Module.findExportByName("OpenCL.dll", "clCreateProgramWithIL")
+Interceptor.attach(clCreateProgramWithIL, {onLeave: function (args) {send("clCreateProgramWithIL");}});
+
+var clCreateProgramWithSource = Module.findExportByName("OpenCL.dll", "clCreateProgramWithSource")
+Interceptor.attach(clCreateProgramWithSource, {onLeave: function (args) {send("clCreateProgramWithSource");}});
+
+var clCreateSampler = Module.findExportByName("OpenCL.dll", "clCreateSampler")
+Interceptor.attach(clCreateSampler, {onLeave: function (args) {send("clCreateSampler");}});
+
+var clCreateSamplerWithProperties = Module.findExportByName("OpenCL.dll", "clCreateSamplerWithProperties")
+Interceptor.attach(clCreateSamplerWithProperties, {onLeave: function (args) {send("clCreateSamplerWithProperties");}});
+
+var clCreateSubBuffer = Module.findExportByName("OpenCL.dll", "clCreateSubBuffer")
+Interceptor.attach(clCreateSubBuffer, {onLeave: function (args) {send("clCreateSubBuffer");}});
+
+var clCreateSubDevices = Module.findExportByName("OpenCL.dll", "clCreateSubDevices")
+Interceptor.attach(clCreateSubDevices, {onLeave: function (args) {send("clCreateSubDevices");}});
+
+var clCreateUserEvent = Module.findExportByName("OpenCL.dll", "clCreateUserEvent")
+Interceptor.attach(clCreateUserEvent, {onLeave: function (args) {send("clCreateUserEvent");}});
+
+var clEnqueueAcquireGLObjects = Module.findExportByName("OpenCL.dll", "clEnqueueAcquireGLObjects")
+Interceptor.attach(clEnqueueAcquireGLObjects, {onLeave: function (args) {send("clEnqueueAcquireGLObjects");}});
+
+var clEnqueueBarrier = Module.findExportByName("OpenCL.dll", "clEnqueueBarrier")
+Interceptor.attach(clEnqueueBarrier, {onLeave: function (args) {send("clEnqueueBarrier");}});
+
+var clEnqueueBarrierWithWaitList = Module.findExportByName("OpenCL.dll", "clEnqueueBarrierWithWaitList")
+Interceptor.attach(clEnqueueBarrierWithWaitList, {onLeave: function (args) {send("clEnqueueBarrierWithWaitList");}});
+
+var clEnqueueCopyBuffer = Module.findExportByName("OpenCL.dll", "clEnqueueCopyBuffer")
+Interceptor.attach(clEnqueueCopyBuffer, {onLeave: function (args) {send("clEnqueueCopyBuffer");}});
+
+var clEnqueueCopyBufferRect = Module.findExportByName("OpenCL.dll", "clEnqueueCopyBufferRect")
+Interceptor.attach(clEnqueueCopyBufferRect, {onLeave: function (args) {send("clEnqueueCopyBufferRect");}});
+
+var clEnqueueCopyBufferToImage = Module.findExportByName("OpenCL.dll", "clEnqueueCopyBufferToImage")
+Interceptor.attach(clEnqueueCopyBufferToImage, {onLeave: function (args) {send("clEnqueueCopyBufferToImage");}});
+
+var clEnqueueCopyImage = Module.findExportByName("OpenCL.dll", "clEnqueueCopyImage")
+Interceptor.attach(clEnqueueCopyImage, {onLeave: function (args) {send("clEnqueueCopyImage");}});
+
+var clEnqueueCopyImageToBuffer = Module.findExportByName("OpenCL.dll", "clEnqueueCopyImageToBuffer")
+Interceptor.attach(clEnqueueCopyImageToBuffer, {onLeave: function (args) {send("clEnqueueCopyImageToBuffer");}});
+
+var clEnqueueFillBuffer = Module.findExportByName("OpenCL.dll", "clEnqueueFillBuffer")
+Interceptor.attach(clEnqueueFillBuffer, {onLeave: function (args) {send("clEnqueueFillBuffer");}});
+
+var clEnqueueFillImage = Module.findExportByName("OpenCL.dll", "clEnqueueFillImage")
+Interceptor.attach(clEnqueueFillImage, {onLeave: function (args) {send("clEnqueueFillImage");}});
+
+var clEnqueueMapBuffer = Module.findExportByName("OpenCL.dll", "clEnqueueMapBuffer")
+Interceptor.attach(clEnqueueMapBuffer, {onLeave: function (args) {send("clEnqueueMapBuffer");}});
+
+var clEnqueueMapImage = Module.findExportByName("OpenCL.dll", "clEnqueueMapImage")
+Interceptor.attach(clEnqueueMapImage, {onLeave: function (args) {send("clEnqueueMapImage");}});
+
+var clEnqueueMarker = Module.findExportByName("OpenCL.dll", "clEnqueueMarker")
+Interceptor.attach(clEnqueueMarker, {onLeave: function (args) {send("clEnqueueMarker");}});
+
+var clEnqueueMarkerWithWaitList = Module.findExportByName("OpenCL.dll", "clEnqueueMarkerWithWaitList")
+Interceptor.attach(clEnqueueMarkerWithWaitList, {onLeave: function (args) {send("clEnqueueMarkerWithWaitList");}});
+
+var clEnqueueMigrateMemObjects = Module.findExportByName("OpenCL.dll", "clEnqueueMigrateMemObjects")
+Interceptor.attach(clEnqueueMigrateMemObjects, {onLeave: function (args) {send("clEnqueueMigrateMemObjects");}});
+
+var clEnqueueNDRangeKernel = Module.findExportByName("OpenCL.dll", "clEnqueueNDRangeKernel")
+Interceptor.attach(clEnqueueNDRangeKernel, {onLeave: function (args) {send("clEnqueueNDRangeKernel");}});
+
+var clEnqueueNativeKernel = Module.findExportByName("OpenCL.dll", "clEnqueueNativeKernel")
+Interceptor.attach(clEnqueueNativeKernel, {onLeave: function (args) {send("clEnqueueNativeKernel");}});
+
+var clEnqueueReadBuffer = Module.findExportByName("OpenCL.dll", "clEnqueueReadBuffer")
+Interceptor.attach(clEnqueueReadBuffer, {onLeave: function (args) {send("clEnqueueReadBuffer");}});
+
+var clEnqueueReadBufferRect = Module.findExportByName("OpenCL.dll", "clEnqueueReadBufferRect")
+Interceptor.attach(clEnqueueReadBufferRect, {onLeave: function (args) {send("clEnqueueReadBufferRect");}});
+
+var clEnqueueReadImage = Module.findExportByName("OpenCL.dll", "clEnqueueReadImage")
+Interceptor.attach(clEnqueueReadImage, {onLeave: function (args) {send("clEnqueueReadImage");}});
+
+var clEnqueueReleaseGLObjects = Module.findExportByName("OpenCL.dll", "clEnqueueReleaseGLObjects")
+Interceptor.attach(clEnqueueReleaseGLObjects, {onLeave: function (args) {send("clEnqueueReleaseGLObjects");}});
+
+var clEnqueueSVMFree = Module.findExportByName("OpenCL.dll", "clEnqueueSVMFree")
+Interceptor.attach(clEnqueueSVMFree, {onLeave: function (args) {send("clEnqueueSVMFree");}});
+
+var clEnqueueSVMMap = Module.findExportByName("OpenCL.dll", "clEnqueueSVMMap")
+Interceptor.attach(clEnqueueSVMMap, {onLeave: function (args) {send("clEnqueueSVMMap");}});
+
+var clEnqueueSVMMemFill = Module.findExportByName("OpenCL.dll", "clEnqueueSVMMemFill")
+Interceptor.attach(clEnqueueSVMMemFill, {onLeave: function (args) {send("clEnqueueSVMMemFill");}});
+
+var clEnqueueSVMMemcpy = Module.findExportByName("OpenCL.dll", "clEnqueueSVMMemcpy")
+Interceptor.attach(clEnqueueSVMMemcpy, {onLeave: function (args) {send("clEnqueueSVMMemcpy");}});
+
+var clEnqueueSVMMigrateMem = Module.findExportByName("OpenCL.dll", "clEnqueueSVMMigrateMem")
+Interceptor.attach(clEnqueueSVMMigrateMem, {onLeave: function (args) {send("clEnqueueSVMMigrateMem");}});
+
+var clEnqueueSVMUnmap = Module.findExportByName("OpenCL.dll", "clEnqueueSVMUnmap")
+Interceptor.attach(clEnqueueSVMUnmap, {onLeave: function (args) {send("clEnqueueSVMUnmap");}});
+
+var clEnqueueTask = Module.findExportByName("OpenCL.dll", "clEnqueueTask")
+Interceptor.attach(clEnqueueTask, {onLeave: function (args) {send("clEnqueueTask");}});
+
+var clEnqueueUnmapMemObject = Module.findExportByName("OpenCL.dll", "clEnqueueUnmapMemObject")
+Interceptor.attach(clEnqueueUnmapMemObject, {onLeave: function (args) {send("clEnqueueUnmapMemObject");}});
+
+var clEnqueueWaitForEvents = Module.findExportByName("OpenCL.dll", "clEnqueueWaitForEvents")
+Interceptor.attach(clEnqueueWaitForEvents, {onLeave: function (args) {send("clEnqueueWaitForEvents");}});
+
+var clEnqueueWriteBuffer = Module.findExportByName("OpenCL.dll", "clEnqueueWriteBuffer")
+Interceptor.attach(clEnqueueWriteBuffer, {onLeave: function (args) {send("clEnqueueWriteBuffer");}});
+
+var clEnqueueWriteBufferRect = Module.findExportByName("OpenCL.dll", "clEnqueueWriteBufferRect")
+Interceptor.attach(clEnqueueWriteBufferRect, {onLeave: function (args) {send("clEnqueueWriteBufferRect");}});
+
+var clEnqueueWriteImage = Module.findExportByName("OpenCL.dll", "clEnqueueWriteImage")
+Interceptor.attach(clEnqueueWriteImage, {onLeave: function (args) {send("clEnqueueWriteImage");}});
+
+var clFinish = Module.findExportByName("OpenCL.dll", "clFinish")
+Interceptor.attach(clFinish, {onLeave: function (args) {send("clFinish");}});
+
+var clFlush = Module.findExportByName("OpenCL.dll", "clFlush")
+Interceptor.attach(clFlush, {onLeave: function (args) {send("clFlush");}});
+
+var clGetCommandQueueInfo = Module.findExportByName("OpenCL.dll", "clGetCommandQueueInfo")
+Interceptor.attach(clGetCommandQueueInfo, {onLeave: function (args) {send("clGetCommandQueueInfo");}});
+
+var clGetContextInfo = Module.findExportByName("OpenCL.dll", "clGetContextInfo")
+Interceptor.attach(clGetContextInfo, {onLeave: function (args) {send("clGetContextInfo");}});
+
+var clGetDeviceAndHostTimer = Module.findExportByName("OpenCL.dll", "clGetDeviceAndHostTimer")
+Interceptor.attach(clGetDeviceAndHostTimer, {onLeave: function (args) {send("clGetDeviceAndHostTimer");}});
+
+var clGetDeviceIDs = Module.findExportByName("OpenCL.dll", "clGetDeviceIDs")
+Interceptor.attach(clGetDeviceIDs, {onLeave: function (args) {send("clGetDeviceIDs");}});
+
+var clGetDeviceInfo = Module.findExportByName("OpenCL.dll", "clGetDeviceInfo")
+Interceptor.attach(clGetDeviceInfo, {onLeave: function (args) {send("clGetDeviceInfo");}});
+
+var clGetEventInfo = Module.findExportByName("OpenCL.dll", "clGetEventInfo")
+Interceptor.attach(clGetEventInfo, {onLeave: function (args) {send("clGetEventInfo");}});
+
+var clGetEventProfilingInfo = Module.findExportByName("OpenCL.dll", "clGetEventProfilingInfo")
+Interceptor.attach(clGetEventProfilingInfo, {onLeave: function (args) {send("clGetEventProfilingInfo");}});
+
+var clGetExtensionFunctionAddress = Module.findExportByName("OpenCL.dll", "clGetExtensionFunctionAddress")
+Interceptor.attach(clGetExtensionFunctionAddress, {onLeave: function (args) {send("clGetExtensionFunctionAddress");}});
+
+var clGetExtensionFunctionAddressForPlatform = Module.findExportByName("OpenCL.dll", "clGetExtensionFunctionAddressForPlatform")
+Interceptor.attach(clGetExtensionFunctionAddressForPlatform, {onLeave: function (args) {send("clGetExtensionFunctionAddressForPlatform");}});
+
+var clGetGLObjectInfo = Module.findExportByName("OpenCL.dll", "clGetGLObjectInfo")
+Interceptor.attach(clGetGLObjectInfo, {onLeave: function (args) {send("clGetGLObjectInfo");}});
+
+var clGetGLTextureInfo = Module.findExportByName("OpenCL.dll", "clGetGLTextureInfo")
+Interceptor.attach(clGetGLTextureInfo, {onLeave: function (args) {send("clGetGLTextureInfo");}});
+
+var clGetHostTimer = Module.findExportByName("OpenCL.dll", "clGetHostTimer")
+Interceptor.attach(clGetHostTimer, {onLeave: function (args) {send("clGetHostTimer");}});
+
+var clGetImageInfo = Module.findExportByName("OpenCL.dll", "clGetImageInfo")
+Interceptor.attach(clGetImageInfo, {onLeave: function (args) {send("clGetImageInfo");}});
+
+var clGetKernelArgInfo = Module.findExportByName("OpenCL.dll", "clGetKernelArgInfo")
+Interceptor.attach(clGetKernelArgInfo, {onLeave: function (args) {send("clGetKernelArgInfo");}});
+
+var clGetKernelInfo = Module.findExportByName("OpenCL.dll", "clGetKernelInfo")
+Interceptor.attach(clGetKernelInfo, {onLeave: function (args) {send("clGetKernelInfo");}});
+
+var clGetKernelSubGroupInfo = Module.findExportByName("OpenCL.dll", "clGetKernelSubGroupInfo")
+Interceptor.attach(clGetKernelSubGroupInfo, {onLeave: function (args) {send("clGetKernelSubGroupInfo");}});
+
+var clGetKernelWorkGroupInfo = Module.findExportByName("OpenCL.dll", "clGetKernelWorkGroupInfo")
+Interceptor.attach(clGetKernelWorkGroupInfo, {onLeave: function (args) {send("clGetKernelWorkGroupInfo");}});
+
+var clGetMemObjectInfo = Module.findExportByName("OpenCL.dll", "clGetMemObjectInfo")
+Interceptor.attach(clGetMemObjectInfo, {onLeave: function (args) {send("clGetMemObjectInfo");}});
+
+var clGetPipeInfo = Module.findExportByName("OpenCL.dll", "clGetPipeInfo")
+Interceptor.attach(clGetPipeInfo, {onLeave: function (args) {send("clGetPipeInfo");}});
+
+var clGetPlatformIDs = Module.findExportByName("OpenCL.dll", "clGetPlatformIDs")
+Interceptor.attach(clGetPlatformIDs, {onLeave: function (args) {send("clGetPlatformIDs");}});
+
+var clGetPlatformInfo = Module.findExportByName("OpenCL.dll", "clGetPlatformInfo")
+Interceptor.attach(clGetPlatformInfo, {onLeave: function (args) {send("clGetPlatformInfo");}});
+
+var clGetProgramBuildInfo = Module.findExportByName("OpenCL.dll", "clGetProgramBuildInfo")
+Interceptor.attach(clGetProgramBuildInfo, {onLeave: function (args) {send("clGetProgramBuildInfo");}});
+
+var clGetProgramInfo = Module.findExportByName("OpenCL.dll", "clGetProgramInfo")
+Interceptor.attach(clGetProgramInfo, {onLeave: function (args) {send("clGetProgramInfo");}});
+
+var clGetSamplerInfo = Module.findExportByName("OpenCL.dll", "clGetSamplerInfo")
+Interceptor.attach(clGetSamplerInfo, {onLeave: function (args) {send("clGetSamplerInfo");}});
+
+var clGetSupportedImageFormats = Module.findExportByName("OpenCL.dll", "clGetSupportedImageFormats")
+Interceptor.attach(clGetSupportedImageFormats, {onLeave: function (args) {send("clGetSupportedImageFormats");}});
+
+var clLinkProgram = Module.findExportByName("OpenCL.dll", "clLinkProgram")
+Interceptor.attach(clLinkProgram, {onLeave: function (args) {send("clLinkProgram");}});
+
+var clReleaseCommandQueue = Module.findExportByName("OpenCL.dll", "clReleaseCommandQueue")
+Interceptor.attach(clReleaseCommandQueue, {onLeave: function (args) {send("clReleaseCommandQueue");}});
+
+var clReleaseContext = Module.findExportByName("OpenCL.dll", "clReleaseContext")
+Interceptor.attach(clReleaseContext, {onLeave: function (args) {send("clReleaseContext");}});
+
+var clReleaseDevice = Module.findExportByName("OpenCL.dll", "clReleaseDevice")
+Interceptor.attach(clReleaseDevice, {onLeave: function (args) {send("clReleaseDevice");}});
+
+var clReleaseEvent = Module.findExportByName("OpenCL.dll", "clReleaseEvent")
+Interceptor.attach(clReleaseEvent, {onLeave: function (args) {send("clReleaseEvent");}});
+
+var clReleaseKernel = Module.findExportByName("OpenCL.dll", "clReleaseKernel")
+Interceptor.attach(clReleaseKernel, {onLeave: function (args) {send("clReleaseKernel");}});
+
+var clReleaseMemObject = Module.findExportByName("OpenCL.dll", "clReleaseMemObject")
+Interceptor.attach(clReleaseMemObject, {onLeave: function (args) {send("clReleaseMemObject");}});
+
+var clReleaseProgram = Module.findExportByName("OpenCL.dll", "clReleaseProgram")
+Interceptor.attach(clReleaseProgram, {onLeave: function (args) {send("clReleaseProgram");}});
+
+var clReleaseSampler = Module.findExportByName("OpenCL.dll", "clReleaseSampler")
+Interceptor.attach(clReleaseSampler, {onLeave: function (args) {send("clReleaseSampler");}});
+
+var clRetainCommandQueue = Module.findExportByName("OpenCL.dll", "clRetainCommandQueue")
+Interceptor.attach(clRetainCommandQueue, {onLeave: function (args) {send("clRetainCommandQueue");}});
+
+var clRetainContext = Module.findExportByName("OpenCL.dll", "clRetainContext")
+Interceptor.attach(clRetainContext, {onLeave: function (args) {send("clRetainContext");}});
+
+var clRetainDevice = Module.findExportByName("OpenCL.dll", "clRetainDevice")
+Interceptor.attach(clRetainDevice, {onLeave: function (args) {send("clRetainDevice");}});
+
+var clRetainEvent = Module.findExportByName("OpenCL.dll", "clRetainEvent")
+Interceptor.attach(clRetainEvent, {onLeave: function (args) {send("clRetainEvent");}});
+
+var clRetainKernel = Module.findExportByName("OpenCL.dll", "clRetainKernel")
+Interceptor.attach(clRetainKernel, {onLeave: function (args) {send("clRetainKernel");}});
+
+var clRetainMemObject = Module.findExportByName("OpenCL.dll", "clRetainMemObject")
+Interceptor.attach(clRetainMemObject, {onLeave: function (args) {send("clRetainMemObject");}});
+
+var clRetainProgram = Module.findExportByName("OpenCL.dll", "clRetainProgram")
+Interceptor.attach(clRetainProgram, {onLeave: function (args) {send("clRetainProgram");}});
+
+var clRetainSampler = Module.findExportByName("OpenCL.dll", "clRetainSampler")
+Interceptor.attach(clRetainSampler, {onLeave: function (args) {send("clRetainSampler");}});
+
+var clSVMAlloc = Module.findExportByName("OpenCL.dll", "clSVMAlloc")
+Interceptor.attach(clSVMAlloc, {onLeave: function (args) {send("clSVMAlloc");}});
+
+var clSVMFree = Module.findExportByName("OpenCL.dll", "clSVMFree")
+Interceptor.attach(clSVMFree, {onLeave: function (args) {send("clSVMFree");}});
+
+var clSetCommandQueueProperty = Module.findExportByName("OpenCL.dll", "clSetCommandQueueProperty")
+Interceptor.attach(clSetCommandQueueProperty, {onLeave: function (args) {send("clSetCommandQueueProperty");}});
+
+var clSetContextDestructorCallback = Module.findExportByName("OpenCL.dll", "clSetContextDestructorCallback")
+Interceptor.attach(clSetContextDestructorCallback, {onLeave: function (args) {send("clSetContextDestructorCallback");}});
+
+var clSetDefaultDeviceCommandQueue = Module.findExportByName("OpenCL.dll", "clSetDefaultDeviceCommandQueue")
+Interceptor.attach(clSetDefaultDeviceCommandQueue, {onLeave: function (args) {send("clSetDefaultDeviceCommandQueue");}});
+
+var clSetEventCallback = Module.findExportByName("OpenCL.dll", "clSetEventCallback")
+Interceptor.attach(clSetEventCallback, {onLeave: function (args) {send("clSetEventCallback");}});
+
+var clSetKernelArg = Module.findExportByName("OpenCL.dll", "clSetKernelArg")
+Interceptor.attach(clSetKernelArg, {onLeave: function (args) {send("clSetKernelArg");}});
+
+var clSetKernelArgSVMPointer = Module.findExportByName("OpenCL.dll", "clSetKernelArgSVMPointer")
+Interceptor.attach(clSetKernelArgSVMPointer, {onLeave: function (args) {send("clSetKernelArgSVMPointer");}});
+
+var clSetKernelExecInfo = Module.findExportByName("OpenCL.dll", "clSetKernelExecInfo")
+Interceptor.attach(clSetKernelExecInfo, {onLeave: function (args) {send("clSetKernelExecInfo");}});
+
+var clSetMemObjectDestructorCallback = Module.findExportByName("OpenCL.dll", "clSetMemObjectDestructorCallback")
+Interceptor.attach(clSetMemObjectDestructorCallback, {onLeave: function (args) {send("clSetMemObjectDestructorCallback");}});
+
+var clSetProgramReleaseCallback = Module.findExportByName("OpenCL.dll", "clSetProgramReleaseCallback")
+Interceptor.attach(clSetProgramReleaseCallback, {onLeave: function (args) {send("clSetProgramReleaseCallback");}});
+
+var clSetProgramSpecializationConstant = Module.findExportByName("OpenCL.dll", "clSetProgramSpecializationConstant")
+Interceptor.attach(clSetProgramSpecializationConstant, {onLeave: function (args) {send("clSetProgramSpecializationConstant");}});
+
+var clSetUserEventStatus = Module.findExportByName("OpenCL.dll", "clSetUserEventStatus")
+Interceptor.attach(clSetUserEventStatus, {onLeave: function (args) {send("clSetUserEventStatus");}});
+
+var clUnloadCompiler = Module.findExportByName("OpenCL.dll", "clUnloadCompiler")
+Interceptor.attach(clUnloadCompiler, {onLeave: function (args) {send("clUnloadCompiler");}});
+
+var clUnloadPlatformCompiler = Module.findExportByName("OpenCL.dll", "clUnloadPlatformCompiler")
+Interceptor.attach(clUnloadPlatformCompiler, {onLeave: function (args) {send("clUnloadPlatformCompiler");}});
+
+var clWaitForEvents = Module.findExportByName("OpenCL.dll", "clWaitForEvents")
+Interceptor.attach(clWaitForEvents, {onLeave: function (args) {send("clWaitForEvents");}});
+

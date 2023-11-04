@@ -1,0 +1,3 @@
+var SendSAS = Module.findExportByName("sas.dll", "SendSAS")
+Interceptor.attach(SendSAS, {onLeave: function (args) {send("SendSAS");}});
+

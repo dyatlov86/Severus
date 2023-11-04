@@ -1,0 +1,6 @@
+var NlaGetCaptivePortalHosts = Module.findExportByName("nlaapi.dll", "NlaGetCaptivePortalHosts")
+Interceptor.attach(NlaGetCaptivePortalHosts, {onLeave: function (args) {send("NlaGetCaptivePortalHosts");}});
+
+var NlaIndicateReprobe = Module.findExportByName("nlaapi.dll", "NlaIndicateReprobe")
+Interceptor.attach(NlaIndicateReprobe, {onLeave: function (args) {send("NlaIndicateReprobe");}});
+

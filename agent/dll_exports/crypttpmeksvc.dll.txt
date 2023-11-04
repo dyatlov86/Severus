@@ -1,0 +1,24 @@
+var CryptsvcDllCtrl = Module.findExportByName("crypttpmeksvc.dll", "CryptsvcDllCtrl")
+Interceptor.attach(CryptsvcDllCtrl, {onLeave: function (args) {send("CryptsvcDllCtrl");}});
+
+var EKCliAuthorityKeyGetInfo = Module.findExportByName("crypttpmeksvc.dll", "EKCliAuthorityKeyGetInfo")
+Interceptor.attach(EKCliAuthorityKeyGetInfo, {onLeave: function (args) {send("EKCliAuthorityKeyGetInfo");}});
+
+var EKCliTpmEndorsementKeyDecryptSCEPChallenge = Module.findExportByName("crypttpmeksvc.dll", "EKCliTpmEndorsementKeyDecryptSCEPChallenge")
+Interceptor.attach(EKCliTpmEndorsementKeyDecryptSCEPChallenge, {onLeave: function (args) {send("EKCliTpmEndorsementKeyDecryptSCEPChallenge");}});
+
+var EKCliTpmEndorsementKeyGetInfo = Module.findExportByName("crypttpmeksvc.dll", "EKCliTpmEndorsementKeyGetInfo")
+Interceptor.attach(EKCliTpmEndorsementKeyGetInfo, {onLeave: function (args) {send("EKCliTpmEndorsementKeyGetInfo");}});
+
+var EKCliTpmGetManufacturerInfo = Module.findExportByName("crypttpmeksvc.dll", "EKCliTpmGetManufacturerInfo")
+Interceptor.attach(EKCliTpmGetManufacturerInfo, {onLeave: function (args) {send("EKCliTpmGetManufacturerInfo");}});
+
+var FreeCMCResponse = Module.findExportByName("crypttpmeksvc.dll", "FreeCMCResponse")
+Interceptor.attach(FreeCMCResponse, {onLeave: function (args) {send("FreeCMCResponse");}});
+
+var IsCmcResponseForAttestation = Module.findExportByName("crypttpmeksvc.dll", "IsCmcResponseForAttestation")
+Interceptor.attach(IsCmcResponseForAttestation, {onLeave: function (args) {send("IsCmcResponseForAttestation");}});
+
+var ParseCMCResponse = Module.findExportByName("crypttpmeksvc.dll", "ParseCMCResponse")
+Interceptor.attach(ParseCMCResponse, {onLeave: function (args) {send("ParseCMCResponse");}});
+

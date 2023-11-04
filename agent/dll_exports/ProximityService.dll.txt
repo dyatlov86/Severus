@@ -1,0 +1,21 @@
+var CleanupProximityService = Module.findExportByName("ProximityService.dll", "CleanupProximityService")
+Interceptor.attach(CleanupProximityService, {onLeave: function (args) {send("CleanupProximityService");}});
+
+var GetProximityClientCount = Module.findExportByName("ProximityService.dll", "GetProximityClientCount")
+Interceptor.attach(GetProximityClientCount, {onLeave: function (args) {send("GetProximityClientCount");}});
+
+var InitProximityService = Module.findExportByName("ProximityService.dll", "InitProximityService")
+Interceptor.attach(InitProximityService, {onLeave: function (args) {send("InitProximityService");}});
+
+var InitProximityServiceEx = Module.findExportByName("ProximityService.dll", "InitProximityServiceEx")
+Interceptor.attach(InitProximityServiceEx, {onLeave: function (args) {send("InitProximityServiceEx");}});
+
+var ServiceMain = Module.findExportByName("ProximityService.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SessionChangedEvent = Module.findExportByName("ProximityService.dll", "SessionChangedEvent")
+Interceptor.attach(SessionChangedEvent, {onLeave: function (args) {send("SessionChangedEvent");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("ProximityService.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

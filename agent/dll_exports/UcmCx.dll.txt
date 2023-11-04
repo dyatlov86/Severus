@@ -1,0 +1,3 @@
+var FxDriverEntryUm = Module.findExportByName("UcmCx.dll", "FxDriverEntryUm")
+Interceptor.attach(FxDriverEntryUm, {onLeave: function (args) {send("FxDriverEntryUm");}});
+

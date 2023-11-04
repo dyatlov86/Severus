@@ -1,0 +1,6 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.Internal.Shell.CloudDesktop.TransitionScreen.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Internal.Shell.CloudDesktop.TransitionScreen.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+

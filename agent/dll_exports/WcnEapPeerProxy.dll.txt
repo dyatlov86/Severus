@@ -1,0 +1,12 @@
+var EapPeerFreeErrorMemory = Module.findExportByName("WcnEapPeerProxy.dll", "EapPeerFreeErrorMemory")
+Interceptor.attach(EapPeerFreeErrorMemory, {onLeave: function (args) {send("EapPeerFreeErrorMemory");}});
+
+var EapPeerFreeMemory = Module.findExportByName("WcnEapPeerProxy.dll", "EapPeerFreeMemory")
+Interceptor.attach(EapPeerFreeMemory, {onLeave: function (args) {send("EapPeerFreeMemory");}});
+
+var EapPeerGetInfo = Module.findExportByName("WcnEapPeerProxy.dll", "EapPeerGetInfo")
+Interceptor.attach(EapPeerGetInfo, {onLeave: function (args) {send("EapPeerGetInfo");}});
+
+var EapPeerGetMethodProperties = Module.findExportByName("WcnEapPeerProxy.dll", "EapPeerGetMethodProperties")
+Interceptor.attach(EapPeerGetMethodProperties, {onLeave: function (args) {send("EapPeerGetMethodProperties");}});
+

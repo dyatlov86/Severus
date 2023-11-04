@@ -1,0 +1,12 @@
+var MI_Application_NewDeserializer_Binary = Module.findExportByName("mibincodec.dll", "MI_Application_NewDeserializer_Binary")
+Interceptor.attach(MI_Application_NewDeserializer_Binary, {onLeave: function (args) {send("MI_Application_NewDeserializer_Binary");}});
+
+var MI_Application_NewSerializer_Binary = Module.findExportByName("mibincodec.dll", "MI_Application_NewSerializer_Binary")
+Interceptor.attach(MI_Application_NewSerializer_Binary, {onLeave: function (args) {send("MI_Application_NewSerializer_Binary");}});
+
+var NITS_PRESENCE_STUB = Module.findExportByName("mibincodec.dll", "NITS_PRESENCE_STUB")
+Interceptor.attach(NITS_PRESENCE_STUB, {onLeave: function (args) {send("NITS_PRESENCE_STUB");}});
+
+var NITS_STUB = Module.findExportByName("mibincodec.dll", "NITS_STUB")
+Interceptor.attach(NITS_STUB, {onLeave: function (args) {send("NITS_STUB");}});
+

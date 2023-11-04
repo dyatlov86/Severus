@@ -1,0 +1,15 @@
+var CleanupUDSGlobals = Module.findExportByName("UserDataService.dll", "CleanupUDSGlobals")
+Interceptor.attach(CleanupUDSGlobals, {onLeave: function (args) {send("CleanupUDSGlobals");}});
+
+var CreateInprocConnectionHandle = Module.findExportByName("UserDataService.dll", "CreateInprocConnectionHandle")
+Interceptor.attach(CreateInprocConnectionHandle, {onLeave: function (args) {send("CreateInprocConnectionHandle");}});
+
+var ServiceMain = Module.findExportByName("UserDataService.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("UserDataService.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+
+var TeardownInprocConnectionHandle = Module.findExportByName("UserDataService.dll", "TeardownInprocConnectionHandle")
+Interceptor.attach(TeardownInprocConnectionHandle, {onLeave: function (args) {send("TeardownInprocConnectionHandle");}});
+

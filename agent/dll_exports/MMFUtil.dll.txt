@@ -1,0 +1,21 @@
+var DisplayAVIBox = Module.findExportByName("MMFUtil.dll", "DisplayAVIBox")
+Interceptor.attach(DisplayAVIBox, {onLeave: function (args) {send("DisplayAVIBox");}});
+
+var DisplayUserMessage = Module.findExportByName("MMFUtil.dll", "DisplayUserMessage")
+Interceptor.attach(DisplayUserMessage, {onLeave: function (args) {send("DisplayUserMessage");}});
+
+var DllCanUnloadNow = Module.findExportByName("MMFUtil.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("MMFUtil.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("MMFUtil.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("MMFUtil.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ErrorStringEx = Module.findExportByName("MMFUtil.dll", "ErrorStringEx")
+Interceptor.attach(ErrorStringEx, {onLeave: function (args) {send("ErrorStringEx");}});
+

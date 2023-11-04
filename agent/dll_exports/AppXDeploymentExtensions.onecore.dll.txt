@@ -1,0 +1,12 @@
+var LoadCategoryNameTable = Module.findExportByName("AppXDeploymentExtensions.onecore.dll", "LoadCategoryNameTable")
+Interceptor.attach(LoadCategoryNameTable, {onLeave: function (args) {send("LoadCategoryNameTable");}});
+
+var LoadExtensionRegistrationTable = Module.findExportByName("AppXDeploymentExtensions.onecore.dll", "LoadExtensionRegistrationTable")
+Interceptor.attach(LoadExtensionRegistrationTable, {onLeave: function (args) {send("LoadExtensionRegistrationTable");}});
+
+var PackageRequiresCustomCapability = Module.findExportByName("AppXDeploymentExtensions.onecore.dll", "PackageRequiresCustomCapability")
+Interceptor.attach(PackageRequiresCustomCapability, {onLeave: function (args) {send("PackageRequiresCustomCapability");}});
+
+var ShellRefresh = Module.findExportByName("AppXDeploymentExtensions.onecore.dll", "ShellRefresh")
+Interceptor.attach(ShellRefresh, {onLeave: function (args) {send("ShellRefresh");}});
+

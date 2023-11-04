@@ -1,0 +1,6 @@
+var FaxFreeSendWizardData = Module.findExportByName("FXSWZRD.DLL", "FaxFreeSendWizardData")
+Interceptor.attach(FaxFreeSendWizardData, {onLeave: function (args) {send("FaxFreeSendWizardData");}});
+
+var FaxSendWizard = Module.findExportByName("FXSWZRD.DLL", "FaxSendWizard")
+Interceptor.attach(FaxSendWizard, {onLeave: function (args) {send("FaxSendWizard");}});
+

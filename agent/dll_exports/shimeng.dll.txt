@@ -1,0 +1,33 @@
+var SE_DllLoaded = Module.findExportByName("shimeng.dll", "SE_DllLoaded")
+Interceptor.attach(SE_DllLoaded, {onLeave: function (args) {send("SE_DllLoaded");}});
+
+var SE_DllUnloaded = Module.findExportByName("shimeng.dll", "SE_DllUnloaded")
+Interceptor.attach(SE_DllUnloaded, {onLeave: function (args) {send("SE_DllUnloaded");}});
+
+var SE_DynamicShim = Module.findExportByName("shimeng.dll", "SE_DynamicShim")
+Interceptor.attach(SE_DynamicShim, {onLeave: function (args) {send("SE_DynamicShim");}});
+
+var SE_GetHookAPIs = Module.findExportByName("shimeng.dll", "SE_GetHookAPIs")
+Interceptor.attach(SE_GetHookAPIs, {onLeave: function (args) {send("SE_GetHookAPIs");}});
+
+var SE_GetMaxShimCount = Module.findExportByName("shimeng.dll", "SE_GetMaxShimCount")
+Interceptor.attach(SE_GetMaxShimCount, {onLeave: function (args) {send("SE_GetMaxShimCount");}});
+
+var SE_GetProcAddressIgnoreIncExc = Module.findExportByName("shimeng.dll", "SE_GetProcAddressIgnoreIncExc")
+Interceptor.attach(SE_GetProcAddressIgnoreIncExc, {onLeave: function (args) {send("SE_GetProcAddressIgnoreIncExc");}});
+
+var SE_GetShimCount = Module.findExportByName("shimeng.dll", "SE_GetShimCount")
+Interceptor.attach(SE_GetShimCount, {onLeave: function (args) {send("SE_GetShimCount");}});
+
+var SE_InstallAfterInit = Module.findExportByName("shimeng.dll", "SE_InstallAfterInit")
+Interceptor.attach(SE_InstallAfterInit, {onLeave: function (args) {send("SE_InstallAfterInit");}});
+
+var SE_InstallBeforeInit = Module.findExportByName("shimeng.dll", "SE_InstallBeforeInit")
+Interceptor.attach(SE_InstallBeforeInit, {onLeave: function (args) {send("SE_InstallBeforeInit");}});
+
+var SE_IsShimDll = Module.findExportByName("shimeng.dll", "SE_IsShimDll")
+Interceptor.attach(SE_IsShimDll, {onLeave: function (args) {send("SE_IsShimDll");}});
+
+var SE_ProcessDying = Module.findExportByName("shimeng.dll", "SE_ProcessDying")
+Interceptor.attach(SE_ProcessDying, {onLeave: function (args) {send("SE_ProcessDying");}});
+

@@ -1,0 +1,27 @@
+var EnumSystemFirmwareTables = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-0.dll", "EnumSystemFirmwareTables")
+Interceptor.attach(EnumSystemFirmwareTables, {onLeave: function (args) {send("EnumSystemFirmwareTables");}});
+
+var GetNativeSystemInfo = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-0.dll", "GetNativeSystemInfo")
+Interceptor.attach(GetNativeSystemInfo, {onLeave: function (args) {send("GetNativeSystemInfo");}});
+
+var GetOsSafeBootMode = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-0.dll", "GetOsSafeBootMode")
+Interceptor.attach(GetOsSafeBootMode, {onLeave: function (args) {send("GetOsSafeBootMode");}});
+
+var GetProductInfo = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-0.dll", "GetProductInfo")
+Interceptor.attach(GetProductInfo, {onLeave: function (args) {send("GetProductInfo");}});
+
+var GetSystemFirmwareTable = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-0.dll", "GetSystemFirmwareTable")
+Interceptor.attach(GetSystemFirmwareTable, {onLeave: function (args) {send("GetSystemFirmwareTable");}});
+
+var GetSystemTimePreciseAsFileTime = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-0.dll", "GetSystemTimePreciseAsFileTime")
+Interceptor.attach(GetSystemTimePreciseAsFileTime, {onLeave: function (args) {send("GetSystemTimePreciseAsFileTime");}});
+
+var SetComputerNameExW = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-0.dll", "SetComputerNameExW")
+Interceptor.attach(SetComputerNameExW, {onLeave: function (args) {send("SetComputerNameExW");}});
+
+var SetSystemTime = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-0.dll", "SetSystemTime")
+Interceptor.attach(SetSystemTime, {onLeave: function (args) {send("SetSystemTime");}});
+
+var VerSetConditionMask = Module.findExportByName("api-ms-win-core-sysinfo-l1-2-0.dll", "VerSetConditionMask")
+Interceptor.attach(VerSetConditionMask, {onLeave: function (args) {send("VerSetConditionMask");}});
+

@@ -1,0 +1,69 @@
+var DeleteClientInfo = Module.findExportByName("olesvr32.dll", "DeleteClientInfo")
+Interceptor.attach(DeleteClientInfo, {onLeave: function (args) {send("DeleteClientInfo");}});
+
+var DocWndProc = Module.findExportByName("olesvr32.dll", "DocWndProc")
+Interceptor.attach(DocWndProc, {onLeave: function (args) {send("DocWndProc");}});
+
+var EnumForTerminate = Module.findExportByName("olesvr32.dll", "EnumForTerminate")
+Interceptor.attach(EnumForTerminate, {onLeave: function (args) {send("EnumForTerminate");}});
+
+var FindItemWnd = Module.findExportByName("olesvr32.dll", "FindItemWnd")
+Interceptor.attach(FindItemWnd, {onLeave: function (args) {send("FindItemWnd");}});
+
+var ItemCallBack = Module.findExportByName("olesvr32.dll", "ItemCallBack")
+Interceptor.attach(ItemCallBack, {onLeave: function (args) {send("ItemCallBack");}});
+
+var ItemWndProc = Module.findExportByName("olesvr32.dll", "ItemWndProc")
+Interceptor.attach(ItemWndProc, {onLeave: function (args) {send("ItemWndProc");}});
+
+var OleBlockServer = Module.findExportByName("olesvr32.dll", "OleBlockServer")
+Interceptor.attach(OleBlockServer, {onLeave: function (args) {send("OleBlockServer");}});
+
+var OleQueryServerVersion = Module.findExportByName("olesvr32.dll", "OleQueryServerVersion")
+Interceptor.attach(OleQueryServerVersion, {onLeave: function (args) {send("OleQueryServerVersion");}});
+
+var OleRegisterServer = Module.findExportByName("olesvr32.dll", "OleRegisterServer")
+Interceptor.attach(OleRegisterServer, {onLeave: function (args) {send("OleRegisterServer");}});
+
+var OleRegisterServerDoc = Module.findExportByName("olesvr32.dll", "OleRegisterServerDoc")
+Interceptor.attach(OleRegisterServerDoc, {onLeave: function (args) {send("OleRegisterServerDoc");}});
+
+var OleRenameServerDoc = Module.findExportByName("olesvr32.dll", "OleRenameServerDoc")
+Interceptor.attach(OleRenameServerDoc, {onLeave: function (args) {send("OleRenameServerDoc");}});
+
+var OleRevertServerDoc = Module.findExportByName("olesvr32.dll", "OleRevertServerDoc")
+Interceptor.attach(OleRevertServerDoc, {onLeave: function (args) {send("OleRevertServerDoc");}});
+
+var OleRevokeObject = Module.findExportByName("olesvr32.dll", "OleRevokeObject")
+Interceptor.attach(OleRevokeObject, {onLeave: function (args) {send("OleRevokeObject");}});
+
+var OleRevokeServer = Module.findExportByName("olesvr32.dll", "OleRevokeServer")
+Interceptor.attach(OleRevokeServer, {onLeave: function (args) {send("OleRevokeServer");}});
+
+var OleRevokeServerDoc = Module.findExportByName("olesvr32.dll", "OleRevokeServerDoc")
+Interceptor.attach(OleRevokeServerDoc, {onLeave: function (args) {send("OleRevokeServerDoc");}});
+
+var OleSavedServerDoc = Module.findExportByName("olesvr32.dll", "OleSavedServerDoc")
+Interceptor.attach(OleSavedServerDoc, {onLeave: function (args) {send("OleSavedServerDoc");}});
+
+var OleUnblockServer = Module.findExportByName("olesvr32.dll", "OleUnblockServer")
+Interceptor.attach(OleUnblockServer, {onLeave: function (args) {send("OleUnblockServer");}});
+
+var SendDataMsg = Module.findExportByName("olesvr32.dll", "SendDataMsg")
+Interceptor.attach(SendDataMsg, {onLeave: function (args) {send("SendDataMsg");}});
+
+var SendRenameMsg = Module.findExportByName("olesvr32.dll", "SendRenameMsg")
+Interceptor.attach(SendRenameMsg, {onLeave: function (args) {send("SendRenameMsg");}});
+
+var SrvrWndProc = Module.findExportByName("olesvr32.dll", "SrvrWndProc")
+Interceptor.attach(SrvrWndProc, {onLeave: function (args) {send("SrvrWndProc");}});
+
+var TerminateClients = Module.findExportByName("olesvr32.dll", "TerminateClients")
+Interceptor.attach(TerminateClients, {onLeave: function (args) {send("TerminateClients");}});
+
+var TerminateDocClients = Module.findExportByName("olesvr32.dll", "TerminateDocClients")
+Interceptor.attach(TerminateDocClients, {onLeave: function (args) {send("TerminateDocClients");}});
+
+var WEP = Module.findExportByName("olesvr32.dll", "WEP")
+Interceptor.attach(WEP, {onLeave: function (args) {send("WEP");}});
+

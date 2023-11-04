@@ -1,0 +1,3 @@
+var SdfMain = Module.findExportByName("SDFHost.dll", "SdfMain")
+Interceptor.attach(SdfMain, {onLeave: function (args) {send("SdfMain");}});
+

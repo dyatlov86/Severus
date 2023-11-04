@@ -1,0 +1,24 @@
+var ProxyHelperGetProxyEventInformation = Module.findExportByName("httpprxp.dll", "ProxyHelperGetProxyEventInformation")
+Interceptor.attach(ProxyHelperGetProxyEventInformation, {onLeave: function (args) {send("ProxyHelperGetProxyEventInformation");}});
+
+var ProxyHelperProviderConnectToServer = Module.findExportByName("httpprxp.dll", "ProxyHelperProviderConnectToServer")
+Interceptor.attach(ProxyHelperProviderConnectToServer, {onLeave: function (args) {send("ProxyHelperProviderConnectToServer");}});
+
+var ProxyHelperProviderDisconnectFromServer = Module.findExportByName("httpprxp.dll", "ProxyHelperProviderDisconnectFromServer")
+Interceptor.attach(ProxyHelperProviderDisconnectFromServer, {onLeave: function (args) {send("ProxyHelperProviderDisconnectFromServer");}});
+
+var ProxyHelperProviderFreeMemory = Module.findExportByName("httpprxp.dll", "ProxyHelperProviderFreeMemory")
+Interceptor.attach(ProxyHelperProviderFreeMemory, {onLeave: function (args) {send("ProxyHelperProviderFreeMemory");}});
+
+var ProxyHelperProviderRegisterForEventNotification = Module.findExportByName("httpprxp.dll", "ProxyHelperProviderRegisterForEventNotification")
+Interceptor.attach(ProxyHelperProviderRegisterForEventNotification, {onLeave: function (args) {send("ProxyHelperProviderRegisterForEventNotification");}});
+
+var ProxyHelperProviderSetProxyConfiguration = Module.findExportByName("httpprxp.dll", "ProxyHelperProviderSetProxyConfiguration")
+Interceptor.attach(ProxyHelperProviderSetProxyConfiguration, {onLeave: function (args) {send("ProxyHelperProviderSetProxyConfiguration");}});
+
+var ProxyHelperProviderSetProxyCredentials = Module.findExportByName("httpprxp.dll", "ProxyHelperProviderSetProxyCredentials")
+Interceptor.attach(ProxyHelperProviderSetProxyCredentials, {onLeave: function (args) {send("ProxyHelperProviderSetProxyCredentials");}});
+
+var ProxyHelperProviderUnregisterEventNotification = Module.findExportByName("httpprxp.dll", "ProxyHelperProviderUnregisterEventNotification")
+Interceptor.attach(ProxyHelperProviderUnregisterEventNotification, {onLeave: function (args) {send("ProxyHelperProviderUnregisterEventNotification");}});
+

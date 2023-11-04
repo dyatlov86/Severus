@@ -1,0 +1,30 @@
+var TetheringStationConnect = Module.findExportByName("TetheringStation.dll", "TetheringStationConnect")
+Interceptor.attach(TetheringStationConnect, {onLeave: function (args) {send("TetheringStationConnect");}});
+
+var TetheringStationConnectApp = Module.findExportByName("TetheringStation.dll", "TetheringStationConnectApp")
+Interceptor.attach(TetheringStationConnectApp, {onLeave: function (args) {send("TetheringStationConnectApp");}});
+
+var TetheringStationDeinitialize = Module.findExportByName("TetheringStation.dll", "TetheringStationDeinitialize")
+Interceptor.attach(TetheringStationDeinitialize, {onLeave: function (args) {send("TetheringStationDeinitialize");}});
+
+var TetheringStationDisconnect = Module.findExportByName("TetheringStation.dll", "TetheringStationDisconnect")
+Interceptor.attach(TetheringStationDisconnect, {onLeave: function (args) {send("TetheringStationDisconnect");}});
+
+var TetheringStationEnumerate = Module.findExportByName("TetheringStation.dll", "TetheringStationEnumerate")
+Interceptor.attach(TetheringStationEnumerate, {onLeave: function (args) {send("TetheringStationEnumerate");}});
+
+var TetheringStationFreeMemory = Module.findExportByName("TetheringStation.dll", "TetheringStationFreeMemory")
+Interceptor.attach(TetheringStationFreeMemory, {onLeave: function (args) {send("TetheringStationFreeMemory");}});
+
+var TetheringStationInitialize = Module.findExportByName("TetheringStation.dll", "TetheringStationInitialize")
+Interceptor.attach(TetheringStationInitialize, {onLeave: function (args) {send("TetheringStationInitialize");}});
+
+var TetheringStationRefresh = Module.findExportByName("TetheringStation.dll", "TetheringStationRefresh")
+Interceptor.attach(TetheringStationRefresh, {onLeave: function (args) {send("TetheringStationRefresh");}});
+
+var TetheringStationRegisterForNotification = Module.findExportByName("TetheringStation.dll", "TetheringStationRegisterForNotification")
+Interceptor.attach(TetheringStationRegisterForNotification, {onLeave: function (args) {send("TetheringStationRegisterForNotification");}});
+
+var TetheringStationUnregisterForNotification = Module.findExportByName("TetheringStation.dll", "TetheringStationUnregisterForNotification")
+Interceptor.attach(TetheringStationUnregisterForNotification, {onLeave: function (args) {send("TetheringStationUnregisterForNotification");}});
+

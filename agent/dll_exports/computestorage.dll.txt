@@ -1,0 +1,36 @@
+var HcsAttachLayerStorageFilter = Module.findExportByName("computestorage.dll", "HcsAttachLayerStorageFilter")
+Interceptor.attach(HcsAttachLayerStorageFilter, {onLeave: function (args) {send("HcsAttachLayerStorageFilter");}});
+
+var HcsDestroyLayer = Module.findExportByName("computestorage.dll", "HcsDestroyLayer")
+Interceptor.attach(HcsDestroyLayer, {onLeave: function (args) {send("HcsDestroyLayer");}});
+
+var HcsDetachLayerStorageFilter = Module.findExportByName("computestorage.dll", "HcsDetachLayerStorageFilter")
+Interceptor.attach(HcsDetachLayerStorageFilter, {onLeave: function (args) {send("HcsDetachLayerStorageFilter");}});
+
+var HcsExportLayer = Module.findExportByName("computestorage.dll", "HcsExportLayer")
+Interceptor.attach(HcsExportLayer, {onLeave: function (args) {send("HcsExportLayer");}});
+
+var HcsExportLegacyWritableLayer = Module.findExportByName("computestorage.dll", "HcsExportLegacyWritableLayer")
+Interceptor.attach(HcsExportLegacyWritableLayer, {onLeave: function (args) {send("HcsExportLegacyWritableLayer");}});
+
+var HcsFormatWritableLayerVhd = Module.findExportByName("computestorage.dll", "HcsFormatWritableLayerVhd")
+Interceptor.attach(HcsFormatWritableLayerVhd, {onLeave: function (args) {send("HcsFormatWritableLayerVhd");}});
+
+var HcsGetLayerVhdMountPath = Module.findExportByName("computestorage.dll", "HcsGetLayerVhdMountPath")
+Interceptor.attach(HcsGetLayerVhdMountPath, {onLeave: function (args) {send("HcsGetLayerVhdMountPath");}});
+
+var HcsImportLayer = Module.findExportByName("computestorage.dll", "HcsImportLayer")
+Interceptor.attach(HcsImportLayer, {onLeave: function (args) {send("HcsImportLayer");}});
+
+var HcsInitializeLegacyWritableLayer = Module.findExportByName("computestorage.dll", "HcsInitializeLegacyWritableLayer")
+Interceptor.attach(HcsInitializeLegacyWritableLayer, {onLeave: function (args) {send("HcsInitializeLegacyWritableLayer");}});
+
+var HcsInitializeWritableLayer = Module.findExportByName("computestorage.dll", "HcsInitializeWritableLayer")
+Interceptor.attach(HcsInitializeWritableLayer, {onLeave: function (args) {send("HcsInitializeWritableLayer");}});
+
+var HcsSetupBaseOSLayer = Module.findExportByName("computestorage.dll", "HcsSetupBaseOSLayer")
+Interceptor.attach(HcsSetupBaseOSLayer, {onLeave: function (args) {send("HcsSetupBaseOSLayer");}});
+
+var HcsSetupBaseOSVolume = Module.findExportByName("computestorage.dll", "HcsSetupBaseOSVolume")
+Interceptor.attach(HcsSetupBaseOSVolume, {onLeave: function (args) {send("HcsSetupBaseOSVolume");}});
+

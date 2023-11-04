@@ -1,0 +1,21 @@
+var CreateControlInput = Module.findExportByName("Windows.UI.dll", "CreateControlInput")
+Interceptor.attach(CreateControlInput, {onLeave: function (args) {send("CreateControlInput");}});
+
+var CreateControlInputEx = Module.findExportByName("Windows.UI.dll", "CreateControlInputEx")
+Interceptor.attach(CreateControlInputEx, {onLeave: function (args) {send("CreateControlInputEx");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.UI.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.UI.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.UI.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("Windows.UI.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("Windows.UI.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

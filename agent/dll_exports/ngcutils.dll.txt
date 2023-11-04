@@ -1,0 +1,12 @@
+var NgcCallerIsAppContainer = Module.findExportByName("ngcutils.dll", "NgcCallerIsAppContainer")
+Interceptor.attach(NgcCallerIsAppContainer, {onLeave: function (args) {send("NgcCallerIsAppContainer");}});
+
+var NgcGetCallerAppContainerSid = Module.findExportByName("ngcutils.dll", "NgcGetCallerAppContainerSid")
+Interceptor.attach(NgcGetCallerAppContainerSid, {onLeave: function (args) {send("NgcGetCallerAppContainerSid");}});
+
+var NgcGetCallerSid = Module.findExportByName("ngcutils.dll", "NgcGetCallerSid")
+Interceptor.attach(NgcGetCallerSid, {onLeave: function (args) {send("NgcGetCallerSid");}});
+
+var NgcIsConsumerUser = Module.findExportByName("ngcutils.dll", "NgcIsConsumerUser")
+Interceptor.attach(NgcIsConsumerUser, {onLeave: function (args) {send("NgcIsConsumerUser");}});
+

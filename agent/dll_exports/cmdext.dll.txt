@@ -1,0 +1,42 @@
+var CmdBatNotificationStub = Module.findExportByName("cmdext.dll", "CmdBatNotificationStub")
+Interceptor.attach(CmdBatNotificationStub, {onLeave: function (args) {send("CmdBatNotificationStub");}});
+
+var DoSHChangeNotify = Module.findExportByName("cmdext.dll", "DoSHChangeNotify")
+Interceptor.attach(DoSHChangeNotify, {onLeave: function (args) {send("DoSHChangeNotify");}});
+
+var FindFirstStreamWStub = Module.findExportByName("cmdext.dll", "FindFirstStreamWStub")
+Interceptor.attach(FindFirstStreamWStub, {onLeave: function (args) {send("FindFirstStreamWStub");}});
+
+var FindNextStreamWStub = Module.findExportByName("cmdext.dll", "FindNextStreamWStub")
+Interceptor.attach(FindNextStreamWStub, {onLeave: function (args) {send("FindNextStreamWStub");}});
+
+var GetBinaryTypeWStub = Module.findExportByName("cmdext.dll", "GetBinaryTypeWStub")
+Interceptor.attach(GetBinaryTypeWStub, {onLeave: function (args) {send("GetBinaryTypeWStub");}});
+
+var GetVDMCurrentDirectoriesStub = Module.findExportByName("cmdext.dll", "GetVDMCurrentDirectoriesStub")
+Interceptor.attach(GetVDMCurrentDirectoriesStub, {onLeave: function (args) {send("GetVDMCurrentDirectoriesStub");}});
+
+var LookupAccountSidWStub = Module.findExportByName("cmdext.dll", "LookupAccountSidWStub")
+Interceptor.attach(LookupAccountSidWStub, {onLeave: function (args) {send("LookupAccountSidWStub");}});
+
+var MessageBeepStub = Module.findExportByName("cmdext.dll", "MessageBeepStub")
+Interceptor.attach(MessageBeepStub, {onLeave: function (args) {send("MessageBeepStub");}});
+
+var QueryFullProcessImageNameWStub = Module.findExportByName("cmdext.dll", "QueryFullProcessImageNameWStub")
+Interceptor.attach(QueryFullProcessImageNameWStub, {onLeave: function (args) {send("QueryFullProcessImageNameWStub");}});
+
+var SaferWorker = Module.findExportByName("cmdext.dll", "SaferWorker")
+Interceptor.attach(SaferWorker, {onLeave: function (args) {send("SaferWorker");}});
+
+var ShellExecuteWorker = Module.findExportByName("cmdext.dll", "ShellExecuteWorker")
+Interceptor.attach(ShellExecuteWorker, {onLeave: function (args) {send("ShellExecuteWorker");}});
+
+var WNetAddConnection2WStub = Module.findExportByName("cmdext.dll", "WNetAddConnection2WStub")
+Interceptor.attach(WNetAddConnection2WStub, {onLeave: function (args) {send("WNetAddConnection2WStub");}});
+
+var WNetCancelConnection2WStub = Module.findExportByName("cmdext.dll", "WNetCancelConnection2WStub")
+Interceptor.attach(WNetCancelConnection2WStub, {onLeave: function (args) {send("WNetCancelConnection2WStub");}});
+
+var WNetGetConnectionWStub = Module.findExportByName("cmdext.dll", "WNetGetConnectionWStub")
+Interceptor.attach(WNetGetConnectionWStub, {onLeave: function (args) {send("WNetGetConnectionWStub");}});
+

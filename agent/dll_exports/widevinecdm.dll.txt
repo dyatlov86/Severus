@@ -1,0 +1,18 @@
+var CreateCdmInstance = Module.findExportByName("widevinecdm.dll", "CreateCdmInstance")
+Interceptor.attach(CreateCdmInstance, {onLeave: function (args) {send("CreateCdmInstance");}});
+
+var DeinitializeCdmModule = Module.findExportByName("widevinecdm.dll", "DeinitializeCdmModule")
+Interceptor.attach(DeinitializeCdmModule, {onLeave: function (args) {send("DeinitializeCdmModule");}});
+
+var GetCdmVersion = Module.findExportByName("widevinecdm.dll", "GetCdmVersion")
+Interceptor.attach(GetCdmVersion, {onLeave: function (args) {send("GetCdmVersion");}});
+
+var GetHandleVerifier = Module.findExportByName("widevinecdm.dll", "GetHandleVerifier")
+Interceptor.attach(GetHandleVerifier, {onLeave: function (args) {send("GetHandleVerifier");}});
+
+var InitializeCdmModule_4 = Module.findExportByName("widevinecdm.dll", "InitializeCdmModule_4")
+Interceptor.attach(InitializeCdmModule_4, {onLeave: function (args) {send("InitializeCdmModule_4");}});
+
+var VerifyCdmHost_0 = Module.findExportByName("widevinecdm.dll", "VerifyCdmHost_0")
+Interceptor.attach(VerifyCdmHost_0, {onLeave: function (args) {send("VerifyCdmHost_0");}});
+

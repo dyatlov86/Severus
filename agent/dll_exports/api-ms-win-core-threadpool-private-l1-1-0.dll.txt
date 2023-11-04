@@ -1,0 +1,3 @@
+var RegisterWaitForSingleObjectEx = Module.findExportByName("api-ms-win-core-threadpool-private-l1-1-0.dll", "RegisterWaitForSingleObjectEx")
+Interceptor.attach(RegisterWaitForSingleObjectEx, {onLeave: function (args) {send("RegisterWaitForSingleObjectEx");}});
+

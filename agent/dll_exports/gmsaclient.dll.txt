@@ -1,0 +1,21 @@
+var GMSAAdd = Module.findExportByName("gmsaclient.dll", "GMSAAdd")
+Interceptor.attach(GMSAAdd, {onLeave: function (args) {send("GMSAAdd");}});
+
+var GMSACheckIfExistsInAD = Module.findExportByName("gmsaclient.dll", "GMSACheckIfExistsInAD")
+Interceptor.attach(GMSACheckIfExistsInAD, {onLeave: function (args) {send("GMSACheckIfExistsInAD");}});
+
+var GMSACleanup = Module.findExportByName("gmsaclient.dll", "GMSACleanup")
+Interceptor.attach(GMSACleanup, {onLeave: function (args) {send("GMSACleanup");}});
+
+var GMSADelete = Module.findExportByName("gmsaclient.dll", "GMSADelete")
+Interceptor.attach(GMSADelete, {onLeave: function (args) {send("GMSADelete");}});
+
+var GMSAGetPassword = Module.findExportByName("gmsaclient.dll", "GMSAGetPassword")
+Interceptor.attach(GMSAGetPassword, {onLeave: function (args) {send("GMSAGetPassword");}});
+
+var GMSAInit = Module.findExportByName("gmsaclient.dll", "GMSAInit")
+Interceptor.attach(GMSAInit, {onLeave: function (args) {send("GMSAInit");}});
+
+var GMSARefreshPasswords = Module.findExportByName("gmsaclient.dll", "GMSARefreshPasswords")
+Interceptor.attach(GMSARefreshPasswords, {onLeave: function (args) {send("GMSARefreshPasswords");}});
+

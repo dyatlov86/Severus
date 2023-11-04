@@ -1,0 +1,9 @@
+var DriverProc = Module.findExportByName("midimap.dll", "DriverProc")
+Interceptor.attach(DriverProc, {onLeave: function (args) {send("DriverProc");}});
+
+var modMessage = Module.findExportByName("midimap.dll", "modMessage")
+Interceptor.attach(modMessage, {onLeave: function (args) {send("modMessage");}});
+
+var modmCallback = Module.findExportByName("midimap.dll", "modmCallback")
+Interceptor.attach(modmCallback, {onLeave: function (args) {send("modmCallback");}});
+

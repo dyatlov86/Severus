@@ -1,0 +1,462 @@
+var BCryptAddContextFunction = Module.findExportByName("ncrypt.dll", "BCryptAddContextFunction")
+Interceptor.attach(BCryptAddContextFunction, {onLeave: function (args) {send("BCryptAddContextFunction");}});
+
+var BCryptAddContextFunctionProvider = Module.findExportByName("ncrypt.dll", "BCryptAddContextFunctionProvider")
+Interceptor.attach(BCryptAddContextFunctionProvider, {onLeave: function (args) {send("BCryptAddContextFunctionProvider");}});
+
+var BCryptCloseAlgorithmProvider = Module.findExportByName("ncrypt.dll", "BCryptCloseAlgorithmProvider")
+Interceptor.attach(BCryptCloseAlgorithmProvider, {onLeave: function (args) {send("BCryptCloseAlgorithmProvider");}});
+
+var BCryptConfigureContext = Module.findExportByName("ncrypt.dll", "BCryptConfigureContext")
+Interceptor.attach(BCryptConfigureContext, {onLeave: function (args) {send("BCryptConfigureContext");}});
+
+var BCryptConfigureContextFunction = Module.findExportByName("ncrypt.dll", "BCryptConfigureContextFunction")
+Interceptor.attach(BCryptConfigureContextFunction, {onLeave: function (args) {send("BCryptConfigureContextFunction");}});
+
+var BCryptCreateContext = Module.findExportByName("ncrypt.dll", "BCryptCreateContext")
+Interceptor.attach(BCryptCreateContext, {onLeave: function (args) {send("BCryptCreateContext");}});
+
+var BCryptCreateHash = Module.findExportByName("ncrypt.dll", "BCryptCreateHash")
+Interceptor.attach(BCryptCreateHash, {onLeave: function (args) {send("BCryptCreateHash");}});
+
+var BCryptDecrypt = Module.findExportByName("ncrypt.dll", "BCryptDecrypt")
+Interceptor.attach(BCryptDecrypt, {onLeave: function (args) {send("BCryptDecrypt");}});
+
+var BCryptDeleteContext = Module.findExportByName("ncrypt.dll", "BCryptDeleteContext")
+Interceptor.attach(BCryptDeleteContext, {onLeave: function (args) {send("BCryptDeleteContext");}});
+
+var BCryptDeriveKey = Module.findExportByName("ncrypt.dll", "BCryptDeriveKey")
+Interceptor.attach(BCryptDeriveKey, {onLeave: function (args) {send("BCryptDeriveKey");}});
+
+var BCryptDeriveKeyCapi = Module.findExportByName("ncrypt.dll", "BCryptDeriveKeyCapi")
+Interceptor.attach(BCryptDeriveKeyCapi, {onLeave: function (args) {send("BCryptDeriveKeyCapi");}});
+
+var BCryptDeriveKeyPBKDF2 = Module.findExportByName("ncrypt.dll", "BCryptDeriveKeyPBKDF2")
+Interceptor.attach(BCryptDeriveKeyPBKDF2, {onLeave: function (args) {send("BCryptDeriveKeyPBKDF2");}});
+
+var BCryptDestroyHash = Module.findExportByName("ncrypt.dll", "BCryptDestroyHash")
+Interceptor.attach(BCryptDestroyHash, {onLeave: function (args) {send("BCryptDestroyHash");}});
+
+var BCryptDestroyKey = Module.findExportByName("ncrypt.dll", "BCryptDestroyKey")
+Interceptor.attach(BCryptDestroyKey, {onLeave: function (args) {send("BCryptDestroyKey");}});
+
+var BCryptDestroySecret = Module.findExportByName("ncrypt.dll", "BCryptDestroySecret")
+Interceptor.attach(BCryptDestroySecret, {onLeave: function (args) {send("BCryptDestroySecret");}});
+
+var BCryptDuplicateHash = Module.findExportByName("ncrypt.dll", "BCryptDuplicateHash")
+Interceptor.attach(BCryptDuplicateHash, {onLeave: function (args) {send("BCryptDuplicateHash");}});
+
+var BCryptDuplicateKey = Module.findExportByName("ncrypt.dll", "BCryptDuplicateKey")
+Interceptor.attach(BCryptDuplicateKey, {onLeave: function (args) {send("BCryptDuplicateKey");}});
+
+var BCryptEncrypt = Module.findExportByName("ncrypt.dll", "BCryptEncrypt")
+Interceptor.attach(BCryptEncrypt, {onLeave: function (args) {send("BCryptEncrypt");}});
+
+var BCryptEnumAlgorithms = Module.findExportByName("ncrypt.dll", "BCryptEnumAlgorithms")
+Interceptor.attach(BCryptEnumAlgorithms, {onLeave: function (args) {send("BCryptEnumAlgorithms");}});
+
+var BCryptEnumContextFunctionProviders = Module.findExportByName("ncrypt.dll", "BCryptEnumContextFunctionProviders")
+Interceptor.attach(BCryptEnumContextFunctionProviders, {onLeave: function (args) {send("BCryptEnumContextFunctionProviders");}});
+
+var BCryptEnumContextFunctions = Module.findExportByName("ncrypt.dll", "BCryptEnumContextFunctions")
+Interceptor.attach(BCryptEnumContextFunctions, {onLeave: function (args) {send("BCryptEnumContextFunctions");}});
+
+var BCryptEnumContexts = Module.findExportByName("ncrypt.dll", "BCryptEnumContexts")
+Interceptor.attach(BCryptEnumContexts, {onLeave: function (args) {send("BCryptEnumContexts");}});
+
+var BCryptEnumProviders = Module.findExportByName("ncrypt.dll", "BCryptEnumProviders")
+Interceptor.attach(BCryptEnumProviders, {onLeave: function (args) {send("BCryptEnumProviders");}});
+
+var BCryptEnumRegisteredProviders = Module.findExportByName("ncrypt.dll", "BCryptEnumRegisteredProviders")
+Interceptor.attach(BCryptEnumRegisteredProviders, {onLeave: function (args) {send("BCryptEnumRegisteredProviders");}});
+
+var BCryptExportKey = Module.findExportByName("ncrypt.dll", "BCryptExportKey")
+Interceptor.attach(BCryptExportKey, {onLeave: function (args) {send("BCryptExportKey");}});
+
+var BCryptFinalizeKeyPair = Module.findExportByName("ncrypt.dll", "BCryptFinalizeKeyPair")
+Interceptor.attach(BCryptFinalizeKeyPair, {onLeave: function (args) {send("BCryptFinalizeKeyPair");}});
+
+var BCryptFinishHash = Module.findExportByName("ncrypt.dll", "BCryptFinishHash")
+Interceptor.attach(BCryptFinishHash, {onLeave: function (args) {send("BCryptFinishHash");}});
+
+var BCryptFreeBuffer = Module.findExportByName("ncrypt.dll", "BCryptFreeBuffer")
+Interceptor.attach(BCryptFreeBuffer, {onLeave: function (args) {send("BCryptFreeBuffer");}});
+
+var BCryptGenRandom = Module.findExportByName("ncrypt.dll", "BCryptGenRandom")
+Interceptor.attach(BCryptGenRandom, {onLeave: function (args) {send("BCryptGenRandom");}});
+
+var BCryptGenerateKeyPair = Module.findExportByName("ncrypt.dll", "BCryptGenerateKeyPair")
+Interceptor.attach(BCryptGenerateKeyPair, {onLeave: function (args) {send("BCryptGenerateKeyPair");}});
+
+var BCryptGenerateSymmetricKey = Module.findExportByName("ncrypt.dll", "BCryptGenerateSymmetricKey")
+Interceptor.attach(BCryptGenerateSymmetricKey, {onLeave: function (args) {send("BCryptGenerateSymmetricKey");}});
+
+var BCryptGetFipsAlgorithmMode = Module.findExportByName("ncrypt.dll", "BCryptGetFipsAlgorithmMode")
+Interceptor.attach(BCryptGetFipsAlgorithmMode, {onLeave: function (args) {send("BCryptGetFipsAlgorithmMode");}});
+
+var BCryptGetProperty = Module.findExportByName("ncrypt.dll", "BCryptGetProperty")
+Interceptor.attach(BCryptGetProperty, {onLeave: function (args) {send("BCryptGetProperty");}});
+
+var BCryptHash = Module.findExportByName("ncrypt.dll", "BCryptHash")
+Interceptor.attach(BCryptHash, {onLeave: function (args) {send("BCryptHash");}});
+
+var BCryptHashData = Module.findExportByName("ncrypt.dll", "BCryptHashData")
+Interceptor.attach(BCryptHashData, {onLeave: function (args) {send("BCryptHashData");}});
+
+var BCryptImportKey = Module.findExportByName("ncrypt.dll", "BCryptImportKey")
+Interceptor.attach(BCryptImportKey, {onLeave: function (args) {send("BCryptImportKey");}});
+
+var BCryptImportKeyPair = Module.findExportByName("ncrypt.dll", "BCryptImportKeyPair")
+Interceptor.attach(BCryptImportKeyPair, {onLeave: function (args) {send("BCryptImportKeyPair");}});
+
+var BCryptKeyDerivation = Module.findExportByName("ncrypt.dll", "BCryptKeyDerivation")
+Interceptor.attach(BCryptKeyDerivation, {onLeave: function (args) {send("BCryptKeyDerivation");}});
+
+var BCryptOpenAlgorithmProvider = Module.findExportByName("ncrypt.dll", "BCryptOpenAlgorithmProvider")
+Interceptor.attach(BCryptOpenAlgorithmProvider, {onLeave: function (args) {send("BCryptOpenAlgorithmProvider");}});
+
+var BCryptQueryContextConfiguration = Module.findExportByName("ncrypt.dll", "BCryptQueryContextConfiguration")
+Interceptor.attach(BCryptQueryContextConfiguration, {onLeave: function (args) {send("BCryptQueryContextConfiguration");}});
+
+var BCryptQueryContextFunctionConfiguration = Module.findExportByName("ncrypt.dll", "BCryptQueryContextFunctionConfiguration")
+Interceptor.attach(BCryptQueryContextFunctionConfiguration, {onLeave: function (args) {send("BCryptQueryContextFunctionConfiguration");}});
+
+var BCryptQueryContextFunctionProperty = Module.findExportByName("ncrypt.dll", "BCryptQueryContextFunctionProperty")
+Interceptor.attach(BCryptQueryContextFunctionProperty, {onLeave: function (args) {send("BCryptQueryContextFunctionProperty");}});
+
+var BCryptQueryProviderRegistration = Module.findExportByName("ncrypt.dll", "BCryptQueryProviderRegistration")
+Interceptor.attach(BCryptQueryProviderRegistration, {onLeave: function (args) {send("BCryptQueryProviderRegistration");}});
+
+var BCryptRegisterConfigChangeNotify = Module.findExportByName("ncrypt.dll", "BCryptRegisterConfigChangeNotify")
+Interceptor.attach(BCryptRegisterConfigChangeNotify, {onLeave: function (args) {send("BCryptRegisterConfigChangeNotify");}});
+
+var BCryptRegisterProvider = Module.findExportByName("ncrypt.dll", "BCryptRegisterProvider")
+Interceptor.attach(BCryptRegisterProvider, {onLeave: function (args) {send("BCryptRegisterProvider");}});
+
+var BCryptRemoveContextFunction = Module.findExportByName("ncrypt.dll", "BCryptRemoveContextFunction")
+Interceptor.attach(BCryptRemoveContextFunction, {onLeave: function (args) {send("BCryptRemoveContextFunction");}});
+
+var BCryptRemoveContextFunctionProvider = Module.findExportByName("ncrypt.dll", "BCryptRemoveContextFunctionProvider")
+Interceptor.attach(BCryptRemoveContextFunctionProvider, {onLeave: function (args) {send("BCryptRemoveContextFunctionProvider");}});
+
+var BCryptResolveProviders = Module.findExportByName("ncrypt.dll", "BCryptResolveProviders")
+Interceptor.attach(BCryptResolveProviders, {onLeave: function (args) {send("BCryptResolveProviders");}});
+
+var BCryptSecretAgreement = Module.findExportByName("ncrypt.dll", "BCryptSecretAgreement")
+Interceptor.attach(BCryptSecretAgreement, {onLeave: function (args) {send("BCryptSecretAgreement");}});
+
+var BCryptSetAuditingInterface = Module.findExportByName("ncrypt.dll", "BCryptSetAuditingInterface")
+Interceptor.attach(BCryptSetAuditingInterface, {onLeave: function (args) {send("BCryptSetAuditingInterface");}});
+
+var BCryptSetContextFunctionProperty = Module.findExportByName("ncrypt.dll", "BCryptSetContextFunctionProperty")
+Interceptor.attach(BCryptSetContextFunctionProperty, {onLeave: function (args) {send("BCryptSetContextFunctionProperty");}});
+
+var BCryptSetProperty = Module.findExportByName("ncrypt.dll", "BCryptSetProperty")
+Interceptor.attach(BCryptSetProperty, {onLeave: function (args) {send("BCryptSetProperty");}});
+
+var BCryptSignHash = Module.findExportByName("ncrypt.dll", "BCryptSignHash")
+Interceptor.attach(BCryptSignHash, {onLeave: function (args) {send("BCryptSignHash");}});
+
+var BCryptUnregisterConfigChangeNotify = Module.findExportByName("ncrypt.dll", "BCryptUnregisterConfigChangeNotify")
+Interceptor.attach(BCryptUnregisterConfigChangeNotify, {onLeave: function (args) {send("BCryptUnregisterConfigChangeNotify");}});
+
+var BCryptUnregisterProvider = Module.findExportByName("ncrypt.dll", "BCryptUnregisterProvider")
+Interceptor.attach(BCryptUnregisterProvider, {onLeave: function (args) {send("BCryptUnregisterProvider");}});
+
+var BCryptVerifySignature = Module.findExportByName("ncrypt.dll", "BCryptVerifySignature")
+Interceptor.attach(BCryptVerifySignature, {onLeave: function (args) {send("BCryptVerifySignature");}});
+
+var GetIsolationServerInterface = Module.findExportByName("ncrypt.dll", "GetIsolationServerInterface")
+Interceptor.attach(GetIsolationServerInterface, {onLeave: function (args) {send("GetIsolationServerInterface");}});
+
+var GetKeyStorageInterface = Module.findExportByName("ncrypt.dll", "GetKeyStorageInterface")
+Interceptor.attach(GetKeyStorageInterface, {onLeave: function (args) {send("GetKeyStorageInterface");}});
+
+var GetSChannelInterface = Module.findExportByName("ncrypt.dll", "GetSChannelInterface")
+Interceptor.attach(GetSChannelInterface, {onLeave: function (args) {send("GetSChannelInterface");}});
+
+var NCryptCloseKeyProtector = Module.findExportByName("ncrypt.dll", "NCryptCloseKeyProtector")
+Interceptor.attach(NCryptCloseKeyProtector, {onLeave: function (args) {send("NCryptCloseKeyProtector");}});
+
+var NCryptCloseProtectionDescriptor = Module.findExportByName("ncrypt.dll", "NCryptCloseProtectionDescriptor")
+Interceptor.attach(NCryptCloseProtectionDescriptor, {onLeave: function (args) {send("NCryptCloseProtectionDescriptor");}});
+
+var NCryptCreateClaim = Module.findExportByName("ncrypt.dll", "NCryptCreateClaim")
+Interceptor.attach(NCryptCreateClaim, {onLeave: function (args) {send("NCryptCreateClaim");}});
+
+var NCryptCreatePersistedKey = Module.findExportByName("ncrypt.dll", "NCryptCreatePersistedKey")
+Interceptor.attach(NCryptCreatePersistedKey, {onLeave: function (args) {send("NCryptCreatePersistedKey");}});
+
+var NCryptCreateProtectionDescriptor = Module.findExportByName("ncrypt.dll", "NCryptCreateProtectionDescriptor")
+Interceptor.attach(NCryptCreateProtectionDescriptor, {onLeave: function (args) {send("NCryptCreateProtectionDescriptor");}});
+
+var NCryptDecrypt = Module.findExportByName("ncrypt.dll", "NCryptDecrypt")
+Interceptor.attach(NCryptDecrypt, {onLeave: function (args) {send("NCryptDecrypt");}});
+
+var NCryptDeleteKey = Module.findExportByName("ncrypt.dll", "NCryptDeleteKey")
+Interceptor.attach(NCryptDeleteKey, {onLeave: function (args) {send("NCryptDeleteKey");}});
+
+var NCryptDeriveKey = Module.findExportByName("ncrypt.dll", "NCryptDeriveKey")
+Interceptor.attach(NCryptDeriveKey, {onLeave: function (args) {send("NCryptDeriveKey");}});
+
+var NCryptDuplicateKeyProtectorHandle = Module.findExportByName("ncrypt.dll", "NCryptDuplicateKeyProtectorHandle")
+Interceptor.attach(NCryptDuplicateKeyProtectorHandle, {onLeave: function (args) {send("NCryptDuplicateKeyProtectorHandle");}});
+
+var NCryptEncrypt = Module.findExportByName("ncrypt.dll", "NCryptEncrypt")
+Interceptor.attach(NCryptEncrypt, {onLeave: function (args) {send("NCryptEncrypt");}});
+
+var NCryptEnumAlgorithms = Module.findExportByName("ncrypt.dll", "NCryptEnumAlgorithms")
+Interceptor.attach(NCryptEnumAlgorithms, {onLeave: function (args) {send("NCryptEnumAlgorithms");}});
+
+var NCryptEnumKeys = Module.findExportByName("ncrypt.dll", "NCryptEnumKeys")
+Interceptor.attach(NCryptEnumKeys, {onLeave: function (args) {send("NCryptEnumKeys");}});
+
+var NCryptEnumStorageProviders = Module.findExportByName("ncrypt.dll", "NCryptEnumStorageProviders")
+Interceptor.attach(NCryptEnumStorageProviders, {onLeave: function (args) {send("NCryptEnumStorageProviders");}});
+
+var NCryptExportKey = Module.findExportByName("ncrypt.dll", "NCryptExportKey")
+Interceptor.attach(NCryptExportKey, {onLeave: function (args) {send("NCryptExportKey");}});
+
+var NCryptFinalizeKey = Module.findExportByName("ncrypt.dll", "NCryptFinalizeKey")
+Interceptor.attach(NCryptFinalizeKey, {onLeave: function (args) {send("NCryptFinalizeKey");}});
+
+var NCryptFreeBuffer = Module.findExportByName("ncrypt.dll", "NCryptFreeBuffer")
+Interceptor.attach(NCryptFreeBuffer, {onLeave: function (args) {send("NCryptFreeBuffer");}});
+
+var NCryptFreeObject = Module.findExportByName("ncrypt.dll", "NCryptFreeObject")
+Interceptor.attach(NCryptFreeObject, {onLeave: function (args) {send("NCryptFreeObject");}});
+
+var NCryptGetProperty = Module.findExportByName("ncrypt.dll", "NCryptGetProperty")
+Interceptor.attach(NCryptGetProperty, {onLeave: function (args) {send("NCryptGetProperty");}});
+
+var NCryptGetProtectionDescriptorInfo = Module.findExportByName("ncrypt.dll", "NCryptGetProtectionDescriptorInfo")
+Interceptor.attach(NCryptGetProtectionDescriptorInfo, {onLeave: function (args) {send("NCryptGetProtectionDescriptorInfo");}});
+
+var NCryptImportKey = Module.findExportByName("ncrypt.dll", "NCryptImportKey")
+Interceptor.attach(NCryptImportKey, {onLeave: function (args) {send("NCryptImportKey");}});
+
+var NCryptIsAlgSupported = Module.findExportByName("ncrypt.dll", "NCryptIsAlgSupported")
+Interceptor.attach(NCryptIsAlgSupported, {onLeave: function (args) {send("NCryptIsAlgSupported");}});
+
+var NCryptIsKeyHandle = Module.findExportByName("ncrypt.dll", "NCryptIsKeyHandle")
+Interceptor.attach(NCryptIsKeyHandle, {onLeave: function (args) {send("NCryptIsKeyHandle");}});
+
+var NCryptKeyDerivation = Module.findExportByName("ncrypt.dll", "NCryptKeyDerivation")
+Interceptor.attach(NCryptKeyDerivation, {onLeave: function (args) {send("NCryptKeyDerivation");}});
+
+var NCryptNotifyChangeKey = Module.findExportByName("ncrypt.dll", "NCryptNotifyChangeKey")
+Interceptor.attach(NCryptNotifyChangeKey, {onLeave: function (args) {send("NCryptNotifyChangeKey");}});
+
+var NCryptOpenKey = Module.findExportByName("ncrypt.dll", "NCryptOpenKey")
+Interceptor.attach(NCryptOpenKey, {onLeave: function (args) {send("NCryptOpenKey");}});
+
+var NCryptOpenKeyProtector = Module.findExportByName("ncrypt.dll", "NCryptOpenKeyProtector")
+Interceptor.attach(NCryptOpenKeyProtector, {onLeave: function (args) {send("NCryptOpenKeyProtector");}});
+
+var NCryptOpenStorageProvider = Module.findExportByName("ncrypt.dll", "NCryptOpenStorageProvider")
+Interceptor.attach(NCryptOpenStorageProvider, {onLeave: function (args) {send("NCryptOpenStorageProvider");}});
+
+var NCryptProtectKey = Module.findExportByName("ncrypt.dll", "NCryptProtectKey")
+Interceptor.attach(NCryptProtectKey, {onLeave: function (args) {send("NCryptProtectKey");}});
+
+var NCryptProtectSecret = Module.findExportByName("ncrypt.dll", "NCryptProtectSecret")
+Interceptor.attach(NCryptProtectSecret, {onLeave: function (args) {send("NCryptProtectSecret");}});
+
+var NCryptQueryProtectionDescriptorName = Module.findExportByName("ncrypt.dll", "NCryptQueryProtectionDescriptorName")
+Interceptor.attach(NCryptQueryProtectionDescriptorName, {onLeave: function (args) {send("NCryptQueryProtectionDescriptorName");}});
+
+var NCryptRegisterProtectionDescriptorName = Module.findExportByName("ncrypt.dll", "NCryptRegisterProtectionDescriptorName")
+Interceptor.attach(NCryptRegisterProtectionDescriptorName, {onLeave: function (args) {send("NCryptRegisterProtectionDescriptorName");}});
+
+var NCryptSecretAgreement = Module.findExportByName("ncrypt.dll", "NCryptSecretAgreement")
+Interceptor.attach(NCryptSecretAgreement, {onLeave: function (args) {send("NCryptSecretAgreement");}});
+
+var NCryptSetAuditingInterface = Module.findExportByName("ncrypt.dll", "NCryptSetAuditingInterface")
+Interceptor.attach(NCryptSetAuditingInterface, {onLeave: function (args) {send("NCryptSetAuditingInterface");}});
+
+var NCryptSetProperty = Module.findExportByName("ncrypt.dll", "NCryptSetProperty")
+Interceptor.attach(NCryptSetProperty, {onLeave: function (args) {send("NCryptSetProperty");}});
+
+var NCryptSignHash = Module.findExportByName("ncrypt.dll", "NCryptSignHash")
+Interceptor.attach(NCryptSignHash, {onLeave: function (args) {send("NCryptSignHash");}});
+
+var NCryptStreamClose = Module.findExportByName("ncrypt.dll", "NCryptStreamClose")
+Interceptor.attach(NCryptStreamClose, {onLeave: function (args) {send("NCryptStreamClose");}});
+
+var NCryptStreamOpenToProtect = Module.findExportByName("ncrypt.dll", "NCryptStreamOpenToProtect")
+Interceptor.attach(NCryptStreamOpenToProtect, {onLeave: function (args) {send("NCryptStreamOpenToProtect");}});
+
+var NCryptStreamOpenToUnprotect = Module.findExportByName("ncrypt.dll", "NCryptStreamOpenToUnprotect")
+Interceptor.attach(NCryptStreamOpenToUnprotect, {onLeave: function (args) {send("NCryptStreamOpenToUnprotect");}});
+
+var NCryptStreamOpenToUnprotectEx = Module.findExportByName("ncrypt.dll", "NCryptStreamOpenToUnprotectEx")
+Interceptor.attach(NCryptStreamOpenToUnprotectEx, {onLeave: function (args) {send("NCryptStreamOpenToUnprotectEx");}});
+
+var NCryptStreamUpdate = Module.findExportByName("ncrypt.dll", "NCryptStreamUpdate")
+Interceptor.attach(NCryptStreamUpdate, {onLeave: function (args) {send("NCryptStreamUpdate");}});
+
+var NCryptTranslateHandle = Module.findExportByName("ncrypt.dll", "NCryptTranslateHandle")
+Interceptor.attach(NCryptTranslateHandle, {onLeave: function (args) {send("NCryptTranslateHandle");}});
+
+var NCryptUnprotectKey = Module.findExportByName("ncrypt.dll", "NCryptUnprotectKey")
+Interceptor.attach(NCryptUnprotectKey, {onLeave: function (args) {send("NCryptUnprotectKey");}});
+
+var NCryptUnprotectSecret = Module.findExportByName("ncrypt.dll", "NCryptUnprotectSecret")
+Interceptor.attach(NCryptUnprotectSecret, {onLeave: function (args) {send("NCryptUnprotectSecret");}});
+
+var NCryptVerifyClaim = Module.findExportByName("ncrypt.dll", "NCryptVerifyClaim")
+Interceptor.attach(NCryptVerifyClaim, {onLeave: function (args) {send("NCryptVerifyClaim");}});
+
+var NCryptVerifySignature = Module.findExportByName("ncrypt.dll", "NCryptVerifySignature")
+Interceptor.attach(NCryptVerifySignature, {onLeave: function (args) {send("NCryptVerifySignature");}});
+
+var SslChangeNotify = Module.findExportByName("ncrypt.dll", "SslChangeNotify")
+Interceptor.attach(SslChangeNotify, {onLeave: function (args) {send("SslChangeNotify");}});
+
+var SslComputeClientAuthHash = Module.findExportByName("ncrypt.dll", "SslComputeClientAuthHash")
+Interceptor.attach(SslComputeClientAuthHash, {onLeave: function (args) {send("SslComputeClientAuthHash");}});
+
+var SslComputeEapKeyBlock = Module.findExportByName("ncrypt.dll", "SslComputeEapKeyBlock")
+Interceptor.attach(SslComputeEapKeyBlock, {onLeave: function (args) {send("SslComputeEapKeyBlock");}});
+
+var SslComputeFinishedHash = Module.findExportByName("ncrypt.dll", "SslComputeFinishedHash")
+Interceptor.attach(SslComputeFinishedHash, {onLeave: function (args) {send("SslComputeFinishedHash");}});
+
+var SslComputeSessionHash = Module.findExportByName("ncrypt.dll", "SslComputeSessionHash")
+Interceptor.attach(SslComputeSessionHash, {onLeave: function (args) {send("SslComputeSessionHash");}});
+
+var SslCreateClientAuthHash = Module.findExportByName("ncrypt.dll", "SslCreateClientAuthHash")
+Interceptor.attach(SslCreateClientAuthHash, {onLeave: function (args) {send("SslCreateClientAuthHash");}});
+
+var SslCreateEphemeralKey = Module.findExportByName("ncrypt.dll", "SslCreateEphemeralKey")
+Interceptor.attach(SslCreateEphemeralKey, {onLeave: function (args) {send("SslCreateEphemeralKey");}});
+
+var SslCreateHandshakeHash = Module.findExportByName("ncrypt.dll", "SslCreateHandshakeHash")
+Interceptor.attach(SslCreateHandshakeHash, {onLeave: function (args) {send("SslCreateHandshakeHash");}});
+
+var SslDecrementProviderReferenceCount = Module.findExportByName("ncrypt.dll", "SslDecrementProviderReferenceCount")
+Interceptor.attach(SslDecrementProviderReferenceCount, {onLeave: function (args) {send("SslDecrementProviderReferenceCount");}});
+
+var SslDecryptPacket = Module.findExportByName("ncrypt.dll", "SslDecryptPacket")
+Interceptor.attach(SslDecryptPacket, {onLeave: function (args) {send("SslDecryptPacket");}});
+
+var SslDeriveSessionTicketKey = Module.findExportByName("ncrypt.dll", "SslDeriveSessionTicketKey")
+Interceptor.attach(SslDeriveSessionTicketKey, {onLeave: function (args) {send("SslDeriveSessionTicketKey");}});
+
+var SslDuplicateTranscriptHash = Module.findExportByName("ncrypt.dll", "SslDuplicateTranscriptHash")
+Interceptor.attach(SslDuplicateTranscriptHash, {onLeave: function (args) {send("SslDuplicateTranscriptHash");}});
+
+var SslEncryptPacket = Module.findExportByName("ncrypt.dll", "SslEncryptPacket")
+Interceptor.attach(SslEncryptPacket, {onLeave: function (args) {send("SslEncryptPacket");}});
+
+var SslEnumCipherSuites = Module.findExportByName("ncrypt.dll", "SslEnumCipherSuites")
+Interceptor.attach(SslEnumCipherSuites, {onLeave: function (args) {send("SslEnumCipherSuites");}});
+
+var SslEnumCipherSuitesEx = Module.findExportByName("ncrypt.dll", "SslEnumCipherSuitesEx")
+Interceptor.attach(SslEnumCipherSuitesEx, {onLeave: function (args) {send("SslEnumCipherSuitesEx");}});
+
+var SslEnumEccCurves = Module.findExportByName("ncrypt.dll", "SslEnumEccCurves")
+Interceptor.attach(SslEnumEccCurves, {onLeave: function (args) {send("SslEnumEccCurves");}});
+
+var SslEnumProtocolProviders = Module.findExportByName("ncrypt.dll", "SslEnumProtocolProviders")
+Interceptor.attach(SslEnumProtocolProviders, {onLeave: function (args) {send("SslEnumProtocolProviders");}});
+
+var SslExpandBinderKey = Module.findExportByName("ncrypt.dll", "SslExpandBinderKey")
+Interceptor.attach(SslExpandBinderKey, {onLeave: function (args) {send("SslExpandBinderKey");}});
+
+var SslExpandExporterMasterKey = Module.findExportByName("ncrypt.dll", "SslExpandExporterMasterKey")
+Interceptor.attach(SslExpandExporterMasterKey, {onLeave: function (args) {send("SslExpandExporterMasterKey");}});
+
+var SslExpandNextGenTrafficKey = Module.findExportByName("ncrypt.dll", "SslExpandNextGenTrafficKey")
+Interceptor.attach(SslExpandNextGenTrafficKey, {onLeave: function (args) {send("SslExpandNextGenTrafficKey");}});
+
+var SslExpandPreSharedKey = Module.findExportByName("ncrypt.dll", "SslExpandPreSharedKey")
+Interceptor.attach(SslExpandPreSharedKey, {onLeave: function (args) {send("SslExpandPreSharedKey");}});
+
+var SslExpandResumptionMasterKey = Module.findExportByName("ncrypt.dll", "SslExpandResumptionMasterKey")
+Interceptor.attach(SslExpandResumptionMasterKey, {onLeave: function (args) {send("SslExpandResumptionMasterKey");}});
+
+var SslExpandTrafficKeys = Module.findExportByName("ncrypt.dll", "SslExpandTrafficKeys")
+Interceptor.attach(SslExpandTrafficKeys, {onLeave: function (args) {send("SslExpandTrafficKeys");}});
+
+var SslExpandWriteKey = Module.findExportByName("ncrypt.dll", "SslExpandWriteKey")
+Interceptor.attach(SslExpandWriteKey, {onLeave: function (args) {send("SslExpandWriteKey");}});
+
+var SslExportKey = Module.findExportByName("ncrypt.dll", "SslExportKey")
+Interceptor.attach(SslExportKey, {onLeave: function (args) {send("SslExportKey");}});
+
+var SslExportKeyingMaterial = Module.findExportByName("ncrypt.dll", "SslExportKeyingMaterial")
+Interceptor.attach(SslExportKeyingMaterial, {onLeave: function (args) {send("SslExportKeyingMaterial");}});
+
+var SslExtractEarlyKey = Module.findExportByName("ncrypt.dll", "SslExtractEarlyKey")
+Interceptor.attach(SslExtractEarlyKey, {onLeave: function (args) {send("SslExtractEarlyKey");}});
+
+var SslExtractHandshakeKey = Module.findExportByName("ncrypt.dll", "SslExtractHandshakeKey")
+Interceptor.attach(SslExtractHandshakeKey, {onLeave: function (args) {send("SslExtractHandshakeKey");}});
+
+var SslExtractMasterKey = Module.findExportByName("ncrypt.dll", "SslExtractMasterKey")
+Interceptor.attach(SslExtractMasterKey, {onLeave: function (args) {send("SslExtractMasterKey");}});
+
+var SslFreeBuffer = Module.findExportByName("ncrypt.dll", "SslFreeBuffer")
+Interceptor.attach(SslFreeBuffer, {onLeave: function (args) {send("SslFreeBuffer");}});
+
+var SslFreeObject = Module.findExportByName("ncrypt.dll", "SslFreeObject")
+Interceptor.attach(SslFreeObject, {onLeave: function (args) {send("SslFreeObject");}});
+
+var SslGenerateMasterKey = Module.findExportByName("ncrypt.dll", "SslGenerateMasterKey")
+Interceptor.attach(SslGenerateMasterKey, {onLeave: function (args) {send("SslGenerateMasterKey");}});
+
+var SslGeneratePreMasterKey = Module.findExportByName("ncrypt.dll", "SslGeneratePreMasterKey")
+Interceptor.attach(SslGeneratePreMasterKey, {onLeave: function (args) {send("SslGeneratePreMasterKey");}});
+
+var SslGenerateSessionKeys = Module.findExportByName("ncrypt.dll", "SslGenerateSessionKeys")
+Interceptor.attach(SslGenerateSessionKeys, {onLeave: function (args) {send("SslGenerateSessionKeys");}});
+
+var SslGetCipherSuitePRFHashAlgorithm = Module.findExportByName("ncrypt.dll", "SslGetCipherSuitePRFHashAlgorithm")
+Interceptor.attach(SslGetCipherSuitePRFHashAlgorithm, {onLeave: function (args) {send("SslGetCipherSuitePRFHashAlgorithm");}});
+
+var SslGetKeyProperty = Module.findExportByName("ncrypt.dll", "SslGetKeyProperty")
+Interceptor.attach(SslGetKeyProperty, {onLeave: function (args) {send("SslGetKeyProperty");}});
+
+var SslGetProviderProperty = Module.findExportByName("ncrypt.dll", "SslGetProviderProperty")
+Interceptor.attach(SslGetProviderProperty, {onLeave: function (args) {send("SslGetProviderProperty");}});
+
+var SslGetSessionTicketProtectionHeaderSize = Module.findExportByName("ncrypt.dll", "SslGetSessionTicketProtectionHeaderSize")
+Interceptor.attach(SslGetSessionTicketProtectionHeaderSize, {onLeave: function (args) {send("SslGetSessionTicketProtectionHeaderSize");}});
+
+var SslHashHandshake = Module.findExportByName("ncrypt.dll", "SslHashHandshake")
+Interceptor.attach(SslHashHandshake, {onLeave: function (args) {send("SslHashHandshake");}});
+
+var SslImportKey = Module.findExportByName("ncrypt.dll", "SslImportKey")
+Interceptor.attach(SslImportKey, {onLeave: function (args) {send("SslImportKey");}});
+
+var SslImportMasterKey = Module.findExportByName("ncrypt.dll", "SslImportMasterKey")
+Interceptor.attach(SslImportMasterKey, {onLeave: function (args) {send("SslImportMasterKey");}});
+
+var SslIncrementProviderReferenceCount = Module.findExportByName("ncrypt.dll", "SslIncrementProviderReferenceCount")
+Interceptor.attach(SslIncrementProviderReferenceCount, {onLeave: function (args) {send("SslIncrementProviderReferenceCount");}});
+
+var SslLookupCipherLengths = Module.findExportByName("ncrypt.dll", "SslLookupCipherLengths")
+Interceptor.attach(SslLookupCipherLengths, {onLeave: function (args) {send("SslLookupCipherLengths");}});
+
+var SslLookupCipherSuiteInfo = Module.findExportByName("ncrypt.dll", "SslLookupCipherSuiteInfo")
+Interceptor.attach(SslLookupCipherSuiteInfo, {onLeave: function (args) {send("SslLookupCipherSuiteInfo");}});
+
+var SslOpenPrivateKey = Module.findExportByName("ncrypt.dll", "SslOpenPrivateKey")
+Interceptor.attach(SslOpenPrivateKey, {onLeave: function (args) {send("SslOpenPrivateKey");}});
+
+var SslOpenProvider = Module.findExportByName("ncrypt.dll", "SslOpenProvider")
+Interceptor.attach(SslOpenProvider, {onLeave: function (args) {send("SslOpenProvider");}});
+
+var SslProtectSessionTicket = Module.findExportByName("ncrypt.dll", "SslProtectSessionTicket")
+Interceptor.attach(SslProtectSessionTicket, {onLeave: function (args) {send("SslProtectSessionTicket");}});
+
+var SslSignHash = Module.findExportByName("ncrypt.dll", "SslSignHash")
+Interceptor.attach(SslSignHash, {onLeave: function (args) {send("SslSignHash");}});
+
+var SslUnprotectSessionTicket = Module.findExportByName("ncrypt.dll", "SslUnprotectSessionTicket")
+Interceptor.attach(SslUnprotectSessionTicket, {onLeave: function (args) {send("SslUnprotectSessionTicket");}});
+
+var SslVerifySignature = Module.findExportByName("ncrypt.dll", "SslVerifySignature")
+Interceptor.attach(SslVerifySignature, {onLeave: function (args) {send("SslVerifySignature");}});
+

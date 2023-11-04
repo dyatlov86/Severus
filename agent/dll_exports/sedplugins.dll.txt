@@ -1,0 +1,57 @@
+var CheckShellTask = Module.findExportByName("sedplugins.dll", "CheckShellTask")
+Interceptor.attach(CheckShellTask, {onLeave: function (args) {send("CheckShellTask");}});
+
+var EnumeratePlugins = Module.findExportByName("sedplugins.dll", "EnumeratePlugins")
+Interceptor.attach(EnumeratePlugins, {onLeave: function (args) {send("EnumeratePlugins");}});
+
+var EnumeratePluginsWithApplicationSource = Module.findExportByName("sedplugins.dll", "EnumeratePluginsWithApplicationSource")
+Interceptor.attach(EnumeratePluginsWithApplicationSource, {onLeave: function (args) {send("EnumeratePluginsWithApplicationSource");}});
+
+var ExecuteShell = Module.findExportByName("sedplugins.dll", "ExecuteShell")
+Interceptor.attach(ExecuteShell, {onLeave: function (args) {send("ExecuteShell");}});
+
+var GetPluginDefaultSettings = Module.findExportByName("sedplugins.dll", "GetPluginDefaultSettings")
+Interceptor.attach(GetPluginDefaultSettings, {onLeave: function (args) {send("GetPluginDefaultSettings");}});
+
+var GetSettingsName = Module.findExportByName("sedplugins.dll", "GetSettingsName")
+Interceptor.attach(GetSettingsName, {onLeave: function (args) {send("GetSettingsName");}});
+
+var Plugin_DetectCondition = Module.findExportByName("sedplugins.dll", "Plugin_DetectCondition")
+Interceptor.attach(Plugin_DetectCondition, {onLeave: function (args) {send("Plugin_DetectCondition");}});
+
+var Plugin_Init = Module.findExportByName("sedplugins.dll", "Plugin_Init")
+Interceptor.attach(Plugin_Init, {onLeave: function (args) {send("Plugin_Init");}});
+
+var Plugin_IsActionApplicable = Module.findExportByName("sedplugins.dll", "Plugin_IsActionApplicable")
+Interceptor.attach(Plugin_IsActionApplicable, {onLeave: function (args) {send("Plugin_IsActionApplicable");}});
+
+var Plugin_IsEnabled = Module.findExportByName("sedplugins.dll", "Plugin_IsEnabled")
+Interceptor.attach(Plugin_IsEnabled, {onLeave: function (args) {send("Plugin_IsEnabled");}});
+
+var Plugin_IsInteractiveOnly = Module.findExportByName("sedplugins.dll", "Plugin_IsInteractiveOnly")
+Interceptor.attach(Plugin_IsInteractiveOnly, {onLeave: function (args) {send("Plugin_IsInteractiveOnly");}});
+
+var Plugin_PerformAction = Module.findExportByName("sedplugins.dll", "Plugin_PerformAction")
+Interceptor.attach(Plugin_PerformAction, {onLeave: function (args) {send("Plugin_PerformAction");}});
+
+var Plugin_Process = Module.findExportByName("sedplugins.dll", "Plugin_Process")
+Interceptor.attach(Plugin_Process, {onLeave: function (args) {send("Plugin_Process");}});
+
+var Plugin_Process_Aqua = Module.findExportByName("sedplugins.dll", "Plugin_Process_Aqua")
+Interceptor.attach(Plugin_Process_Aqua, {onLeave: function (args) {send("Plugin_Process_Aqua");}});
+
+var Plugin_Uninit = Module.findExportByName("sedplugins.dll", "Plugin_Uninit")
+Interceptor.attach(Plugin_Uninit, {onLeave: function (args) {send("Plugin_Uninit");}});
+
+var RegisterApplication = Module.findExportByName("sedplugins.dll", "RegisterApplication")
+Interceptor.attach(RegisterApplication, {onLeave: function (args) {send("RegisterApplication");}});
+
+var SedimentDriver_Init = Module.findExportByName("sedplugins.dll", "SedimentDriver_Init")
+Interceptor.attach(SedimentDriver_Init, {onLeave: function (args) {send("SedimentDriver_Init");}});
+
+var SedimentDriver_Init_Aqua = Module.findExportByName("sedplugins.dll", "SedimentDriver_Init_Aqua")
+Interceptor.attach(SedimentDriver_Init_Aqua, {onLeave: function (args) {send("SedimentDriver_Init_Aqua");}});
+
+var SedimentDriver_Uninit = Module.findExportByName("sedplugins.dll", "SedimentDriver_Uninit")
+Interceptor.attach(SedimentDriver_Uninit, {onLeave: function (args) {send("SedimentDriver_Uninit");}});
+

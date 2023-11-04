@@ -1,0 +1,6 @@
+var SruInitializeProvider = Module.findExportByName("energyprov.dll", "SruInitializeProvider")
+Interceptor.attach(SruInitializeProvider, {onLeave: function (args) {send("SruInitializeProvider");}});
+
+var SruUninitializeProvider = Module.findExportByName("energyprov.dll", "SruUninitializeProvider")
+Interceptor.attach(SruUninitializeProvider, {onLeave: function (args) {send("SruUninitializeProvider");}});
+

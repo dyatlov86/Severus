@@ -1,0 +1,24 @@
+var WcAttachFilterEx = Module.findExportByName("wc_storage.dll", "WcAttachFilterEx")
+Interceptor.attach(WcAttachFilterEx, {onLeave: function (args) {send("WcAttachFilterEx");}});
+
+var WcCreateSandboxStubFiles = Module.findExportByName("wc_storage.dll", "WcCreateSandboxStubFiles")
+Interceptor.attach(WcCreateSandboxStubFiles, {onLeave: function (args) {send("WcCreateSandboxStubFiles");}});
+
+var WcDestroyLayer = Module.findExportByName("wc_storage.dll", "WcDestroyLayer")
+Interceptor.attach(WcDestroyLayer, {onLeave: function (args) {send("WcDestroyLayer");}});
+
+var WcDetachFilterEx = Module.findExportByName("wc_storage.dll", "WcDetachFilterEx")
+Interceptor.attach(WcDetachFilterEx, {onLeave: function (args) {send("WcDetachFilterEx");}});
+
+var WcExportLayerEx = Module.findExportByName("wc_storage.dll", "WcExportLayerEx")
+Interceptor.attach(WcExportLayerEx, {onLeave: function (args) {send("WcExportLayerEx");}});
+
+var WcImportLayerEx = Module.findExportByName("wc_storage.dll", "WcImportLayerEx")
+Interceptor.attach(WcImportLayerEx, {onLeave: function (args) {send("WcImportLayerEx");}});
+
+var WcInitializeSandbox = Module.findExportByName("wc_storage.dll", "WcInitializeSandbox")
+Interceptor.attach(WcInitializeSandbox, {onLeave: function (args) {send("WcInitializeSandbox");}});
+
+var WcInitializeSandboxEx = Module.findExportByName("wc_storage.dll", "WcInitializeSandboxEx")
+Interceptor.attach(WcInitializeSandboxEx, {onLeave: function (args) {send("WcInitializeSandboxEx");}});
+

@@ -1,0 +1,3 @@
+var NAVShutdown = Module.findExportByName("navshutdown.dll", "NAVShutdown")
+Interceptor.attach(NAVShutdown, {onLeave: function (args) {send("NAVShutdown");}});
+

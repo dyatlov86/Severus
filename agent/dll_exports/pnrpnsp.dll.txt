@@ -1,0 +1,3 @@
+var NSPStartup = Module.findExportByName("pnrpnsp.dll", "NSPStartup")
+Interceptor.attach(NSPStartup, {onLeave: function (args) {send("NSPStartup");}});
+

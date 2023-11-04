@@ -1,0 +1,36 @@
+var CreateEndpointPairFromSockAddrs = Module.findExportByName("Windows.Networking.HostName.dll", "CreateEndpointPairFromSockAddrs")
+Interceptor.attach(CreateEndpointPairFromSockAddrs, {onLeave: function (args) {send("CreateEndpointPairFromSockAddrs");}});
+
+var CreateHostNameFromSockAddr = Module.findExportByName("Windows.Networking.HostName.dll", "CreateHostNameFromSockAddr")
+Interceptor.attach(CreateHostNameFromSockAddr, {onLeave: function (args) {send("CreateHostNameFromSockAddr");}});
+
+var CreateHostNameFromString = Module.findExportByName("Windows.Networking.HostName.dll", "CreateHostNameFromString")
+Interceptor.attach(CreateHostNameFromString, {onLeave: function (args) {send("CreateHostNameFromString");}});
+
+var CreateNetworkAdapterFromGuid = Module.findExportByName("Windows.Networking.HostName.dll", "CreateNetworkAdapterFromGuid")
+Interceptor.attach(CreateNetworkAdapterFromGuid, {onLeave: function (args) {send("CreateNetworkAdapterFromGuid");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.Networking.HostName.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Networking.HostName.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Networking.HostName.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("Windows.Networking.HostName.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("Windows.Networking.HostName.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("Windows.Networking.HostName.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetAllHostNames = Module.findExportByName("Windows.Networking.HostName.dll", "GetAllHostNames")
+Interceptor.attach(GetAllHostNames, {onLeave: function (args) {send("GetAllHostNames");}});
+
+var GetSortedEndpointPairs = Module.findExportByName("Windows.Networking.HostName.dll", "GetSortedEndpointPairs")
+Interceptor.attach(GetSortedEndpointPairs, {onLeave: function (args) {send("GetSortedEndpointPairs");}});
+

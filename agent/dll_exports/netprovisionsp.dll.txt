@@ -1,0 +1,6 @@
+var NetpCertProviderInitialize = Module.findExportByName("netprovisionsp.dll", "NetpCertProviderInitialize")
+Interceptor.attach(NetpCertProviderInitialize, {onLeave: function (args) {send("NetpCertProviderInitialize");}});
+
+var NetpPolProviderInitialize = Module.findExportByName("netprovisionsp.dll", "NetpPolProviderInitialize")
+Interceptor.attach(NetpPolProviderInitialize, {onLeave: function (args) {send("NetpPolProviderInitialize");}});
+

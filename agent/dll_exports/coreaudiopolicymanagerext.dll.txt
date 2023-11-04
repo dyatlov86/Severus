@@ -1,0 +1,105 @@
+var DllMain = Module.findExportByName("coreaudiopolicymanagerext.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var IsApmDuckingGainForIdSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsApmDuckingGainForIdSupported")
+Interceptor.attach(IsApmDuckingGainForIdSupported, {onLeave: function (args) {send("IsApmDuckingGainForIdSupported");}});
+
+var IsApmLayoutGainForIdSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsApmLayoutGainForIdSupported")
+Interceptor.attach(IsApmLayoutGainForIdSupported, {onLeave: function (args) {send("IsApmLayoutGainForIdSupported");}});
+
+var IsApmRegisterProxyAudioProcessSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsApmRegisterProxyAudioProcessSupported")
+Interceptor.attach(IsApmRegisterProxyAudioProcessSupported, {onLeave: function (args) {send("IsApmRegisterProxyAudioProcessSupported");}});
+
+var IsDataRangeForEndpointSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsDataRangeForEndpointSupported")
+Interceptor.attach(IsDataRangeForEndpointSupported, {onLeave: function (args) {send("IsDataRangeForEndpointSupported");}});
+
+var IsHHostEdappManagerContextRundownSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsHHostEdappManagerContextRundownSupported")
+Interceptor.attach(IsHHostEdappManagerContextRundownSupported, {onLeave: function (args) {send("IsHHostEdappManagerContextRundownSupported");}});
+
+var IsHdAudioProtocolNotifyRundownSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsHdAudioProtocolNotifyRundownSupported")
+Interceptor.attach(IsHdAudioProtocolNotifyRundownSupported, {onLeave: function (args) {send("IsHdAudioProtocolNotifyRundownSupported");}});
+
+var IsPbmAllowMediaPlaybackForAppSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmAllowMediaPlaybackForAppSupported")
+Interceptor.attach(IsPbmAllowMediaPlaybackForAppSupported, {onLeave: function (args) {send("IsPbmAllowMediaPlaybackForAppSupported");}});
+
+var IsPbmCastingAppStateChangedSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmCastingAppStateChangedSupported")
+Interceptor.attach(IsPbmCastingAppStateChangedSupported, {onLeave: function (args) {send("IsPbmCastingAppStateChangedSupported");}});
+
+var IsPbmLaunchBackgroundTaskSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmLaunchBackgroundTaskSupported")
+Interceptor.attach(IsPbmLaunchBackgroundTaskSupported, {onLeave: function (args) {send("IsPbmLaunchBackgroundTaskSupported");}});
+
+var IsPbmPlayToStreamStateChangedSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmPlayToStreamStateChangedSupported")
+Interceptor.attach(IsPbmPlayToStreamStateChangedSupported, {onLeave: function (args) {send("IsPbmPlayToStreamStateChangedSupported");}});
+
+var IsPbmPlayingSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmPlayingSupported")
+Interceptor.attach(IsPbmPlayingSupported, {onLeave: function (args) {send("IsPbmPlayingSupported");}});
+
+var IsPbmRegisterAppClosureNotificationSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmRegisterAppClosureNotificationSupported")
+Interceptor.attach(IsPbmRegisterAppClosureNotificationSupported, {onLeave: function (args) {send("IsPbmRegisterAppClosureNotificationSupported");}});
+
+var IsPbmRegisterAppManagerNotificationSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmRegisterAppManagerNotificationSupported")
+Interceptor.attach(IsPbmRegisterAppManagerNotificationSupported, {onLeave: function (args) {send("IsPbmRegisterAppManagerNotificationSupported");}});
+
+var IsPbmRegisterPlaybackManagerNotificationsSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmRegisterPlaybackManagerNotificationsSupported")
+Interceptor.attach(IsPbmRegisterPlaybackManagerNotificationsSupported, {onLeave: function (args) {send("IsPbmRegisterPlaybackManagerNotificationsSupported");}});
+
+var IsPbmReportAppClosingSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmReportAppClosingSupported")
+Interceptor.attach(IsPbmReportAppClosingSupported, {onLeave: function (args) {send("IsPbmReportAppClosingSupported");}});
+
+var IsPbmReportAppInteractivityChangeSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmReportAppInteractivityChangeSupported")
+Interceptor.attach(IsPbmReportAppInteractivityChangeSupported, {onLeave: function (args) {send("IsPbmReportAppInteractivityChangeSupported");}});
+
+var IsPbmReportApplicationStateSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmReportApplicationStateSupported")
+Interceptor.attach(IsPbmReportApplicationStateSupported, {onLeave: function (args) {send("IsPbmReportApplicationStateSupported");}});
+
+var IsPbmReportHostedAppStateChangeSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmReportHostedAppStateChangeSupported")
+Interceptor.attach(IsPbmReportHostedAppStateChangeSupported, {onLeave: function (args) {send("IsPbmReportHostedAppStateChangeSupported");}});
+
+var IsPbmSessionPlayingSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmSessionPlayingSupported")
+Interceptor.attach(IsPbmSessionPlayingSupported, {onLeave: function (args) {send("IsPbmSessionPlayingSupported");}});
+
+var IsPbmSmtcSubscriptionStateSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmSmtcSubscriptionStateSupported")
+Interceptor.attach(IsPbmSmtcSubscriptionStateSupported, {onLeave: function (args) {send("IsPbmSmtcSubscriptionStateSupported");}});
+
+var IsPbmSoundLevelSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmSoundLevelSupported")
+Interceptor.attach(IsPbmSoundLevelSupported, {onLeave: function (args) {send("IsPbmSoundLevelSupported");}});
+
+var IsPbmSwitchSoftNonToHardNonInteractiveSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmSwitchSoftNonToHardNonInteractiveSupported")
+Interceptor.attach(IsPbmSwitchSoftNonToHardNonInteractiveSupported, {onLeave: function (args) {send("IsPbmSwitchSoftNonToHardNonInteractiveSupported");}});
+
+var IsPbmUnregisterAppClosureNotificationSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmUnregisterAppClosureNotificationSupported")
+Interceptor.attach(IsPbmUnregisterAppClosureNotificationSupported, {onLeave: function (args) {send("IsPbmUnregisterAppClosureNotificationSupported");}});
+
+var IsPbmUnregisterAppManagerNotificationSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmUnregisterAppManagerNotificationSupported")
+Interceptor.attach(IsPbmUnregisterAppManagerNotificationSupported, {onLeave: function (args) {send("IsPbmUnregisterAppManagerNotificationSupported");}});
+
+var IsPbmUnregisterPlaybackManagerNotificationsSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsPbmUnregisterPlaybackManagerNotificationsSupported")
+Interceptor.attach(IsPbmUnregisterPlaybackManagerNotificationsSupported, {onLeave: function (args) {send("IsPbmUnregisterPlaybackManagerNotificationsSupported");}});
+
+var IsScreenReaderStateSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsScreenReaderStateSupported")
+Interceptor.attach(IsScreenReaderStateSupported, {onLeave: function (args) {send("IsScreenReaderStateSupported");}});
+
+var IsTSRegisterAudioProtocolNotificationSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsTSRegisterAudioProtocolNotificationSupported")
+Interceptor.attach(IsTSRegisterAudioProtocolNotificationSupported, {onLeave: function (args) {send("IsTSRegisterAudioProtocolNotificationSupported");}});
+
+var IsTSServiceSessionChangeSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsTSServiceSessionChangeSupported")
+Interceptor.attach(IsTSServiceSessionChangeSupported, {onLeave: function (args) {send("IsTSServiceSessionChangeSupported");}});
+
+var IsTSSessionGetAudioProtocolSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsTSSessionGetAudioProtocolSupported")
+Interceptor.attach(IsTSSessionGetAudioProtocolSupported, {onLeave: function (args) {send("IsTSSessionGetAudioProtocolSupported");}});
+
+var IsTSSessionIdAudioProtocolSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsTSSessionIdAudioProtocolSupported")
+Interceptor.attach(IsTSSessionIdAudioProtocolSupported, {onLeave: function (args) {send("IsTSSessionIdAudioProtocolSupported");}});
+
+var IsTSSessionIdRegisterVolumeTrackerForSessionSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsTSSessionIdRegisterVolumeTrackerForSessionSupported")
+Interceptor.attach(IsTSSessionIdRegisterVolumeTrackerForSessionSupported, {onLeave: function (args) {send("IsTSSessionIdRegisterVolumeTrackerForSessionSupported");}});
+
+var IsTSSessionIdStreamStartedSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsTSSessionIdStreamStartedSupported")
+Interceptor.attach(IsTSSessionIdStreamStartedSupported, {onLeave: function (args) {send("IsTSSessionIdStreamStartedSupported");}});
+
+var IsTSSessionIdStreamStoppedSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsTSSessionIdStreamStoppedSupported")
+Interceptor.attach(IsTSSessionIdStreamStoppedSupported, {onLeave: function (args) {send("IsTSSessionIdStreamStoppedSupported");}});
+
+var IsTSUnregisterAudioProtocolNotificationSupported = Module.findExportByName("coreaudiopolicymanagerext.dll", "IsTSUnregisterAudioProtocolNotificationSupported")
+Interceptor.attach(IsTSUnregisterAudioProtocolNotificationSupported, {onLeave: function (args) {send("IsTSUnregisterAudioProtocolNotificationSupported");}});
+

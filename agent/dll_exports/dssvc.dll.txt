@@ -1,0 +1,15 @@
+var DSSCreateSharedFileTokenEx = Module.findExportByName("dssvc.dll", "DSSCreateSharedFileTokenEx")
+Interceptor.attach(DSSCreateSharedFileTokenEx, {onLeave: function (args) {send("DSSCreateSharedFileTokenEx");}});
+
+var DSSFreeToken = Module.findExportByName("dssvc.dll", "DSSFreeToken")
+Interceptor.attach(DSSFreeToken, {onLeave: function (args) {send("DSSFreeToken");}});
+
+var InitializeService = Module.findExportByName("dssvc.dll", "InitializeService")
+Interceptor.attach(InitializeService, {onLeave: function (args) {send("InitializeService");}});
+
+var ServiceMain = Module.findExportByName("dssvc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("dssvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

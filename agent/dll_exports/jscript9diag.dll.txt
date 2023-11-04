@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("jscript9diag.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("jscript9diag.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("jscript9diag.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("jscript9diag.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var FreeDumpStreams = Module.findExportByName("jscript9diag.dll", "FreeDumpStreams")
+Interceptor.attach(FreeDumpStreams, {onLeave: function (args) {send("FreeDumpStreams");}});
+
+var GetDumpStreams = Module.findExportByName("jscript9diag.dll", "GetDumpStreams")
+Interceptor.attach(GetDumpStreams, {onLeave: function (args) {send("GetDumpStreams");}});
+

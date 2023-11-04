@@ -1,0 +1,15 @@
+var CreateDCOMSecurityUIPage = Module.findExportByName("comuid.dll", "CreateDCOMSecurityUIPage")
+Interceptor.attach(CreateDCOMSecurityUIPage, {onLeave: function (args) {send("CreateDCOMSecurityUIPage");}});
+
+var DllCanUnloadNow = Module.findExportByName("comuid.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("comuid.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("comuid.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("comuid.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

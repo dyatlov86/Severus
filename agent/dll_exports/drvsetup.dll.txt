@@ -1,0 +1,21 @@
+var DrvSetupInstallDriver = Module.findExportByName("drvsetup.dll", "DrvSetupInstallDriver")
+Interceptor.attach(DrvSetupInstallDriver, {onLeave: function (args) {send("DrvSetupInstallDriver");}});
+
+var DrvSetupInstallWuDriver = Module.findExportByName("drvsetup.dll", "DrvSetupInstallWuDriver")
+Interceptor.attach(DrvSetupInstallWuDriver, {onLeave: function (args) {send("DrvSetupInstallWuDriver");}});
+
+var DrvSetupInstallWuDrivers = Module.findExportByName("drvsetup.dll", "DrvSetupInstallWuDrivers")
+Interceptor.attach(DrvSetupInstallWuDrivers, {onLeave: function (args) {send("DrvSetupInstallWuDrivers");}});
+
+var DrvSetupQueryUpdateStatus = Module.findExportByName("drvsetup.dll", "DrvSetupQueryUpdateStatus")
+Interceptor.attach(DrvSetupQueryUpdateStatus, {onLeave: function (args) {send("DrvSetupQueryUpdateStatus");}});
+
+var DrvSetupUninstallDriver = Module.findExportByName("drvsetup.dll", "DrvSetupUninstallDriver")
+Interceptor.attach(DrvSetupUninstallDriver, {onLeave: function (args) {send("DrvSetupUninstallDriver");}});
+
+var DrvSetupUninstallWuDrivers = Module.findExportByName("drvsetup.dll", "DrvSetupUninstallWuDrivers")
+Interceptor.attach(DrvSetupUninstallWuDrivers, {onLeave: function (args) {send("DrvSetupUninstallWuDrivers");}});
+
+var pDrvSetupUninstallDriver = Module.findExportByName("drvsetup.dll", "pDrvSetupUninstallDriver")
+Interceptor.attach(pDrvSetupUninstallDriver, {onLeave: function (args) {send("pDrvSetupUninstallDriver");}});
+

@@ -1,0 +1,9 @@
+var ALVRDisplayInit = Module.findExportByName("amdlvr64.dll", "ALVRDisplayInit")
+Interceptor.attach(ALVRDisplayInit, {onLeave: function (args) {send("ALVRDisplayInit");}});
+
+var ALVRInit = Module.findExportByName("amdlvr64.dll", "ALVRInit")
+Interceptor.attach(ALVRInit, {onLeave: function (args) {send("ALVRInit");}});
+
+var ALVRQueryVersion = Module.findExportByName("amdlvr64.dll", "ALVRQueryVersion")
+Interceptor.attach(ALVRQueryVersion, {onLeave: function (args) {send("ALVRQueryVersion");}});
+

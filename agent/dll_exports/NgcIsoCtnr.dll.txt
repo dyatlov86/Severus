@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("NgcIsoCtnr.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("NgcIsoCtnr.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var NgcIsoCtnrInitialize = Module.findExportByName("NgcIsoCtnr.dll", "NgcIsoCtnrInitialize")
+Interceptor.attach(NgcIsoCtnrInitialize, {onLeave: function (args) {send("NgcIsoCtnrInitialize");}});
+
+var NgcIsoCtnrInitializePregenPool = Module.findExportByName("NgcIsoCtnr.dll", "NgcIsoCtnrInitializePregenPool")
+Interceptor.attach(NgcIsoCtnrInitializePregenPool, {onLeave: function (args) {send("NgcIsoCtnrInitializePregenPool");}});
+
+var NgcIsoCtnrTriggerPregen = Module.findExportByName("NgcIsoCtnr.dll", "NgcIsoCtnrTriggerPregen")
+Interceptor.attach(NgcIsoCtnrTriggerPregen, {onLeave: function (args) {send("NgcIsoCtnrTriggerPregen");}});
+
+var NgcIsoCtnrUninitializePregenPool = Module.findExportByName("NgcIsoCtnr.dll", "NgcIsoCtnrUninitializePregenPool")
+Interceptor.attach(NgcIsoCtnrUninitializePregenPool, {onLeave: function (args) {send("NgcIsoCtnrUninitializePregenPool");}});
+

@@ -1,0 +1,27 @@
+var PcaPldAddGenDbRecord = Module.findExportByName("pcadm.dll", "PcaPldAddGenDbRecord")
+Interceptor.attach(PcaPldAddGenDbRecord, {onLeave: function (args) {send("PcaPldAddGenDbRecord");}});
+
+var PcaPldGetAppsLaunchedWithinPeriod = Module.findExportByName("pcadm.dll", "PcaPldGetAppsLaunchedWithinPeriod")
+Interceptor.attach(PcaPldGetAppsLaunchedWithinPeriod, {onLeave: function (args) {send("PcaPldGetAppsLaunchedWithinPeriod");}});
+
+var PcaPldGetValueInDictionary = Module.findExportByName("pcadm.dll", "PcaPldGetValueInDictionary")
+Interceptor.attach(PcaPldGetValueInDictionary, {onLeave: function (args) {send("PcaPldGetValueInDictionary");}});
+
+var PcaPldParseGenDbRecord = Module.findExportByName("pcadm.dll", "PcaPldParseGenDbRecord")
+Interceptor.attach(PcaPldParseGenDbRecord, {onLeave: function (args) {send("PcaPldParseGenDbRecord");}});
+
+var PcaPldRecordAppLaunch = Module.findExportByName("pcadm.dll", "PcaPldRecordAppLaunch")
+Interceptor.attach(PcaPldRecordAppLaunch, {onLeave: function (args) {send("PcaPldRecordAppLaunch");}});
+
+var PcaPldSetValueInDictionary = Module.findExportByName("pcadm.dll", "PcaPldSetValueInDictionary")
+Interceptor.attach(PcaPldSetValueInDictionary, {onLeave: function (args) {send("PcaPldSetValueInDictionary");}});
+
+var WdiDiagnosticModuleMain = Module.findExportByName("pcadm.dll", "WdiDiagnosticModuleMain")
+Interceptor.attach(WdiDiagnosticModuleMain, {onLeave: function (args) {send("WdiDiagnosticModuleMain");}});
+
+var WdiGetDiagnosticModuleInterfaceVersion = Module.findExportByName("pcadm.dll", "WdiGetDiagnosticModuleInterfaceVersion")
+Interceptor.attach(WdiGetDiagnosticModuleInterfaceVersion, {onLeave: function (args) {send("WdiGetDiagnosticModuleInterfaceVersion");}});
+
+var WdiHandleInstance = Module.findExportByName("pcadm.dll", "WdiHandleInstance")
+Interceptor.attach(WdiHandleInstance, {onLeave: function (args) {send("WdiHandleInstance");}});
+

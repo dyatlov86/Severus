@@ -1,0 +1,6 @@
+var DllCanUnloadNow = Module.findExportByName("SystemSettings.UserAccountsHandlers.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var GetSetting = Module.findExportByName("SystemSettings.UserAccountsHandlers.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+

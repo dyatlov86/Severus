@@ -1,0 +1,21 @@
+var DeleteTaskNotification = Module.findExportByName("taskcomp.dll", "DeleteTaskNotification")
+Interceptor.attach(DeleteTaskNotification, {onLeave: function (args) {send("DeleteTaskNotification");}});
+
+var InitializeAdapter = Module.findExportByName("taskcomp.dll", "InitializeAdapter")
+Interceptor.attach(InitializeAdapter, {onLeave: function (args) {send("InitializeAdapter");}});
+
+var IsRegistering = Module.findExportByName("taskcomp.dll", "IsRegistering")
+Interceptor.attach(IsRegistering, {onLeave: function (args) {send("IsRegistering");}});
+
+var RegisterTaskNotification = Module.findExportByName("taskcomp.dll", "RegisterTaskNotification")
+Interceptor.attach(RegisterTaskNotification, {onLeave: function (args) {send("RegisterTaskNotification");}});
+
+var SetSdNotification = Module.findExportByName("taskcomp.dll", "SetSdNotification")
+Interceptor.attach(SetSdNotification, {onLeave: function (args) {send("SetSdNotification");}});
+
+var ShutdownAdapter = Module.findExportByName("taskcomp.dll", "ShutdownAdapter")
+Interceptor.attach(ShutdownAdapter, {onLeave: function (args) {send("ShutdownAdapter");}});
+
+var UpdateJobStatus = Module.findExportByName("taskcomp.dll", "UpdateJobStatus")
+Interceptor.attach(UpdateJobStatus, {onLeave: function (args) {send("UpdateJobStatus");}});
+

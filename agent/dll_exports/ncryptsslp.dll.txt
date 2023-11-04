@@ -1,0 +1,3 @@
+var GetSChannelInterface = Module.findExportByName("ncryptsslp.dll", "GetSChannelInterface")
+Interceptor.attach(GetSChannelInterface, {onLeave: function (args) {send("GetSChannelInterface");}});
+

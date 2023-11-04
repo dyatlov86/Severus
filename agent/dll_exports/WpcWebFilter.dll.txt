@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("WpcWebFilter.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("WpcWebFilter.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("WpcWebFilter.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var WpcWebFilterCreate = Module.findExportByName("WpcWebFilter.dll", "WpcWebFilterCreate")
+Interceptor.attach(WpcWebFilterCreate, {onLeave: function (args) {send("WpcWebFilterCreate");}});
+
+var WpcWebFilterDestroy = Module.findExportByName("WpcWebFilter.dll", "WpcWebFilterDestroy")
+Interceptor.attach(WpcWebFilterDestroy, {onLeave: function (args) {send("WpcWebFilterDestroy");}});
+
+var WpcWebFilterGet = Module.findExportByName("WpcWebFilter.dll", "WpcWebFilterGet")
+Interceptor.attach(WpcWebFilterGet, {onLeave: function (args) {send("WpcWebFilterGet");}});
+

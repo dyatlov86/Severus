@@ -1,0 +1,6 @@
+var AmdExtD3DCreateInterface = Module.findExportByName("amdxcstub64.dll", "AmdExtD3DCreateInterface")
+Interceptor.attach(AmdExtD3DCreateInterface, {onLeave: function (args) {send("AmdExtD3DCreateInterface");}});
+
+var AmdGetDxcModuleHandle = Module.findExportByName("amdxcstub64.dll", "AmdGetDxcModuleHandle")
+Interceptor.attach(AmdGetDxcModuleHandle, {onLeave: function (args) {send("AmdGetDxcModuleHandle");}});
+

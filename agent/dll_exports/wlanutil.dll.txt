@@ -1,0 +1,21 @@
+var WlanIsActiveConsoleUser = Module.findExportByName("wlanutil.dll", "WlanIsActiveConsoleUser")
+Interceptor.attach(WlanIsActiveConsoleUser, {onLeave: function (args) {send("WlanIsActiveConsoleUser");}});
+
+var WlanSignalValueToBar = Module.findExportByName("wlanutil.dll", "WlanSignalValueToBar")
+Interceptor.attach(WlanSignalValueToBar, {onLeave: function (args) {send("WlanSignalValueToBar");}});
+
+var WlanSignalValueToBarEx = Module.findExportByName("wlanutil.dll", "WlanSignalValueToBarEx")
+Interceptor.attach(WlanSignalValueToBarEx, {onLeave: function (args) {send("WlanSignalValueToBarEx");}});
+
+var WlanSsidToDisplayName = Module.findExportByName("wlanutil.dll", "WlanSsidToDisplayName")
+Interceptor.attach(WlanSsidToDisplayName, {onLeave: function (args) {send("WlanSsidToDisplayName");}});
+
+var WlanStringToSsid = Module.findExportByName("wlanutil.dll", "WlanStringToSsid")
+Interceptor.attach(WlanStringToSsid, {onLeave: function (args) {send("WlanStringToSsid");}});
+
+var WlanStringToUtf8Ssid = Module.findExportByName("wlanutil.dll", "WlanStringToUtf8Ssid")
+Interceptor.attach(WlanStringToUtf8Ssid, {onLeave: function (args) {send("WlanStringToUtf8Ssid");}});
+
+var WlanUtf8SsidToDisplayName = Module.findExportByName("wlanutil.dll", "WlanUtf8SsidToDisplayName")
+Interceptor.attach(WlanUtf8SsidToDisplayName, {onLeave: function (args) {send("WlanUtf8SsidToDisplayName");}});
+

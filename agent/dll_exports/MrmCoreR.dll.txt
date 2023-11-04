@@ -1,0 +1,54 @@
+var DllCanUnloadNow = Module.findExportByName("MrmCoreR.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("MrmCoreR.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("MrmCoreR.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetInternalReferenceBlobForManifestValue = Module.findExportByName("MrmCoreR.dll", "GetInternalReferenceBlobForManifestValue")
+Interceptor.attach(GetInternalReferenceBlobForManifestValue, {onLeave: function (args) {send("GetInternalReferenceBlobForManifestValue");}});
+
+var GetMergedSystemPri = Module.findExportByName("MrmCoreR.dll", "GetMergedSystemPri")
+Interceptor.attach(GetMergedSystemPri, {onLeave: function (args) {send("GetMergedSystemPri");}});
+
+var GetMergedSystemPriEx = Module.findExportByName("MrmCoreR.dll", "GetMergedSystemPriEx")
+Interceptor.attach(GetMergedSystemPriEx, {onLeave: function (args) {send("GetMergedSystemPriEx");}});
+
+var GetStringValueForManifestField = Module.findExportByName("MrmCoreR.dll", "GetStringValueForManifestField")
+Interceptor.attach(GetStringValueForManifestField, {onLeave: function (args) {send("GetStringValueForManifestField");}});
+
+var MergeResourcePackPri = Module.findExportByName("MrmCoreR.dll", "MergeResourcePackPri")
+Interceptor.attach(MergeResourcePackPri, {onLeave: function (args) {send("MergeResourcePackPri");}});
+
+var MergeSystemPriFiles = Module.findExportByName("MrmCoreR.dll", "MergeSystemPriFiles")
+Interceptor.attach(MergeSystemPriFiles, {onLeave: function (args) {send("MergeSystemPriFiles");}});
+
+var ResourceManagerQueueGetCurrentDepth = Module.findExportByName("MrmCoreR.dll", "ResourceManagerQueueGetCurrentDepth")
+Interceptor.attach(ResourceManagerQueueGetCurrentDepth, {onLeave: function (args) {send("ResourceManagerQueueGetCurrentDepth");}});
+
+var ResourceManagerQueueGetGlobalFlags = Module.findExportByName("MrmCoreR.dll", "ResourceManagerQueueGetGlobalFlags")
+Interceptor.attach(ResourceManagerQueueGetGlobalFlags, {onLeave: function (args) {send("ResourceManagerQueueGetGlobalFlags");}});
+
+var ResourceManagerQueueGetMrtCachePathForPackage = Module.findExportByName("MrmCoreR.dll", "ResourceManagerQueueGetMrtCachePathForPackage")
+Interceptor.attach(ResourceManagerQueueGetMrtCachePathForPackage, {onLeave: function (args) {send("ResourceManagerQueueGetMrtCachePathForPackage");}});
+
+var ResourceManagerQueueGetString = Module.findExportByName("MrmCoreR.dll", "ResourceManagerQueueGetString")
+Interceptor.attach(ResourceManagerQueueGetString, {onLeave: function (args) {send("ResourceManagerQueueGetString");}});
+
+var ResourceManagerQueueGetStringDirect = Module.findExportByName("MrmCoreR.dll", "ResourceManagerQueueGetStringDirect")
+Interceptor.attach(ResourceManagerQueueGetStringDirect, {onLeave: function (args) {send("ResourceManagerQueueGetStringDirect");}});
+
+var ResourceManagerQueueIsResourceReference = Module.findExportByName("MrmCoreR.dll", "ResourceManagerQueueIsResourceReference")
+Interceptor.attach(ResourceManagerQueueIsResourceReference, {onLeave: function (args) {send("ResourceManagerQueueIsResourceReference");}});
+
+var ResourceManagerQueueReset = Module.findExportByName("MrmCoreR.dll", "ResourceManagerQueueReset")
+Interceptor.attach(ResourceManagerQueueReset, {onLeave: function (args) {send("ResourceManagerQueueReset");}});
+
+var ResourceManagerQueueSetGlobalFlags = Module.findExportByName("MrmCoreR.dll", "ResourceManagerQueueSetGlobalFlags")
+Interceptor.attach(ResourceManagerQueueSetGlobalFlags, {onLeave: function (args) {send("ResourceManagerQueueSetGlobalFlags");}});
+
+var ShouldMergeInproc = Module.findExportByName("MrmCoreR.dll", "ShouldMergeInproc")
+Interceptor.attach(ShouldMergeInproc, {onLeave: function (args) {send("ShouldMergeInproc");}});
+

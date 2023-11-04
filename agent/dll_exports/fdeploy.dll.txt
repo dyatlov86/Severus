@@ -1,0 +1,9 @@
+var GenerateGroupPolicy = Module.findExportByName("fdeploy.dll", "GenerateGroupPolicy")
+Interceptor.attach(GenerateGroupPolicy, {onLeave: function (args) {send("GenerateGroupPolicy");}});
+
+var ProcessGroupPolicyEx = Module.findExportByName("fdeploy.dll", "ProcessGroupPolicyEx")
+Interceptor.attach(ProcessGroupPolicyEx, {onLeave: function (args) {send("ProcessGroupPolicyEx");}});
+
+var ProcessWmiPolicy = Module.findExportByName("fdeploy.dll", "ProcessWmiPolicy")
+Interceptor.attach(ProcessWmiPolicy, {onLeave: function (args) {send("ProcessWmiPolicy");}});
+

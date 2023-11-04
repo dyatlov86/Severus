@@ -1,0 +1,3 @@
+var Netbios = Module.findExportByName("netbios.dll", "Netbios")
+Interceptor.attach(Netbios, {onLeave: function (args) {send("Netbios");}});
+

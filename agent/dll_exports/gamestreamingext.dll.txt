@@ -1,0 +1,3 @@
+var IsGameStreamingServer = Module.findExportByName("gamestreamingext.dll", "IsGameStreamingServer")
+Interceptor.attach(IsGameStreamingServer, {onLeave: function (args) {send("IsGameStreamingServer");}});
+

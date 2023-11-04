@@ -1,0 +1,12 @@
+var DllInstall = Module.findExportByName("PCPKsp.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllMain = Module.findExportByName("PCPKsp.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllUnregisterServer = Module.findExportByName("PCPKsp.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetKeyStorageInterface = Module.findExportByName("PCPKsp.dll", "GetKeyStorageInterface")
+Interceptor.attach(GetKeyStorageInterface, {onLeave: function (args) {send("GetKeyStorageInterface");}});
+

@@ -1,0 +1,42 @@
+var CloseOsBaseline = Module.findExportByName("osbaseln.dll", "CloseOsBaseline")
+Interceptor.attach(CloseOsBaseline, {onLeave: function (args) {send("CloseOsBaseline");}});
+
+var EnumOsBaselineComponentsA = Module.findExportByName("osbaseln.dll", "EnumOsBaselineComponentsA")
+Interceptor.attach(EnumOsBaselineComponentsA, {onLeave: function (args) {send("EnumOsBaselineComponentsA");}});
+
+var EnumOsBaselineComponentsW = Module.findExportByName("osbaseln.dll", "EnumOsBaselineComponentsW")
+Interceptor.attach(EnumOsBaselineComponentsW, {onLeave: function (args) {send("EnumOsBaselineComponentsW");}});
+
+var EnumOsOutOfDateComponentsA = Module.findExportByName("osbaseln.dll", "EnumOsOutOfDateComponentsA")
+Interceptor.attach(EnumOsOutOfDateComponentsA, {onLeave: function (args) {send("EnumOsOutOfDateComponentsA");}});
+
+var EnumOsOutOfDateComponentsW = Module.findExportByName("osbaseln.dll", "EnumOsOutOfDateComponentsW")
+Interceptor.attach(EnumOsOutOfDateComponentsW, {onLeave: function (args) {send("EnumOsOutOfDateComponentsW");}});
+
+var GetOsBaselineComponentInfoA = Module.findExportByName("osbaseln.dll", "GetOsBaselineComponentInfoA")
+Interceptor.attach(GetOsBaselineComponentInfoA, {onLeave: function (args) {send("GetOsBaselineComponentInfoA");}});
+
+var GetOsBaselineComponentInfoW = Module.findExportByName("osbaseln.dll", "GetOsBaselineComponentInfoW")
+Interceptor.attach(GetOsBaselineComponentInfoW, {onLeave: function (args) {send("GetOsBaselineComponentInfoW");}});
+
+var GetOsInstalledComponentInfoA = Module.findExportByName("osbaseln.dll", "GetOsInstalledComponentInfoA")
+Interceptor.attach(GetOsInstalledComponentInfoA, {onLeave: function (args) {send("GetOsInstalledComponentInfoA");}});
+
+var GetOsInstalledComponentInfoW = Module.findExportByName("osbaseln.dll", "GetOsInstalledComponentInfoW")
+Interceptor.attach(GetOsInstalledComponentInfoW, {onLeave: function (args) {send("GetOsInstalledComponentInfoW");}});
+
+var GetOsLatestBaselineServicePack = Module.findExportByName("osbaseln.dll", "GetOsLatestBaselineServicePack")
+Interceptor.attach(GetOsLatestBaselineServicePack, {onLeave: function (args) {send("GetOsLatestBaselineServicePack");}});
+
+var OpenOsBaseline = Module.findExportByName("osbaseln.dll", "OpenOsBaseline")
+Interceptor.attach(OpenOsBaseline, {onLeave: function (args) {send("OpenOsBaseline");}});
+
+var pGetOsBaselineCurrentVersion = Module.findExportByName("osbaseln.dll", "pGetOsBaselineCurrentVersion")
+Interceptor.attach(pGetOsBaselineCurrentVersion, {onLeave: function (args) {send("pGetOsBaselineCurrentVersion");}});
+
+var pGetOsCurrentBaselineServicePack = Module.findExportByName("osbaseln.dll", "pGetOsCurrentBaselineServicePack")
+Interceptor.attach(pGetOsCurrentBaselineServicePack, {onLeave: function (args) {send("pGetOsCurrentBaselineServicePack");}});
+
+var pOpenOsBaselineByVersion = Module.findExportByName("osbaseln.dll", "pOpenOsBaselineByVersion")
+Interceptor.attach(pOpenOsBaselineByVersion, {onLeave: function (args) {send("pOpenOsBaselineByVersion");}});
+

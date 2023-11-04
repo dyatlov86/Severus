@@ -1,0 +1,42 @@
+var DllCanUnloadNow = Module.findExportByName("LocationFramework.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("LocationFramework.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("LocationFramework.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("LocationFramework.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var LocationObjectManagerInstance = Module.findExportByName("LocationFramework.dll", "LocationObjectManagerInstance")
+Interceptor.attach(LocationObjectManagerInstance, {onLeave: function (args) {send("LocationObjectManagerInstance");}});
+
+var LocationServiceHostShutdown = Module.findExportByName("LocationFramework.dll", "LocationServiceHostShutdown")
+Interceptor.attach(LocationServiceHostShutdown, {onLeave: function (args) {send("LocationServiceHostShutdown");}});
+
+var LocationServiceHostStartup = Module.findExportByName("LocationFramework.dll", "LocationServiceHostStartup")
+Interceptor.attach(LocationServiceHostStartup, {onLeave: function (args) {send("LocationServiceHostStartup");}});
+
+var RegisterLocationCOMServer = Module.findExportByName("LocationFramework.dll", "RegisterLocationCOMServer")
+Interceptor.attach(RegisterLocationCOMServer, {onLeave: function (args) {send("RegisterLocationCOMServer");}});
+
+var SvcLocationAddRef = Module.findExportByName("LocationFramework.dll", "SvcLocationAddRef")
+Interceptor.attach(SvcLocationAddRef, {onLeave: function (args) {send("SvcLocationAddRef");}});
+
+var SvcLocationInitServerLock = Module.findExportByName("LocationFramework.dll", "SvcLocationInitServerLock")
+Interceptor.attach(SvcLocationInitServerLock, {onLeave: function (args) {send("SvcLocationInitServerLock");}});
+
+var SvcLocationReleaseRef = Module.findExportByName("LocationFramework.dll", "SvcLocationReleaseRef")
+Interceptor.attach(SvcLocationReleaseRef, {onLeave: function (args) {send("SvcLocationReleaseRef");}});
+
+var SvcOnConsoleSessionNotification = Module.findExportByName("LocationFramework.dll", "SvcOnConsoleSessionNotification")
+Interceptor.attach(SvcOnConsoleSessionNotification, {onLeave: function (args) {send("SvcOnConsoleSessionNotification");}});
+
+var SvcOnUserLogOnStateNotification = Module.findExportByName("LocationFramework.dll", "SvcOnUserLogOnStateNotification")
+Interceptor.attach(SvcOnUserLogOnStateNotification, {onLeave: function (args) {send("SvcOnUserLogOnStateNotification");}});
+
+var UnregisterLocationCOMServer = Module.findExportByName("LocationFramework.dll", "UnregisterLocationCOMServer")
+Interceptor.attach(UnregisterLocationCOMServer, {onLeave: function (args) {send("UnregisterLocationCOMServer");}});
+

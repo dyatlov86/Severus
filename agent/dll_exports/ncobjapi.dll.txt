@@ -1,0 +1,30 @@
+var WmiAddObjectProp = Module.findExportByName("ncobjapi.dll", "WmiAddObjectProp")
+Interceptor.attach(WmiAddObjectProp, {onLeave: function (args) {send("WmiAddObjectProp");}});
+
+var WmiCommitObject = Module.findExportByName("ncobjapi.dll", "WmiCommitObject")
+Interceptor.attach(WmiCommitObject, {onLeave: function (args) {send("WmiCommitObject");}});
+
+var WmiCreateObject = Module.findExportByName("ncobjapi.dll", "WmiCreateObject")
+Interceptor.attach(WmiCreateObject, {onLeave: function (args) {send("WmiCreateObject");}});
+
+var WmiCreateObjectWithFormat = Module.findExportByName("ncobjapi.dll", "WmiCreateObjectWithFormat")
+Interceptor.attach(WmiCreateObjectWithFormat, {onLeave: function (args) {send("WmiCreateObjectWithFormat");}});
+
+var WmiCreateObjectWithProps = Module.findExportByName("ncobjapi.dll", "WmiCreateObjectWithProps")
+Interceptor.attach(WmiCreateObjectWithProps, {onLeave: function (args) {send("WmiCreateObjectWithProps");}});
+
+var WmiDestroyObject = Module.findExportByName("ncobjapi.dll", "WmiDestroyObject")
+Interceptor.attach(WmiDestroyObject, {onLeave: function (args) {send("WmiDestroyObject");}});
+
+var WmiEventSourceConnect = Module.findExportByName("ncobjapi.dll", "WmiEventSourceConnect")
+Interceptor.attach(WmiEventSourceConnect, {onLeave: function (args) {send("WmiEventSourceConnect");}});
+
+var WmiEventSourceDisconnect = Module.findExportByName("ncobjapi.dll", "WmiEventSourceDisconnect")
+Interceptor.attach(WmiEventSourceDisconnect, {onLeave: function (args) {send("WmiEventSourceDisconnect");}});
+
+var WmiIsObjectActive = Module.findExportByName("ncobjapi.dll", "WmiIsObjectActive")
+Interceptor.attach(WmiIsObjectActive, {onLeave: function (args) {send("WmiIsObjectActive");}});
+
+var WmiSetAndCommitObject = Module.findExportByName("ncobjapi.dll", "WmiSetAndCommitObject")
+Interceptor.attach(WmiSetAndCommitObject, {onLeave: function (args) {send("WmiSetAndCommitObject");}});
+

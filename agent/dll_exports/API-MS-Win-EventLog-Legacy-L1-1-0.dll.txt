@@ -1,0 +1,18 @@
+var DeregisterEventSource = Module.findExportByName("API-MS-Win-EventLog-Legacy-L1-1-0.dll", "DeregisterEventSource")
+Interceptor.attach(DeregisterEventSource, {onLeave: function (args) {send("DeregisterEventSource");}});
+
+var GetEventLogInformation = Module.findExportByName("API-MS-Win-EventLog-Legacy-L1-1-0.dll", "GetEventLogInformation")
+Interceptor.attach(GetEventLogInformation, {onLeave: function (args) {send("GetEventLogInformation");}});
+
+var RegisterEventSourceA = Module.findExportByName("API-MS-Win-EventLog-Legacy-L1-1-0.dll", "RegisterEventSourceA")
+Interceptor.attach(RegisterEventSourceA, {onLeave: function (args) {send("RegisterEventSourceA");}});
+
+var RegisterEventSourceW = Module.findExportByName("API-MS-Win-EventLog-Legacy-L1-1-0.dll", "RegisterEventSourceW")
+Interceptor.attach(RegisterEventSourceW, {onLeave: function (args) {send("RegisterEventSourceW");}});
+
+var ReportEventA = Module.findExportByName("API-MS-Win-EventLog-Legacy-L1-1-0.dll", "ReportEventA")
+Interceptor.attach(ReportEventA, {onLeave: function (args) {send("ReportEventA");}});
+
+var ReportEventW = Module.findExportByName("API-MS-Win-EventLog-Legacy-L1-1-0.dll", "ReportEventW")
+Interceptor.attach(ReportEventW, {onLeave: function (args) {send("ReportEventW");}});
+

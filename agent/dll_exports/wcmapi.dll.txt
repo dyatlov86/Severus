@@ -1,0 +1,114 @@
+var DllCanUnloadNow = Module.findExportByName("wcmapi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wcmapi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("wcmapi.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wcmapi.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var WcmAddAppBasedRoutePolicy = Module.findExportByName("wcmapi.dll", "WcmAddAppBasedRoutePolicy")
+Interceptor.attach(WcmAddAppBasedRoutePolicy, {onLeave: function (args) {send("WcmAddAppBasedRoutePolicy");}});
+
+var WcmAddRoutePolicy = Module.findExportByName("wcmapi.dll", "WcmAddRoutePolicy")
+Interceptor.attach(WcmAddRoutePolicy, {onLeave: function (args) {send("WcmAddRoutePolicy");}});
+
+var WcmCancelOnDemandRequest = Module.findExportByName("wcmapi.dll", "WcmCancelOnDemandRequest")
+Interceptor.attach(WcmCancelOnDemandRequest, {onLeave: function (args) {send("WcmCancelOnDemandRequest");}});
+
+var WcmCheckCapabilityStatus = Module.findExportByName("wcmapi.dll", "WcmCheckCapabilityStatus")
+Interceptor.attach(WcmCheckCapabilityStatus, {onLeave: function (args) {send("WcmCheckCapabilityStatus");}});
+
+var WcmCloseHandle = Module.findExportByName("wcmapi.dll", "WcmCloseHandle")
+Interceptor.attach(WcmCloseHandle, {onLeave: function (args) {send("WcmCloseHandle");}});
+
+var WcmCloseOnDemandRequestHandle = Module.findExportByName("wcmapi.dll", "WcmCloseOnDemandRequestHandle")
+Interceptor.attach(WcmCloseOnDemandRequestHandle, {onLeave: function (args) {send("WcmCloseOnDemandRequestHandle");}});
+
+var WcmDeleteAppBasedRoutePolicy = Module.findExportByName("wcmapi.dll", "WcmDeleteAppBasedRoutePolicy")
+Interceptor.attach(WcmDeleteAppBasedRoutePolicy, {onLeave: function (args) {send("WcmDeleteAppBasedRoutePolicy");}});
+
+var WcmDeleteProxyInformation = Module.findExportByName("wcmapi.dll", "WcmDeleteProxyInformation")
+Interceptor.attach(WcmDeleteProxyInformation, {onLeave: function (args) {send("WcmDeleteProxyInformation");}});
+
+var WcmDeprovisionCapability = Module.findExportByName("wcmapi.dll", "WcmDeprovisionCapability")
+Interceptor.attach(WcmDeprovisionCapability, {onLeave: function (args) {send("WcmDeprovisionCapability");}});
+
+var WcmEnterConnectedStandby = Module.findExportByName("wcmapi.dll", "WcmEnterConnectedStandby")
+Interceptor.attach(WcmEnterConnectedStandby, {onLeave: function (args) {send("WcmEnterConnectedStandby");}});
+
+var WcmEnterNetQuiet = Module.findExportByName("wcmapi.dll", "WcmEnterNetQuiet")
+Interceptor.attach(WcmEnterNetQuiet, {onLeave: function (args) {send("WcmEnterNetQuiet");}});
+
+var WcmEnumInterfaces = Module.findExportByName("wcmapi.dll", "WcmEnumInterfaces")
+Interceptor.attach(WcmEnumInterfaces, {onLeave: function (args) {send("WcmEnumInterfaces");}});
+
+var WcmExitConnectedStandby = Module.findExportByName("wcmapi.dll", "WcmExitConnectedStandby")
+Interceptor.attach(WcmExitConnectedStandby, {onLeave: function (args) {send("WcmExitConnectedStandby");}});
+
+var WcmExitNetQuiet = Module.findExportByName("wcmapi.dll", "WcmExitNetQuiet")
+Interceptor.attach(WcmExitNetQuiet, {onLeave: function (args) {send("WcmExitNetQuiet");}});
+
+var WcmFreeMemory = Module.findExportByName("wcmapi.dll", "WcmFreeMemory")
+Interceptor.attach(WcmFreeMemory, {onLeave: function (args) {send("WcmFreeMemory");}});
+
+var WcmGetInterfaceContextTable = Module.findExportByName("wcmapi.dll", "WcmGetInterfaceContextTable")
+Interceptor.attach(WcmGetInterfaceContextTable, {onLeave: function (args) {send("WcmGetInterfaceContextTable");}});
+
+var WcmGetProfileList = Module.findExportByName("wcmapi.dll", "WcmGetProfileList")
+Interceptor.attach(WcmGetProfileList, {onLeave: function (args) {send("WcmGetProfileList");}});
+
+var WcmGetProfileListByPurpose = Module.findExportByName("wcmapi.dll", "WcmGetProfileListByPurpose")
+Interceptor.attach(WcmGetProfileListByPurpose, {onLeave: function (args) {send("WcmGetProfileListByPurpose");}});
+
+var WcmGetRoutingHint = Module.findExportByName("wcmapi.dll", "WcmGetRoutingHint")
+Interceptor.attach(WcmGetRoutingHint, {onLeave: function (args) {send("WcmGetRoutingHint");}});
+
+var WcmOpenHandle = Module.findExportByName("wcmapi.dll", "WcmOpenHandle")
+Interceptor.attach(WcmOpenHandle, {onLeave: function (args) {send("WcmOpenHandle");}});
+
+var WcmOpenOnDemandRequestHandle = Module.findExportByName("wcmapi.dll", "WcmOpenOnDemandRequestHandle")
+Interceptor.attach(WcmOpenOnDemandRequestHandle, {onLeave: function (args) {send("WcmOpenOnDemandRequestHandle");}});
+
+var WcmOpenOnDemandRequestHandleByWwanProfileName = Module.findExportByName("wcmapi.dll", "WcmOpenOnDemandRequestHandleByWwanProfileName")
+Interceptor.attach(WcmOpenOnDemandRequestHandleByWwanProfileName, {onLeave: function (args) {send("WcmOpenOnDemandRequestHandleByWwanProfileName");}});
+
+var WcmOrderConnection = Module.findExportByName("wcmapi.dll", "WcmOrderConnection")
+Interceptor.attach(WcmOrderConnection, {onLeave: function (args) {send("WcmOrderConnection");}});
+
+var WcmQueryOnDemandRequestStateInfo = Module.findExportByName("wcmapi.dll", "WcmQueryOnDemandRequestStateInfo")
+Interceptor.attach(WcmQueryOnDemandRequestStateInfo, {onLeave: function (args) {send("WcmQueryOnDemandRequestStateInfo");}});
+
+var WcmQueryParameter = Module.findExportByName("wcmapi.dll", "WcmQueryParameter")
+Interceptor.attach(WcmQueryParameter, {onLeave: function (args) {send("WcmQueryParameter");}});
+
+var WcmQueryProperty = Module.findExportByName("wcmapi.dll", "WcmQueryProperty")
+Interceptor.attach(WcmQueryProperty, {onLeave: function (args) {send("WcmQueryProperty");}});
+
+var WcmRemoveMatchingRoutePolicy = Module.findExportByName("wcmapi.dll", "WcmRemoveMatchingRoutePolicy")
+Interceptor.attach(WcmRemoveMatchingRoutePolicy, {onLeave: function (args) {send("WcmRemoveMatchingRoutePolicy");}});
+
+var WcmRemoveRoutePolicy = Module.findExportByName("wcmapi.dll", "WcmRemoveRoutePolicy")
+Interceptor.attach(WcmRemoveRoutePolicy, {onLeave: function (args) {send("WcmRemoveRoutePolicy");}});
+
+var WcmSetParameter = Module.findExportByName("wcmapi.dll", "WcmSetParameter")
+Interceptor.attach(WcmSetParameter, {onLeave: function (args) {send("WcmSetParameter");}});
+
+var WcmSetProfileList = Module.findExportByName("wcmapi.dll", "WcmSetProfileList")
+Interceptor.attach(WcmSetProfileList, {onLeave: function (args) {send("WcmSetProfileList");}});
+
+var WcmSetProperty = Module.findExportByName("wcmapi.dll", "WcmSetProperty")
+Interceptor.attach(WcmSetProperty, {onLeave: function (args) {send("WcmSetProperty");}});
+
+var WcmSetProxyInformation = Module.findExportByName("wcmapi.dll", "WcmSetProxyInformation")
+Interceptor.attach(WcmSetProxyInformation, {onLeave: function (args) {send("WcmSetProxyInformation");}});
+
+var WcmStartOnDemandRequest = Module.findExportByName("wcmapi.dll", "WcmStartOnDemandRequest")
+Interceptor.attach(WcmStartOnDemandRequest, {onLeave: function (args) {send("WcmStartOnDemandRequest");}});
+
+var WcmUpdateCapabilityAccess = Module.findExportByName("wcmapi.dll", "WcmUpdateCapabilityAccess")
+Interceptor.attach(WcmUpdateCapabilityAccess, {onLeave: function (args) {send("WcmUpdateCapabilityAccess");}});
+

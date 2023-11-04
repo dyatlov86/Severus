@@ -1,0 +1,9 @@
+var CreateHolographicCompositor = Module.findExportByName("HologramCompositor.dll", "CreateHolographicCompositor")
+Interceptor.attach(CreateHolographicCompositor, {onLeave: function (args) {send("CreateHolographicCompositor");}});
+
+var DwmInitializePort = Module.findExportByName("HologramCompositor.dll", "DwmInitializePort")
+Interceptor.attach(DwmInitializePort, {onLeave: function (args) {send("DwmInitializePort");}});
+
+var GetMPCInputPostProcessor = Module.findExportByName("HologramCompositor.dll", "GetMPCInputPostProcessor")
+Interceptor.attach(GetMPCInputPostProcessor, {onLeave: function (args) {send("GetMPCInputPostProcessor");}});
+

@@ -1,0 +1,12 @@
+var DownlevelGetParentLocaleLCID = Module.findExportByName("Nlsdl.dll", "DownlevelGetParentLocaleLCID")
+Interceptor.attach(DownlevelGetParentLocaleLCID, {onLeave: function (args) {send("DownlevelGetParentLocaleLCID");}});
+
+var DownlevelGetParentLocaleName = Module.findExportByName("Nlsdl.dll", "DownlevelGetParentLocaleName")
+Interceptor.attach(DownlevelGetParentLocaleName, {onLeave: function (args) {send("DownlevelGetParentLocaleName");}});
+
+var DownlevelLCIDToLocaleName = Module.findExportByName("Nlsdl.dll", "DownlevelLCIDToLocaleName")
+Interceptor.attach(DownlevelLCIDToLocaleName, {onLeave: function (args) {send("DownlevelLCIDToLocaleName");}});
+
+var DownlevelLocaleNameToLCID = Module.findExportByName("Nlsdl.dll", "DownlevelLocaleNameToLCID")
+Interceptor.attach(DownlevelLocaleNameToLCID, {onLeave: function (args) {send("DownlevelLocaleNameToLCID");}});
+

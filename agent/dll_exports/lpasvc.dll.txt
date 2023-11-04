@@ -1,0 +1,6 @@
+var LpaSvcMain = Module.findExportByName("lpasvc.dll", "LpaSvcMain")
+Interceptor.attach(LpaSvcMain, {onLeave: function (args) {send("LpaSvcMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("lpasvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

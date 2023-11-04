@@ -1,0 +1,12 @@
+var AppxSysprepSpecializeOffline = Module.findExportByName("AppxSysprep.dll", "AppxSysprepSpecializeOffline")
+Interceptor.attach(AppxSysprepSpecializeOffline, {onLeave: function (args) {send("AppxSysprepSpecializeOffline");}});
+
+var AppxSysprepSpecializeOnline = Module.findExportByName("AppxSysprep.dll", "AppxSysprepSpecializeOnline")
+Interceptor.attach(AppxSysprepSpecializeOnline, {onLeave: function (args) {send("AppxSysprepSpecializeOnline");}});
+
+var SysprepGeneralize = Module.findExportByName("AppxSysprep.dll", "SysprepGeneralize")
+Interceptor.attach(SysprepGeneralize, {onLeave: function (args) {send("SysprepGeneralize");}});
+
+var SysprepGeneralizeValidate = Module.findExportByName("AppxSysprep.dll", "SysprepGeneralizeValidate")
+Interceptor.attach(SysprepGeneralizeValidate, {onLeave: function (args) {send("SysprepGeneralizeValidate");}});
+

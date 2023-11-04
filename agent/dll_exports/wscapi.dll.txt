@@ -1,0 +1,123 @@
+var CLSID_WSCDefaultProduct = Module.findExportByName("wscapi.dll", "CLSID_WSCDefaultProduct")
+Interceptor.attach(CLSID_WSCDefaultProduct, {onLeave: function (args) {send("CLSID_WSCDefaultProduct");}});
+
+var CLSID_WSCProductList = Module.findExportByName("wscapi.dll", "CLSID_WSCProductList")
+Interceptor.attach(CLSID_WSCProductList, {onLeave: function (args) {send("CLSID_WSCProductList");}});
+
+var DllCanUnloadNow = Module.findExportByName("wscapi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wscapi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var IID_IWSCDefaultProduct = Module.findExportByName("wscapi.dll", "IID_IWSCDefaultProduct")
+Interceptor.attach(IID_IWSCDefaultProduct, {onLeave: function (args) {send("IID_IWSCDefaultProduct");}});
+
+var IID_IWSCProductList = Module.findExportByName("wscapi.dll", "IID_IWSCProductList")
+Interceptor.attach(IID_IWSCProductList, {onLeave: function (args) {send("IID_IWSCProductList");}});
+
+var IID_IWscProduct = Module.findExportByName("wscapi.dll", "IID_IWscProduct")
+Interceptor.attach(IID_IWscProduct, {onLeave: function (args) {send("IID_IWscProduct");}});
+
+var LIBID_wscAPILib = Module.findExportByName("wscapi.dll", "LIBID_wscAPILib")
+Interceptor.attach(LIBID_wscAPILib, {onLeave: function (args) {send("LIBID_wscAPILib");}});
+
+var WscGetAntiMalwareUri = Module.findExportByName("wscapi.dll", "WscGetAntiMalwareUri")
+Interceptor.attach(WscGetAntiMalwareUri, {onLeave: function (args) {send("WscGetAntiMalwareUri");}});
+
+var WscGetSecurityProviderHealth = Module.findExportByName("wscapi.dll", "WscGetSecurityProviderHealth")
+Interceptor.attach(WscGetSecurityProviderHealth, {onLeave: function (args) {send("WscGetSecurityProviderHealth");}});
+
+var WscQueryAntiMalwareUri = Module.findExportByName("wscapi.dll", "WscQueryAntiMalwareUri")
+Interceptor.attach(WscQueryAntiMalwareUri, {onLeave: function (args) {send("WscQueryAntiMalwareUri");}});
+
+var WscRegisterForChanges = Module.findExportByName("wscapi.dll", "WscRegisterForChanges")
+Interceptor.attach(WscRegisterForChanges, {onLeave: function (args) {send("WscRegisterForChanges");}});
+
+var WscRegisterForUserNotifications = Module.findExportByName("wscapi.dll", "WscRegisterForUserNotifications")
+Interceptor.attach(WscRegisterForUserNotifications, {onLeave: function (args) {send("WscRegisterForUserNotifications");}});
+
+var WscUnRegisterChanges = Module.findExportByName("wscapi.dll", "WscUnRegisterChanges")
+Interceptor.attach(WscUnRegisterChanges, {onLeave: function (args) {send("WscUnRegisterChanges");}});
+
+var wscAntiSpywareGetStatus = Module.findExportByName("wscapi.dll", "wscAntiSpywareGetStatus")
+Interceptor.attach(wscAntiSpywareGetStatus, {onLeave: function (args) {send("wscAntiSpywareGetStatus");}});
+
+var wscAntiVirusExpiredBeyondThreshold = Module.findExportByName("wscapi.dll", "wscAntiVirusExpiredBeyondThreshold")
+Interceptor.attach(wscAntiVirusExpiredBeyondThreshold, {onLeave: function (args) {send("wscAntiVirusExpiredBeyondThreshold");}});
+
+var wscAntiVirusGetStatus = Module.findExportByName("wscapi.dll", "wscAntiVirusGetStatus")
+Interceptor.attach(wscAntiVirusGetStatus, {onLeave: function (args) {send("wscAntiVirusGetStatus");}});
+
+var wscAutoUpdatesEnableScheduledMode = Module.findExportByName("wscapi.dll", "wscAutoUpdatesEnableScheduledMode")
+Interceptor.attach(wscAutoUpdatesEnableScheduledMode, {onLeave: function (args) {send("wscAutoUpdatesEnableScheduledMode");}});
+
+var wscAutoUpdatesGetStatus = Module.findExportByName("wscapi.dll", "wscAutoUpdatesGetStatus")
+Interceptor.attach(wscAutoUpdatesGetStatus, {onLeave: function (args) {send("wscAutoUpdatesGetStatus");}});
+
+var wscFirewallGetStatus = Module.findExportByName("wscapi.dll", "wscFirewallGetStatus")
+Interceptor.attach(wscFirewallGetStatus, {onLeave: function (args) {send("wscFirewallGetStatus");}});
+
+var wscGeneralSecurityGetStatus = Module.findExportByName("wscapi.dll", "wscGeneralSecurityGetStatus")
+Interceptor.attach(wscGeneralSecurityGetStatus, {onLeave: function (args) {send("wscGeneralSecurityGetStatus");}});
+
+var wscGetAlertStatus = Module.findExportByName("wscapi.dll", "wscGetAlertStatus")
+Interceptor.attach(wscGetAlertStatus, {onLeave: function (args) {send("wscGetAlertStatus");}});
+
+var wscIcfEnable = Module.findExportByName("wscapi.dll", "wscIcfEnable")
+Interceptor.attach(wscIcfEnable, {onLeave: function (args) {send("wscIcfEnable");}});
+
+var wscIeSettingsFix = Module.findExportByName("wscapi.dll", "wscIeSettingsFix")
+Interceptor.attach(wscIeSettingsFix, {onLeave: function (args) {send("wscIeSettingsFix");}});
+
+var wscInitiateOfflineCleaning = Module.findExportByName("wscapi.dll", "wscInitiateOfflineCleaning")
+Interceptor.attach(wscInitiateOfflineCleaning, {onLeave: function (args) {send("wscInitiateOfflineCleaning");}});
+
+var wscIsDefenderAntivirusSupported = Module.findExportByName("wscapi.dll", "wscIsDefenderAntivirusSupported")
+Interceptor.attach(wscIsDefenderAntivirusSupported, {onLeave: function (args) {send("wscIsDefenderAntivirusSupported");}});
+
+var wscLaunchAdminMakeDefaultUI = Module.findExportByName("wscapi.dll", "wscLaunchAdminMakeDefaultUI")
+Interceptor.attach(wscLaunchAdminMakeDefaultUI, {onLeave: function (args) {send("wscLaunchAdminMakeDefaultUI");}});
+
+var wscLuaSettingsFix = Module.findExportByName("wscapi.dll", "wscLuaSettingsFix")
+Interceptor.attach(wscLuaSettingsFix, {onLeave: function (args) {send("wscLuaSettingsFix");}});
+
+var wscMakeDefaultProductRequest = Module.findExportByName("wscapi.dll", "wscMakeDefaultProductRequest")
+Interceptor.attach(wscMakeDefaultProductRequest, {onLeave: function (args) {send("wscMakeDefaultProductRequest");}});
+
+var wscNotifyUserForNearExpiration = Module.findExportByName("wscapi.dll", "wscNotifyUserForNearExpiration")
+Interceptor.attach(wscNotifyUserForNearExpiration, {onLeave: function (args) {send("wscNotifyUserForNearExpiration");}});
+
+var wscOverrideComponentStatus = Module.findExportByName("wscapi.dll", "wscOverrideComponentStatus")
+Interceptor.attach(wscOverrideComponentStatus, {onLeave: function (args) {send("wscOverrideComponentStatus");}});
+
+var wscPing = Module.findExportByName("wscapi.dll", "wscPing")
+Interceptor.attach(wscPing, {onLeave: function (args) {send("wscPing");}});
+
+var wscProductInfoFree = Module.findExportByName("wscapi.dll", "wscProductInfoFree")
+Interceptor.attach(wscProductInfoFree, {onLeave: function (args) {send("wscProductInfoFree");}});
+
+var wscRegisterChangeNotification = Module.findExportByName("wscapi.dll", "wscRegisterChangeNotification")
+Interceptor.attach(wscRegisterChangeNotification, {onLeave: function (args) {send("wscRegisterChangeNotification");}});
+
+var wscRegisterSecurityProduct = Module.findExportByName("wscapi.dll", "wscRegisterSecurityProduct")
+Interceptor.attach(wscRegisterSecurityProduct, {onLeave: function (args) {send("wscRegisterSecurityProduct");}});
+
+var wscSetDefaultProduct = Module.findExportByName("wscapi.dll", "wscSetDefaultProduct")
+Interceptor.attach(wscSetDefaultProduct, {onLeave: function (args) {send("wscSetDefaultProduct");}});
+
+var wscShowAMSCN = Module.findExportByName("wscapi.dll", "wscShowAMSCN")
+Interceptor.attach(wscShowAMSCN, {onLeave: function (args) {send("wscShowAMSCN");}});
+
+var wscUnRegisterChangeNotification = Module.findExportByName("wscapi.dll", "wscUnRegisterChangeNotification")
+Interceptor.attach(wscUnRegisterChangeNotification, {onLeave: function (args) {send("wscUnRegisterChangeNotification");}});
+
+var wscUnregisterSecurityProduct = Module.findExportByName("wscapi.dll", "wscUnregisterSecurityProduct")
+Interceptor.attach(wscUnregisterSecurityProduct, {onLeave: function (args) {send("wscUnregisterSecurityProduct");}});
+
+var wscUpdateProductStatus = Module.findExportByName("wscapi.dll", "wscUpdateProductStatus")
+Interceptor.attach(wscUpdateProductStatus, {onLeave: function (args) {send("wscUpdateProductStatus");}});
+
+var wscUpdateProductSubStatus = Module.findExportByName("wscapi.dll", "wscUpdateProductSubStatus")
+Interceptor.attach(wscUpdateProductSubStatus, {onLeave: function (args) {send("wscUpdateProductSubStatus");}});
+

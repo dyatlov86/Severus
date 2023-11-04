@@ -1,0 +1,117 @@
+var CryptAcquireContextA = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptAcquireContextA")
+Interceptor.attach(CryptAcquireContextA, {onLeave: function (args) {send("CryptAcquireContextA");}});
+
+var CryptAcquireContextW = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptAcquireContextW")
+Interceptor.attach(CryptAcquireContextW, {onLeave: function (args) {send("CryptAcquireContextW");}});
+
+var CryptContextAddRef = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptContextAddRef")
+Interceptor.attach(CryptContextAddRef, {onLeave: function (args) {send("CryptContextAddRef");}});
+
+var CryptCreateHash = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptCreateHash")
+Interceptor.attach(CryptCreateHash, {onLeave: function (args) {send("CryptCreateHash");}});
+
+var CryptDecrypt = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptDecrypt")
+Interceptor.attach(CryptDecrypt, {onLeave: function (args) {send("CryptDecrypt");}});
+
+var CryptDeriveKey = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptDeriveKey")
+Interceptor.attach(CryptDeriveKey, {onLeave: function (args) {send("CryptDeriveKey");}});
+
+var CryptDestroyHash = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptDestroyHash")
+Interceptor.attach(CryptDestroyHash, {onLeave: function (args) {send("CryptDestroyHash");}});
+
+var CryptDestroyKey = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptDestroyKey")
+Interceptor.attach(CryptDestroyKey, {onLeave: function (args) {send("CryptDestroyKey");}});
+
+var CryptDuplicateHash = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptDuplicateHash")
+Interceptor.attach(CryptDuplicateHash, {onLeave: function (args) {send("CryptDuplicateHash");}});
+
+var CryptDuplicateKey = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptDuplicateKey")
+Interceptor.attach(CryptDuplicateKey, {onLeave: function (args) {send("CryptDuplicateKey");}});
+
+var CryptEncrypt = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptEncrypt")
+Interceptor.attach(CryptEncrypt, {onLeave: function (args) {send("CryptEncrypt");}});
+
+var CryptEnumProviderTypesA = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptEnumProviderTypesA")
+Interceptor.attach(CryptEnumProviderTypesA, {onLeave: function (args) {send("CryptEnumProviderTypesA");}});
+
+var CryptEnumProviderTypesW = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptEnumProviderTypesW")
+Interceptor.attach(CryptEnumProviderTypesW, {onLeave: function (args) {send("CryptEnumProviderTypesW");}});
+
+var CryptEnumProvidersA = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptEnumProvidersA")
+Interceptor.attach(CryptEnumProvidersA, {onLeave: function (args) {send("CryptEnumProvidersA");}});
+
+var CryptEnumProvidersW = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptEnumProvidersW")
+Interceptor.attach(CryptEnumProvidersW, {onLeave: function (args) {send("CryptEnumProvidersW");}});
+
+var CryptExportKey = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptExportKey")
+Interceptor.attach(CryptExportKey, {onLeave: function (args) {send("CryptExportKey");}});
+
+var CryptGenKey = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptGenKey")
+Interceptor.attach(CryptGenKey, {onLeave: function (args) {send("CryptGenKey");}});
+
+var CryptGenRandom = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptGenRandom")
+Interceptor.attach(CryptGenRandom, {onLeave: function (args) {send("CryptGenRandom");}});
+
+var CryptGetDefaultProviderA = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptGetDefaultProviderA")
+Interceptor.attach(CryptGetDefaultProviderA, {onLeave: function (args) {send("CryptGetDefaultProviderA");}});
+
+var CryptGetDefaultProviderW = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptGetDefaultProviderW")
+Interceptor.attach(CryptGetDefaultProviderW, {onLeave: function (args) {send("CryptGetDefaultProviderW");}});
+
+var CryptGetHashParam = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptGetHashParam")
+Interceptor.attach(CryptGetHashParam, {onLeave: function (args) {send("CryptGetHashParam");}});
+
+var CryptGetKeyParam = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptGetKeyParam")
+Interceptor.attach(CryptGetKeyParam, {onLeave: function (args) {send("CryptGetKeyParam");}});
+
+var CryptGetProvParam = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptGetProvParam")
+Interceptor.attach(CryptGetProvParam, {onLeave: function (args) {send("CryptGetProvParam");}});
+
+var CryptGetUserKey = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptGetUserKey")
+Interceptor.attach(CryptGetUserKey, {onLeave: function (args) {send("CryptGetUserKey");}});
+
+var CryptHashData = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptHashData")
+Interceptor.attach(CryptHashData, {onLeave: function (args) {send("CryptHashData");}});
+
+var CryptHashSessionKey = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptHashSessionKey")
+Interceptor.attach(CryptHashSessionKey, {onLeave: function (args) {send("CryptHashSessionKey");}});
+
+var CryptImportKey = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptImportKey")
+Interceptor.attach(CryptImportKey, {onLeave: function (args) {send("CryptImportKey");}});
+
+var CryptReleaseContext = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptReleaseContext")
+Interceptor.attach(CryptReleaseContext, {onLeave: function (args) {send("CryptReleaseContext");}});
+
+var CryptSetHashParam = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptSetHashParam")
+Interceptor.attach(CryptSetHashParam, {onLeave: function (args) {send("CryptSetHashParam");}});
+
+var CryptSetKeyParam = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptSetKeyParam")
+Interceptor.attach(CryptSetKeyParam, {onLeave: function (args) {send("CryptSetKeyParam");}});
+
+var CryptSetProvParam = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptSetProvParam")
+Interceptor.attach(CryptSetProvParam, {onLeave: function (args) {send("CryptSetProvParam");}});
+
+var CryptSetProviderA = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptSetProviderA")
+Interceptor.attach(CryptSetProviderA, {onLeave: function (args) {send("CryptSetProviderA");}});
+
+var CryptSetProviderExA = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptSetProviderExA")
+Interceptor.attach(CryptSetProviderExA, {onLeave: function (args) {send("CryptSetProviderExA");}});
+
+var CryptSetProviderExW = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptSetProviderExW")
+Interceptor.attach(CryptSetProviderExW, {onLeave: function (args) {send("CryptSetProviderExW");}});
+
+var CryptSetProviderW = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptSetProviderW")
+Interceptor.attach(CryptSetProviderW, {onLeave: function (args) {send("CryptSetProviderW");}});
+
+var CryptSignHashA = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptSignHashA")
+Interceptor.attach(CryptSignHashA, {onLeave: function (args) {send("CryptSignHashA");}});
+
+var CryptSignHashW = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptSignHashW")
+Interceptor.attach(CryptSignHashW, {onLeave: function (args) {send("CryptSignHashW");}});
+
+var CryptVerifySignatureA = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptVerifySignatureA")
+Interceptor.attach(CryptVerifySignatureA, {onLeave: function (args) {send("CryptVerifySignatureA");}});
+
+var CryptVerifySignatureW = Module.findExportByName("api-ms-win-security-cryptoapi-l1-1-0.dll", "CryptVerifySignatureW")
+Interceptor.attach(CryptVerifySignatureW, {onLeave: function (args) {send("CryptVerifySignatureW");}});
+

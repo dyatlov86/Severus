@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("appmgr.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("appmgr.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GenerateScript = Module.findExportByName("appmgr.dll", "GenerateScript")
+Interceptor.attach(GenerateScript, {onLeave: function (args) {send("GenerateScript");}});
+

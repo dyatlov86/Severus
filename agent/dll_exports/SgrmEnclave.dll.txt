@@ -1,0 +1,51 @@
+var EngHostAttest = Module.findExportByName("SgrmEnclave.dll", "EngHostAttest")
+Interceptor.attach(EngHostAttest, {onLeave: function (args) {send("EngHostAttest");}});
+
+var EngHostCreateAttestationClient = Module.findExportByName("SgrmEnclave.dll", "EngHostCreateAttestationClient")
+Interceptor.attach(EngHostCreateAttestationClient, {onLeave: function (args) {send("EngHostCreateAttestationClient");}});
+
+var EngHostDestroyAttestationClient = Module.findExportByName("SgrmEnclave.dll", "EngHostDestroyAttestationClient")
+Interceptor.attach(EngHostDestroyAttestationClient, {onLeave: function (args) {send("EngHostDestroyAttestationClient");}});
+
+var EngHostDispatchThread = Module.findExportByName("SgrmEnclave.dll", "EngHostDispatchThread")
+Interceptor.attach(EngHostDispatchThread, {onLeave: function (args) {send("EngHostDispatchThread");}});
+
+var EngHostGetRuntimeReport = Module.findExportByName("SgrmEnclave.dll", "EngHostGetRuntimeReport")
+Interceptor.attach(EngHostGetRuntimeReport, {onLeave: function (args) {send("EngHostGetRuntimeReport");}});
+
+var EngHostGetSessionCertificate = Module.findExportByName("SgrmEnclave.dll", "EngHostGetSessionCertificate")
+Interceptor.attach(EngHostGetSessionCertificate, {onLeave: function (args) {send("EngHostGetSessionCertificate");}});
+
+var EngHostGetSessionReport = Module.findExportByName("SgrmEnclave.dll", "EngHostGetSessionReport")
+Interceptor.attach(EngHostGetSessionReport, {onLeave: function (args) {send("EngHostGetSessionReport");}});
+
+var EngHostInitialize = Module.findExportByName("SgrmEnclave.dll", "EngHostInitialize")
+Interceptor.attach(EngHostInitialize, {onLeave: function (args) {send("EngHostInitialize");}});
+
+var EngHostNotify = Module.findExportByName("SgrmEnclave.dll", "EngHostNotify")
+Interceptor.attach(EngHostNotify, {onLeave: function (args) {send("EngHostNotify");}});
+
+var EngHostReinitialize = Module.findExportByName("SgrmEnclave.dll", "EngHostReinitialize")
+Interceptor.attach(EngHostReinitialize, {onLeave: function (args) {send("EngHostReinitialize");}});
+
+var EngHostShutdown = Module.findExportByName("SgrmEnclave.dll", "EngHostShutdown")
+Interceptor.attach(EngHostShutdown, {onLeave: function (args) {send("EngHostShutdown");}});
+
+var EngHostStoreSessionSequenceNumber = Module.findExportByName("SgrmEnclave.dll", "EngHostStoreSessionSequenceNumber")
+Interceptor.attach(EngHostStoreSessionSequenceNumber, {onLeave: function (args) {send("EngHostStoreSessionSequenceNumber");}});
+
+var OctagonEnclaveAttestationAttest = Module.findExportByName("SgrmEnclave.dll", "OctagonEnclaveAttestationAttest")
+Interceptor.attach(OctagonEnclaveAttestationAttest, {onLeave: function (args) {send("OctagonEnclaveAttestationAttest");}});
+
+var OctagonEnclaveAttestationCloseSession = Module.findExportByName("SgrmEnclave.dll", "OctagonEnclaveAttestationCloseSession")
+Interceptor.attach(OctagonEnclaveAttestationCloseSession, {onLeave: function (args) {send("OctagonEnclaveAttestationCloseSession");}});
+
+var OctagonEnclaveAttestationConfigure = Module.findExportByName("SgrmEnclave.dll", "OctagonEnclaveAttestationConfigure")
+Interceptor.attach(OctagonEnclaveAttestationConfigure, {onLeave: function (args) {send("OctagonEnclaveAttestationConfigure");}});
+
+var OctagonEnclaveAttestationCreateSession = Module.findExportByName("SgrmEnclave.dll", "OctagonEnclaveAttestationCreateSession")
+Interceptor.attach(OctagonEnclaveAttestationCreateSession, {onLeave: function (args) {send("OctagonEnclaveAttestationCreateSession");}});
+
+var OctagonEnclaveAttestationGetReport = Module.findExportByName("SgrmEnclave.dll", "OctagonEnclaveAttestationGetReport")
+Interceptor.attach(OctagonEnclaveAttestationGetReport, {onLeave: function (args) {send("OctagonEnclaveAttestationGetReport");}});
+

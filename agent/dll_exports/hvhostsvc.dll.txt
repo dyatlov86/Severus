@@ -1,0 +1,9 @@
+var HvConfigurePerfmon = Module.findExportByName("hvhostsvc.dll", "HvConfigurePerfmon")
+Interceptor.attach(HvConfigurePerfmon, {onLeave: function (args) {send("HvConfigurePerfmon");}});
+
+var ServiceMain = Module.findExportByName("hvhostsvc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("hvhostsvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

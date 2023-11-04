@@ -1,0 +1,153 @@
+var CreateDirect3D11DeviceFromDXGIDevice = Module.findExportByName("d3d11.dll", "CreateDirect3D11DeviceFromDXGIDevice")
+Interceptor.attach(CreateDirect3D11DeviceFromDXGIDevice, {onLeave: function (args) {send("CreateDirect3D11DeviceFromDXGIDevice");}});
+
+var CreateDirect3D11SurfaceFromDXGISurface = Module.findExportByName("d3d11.dll", "CreateDirect3D11SurfaceFromDXGISurface")
+Interceptor.attach(CreateDirect3D11SurfaceFromDXGISurface, {onLeave: function (args) {send("CreateDirect3D11SurfaceFromDXGISurface");}});
+
+var D3D11CoreCreateDevice = Module.findExportByName("d3d11.dll", "D3D11CoreCreateDevice")
+Interceptor.attach(D3D11CoreCreateDevice, {onLeave: function (args) {send("D3D11CoreCreateDevice");}});
+
+var D3D11CoreCreateLayeredDevice = Module.findExportByName("d3d11.dll", "D3D11CoreCreateLayeredDevice")
+Interceptor.attach(D3D11CoreCreateLayeredDevice, {onLeave: function (args) {send("D3D11CoreCreateLayeredDevice");}});
+
+var D3D11CoreGetLayeredDeviceSize = Module.findExportByName("d3d11.dll", "D3D11CoreGetLayeredDeviceSize")
+Interceptor.attach(D3D11CoreGetLayeredDeviceSize, {onLeave: function (args) {send("D3D11CoreGetLayeredDeviceSize");}});
+
+var D3D11CoreRegisterLayers = Module.findExportByName("d3d11.dll", "D3D11CoreRegisterLayers")
+Interceptor.attach(D3D11CoreRegisterLayers, {onLeave: function (args) {send("D3D11CoreRegisterLayers");}});
+
+var D3D11CreateDevice = Module.findExportByName("d3d11.dll", "D3D11CreateDevice")
+Interceptor.attach(D3D11CreateDevice, {onLeave: function (args) {send("D3D11CreateDevice");}});
+
+var D3D11CreateDeviceAndSwapChain = Module.findExportByName("d3d11.dll", "D3D11CreateDeviceAndSwapChain")
+Interceptor.attach(D3D11CreateDeviceAndSwapChain, {onLeave: function (args) {send("D3D11CreateDeviceAndSwapChain");}});
+
+var D3D11CreateDeviceForD3D12 = Module.findExportByName("d3d11.dll", "D3D11CreateDeviceForD3D12")
+Interceptor.attach(D3D11CreateDeviceForD3D12, {onLeave: function (args) {send("D3D11CreateDeviceForD3D12");}});
+
+var D3D11On12CreateDevice = Module.findExportByName("d3d11.dll", "D3D11On12CreateDevice")
+Interceptor.attach(D3D11On12CreateDevice, {onLeave: function (args) {send("D3D11On12CreateDevice");}});
+
+var D3DKMTCloseAdapter = Module.findExportByName("d3d11.dll", "D3DKMTCloseAdapter")
+Interceptor.attach(D3DKMTCloseAdapter, {onLeave: function (args) {send("D3DKMTCloseAdapter");}});
+
+var D3DKMTCreateAllocation = Module.findExportByName("d3d11.dll", "D3DKMTCreateAllocation")
+Interceptor.attach(D3DKMTCreateAllocation, {onLeave: function (args) {send("D3DKMTCreateAllocation");}});
+
+var D3DKMTCreateContext = Module.findExportByName("d3d11.dll", "D3DKMTCreateContext")
+Interceptor.attach(D3DKMTCreateContext, {onLeave: function (args) {send("D3DKMTCreateContext");}});
+
+var D3DKMTCreateDevice = Module.findExportByName("d3d11.dll", "D3DKMTCreateDevice")
+Interceptor.attach(D3DKMTCreateDevice, {onLeave: function (args) {send("D3DKMTCreateDevice");}});
+
+var D3DKMTCreateSynchronizationObject = Module.findExportByName("d3d11.dll", "D3DKMTCreateSynchronizationObject")
+Interceptor.attach(D3DKMTCreateSynchronizationObject, {onLeave: function (args) {send("D3DKMTCreateSynchronizationObject");}});
+
+var D3DKMTDestroyAllocation = Module.findExportByName("d3d11.dll", "D3DKMTDestroyAllocation")
+Interceptor.attach(D3DKMTDestroyAllocation, {onLeave: function (args) {send("D3DKMTDestroyAllocation");}});
+
+var D3DKMTDestroyContext = Module.findExportByName("d3d11.dll", "D3DKMTDestroyContext")
+Interceptor.attach(D3DKMTDestroyContext, {onLeave: function (args) {send("D3DKMTDestroyContext");}});
+
+var D3DKMTDestroyDevice = Module.findExportByName("d3d11.dll", "D3DKMTDestroyDevice")
+Interceptor.attach(D3DKMTDestroyDevice, {onLeave: function (args) {send("D3DKMTDestroyDevice");}});
+
+var D3DKMTDestroySynchronizationObject = Module.findExportByName("d3d11.dll", "D3DKMTDestroySynchronizationObject")
+Interceptor.attach(D3DKMTDestroySynchronizationObject, {onLeave: function (args) {send("D3DKMTDestroySynchronizationObject");}});
+
+var D3DKMTEscape = Module.findExportByName("d3d11.dll", "D3DKMTEscape")
+Interceptor.attach(D3DKMTEscape, {onLeave: function (args) {send("D3DKMTEscape");}});
+
+var D3DKMTGetContextSchedulingPriority = Module.findExportByName("d3d11.dll", "D3DKMTGetContextSchedulingPriority")
+Interceptor.attach(D3DKMTGetContextSchedulingPriority, {onLeave: function (args) {send("D3DKMTGetContextSchedulingPriority");}});
+
+var D3DKMTGetDeviceState = Module.findExportByName("d3d11.dll", "D3DKMTGetDeviceState")
+Interceptor.attach(D3DKMTGetDeviceState, {onLeave: function (args) {send("D3DKMTGetDeviceState");}});
+
+var D3DKMTGetDisplayModeList = Module.findExportByName("d3d11.dll", "D3DKMTGetDisplayModeList")
+Interceptor.attach(D3DKMTGetDisplayModeList, {onLeave: function (args) {send("D3DKMTGetDisplayModeList");}});
+
+var D3DKMTGetMultisampleMethodList = Module.findExportByName("d3d11.dll", "D3DKMTGetMultisampleMethodList")
+Interceptor.attach(D3DKMTGetMultisampleMethodList, {onLeave: function (args) {send("D3DKMTGetMultisampleMethodList");}});
+
+var D3DKMTGetRuntimeData = Module.findExportByName("d3d11.dll", "D3DKMTGetRuntimeData")
+Interceptor.attach(D3DKMTGetRuntimeData, {onLeave: function (args) {send("D3DKMTGetRuntimeData");}});
+
+var D3DKMTGetSharedPrimaryHandle = Module.findExportByName("d3d11.dll", "D3DKMTGetSharedPrimaryHandle")
+Interceptor.attach(D3DKMTGetSharedPrimaryHandle, {onLeave: function (args) {send("D3DKMTGetSharedPrimaryHandle");}});
+
+var D3DKMTLock = Module.findExportByName("d3d11.dll", "D3DKMTLock")
+Interceptor.attach(D3DKMTLock, {onLeave: function (args) {send("D3DKMTLock");}});
+
+var D3DKMTOpenAdapterFromHdc = Module.findExportByName("d3d11.dll", "D3DKMTOpenAdapterFromHdc")
+Interceptor.attach(D3DKMTOpenAdapterFromHdc, {onLeave: function (args) {send("D3DKMTOpenAdapterFromHdc");}});
+
+var D3DKMTOpenResource = Module.findExportByName("d3d11.dll", "D3DKMTOpenResource")
+Interceptor.attach(D3DKMTOpenResource, {onLeave: function (args) {send("D3DKMTOpenResource");}});
+
+var D3DKMTPresent = Module.findExportByName("d3d11.dll", "D3DKMTPresent")
+Interceptor.attach(D3DKMTPresent, {onLeave: function (args) {send("D3DKMTPresent");}});
+
+var D3DKMTQueryAdapterInfo = Module.findExportByName("d3d11.dll", "D3DKMTQueryAdapterInfo")
+Interceptor.attach(D3DKMTQueryAdapterInfo, {onLeave: function (args) {send("D3DKMTQueryAdapterInfo");}});
+
+var D3DKMTQueryAllocationResidency = Module.findExportByName("d3d11.dll", "D3DKMTQueryAllocationResidency")
+Interceptor.attach(D3DKMTQueryAllocationResidency, {onLeave: function (args) {send("D3DKMTQueryAllocationResidency");}});
+
+var D3DKMTQueryResourceInfo = Module.findExportByName("d3d11.dll", "D3DKMTQueryResourceInfo")
+Interceptor.attach(D3DKMTQueryResourceInfo, {onLeave: function (args) {send("D3DKMTQueryResourceInfo");}});
+
+var D3DKMTRender = Module.findExportByName("d3d11.dll", "D3DKMTRender")
+Interceptor.attach(D3DKMTRender, {onLeave: function (args) {send("D3DKMTRender");}});
+
+var D3DKMTSetAllocationPriority = Module.findExportByName("d3d11.dll", "D3DKMTSetAllocationPriority")
+Interceptor.attach(D3DKMTSetAllocationPriority, {onLeave: function (args) {send("D3DKMTSetAllocationPriority");}});
+
+var D3DKMTSetContextSchedulingPriority = Module.findExportByName("d3d11.dll", "D3DKMTSetContextSchedulingPriority")
+Interceptor.attach(D3DKMTSetContextSchedulingPriority, {onLeave: function (args) {send("D3DKMTSetContextSchedulingPriority");}});
+
+var D3DKMTSetDisplayMode = Module.findExportByName("d3d11.dll", "D3DKMTSetDisplayMode")
+Interceptor.attach(D3DKMTSetDisplayMode, {onLeave: function (args) {send("D3DKMTSetDisplayMode");}});
+
+var D3DKMTSetDisplayPrivateDriverFormat = Module.findExportByName("d3d11.dll", "D3DKMTSetDisplayPrivateDriverFormat")
+Interceptor.attach(D3DKMTSetDisplayPrivateDriverFormat, {onLeave: function (args) {send("D3DKMTSetDisplayPrivateDriverFormat");}});
+
+var D3DKMTSetGammaRamp = Module.findExportByName("d3d11.dll", "D3DKMTSetGammaRamp")
+Interceptor.attach(D3DKMTSetGammaRamp, {onLeave: function (args) {send("D3DKMTSetGammaRamp");}});
+
+var D3DKMTSetVidPnSourceOwner = Module.findExportByName("d3d11.dll", "D3DKMTSetVidPnSourceOwner")
+Interceptor.attach(D3DKMTSetVidPnSourceOwner, {onLeave: function (args) {send("D3DKMTSetVidPnSourceOwner");}});
+
+var D3DKMTSignalSynchronizationObject = Module.findExportByName("d3d11.dll", "D3DKMTSignalSynchronizationObject")
+Interceptor.attach(D3DKMTSignalSynchronizationObject, {onLeave: function (args) {send("D3DKMTSignalSynchronizationObject");}});
+
+var D3DKMTUnlock = Module.findExportByName("d3d11.dll", "D3DKMTUnlock")
+Interceptor.attach(D3DKMTUnlock, {onLeave: function (args) {send("D3DKMTUnlock");}});
+
+var D3DKMTWaitForSynchronizationObject = Module.findExportByName("d3d11.dll", "D3DKMTWaitForSynchronizationObject")
+Interceptor.attach(D3DKMTWaitForSynchronizationObject, {onLeave: function (args) {send("D3DKMTWaitForSynchronizationObject");}});
+
+var D3DKMTWaitForVerticalBlankEvent = Module.findExportByName("d3d11.dll", "D3DKMTWaitForVerticalBlankEvent")
+Interceptor.attach(D3DKMTWaitForVerticalBlankEvent, {onLeave: function (args) {send("D3DKMTWaitForVerticalBlankEvent");}});
+
+var D3DPerformance_BeginEvent = Module.findExportByName("d3d11.dll", "D3DPerformance_BeginEvent")
+Interceptor.attach(D3DPerformance_BeginEvent, {onLeave: function (args) {send("D3DPerformance_BeginEvent");}});
+
+var D3DPerformance_EndEvent = Module.findExportByName("d3d11.dll", "D3DPerformance_EndEvent")
+Interceptor.attach(D3DPerformance_EndEvent, {onLeave: function (args) {send("D3DPerformance_EndEvent");}});
+
+var D3DPerformance_GetStatus = Module.findExportByName("d3d11.dll", "D3DPerformance_GetStatus")
+Interceptor.attach(D3DPerformance_GetStatus, {onLeave: function (args) {send("D3DPerformance_GetStatus");}});
+
+var D3DPerformance_SetMarker = Module.findExportByName("d3d11.dll", "D3DPerformance_SetMarker")
+Interceptor.attach(D3DPerformance_SetMarker, {onLeave: function (args) {send("D3DPerformance_SetMarker");}});
+
+var EnableFeatureLevelUpgrade = Module.findExportByName("d3d11.dll", "EnableFeatureLevelUpgrade")
+Interceptor.attach(EnableFeatureLevelUpgrade, {onLeave: function (args) {send("EnableFeatureLevelUpgrade");}});
+
+var OpenAdapter10 = Module.findExportByName("d3d11.dll", "OpenAdapter10")
+Interceptor.attach(OpenAdapter10, {onLeave: function (args) {send("OpenAdapter10");}});
+
+var OpenAdapter10_2 = Module.findExportByName("d3d11.dll", "OpenAdapter10_2")
+Interceptor.attach(OpenAdapter10_2, {onLeave: function (args) {send("OpenAdapter10_2");}});
+

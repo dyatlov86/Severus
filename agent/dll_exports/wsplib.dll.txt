@@ -1,0 +1,6 @@
+var DecodeWspHeaders = Module.findExportByName("wsplib.dll", "DecodeWspHeaders")
+Interceptor.attach(DecodeWspHeaders, {onLeave: function (args) {send("DecodeWspHeaders");}});
+
+var FreeWspHeaders = Module.findExportByName("wsplib.dll", "FreeWspHeaders")
+Interceptor.attach(FreeWspHeaders, {onLeave: function (args) {send("FreeWspHeaders");}});
+

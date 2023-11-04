@@ -1,0 +1,3 @@
+var InitializePrintProvidor = Module.findExportByName("inetpp.dll", "InitializePrintProvidor")
+Interceptor.attach(InitializePrintProvidor, {onLeave: function (args) {send("InitializePrintProvidor");}});
+

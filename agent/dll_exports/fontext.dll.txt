@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("fontext.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("fontext.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DownloadAndInstallOptionalFontsAsync = Module.findExportByName("fontext.dll", "DownloadAndInstallOptionalFontsAsync")
+Interceptor.attach(DownloadAndInstallOptionalFontsAsync, {onLeave: function (args) {send("DownloadAndInstallOptionalFontsAsync");}});
+
+var InstallFontFile = Module.findExportByName("fontext.dll", "InstallFontFile")
+Interceptor.attach(InstallFontFile, {onLeave: function (args) {send("InstallFontFile");}});
+

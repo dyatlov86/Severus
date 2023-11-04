@@ -1,0 +1,21 @@
+var ClosePrintProcessor = Module.findExportByName("winprint.dll", "ClosePrintProcessor")
+Interceptor.attach(ClosePrintProcessor, {onLeave: function (args) {send("ClosePrintProcessor");}});
+
+var ControlPrintProcessor = Module.findExportByName("winprint.dll", "ControlPrintProcessor")
+Interceptor.attach(ControlPrintProcessor, {onLeave: function (args) {send("ControlPrintProcessor");}});
+
+var DllMain = Module.findExportByName("winprint.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var EnumPrintProcessorDatatypesW = Module.findExportByName("winprint.dll", "EnumPrintProcessorDatatypesW")
+Interceptor.attach(EnumPrintProcessorDatatypesW, {onLeave: function (args) {send("EnumPrintProcessorDatatypesW");}});
+
+var GetPrintProcessorCapabilities = Module.findExportByName("winprint.dll", "GetPrintProcessorCapabilities")
+Interceptor.attach(GetPrintProcessorCapabilities, {onLeave: function (args) {send("GetPrintProcessorCapabilities");}});
+
+var OpenPrintProcessor = Module.findExportByName("winprint.dll", "OpenPrintProcessor")
+Interceptor.attach(OpenPrintProcessor, {onLeave: function (args) {send("OpenPrintProcessor");}});
+
+var PrintDocumentOnPrintProcessor = Module.findExportByName("winprint.dll", "PrintDocumentOnPrintProcessor")
+Interceptor.attach(PrintDocumentOnPrintProcessor, {onLeave: function (args) {send("PrintDocumentOnPrintProcessor");}});
+

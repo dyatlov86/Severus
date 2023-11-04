@@ -1,0 +1,3 @@
+var ConfigDSNW = Module.findExportByName("oddbse32.dll", "ConfigDSNW")
+Interceptor.attach(ConfigDSNW, {onLeave: function (args) {send("ConfigDSNW");}});
+

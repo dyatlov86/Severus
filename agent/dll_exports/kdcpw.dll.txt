@@ -1,0 +1,33 @@
+var CredentialUpdateFree = Module.findExportByName("kdcpw.dll", "CredentialUpdateFree")
+Interceptor.attach(CredentialUpdateFree, {onLeave: function (args) {send("CredentialUpdateFree");}});
+
+var CredentialUpdateNotify = Module.findExportByName("kdcpw.dll", "CredentialUpdateNotify")
+Interceptor.attach(CredentialUpdateNotify, {onLeave: function (args) {send("CredentialUpdateNotify");}});
+
+var CredentialUpdateNotify2 = Module.findExportByName("kdcpw.dll", "CredentialUpdateNotify2")
+Interceptor.attach(CredentialUpdateNotify2, {onLeave: function (args) {send("CredentialUpdateNotify2");}});
+
+var CredentialUpdateRegister = Module.findExportByName("kdcpw.dll", "CredentialUpdateRegister")
+Interceptor.attach(CredentialUpdateRegister, {onLeave: function (args) {send("CredentialUpdateRegister");}});
+
+var CredentialUpdateRegister2 = Module.findExportByName("kdcpw.dll", "CredentialUpdateRegister2")
+Interceptor.attach(CredentialUpdateRegister2, {onLeave: function (args) {send("CredentialUpdateRegister2");}});
+
+var InitializeChangeNotify = Module.findExportByName("kdcpw.dll", "InitializeChangeNotify")
+Interceptor.attach(InitializeChangeNotify, {onLeave: function (args) {send("InitializeChangeNotify");}});
+
+var PasswordChangeNotify = Module.findExportByName("kdcpw.dll", "PasswordChangeNotify")
+Interceptor.attach(PasswordChangeNotify, {onLeave: function (args) {send("PasswordChangeNotify");}});
+
+var RegisterMappedEntrypoints = Module.findExportByName("kdcpw.dll", "RegisterMappedEntrypoints")
+Interceptor.attach(RegisterMappedEntrypoints, {onLeave: function (args) {send("RegisterMappedEntrypoints");}});
+
+var StrongNtowfFree = Module.findExportByName("kdcpw.dll", "StrongNtowfFree")
+Interceptor.attach(StrongNtowfFree, {onLeave: function (args) {send("StrongNtowfFree");}});
+
+var StrongNtowfNotify = Module.findExportByName("kdcpw.dll", "StrongNtowfNotify")
+Interceptor.attach(StrongNtowfNotify, {onLeave: function (args) {send("StrongNtowfNotify");}});
+
+var StrongNtowfRegister = Module.findExportByName("kdcpw.dll", "StrongNtowfRegister")
+Interceptor.attach(StrongNtowfRegister, {onLeave: function (args) {send("StrongNtowfRegister");}});
+

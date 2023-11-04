@@ -1,0 +1,30 @@
+var AttachTools = Module.findExportByName("F12AppFrame.dll", "AttachTools")
+Interceptor.attach(AttachTools, {onLeave: function (args) {send("AttachTools");}});
+
+var DllCanUnloadNow = Module.findExportByName("F12AppFrame.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("F12AppFrame.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("F12AppFrame.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("F12AppFrame.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("F12AppFrame.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var EnableDebugMode = Module.findExportByName("F12AppFrame.dll", "EnableDebugMode")
+Interceptor.attach(EnableDebugMode, {onLeave: function (args) {send("EnableDebugMode");}});
+
+var GetProxyDllInfo = Module.findExportByName("F12AppFrame.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+
+var InjectTools = Module.findExportByName("F12AppFrame.dll", "InjectTools")
+Interceptor.attach(InjectTools, {onLeave: function (args) {send("InjectTools");}});
+
+var ShowTools = Module.findExportByName("F12AppFrame.dll", "ShowTools")
+Interceptor.attach(ShowTools, {onLeave: function (args) {send("ShowTools");}});
+

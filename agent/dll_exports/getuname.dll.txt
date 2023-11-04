@@ -1,0 +1,3 @@
+var GetUName = Module.findExportByName("getuname.dll", "GetUName")
+Interceptor.attach(GetUName, {onLeave: function (args) {send("GetUName");}});
+

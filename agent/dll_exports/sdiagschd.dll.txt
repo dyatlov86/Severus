@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("sdiagschd.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("sdiagschd.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var EnableScheduledDiagnostics = Module.findExportByName("sdiagschd.dll", "EnableScheduledDiagnostics")
+Interceptor.attach(EnableScheduledDiagnostics, {onLeave: function (args) {send("EnableScheduledDiagnostics");}});
+
+var GetScheduledDiagnosticsExecutionLevel = Module.findExportByName("sdiagschd.dll", "GetScheduledDiagnosticsExecutionLevel")
+Interceptor.attach(GetScheduledDiagnosticsExecutionLevel, {onLeave: function (args) {send("GetScheduledDiagnosticsExecutionLevel");}});
+

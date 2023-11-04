@@ -1,0 +1,9 @@
+var FreeErrorDetails = Module.findExportByName("ErrorDetailsCore.dll", "FreeErrorDetails")
+Interceptor.attach(FreeErrorDetails, {onLeave: function (args) {send("FreeErrorDetails");}});
+
+var GetErrorDetails = Module.findExportByName("ErrorDetailsCore.dll", "GetErrorDetails")
+Interceptor.attach(GetErrorDetails, {onLeave: function (args) {send("GetErrorDetails");}});
+
+var GetErrorDetailsWithContext = Module.findExportByName("ErrorDetailsCore.dll", "GetErrorDetailsWithContext")
+Interceptor.attach(GetErrorDetailsWithContext, {onLeave: function (args) {send("GetErrorDetailsWithContext");}});
+

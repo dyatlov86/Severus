@@ -1,0 +1,30 @@
+var CiCheckSignedFile = Module.findExportByName("ci.dll", "CiCheckSignedFile")
+Interceptor.attach(CiCheckSignedFile, {onLeave: function (args) {send("CiCheckSignedFile");}});
+
+var CiFindPageHashesInCatalog = Module.findExportByName("ci.dll", "CiFindPageHashesInCatalog")
+Interceptor.attach(CiFindPageHashesInCatalog, {onLeave: function (args) {send("CiFindPageHashesInCatalog");}});
+
+var CiFindPageHashesInSignedFile = Module.findExportByName("ci.dll", "CiFindPageHashesInSignedFile")
+Interceptor.attach(CiFindPageHashesInSignedFile, {onLeave: function (args) {send("CiFindPageHashesInSignedFile");}});
+
+var CiFreePolicyInfo = Module.findExportByName("ci.dll", "CiFreePolicyInfo")
+Interceptor.attach(CiFreePolicyInfo, {onLeave: function (args) {send("CiFreePolicyInfo");}});
+
+var CiGetCertPublisherName = Module.findExportByName("ci.dll", "CiGetCertPublisherName")
+Interceptor.attach(CiGetCertPublisherName, {onLeave: function (args) {send("CiGetCertPublisherName");}});
+
+var CiGetPEInformation = Module.findExportByName("ci.dll", "CiGetPEInformation")
+Interceptor.attach(CiGetPEInformation, {onLeave: function (args) {send("CiGetPEInformation");}});
+
+var CiInitialize = Module.findExportByName("ci.dll", "CiInitialize")
+Interceptor.attach(CiInitialize, {onLeave: function (args) {send("CiInitialize");}});
+
+var CiSetTrustedOriginClaimId = Module.findExportByName("ci.dll", "CiSetTrustedOriginClaimId")
+Interceptor.attach(CiSetTrustedOriginClaimId, {onLeave: function (args) {send("CiSetTrustedOriginClaimId");}});
+
+var CiValidateFileObject = Module.findExportByName("ci.dll", "CiValidateFileObject")
+Interceptor.attach(CiValidateFileObject, {onLeave: function (args) {send("CiValidateFileObject");}});
+
+var CiVerifyHashInCatalog = Module.findExportByName("ci.dll", "CiVerifyHashInCatalog")
+Interceptor.attach(CiVerifyHashInCatalog, {onLeave: function (args) {send("CiVerifyHashInCatalog");}});
+

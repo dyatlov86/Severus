@@ -1,0 +1,12 @@
+var AboutDialogProc = Module.findExportByName("ir32_32original.dll", "AboutDialogProc")
+Interceptor.attach(AboutDialogProc, {onLeave: function (args) {send("AboutDialogProc");}});
+
+var DllMain = Module.findExportByName("ir32_32original.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DriverDialogProc = Module.findExportByName("ir32_32original.dll", "DriverDialogProc")
+Interceptor.attach(DriverDialogProc, {onLeave: function (args) {send("DriverDialogProc");}});
+
+var DriverProc = Module.findExportByName("ir32_32original.dll", "DriverProc")
+Interceptor.attach(DriverProc, {onLeave: function (args) {send("DriverProc");}});
+

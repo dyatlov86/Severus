@@ -1,0 +1,36 @@
+var CreateDeploymentSession = Module.findExportByName("UpdateAgent.dll", "CreateDeploymentSession")
+Interceptor.attach(CreateDeploymentSession, {onLeave: function (args) {send("CreateDeploymentSession");}});
+
+var CreateDeploymentSessionEx = Module.findExportByName("UpdateAgent.dll", "CreateDeploymentSessionEx")
+Interceptor.attach(CreateDeploymentSessionEx, {onLeave: function (args) {send("CreateDeploymentSessionEx");}});
+
+var CreateOfflineDeploymentSession = Module.findExportByName("UpdateAgent.dll", "CreateOfflineDeploymentSession")
+Interceptor.attach(CreateOfflineDeploymentSession, {onLeave: function (args) {send("CreateOfflineDeploymentSession");}});
+
+var UA_CommitActionList = Module.findExportByName("UpdateAgent.dll", "UA_CommitActionList")
+Interceptor.attach(UA_CommitActionList, {onLeave: function (args) {send("UA_CommitActionList");}});
+
+var UA_CreateActionList = Module.findExportByName("UpdateAgent.dll", "UA_CreateActionList")
+Interceptor.attach(UA_CreateActionList, {onLeave: function (args) {send("UA_CreateActionList");}});
+
+var UA_CreateActionList2 = Module.findExportByName("UpdateAgent.dll", "UA_CreateActionList2")
+Interceptor.attach(UA_CreateActionList2, {onLeave: function (args) {send("UA_CreateActionList2");}});
+
+var UA_CreateDeviceInformation = Module.findExportByName("UpdateAgent.dll", "UA_CreateDeviceInformation")
+Interceptor.attach(UA_CreateDeviceInformation, {onLeave: function (args) {send("UA_CreateDeviceInformation");}});
+
+var UA_CreateDownloadList = Module.findExportByName("UpdateAgent.dll", "UA_CreateDownloadList")
+Interceptor.attach(UA_CreateDownloadList, {onLeave: function (args) {send("UA_CreateDownloadList");}});
+
+var UA_CreateDownloadListFromActionList = Module.findExportByName("UpdateAgent.dll", "UA_CreateDownloadListFromActionList")
+Interceptor.attach(UA_CreateDownloadListFromActionList, {onLeave: function (args) {send("UA_CreateDownloadListFromActionList");}});
+
+var UA_CreatePackageListFromDownloadList = Module.findExportByName("UpdateAgent.dll", "UA_CreatePackageListFromDownloadList")
+Interceptor.attach(UA_CreatePackageListFromDownloadList, {onLeave: function (args) {send("UA_CreatePackageListFromDownloadList");}});
+
+var UA_InstallActionList = Module.findExportByName("UpdateAgent.dll", "UA_InstallActionList")
+Interceptor.attach(UA_InstallActionList, {onLeave: function (args) {send("UA_InstallActionList");}});
+
+var UA_ReleaseDownloadList = Module.findExportByName("UpdateAgent.dll", "UA_ReleaseDownloadList")
+Interceptor.attach(UA_ReleaseDownloadList, {onLeave: function (args) {send("UA_ReleaseDownloadList");}});
+

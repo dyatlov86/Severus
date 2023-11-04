@@ -1,0 +1,6 @@
+var DVRCreateDVRFileSink = Module.findExportByName("sbeio.dll", "DVRCreateDVRFileSink")
+Interceptor.attach(DVRCreateDVRFileSink, {onLeave: function (args) {send("DVRCreateDVRFileSink");}});
+
+var DVRCreateDVRFileSource = Module.findExportByName("sbeio.dll", "DVRCreateDVRFileSource")
+Interceptor.attach(DVRCreateDVRFileSource, {onLeave: function (args) {send("DVRCreateDVRFileSource");}});
+

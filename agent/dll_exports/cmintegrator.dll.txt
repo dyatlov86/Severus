@@ -1,0 +1,9 @@
+var VpnCmOracleCheckVpnAvailability = Module.findExportByName("cmintegrator.dll", "VpnCmOracleCheckVpnAvailability")
+Interceptor.attach(VpnCmOracleCheckVpnAvailability, {onLeave: function (args) {send("VpnCmOracleCheckVpnAvailability");}});
+
+var VpnCmOracleInitialize = Module.findExportByName("cmintegrator.dll", "VpnCmOracleInitialize")
+Interceptor.attach(VpnCmOracleInitialize, {onLeave: function (args) {send("VpnCmOracleInitialize");}});
+
+var VpnCmOracleShutdown = Module.findExportByName("cmintegrator.dll", "VpnCmOracleShutdown")
+Interceptor.attach(VpnCmOracleShutdown, {onLeave: function (args) {send("VpnCmOracleShutdown");}});
+

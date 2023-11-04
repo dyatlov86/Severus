@@ -1,0 +1,21 @@
+var ClearAutoLogon = Module.findExportByName("netplwiz.dll", "ClearAutoLogon")
+Interceptor.attach(ClearAutoLogon, {onLeave: function (args) {send("ClearAutoLogon");}});
+
+var DllCanUnloadNow = Module.findExportByName("netplwiz.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("netplwiz.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var NetAccessWizard = Module.findExportByName("netplwiz.dll", "NetAccessWizard")
+Interceptor.attach(NetAccessWizard, {onLeave: function (args) {send("NetAccessWizard");}});
+
+var NetPlacesWizardDoModal = Module.findExportByName("netplwiz.dll", "NetPlacesWizardDoModal")
+Interceptor.attach(NetPlacesWizardDoModal, {onLeave: function (args) {send("NetPlacesWizardDoModal");}});
+
+var SHDisconnectNetDrives = Module.findExportByName("netplwiz.dll", "SHDisconnectNetDrives")
+Interceptor.attach(SHDisconnectNetDrives, {onLeave: function (args) {send("SHDisconnectNetDrives");}});
+
+var UsersRunDllW = Module.findExportByName("netplwiz.dll", "UsersRunDllW")
+Interceptor.attach(UsersRunDllW, {onLeave: function (args) {send("UsersRunDllW");}});
+

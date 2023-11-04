@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("audiodev.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("audiodev.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("audiodev.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("audiodev.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var _CDefFolderMenu_MergeMenu@16 = Module.findExportByName("audiodev.dll", "_CDefFolderMenu_MergeMenu@16")
+Interceptor.attach(_CDefFolderMenu_MergeMenu@16, {onLeave: function (args) {send("_CDefFolderMenu_MergeMenu@16");}});
+
+var _CIDLData_CreateFromIDArray@16 = Module.findExportByName("audiodev.dll", "_CIDLData_CreateFromIDArray@16")
+Interceptor.attach(_CIDLData_CreateFromIDArray@16, {onLeave: function (args) {send("_CIDLData_CreateFromIDArray@16");}});
+

@@ -1,0 +1,27 @@
+var CreateColorFaceProcessor = Module.findExportByName("FaceProcessor.dll", "CreateColorFaceProcessor")
+Interceptor.attach(CreateColorFaceProcessor, {onLeave: function (args) {send("CreateColorFaceProcessor");}});
+
+var CreateFacePreprocessorOutput = Module.findExportByName("FaceProcessor.dll", "CreateFacePreprocessorOutput")
+Interceptor.attach(CreateFacePreprocessorOutput, {onLeave: function (args) {send("CreateFacePreprocessorOutput");}});
+
+var FileInputManager_InitializeRuntime = Module.findExportByName("FaceProcessor.dll", "FileInputManager_InitializeRuntime")
+Interceptor.attach(FileInputManager_InitializeRuntime, {onLeave: function (args) {send("FileInputManager_InitializeRuntime");}});
+
+var FileInputManager_ReadSourceColorFrameData = Module.findExportByName("FaceProcessor.dll", "FileInputManager_ReadSourceColorFrameData")
+Interceptor.attach(FileInputManager_ReadSourceColorFrameData, {onLeave: function (args) {send("FileInputManager_ReadSourceColorFrameData");}});
+
+var FileInputManager_ReadSourceDeviceMetadata = Module.findExportByName("FaceProcessor.dll", "FileInputManager_ReadSourceDeviceMetadata")
+Interceptor.attach(FileInputManager_ReadSourceDeviceMetadata, {onLeave: function (args) {send("FileInputManager_ReadSourceDeviceMetadata");}});
+
+var FileInputManager_ReadSourceInfraredFrameData = Module.findExportByName("FaceProcessor.dll", "FileInputManager_ReadSourceInfraredFrameData")
+Interceptor.attach(FileInputManager_ReadSourceInfraredFrameData, {onLeave: function (args) {send("FileInputManager_ReadSourceInfraredFrameData");}});
+
+var FileInputManager_Reset = Module.findExportByName("FaceProcessor.dll", "FileInputManager_Reset")
+Interceptor.attach(FileInputManager_Reset, {onLeave: function (args) {send("FileInputManager_Reset");}});
+
+var FileInputManager_SendColorFrameData = Module.findExportByName("FaceProcessor.dll", "FileInputManager_SendColorFrameData")
+Interceptor.attach(FileInputManager_SendColorFrameData, {onLeave: function (args) {send("FileInputManager_SendColorFrameData");}});
+
+var FileInputManager_SendInfraredFrameData = Module.findExportByName("FaceProcessor.dll", "FileInputManager_SendInfraredFrameData")
+Interceptor.attach(FileInputManager_SendInfraredFrameData, {onLeave: function (args) {send("FileInputManager_SendInfraredFrameData");}});
+

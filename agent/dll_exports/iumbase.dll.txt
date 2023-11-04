@@ -1,0 +1,105 @@
+var AssignMemoryToSocDomain = Module.findExportByName("iumbase.dll", "AssignMemoryToSocDomain")
+Interceptor.attach(AssignMemoryToSocDomain, {onLeave: function (args) {send("AssignMemoryToSocDomain");}});
+
+var AwaitSmc = Module.findExportByName("iumbase.dll", "AwaitSmc")
+Interceptor.attach(AwaitSmc, {onLeave: function (args) {send("AwaitSmc");}});
+
+var CreateSecureDevice = Module.findExportByName("iumbase.dll", "CreateSecureDevice")
+Interceptor.attach(CreateSecureDevice, {onLeave: function (args) {send("CreateSecureDevice");}});
+
+var CreateSecureSection = Module.findExportByName("iumbase.dll", "CreateSecureSection")
+Interceptor.attach(CreateSecureSection, {onLeave: function (args) {send("CreateSecureSection");}});
+
+var CreateSecureSectionSpecifyPages = Module.findExportByName("iumbase.dll", "CreateSecureSectionSpecifyPages")
+Interceptor.attach(CreateSecureSectionSpecifyPages, {onLeave: function (args) {send("CreateSecureSectionSpecifyPages");}});
+
+var DecryptData = Module.findExportByName("iumbase.dll", "DecryptData")
+Interceptor.attach(DecryptData, {onLeave: function (args) {send("DecryptData");}});
+
+var DecryptISKBoundData = Module.findExportByName("iumbase.dll", "DecryptISKBoundData")
+Interceptor.attach(DecryptISKBoundData, {onLeave: function (args) {send("DecryptISKBoundData");}});
+
+var DmaMapMemory = Module.findExportByName("iumbase.dll", "DmaMapMemory")
+Interceptor.attach(DmaMapMemory, {onLeave: function (args) {send("DmaMapMemory");}});
+
+var EmitSmc = Module.findExportByName("iumbase.dll", "EmitSmc")
+Interceptor.attach(EmitSmc, {onLeave: function (args) {send("EmitSmc");}});
+
+var EncryptData = Module.findExportByName("iumbase.dll", "EncryptData")
+Interceptor.attach(EncryptData, {onLeave: function (args) {send("EncryptData");}});
+
+var FlushSecureSectionBuffers = Module.findExportByName("iumbase.dll", "FlushSecureSectionBuffers")
+Interceptor.attach(FlushSecureSectionBuffers, {onLeave: function (args) {send("FlushSecureSectionBuffers");}});
+
+var GetDmaEnabler = Module.findExportByName("iumbase.dll", "GetDmaEnabler")
+Interceptor.attach(GetDmaEnabler, {onLeave: function (args) {send("GetDmaEnabler");}});
+
+var GetExposedSecureSection = Module.findExportByName("iumbase.dll", "GetExposedSecureSection")
+Interceptor.attach(GetExposedSecureSection, {onLeave: function (args) {send("GetExposedSecureSection");}});
+
+var GetFipsModeFromIumKernelState = Module.findExportByName("iumbase.dll", "GetFipsModeFromIumKernelState")
+Interceptor.attach(GetFipsModeFromIumKernelState, {onLeave: function (args) {send("GetFipsModeFromIumKernelState");}});
+
+var GetSecureIdentityKey = Module.findExportByName("iumbase.dll", "GetSecureIdentityKey")
+Interceptor.attach(GetSecureIdentityKey, {onLeave: function (args) {send("GetSecureIdentityKey");}});
+
+var GetSecureIdentitySigningKey = Module.findExportByName("iumbase.dll", "GetSecureIdentitySigningKey")
+Interceptor.attach(GetSecureIdentitySigningKey, {onLeave: function (args) {send("GetSecureIdentitySigningKey");}});
+
+var GetSeedFromIumKernelState = Module.findExportByName("iumbase.dll", "GetSeedFromIumKernelState")
+Interceptor.attach(GetSeedFromIumKernelState, {onLeave: function (args) {send("GetSeedFromIumKernelState");}});
+
+var GetSignedReport = Module.findExportByName("iumbase.dll", "GetSignedReport")
+Interceptor.attach(GetSignedReport, {onLeave: function (args) {send("GetSignedReport");}});
+
+var GetTaggedData = Module.findExportByName("iumbase.dll", "GetTaggedData")
+Interceptor.attach(GetTaggedData, {onLeave: function (args) {send("GetTaggedData");}});
+
+var GetTaggedDataSize = Module.findExportByName("iumbase.dll", "GetTaggedDataSize")
+Interceptor.attach(GetTaggedDataSize, {onLeave: function (args) {send("GetTaggedDataSize");}});
+
+var GetTpmBindingInfo = Module.findExportByName("iumbase.dll", "GetTpmBindingInfo")
+Interceptor.attach(GetTpmBindingInfo, {onLeave: function (args) {send("GetTpmBindingInfo");}});
+
+var IsSecureProcess = Module.findExportByName("iumbase.dll", "IsSecureProcess")
+Interceptor.attach(IsSecureProcess, {onLeave: function (args) {send("IsSecureProcess");}});
+
+var MapSecureIo = Module.findExportByName("iumbase.dll", "MapSecureIo")
+Interceptor.attach(MapSecureIo, {onLeave: function (args) {send("MapSecureIo");}});
+
+var OpenCurrentExtension = Module.findExportByName("iumbase.dll", "OpenCurrentExtension")
+Interceptor.attach(OpenCurrentExtension, {onLeave: function (args) {send("OpenCurrentExtension");}});
+
+var OpenSecureSection = Module.findExportByName("iumbase.dll", "OpenSecureSection")
+Interceptor.attach(OpenSecureSection, {onLeave: function (args) {send("OpenSecureSection");}});
+
+var PostMailbox = Module.findExportByName("iumbase.dll", "PostMailbox")
+Interceptor.attach(PostMailbox, {onLeave: function (args) {send("PostMailbox");}});
+
+var ProtectSecureIo = Module.findExportByName("iumbase.dll", "ProtectSecureIo")
+Interceptor.attach(ProtectSecureIo, {onLeave: function (args) {send("ProtectSecureIo");}});
+
+var QuerySecureDeviceInformation = Module.findExportByName("iumbase.dll", "QuerySecureDeviceInformation")
+Interceptor.attach(QuerySecureDeviceInformation, {onLeave: function (args) {send("QuerySecureDeviceInformation");}});
+
+var SecureStorageGet = Module.findExportByName("iumbase.dll", "SecureStorageGet")
+Interceptor.attach(SecureStorageGet, {onLeave: function (args) {send("SecureStorageGet");}});
+
+var SecureStoragePut = Module.findExportByName("iumbase.dll", "SecureStoragePut")
+Interceptor.attach(SecureStoragePut, {onLeave: function (args) {send("SecureStoragePut");}});
+
+var SetDmaTargetProperties = Module.findExportByName("iumbase.dll", "SetDmaTargetProperties")
+Interceptor.attach(SetDmaTargetProperties, {onLeave: function (args) {send("SetDmaTargetProperties");}});
+
+var SetPolicyExtension = Module.findExportByName("iumbase.dll", "SetPolicyExtension")
+Interceptor.attach(SetPolicyExtension, {onLeave: function (args) {send("SetPolicyExtension");}});
+
+var UnmapSecureIo = Module.findExportByName("iumbase.dll", "UnmapSecureIo")
+Interceptor.attach(UnmapSecureIo, {onLeave: function (args) {send("UnmapSecureIo");}});
+
+var UpdateSecureDeviceState = Module.findExportByName("iumbase.dll", "UpdateSecureDeviceState")
+Interceptor.attach(UpdateSecureDeviceState, {onLeave: function (args) {send("UpdateSecureDeviceState");}});
+
+var VbsVmSysCall = Module.findExportByName("iumbase.dll", "VbsVmSysCall")
+Interceptor.attach(VbsVmSysCall, {onLeave: function (args) {send("VbsVmSysCall");}});
+

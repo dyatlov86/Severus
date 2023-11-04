@@ -1,0 +1,27 @@
+var Create_SpatialAudioConfigureDevice = Module.findExportByName("Windows.Media.Devices.dll", "Create_SpatialAudioConfigureDevice")
+Interceptor.attach(Create_SpatialAudioConfigureDevice, {onLeave: function (args) {send("Create_SpatialAudioConfigureDevice");}});
+
+var Create_SpatialAudioDevicePropertyReader = Module.findExportByName("Windows.Media.Devices.dll", "Create_SpatialAudioDevicePropertyReader")
+Interceptor.attach(Create_SpatialAudioDevicePropertyReader, {onLeave: function (args) {send("Create_SpatialAudioDevicePropertyReader");}});
+
+var Create_SpatialAudioDeviceStateReader = Module.findExportByName("Windows.Media.Devices.dll", "Create_SpatialAudioDeviceStateReader")
+Interceptor.attach(Create_SpatialAudioDeviceStateReader, {onLeave: function (args) {send("Create_SpatialAudioDeviceStateReader");}});
+
+var Create_SpatialAudioEncoderProperties = Module.findExportByName("Windows.Media.Devices.dll", "Create_SpatialAudioEncoderProperties")
+Interceptor.attach(Create_SpatialAudioEncoderProperties, {onLeave: function (args) {send("Create_SpatialAudioEncoderProperties");}});
+
+var Create_SpatialAudioPositionCalc = Module.findExportByName("Windows.Media.Devices.dll", "Create_SpatialAudioPositionCalc")
+Interceptor.attach(Create_SpatialAudioPositionCalc, {onLeave: function (args) {send("Create_SpatialAudioPositionCalc");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.Media.Devices.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Media.Devices.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Media.Devices.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetSpatialSettingsMonitoringPKey = Module.findExportByName("Windows.Media.Devices.dll", "GetSpatialSettingsMonitoringPKey")
+Interceptor.attach(GetSpatialSettingsMonitoringPKey, {onLeave: function (args) {send("GetSpatialSettingsMonitoringPKey");}});
+

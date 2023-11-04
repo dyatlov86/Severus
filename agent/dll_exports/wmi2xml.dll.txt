@@ -1,0 +1,24 @@
+var CloseWbemTextSource = Module.findExportByName("wmi2xml.dll", "CloseWbemTextSource")
+Interceptor.attach(CloseWbemTextSource, {onLeave: function (args) {send("CloseWbemTextSource");}});
+
+var DllCanUnloadNow = Module.findExportByName("wmi2xml.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wmi2xml.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("wmi2xml.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wmi2xml.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var OpenWbemTextSource = Module.findExportByName("wmi2xml.dll", "OpenWbemTextSource")
+Interceptor.attach(OpenWbemTextSource, {onLeave: function (args) {send("OpenWbemTextSource");}});
+
+var TextToWbemObject = Module.findExportByName("wmi2xml.dll", "TextToWbemObject")
+Interceptor.attach(TextToWbemObject, {onLeave: function (args) {send("TextToWbemObject");}});
+
+var WbemObjectToText = Module.findExportByName("wmi2xml.dll", "WbemObjectToText")
+Interceptor.attach(WbemObjectToText, {onLeave: function (args) {send("WbemObjectToText");}});
+

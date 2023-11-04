@@ -1,0 +1,30 @@
+var DllCanUnloadNow = Module.findExportByName("DscCoreConfProv.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("DscCoreConfProv.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("DscCoreConfProv.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("DscCoreConfProv.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("DscCoreConfProv.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetProviderClassID = Module.findExportByName("DscCoreConfProv.dll", "GetProviderClassID")
+Interceptor.attach(GetProviderClassID, {onLeave: function (args) {send("GetProviderClassID");}});
+
+var MI_Main = Module.findExportByName("DscCoreConfProv.dll", "MI_Main")
+Interceptor.attach(MI_Main, {onLeave: function (args) {send("MI_Main");}});
+
+var NITS_PRESENCE_STUB = Module.findExportByName("DscCoreConfProv.dll", "NITS_PRESENCE_STUB")
+Interceptor.attach(NITS_PRESENCE_STUB, {onLeave: function (args) {send("NITS_PRESENCE_STUB");}});
+
+var NITS_STUB = Module.findExportByName("DscCoreConfProv.dll", "NITS_STUB")
+Interceptor.attach(NITS_STUB, {onLeave: function (args) {send("NITS_STUB");}});
+
+var NativeProviderTraps = Module.findExportByName("DscCoreConfProv.dll", "NativeProviderTraps")
+Interceptor.attach(NativeProviderTraps, {onLeave: function (args) {send("NativeProviderTraps");}});
+

@@ -1,0 +1,24 @@
+var RtlCopyExtendedContext = Module.findExportByName("api-ms-win-core-xstate-l1-1-0.dll", "RtlCopyExtendedContext")
+Interceptor.attach(RtlCopyExtendedContext, {onLeave: function (args) {send("RtlCopyExtendedContext");}});
+
+var RtlGetEnabledExtendedFeatures = Module.findExportByName("api-ms-win-core-xstate-l1-1-0.dll", "RtlGetEnabledExtendedFeatures")
+Interceptor.attach(RtlGetEnabledExtendedFeatures, {onLeave: function (args) {send("RtlGetEnabledExtendedFeatures");}});
+
+var RtlGetExtendedContextLength = Module.findExportByName("api-ms-win-core-xstate-l1-1-0.dll", "RtlGetExtendedContextLength")
+Interceptor.attach(RtlGetExtendedContextLength, {onLeave: function (args) {send("RtlGetExtendedContextLength");}});
+
+var RtlGetExtendedFeaturesMask = Module.findExportByName("api-ms-win-core-xstate-l1-1-0.dll", "RtlGetExtendedFeaturesMask")
+Interceptor.attach(RtlGetExtendedFeaturesMask, {onLeave: function (args) {send("RtlGetExtendedFeaturesMask");}});
+
+var RtlInitializeExtendedContext = Module.findExportByName("api-ms-win-core-xstate-l1-1-0.dll", "RtlInitializeExtendedContext")
+Interceptor.attach(RtlInitializeExtendedContext, {onLeave: function (args) {send("RtlInitializeExtendedContext");}});
+
+var RtlLocateExtendedFeature = Module.findExportByName("api-ms-win-core-xstate-l1-1-0.dll", "RtlLocateExtendedFeature")
+Interceptor.attach(RtlLocateExtendedFeature, {onLeave: function (args) {send("RtlLocateExtendedFeature");}});
+
+var RtlLocateLegacyContext = Module.findExportByName("api-ms-win-core-xstate-l1-1-0.dll", "RtlLocateLegacyContext")
+Interceptor.attach(RtlLocateLegacyContext, {onLeave: function (args) {send("RtlLocateLegacyContext");}});
+
+var RtlSetExtendedFeaturesMask = Module.findExportByName("api-ms-win-core-xstate-l1-1-0.dll", "RtlSetExtendedFeaturesMask")
+Interceptor.attach(RtlSetExtendedFeaturesMask, {onLeave: function (args) {send("RtlSetExtendedFeaturesMask");}});
+

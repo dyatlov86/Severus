@@ -1,0 +1,15 @@
+var IdnToAscii = Module.findExportByName("normaliz.dll", "IdnToAscii")
+Interceptor.attach(IdnToAscii, {onLeave: function (args) {send("IdnToAscii");}});
+
+var IdnToNameprepUnicode = Module.findExportByName("normaliz.dll", "IdnToNameprepUnicode")
+Interceptor.attach(IdnToNameprepUnicode, {onLeave: function (args) {send("IdnToNameprepUnicode");}});
+
+var IdnToUnicode = Module.findExportByName("normaliz.dll", "IdnToUnicode")
+Interceptor.attach(IdnToUnicode, {onLeave: function (args) {send("IdnToUnicode");}});
+
+var IsNormalizedString = Module.findExportByName("normaliz.dll", "IsNormalizedString")
+Interceptor.attach(IsNormalizedString, {onLeave: function (args) {send("IsNormalizedString");}});
+
+var NormalizeString = Module.findExportByName("normaliz.dll", "NormalizeString")
+Interceptor.attach(NormalizeString, {onLeave: function (args) {send("NormalizeString");}});
+

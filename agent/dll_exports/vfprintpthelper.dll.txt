@@ -1,0 +1,18 @@
+var ConvertDOMDocumentToIStream = Module.findExportByName("vfprintpthelper.dll", "ConvertDOMDocumentToIStream")
+Interceptor.attach(ConvertDOMDocumentToIStream, {onLeave: function (args) {send("ConvertDOMDocumentToIStream");}});
+
+var CopyStream = Module.findExportByName("vfprintpthelper.dll", "CopyStream")
+Interceptor.attach(CopyStream, {onLeave: function (args) {send("CopyStream");}});
+
+var GetXml = Module.findExportByName("vfprintpthelper.dll", "GetXml")
+Interceptor.attach(GetXml, {onLeave: function (args) {send("GetXml");}});
+
+var IsPrintCapabilitiesConformant = Module.findExportByName("vfprintpthelper.dll", "IsPrintCapabilitiesConformant")
+Interceptor.attach(IsPrintCapabilitiesConformant, {onLeave: function (args) {send("IsPrintCapabilitiesConformant");}});
+
+var IsPrintTicketConformant = Module.findExportByName("vfprintpthelper.dll", "IsPrintTicketConformant")
+Interceptor.attach(IsPrintTicketConformant, {onLeave: function (args) {send("IsPrintTicketConformant");}});
+
+var RewindStream = Module.findExportByName("vfprintpthelper.dll", "RewindStream")
+Interceptor.attach(RewindStream, {onLeave: function (args) {send("RewindStream");}});
+

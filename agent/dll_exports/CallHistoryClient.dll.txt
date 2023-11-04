@@ -1,0 +1,33 @@
+var DoesCallHistoryItemMatchFilter = Module.findExportByName("CallHistoryClient.dll", "DoesCallHistoryItemMatchFilter")
+Interceptor.attach(DoesCallHistoryItemMatchFilter, {onLeave: function (args) {send("DoesCallHistoryItemMatchFilter");}});
+
+var StringToUdmObjectId = Module.findExportByName("CallHistoryClient.dll", "StringToUdmObjectId")
+Interceptor.attach(StringToUdmObjectId, {onLeave: function (args) {send("StringToUdmObjectId");}});
+
+var UdmAreCallEventsEqual = Module.findExportByName("CallHistoryClient.dll", "UdmAreCallEventsEqual")
+Interceptor.attach(UdmAreCallEventsEqual, {onLeave: function (args) {send("UdmAreCallEventsEqual");}});
+
+var UdmCancelAsyncTask = Module.findExportByName("CallHistoryClient.dll", "UdmCancelAsyncTask")
+Interceptor.attach(UdmCancelAsyncTask, {onLeave: function (args) {send("UdmCancelAsyncTask");}});
+
+var UdmCreateDataSession = Module.findExportByName("CallHistoryClient.dll", "UdmCreateDataSession")
+Interceptor.attach(UdmCreateDataSession, {onLeave: function (args) {send("UdmCreateDataSession");}});
+
+var UdmCreateDataSessionForUser = Module.findExportByName("CallHistoryClient.dll", "UdmCreateDataSessionForUser")
+Interceptor.attach(UdmCreateDataSessionForUser, {onLeave: function (args) {send("UdmCreateDataSessionForUser");}});
+
+var UdmCreateSyncCallbackHandler = Module.findExportByName("CallHistoryClient.dll", "UdmCreateSyncCallbackHandler")
+Interceptor.attach(UdmCreateSyncCallbackHandler, {onLeave: function (args) {send("UdmCreateSyncCallbackHandler");}});
+
+var UdmDebugModifyNotifyState = Module.findExportByName("CallHistoryClient.dll", "UdmDebugModifyNotifyState")
+Interceptor.attach(UdmDebugModifyNotifyState, {onLeave: function (args) {send("UdmDebugModifyNotifyState");}});
+
+var UdmFreeCallFavoriteItemSet = Module.findExportByName("CallHistoryClient.dll", "UdmFreeCallFavoriteItemSet")
+Interceptor.attach(UdmFreeCallFavoriteItemSet, {onLeave: function (args) {send("UdmFreeCallFavoriteItemSet");}});
+
+var UdmFreeCallHistoryItemSet = Module.findExportByName("CallHistoryClient.dll", "UdmFreeCallHistoryItemSet")
+Interceptor.attach(UdmFreeCallHistoryItemSet, {onLeave: function (args) {send("UdmFreeCallHistoryItemSet");}});
+
+var UdmObjectIdToString = Module.findExportByName("CallHistoryClient.dll", "UdmObjectIdToString")
+Interceptor.attach(UdmObjectIdToString, {onLeave: function (args) {send("UdmObjectIdToString");}});
+

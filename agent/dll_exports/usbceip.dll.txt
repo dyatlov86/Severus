@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("usbceip.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("usbceip.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("usbceip.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("usbceip.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var UsbCeip_Execute = Module.findExportByName("usbceip.dll", "UsbCeip_Execute")
+Interceptor.attach(UsbCeip_Execute, {onLeave: function (args) {send("UsbCeip_Execute");}});
+

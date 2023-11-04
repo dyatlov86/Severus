@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("ShareHost.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("ShareHost.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("ShareHost.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetProxyDllInfo = Module.findExportByName("ShareHost.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+
+var ResolveConnectedSharePlatformToken = Module.findExportByName("ShareHost.dll", "ResolveConnectedSharePlatformToken")
+Interceptor.attach(ResolveConnectedSharePlatformToken, {onLeave: function (args) {send("ResolveConnectedSharePlatformToken");}});
+

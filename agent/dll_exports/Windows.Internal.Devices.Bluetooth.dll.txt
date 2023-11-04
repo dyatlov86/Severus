@@ -1,0 +1,15 @@
+var BthEvtBrCreateBroker = Module.findExportByName("Windows.Internal.Devices.Bluetooth.dll", "BthEvtBrCreateBroker")
+Interceptor.attach(BthEvtBrCreateBroker, {onLeave: function (args) {send("BthEvtBrCreateBroker");}});
+
+var BthEvtBrDeleteBroker = Module.findExportByName("Windows.Internal.Devices.Bluetooth.dll", "BthEvtBrDeleteBroker")
+Interceptor.attach(BthEvtBrDeleteBroker, {onLeave: function (args) {send("BthEvtBrDeleteBroker");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.Internal.Devices.Bluetooth.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Internal.Devices.Bluetooth.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Internal.Devices.Bluetooth.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

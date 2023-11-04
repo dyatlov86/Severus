@@ -1,0 +1,24 @@
+var MI_Application_NewDeserializer_Mof = Module.findExportByName("mimofcodec.dll", "MI_Application_NewDeserializer_Mof")
+Interceptor.attach(MI_Application_NewDeserializer_Mof, {onLeave: function (args) {send("MI_Application_NewDeserializer_Mof");}});
+
+var MI_Application_NewSerializer_Mof = Module.findExportByName("mimofcodec.dll", "MI_Application_NewSerializer_Mof")
+Interceptor.attach(MI_Application_NewSerializer_Mof, {onLeave: function (args) {send("MI_Application_NewSerializer_Mof");}});
+
+var MI_MOFParser_Delete = Module.findExportByName("mimofcodec.dll", "MI_MOFParser_Delete")
+Interceptor.attach(MI_MOFParser_Delete, {onLeave: function (args) {send("MI_MOFParser_Delete");}});
+
+var MI_MOFParser_Init = Module.findExportByName("mimofcodec.dll", "MI_MOFParser_Init")
+Interceptor.attach(MI_MOFParser_Init, {onLeave: function (args) {send("MI_MOFParser_Init");}});
+
+var MI_MOFParser_Lex = Module.findExportByName("mimofcodec.dll", "MI_MOFParser_Lex")
+Interceptor.attach(MI_MOFParser_Lex, {onLeave: function (args) {send("MI_MOFParser_Lex");}});
+
+var MI_MOFParser_Parse = Module.findExportByName("mimofcodec.dll", "MI_MOFParser_Parse")
+Interceptor.attach(MI_MOFParser_Parse, {onLeave: function (args) {send("MI_MOFParser_Parse");}});
+
+var NITS_PRESENCE_STUB = Module.findExportByName("mimofcodec.dll", "NITS_PRESENCE_STUB")
+Interceptor.attach(NITS_PRESENCE_STUB, {onLeave: function (args) {send("NITS_PRESENCE_STUB");}});
+
+var NITS_STUB = Module.findExportByName("mimofcodec.dll", "NITS_STUB")
+Interceptor.attach(NITS_STUB, {onLeave: function (args) {send("NITS_STUB");}});
+

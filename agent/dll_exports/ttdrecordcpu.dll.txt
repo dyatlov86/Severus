@@ -1,0 +1,126 @@
+var ClearClientTlsValueForThreadId = Module.findExportByName("ttdrecordcpu.dll", "ClearClientTlsValueForThreadId")
+Interceptor.attach(ClearClientTlsValueForThreadId, {onLeave: function (args) {send("ClearClientTlsValueForThreadId");}});
+
+var FlushCodeCaches = Module.findExportByName("ttdrecordcpu.dll", "FlushCodeCaches")
+Interceptor.attach(FlushCodeCaches, {onLeave: function (args) {send("FlushCodeCaches");}});
+
+var GetClientTlsValueForCurrentThread = Module.findExportByName("ttdrecordcpu.dll", "GetClientTlsValueForCurrentThread")
+Interceptor.attach(GetClientTlsValueForCurrentThread, {onLeave: function (args) {send("GetClientTlsValueForCurrentThread");}});
+
+var GetInstructionCounts = Module.findExportByName("ttdrecordcpu.dll", "GetInstructionCounts")
+Interceptor.attach(GetInstructionCounts, {onLeave: function (args) {send("GetInstructionCounts");}});
+
+var GetRegisterOffsets = Module.findExportByName("ttdrecordcpu.dll", "GetRegisterOffsets")
+Interceptor.attach(GetRegisterOffsets, {onLeave: function (args) {send("GetRegisterOffsets");}});
+
+var InitializeEmulateOnlyClient = Module.findExportByName("ttdrecordcpu.dll", "InitializeEmulateOnlyClient")
+Interceptor.attach(InitializeEmulateOnlyClient, {onLeave: function (args) {send("InitializeEmulateOnlyClient");}});
+
+var InitializeGlobalState = Module.findExportByName("ttdrecordcpu.dll", "InitializeGlobalState")
+Interceptor.attach(InitializeGlobalState, {onLeave: function (args) {send("InitializeGlobalState");}});
+
+var InitializeNirvanaClient = Module.findExportByName("ttdrecordcpu.dll", "InitializeNirvanaClient")
+Interceptor.attach(InitializeNirvanaClient, {onLeave: function (args) {send("InitializeNirvanaClient");}});
+
+var InitializeRecorder = Module.findExportByName("ttdrecordcpu.dll", "InitializeRecorder")
+Interceptor.attach(InitializeRecorder, {onLeave: function (args) {send("InitializeRecorder");}});
+
+var InitializeSmartCpuClient = Module.findExportByName("ttdrecordcpu.dll", "InitializeSmartCpuClient")
+Interceptor.attach(InitializeSmartCpuClient, {onLeave: function (args) {send("InitializeSmartCpuClient");}});
+
+var InjectThread = Module.findExportByName("ttdrecordcpu.dll", "InjectThread")
+Interceptor.attach(InjectThread, {onLeave: function (args) {send("InjectThread");}});
+
+var IsEmulatingCurrentThread = Module.findExportByName("ttdrecordcpu.dll", "IsEmulatingCurrentThread")
+Interceptor.attach(IsEmulatingCurrentThread, {onLeave: function (args) {send("IsEmulatingCurrentThread");}});
+
+var IsSimulating = Module.findExportByName("ttdrecordcpu.dll", "IsSimulating")
+Interceptor.attach(IsSimulating, {onLeave: function (args) {send("IsSimulating");}});
+
+var OpenWriter = Module.findExportByName("ttdrecordcpu.dll", "OpenWriter")
+Interceptor.attach(OpenWriter, {onLeave: function (args) {send("OpenWriter");}});
+
+var ParametersBlock = Module.findExportByName("ttdrecordcpu.dll", "ParametersBlock")
+Interceptor.attach(ParametersBlock, {onLeave: function (args) {send("ParametersBlock");}});
+
+var RegisterInstrumentationCallbacks = Module.findExportByName("ttdrecordcpu.dll", "RegisterInstrumentationCallbacks")
+Interceptor.attach(RegisterInstrumentationCallbacks, {onLeave: function (args) {send("RegisterInstrumentationCallbacks");}});
+
+var RegisterRecordCallbacks = Module.findExportByName("ttdrecordcpu.dll", "RegisterRecordCallbacks")
+Interceptor.attach(RegisterRecordCallbacks, {onLeave: function (args) {send("RegisterRecordCallbacks");}});
+
+var RequestUnhookedFunctions = Module.findExportByName("ttdrecordcpu.dll", "RequestUnhookedFunctions")
+Interceptor.attach(RequestUnhookedFunctions, {onLeave: function (args) {send("RequestUnhookedFunctions");}});
+
+var ResetMaxInstructionsToEmulate = Module.findExportByName("ttdrecordcpu.dll", "ResetMaxInstructionsToEmulate")
+Interceptor.attach(ResetMaxInstructionsToEmulate, {onLeave: function (args) {send("ResetMaxInstructionsToEmulate");}});
+
+var ResumeSimulation = Module.findExportByName("ttdrecordcpu.dll", "ResumeSimulation")
+Interceptor.attach(ResumeSimulation, {onLeave: function (args) {send("ResumeSimulation");}});
+
+var RunCallbackWithSmartContextForCurrentThread = Module.findExportByName("ttdrecordcpu.dll", "RunCallbackWithSmartContextForCurrentThread")
+Interceptor.attach(RunCallbackWithSmartContextForCurrentThread, {onLeave: function (args) {send("RunCallbackWithSmartContextForCurrentThread");}});
+
+var SetRuntimeOptions = Module.findExportByName("ttdrecordcpu.dll", "SetRuntimeOptions")
+Interceptor.attach(SetRuntimeOptions, {onLeave: function (args) {send("SetRuntimeOptions");}});
+
+var SetThreadNative = Module.findExportByName("ttdrecordcpu.dll", "SetThreadNative")
+Interceptor.attach(SetThreadNative, {onLeave: function (args) {send("SetThreadNative");}});
+
+var StartEmulatingCurrentThread = Module.findExportByName("ttdrecordcpu.dll", "StartEmulatingCurrentThread")
+Interceptor.attach(StartEmulatingCurrentThread, {onLeave: function (args) {send("StartEmulatingCurrentThread");}});
+
+var StopEmulatingCurrentThread = Module.findExportByName("ttdrecordcpu.dll", "StopEmulatingCurrentThread")
+Interceptor.attach(StopEmulatingCurrentThread, {onLeave: function (args) {send("StopEmulatingCurrentThread");}});
+
+var StubDllEntry = Module.findExportByName("ttdrecordcpu.dll", "StubDllEntry")
+Interceptor.attach(StubDllEntry, {onLeave: function (args) {send("StubDllEntry");}});
+
+var TryPauseSimulation = Module.findExportByName("ttdrecordcpu.dll", "TryPauseSimulation")
+Interceptor.attach(TryPauseSimulation, {onLeave: function (args) {send("TryPauseSimulation");}});
+
+var TtdWriterAddCustomEvent = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterAddCustomEvent")
+Interceptor.attach(TtdWriterAddCustomEvent, {onLeave: function (args) {send("TtdWriterAddCustomEvent");}});
+
+var TtdWriterDumpHeaps = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterDumpHeaps")
+Interceptor.attach(TtdWriterDumpHeaps, {onLeave: function (args) {send("TtdWriterDumpHeaps");}});
+
+var TtdWriterDumpModuleData = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterDumpModuleData")
+Interceptor.attach(TtdWriterDumpModuleData, {onLeave: function (args) {send("TtdWriterDumpModuleData");}});
+
+var TtdWriterDumpSnapshot = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterDumpSnapshot")
+Interceptor.attach(TtdWriterDumpSnapshot, {onLeave: function (args) {send("TtdWriterDumpSnapshot");}});
+
+var TtdWriterGetFileName = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterGetFileName")
+Interceptor.attach(TtdWriterGetFileName, {onLeave: function (args) {send("TtdWriterGetFileName");}});
+
+var TtdWriterGetState = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterGetState")
+Interceptor.attach(TtdWriterGetState, {onLeave: function (args) {send("TtdWriterGetState");}});
+
+var TtdWriterGetThrottleState = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterGetThrottleState")
+Interceptor.attach(TtdWriterGetThrottleState, {onLeave: function (args) {send("TtdWriterGetThrottleState");}});
+
+var TtdWriterRelease = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterRelease")
+Interceptor.attach(TtdWriterRelease, {onLeave: function (args) {send("TtdWriterRelease");}});
+
+var TtdWriterResetThrottle = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterResetThrottle")
+Interceptor.attach(TtdWriterResetThrottle, {onLeave: function (args) {send("TtdWriterResetThrottle");}});
+
+var TtdWriterResumeRecording = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterResumeRecording")
+Interceptor.attach(TtdWriterResumeRecording, {onLeave: function (args) {send("TtdWriterResumeRecording");}});
+
+var TtdWriterStartRecordingCurrentThread = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterStartRecordingCurrentThread")
+Interceptor.attach(TtdWriterStartRecordingCurrentThread, {onLeave: function (args) {send("TtdWriterStartRecordingCurrentThread");}});
+
+var TtdWriterStopRecordingCurrentThread = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterStopRecordingCurrentThread")
+Interceptor.attach(TtdWriterStopRecordingCurrentThread, {onLeave: function (args) {send("TtdWriterStopRecordingCurrentThread");}});
+
+var TtdWriterTryPauseRecording = Module.findExportByName("ttdrecordcpu.dll", "TtdWriterTryPauseRecording")
+Interceptor.attach(TtdWriterTryPauseRecording, {onLeave: function (args) {send("TtdWriterTryPauseRecording");}});
+
+var g_ttdConstants = Module.findExportByName("ttdrecordcpu.dll", "g_ttdConstants")
+Interceptor.attach(g_ttdConstants, {onLeave: function (args) {send("g_ttdConstants");}});
+
+var ntdllLdrInitializeThunk = Module.findExportByName("ttdrecordcpu.dll", "ntdllLdrInitializeThunk")
+Interceptor.attach(ntdllLdrInitializeThunk, {onLeave: function (args) {send("ntdllLdrInitializeThunk");}});
+

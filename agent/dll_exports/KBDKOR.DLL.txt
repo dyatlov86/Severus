@@ -1,0 +1,15 @@
+var KbdLayerDescriptor = Module.findExportByName("KBDKOR.DLL", "KbdLayerDescriptor")
+Interceptor.attach(KbdLayerDescriptor, {onLeave: function (args) {send("KbdLayerDescriptor");}});
+
+var KbdLayerMultiDescriptor = Module.findExportByName("KBDKOR.DLL", "KbdLayerMultiDescriptor")
+Interceptor.attach(KbdLayerMultiDescriptor, {onLeave: function (args) {send("KbdLayerMultiDescriptor");}});
+
+var KbdLayerRealDllFile = Module.findExportByName("KBDKOR.DLL", "KbdLayerRealDllFile")
+Interceptor.attach(KbdLayerRealDllFile, {onLeave: function (args) {send("KbdLayerRealDllFile");}});
+
+var KbdLayerRealDllFileNT4 = Module.findExportByName("KBDKOR.DLL", "KbdLayerRealDllFileNT4")
+Interceptor.attach(KbdLayerRealDllFileNT4, {onLeave: function (args) {send("KbdLayerRealDllFileNT4");}});
+
+var KbdNlsLayerDescriptor = Module.findExportByName("KBDKOR.DLL", "KbdNlsLayerDescriptor")
+Interceptor.attach(KbdNlsLayerDescriptor, {onLeave: function (args) {send("KbdNlsLayerDescriptor");}});
+

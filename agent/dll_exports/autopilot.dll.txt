@@ -1,0 +1,27 @@
+var AutoPilotGetOobeSettingsOverride = Module.findExportByName("autopilot.dll", "AutoPilotGetOobeSettingsOverride")
+Interceptor.attach(AutoPilotGetOobeSettingsOverride, {onLeave: function (args) {send("AutoPilotGetOobeSettingsOverride");}});
+
+var AutoPilotGetPolicyDwordByName = Module.findExportByName("autopilot.dll", "AutoPilotGetPolicyDwordByName")
+Interceptor.attach(AutoPilotGetPolicyDwordByName, {onLeave: function (args) {send("AutoPilotGetPolicyDwordByName");}});
+
+var AutoPilotGetPolicyStringByName = Module.findExportByName("autopilot.dll", "AutoPilotGetPolicyStringByName")
+Interceptor.attach(AutoPilotGetPolicyStringByName, {onLeave: function (args) {send("AutoPilotGetPolicyStringByName");}});
+
+var AutoPilotIsLocalProfileAvailable = Module.findExportByName("autopilot.dll", "AutoPilotIsLocalProfileAvailable")
+Interceptor.attach(AutoPilotIsLocalProfileAvailable, {onLeave: function (args) {send("AutoPilotIsLocalProfileAvailable");}});
+
+var AutoPilotIsNetworkRequired = Module.findExportByName("autopilot.dll", "AutoPilotIsNetworkRequired")
+Interceptor.attach(AutoPilotIsNetworkRequired, {onLeave: function (args) {send("AutoPilotIsNetworkRequired");}});
+
+var DllCanUnloadNow = Module.findExportByName("autopilot.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("autopilot.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("autopilot.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("autopilot.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

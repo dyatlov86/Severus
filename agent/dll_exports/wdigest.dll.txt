@@ -1,0 +1,30 @@
+var CredentialUpdateFree = Module.findExportByName("wdigest.dll", "CredentialUpdateFree")
+Interceptor.attach(CredentialUpdateFree, {onLeave: function (args) {send("CredentialUpdateFree");}});
+
+var CredentialUpdateNotify = Module.findExportByName("wdigest.dll", "CredentialUpdateNotify")
+Interceptor.attach(CredentialUpdateNotify, {onLeave: function (args) {send("CredentialUpdateNotify");}});
+
+var CredentialUpdateRegister = Module.findExportByName("wdigest.dll", "CredentialUpdateRegister")
+Interceptor.attach(CredentialUpdateRegister, {onLeave: function (args) {send("CredentialUpdateRegister");}});
+
+var DllMain = Module.findExportByName("wdigest.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var SpInitialize = Module.findExportByName("wdigest.dll", "SpInitialize")
+Interceptor.attach(SpInitialize, {onLeave: function (args) {send("SpInitialize");}});
+
+var SpInstanceInit = Module.findExportByName("wdigest.dll", "SpInstanceInit")
+Interceptor.attach(SpInstanceInit, {onLeave: function (args) {send("SpInstanceInit");}});
+
+var SpLsaModeInitialize = Module.findExportByName("wdigest.dll", "SpLsaModeInitialize")
+Interceptor.attach(SpLsaModeInitialize, {onLeave: function (args) {send("SpLsaModeInitialize");}});
+
+var SpUserModeInitialize = Module.findExportByName("wdigest.dll", "SpUserModeInitialize")
+Interceptor.attach(SpUserModeInitialize, {onLeave: function (args) {send("SpUserModeInitialize");}});
+
+var SsiCredentialsUpdateFree = Module.findExportByName("wdigest.dll", "SsiCredentialsUpdateFree")
+Interceptor.attach(SsiCredentialsUpdateFree, {onLeave: function (args) {send("SsiCredentialsUpdateFree");}});
+
+var SsiCredentialsUpdateNotify = Module.findExportByName("wdigest.dll", "SsiCredentialsUpdateNotify")
+Interceptor.attach(SsiCredentialsUpdateNotify, {onLeave: function (args) {send("SsiCredentialsUpdateNotify");}});
+

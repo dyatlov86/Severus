@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("RDXService.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("RDXService.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetProxyDllInfo = Module.findExportByName("RDXService.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+
+var OpenRDXDocumentW = Module.findExportByName("RDXService.dll", "OpenRDXDocumentW")
+Interceptor.attach(OpenRDXDocumentW, {onLeave: function (args) {send("OpenRDXDocumentW");}});
+
+var ServiceMain = Module.findExportByName("RDXService.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

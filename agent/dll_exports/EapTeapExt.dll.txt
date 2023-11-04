@@ -1,0 +1,6 @@
+var TeapExt_EapPeerInvokeConfigUI = Module.findExportByName("EapTeapExt.dll", "TeapExt_EapPeerInvokeConfigUI")
+Interceptor.attach(TeapExt_EapPeerInvokeConfigUI, {onLeave: function (args) {send("TeapExt_EapPeerInvokeConfigUI");}});
+
+var TtlsExt_FreeMemoryExt = Module.findExportByName("EapTeapExt.dll", "TtlsExt_FreeMemoryExt")
+Interceptor.attach(TtlsExt_FreeMemoryExt, {onLeave: function (args) {send("TtlsExt_FreeMemoryExt");}});
+

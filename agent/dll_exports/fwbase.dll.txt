@@ -1,0 +1,612 @@
+var FWIndicatePortInUse_Helper = Module.findExportByName("fwbase.dll", "FWIndicatePortInUse_Helper")
+Interceptor.attach(FWIndicatePortInUse_Helper, {onLeave: function (args) {send("FWIndicatePortInUse_Helper");}});
+
+var FwAddrChangeSourceInitialize = Module.findExportByName("fwbase.dll", "FwAddrChangeSourceInitialize")
+Interceptor.attach(FwAddrChangeSourceInitialize, {onLeave: function (args) {send("FwAddrChangeSourceInitialize");}});
+
+var FwAddrChangeSourceShutdown = Module.findExportByName("fwbase.dll", "FwAddrChangeSourceShutdown")
+Interceptor.attach(FwAddrChangeSourceShutdown, {onLeave: function (args) {send("FwAddrChangeSourceShutdown");}});
+
+var FwAddrChangeSourceSignal = Module.findExportByName("fwbase.dll", "FwAddrChangeSourceSignal")
+Interceptor.attach(FwAddrChangeSourceSignal, {onLeave: function (args) {send("FwAddrChangeSourceSignal");}});
+
+var FwAlloc = Module.findExportByName("fwbase.dll", "FwAlloc")
+Interceptor.attach(FwAlloc, {onLeave: function (args) {send("FwAlloc");}});
+
+var FwAllocArray = Module.findExportByName("fwbase.dll", "FwAllocArray")
+Interceptor.attach(FwAllocArray, {onLeave: function (args) {send("FwAllocArray");}});
+
+var FwAllocCheckSize = Module.findExportByName("fwbase.dll", "FwAllocCheckSize")
+Interceptor.attach(FwAllocCheckSize, {onLeave: function (args) {send("FwAllocCheckSize");}});
+
+var FwArrayAppend = Module.findExportByName("fwbase.dll", "FwArrayAppend")
+Interceptor.attach(FwArrayAppend, {onLeave: function (args) {send("FwArrayAppend");}});
+
+var FwArrayCat = Module.findExportByName("fwbase.dll", "FwArrayCat")
+Interceptor.attach(FwArrayCat, {onLeave: function (args) {send("FwArrayCat");}});
+
+var FwArrayCopy = Module.findExportByName("fwbase.dll", "FwArrayCopy")
+Interceptor.attach(FwArrayCopy, {onLeave: function (args) {send("FwArrayCopy");}});
+
+var FwArrayCreateFromRegistry = Module.findExportByName("fwbase.dll", "FwArrayCreateFromRegistry")
+Interceptor.attach(FwArrayCreateFromRegistry, {onLeave: function (args) {send("FwArrayCreateFromRegistry");}});
+
+var FwArrayDestroy = Module.findExportByName("fwbase.dll", "FwArrayDestroy")
+Interceptor.attach(FwArrayDestroy, {onLeave: function (args) {send("FwArrayDestroy");}});
+
+var FwArrayErase = Module.findExportByName("fwbase.dll", "FwArrayErase")
+Interceptor.attach(FwArrayErase, {onLeave: function (args) {send("FwArrayErase");}});
+
+var FwAuthSuiteEmpty = Module.findExportByName("fwbase.dll", "FwAuthSuiteEmpty")
+Interceptor.attach(FwAuthSuiteEmpty, {onLeave: function (args) {send("FwAuthSuiteEmpty");}});
+
+var FwAuthSuiteEmptyByVersion = Module.findExportByName("fwbase.dll", "FwAuthSuiteEmptyByVersion")
+Interceptor.attach(FwAuthSuiteEmptyByVersion, {onLeave: function (args) {send("FwAuthSuiteEmptyByVersion");}});
+
+var FwAuthorizedAppEncode = Module.findExportByName("fwbase.dll", "FwAuthorizedAppEncode")
+Interceptor.attach(FwAuthorizedAppEncode, {onLeave: function (args) {send("FwAuthorizedAppEncode");}});
+
+var FwBaseAlloc = Module.findExportByName("fwbase.dll", "FwBaseAlloc")
+Interceptor.attach(FwBaseAlloc, {onLeave: function (args) {send("FwBaseAlloc");}});
+
+var FwBaseAllocCheckSize = Module.findExportByName("fwbase.dll", "FwBaseAllocCheckSize")
+Interceptor.attach(FwBaseAllocCheckSize, {onLeave: function (args) {send("FwBaseAllocCheckSize");}});
+
+var FwBaseFree = Module.findExportByName("fwbase.dll", "FwBaseFree")
+Interceptor.attach(FwBaseFree, {onLeave: function (args) {send("FwBaseFree");}});
+
+var FwBoolIsEqual = Module.findExportByName("fwbase.dll", "FwBoolIsEqual")
+Interceptor.attach(FwBoolIsEqual, {onLeave: function (args) {send("FwBoolIsEqual");}});
+
+var FwBuildIndirectString = Module.findExportByName("fwbase.dll", "FwBuildIndirectString")
+Interceptor.attach(FwBuildIndirectString, {onLeave: function (args) {send("FwBuildIndirectString");}});
+
+var FwCanonizeAuthorizedApps = Module.findExportByName("fwbase.dll", "FwCanonizeAuthorizedApps")
+Interceptor.attach(FwCanonizeAuthorizedApps, {onLeave: function (args) {send("FwCanonizeAuthorizedApps");}});
+
+var FwChangeSinkCreate = Module.findExportByName("fwbase.dll", "FwChangeSinkCreate")
+Interceptor.attach(FwChangeSinkCreate, {onLeave: function (args) {send("FwChangeSinkCreate");}});
+
+var FwChangeSinkDestroy = Module.findExportByName("fwbase.dll", "FwChangeSinkDestroy")
+Interceptor.attach(FwChangeSinkDestroy, {onLeave: function (args) {send("FwChangeSinkDestroy");}});
+
+var FwChangeSourceInitialize = Module.findExportByName("fwbase.dll", "FwChangeSourceInitialize")
+Interceptor.attach(FwChangeSourceInitialize, {onLeave: function (args) {send("FwChangeSourceInitialize");}});
+
+var FwChangeSourceShutdown = Module.findExportByName("fwbase.dll", "FwChangeSourceShutdown")
+Interceptor.attach(FwChangeSourceShutdown, {onLeave: function (args) {send("FwChangeSourceShutdown");}});
+
+var FwChangeSourceSignal = Module.findExportByName("fwbase.dll", "FwChangeSourceSignal")
+Interceptor.attach(FwChangeSourceSignal, {onLeave: function (args) {send("FwChangeSourceSignal");}});
+
+var FwChangeSourceSignalStart = Module.findExportByName("fwbase.dll", "FwChangeSourceSignalStart")
+Interceptor.attach(FwChangeSourceSignalStart, {onLeave: function (args) {send("FwChangeSourceSignalStart");}});
+
+var FwCloseHandle = Module.findExportByName("fwbase.dll", "FwCloseHandle")
+Interceptor.attach(FwCloseHandle, {onLeave: function (args) {send("FwCloseHandle");}});
+
+var FwConstructRemoteMachineSPN = Module.findExportByName("fwbase.dll", "FwConstructRemoteMachineSPN")
+Interceptor.attach(FwConstructRemoteMachineSPN, {onLeave: function (args) {send("FwConstructRemoteMachineSPN");}});
+
+var FwCreateDirectory = Module.findExportByName("fwbase.dll", "FwCreateDirectory")
+Interceptor.attach(FwCreateDirectory, {onLeave: function (args) {send("FwCreateDirectory");}});
+
+var FwCreateSDDLStringFromPolicyAppId = Module.findExportByName("fwbase.dll", "FwCreateSDDLStringFromPolicyAppId")
+Interceptor.attach(FwCreateSDDLStringFromPolicyAppId, {onLeave: function (args) {send("FwCreateSDDLStringFromPolicyAppId");}});
+
+var FwCriticalSectionCreate = Module.findExportByName("fwbase.dll", "FwCriticalSectionCreate")
+Interceptor.attach(FwCriticalSectionCreate, {onLeave: function (args) {send("FwCriticalSectionCreate");}});
+
+var FwCriticalSectionDestroy = Module.findExportByName("fwbase.dll", "FwCriticalSectionDestroy")
+Interceptor.attach(FwCriticalSectionDestroy, {onLeave: function (args) {send("FwCriticalSectionDestroy");}});
+
+var FwCriticalSectionEnter = Module.findExportByName("fwbase.dll", "FwCriticalSectionEnter")
+Interceptor.attach(FwCriticalSectionEnter, {onLeave: function (args) {send("FwCriticalSectionEnter");}});
+
+var FwCriticalSectionLeave = Module.findExportByName("fwbase.dll", "FwCriticalSectionLeave")
+Interceptor.attach(FwCriticalSectionLeave, {onLeave: function (args) {send("FwCriticalSectionLeave");}});
+
+var FwDWordMultiply = Module.findExportByName("fwbase.dll", "FwDWordMultiply")
+Interceptor.attach(FwDWordMultiply, {onLeave: function (args) {send("FwDWordMultiply");}});
+
+var FwEnableMemTracing = Module.findExportByName("fwbase.dll", "FwEnableMemTracing")
+Interceptor.attach(FwEnableMemTracing, {onLeave: function (args) {send("FwEnableMemTracing");}});
+
+var FwEnablePrivilege = Module.findExportByName("fwbase.dll", "FwEnablePrivilege")
+Interceptor.attach(FwEnablePrivilege, {onLeave: function (args) {send("FwEnablePrivilege");}});
+
+var FwExpandEnvironmentStrings = Module.findExportByName("fwbase.dll", "FwExpandEnvironmentStrings")
+Interceptor.attach(FwExpandEnvironmentStrings, {onLeave: function (args) {send("FwExpandEnvironmentStrings");}});
+
+var FwExtractPortNumber = Module.findExportByName("fwbase.dll", "FwExtractPortNumber")
+Interceptor.attach(FwExtractPortNumber, {onLeave: function (args) {send("FwExtractPortNumber");}});
+
+var FwFieldNameMatchStringBegining = Module.findExportByName("fwbase.dll", "FwFieldNameMatchStringBegining")
+Interceptor.attach(FwFieldNameMatchStringBegining, {onLeave: function (args) {send("FwFieldNameMatchStringBegining");}});
+
+var FwFinalHash = Module.findExportByName("fwbase.dll", "FwFinalHash")
+Interceptor.attach(FwFinalHash, {onLeave: function (args) {send("FwFinalHash");}});
+
+var FwFree = Module.findExportByName("fwbase.dll", "FwFree")
+Interceptor.attach(FwFree, {onLeave: function (args) {send("FwFree");}});
+
+var FwFreeCertCriteria = Module.findExportByName("fwbase.dll", "FwFreeCertCriteria")
+Interceptor.attach(FwFreeCertCriteria, {onLeave: function (args) {send("FwFreeCertCriteria");}});
+
+var FwFreeRpcCallersProcessInfo = Module.findExportByName("fwbase.dll", "FwFreeRpcCallersProcessInfo")
+Interceptor.attach(FwFreeRpcCallersProcessInfo, {onLeave: function (args) {send("FwFreeRpcCallersProcessInfo");}});
+
+var FwGetAppBlockList = Module.findExportByName("fwbase.dll", "FwGetAppBlockList")
+Interceptor.attach(FwGetAppBlockList, {onLeave: function (args) {send("FwGetAppBlockList");}});
+
+var FwGetAuthorizedApp = Module.findExportByName("fwbase.dll", "FwGetAuthorizedApp")
+Interceptor.attach(FwGetAuthorizedApp, {onLeave: function (args) {send("FwGetAuthorizedApp");}});
+
+var FwGetExpandedCanonicalLongPathName = Module.findExportByName("fwbase.dll", "FwGetExpandedCanonicalLongPathName")
+Interceptor.attach(FwGetExpandedCanonicalLongPathName, {onLeave: function (args) {send("FwGetExpandedCanonicalLongPathName");}});
+
+var FwGetIcmpSettings = Module.findExportByName("fwbase.dll", "FwGetIcmpSettings")
+Interceptor.attach(FwGetIcmpSettings, {onLeave: function (args) {send("FwGetIcmpSettings");}});
+
+var FwGetLongPathName = Module.findExportByName("fwbase.dll", "FwGetLongPathName")
+Interceptor.attach(FwGetLongPathName, {onLeave: function (args) {send("FwGetLongPathName");}});
+
+var FwGetPolicyAppIdFromSDDLString = Module.findExportByName("fwbase.dll", "FwGetPolicyAppIdFromSDDLString")
+Interceptor.attach(FwGetPolicyAppIdFromSDDLString, {onLeave: function (args) {send("FwGetPolicyAppIdFromSDDLString");}});
+
+var FwGetProfileIndexFromProfileType = Module.findExportByName("fwbase.dll", "FwGetProfileIndexFromProfileType")
+Interceptor.attach(FwGetProfileIndexFromProfileType, {onLeave: function (args) {send("FwGetProfileIndexFromProfileType");}});
+
+var FwGetProfileTypeFromProfileIndex = Module.findExportByName("fwbase.dll", "FwGetProfileTypeFromProfileIndex")
+Interceptor.attach(FwGetProfileTypeFromProfileIndex, {onLeave: function (args) {send("FwGetProfileTypeFromProfileIndex");}});
+
+var FwGetRemoteAdminSettings = Module.findExportByName("fwbase.dll", "FwGetRemoteAdminSettings")
+Interceptor.attach(FwGetRemoteAdminSettings, {onLeave: function (args) {send("FwGetRemoteAdminSettings");}});
+
+var FwGetRpcCallersProcessImageName = Module.findExportByName("fwbase.dll", "FwGetRpcCallersProcessImageName")
+Interceptor.attach(FwGetRpcCallersProcessImageName, {onLeave: function (args) {send("FwGetRpcCallersProcessImageName");}});
+
+var FwGetRpcCallersProcessInfo = Module.findExportByName("fwbase.dll", "FwGetRpcCallersProcessInfo")
+Interceptor.attach(FwGetRpcCallersProcessInfo, {onLeave: function (args) {send("FwGetRpcCallersProcessInfo");}});
+
+var FwGetService = Module.findExportByName("fwbase.dll", "FwGetService")
+Interceptor.attach(FwGetService, {onLeave: function (args) {send("FwGetService");}});
+
+var FwGetServiceTypes = Module.findExportByName("fwbase.dll", "FwGetServiceTypes")
+Interceptor.attach(FwGetServiceTypes, {onLeave: function (args) {send("FwGetServiceTypes");}});
+
+var FwGetServices = Module.findExportByName("fwbase.dll", "FwGetServices")
+Interceptor.attach(FwGetServices, {onLeave: function (args) {send("FwGetServices");}});
+
+var FwGetStaticFwPort = Module.findExportByName("fwbase.dll", "FwGetStaticFwPort")
+Interceptor.attach(FwGetStaticFwPort, {onLeave: function (args) {send("FwGetStaticFwPort");}});
+
+var FwGetStringId = Module.findExportByName("fwbase.dll", "FwGetStringId")
+Interceptor.attach(FwGetStringId, {onLeave: function (args) {send("FwGetStringId");}});
+
+var FwGetStringIdForStatusCode = Module.findExportByName("fwbase.dll", "FwGetStringIdForStatusCode")
+Interceptor.attach(FwGetStringIdForStatusCode, {onLeave: function (args) {send("FwGetStringIdForStatusCode");}});
+
+var FwGetSysPathName = Module.findExportByName("fwbase.dll", "FwGetSysPathName")
+Interceptor.attach(FwGetSysPathName, {onLeave: function (args) {send("FwGetSysPathName");}});
+
+var FwGetTokenInformation = Module.findExportByName("fwbase.dll", "FwGetTokenInformation")
+Interceptor.attach(FwGetTokenInformation, {onLeave: function (args) {send("FwGetTokenInformation");}});
+
+var FwHResultToWindowsError = Module.findExportByName("fwbase.dll", "FwHResultToWindowsError")
+Interceptor.attach(FwHResultToWindowsError, {onLeave: function (args) {send("FwHResultToWindowsError");}});
+
+var FwHashtableCreate = Module.findExportByName("fwbase.dll", "FwHashtableCreate")
+Interceptor.attach(FwHashtableCreate, {onLeave: function (args) {send("FwHashtableCreate");}});
+
+var FwHashtableDestroy = Module.findExportByName("fwbase.dll", "FwHashtableDestroy")
+Interceptor.attach(FwHashtableDestroy, {onLeave: function (args) {send("FwHashtableDestroy");}});
+
+var FwHashtableEmpty = Module.findExportByName("fwbase.dll", "FwHashtableEmpty")
+Interceptor.attach(FwHashtableEmpty, {onLeave: function (args) {send("FwHashtableEmpty");}});
+
+var FwHashtableFind = Module.findExportByName("fwbase.dll", "FwHashtableFind")
+Interceptor.attach(FwHashtableFind, {onLeave: function (args) {send("FwHashtableFind");}});
+
+var FwHashtableGetNext = Module.findExportByName("fwbase.dll", "FwHashtableGetNext")
+Interceptor.attach(FwHashtableGetNext, {onLeave: function (args) {send("FwHashtableGetNext");}});
+
+var FwHashtableInsert = Module.findExportByName("fwbase.dll", "FwHashtableInsert")
+Interceptor.attach(FwHashtableInsert, {onLeave: function (args) {send("FwHashtableInsert");}});
+
+var FwHashtableIsEmpty = Module.findExportByName("fwbase.dll", "FwHashtableIsEmpty")
+Interceptor.attach(FwHashtableIsEmpty, {onLeave: function (args) {send("FwHashtableIsEmpty");}});
+
+var FwHashtableRemove = Module.findExportByName("fwbase.dll", "FwHashtableRemove")
+Interceptor.attach(FwHashtableRemove, {onLeave: function (args) {send("FwHashtableRemove");}});
+
+var FwIOReadPortUseIndications = Module.findExportByName("fwbase.dll", "FwIOReadPortUseIndications")
+Interceptor.attach(FwIOReadPortUseIndications, {onLeave: function (args) {send("FwIOReadPortUseIndications");}});
+
+var FwIOWritePortUseIndications = Module.findExportByName("fwbase.dll", "FwIOWritePortUseIndications")
+Interceptor.attach(FwIOWritePortUseIndications, {onLeave: function (args) {send("FwIOWritePortUseIndications");}});
+
+var FwIcfAuthBypassServicesDestroy = Module.findExportByName("fwbase.dll", "FwIcfAuthBypassServicesDestroy")
+Interceptor.attach(FwIcfAuthBypassServicesDestroy, {onLeave: function (args) {send("FwIcfAuthBypassServicesDestroy");}});
+
+var FwIcfAuthBypassSubNetsDestroy = Module.findExportByName("fwbase.dll", "FwIcfAuthBypassSubNetsDestroy")
+Interceptor.attach(FwIcfAuthBypassSubNetsDestroy, {onLeave: function (args) {send("FwIcfAuthBypassSubNetsDestroy");}});
+
+var FwIcfAuthorizedAppCopy = Module.findExportByName("fwbase.dll", "FwIcfAuthorizedAppCopy")
+Interceptor.attach(FwIcfAuthorizedAppCopy, {onLeave: function (args) {send("FwIcfAuthorizedAppCopy");}});
+
+var FwIcfAuthorizedAppsCopy = Module.findExportByName("fwbase.dll", "FwIcfAuthorizedAppsCopy")
+Interceptor.attach(FwIcfAuthorizedAppsCopy, {onLeave: function (args) {send("FwIcfAuthorizedAppsCopy");}});
+
+var FwIcfAuthorizedAppsDestroy = Module.findExportByName("fwbase.dll", "FwIcfAuthorizedAppsDestroy")
+Interceptor.attach(FwIcfAuthorizedAppsDestroy, {onLeave: function (args) {send("FwIcfAuthorizedAppsDestroy");}});
+
+var FwIcfDynamicFwPortDestroy = Module.findExportByName("fwbase.dll", "FwIcfDynamicFwPortDestroy")
+Interceptor.attach(FwIcfDynamicFwPortDestroy, {onLeave: function (args) {send("FwIcfDynamicFwPortDestroy");}});
+
+var FwIcfIpV4SubNetsCanonize = Module.findExportByName("fwbase.dll", "FwIcfIpV4SubNetsCanonize")
+Interceptor.attach(FwIcfIpV4SubNetsCanonize, {onLeave: function (args) {send("FwIcfIpV4SubNetsCanonize");}});
+
+var FwIcfIpV6SubNetsCanonize = Module.findExportByName("fwbase.dll", "FwIcfIpV6SubNetsCanonize")
+Interceptor.attach(FwIcfIpV6SubNetsCanonize, {onLeave: function (args) {send("FwIcfIpV6SubNetsCanonize");}});
+
+var FwIcfSubNetsCopy = Module.findExportByName("fwbase.dll", "FwIcfSubNetsCopy")
+Interceptor.attach(FwIcfSubNetsCopy, {onLeave: function (args) {send("FwIcfSubNetsCopy");}});
+
+var FwIcfSubNetsDestroy = Module.findExportByName("fwbase.dll", "FwIcfSubNetsDestroy")
+Interceptor.attach(FwIcfSubNetsDestroy, {onLeave: function (args) {send("FwIcfSubNetsDestroy");}});
+
+var FwIcfSubNetsGetScope = Module.findExportByName("fwbase.dll", "FwIcfSubNetsGetScope")
+Interceptor.attach(FwIcfSubNetsGetScope, {onLeave: function (args) {send("FwIcfSubNetsGetScope");}});
+
+var FwIcfSubNetsIsEqual = Module.findExportByName("fwbase.dll", "FwIcfSubNetsIsEqual")
+Interceptor.attach(FwIcfSubNetsIsEqual, {onLeave: function (args) {send("FwIcfSubNetsIsEqual");}});
+
+var FwImageListDestroy = Module.findExportByName("fwbase.dll", "FwImageListDestroy")
+Interceptor.attach(FwImageListDestroy, {onLeave: function (args) {send("FwImageListDestroy");}});
+
+var FwImageListHasImage = Module.findExportByName("fwbase.dll", "FwImageListHasImage")
+Interceptor.attach(FwImageListHasImage, {onLeave: function (args) {send("FwImageListHasImage");}});
+
+var FwInitMemoryMgr = Module.findExportByName("fwbase.dll", "FwInitMemoryMgr")
+Interceptor.attach(FwInitMemoryMgr, {onLeave: function (args) {send("FwInitMemoryMgr");}});
+
+var FwInitializeHashContext = Module.findExportByName("fwbase.dll", "FwInitializeHashContext")
+Interceptor.attach(FwInitializeHashContext, {onLeave: function (args) {send("FwInitializeHashContext");}});
+
+var FwIpV4SubNetDecode = Module.findExportByName("fwbase.dll", "FwIpV4SubNetDecode")
+Interceptor.attach(FwIpV4SubNetDecode, {onLeave: function (args) {send("FwIpV4SubNetDecode");}});
+
+var FwIsBuiltInPort = Module.findExportByName("fwbase.dll", "FwIsBuiltInPort")
+Interceptor.attach(FwIsBuiltInPort, {onLeave: function (args) {send("FwIsBuiltInPort");}});
+
+var FwIsMachineLocalHost = Module.findExportByName("fwbase.dll", "FwIsMachineLocalHost")
+Interceptor.attach(FwIsMachineLocalHost, {onLeave: function (args) {send("FwIsMachineLocalHost");}});
+
+var FwIsValidPorts = Module.findExportByName("fwbase.dll", "FwIsValidPorts")
+Interceptor.attach(FwIsValidPorts, {onLeave: function (args) {send("FwIsValidPorts");}});
+
+var FwLicensingIsIoT = Module.findExportByName("fwbase.dll", "FwLicensingIsIoT")
+Interceptor.attach(FwLicensingIsIoT, {onLeave: function (args) {send("FwLicensingIsIoT");}});
+
+var FwLicensingIsNetIsolationOnly = Module.findExportByName("fwbase.dll", "FwLicensingIsNetIsolationOnly")
+Interceptor.attach(FwLicensingIsNetIsolationOnly, {onLeave: function (args) {send("FwLicensingIsNetIsolationOnly");}});
+
+var FwLicensingIsVAILContainer = Module.findExportByName("fwbase.dll", "FwLicensingIsVAILContainer")
+Interceptor.attach(FwLicensingIsVAILContainer, {onLeave: function (args) {send("FwLicensingIsVAILContainer");}});
+
+var FwLicensingIsXbox = Module.findExportByName("fwbase.dll", "FwLicensingIsXbox")
+Interceptor.attach(FwLicensingIsXbox, {onLeave: function (args) {send("FwLicensingIsXbox");}});
+
+var FwLoadIndirectString = Module.findExportByName("fwbase.dll", "FwLoadIndirectString")
+Interceptor.attach(FwLoadIndirectString, {onLeave: function (args) {send("FwLoadIndirectString");}});
+
+var FwLoadString = Module.findExportByName("fwbase.dll", "FwLoadString")
+Interceptor.attach(FwLoadString, {onLeave: function (args) {send("FwLoadString");}});
+
+var FwLookupAccountSid = Module.findExportByName("fwbase.dll", "FwLookupAccountSid")
+Interceptor.attach(FwLookupAccountSid, {onLeave: function (args) {send("FwLookupAccountSid");}});
+
+var FwMarshalledMetaDataCopy = Module.findExportByName("fwbase.dll", "FwMarshalledMetaDataCopy")
+Interceptor.attach(FwMarshalledMetaDataCopy, {onLeave: function (args) {send("FwMarshalledMetaDataCopy");}});
+
+var FwMarshalledMetaDataInitialize = Module.findExportByName("fwbase.dll", "FwMarshalledMetaDataInitialize")
+Interceptor.attach(FwMarshalledMetaDataInitialize, {onLeave: function (args) {send("FwMarshalledMetaDataInitialize");}});
+
+var FwMetaDataAddEnforcementState = Module.findExportByName("fwbase.dll", "FwMetaDataAddEnforcementState")
+Interceptor.attach(FwMetaDataAddEnforcementState, {onLeave: function (args) {send("FwMetaDataAddEnforcementState");}});
+
+var FwMetaDataCopy = Module.findExportByName("fwbase.dll", "FwMetaDataCopy")
+Interceptor.attach(FwMetaDataCopy, {onLeave: function (args) {send("FwMetaDataCopy");}});
+
+var FwMetaDataFree = Module.findExportByName("fwbase.dll", "FwMetaDataFree")
+Interceptor.attach(FwMetaDataFree, {onLeave: function (args) {send("FwMetaDataFree");}});
+
+var FwMetaDataIsEnforcementStatePresent = Module.findExportByName("fwbase.dll", "FwMetaDataIsEnforcementStatePresent")
+Interceptor.attach(FwMetaDataIsEnforcementStatePresent, {onLeave: function (args) {send("FwMetaDataIsEnforcementStatePresent");}});
+
+var FwModifySDDLStringWithPolicyAppId = Module.findExportByName("fwbase.dll", "FwModifySDDLStringWithPolicyAppId")
+Interceptor.attach(FwModifySDDLStringWithPolicyAppId, {onLeave: function (args) {send("FwModifySDDLStringWithPolicyAppId");}});
+
+var FwMultiByteToWideChar = Module.findExportByName("fwbase.dll", "FwMultiByteToWideChar")
+Interceptor.attach(FwMultiByteToWideChar, {onLeave: function (args) {send("FwMultiByteToWideChar");}});
+
+var FwNtStatusToHResult = Module.findExportByName("fwbase.dll", "FwNtStatusToHResult")
+Interceptor.attach(FwNtStatusToHResult, {onLeave: function (args) {send("FwNtStatusToHResult");}});
+
+var FwParseEdpCloudResourceStringToNrptRuleList = Module.findExportByName("fwbase.dll", "FwParseEdpCloudResourceStringToNrptRuleList")
+Interceptor.attach(FwParseEdpCloudResourceStringToNrptRuleList, {onLeave: function (args) {send("FwParseEdpCloudResourceStringToNrptRuleList");}});
+
+var FwPortsToString = Module.findExportByName("fwbase.dll", "FwPortsToString")
+Interceptor.attach(FwPortsToString, {onLeave: function (args) {send("FwPortsToString");}});
+
+var FwProfileTypesToString = Module.findExportByName("fwbase.dll", "FwProfileTypesToString")
+Interceptor.attach(FwProfileTypesToString, {onLeave: function (args) {send("FwProfileTypesToString");}});
+
+var FwRegCloseKey = Module.findExportByName("fwbase.dll", "FwRegCloseKey")
+Interceptor.attach(FwRegCloseKey, {onLeave: function (args) {send("FwRegCloseKey");}});
+
+var FwRegCreateKey = Module.findExportByName("fwbase.dll", "FwRegCreateKey")
+Interceptor.attach(FwRegCreateKey, {onLeave: function (args) {send("FwRegCreateKey");}});
+
+var FwRegDeleteAllValues = Module.findExportByName("fwbase.dll", "FwRegDeleteAllValues")
+Interceptor.attach(FwRegDeleteAllValues, {onLeave: function (args) {send("FwRegDeleteAllValues");}});
+
+var FwRegDeleteKey = Module.findExportByName("fwbase.dll", "FwRegDeleteKey")
+Interceptor.attach(FwRegDeleteKey, {onLeave: function (args) {send("FwRegDeleteKey");}});
+
+var FwRegDeleteValue = Module.findExportByName("fwbase.dll", "FwRegDeleteValue")
+Interceptor.attach(FwRegDeleteValue, {onLeave: function (args) {send("FwRegDeleteValue");}});
+
+var FwRegEnumValueNameAndValueData = Module.findExportByName("fwbase.dll", "FwRegEnumValueNameAndValueData")
+Interceptor.attach(FwRegEnumValueNameAndValueData, {onLeave: function (args) {send("FwRegEnumValueNameAndValueData");}});
+
+var FwRegNotifyCreate = Module.findExportByName("fwbase.dll", "FwRegNotifyCreate")
+Interceptor.attach(FwRegNotifyCreate, {onLeave: function (args) {send("FwRegNotifyCreate");}});
+
+var FwRegNotifyDestroy = Module.findExportByName("fwbase.dll", "FwRegNotifyDestroy")
+Interceptor.attach(FwRegNotifyDestroy, {onLeave: function (args) {send("FwRegNotifyDestroy");}});
+
+var FwRegOpenKey = Module.findExportByName("fwbase.dll", "FwRegOpenKey")
+Interceptor.attach(FwRegOpenKey, {onLeave: function (args) {send("FwRegOpenKey");}});
+
+var FwRegQueryDWord = Module.findExportByName("fwbase.dll", "FwRegQueryDWord")
+Interceptor.attach(FwRegQueryDWord, {onLeave: function (args) {send("FwRegQueryDWord");}});
+
+var FwRegQueryNumKeys = Module.findExportByName("fwbase.dll", "FwRegQueryNumKeys")
+Interceptor.attach(FwRegQueryNumKeys, {onLeave: function (args) {send("FwRegQueryNumKeys");}});
+
+var FwRegQueryNumValues = Module.findExportByName("fwbase.dll", "FwRegQueryNumValues")
+Interceptor.attach(FwRegQueryNumValues, {onLeave: function (args) {send("FwRegQueryNumValues");}});
+
+var FwRegQueryString = Module.findExportByName("fwbase.dll", "FwRegQueryString")
+Interceptor.attach(FwRegQueryString, {onLeave: function (args) {send("FwRegQueryString");}});
+
+var FwRegSetDWord = Module.findExportByName("fwbase.dll", "FwRegSetDWord")
+Interceptor.attach(FwRegSetDWord, {onLeave: function (args) {send("FwRegSetDWord");}});
+
+var FwRegSetString = Module.findExportByName("fwbase.dll", "FwRegSetString")
+Interceptor.attach(FwRegSetString, {onLeave: function (args) {send("FwRegSetString");}});
+
+var FwReleasePrivilege = Module.findExportByName("fwbase.dll", "FwReleasePrivilege")
+Interceptor.attach(FwReleasePrivilege, {onLeave: function (args) {send("FwReleasePrivilege");}});
+
+var FwRemovePolicyAppIdFromSDDLString = Module.findExportByName("fwbase.dll", "FwRemovePolicyAppIdFromSDDLString")
+Interceptor.attach(FwRemovePolicyAppIdFromSDDLString, {onLeave: function (args) {send("FwRemovePolicyAppIdFromSDDLString");}});
+
+var FwReplacePolicyAppIdInSDDLString = Module.findExportByName("fwbase.dll", "FwReplacePolicyAppIdInSDDLString")
+Interceptor.attach(FwReplacePolicyAppIdInSDDLString, {onLeave: function (args) {send("FwReplacePolicyAppIdInSDDLString");}});
+
+var FwReportErrorAsNtStatus = Module.findExportByName("fwbase.dll", "FwReportErrorAsNtStatus")
+Interceptor.attach(FwReportErrorAsNtStatus, {onLeave: function (args) {send("FwReportErrorAsNtStatus");}});
+
+var FwReportErrorAsWinError = Module.findExportByName("fwbase.dll", "FwReportErrorAsWinError")
+Interceptor.attach(FwReportErrorAsWinError, {onLeave: function (args) {send("FwReportErrorAsWinError");}});
+
+var FwReportReturnError = Module.findExportByName("fwbase.dll", "FwReportReturnError")
+Interceptor.attach(FwReportReturnError, {onLeave: function (args) {send("FwReportReturnError");}});
+
+var FwResolveIndirectString = Module.findExportByName("fwbase.dll", "FwResolveIndirectString")
+Interceptor.attach(FwResolveIndirectString, {onLeave: function (args) {send("FwResolveIndirectString");}});
+
+var FwRestructureHashtable = Module.findExportByName("fwbase.dll", "FwRestructureHashtable")
+Interceptor.attach(FwRestructureHashtable, {onLeave: function (args) {send("FwRestructureHashtable");}});
+
+var FwServiceSidCreateInPlace = Module.findExportByName("fwbase.dll", "FwServiceSidCreateInPlace")
+Interceptor.attach(FwServiceSidCreateInPlace, {onLeave: function (args) {send("FwServiceSidCreateInPlace");}});
+
+var FwSetMemLeakPolicy = Module.findExportByName("fwbase.dll", "FwSetMemLeakPolicy")
+Interceptor.attach(FwSetMemLeakPolicy, {onLeave: function (args) {send("FwSetMemLeakPolicy");}});
+
+var FwShutdownMemoryMgr = Module.findExportByName("fwbase.dll", "FwShutdownMemoryMgr")
+Interceptor.attach(FwShutdownMemoryMgr, {onLeave: function (args) {send("FwShutdownMemoryMgr");}});
+
+var FwSidCreate = Module.findExportByName("fwbase.dll", "FwSidCreate")
+Interceptor.attach(FwSidCreate, {onLeave: function (args) {send("FwSidCreate");}});
+
+var FwSidDestroy = Module.findExportByName("fwbase.dll", "FwSidDestroy")
+Interceptor.attach(FwSidDestroy, {onLeave: function (args) {send("FwSidDestroy");}});
+
+var FwSizeTAdd = Module.findExportByName("fwbase.dll", "FwSizeTAdd")
+Interceptor.attach(FwSizeTAdd, {onLeave: function (args) {send("FwSizeTAdd");}});
+
+var FwSizeTMultiply = Module.findExportByName("fwbase.dll", "FwSizeTMultiply")
+Interceptor.attach(FwSizeTMultiply, {onLeave: function (args) {send("FwSizeTMultiply");}});
+
+var FwSortAddresses = Module.findExportByName("fwbase.dll", "FwSortAddresses")
+Interceptor.attach(FwSortAddresses, {onLeave: function (args) {send("FwSortAddresses");}});
+
+var FwSortInterfaceLUIDs = Module.findExportByName("fwbase.dll", "FwSortInterfaceLUIDs")
+Interceptor.attach(FwSortInterfaceLUIDs, {onLeave: function (args) {send("FwSortInterfaceLUIDs");}});
+
+var FwStaticFwPortEncode = Module.findExportByName("fwbase.dll", "FwStaticFwPortEncode")
+Interceptor.attach(FwStaticFwPortEncode, {onLeave: function (args) {send("FwStaticFwPortEncode");}});
+
+var FwStaticFwPortEncodeValueName = Module.findExportByName("fwbase.dll", "FwStaticFwPortEncodeValueName")
+Interceptor.attach(FwStaticFwPortEncodeValueName, {onLeave: function (args) {send("FwStaticFwPortEncodeValueName");}});
+
+var FwStringArrayCopy = Module.findExportByName("fwbase.dll", "FwStringArrayCopy")
+Interceptor.attach(FwStringArrayCopy, {onLeave: function (args) {send("FwStringArrayCopy");}});
+
+var FwStringBuild = Module.findExportByName("fwbase.dll", "FwStringBuild")
+Interceptor.attach(FwStringBuild, {onLeave: function (args) {send("FwStringBuild");}});
+
+var FwStringBuildWithPrefix = Module.findExportByName("fwbase.dll", "FwStringBuildWithPrefix")
+Interceptor.attach(FwStringBuildWithPrefix, {onLeave: function (args) {send("FwStringBuildWithPrefix");}});
+
+var FwStringCanonicalizeCopy = Module.findExportByName("fwbase.dll", "FwStringCanonicalizeCopy")
+Interceptor.attach(FwStringCanonicalizeCopy, {onLeave: function (args) {send("FwStringCanonicalizeCopy");}});
+
+var FwStringConcat = Module.findExportByName("fwbase.dll", "FwStringConcat")
+Interceptor.attach(FwStringConcat, {onLeave: function (args) {send("FwStringConcat");}});
+
+var FwStringCopy = Module.findExportByName("fwbase.dll", "FwStringCopy")
+Interceptor.attach(FwStringCopy, {onLeave: function (args) {send("FwStringCopy");}});
+
+var FwStringCopyA = Module.findExportByName("fwbase.dll", "FwStringCopyA")
+Interceptor.attach(FwStringCopyA, {onLeave: function (args) {send("FwStringCopyA");}});
+
+var FwStringCopyAtoWAlloc = Module.findExportByName("fwbase.dll", "FwStringCopyAtoWAlloc")
+Interceptor.attach(FwStringCopyAtoWAlloc, {onLeave: function (args) {send("FwStringCopyAtoWAlloc");}});
+
+var FwStringCopyWtoAAlloc = Module.findExportByName("fwbase.dll", "FwStringCopyWtoAAlloc")
+Interceptor.attach(FwStringCopyWtoAAlloc, {onLeave: function (args) {send("FwStringCopyWtoAAlloc");}});
+
+var FwStringPrefixConcat = Module.findExportByName("fwbase.dll", "FwStringPrefixConcat")
+Interceptor.attach(FwStringPrefixConcat, {onLeave: function (args) {send("FwStringPrefixConcat");}});
+
+var FwStringPrefixCopy = Module.findExportByName("fwbase.dll", "FwStringPrefixCopy")
+Interceptor.attach(FwStringPrefixCopy, {onLeave: function (args) {send("FwStringPrefixCopy");}});
+
+var FwSubNetsEncode = Module.findExportByName("fwbase.dll", "FwSubNetsEncode")
+Interceptor.attach(FwSubNetsEncode, {onLeave: function (args) {send("FwSubNetsEncode");}});
+
+var FwSubstituteDeviceName = Module.findExportByName("fwbase.dll", "FwSubstituteDeviceName")
+Interceptor.attach(FwSubstituteDeviceName, {onLeave: function (args) {send("FwSubstituteDeviceName");}});
+
+var FwTriggerGetEventForSource = Module.findExportByName("fwbase.dll", "FwTriggerGetEventForSource")
+Interceptor.attach(FwTriggerGetEventForSource, {onLeave: function (args) {send("FwTriggerGetEventForSource");}});
+
+var FwTriggerRearm = Module.findExportByName("fwbase.dll", "FwTriggerRearm")
+Interceptor.attach(FwTriggerRearm, {onLeave: function (args) {send("FwTriggerRearm");}});
+
+var FwTriggerRegisterWait = Module.findExportByName("fwbase.dll", "FwTriggerRegisterWait")
+Interceptor.attach(FwTriggerRegisterWait, {onLeave: function (args) {send("FwTriggerRegisterWait");}});
+
+var FwTriggerUnregisterWait = Module.findExportByName("fwbase.dll", "FwTriggerUnregisterWait")
+Interceptor.attach(FwTriggerUnregisterWait, {onLeave: function (args) {send("FwTriggerUnregisterWait");}});
+
+var FwUpdateHash = Module.findExportByName("fwbase.dll", "FwUpdateHash")
+Interceptor.attach(FwUpdateHash, {onLeave: function (args) {send("FwUpdateHash");}});
+
+var FwVerifyAuthenticationSet = Module.findExportByName("fwbase.dll", "FwVerifyAuthenticationSet")
+Interceptor.attach(FwVerifyAuthenticationSet, {onLeave: function (args) {send("FwVerifyAuthenticationSet");}});
+
+var FwVerifyAuthenticationSetQuery = Module.findExportByName("fwbase.dll", "FwVerifyAuthenticationSetQuery")
+Interceptor.attach(FwVerifyAuthenticationSetQuery, {onLeave: function (args) {send("FwVerifyAuthenticationSetQuery");}});
+
+var FwVerifyConnectionSecurityRule = Module.findExportByName("fwbase.dll", "FwVerifyConnectionSecurityRule")
+Interceptor.attach(FwVerifyConnectionSecurityRule, {onLeave: function (args) {send("FwVerifyConnectionSecurityRule");}});
+
+var FwVerifyConnectionSecurityRuleQuery = Module.findExportByName("fwbase.dll", "FwVerifyConnectionSecurityRuleQuery")
+Interceptor.attach(FwVerifyConnectionSecurityRuleQuery, {onLeave: function (args) {send("FwVerifyConnectionSecurityRuleQuery");}});
+
+var FwVerifyCryptoSet = Module.findExportByName("fwbase.dll", "FwVerifyCryptoSet")
+Interceptor.attach(FwVerifyCryptoSet, {onLeave: function (args) {send("FwVerifyCryptoSet");}});
+
+var FwVerifyCryptoSetQuery = Module.findExportByName("fwbase.dll", "FwVerifyCryptoSetQuery")
+Interceptor.attach(FwVerifyCryptoSetQuery, {onLeave: function (args) {send("FwVerifyCryptoSetQuery");}});
+
+var FwVerifyFirewallRule = Module.findExportByName("fwbase.dll", "FwVerifyFirewallRule")
+Interceptor.attach(FwVerifyFirewallRule, {onLeave: function (args) {send("FwVerifyFirewallRule");}});
+
+var FwVerifyFirewallRuleQuery = Module.findExportByName("fwbase.dll", "FwVerifyFirewallRuleQuery")
+Interceptor.attach(FwVerifyFirewallRuleQuery, {onLeave: function (args) {send("FwVerifyFirewallRuleQuery");}});
+
+var FwVerifyMainModeRule = Module.findExportByName("fwbase.dll", "FwVerifyMainModeRule")
+Interceptor.attach(FwVerifyMainModeRule, {onLeave: function (args) {send("FwVerifyMainModeRule");}});
+
+var FwVerifyMainModeRuleQuery = Module.findExportByName("fwbase.dll", "FwVerifyMainModeRuleQuery")
+Interceptor.attach(FwVerifyMainModeRuleQuery, {onLeave: function (args) {send("FwVerifyMainModeRuleQuery");}});
+
+var FwVerifyNoHeapLeaks = Module.findExportByName("fwbase.dll", "FwVerifyNoHeapLeaks")
+Interceptor.attach(FwVerifyNoHeapLeaks, {onLeave: function (args) {send("FwVerifyNoHeapLeaks");}});
+
+var FwWcsICmp = Module.findExportByName("fwbase.dll", "FwWcsICmp")
+Interceptor.attach(FwWcsICmp, {onLeave: function (args) {send("FwWcsICmp");}});
+
+var Int_FWVerifyAuthenticationSet = Module.findExportByName("fwbase.dll", "Int_FWVerifyAuthenticationSet")
+Interceptor.attach(Int_FWVerifyAuthenticationSet, {onLeave: function (args) {send("Int_FWVerifyAuthenticationSet");}});
+
+var Int_FWVerifyConnectionSecurityRule = Module.findExportByName("fwbase.dll", "Int_FWVerifyConnectionSecurityRule")
+Interceptor.attach(Int_FWVerifyConnectionSecurityRule, {onLeave: function (args) {send("Int_FWVerifyConnectionSecurityRule");}});
+
+var Int_FWVerifyCryptoSet = Module.findExportByName("fwbase.dll", "Int_FWVerifyCryptoSet")
+Interceptor.attach(Int_FWVerifyCryptoSet, {onLeave: function (args) {send("Int_FWVerifyCryptoSet");}});
+
+var Int_FWVerifyFirewallRule = Module.findExportByName("fwbase.dll", "Int_FWVerifyFirewallRule")
+Interceptor.attach(Int_FWVerifyFirewallRule, {onLeave: function (args) {send("Int_FWVerifyFirewallRule");}});
+
+var Int_FWVerifyHyperVRule = Module.findExportByName("fwbase.dll", "Int_FWVerifyHyperVRule")
+Interceptor.attach(Int_FWVerifyHyperVRule, {onLeave: function (args) {send("Int_FWVerifyHyperVRule");}});
+
+var Int_FWVerifyMainModeRule = Module.findExportByName("fwbase.dll", "Int_FWVerifyMainModeRule")
+Interceptor.attach(Int_FWVerifyMainModeRule, {onLeave: function (args) {send("Int_FWVerifyMainModeRule");}});
+
+var Int_FwIPV4RangeContainsMulticast = Module.findExportByName("fwbase.dll", "Int_FwIPV4RangeContainsMulticast")
+Interceptor.attach(Int_FwIPV4RangeContainsMulticast, {onLeave: function (args) {send("Int_FwIPV4RangeContainsMulticast");}});
+
+var Int_FwIPV6RangeContainsMulticast = Module.findExportByName("fwbase.dll", "Int_FwIPV6RangeContainsMulticast")
+Interceptor.attach(Int_FwIPV6RangeContainsMulticast, {onLeave: function (args) {send("Int_FwIPV6RangeContainsMulticast");}});
+
+var Int_FwIsV6AddrLoopback = Module.findExportByName("fwbase.dll", "Int_FwIsV6AddrLoopback")
+Interceptor.attach(Int_FwIsV6AddrLoopback, {onLeave: function (args) {send("Int_FwIsV6AddrLoopback");}});
+
+var Int_FwValidateAndMigrateSecurityDescriptor = Module.findExportByName("fwbase.dll", "Int_FwValidateAndMigrateSecurityDescriptor")
+Interceptor.attach(Int_FwValidateAndMigrateSecurityDescriptor, {onLeave: function (args) {send("Int_FwValidateAndMigrateSecurityDescriptor");}});
+
+var Int_FwValidateComplianceAndReduceAuthSetToVersion = Module.findExportByName("fwbase.dll", "Int_FwValidateComplianceAndReduceAuthSetToVersion")
+Interceptor.attach(Int_FwValidateComplianceAndReduceAuthSetToVersion, {onLeave: function (args) {send("Int_FwValidateComplianceAndReduceAuthSetToVersion");}});
+
+var Int_FwValidateComplianceAndReduceConnSecRuleToVersion = Module.findExportByName("fwbase.dll", "Int_FwValidateComplianceAndReduceConnSecRuleToVersion")
+Interceptor.attach(Int_FwValidateComplianceAndReduceConnSecRuleToVersion, {onLeave: function (args) {send("Int_FwValidateComplianceAndReduceConnSecRuleToVersion");}});
+
+var Int_FwValidateComplianceAndReduceCryptoSetToVersion = Module.findExportByName("fwbase.dll", "Int_FwValidateComplianceAndReduceCryptoSetToVersion")
+Interceptor.attach(Int_FwValidateComplianceAndReduceCryptoSetToVersion, {onLeave: function (args) {send("Int_FwValidateComplianceAndReduceCryptoSetToVersion");}});
+
+var Int_FwValidateComplianceAndReduceFirewallRuleToVersion = Module.findExportByName("fwbase.dll", "Int_FwValidateComplianceAndReduceFirewallRuleToVersion")
+Interceptor.attach(Int_FwValidateComplianceAndReduceFirewallRuleToVersion, {onLeave: function (args) {send("Int_FwValidateComplianceAndReduceFirewallRuleToVersion");}});
+
+var Int_FwValidateComplianceAndReduceHyperVRuleToVersion = Module.findExportByName("fwbase.dll", "Int_FwValidateComplianceAndReduceHyperVRuleToVersion")
+Interceptor.attach(Int_FwValidateComplianceAndReduceHyperVRuleToVersion, {onLeave: function (args) {send("Int_FwValidateComplianceAndReduceHyperVRuleToVersion");}});
+
+var Int_FwValidateComplianceAndReduceMainModeRuleToVersion = Module.findExportByName("fwbase.dll", "Int_FwValidateComplianceAndReduceMainModeRuleToVersion")
+Interceptor.attach(Int_FwValidateComplianceAndReduceMainModeRuleToVersion, {onLeave: function (args) {send("Int_FwValidateComplianceAndReduceMainModeRuleToVersion");}});
+
+var Int_FwValidateSecurityDescriptor = Module.findExportByName("fwbase.dll", "Int_FwValidateSecurityDescriptor")
+Interceptor.attach(Int_FwValidateSecurityDescriptor, {onLeave: function (args) {send("Int_FwValidateSecurityDescriptor");}});
+
+var IsAddressesEmpty = Module.findExportByName("fwbase.dll", "IsAddressesEmpty")
+Interceptor.attach(IsAddressesEmpty, {onLeave: function (args) {send("IsAddressesEmpty");}});
+
+var IsCSRuleTunnelMode = Module.findExportByName("fwbase.dll", "IsCSRuleTunnelMode")
+Interceptor.attach(IsCSRuleTunnelMode, {onLeave: function (args) {send("IsCSRuleTunnelMode");}});
+
+var IsRuleOldAuthApp = Module.findExportByName("fwbase.dll", "IsRuleOldAuthApp")
+Interceptor.attach(IsRuleOldAuthApp, {onLeave: function (args) {send("IsRuleOldAuthApp");}});
+
+var IsRuleOldGlobalOpenPort = Module.findExportByName("fwbase.dll", "IsRuleOldGlobalOpenPort")
+Interceptor.attach(IsRuleOldGlobalOpenPort, {onLeave: function (args) {send("IsRuleOldGlobalOpenPort");}});
+
+var IsRuleOldv1Compliant = Module.findExportByName("fwbase.dll", "IsRuleOldv1Compliant")
+Interceptor.attach(IsRuleOldv1Compliant, {onLeave: function (args) {send("IsRuleOldv1Compliant");}});
+
+var IsRuleOpenPortOrAuthApp = Module.findExportByName("fwbase.dll", "IsRuleOpenPortOrAuthApp")
+Interceptor.attach(IsRuleOpenPortOrAuthApp, {onLeave: function (args) {send("IsRuleOpenPortOrAuthApp");}});
+
+var Isv4AddressesEmpty = Module.findExportByName("fwbase.dll", "Isv4AddressesEmpty")
+Interceptor.attach(Isv4AddressesEmpty, {onLeave: function (args) {send("Isv4AddressesEmpty");}});
+
+var Isv6AddressesEmpty = Module.findExportByName("fwbase.dll", "Isv6AddressesEmpty")
+Interceptor.attach(Isv6AddressesEmpty, {onLeave: function (args) {send("Isv6AddressesEmpty");}});
+

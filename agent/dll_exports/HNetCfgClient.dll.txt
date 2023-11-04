@@ -1,0 +1,36 @@
+var DllCanUnloadNow = Module.findExportByName("HNetCfgClient.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("HNetCfgClient.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("HNetCfgClient.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("HNetCfgClient.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var HNetCfgGetDhcpScopeAddress = Module.findExportByName("HNetCfgClient.dll", "HNetCfgGetDhcpScopeAddress")
+Interceptor.attach(HNetCfgGetDhcpScopeAddress, {onLeave: function (args) {send("HNetCfgGetDhcpScopeAddress");}});
+
+var HNetCfgGetPrivateIndex = Module.findExportByName("HNetCfgClient.dll", "HNetCfgGetPrivateIndex")
+Interceptor.attach(HNetCfgGetPrivateIndex, {onLeave: function (args) {send("HNetCfgGetPrivateIndex");}});
+
+var HNetCfgGetPublicIndex = Module.findExportByName("HNetCfgClient.dll", "HNetCfgGetPublicIndex")
+Interceptor.attach(HNetCfgGetPublicIndex, {onLeave: function (args) {send("HNetCfgGetPublicIndex");}});
+
+var HNetCfgSetDhcpScopeAddress = Module.findExportByName("HNetCfgClient.dll", "HNetCfgSetDhcpScopeAddress")
+Interceptor.attach(HNetCfgSetDhcpScopeAddress, {onLeave: function (args) {send("HNetCfgSetDhcpScopeAddress");}});
+
+var HNetCfgStartSharing = Module.findExportByName("HNetCfgClient.dll", "HNetCfgStartSharing")
+Interceptor.attach(HNetCfgStartSharing, {onLeave: function (args) {send("HNetCfgStartSharing");}});
+
+var HNetCfgStartSharingEx = Module.findExportByName("HNetCfgClient.dll", "HNetCfgStartSharingEx")
+Interceptor.attach(HNetCfgStartSharingEx, {onLeave: function (args) {send("HNetCfgStartSharingEx");}});
+
+var HNetCfgStopSharing = Module.findExportByName("HNetCfgClient.dll", "HNetCfgStopSharing")
+Interceptor.attach(HNetCfgStopSharing, {onLeave: function (args) {send("HNetCfgStopSharing");}});
+
+var HNetCfgUpdateSharingSettingsFromStorage = Module.findExportByName("HNetCfgClient.dll", "HNetCfgUpdateSharingSettingsFromStorage")
+Interceptor.attach(HNetCfgUpdateSharingSettingsFromStorage, {onLeave: function (args) {send("HNetCfgUpdateSharingSettingsFromStorage");}});
+

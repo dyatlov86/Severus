@@ -1,0 +1,9 @@
+var AbortSystemShutdownW = Module.findExportByName("api-ms-win-core-shutdown-l1-1-0.dll", "AbortSystemShutdownW")
+Interceptor.attach(AbortSystemShutdownW, {onLeave: function (args) {send("AbortSystemShutdownW");}});
+
+var InitiateSystemShutdownExW = Module.findExportByName("api-ms-win-core-shutdown-l1-1-0.dll", "InitiateSystemShutdownExW")
+Interceptor.attach(InitiateSystemShutdownExW, {onLeave: function (args) {send("InitiateSystemShutdownExW");}});
+
+var InitiateSystemShutdownW = Module.findExportByName("api-ms-win-core-shutdown-l1-1-0.dll", "InitiateSystemShutdownW")
+Interceptor.attach(InitiateSystemShutdownW, {onLeave: function (args) {send("InitiateSystemShutdownW");}});
+

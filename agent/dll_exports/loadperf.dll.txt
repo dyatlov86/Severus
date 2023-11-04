@@ -1,0 +1,42 @@
+var BackupPerfRegistryToFileW = Module.findExportByName("loadperf.dll", "BackupPerfRegistryToFileW")
+Interceptor.attach(BackupPerfRegistryToFileW, {onLeave: function (args) {send("BackupPerfRegistryToFileW");}});
+
+var InstallPerfDllA = Module.findExportByName("loadperf.dll", "InstallPerfDllA")
+Interceptor.attach(InstallPerfDllA, {onLeave: function (args) {send("InstallPerfDllA");}});
+
+var InstallPerfDllW = Module.findExportByName("loadperf.dll", "InstallPerfDllW")
+Interceptor.attach(InstallPerfDllW, {onLeave: function (args) {send("InstallPerfDllW");}});
+
+var LoadPerfCounterTextStringsA = Module.findExportByName("loadperf.dll", "LoadPerfCounterTextStringsA")
+Interceptor.attach(LoadPerfCounterTextStringsA, {onLeave: function (args) {send("LoadPerfCounterTextStringsA");}});
+
+var LoadPerfCounterTextStringsW = Module.findExportByName("loadperf.dll", "LoadPerfCounterTextStringsW")
+Interceptor.attach(LoadPerfCounterTextStringsW, {onLeave: function (args) {send("LoadPerfCounterTextStringsW");}});
+
+var LpAcquireInstallationMutex = Module.findExportByName("loadperf.dll", "LpAcquireInstallationMutex")
+Interceptor.attach(LpAcquireInstallationMutex, {onLeave: function (args) {send("LpAcquireInstallationMutex");}});
+
+var LpReleaseInstallationMutex = Module.findExportByName("loadperf.dll", "LpReleaseInstallationMutex")
+Interceptor.attach(LpReleaseInstallationMutex, {onLeave: function (args) {send("LpReleaseInstallationMutex");}});
+
+var RestorePerfRegistryFromFileW = Module.findExportByName("loadperf.dll", "RestorePerfRegistryFromFileW")
+Interceptor.attach(RestorePerfRegistryFromFileW, {onLeave: function (args) {send("RestorePerfRegistryFromFileW");}});
+
+var SetServiceAsTrustedA = Module.findExportByName("loadperf.dll", "SetServiceAsTrustedA")
+Interceptor.attach(SetServiceAsTrustedA, {onLeave: function (args) {send("SetServiceAsTrustedA");}});
+
+var SetServiceAsTrustedW = Module.findExportByName("loadperf.dll", "SetServiceAsTrustedW")
+Interceptor.attach(SetServiceAsTrustedW, {onLeave: function (args) {send("SetServiceAsTrustedW");}});
+
+var UnloadPerfCounterTextStringsA = Module.findExportByName("loadperf.dll", "UnloadPerfCounterTextStringsA")
+Interceptor.attach(UnloadPerfCounterTextStringsA, {onLeave: function (args) {send("UnloadPerfCounterTextStringsA");}});
+
+var UnloadPerfCounterTextStringsW = Module.findExportByName("loadperf.dll", "UnloadPerfCounterTextStringsW")
+Interceptor.attach(UnloadPerfCounterTextStringsW, {onLeave: function (args) {send("UnloadPerfCounterTextStringsW");}});
+
+var UpdatePerfNameFilesA = Module.findExportByName("loadperf.dll", "UpdatePerfNameFilesA")
+Interceptor.attach(UpdatePerfNameFilesA, {onLeave: function (args) {send("UpdatePerfNameFilesA");}});
+
+var UpdatePerfNameFilesW = Module.findExportByName("loadperf.dll", "UpdatePerfNameFilesW")
+Interceptor.attach(UpdatePerfNameFilesW, {onLeave: function (args) {send("UpdatePerfNameFilesW");}});
+

@@ -1,0 +1,24 @@
+var ChangeTimerQueueTimer = Module.findExportByName("api-ms-win-core-threadpool-legacy-l1-1-0.dll", "ChangeTimerQueueTimer")
+Interceptor.attach(ChangeTimerQueueTimer, {onLeave: function (args) {send("ChangeTimerQueueTimer");}});
+
+var CreateTimerQueue = Module.findExportByName("api-ms-win-core-threadpool-legacy-l1-1-0.dll", "CreateTimerQueue")
+Interceptor.attach(CreateTimerQueue, {onLeave: function (args) {send("CreateTimerQueue");}});
+
+var CreateTimerQueueTimer = Module.findExportByName("api-ms-win-core-threadpool-legacy-l1-1-0.dll", "CreateTimerQueueTimer")
+Interceptor.attach(CreateTimerQueueTimer, {onLeave: function (args) {send("CreateTimerQueueTimer");}});
+
+var DeleteTimerQueue = Module.findExportByName("api-ms-win-core-threadpool-legacy-l1-1-0.dll", "DeleteTimerQueue")
+Interceptor.attach(DeleteTimerQueue, {onLeave: function (args) {send("DeleteTimerQueue");}});
+
+var DeleteTimerQueueEx = Module.findExportByName("api-ms-win-core-threadpool-legacy-l1-1-0.dll", "DeleteTimerQueueEx")
+Interceptor.attach(DeleteTimerQueueEx, {onLeave: function (args) {send("DeleteTimerQueueEx");}});
+
+var DeleteTimerQueueTimer = Module.findExportByName("api-ms-win-core-threadpool-legacy-l1-1-0.dll", "DeleteTimerQueueTimer")
+Interceptor.attach(DeleteTimerQueueTimer, {onLeave: function (args) {send("DeleteTimerQueueTimer");}});
+
+var QueueUserWorkItem = Module.findExportByName("api-ms-win-core-threadpool-legacy-l1-1-0.dll", "QueueUserWorkItem")
+Interceptor.attach(QueueUserWorkItem, {onLeave: function (args) {send("QueueUserWorkItem");}});
+
+var UnregisterWaitEx = Module.findExportByName("api-ms-win-core-threadpool-legacy-l1-1-0.dll", "UnregisterWaitEx")
+Interceptor.attach(UnregisterWaitEx, {onLeave: function (args) {send("UnregisterWaitEx");}});
+

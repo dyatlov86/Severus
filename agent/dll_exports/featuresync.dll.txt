@@ -1,0 +1,6 @@
+var FeatureSyncStart = Module.findExportByName("featuresync.dll", "FeatureSyncStart")
+Interceptor.attach(FeatureSyncStart, {onLeave: function (args) {send("FeatureSyncStart");}});
+
+var FeatureSyncStop = Module.findExportByName("featuresync.dll", "FeatureSyncStop")
+Interceptor.attach(FeatureSyncStop, {onLeave: function (args) {send("FeatureSyncStop");}});
+

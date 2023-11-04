@@ -1,0 +1,12 @@
+var AtlThunk_AllocateData = Module.findExportByName("atlthunk.dll", "AtlThunk_AllocateData")
+Interceptor.attach(AtlThunk_AllocateData, {onLeave: function (args) {send("AtlThunk_AllocateData");}});
+
+var AtlThunk_DataToCode = Module.findExportByName("atlthunk.dll", "AtlThunk_DataToCode")
+Interceptor.attach(AtlThunk_DataToCode, {onLeave: function (args) {send("AtlThunk_DataToCode");}});
+
+var AtlThunk_FreeData = Module.findExportByName("atlthunk.dll", "AtlThunk_FreeData")
+Interceptor.attach(AtlThunk_FreeData, {onLeave: function (args) {send("AtlThunk_FreeData");}});
+
+var AtlThunk_InitData = Module.findExportByName("atlthunk.dll", "AtlThunk_InitData")
+Interceptor.attach(AtlThunk_InitData, {onLeave: function (args) {send("AtlThunk_InitData");}});
+

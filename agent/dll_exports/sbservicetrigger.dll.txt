@@ -1,0 +1,12 @@
+var ServiceTriggerEnumerateTransferredSockets = Module.findExportByName("sbservicetrigger.dll", "ServiceTriggerEnumerateTransferredSockets")
+Interceptor.attach(ServiceTriggerEnumerateTransferredSockets, {onLeave: function (args) {send("ServiceTriggerEnumerateTransferredSockets");}});
+
+var ServiceTriggerRetrieveSocketContext = Module.findExportByName("sbservicetrigger.dll", "ServiceTriggerRetrieveSocketContext")
+Interceptor.attach(ServiceTriggerRetrieveSocketContext, {onLeave: function (args) {send("ServiceTriggerRetrieveSocketContext");}});
+
+var ServiceTriggerRetrieveSockets = Module.findExportByName("sbservicetrigger.dll", "ServiceTriggerRetrieveSockets")
+Interceptor.attach(ServiceTriggerRetrieveSockets, {onLeave: function (args) {send("ServiceTriggerRetrieveSockets");}});
+
+var ServiceTriggerTransferSocketOwnership = Module.findExportByName("sbservicetrigger.dll", "ServiceTriggerTransferSocketOwnership")
+Interceptor.attach(ServiceTriggerTransferSocketOwnership, {onLeave: function (args) {send("ServiceTriggerTransferSocketOwnership");}});
+

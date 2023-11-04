@@ -1,0 +1,33 @@
+var IEShims_CreateFileW = Module.findExportByName("eShims.dll", "IEShims_CreateFileW")
+Interceptor.attach(IEShims_CreateFileW, {onLeave: function (args) {send("IEShims_CreateFileW");}});
+
+var IEShims_FindClose = Module.findExportByName("eShims.dll", "IEShims_FindClose")
+Interceptor.attach(IEShims_FindClose, {onLeave: function (args) {send("IEShims_FindClose");}});
+
+var IEShims_FindFirstFileW = Module.findExportByName("eShims.dll", "IEShims_FindFirstFileW")
+Interceptor.attach(IEShims_FindFirstFileW, {onLeave: function (args) {send("IEShims_FindFirstFileW");}});
+
+var IEShims_GetFileAttributesExW = Module.findExportByName("eShims.dll", "IEShims_GetFileAttributesExW")
+Interceptor.attach(IEShims_GetFileAttributesExW, {onLeave: function (args) {send("IEShims_GetFileAttributesExW");}});
+
+var IEShims_GetFileAttributesW = Module.findExportByName("eShims.dll", "IEShims_GetFileAttributesW")
+Interceptor.attach(IEShims_GetFileAttributesW, {onLeave: function (args) {send("IEShims_GetFileAttributesW");}});
+
+var IEShims_GetFullPathNameW = Module.findExportByName("eShims.dll", "IEShims_GetFullPathNameW")
+Interceptor.attach(IEShims_GetFullPathNameW, {onLeave: function (args) {send("IEShims_GetFullPathNameW");}});
+
+var IEShims_GetLongPathNameW = Module.findExportByName("eShims.dll", "IEShims_GetLongPathNameW")
+Interceptor.attach(IEShims_GetLongPathNameW, {onLeave: function (args) {send("IEShims_GetLongPathNameW");}});
+
+var IEShims_Initialize = Module.findExportByName("eShims.dll", "IEShims_Initialize")
+Interceptor.attach(IEShims_Initialize, {onLeave: function (args) {send("IEShims_Initialize");}});
+
+var IEShims_Uninitialize = Module.findExportByName("eShims.dll", "IEShims_Uninitialize")
+Interceptor.attach(IEShims_Uninitialize, {onLeave: function (args) {send("IEShims_Uninitialize");}});
+
+var IEShims_WNetGetConnectionW = Module.findExportByName("eShims.dll", "IEShims_WNetGetConnectionW")
+Interceptor.attach(IEShims_WNetGetConnectionW, {onLeave: function (args) {send("IEShims_WNetGetConnectionW");}});
+
+var RegisterFlashShimHandler = Module.findExportByName("eShims.dll", "RegisterFlashShimHandler")
+Interceptor.attach(RegisterFlashShimHandler, {onLeave: function (args) {send("RegisterFlashShimHandler");}});
+

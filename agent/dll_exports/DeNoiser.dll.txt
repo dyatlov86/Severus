@@ -1,0 +1,18 @@
+var ClearDeNoiserStatus = Module.findExportByName("DeNoiser.dll", "ClearDeNoiserStatus")
+Interceptor.attach(ClearDeNoiserStatus, {onLeave: function (args) {send("ClearDeNoiserStatus");}});
+
+var DoDeNoiser = Module.findExportByName("DeNoiser.dll", "DoDeNoiser")
+Interceptor.attach(DoDeNoiser, {onLeave: function (args) {send("DoDeNoiser");}});
+
+var EADenoiser = Module.findExportByName("DeNoiser.dll", "EADenoiser")
+Interceptor.attach(EADenoiser, {onLeave: function (args) {send("EADenoiser");}});
+
+var EADenoiser2 = Module.findExportByName("DeNoiser.dll", "EADenoiser2")
+Interceptor.attach(EADenoiser2, {onLeave: function (args) {send("EADenoiser2");}});
+
+var Free_DeNoiser = Module.findExportByName("DeNoiser.dll", "Free_DeNoiser")
+Interceptor.attach(Free_DeNoiser, {onLeave: function (args) {send("Free_DeNoiser");}});
+
+var Initial_DeNoiser = Module.findExportByName("DeNoiser.dll", "Initial_DeNoiser")
+Interceptor.attach(Initial_DeNoiser, {onLeave: function (args) {send("Initial_DeNoiser");}});
+

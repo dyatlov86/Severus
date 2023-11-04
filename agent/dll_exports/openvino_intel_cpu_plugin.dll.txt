@@ -1,0 +1,6 @@
+var CreateExtensionShared = Module.findExportByName("openvino_intel_cpu_plugin.dll", "CreateExtensionShared")
+Interceptor.attach(CreateExtensionShared, {onLeave: function (args) {send("CreateExtensionShared");}});
+
+var CreatePluginEngine = Module.findExportByName("openvino_intel_cpu_plugin.dll", "CreatePluginEngine")
+Interceptor.attach(CreatePluginEngine, {onLeave: function (args) {send("CreatePluginEngine");}});
+

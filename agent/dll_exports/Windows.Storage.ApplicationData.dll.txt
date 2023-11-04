@@ -1,0 +1,12 @@
+var CleanupTemporaryState = Module.findExportByName("Windows.Storage.ApplicationData.dll", "CleanupTemporaryState")
+Interceptor.attach(CleanupTemporaryState, {onLeave: function (args) {send("CleanupTemporaryState");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.Storage.ApplicationData.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Storage.ApplicationData.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Storage.ApplicationData.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

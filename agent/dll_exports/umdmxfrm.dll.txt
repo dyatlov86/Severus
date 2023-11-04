@@ -1,0 +1,3 @@
+var GetXformInfo = Module.findExportByName("umdmxfrm.dll", "GetXformInfo")
+Interceptor.attach(GetXformInfo, {onLeave: function (args) {send("GetXformInfo");}});
+

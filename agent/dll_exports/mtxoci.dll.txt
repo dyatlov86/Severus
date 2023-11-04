@@ -1,0 +1,120 @@
+var DllRegisterServer = Module.findExportByName("mtxoci.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mtxoci.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var Enlist = Module.findExportByName("mtxoci.dll", "Enlist")
+Interceptor.attach(Enlist, {onLeave: function (args) {send("Enlist");}});
+
+var GetXaSwitch = Module.findExportByName("mtxoci.dll", "GetXaSwitch")
+Interceptor.attach(GetXaSwitch, {onLeave: function (args) {send("GetXaSwitch");}});
+
+var MTxOciGetVersion = Module.findExportByName("mtxoci.dll", "MTxOciGetVersion")
+Interceptor.attach(MTxOciGetVersion, {onLeave: function (args) {send("MTxOciGetVersion");}});
+
+var MTxOciInit = Module.findExportByName("mtxoci.dll", "MTxOciInit")
+Interceptor.attach(MTxOciInit, {onLeave: function (args) {send("MTxOciInit");}});
+
+var MTxOciRegisterCursor = Module.findExportByName("mtxoci.dll", "MTxOciRegisterCursor")
+Interceptor.attach(MTxOciRegisterCursor, {onLeave: function (args) {send("MTxOciRegisterCursor");}});
+
+var MTxolog = Module.findExportByName("mtxoci.dll", "MTxolog")
+Interceptor.attach(MTxolog, {onLeave: function (args) {send("MTxolog");}});
+
+var obindps = Module.findExportByName("mtxoci.dll", "obindps")
+Interceptor.attach(obindps, {onLeave: function (args) {send("obindps");}});
+
+var obndra = Module.findExportByName("mtxoci.dll", "obndra")
+Interceptor.attach(obndra, {onLeave: function (args) {send("obndra");}});
+
+var obndrn = Module.findExportByName("mtxoci.dll", "obndrn")
+Interceptor.attach(obndrn, {onLeave: function (args) {send("obndrn");}});
+
+var obndrv = Module.findExportByName("mtxoci.dll", "obndrv")
+Interceptor.attach(obndrv, {onLeave: function (args) {send("obndrv");}});
+
+var obreak = Module.findExportByName("mtxoci.dll", "obreak")
+Interceptor.attach(obreak, {onLeave: function (args) {send("obreak");}});
+
+var ocan = Module.findExportByName("mtxoci.dll", "ocan")
+Interceptor.attach(ocan, {onLeave: function (args) {send("ocan");}});
+
+var oclose = Module.findExportByName("mtxoci.dll", "oclose")
+Interceptor.attach(oclose, {onLeave: function (args) {send("oclose");}});
+
+var ocof = Module.findExportByName("mtxoci.dll", "ocof")
+Interceptor.attach(ocof, {onLeave: function (args) {send("ocof");}});
+
+var ocom = Module.findExportByName("mtxoci.dll", "ocom")
+Interceptor.attach(ocom, {onLeave: function (args) {send("ocom");}});
+
+var ocon = Module.findExportByName("mtxoci.dll", "ocon")
+Interceptor.attach(ocon, {onLeave: function (args) {send("ocon");}});
+
+var odefin = Module.findExportByName("mtxoci.dll", "odefin")
+Interceptor.attach(odefin, {onLeave: function (args) {send("odefin");}});
+
+var odefinps = Module.findExportByName("mtxoci.dll", "odefinps")
+Interceptor.attach(odefinps, {onLeave: function (args) {send("odefinps");}});
+
+var odescr = Module.findExportByName("mtxoci.dll", "odescr")
+Interceptor.attach(odescr, {onLeave: function (args) {send("odescr");}});
+
+var odessp = Module.findExportByName("mtxoci.dll", "odessp")
+Interceptor.attach(odessp, {onLeave: function (args) {send("odessp");}});
+
+var oerhms = Module.findExportByName("mtxoci.dll", "oerhms")
+Interceptor.attach(oerhms, {onLeave: function (args) {send("oerhms");}});
+
+var oermsg = Module.findExportByName("mtxoci.dll", "oermsg")
+Interceptor.attach(oermsg, {onLeave: function (args) {send("oermsg");}});
+
+var oexec = Module.findExportByName("mtxoci.dll", "oexec")
+Interceptor.attach(oexec, {onLeave: function (args) {send("oexec");}});
+
+var oexfet = Module.findExportByName("mtxoci.dll", "oexfet")
+Interceptor.attach(oexfet, {onLeave: function (args) {send("oexfet");}});
+
+var oexn = Module.findExportByName("mtxoci.dll", "oexn")
+Interceptor.attach(oexn, {onLeave: function (args) {send("oexn");}});
+
+var ofen = Module.findExportByName("mtxoci.dll", "ofen")
+Interceptor.attach(ofen, {onLeave: function (args) {send("ofen");}});
+
+var ofetch = Module.findExportByName("mtxoci.dll", "ofetch")
+Interceptor.attach(ofetch, {onLeave: function (args) {send("ofetch");}});
+
+var oflng = Module.findExportByName("mtxoci.dll", "oflng")
+Interceptor.attach(oflng, {onLeave: function (args) {send("oflng");}});
+
+var ogetpi = Module.findExportByName("mtxoci.dll", "ogetpi")
+Interceptor.attach(ogetpi, {onLeave: function (args) {send("ogetpi");}});
+
+var olog = Module.findExportByName("mtxoci.dll", "olog")
+Interceptor.attach(olog, {onLeave: function (args) {send("olog");}});
+
+var ologTransacted = Module.findExportByName("mtxoci.dll", "ologTransacted")
+Interceptor.attach(ologTransacted, {onLeave: function (args) {send("ologTransacted");}});
+
+var ologof = Module.findExportByName("mtxoci.dll", "ologof")
+Interceptor.attach(ologof, {onLeave: function (args) {send("ologof");}});
+
+var oopen = Module.findExportByName("mtxoci.dll", "oopen")
+Interceptor.attach(oopen, {onLeave: function (args) {send("oopen");}});
+
+var oopt = Module.findExportByName("mtxoci.dll", "oopt")
+Interceptor.attach(oopt, {onLeave: function (args) {send("oopt");}});
+
+var oparse = Module.findExportByName("mtxoci.dll", "oparse")
+Interceptor.attach(oparse, {onLeave: function (args) {send("oparse");}});
+
+var opinit = Module.findExportByName("mtxoci.dll", "opinit")
+Interceptor.attach(opinit, {onLeave: function (args) {send("opinit");}});
+
+var orol = Module.findExportByName("mtxoci.dll", "orol")
+Interceptor.attach(orol, {onLeave: function (args) {send("orol");}});
+
+var osetpi = Module.findExportByName("mtxoci.dll", "osetpi")
+Interceptor.attach(osetpi, {onLeave: function (args) {send("osetpi");}});
+

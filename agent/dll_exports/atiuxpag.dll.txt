@@ -1,0 +1,12 @@
+var OpenAdapter10 = Module.findExportByName("atiuxpag.dll", "OpenAdapter10")
+Interceptor.attach(OpenAdapter10, {onLeave: function (args) {send("OpenAdapter10");}});
+
+var OpenAdapter10_2 = Module.findExportByName("atiuxpag.dll", "OpenAdapter10_2")
+Interceptor.attach(OpenAdapter10_2, {onLeave: function (args) {send("OpenAdapter10_2");}});
+
+var XopOpenAdapters10 = Module.findExportByName("atiuxpag.dll", "XopOpenAdapters10")
+Interceptor.attach(XopOpenAdapters10, {onLeave: function (args) {send("XopOpenAdapters10");}});
+
+var XopQueryAdapters10 = Module.findExportByName("atiuxpag.dll", "XopQueryAdapters10")
+Interceptor.attach(XopQueryAdapters10, {onLeave: function (args) {send("XopQueryAdapters10");}});
+

@@ -1,0 +1,15 @@
+var DllRegisterServer = Module.findExportByName("WmiApRpl.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("WmiApRpl.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var WmiClosePerfData = Module.findExportByName("WmiApRpl.dll", "WmiClosePerfData")
+Interceptor.attach(WmiClosePerfData, {onLeave: function (args) {send("WmiClosePerfData");}});
+
+var WmiCollectPerfData = Module.findExportByName("WmiApRpl.dll", "WmiCollectPerfData")
+Interceptor.attach(WmiCollectPerfData, {onLeave: function (args) {send("WmiCollectPerfData");}});
+
+var WmiOpenPerfData = Module.findExportByName("WmiApRpl.dll", "WmiOpenPerfData")
+Interceptor.attach(WmiOpenPerfData, {onLeave: function (args) {send("WmiOpenPerfData");}});
+

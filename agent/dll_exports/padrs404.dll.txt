@@ -1,0 +1,6 @@
+var PadHelp_HandleContextPopup = Module.findExportByName("padrs404.dll", "PadHelp_HandleContextPopup")
+Interceptor.attach(PadHelp_HandleContextPopup, {onLeave: function (args) {send("PadHelp_HandleContextPopup");}});
+
+var PadHelp_HandleHelp = Module.findExportByName("padrs404.dll", "PadHelp_HandleHelp")
+Interceptor.attach(PadHelp_HandleHelp, {onLeave: function (args) {send("PadHelp_HandleHelp");}});
+

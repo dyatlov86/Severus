@@ -1,0 +1,6 @@
+var DllMain = Module.findExportByName("nlansp_c.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var NSPStartup = Module.findExportByName("nlansp_c.dll", "NSPStartup")
+Interceptor.attach(NSPStartup, {onLeave: function (args) {send("NSPStartup");}});
+

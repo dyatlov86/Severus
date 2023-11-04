@@ -1,0 +1,12 @@
+var DiskCleanupEnd = Module.findExportByName("utcutil.dll", "DiskCleanupEnd")
+Interceptor.attach(DiskCleanupEnd, {onLeave: function (args) {send("DiskCleanupEnd");}});
+
+var DiskCleanupStart = Module.findExportByName("utcutil.dll", "DiskCleanupStart")
+Interceptor.attach(DiskCleanupStart, {onLeave: function (args) {send("DiskCleanupStart");}});
+
+var GetCommonAttributes = Module.findExportByName("utcutil.dll", "GetCommonAttributes")
+Interceptor.attach(GetCommonAttributes, {onLeave: function (args) {send("GetCommonAttributes");}});
+
+var GetPropertyAlloc = Module.findExportByName("utcutil.dll", "GetPropertyAlloc")
+Interceptor.attach(GetPropertyAlloc, {onLeave: function (args) {send("GetPropertyAlloc");}});
+

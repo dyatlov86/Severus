@@ -1,0 +1,27 @@
+var DllCanUnloadNow = Module.findExportByName("MTFServer.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("MTFServer.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var MTF_Close = Module.findExportByName("MTFServer.dll", "MTF_Close")
+Interceptor.attach(MTF_Close, {onLeave: function (args) {send("MTF_Close");}});
+
+var MTF_Deinit = Module.findExportByName("MTFServer.dll", "MTF_Deinit")
+Interceptor.attach(MTF_Deinit, {onLeave: function (args) {send("MTF_Deinit");}});
+
+var MTF_GetServer = Module.findExportByName("MTFServer.dll", "MTF_GetServer")
+Interceptor.attach(MTF_GetServer, {onLeave: function (args) {send("MTF_GetServer");}});
+
+var MTF_IOControl = Module.findExportByName("MTFServer.dll", "MTF_IOControl")
+Interceptor.attach(MTF_IOControl, {onLeave: function (args) {send("MTF_IOControl");}});
+
+var MTF_Init = Module.findExportByName("MTFServer.dll", "MTF_Init")
+Interceptor.attach(MTF_Init, {onLeave: function (args) {send("MTF_Init");}});
+
+var MTF_Open = Module.findExportByName("MTFServer.dll", "MTF_Open")
+Interceptor.attach(MTF_Open, {onLeave: function (args) {send("MTF_Open");}});
+
+var MTF_SetPrivateMode = Module.findExportByName("MTFServer.dll", "MTF_SetPrivateMode")
+Interceptor.attach(MTF_SetPrivateMode, {onLeave: function (args) {send("MTF_SetPrivateMode");}});
+

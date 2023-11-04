@@ -1,0 +1,24 @@
+var DllMain = Module.findExportByName("XInputUap.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var XInputEnable = Module.findExportByName("XInputUap.dll", "XInputEnable")
+Interceptor.attach(XInputEnable, {onLeave: function (args) {send("XInputEnable");}});
+
+var XInputGetAudioDeviceIds = Module.findExportByName("XInputUap.dll", "XInputGetAudioDeviceIds")
+Interceptor.attach(XInputGetAudioDeviceIds, {onLeave: function (args) {send("XInputGetAudioDeviceIds");}});
+
+var XInputGetBatteryInformation = Module.findExportByName("XInputUap.dll", "XInputGetBatteryInformation")
+Interceptor.attach(XInputGetBatteryInformation, {onLeave: function (args) {send("XInputGetBatteryInformation");}});
+
+var XInputGetCapabilities = Module.findExportByName("XInputUap.dll", "XInputGetCapabilities")
+Interceptor.attach(XInputGetCapabilities, {onLeave: function (args) {send("XInputGetCapabilities");}});
+
+var XInputGetKeystroke = Module.findExportByName("XInputUap.dll", "XInputGetKeystroke")
+Interceptor.attach(XInputGetKeystroke, {onLeave: function (args) {send("XInputGetKeystroke");}});
+
+var XInputGetState = Module.findExportByName("XInputUap.dll", "XInputGetState")
+Interceptor.attach(XInputGetState, {onLeave: function (args) {send("XInputGetState");}});
+
+var XInputSetState = Module.findExportByName("XInputUap.dll", "XInputSetState")
+Interceptor.attach(XInputSetState, {onLeave: function (args) {send("XInputSetState");}});
+

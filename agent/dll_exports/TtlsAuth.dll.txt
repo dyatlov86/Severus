@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("TtlsAuth.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("TtlsAuth.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("TtlsAuth.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("TtlsAuth.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var EapPeerFreeErrorMemory = Module.findExportByName("TtlsAuth.dll", "EapPeerFreeErrorMemory")
+Interceptor.attach(EapPeerFreeErrorMemory, {onLeave: function (args) {send("EapPeerFreeErrorMemory");}});
+
+var EapPeerFreeMemory = Module.findExportByName("TtlsAuth.dll", "EapPeerFreeMemory")
+Interceptor.attach(EapPeerFreeMemory, {onLeave: function (args) {send("EapPeerFreeMemory");}});
+
+var EapPeerGetInfo = Module.findExportByName("TtlsAuth.dll", "EapPeerGetInfo")
+Interceptor.attach(EapPeerGetInfo, {onLeave: function (args) {send("EapPeerGetInfo");}});
+

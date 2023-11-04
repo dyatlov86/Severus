@@ -1,0 +1,3 @@
+var GetLocaleHandler = Module.findExportByName("MSTTSLoc.dll", "GetLocaleHandler")
+Interceptor.attach(GetLocaleHandler, {onLeave: function (args) {send("GetLocaleHandler");}});
+

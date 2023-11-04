@@ -1,0 +1,12 @@
+var FileTimeToISO8601String = Module.findExportByName("dmiso8601utils.dll", "FileTimeToISO8601String")
+Interceptor.attach(FileTimeToISO8601String, {onLeave: function (args) {send("FileTimeToISO8601String");}});
+
+var ISO8601StringToFileTime = Module.findExportByName("dmiso8601utils.dll", "ISO8601StringToFileTime")
+Interceptor.attach(ISO8601StringToFileTime, {onLeave: function (args) {send("ISO8601StringToFileTime");}});
+
+var ISO8601StringToSystemTime = Module.findExportByName("dmiso8601utils.dll", "ISO8601StringToSystemTime")
+Interceptor.attach(ISO8601StringToSystemTime, {onLeave: function (args) {send("ISO8601StringToSystemTime");}});
+
+var SystemTimeToISO8601String = Module.findExportByName("dmiso8601utils.dll", "SystemTimeToISO8601String")
+Interceptor.attach(SystemTimeToISO8601String, {onLeave: function (args) {send("SystemTimeToISO8601String");}});
+

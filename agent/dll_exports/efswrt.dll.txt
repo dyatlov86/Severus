@@ -1,0 +1,102 @@
+var CdplGetFileProtectionLevel = Module.findExportByName("efswrt.dll", "CdplGetFileProtectionLevel")
+Interceptor.attach(CdplGetFileProtectionLevel, {onLeave: function (args) {send("CdplGetFileProtectionLevel");}});
+
+var CdplGetFileProtectionLevelAndUser = Module.findExportByName("efswrt.dll", "CdplGetFileProtectionLevelAndUser")
+Interceptor.attach(CdplGetFileProtectionLevelAndUser, {onLeave: function (args) {send("CdplGetFileProtectionLevelAndUser");}});
+
+var CdplIsAppAllowedToRun = Module.findExportByName("efswrt.dll", "CdplIsAppAllowedToRun")
+Interceptor.attach(CdplIsAppAllowedToRun, {onLeave: function (args) {send("CdplIsAppAllowedToRun");}});
+
+var CdplIsAppDataProtectionSupported = Module.findExportByName("efswrt.dll", "CdplIsAppDataProtectionSupported")
+Interceptor.attach(CdplIsAppDataProtectionSupported, {onLeave: function (args) {send("CdplIsAppDataProtectionSupported");}});
+
+var CdplIsSupported = Module.findExportByName("efswrt.dll", "CdplIsSupported")
+Interceptor.attach(CdplIsSupported, {onLeave: function (args) {send("CdplIsSupported");}});
+
+var CdplProtectFileToLevel = Module.findExportByName("efswrt.dll", "CdplProtectFileToLevel")
+Interceptor.attach(CdplProtectFileToLevel, {onLeave: function (args) {send("CdplProtectFileToLevel");}});
+
+var CdplProtectFileToLevelWithResult = Module.findExportByName("efswrt.dll", "CdplProtectFileToLevelWithResult")
+Interceptor.attach(CdplProtectFileToLevelWithResult, {onLeave: function (args) {send("CdplProtectFileToLevelWithResult");}});
+
+var CdplProtectKnownUserFolders = Module.findExportByName("efswrt.dll", "CdplProtectKnownUserFolders")
+Interceptor.attach(CdplProtectKnownUserFolders, {onLeave: function (args) {send("CdplProtectKnownUserFolders");}});
+
+var CdplProtectSecretToLevel = Module.findExportByName("efswrt.dll", "CdplProtectSecretToLevel")
+Interceptor.attach(CdplProtectSecretToLevel, {onLeave: function (args) {send("CdplProtectSecretToLevel");}});
+
+var CdplSetIsPolicyEnabledForCurrentUser = Module.findExportByName("efswrt.dll", "CdplSetIsPolicyEnabledForCurrentUser")
+Interceptor.attach(CdplSetIsPolicyEnabledForCurrentUser, {onLeave: function (args) {send("CdplSetIsPolicyEnabledForCurrentUser");}});
+
+var CdplSetIsPolicyEnabledForUser = Module.findExportByName("efswrt.dll", "CdplSetIsPolicyEnabledForUser")
+Interceptor.attach(CdplSetIsPolicyEnabledForUser, {onLeave: function (args) {send("CdplSetIsPolicyEnabledForUser");}});
+
+var CdplUnprotectSecret = Module.findExportByName("efswrt.dll", "CdplUnprotectSecret")
+Interceptor.attach(CdplUnprotectSecret, {onLeave: function (args) {send("CdplUnprotectSecret");}});
+
+var DllCanUnloadNow = Module.findExportByName("efswrt.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("efswrt.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("efswrt.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DpmBufferFree = Module.findExportByName("efswrt.dll", "DpmBufferFree")
+Interceptor.attach(DpmBufferFree, {onLeave: function (args) {send("DpmBufferFree");}});
+
+var DpmProtectSecretToIdentity = Module.findExportByName("efswrt.dll", "DpmProtectSecretToIdentity")
+Interceptor.attach(DpmProtectSecretToIdentity, {onLeave: function (args) {send("DpmProtectSecretToIdentity");}});
+
+var DpmStreamClose = Module.findExportByName("efswrt.dll", "DpmStreamClose")
+Interceptor.attach(DpmStreamClose, {onLeave: function (args) {send("DpmStreamClose");}});
+
+var DpmStreamOpenToProtectToIdentity = Module.findExportByName("efswrt.dll", "DpmStreamOpenToProtectToIdentity")
+Interceptor.attach(DpmStreamOpenToProtectToIdentity, {onLeave: function (args) {send("DpmStreamOpenToProtectToIdentity");}});
+
+var DpmStreamOpenToUnprotect = Module.findExportByName("efswrt.dll", "DpmStreamOpenToUnprotect")
+Interceptor.attach(DpmStreamOpenToUnprotect, {onLeave: function (args) {send("DpmStreamOpenToUnprotect");}});
+
+var DpmStreamUpdate = Module.findExportByName("efswrt.dll", "DpmStreamUpdate")
+Interceptor.attach(DpmStreamUpdate, {onLeave: function (args) {send("DpmStreamUpdate");}});
+
+var DpmUnprotectSecret = Module.findExportByName("efswrt.dll", "DpmUnprotectSecret")
+Interceptor.attach(DpmUnprotectSecret, {onLeave: function (args) {send("DpmUnprotectSecret");}});
+
+var EnterpriseDataCopyProtection = Module.findExportByName("efswrt.dll", "EnterpriseDataCopyProtection")
+Interceptor.attach(EnterpriseDataCopyProtection, {onLeave: function (args) {send("EnterpriseDataCopyProtection");}});
+
+var EnterpriseDataGetStatus = Module.findExportByName("efswrt.dll", "EnterpriseDataGetStatus")
+Interceptor.attach(EnterpriseDataGetStatus, {onLeave: function (args) {send("EnterpriseDataGetStatus");}});
+
+var EnterpriseDataProtect = Module.findExportByName("efswrt.dll", "EnterpriseDataProtect")
+Interceptor.attach(EnterpriseDataProtect, {onLeave: function (args) {send("EnterpriseDataProtect");}});
+
+var EnterpriseDataRevoke = Module.findExportByName("efswrt.dll", "EnterpriseDataRevoke")
+Interceptor.attach(EnterpriseDataRevoke, {onLeave: function (args) {send("EnterpriseDataRevoke");}});
+
+var FreeIdentityProtectorList = Module.findExportByName("efswrt.dll", "FreeIdentityProtectorList")
+Interceptor.attach(FreeIdentityProtectorList, {onLeave: function (args) {send("FreeIdentityProtectorList");}});
+
+var GetEnterpriseActionForCopy = Module.findExportByName("efswrt.dll", "GetEnterpriseActionForCopy")
+Interceptor.attach(GetEnterpriseActionForCopy, {onLeave: function (args) {send("GetEnterpriseActionForCopy");}});
+
+var GetEnterpriseIdForNetworkPath = Module.findExportByName("efswrt.dll", "GetEnterpriseIdForNetworkPath")
+Interceptor.attach(GetEnterpriseIdForNetworkPath, {onLeave: function (args) {send("GetEnterpriseIdForNetworkPath");}});
+
+var ProtectFileToEnterpriseIdentity = Module.findExportByName("efswrt.dll", "ProtectFileToEnterpriseIdentity")
+Interceptor.attach(ProtectFileToEnterpriseIdentity, {onLeave: function (args) {send("ProtectFileToEnterpriseIdentity");}});
+
+var ProtectFileToIdentity = Module.findExportByName("efswrt.dll", "ProtectFileToIdentity")
+Interceptor.attach(ProtectFileToIdentity, {onLeave: function (args) {send("ProtectFileToIdentity");}});
+
+var ProtectOrReprotectFileToIdentity = Module.findExportByName("efswrt.dll", "ProtectOrReprotectFileToIdentity")
+Interceptor.attach(ProtectOrReprotectFileToIdentity, {onLeave: function (args) {send("ProtectOrReprotectFileToIdentity");}});
+
+var QueryIdentityProtectors = Module.findExportByName("efswrt.dll", "QueryIdentityProtectors")
+Interceptor.attach(QueryIdentityProtectors, {onLeave: function (args) {send("QueryIdentityProtectors");}});
+
+var UnprotectFile = Module.findExportByName("efswrt.dll", "UnprotectFile")
+Interceptor.attach(UnprotectFile, {onLeave: function (args) {send("UnprotectFile");}});
+

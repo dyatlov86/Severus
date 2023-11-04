@@ -1,0 +1,24 @@
+var ?GetSurface@CVIDEOfilter@@QEAAJHPEAEJ@Z = Module.findExportByName("msmpeg2vdec.dll", "?GetSurface@CVIDEOfilter@@QEAAJHPEAEJ@Z")
+Interceptor.attach(?GetSurface@CVIDEOfilter@@QEAAJHPEAEJ@Z, {onLeave: function (args) {send("?GetSurface@CVIDEOfilter@@QEAAJHPEAEJ@Z");}});
+
+var ?GetSurfaceSize@CVIDEOfilter@@QEAAJHPEAJ@Z = Module.findExportByName("msmpeg2vdec.dll", "?GetSurfaceSize@CVIDEOfilter@@QEAAJHPEAJ@Z")
+Interceptor.attach(?GetSurfaceSize@CVIDEOfilter@@QEAAJHPEAJ@Z, {onLeave: function (args) {send("?GetSurfaceSize@CVIDEOfilter@@QEAAJHPEAJ@Z");}});
+
+var ?LoadSurface@CVIDEOfilter@@QEAAJHPEAEK@Z = Module.findExportByName("msmpeg2vdec.dll", "?LoadSurface@CVIDEOfilter@@QEAAJHPEAEK@Z")
+Interceptor.attach(?LoadSurface@CVIDEOfilter@@QEAAJHPEAEK@Z, {onLeave: function (args) {send("?LoadSurface@CVIDEOfilter@@QEAAJHPEAEK@Z");}});
+
+var DllCanUnloadNow = Module.findExportByName("msmpeg2vdec.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("msmpeg2vdec.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("msmpeg2vdec.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msmpeg2vdec.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetH264DecoderFunctionTable = Module.findExportByName("msmpeg2vdec.dll", "GetH264DecoderFunctionTable")
+Interceptor.attach(GetH264DecoderFunctionTable, {onLeave: function (args) {send("GetH264DecoderFunctionTable");}});
+

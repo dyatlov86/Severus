@@ -1,0 +1,33 @@
+var CopyFile2 = Module.findExportByName("API-MS-Win-core-file-l2-1-0.dll", "CopyFile2")
+Interceptor.attach(CopyFile2, {onLeave: function (args) {send("CopyFile2");}});
+
+var CopyFileExW = Module.findExportByName("API-MS-Win-core-file-l2-1-0.dll", "CopyFileExW")
+Interceptor.attach(CopyFileExW, {onLeave: function (args) {send("CopyFileExW");}});
+
+var CreateDirectoryExW = Module.findExportByName("API-MS-Win-core-file-l2-1-0.dll", "CreateDirectoryExW")
+Interceptor.attach(CreateDirectoryExW, {onLeave: function (args) {send("CreateDirectoryExW");}});
+
+var CreateHardLinkW = Module.findExportByName("API-MS-Win-core-file-l2-1-0.dll", "CreateHardLinkW")
+Interceptor.attach(CreateHardLinkW, {onLeave: function (args) {send("CreateHardLinkW");}});
+
+var CreateSymbolicLinkW = Module.findExportByName("API-MS-Win-core-file-l2-1-0.dll", "CreateSymbolicLinkW")
+Interceptor.attach(CreateSymbolicLinkW, {onLeave: function (args) {send("CreateSymbolicLinkW");}});
+
+var GetFileInformationByHandleEx = Module.findExportByName("API-MS-Win-core-file-l2-1-0.dll", "GetFileInformationByHandleEx")
+Interceptor.attach(GetFileInformationByHandleEx, {onLeave: function (args) {send("GetFileInformationByHandleEx");}});
+
+var MoveFileExW = Module.findExportByName("API-MS-Win-core-file-l2-1-0.dll", "MoveFileExW")
+Interceptor.attach(MoveFileExW, {onLeave: function (args) {send("MoveFileExW");}});
+
+var MoveFileWithProgressW = Module.findExportByName("API-MS-Win-core-file-l2-1-0.dll", "MoveFileWithProgressW")
+Interceptor.attach(MoveFileWithProgressW, {onLeave: function (args) {send("MoveFileWithProgressW");}});
+
+var ReOpenFile = Module.findExportByName("API-MS-Win-core-file-l2-1-0.dll", "ReOpenFile")
+Interceptor.attach(ReOpenFile, {onLeave: function (args) {send("ReOpenFile");}});
+
+var ReadDirectoryChangesW = Module.findExportByName("API-MS-Win-core-file-l2-1-0.dll", "ReadDirectoryChangesW")
+Interceptor.attach(ReadDirectoryChangesW, {onLeave: function (args) {send("ReadDirectoryChangesW");}});
+
+var ReplaceFileW = Module.findExportByName("API-MS-Win-core-file-l2-1-0.dll", "ReplaceFileW")
+Interceptor.attach(ReplaceFileW, {onLeave: function (args) {send("ReplaceFileW");}});
+

@@ -1,0 +1,33 @@
+var DllMain = Module.findExportByName("kerberos.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var KerbCreateTokenFromTicketForKdc = Module.findExportByName("kerberos.dll", "KerbCreateTokenFromTicketForKdc")
+Interceptor.attach(KerbCreateTokenFromTicketForKdc, {onLeave: function (args) {send("KerbCreateTokenFromTicketForKdc");}});
+
+var KerbDomainChangeCallback = Module.findExportByName("kerberos.dll", "KerbDomainChangeCallback")
+Interceptor.attach(KerbDomainChangeCallback, {onLeave: function (args) {send("KerbDomainChangeCallback");}});
+
+var KerbIsInitialized = Module.findExportByName("kerberos.dll", "KerbIsInitialized")
+Interceptor.attach(KerbIsInitialized, {onLeave: function (args) {send("KerbIsInitialized");}});
+
+var KerbKdcCallBack = Module.findExportByName("kerberos.dll", "KerbKdcCallBack")
+Interceptor.attach(KerbKdcCallBack, {onLeave: function (args) {send("KerbKdcCallBack");}});
+
+var KerbMakeKdcCall = Module.findExportByName("kerberos.dll", "KerbMakeKdcCall")
+Interceptor.attach(KerbMakeKdcCall, {onLeave: function (args) {send("KerbMakeKdcCall");}});
+
+var Kerberos = Module.findExportByName("kerberos.dll", "Kerberos")
+Interceptor.attach(Kerberos, {onLeave: function (args) {send("Kerberos");}});
+
+var SpInitialize = Module.findExportByName("kerberos.dll", "SpInitialize")
+Interceptor.attach(SpInitialize, {onLeave: function (args) {send("SpInitialize");}});
+
+var SpInstanceInit = Module.findExportByName("kerberos.dll", "SpInstanceInit")
+Interceptor.attach(SpInstanceInit, {onLeave: function (args) {send("SpInstanceInit");}});
+
+var SpLsaModeInitialize = Module.findExportByName("kerberos.dll", "SpLsaModeInitialize")
+Interceptor.attach(SpLsaModeInitialize, {onLeave: function (args) {send("SpLsaModeInitialize");}});
+
+var SpUserModeInitialize = Module.findExportByName("kerberos.dll", "SpUserModeInitialize")
+Interceptor.attach(SpUserModeInitialize, {onLeave: function (args) {send("SpUserModeInitialize");}});
+

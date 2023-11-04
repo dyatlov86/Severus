@@ -1,0 +1,15 @@
+var CAPISysPrep_Generalize = Module.findExportByName("capisp.dll", "CAPISysPrep_Generalize")
+Interceptor.attach(CAPISysPrep_Generalize, {onLeave: function (args) {send("CAPISysPrep_Generalize");}});
+
+var CryptoSysPrep_Clean = Module.findExportByName("capisp.dll", "CryptoSysPrep_Clean")
+Interceptor.attach(CryptoSysPrep_Clean, {onLeave: function (args) {send("CryptoSysPrep_Clean");}});
+
+var CryptoSysPrep_Specialize = Module.findExportByName("capisp.dll", "CryptoSysPrep_Specialize")
+Interceptor.attach(CryptoSysPrep_Specialize, {onLeave: function (args) {send("CryptoSysPrep_Specialize");}});
+
+var CryptoSysPrep_Specialize_Clone = Module.findExportByName("capisp.dll", "CryptoSysPrep_Specialize_Clone")
+Interceptor.attach(CryptoSysPrep_Specialize_Clone, {onLeave: function (args) {send("CryptoSysPrep_Specialize_Clone");}});
+
+var CryptoSysPrep_Specialize_Offline = Module.findExportByName("capisp.dll", "CryptoSysPrep_Specialize_Offline")
+Interceptor.attach(CryptoSysPrep_Specialize_Offline, {onLeave: function (args) {send("CryptoSysPrep_Specialize_Offline");}});
+

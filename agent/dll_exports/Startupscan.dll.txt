@@ -1,0 +1,15 @@
+var DllMain = Module.findExportByName("Startupscan.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var SusResetNotification = Module.findExportByName("Startupscan.dll", "SusResetNotification")
+Interceptor.attach(SusResetNotification, {onLeave: function (args) {send("SusResetNotification");}});
+
+var SusRunOEMTaskOffline = Module.findExportByName("Startupscan.dll", "SusRunOEMTaskOffline")
+Interceptor.attach(SusRunOEMTaskOffline, {onLeave: function (args) {send("SusRunOEMTaskOffline");}});
+
+var SusRunOEMTaskOnline = Module.findExportByName("Startupscan.dll", "SusRunOEMTaskOnline")
+Interceptor.attach(SusRunOEMTaskOnline, {onLeave: function (args) {send("SusRunOEMTaskOnline");}});
+
+var SusRunTask = Module.findExportByName("Startupscan.dll", "SusRunTask")
+Interceptor.attach(SusRunTask, {onLeave: function (args) {send("SusRunTask");}});
+

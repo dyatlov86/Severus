@@ -1,0 +1,12 @@
+var JetErrFormattedMessage = Module.findExportByName("msjter40.dll", "JetErrFormattedMessage")
+Interceptor.attach(JetErrFormattedMessage, {onLeave: function (args) {send("JetErrFormattedMessage");}});
+
+var JetErrIDAForError = Module.findExportByName("msjter40.dll", "JetErrIDAForError")
+Interceptor.attach(JetErrIDAForError, {onLeave: function (args) {send("JetErrIDAForError");}});
+
+var JetErrIDARawMessage = Module.findExportByName("msjter40.dll", "JetErrIDARawMessage")
+Interceptor.attach(JetErrIDARawMessage, {onLeave: function (args) {send("JetErrIDARawMessage");}});
+
+var JetErrRawMessage = Module.findExportByName("msjter40.dll", "JetErrRawMessage")
+Interceptor.attach(JetErrRawMessage, {onLeave: function (args) {send("JetErrRawMessage");}});
+

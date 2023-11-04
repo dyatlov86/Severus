@@ -1,0 +1,21 @@
+var CreateAudioReverb = Module.findExportByName("XAudio2_8.dll", "CreateAudioReverb")
+Interceptor.attach(CreateAudioReverb, {onLeave: function (args) {send("CreateAudioReverb");}});
+
+var CreateAudioVolumeMeter = Module.findExportByName("XAudio2_8.dll", "CreateAudioVolumeMeter")
+Interceptor.attach(CreateAudioVolumeMeter, {onLeave: function (args) {send("CreateAudioVolumeMeter");}});
+
+var CreateFX = Module.findExportByName("XAudio2_8.dll", "CreateFX")
+Interceptor.attach(CreateFX, {onLeave: function (args) {send("CreateFX");}});
+
+var X3DAudioCalculate = Module.findExportByName("XAudio2_8.dll", "X3DAudioCalculate")
+Interceptor.attach(X3DAudioCalculate, {onLeave: function (args) {send("X3DAudioCalculate");}});
+
+var X3DAudioInitialize = Module.findExportByName("XAudio2_8.dll", "X3DAudioInitialize")
+Interceptor.attach(X3DAudioInitialize, {onLeave: function (args) {send("X3DAudioInitialize");}});
+
+var XAudio2Create = Module.findExportByName("XAudio2_8.dll", "XAudio2Create")
+Interceptor.attach(XAudio2Create, {onLeave: function (args) {send("XAudio2Create");}});
+
+var XAudio2CreateWithVersionInfo = Module.findExportByName("XAudio2_8.dll", "XAudio2CreateWithVersionInfo")
+Interceptor.attach(XAudio2CreateWithVersionInfo, {onLeave: function (args) {send("XAudio2CreateWithVersionInfo");}});
+

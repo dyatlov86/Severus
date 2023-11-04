@@ -1,0 +1,33 @@
+var EnableInProcTracingForProvider = Module.findExportByName("InprocLogger.dll", "EnableInProcTracingForProvider")
+Interceptor.attach(EnableInProcTracingForProvider, {onLeave: function (args) {send("EnableInProcTracingForProvider");}});
+
+var FlushInProcTraceSession = Module.findExportByName("InprocLogger.dll", "FlushInProcTraceSession")
+Interceptor.attach(FlushInProcTraceSession, {onLeave: function (args) {send("FlushInProcTraceSession");}});
+
+var InitializeInProcLogger = Module.findExportByName("InprocLogger.dll", "InitializeInProcLogger")
+Interceptor.attach(InitializeInProcLogger, {onLeave: function (args) {send("InitializeInProcLogger");}});
+
+var InitializeInProcTraceFlushTrigger = Module.findExportByName("InprocLogger.dll", "InitializeInProcTraceFlushTrigger")
+Interceptor.attach(InitializeInProcTraceFlushTrigger, {onLeave: function (args) {send("InitializeInProcTraceFlushTrigger");}});
+
+var InitializeInProcTraceSession = Module.findExportByName("InprocLogger.dll", "InitializeInProcTraceSession")
+Interceptor.attach(InitializeInProcTraceSession, {onLeave: function (args) {send("InitializeInProcTraceSession");}});
+
+var IsInProcTraceSessionStarted = Module.findExportByName("InprocLogger.dll", "IsInProcTraceSessionStarted")
+Interceptor.attach(IsInProcTraceSessionStarted, {onLeave: function (args) {send("IsInProcTraceSessionStarted");}});
+
+var ShutdownInProcLogger = Module.findExportByName("InprocLogger.dll", "ShutdownInProcLogger")
+Interceptor.attach(ShutdownInProcLogger, {onLeave: function (args) {send("ShutdownInProcLogger");}});
+
+var ShutdownInProcTraceFlushTrigger = Module.findExportByName("InprocLogger.dll", "ShutdownInProcTraceFlushTrigger")
+Interceptor.attach(ShutdownInProcTraceFlushTrigger, {onLeave: function (args) {send("ShutdownInProcTraceFlushTrigger");}});
+
+var ShutdownInProcTraceSession = Module.findExportByName("InprocLogger.dll", "ShutdownInProcTraceSession")
+Interceptor.attach(ShutdownInProcTraceSession, {onLeave: function (args) {send("ShutdownInProcTraceSession");}});
+
+var StartInProcTraceSession = Module.findExportByName("InprocLogger.dll", "StartInProcTraceSession")
+Interceptor.attach(StartInProcTraceSession, {onLeave: function (args) {send("StartInProcTraceSession");}});
+
+var StopInProcTraceSession = Module.findExportByName("InprocLogger.dll", "StopInProcTraceSession")
+Interceptor.attach(StopInProcTraceSession, {onLeave: function (args) {send("StopInProcTraceSession");}});
+

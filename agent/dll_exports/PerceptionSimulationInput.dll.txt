@@ -1,0 +1,21 @@
+var CloseSimulationConnection = Module.findExportByName("PerceptionSimulationInput.dll", "CloseSimulationConnection")
+Interceptor.attach(CloseSimulationConnection, {onLeave: function (args) {send("CloseSimulationConnection");}});
+
+var HidePerceptionSimulationControlUx = Module.findExportByName("PerceptionSimulationInput.dll", "HidePerceptionSimulationControlUx")
+Interceptor.attach(HidePerceptionSimulationControlUx, {onLeave: function (args) {send("HidePerceptionSimulationControlUx");}});
+
+var ShowPerceptionSimulationControlUx = Module.findExportByName("PerceptionSimulationInput.dll", "ShowPerceptionSimulationControlUx")
+Interceptor.attach(ShowPerceptionSimulationControlUx, {onLeave: function (args) {send("ShowPerceptionSimulationControlUx");}});
+
+var StartPerceptionSimulationControlUx = Module.findExportByName("PerceptionSimulationInput.dll", "StartPerceptionSimulationControlUx")
+Interceptor.attach(StartPerceptionSimulationControlUx, {onLeave: function (args) {send("StartPerceptionSimulationControlUx");}});
+
+var StopPerceptionSimulationControlUx = Module.findExportByName("PerceptionSimulationInput.dll", "StopPerceptionSimulationControlUx")
+Interceptor.attach(StopPerceptionSimulationControlUx, {onLeave: function (args) {send("StopPerceptionSimulationControlUx");}});
+
+var TogglePerceptionSimulationControlUx = Module.findExportByName("PerceptionSimulationInput.dll", "TogglePerceptionSimulationControlUx")
+Interceptor.attach(TogglePerceptionSimulationControlUx, {onLeave: function (args) {send("TogglePerceptionSimulationControlUx");}});
+
+var UpdatePerceptionSimulationControlUx = Module.findExportByName("PerceptionSimulationInput.dll", "UpdatePerceptionSimulationControlUx")
+Interceptor.attach(UpdatePerceptionSimulationControlUx, {onLeave: function (args) {send("UpdatePerceptionSimulationControlUx");}});
+

@@ -1,0 +1,30 @@
+var TokenBindingDeleteAllBindings = Module.findExportByName("tokenbinding.dll", "TokenBindingDeleteAllBindings")
+Interceptor.attach(TokenBindingDeleteAllBindings, {onLeave: function (args) {send("TokenBindingDeleteAllBindings");}});
+
+var TokenBindingDeleteBinding = Module.findExportByName("tokenbinding.dll", "TokenBindingDeleteBinding")
+Interceptor.attach(TokenBindingDeleteBinding, {onLeave: function (args) {send("TokenBindingDeleteBinding");}});
+
+var TokenBindingGenerateBinding = Module.findExportByName("tokenbinding.dll", "TokenBindingGenerateBinding")
+Interceptor.attach(TokenBindingGenerateBinding, {onLeave: function (args) {send("TokenBindingGenerateBinding");}});
+
+var TokenBindingGenerateID = Module.findExportByName("tokenbinding.dll", "TokenBindingGenerateID")
+Interceptor.attach(TokenBindingGenerateID, {onLeave: function (args) {send("TokenBindingGenerateID");}});
+
+var TokenBindingGenerateIDForUri = Module.findExportByName("tokenbinding.dll", "TokenBindingGenerateIDForUri")
+Interceptor.attach(TokenBindingGenerateIDForUri, {onLeave: function (args) {send("TokenBindingGenerateIDForUri");}});
+
+var TokenBindingGenerateMessage = Module.findExportByName("tokenbinding.dll", "TokenBindingGenerateMessage")
+Interceptor.attach(TokenBindingGenerateMessage, {onLeave: function (args) {send("TokenBindingGenerateMessage");}});
+
+var TokenBindingGetHighestSupportedVersion = Module.findExportByName("tokenbinding.dll", "TokenBindingGetHighestSupportedVersion")
+Interceptor.attach(TokenBindingGetHighestSupportedVersion, {onLeave: function (args) {send("TokenBindingGetHighestSupportedVersion");}});
+
+var TokenBindingGetKeyTypesClient = Module.findExportByName("tokenbinding.dll", "TokenBindingGetKeyTypesClient")
+Interceptor.attach(TokenBindingGetKeyTypesClient, {onLeave: function (args) {send("TokenBindingGetKeyTypesClient");}});
+
+var TokenBindingGetKeyTypesServer = Module.findExportByName("tokenbinding.dll", "TokenBindingGetKeyTypesServer")
+Interceptor.attach(TokenBindingGetKeyTypesServer, {onLeave: function (args) {send("TokenBindingGetKeyTypesServer");}});
+
+var TokenBindingVerifyMessage = Module.findExportByName("tokenbinding.dll", "TokenBindingVerifyMessage")
+Interceptor.attach(TokenBindingVerifyMessage, {onLeave: function (args) {send("TokenBindingVerifyMessage");}});
+

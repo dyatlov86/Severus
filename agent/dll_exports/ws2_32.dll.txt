@@ -1,0 +1,588 @@
+var FreeAddrInfoEx = Module.findExportByName("ws2_32.dll", "FreeAddrInfoEx")
+Interceptor.attach(FreeAddrInfoEx, {onLeave: function (args) {send("FreeAddrInfoEx");}});
+
+var FreeAddrInfoExW = Module.findExportByName("ws2_32.dll", "FreeAddrInfoExW")
+Interceptor.attach(FreeAddrInfoExW, {onLeave: function (args) {send("FreeAddrInfoExW");}});
+
+var FreeAddrInfoW = Module.findExportByName("ws2_32.dll", "FreeAddrInfoW")
+Interceptor.attach(FreeAddrInfoW, {onLeave: function (args) {send("FreeAddrInfoW");}});
+
+var GetAddrInfoExA = Module.findExportByName("ws2_32.dll", "GetAddrInfoExA")
+Interceptor.attach(GetAddrInfoExA, {onLeave: function (args) {send("GetAddrInfoExA");}});
+
+var GetAddrInfoExCancel = Module.findExportByName("ws2_32.dll", "GetAddrInfoExCancel")
+Interceptor.attach(GetAddrInfoExCancel, {onLeave: function (args) {send("GetAddrInfoExCancel");}});
+
+var GetAddrInfoExOverlappedResult = Module.findExportByName("ws2_32.dll", "GetAddrInfoExOverlappedResult")
+Interceptor.attach(GetAddrInfoExOverlappedResult, {onLeave: function (args) {send("GetAddrInfoExOverlappedResult");}});
+
+var GetAddrInfoExW = Module.findExportByName("ws2_32.dll", "GetAddrInfoExW")
+Interceptor.attach(GetAddrInfoExW, {onLeave: function (args) {send("GetAddrInfoExW");}});
+
+var GetAddrInfoW = Module.findExportByName("ws2_32.dll", "GetAddrInfoW")
+Interceptor.attach(GetAddrInfoW, {onLeave: function (args) {send("GetAddrInfoW");}});
+
+var GetHostNameW = Module.findExportByName("ws2_32.dll", "GetHostNameW")
+Interceptor.attach(GetHostNameW, {onLeave: function (args) {send("GetHostNameW");}});
+
+var GetNameInfoW = Module.findExportByName("ws2_32.dll", "GetNameInfoW")
+Interceptor.attach(GetNameInfoW, {onLeave: function (args) {send("GetNameInfoW");}});
+
+var InetNtopW = Module.findExportByName("ws2_32.dll", "InetNtopW")
+Interceptor.attach(InetNtopW, {onLeave: function (args) {send("InetNtopW");}});
+
+var InetPtonW = Module.findExportByName("ws2_32.dll", "InetPtonW")
+Interceptor.attach(InetPtonW, {onLeave: function (args) {send("InetPtonW");}});
+
+var ProcessSocketNotifications = Module.findExportByName("ws2_32.dll", "ProcessSocketNotifications")
+Interceptor.attach(ProcessSocketNotifications, {onLeave: function (args) {send("ProcessSocketNotifications");}});
+
+var SetAddrInfoExA = Module.findExportByName("ws2_32.dll", "SetAddrInfoExA")
+Interceptor.attach(SetAddrInfoExA, {onLeave: function (args) {send("SetAddrInfoExA");}});
+
+var SetAddrInfoExW = Module.findExportByName("ws2_32.dll", "SetAddrInfoExW")
+Interceptor.attach(SetAddrInfoExW, {onLeave: function (args) {send("SetAddrInfoExW");}});
+
+var WEP = Module.findExportByName("ws2_32.dll", "WEP")
+Interceptor.attach(WEP, {onLeave: function (args) {send("WEP");}});
+
+var WPUCompleteOverlappedRequest = Module.findExportByName("ws2_32.dll", "WPUCompleteOverlappedRequest")
+Interceptor.attach(WPUCompleteOverlappedRequest, {onLeave: function (args) {send("WPUCompleteOverlappedRequest");}});
+
+var WPUGetProviderPathEx = Module.findExportByName("ws2_32.dll", "WPUGetProviderPathEx")
+Interceptor.attach(WPUGetProviderPathEx, {onLeave: function (args) {send("WPUGetProviderPathEx");}});
+
+var WSAAccept = Module.findExportByName("ws2_32.dll", "WSAAccept")
+Interceptor.attach(WSAAccept, {onLeave: function (args) {send("WSAAccept");}});
+
+var WSAAddressToStringA = Module.findExportByName("ws2_32.dll", "WSAAddressToStringA")
+Interceptor.attach(WSAAddressToStringA, {onLeave: function (args) {send("WSAAddressToStringA");}});
+
+var WSAAddressToStringW = Module.findExportByName("ws2_32.dll", "WSAAddressToStringW")
+Interceptor.attach(WSAAddressToStringW, {onLeave: function (args) {send("WSAAddressToStringW");}});
+
+var WSAAdvertiseProvider = Module.findExportByName("ws2_32.dll", "WSAAdvertiseProvider")
+Interceptor.attach(WSAAdvertiseProvider, {onLeave: function (args) {send("WSAAdvertiseProvider");}});
+
+var WSAAsyncGetHostByAddr = Module.findExportByName("ws2_32.dll", "WSAAsyncGetHostByAddr")
+Interceptor.attach(WSAAsyncGetHostByAddr, {onLeave: function (args) {send("WSAAsyncGetHostByAddr");}});
+
+var WSAAsyncGetHostByName = Module.findExportByName("ws2_32.dll", "WSAAsyncGetHostByName")
+Interceptor.attach(WSAAsyncGetHostByName, {onLeave: function (args) {send("WSAAsyncGetHostByName");}});
+
+var WSAAsyncGetProtoByName = Module.findExportByName("ws2_32.dll", "WSAAsyncGetProtoByName")
+Interceptor.attach(WSAAsyncGetProtoByName, {onLeave: function (args) {send("WSAAsyncGetProtoByName");}});
+
+var WSAAsyncGetProtoByNumber = Module.findExportByName("ws2_32.dll", "WSAAsyncGetProtoByNumber")
+Interceptor.attach(WSAAsyncGetProtoByNumber, {onLeave: function (args) {send("WSAAsyncGetProtoByNumber");}});
+
+var WSAAsyncGetServByName = Module.findExportByName("ws2_32.dll", "WSAAsyncGetServByName")
+Interceptor.attach(WSAAsyncGetServByName, {onLeave: function (args) {send("WSAAsyncGetServByName");}});
+
+var WSAAsyncGetServByPort = Module.findExportByName("ws2_32.dll", "WSAAsyncGetServByPort")
+Interceptor.attach(WSAAsyncGetServByPort, {onLeave: function (args) {send("WSAAsyncGetServByPort");}});
+
+var WSAAsyncSelect = Module.findExportByName("ws2_32.dll", "WSAAsyncSelect")
+Interceptor.attach(WSAAsyncSelect, {onLeave: function (args) {send("WSAAsyncSelect");}});
+
+var WSACancelAsyncRequest = Module.findExportByName("ws2_32.dll", "WSACancelAsyncRequest")
+Interceptor.attach(WSACancelAsyncRequest, {onLeave: function (args) {send("WSACancelAsyncRequest");}});
+
+var WSACancelBlockingCall = Module.findExportByName("ws2_32.dll", "WSACancelBlockingCall")
+Interceptor.attach(WSACancelBlockingCall, {onLeave: function (args) {send("WSACancelBlockingCall");}});
+
+var WSACleanup = Module.findExportByName("ws2_32.dll", "WSACleanup")
+Interceptor.attach(WSACleanup, {onLeave: function (args) {send("WSACleanup");}});
+
+var WSACloseEvent = Module.findExportByName("ws2_32.dll", "WSACloseEvent")
+Interceptor.attach(WSACloseEvent, {onLeave: function (args) {send("WSACloseEvent");}});
+
+var WSAConnect = Module.findExportByName("ws2_32.dll", "WSAConnect")
+Interceptor.attach(WSAConnect, {onLeave: function (args) {send("WSAConnect");}});
+
+var WSAConnectByList = Module.findExportByName("ws2_32.dll", "WSAConnectByList")
+Interceptor.attach(WSAConnectByList, {onLeave: function (args) {send("WSAConnectByList");}});
+
+var WSAConnectByNameA = Module.findExportByName("ws2_32.dll", "WSAConnectByNameA")
+Interceptor.attach(WSAConnectByNameA, {onLeave: function (args) {send("WSAConnectByNameA");}});
+
+var WSAConnectByNameW = Module.findExportByName("ws2_32.dll", "WSAConnectByNameW")
+Interceptor.attach(WSAConnectByNameW, {onLeave: function (args) {send("WSAConnectByNameW");}});
+
+var WSACreateEvent = Module.findExportByName("ws2_32.dll", "WSACreateEvent")
+Interceptor.attach(WSACreateEvent, {onLeave: function (args) {send("WSACreateEvent");}});
+
+var WSADuplicateSocketA = Module.findExportByName("ws2_32.dll", "WSADuplicateSocketA")
+Interceptor.attach(WSADuplicateSocketA, {onLeave: function (args) {send("WSADuplicateSocketA");}});
+
+var WSADuplicateSocketW = Module.findExportByName("ws2_32.dll", "WSADuplicateSocketW")
+Interceptor.attach(WSADuplicateSocketW, {onLeave: function (args) {send("WSADuplicateSocketW");}});
+
+var WSAEnumNameSpaceProvidersA = Module.findExportByName("ws2_32.dll", "WSAEnumNameSpaceProvidersA")
+Interceptor.attach(WSAEnumNameSpaceProvidersA, {onLeave: function (args) {send("WSAEnumNameSpaceProvidersA");}});
+
+var WSAEnumNameSpaceProvidersExA = Module.findExportByName("ws2_32.dll", "WSAEnumNameSpaceProvidersExA")
+Interceptor.attach(WSAEnumNameSpaceProvidersExA, {onLeave: function (args) {send("WSAEnumNameSpaceProvidersExA");}});
+
+var WSAEnumNameSpaceProvidersExW = Module.findExportByName("ws2_32.dll", "WSAEnumNameSpaceProvidersExW")
+Interceptor.attach(WSAEnumNameSpaceProvidersExW, {onLeave: function (args) {send("WSAEnumNameSpaceProvidersExW");}});
+
+var WSAEnumNameSpaceProvidersW = Module.findExportByName("ws2_32.dll", "WSAEnumNameSpaceProvidersW")
+Interceptor.attach(WSAEnumNameSpaceProvidersW, {onLeave: function (args) {send("WSAEnumNameSpaceProvidersW");}});
+
+var WSAEnumNetworkEvents = Module.findExportByName("ws2_32.dll", "WSAEnumNetworkEvents")
+Interceptor.attach(WSAEnumNetworkEvents, {onLeave: function (args) {send("WSAEnumNetworkEvents");}});
+
+var WSAEnumProtocolsA = Module.findExportByName("ws2_32.dll", "WSAEnumProtocolsA")
+Interceptor.attach(WSAEnumProtocolsA, {onLeave: function (args) {send("WSAEnumProtocolsA");}});
+
+var WSAEnumProtocolsW = Module.findExportByName("ws2_32.dll", "WSAEnumProtocolsW")
+Interceptor.attach(WSAEnumProtocolsW, {onLeave: function (args) {send("WSAEnumProtocolsW");}});
+
+var WSAEventSelect = Module.findExportByName("ws2_32.dll", "WSAEventSelect")
+Interceptor.attach(WSAEventSelect, {onLeave: function (args) {send("WSAEventSelect");}});
+
+var WSAGetLastError = Module.findExportByName("ws2_32.dll", "WSAGetLastError")
+Interceptor.attach(WSAGetLastError, {onLeave: function (args) {send("WSAGetLastError");}});
+
+var WSAGetOverlappedResult = Module.findExportByName("ws2_32.dll", "WSAGetOverlappedResult")
+Interceptor.attach(WSAGetOverlappedResult, {onLeave: function (args) {send("WSAGetOverlappedResult");}});
+
+var WSAGetQOSByName = Module.findExportByName("ws2_32.dll", "WSAGetQOSByName")
+Interceptor.attach(WSAGetQOSByName, {onLeave: function (args) {send("WSAGetQOSByName");}});
+
+var WSAGetServiceClassInfoA = Module.findExportByName("ws2_32.dll", "WSAGetServiceClassInfoA")
+Interceptor.attach(WSAGetServiceClassInfoA, {onLeave: function (args) {send("WSAGetServiceClassInfoA");}});
+
+var WSAGetServiceClassInfoW = Module.findExportByName("ws2_32.dll", "WSAGetServiceClassInfoW")
+Interceptor.attach(WSAGetServiceClassInfoW, {onLeave: function (args) {send("WSAGetServiceClassInfoW");}});
+
+var WSAGetServiceClassNameByClassIdA = Module.findExportByName("ws2_32.dll", "WSAGetServiceClassNameByClassIdA")
+Interceptor.attach(WSAGetServiceClassNameByClassIdA, {onLeave: function (args) {send("WSAGetServiceClassNameByClassIdA");}});
+
+var WSAGetServiceClassNameByClassIdW = Module.findExportByName("ws2_32.dll", "WSAGetServiceClassNameByClassIdW")
+Interceptor.attach(WSAGetServiceClassNameByClassIdW, {onLeave: function (args) {send("WSAGetServiceClassNameByClassIdW");}});
+
+var WSAHtonl = Module.findExportByName("ws2_32.dll", "WSAHtonl")
+Interceptor.attach(WSAHtonl, {onLeave: function (args) {send("WSAHtonl");}});
+
+var WSAHtons = Module.findExportByName("ws2_32.dll", "WSAHtons")
+Interceptor.attach(WSAHtons, {onLeave: function (args) {send("WSAHtons");}});
+
+var WSAInstallServiceClassA = Module.findExportByName("ws2_32.dll", "WSAInstallServiceClassA")
+Interceptor.attach(WSAInstallServiceClassA, {onLeave: function (args) {send("WSAInstallServiceClassA");}});
+
+var WSAInstallServiceClassW = Module.findExportByName("ws2_32.dll", "WSAInstallServiceClassW")
+Interceptor.attach(WSAInstallServiceClassW, {onLeave: function (args) {send("WSAInstallServiceClassW");}});
+
+var WSAIoctl = Module.findExportByName("ws2_32.dll", "WSAIoctl")
+Interceptor.attach(WSAIoctl, {onLeave: function (args) {send("WSAIoctl");}});
+
+var WSAIsBlocking = Module.findExportByName("ws2_32.dll", "WSAIsBlocking")
+Interceptor.attach(WSAIsBlocking, {onLeave: function (args) {send("WSAIsBlocking");}});
+
+var WSAJoinLeaf = Module.findExportByName("ws2_32.dll", "WSAJoinLeaf")
+Interceptor.attach(WSAJoinLeaf, {onLeave: function (args) {send("WSAJoinLeaf");}});
+
+var WSALookupServiceBeginA = Module.findExportByName("ws2_32.dll", "WSALookupServiceBeginA")
+Interceptor.attach(WSALookupServiceBeginA, {onLeave: function (args) {send("WSALookupServiceBeginA");}});
+
+var WSALookupServiceBeginW = Module.findExportByName("ws2_32.dll", "WSALookupServiceBeginW")
+Interceptor.attach(WSALookupServiceBeginW, {onLeave: function (args) {send("WSALookupServiceBeginW");}});
+
+var WSALookupServiceEnd = Module.findExportByName("ws2_32.dll", "WSALookupServiceEnd")
+Interceptor.attach(WSALookupServiceEnd, {onLeave: function (args) {send("WSALookupServiceEnd");}});
+
+var WSALookupServiceNextA = Module.findExportByName("ws2_32.dll", "WSALookupServiceNextA")
+Interceptor.attach(WSALookupServiceNextA, {onLeave: function (args) {send("WSALookupServiceNextA");}});
+
+var WSALookupServiceNextW = Module.findExportByName("ws2_32.dll", "WSALookupServiceNextW")
+Interceptor.attach(WSALookupServiceNextW, {onLeave: function (args) {send("WSALookupServiceNextW");}});
+
+var WSANSPIoctl = Module.findExportByName("ws2_32.dll", "WSANSPIoctl")
+Interceptor.attach(WSANSPIoctl, {onLeave: function (args) {send("WSANSPIoctl");}});
+
+var WSANtohl = Module.findExportByName("ws2_32.dll", "WSANtohl")
+Interceptor.attach(WSANtohl, {onLeave: function (args) {send("WSANtohl");}});
+
+var WSANtohs = Module.findExportByName("ws2_32.dll", "WSANtohs")
+Interceptor.attach(WSANtohs, {onLeave: function (args) {send("WSANtohs");}});
+
+var WSAPoll = Module.findExportByName("ws2_32.dll", "WSAPoll")
+Interceptor.attach(WSAPoll, {onLeave: function (args) {send("WSAPoll");}});
+
+var WSAProviderCompleteAsyncCall = Module.findExportByName("ws2_32.dll", "WSAProviderCompleteAsyncCall")
+Interceptor.attach(WSAProviderCompleteAsyncCall, {onLeave: function (args) {send("WSAProviderCompleteAsyncCall");}});
+
+var WSAProviderConfigChange = Module.findExportByName("ws2_32.dll", "WSAProviderConfigChange")
+Interceptor.attach(WSAProviderConfigChange, {onLeave: function (args) {send("WSAProviderConfigChange");}});
+
+var WSARecv = Module.findExportByName("ws2_32.dll", "WSARecv")
+Interceptor.attach(WSARecv, {onLeave: function (args) {send("WSARecv");}});
+
+var WSARecvDisconnect = Module.findExportByName("ws2_32.dll", "WSARecvDisconnect")
+Interceptor.attach(WSARecvDisconnect, {onLeave: function (args) {send("WSARecvDisconnect");}});
+
+var WSARecvFrom = Module.findExportByName("ws2_32.dll", "WSARecvFrom")
+Interceptor.attach(WSARecvFrom, {onLeave: function (args) {send("WSARecvFrom");}});
+
+var WSARemoveServiceClass = Module.findExportByName("ws2_32.dll", "WSARemoveServiceClass")
+Interceptor.attach(WSARemoveServiceClass, {onLeave: function (args) {send("WSARemoveServiceClass");}});
+
+var WSAResetEvent = Module.findExportByName("ws2_32.dll", "WSAResetEvent")
+Interceptor.attach(WSAResetEvent, {onLeave: function (args) {send("WSAResetEvent");}});
+
+var WSASend = Module.findExportByName("ws2_32.dll", "WSASend")
+Interceptor.attach(WSASend, {onLeave: function (args) {send("WSASend");}});
+
+var WSASendDisconnect = Module.findExportByName("ws2_32.dll", "WSASendDisconnect")
+Interceptor.attach(WSASendDisconnect, {onLeave: function (args) {send("WSASendDisconnect");}});
+
+var WSASendMsg = Module.findExportByName("ws2_32.dll", "WSASendMsg")
+Interceptor.attach(WSASendMsg, {onLeave: function (args) {send("WSASendMsg");}});
+
+var WSASendTo = Module.findExportByName("ws2_32.dll", "WSASendTo")
+Interceptor.attach(WSASendTo, {onLeave: function (args) {send("WSASendTo");}});
+
+var WSASetBlockingHook = Module.findExportByName("ws2_32.dll", "WSASetBlockingHook")
+Interceptor.attach(WSASetBlockingHook, {onLeave: function (args) {send("WSASetBlockingHook");}});
+
+var WSASetEvent = Module.findExportByName("ws2_32.dll", "WSASetEvent")
+Interceptor.attach(WSASetEvent, {onLeave: function (args) {send("WSASetEvent");}});
+
+var WSASetLastError = Module.findExportByName("ws2_32.dll", "WSASetLastError")
+Interceptor.attach(WSASetLastError, {onLeave: function (args) {send("WSASetLastError");}});
+
+var WSASetServiceA = Module.findExportByName("ws2_32.dll", "WSASetServiceA")
+Interceptor.attach(WSASetServiceA, {onLeave: function (args) {send("WSASetServiceA");}});
+
+var WSASetServiceW = Module.findExportByName("ws2_32.dll", "WSASetServiceW")
+Interceptor.attach(WSASetServiceW, {onLeave: function (args) {send("WSASetServiceW");}});
+
+var WSASocketA = Module.findExportByName("ws2_32.dll", "WSASocketA")
+Interceptor.attach(WSASocketA, {onLeave: function (args) {send("WSASocketA");}});
+
+var WSASocketW = Module.findExportByName("ws2_32.dll", "WSASocketW")
+Interceptor.attach(WSASocketW, {onLeave: function (args) {send("WSASocketW");}});
+
+var WSAStartup = Module.findExportByName("ws2_32.dll", "WSAStartup")
+Interceptor.attach(WSAStartup, {onLeave: function (args) {send("WSAStartup");}});
+
+var WSAStringToAddressA = Module.findExportByName("ws2_32.dll", "WSAStringToAddressA")
+Interceptor.attach(WSAStringToAddressA, {onLeave: function (args) {send("WSAStringToAddressA");}});
+
+var WSAStringToAddressW = Module.findExportByName("ws2_32.dll", "WSAStringToAddressW")
+Interceptor.attach(WSAStringToAddressW, {onLeave: function (args) {send("WSAStringToAddressW");}});
+
+var WSAUnadvertiseProvider = Module.findExportByName("ws2_32.dll", "WSAUnadvertiseProvider")
+Interceptor.attach(WSAUnadvertiseProvider, {onLeave: function (args) {send("WSAUnadvertiseProvider");}});
+
+var WSAUnhookBlockingHook = Module.findExportByName("ws2_32.dll", "WSAUnhookBlockingHook")
+Interceptor.attach(WSAUnhookBlockingHook, {onLeave: function (args) {send("WSAUnhookBlockingHook");}});
+
+var WSAWaitForMultipleEvents = Module.findExportByName("ws2_32.dll", "WSAWaitForMultipleEvents")
+Interceptor.attach(WSAWaitForMultipleEvents, {onLeave: function (args) {send("WSAWaitForMultipleEvents");}});
+
+var WSApSetPostRoutine = Module.findExportByName("ws2_32.dll", "WSApSetPostRoutine")
+Interceptor.attach(WSApSetPostRoutine, {onLeave: function (args) {send("WSApSetPostRoutine");}});
+
+var WSCDeinstallProvider = Module.findExportByName("ws2_32.dll", "WSCDeinstallProvider")
+Interceptor.attach(WSCDeinstallProvider, {onLeave: function (args) {send("WSCDeinstallProvider");}});
+
+var WSCDeinstallProvider32 = Module.findExportByName("ws2_32.dll", "WSCDeinstallProvider32")
+Interceptor.attach(WSCDeinstallProvider32, {onLeave: function (args) {send("WSCDeinstallProvider32");}});
+
+var WSCDeinstallProviderEx = Module.findExportByName("ws2_32.dll", "WSCDeinstallProviderEx")
+Interceptor.attach(WSCDeinstallProviderEx, {onLeave: function (args) {send("WSCDeinstallProviderEx");}});
+
+var WSCEnableNSProvider = Module.findExportByName("ws2_32.dll", "WSCEnableNSProvider")
+Interceptor.attach(WSCEnableNSProvider, {onLeave: function (args) {send("WSCEnableNSProvider");}});
+
+var WSCEnableNSProvider32 = Module.findExportByName("ws2_32.dll", "WSCEnableNSProvider32")
+Interceptor.attach(WSCEnableNSProvider32, {onLeave: function (args) {send("WSCEnableNSProvider32");}});
+
+var WSCEnumNameSpaceProviders32 = Module.findExportByName("ws2_32.dll", "WSCEnumNameSpaceProviders32")
+Interceptor.attach(WSCEnumNameSpaceProviders32, {onLeave: function (args) {send("WSCEnumNameSpaceProviders32");}});
+
+var WSCEnumNameSpaceProvidersEx32 = Module.findExportByName("ws2_32.dll", "WSCEnumNameSpaceProvidersEx32")
+Interceptor.attach(WSCEnumNameSpaceProvidersEx32, {onLeave: function (args) {send("WSCEnumNameSpaceProvidersEx32");}});
+
+var WSCEnumProtocols = Module.findExportByName("ws2_32.dll", "WSCEnumProtocols")
+Interceptor.attach(WSCEnumProtocols, {onLeave: function (args) {send("WSCEnumProtocols");}});
+
+var WSCEnumProtocols32 = Module.findExportByName("ws2_32.dll", "WSCEnumProtocols32")
+Interceptor.attach(WSCEnumProtocols32, {onLeave: function (args) {send("WSCEnumProtocols32");}});
+
+var WSCEnumProtocolsEx = Module.findExportByName("ws2_32.dll", "WSCEnumProtocolsEx")
+Interceptor.attach(WSCEnumProtocolsEx, {onLeave: function (args) {send("WSCEnumProtocolsEx");}});
+
+var WSCGetApplicationCategory = Module.findExportByName("ws2_32.dll", "WSCGetApplicationCategory")
+Interceptor.attach(WSCGetApplicationCategory, {onLeave: function (args) {send("WSCGetApplicationCategory");}});
+
+var WSCGetApplicationCategoryEx = Module.findExportByName("ws2_32.dll", "WSCGetApplicationCategoryEx")
+Interceptor.attach(WSCGetApplicationCategoryEx, {onLeave: function (args) {send("WSCGetApplicationCategoryEx");}});
+
+var WSCGetProviderInfo = Module.findExportByName("ws2_32.dll", "WSCGetProviderInfo")
+Interceptor.attach(WSCGetProviderInfo, {onLeave: function (args) {send("WSCGetProviderInfo");}});
+
+var WSCGetProviderInfo32 = Module.findExportByName("ws2_32.dll", "WSCGetProviderInfo32")
+Interceptor.attach(WSCGetProviderInfo32, {onLeave: function (args) {send("WSCGetProviderInfo32");}});
+
+var WSCGetProviderPath = Module.findExportByName("ws2_32.dll", "WSCGetProviderPath")
+Interceptor.attach(WSCGetProviderPath, {onLeave: function (args) {send("WSCGetProviderPath");}});
+
+var WSCGetProviderPath32 = Module.findExportByName("ws2_32.dll", "WSCGetProviderPath32")
+Interceptor.attach(WSCGetProviderPath32, {onLeave: function (args) {send("WSCGetProviderPath32");}});
+
+var WSCInstallNameSpace = Module.findExportByName("ws2_32.dll", "WSCInstallNameSpace")
+Interceptor.attach(WSCInstallNameSpace, {onLeave: function (args) {send("WSCInstallNameSpace");}});
+
+var WSCInstallNameSpace32 = Module.findExportByName("ws2_32.dll", "WSCInstallNameSpace32")
+Interceptor.attach(WSCInstallNameSpace32, {onLeave: function (args) {send("WSCInstallNameSpace32");}});
+
+var WSCInstallNameSpaceEx = Module.findExportByName("ws2_32.dll", "WSCInstallNameSpaceEx")
+Interceptor.attach(WSCInstallNameSpaceEx, {onLeave: function (args) {send("WSCInstallNameSpaceEx");}});
+
+var WSCInstallNameSpaceEx2 = Module.findExportByName("ws2_32.dll", "WSCInstallNameSpaceEx2")
+Interceptor.attach(WSCInstallNameSpaceEx2, {onLeave: function (args) {send("WSCInstallNameSpaceEx2");}});
+
+var WSCInstallNameSpaceEx32 = Module.findExportByName("ws2_32.dll", "WSCInstallNameSpaceEx32")
+Interceptor.attach(WSCInstallNameSpaceEx32, {onLeave: function (args) {send("WSCInstallNameSpaceEx32");}});
+
+var WSCInstallProvider = Module.findExportByName("ws2_32.dll", "WSCInstallProvider")
+Interceptor.attach(WSCInstallProvider, {onLeave: function (args) {send("WSCInstallProvider");}});
+
+var WSCInstallProvider64_32 = Module.findExportByName("ws2_32.dll", "WSCInstallProvider64_32")
+Interceptor.attach(WSCInstallProvider64_32, {onLeave: function (args) {send("WSCInstallProvider64_32");}});
+
+var WSCInstallProviderAndChains64_32 = Module.findExportByName("ws2_32.dll", "WSCInstallProviderAndChains64_32")
+Interceptor.attach(WSCInstallProviderAndChains64_32, {onLeave: function (args) {send("WSCInstallProviderAndChains64_32");}});
+
+var WSCInstallProviderEx = Module.findExportByName("ws2_32.dll", "WSCInstallProviderEx")
+Interceptor.attach(WSCInstallProviderEx, {onLeave: function (args) {send("WSCInstallProviderEx");}});
+
+var WSCSetApplicationCategory = Module.findExportByName("ws2_32.dll", "WSCSetApplicationCategory")
+Interceptor.attach(WSCSetApplicationCategory, {onLeave: function (args) {send("WSCSetApplicationCategory");}});
+
+var WSCSetApplicationCategoryEx = Module.findExportByName("ws2_32.dll", "WSCSetApplicationCategoryEx")
+Interceptor.attach(WSCSetApplicationCategoryEx, {onLeave: function (args) {send("WSCSetApplicationCategoryEx");}});
+
+var WSCSetProviderInfo = Module.findExportByName("ws2_32.dll", "WSCSetProviderInfo")
+Interceptor.attach(WSCSetProviderInfo, {onLeave: function (args) {send("WSCSetProviderInfo");}});
+
+var WSCSetProviderInfo32 = Module.findExportByName("ws2_32.dll", "WSCSetProviderInfo32")
+Interceptor.attach(WSCSetProviderInfo32, {onLeave: function (args) {send("WSCSetProviderInfo32");}});
+
+var WSCUnInstallNameSpace = Module.findExportByName("ws2_32.dll", "WSCUnInstallNameSpace")
+Interceptor.attach(WSCUnInstallNameSpace, {onLeave: function (args) {send("WSCUnInstallNameSpace");}});
+
+var WSCUnInstallNameSpace32 = Module.findExportByName("ws2_32.dll", "WSCUnInstallNameSpace32")
+Interceptor.attach(WSCUnInstallNameSpace32, {onLeave: function (args) {send("WSCUnInstallNameSpace32");}});
+
+var WSCUnInstallNameSpaceEx2 = Module.findExportByName("ws2_32.dll", "WSCUnInstallNameSpaceEx2")
+Interceptor.attach(WSCUnInstallNameSpaceEx2, {onLeave: function (args) {send("WSCUnInstallNameSpaceEx2");}});
+
+var WSCUpdateProvider = Module.findExportByName("ws2_32.dll", "WSCUpdateProvider")
+Interceptor.attach(WSCUpdateProvider, {onLeave: function (args) {send("WSCUpdateProvider");}});
+
+var WSCUpdateProvider32 = Module.findExportByName("ws2_32.dll", "WSCUpdateProvider32")
+Interceptor.attach(WSCUpdateProvider32, {onLeave: function (args) {send("WSCUpdateProvider32");}});
+
+var WSCUpdateProviderEx = Module.findExportByName("ws2_32.dll", "WSCUpdateProviderEx")
+Interceptor.attach(WSCUpdateProviderEx, {onLeave: function (args) {send("WSCUpdateProviderEx");}});
+
+var WSCWriteNameSpaceOrder = Module.findExportByName("ws2_32.dll", "WSCWriteNameSpaceOrder")
+Interceptor.attach(WSCWriteNameSpaceOrder, {onLeave: function (args) {send("WSCWriteNameSpaceOrder");}});
+
+var WSCWriteNameSpaceOrder32 = Module.findExportByName("ws2_32.dll", "WSCWriteNameSpaceOrder32")
+Interceptor.attach(WSCWriteNameSpaceOrder32, {onLeave: function (args) {send("WSCWriteNameSpaceOrder32");}});
+
+var WSCWriteProviderOrder = Module.findExportByName("ws2_32.dll", "WSCWriteProviderOrder")
+Interceptor.attach(WSCWriteProviderOrder, {onLeave: function (args) {send("WSCWriteProviderOrder");}});
+
+var WSCWriteProviderOrder32 = Module.findExportByName("ws2_32.dll", "WSCWriteProviderOrder32")
+Interceptor.attach(WSCWriteProviderOrder32, {onLeave: function (args) {send("WSCWriteProviderOrder32");}});
+
+var WSCWriteProviderOrderEx = Module.findExportByName("ws2_32.dll", "WSCWriteProviderOrderEx")
+Interceptor.attach(WSCWriteProviderOrderEx, {onLeave: function (args) {send("WSCWriteProviderOrderEx");}});
+
+var WahCloseApcHelper = Module.findExportByName("ws2_32.dll", "WahCloseApcHelper")
+Interceptor.attach(WahCloseApcHelper, {onLeave: function (args) {send("WahCloseApcHelper");}});
+
+var WahCloseHandleHelper = Module.findExportByName("ws2_32.dll", "WahCloseHandleHelper")
+Interceptor.attach(WahCloseHandleHelper, {onLeave: function (args) {send("WahCloseHandleHelper");}});
+
+var WahCloseNotificationHandleHelper = Module.findExportByName("ws2_32.dll", "WahCloseNotificationHandleHelper")
+Interceptor.attach(WahCloseNotificationHandleHelper, {onLeave: function (args) {send("WahCloseNotificationHandleHelper");}});
+
+var WahCloseSocketHandle = Module.findExportByName("ws2_32.dll", "WahCloseSocketHandle")
+Interceptor.attach(WahCloseSocketHandle, {onLeave: function (args) {send("WahCloseSocketHandle");}});
+
+var WahCloseThread = Module.findExportByName("ws2_32.dll", "WahCloseThread")
+Interceptor.attach(WahCloseThread, {onLeave: function (args) {send("WahCloseThread");}});
+
+var WahCompleteRequest = Module.findExportByName("ws2_32.dll", "WahCompleteRequest")
+Interceptor.attach(WahCompleteRequest, {onLeave: function (args) {send("WahCompleteRequest");}});
+
+var WahCreateHandleContextTable = Module.findExportByName("ws2_32.dll", "WahCreateHandleContextTable")
+Interceptor.attach(WahCreateHandleContextTable, {onLeave: function (args) {send("WahCreateHandleContextTable");}});
+
+var WahCreateNotificationHandle = Module.findExportByName("ws2_32.dll", "WahCreateNotificationHandle")
+Interceptor.attach(WahCreateNotificationHandle, {onLeave: function (args) {send("WahCreateNotificationHandle");}});
+
+var WahCreateSocketHandle = Module.findExportByName("ws2_32.dll", "WahCreateSocketHandle")
+Interceptor.attach(WahCreateSocketHandle, {onLeave: function (args) {send("WahCreateSocketHandle");}});
+
+var WahDestroyHandleContextTable = Module.findExportByName("ws2_32.dll", "WahDestroyHandleContextTable")
+Interceptor.attach(WahDestroyHandleContextTable, {onLeave: function (args) {send("WahDestroyHandleContextTable");}});
+
+var WahDisableNonIFSHandleSupport = Module.findExportByName("ws2_32.dll", "WahDisableNonIFSHandleSupport")
+Interceptor.attach(WahDisableNonIFSHandleSupport, {onLeave: function (args) {send("WahDisableNonIFSHandleSupport");}});
+
+var WahEnableNonIFSHandleSupport = Module.findExportByName("ws2_32.dll", "WahEnableNonIFSHandleSupport")
+Interceptor.attach(WahEnableNonIFSHandleSupport, {onLeave: function (args) {send("WahEnableNonIFSHandleSupport");}});
+
+var WahEnumerateHandleContexts = Module.findExportByName("ws2_32.dll", "WahEnumerateHandleContexts")
+Interceptor.attach(WahEnumerateHandleContexts, {onLeave: function (args) {send("WahEnumerateHandleContexts");}});
+
+var WahInsertHandleContext = Module.findExportByName("ws2_32.dll", "WahInsertHandleContext")
+Interceptor.attach(WahInsertHandleContext, {onLeave: function (args) {send("WahInsertHandleContext");}});
+
+var WahNotifyAllProcesses = Module.findExportByName("ws2_32.dll", "WahNotifyAllProcesses")
+Interceptor.attach(WahNotifyAllProcesses, {onLeave: function (args) {send("WahNotifyAllProcesses");}});
+
+var WahOpenApcHelper = Module.findExportByName("ws2_32.dll", "WahOpenApcHelper")
+Interceptor.attach(WahOpenApcHelper, {onLeave: function (args) {send("WahOpenApcHelper");}});
+
+var WahOpenCurrentThread = Module.findExportByName("ws2_32.dll", "WahOpenCurrentThread")
+Interceptor.attach(WahOpenCurrentThread, {onLeave: function (args) {send("WahOpenCurrentThread");}});
+
+var WahOpenHandleHelper = Module.findExportByName("ws2_32.dll", "WahOpenHandleHelper")
+Interceptor.attach(WahOpenHandleHelper, {onLeave: function (args) {send("WahOpenHandleHelper");}});
+
+var WahOpenNotificationHandleHelper = Module.findExportByName("ws2_32.dll", "WahOpenNotificationHandleHelper")
+Interceptor.attach(WahOpenNotificationHandleHelper, {onLeave: function (args) {send("WahOpenNotificationHandleHelper");}});
+
+var WahQueueUserApc = Module.findExportByName("ws2_32.dll", "WahQueueUserApc")
+Interceptor.attach(WahQueueUserApc, {onLeave: function (args) {send("WahQueueUserApc");}});
+
+var WahReferenceContextByHandle = Module.findExportByName("ws2_32.dll", "WahReferenceContextByHandle")
+Interceptor.attach(WahReferenceContextByHandle, {onLeave: function (args) {send("WahReferenceContextByHandle");}});
+
+var WahRemoveHandleContext = Module.findExportByName("ws2_32.dll", "WahRemoveHandleContext")
+Interceptor.attach(WahRemoveHandleContext, {onLeave: function (args) {send("WahRemoveHandleContext");}});
+
+var WahWaitForNotification = Module.findExportByName("ws2_32.dll", "WahWaitForNotification")
+Interceptor.attach(WahWaitForNotification, {onLeave: function (args) {send("WahWaitForNotification");}});
+
+var WahWriteLSPEvent = Module.findExportByName("ws2_32.dll", "WahWriteLSPEvent")
+Interceptor.attach(WahWriteLSPEvent, {onLeave: function (args) {send("WahWriteLSPEvent");}});
+
+var __WSAFDIsSet = Module.findExportByName("ws2_32.dll", "__WSAFDIsSet")
+Interceptor.attach(__WSAFDIsSet, {onLeave: function (args) {send("__WSAFDIsSet");}});
+
+var accept = Module.findExportByName("ws2_32.dll", "accept")
+Interceptor.attach(accept, {onLeave: function (args) {send("accept");}});
+
+var bind = Module.findExportByName("ws2_32.dll", "bind")
+Interceptor.attach(bind, {onLeave: function (args) {send("bind");}});
+
+var closesocket = Module.findExportByName("ws2_32.dll", "closesocket")
+Interceptor.attach(closesocket, {onLeave: function (args) {send("closesocket");}});
+
+var connect = Module.findExportByName("ws2_32.dll", "connect")
+Interceptor.attach(connect, {onLeave: function (args) {send("connect");}});
+
+var freeaddrinfo = Module.findExportByName("ws2_32.dll", "freeaddrinfo")
+Interceptor.attach(freeaddrinfo, {onLeave: function (args) {send("freeaddrinfo");}});
+
+var getaddrinfo = Module.findExportByName("ws2_32.dll", "getaddrinfo")
+Interceptor.attach(getaddrinfo, {onLeave: function (args) {send("getaddrinfo");}});
+
+var gethostbyaddr = Module.findExportByName("ws2_32.dll", "gethostbyaddr")
+Interceptor.attach(gethostbyaddr, {onLeave: function (args) {send("gethostbyaddr");}});
+
+var gethostbyname = Module.findExportByName("ws2_32.dll", "gethostbyname")
+Interceptor.attach(gethostbyname, {onLeave: function (args) {send("gethostbyname");}});
+
+var gethostname = Module.findExportByName("ws2_32.dll", "gethostname")
+Interceptor.attach(gethostname, {onLeave: function (args) {send("gethostname");}});
+
+var getnameinfo = Module.findExportByName("ws2_32.dll", "getnameinfo")
+Interceptor.attach(getnameinfo, {onLeave: function (args) {send("getnameinfo");}});
+
+var getpeername = Module.findExportByName("ws2_32.dll", "getpeername")
+Interceptor.attach(getpeername, {onLeave: function (args) {send("getpeername");}});
+
+var getprotobyname = Module.findExportByName("ws2_32.dll", "getprotobyname")
+Interceptor.attach(getprotobyname, {onLeave: function (args) {send("getprotobyname");}});
+
+var getprotobynumber = Module.findExportByName("ws2_32.dll", "getprotobynumber")
+Interceptor.attach(getprotobynumber, {onLeave: function (args) {send("getprotobynumber");}});
+
+var getservbyname = Module.findExportByName("ws2_32.dll", "getservbyname")
+Interceptor.attach(getservbyname, {onLeave: function (args) {send("getservbyname");}});
+
+var getservbyport = Module.findExportByName("ws2_32.dll", "getservbyport")
+Interceptor.attach(getservbyport, {onLeave: function (args) {send("getservbyport");}});
+
+var getsockname = Module.findExportByName("ws2_32.dll", "getsockname")
+Interceptor.attach(getsockname, {onLeave: function (args) {send("getsockname");}});
+
+var getsockopt = Module.findExportByName("ws2_32.dll", "getsockopt")
+Interceptor.attach(getsockopt, {onLeave: function (args) {send("getsockopt");}});
+
+var htonl = Module.findExportByName("ws2_32.dll", "htonl")
+Interceptor.attach(htonl, {onLeave: function (args) {send("htonl");}});
+
+var htons = Module.findExportByName("ws2_32.dll", "htons")
+Interceptor.attach(htons, {onLeave: function (args) {send("htons");}});
+
+var inet_addr = Module.findExportByName("ws2_32.dll", "inet_addr")
+Interceptor.attach(inet_addr, {onLeave: function (args) {send("inet_addr");}});
+
+var inet_ntoa = Module.findExportByName("ws2_32.dll", "inet_ntoa")
+Interceptor.attach(inet_ntoa, {onLeave: function (args) {send("inet_ntoa");}});
+
+var inet_ntop = Module.findExportByName("ws2_32.dll", "inet_ntop")
+Interceptor.attach(inet_ntop, {onLeave: function (args) {send("inet_ntop");}});
+
+var inet_pton = Module.findExportByName("ws2_32.dll", "inet_pton")
+Interceptor.attach(inet_pton, {onLeave: function (args) {send("inet_pton");}});
+
+var ioctlsocket = Module.findExportByName("ws2_32.dll", "ioctlsocket")
+Interceptor.attach(ioctlsocket, {onLeave: function (args) {send("ioctlsocket");}});
+
+var listen = Module.findExportByName("ws2_32.dll", "listen")
+Interceptor.attach(listen, {onLeave: function (args) {send("listen");}});
+
+var ntohl = Module.findExportByName("ws2_32.dll", "ntohl")
+Interceptor.attach(ntohl, {onLeave: function (args) {send("ntohl");}});
+
+var ntohs = Module.findExportByName("ws2_32.dll", "ntohs")
+Interceptor.attach(ntohs, {onLeave: function (args) {send("ntohs");}});
+
+var recv = Module.findExportByName("ws2_32.dll", "recv")
+Interceptor.attach(recv, {onLeave: function (args) {send("recv");}});
+
+var recvfrom = Module.findExportByName("ws2_32.dll", "recvfrom")
+Interceptor.attach(recvfrom, {onLeave: function (args) {send("recvfrom");}});
+
+var select = Module.findExportByName("ws2_32.dll", "select")
+Interceptor.attach(select, {onLeave: function (args) {send("select");}});
+
+var send = Module.findExportByName("ws2_32.dll", "send")
+Interceptor.attach(send, {onLeave: function (args) {send("send");}});
+
+var sendto = Module.findExportByName("ws2_32.dll", "sendto")
+Interceptor.attach(sendto, {onLeave: function (args) {send("sendto");}});
+
+var setsockopt = Module.findExportByName("ws2_32.dll", "setsockopt")
+Interceptor.attach(setsockopt, {onLeave: function (args) {send("setsockopt");}});
+
+var shutdown = Module.findExportByName("ws2_32.dll", "shutdown")
+Interceptor.attach(shutdown, {onLeave: function (args) {send("shutdown");}});
+
+var socket = Module.findExportByName("ws2_32.dll", "socket")
+Interceptor.attach(socket, {onLeave: function (args) {send("socket");}});
+

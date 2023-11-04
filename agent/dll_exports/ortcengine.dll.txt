@@ -1,0 +1,9 @@
+var RtcOrtcAlloc = Module.findExportByName("ortcengine.dll", "RtcOrtcAlloc")
+Interceptor.attach(RtcOrtcAlloc, {onLeave: function (args) {send("RtcOrtcAlloc");}});
+
+var RtcOrtcFree = Module.findExportByName("ortcengine.dll", "RtcOrtcFree")
+Interceptor.attach(RtcOrtcFree, {onLeave: function (args) {send("RtcOrtcFree");}});
+
+var RtcOrtcGetBrokerFactory = Module.findExportByName("ortcengine.dll", "RtcOrtcGetBrokerFactory")
+Interceptor.attach(RtcOrtcGetBrokerFactory, {onLeave: function (args) {send("RtcOrtcGetBrokerFactory");}});
+

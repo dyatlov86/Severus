@@ -1,0 +1,591 @@
+var ChangeEntryType = Module.findExportByName("rasapi32.dll", "ChangeEntryType")
+Interceptor.attach(ChangeEntryType, {onLeave: function (args) {send("ChangeEntryType");}});
+
+var ClosePhonebookFile = Module.findExportByName("rasapi32.dll", "ClosePhonebookFile")
+Interceptor.attach(ClosePhonebookFile, {onLeave: function (args) {send("ClosePhonebookFile");}});
+
+var ComputeHashFromEntryName = Module.findExportByName("rasapi32.dll", "ComputeHashFromEntryName")
+Interceptor.attach(ComputeHashFromEntryName, {onLeave: function (args) {send("ComputeHashFromEntryName");}});
+
+var CopyToPbport = Module.findExportByName("rasapi32.dll", "CopyToPbport")
+Interceptor.attach(CopyToPbport, {onLeave: function (args) {send("CopyToPbport");}});
+
+var CreateEntryNode = Module.findExportByName("rasapi32.dll", "CreateEntryNode")
+Interceptor.attach(CreateEntryNode, {onLeave: function (args) {send("CreateEntryNode");}});
+
+var CreateLinkNode = Module.findExportByName("rasapi32.dll", "CreateLinkNode")
+Interceptor.attach(CreateLinkNode, {onLeave: function (args) {send("CreateLinkNode");}});
+
+var CreatePhoneNode = Module.findExportByName("rasapi32.dll", "CreatePhoneNode")
+Interceptor.attach(CreatePhoneNode, {onLeave: function (args) {send("CreatePhoneNode");}});
+
+var CreatePortNode = Module.findExportByName("rasapi32.dll", "CreatePortNode")
+Interceptor.attach(CreatePortNode, {onLeave: function (args) {send("CreatePortNode");}});
+
+var DDMComputeLuid = Module.findExportByName("rasapi32.dll", "DDMComputeLuid")
+Interceptor.attach(DDMComputeLuid, {onLeave: function (args) {send("DDMComputeLuid");}});
+
+var DDMFreeDialingParam = Module.findExportByName("rasapi32.dll", "DDMFreeDialingParam")
+Interceptor.attach(DDMFreeDialingParam, {onLeave: function (args) {send("DDMFreeDialingParam");}});
+
+var DDMFreePhonebookContext = Module.findExportByName("rasapi32.dll", "DDMFreePhonebookContext")
+Interceptor.attach(DDMFreePhonebookContext, {onLeave: function (args) {send("DDMFreePhonebookContext");}});
+
+var DDMFreeRemoteEndpoint = Module.findExportByName("rasapi32.dll", "DDMFreeRemoteEndpoint")
+Interceptor.attach(DDMFreeRemoteEndpoint, {onLeave: function (args) {send("DDMFreeRemoteEndpoint");}});
+
+var DDMGetAddressesFromPhonebook = Module.findExportByName("rasapi32.dll", "DDMGetAddressesFromPhonebook")
+Interceptor.attach(DDMGetAddressesFromPhonebook, {onLeave: function (args) {send("DDMGetAddressesFromPhonebook");}});
+
+var DDMGetEapInfo = Module.findExportByName("rasapi32.dll", "DDMGetEapInfo")
+Interceptor.attach(DDMGetEapInfo, {onLeave: function (args) {send("DDMGetEapInfo");}});
+
+var DDMGetEapUserIdentityW = Module.findExportByName("rasapi32.dll", "DDMGetEapUserIdentityW")
+Interceptor.attach(DDMGetEapUserIdentityW, {onLeave: function (args) {send("DDMGetEapUserIdentityW");}});
+
+var DDMGetPhoneBookContext = Module.findExportByName("rasapi32.dll", "DDMGetPhoneBookContext")
+Interceptor.attach(DDMGetPhoneBookContext, {onLeave: function (args) {send("DDMGetPhoneBookContext");}});
+
+var DDMGetPhonebookInfo = Module.findExportByName("rasapi32.dll", "DDMGetPhonebookInfo")
+Interceptor.attach(DDMGetPhonebookInfo, {onLeave: function (args) {send("DDMGetPhonebookInfo");}});
+
+var DDMGetProtocolStartParams = Module.findExportByName("rasapi32.dll", "DDMGetProtocolStartParams")
+Interceptor.attach(DDMGetProtocolStartParams, {onLeave: function (args) {send("DDMGetProtocolStartParams");}});
+
+var DDMGetRasDialParams = Module.findExportByName("rasapi32.dll", "DDMGetRasDialParams")
+Interceptor.attach(DDMGetRasDialParams, {onLeave: function (args) {send("DDMGetRasDialParams");}});
+
+var DDMGetRasDialingParams = Module.findExportByName("rasapi32.dll", "DDMGetRasDialingParams")
+Interceptor.attach(DDMGetRasDialingParams, {onLeave: function (args) {send("DDMGetRasDialingParams");}});
+
+var DDMGetTunnelEndpoints = Module.findExportByName("rasapi32.dll", "DDMGetTunnelEndpoints")
+Interceptor.attach(DDMGetTunnelEndpoints, {onLeave: function (args) {send("DDMGetTunnelEndpoints");}});
+
+var DDMRasPbkEntryCleanup = Module.findExportByName("rasapi32.dll", "DDMRasPbkEntryCleanup")
+Interceptor.attach(DDMRasPbkEntryCleanup, {onLeave: function (args) {send("DDMRasPbkEntryCleanup");}});
+
+var DDMUpdateProtocolConfigInfoFromEntry = Module.findExportByName("rasapi32.dll", "DDMUpdateProtocolConfigInfoFromEntry")
+Interceptor.attach(DDMUpdateProtocolConfigInfoFromEntry, {onLeave: function (args) {send("DDMUpdateProtocolConfigInfoFromEntry");}});
+
+var DestroyEntryNode = Module.findExportByName("rasapi32.dll", "DestroyEntryNode")
+Interceptor.attach(DestroyEntryNode, {onLeave: function (args) {send("DestroyEntryNode");}});
+
+var DestroyLinkNode = Module.findExportByName("rasapi32.dll", "DestroyLinkNode")
+Interceptor.attach(DestroyLinkNode, {onLeave: function (args) {send("DestroyLinkNode");}});
+
+var DestroyPhoneNode = Module.findExportByName("rasapi32.dll", "DestroyPhoneNode")
+Interceptor.attach(DestroyPhoneNode, {onLeave: function (args) {send("DestroyPhoneNode");}});
+
+var DestroyPortNode = Module.findExportByName("rasapi32.dll", "DestroyPortNode")
+Interceptor.attach(DestroyPortNode, {onLeave: function (args) {send("DestroyPortNode");}});
+
+var DoesProtocolListInfoContain = Module.findExportByName("rasapi32.dll", "DoesProtocolListInfoContain")
+Interceptor.attach(DoesProtocolListInfoContain, {onLeave: function (args) {send("DoesProtocolListInfoContain");}});
+
+var DuplicateEntryNode = Module.findExportByName("rasapi32.dll", "DuplicateEntryNode")
+Interceptor.attach(DuplicateEntryNode, {onLeave: function (args) {send("DuplicateEntryNode");}});
+
+var DuplicatePhoneNode = Module.findExportByName("rasapi32.dll", "DuplicatePhoneNode")
+Interceptor.attach(DuplicatePhoneNode, {onLeave: function (args) {send("DuplicatePhoneNode");}});
+
+var DwCloneEntry = Module.findExportByName("rasapi32.dll", "DwCloneEntry")
+Interceptor.attach(DwCloneEntry, {onLeave: function (args) {send("DwCloneEntry");}});
+
+var DwEnumEntryDetails = Module.findExportByName("rasapi32.dll", "DwEnumEntryDetails")
+Interceptor.attach(DwEnumEntryDetails, {onLeave: function (args) {send("DwEnumEntryDetails");}});
+
+var DwEnumEntryDetailsEx = Module.findExportByName("rasapi32.dll", "DwEnumEntryDetailsEx")
+Interceptor.attach(DwEnumEntryDetailsEx, {onLeave: function (args) {send("DwEnumEntryDetailsEx");}});
+
+var DwGetCustomAuthData = Module.findExportByName("rasapi32.dll", "DwGetCustomAuthData")
+Interceptor.attach(DwGetCustomAuthData, {onLeave: function (args) {send("DwGetCustomAuthData");}});
+
+var DwGetCustomDllEntryPoint = Module.findExportByName("rasapi32.dll", "DwGetCustomDllEntryPoint")
+Interceptor.attach(DwGetCustomDllEntryPoint, {onLeave: function (args) {send("DwGetCustomDllEntryPoint");}});
+
+var DwGetEntryMode = Module.findExportByName("rasapi32.dll", "DwGetEntryMode")
+Interceptor.attach(DwGetEntryMode, {onLeave: function (args) {send("DwGetEntryMode");}});
+
+var DwRasUninitialize = Module.findExportByName("rasapi32.dll", "DwRasUninitialize")
+Interceptor.attach(DwRasUninitialize, {onLeave: function (args) {send("DwRasUninitialize");}});
+
+var DwSetCustomAuthData = Module.findExportByName("rasapi32.dll", "DwSetCustomAuthData")
+Interceptor.attach(DwSetCustomAuthData, {onLeave: function (args) {send("DwSetCustomAuthData");}});
+
+var EnableOrDisableNetComponent = Module.findExportByName("rasapi32.dll", "EnableOrDisableNetComponent")
+Interceptor.attach(EnableOrDisableNetComponent, {onLeave: function (args) {send("EnableOrDisableNetComponent");}});
+
+var EntryNodeFromName = Module.findExportByName("rasapi32.dll", "EntryNodeFromName")
+Interceptor.attach(EntryNodeFromName, {onLeave: function (args) {send("EntryNodeFromName");}});
+
+var FIsNetComponentListed = Module.findExportByName("rasapi32.dll", "FIsNetComponentListed")
+Interceptor.attach(FIsNetComponentListed, {onLeave: function (args) {send("FIsNetComponentListed");}});
+
+var GetAutoTriggerProfileInfo = Module.findExportByName("rasapi32.dll", "GetAutoTriggerProfileInfo")
+Interceptor.attach(GetAutoTriggerProfileInfo, {onLeave: function (args) {send("GetAutoTriggerProfileInfo");}});
+
+var GetCountryCodeAndID = Module.findExportByName("rasapi32.dll", "GetCountryCodeAndID")
+Interceptor.attach(GetCountryCodeAndID, {onLeave: function (args) {send("GetCountryCodeAndID");}});
+
+var GetFirstPhoneNode = Module.findExportByName("rasapi32.dll", "GetFirstPhoneNode")
+Interceptor.attach(GetFirstPhoneNode, {onLeave: function (args) {send("GetFirstPhoneNode");}});
+
+var GetOverridableParam = Module.findExportByName("rasapi32.dll", "GetOverridableParam")
+Interceptor.attach(GetOverridableParam, {onLeave: function (args) {send("GetOverridableParam");}});
+
+var GetPbkAndEntryName = Module.findExportByName("rasapi32.dll", "GetPbkAndEntryName")
+Interceptor.attach(GetPbkAndEntryName, {onLeave: function (args) {send("GetPbkAndEntryName");}});
+
+var GetPersonalPhonebookPath = Module.findExportByName("rasapi32.dll", "GetPersonalPhonebookPath")
+Interceptor.attach(GetPersonalPhonebookPath, {onLeave: function (args) {send("GetPersonalPhonebookPath");}});
+
+var GetPhonebookDirectory = Module.findExportByName("rasapi32.dll", "GetPhonebookDirectory")
+Interceptor.attach(GetPhonebookDirectory, {onLeave: function (args) {send("GetPhonebookDirectory");}});
+
+var GetPreferredDestinationForEntry = Module.findExportByName("rasapi32.dll", "GetPreferredDestinationForEntry")
+Interceptor.attach(GetPreferredDestinationForEntry, {onLeave: function (args) {send("GetPreferredDestinationForEntry");}});
+
+var GetPublicPhonebookPath = Module.findExportByName("rasapi32.dll", "GetPublicPhonebookPath")
+Interceptor.attach(GetPublicPhonebookPath, {onLeave: function (args) {send("GetPublicPhonebookPath");}});
+
+var IsActiveAutoTriggerConnection = Module.findExportByName("rasapi32.dll", "IsActiveAutoTriggerConnection")
+Interceptor.attach(IsActiveAutoTriggerConnection, {onLeave: function (args) {send("IsActiveAutoTriggerConnection");}});
+
+var IsActiveAutoTriggerConnectionEx = Module.findExportByName("rasapi32.dll", "IsActiveAutoTriggerConnectionEx")
+Interceptor.attach(IsActiveAutoTriggerConnectionEx, {onLeave: function (args) {send("IsActiveAutoTriggerConnectionEx");}});
+
+var IsCredentialIsolationEnabled = Module.findExportByName("rasapi32.dll", "IsCredentialIsolationEnabled")
+Interceptor.attach(IsCredentialIsolationEnabled, {onLeave: function (args) {send("IsCredentialIsolationEnabled");}});
+
+var IsProtocolListInfoEmpty = Module.findExportByName("rasapi32.dll", "IsProtocolListInfoEmpty")
+Interceptor.attach(IsProtocolListInfoEmpty, {onLeave: function (args) {send("IsProtocolListInfoEmpty");}});
+
+var IsProtocolListInfoValid = Module.findExportByName("rasapi32.dll", "IsProtocolListInfoValid")
+Interceptor.attach(IsProtocolListInfoValid, {onLeave: function (args) {send("IsProtocolListInfoValid");}});
+
+var IsPublicPhonebook = Module.findExportByName("rasapi32.dll", "IsPublicPhonebook")
+Interceptor.attach(IsPublicPhonebook, {onLeave: function (args) {send("IsPublicPhonebook");}});
+
+var IsRouterPhonebook = Module.findExportByName("rasapi32.dll", "IsRouterPhonebook")
+Interceptor.attach(IsRouterPhonebook, {onLeave: function (args) {send("IsRouterPhonebook");}});
+
+var IsValidPbportForVPNStrategy = Module.findExportByName("rasapi32.dll", "IsValidPbportForVPNStrategy")
+Interceptor.attach(IsValidPbportForVPNStrategy, {onLeave: function (args) {send("IsValidPbportForVPNStrategy");}});
+
+var LoadPortsList2 = Module.findExportByName("rasapi32.dll", "LoadPortsList2")
+Interceptor.attach(LoadPortsList2, {onLeave: function (args) {send("LoadPortsList2");}});
+
+var PbdevicetypeFromPszType = Module.findExportByName("rasapi32.dll", "PbdevicetypeFromPszType")
+Interceptor.attach(PbdevicetypeFromPszType, {onLeave: function (args) {send("PbdevicetypeFromPszType");}});
+
+var RasAutoDialSharedConnection = Module.findExportByName("rasapi32.dll", "RasAutoDialSharedConnection")
+Interceptor.attach(RasAutoDialSharedConnection, {onLeave: function (args) {send("RasAutoDialSharedConnection");}});
+
+var RasAutodialAddressToNetwork = Module.findExportByName("rasapi32.dll", "RasAutodialAddressToNetwork")
+Interceptor.attach(RasAutodialAddressToNetwork, {onLeave: function (args) {send("RasAutodialAddressToNetwork");}});
+
+var RasAutodialEntryToNetwork = Module.findExportByName("rasapi32.dll", "RasAutodialEntryToNetwork")
+Interceptor.attach(RasAutodialEntryToNetwork, {onLeave: function (args) {send("RasAutodialEntryToNetwork");}});
+
+var RasClearConnectionStatistics = Module.findExportByName("rasapi32.dll", "RasClearConnectionStatistics")
+Interceptor.attach(RasClearConnectionStatistics, {onLeave: function (args) {send("RasClearConnectionStatistics");}});
+
+var RasClearLinkStatistics = Module.findExportByName("rasapi32.dll", "RasClearLinkStatistics")
+Interceptor.attach(RasClearLinkStatistics, {onLeave: function (args) {send("RasClearLinkStatistics");}});
+
+var RasCompleteDialMachineCleanup = Module.findExportByName("rasapi32.dll", "RasCompleteDialMachineCleanup")
+Interceptor.attach(RasCompleteDialMachineCleanup, {onLeave: function (args) {send("RasCompleteDialMachineCleanup");}});
+
+var RasConfigUserProxySettingsW = Module.findExportByName("rasapi32.dll", "RasConfigUserProxySettingsW")
+Interceptor.attach(RasConfigUserProxySettingsW, {onLeave: function (args) {send("RasConfigUserProxySettingsW");}});
+
+var RasConnectionNotificationA = Module.findExportByName("rasapi32.dll", "RasConnectionNotificationA")
+Interceptor.attach(RasConnectionNotificationA, {onLeave: function (args) {send("RasConnectionNotificationA");}});
+
+var RasConnectionNotificationW = Module.findExportByName("rasapi32.dll", "RasConnectionNotificationW")
+Interceptor.attach(RasConnectionNotificationW, {onLeave: function (args) {send("RasConnectionNotificationW");}});
+
+var RasCreatePhonebookEntryA = Module.findExportByName("rasapi32.dll", "RasCreatePhonebookEntryA")
+Interceptor.attach(RasCreatePhonebookEntryA, {onLeave: function (args) {send("RasCreatePhonebookEntryA");}});
+
+var RasCreatePhonebookEntryW = Module.findExportByName("rasapi32.dll", "RasCreatePhonebookEntryW")
+Interceptor.attach(RasCreatePhonebookEntryW, {onLeave: function (args) {send("RasCreatePhonebookEntryW");}});
+
+var RasDeleteEntryA = Module.findExportByName("rasapi32.dll", "RasDeleteEntryA")
+Interceptor.attach(RasDeleteEntryA, {onLeave: function (args) {send("RasDeleteEntryA");}});
+
+var RasDeleteEntryW = Module.findExportByName("rasapi32.dll", "RasDeleteEntryW")
+Interceptor.attach(RasDeleteEntryW, {onLeave: function (args) {send("RasDeleteEntryW");}});
+
+var RasDeleteSubEntryA = Module.findExportByName("rasapi32.dll", "RasDeleteSubEntryA")
+Interceptor.attach(RasDeleteSubEntryA, {onLeave: function (args) {send("RasDeleteSubEntryA");}});
+
+var RasDeleteSubEntryW = Module.findExportByName("rasapi32.dll", "RasDeleteSubEntryW")
+Interceptor.attach(RasDeleteSubEntryW, {onLeave: function (args) {send("RasDeleteSubEntryW");}});
+
+var RasDialA = Module.findExportByName("rasapi32.dll", "RasDialA")
+Interceptor.attach(RasDialA, {onLeave: function (args) {send("RasDialA");}});
+
+var RasDialW = Module.findExportByName("rasapi32.dll", "RasDialW")
+Interceptor.attach(RasDialW, {onLeave: function (args) {send("RasDialW");}});
+
+var RasEditPhonebookEntryA = Module.findExportByName("rasapi32.dll", "RasEditPhonebookEntryA")
+Interceptor.attach(RasEditPhonebookEntryA, {onLeave: function (args) {send("RasEditPhonebookEntryA");}});
+
+var RasEditPhonebookEntryW = Module.findExportByName("rasapi32.dll", "RasEditPhonebookEntryW")
+Interceptor.attach(RasEditPhonebookEntryW, {onLeave: function (args) {send("RasEditPhonebookEntryW");}});
+
+var RasEnumAutodialAddressesA = Module.findExportByName("rasapi32.dll", "RasEnumAutodialAddressesA")
+Interceptor.attach(RasEnumAutodialAddressesA, {onLeave: function (args) {send("RasEnumAutodialAddressesA");}});
+
+var RasEnumAutodialAddressesW = Module.findExportByName("rasapi32.dll", "RasEnumAutodialAddressesW")
+Interceptor.attach(RasEnumAutodialAddressesW, {onLeave: function (args) {send("RasEnumAutodialAddressesW");}});
+
+var RasEnumConnectionsA = Module.findExportByName("rasapi32.dll", "RasEnumConnectionsA")
+Interceptor.attach(RasEnumConnectionsA, {onLeave: function (args) {send("RasEnumConnectionsA");}});
+
+var RasEnumConnectionsW = Module.findExportByName("rasapi32.dll", "RasEnumConnectionsW")
+Interceptor.attach(RasEnumConnectionsW, {onLeave: function (args) {send("RasEnumConnectionsW");}});
+
+var RasEnumDevicesA = Module.findExportByName("rasapi32.dll", "RasEnumDevicesA")
+Interceptor.attach(RasEnumDevicesA, {onLeave: function (args) {send("RasEnumDevicesA");}});
+
+var RasEnumDevicesW = Module.findExportByName("rasapi32.dll", "RasEnumDevicesW")
+Interceptor.attach(RasEnumDevicesW, {onLeave: function (args) {send("RasEnumDevicesW");}});
+
+var RasEnumEntriesA = Module.findExportByName("rasapi32.dll", "RasEnumEntriesA")
+Interceptor.attach(RasEnumEntriesA, {onLeave: function (args) {send("RasEnumEntriesA");}});
+
+var RasEnumEntriesW = Module.findExportByName("rasapi32.dll", "RasEnumEntriesW")
+Interceptor.attach(RasEnumEntriesW, {onLeave: function (args) {send("RasEnumEntriesW");}});
+
+var RasFreeEapUserIdentityA = Module.findExportByName("rasapi32.dll", "RasFreeEapUserIdentityA")
+Interceptor.attach(RasFreeEapUserIdentityA, {onLeave: function (args) {send("RasFreeEapUserIdentityA");}});
+
+var RasFreeEapUserIdentityW = Module.findExportByName("rasapi32.dll", "RasFreeEapUserIdentityW")
+Interceptor.attach(RasFreeEapUserIdentityW, {onLeave: function (args) {send("RasFreeEapUserIdentityW");}});
+
+var RasFreeEntryAdvancedProperties = Module.findExportByName("rasapi32.dll", "RasFreeEntryAdvancedProperties")
+Interceptor.attach(RasFreeEntryAdvancedProperties, {onLeave: function (args) {send("RasFreeEntryAdvancedProperties");}});
+
+var RasGetAutoTriggerConnectStatus = Module.findExportByName("rasapi32.dll", "RasGetAutoTriggerConnectStatus")
+Interceptor.attach(RasGetAutoTriggerConnectStatus, {onLeave: function (args) {send("RasGetAutoTriggerConnectStatus");}});
+
+var RasGetAutodialAddressA = Module.findExportByName("rasapi32.dll", "RasGetAutodialAddressA")
+Interceptor.attach(RasGetAutodialAddressA, {onLeave: function (args) {send("RasGetAutodialAddressA");}});
+
+var RasGetAutodialAddressW = Module.findExportByName("rasapi32.dll", "RasGetAutodialAddressW")
+Interceptor.attach(RasGetAutodialAddressW, {onLeave: function (args) {send("RasGetAutodialAddressW");}});
+
+var RasGetAutodialEnableA = Module.findExportByName("rasapi32.dll", "RasGetAutodialEnableA")
+Interceptor.attach(RasGetAutodialEnableA, {onLeave: function (args) {send("RasGetAutodialEnableA");}});
+
+var RasGetAutodialEnableW = Module.findExportByName("rasapi32.dll", "RasGetAutodialEnableW")
+Interceptor.attach(RasGetAutodialEnableW, {onLeave: function (args) {send("RasGetAutodialEnableW");}});
+
+var RasGetAutodialParamA = Module.findExportByName("rasapi32.dll", "RasGetAutodialParamA")
+Interceptor.attach(RasGetAutodialParamA, {onLeave: function (args) {send("RasGetAutodialParamA");}});
+
+var RasGetAutodialParamW = Module.findExportByName("rasapi32.dll", "RasGetAutodialParamW")
+Interceptor.attach(RasGetAutodialParamW, {onLeave: function (args) {send("RasGetAutodialParamW");}});
+
+var RasGetConnectStatusA = Module.findExportByName("rasapi32.dll", "RasGetConnectStatusA")
+Interceptor.attach(RasGetConnectStatusA, {onLeave: function (args) {send("RasGetConnectStatusA");}});
+
+var RasGetConnectStatusW = Module.findExportByName("rasapi32.dll", "RasGetConnectStatusW")
+Interceptor.attach(RasGetConnectStatusW, {onLeave: function (args) {send("RasGetConnectStatusW");}});
+
+var RasGetConnectionErrorStringW = Module.findExportByName("rasapi32.dll", "RasGetConnectionErrorStringW")
+Interceptor.attach(RasGetConnectionErrorStringW, {onLeave: function (args) {send("RasGetConnectionErrorStringW");}});
+
+var RasGetConnectionStatistics = Module.findExportByName("rasapi32.dll", "RasGetConnectionStatistics")
+Interceptor.attach(RasGetConnectionStatistics, {onLeave: function (args) {send("RasGetConnectionStatistics");}});
+
+var RasGetCountryInfoA = Module.findExportByName("rasapi32.dll", "RasGetCountryInfoA")
+Interceptor.attach(RasGetCountryInfoA, {onLeave: function (args) {send("RasGetCountryInfoA");}});
+
+var RasGetCountryInfoW = Module.findExportByName("rasapi32.dll", "RasGetCountryInfoW")
+Interceptor.attach(RasGetCountryInfoW, {onLeave: function (args) {send("RasGetCountryInfoW");}});
+
+var RasGetCredentialsA = Module.findExportByName("rasapi32.dll", "RasGetCredentialsA")
+Interceptor.attach(RasGetCredentialsA, {onLeave: function (args) {send("RasGetCredentialsA");}});
+
+var RasGetCredentialsW = Module.findExportByName("rasapi32.dll", "RasGetCredentialsW")
+Interceptor.attach(RasGetCredentialsW, {onLeave: function (args) {send("RasGetCredentialsW");}});
+
+var RasGetCustomAuthDataA = Module.findExportByName("rasapi32.dll", "RasGetCustomAuthDataA")
+Interceptor.attach(RasGetCustomAuthDataA, {onLeave: function (args) {send("RasGetCustomAuthDataA");}});
+
+var RasGetCustomAuthDataW = Module.findExportByName("rasapi32.dll", "RasGetCustomAuthDataW")
+Interceptor.attach(RasGetCustomAuthDataW, {onLeave: function (args) {send("RasGetCustomAuthDataW");}});
+
+var RasGetEapUserDataA = Module.findExportByName("rasapi32.dll", "RasGetEapUserDataA")
+Interceptor.attach(RasGetEapUserDataA, {onLeave: function (args) {send("RasGetEapUserDataA");}});
+
+var RasGetEapUserDataW = Module.findExportByName("rasapi32.dll", "RasGetEapUserDataW")
+Interceptor.attach(RasGetEapUserDataW, {onLeave: function (args) {send("RasGetEapUserDataW");}});
+
+var RasGetEapUserIdentityA = Module.findExportByName("rasapi32.dll", "RasGetEapUserIdentityA")
+Interceptor.attach(RasGetEapUserIdentityA, {onLeave: function (args) {send("RasGetEapUserIdentityA");}});
+
+var RasGetEapUserIdentityW = Module.findExportByName("rasapi32.dll", "RasGetEapUserIdentityW")
+Interceptor.attach(RasGetEapUserIdentityW, {onLeave: function (args) {send("RasGetEapUserIdentityW");}});
+
+var RasGetEntryAdvancedProperties = Module.findExportByName("rasapi32.dll", "RasGetEntryAdvancedProperties")
+Interceptor.attach(RasGetEntryAdvancedProperties, {onLeave: function (args) {send("RasGetEntryAdvancedProperties");}});
+
+var RasGetEntryDialParamsA = Module.findExportByName("rasapi32.dll", "RasGetEntryDialParamsA")
+Interceptor.attach(RasGetEntryDialParamsA, {onLeave: function (args) {send("RasGetEntryDialParamsA");}});
+
+var RasGetEntryDialParamsW = Module.findExportByName("rasapi32.dll", "RasGetEntryDialParamsW")
+Interceptor.attach(RasGetEntryDialParamsW, {onLeave: function (args) {send("RasGetEntryDialParamsW");}});
+
+var RasGetEntryHrasconnW = Module.findExportByName("rasapi32.dll", "RasGetEntryHrasconnW")
+Interceptor.attach(RasGetEntryHrasconnW, {onLeave: function (args) {send("RasGetEntryHrasconnW");}});
+
+var RasGetEntryPropertiesA = Module.findExportByName("rasapi32.dll", "RasGetEntryPropertiesA")
+Interceptor.attach(RasGetEntryPropertiesA, {onLeave: function (args) {send("RasGetEntryPropertiesA");}});
+
+var RasGetEntryPropertiesW = Module.findExportByName("rasapi32.dll", "RasGetEntryPropertiesW")
+Interceptor.attach(RasGetEntryPropertiesW, {onLeave: function (args) {send("RasGetEntryPropertiesW");}});
+
+var RasGetErrorStringA = Module.findExportByName("rasapi32.dll", "RasGetErrorStringA")
+Interceptor.attach(RasGetErrorStringA, {onLeave: function (args) {send("RasGetErrorStringA");}});
+
+var RasGetErrorStringEx = Module.findExportByName("rasapi32.dll", "RasGetErrorStringEx")
+Interceptor.attach(RasGetErrorStringEx, {onLeave: function (args) {send("RasGetErrorStringEx");}});
+
+var RasGetErrorStringW = Module.findExportByName("rasapi32.dll", "RasGetErrorStringW")
+Interceptor.attach(RasGetErrorStringW, {onLeave: function (args) {send("RasGetErrorStringW");}});
+
+var RasGetHport = Module.findExportByName("rasapi32.dll", "RasGetHport")
+Interceptor.attach(RasGetHport, {onLeave: function (args) {send("RasGetHport");}});
+
+var RasGetLinkStatistics = Module.findExportByName("rasapi32.dll", "RasGetLinkStatistics")
+Interceptor.attach(RasGetLinkStatistics, {onLeave: function (args) {send("RasGetLinkStatistics");}});
+
+var RasGetNapStatus = Module.findExportByName("rasapi32.dll", "RasGetNapStatus")
+Interceptor.attach(RasGetNapStatus, {onLeave: function (args) {send("RasGetNapStatus");}});
+
+var RasGetPCscf = Module.findExportByName("rasapi32.dll", "RasGetPCscf")
+Interceptor.attach(RasGetPCscf, {onLeave: function (args) {send("RasGetPCscf");}});
+
+var RasGetPbkPath = Module.findExportByName("rasapi32.dll", "RasGetPbkPath")
+Interceptor.attach(RasGetPbkPath, {onLeave: function (args) {send("RasGetPbkPath");}});
+
+var RasGetProjectionInfoA = Module.findExportByName("rasapi32.dll", "RasGetProjectionInfoA")
+Interceptor.attach(RasGetProjectionInfoA, {onLeave: function (args) {send("RasGetProjectionInfoA");}});
+
+var RasGetProjectionInfoEx = Module.findExportByName("rasapi32.dll", "RasGetProjectionInfoEx")
+Interceptor.attach(RasGetProjectionInfoEx, {onLeave: function (args) {send("RasGetProjectionInfoEx");}});
+
+var RasGetProjectionInfoW = Module.findExportByName("rasapi32.dll", "RasGetProjectionInfoW")
+Interceptor.attach(RasGetProjectionInfoW, {onLeave: function (args) {send("RasGetProjectionInfoW");}});
+
+var RasGetSubEntryHandleA = Module.findExportByName("rasapi32.dll", "RasGetSubEntryHandleA")
+Interceptor.attach(RasGetSubEntryHandleA, {onLeave: function (args) {send("RasGetSubEntryHandleA");}});
+
+var RasGetSubEntryHandleW = Module.findExportByName("rasapi32.dll", "RasGetSubEntryHandleW")
+Interceptor.attach(RasGetSubEntryHandleW, {onLeave: function (args) {send("RasGetSubEntryHandleW");}});
+
+var RasGetSubEntryPropertiesA = Module.findExportByName("rasapi32.dll", "RasGetSubEntryPropertiesA")
+Interceptor.attach(RasGetSubEntryPropertiesA, {onLeave: function (args) {send("RasGetSubEntryPropertiesA");}});
+
+var RasGetSubEntryPropertiesW = Module.findExportByName("rasapi32.dll", "RasGetSubEntryPropertiesW")
+Interceptor.attach(RasGetSubEntryPropertiesW, {onLeave: function (args) {send("RasGetSubEntryPropertiesW");}});
+
+var RasHandleTriggerConnDisconnect = Module.findExportByName("rasapi32.dll", "RasHandleTriggerConnDisconnect")
+Interceptor.attach(RasHandleTriggerConnDisconnect, {onLeave: function (args) {send("RasHandleTriggerConnDisconnect");}});
+
+var RasHangUpA = Module.findExportByName("rasapi32.dll", "RasHangUpA")
+Interceptor.attach(RasHangUpA, {onLeave: function (args) {send("RasHangUpA");}});
+
+var RasHangUpW = Module.findExportByName("rasapi32.dll", "RasHangUpW")
+Interceptor.attach(RasHangUpW, {onLeave: function (args) {send("RasHangUpW");}});
+
+var RasInvokeEapUI = Module.findExportByName("rasapi32.dll", "RasInvokeEapUI")
+Interceptor.attach(RasInvokeEapUI, {onLeave: function (args) {send("RasInvokeEapUI");}});
+
+var RasIsPublicPhonebook = Module.findExportByName("rasapi32.dll", "RasIsPublicPhonebook")
+Interceptor.attach(RasIsPublicPhonebook, {onLeave: function (args) {send("RasIsPublicPhonebook");}});
+
+var RasIsSharedConnection = Module.findExportByName("rasapi32.dll", "RasIsSharedConnection")
+Interceptor.attach(RasIsSharedConnection, {onLeave: function (args) {send("RasIsSharedConnection");}});
+
+var RasMobileCore = Module.findExportByName("rasapi32.dll", "RasMobileCore")
+Interceptor.attach(RasMobileCore, {onLeave: function (args) {send("RasMobileCore");}});
+
+var RasNQMStateEnteredNotification = Module.findExportByName("rasapi32.dll", "RasNQMStateEnteredNotification")
+Interceptor.attach(RasNQMStateEnteredNotification, {onLeave: function (args) {send("RasNQMStateEnteredNotification");}});
+
+var RasQueryRedialOnLinkFailure = Module.findExportByName("rasapi32.dll", "RasQueryRedialOnLinkFailure")
+Interceptor.attach(RasQueryRedialOnLinkFailure, {onLeave: function (args) {send("RasQueryRedialOnLinkFailure");}});
+
+var RasQuerySharedAutoDial = Module.findExportByName("rasapi32.dll", "RasQuerySharedAutoDial")
+Interceptor.attach(RasQuerySharedAutoDial, {onLeave: function (args) {send("RasQuerySharedAutoDial");}});
+
+var RasQuerySharedConnection = Module.findExportByName("rasapi32.dll", "RasQuerySharedConnection")
+Interceptor.attach(RasQuerySharedConnection, {onLeave: function (args) {send("RasQuerySharedConnection");}});
+
+var RasRegisterEntryChangeNotification = Module.findExportByName("rasapi32.dll", "RasRegisterEntryChangeNotification")
+Interceptor.attach(RasRegisterEntryChangeNotification, {onLeave: function (args) {send("RasRegisterEntryChangeNotification");}});
+
+var RasRemoveToastNotification = Module.findExportByName("rasapi32.dll", "RasRemoveToastNotification")
+Interceptor.attach(RasRemoveToastNotification, {onLeave: function (args) {send("RasRemoveToastNotification");}});
+
+var RasRenameEntryA = Module.findExportByName("rasapi32.dll", "RasRenameEntryA")
+Interceptor.attach(RasRenameEntryA, {onLeave: function (args) {send("RasRenameEntryA");}});
+
+var RasRenameEntryW = Module.findExportByName("rasapi32.dll", "RasRenameEntryW")
+Interceptor.attach(RasRenameEntryW, {onLeave: function (args) {send("RasRenameEntryW");}});
+
+var RasRestoreDefaultLegacyProxySettings = Module.findExportByName("rasapi32.dll", "RasRestoreDefaultLegacyProxySettings")
+Interceptor.attach(RasRestoreDefaultLegacyProxySettings, {onLeave: function (args) {send("RasRestoreDefaultLegacyProxySettings");}});
+
+var RasScriptExecute = Module.findExportByName("rasapi32.dll", "RasScriptExecute")
+Interceptor.attach(RasScriptExecute, {onLeave: function (args) {send("RasScriptExecute");}});
+
+var RasScriptGetIpAddress = Module.findExportByName("rasapi32.dll", "RasScriptGetIpAddress")
+Interceptor.attach(RasScriptGetIpAddress, {onLeave: function (args) {send("RasScriptGetIpAddress");}});
+
+var RasScriptInit = Module.findExportByName("rasapi32.dll", "RasScriptInit")
+Interceptor.attach(RasScriptInit, {onLeave: function (args) {send("RasScriptInit");}});
+
+var RasScriptReceive = Module.findExportByName("rasapi32.dll", "RasScriptReceive")
+Interceptor.attach(RasScriptReceive, {onLeave: function (args) {send("RasScriptReceive");}});
+
+var RasScriptSend = Module.findExportByName("rasapi32.dll", "RasScriptSend")
+Interceptor.attach(RasScriptSend, {onLeave: function (args) {send("RasScriptSend");}});
+
+var RasScriptTerm = Module.findExportByName("rasapi32.dll", "RasScriptTerm")
+Interceptor.attach(RasScriptTerm, {onLeave: function (args) {send("RasScriptTerm");}});
+
+var RasSetAutoTriggerProfile = Module.findExportByName("rasapi32.dll", "RasSetAutoTriggerProfile")
+Interceptor.attach(RasSetAutoTriggerProfile, {onLeave: function (args) {send("RasSetAutoTriggerProfile");}});
+
+var RasSetAutoTriggerProfileEx = Module.findExportByName("rasapi32.dll", "RasSetAutoTriggerProfileEx")
+Interceptor.attach(RasSetAutoTriggerProfileEx, {onLeave: function (args) {send("RasSetAutoTriggerProfileEx");}});
+
+var RasSetAutodialAddressA = Module.findExportByName("rasapi32.dll", "RasSetAutodialAddressA")
+Interceptor.attach(RasSetAutodialAddressA, {onLeave: function (args) {send("RasSetAutodialAddressA");}});
+
+var RasSetAutodialAddressW = Module.findExportByName("rasapi32.dll", "RasSetAutodialAddressW")
+Interceptor.attach(RasSetAutodialAddressW, {onLeave: function (args) {send("RasSetAutodialAddressW");}});
+
+var RasSetAutodialEnableA = Module.findExportByName("rasapi32.dll", "RasSetAutodialEnableA")
+Interceptor.attach(RasSetAutodialEnableA, {onLeave: function (args) {send("RasSetAutodialEnableA");}});
+
+var RasSetAutodialEnableW = Module.findExportByName("rasapi32.dll", "RasSetAutodialEnableW")
+Interceptor.attach(RasSetAutodialEnableW, {onLeave: function (args) {send("RasSetAutodialEnableW");}});
+
+var RasSetAutodialParamA = Module.findExportByName("rasapi32.dll", "RasSetAutodialParamA")
+Interceptor.attach(RasSetAutodialParamA, {onLeave: function (args) {send("RasSetAutodialParamA");}});
+
+var RasSetAutodialParamW = Module.findExportByName("rasapi32.dll", "RasSetAutodialParamW")
+Interceptor.attach(RasSetAutodialParamW, {onLeave: function (args) {send("RasSetAutodialParamW");}});
+
+var RasSetCredentialsA = Module.findExportByName("rasapi32.dll", "RasSetCredentialsA")
+Interceptor.attach(RasSetCredentialsA, {onLeave: function (args) {send("RasSetCredentialsA");}});
+
+var RasSetCredentialsW = Module.findExportByName("rasapi32.dll", "RasSetCredentialsW")
+Interceptor.attach(RasSetCredentialsW, {onLeave: function (args) {send("RasSetCredentialsW");}});
+
+var RasSetCustomAuthDataA = Module.findExportByName("rasapi32.dll", "RasSetCustomAuthDataA")
+Interceptor.attach(RasSetCustomAuthDataA, {onLeave: function (args) {send("RasSetCustomAuthDataA");}});
+
+var RasSetCustomAuthDataW = Module.findExportByName("rasapi32.dll", "RasSetCustomAuthDataW")
+Interceptor.attach(RasSetCustomAuthDataW, {onLeave: function (args) {send("RasSetCustomAuthDataW");}});
+
+var RasSetEapUserDataA = Module.findExportByName("rasapi32.dll", "RasSetEapUserDataA")
+Interceptor.attach(RasSetEapUserDataA, {onLeave: function (args) {send("RasSetEapUserDataA");}});
+
+var RasSetEapUserDataAEx = Module.findExportByName("rasapi32.dll", "RasSetEapUserDataAEx")
+Interceptor.attach(RasSetEapUserDataAEx, {onLeave: function (args) {send("RasSetEapUserDataAEx");}});
+
+var RasSetEapUserDataW = Module.findExportByName("rasapi32.dll", "RasSetEapUserDataW")
+Interceptor.attach(RasSetEapUserDataW, {onLeave: function (args) {send("RasSetEapUserDataW");}});
+
+var RasSetEapUserDataWEx = Module.findExportByName("rasapi32.dll", "RasSetEapUserDataWEx")
+Interceptor.attach(RasSetEapUserDataWEx, {onLeave: function (args) {send("RasSetEapUserDataWEx");}});
+
+var RasSetEntryAdvancedProperties = Module.findExportByName("rasapi32.dll", "RasSetEntryAdvancedProperties")
+Interceptor.attach(RasSetEntryAdvancedProperties, {onLeave: function (args) {send("RasSetEntryAdvancedProperties");}});
+
+var RasSetEntryDialParamsA = Module.findExportByName("rasapi32.dll", "RasSetEntryDialParamsA")
+Interceptor.attach(RasSetEntryDialParamsA, {onLeave: function (args) {send("RasSetEntryDialParamsA");}});
+
+var RasSetEntryDialParamsW = Module.findExportByName("rasapi32.dll", "RasSetEntryDialParamsW")
+Interceptor.attach(RasSetEntryDialParamsW, {onLeave: function (args) {send("RasSetEntryDialParamsW");}});
+
+var RasSetEntryPropertiesA = Module.findExportByName("rasapi32.dll", "RasSetEntryPropertiesA")
+Interceptor.attach(RasSetEntryPropertiesA, {onLeave: function (args) {send("RasSetEntryPropertiesA");}});
+
+var RasSetEntryPropertiesW = Module.findExportByName("rasapi32.dll", "RasSetEntryPropertiesW")
+Interceptor.attach(RasSetEntryPropertiesW, {onLeave: function (args) {send("RasSetEntryPropertiesW");}});
+
+var RasSetOldPassword = Module.findExportByName("rasapi32.dll", "RasSetOldPassword")
+Interceptor.attach(RasSetOldPassword, {onLeave: function (args) {send("RasSetOldPassword");}});
+
+var RasSetPerConnectionProxy = Module.findExportByName("rasapi32.dll", "RasSetPerConnectionProxy")
+Interceptor.attach(RasSetPerConnectionProxy, {onLeave: function (args) {send("RasSetPerConnectionProxy");}});
+
+var RasSetSharedAutoDial = Module.findExportByName("rasapi32.dll", "RasSetSharedAutoDial")
+Interceptor.attach(RasSetSharedAutoDial, {onLeave: function (args) {send("RasSetSharedAutoDial");}});
+
+var RasSetSubEntryPropertiesA = Module.findExportByName("rasapi32.dll", "RasSetSubEntryPropertiesA")
+Interceptor.attach(RasSetSubEntryPropertiesA, {onLeave: function (args) {send("RasSetSubEntryPropertiesA");}});
+
+var RasSetSubEntryPropertiesW = Module.findExportByName("rasapi32.dll", "RasSetSubEntryPropertiesW")
+Interceptor.attach(RasSetSubEntryPropertiesW, {onLeave: function (args) {send("RasSetSubEntryPropertiesW");}});
+
+var RasShowToastNotificationEx = Module.findExportByName("rasapi32.dll", "RasShowToastNotificationEx")
+Interceptor.attach(RasShowToastNotificationEx, {onLeave: function (args) {send("RasShowToastNotificationEx");}});
+
+var RasTriggerConnection = Module.findExportByName("rasapi32.dll", "RasTriggerConnection")
+Interceptor.attach(RasTriggerConnection, {onLeave: function (args) {send("RasTriggerConnection");}});
+
+var RasTriggerConnectionEx = Module.findExportByName("rasapi32.dll", "RasTriggerConnectionEx")
+Interceptor.attach(RasTriggerConnectionEx, {onLeave: function (args) {send("RasTriggerConnectionEx");}});
+
+var RasTriggerDisconnection = Module.findExportByName("rasapi32.dll", "RasTriggerDisconnection")
+Interceptor.attach(RasTriggerDisconnection, {onLeave: function (args) {send("RasTriggerDisconnection");}});
+
+var RasTriggerDisconnectionEx = Module.findExportByName("rasapi32.dll", "RasTriggerDisconnectionEx")
+Interceptor.attach(RasTriggerDisconnectionEx, {onLeave: function (args) {send("RasTriggerDisconnectionEx");}});
+
+var RasUnregisterEntryChangeNotification = Module.findExportByName("rasapi32.dll", "RasUnregisterEntryChangeNotification")
+Interceptor.attach(RasUnregisterEntryChangeNotification, {onLeave: function (args) {send("RasUnregisterEntryChangeNotification");}});
+
+var RasUpdateConnection = Module.findExportByName("rasapi32.dll", "RasUpdateConnection")
+Interceptor.attach(RasUpdateConnection, {onLeave: function (args) {send("RasUpdateConnection");}});
+
+var RasValidateEntryNameA = Module.findExportByName("rasapi32.dll", "RasValidateEntryNameA")
+Interceptor.attach(RasValidateEntryNameA, {onLeave: function (args) {send("RasValidateEntryNameA");}});
+
+var RasValidateEntryNameW = Module.findExportByName("rasapi32.dll", "RasValidateEntryNameW")
+Interceptor.attach(RasValidateEntryNameW, {onLeave: function (args) {send("RasValidateEntryNameW");}});
+
+var RasWriteSharedPbkOptions = Module.findExportByName("rasapi32.dll", "RasWriteSharedPbkOptions")
+Interceptor.attach(RasWriteSharedPbkOptions, {onLeave: function (args) {send("RasWriteSharedPbkOptions");}});
+
+var RdtFromPbdt = Module.findExportByName("rasapi32.dll", "RdtFromPbdt")
+Interceptor.attach(RdtFromPbdt, {onLeave: function (args) {send("RdtFromPbdt");}});
+
+var ReadPhonebookFile = Module.findExportByName("rasapi32.dll", "ReadPhonebookFile")
+Interceptor.attach(ReadPhonebookFile, {onLeave: function (args) {send("ReadPhonebookFile");}});
+
+var SetDefaultModemSettings = Module.findExportByName("rasapi32.dll", "SetDefaultModemSettings")
+Interceptor.attach(SetDefaultModemSettings, {onLeave: function (args) {send("SetDefaultModemSettings");}});
+
+var UnInitializeRAS = Module.findExportByName("rasapi32.dll", "UnInitializeRAS")
+Interceptor.attach(UnInitializeRAS, {onLeave: function (args) {send("UnInitializeRAS");}});
+
+var UpdatePreferredVPNDestinationInRegistry = Module.findExportByName("rasapi32.dll", "UpdatePreferredVPNDestinationInRegistry")
+Interceptor.attach(UpdatePreferredVPNDestinationInRegistry, {onLeave: function (args) {send("UpdatePreferredVPNDestinationInRegistry");}});
+
+var ValidateEntryName = Module.findExportByName("rasapi32.dll", "ValidateEntryName")
+Interceptor.attach(ValidateEntryName, {onLeave: function (args) {send("ValidateEntryName");}});
+
+var WritePhonebookFile = Module.findExportByName("rasapi32.dll", "WritePhonebookFile")
+Interceptor.attach(WritePhonebookFile, {onLeave: function (args) {send("WritePhonebookFile");}});
+

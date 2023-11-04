@@ -1,0 +1,93 @@
+var CloseEnumServers = Module.findExportByName("dbnetlib.dll", "CloseEnumServers")
+Interceptor.attach(CloseEnumServers, {onLeave: function (args) {send("CloseEnumServers");}});
+
+var ConnectionCheckForData = Module.findExportByName("dbnetlib.dll", "ConnectionCheckForData")
+Interceptor.attach(ConnectionCheckForData, {onLeave: function (args) {send("ConnectionCheckForData");}});
+
+var ConnectionClose = Module.findExportByName("dbnetlib.dll", "ConnectionClose")
+Interceptor.attach(ConnectionClose, {onLeave: function (args) {send("ConnectionClose");}});
+
+var ConnectionError = Module.findExportByName("dbnetlib.dll", "ConnectionError")
+Interceptor.attach(ConnectionError, {onLeave: function (args) {send("ConnectionError");}});
+
+var ConnectionErrorW = Module.findExportByName("dbnetlib.dll", "ConnectionErrorW")
+Interceptor.attach(ConnectionErrorW, {onLeave: function (args) {send("ConnectionErrorW");}});
+
+var ConnectionFlushCache = Module.findExportByName("dbnetlib.dll", "ConnectionFlushCache")
+Interceptor.attach(ConnectionFlushCache, {onLeave: function (args) {send("ConnectionFlushCache");}});
+
+var ConnectionGetSvrUser = Module.findExportByName("dbnetlib.dll", "ConnectionGetSvrUser")
+Interceptor.attach(ConnectionGetSvrUser, {onLeave: function (args) {send("ConnectionGetSvrUser");}});
+
+var ConnectionMode = Module.findExportByName("dbnetlib.dll", "ConnectionMode")
+Interceptor.attach(ConnectionMode, {onLeave: function (args) {send("ConnectionMode");}});
+
+var ConnectionObjectSize = Module.findExportByName("dbnetlib.dll", "ConnectionObjectSize")
+Interceptor.attach(ConnectionObjectSize, {onLeave: function (args) {send("ConnectionObjectSize");}});
+
+var ConnectionOpen = Module.findExportByName("dbnetlib.dll", "ConnectionOpen")
+Interceptor.attach(ConnectionOpen, {onLeave: function (args) {send("ConnectionOpen");}});
+
+var ConnectionOpenW = Module.findExportByName("dbnetlib.dll", "ConnectionOpenW")
+Interceptor.attach(ConnectionOpenW, {onLeave: function (args) {send("ConnectionOpenW");}});
+
+var ConnectionOption = Module.findExportByName("dbnetlib.dll", "ConnectionOption")
+Interceptor.attach(ConnectionOption, {onLeave: function (args) {send("ConnectionOption");}});
+
+var ConnectionRead = Module.findExportByName("dbnetlib.dll", "ConnectionRead")
+Interceptor.attach(ConnectionRead, {onLeave: function (args) {send("ConnectionRead");}});
+
+var ConnectionServerEnum = Module.findExportByName("dbnetlib.dll", "ConnectionServerEnum")
+Interceptor.attach(ConnectionServerEnum, {onLeave: function (args) {send("ConnectionServerEnum");}});
+
+var ConnectionServerEnumW = Module.findExportByName("dbnetlib.dll", "ConnectionServerEnumW")
+Interceptor.attach(ConnectionServerEnumW, {onLeave: function (args) {send("ConnectionServerEnumW");}});
+
+var ConnectionSqlVer = Module.findExportByName("dbnetlib.dll", "ConnectionSqlVer")
+Interceptor.attach(ConnectionSqlVer, {onLeave: function (args) {send("ConnectionSqlVer");}});
+
+var ConnectionStatus = Module.findExportByName("dbnetlib.dll", "ConnectionStatus")
+Interceptor.attach(ConnectionStatus, {onLeave: function (args) {send("ConnectionStatus");}});
+
+var ConnectionTransact = Module.findExportByName("dbnetlib.dll", "ConnectionTransact")
+Interceptor.attach(ConnectionTransact, {onLeave: function (args) {send("ConnectionTransact");}});
+
+var ConnectionVer = Module.findExportByName("dbnetlib.dll", "ConnectionVer")
+Interceptor.attach(ConnectionVer, {onLeave: function (args) {send("ConnectionVer");}});
+
+var ConnectionWrite = Module.findExportByName("dbnetlib.dll", "ConnectionWrite")
+Interceptor.attach(ConnectionWrite, {onLeave: function (args) {send("ConnectionWrite");}});
+
+var ConnectionWriteOOB = Module.findExportByName("dbnetlib.dll", "ConnectionWriteOOB")
+Interceptor.attach(ConnectionWriteOOB, {onLeave: function (args) {send("ConnectionWriteOOB");}});
+
+var GenClientContext = Module.findExportByName("dbnetlib.dll", "GenClientContext")
+Interceptor.attach(GenClientContext, {onLeave: function (args) {send("GenClientContext");}});
+
+var GenClientContextEx = Module.findExportByName("dbnetlib.dll", "GenClientContextEx")
+Interceptor.attach(GenClientContextEx, {onLeave: function (args) {send("GenClientContextEx");}});
+
+var GetNextEnumeration = Module.findExportByName("dbnetlib.dll", "GetNextEnumeration")
+Interceptor.attach(GetNextEnumeration, {onLeave: function (args) {send("GetNextEnumeration");}});
+
+var InitEnumServers = Module.findExportByName("dbnetlib.dll", "InitEnumServers")
+Interceptor.attach(InitEnumServers, {onLeave: function (args) {send("InitEnumServers");}});
+
+var InitSSPIPackage = Module.findExportByName("dbnetlib.dll", "InitSSPIPackage")
+Interceptor.attach(InitSSPIPackage, {onLeave: function (args) {send("InitSSPIPackage");}});
+
+var InitSession = Module.findExportByName("dbnetlib.dll", "InitSession")
+Interceptor.attach(InitSession, {onLeave: function (args) {send("InitSession");}});
+
+var InitSessionEx = Module.findExportByName("dbnetlib.dll", "InitSessionEx")
+Interceptor.attach(InitSessionEx, {onLeave: function (args) {send("InitSessionEx");}});
+
+var TermSSPIPackage = Module.findExportByName("dbnetlib.dll", "TermSSPIPackage")
+Interceptor.attach(TermSSPIPackage, {onLeave: function (args) {send("TermSSPIPackage");}});
+
+var TermSession = Module.findExportByName("dbnetlib.dll", "TermSession")
+Interceptor.attach(TermSession, {onLeave: function (args) {send("TermSession");}});
+
+var TermSessionEx = Module.findExportByName("dbnetlib.dll", "TermSessionEx")
+Interceptor.attach(TermSessionEx, {onLeave: function (args) {send("TermSessionEx");}});
+

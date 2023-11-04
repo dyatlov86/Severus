@@ -1,0 +1,6 @@
+var KtmRmServiceMain = Module.findExportByName("msdtckrm.dll", "KtmRmServiceMain")
+Interceptor.attach(KtmRmServiceMain, {onLeave: function (args) {send("KtmRmServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("msdtckrm.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

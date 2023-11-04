@@ -1,0 +1,12 @@
+var OneXGetUserFriendlyText = Module.findExportByName("onexui.dll", "OneXGetUserFriendlyText")
+Interceptor.attach(OneXGetUserFriendlyText, {onLeave: function (args) {send("OneXGetUserFriendlyText");}});
+
+var OneXMapEAPHostInteractiveUIToOneXUIResponse = Module.findExportByName("onexui.dll", "OneXMapEAPHostInteractiveUIToOneXUIResponse")
+Interceptor.attach(OneXMapEAPHostInteractiveUIToOneXUIResponse, {onLeave: function (args) {send("OneXMapEAPHostInteractiveUIToOneXUIResponse");}});
+
+var OneXShowUI = Module.findExportByName("onexui.dll", "OneXShowUI")
+Interceptor.attach(OneXShowUI, {onLeave: function (args) {send("OneXShowUI");}});
+
+var OneXShowUIFromEAPCreds = Module.findExportByName("onexui.dll", "OneXShowUIFromEAPCreds")
+Interceptor.attach(OneXShowUIFromEAPCreds, {onLeave: function (args) {send("OneXShowUIFromEAPCreds");}});
+

@@ -1,0 +1,3 @@
+var OnMachineUILanguageSwitch = Module.findExportByName("TimeDateMUICallback.dll", "OnMachineUILanguageSwitch")
+Interceptor.attach(OnMachineUILanguageSwitch, {onLeave: function (args) {send("OnMachineUILanguageSwitch");}});
+

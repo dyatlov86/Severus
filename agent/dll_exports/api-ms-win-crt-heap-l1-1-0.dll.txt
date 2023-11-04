@@ -1,0 +1,81 @@
+var _aligned_free = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_aligned_free")
+Interceptor.attach(_aligned_free, {onLeave: function (args) {send("_aligned_free");}});
+
+var _aligned_malloc = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_aligned_malloc")
+Interceptor.attach(_aligned_malloc, {onLeave: function (args) {send("_aligned_malloc");}});
+
+var _aligned_msize = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_aligned_msize")
+Interceptor.attach(_aligned_msize, {onLeave: function (args) {send("_aligned_msize");}});
+
+var _aligned_offset_malloc = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_aligned_offset_malloc")
+Interceptor.attach(_aligned_offset_malloc, {onLeave: function (args) {send("_aligned_offset_malloc");}});
+
+var _aligned_offset_realloc = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_aligned_offset_realloc")
+Interceptor.attach(_aligned_offset_realloc, {onLeave: function (args) {send("_aligned_offset_realloc");}});
+
+var _aligned_offset_recalloc = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_aligned_offset_recalloc")
+Interceptor.attach(_aligned_offset_recalloc, {onLeave: function (args) {send("_aligned_offset_recalloc");}});
+
+var _aligned_realloc = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_aligned_realloc")
+Interceptor.attach(_aligned_realloc, {onLeave: function (args) {send("_aligned_realloc");}});
+
+var _aligned_recalloc = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_aligned_recalloc")
+Interceptor.attach(_aligned_recalloc, {onLeave: function (args) {send("_aligned_recalloc");}});
+
+var _callnewh = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_callnewh")
+Interceptor.attach(_callnewh, {onLeave: function (args) {send("_callnewh");}});
+
+var _calloc_base = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_calloc_base")
+Interceptor.attach(_calloc_base, {onLeave: function (args) {send("_calloc_base");}});
+
+var _expand = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_expand")
+Interceptor.attach(_expand, {onLeave: function (args) {send("_expand");}});
+
+var _free_base = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_free_base")
+Interceptor.attach(_free_base, {onLeave: function (args) {send("_free_base");}});
+
+var _get_heap_handle = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_get_heap_handle")
+Interceptor.attach(_get_heap_handle, {onLeave: function (args) {send("_get_heap_handle");}});
+
+var _heapchk = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_heapchk")
+Interceptor.attach(_heapchk, {onLeave: function (args) {send("_heapchk");}});
+
+var _heapmin = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_heapmin")
+Interceptor.attach(_heapmin, {onLeave: function (args) {send("_heapmin");}});
+
+var _heapwalk = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_heapwalk")
+Interceptor.attach(_heapwalk, {onLeave: function (args) {send("_heapwalk");}});
+
+var _malloc_base = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_malloc_base")
+Interceptor.attach(_malloc_base, {onLeave: function (args) {send("_malloc_base");}});
+
+var _msize = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_msize")
+Interceptor.attach(_msize, {onLeave: function (args) {send("_msize");}});
+
+var _query_new_handler = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_query_new_handler")
+Interceptor.attach(_query_new_handler, {onLeave: function (args) {send("_query_new_handler");}});
+
+var _query_new_mode = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_query_new_mode")
+Interceptor.attach(_query_new_mode, {onLeave: function (args) {send("_query_new_mode");}});
+
+var _realloc_base = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_realloc_base")
+Interceptor.attach(_realloc_base, {onLeave: function (args) {send("_realloc_base");}});
+
+var _recalloc = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_recalloc")
+Interceptor.attach(_recalloc, {onLeave: function (args) {send("_recalloc");}});
+
+var _set_new_mode = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "_set_new_mode")
+Interceptor.attach(_set_new_mode, {onLeave: function (args) {send("_set_new_mode");}});
+
+var calloc = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "calloc")
+Interceptor.attach(calloc, {onLeave: function (args) {send("calloc");}});
+
+var free = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "free")
+Interceptor.attach(free, {onLeave: function (args) {send("free");}});
+
+var malloc = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "malloc")
+Interceptor.attach(malloc, {onLeave: function (args) {send("malloc");}});
+
+var realloc = Module.findExportByName("api-ms-win-crt-heap-l1-1-0.dll", "realloc")
+Interceptor.attach(realloc, {onLeave: function (args) {send("realloc");}});
+

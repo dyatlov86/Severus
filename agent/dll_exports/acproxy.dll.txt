@@ -1,0 +1,3 @@
+var PerformAutochkOperations = Module.findExportByName("acproxy.dll", "PerformAutochkOperations")
+Interceptor.attach(PerformAutochkOperations, {onLeave: function (args) {send("PerformAutochkOperations");}});
+

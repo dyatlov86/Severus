@@ -1,0 +1,9 @@
+var RdvTransport_CreateInstance = Module.findExportByName("rdvvmtransport.dll", "RdvTransport_CreateInstance")
+Interceptor.attach(RdvTransport_CreateInstance, {onLeave: function (args) {send("RdvTransport_CreateInstance");}});
+
+var RdvTransport_GetInstance = Module.findExportByName("rdvvmtransport.dll", "RdvTransport_GetInstance")
+Interceptor.attach(RdvTransport_GetInstance, {onLeave: function (args) {send("RdvTransport_GetInstance");}});
+
+var RdvTransport_TerminateInstance = Module.findExportByName("rdvvmtransport.dll", "RdvTransport_TerminateInstance")
+Interceptor.attach(RdvTransport_TerminateInstance, {onLeave: function (args) {send("RdvTransport_TerminateInstance");}});
+

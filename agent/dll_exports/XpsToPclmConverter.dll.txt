@@ -1,0 +1,9 @@
+var CreateXpsToPCLmConverter = Module.findExportByName("XpsToPclmConverter.dll", "CreateXpsToPCLmConverter")
+Interceptor.attach(CreateXpsToPCLmConverter, {onLeave: function (args) {send("CreateXpsToPCLmConverter");}});
+
+var DllCanUnloadNow = Module.findExportByName("XpsToPclmConverter.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("XpsToPclmConverter.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

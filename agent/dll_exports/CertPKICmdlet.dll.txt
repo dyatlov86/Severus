@@ -1,0 +1,42 @@
+var DllMain = Module.findExportByName("CertPKICmdlet.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var ExportCertificate = Module.findExportByName("CertPKICmdlet.dll", "ExportCertificate")
+Interceptor.attach(ExportCertificate, {onLeave: function (args) {send("ExportCertificate");}});
+
+var ExportPFXCertificate = Module.findExportByName("CertPKICmdlet.dll", "ExportPFXCertificate")
+Interceptor.attach(ExportPFXCertificate, {onLeave: function (args) {send("ExportPFXCertificate");}});
+
+var FindCertificate = Module.findExportByName("CertPKICmdlet.dll", "FindCertificate")
+Interceptor.attach(FindCertificate, {onLeave: function (args) {send("FindCertificate");}});
+
+var FreeCertResults = Module.findExportByName("CertPKICmdlet.dll", "FreeCertResults")
+Interceptor.attach(FreeCertResults, {onLeave: function (args) {send("FreeCertResults");}});
+
+var FreeResourceString = Module.findExportByName("CertPKICmdlet.dll", "FreeResourceString")
+Interceptor.attach(FreeResourceString, {onLeave: function (args) {send("FreeResourceString");}});
+
+var GetCertificateFromEnrollmentInternal = Module.findExportByName("CertPKICmdlet.dll", "GetCertificateFromEnrollmentInternal")
+Interceptor.attach(GetCertificateFromEnrollmentInternal, {onLeave: function (args) {send("GetCertificateFromEnrollmentInternal");}});
+
+var ImportCertificate = Module.findExportByName("CertPKICmdlet.dll", "ImportCertificate")
+Interceptor.attach(ImportCertificate, {onLeave: function (args) {send("ImportCertificate");}});
+
+var ImportPFXCertificate = Module.findExportByName("CertPKICmdlet.dll", "ImportPFXCertificate")
+Interceptor.attach(ImportPFXCertificate, {onLeave: function (args) {send("ImportPFXCertificate");}});
+
+var IsSecureKernelRunning = Module.findExportByName("CertPKICmdlet.dll", "IsSecureKernelRunning")
+Interceptor.attach(IsSecureKernelRunning, {onLeave: function (args) {send("IsSecureKernelRunning");}});
+
+var IsSmartCard = Module.findExportByName("CertPKICmdlet.dll", "IsSmartCard")
+Interceptor.attach(IsSmartCard, {onLeave: function (args) {send("IsSmartCard");}});
+
+var LoadResourceString = Module.findExportByName("CertPKICmdlet.dll", "LoadResourceString")
+Interceptor.attach(LoadResourceString, {onLeave: function (args) {send("LoadResourceString");}});
+
+var SuppressFreeCert = Module.findExportByName("CertPKICmdlet.dll", "SuppressFreeCert")
+Interceptor.attach(SuppressFreeCert, {onLeave: function (args) {send("SuppressFreeCert");}});
+
+var SuppressFreeStore = Module.findExportByName("CertPKICmdlet.dll", "SuppressFreeStore")
+Interceptor.attach(SuppressFreeStore, {onLeave: function (args) {send("SuppressFreeStore");}});
+

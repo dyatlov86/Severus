@@ -1,0 +1,6 @@
+var ServiceMain = Module.findExportByName("rasauto.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SetAddressDisabledEx = Module.findExportByName("rasauto.dll", "SetAddressDisabledEx")
+Interceptor.attach(SetAddressDisabledEx, {onLeave: function (args) {send("SetAddressDisabledEx");}});
+

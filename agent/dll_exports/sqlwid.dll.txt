@@ -1,0 +1,30 @@
+var GetEnvironmentStrings_ = Module.findExportByName("sqlwid.dll", "GetEnvironmentStrings_")
+Interceptor.attach(GetEnvironmentStrings_, {onLeave: function (args) {send("GetEnvironmentStrings_");}});
+
+var GetProcAddress_ = Module.findExportByName("sqlwid.dll", "GetProcAddress_")
+Interceptor.attach(GetProcAddress_, {onLeave: function (args) {send("GetProcAddress_");}});
+
+var OpenFile_ = Module.findExportByName("sqlwid.dll", "OpenFile_")
+Interceptor.attach(OpenFile_, {onLeave: function (args) {send("OpenFile_");}});
+
+var _hwrite_ = Module.findExportByName("sqlwid.dll", "_hwrite_")
+Interceptor.attach(_hwrite_, {onLeave: function (args) {send("_hwrite_");}});
+
+var _lcreat_ = Module.findExportByName("sqlwid.dll", "_lcreat_")
+Interceptor.attach(_lcreat_, {onLeave: function (args) {send("_lcreat_");}});
+
+var _lopen_ = Module.findExportByName("sqlwid.dll", "_lopen_")
+Interceptor.attach(_lopen_, {onLeave: function (args) {send("_lopen_");}});
+
+var _lwrite_ = Module.findExportByName("sqlwid.dll", "_lwrite_")
+Interceptor.attach(_lwrite_, {onLeave: function (args) {send("_lwrite_");}});
+
+var _ttof = Module.findExportByName("sqlwid.dll", "_ttof")
+Interceptor.attach(_ttof, {onLeave: function (args) {send("_ttof");}});
+
+var strerror_ = Module.findExportByName("sqlwid.dll", "strerror_")
+Interceptor.attach(strerror_, {onLeave: function (args) {send("strerror_");}});
+
+var wstrlen = Module.findExportByName("sqlwid.dll", "wstrlen")
+Interceptor.attach(wstrlen, {onLeave: function (args) {send("wstrlen");}});
+

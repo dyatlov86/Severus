@@ -1,0 +1,9 @@
+var GetCampaignContentLocation = Module.findExportByName("UpdateNotificationHelpers.dll", "GetCampaignContentLocation")
+Interceptor.attach(GetCampaignContentLocation, {onLeave: function (args) {send("GetCampaignContentLocation");}});
+
+var InitializeUpdateNotificationMgrTask = Module.findExportByName("UpdateNotificationHelpers.dll", "InitializeUpdateNotificationMgrTask")
+Interceptor.attach(InitializeUpdateNotificationMgrTask, {onLeave: function (args) {send("InitializeUpdateNotificationMgrTask");}});
+
+var IsCampaignActive = Module.findExportByName("UpdateNotificationHelpers.dll", "IsCampaignActive")
+Interceptor.attach(IsCampaignActive, {onLeave: function (args) {send("IsCampaignActive");}});
+

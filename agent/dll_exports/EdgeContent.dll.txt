@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("EdgeContent.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("EdgeContent.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("EdgeContent.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var IEGetWriteableFolderPath = Module.findExportByName("EdgeContent.dll", "IEGetWriteableFolderPath")
+Interceptor.attach(IEGetWriteableFolderPath, {onLeave: function (args) {send("IEGetWriteableFolderPath");}});
+
+var IEIsInPrivateBrowsing = Module.findExportByName("EdgeContent.dll", "IEIsInPrivateBrowsing")
+Interceptor.attach(IEIsInPrivateBrowsing, {onLeave: function (args) {send("IEIsInPrivateBrowsing");}});
+
+var IEIsProtectedModeProcess = Module.findExportByName("EdgeContent.dll", "IEIsProtectedModeProcess")
+Interceptor.attach(IEIsProtectedModeProcess, {onLeave: function (args) {send("IEIsProtectedModeProcess");}});
+
+var IERefreshElevationPolicy = Module.findExportByName("EdgeContent.dll", "IERefreshElevationPolicy")
+Interceptor.attach(IERefreshElevationPolicy, {onLeave: function (args) {send("IERefreshElevationPolicy");}});
+

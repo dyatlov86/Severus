@@ -1,0 +1,24 @@
+var DllCanUnloadNow = Module.findExportByName("gpprnext.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("gpprnext.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("gpprnext.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("gpprnext.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("gpprnext.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var PrinterGenerateGroupPolicy = Module.findExportByName("gpprnext.dll", "PrinterGenerateGroupPolicy")
+Interceptor.attach(PrinterGenerateGroupPolicy, {onLeave: function (args) {send("PrinterGenerateGroupPolicy");}});
+
+var PrinterProcessGroupPolicy = Module.findExportByName("gpprnext.dll", "PrinterProcessGroupPolicy")
+Interceptor.attach(PrinterProcessGroupPolicy, {onLeave: function (args) {send("PrinterProcessGroupPolicy");}});
+
+var PrinterProcessGroupPolicyEx = Module.findExportByName("gpprnext.dll", "PrinterProcessGroupPolicyEx")
+Interceptor.attach(PrinterProcessGroupPolicyEx, {onLeave: function (args) {send("PrinterProcessGroupPolicyEx");}});
+

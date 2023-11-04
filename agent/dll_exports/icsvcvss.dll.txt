@@ -1,0 +1,9 @@
+var DllRegisterServer = Module.findExportByName("icsvcvss.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("icsvcvss.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var VssServiceMain = Module.findExportByName("icsvcvss.dll", "VssServiceMain")
+Interceptor.attach(VssServiceMain, {onLeave: function (args) {send("VssServiceMain");}});
+

@@ -1,0 +1,12 @@
+var DllMain = Module.findExportByName("FXSDRV.DLL", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DrvDisableDriver = Module.findExportByName("FXSDRV.DLL", "DrvDisableDriver")
+Interceptor.attach(DrvDisableDriver, {onLeave: function (args) {send("DrvDisableDriver");}});
+
+var DrvEnableDriver = Module.findExportByName("FXSDRV.DLL", "DrvEnableDriver")
+Interceptor.attach(DrvEnableDriver, {onLeave: function (args) {send("DrvEnableDriver");}});
+
+var DrvQueryDriverInfo = Module.findExportByName("FXSDRV.DLL", "DrvQueryDriverInfo")
+Interceptor.attach(DrvQueryDriverInfo, {onLeave: function (args) {send("DrvQueryDriverInfo");}});
+

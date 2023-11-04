@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("SettingsHandlers_PCDisplay.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SettingsHandlers_PCDisplay.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetSetting = Module.findExportByName("SettingsHandlers_PCDisplay.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+
+var NotifyDisplayHandler = Module.findExportByName("SettingsHandlers_PCDisplay.dll", "NotifyDisplayHandler")
+Interceptor.attach(NotifyDisplayHandler, {onLeave: function (args) {send("NotifyDisplayHandler");}});
+

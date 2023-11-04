@@ -1,0 +1,3 @@
+var DHD1CreateSystem = Module.findExportByName("DHolographicDisplay.dll", "DHD1CreateSystem")
+Interceptor.attach(DHD1CreateSystem, {onLeave: function (args) {send("DHD1CreateSystem");}});
+

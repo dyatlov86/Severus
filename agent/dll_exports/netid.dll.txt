@@ -1,0 +1,6 @@
+var CreateNetIDPropertyPage = Module.findExportByName("netid.dll", "CreateNetIDPropertyPage")
+Interceptor.attach(CreateNetIDPropertyPage, {onLeave: function (args) {send("CreateNetIDPropertyPage");}});
+
+var ShowDcNotFoundErrorDialog = Module.findExportByName("netid.dll", "ShowDcNotFoundErrorDialog")
+Interceptor.attach(ShowDcNotFoundErrorDialog, {onLeave: function (args) {send("ShowDcNotFoundErrorDialog");}});
+

@@ -1,0 +1,6 @@
+var GetDateFormatEx = Module.findExportByName("api-ms-win-core-datetime-l1-1-1.dll", "GetDateFormatEx")
+Interceptor.attach(GetDateFormatEx, {onLeave: function (args) {send("GetDateFormatEx");}});
+
+var GetTimeFormatEx = Module.findExportByName("api-ms-win-core-datetime-l1-1-1.dll", "GetTimeFormatEx")
+Interceptor.attach(GetTimeFormatEx, {onLeave: function (args) {send("GetTimeFormatEx");}});
+

@@ -1,0 +1,12 @@
+var CatDbOfflineRebuildDatabasesRundll32W = Module.findExportByName("cryptcatsvc.dll", "CatDbOfflineRebuildDatabasesRundll32W")
+Interceptor.attach(CatDbOfflineRebuildDatabasesRundll32W, {onLeave: function (args) {send("CatDbOfflineRebuildDatabasesRundll32W");}});
+
+var CatDbOfflineRebuildDatabasesW = Module.findExportByName("cryptcatsvc.dll", "CatDbOfflineRebuildDatabasesW")
+Interceptor.attach(CatDbOfflineRebuildDatabasesW, {onLeave: function (args) {send("CatDbOfflineRebuildDatabasesW");}});
+
+var CryptCATAdminCatalogDatabase = Module.findExportByName("cryptcatsvc.dll", "CryptCATAdminCatalogDatabase")
+Interceptor.attach(CryptCATAdminCatalogDatabase, {onLeave: function (args) {send("CryptCATAdminCatalogDatabase");}});
+
+var CryptsvcDllCtrl = Module.findExportByName("cryptcatsvc.dll", "CryptsvcDllCtrl")
+Interceptor.attach(CryptsvcDllCtrl, {onLeave: function (args) {send("CryptsvcDllCtrl");}});
+

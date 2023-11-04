@@ -1,0 +1,3 @@
+var CPlApplet = Module.findExportByName("iscsicpl.dll", "CPlApplet")
+Interceptor.attach(CPlApplet, {onLeave: function (args) {send("CPlApplet");}});
+

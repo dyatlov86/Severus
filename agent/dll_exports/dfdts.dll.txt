@@ -1,0 +1,12 @@
+var DfdGetDefaultPolicyAndSMART = Module.findExportByName("dfdts.dll", "DfdGetDefaultPolicyAndSMART")
+Interceptor.attach(DfdGetDefaultPolicyAndSMART, {onLeave: function (args) {send("DfdGetDefaultPolicyAndSMART");}});
+
+var WdiDiagnosticModuleMain = Module.findExportByName("dfdts.dll", "WdiDiagnosticModuleMain")
+Interceptor.attach(WdiDiagnosticModuleMain, {onLeave: function (args) {send("WdiDiagnosticModuleMain");}});
+
+var WdiGetDiagnosticModuleInterfaceVersion = Module.findExportByName("dfdts.dll", "WdiGetDiagnosticModuleInterfaceVersion")
+Interceptor.attach(WdiGetDiagnosticModuleInterfaceVersion, {onLeave: function (args) {send("WdiGetDiagnosticModuleInterfaceVersion");}});
+
+var WdiHandleInstance = Module.findExportByName("dfdts.dll", "WdiHandleInstance")
+Interceptor.attach(WdiHandleInstance, {onLeave: function (args) {send("WdiHandleInstance");}});
+

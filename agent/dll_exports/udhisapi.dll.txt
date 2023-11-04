@@ -1,0 +1,9 @@
+var GetExtensionVersion = Module.findExportByName("udhisapi.dll", "GetExtensionVersion")
+Interceptor.attach(GetExtensionVersion, {onLeave: function (args) {send("GetExtensionVersion");}});
+
+var HttpExtensionProc = Module.findExportByName("udhisapi.dll", "HttpExtensionProc")
+Interceptor.attach(HttpExtensionProc, {onLeave: function (args) {send("HttpExtensionProc");}});
+
+var TerminateExtension = Module.findExportByName("udhisapi.dll", "TerminateExtension")
+Interceptor.attach(TerminateExtension, {onLeave: function (args) {send("TerminateExtension");}});
+

@@ -1,0 +1,9 @@
+var MitLibInitialize = Module.findExportByName("PayloadRestrictions.dll", "MitLibInitialize")
+Interceptor.attach(MitLibInitialize, {onLeave: function (args) {send("MitLibInitialize");}});
+
+var MitLibQueryMitigations = Module.findExportByName("PayloadRestrictions.dll", "MitLibQueryMitigations")
+Interceptor.attach(MitLibQueryMitigations, {onLeave: function (args) {send("MitLibQueryMitigations");}});
+
+var MitLibUninitialize = Module.findExportByName("PayloadRestrictions.dll", "MitLibUninitialize")
+Interceptor.attach(MitLibUninitialize, {onLeave: function (args) {send("MitLibUninitialize");}});
+

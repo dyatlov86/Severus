@@ -1,0 +1,15 @@
+var GetActiveProcessorCount = Module.findExportByName("api-ms-win-core-processtopology-obsolete-l1-1-0.dll", "GetActiveProcessorCount")
+Interceptor.attach(GetActiveProcessorCount, {onLeave: function (args) {send("GetActiveProcessorCount");}});
+
+var GetProcessAffinityMask = Module.findExportByName("api-ms-win-core-processtopology-obsolete-l1-1-0.dll", "GetProcessAffinityMask")
+Interceptor.attach(GetProcessAffinityMask, {onLeave: function (args) {send("GetProcessAffinityMask");}});
+
+var GetProcessIoCounters = Module.findExportByName("api-ms-win-core-processtopology-obsolete-l1-1-0.dll", "GetProcessIoCounters")
+Interceptor.attach(GetProcessIoCounters, {onLeave: function (args) {send("GetProcessIoCounters");}});
+
+var SetProcessAffinityMask = Module.findExportByName("api-ms-win-core-processtopology-obsolete-l1-1-0.dll", "SetProcessAffinityMask")
+Interceptor.attach(SetProcessAffinityMask, {onLeave: function (args) {send("SetProcessAffinityMask");}});
+
+var SetThreadAffinityMask = Module.findExportByName("api-ms-win-core-processtopology-obsolete-l1-1-0.dll", "SetThreadAffinityMask")
+Interceptor.attach(SetThreadAffinityMask, {onLeave: function (args) {send("SetThreadAffinityMask");}});
+

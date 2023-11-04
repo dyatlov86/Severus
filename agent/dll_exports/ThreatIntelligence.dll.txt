@@ -1,0 +1,6 @@
+var InitTIM = Module.findExportByName("ThreatIntelligence.dll", "InitTIM")
+Interceptor.attach(InitTIM, {onLeave: function (args) {send("InitTIM");}});
+
+var UninitTIM = Module.findExportByName("ThreatIntelligence.dll", "UninitTIM")
+Interceptor.attach(UninitTIM, {onLeave: function (args) {send("UninitTIM");}});
+

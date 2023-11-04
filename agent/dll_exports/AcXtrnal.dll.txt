@@ -1,0 +1,6 @@
+var GetHookAPIs = Module.findExportByName("AcXtrnal.dll", "GetHookAPIs")
+Interceptor.attach(GetHookAPIs, {onLeave: function (args) {send("GetHookAPIs");}});
+
+var NotifyShims = Module.findExportByName("AcXtrnal.dll", "NotifyShims")
+Interceptor.attach(NotifyShims, {onLeave: function (args) {send("NotifyShims");}});
+

@@ -1,0 +1,66 @@
+var HvciGetConfig = Module.findExportByName("vbsapi.dll", "HvciGetConfig")
+Interceptor.attach(HvciGetConfig, {onLeave: function (args) {send("HvciGetConfig");}});
+
+var HvciGetConfigFromVBSKey = Module.findExportByName("vbsapi.dll", "HvciGetConfigFromVBSKey")
+Interceptor.attach(HvciGetConfigFromVBSKey, {onLeave: function (args) {send("HvciGetConfigFromVBSKey");}});
+
+var HvciIncompatibilityScanCancel = Module.findExportByName("vbsapi.dll", "HvciIncompatibilityScanCancel")
+Interceptor.attach(HvciIncompatibilityScanCancel, {onLeave: function (args) {send("HvciIncompatibilityScanCancel");}});
+
+var HvciIncompatibilityScanFree = Module.findExportByName("vbsapi.dll", "HvciIncompatibilityScanFree")
+Interceptor.attach(HvciIncompatibilityScanFree, {onLeave: function (args) {send("HvciIncompatibilityScanFree");}});
+
+var HvciIncompatibilityScanGetResult = Module.findExportByName("vbsapi.dll", "HvciIncompatibilityScanGetResult")
+Interceptor.attach(HvciIncompatibilityScanGetResult, {onLeave: function (args) {send("HvciIncompatibilityScanGetResult");}});
+
+var HvciIncompatibilityScanInitialize = Module.findExportByName("vbsapi.dll", "HvciIncompatibilityScanInitialize")
+Interceptor.attach(HvciIncompatibilityScanInitialize, {onLeave: function (args) {send("HvciIncompatibilityScanInitialize");}});
+
+var HvciIncompatibilityScanInitialize2 = Module.findExportByName("vbsapi.dll", "HvciIncompatibilityScanInitialize2")
+Interceptor.attach(HvciIncompatibilityScanInitialize2, {onLeave: function (args) {send("HvciIncompatibilityScanInitialize2");}});
+
+var HvciIncompatibilityScanOverrideDriverCompatDatabase = Module.findExportByName("vbsapi.dll", "HvciIncompatibilityScanOverrideDriverCompatDatabase")
+Interceptor.attach(HvciIncompatibilityScanOverrideDriverCompatDatabase, {onLeave: function (args) {send("HvciIncompatibilityScanOverrideDriverCompatDatabase");}});
+
+var HvciIncompatibilityScanOverrideServicesKey = Module.findExportByName("vbsapi.dll", "HvciIncompatibilityScanOverrideServicesKey")
+Interceptor.attach(HvciIncompatibilityScanOverrideServicesKey, {onLeave: function (args) {send("HvciIncompatibilityScanOverrideServicesKey");}});
+
+var HvciIncompatibilityScanStart = Module.findExportByName("vbsapi.dll", "HvciIncompatibilityScanStart")
+Interceptor.attach(HvciIncompatibilityScanStart, {onLeave: function (args) {send("HvciIncompatibilityScanStart");}});
+
+var HvciIsActive = Module.findExportByName("vbsapi.dll", "HvciIsActive")
+Interceptor.attach(HvciIsActive, {onLeave: function (args) {send("HvciIsActive");}});
+
+var KernelShadowStacksGetConfig = Module.findExportByName("vbsapi.dll", "KernelShadowStacksGetConfig")
+Interceptor.attach(KernelShadowStacksGetConfig, {onLeave: function (args) {send("KernelShadowStacksGetConfig");}});
+
+var KernelShadowStacksGetConfigFromVBSKey = Module.findExportByName("vbsapi.dll", "KernelShadowStacksGetConfigFromVBSKey")
+Interceptor.attach(KernelShadowStacksGetConfigFromVBSKey, {onLeave: function (args) {send("KernelShadowStacksGetConfigFromVBSKey");}});
+
+var KernelShadowStacksIsActive = Module.findExportByName("vbsapi.dll", "KernelShadowStacksIsActive")
+Interceptor.attach(KernelShadowStacksIsActive, {onLeave: function (args) {send("KernelShadowStacksIsActive");}});
+
+var VbsGetIssues = Module.findExportByName("vbsapi.dll", "VbsGetIssues")
+Interceptor.attach(VbsGetIssues, {onLeave: function (args) {send("VbsGetIssues");}});
+
+var VbsIsCapable = Module.findExportByName("vbsapi.dll", "VbsIsCapable")
+Interceptor.attach(VbsIsCapable, {onLeave: function (args) {send("VbsIsCapable");}});
+
+var VbsIsRecommended = Module.findExportByName("vbsapi.dll", "VbsIsRecommended")
+Interceptor.attach(VbsIsRecommended, {onLeave: function (args) {send("VbsIsRecommended");}});
+
+var VbsIsScenarioEnabled = Module.findExportByName("vbsapi.dll", "VbsIsScenarioEnabled")
+Interceptor.attach(VbsIsScenarioEnabled, {onLeave: function (args) {send("VbsIsScenarioEnabled");}});
+
+var VbsSetKernelShadowStacksScenarioEnable = Module.findExportByName("vbsapi.dll", "VbsSetKernelShadowStacksScenarioEnable")
+Interceptor.attach(VbsSetKernelShadowStacksScenarioEnable, {onLeave: function (args) {send("VbsSetKernelShadowStacksScenarioEnable");}});
+
+var VbsSetKernelShadowStacksScenarioEnableToVBSKey = Module.findExportByName("vbsapi.dll", "VbsSetKernelShadowStacksScenarioEnableToVBSKey")
+Interceptor.attach(VbsSetKernelShadowStacksScenarioEnableToVBSKey, {onLeave: function (args) {send("VbsSetKernelShadowStacksScenarioEnableToVBSKey");}});
+
+var VbsSetScenarioEnable = Module.findExportByName("vbsapi.dll", "VbsSetScenarioEnable")
+Interceptor.attach(VbsSetScenarioEnable, {onLeave: function (args) {send("VbsSetScenarioEnable");}});
+
+var VbsSetScenarioEnableToVBSKey = Module.findExportByName("vbsapi.dll", "VbsSetScenarioEnableToVBSKey")
+Interceptor.attach(VbsSetScenarioEnableToVBSKey, {onLeave: function (args) {send("VbsSetScenarioEnableToVBSKey");}});
+

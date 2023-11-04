@@ -1,0 +1,33 @@
+var PsmBiExtInitialize = Module.findExportByName("bisrv.dll", "PsmBiExtInitialize")
+Interceptor.attach(PsmBiExtInitialize, {onLeave: function (args) {send("PsmBiExtInitialize");}});
+
+var PsmBiExtNotifyAppState = Module.findExportByName("bisrv.dll", "PsmBiExtNotifyAppState")
+Interceptor.attach(PsmBiExtNotifyAppState, {onLeave: function (args) {send("PsmBiExtNotifyAppState");}});
+
+var PsmBiExtNotifyRmInitializationComplete = Module.findExportByName("bisrv.dll", "PsmBiExtNotifyRmInitializationComplete")
+Interceptor.attach(PsmBiExtNotifyRmInitializationComplete, {onLeave: function (args) {send("PsmBiExtNotifyRmInitializationComplete");}});
+
+var PsmBiExtNotifySessionStateChange = Module.findExportByName("bisrv.dll", "PsmBiExtNotifySessionStateChange")
+Interceptor.attach(PsmBiExtNotifySessionStateChange, {onLeave: function (args) {send("PsmBiExtNotifySessionStateChange");}});
+
+var PsmBiExtNotifySessionUserStateChange = Module.findExportByName("bisrv.dll", "PsmBiExtNotifySessionUserStateChange")
+Interceptor.attach(PsmBiExtNotifySessionUserStateChange, {onLeave: function (args) {send("PsmBiExtNotifySessionUserStateChange");}});
+
+var PsmBiExtNotifyWerReportProgress = Module.findExportByName("bisrv.dll", "PsmBiExtNotifyWerReportProgress")
+Interceptor.attach(PsmBiExtNotifyWerReportProgress, {onLeave: function (args) {send("PsmBiExtNotifyWerReportProgress");}});
+
+var PsmBiExtPrepareToSuspendPackage = Module.findExportByName("bisrv.dll", "PsmBiExtPrepareToSuspendPackage")
+Interceptor.attach(PsmBiExtPrepareToSuspendPackage, {onLeave: function (args) {send("PsmBiExtPrepareToSuspendPackage");}});
+
+var PsmBiExtResumePackage = Module.findExportByName("bisrv.dll", "PsmBiExtResumePackage")
+Interceptor.attach(PsmBiExtResumePackage, {onLeave: function (args) {send("PsmBiExtResumePackage");}});
+
+var PsmBiExtServerCleanup = Module.findExportByName("bisrv.dll", "PsmBiExtServerCleanup")
+Interceptor.attach(PsmBiExtServerCleanup, {onLeave: function (args) {send("PsmBiExtServerCleanup");}});
+
+var PsmBiExtServerInitialize = Module.findExportByName("bisrv.dll", "PsmBiExtServerInitialize")
+Interceptor.attach(PsmBiExtServerInitialize, {onLeave: function (args) {send("PsmBiExtServerInitialize");}});
+
+var PsmBiExtServerStart = Module.findExportByName("bisrv.dll", "PsmBiExtServerStart")
+Interceptor.attach(PsmBiExtServerStart, {onLeave: function (args) {send("PsmBiExtServerStart");}});
+

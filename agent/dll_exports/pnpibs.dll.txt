@@ -1,0 +1,9 @@
+var CallBack_Pnp_AddDriversOffline = Module.findExportByName("pnpibs.dll", "CallBack_Pnp_AddDriversOffline")
+Interceptor.attach(CallBack_Pnp_AddDriversOffline, {onLeave: function (args) {send("CallBack_Pnp_AddDriversOffline");}});
+
+var CallBack_Pnp_AddDriversOnlineWinPE = Module.findExportByName("pnpibs.dll", "CallBack_Pnp_AddDriversOnlineWinPE")
+Interceptor.attach(CallBack_Pnp_AddDriversOnlineWinPE, {onLeave: function (args) {send("CallBack_Pnp_AddDriversOnlineWinPE");}});
+
+var Module_Init_Pnp = Module.findExportByName("pnpibs.dll", "Module_Init_Pnp")
+Interceptor.attach(Module_Init_Pnp, {onLeave: function (args) {send("Module_Init_Pnp");}});
+

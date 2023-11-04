@@ -1,0 +1,897 @@
+var AppCacheCheckManifest = Module.findExportByName("wininet.dll", "AppCacheCheckManifest")
+Interceptor.attach(AppCacheCheckManifest, {onLeave: function (args) {send("AppCacheCheckManifest");}});
+
+var AppCacheCloseHandle = Module.findExportByName("wininet.dll", "AppCacheCloseHandle")
+Interceptor.attach(AppCacheCloseHandle, {onLeave: function (args) {send("AppCacheCloseHandle");}});
+
+var AppCacheCreateAndCommitFile = Module.findExportByName("wininet.dll", "AppCacheCreateAndCommitFile")
+Interceptor.attach(AppCacheCreateAndCommitFile, {onLeave: function (args) {send("AppCacheCreateAndCommitFile");}});
+
+var AppCacheDeleteGroup = Module.findExportByName("wininet.dll", "AppCacheDeleteGroup")
+Interceptor.attach(AppCacheDeleteGroup, {onLeave: function (args) {send("AppCacheDeleteGroup");}});
+
+var AppCacheDeleteIEGroup = Module.findExportByName("wininet.dll", "AppCacheDeleteIEGroup")
+Interceptor.attach(AppCacheDeleteIEGroup, {onLeave: function (args) {send("AppCacheDeleteIEGroup");}});
+
+var AppCacheDuplicateHandle = Module.findExportByName("wininet.dll", "AppCacheDuplicateHandle")
+Interceptor.attach(AppCacheDuplicateHandle, {onLeave: function (args) {send("AppCacheDuplicateHandle");}});
+
+var AppCacheFinalize = Module.findExportByName("wininet.dll", "AppCacheFinalize")
+Interceptor.attach(AppCacheFinalize, {onLeave: function (args) {send("AppCacheFinalize");}});
+
+var AppCacheFreeDownloadList = Module.findExportByName("wininet.dll", "AppCacheFreeDownloadList")
+Interceptor.attach(AppCacheFreeDownloadList, {onLeave: function (args) {send("AppCacheFreeDownloadList");}});
+
+var AppCacheFreeGroupList = Module.findExportByName("wininet.dll", "AppCacheFreeGroupList")
+Interceptor.attach(AppCacheFreeGroupList, {onLeave: function (args) {send("AppCacheFreeGroupList");}});
+
+var AppCacheFreeIESpace = Module.findExportByName("wininet.dll", "AppCacheFreeIESpace")
+Interceptor.attach(AppCacheFreeIESpace, {onLeave: function (args) {send("AppCacheFreeIESpace");}});
+
+var AppCacheFreeSpace = Module.findExportByName("wininet.dll", "AppCacheFreeSpace")
+Interceptor.attach(AppCacheFreeSpace, {onLeave: function (args) {send("AppCacheFreeSpace");}});
+
+var AppCacheGetDownloadList = Module.findExportByName("wininet.dll", "AppCacheGetDownloadList")
+Interceptor.attach(AppCacheGetDownloadList, {onLeave: function (args) {send("AppCacheGetDownloadList");}});
+
+var AppCacheGetFallbackUrl = Module.findExportByName("wininet.dll", "AppCacheGetFallbackUrl")
+Interceptor.attach(AppCacheGetFallbackUrl, {onLeave: function (args) {send("AppCacheGetFallbackUrl");}});
+
+var AppCacheGetGroupList = Module.findExportByName("wininet.dll", "AppCacheGetGroupList")
+Interceptor.attach(AppCacheGetGroupList, {onLeave: function (args) {send("AppCacheGetGroupList");}});
+
+var AppCacheGetIEGroupList = Module.findExportByName("wininet.dll", "AppCacheGetIEGroupList")
+Interceptor.attach(AppCacheGetIEGroupList, {onLeave: function (args) {send("AppCacheGetIEGroupList");}});
+
+var AppCacheGetInfo = Module.findExportByName("wininet.dll", "AppCacheGetInfo")
+Interceptor.attach(AppCacheGetInfo, {onLeave: function (args) {send("AppCacheGetInfo");}});
+
+var AppCacheGetManifestUrl = Module.findExportByName("wininet.dll", "AppCacheGetManifestUrl")
+Interceptor.attach(AppCacheGetManifestUrl, {onLeave: function (args) {send("AppCacheGetManifestUrl");}});
+
+var AppCacheLookup = Module.findExportByName("wininet.dll", "AppCacheLookup")
+Interceptor.attach(AppCacheLookup, {onLeave: function (args) {send("AppCacheLookup");}});
+
+var CommitUrlCacheEntryA = Module.findExportByName("wininet.dll", "CommitUrlCacheEntryA")
+Interceptor.attach(CommitUrlCacheEntryA, {onLeave: function (args) {send("CommitUrlCacheEntryA");}});
+
+var CommitUrlCacheEntryBinaryBlob = Module.findExportByName("wininet.dll", "CommitUrlCacheEntryBinaryBlob")
+Interceptor.attach(CommitUrlCacheEntryBinaryBlob, {onLeave: function (args) {send("CommitUrlCacheEntryBinaryBlob");}});
+
+var CommitUrlCacheEntryW = Module.findExportByName("wininet.dll", "CommitUrlCacheEntryW")
+Interceptor.attach(CommitUrlCacheEntryW, {onLeave: function (args) {send("CommitUrlCacheEntryW");}});
+
+var CreateMD5SSOHash = Module.findExportByName("wininet.dll", "CreateMD5SSOHash")
+Interceptor.attach(CreateMD5SSOHash, {onLeave: function (args) {send("CreateMD5SSOHash");}});
+
+var CreateUrlCacheContainerA = Module.findExportByName("wininet.dll", "CreateUrlCacheContainerA")
+Interceptor.attach(CreateUrlCacheContainerA, {onLeave: function (args) {send("CreateUrlCacheContainerA");}});
+
+var CreateUrlCacheContainerW = Module.findExportByName("wininet.dll", "CreateUrlCacheContainerW")
+Interceptor.attach(CreateUrlCacheContainerW, {onLeave: function (args) {send("CreateUrlCacheContainerW");}});
+
+var CreateUrlCacheEntryA = Module.findExportByName("wininet.dll", "CreateUrlCacheEntryA")
+Interceptor.attach(CreateUrlCacheEntryA, {onLeave: function (args) {send("CreateUrlCacheEntryA");}});
+
+var CreateUrlCacheEntryExW = Module.findExportByName("wininet.dll", "CreateUrlCacheEntryExW")
+Interceptor.attach(CreateUrlCacheEntryExW, {onLeave: function (args) {send("CreateUrlCacheEntryExW");}});
+
+var CreateUrlCacheEntryW = Module.findExportByName("wininet.dll", "CreateUrlCacheEntryW")
+Interceptor.attach(CreateUrlCacheEntryW, {onLeave: function (args) {send("CreateUrlCacheEntryW");}});
+
+var CreateUrlCacheGroup = Module.findExportByName("wininet.dll", "CreateUrlCacheGroup")
+Interceptor.attach(CreateUrlCacheGroup, {onLeave: function (args) {send("CreateUrlCacheGroup");}});
+
+var DeleteIE3Cache = Module.findExportByName("wininet.dll", "DeleteIE3Cache")
+Interceptor.attach(DeleteIE3Cache, {onLeave: function (args) {send("DeleteIE3Cache");}});
+
+var DeleteUrlCacheContainerA = Module.findExportByName("wininet.dll", "DeleteUrlCacheContainerA")
+Interceptor.attach(DeleteUrlCacheContainerA, {onLeave: function (args) {send("DeleteUrlCacheContainerA");}});
+
+var DeleteUrlCacheContainerW = Module.findExportByName("wininet.dll", "DeleteUrlCacheContainerW")
+Interceptor.attach(DeleteUrlCacheContainerW, {onLeave: function (args) {send("DeleteUrlCacheContainerW");}});
+
+var DeleteUrlCacheEntry = Module.findExportByName("wininet.dll", "DeleteUrlCacheEntry")
+Interceptor.attach(DeleteUrlCacheEntry, {onLeave: function (args) {send("DeleteUrlCacheEntry");}});
+
+var DeleteUrlCacheEntryA = Module.findExportByName("wininet.dll", "DeleteUrlCacheEntryA")
+Interceptor.attach(DeleteUrlCacheEntryA, {onLeave: function (args) {send("DeleteUrlCacheEntryA");}});
+
+var DeleteUrlCacheEntryW = Module.findExportByName("wininet.dll", "DeleteUrlCacheEntryW")
+Interceptor.attach(DeleteUrlCacheEntryW, {onLeave: function (args) {send("DeleteUrlCacheEntryW");}});
+
+var DeleteUrlCacheGroup = Module.findExportByName("wininet.dll", "DeleteUrlCacheGroup")
+Interceptor.attach(DeleteUrlCacheGroup, {onLeave: function (args) {send("DeleteUrlCacheGroup");}});
+
+var DeleteWpadCacheForNetworks = Module.findExportByName("wininet.dll", "DeleteWpadCacheForNetworks")
+Interceptor.attach(DeleteWpadCacheForNetworks, {onLeave: function (args) {send("DeleteWpadCacheForNetworks");}});
+
+var DetectAutoProxyUrl = Module.findExportByName("wininet.dll", "DetectAutoProxyUrl")
+Interceptor.attach(DetectAutoProxyUrl, {onLeave: function (args) {send("DetectAutoProxyUrl");}});
+
+var DispatchAPICall = Module.findExportByName("wininet.dll", "DispatchAPICall")
+Interceptor.attach(DispatchAPICall, {onLeave: function (args) {send("DispatchAPICall");}});
+
+var DllCanUnloadNow = Module.findExportByName("wininet.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wininet.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("wininet.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("wininet.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wininet.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var FindCloseUrlCache = Module.findExportByName("wininet.dll", "FindCloseUrlCache")
+Interceptor.attach(FindCloseUrlCache, {onLeave: function (args) {send("FindCloseUrlCache");}});
+
+var FindFirstUrlCacheContainerA = Module.findExportByName("wininet.dll", "FindFirstUrlCacheContainerA")
+Interceptor.attach(FindFirstUrlCacheContainerA, {onLeave: function (args) {send("FindFirstUrlCacheContainerA");}});
+
+var FindFirstUrlCacheContainerW = Module.findExportByName("wininet.dll", "FindFirstUrlCacheContainerW")
+Interceptor.attach(FindFirstUrlCacheContainerW, {onLeave: function (args) {send("FindFirstUrlCacheContainerW");}});
+
+var FindFirstUrlCacheEntryA = Module.findExportByName("wininet.dll", "FindFirstUrlCacheEntryA")
+Interceptor.attach(FindFirstUrlCacheEntryA, {onLeave: function (args) {send("FindFirstUrlCacheEntryA");}});
+
+var FindFirstUrlCacheEntryExA = Module.findExportByName("wininet.dll", "FindFirstUrlCacheEntryExA")
+Interceptor.attach(FindFirstUrlCacheEntryExA, {onLeave: function (args) {send("FindFirstUrlCacheEntryExA");}});
+
+var FindFirstUrlCacheEntryExW = Module.findExportByName("wininet.dll", "FindFirstUrlCacheEntryExW")
+Interceptor.attach(FindFirstUrlCacheEntryExW, {onLeave: function (args) {send("FindFirstUrlCacheEntryExW");}});
+
+var FindFirstUrlCacheEntryW = Module.findExportByName("wininet.dll", "FindFirstUrlCacheEntryW")
+Interceptor.attach(FindFirstUrlCacheEntryW, {onLeave: function (args) {send("FindFirstUrlCacheEntryW");}});
+
+var FindFirstUrlCacheGroup = Module.findExportByName("wininet.dll", "FindFirstUrlCacheGroup")
+Interceptor.attach(FindFirstUrlCacheGroup, {onLeave: function (args) {send("FindFirstUrlCacheGroup");}});
+
+var FindNextUrlCacheContainerA = Module.findExportByName("wininet.dll", "FindNextUrlCacheContainerA")
+Interceptor.attach(FindNextUrlCacheContainerA, {onLeave: function (args) {send("FindNextUrlCacheContainerA");}});
+
+var FindNextUrlCacheContainerW = Module.findExportByName("wininet.dll", "FindNextUrlCacheContainerW")
+Interceptor.attach(FindNextUrlCacheContainerW, {onLeave: function (args) {send("FindNextUrlCacheContainerW");}});
+
+var FindNextUrlCacheEntryA = Module.findExportByName("wininet.dll", "FindNextUrlCacheEntryA")
+Interceptor.attach(FindNextUrlCacheEntryA, {onLeave: function (args) {send("FindNextUrlCacheEntryA");}});
+
+var FindNextUrlCacheEntryExA = Module.findExportByName("wininet.dll", "FindNextUrlCacheEntryExA")
+Interceptor.attach(FindNextUrlCacheEntryExA, {onLeave: function (args) {send("FindNextUrlCacheEntryExA");}});
+
+var FindNextUrlCacheEntryExW = Module.findExportByName("wininet.dll", "FindNextUrlCacheEntryExW")
+Interceptor.attach(FindNextUrlCacheEntryExW, {onLeave: function (args) {send("FindNextUrlCacheEntryExW");}});
+
+var FindNextUrlCacheEntryW = Module.findExportByName("wininet.dll", "FindNextUrlCacheEntryW")
+Interceptor.attach(FindNextUrlCacheEntryW, {onLeave: function (args) {send("FindNextUrlCacheEntryW");}});
+
+var FindNextUrlCacheGroup = Module.findExportByName("wininet.dll", "FindNextUrlCacheGroup")
+Interceptor.attach(FindNextUrlCacheGroup, {onLeave: function (args) {send("FindNextUrlCacheGroup");}});
+
+var ForceNexusLookup = Module.findExportByName("wininet.dll", "ForceNexusLookup")
+Interceptor.attach(ForceNexusLookup, {onLeave: function (args) {send("ForceNexusLookup");}});
+
+var ForceNexusLookupExW = Module.findExportByName("wininet.dll", "ForceNexusLookupExW")
+Interceptor.attach(ForceNexusLookupExW, {onLeave: function (args) {send("ForceNexusLookupExW");}});
+
+var FreeUrlCacheSpaceA = Module.findExportByName("wininet.dll", "FreeUrlCacheSpaceA")
+Interceptor.attach(FreeUrlCacheSpaceA, {onLeave: function (args) {send("FreeUrlCacheSpaceA");}});
+
+var FreeUrlCacheSpaceW = Module.findExportByName("wininet.dll", "FreeUrlCacheSpaceW")
+Interceptor.attach(FreeUrlCacheSpaceW, {onLeave: function (args) {send("FreeUrlCacheSpaceW");}});
+
+var FtpCommandA = Module.findExportByName("wininet.dll", "FtpCommandA")
+Interceptor.attach(FtpCommandA, {onLeave: function (args) {send("FtpCommandA");}});
+
+var FtpCommandW = Module.findExportByName("wininet.dll", "FtpCommandW")
+Interceptor.attach(FtpCommandW, {onLeave: function (args) {send("FtpCommandW");}});
+
+var FtpCreateDirectoryA = Module.findExportByName("wininet.dll", "FtpCreateDirectoryA")
+Interceptor.attach(FtpCreateDirectoryA, {onLeave: function (args) {send("FtpCreateDirectoryA");}});
+
+var FtpCreateDirectoryW = Module.findExportByName("wininet.dll", "FtpCreateDirectoryW")
+Interceptor.attach(FtpCreateDirectoryW, {onLeave: function (args) {send("FtpCreateDirectoryW");}});
+
+var FtpDeleteFileA = Module.findExportByName("wininet.dll", "FtpDeleteFileA")
+Interceptor.attach(FtpDeleteFileA, {onLeave: function (args) {send("FtpDeleteFileA");}});
+
+var FtpDeleteFileW = Module.findExportByName("wininet.dll", "FtpDeleteFileW")
+Interceptor.attach(FtpDeleteFileW, {onLeave: function (args) {send("FtpDeleteFileW");}});
+
+var FtpFindFirstFileA = Module.findExportByName("wininet.dll", "FtpFindFirstFileA")
+Interceptor.attach(FtpFindFirstFileA, {onLeave: function (args) {send("FtpFindFirstFileA");}});
+
+var FtpFindFirstFileW = Module.findExportByName("wininet.dll", "FtpFindFirstFileW")
+Interceptor.attach(FtpFindFirstFileW, {onLeave: function (args) {send("FtpFindFirstFileW");}});
+
+var FtpGetCurrentDirectoryA = Module.findExportByName("wininet.dll", "FtpGetCurrentDirectoryA")
+Interceptor.attach(FtpGetCurrentDirectoryA, {onLeave: function (args) {send("FtpGetCurrentDirectoryA");}});
+
+var FtpGetCurrentDirectoryW = Module.findExportByName("wininet.dll", "FtpGetCurrentDirectoryW")
+Interceptor.attach(FtpGetCurrentDirectoryW, {onLeave: function (args) {send("FtpGetCurrentDirectoryW");}});
+
+var FtpGetFileA = Module.findExportByName("wininet.dll", "FtpGetFileA")
+Interceptor.attach(FtpGetFileA, {onLeave: function (args) {send("FtpGetFileA");}});
+
+var FtpGetFileEx = Module.findExportByName("wininet.dll", "FtpGetFileEx")
+Interceptor.attach(FtpGetFileEx, {onLeave: function (args) {send("FtpGetFileEx");}});
+
+var FtpGetFileSize = Module.findExportByName("wininet.dll", "FtpGetFileSize")
+Interceptor.attach(FtpGetFileSize, {onLeave: function (args) {send("FtpGetFileSize");}});
+
+var FtpGetFileW = Module.findExportByName("wininet.dll", "FtpGetFileW")
+Interceptor.attach(FtpGetFileW, {onLeave: function (args) {send("FtpGetFileW");}});
+
+var FtpOpenFileA = Module.findExportByName("wininet.dll", "FtpOpenFileA")
+Interceptor.attach(FtpOpenFileA, {onLeave: function (args) {send("FtpOpenFileA");}});
+
+var FtpOpenFileW = Module.findExportByName("wininet.dll", "FtpOpenFileW")
+Interceptor.attach(FtpOpenFileW, {onLeave: function (args) {send("FtpOpenFileW");}});
+
+var FtpPutFileA = Module.findExportByName("wininet.dll", "FtpPutFileA")
+Interceptor.attach(FtpPutFileA, {onLeave: function (args) {send("FtpPutFileA");}});
+
+var FtpPutFileEx = Module.findExportByName("wininet.dll", "FtpPutFileEx")
+Interceptor.attach(FtpPutFileEx, {onLeave: function (args) {send("FtpPutFileEx");}});
+
+var FtpPutFileW = Module.findExportByName("wininet.dll", "FtpPutFileW")
+Interceptor.attach(FtpPutFileW, {onLeave: function (args) {send("FtpPutFileW");}});
+
+var FtpRemoveDirectoryA = Module.findExportByName("wininet.dll", "FtpRemoveDirectoryA")
+Interceptor.attach(FtpRemoveDirectoryA, {onLeave: function (args) {send("FtpRemoveDirectoryA");}});
+
+var FtpRemoveDirectoryW = Module.findExportByName("wininet.dll", "FtpRemoveDirectoryW")
+Interceptor.attach(FtpRemoveDirectoryW, {onLeave: function (args) {send("FtpRemoveDirectoryW");}});
+
+var FtpRenameFileA = Module.findExportByName("wininet.dll", "FtpRenameFileA")
+Interceptor.attach(FtpRenameFileA, {onLeave: function (args) {send("FtpRenameFileA");}});
+
+var FtpRenameFileW = Module.findExportByName("wininet.dll", "FtpRenameFileW")
+Interceptor.attach(FtpRenameFileW, {onLeave: function (args) {send("FtpRenameFileW");}});
+
+var FtpSetCurrentDirectoryA = Module.findExportByName("wininet.dll", "FtpSetCurrentDirectoryA")
+Interceptor.attach(FtpSetCurrentDirectoryA, {onLeave: function (args) {send("FtpSetCurrentDirectoryA");}});
+
+var FtpSetCurrentDirectoryW = Module.findExportByName("wininet.dll", "FtpSetCurrentDirectoryW")
+Interceptor.attach(FtpSetCurrentDirectoryW, {onLeave: function (args) {send("FtpSetCurrentDirectoryW");}});
+
+var GetProxyDllInfo = Module.findExportByName("wininet.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+
+var GetUrlCacheConfigInfoA = Module.findExportByName("wininet.dll", "GetUrlCacheConfigInfoA")
+Interceptor.attach(GetUrlCacheConfigInfoA, {onLeave: function (args) {send("GetUrlCacheConfigInfoA");}});
+
+var GetUrlCacheConfigInfoW = Module.findExportByName("wininet.dll", "GetUrlCacheConfigInfoW")
+Interceptor.attach(GetUrlCacheConfigInfoW, {onLeave: function (args) {send("GetUrlCacheConfigInfoW");}});
+
+var GetUrlCacheEntryBinaryBlob = Module.findExportByName("wininet.dll", "GetUrlCacheEntryBinaryBlob")
+Interceptor.attach(GetUrlCacheEntryBinaryBlob, {onLeave: function (args) {send("GetUrlCacheEntryBinaryBlob");}});
+
+var GetUrlCacheEntryInfoA = Module.findExportByName("wininet.dll", "GetUrlCacheEntryInfoA")
+Interceptor.attach(GetUrlCacheEntryInfoA, {onLeave: function (args) {send("GetUrlCacheEntryInfoA");}});
+
+var GetUrlCacheEntryInfoExA = Module.findExportByName("wininet.dll", "GetUrlCacheEntryInfoExA")
+Interceptor.attach(GetUrlCacheEntryInfoExA, {onLeave: function (args) {send("GetUrlCacheEntryInfoExA");}});
+
+var GetUrlCacheEntryInfoExW = Module.findExportByName("wininet.dll", "GetUrlCacheEntryInfoExW")
+Interceptor.attach(GetUrlCacheEntryInfoExW, {onLeave: function (args) {send("GetUrlCacheEntryInfoExW");}});
+
+var GetUrlCacheEntryInfoW = Module.findExportByName("wininet.dll", "GetUrlCacheEntryInfoW")
+Interceptor.attach(GetUrlCacheEntryInfoW, {onLeave: function (args) {send("GetUrlCacheEntryInfoW");}});
+
+var GetUrlCacheGroupAttributeA = Module.findExportByName("wininet.dll", "GetUrlCacheGroupAttributeA")
+Interceptor.attach(GetUrlCacheGroupAttributeA, {onLeave: function (args) {send("GetUrlCacheGroupAttributeA");}});
+
+var GetUrlCacheGroupAttributeW = Module.findExportByName("wininet.dll", "GetUrlCacheGroupAttributeW")
+Interceptor.attach(GetUrlCacheGroupAttributeW, {onLeave: function (args) {send("GetUrlCacheGroupAttributeW");}});
+
+var GetUrlCacheHeaderData = Module.findExportByName("wininet.dll", "GetUrlCacheHeaderData")
+Interceptor.attach(GetUrlCacheHeaderData, {onLeave: function (args) {send("GetUrlCacheHeaderData");}});
+
+var GopherCreateLocatorA = Module.findExportByName("wininet.dll", "GopherCreateLocatorA")
+Interceptor.attach(GopherCreateLocatorA, {onLeave: function (args) {send("GopherCreateLocatorA");}});
+
+var GopherCreateLocatorW = Module.findExportByName("wininet.dll", "GopherCreateLocatorW")
+Interceptor.attach(GopherCreateLocatorW, {onLeave: function (args) {send("GopherCreateLocatorW");}});
+
+var GopherFindFirstFileA = Module.findExportByName("wininet.dll", "GopherFindFirstFileA")
+Interceptor.attach(GopherFindFirstFileA, {onLeave: function (args) {send("GopherFindFirstFileA");}});
+
+var GopherFindFirstFileW = Module.findExportByName("wininet.dll", "GopherFindFirstFileW")
+Interceptor.attach(GopherFindFirstFileW, {onLeave: function (args) {send("GopherFindFirstFileW");}});
+
+var GopherGetAttributeA = Module.findExportByName("wininet.dll", "GopherGetAttributeA")
+Interceptor.attach(GopherGetAttributeA, {onLeave: function (args) {send("GopherGetAttributeA");}});
+
+var GopherGetAttributeW = Module.findExportByName("wininet.dll", "GopherGetAttributeW")
+Interceptor.attach(GopherGetAttributeW, {onLeave: function (args) {send("GopherGetAttributeW");}});
+
+var GopherGetLocatorTypeA = Module.findExportByName("wininet.dll", "GopherGetLocatorTypeA")
+Interceptor.attach(GopherGetLocatorTypeA, {onLeave: function (args) {send("GopherGetLocatorTypeA");}});
+
+var GopherGetLocatorTypeW = Module.findExportByName("wininet.dll", "GopherGetLocatorTypeW")
+Interceptor.attach(GopherGetLocatorTypeW, {onLeave: function (args) {send("GopherGetLocatorTypeW");}});
+
+var GopherOpenFileA = Module.findExportByName("wininet.dll", "GopherOpenFileA")
+Interceptor.attach(GopherOpenFileA, {onLeave: function (args) {send("GopherOpenFileA");}});
+
+var GopherOpenFileW = Module.findExportByName("wininet.dll", "GopherOpenFileW")
+Interceptor.attach(GopherOpenFileW, {onLeave: function (args) {send("GopherOpenFileW");}});
+
+var HttpAddRequestHeadersA = Module.findExportByName("wininet.dll", "HttpAddRequestHeadersA")
+Interceptor.attach(HttpAddRequestHeadersA, {onLeave: function (args) {send("HttpAddRequestHeadersA");}});
+
+var HttpAddRequestHeadersW = Module.findExportByName("wininet.dll", "HttpAddRequestHeadersW")
+Interceptor.attach(HttpAddRequestHeadersW, {onLeave: function (args) {send("HttpAddRequestHeadersW");}});
+
+var HttpCheckDavCompliance = Module.findExportByName("wininet.dll", "HttpCheckDavCompliance")
+Interceptor.attach(HttpCheckDavCompliance, {onLeave: function (args) {send("HttpCheckDavCompliance");}});
+
+var HttpCloseDependencyHandle = Module.findExportByName("wininet.dll", "HttpCloseDependencyHandle")
+Interceptor.attach(HttpCloseDependencyHandle, {onLeave: function (args) {send("HttpCloseDependencyHandle");}});
+
+var HttpDuplicateDependencyHandle = Module.findExportByName("wininet.dll", "HttpDuplicateDependencyHandle")
+Interceptor.attach(HttpDuplicateDependencyHandle, {onLeave: function (args) {send("HttpDuplicateDependencyHandle");}});
+
+var HttpEndRequestA = Module.findExportByName("wininet.dll", "HttpEndRequestA")
+Interceptor.attach(HttpEndRequestA, {onLeave: function (args) {send("HttpEndRequestA");}});
+
+var HttpEndRequestW = Module.findExportByName("wininet.dll", "HttpEndRequestW")
+Interceptor.attach(HttpEndRequestW, {onLeave: function (args) {send("HttpEndRequestW");}});
+
+var HttpGetServerCredentials = Module.findExportByName("wininet.dll", "HttpGetServerCredentials")
+Interceptor.attach(HttpGetServerCredentials, {onLeave: function (args) {send("HttpGetServerCredentials");}});
+
+var HttpGetTunnelSocket = Module.findExportByName("wininet.dll", "HttpGetTunnelSocket")
+Interceptor.attach(HttpGetTunnelSocket, {onLeave: function (args) {send("HttpGetTunnelSocket");}});
+
+var HttpIndicatePageLoadComplete = Module.findExportByName("wininet.dll", "HttpIndicatePageLoadComplete")
+Interceptor.attach(HttpIndicatePageLoadComplete, {onLeave: function (args) {send("HttpIndicatePageLoadComplete");}});
+
+var HttpIsHostHstsEnabled = Module.findExportByName("wininet.dll", "HttpIsHostHstsEnabled")
+Interceptor.attach(HttpIsHostHstsEnabled, {onLeave: function (args) {send("HttpIsHostHstsEnabled");}});
+
+var HttpOpenDependencyHandle = Module.findExportByName("wininet.dll", "HttpOpenDependencyHandle")
+Interceptor.attach(HttpOpenDependencyHandle, {onLeave: function (args) {send("HttpOpenDependencyHandle");}});
+
+var HttpOpenRequestA = Module.findExportByName("wininet.dll", "HttpOpenRequestA")
+Interceptor.attach(HttpOpenRequestA, {onLeave: function (args) {send("HttpOpenRequestA");}});
+
+var HttpOpenRequestW = Module.findExportByName("wininet.dll", "HttpOpenRequestW")
+Interceptor.attach(HttpOpenRequestW, {onLeave: function (args) {send("HttpOpenRequestW");}});
+
+var HttpPushClose = Module.findExportByName("wininet.dll", "HttpPushClose")
+Interceptor.attach(HttpPushClose, {onLeave: function (args) {send("HttpPushClose");}});
+
+var HttpPushEnable = Module.findExportByName("wininet.dll", "HttpPushEnable")
+Interceptor.attach(HttpPushEnable, {onLeave: function (args) {send("HttpPushEnable");}});
+
+var HttpPushWait = Module.findExportByName("wininet.dll", "HttpPushWait")
+Interceptor.attach(HttpPushWait, {onLeave: function (args) {send("HttpPushWait");}});
+
+var HttpQueryInfoA = Module.findExportByName("wininet.dll", "HttpQueryInfoA")
+Interceptor.attach(HttpQueryInfoA, {onLeave: function (args) {send("HttpQueryInfoA");}});
+
+var HttpQueryInfoW = Module.findExportByName("wininet.dll", "HttpQueryInfoW")
+Interceptor.attach(HttpQueryInfoW, {onLeave: function (args) {send("HttpQueryInfoW");}});
+
+var HttpSendRequestA = Module.findExportByName("wininet.dll", "HttpSendRequestA")
+Interceptor.attach(HttpSendRequestA, {onLeave: function (args) {send("HttpSendRequestA");}});
+
+var HttpSendRequestExA = Module.findExportByName("wininet.dll", "HttpSendRequestExA")
+Interceptor.attach(HttpSendRequestExA, {onLeave: function (args) {send("HttpSendRequestExA");}});
+
+var HttpSendRequestExW = Module.findExportByName("wininet.dll", "HttpSendRequestExW")
+Interceptor.attach(HttpSendRequestExW, {onLeave: function (args) {send("HttpSendRequestExW");}});
+
+var HttpSendRequestW = Module.findExportByName("wininet.dll", "HttpSendRequestW")
+Interceptor.attach(HttpSendRequestW, {onLeave: function (args) {send("HttpSendRequestW");}});
+
+var HttpWebSocketClose = Module.findExportByName("wininet.dll", "HttpWebSocketClose")
+Interceptor.attach(HttpWebSocketClose, {onLeave: function (args) {send("HttpWebSocketClose");}});
+
+var HttpWebSocketCompleteUpgrade = Module.findExportByName("wininet.dll", "HttpWebSocketCompleteUpgrade")
+Interceptor.attach(HttpWebSocketCompleteUpgrade, {onLeave: function (args) {send("HttpWebSocketCompleteUpgrade");}});
+
+var HttpWebSocketQueryCloseStatus = Module.findExportByName("wininet.dll", "HttpWebSocketQueryCloseStatus")
+Interceptor.attach(HttpWebSocketQueryCloseStatus, {onLeave: function (args) {send("HttpWebSocketQueryCloseStatus");}});
+
+var HttpWebSocketReceive = Module.findExportByName("wininet.dll", "HttpWebSocketReceive")
+Interceptor.attach(HttpWebSocketReceive, {onLeave: function (args) {send("HttpWebSocketReceive");}});
+
+var HttpWebSocketSend = Module.findExportByName("wininet.dll", "HttpWebSocketSend")
+Interceptor.attach(HttpWebSocketSend, {onLeave: function (args) {send("HttpWebSocketSend");}});
+
+var HttpWebSocketShutdown = Module.findExportByName("wininet.dll", "HttpWebSocketShutdown")
+Interceptor.attach(HttpWebSocketShutdown, {onLeave: function (args) {send("HttpWebSocketShutdown");}});
+
+var IncrementUrlCacheHeaderData = Module.findExportByName("wininet.dll", "IncrementUrlCacheHeaderData")
+Interceptor.attach(IncrementUrlCacheHeaderData, {onLeave: function (args) {send("IncrementUrlCacheHeaderData");}});
+
+var InternetAlgIdToStringA = Module.findExportByName("wininet.dll", "InternetAlgIdToStringA")
+Interceptor.attach(InternetAlgIdToStringA, {onLeave: function (args) {send("InternetAlgIdToStringA");}});
+
+var InternetAlgIdToStringW = Module.findExportByName("wininet.dll", "InternetAlgIdToStringW")
+Interceptor.attach(InternetAlgIdToStringW, {onLeave: function (args) {send("InternetAlgIdToStringW");}});
+
+var InternetAttemptConnect = Module.findExportByName("wininet.dll", "InternetAttemptConnect")
+Interceptor.attach(InternetAttemptConnect, {onLeave: function (args) {send("InternetAttemptConnect");}});
+
+var InternetAutodial = Module.findExportByName("wininet.dll", "InternetAutodial")
+Interceptor.attach(InternetAutodial, {onLeave: function (args) {send("InternetAutodial");}});
+
+var InternetAutodialCallback = Module.findExportByName("wininet.dll", "InternetAutodialCallback")
+Interceptor.attach(InternetAutodialCallback, {onLeave: function (args) {send("InternetAutodialCallback");}});
+
+var InternetAutodialHangup = Module.findExportByName("wininet.dll", "InternetAutodialHangup")
+Interceptor.attach(InternetAutodialHangup, {onLeave: function (args) {send("InternetAutodialHangup");}});
+
+var InternetCanonicalizeUrlA = Module.findExportByName("wininet.dll", "InternetCanonicalizeUrlA")
+Interceptor.attach(InternetCanonicalizeUrlA, {onLeave: function (args) {send("InternetCanonicalizeUrlA");}});
+
+var InternetCanonicalizeUrlW = Module.findExportByName("wininet.dll", "InternetCanonicalizeUrlW")
+Interceptor.attach(InternetCanonicalizeUrlW, {onLeave: function (args) {send("InternetCanonicalizeUrlW");}});
+
+var InternetCheckConnectionA = Module.findExportByName("wininet.dll", "InternetCheckConnectionA")
+Interceptor.attach(InternetCheckConnectionA, {onLeave: function (args) {send("InternetCheckConnectionA");}});
+
+var InternetCheckConnectionW = Module.findExportByName("wininet.dll", "InternetCheckConnectionW")
+Interceptor.attach(InternetCheckConnectionW, {onLeave: function (args) {send("InternetCheckConnectionW");}});
+
+var InternetClearAllPerSiteCookieDecisions = Module.findExportByName("wininet.dll", "InternetClearAllPerSiteCookieDecisions")
+Interceptor.attach(InternetClearAllPerSiteCookieDecisions, {onLeave: function (args) {send("InternetClearAllPerSiteCookieDecisions");}});
+
+var InternetCloseHandle = Module.findExportByName("wininet.dll", "InternetCloseHandle")
+Interceptor.attach(InternetCloseHandle, {onLeave: function (args) {send("InternetCloseHandle");}});
+
+var InternetCombineUrlA = Module.findExportByName("wininet.dll", "InternetCombineUrlA")
+Interceptor.attach(InternetCombineUrlA, {onLeave: function (args) {send("InternetCombineUrlA");}});
+
+var InternetCombineUrlW = Module.findExportByName("wininet.dll", "InternetCombineUrlW")
+Interceptor.attach(InternetCombineUrlW, {onLeave: function (args) {send("InternetCombineUrlW");}});
+
+var InternetConfirmZoneCrossing = Module.findExportByName("wininet.dll", "InternetConfirmZoneCrossing")
+Interceptor.attach(InternetConfirmZoneCrossing, {onLeave: function (args) {send("InternetConfirmZoneCrossing");}});
+
+var InternetConfirmZoneCrossingA = Module.findExportByName("wininet.dll", "InternetConfirmZoneCrossingA")
+Interceptor.attach(InternetConfirmZoneCrossingA, {onLeave: function (args) {send("InternetConfirmZoneCrossingA");}});
+
+var InternetConfirmZoneCrossingW = Module.findExportByName("wininet.dll", "InternetConfirmZoneCrossingW")
+Interceptor.attach(InternetConfirmZoneCrossingW, {onLeave: function (args) {send("InternetConfirmZoneCrossingW");}});
+
+var InternetConnectA = Module.findExportByName("wininet.dll", "InternetConnectA")
+Interceptor.attach(InternetConnectA, {onLeave: function (args) {send("InternetConnectA");}});
+
+var InternetConnectW = Module.findExportByName("wininet.dll", "InternetConnectW")
+Interceptor.attach(InternetConnectW, {onLeave: function (args) {send("InternetConnectW");}});
+
+var InternetConvertUrlFromWireToWideChar = Module.findExportByName("wininet.dll", "InternetConvertUrlFromWireToWideChar")
+Interceptor.attach(InternetConvertUrlFromWireToWideChar, {onLeave: function (args) {send("InternetConvertUrlFromWireToWideChar");}});
+
+var InternetCrackUrlA = Module.findExportByName("wininet.dll", "InternetCrackUrlA")
+Interceptor.attach(InternetCrackUrlA, {onLeave: function (args) {send("InternetCrackUrlA");}});
+
+var InternetCrackUrlW = Module.findExportByName("wininet.dll", "InternetCrackUrlW")
+Interceptor.attach(InternetCrackUrlW, {onLeave: function (args) {send("InternetCrackUrlW");}});
+
+var InternetCreateUrlA = Module.findExportByName("wininet.dll", "InternetCreateUrlA")
+Interceptor.attach(InternetCreateUrlA, {onLeave: function (args) {send("InternetCreateUrlA");}});
+
+var InternetCreateUrlW = Module.findExportByName("wininet.dll", "InternetCreateUrlW")
+Interceptor.attach(InternetCreateUrlW, {onLeave: function (args) {send("InternetCreateUrlW");}});
+
+var InternetDial = Module.findExportByName("wininet.dll", "InternetDial")
+Interceptor.attach(InternetDial, {onLeave: function (args) {send("InternetDial");}});
+
+var InternetDialA = Module.findExportByName("wininet.dll", "InternetDialA")
+Interceptor.attach(InternetDialA, {onLeave: function (args) {send("InternetDialA");}});
+
+var InternetDialW = Module.findExportByName("wininet.dll", "InternetDialW")
+Interceptor.attach(InternetDialW, {onLeave: function (args) {send("InternetDialW");}});
+
+var InternetEnumPerSiteCookieDecisionA = Module.findExportByName("wininet.dll", "InternetEnumPerSiteCookieDecisionA")
+Interceptor.attach(InternetEnumPerSiteCookieDecisionA, {onLeave: function (args) {send("InternetEnumPerSiteCookieDecisionA");}});
+
+var InternetEnumPerSiteCookieDecisionW = Module.findExportByName("wininet.dll", "InternetEnumPerSiteCookieDecisionW")
+Interceptor.attach(InternetEnumPerSiteCookieDecisionW, {onLeave: function (args) {send("InternetEnumPerSiteCookieDecisionW");}});
+
+var InternetErrorDlg = Module.findExportByName("wininet.dll", "InternetErrorDlg")
+Interceptor.attach(InternetErrorDlg, {onLeave: function (args) {send("InternetErrorDlg");}});
+
+var InternetFindNextFileA = Module.findExportByName("wininet.dll", "InternetFindNextFileA")
+Interceptor.attach(InternetFindNextFileA, {onLeave: function (args) {send("InternetFindNextFileA");}});
+
+var InternetFindNextFileW = Module.findExportByName("wininet.dll", "InternetFindNextFileW")
+Interceptor.attach(InternetFindNextFileW, {onLeave: function (args) {send("InternetFindNextFileW");}});
+
+var InternetFortezzaCommand = Module.findExportByName("wininet.dll", "InternetFortezzaCommand")
+Interceptor.attach(InternetFortezzaCommand, {onLeave: function (args) {send("InternetFortezzaCommand");}});
+
+var InternetFreeCookies = Module.findExportByName("wininet.dll", "InternetFreeCookies")
+Interceptor.attach(InternetFreeCookies, {onLeave: function (args) {send("InternetFreeCookies");}});
+
+var InternetFreeProxyInfoList = Module.findExportByName("wininet.dll", "InternetFreeProxyInfoList")
+Interceptor.attach(InternetFreeProxyInfoList, {onLeave: function (args) {send("InternetFreeProxyInfoList");}});
+
+var InternetGetCertByURL = Module.findExportByName("wininet.dll", "InternetGetCertByURL")
+Interceptor.attach(InternetGetCertByURL, {onLeave: function (args) {send("InternetGetCertByURL");}});
+
+var InternetGetCertByURLA = Module.findExportByName("wininet.dll", "InternetGetCertByURLA")
+Interceptor.attach(InternetGetCertByURLA, {onLeave: function (args) {send("InternetGetCertByURLA");}});
+
+var InternetGetConnectedState = Module.findExportByName("wininet.dll", "InternetGetConnectedState")
+Interceptor.attach(InternetGetConnectedState, {onLeave: function (args) {send("InternetGetConnectedState");}});
+
+var InternetGetConnectedStateEx = Module.findExportByName("wininet.dll", "InternetGetConnectedStateEx")
+Interceptor.attach(InternetGetConnectedStateEx, {onLeave: function (args) {send("InternetGetConnectedStateEx");}});
+
+var InternetGetConnectedStateExA = Module.findExportByName("wininet.dll", "InternetGetConnectedStateExA")
+Interceptor.attach(InternetGetConnectedStateExA, {onLeave: function (args) {send("InternetGetConnectedStateExA");}});
+
+var InternetGetConnectedStateExW = Module.findExportByName("wininet.dll", "InternetGetConnectedStateExW")
+Interceptor.attach(InternetGetConnectedStateExW, {onLeave: function (args) {send("InternetGetConnectedStateExW");}});
+
+var InternetGetCookieA = Module.findExportByName("wininet.dll", "InternetGetCookieA")
+Interceptor.attach(InternetGetCookieA, {onLeave: function (args) {send("InternetGetCookieA");}});
+
+var InternetGetCookieEx2 = Module.findExportByName("wininet.dll", "InternetGetCookieEx2")
+Interceptor.attach(InternetGetCookieEx2, {onLeave: function (args) {send("InternetGetCookieEx2");}});
+
+var InternetGetCookieExA = Module.findExportByName("wininet.dll", "InternetGetCookieExA")
+Interceptor.attach(InternetGetCookieExA, {onLeave: function (args) {send("InternetGetCookieExA");}});
+
+var InternetGetCookieExW = Module.findExportByName("wininet.dll", "InternetGetCookieExW")
+Interceptor.attach(InternetGetCookieExW, {onLeave: function (args) {send("InternetGetCookieExW");}});
+
+var InternetGetCookieW = Module.findExportByName("wininet.dll", "InternetGetCookieW")
+Interceptor.attach(InternetGetCookieW, {onLeave: function (args) {send("InternetGetCookieW");}});
+
+var InternetGetLastResponseInfoA = Module.findExportByName("wininet.dll", "InternetGetLastResponseInfoA")
+Interceptor.attach(InternetGetLastResponseInfoA, {onLeave: function (args) {send("InternetGetLastResponseInfoA");}});
+
+var InternetGetLastResponseInfoW = Module.findExportByName("wininet.dll", "InternetGetLastResponseInfoW")
+Interceptor.attach(InternetGetLastResponseInfoW, {onLeave: function (args) {send("InternetGetLastResponseInfoW");}});
+
+var InternetGetPerSiteCookieDecisionA = Module.findExportByName("wininet.dll", "InternetGetPerSiteCookieDecisionA")
+Interceptor.attach(InternetGetPerSiteCookieDecisionA, {onLeave: function (args) {send("InternetGetPerSiteCookieDecisionA");}});
+
+var InternetGetPerSiteCookieDecisionW = Module.findExportByName("wininet.dll", "InternetGetPerSiteCookieDecisionW")
+Interceptor.attach(InternetGetPerSiteCookieDecisionW, {onLeave: function (args) {send("InternetGetPerSiteCookieDecisionW");}});
+
+var InternetGetProxyForUrl = Module.findExportByName("wininet.dll", "InternetGetProxyForUrl")
+Interceptor.attach(InternetGetProxyForUrl, {onLeave: function (args) {send("InternetGetProxyForUrl");}});
+
+var InternetGetSecurityInfoByURL = Module.findExportByName("wininet.dll", "InternetGetSecurityInfoByURL")
+Interceptor.attach(InternetGetSecurityInfoByURL, {onLeave: function (args) {send("InternetGetSecurityInfoByURL");}});
+
+var InternetGetSecurityInfoByURLA = Module.findExportByName("wininet.dll", "InternetGetSecurityInfoByURLA")
+Interceptor.attach(InternetGetSecurityInfoByURLA, {onLeave: function (args) {send("InternetGetSecurityInfoByURLA");}});
+
+var InternetGetSecurityInfoByURLW = Module.findExportByName("wininet.dll", "InternetGetSecurityInfoByURLW")
+Interceptor.attach(InternetGetSecurityInfoByURLW, {onLeave: function (args) {send("InternetGetSecurityInfoByURLW");}});
+
+var InternetGoOnline = Module.findExportByName("wininet.dll", "InternetGoOnline")
+Interceptor.attach(InternetGoOnline, {onLeave: function (args) {send("InternetGoOnline");}});
+
+var InternetGoOnlineA = Module.findExportByName("wininet.dll", "InternetGoOnlineA")
+Interceptor.attach(InternetGoOnlineA, {onLeave: function (args) {send("InternetGoOnlineA");}});
+
+var InternetGoOnlineW = Module.findExportByName("wininet.dll", "InternetGoOnlineW")
+Interceptor.attach(InternetGoOnlineW, {onLeave: function (args) {send("InternetGoOnlineW");}});
+
+var InternetHangUp = Module.findExportByName("wininet.dll", "InternetHangUp")
+Interceptor.attach(InternetHangUp, {onLeave: function (args) {send("InternetHangUp");}});
+
+var InternetInitializeAutoProxyDll = Module.findExportByName("wininet.dll", "InternetInitializeAutoProxyDll")
+Interceptor.attach(InternetInitializeAutoProxyDll, {onLeave: function (args) {send("InternetInitializeAutoProxyDll");}});
+
+var InternetLockRequestFile = Module.findExportByName("wininet.dll", "InternetLockRequestFile")
+Interceptor.attach(InternetLockRequestFile, {onLeave: function (args) {send("InternetLockRequestFile");}});
+
+var InternetOpenA = Module.findExportByName("wininet.dll", "InternetOpenA")
+Interceptor.attach(InternetOpenA, {onLeave: function (args) {send("InternetOpenA");}});
+
+var InternetOpenUrlA = Module.findExportByName("wininet.dll", "InternetOpenUrlA")
+Interceptor.attach(InternetOpenUrlA, {onLeave: function (args) {send("InternetOpenUrlA");}});
+
+var InternetOpenUrlW = Module.findExportByName("wininet.dll", "InternetOpenUrlW")
+Interceptor.attach(InternetOpenUrlW, {onLeave: function (args) {send("InternetOpenUrlW");}});
+
+var InternetOpenW = Module.findExportByName("wininet.dll", "InternetOpenW")
+Interceptor.attach(InternetOpenW, {onLeave: function (args) {send("InternetOpenW");}});
+
+var InternetQueryDataAvailable = Module.findExportByName("wininet.dll", "InternetQueryDataAvailable")
+Interceptor.attach(InternetQueryDataAvailable, {onLeave: function (args) {send("InternetQueryDataAvailable");}});
+
+var InternetQueryFortezzaStatus = Module.findExportByName("wininet.dll", "InternetQueryFortezzaStatus")
+Interceptor.attach(InternetQueryFortezzaStatus, {onLeave: function (args) {send("InternetQueryFortezzaStatus");}});
+
+var InternetQueryOptionA = Module.findExportByName("wininet.dll", "InternetQueryOptionA")
+Interceptor.attach(InternetQueryOptionA, {onLeave: function (args) {send("InternetQueryOptionA");}});
+
+var InternetQueryOptionW = Module.findExportByName("wininet.dll", "InternetQueryOptionW")
+Interceptor.attach(InternetQueryOptionW, {onLeave: function (args) {send("InternetQueryOptionW");}});
+
+var InternetReadFile = Module.findExportByName("wininet.dll", "InternetReadFile")
+Interceptor.attach(InternetReadFile, {onLeave: function (args) {send("InternetReadFile");}});
+
+var InternetReadFileExA = Module.findExportByName("wininet.dll", "InternetReadFileExA")
+Interceptor.attach(InternetReadFileExA, {onLeave: function (args) {send("InternetReadFileExA");}});
+
+var InternetReadFileExW = Module.findExportByName("wininet.dll", "InternetReadFileExW")
+Interceptor.attach(InternetReadFileExW, {onLeave: function (args) {send("InternetReadFileExW");}});
+
+var InternetSecurityProtocolToStringA = Module.findExportByName("wininet.dll", "InternetSecurityProtocolToStringA")
+Interceptor.attach(InternetSecurityProtocolToStringA, {onLeave: function (args) {send("InternetSecurityProtocolToStringA");}});
+
+var InternetSecurityProtocolToStringW = Module.findExportByName("wininet.dll", "InternetSecurityProtocolToStringW")
+Interceptor.attach(InternetSecurityProtocolToStringW, {onLeave: function (args) {send("InternetSecurityProtocolToStringW");}});
+
+var InternetSetCookieA = Module.findExportByName("wininet.dll", "InternetSetCookieA")
+Interceptor.attach(InternetSetCookieA, {onLeave: function (args) {send("InternetSetCookieA");}});
+
+var InternetSetCookieEx2 = Module.findExportByName("wininet.dll", "InternetSetCookieEx2")
+Interceptor.attach(InternetSetCookieEx2, {onLeave: function (args) {send("InternetSetCookieEx2");}});
+
+var InternetSetCookieExA = Module.findExportByName("wininet.dll", "InternetSetCookieExA")
+Interceptor.attach(InternetSetCookieExA, {onLeave: function (args) {send("InternetSetCookieExA");}});
+
+var InternetSetCookieExW = Module.findExportByName("wininet.dll", "InternetSetCookieExW")
+Interceptor.attach(InternetSetCookieExW, {onLeave: function (args) {send("InternetSetCookieExW");}});
+
+var InternetSetCookieW = Module.findExportByName("wininet.dll", "InternetSetCookieW")
+Interceptor.attach(InternetSetCookieW, {onLeave: function (args) {send("InternetSetCookieW");}});
+
+var InternetSetDialState = Module.findExportByName("wininet.dll", "InternetSetDialState")
+Interceptor.attach(InternetSetDialState, {onLeave: function (args) {send("InternetSetDialState");}});
+
+var InternetSetDialStateA = Module.findExportByName("wininet.dll", "InternetSetDialStateA")
+Interceptor.attach(InternetSetDialStateA, {onLeave: function (args) {send("InternetSetDialStateA");}});
+
+var InternetSetDialStateW = Module.findExportByName("wininet.dll", "InternetSetDialStateW")
+Interceptor.attach(InternetSetDialStateW, {onLeave: function (args) {send("InternetSetDialStateW");}});
+
+var InternetSetFilePointer = Module.findExportByName("wininet.dll", "InternetSetFilePointer")
+Interceptor.attach(InternetSetFilePointer, {onLeave: function (args) {send("InternetSetFilePointer");}});
+
+var InternetSetOptionA = Module.findExportByName("wininet.dll", "InternetSetOptionA")
+Interceptor.attach(InternetSetOptionA, {onLeave: function (args) {send("InternetSetOptionA");}});
+
+var InternetSetOptionExA = Module.findExportByName("wininet.dll", "InternetSetOptionExA")
+Interceptor.attach(InternetSetOptionExA, {onLeave: function (args) {send("InternetSetOptionExA");}});
+
+var InternetSetOptionExW = Module.findExportByName("wininet.dll", "InternetSetOptionExW")
+Interceptor.attach(InternetSetOptionExW, {onLeave: function (args) {send("InternetSetOptionExW");}});
+
+var InternetSetOptionW = Module.findExportByName("wininet.dll", "InternetSetOptionW")
+Interceptor.attach(InternetSetOptionW, {onLeave: function (args) {send("InternetSetOptionW");}});
+
+var InternetSetPerSiteCookieDecisionA = Module.findExportByName("wininet.dll", "InternetSetPerSiteCookieDecisionA")
+Interceptor.attach(InternetSetPerSiteCookieDecisionA, {onLeave: function (args) {send("InternetSetPerSiteCookieDecisionA");}});
+
+var InternetSetPerSiteCookieDecisionW = Module.findExportByName("wininet.dll", "InternetSetPerSiteCookieDecisionW")
+Interceptor.attach(InternetSetPerSiteCookieDecisionW, {onLeave: function (args) {send("InternetSetPerSiteCookieDecisionW");}});
+
+var InternetSetSecureLegacyServersAppCompat = Module.findExportByName("wininet.dll", "InternetSetSecureLegacyServersAppCompat")
+Interceptor.attach(InternetSetSecureLegacyServersAppCompat, {onLeave: function (args) {send("InternetSetSecureLegacyServersAppCompat");}});
+
+var InternetSetStatusCallback = Module.findExportByName("wininet.dll", "InternetSetStatusCallback")
+Interceptor.attach(InternetSetStatusCallback, {onLeave: function (args) {send("InternetSetStatusCallback");}});
+
+var InternetSetStatusCallbackA = Module.findExportByName("wininet.dll", "InternetSetStatusCallbackA")
+Interceptor.attach(InternetSetStatusCallbackA, {onLeave: function (args) {send("InternetSetStatusCallbackA");}});
+
+var InternetSetStatusCallbackW = Module.findExportByName("wininet.dll", "InternetSetStatusCallbackW")
+Interceptor.attach(InternetSetStatusCallbackW, {onLeave: function (args) {send("InternetSetStatusCallbackW");}});
+
+var InternetShowSecurityInfoByURL = Module.findExportByName("wininet.dll", "InternetShowSecurityInfoByURL")
+Interceptor.attach(InternetShowSecurityInfoByURL, {onLeave: function (args) {send("InternetShowSecurityInfoByURL");}});
+
+var InternetShowSecurityInfoByURLA = Module.findExportByName("wininet.dll", "InternetShowSecurityInfoByURLA")
+Interceptor.attach(InternetShowSecurityInfoByURLA, {onLeave: function (args) {send("InternetShowSecurityInfoByURLA");}});
+
+var InternetShowSecurityInfoByURLW = Module.findExportByName("wininet.dll", "InternetShowSecurityInfoByURLW")
+Interceptor.attach(InternetShowSecurityInfoByURLW, {onLeave: function (args) {send("InternetShowSecurityInfoByURLW");}});
+
+var InternetTimeFromSystemTime = Module.findExportByName("wininet.dll", "InternetTimeFromSystemTime")
+Interceptor.attach(InternetTimeFromSystemTime, {onLeave: function (args) {send("InternetTimeFromSystemTime");}});
+
+var InternetTimeFromSystemTimeA = Module.findExportByName("wininet.dll", "InternetTimeFromSystemTimeA")
+Interceptor.attach(InternetTimeFromSystemTimeA, {onLeave: function (args) {send("InternetTimeFromSystemTimeA");}});
+
+var InternetTimeFromSystemTimeW = Module.findExportByName("wininet.dll", "InternetTimeFromSystemTimeW")
+Interceptor.attach(InternetTimeFromSystemTimeW, {onLeave: function (args) {send("InternetTimeFromSystemTimeW");}});
+
+var InternetTimeToSystemTime = Module.findExportByName("wininet.dll", "InternetTimeToSystemTime")
+Interceptor.attach(InternetTimeToSystemTime, {onLeave: function (args) {send("InternetTimeToSystemTime");}});
+
+var InternetTimeToSystemTimeA = Module.findExportByName("wininet.dll", "InternetTimeToSystemTimeA")
+Interceptor.attach(InternetTimeToSystemTimeA, {onLeave: function (args) {send("InternetTimeToSystemTimeA");}});
+
+var InternetTimeToSystemTimeW = Module.findExportByName("wininet.dll", "InternetTimeToSystemTimeW")
+Interceptor.attach(InternetTimeToSystemTimeW, {onLeave: function (args) {send("InternetTimeToSystemTimeW");}});
+
+var InternetUnlockRequestFile = Module.findExportByName("wininet.dll", "InternetUnlockRequestFile")
+Interceptor.attach(InternetUnlockRequestFile, {onLeave: function (args) {send("InternetUnlockRequestFile");}});
+
+var InternetWriteFile = Module.findExportByName("wininet.dll", "InternetWriteFile")
+Interceptor.attach(InternetWriteFile, {onLeave: function (args) {send("InternetWriteFile");}});
+
+var InternetWriteFileExA = Module.findExportByName("wininet.dll", "InternetWriteFileExA")
+Interceptor.attach(InternetWriteFileExA, {onLeave: function (args) {send("InternetWriteFileExA");}});
+
+var InternetWriteFileExW = Module.findExportByName("wininet.dll", "InternetWriteFileExW")
+Interceptor.attach(InternetWriteFileExW, {onLeave: function (args) {send("InternetWriteFileExW");}});
+
+var IsHostInProxyBypassList = Module.findExportByName("wininet.dll", "IsHostInProxyBypassList")
+Interceptor.attach(IsHostInProxyBypassList, {onLeave: function (args) {send("IsHostInProxyBypassList");}});
+
+var IsUrlCacheEntryExpiredA = Module.findExportByName("wininet.dll", "IsUrlCacheEntryExpiredA")
+Interceptor.attach(IsUrlCacheEntryExpiredA, {onLeave: function (args) {send("IsUrlCacheEntryExpiredA");}});
+
+var IsUrlCacheEntryExpiredW = Module.findExportByName("wininet.dll", "IsUrlCacheEntryExpiredW")
+Interceptor.attach(IsUrlCacheEntryExpiredW, {onLeave: function (args) {send("IsUrlCacheEntryExpiredW");}});
+
+var LoadUrlCacheContent = Module.findExportByName("wininet.dll", "LoadUrlCacheContent")
+Interceptor.attach(LoadUrlCacheContent, {onLeave: function (args) {send("LoadUrlCacheContent");}});
+
+var ParseX509EncodedCertificateForListBoxEntry = Module.findExportByName("wininet.dll", "ParseX509EncodedCertificateForListBoxEntry")
+Interceptor.attach(ParseX509EncodedCertificateForListBoxEntry, {onLeave: function (args) {send("ParseX509EncodedCertificateForListBoxEntry");}});
+
+var PrivacyGetZonePreferenceW = Module.findExportByName("wininet.dll", "PrivacyGetZonePreferenceW")
+Interceptor.attach(PrivacyGetZonePreferenceW, {onLeave: function (args) {send("PrivacyGetZonePreferenceW");}});
+
+var PrivacySetZonePreferenceW = Module.findExportByName("wininet.dll", "PrivacySetZonePreferenceW")
+Interceptor.attach(PrivacySetZonePreferenceW, {onLeave: function (args) {send("PrivacySetZonePreferenceW");}});
+
+var ReadUrlCacheEntryStream = Module.findExportByName("wininet.dll", "ReadUrlCacheEntryStream")
+Interceptor.attach(ReadUrlCacheEntryStream, {onLeave: function (args) {send("ReadUrlCacheEntryStream");}});
+
+var ReadUrlCacheEntryStreamEx = Module.findExportByName("wininet.dll", "ReadUrlCacheEntryStreamEx")
+Interceptor.attach(ReadUrlCacheEntryStreamEx, {onLeave: function (args) {send("ReadUrlCacheEntryStreamEx");}});
+
+var RegisterUrlCacheNotification = Module.findExportByName("wininet.dll", "RegisterUrlCacheNotification")
+Interceptor.attach(RegisterUrlCacheNotification, {onLeave: function (args) {send("RegisterUrlCacheNotification");}});
+
+var ResumeSuspendedDownload = Module.findExportByName("wininet.dll", "ResumeSuspendedDownload")
+Interceptor.attach(ResumeSuspendedDownload, {onLeave: function (args) {send("ResumeSuspendedDownload");}});
+
+var RetrieveUrlCacheEntryFileA = Module.findExportByName("wininet.dll", "RetrieveUrlCacheEntryFileA")
+Interceptor.attach(RetrieveUrlCacheEntryFileA, {onLeave: function (args) {send("RetrieveUrlCacheEntryFileA");}});
+
+var RetrieveUrlCacheEntryFileW = Module.findExportByName("wininet.dll", "RetrieveUrlCacheEntryFileW")
+Interceptor.attach(RetrieveUrlCacheEntryFileW, {onLeave: function (args) {send("RetrieveUrlCacheEntryFileW");}});
+
+var RetrieveUrlCacheEntryStreamA = Module.findExportByName("wininet.dll", "RetrieveUrlCacheEntryStreamA")
+Interceptor.attach(RetrieveUrlCacheEntryStreamA, {onLeave: function (args) {send("RetrieveUrlCacheEntryStreamA");}});
+
+var RetrieveUrlCacheEntryStreamW = Module.findExportByName("wininet.dll", "RetrieveUrlCacheEntryStreamW")
+Interceptor.attach(RetrieveUrlCacheEntryStreamW, {onLeave: function (args) {send("RetrieveUrlCacheEntryStreamW");}});
+
+var RunOnceUrlCache = Module.findExportByName("wininet.dll", "RunOnceUrlCache")
+Interceptor.attach(RunOnceUrlCache, {onLeave: function (args) {send("RunOnceUrlCache");}});
+
+var SetUrlCacheConfigInfoA = Module.findExportByName("wininet.dll", "SetUrlCacheConfigInfoA")
+Interceptor.attach(SetUrlCacheConfigInfoA, {onLeave: function (args) {send("SetUrlCacheConfigInfoA");}});
+
+var SetUrlCacheConfigInfoW = Module.findExportByName("wininet.dll", "SetUrlCacheConfigInfoW")
+Interceptor.attach(SetUrlCacheConfigInfoW, {onLeave: function (args) {send("SetUrlCacheConfigInfoW");}});
+
+var SetUrlCacheEntryGroup = Module.findExportByName("wininet.dll", "SetUrlCacheEntryGroup")
+Interceptor.attach(SetUrlCacheEntryGroup, {onLeave: function (args) {send("SetUrlCacheEntryGroup");}});
+
+var SetUrlCacheEntryGroupA = Module.findExportByName("wininet.dll", "SetUrlCacheEntryGroupA")
+Interceptor.attach(SetUrlCacheEntryGroupA, {onLeave: function (args) {send("SetUrlCacheEntryGroupA");}});
+
+var SetUrlCacheEntryGroupW = Module.findExportByName("wininet.dll", "SetUrlCacheEntryGroupW")
+Interceptor.attach(SetUrlCacheEntryGroupW, {onLeave: function (args) {send("SetUrlCacheEntryGroupW");}});
+
+var SetUrlCacheEntryInfoA = Module.findExportByName("wininet.dll", "SetUrlCacheEntryInfoA")
+Interceptor.attach(SetUrlCacheEntryInfoA, {onLeave: function (args) {send("SetUrlCacheEntryInfoA");}});
+
+var SetUrlCacheEntryInfoW = Module.findExportByName("wininet.dll", "SetUrlCacheEntryInfoW")
+Interceptor.attach(SetUrlCacheEntryInfoW, {onLeave: function (args) {send("SetUrlCacheEntryInfoW");}});
+
+var SetUrlCacheGroupAttributeA = Module.findExportByName("wininet.dll", "SetUrlCacheGroupAttributeA")
+Interceptor.attach(SetUrlCacheGroupAttributeA, {onLeave: function (args) {send("SetUrlCacheGroupAttributeA");}});
+
+var SetUrlCacheGroupAttributeW = Module.findExportByName("wininet.dll", "SetUrlCacheGroupAttributeW")
+Interceptor.attach(SetUrlCacheGroupAttributeW, {onLeave: function (args) {send("SetUrlCacheGroupAttributeW");}});
+
+var SetUrlCacheHeaderData = Module.findExportByName("wininet.dll", "SetUrlCacheHeaderData")
+Interceptor.attach(SetUrlCacheHeaderData, {onLeave: function (args) {send("SetUrlCacheHeaderData");}});
+
+var ShowCertificate = Module.findExportByName("wininet.dll", "ShowCertificate")
+Interceptor.attach(ShowCertificate, {onLeave: function (args) {send("ShowCertificate");}});
+
+var ShowClientAuthCerts = Module.findExportByName("wininet.dll", "ShowClientAuthCerts")
+Interceptor.attach(ShowClientAuthCerts, {onLeave: function (args) {send("ShowClientAuthCerts");}});
+
+var ShowSecurityInfo = Module.findExportByName("wininet.dll", "ShowSecurityInfo")
+Interceptor.attach(ShowSecurityInfo, {onLeave: function (args) {send("ShowSecurityInfo");}});
+
+var ShowX509EncodedCertificate = Module.findExportByName("wininet.dll", "ShowX509EncodedCertificate")
+Interceptor.attach(ShowX509EncodedCertificate, {onLeave: function (args) {send("ShowX509EncodedCertificate");}});
+
+var UnlockUrlCacheEntryFile = Module.findExportByName("wininet.dll", "UnlockUrlCacheEntryFile")
+Interceptor.attach(UnlockUrlCacheEntryFile, {onLeave: function (args) {send("UnlockUrlCacheEntryFile");}});
+
+var UnlockUrlCacheEntryFileA = Module.findExportByName("wininet.dll", "UnlockUrlCacheEntryFileA")
+Interceptor.attach(UnlockUrlCacheEntryFileA, {onLeave: function (args) {send("UnlockUrlCacheEntryFileA");}});
+
+var UnlockUrlCacheEntryFileW = Module.findExportByName("wininet.dll", "UnlockUrlCacheEntryFileW")
+Interceptor.attach(UnlockUrlCacheEntryFileW, {onLeave: function (args) {send("UnlockUrlCacheEntryFileW");}});
+
+var UnlockUrlCacheEntryStream = Module.findExportByName("wininet.dll", "UnlockUrlCacheEntryStream")
+Interceptor.attach(UnlockUrlCacheEntryStream, {onLeave: function (args) {send("UnlockUrlCacheEntryStream");}});
+
+var UpdateUrlCacheContentPath = Module.findExportByName("wininet.dll", "UpdateUrlCacheContentPath")
+Interceptor.attach(UpdateUrlCacheContentPath, {onLeave: function (args) {send("UpdateUrlCacheContentPath");}});
+
+var UrlCacheCheckEntriesExist = Module.findExportByName("wininet.dll", "UrlCacheCheckEntriesExist")
+Interceptor.attach(UrlCacheCheckEntriesExist, {onLeave: function (args) {send("UrlCacheCheckEntriesExist");}});
+
+var UrlCacheCloseEntryHandle = Module.findExportByName("wininet.dll", "UrlCacheCloseEntryHandle")
+Interceptor.attach(UrlCacheCloseEntryHandle, {onLeave: function (args) {send("UrlCacheCloseEntryHandle");}});
+
+var UrlCacheContainerSetEntryMaximumAge = Module.findExportByName("wininet.dll", "UrlCacheContainerSetEntryMaximumAge")
+Interceptor.attach(UrlCacheContainerSetEntryMaximumAge, {onLeave: function (args) {send("UrlCacheContainerSetEntryMaximumAge");}});
+
+var UrlCacheCreateContainer = Module.findExportByName("wininet.dll", "UrlCacheCreateContainer")
+Interceptor.attach(UrlCacheCreateContainer, {onLeave: function (args) {send("UrlCacheCreateContainer");}});
+
+var UrlCacheFindFirstEntry = Module.findExportByName("wininet.dll", "UrlCacheFindFirstEntry")
+Interceptor.attach(UrlCacheFindFirstEntry, {onLeave: function (args) {send("UrlCacheFindFirstEntry");}});
+
+var UrlCacheFindNextEntry = Module.findExportByName("wininet.dll", "UrlCacheFindNextEntry")
+Interceptor.attach(UrlCacheFindNextEntry, {onLeave: function (args) {send("UrlCacheFindNextEntry");}});
+
+var UrlCacheFreeEntryInfo = Module.findExportByName("wininet.dll", "UrlCacheFreeEntryInfo")
+Interceptor.attach(UrlCacheFreeEntryInfo, {onLeave: function (args) {send("UrlCacheFreeEntryInfo");}});
+
+var UrlCacheFreeGlobalSpace = Module.findExportByName("wininet.dll", "UrlCacheFreeGlobalSpace")
+Interceptor.attach(UrlCacheFreeGlobalSpace, {onLeave: function (args) {send("UrlCacheFreeGlobalSpace");}});
+
+var UrlCacheGetContentPaths = Module.findExportByName("wininet.dll", "UrlCacheGetContentPaths")
+Interceptor.attach(UrlCacheGetContentPaths, {onLeave: function (args) {send("UrlCacheGetContentPaths");}});
+
+var UrlCacheGetEntryInfo = Module.findExportByName("wininet.dll", "UrlCacheGetEntryInfo")
+Interceptor.attach(UrlCacheGetEntryInfo, {onLeave: function (args) {send("UrlCacheGetEntryInfo");}});
+
+var UrlCacheGetGlobalCacheSize = Module.findExportByName("wininet.dll", "UrlCacheGetGlobalCacheSize")
+Interceptor.attach(UrlCacheGetGlobalCacheSize, {onLeave: function (args) {send("UrlCacheGetGlobalCacheSize");}});
+
+var UrlCacheGetGlobalLimit = Module.findExportByName("wininet.dll", "UrlCacheGetGlobalLimit")
+Interceptor.attach(UrlCacheGetGlobalLimit, {onLeave: function (args) {send("UrlCacheGetGlobalLimit");}});
+
+var UrlCacheReadEntryStream = Module.findExportByName("wininet.dll", "UrlCacheReadEntryStream")
+Interceptor.attach(UrlCacheReadEntryStream, {onLeave: function (args) {send("UrlCacheReadEntryStream");}});
+
+var UrlCacheReloadSettings = Module.findExportByName("wininet.dll", "UrlCacheReloadSettings")
+Interceptor.attach(UrlCacheReloadSettings, {onLeave: function (args) {send("UrlCacheReloadSettings");}});
+
+var UrlCacheRetrieveEntryFile = Module.findExportByName("wininet.dll", "UrlCacheRetrieveEntryFile")
+Interceptor.attach(UrlCacheRetrieveEntryFile, {onLeave: function (args) {send("UrlCacheRetrieveEntryFile");}});
+
+var UrlCacheRetrieveEntryStream = Module.findExportByName("wininet.dll", "UrlCacheRetrieveEntryStream")
+Interceptor.attach(UrlCacheRetrieveEntryStream, {onLeave: function (args) {send("UrlCacheRetrieveEntryStream");}});
+
+var UrlCacheServer = Module.findExportByName("wininet.dll", "UrlCacheServer")
+Interceptor.attach(UrlCacheServer, {onLeave: function (args) {send("UrlCacheServer");}});
+
+var UrlCacheSetGlobalLimit = Module.findExportByName("wininet.dll", "UrlCacheSetGlobalLimit")
+Interceptor.attach(UrlCacheSetGlobalLimit, {onLeave: function (args) {send("UrlCacheSetGlobalLimit");}});
+
+var UrlCacheUpdateEntryExtraData = Module.findExportByName("wininet.dll", "UrlCacheUpdateEntryExtraData")
+Interceptor.attach(UrlCacheUpdateEntryExtraData, {onLeave: function (args) {send("UrlCacheUpdateEntryExtraData");}});
+
+var UrlZonesDetach = Module.findExportByName("wininet.dll", "UrlZonesDetach")
+Interceptor.attach(UrlZonesDetach, {onLeave: function (args) {send("UrlZonesDetach");}});
+
+var _GetFileExtensionFromUrl = Module.findExportByName("wininet.dll", "_GetFileExtensionFromUrl")
+Interceptor.attach(_GetFileExtensionFromUrl, {onLeave: function (args) {send("_GetFileExtensionFromUrl");}});
+

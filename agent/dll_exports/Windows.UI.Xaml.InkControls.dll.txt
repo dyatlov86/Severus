@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.UI.Xaml.InkControls.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.UI.Xaml.InkControls.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.UI.Xaml.InkControls.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetDependencyLocatorStorage = Module.findExportByName("Windows.UI.Xaml.InkControls.dll", "GetDependencyLocatorStorage")
+Interceptor.attach(GetDependencyLocatorStorage, {onLeave: function (args) {send("GetDependencyLocatorStorage");}});
+
+var XamlTestHookFreeInkControlsResourceLibrary = Module.findExportByName("Windows.UI.Xaml.InkControls.dll", "XamlTestHookFreeInkControlsResourceLibrary")
+Interceptor.attach(XamlTestHookFreeInkControlsResourceLibrary, {onLeave: function (args) {send("XamlTestHookFreeInkControlsResourceLibrary");}});
+

@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("XpsRasterService.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("XpsRasterService.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DrvPopulateFilterServices = Module.findExportByName("XpsRasterService.dll", "DrvPopulateFilterServices")
+Interceptor.attach(DrvPopulateFilterServices, {onLeave: function (args) {send("DrvPopulateFilterServices");}});
+

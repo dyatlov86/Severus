@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("scansetting.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllMain = Module.findExportByName("scansetting.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GetDefaultProfileScan = Module.findExportByName("scansetting.dll", "GetDefaultProfileScan")
+Interceptor.attach(GetDefaultProfileScan, {onLeave: function (args) {send("GetDefaultProfileScan");}});
+
+var GetImageDialog = Module.findExportByName("scansetting.dll", "GetImageDialog")
+Interceptor.attach(GetImageDialog, {onLeave: function (args) {send("GetImageDialog");}});
+
+var ProfilesDialog = Module.findExportByName("scansetting.dll", "ProfilesDialog")
+Interceptor.attach(ProfilesDialog, {onLeave: function (args) {send("ProfilesDialog");}});
+
+var ProgDlgTakeFgIfShowing = Module.findExportByName("scansetting.dll", "ProgDlgTakeFgIfShowing")
+Interceptor.attach(ProgDlgTakeFgIfShowing, {onLeave: function (args) {send("ProgDlgTakeFgIfShowing");}});
+

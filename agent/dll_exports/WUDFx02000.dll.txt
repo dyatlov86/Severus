@@ -1,0 +1,6 @@
+var FxFrameworkEntryUm = Module.findExportByName("WUDFx02000.dll", "FxFrameworkEntryUm")
+Interceptor.attach(FxFrameworkEntryUm, {onLeave: function (args) {send("FxFrameworkEntryUm");}});
+
+var Microsoft_WDF_UMDF_Version = Module.findExportByName("WUDFx02000.dll", "Microsoft_WDF_UMDF_Version")
+Interceptor.attach(Microsoft_WDF_UMDF_Version, {onLeave: function (args) {send("Microsoft_WDF_UMDF_Version");}});
+

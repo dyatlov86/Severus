@@ -1,0 +1,6 @@
+var Sysprep_Clean_WMP = Module.findExportByName("spwmp.dll", "Sysprep_Clean_WMP")
+Interceptor.attach(Sysprep_Clean_WMP, {onLeave: function (args) {send("Sysprep_Clean_WMP");}});
+
+var Sysprep_Generalize_WMP = Module.findExportByName("spwmp.dll", "Sysprep_Generalize_WMP")
+Interceptor.attach(Sysprep_Generalize_WMP, {onLeave: function (args) {send("Sysprep_Generalize_WMP");}});
+

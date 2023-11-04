@@ -1,0 +1,33 @@
+var AppendHiddenSearchContext = Module.findExportByName("SearchFolder.dll", "AppendHiddenSearchContext")
+Interceptor.attach(AppendHiddenSearchContext, {onLeave: function (args) {send("AppendHiddenSearchContext");}});
+
+var CDBFolderUI_CreateInstance = Module.findExportByName("SearchFolder.dll", "CDBFolderUI_CreateInstance")
+Interceptor.attach(CDBFolderUI_CreateInstance, {onLeave: function (args) {send("CDBFolderUI_CreateInstance");}});
+
+var CDBFolderViewCB_CreateInstance = Module.findExportByName("SearchFolder.dll", "CDBFolderViewCB_CreateInstance")
+Interceptor.attach(CDBFolderViewCB_CreateInstance, {onLeave: function (args) {send("CDBFolderViewCB_CreateInstance");}});
+
+var CSearchDelegateFolderUI_CreateInstance = Module.findExportByName("SearchFolder.dll", "CSearchDelegateFolderUI_CreateInstance")
+Interceptor.attach(CSearchDelegateFolderUI_CreateInstance, {onLeave: function (args) {send("CSearchDelegateFolderUI_CreateInstance");}});
+
+var DllCanUnloadNow = Module.findExportByName("SearchFolder.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SearchFolder.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("SearchFolder.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("SearchFolder.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("SearchFolder.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetAggregateQueryError = Module.findExportByName("SearchFolder.dll", "GetAggregateQueryError")
+Interceptor.attach(GetAggregateQueryError, {onLeave: function (args) {send("GetAggregateQueryError");}});
+
+var s_GetStartMenuFilesScope = Module.findExportByName("SearchFolder.dll", "s_GetStartMenuFilesScope")
+Interceptor.attach(s_GetStartMenuFilesScope, {onLeave: function (args) {send("s_GetStartMenuFilesScope");}});
+

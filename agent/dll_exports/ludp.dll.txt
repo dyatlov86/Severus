@@ -1,0 +1,54 @@
+var clearEvents = Module.findExportByName("ludp.dll", "clearEvents")
+Interceptor.attach(clearEvents, {onLeave: function (args) {send("clearEvents");}});
+
+var disableTrack = Module.findExportByName("ludp.dll", "disableTrack")
+Interceptor.attach(disableTrack, {onLeave: function (args) {send("disableTrack");}});
+
+var enableTrack = Module.findExportByName("ludp.dll", "enableTrack")
+Interceptor.attach(enableTrack, {onLeave: function (args) {send("enableTrack");}});
+
+var finish = Module.findExportByName("ludp.dll", "finish")
+Interceptor.attach(finish, {onLeave: function (args) {send("finish");}});
+
+var getDeviceID = Module.findExportByName("ludp.dll", "getDeviceID")
+Interceptor.attach(getDeviceID, {onLeave: function (args) {send("getDeviceID");}});
+
+var initialize = Module.findExportByName("ludp.dll", "initialize")
+Interceptor.attach(initialize, {onLeave: function (args) {send("initialize");}});
+
+var initialize2 = Module.findExportByName("ludp.dll", "initialize2")
+Interceptor.attach(initialize2, {onLeave: function (args) {send("initialize2");}});
+
+var isTrackerInitialized = Module.findExportByName("ludp.dll", "isTrackerInitialized")
+Interceptor.attach(isTrackerInitialized, {onLeave: function (args) {send("isTrackerInitialized");}});
+
+var setCertSN = Module.findExportByName("ludp.dll", "setCertSN")
+Interceptor.attach(setCertSN, {onLeave: function (args) {send("setCertSN");}});
+
+var setTerminateTimeouts = Module.findExportByName("ludp.dll", "setTerminateTimeouts")
+Interceptor.attach(setTerminateTimeouts, {onLeave: function (args) {send("setTerminateTimeouts");}});
+
+var setTerminateTimeoutsMs = Module.findExportByName("ludp.dll", "setTerminateTimeoutsMs")
+Interceptor.attach(setTerminateTimeoutsMs, {onLeave: function (args) {send("setTerminateTimeoutsMs");}});
+
+var trackAppStart = Module.findExportByName("ludp.dll", "trackAppStart")
+Interceptor.attach(trackAppStart, {onLeave: function (args) {send("trackAppStart");}});
+
+var trackAppStop = Module.findExportByName("ludp.dll", "trackAppStop")
+Interceptor.attach(trackAppStop, {onLeave: function (args) {send("trackAppStop");}});
+
+var trackEvent2 = Module.findExportByName("ludp.dll", "trackEvent2")
+Interceptor.attach(trackEvent2, {onLeave: function (args) {send("trackEvent2");}});
+
+var trackEventWithCallback = Module.findExportByName("ludp.dll", "trackEventWithCallback")
+Interceptor.attach(trackEventWithCallback, {onLeave: function (args) {send("trackEventWithCallback");}});
+
+var trackUserAction = Module.findExportByName("ludp.dll", "trackUserAction")
+Interceptor.attach(trackUserAction, {onLeave: function (args) {send("trackUserAction");}});
+
+var trackWindowBackstage = Module.findExportByName("ludp.dll", "trackWindowBackstage")
+Interceptor.attach(trackWindowBackstage, {onLeave: function (args) {send("trackWindowBackstage");}});
+
+var trackWindowOntop = Module.findExportByName("ludp.dll", "trackWindowOntop")
+Interceptor.attach(trackWindowOntop, {onLeave: function (args) {send("trackWindowOntop");}});
+

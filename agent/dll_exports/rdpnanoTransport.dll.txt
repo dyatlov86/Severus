@@ -1,0 +1,30 @@
+var CleanUpnpEntries = Module.findExportByName("rdpnanoTransport.dll", "CleanUpnpEntries")
+Interceptor.attach(CleanUpnpEntries, {onLeave: function (args) {send("CleanUpnpEntries");}});
+
+var CreateRdpUdpStreamWrapper = Module.findExportByName("rdpnanoTransport.dll", "CreateRdpUdpStreamWrapper")
+Interceptor.attach(CreateRdpUdpStreamWrapper, {onLeave: function (args) {send("CreateRdpUdpStreamWrapper");}});
+
+var CreateRdpWebSocketStreamWrapper = Module.findExportByName("rdpnanoTransport.dll", "CreateRdpWebSocketStreamWrapper")
+Interceptor.attach(CreateRdpWebSocketStreamWrapper, {onLeave: function (args) {send("CreateRdpWebSocketStreamWrapper");}});
+
+var DllMain = Module.findExportByName("rdpnanoTransport.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var FreeRdpUdpStreamWrapper = Module.findExportByName("rdpnanoTransport.dll", "FreeRdpUdpStreamWrapper")
+Interceptor.attach(FreeRdpUdpStreamWrapper, {onLeave: function (args) {send("FreeRdpUdpStreamWrapper");}});
+
+var FreeRdpWebSocketStreamWrapper = Module.findExportByName("rdpnanoTransport.dll", "FreeRdpWebSocketStreamWrapper")
+Interceptor.attach(FreeRdpWebSocketStreamWrapper, {onLeave: function (args) {send("FreeRdpWebSocketStreamWrapper");}});
+
+var ListUpnpEntries = Module.findExportByName("rdpnanoTransport.dll", "ListUpnpEntries")
+Interceptor.attach(ListUpnpEntries, {onLeave: function (args) {send("ListUpnpEntries");}});
+
+var RdpNanoInternalCreateIceWrapperVersioned = Module.findExportByName("rdpnanoTransport.dll", "RdpNanoInternalCreateIceWrapperVersioned")
+Interceptor.attach(RdpNanoInternalCreateIceWrapperVersioned, {onLeave: function (args) {send("RdpNanoInternalCreateIceWrapperVersioned");}});
+
+var RdpNanoInternalCreateMockIceWrapperVersioned = Module.findExportByName("rdpnanoTransport.dll", "RdpNanoInternalCreateMockIceWrapperVersioned")
+Interceptor.attach(RdpNanoInternalCreateMockIceWrapperVersioned, {onLeave: function (args) {send("RdpNanoInternalCreateMockIceWrapperVersioned");}});
+
+var RdpNanoInternalFreeIceWrapperVersioned = Module.findExportByName("rdpnanoTransport.dll", "RdpNanoInternalFreeIceWrapperVersioned")
+Interceptor.attach(RdpNanoInternalFreeIceWrapperVersioned, {onLeave: function (args) {send("RdpNanoInternalFreeIceWrapperVersioned");}});
+

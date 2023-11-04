@@ -1,0 +1,30 @@
+var ClosePrintProcessor = Module.findExportByName("printfilterpipelineprxy.dll", "ClosePrintProcessor")
+Interceptor.attach(ClosePrintProcessor, {onLeave: function (args) {send("ClosePrintProcessor");}});
+
+var ControlPrintProcessor = Module.findExportByName("printfilterpipelineprxy.dll", "ControlPrintProcessor")
+Interceptor.attach(ControlPrintProcessor, {onLeave: function (args) {send("ControlPrintProcessor");}});
+
+var DllCanUnloadNow = Module.findExportByName("printfilterpipelineprxy.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("printfilterpipelineprxy.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("printfilterpipelineprxy.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("printfilterpipelineprxy.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var EnumPrintProcessorDatatypesW = Module.findExportByName("printfilterpipelineprxy.dll", "EnumPrintProcessorDatatypesW")
+Interceptor.attach(EnumPrintProcessorDatatypesW, {onLeave: function (args) {send("EnumPrintProcessorDatatypesW");}});
+
+var GetPrintProcessorCapabilities = Module.findExportByName("printfilterpipelineprxy.dll", "GetPrintProcessorCapabilities")
+Interceptor.attach(GetPrintProcessorCapabilities, {onLeave: function (args) {send("GetPrintProcessorCapabilities");}});
+
+var OpenPrintProcessor = Module.findExportByName("printfilterpipelineprxy.dll", "OpenPrintProcessor")
+Interceptor.attach(OpenPrintProcessor, {onLeave: function (args) {send("OpenPrintProcessor");}});
+
+var PrintDocumentOnPrintProcessor = Module.findExportByName("printfilterpipelineprxy.dll", "PrintDocumentOnPrintProcessor")
+Interceptor.attach(PrintDocumentOnPrintProcessor, {onLeave: function (args) {send("PrintDocumentOnPrintProcessor");}});
+

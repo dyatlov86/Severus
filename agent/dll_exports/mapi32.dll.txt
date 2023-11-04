@@ -1,0 +1,513 @@
+var BMAPIAddress = Module.findExportByName("mapi32.dll", "BMAPIAddress")
+Interceptor.attach(BMAPIAddress, {onLeave: function (args) {send("BMAPIAddress");}});
+
+var BMAPIDetails = Module.findExportByName("mapi32.dll", "BMAPIDetails")
+Interceptor.attach(BMAPIDetails, {onLeave: function (args) {send("BMAPIDetails");}});
+
+var BMAPIFindNext = Module.findExportByName("mapi32.dll", "BMAPIFindNext")
+Interceptor.attach(BMAPIFindNext, {onLeave: function (args) {send("BMAPIFindNext");}});
+
+var BMAPIGetAddress = Module.findExportByName("mapi32.dll", "BMAPIGetAddress")
+Interceptor.attach(BMAPIGetAddress, {onLeave: function (args) {send("BMAPIGetAddress");}});
+
+var BMAPIGetReadMail = Module.findExportByName("mapi32.dll", "BMAPIGetReadMail")
+Interceptor.attach(BMAPIGetReadMail, {onLeave: function (args) {send("BMAPIGetReadMail");}});
+
+var BMAPIReadMail = Module.findExportByName("mapi32.dll", "BMAPIReadMail")
+Interceptor.attach(BMAPIReadMail, {onLeave: function (args) {send("BMAPIReadMail");}});
+
+var BMAPIResolveName = Module.findExportByName("mapi32.dll", "BMAPIResolveName")
+Interceptor.attach(BMAPIResolveName, {onLeave: function (args) {send("BMAPIResolveName");}});
+
+var BMAPISaveMail = Module.findExportByName("mapi32.dll", "BMAPISaveMail")
+Interceptor.attach(BMAPISaveMail, {onLeave: function (args) {send("BMAPISaveMail");}});
+
+var BMAPISendMail = Module.findExportByName("mapi32.dll", "BMAPISendMail")
+Interceptor.attach(BMAPISendMail, {onLeave: function (args) {send("BMAPISendMail");}});
+
+var BuildDisplayTable = Module.findExportByName("mapi32.dll", "BuildDisplayTable")
+Interceptor.attach(BuildDisplayTable, {onLeave: function (args) {send("BuildDisplayTable");}});
+
+var CbOfEncoded = Module.findExportByName("mapi32.dll", "CbOfEncoded")
+Interceptor.attach(CbOfEncoded, {onLeave: function (args) {send("CbOfEncoded");}});
+
+var CchOfEncoding = Module.findExportByName("mapi32.dll", "CchOfEncoding")
+Interceptor.attach(CchOfEncoding, {onLeave: function (args) {send("CchOfEncoding");}});
+
+var ChangeIdleRoutine = Module.findExportByName("mapi32.dll", "ChangeIdleRoutine")
+Interceptor.attach(ChangeIdleRoutine, {onLeave: function (args) {send("ChangeIdleRoutine");}});
+
+var CloseIMsgSession = Module.findExportByName("mapi32.dll", "CloseIMsgSession")
+Interceptor.attach(CloseIMsgSession, {onLeave: function (args) {send("CloseIMsgSession");}});
+
+var CreateIProp = Module.findExportByName("mapi32.dll", "CreateIProp")
+Interceptor.attach(CreateIProp, {onLeave: function (args) {send("CreateIProp");}});
+
+var CreateTable = Module.findExportByName("mapi32.dll", "CreateTable")
+Interceptor.attach(CreateTable, {onLeave: function (args) {send("CreateTable");}});
+
+var DeinitMapiUtil = Module.findExportByName("mapi32.dll", "DeinitMapiUtil")
+Interceptor.attach(DeinitMapiUtil, {onLeave: function (args) {send("DeinitMapiUtil");}});
+
+var DeregisterIdleRoutine = Module.findExportByName("mapi32.dll", "DeregisterIdleRoutine")
+Interceptor.attach(DeregisterIdleRoutine, {onLeave: function (args) {send("DeregisterIdleRoutine");}});
+
+var DllCanUnloadNow = Module.findExportByName("mapi32.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mapi32.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var EnableIdleRoutine = Module.findExportByName("mapi32.dll", "EnableIdleRoutine")
+Interceptor.attach(EnableIdleRoutine, {onLeave: function (args) {send("EnableIdleRoutine");}});
+
+var EncodeID = Module.findExportByName("mapi32.dll", "EncodeID")
+Interceptor.attach(EncodeID, {onLeave: function (args) {send("EncodeID");}});
+
+var FBadColumnSet = Module.findExportByName("mapi32.dll", "FBadColumnSet")
+Interceptor.attach(FBadColumnSet, {onLeave: function (args) {send("FBadColumnSet");}});
+
+var FBadEntryList = Module.findExportByName("mapi32.dll", "FBadEntryList")
+Interceptor.attach(FBadEntryList, {onLeave: function (args) {send("FBadEntryList");}});
+
+var FBadProp = Module.findExportByName("mapi32.dll", "FBadProp")
+Interceptor.attach(FBadProp, {onLeave: function (args) {send("FBadProp");}});
+
+var FBadPropTag = Module.findExportByName("mapi32.dll", "FBadPropTag")
+Interceptor.attach(FBadPropTag, {onLeave: function (args) {send("FBadPropTag");}});
+
+var FBadRestriction = Module.findExportByName("mapi32.dll", "FBadRestriction")
+Interceptor.attach(FBadRestriction, {onLeave: function (args) {send("FBadRestriction");}});
+
+var FBadRglpNameID = Module.findExportByName("mapi32.dll", "FBadRglpNameID")
+Interceptor.attach(FBadRglpNameID, {onLeave: function (args) {send("FBadRglpNameID");}});
+
+var FBadRglpszA = Module.findExportByName("mapi32.dll", "FBadRglpszA")
+Interceptor.attach(FBadRglpszA, {onLeave: function (args) {send("FBadRglpszA");}});
+
+var FBadRglpszW = Module.findExportByName("mapi32.dll", "FBadRglpszW")
+Interceptor.attach(FBadRglpszW, {onLeave: function (args) {send("FBadRglpszW");}});
+
+var FBadRow = Module.findExportByName("mapi32.dll", "FBadRow")
+Interceptor.attach(FBadRow, {onLeave: function (args) {send("FBadRow");}});
+
+var FBadRowSet = Module.findExportByName("mapi32.dll", "FBadRowSet")
+Interceptor.attach(FBadRowSet, {onLeave: function (args) {send("FBadRowSet");}});
+
+var FBadSortOrderSet = Module.findExportByName("mapi32.dll", "FBadSortOrderSet")
+Interceptor.attach(FBadSortOrderSet, {onLeave: function (args) {send("FBadSortOrderSet");}});
+
+var FBinFromHex = Module.findExportByName("mapi32.dll", "FBinFromHex")
+Interceptor.attach(FBinFromHex, {onLeave: function (args) {send("FBinFromHex");}});
+
+var FDecodeID = Module.findExportByName("mapi32.dll", "FDecodeID")
+Interceptor.attach(FDecodeID, {onLeave: function (args) {send("FDecodeID");}});
+
+var FEqualNames = Module.findExportByName("mapi32.dll", "FEqualNames")
+Interceptor.attach(FEqualNames, {onLeave: function (args) {send("FEqualNames");}});
+
+var FGetComponentPath = Module.findExportByName("mapi32.dll", "FGetComponentPath")
+Interceptor.attach(FGetComponentPath, {onLeave: function (args) {send("FGetComponentPath");}});
+
+var FPropCompareProp = Module.findExportByName("mapi32.dll", "FPropCompareProp")
+Interceptor.attach(FPropCompareProp, {onLeave: function (args) {send("FPropCompareProp");}});
+
+var FPropContainsProp = Module.findExportByName("mapi32.dll", "FPropContainsProp")
+Interceptor.attach(FPropContainsProp, {onLeave: function (args) {send("FPropContainsProp");}});
+
+var FPropExists = Module.findExportByName("mapi32.dll", "FPropExists")
+Interceptor.attach(FPropExists, {onLeave: function (args) {send("FPropExists");}});
+
+var FixMAPI = Module.findExportByName("mapi32.dll", "FixMAPI")
+Interceptor.attach(FixMAPI, {onLeave: function (args) {send("FixMAPI");}});
+
+var FreePadrlist = Module.findExportByName("mapi32.dll", "FreePadrlist")
+Interceptor.attach(FreePadrlist, {onLeave: function (args) {send("FreePadrlist");}});
+
+var FreeProws = Module.findExportByName("mapi32.dll", "FreeProws")
+Interceptor.attach(FreeProws, {onLeave: function (args) {send("FreeProws");}});
+
+var FtAdcFt = Module.findExportByName("mapi32.dll", "FtAdcFt")
+Interceptor.attach(FtAdcFt, {onLeave: function (args) {send("FtAdcFt");}});
+
+var FtAddFt = Module.findExportByName("mapi32.dll", "FtAddFt")
+Interceptor.attach(FtAddFt, {onLeave: function (args) {send("FtAddFt");}});
+
+var FtDivFtBogus = Module.findExportByName("mapi32.dll", "FtDivFtBogus")
+Interceptor.attach(FtDivFtBogus, {onLeave: function (args) {send("FtDivFtBogus");}});
+
+var FtMulDw = Module.findExportByName("mapi32.dll", "FtMulDw")
+Interceptor.attach(FtMulDw, {onLeave: function (args) {send("FtMulDw");}});
+
+var FtMulDwDw = Module.findExportByName("mapi32.dll", "FtMulDwDw")
+Interceptor.attach(FtMulDwDw, {onLeave: function (args) {send("FtMulDwDw");}});
+
+var FtNegFt = Module.findExportByName("mapi32.dll", "FtNegFt")
+Interceptor.attach(FtNegFt, {onLeave: function (args) {send("FtNegFt");}});
+
+var FtSubFt = Module.findExportByName("mapi32.dll", "FtSubFt")
+Interceptor.attach(FtSubFt, {onLeave: function (args) {send("FtSubFt");}});
+
+var FtgRegisterIdleRoutine = Module.findExportByName("mapi32.dll", "FtgRegisterIdleRoutine")
+Interceptor.attach(FtgRegisterIdleRoutine, {onLeave: function (args) {send("FtgRegisterIdleRoutine");}});
+
+var GetAttribIMsgOnIStg = Module.findExportByName("mapi32.dll", "GetAttribIMsgOnIStg")
+Interceptor.attach(GetAttribIMsgOnIStg, {onLeave: function (args) {send("GetAttribIMsgOnIStg");}});
+
+var GetOutlookVersion = Module.findExportByName("mapi32.dll", "GetOutlookVersion")
+Interceptor.attach(GetOutlookVersion, {onLeave: function (args) {send("GetOutlookVersion");}});
+
+var GetTnefStreamCodepage = Module.findExportByName("mapi32.dll", "GetTnefStreamCodepage")
+Interceptor.attach(GetTnefStreamCodepage, {onLeave: function (args) {send("GetTnefStreamCodepage");}});
+
+var HexFromBin = Module.findExportByName("mapi32.dll", "HexFromBin")
+Interceptor.attach(HexFromBin, {onLeave: function (args) {send("HexFromBin");}});
+
+var HrAddColumns = Module.findExportByName("mapi32.dll", "HrAddColumns")
+Interceptor.attach(HrAddColumns, {onLeave: function (args) {send("HrAddColumns");}});
+
+var HrAddColumnsEx = Module.findExportByName("mapi32.dll", "HrAddColumnsEx")
+Interceptor.attach(HrAddColumnsEx, {onLeave: function (args) {send("HrAddColumnsEx");}});
+
+var HrAllocAdviseSink = Module.findExportByName("mapi32.dll", "HrAllocAdviseSink")
+Interceptor.attach(HrAllocAdviseSink, {onLeave: function (args) {send("HrAllocAdviseSink");}});
+
+var HrComposeEID = Module.findExportByName("mapi32.dll", "HrComposeEID")
+Interceptor.attach(HrComposeEID, {onLeave: function (args) {send("HrComposeEID");}});
+
+var HrComposeMsgID = Module.findExportByName("mapi32.dll", "HrComposeMsgID")
+Interceptor.attach(HrComposeMsgID, {onLeave: function (args) {send("HrComposeMsgID");}});
+
+var HrDecomposeEID = Module.findExportByName("mapi32.dll", "HrDecomposeEID")
+Interceptor.attach(HrDecomposeEID, {onLeave: function (args) {send("HrDecomposeEID");}});
+
+var HrDecomposeMsgID = Module.findExportByName("mapi32.dll", "HrDecomposeMsgID")
+Interceptor.attach(HrDecomposeMsgID, {onLeave: function (args) {send("HrDecomposeMsgID");}});
+
+var HrDispatchNotifications = Module.findExportByName("mapi32.dll", "HrDispatchNotifications")
+Interceptor.attach(HrDispatchNotifications, {onLeave: function (args) {send("HrDispatchNotifications");}});
+
+var HrEntryIDFromSz = Module.findExportByName("mapi32.dll", "HrEntryIDFromSz")
+Interceptor.attach(HrEntryIDFromSz, {onLeave: function (args) {send("HrEntryIDFromSz");}});
+
+var HrGetOmiProvidersFlags = Module.findExportByName("mapi32.dll", "HrGetOmiProvidersFlags")
+Interceptor.attach(HrGetOmiProvidersFlags, {onLeave: function (args) {send("HrGetOmiProvidersFlags");}});
+
+var HrGetOneProp = Module.findExportByName("mapi32.dll", "HrGetOneProp")
+Interceptor.attach(HrGetOneProp, {onLeave: function (args) {send("HrGetOneProp");}});
+
+var HrIStorageFromStream = Module.findExportByName("mapi32.dll", "HrIStorageFromStream")
+Interceptor.attach(HrIStorageFromStream, {onLeave: function (args) {send("HrIStorageFromStream");}});
+
+var HrQueryAllRows = Module.findExportByName("mapi32.dll", "HrQueryAllRows")
+Interceptor.attach(HrQueryAllRows, {onLeave: function (args) {send("HrQueryAllRows");}});
+
+var HrSetOmiProvidersFlagsInvalid = Module.findExportByName("mapi32.dll", "HrSetOmiProvidersFlagsInvalid")
+Interceptor.attach(HrSetOmiProvidersFlagsInvalid, {onLeave: function (args) {send("HrSetOmiProvidersFlagsInvalid");}});
+
+var HrSetOneProp = Module.findExportByName("mapi32.dll", "HrSetOneProp")
+Interceptor.attach(HrSetOneProp, {onLeave: function (args) {send("HrSetOneProp");}});
+
+var HrSzFromEntryID = Module.findExportByName("mapi32.dll", "HrSzFromEntryID")
+Interceptor.attach(HrSzFromEntryID, {onLeave: function (args) {send("HrSzFromEntryID");}});
+
+var HrThisThreadAdviseSink = Module.findExportByName("mapi32.dll", "HrThisThreadAdviseSink")
+Interceptor.attach(HrThisThreadAdviseSink, {onLeave: function (args) {send("HrThisThreadAdviseSink");}});
+
+var HrValidateIPMSubtree = Module.findExportByName("mapi32.dll", "HrValidateIPMSubtree")
+Interceptor.attach(HrValidateIPMSubtree, {onLeave: function (args) {send("HrValidateIPMSubtree");}});
+
+var HrValidateParametersV = Module.findExportByName("mapi32.dll", "HrValidateParametersV")
+Interceptor.attach(HrValidateParametersV, {onLeave: function (args) {send("HrValidateParametersV");}});
+
+var HrValidateParametersValist = Module.findExportByName("mapi32.dll", "HrValidateParametersValist")
+Interceptor.attach(HrValidateParametersValist, {onLeave: function (args) {send("HrValidateParametersValist");}});
+
+var InstallFilterHook = Module.findExportByName("mapi32.dll", "InstallFilterHook")
+Interceptor.attach(InstallFilterHook, {onLeave: function (args) {send("InstallFilterHook");}});
+
+var IsBadBoundedStringPtr = Module.findExportByName("mapi32.dll", "IsBadBoundedStringPtr")
+Interceptor.attach(IsBadBoundedStringPtr, {onLeave: function (args) {send("IsBadBoundedStringPtr");}});
+
+var LAUNCHWIZARD = Module.findExportByName("mapi32.dll", "LAUNCHWIZARD")
+Interceptor.attach(LAUNCHWIZARD, {onLeave: function (args) {send("LAUNCHWIZARD");}});
+
+var LPropCompareProp = Module.findExportByName("mapi32.dll", "LPropCompareProp")
+Interceptor.attach(LPropCompareProp, {onLeave: function (args) {send("LPropCompareProp");}});
+
+var LaunchWizard = Module.findExportByName("mapi32.dll", "LaunchWizard")
+Interceptor.attach(LaunchWizard, {onLeave: function (args) {send("LaunchWizard");}});
+
+var LpValFindProp = Module.findExportByName("mapi32.dll", "LpValFindProp")
+Interceptor.attach(LpValFindProp, {onLeave: function (args) {send("LpValFindProp");}});
+
+var MAPIAddress = Module.findExportByName("mapi32.dll", "MAPIAddress")
+Interceptor.attach(MAPIAddress, {onLeave: function (args) {send("MAPIAddress");}});
+
+var MAPIAdminProfiles = Module.findExportByName("mapi32.dll", "MAPIAdminProfiles")
+Interceptor.attach(MAPIAdminProfiles, {onLeave: function (args) {send("MAPIAdminProfiles");}});
+
+var MAPIAllocateBuffer = Module.findExportByName("mapi32.dll", "MAPIAllocateBuffer")
+Interceptor.attach(MAPIAllocateBuffer, {onLeave: function (args) {send("MAPIAllocateBuffer");}});
+
+var MAPIAllocateMore = Module.findExportByName("mapi32.dll", "MAPIAllocateMore")
+Interceptor.attach(MAPIAllocateMore, {onLeave: function (args) {send("MAPIAllocateMore");}});
+
+var MAPIDeinitIdle = Module.findExportByName("mapi32.dll", "MAPIDeinitIdle")
+Interceptor.attach(MAPIDeinitIdle, {onLeave: function (args) {send("MAPIDeinitIdle");}});
+
+var MAPIDeleteMail = Module.findExportByName("mapi32.dll", "MAPIDeleteMail")
+Interceptor.attach(MAPIDeleteMail, {onLeave: function (args) {send("MAPIDeleteMail");}});
+
+var MAPIDetails = Module.findExportByName("mapi32.dll", "MAPIDetails")
+Interceptor.attach(MAPIDetails, {onLeave: function (args) {send("MAPIDetails");}});
+
+var MAPIFindNext = Module.findExportByName("mapi32.dll", "MAPIFindNext")
+Interceptor.attach(MAPIFindNext, {onLeave: function (args) {send("MAPIFindNext");}});
+
+var MAPIFreeBuffer = Module.findExportByName("mapi32.dll", "MAPIFreeBuffer")
+Interceptor.attach(MAPIFreeBuffer, {onLeave: function (args) {send("MAPIFreeBuffer");}});
+
+var MAPIGetDefaultMalloc = Module.findExportByName("mapi32.dll", "MAPIGetDefaultMalloc")
+Interceptor.attach(MAPIGetDefaultMalloc, {onLeave: function (args) {send("MAPIGetDefaultMalloc");}});
+
+var MAPIInitIdle = Module.findExportByName("mapi32.dll", "MAPIInitIdle")
+Interceptor.attach(MAPIInitIdle, {onLeave: function (args) {send("MAPIInitIdle");}});
+
+var MAPIInitialize = Module.findExportByName("mapi32.dll", "MAPIInitialize")
+Interceptor.attach(MAPIInitialize, {onLeave: function (args) {send("MAPIInitialize");}});
+
+var MAPILogoff = Module.findExportByName("mapi32.dll", "MAPILogoff")
+Interceptor.attach(MAPILogoff, {onLeave: function (args) {send("MAPILogoff");}});
+
+var MAPILogon = Module.findExportByName("mapi32.dll", "MAPILogon")
+Interceptor.attach(MAPILogon, {onLeave: function (args) {send("MAPILogon");}});
+
+var MAPILogonEx = Module.findExportByName("mapi32.dll", "MAPILogonEx")
+Interceptor.attach(MAPILogonEx, {onLeave: function (args) {send("MAPILogonEx");}});
+
+var MAPIOpenFormMgr = Module.findExportByName("mapi32.dll", "MAPIOpenFormMgr")
+Interceptor.attach(MAPIOpenFormMgr, {onLeave: function (args) {send("MAPIOpenFormMgr");}});
+
+var MAPIOpenLocalFormContainer = Module.findExportByName("mapi32.dll", "MAPIOpenLocalFormContainer")
+Interceptor.attach(MAPIOpenLocalFormContainer, {onLeave: function (args) {send("MAPIOpenLocalFormContainer");}});
+
+var MAPIReadMail = Module.findExportByName("mapi32.dll", "MAPIReadMail")
+Interceptor.attach(MAPIReadMail, {onLeave: function (args) {send("MAPIReadMail");}});
+
+var MAPIResolveName = Module.findExportByName("mapi32.dll", "MAPIResolveName")
+Interceptor.attach(MAPIResolveName, {onLeave: function (args) {send("MAPIResolveName");}});
+
+var MAPISaveMail = Module.findExportByName("mapi32.dll", "MAPISaveMail")
+Interceptor.attach(MAPISaveMail, {onLeave: function (args) {send("MAPISaveMail");}});
+
+var MAPISendDocuments = Module.findExportByName("mapi32.dll", "MAPISendDocuments")
+Interceptor.attach(MAPISendDocuments, {onLeave: function (args) {send("MAPISendDocuments");}});
+
+var MAPISendMail = Module.findExportByName("mapi32.dll", "MAPISendMail")
+Interceptor.attach(MAPISendMail, {onLeave: function (args) {send("MAPISendMail");}});
+
+var MAPISendMailW = Module.findExportByName("mapi32.dll", "MAPISendMailW")
+Interceptor.attach(MAPISendMailW, {onLeave: function (args) {send("MAPISendMailW");}});
+
+var MAPIUninitialize = Module.findExportByName("mapi32.dll", "MAPIUninitialize")
+Interceptor.attach(MAPIUninitialize, {onLeave: function (args) {send("MAPIUninitialize");}});
+
+var MNLS_CompareStringW = Module.findExportByName("mapi32.dll", "MNLS_CompareStringW")
+Interceptor.attach(MNLS_CompareStringW, {onLeave: function (args) {send("MNLS_CompareStringW");}});
+
+var MNLS_IsBadStringPtrW = Module.findExportByName("mapi32.dll", "MNLS_IsBadStringPtrW")
+Interceptor.attach(MNLS_IsBadStringPtrW, {onLeave: function (args) {send("MNLS_IsBadStringPtrW");}});
+
+var MNLS_MultiByteToWideChar = Module.findExportByName("mapi32.dll", "MNLS_MultiByteToWideChar")
+Interceptor.attach(MNLS_MultiByteToWideChar, {onLeave: function (args) {send("MNLS_MultiByteToWideChar");}});
+
+var MNLS_WideCharToMultiByte = Module.findExportByName("mapi32.dll", "MNLS_WideCharToMultiByte")
+Interceptor.attach(MNLS_WideCharToMultiByte, {onLeave: function (args) {send("MNLS_WideCharToMultiByte");}});
+
+var MNLS_lstrcmpW = Module.findExportByName("mapi32.dll", "MNLS_lstrcmpW")
+Interceptor.attach(MNLS_lstrcmpW, {onLeave: function (args) {send("MNLS_lstrcmpW");}});
+
+var MNLS_lstrcpyW = Module.findExportByName("mapi32.dll", "MNLS_lstrcpyW")
+Interceptor.attach(MNLS_lstrcpyW, {onLeave: function (args) {send("MNLS_lstrcpyW");}});
+
+var MNLS_lstrlenW = Module.findExportByName("mapi32.dll", "MNLS_lstrlenW")
+Interceptor.attach(MNLS_lstrlenW, {onLeave: function (args) {send("MNLS_lstrlenW");}});
+
+var MapStorageSCode = Module.findExportByName("mapi32.dll", "MapStorageSCode")
+Interceptor.attach(MapStorageSCode, {onLeave: function (args) {send("MapStorageSCode");}});
+
+var OpenIMsgOnIStg = Module.findExportByName("mapi32.dll", "OpenIMsgOnIStg")
+Interceptor.attach(OpenIMsgOnIStg, {onLeave: function (args) {send("OpenIMsgOnIStg");}});
+
+var OpenIMsgSession = Module.findExportByName("mapi32.dll", "OpenIMsgSession")
+Interceptor.attach(OpenIMsgSession, {onLeave: function (args) {send("OpenIMsgSession");}});
+
+var OpenStreamOnFile = Module.findExportByName("mapi32.dll", "OpenStreamOnFile")
+Interceptor.attach(OpenStreamOnFile, {onLeave: function (args) {send("OpenStreamOnFile");}});
+
+var OpenTnefStream = Module.findExportByName("mapi32.dll", "OpenTnefStream")
+Interceptor.attach(OpenTnefStream, {onLeave: function (args) {send("OpenTnefStream");}});
+
+var OpenTnefStreamEx = Module.findExportByName("mapi32.dll", "OpenTnefStreamEx")
+Interceptor.attach(OpenTnefStreamEx, {onLeave: function (args) {send("OpenTnefStreamEx");}});
+
+var PRProviderInit = Module.findExportByName("mapi32.dll", "PRProviderInit")
+Interceptor.attach(PRProviderInit, {onLeave: function (args) {send("PRProviderInit");}});
+
+var PpropFindProp = Module.findExportByName("mapi32.dll", "PpropFindProp")
+Interceptor.attach(PpropFindProp, {onLeave: function (args) {send("PpropFindProp");}});
+
+var PropCopyMore = Module.findExportByName("mapi32.dll", "PropCopyMore")
+Interceptor.attach(PropCopyMore, {onLeave: function (args) {send("PropCopyMore");}});
+
+var RTFSync = Module.findExportByName("mapi32.dll", "RTFSync")
+Interceptor.attach(RTFSync, {onLeave: function (args) {send("RTFSync");}});
+
+var ScBinFromHexBounded = Module.findExportByName("mapi32.dll", "ScBinFromHexBounded")
+Interceptor.attach(ScBinFromHexBounded, {onLeave: function (args) {send("ScBinFromHexBounded");}});
+
+var ScCopyNotifications = Module.findExportByName("mapi32.dll", "ScCopyNotifications")
+Interceptor.attach(ScCopyNotifications, {onLeave: function (args) {send("ScCopyNotifications");}});
+
+var ScCopyProps = Module.findExportByName("mapi32.dll", "ScCopyProps")
+Interceptor.attach(ScCopyProps, {onLeave: function (args) {send("ScCopyProps");}});
+
+var ScCountNotifications = Module.findExportByName("mapi32.dll", "ScCountNotifications")
+Interceptor.attach(ScCountNotifications, {onLeave: function (args) {send("ScCountNotifications");}});
+
+var ScCountProps = Module.findExportByName("mapi32.dll", "ScCountProps")
+Interceptor.attach(ScCountProps, {onLeave: function (args) {send("ScCountProps");}});
+
+var ScCreateConversationIndex = Module.findExportByName("mapi32.dll", "ScCreateConversationIndex")
+Interceptor.attach(ScCreateConversationIndex, {onLeave: function (args) {send("ScCreateConversationIndex");}});
+
+var ScDupPropset = Module.findExportByName("mapi32.dll", "ScDupPropset")
+Interceptor.attach(ScDupPropset, {onLeave: function (args) {send("ScDupPropset");}});
+
+var ScGenerateMuid = Module.findExportByName("mapi32.dll", "ScGenerateMuid")
+Interceptor.attach(ScGenerateMuid, {onLeave: function (args) {send("ScGenerateMuid");}});
+
+var ScInitMapiUtil = Module.findExportByName("mapi32.dll", "ScInitMapiUtil")
+Interceptor.attach(ScInitMapiUtil, {onLeave: function (args) {send("ScInitMapiUtil");}});
+
+var ScLocalPathFromUNC = Module.findExportByName("mapi32.dll", "ScLocalPathFromUNC")
+Interceptor.attach(ScLocalPathFromUNC, {onLeave: function (args) {send("ScLocalPathFromUNC");}});
+
+var ScMAPIXFromCMC = Module.findExportByName("mapi32.dll", "ScMAPIXFromCMC")
+Interceptor.attach(ScMAPIXFromCMC, {onLeave: function (args) {send("ScMAPIXFromCMC");}});
+
+var ScMAPIXFromSMAPI = Module.findExportByName("mapi32.dll", "ScMAPIXFromSMAPI")
+Interceptor.attach(ScMAPIXFromSMAPI, {onLeave: function (args) {send("ScMAPIXFromSMAPI");}});
+
+var ScRelocNotifications = Module.findExportByName("mapi32.dll", "ScRelocNotifications")
+Interceptor.attach(ScRelocNotifications, {onLeave: function (args) {send("ScRelocNotifications");}});
+
+var ScRelocProps = Module.findExportByName("mapi32.dll", "ScRelocProps")
+Interceptor.attach(ScRelocProps, {onLeave: function (args) {send("ScRelocProps");}});
+
+var ScUNCFromLocalPath = Module.findExportByName("mapi32.dll", "ScUNCFromLocalPath")
+Interceptor.attach(ScUNCFromLocalPath, {onLeave: function (args) {send("ScUNCFromLocalPath");}});
+
+var SetAttribIMsgOnIStg = Module.findExportByName("mapi32.dll", "SetAttribIMsgOnIStg")
+Interceptor.attach(SetAttribIMsgOnIStg, {onLeave: function (args) {send("SetAttribIMsgOnIStg");}});
+
+var SwapPlong = Module.findExportByName("mapi32.dll", "SwapPlong")
+Interceptor.attach(SwapPlong, {onLeave: function (args) {send("SwapPlong");}});
+
+var SwapPword = Module.findExportByName("mapi32.dll", "SwapPword")
+Interceptor.attach(SwapPword, {onLeave: function (args) {send("SwapPword");}});
+
+var SzFindCh = Module.findExportByName("mapi32.dll", "SzFindCh")
+Interceptor.attach(SzFindCh, {onLeave: function (args) {send("SzFindCh");}});
+
+var SzFindLastCh = Module.findExportByName("mapi32.dll", "SzFindLastCh")
+Interceptor.attach(SzFindLastCh, {onLeave: function (args) {send("SzFindLastCh");}});
+
+var SzFindSz = Module.findExportByName("mapi32.dll", "SzFindSz")
+Interceptor.attach(SzFindSz, {onLeave: function (args) {send("SzFindSz");}});
+
+var UFromSz = Module.findExportByName("mapi32.dll", "UFromSz")
+Interceptor.attach(UFromSz, {onLeave: function (args) {send("UFromSz");}});
+
+var UNKOBJ_COFree = Module.findExportByName("mapi32.dll", "UNKOBJ_COFree")
+Interceptor.attach(UNKOBJ_COFree, {onLeave: function (args) {send("UNKOBJ_COFree");}});
+
+var UNKOBJ_Free = Module.findExportByName("mapi32.dll", "UNKOBJ_Free")
+Interceptor.attach(UNKOBJ_Free, {onLeave: function (args) {send("UNKOBJ_Free");}});
+
+var UNKOBJ_FreeRows = Module.findExportByName("mapi32.dll", "UNKOBJ_FreeRows")
+Interceptor.attach(UNKOBJ_FreeRows, {onLeave: function (args) {send("UNKOBJ_FreeRows");}});
+
+var UNKOBJ_ScAllocate = Module.findExportByName("mapi32.dll", "UNKOBJ_ScAllocate")
+Interceptor.attach(UNKOBJ_ScAllocate, {onLeave: function (args) {send("UNKOBJ_ScAllocate");}});
+
+var UNKOBJ_ScAllocateMore = Module.findExportByName("mapi32.dll", "UNKOBJ_ScAllocateMore")
+Interceptor.attach(UNKOBJ_ScAllocateMore, {onLeave: function (args) {send("UNKOBJ_ScAllocateMore");}});
+
+var UNKOBJ_ScCOAllocate = Module.findExportByName("mapi32.dll", "UNKOBJ_ScCOAllocate")
+Interceptor.attach(UNKOBJ_ScCOAllocate, {onLeave: function (args) {send("UNKOBJ_ScCOAllocate");}});
+
+var UNKOBJ_ScCOReallocate = Module.findExportByName("mapi32.dll", "UNKOBJ_ScCOReallocate")
+Interceptor.attach(UNKOBJ_ScCOReallocate, {onLeave: function (args) {send("UNKOBJ_ScCOReallocate");}});
+
+var UNKOBJ_ScSzFromIdsAlloc = Module.findExportByName("mapi32.dll", "UNKOBJ_ScSzFromIdsAlloc")
+Interceptor.attach(UNKOBJ_ScSzFromIdsAlloc, {onLeave: function (args) {send("UNKOBJ_ScSzFromIdsAlloc");}});
+
+var UlAddRef = Module.findExportByName("mapi32.dll", "UlAddRef")
+Interceptor.attach(UlAddRef, {onLeave: function (args) {send("UlAddRef");}});
+
+var UlFromSzHex = Module.findExportByName("mapi32.dll", "UlFromSzHex")
+Interceptor.attach(UlFromSzHex, {onLeave: function (args) {send("UlFromSzHex");}});
+
+var UlPropSize = Module.findExportByName("mapi32.dll", "UlPropSize")
+Interceptor.attach(UlPropSize, {onLeave: function (args) {send("UlPropSize");}});
+
+var UlRelease = Module.findExportByName("mapi32.dll", "UlRelease")
+Interceptor.attach(UlRelease, {onLeave: function (args) {send("UlRelease");}});
+
+var WrapCompressedRTFStream = Module.findExportByName("mapi32.dll", "WrapCompressedRTFStream")
+Interceptor.attach(WrapCompressedRTFStream, {onLeave: function (args) {send("WrapCompressedRTFStream");}});
+
+var WrapProgress = Module.findExportByName("mapi32.dll", "WrapProgress")
+Interceptor.attach(WrapProgress, {onLeave: function (args) {send("WrapProgress");}});
+
+var WrapStoreEntryID = Module.findExportByName("mapi32.dll", "WrapStoreEntryID")
+Interceptor.attach(WrapStoreEntryID, {onLeave: function (args) {send("WrapStoreEntryID");}});
+
+var __CPPValidateParameters = Module.findExportByName("mapi32.dll", "__CPPValidateParameters")
+Interceptor.attach(__CPPValidateParameters, {onLeave: function (args) {send("__CPPValidateParameters");}});
+
+var __ValidateParameters = Module.findExportByName("mapi32.dll", "__ValidateParameters")
+Interceptor.attach(__ValidateParameters, {onLeave: function (args) {send("__ValidateParameters");}});
+
+var cmc_act_on = Module.findExportByName("mapi32.dll", "cmc_act_on")
+Interceptor.attach(cmc_act_on, {onLeave: function (args) {send("cmc_act_on");}});
+
+var cmc_free = Module.findExportByName("mapi32.dll", "cmc_free")
+Interceptor.attach(cmc_free, {onLeave: function (args) {send("cmc_free");}});
+
+var cmc_list = Module.findExportByName("mapi32.dll", "cmc_list")
+Interceptor.attach(cmc_list, {onLeave: function (args) {send("cmc_list");}});
+
+var cmc_logoff = Module.findExportByName("mapi32.dll", "cmc_logoff")
+Interceptor.attach(cmc_logoff, {onLeave: function (args) {send("cmc_logoff");}});
+
+var cmc_logon = Module.findExportByName("mapi32.dll", "cmc_logon")
+Interceptor.attach(cmc_logon, {onLeave: function (args) {send("cmc_logon");}});
+
+var cmc_look_up = Module.findExportByName("mapi32.dll", "cmc_look_up")
+Interceptor.attach(cmc_look_up, {onLeave: function (args) {send("cmc_look_up");}});
+
+var cmc_query_configuration = Module.findExportByName("mapi32.dll", "cmc_query_configuration")
+Interceptor.attach(cmc_query_configuration, {onLeave: function (args) {send("cmc_query_configuration");}});
+
+var cmc_read = Module.findExportByName("mapi32.dll", "cmc_read")
+Interceptor.attach(cmc_read, {onLeave: function (args) {send("cmc_read");}});
+
+var cmc_send = Module.findExportByName("mapi32.dll", "cmc_send")
+Interceptor.attach(cmc_send, {onLeave: function (args) {send("cmc_send");}});
+
+var cmc_send_documents = Module.findExportByName("mapi32.dll", "cmc_send_documents")
+Interceptor.attach(cmc_send_documents, {onLeave: function (args) {send("cmc_send_documents");}});
+

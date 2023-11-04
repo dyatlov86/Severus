@@ -1,0 +1,15 @@
+var CloseHandle = Module.findExportByName("api-ms-win-core-handle-l1-1-0.dll", "CloseHandle")
+Interceptor.attach(CloseHandle, {onLeave: function (args) {send("CloseHandle");}});
+
+var CompareObjectHandles = Module.findExportByName("api-ms-win-core-handle-l1-1-0.dll", "CompareObjectHandles")
+Interceptor.attach(CompareObjectHandles, {onLeave: function (args) {send("CompareObjectHandles");}});
+
+var DuplicateHandle = Module.findExportByName("api-ms-win-core-handle-l1-1-0.dll", "DuplicateHandle")
+Interceptor.attach(DuplicateHandle, {onLeave: function (args) {send("DuplicateHandle");}});
+
+var GetHandleInformation = Module.findExportByName("api-ms-win-core-handle-l1-1-0.dll", "GetHandleInformation")
+Interceptor.attach(GetHandleInformation, {onLeave: function (args) {send("GetHandleInformation");}});
+
+var SetHandleInformation = Module.findExportByName("api-ms-win-core-handle-l1-1-0.dll", "SetHandleInformation")
+Interceptor.attach(SetHandleInformation, {onLeave: function (args) {send("SetHandleInformation");}});
+

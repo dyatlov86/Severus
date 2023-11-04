@@ -1,0 +1,9 @@
+var GetPrivateDDITable = Module.findExportByName("d3d9on12.dll", "GetPrivateDDITable")
+Interceptor.attach(GetPrivateDDITable, {onLeave: function (args) {send("GetPrivateDDITable");}});
+
+var OpenAdapter = Module.findExportByName("d3d9on12.dll", "OpenAdapter")
+Interceptor.attach(OpenAdapter, {onLeave: function (args) {send("OpenAdapter");}});
+
+var SetAppCompatData = Module.findExportByName("d3d9on12.dll", "SetAppCompatData")
+Interceptor.attach(SetAppCompatData, {onLeave: function (args) {send("SetAppCompatData");}});
+

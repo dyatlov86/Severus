@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("cmifw.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllCsiGetHandler = Module.findExportByName("cmifw.dll", "DllCsiGetHandler")
+Interceptor.attach(DllCsiGetHandler, {onLeave: function (args) {send("DllCsiGetHandler");}});
+
+var EnableGroupW = Module.findExportByName("cmifw.dll", "EnableGroupW")
+Interceptor.attach(EnableGroupW, {onLeave: function (args) {send("EnableGroupW");}});
+
+var unattendW = Module.findExportByName("cmifw.dll", "unattendW")
+Interceptor.attach(unattendW, {onLeave: function (args) {send("unattendW");}});
+

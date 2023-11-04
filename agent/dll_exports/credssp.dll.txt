@@ -1,0 +1,78 @@
+var InitSecurityInterfaceW = Module.findExportByName("credssp.dll", "InitSecurityInterfaceW")
+Interceptor.attach(InitSecurityInterfaceW, {onLeave: function (args) {send("InitSecurityInterfaceW");}});
+
+var SpAcceptSecurityContext = Module.findExportByName("credssp.dll", "SpAcceptSecurityContext")
+Interceptor.attach(SpAcceptSecurityContext, {onLeave: function (args) {send("SpAcceptSecurityContext");}});
+
+var SpAcquireCredentialsHandleW = Module.findExportByName("credssp.dll", "SpAcquireCredentialsHandleW")
+Interceptor.attach(SpAcquireCredentialsHandleW, {onLeave: function (args) {send("SpAcquireCredentialsHandleW");}});
+
+var SpAddCredentialsW = Module.findExportByName("credssp.dll", "SpAddCredentialsW")
+Interceptor.attach(SpAddCredentialsW, {onLeave: function (args) {send("SpAddCredentialsW");}});
+
+var SpApplyControlToken = Module.findExportByName("credssp.dll", "SpApplyControlToken")
+Interceptor.attach(SpApplyControlToken, {onLeave: function (args) {send("SpApplyControlToken");}});
+
+var SpChangeAccountPasswordW = Module.findExportByName("credssp.dll", "SpChangeAccountPasswordW")
+Interceptor.attach(SpChangeAccountPasswordW, {onLeave: function (args) {send("SpChangeAccountPasswordW");}});
+
+var SpCompleteAuthToken = Module.findExportByName("credssp.dll", "SpCompleteAuthToken")
+Interceptor.attach(SpCompleteAuthToken, {onLeave: function (args) {send("SpCompleteAuthToken");}});
+
+var SpDecryptMessage = Module.findExportByName("credssp.dll", "SpDecryptMessage")
+Interceptor.attach(SpDecryptMessage, {onLeave: function (args) {send("SpDecryptMessage");}});
+
+var SpDeleteSecurityContext = Module.findExportByName("credssp.dll", "SpDeleteSecurityContext")
+Interceptor.attach(SpDeleteSecurityContext, {onLeave: function (args) {send("SpDeleteSecurityContext");}});
+
+var SpEncryptMessage = Module.findExportByName("credssp.dll", "SpEncryptMessage")
+Interceptor.attach(SpEncryptMessage, {onLeave: function (args) {send("SpEncryptMessage");}});
+
+var SpEnumerateSecurityPackagesW = Module.findExportByName("credssp.dll", "SpEnumerateSecurityPackagesW")
+Interceptor.attach(SpEnumerateSecurityPackagesW, {onLeave: function (args) {send("SpEnumerateSecurityPackagesW");}});
+
+var SpExportSecurityContext = Module.findExportByName("credssp.dll", "SpExportSecurityContext")
+Interceptor.attach(SpExportSecurityContext, {onLeave: function (args) {send("SpExportSecurityContext");}});
+
+var SpFreeContextBuffer = Module.findExportByName("credssp.dll", "SpFreeContextBuffer")
+Interceptor.attach(SpFreeContextBuffer, {onLeave: function (args) {send("SpFreeContextBuffer");}});
+
+var SpFreeCredentialsHandle = Module.findExportByName("credssp.dll", "SpFreeCredentialsHandle")
+Interceptor.attach(SpFreeCredentialsHandle, {onLeave: function (args) {send("SpFreeCredentialsHandle");}});
+
+var SpImpersonateSecurityContext = Module.findExportByName("credssp.dll", "SpImpersonateSecurityContext")
+Interceptor.attach(SpImpersonateSecurityContext, {onLeave: function (args) {send("SpImpersonateSecurityContext");}});
+
+var SpImportSecurityContextW = Module.findExportByName("credssp.dll", "SpImportSecurityContextW")
+Interceptor.attach(SpImportSecurityContextW, {onLeave: function (args) {send("SpImportSecurityContextW");}});
+
+var SpInitializeSecurityContextW = Module.findExportByName("credssp.dll", "SpInitializeSecurityContextW")
+Interceptor.attach(SpInitializeSecurityContextW, {onLeave: function (args) {send("SpInitializeSecurityContextW");}});
+
+var SpMakeSignature = Module.findExportByName("credssp.dll", "SpMakeSignature")
+Interceptor.attach(SpMakeSignature, {onLeave: function (args) {send("SpMakeSignature");}});
+
+var SpQueryContextAttributesW = Module.findExportByName("credssp.dll", "SpQueryContextAttributesW")
+Interceptor.attach(SpQueryContextAttributesW, {onLeave: function (args) {send("SpQueryContextAttributesW");}});
+
+var SpQueryCredentialsAttributesW = Module.findExportByName("credssp.dll", "SpQueryCredentialsAttributesW")
+Interceptor.attach(SpQueryCredentialsAttributesW, {onLeave: function (args) {send("SpQueryCredentialsAttributesW");}});
+
+var SpQuerySecurityContextToken = Module.findExportByName("credssp.dll", "SpQuerySecurityContextToken")
+Interceptor.attach(SpQuerySecurityContextToken, {onLeave: function (args) {send("SpQuerySecurityContextToken");}});
+
+var SpQuerySecurityPackageInfoW = Module.findExportByName("credssp.dll", "SpQuerySecurityPackageInfoW")
+Interceptor.attach(SpQuerySecurityPackageInfoW, {onLeave: function (args) {send("SpQuerySecurityPackageInfoW");}});
+
+var SpRevertSecurityContext = Module.findExportByName("credssp.dll", "SpRevertSecurityContext")
+Interceptor.attach(SpRevertSecurityContext, {onLeave: function (args) {send("SpRevertSecurityContext");}});
+
+var SpSetContextAttributesW = Module.findExportByName("credssp.dll", "SpSetContextAttributesW")
+Interceptor.attach(SpSetContextAttributesW, {onLeave: function (args) {send("SpSetContextAttributesW");}});
+
+var SpSetCredentialsAttributesW = Module.findExportByName("credssp.dll", "SpSetCredentialsAttributesW")
+Interceptor.attach(SpSetCredentialsAttributesW, {onLeave: function (args) {send("SpSetCredentialsAttributesW");}});
+
+var SpVerifySignature = Module.findExportByName("credssp.dll", "SpVerifySignature")
+Interceptor.attach(SpVerifySignature, {onLeave: function (args) {send("SpVerifySignature");}});
+

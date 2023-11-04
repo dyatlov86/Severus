@@ -1,0 +1,6 @@
+var CreateSplashWindows = Module.findExportByName("WinLGDep.dll", "CreateSplashWindows")
+Interceptor.attach(CreateSplashWindows, {onLeave: function (args) {send("CreateSplashWindows");}});
+
+var DestroySplashWindows = Module.findExportByName("WinLGDep.dll", "DestroySplashWindows")
+Interceptor.attach(DestroySplashWindows, {onLeave: function (args) {send("DestroySplashWindows");}});
+

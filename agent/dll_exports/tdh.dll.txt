@@ -1,0 +1,108 @@
+var DllCanUnloadNow = Module.findExportByName("tdh.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("tdh.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var TdhAggregatePayloadFilters = Module.findExportByName("tdh.dll", "TdhAggregatePayloadFilters")
+Interceptor.attach(TdhAggregatePayloadFilters, {onLeave: function (args) {send("TdhAggregatePayloadFilters");}});
+
+var TdhApplyPayloadFilter = Module.findExportByName("tdh.dll", "TdhApplyPayloadFilter")
+Interceptor.attach(TdhApplyPayloadFilter, {onLeave: function (args) {send("TdhApplyPayloadFilter");}});
+
+var TdhCleanupPayloadEventFilterDescriptor = Module.findExportByName("tdh.dll", "TdhCleanupPayloadEventFilterDescriptor")
+Interceptor.attach(TdhCleanupPayloadEventFilterDescriptor, {onLeave: function (args) {send("TdhCleanupPayloadEventFilterDescriptor");}});
+
+var TdhCloseDecodingHandle = Module.findExportByName("tdh.dll", "TdhCloseDecodingHandle")
+Interceptor.attach(TdhCloseDecodingHandle, {onLeave: function (args) {send("TdhCloseDecodingHandle");}});
+
+var TdhCreatePayloadFilter = Module.findExportByName("tdh.dll", "TdhCreatePayloadFilter")
+Interceptor.attach(TdhCreatePayloadFilter, {onLeave: function (args) {send("TdhCreatePayloadFilter");}});
+
+var TdhDeletePayloadFilter = Module.findExportByName("tdh.dll", "TdhDeletePayloadFilter")
+Interceptor.attach(TdhDeletePayloadFilter, {onLeave: function (args) {send("TdhDeletePayloadFilter");}});
+
+var TdhEnumerateManifestProviderEvents = Module.findExportByName("tdh.dll", "TdhEnumerateManifestProviderEvents")
+Interceptor.attach(TdhEnumerateManifestProviderEvents, {onLeave: function (args) {send("TdhEnumerateManifestProviderEvents");}});
+
+var TdhEnumerateProviderFieldInformation = Module.findExportByName("tdh.dll", "TdhEnumerateProviderFieldInformation")
+Interceptor.attach(TdhEnumerateProviderFieldInformation, {onLeave: function (args) {send("TdhEnumerateProviderFieldInformation");}});
+
+var TdhEnumerateProviderFilters = Module.findExportByName("tdh.dll", "TdhEnumerateProviderFilters")
+Interceptor.attach(TdhEnumerateProviderFilters, {onLeave: function (args) {send("TdhEnumerateProviderFilters");}});
+
+var TdhEnumerateProviders = Module.findExportByName("tdh.dll", "TdhEnumerateProviders")
+Interceptor.attach(TdhEnumerateProviders, {onLeave: function (args) {send("TdhEnumerateProviders");}});
+
+var TdhEnumerateProvidersForDecodingSource = Module.findExportByName("tdh.dll", "TdhEnumerateProvidersForDecodingSource")
+Interceptor.attach(TdhEnumerateProvidersForDecodingSource, {onLeave: function (args) {send("TdhEnumerateProvidersForDecodingSource");}});
+
+var TdhEnumerateRemoteWBEMProviderFieldInformation = Module.findExportByName("tdh.dll", "TdhEnumerateRemoteWBEMProviderFieldInformation")
+Interceptor.attach(TdhEnumerateRemoteWBEMProviderFieldInformation, {onLeave: function (args) {send("TdhEnumerateRemoteWBEMProviderFieldInformation");}});
+
+var TdhEnumerateRemoteWBEMProviders = Module.findExportByName("tdh.dll", "TdhEnumerateRemoteWBEMProviders")
+Interceptor.attach(TdhEnumerateRemoteWBEMProviders, {onLeave: function (args) {send("TdhEnumerateRemoteWBEMProviders");}});
+
+var TdhFormatProperty = Module.findExportByName("tdh.dll", "TdhFormatProperty")
+Interceptor.attach(TdhFormatProperty, {onLeave: function (args) {send("TdhFormatProperty");}});
+
+var TdhGetAllEventsInformation = Module.findExportByName("tdh.dll", "TdhGetAllEventsInformation")
+Interceptor.attach(TdhGetAllEventsInformation, {onLeave: function (args) {send("TdhGetAllEventsInformation");}});
+
+var TdhGetDecodingParameter = Module.findExportByName("tdh.dll", "TdhGetDecodingParameter")
+Interceptor.attach(TdhGetDecodingParameter, {onLeave: function (args) {send("TdhGetDecodingParameter");}});
+
+var TdhGetEventInformation = Module.findExportByName("tdh.dll", "TdhGetEventInformation")
+Interceptor.attach(TdhGetEventInformation, {onLeave: function (args) {send("TdhGetEventInformation");}});
+
+var TdhGetEventMapInformation = Module.findExportByName("tdh.dll", "TdhGetEventMapInformation")
+Interceptor.attach(TdhGetEventMapInformation, {onLeave: function (args) {send("TdhGetEventMapInformation");}});
+
+var TdhGetManifestEventInformation = Module.findExportByName("tdh.dll", "TdhGetManifestEventInformation")
+Interceptor.attach(TdhGetManifestEventInformation, {onLeave: function (args) {send("TdhGetManifestEventInformation");}});
+
+var TdhGetProperty = Module.findExportByName("tdh.dll", "TdhGetProperty")
+Interceptor.attach(TdhGetProperty, {onLeave: function (args) {send("TdhGetProperty");}});
+
+var TdhGetPropertyOffsetAndSize = Module.findExportByName("tdh.dll", "TdhGetPropertyOffsetAndSize")
+Interceptor.attach(TdhGetPropertyOffsetAndSize, {onLeave: function (args) {send("TdhGetPropertyOffsetAndSize");}});
+
+var TdhGetPropertySize = Module.findExportByName("tdh.dll", "TdhGetPropertySize")
+Interceptor.attach(TdhGetPropertySize, {onLeave: function (args) {send("TdhGetPropertySize");}});
+
+var TdhGetWppMessage = Module.findExportByName("tdh.dll", "TdhGetWppMessage")
+Interceptor.attach(TdhGetWppMessage, {onLeave: function (args) {send("TdhGetWppMessage");}});
+
+var TdhGetWppProperty = Module.findExportByName("tdh.dll", "TdhGetWppProperty")
+Interceptor.attach(TdhGetWppProperty, {onLeave: function (args) {send("TdhGetWppProperty");}});
+
+var TdhLoadManifest = Module.findExportByName("tdh.dll", "TdhLoadManifest")
+Interceptor.attach(TdhLoadManifest, {onLeave: function (args) {send("TdhLoadManifest");}});
+
+var TdhLoadManifestFromBinary = Module.findExportByName("tdh.dll", "TdhLoadManifestFromBinary")
+Interceptor.attach(TdhLoadManifestFromBinary, {onLeave: function (args) {send("TdhLoadManifestFromBinary");}});
+
+var TdhLoadManifestFromMemory = Module.findExportByName("tdh.dll", "TdhLoadManifestFromMemory")
+Interceptor.attach(TdhLoadManifestFromMemory, {onLeave: function (args) {send("TdhLoadManifestFromMemory");}});
+
+var TdhOpenDecodingHandle = Module.findExportByName("tdh.dll", "TdhOpenDecodingHandle")
+Interceptor.attach(TdhOpenDecodingHandle, {onLeave: function (args) {send("TdhOpenDecodingHandle");}});
+
+var TdhQueryProviderFieldInformation = Module.findExportByName("tdh.dll", "TdhQueryProviderFieldInformation")
+Interceptor.attach(TdhQueryProviderFieldInformation, {onLeave: function (args) {send("TdhQueryProviderFieldInformation");}});
+
+var TdhQueryRemoteWBEMProviderFieldInformation = Module.findExportByName("tdh.dll", "TdhQueryRemoteWBEMProviderFieldInformation")
+Interceptor.attach(TdhQueryRemoteWBEMProviderFieldInformation, {onLeave: function (args) {send("TdhQueryRemoteWBEMProviderFieldInformation");}});
+
+var TdhSetDecodingParameter = Module.findExportByName("tdh.dll", "TdhSetDecodingParameter")
+Interceptor.attach(TdhSetDecodingParameter, {onLeave: function (args) {send("TdhSetDecodingParameter");}});
+
+var TdhUnloadManifest = Module.findExportByName("tdh.dll", "TdhUnloadManifest")
+Interceptor.attach(TdhUnloadManifest, {onLeave: function (args) {send("TdhUnloadManifest");}});
+
+var TdhUnloadManifestFromMemory = Module.findExportByName("tdh.dll", "TdhUnloadManifestFromMemory")
+Interceptor.attach(TdhUnloadManifestFromMemory, {onLeave: function (args) {send("TdhUnloadManifestFromMemory");}});
+
+var TdhValidatePayloadFilter = Module.findExportByName("tdh.dll", "TdhValidatePayloadFilter")
+Interceptor.attach(TdhValidatePayloadFilter, {onLeave: function (args) {send("TdhValidatePayloadFilter");}});
+

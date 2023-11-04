@@ -1,0 +1,9 @@
+var DllMain = Module.findExportByName("EhStorPwdMgr.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var EnhancedStoragePasswordConfig = Module.findExportByName("EhStorPwdMgr.dll", "EnhancedStoragePasswordConfig")
+Interceptor.attach(EnhancedStoragePasswordConfig, {onLeave: function (args) {send("EnhancedStoragePasswordConfig");}});
+
+var EnhancedStoragePasswordInitDisk = Module.findExportByName("EhStorPwdMgr.dll", "EnhancedStoragePasswordInitDisk")
+Interceptor.attach(EnhancedStoragePasswordInitDisk, {onLeave: function (args) {send("EnhancedStoragePasswordInitDisk");}});
+

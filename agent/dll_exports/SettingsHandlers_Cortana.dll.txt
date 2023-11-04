@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("SettingsHandlers_Cortana.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SettingsHandlers_Cortana.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetSetting = Module.findExportByName("SettingsHandlers_Cortana.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+
+var GetSettingForUser = Module.findExportByName("SettingsHandlers_Cortana.dll", "GetSettingForUser")
+Interceptor.attach(GetSettingForUser, {onLeave: function (args) {send("GetSettingForUser");}});
+

@@ -1,0 +1,39 @@
+var D3DFree = Module.findExportByName("d3dim.dll", "D3DFree")
+Interceptor.attach(D3DFree, {onLeave: function (args) {send("D3DFree");}});
+
+var D3DMalloc = Module.findExportByName("d3dim.dll", "D3DMalloc")
+Interceptor.attach(D3DMalloc, {onLeave: function (args) {send("D3DMalloc");}});
+
+var D3DRealloc = Module.findExportByName("d3dim.dll", "D3DRealloc")
+Interceptor.attach(D3DRealloc, {onLeave: function (args) {send("D3DRealloc");}});
+
+var Direct3DCreate = Module.findExportByName("d3dim.dll", "Direct3DCreate")
+Interceptor.attach(Direct3DCreate, {onLeave: function (args) {send("Direct3DCreate");}});
+
+var Direct3DCreateDevice = Module.findExportByName("d3dim.dll", "Direct3DCreateDevice")
+Interceptor.attach(Direct3DCreateDevice, {onLeave: function (args) {send("Direct3DCreateDevice");}});
+
+var Direct3DCreateTexture = Module.findExportByName("d3dim.dll", "Direct3DCreateTexture")
+Interceptor.attach(Direct3DCreateTexture, {onLeave: function (args) {send("Direct3DCreateTexture");}});
+
+var Direct3DGetSWRastZPixFmts = Module.findExportByName("d3dim.dll", "Direct3DGetSWRastZPixFmts")
+Interceptor.attach(Direct3DGetSWRastZPixFmts, {onLeave: function (args) {send("Direct3DGetSWRastZPixFmts");}});
+
+var Direct3D_HALCleanUp = Module.findExportByName("d3dim.dll", "Direct3D_HALCleanUp")
+Interceptor.attach(Direct3D_HALCleanUp, {onLeave: function (args) {send("Direct3D_HALCleanUp");}});
+
+var FlushD3DDevices = Module.findExportByName("d3dim.dll", "FlushD3DDevices")
+Interceptor.attach(FlushD3DDevices, {onLeave: function (args) {send("FlushD3DDevices");}});
+
+var FlushD3DDevices2 = Module.findExportByName("d3dim.dll", "FlushD3DDevices2")
+Interceptor.attach(FlushD3DDevices2, {onLeave: function (args) {send("FlushD3DDevices2");}});
+
+var PaletteAssociateNotify = Module.findExportByName("d3dim.dll", "PaletteAssociateNotify")
+Interceptor.attach(PaletteAssociateNotify, {onLeave: function (args) {send("PaletteAssociateNotify");}});
+
+var PaletteUpdateNotify = Module.findExportByName("d3dim.dll", "PaletteUpdateNotify")
+Interceptor.attach(PaletteUpdateNotify, {onLeave: function (args) {send("PaletteUpdateNotify");}});
+
+var SurfaceFlipNotify = Module.findExportByName("d3dim.dll", "SurfaceFlipNotify")
+Interceptor.attach(SurfaceFlipNotify, {onLeave: function (args) {send("SurfaceFlipNotify");}});
+

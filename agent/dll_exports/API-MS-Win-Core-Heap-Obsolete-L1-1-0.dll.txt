@@ -1,0 +1,45 @@
+var GlobalAlloc = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "GlobalAlloc")
+Interceptor.attach(GlobalAlloc, {onLeave: function (args) {send("GlobalAlloc");}});
+
+var GlobalFlags = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "GlobalFlags")
+Interceptor.attach(GlobalFlags, {onLeave: function (args) {send("GlobalFlags");}});
+
+var GlobalFree = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "GlobalFree")
+Interceptor.attach(GlobalFree, {onLeave: function (args) {send("GlobalFree");}});
+
+var GlobalHandle = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "GlobalHandle")
+Interceptor.attach(GlobalHandle, {onLeave: function (args) {send("GlobalHandle");}});
+
+var GlobalLock = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "GlobalLock")
+Interceptor.attach(GlobalLock, {onLeave: function (args) {send("GlobalLock");}});
+
+var GlobalReAlloc = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "GlobalReAlloc")
+Interceptor.attach(GlobalReAlloc, {onLeave: function (args) {send("GlobalReAlloc");}});
+
+var GlobalSize = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "GlobalSize")
+Interceptor.attach(GlobalSize, {onLeave: function (args) {send("GlobalSize");}});
+
+var GlobalUnlock = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "GlobalUnlock")
+Interceptor.attach(GlobalUnlock, {onLeave: function (args) {send("GlobalUnlock");}});
+
+var LocalAlloc = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "LocalAlloc")
+Interceptor.attach(LocalAlloc, {onLeave: function (args) {send("LocalAlloc");}});
+
+var LocalFlags = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "LocalFlags")
+Interceptor.attach(LocalFlags, {onLeave: function (args) {send("LocalFlags");}});
+
+var LocalFree = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "LocalFree")
+Interceptor.attach(LocalFree, {onLeave: function (args) {send("LocalFree");}});
+
+var LocalLock = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "LocalLock")
+Interceptor.attach(LocalLock, {onLeave: function (args) {send("LocalLock");}});
+
+var LocalReAlloc = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "LocalReAlloc")
+Interceptor.attach(LocalReAlloc, {onLeave: function (args) {send("LocalReAlloc");}});
+
+var LocalSize = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "LocalSize")
+Interceptor.attach(LocalSize, {onLeave: function (args) {send("LocalSize");}});
+
+var LocalUnlock = Module.findExportByName("API-MS-Win-Core-Heap-Obsolete-L1-1-0.dll", "LocalUnlock")
+Interceptor.attach(LocalUnlock, {onLeave: function (args) {send("LocalUnlock");}});
+

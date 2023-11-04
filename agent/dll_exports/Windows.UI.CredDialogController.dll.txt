@@ -1,0 +1,6 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.UI.CredDialogController.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.UI.CredDialogController.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

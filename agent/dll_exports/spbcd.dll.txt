@@ -1,0 +1,9 @@
+var Sysprep_Generalize_Bcd = Module.findExportByName("spbcd.dll", "Sysprep_Generalize_Bcd")
+Interceptor.attach(Sysprep_Generalize_Bcd, {onLeave: function (args) {send("Sysprep_Generalize_Bcd");}});
+
+var Sysprep_Offline_Specialize_Bcd = Module.findExportByName("spbcd.dll", "Sysprep_Offline_Specialize_Bcd")
+Interceptor.attach(Sysprep_Offline_Specialize_Bcd, {onLeave: function (args) {send("Sysprep_Offline_Specialize_Bcd");}});
+
+var Sysprep_Online_Specialize_Bcd = Module.findExportByName("spbcd.dll", "Sysprep_Online_Specialize_Bcd")
+Interceptor.attach(Sysprep_Online_Specialize_Bcd, {onLeave: function (args) {send("Sysprep_Online_Specialize_Bcd");}});
+

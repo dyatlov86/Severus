@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("StartTileData.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("StartTileData.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("StartTileData.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetSetting = Module.findExportByName("StartTileData.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+
+var HasMigratedTDLData = Module.findExportByName("StartTileData.dll", "HasMigratedTDLData")
+Interceptor.attach(HasMigratedTDLData, {onLeave: function (args) {send("HasMigratedTDLData");}});
+
+var ProcessStartLayoutPolicy = Module.findExportByName("StartTileData.dll", "ProcessStartLayoutPolicy")
+Interceptor.attach(ProcessStartLayoutPolicy, {onLeave: function (args) {send("ProcessStartLayoutPolicy");}});
+
+var TryMigrateTDLData = Module.findExportByName("StartTileData.dll", "TryMigrateTDLData")
+Interceptor.attach(TryMigrateTDLData, {onLeave: function (args) {send("TryMigrateTDLData");}});
+

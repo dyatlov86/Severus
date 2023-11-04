@@ -1,0 +1,12 @@
+var DllMain = Module.findExportByName("Windows.SharedPC.AccountManager.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var ServiceMain = Module.findExportByName("Windows.SharedPC.AccountManager.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var StartMaintenance = Module.findExportByName("Windows.SharedPC.AccountManager.dll", "StartMaintenance")
+Interceptor.attach(StartMaintenance, {onLeave: function (args) {send("StartMaintenance");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("Windows.SharedPC.AccountManager.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

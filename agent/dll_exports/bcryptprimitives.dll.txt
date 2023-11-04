@@ -1,0 +1,30 @@
+var GetAsymmetricEncryptionInterface = Module.findExportByName("bcryptprimitives.dll", "GetAsymmetricEncryptionInterface")
+Interceptor.attach(GetAsymmetricEncryptionInterface, {onLeave: function (args) {send("GetAsymmetricEncryptionInterface");}});
+
+var GetCipherInterface = Module.findExportByName("bcryptprimitives.dll", "GetCipherInterface")
+Interceptor.attach(GetCipherInterface, {onLeave: function (args) {send("GetCipherInterface");}});
+
+var GetHashInterface = Module.findExportByName("bcryptprimitives.dll", "GetHashInterface")
+Interceptor.attach(GetHashInterface, {onLeave: function (args) {send("GetHashInterface");}});
+
+var GetKeyDerivationInterface = Module.findExportByName("bcryptprimitives.dll", "GetKeyDerivationInterface")
+Interceptor.attach(GetKeyDerivationInterface, {onLeave: function (args) {send("GetKeyDerivationInterface");}});
+
+var GetRngInterface = Module.findExportByName("bcryptprimitives.dll", "GetRngInterface")
+Interceptor.attach(GetRngInterface, {onLeave: function (args) {send("GetRngInterface");}});
+
+var GetSecretAgreementInterface = Module.findExportByName("bcryptprimitives.dll", "GetSecretAgreementInterface")
+Interceptor.attach(GetSecretAgreementInterface, {onLeave: function (args) {send("GetSecretAgreementInterface");}});
+
+var GetSignatureInterface = Module.findExportByName("bcryptprimitives.dll", "GetSignatureInterface")
+Interceptor.attach(GetSignatureInterface, {onLeave: function (args) {send("GetSignatureInterface");}});
+
+var MSCryptConvertRsaPrivateBlobToFullRsaBlob = Module.findExportByName("bcryptprimitives.dll", "MSCryptConvertRsaPrivateBlobToFullRsaBlob")
+Interceptor.attach(MSCryptConvertRsaPrivateBlobToFullRsaBlob, {onLeave: function (args) {send("MSCryptConvertRsaPrivateBlobToFullRsaBlob");}});
+
+var ProcessPrng = Module.findExportByName("bcryptprimitives.dll", "ProcessPrng")
+Interceptor.attach(ProcessPrng, {onLeave: function (args) {send("ProcessPrng");}});
+
+var ProcessPrngGuid = Module.findExportByName("bcryptprimitives.dll", "ProcessPrngGuid")
+Interceptor.attach(ProcessPrngGuid, {onLeave: function (args) {send("ProcessPrngGuid");}});
+

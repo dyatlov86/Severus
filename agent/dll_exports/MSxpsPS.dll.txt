@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("MSxpsPS.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("MSxpsPS.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var XpsProcess = Module.findExportByName("MSxpsPS.dll", "XpsProcess")
+Interceptor.attach(XpsProcess, {onLeave: function (args) {send("XpsProcess");}});
+
+var XpsTestProcess = Module.findExportByName("MSxpsPS.dll", "XpsTestProcess")
+Interceptor.attach(XpsTestProcess, {onLeave: function (args) {send("XpsTestProcess");}});
+

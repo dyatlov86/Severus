@@ -1,0 +1,30 @@
+var CPlApplet = Module.findExportByName("keymgr.dll", "CPlApplet")
+Interceptor.attach(CPlApplet, {onLeave: function (args) {send("CPlApplet");}});
+
+var DllCanUnloadNow = Module.findExportByName("keymgr.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("keymgr.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("keymgr.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var KRShowKeyMgr = Module.findExportByName("keymgr.dll", "KRShowKeyMgr")
+Interceptor.attach(KRShowKeyMgr, {onLeave: function (args) {send("KRShowKeyMgr");}});
+
+var PRShowRestoreFromMsginaW = Module.findExportByName("keymgr.dll", "PRShowRestoreFromMsginaW")
+Interceptor.attach(PRShowRestoreFromMsginaW, {onLeave: function (args) {send("PRShowRestoreFromMsginaW");}});
+
+var PRShowRestoreWizardExW = Module.findExportByName("keymgr.dll", "PRShowRestoreWizardExW")
+Interceptor.attach(PRShowRestoreWizardExW, {onLeave: function (args) {send("PRShowRestoreWizardExW");}});
+
+var PRShowRestoreWizardW = Module.findExportByName("keymgr.dll", "PRShowRestoreWizardW")
+Interceptor.attach(PRShowRestoreWizardW, {onLeave: function (args) {send("PRShowRestoreWizardW");}});
+
+var PRShowSaveFromMsginaW = Module.findExportByName("keymgr.dll", "PRShowSaveFromMsginaW")
+Interceptor.attach(PRShowSaveFromMsginaW, {onLeave: function (args) {send("PRShowSaveFromMsginaW");}});
+
+var PRShowSaveWizardExW = Module.findExportByName("keymgr.dll", "PRShowSaveWizardExW")
+Interceptor.attach(PRShowSaveWizardExW, {onLeave: function (args) {send("PRShowSaveWizardExW");}});
+

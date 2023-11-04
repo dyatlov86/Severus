@@ -1,0 +1,9 @@
+var ApplySuccess = Module.findExportByName("imjpmig.dll", "ApplySuccess")
+Interceptor.attach(ApplySuccess, {onLeave: function (args) {send("ApplySuccess");}});
+
+var Gather = Module.findExportByName("imjpmig.dll", "Gather")
+Interceptor.attach(Gather, {onLeave: function (args) {send("Gather");}});
+
+var PreApply = Module.findExportByName("imjpmig.dll", "PreApply")
+Interceptor.attach(PreApply, {onLeave: function (args) {send("PreApply");}});
+

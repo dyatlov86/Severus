@@ -1,0 +1,18 @@
+var HelperTraceEvent = Module.findExportByName("netdiagfx.dll", "HelperTraceEvent")
+Interceptor.attach(HelperTraceEvent, {onLeave: function (args) {send("HelperTraceEvent");}});
+
+var HelperTraceInitialize = Module.findExportByName("netdiagfx.dll", "HelperTraceInitialize")
+Interceptor.attach(HelperTraceInitialize, {onLeave: function (args) {send("HelperTraceInitialize");}});
+
+var HelperTraceUninitialize = Module.findExportByName("netdiagfx.dll", "HelperTraceUninitialize")
+Interceptor.attach(HelperTraceUninitialize, {onLeave: function (args) {send("HelperTraceUninitialize");}});
+
+var WdiDiagnosticModuleMain = Module.findExportByName("netdiagfx.dll", "WdiDiagnosticModuleMain")
+Interceptor.attach(WdiDiagnosticModuleMain, {onLeave: function (args) {send("WdiDiagnosticModuleMain");}});
+
+var WdiGetDiagnosticModuleInterfaceVersion = Module.findExportByName("netdiagfx.dll", "WdiGetDiagnosticModuleInterfaceVersion")
+Interceptor.attach(WdiGetDiagnosticModuleInterfaceVersion, {onLeave: function (args) {send("WdiGetDiagnosticModuleInterfaceVersion");}});
+
+var WdiHandleInstance = Module.findExportByName("netdiagfx.dll", "WdiHandleInstance")
+Interceptor.attach(WdiHandleInstance, {onLeave: function (args) {send("WdiHandleInstance");}});
+

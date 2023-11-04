@@ -1,0 +1,3 @@
+var PerformCaptureAnalysisAsync = Module.findExportByName("DXToolsReporting.dll", "PerformCaptureAnalysisAsync")
+Interceptor.attach(PerformCaptureAnalysisAsync, {onLeave: function (args) {send("PerformCaptureAnalysisAsync");}});
+

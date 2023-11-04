@@ -1,0 +1,6 @@
+var GetKeywordDetectorRequiredResources = Module.findExportByName("audioresourceregistrar.dll", "GetKeywordDetectorRequiredResources")
+Interceptor.attach(GetKeywordDetectorRequiredResources, {onLeave: function (args) {send("GetKeywordDetectorRequiredResources");}});
+
+var Register = Module.findExportByName("audioresourceregistrar.dll", "Register")
+Interceptor.attach(Register, {onLeave: function (args) {send("Register");}});
+

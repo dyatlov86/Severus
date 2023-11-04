@@ -1,0 +1,27 @@
+var DllCanUnloadNow = Module.findExportByName("eapputil.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("eapputil.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var EapConvertHostToWireFormat16 = Module.findExportByName("eapputil.dll", "EapConvertHostToWireFormat16")
+Interceptor.attach(EapConvertHostToWireFormat16, {onLeave: function (args) {send("EapConvertHostToWireFormat16");}});
+
+var EapConvertHostToWireFormat24 = Module.findExportByName("eapputil.dll", "EapConvertHostToWireFormat24")
+Interceptor.attach(EapConvertHostToWireFormat24, {onLeave: function (args) {send("EapConvertHostToWireFormat24");}});
+
+var EapConvertHostToWireFormat32 = Module.findExportByName("eapputil.dll", "EapConvertHostToWireFormat32")
+Interceptor.attach(EapConvertHostToWireFormat32, {onLeave: function (args) {send("EapConvertHostToWireFormat32");}});
+
+var EapConvertWireToHostFormat16 = Module.findExportByName("eapputil.dll", "EapConvertWireToHostFormat16")
+Interceptor.attach(EapConvertWireToHostFormat16, {onLeave: function (args) {send("EapConvertWireToHostFormat16");}});
+
+var EapConvertWireToHostFormat24 = Module.findExportByName("eapputil.dll", "EapConvertWireToHostFormat24")
+Interceptor.attach(EapConvertWireToHostFormat24, {onLeave: function (args) {send("EapConvertWireToHostFormat24");}});
+
+var EapConvertWireToHostFormat32 = Module.findExportByName("eapputil.dll", "EapConvertWireToHostFormat32")
+Interceptor.attach(EapConvertWireToHostFormat32, {onLeave: function (args) {send("EapConvertWireToHostFormat32");}});
+
+var EapUseLegacyTlsStack = Module.findExportByName("eapputil.dll", "EapUseLegacyTlsStack")
+Interceptor.attach(EapUseLegacyTlsStack, {onLeave: function (args) {send("EapUseLegacyTlsStack");}});
+

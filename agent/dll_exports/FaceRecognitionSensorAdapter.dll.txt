@@ -1,0 +1,3 @@
+var WbioQuerySensorInterface = Module.findExportByName("FaceRecognitionSensorAdapter.dll", "WbioQuerySensorInterface")
+Interceptor.attach(WbioQuerySensorInterface, {onLeave: function (args) {send("WbioQuerySensorInterface");}});
+

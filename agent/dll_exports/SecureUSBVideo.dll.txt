@@ -1,0 +1,6 @@
+var FxDriverEntryUm = Module.findExportByName("SecureUSBVideo.dll", "FxDriverEntryUm")
+Interceptor.attach(FxDriverEntryUm, {onLeave: function (args) {send("FxDriverEntryUm");}});
+
+var __ImagePolicyMetadata = Module.findExportByName("SecureUSBVideo.dll", "__ImagePolicyMetadata")
+Interceptor.attach(__ImagePolicyMetadata, {onLeave: function (args) {send("__ImagePolicyMetadata");}});
+

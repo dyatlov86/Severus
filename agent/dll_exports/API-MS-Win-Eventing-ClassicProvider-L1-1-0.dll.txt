@@ -1,0 +1,24 @@
+var GetTraceEnableFlags = Module.findExportByName("API-MS-Win-Eventing-ClassicProvider-L1-1-0.dll", "GetTraceEnableFlags")
+Interceptor.attach(GetTraceEnableFlags, {onLeave: function (args) {send("GetTraceEnableFlags");}});
+
+var GetTraceEnableLevel = Module.findExportByName("API-MS-Win-Eventing-ClassicProvider-L1-1-0.dll", "GetTraceEnableLevel")
+Interceptor.attach(GetTraceEnableLevel, {onLeave: function (args) {send("GetTraceEnableLevel");}});
+
+var GetTraceLoggerHandle = Module.findExportByName("API-MS-Win-Eventing-ClassicProvider-L1-1-0.dll", "GetTraceLoggerHandle")
+Interceptor.attach(GetTraceLoggerHandle, {onLeave: function (args) {send("GetTraceLoggerHandle");}});
+
+var RegisterTraceGuidsW = Module.findExportByName("API-MS-Win-Eventing-ClassicProvider-L1-1-0.dll", "RegisterTraceGuidsW")
+Interceptor.attach(RegisterTraceGuidsW, {onLeave: function (args) {send("RegisterTraceGuidsW");}});
+
+var TraceEvent = Module.findExportByName("API-MS-Win-Eventing-ClassicProvider-L1-1-0.dll", "TraceEvent")
+Interceptor.attach(TraceEvent, {onLeave: function (args) {send("TraceEvent");}});
+
+var TraceMessage = Module.findExportByName("API-MS-Win-Eventing-ClassicProvider-L1-1-0.dll", "TraceMessage")
+Interceptor.attach(TraceMessage, {onLeave: function (args) {send("TraceMessage");}});
+
+var TraceMessageVa = Module.findExportByName("API-MS-Win-Eventing-ClassicProvider-L1-1-0.dll", "TraceMessageVa")
+Interceptor.attach(TraceMessageVa, {onLeave: function (args) {send("TraceMessageVa");}});
+
+var UnregisterTraceGuids = Module.findExportByName("API-MS-Win-Eventing-ClassicProvider-L1-1-0.dll", "UnregisterTraceGuids")
+Interceptor.attach(UnregisterTraceGuids, {onLeave: function (args) {send("UnregisterTraceGuids");}});
+

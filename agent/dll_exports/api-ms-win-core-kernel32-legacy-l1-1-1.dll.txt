@@ -1,0 +1,45 @@
+var FindFirstVolumeMountPointW = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "FindFirstVolumeMountPointW")
+Interceptor.attach(FindFirstVolumeMountPointW, {onLeave: function (args) {send("FindFirstVolumeMountPointW");}});
+
+var FindNextVolumeMountPointW = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "FindNextVolumeMountPointW")
+Interceptor.attach(FindNextVolumeMountPointW, {onLeave: function (args) {send("FindNextVolumeMountPointW");}});
+
+var FindVolumeMountPointClose = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "FindVolumeMountPointClose")
+Interceptor.attach(FindVolumeMountPointClose, {onLeave: function (args) {send("FindVolumeMountPointClose");}});
+
+var GetFileAttributesTransactedW = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "GetFileAttributesTransactedW")
+Interceptor.attach(GetFileAttributesTransactedW, {onLeave: function (args) {send("GetFileAttributesTransactedW");}});
+
+var GetFirmwareType = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "GetFirmwareType")
+Interceptor.attach(GetFirmwareType, {onLeave: function (args) {send("GetFirmwareType");}});
+
+var GetNumaAvailableMemoryNodeEx = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "GetNumaAvailableMemoryNodeEx")
+Interceptor.attach(GetNumaAvailableMemoryNodeEx, {onLeave: function (args) {send("GetNumaAvailableMemoryNodeEx");}});
+
+var GetNumaNodeProcessorMask = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "GetNumaNodeProcessorMask")
+Interceptor.attach(GetNumaNodeProcessorMask, {onLeave: function (args) {send("GetNumaNodeProcessorMask");}});
+
+var GetNumaProcessorNodeEx = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "GetNumaProcessorNodeEx")
+Interceptor.attach(GetNumaProcessorNodeEx, {onLeave: function (args) {send("GetNumaProcessorNodeEx");}});
+
+var PowerClearRequest = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "PowerClearRequest")
+Interceptor.attach(PowerClearRequest, {onLeave: function (args) {send("PowerClearRequest");}});
+
+var PowerCreateRequest = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "PowerCreateRequest")
+Interceptor.attach(PowerCreateRequest, {onLeave: function (args) {send("PowerCreateRequest");}});
+
+var PowerSetRequest = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "PowerSetRequest")
+Interceptor.attach(PowerSetRequest, {onLeave: function (args) {send("PowerSetRequest");}});
+
+var SetDllDirectoryW = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "SetDllDirectoryW")
+Interceptor.attach(SetDllDirectoryW, {onLeave: function (args) {send("SetDllDirectoryW");}});
+
+var SetThreadIdealProcessor = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "SetThreadIdealProcessor")
+Interceptor.attach(SetThreadIdealProcessor, {onLeave: function (args) {send("SetThreadIdealProcessor");}});
+
+var SetVolumeMountPointW = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "SetVolumeMountPointW")
+Interceptor.attach(SetVolumeMountPointW, {onLeave: function (args) {send("SetVolumeMountPointW");}});
+
+var VerifyVersionInfoW = Module.findExportByName("api-ms-win-core-kernel32-legacy-l1-1-1.dll", "VerifyVersionInfoW")
+Interceptor.attach(VerifyVersionInfoW, {onLeave: function (args) {send("VerifyVersionInfoW");}});
+

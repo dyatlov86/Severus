@@ -1,0 +1,492 @@
+var BindImage = Module.findExportByName("imagehlp.dll", "BindImage")
+Interceptor.attach(BindImage, {onLeave: function (args) {send("BindImage");}});
+
+var BindImageEx = Module.findExportByName("imagehlp.dll", "BindImageEx")
+Interceptor.attach(BindImageEx, {onLeave: function (args) {send("BindImageEx");}});
+
+var CheckSumMappedFile = Module.findExportByName("imagehlp.dll", "CheckSumMappedFile")
+Interceptor.attach(CheckSumMappedFile, {onLeave: function (args) {send("CheckSumMappedFile");}});
+
+var EnumerateLoadedModules = Module.findExportByName("imagehlp.dll", "EnumerateLoadedModules")
+Interceptor.attach(EnumerateLoadedModules, {onLeave: function (args) {send("EnumerateLoadedModules");}});
+
+var EnumerateLoadedModules64 = Module.findExportByName("imagehlp.dll", "EnumerateLoadedModules64")
+Interceptor.attach(EnumerateLoadedModules64, {onLeave: function (args) {send("EnumerateLoadedModules64");}});
+
+var EnumerateLoadedModulesEx = Module.findExportByName("imagehlp.dll", "EnumerateLoadedModulesEx")
+Interceptor.attach(EnumerateLoadedModulesEx, {onLeave: function (args) {send("EnumerateLoadedModulesEx");}});
+
+var EnumerateLoadedModulesExW = Module.findExportByName("imagehlp.dll", "EnumerateLoadedModulesExW")
+Interceptor.attach(EnumerateLoadedModulesExW, {onLeave: function (args) {send("EnumerateLoadedModulesExW");}});
+
+var EnumerateLoadedModulesW64 = Module.findExportByName("imagehlp.dll", "EnumerateLoadedModulesW64")
+Interceptor.attach(EnumerateLoadedModulesW64, {onLeave: function (args) {send("EnumerateLoadedModulesW64");}});
+
+var FindDebugInfoFile = Module.findExportByName("imagehlp.dll", "FindDebugInfoFile")
+Interceptor.attach(FindDebugInfoFile, {onLeave: function (args) {send("FindDebugInfoFile");}});
+
+var FindDebugInfoFileEx = Module.findExportByName("imagehlp.dll", "FindDebugInfoFileEx")
+Interceptor.attach(FindDebugInfoFileEx, {onLeave: function (args) {send("FindDebugInfoFileEx");}});
+
+var FindExecutableImage = Module.findExportByName("imagehlp.dll", "FindExecutableImage")
+Interceptor.attach(FindExecutableImage, {onLeave: function (args) {send("FindExecutableImage");}});
+
+var FindExecutableImageEx = Module.findExportByName("imagehlp.dll", "FindExecutableImageEx")
+Interceptor.attach(FindExecutableImageEx, {onLeave: function (args) {send("FindExecutableImageEx");}});
+
+var FindFileInPath = Module.findExportByName("imagehlp.dll", "FindFileInPath")
+Interceptor.attach(FindFileInPath, {onLeave: function (args) {send("FindFileInPath");}});
+
+var FindFileInSearchPath = Module.findExportByName("imagehlp.dll", "FindFileInSearchPath")
+Interceptor.attach(FindFileInSearchPath, {onLeave: function (args) {send("FindFileInSearchPath");}});
+
+var GetImageConfigInformation = Module.findExportByName("imagehlp.dll", "GetImageConfigInformation")
+Interceptor.attach(GetImageConfigInformation, {onLeave: function (args) {send("GetImageConfigInformation");}});
+
+var GetImageUnusedHeaderBytes = Module.findExportByName("imagehlp.dll", "GetImageUnusedHeaderBytes")
+Interceptor.attach(GetImageUnusedHeaderBytes, {onLeave: function (args) {send("GetImageUnusedHeaderBytes");}});
+
+var GetSymLoadError = Module.findExportByName("imagehlp.dll", "GetSymLoadError")
+Interceptor.attach(GetSymLoadError, {onLeave: function (args) {send("GetSymLoadError");}});
+
+var GetTimestampForLoadedLibrary = Module.findExportByName("imagehlp.dll", "GetTimestampForLoadedLibrary")
+Interceptor.attach(GetTimestampForLoadedLibrary, {onLeave: function (args) {send("GetTimestampForLoadedLibrary");}});
+
+var ImageAddCertificate = Module.findExportByName("imagehlp.dll", "ImageAddCertificate")
+Interceptor.attach(ImageAddCertificate, {onLeave: function (args) {send("ImageAddCertificate");}});
+
+var ImageDirectoryEntryToData = Module.findExportByName("imagehlp.dll", "ImageDirectoryEntryToData")
+Interceptor.attach(ImageDirectoryEntryToData, {onLeave: function (args) {send("ImageDirectoryEntryToData");}});
+
+var ImageDirectoryEntryToDataEx = Module.findExportByName("imagehlp.dll", "ImageDirectoryEntryToDataEx")
+Interceptor.attach(ImageDirectoryEntryToDataEx, {onLeave: function (args) {send("ImageDirectoryEntryToDataEx");}});
+
+var ImageEnumerateCertificates = Module.findExportByName("imagehlp.dll", "ImageEnumerateCertificates")
+Interceptor.attach(ImageEnumerateCertificates, {onLeave: function (args) {send("ImageEnumerateCertificates");}});
+
+var ImageGetCertificateData = Module.findExportByName("imagehlp.dll", "ImageGetCertificateData")
+Interceptor.attach(ImageGetCertificateData, {onLeave: function (args) {send("ImageGetCertificateData");}});
+
+var ImageGetCertificateDataEx = Module.findExportByName("imagehlp.dll", "ImageGetCertificateDataEx")
+Interceptor.attach(ImageGetCertificateDataEx, {onLeave: function (args) {send("ImageGetCertificateDataEx");}});
+
+var ImageGetCertificateHeader = Module.findExportByName("imagehlp.dll", "ImageGetCertificateHeader")
+Interceptor.attach(ImageGetCertificateHeader, {onLeave: function (args) {send("ImageGetCertificateHeader");}});
+
+var ImageGetDigestStream = Module.findExportByName("imagehlp.dll", "ImageGetDigestStream")
+Interceptor.attach(ImageGetDigestStream, {onLeave: function (args) {send("ImageGetDigestStream");}});
+
+var ImageLoad = Module.findExportByName("imagehlp.dll", "ImageLoad")
+Interceptor.attach(ImageLoad, {onLeave: function (args) {send("ImageLoad");}});
+
+var ImageNtHeader = Module.findExportByName("imagehlp.dll", "ImageNtHeader")
+Interceptor.attach(ImageNtHeader, {onLeave: function (args) {send("ImageNtHeader");}});
+
+var ImageRemoveCertificate = Module.findExportByName("imagehlp.dll", "ImageRemoveCertificate")
+Interceptor.attach(ImageRemoveCertificate, {onLeave: function (args) {send("ImageRemoveCertificate");}});
+
+var ImageRvaToSection = Module.findExportByName("imagehlp.dll", "ImageRvaToSection")
+Interceptor.attach(ImageRvaToSection, {onLeave: function (args) {send("ImageRvaToSection");}});
+
+var ImageRvaToVa = Module.findExportByName("imagehlp.dll", "ImageRvaToVa")
+Interceptor.attach(ImageRvaToVa, {onLeave: function (args) {send("ImageRvaToVa");}});
+
+var ImageUnload = Module.findExportByName("imagehlp.dll", "ImageUnload")
+Interceptor.attach(ImageUnload, {onLeave: function (args) {send("ImageUnload");}});
+
+var ImagehlpApiVersion = Module.findExportByName("imagehlp.dll", "ImagehlpApiVersion")
+Interceptor.attach(ImagehlpApiVersion, {onLeave: function (args) {send("ImagehlpApiVersion");}});
+
+var ImagehlpApiVersionEx = Module.findExportByName("imagehlp.dll", "ImagehlpApiVersionEx")
+Interceptor.attach(ImagehlpApiVersionEx, {onLeave: function (args) {send("ImagehlpApiVersionEx");}});
+
+var IsBufferCleanOfInvalidMarkers = Module.findExportByName("imagehlp.dll", "IsBufferCleanOfInvalidMarkers")
+Interceptor.attach(IsBufferCleanOfInvalidMarkers, {onLeave: function (args) {send("IsBufferCleanOfInvalidMarkers");}});
+
+var MakeSureDirectoryPathExists = Module.findExportByName("imagehlp.dll", "MakeSureDirectoryPathExists")
+Interceptor.attach(MakeSureDirectoryPathExists, {onLeave: function (args) {send("MakeSureDirectoryPathExists");}});
+
+var MapAndLoad = Module.findExportByName("imagehlp.dll", "MapAndLoad")
+Interceptor.attach(MapAndLoad, {onLeave: function (args) {send("MapAndLoad");}});
+
+var MapFileAndCheckSumA = Module.findExportByName("imagehlp.dll", "MapFileAndCheckSumA")
+Interceptor.attach(MapFileAndCheckSumA, {onLeave: function (args) {send("MapFileAndCheckSumA");}});
+
+var MapFileAndCheckSumW = Module.findExportByName("imagehlp.dll", "MapFileAndCheckSumW")
+Interceptor.attach(MapFileAndCheckSumW, {onLeave: function (args) {send("MapFileAndCheckSumW");}});
+
+var ReBaseImage = Module.findExportByName("imagehlp.dll", "ReBaseImage")
+Interceptor.attach(ReBaseImage, {onLeave: function (args) {send("ReBaseImage");}});
+
+var ReBaseImage64 = Module.findExportByName("imagehlp.dll", "ReBaseImage64")
+Interceptor.attach(ReBaseImage64, {onLeave: function (args) {send("ReBaseImage64");}});
+
+var RemoveInvalidModuleList = Module.findExportByName("imagehlp.dll", "RemoveInvalidModuleList")
+Interceptor.attach(RemoveInvalidModuleList, {onLeave: function (args) {send("RemoveInvalidModuleList");}});
+
+var RemovePrivateCvSymbolic = Module.findExportByName("imagehlp.dll", "RemovePrivateCvSymbolic")
+Interceptor.attach(RemovePrivateCvSymbolic, {onLeave: function (args) {send("RemovePrivateCvSymbolic");}});
+
+var RemovePrivateCvSymbolicEx = Module.findExportByName("imagehlp.dll", "RemovePrivateCvSymbolicEx")
+Interceptor.attach(RemovePrivateCvSymbolicEx, {onLeave: function (args) {send("RemovePrivateCvSymbolicEx");}});
+
+var RemoveRelocations = Module.findExportByName("imagehlp.dll", "RemoveRelocations")
+Interceptor.attach(RemoveRelocations, {onLeave: function (args) {send("RemoveRelocations");}});
+
+var ReportSymbolLoadSummary = Module.findExportByName("imagehlp.dll", "ReportSymbolLoadSummary")
+Interceptor.attach(ReportSymbolLoadSummary, {onLeave: function (args) {send("ReportSymbolLoadSummary");}});
+
+var SearchTreeForFile = Module.findExportByName("imagehlp.dll", "SearchTreeForFile")
+Interceptor.attach(SearchTreeForFile, {onLeave: function (args) {send("SearchTreeForFile");}});
+
+var SetCheckUserInterruptShared = Module.findExportByName("imagehlp.dll", "SetCheckUserInterruptShared")
+Interceptor.attach(SetCheckUserInterruptShared, {onLeave: function (args) {send("SetCheckUserInterruptShared");}});
+
+var SetImageConfigInformation = Module.findExportByName("imagehlp.dll", "SetImageConfigInformation")
+Interceptor.attach(SetImageConfigInformation, {onLeave: function (args) {send("SetImageConfigInformation");}});
+
+var SetSymLoadError = Module.findExportByName("imagehlp.dll", "SetSymLoadError")
+Interceptor.attach(SetSymLoadError, {onLeave: function (args) {send("SetSymLoadError");}});
+
+var SplitSymbols = Module.findExportByName("imagehlp.dll", "SplitSymbols")
+Interceptor.attach(SplitSymbols, {onLeave: function (args) {send("SplitSymbols");}});
+
+var StackWalk = Module.findExportByName("imagehlp.dll", "StackWalk")
+Interceptor.attach(StackWalk, {onLeave: function (args) {send("StackWalk");}});
+
+var StackWalk2 = Module.findExportByName("imagehlp.dll", "StackWalk2")
+Interceptor.attach(StackWalk2, {onLeave: function (args) {send("StackWalk2");}});
+
+var StackWalk64 = Module.findExportByName("imagehlp.dll", "StackWalk64")
+Interceptor.attach(StackWalk64, {onLeave: function (args) {send("StackWalk64");}});
+
+var StackWalkEx = Module.findExportByName("imagehlp.dll", "StackWalkEx")
+Interceptor.attach(StackWalkEx, {onLeave: function (args) {send("StackWalkEx");}});
+
+var SymAddrIncludeInlineTrace = Module.findExportByName("imagehlp.dll", "SymAddrIncludeInlineTrace")
+Interceptor.attach(SymAddrIncludeInlineTrace, {onLeave: function (args) {send("SymAddrIncludeInlineTrace");}});
+
+var SymAllocDiaString = Module.findExportByName("imagehlp.dll", "SymAllocDiaString")
+Interceptor.attach(SymAllocDiaString, {onLeave: function (args) {send("SymAllocDiaString");}});
+
+var SymCleanup = Module.findExportByName("imagehlp.dll", "SymCleanup")
+Interceptor.attach(SymCleanup, {onLeave: function (args) {send("SymCleanup");}});
+
+var SymCompareInlineTrace = Module.findExportByName("imagehlp.dll", "SymCompareInlineTrace")
+Interceptor.attach(SymCompareInlineTrace, {onLeave: function (args) {send("SymCompareInlineTrace");}});
+
+var SymEnumSym = Module.findExportByName("imagehlp.dll", "SymEnumSym")
+Interceptor.attach(SymEnumSym, {onLeave: function (args) {send("SymEnumSym");}});
+
+var SymEnumSymbols = Module.findExportByName("imagehlp.dll", "SymEnumSymbols")
+Interceptor.attach(SymEnumSymbols, {onLeave: function (args) {send("SymEnumSymbols");}});
+
+var SymEnumSymbolsEx = Module.findExportByName("imagehlp.dll", "SymEnumSymbolsEx")
+Interceptor.attach(SymEnumSymbolsEx, {onLeave: function (args) {send("SymEnumSymbolsEx");}});
+
+var SymEnumSymbolsExW = Module.findExportByName("imagehlp.dll", "SymEnumSymbolsExW")
+Interceptor.attach(SymEnumSymbolsExW, {onLeave: function (args) {send("SymEnumSymbolsExW");}});
+
+var SymEnumSymbolsForAddr = Module.findExportByName("imagehlp.dll", "SymEnumSymbolsForAddr")
+Interceptor.attach(SymEnumSymbolsForAddr, {onLeave: function (args) {send("SymEnumSymbolsForAddr");}});
+
+var SymEnumTypes = Module.findExportByName("imagehlp.dll", "SymEnumTypes")
+Interceptor.attach(SymEnumTypes, {onLeave: function (args) {send("SymEnumTypes");}});
+
+var SymEnumTypesByName = Module.findExportByName("imagehlp.dll", "SymEnumTypesByName")
+Interceptor.attach(SymEnumTypesByName, {onLeave: function (args) {send("SymEnumTypesByName");}});
+
+var SymEnumTypesByNameW = Module.findExportByName("imagehlp.dll", "SymEnumTypesByNameW")
+Interceptor.attach(SymEnumTypesByNameW, {onLeave: function (args) {send("SymEnumTypesByNameW");}});
+
+var SymEnumTypesW = Module.findExportByName("imagehlp.dll", "SymEnumTypesW")
+Interceptor.attach(SymEnumTypesW, {onLeave: function (args) {send("SymEnumTypesW");}});
+
+var SymEnumerateModules = Module.findExportByName("imagehlp.dll", "SymEnumerateModules")
+Interceptor.attach(SymEnumerateModules, {onLeave: function (args) {send("SymEnumerateModules");}});
+
+var SymEnumerateModules64 = Module.findExportByName("imagehlp.dll", "SymEnumerateModules64")
+Interceptor.attach(SymEnumerateModules64, {onLeave: function (args) {send("SymEnumerateModules64");}});
+
+var SymEnumerateSymbols = Module.findExportByName("imagehlp.dll", "SymEnumerateSymbols")
+Interceptor.attach(SymEnumerateSymbols, {onLeave: function (args) {send("SymEnumerateSymbols");}});
+
+var SymEnumerateSymbols64 = Module.findExportByName("imagehlp.dll", "SymEnumerateSymbols64")
+Interceptor.attach(SymEnumerateSymbols64, {onLeave: function (args) {send("SymEnumerateSymbols64");}});
+
+var SymEnumerateSymbolsW = Module.findExportByName("imagehlp.dll", "SymEnumerateSymbolsW")
+Interceptor.attach(SymEnumerateSymbolsW, {onLeave: function (args) {send("SymEnumerateSymbolsW");}});
+
+var SymEnumerateSymbolsW64 = Module.findExportByName("imagehlp.dll", "SymEnumerateSymbolsW64")
+Interceptor.attach(SymEnumerateSymbolsW64, {onLeave: function (args) {send("SymEnumerateSymbolsW64");}});
+
+var SymFindFileInPath = Module.findExportByName("imagehlp.dll", "SymFindFileInPath")
+Interceptor.attach(SymFindFileInPath, {onLeave: function (args) {send("SymFindFileInPath");}});
+
+var SymFindFileInPathW = Module.findExportByName("imagehlp.dll", "SymFindFileInPathW")
+Interceptor.attach(SymFindFileInPathW, {onLeave: function (args) {send("SymFindFileInPathW");}});
+
+var SymFreeDiaString = Module.findExportByName("imagehlp.dll", "SymFreeDiaString")
+Interceptor.attach(SymFreeDiaString, {onLeave: function (args) {send("SymFreeDiaString");}});
+
+var SymFromAddr = Module.findExportByName("imagehlp.dll", "SymFromAddr")
+Interceptor.attach(SymFromAddr, {onLeave: function (args) {send("SymFromAddr");}});
+
+var SymFromInlineContext = Module.findExportByName("imagehlp.dll", "SymFromInlineContext")
+Interceptor.attach(SymFromInlineContext, {onLeave: function (args) {send("SymFromInlineContext");}});
+
+var SymFromInlineContextW = Module.findExportByName("imagehlp.dll", "SymFromInlineContextW")
+Interceptor.attach(SymFromInlineContextW, {onLeave: function (args) {send("SymFromInlineContextW");}});
+
+var SymFromName = Module.findExportByName("imagehlp.dll", "SymFromName")
+Interceptor.attach(SymFromName, {onLeave: function (args) {send("SymFromName");}});
+
+var SymFunctionTableAccess = Module.findExportByName("imagehlp.dll", "SymFunctionTableAccess")
+Interceptor.attach(SymFunctionTableAccess, {onLeave: function (args) {send("SymFunctionTableAccess");}});
+
+var SymFunctionTableAccess64 = Module.findExportByName("imagehlp.dll", "SymFunctionTableAccess64")
+Interceptor.attach(SymFunctionTableAccess64, {onLeave: function (args) {send("SymFunctionTableAccess64");}});
+
+var SymFunctionTableAccess64AccessRoutines = Module.findExportByName("imagehlp.dll", "SymFunctionTableAccess64AccessRoutines")
+Interceptor.attach(SymFunctionTableAccess64AccessRoutines, {onLeave: function (args) {send("SymFunctionTableAccess64AccessRoutines");}});
+
+var SymGetDiaSession = Module.findExportByName("imagehlp.dll", "SymGetDiaSession")
+Interceptor.attach(SymGetDiaSession, {onLeave: function (args) {send("SymGetDiaSession");}});
+
+var SymGetDiaSource = Module.findExportByName("imagehlp.dll", "SymGetDiaSource")
+Interceptor.attach(SymGetDiaSource, {onLeave: function (args) {send("SymGetDiaSource");}});
+
+var SymGetExtendedOption = Module.findExportByName("imagehlp.dll", "SymGetExtendedOption")
+Interceptor.attach(SymGetExtendedOption, {onLeave: function (args) {send("SymGetExtendedOption");}});
+
+var SymGetLineFromAddr = Module.findExportByName("imagehlp.dll", "SymGetLineFromAddr")
+Interceptor.attach(SymGetLineFromAddr, {onLeave: function (args) {send("SymGetLineFromAddr");}});
+
+var SymGetLineFromAddr64 = Module.findExportByName("imagehlp.dll", "SymGetLineFromAddr64")
+Interceptor.attach(SymGetLineFromAddr64, {onLeave: function (args) {send("SymGetLineFromAddr64");}});
+
+var SymGetLineFromInlineContext = Module.findExportByName("imagehlp.dll", "SymGetLineFromInlineContext")
+Interceptor.attach(SymGetLineFromInlineContext, {onLeave: function (args) {send("SymGetLineFromInlineContext");}});
+
+var SymGetLineFromInlineContextW = Module.findExportByName("imagehlp.dll", "SymGetLineFromInlineContextW")
+Interceptor.attach(SymGetLineFromInlineContextW, {onLeave: function (args) {send("SymGetLineFromInlineContextW");}});
+
+var SymGetLineFromName = Module.findExportByName("imagehlp.dll", "SymGetLineFromName")
+Interceptor.attach(SymGetLineFromName, {onLeave: function (args) {send("SymGetLineFromName");}});
+
+var SymGetLineFromName64 = Module.findExportByName("imagehlp.dll", "SymGetLineFromName64")
+Interceptor.attach(SymGetLineFromName64, {onLeave: function (args) {send("SymGetLineFromName64");}});
+
+var SymGetLineNext = Module.findExportByName("imagehlp.dll", "SymGetLineNext")
+Interceptor.attach(SymGetLineNext, {onLeave: function (args) {send("SymGetLineNext");}});
+
+var SymGetLineNext64 = Module.findExportByName("imagehlp.dll", "SymGetLineNext64")
+Interceptor.attach(SymGetLineNext64, {onLeave: function (args) {send("SymGetLineNext64");}});
+
+var SymGetLinePrev = Module.findExportByName("imagehlp.dll", "SymGetLinePrev")
+Interceptor.attach(SymGetLinePrev, {onLeave: function (args) {send("SymGetLinePrev");}});
+
+var SymGetLinePrev64 = Module.findExportByName("imagehlp.dll", "SymGetLinePrev64")
+Interceptor.attach(SymGetLinePrev64, {onLeave: function (args) {send("SymGetLinePrev64");}});
+
+var SymGetModuleBase = Module.findExportByName("imagehlp.dll", "SymGetModuleBase")
+Interceptor.attach(SymGetModuleBase, {onLeave: function (args) {send("SymGetModuleBase");}});
+
+var SymGetModuleBase64 = Module.findExportByName("imagehlp.dll", "SymGetModuleBase64")
+Interceptor.attach(SymGetModuleBase64, {onLeave: function (args) {send("SymGetModuleBase64");}});
+
+var SymGetModuleInfo = Module.findExportByName("imagehlp.dll", "SymGetModuleInfo")
+Interceptor.attach(SymGetModuleInfo, {onLeave: function (args) {send("SymGetModuleInfo");}});
+
+var SymGetModuleInfo64 = Module.findExportByName("imagehlp.dll", "SymGetModuleInfo64")
+Interceptor.attach(SymGetModuleInfo64, {onLeave: function (args) {send("SymGetModuleInfo64");}});
+
+var SymGetModuleInfoW = Module.findExportByName("imagehlp.dll", "SymGetModuleInfoW")
+Interceptor.attach(SymGetModuleInfoW, {onLeave: function (args) {send("SymGetModuleInfoW");}});
+
+var SymGetModuleInfoW64 = Module.findExportByName("imagehlp.dll", "SymGetModuleInfoW64")
+Interceptor.attach(SymGetModuleInfoW64, {onLeave: function (args) {send("SymGetModuleInfoW64");}});
+
+var SymGetOptions = Module.findExportByName("imagehlp.dll", "SymGetOptions")
+Interceptor.attach(SymGetOptions, {onLeave: function (args) {send("SymGetOptions");}});
+
+var SymGetSearchPath = Module.findExportByName("imagehlp.dll", "SymGetSearchPath")
+Interceptor.attach(SymGetSearchPath, {onLeave: function (args) {send("SymGetSearchPath");}});
+
+var SymGetSourceFileChecksumW = Module.findExportByName("imagehlp.dll", "SymGetSourceFileChecksumW")
+Interceptor.attach(SymGetSourceFileChecksumW, {onLeave: function (args) {send("SymGetSourceFileChecksumW");}});
+
+var SymGetSourceFileFromTokenByTokenName = Module.findExportByName("imagehlp.dll", "SymGetSourceFileFromTokenByTokenName")
+Interceptor.attach(SymGetSourceFileFromTokenByTokenName, {onLeave: function (args) {send("SymGetSourceFileFromTokenByTokenName");}});
+
+var SymGetSourceFileFromTokenByTokenNameW = Module.findExportByName("imagehlp.dll", "SymGetSourceFileFromTokenByTokenNameW")
+Interceptor.attach(SymGetSourceFileFromTokenByTokenNameW, {onLeave: function (args) {send("SymGetSourceFileFromTokenByTokenNameW");}});
+
+var SymGetSourceFileFromTokenW = Module.findExportByName("imagehlp.dll", "SymGetSourceFileFromTokenW")
+Interceptor.attach(SymGetSourceFileFromTokenW, {onLeave: function (args) {send("SymGetSourceFileFromTokenW");}});
+
+var SymGetSourceFileTokenByTokenName = Module.findExportByName("imagehlp.dll", "SymGetSourceFileTokenByTokenName")
+Interceptor.attach(SymGetSourceFileTokenByTokenName, {onLeave: function (args) {send("SymGetSourceFileTokenByTokenName");}});
+
+var SymGetSourceFileTokenByTokenNameW = Module.findExportByName("imagehlp.dll", "SymGetSourceFileTokenByTokenNameW")
+Interceptor.attach(SymGetSourceFileTokenByTokenNameW, {onLeave: function (args) {send("SymGetSourceFileTokenByTokenNameW");}});
+
+var SymGetSourceFileTokenW = Module.findExportByName("imagehlp.dll", "SymGetSourceFileTokenW")
+Interceptor.attach(SymGetSourceFileTokenW, {onLeave: function (args) {send("SymGetSourceFileTokenW");}});
+
+var SymGetSourceVarFromTokenW = Module.findExportByName("imagehlp.dll", "SymGetSourceVarFromTokenW")
+Interceptor.attach(SymGetSourceVarFromTokenW, {onLeave: function (args) {send("SymGetSourceVarFromTokenW");}});
+
+var SymGetSymFromAddr = Module.findExportByName("imagehlp.dll", "SymGetSymFromAddr")
+Interceptor.attach(SymGetSymFromAddr, {onLeave: function (args) {send("SymGetSymFromAddr");}});
+
+var SymGetSymFromAddr64 = Module.findExportByName("imagehlp.dll", "SymGetSymFromAddr64")
+Interceptor.attach(SymGetSymFromAddr64, {onLeave: function (args) {send("SymGetSymFromAddr64");}});
+
+var SymGetSymFromName = Module.findExportByName("imagehlp.dll", "SymGetSymFromName")
+Interceptor.attach(SymGetSymFromName, {onLeave: function (args) {send("SymGetSymFromName");}});
+
+var SymGetSymFromName64 = Module.findExportByName("imagehlp.dll", "SymGetSymFromName64")
+Interceptor.attach(SymGetSymFromName64, {onLeave: function (args) {send("SymGetSymFromName64");}});
+
+var SymGetSymNext = Module.findExportByName("imagehlp.dll", "SymGetSymNext")
+Interceptor.attach(SymGetSymNext, {onLeave: function (args) {send("SymGetSymNext");}});
+
+var SymGetSymNext64 = Module.findExportByName("imagehlp.dll", "SymGetSymNext64")
+Interceptor.attach(SymGetSymNext64, {onLeave: function (args) {send("SymGetSymNext64");}});
+
+var SymGetSymPrev = Module.findExportByName("imagehlp.dll", "SymGetSymPrev")
+Interceptor.attach(SymGetSymPrev, {onLeave: function (args) {send("SymGetSymPrev");}});
+
+var SymGetSymPrev64 = Module.findExportByName("imagehlp.dll", "SymGetSymPrev64")
+Interceptor.attach(SymGetSymPrev64, {onLeave: function (args) {send("SymGetSymPrev64");}});
+
+var SymGetSymbolFile = Module.findExportByName("imagehlp.dll", "SymGetSymbolFile")
+Interceptor.attach(SymGetSymbolFile, {onLeave: function (args) {send("SymGetSymbolFile");}});
+
+var SymGetSymbolFileW = Module.findExportByName("imagehlp.dll", "SymGetSymbolFileW")
+Interceptor.attach(SymGetSymbolFileW, {onLeave: function (args) {send("SymGetSymbolFileW");}});
+
+var SymGetTypeFromName = Module.findExportByName("imagehlp.dll", "SymGetTypeFromName")
+Interceptor.attach(SymGetTypeFromName, {onLeave: function (args) {send("SymGetTypeFromName");}});
+
+var SymGetTypeFromNameW = Module.findExportByName("imagehlp.dll", "SymGetTypeFromNameW")
+Interceptor.attach(SymGetTypeFromNameW, {onLeave: function (args) {send("SymGetTypeFromNameW");}});
+
+var SymGetTypeInfo = Module.findExportByName("imagehlp.dll", "SymGetTypeInfo")
+Interceptor.attach(SymGetTypeInfo, {onLeave: function (args) {send("SymGetTypeInfo");}});
+
+var SymGetTypeInfoEx = Module.findExportByName("imagehlp.dll", "SymGetTypeInfoEx")
+Interceptor.attach(SymGetTypeInfoEx, {onLeave: function (args) {send("SymGetTypeInfoEx");}});
+
+var SymInitialize = Module.findExportByName("imagehlp.dll", "SymInitialize")
+Interceptor.attach(SymInitialize, {onLeave: function (args) {send("SymInitialize");}});
+
+var SymLoadModule = Module.findExportByName("imagehlp.dll", "SymLoadModule")
+Interceptor.attach(SymLoadModule, {onLeave: function (args) {send("SymLoadModule");}});
+
+var SymLoadModule64 = Module.findExportByName("imagehlp.dll", "SymLoadModule64")
+Interceptor.attach(SymLoadModule64, {onLeave: function (args) {send("SymLoadModule64");}});
+
+var SymMatchFileName = Module.findExportByName("imagehlp.dll", "SymMatchFileName")
+Interceptor.attach(SymMatchFileName, {onLeave: function (args) {send("SymMatchFileName");}});
+
+var SymMatchFileNameW = Module.findExportByName("imagehlp.dll", "SymMatchFileNameW")
+Interceptor.attach(SymMatchFileNameW, {onLeave: function (args) {send("SymMatchFileNameW");}});
+
+var SymMatchString = Module.findExportByName("imagehlp.dll", "SymMatchString")
+Interceptor.attach(SymMatchString, {onLeave: function (args) {send("SymMatchString");}});
+
+var SymMatchStringA = Module.findExportByName("imagehlp.dll", "SymMatchStringA")
+Interceptor.attach(SymMatchStringA, {onLeave: function (args) {send("SymMatchStringA");}});
+
+var SymMatchStringW = Module.findExportByName("imagehlp.dll", "SymMatchStringW")
+Interceptor.attach(SymMatchStringW, {onLeave: function (args) {send("SymMatchStringW");}});
+
+var SymQueryInlineTrace = Module.findExportByName("imagehlp.dll", "SymQueryInlineTrace")
+Interceptor.attach(SymQueryInlineTrace, {onLeave: function (args) {send("SymQueryInlineTrace");}});
+
+var SymRegisterCallback = Module.findExportByName("imagehlp.dll", "SymRegisterCallback")
+Interceptor.attach(SymRegisterCallback, {onLeave: function (args) {send("SymRegisterCallback");}});
+
+var SymRegisterCallback64 = Module.findExportByName("imagehlp.dll", "SymRegisterCallback64")
+Interceptor.attach(SymRegisterCallback64, {onLeave: function (args) {send("SymRegisterCallback64");}});
+
+var SymRegisterFunctionEntryCallback = Module.findExportByName("imagehlp.dll", "SymRegisterFunctionEntryCallback")
+Interceptor.attach(SymRegisterFunctionEntryCallback, {onLeave: function (args) {send("SymRegisterFunctionEntryCallback");}});
+
+var SymRegisterFunctionEntryCallback64 = Module.findExportByName("imagehlp.dll", "SymRegisterFunctionEntryCallback64")
+Interceptor.attach(SymRegisterFunctionEntryCallback64, {onLeave: function (args) {send("SymRegisterFunctionEntryCallback64");}});
+
+var SymRegisterGetSourcePathPartCallback = Module.findExportByName("imagehlp.dll", "SymRegisterGetSourcePathPartCallback")
+Interceptor.attach(SymRegisterGetSourcePathPartCallback, {onLeave: function (args) {send("SymRegisterGetSourcePathPartCallback");}});
+
+var SymRegisterSourceFileUrlListCallback = Module.findExportByName("imagehlp.dll", "SymRegisterSourceFileUrlListCallback")
+Interceptor.attach(SymRegisterSourceFileUrlListCallback, {onLeave: function (args) {send("SymRegisterSourceFileUrlListCallback");}});
+
+var SymSetContext = Module.findExportByName("imagehlp.dll", "SymSetContext")
+Interceptor.attach(SymSetContext, {onLeave: function (args) {send("SymSetContext");}});
+
+var SymSetDiaSession = Module.findExportByName("imagehlp.dll", "SymSetDiaSession")
+Interceptor.attach(SymSetDiaSession, {onLeave: function (args) {send("SymSetDiaSession");}});
+
+var SymSetExtendedOption = Module.findExportByName("imagehlp.dll", "SymSetExtendedOption")
+Interceptor.attach(SymSetExtendedOption, {onLeave: function (args) {send("SymSetExtendedOption");}});
+
+var SymSetOptions = Module.findExportByName("imagehlp.dll", "SymSetOptions")
+Interceptor.attach(SymSetOptions, {onLeave: function (args) {send("SymSetOptions");}});
+
+var SymSetScopeFromAddr = Module.findExportByName("imagehlp.dll", "SymSetScopeFromAddr")
+Interceptor.attach(SymSetScopeFromAddr, {onLeave: function (args) {send("SymSetScopeFromAddr");}});
+
+var SymSetScopeFromIndex = Module.findExportByName("imagehlp.dll", "SymSetScopeFromIndex")
+Interceptor.attach(SymSetScopeFromIndex, {onLeave: function (args) {send("SymSetScopeFromIndex");}});
+
+var SymSetScopeFromInlineContext = Module.findExportByName("imagehlp.dll", "SymSetScopeFromInlineContext")
+Interceptor.attach(SymSetScopeFromInlineContext, {onLeave: function (args) {send("SymSetScopeFromInlineContext");}});
+
+var SymSetSearchPath = Module.findExportByName("imagehlp.dll", "SymSetSearchPath")
+Interceptor.attach(SymSetSearchPath, {onLeave: function (args) {send("SymSetSearchPath");}});
+
+var SymSetServiceManager = Module.findExportByName("imagehlp.dll", "SymSetServiceManager")
+Interceptor.attach(SymSetServiceManager, {onLeave: function (args) {send("SymSetServiceManager");}});
+
+var SymSrvGetFileIndexString = Module.findExportByName("imagehlp.dll", "SymSrvGetFileIndexString")
+Interceptor.attach(SymSrvGetFileIndexString, {onLeave: function (args) {send("SymSrvGetFileIndexString");}});
+
+var SymSrvGetFileIndexStringW = Module.findExportByName("imagehlp.dll", "SymSrvGetFileIndexStringW")
+Interceptor.attach(SymSrvGetFileIndexStringW, {onLeave: function (args) {send("SymSrvGetFileIndexStringW");}});
+
+var SymSrvGetFileIndexes = Module.findExportByName("imagehlp.dll", "SymSrvGetFileIndexes")
+Interceptor.attach(SymSrvGetFileIndexes, {onLeave: function (args) {send("SymSrvGetFileIndexes");}});
+
+var SymSrvGetFileIndexesW = Module.findExportByName("imagehlp.dll", "SymSrvGetFileIndexesW")
+Interceptor.attach(SymSrvGetFileIndexesW, {onLeave: function (args) {send("SymSrvGetFileIndexesW");}});
+
+var SymUnDName = Module.findExportByName("imagehlp.dll", "SymUnDName")
+Interceptor.attach(SymUnDName, {onLeave: function (args) {send("SymUnDName");}});
+
+var SymUnDName64 = Module.findExportByName("imagehlp.dll", "SymUnDName64")
+Interceptor.attach(SymUnDName64, {onLeave: function (args) {send("SymUnDName64");}});
+
+var SymUnloadModule = Module.findExportByName("imagehlp.dll", "SymUnloadModule")
+Interceptor.attach(SymUnloadModule, {onLeave: function (args) {send("SymUnloadModule");}});
+
+var SymUnloadModule64 = Module.findExportByName("imagehlp.dll", "SymUnloadModule64")
+Interceptor.attach(SymUnloadModule64, {onLeave: function (args) {send("SymUnloadModule64");}});
+
+var TouchFileTimes = Module.findExportByName("imagehlp.dll", "TouchFileTimes")
+Interceptor.attach(TouchFileTimes, {onLeave: function (args) {send("TouchFileTimes");}});
+
+var UnDecorateSymbolName = Module.findExportByName("imagehlp.dll", "UnDecorateSymbolName")
+Interceptor.attach(UnDecorateSymbolName, {onLeave: function (args) {send("UnDecorateSymbolName");}});
+
+var UnMapAndLoad = Module.findExportByName("imagehlp.dll", "UnMapAndLoad")
+Interceptor.attach(UnMapAndLoad, {onLeave: function (args) {send("UnMapAndLoad");}});
+
+var UpdateDebugInfoFile = Module.findExportByName("imagehlp.dll", "UpdateDebugInfoFile")
+Interceptor.attach(UpdateDebugInfoFile, {onLeave: function (args) {send("UpdateDebugInfoFile");}});
+
+var UpdateDebugInfoFileEx = Module.findExportByName("imagehlp.dll", "UpdateDebugInfoFileEx")
+Interceptor.attach(UpdateDebugInfoFileEx, {onLeave: function (args) {send("UpdateDebugInfoFileEx");}});
+

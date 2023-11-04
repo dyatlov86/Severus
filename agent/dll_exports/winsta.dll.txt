@@ -1,0 +1,537 @@
+var LogonIdFromWinStationNameA = Module.findExportByName("winsta.dll", "LogonIdFromWinStationNameA")
+Interceptor.attach(LogonIdFromWinStationNameA, {onLeave: function (args) {send("LogonIdFromWinStationNameA");}});
+
+var LogonIdFromWinStationNameW = Module.findExportByName("winsta.dll", "LogonIdFromWinStationNameW")
+Interceptor.attach(LogonIdFromWinStationNameW, {onLeave: function (args) {send("LogonIdFromWinStationNameW");}});
+
+var RemoteAssistancePrepareSystemRestore = Module.findExportByName("winsta.dll", "RemoteAssistancePrepareSystemRestore")
+Interceptor.attach(RemoteAssistancePrepareSystemRestore, {onLeave: function (args) {send("RemoteAssistancePrepareSystemRestore");}});
+
+var ServerGetInternetConnectorStatus = Module.findExportByName("winsta.dll", "ServerGetInternetConnectorStatus")
+Interceptor.attach(ServerGetInternetConnectorStatus, {onLeave: function (args) {send("ServerGetInternetConnectorStatus");}});
+
+var ServerLicensingClose = Module.findExportByName("winsta.dll", "ServerLicensingClose")
+Interceptor.attach(ServerLicensingClose, {onLeave: function (args) {send("ServerLicensingClose");}});
+
+var ServerLicensingDeactivateCurrentPolicy = Module.findExportByName("winsta.dll", "ServerLicensingDeactivateCurrentPolicy")
+Interceptor.attach(ServerLicensingDeactivateCurrentPolicy, {onLeave: function (args) {send("ServerLicensingDeactivateCurrentPolicy");}});
+
+var ServerLicensingFreePolicyInformation = Module.findExportByName("winsta.dll", "ServerLicensingFreePolicyInformation")
+Interceptor.attach(ServerLicensingFreePolicyInformation, {onLeave: function (args) {send("ServerLicensingFreePolicyInformation");}});
+
+var ServerLicensingGetAadInfo = Module.findExportByName("winsta.dll", "ServerLicensingGetAadInfo")
+Interceptor.attach(ServerLicensingGetAadInfo, {onLeave: function (args) {send("ServerLicensingGetAadInfo");}});
+
+var ServerLicensingGetAvailablePolicyIds = Module.findExportByName("winsta.dll", "ServerLicensingGetAvailablePolicyIds")
+Interceptor.attach(ServerLicensingGetAvailablePolicyIds, {onLeave: function (args) {send("ServerLicensingGetAvailablePolicyIds");}});
+
+var ServerLicensingGetPolicy = Module.findExportByName("winsta.dll", "ServerLicensingGetPolicy")
+Interceptor.attach(ServerLicensingGetPolicy, {onLeave: function (args) {send("ServerLicensingGetPolicy");}});
+
+var ServerLicensingGetPolicyInformationA = Module.findExportByName("winsta.dll", "ServerLicensingGetPolicyInformationA")
+Interceptor.attach(ServerLicensingGetPolicyInformationA, {onLeave: function (args) {send("ServerLicensingGetPolicyInformationA");}});
+
+var ServerLicensingGetPolicyInformationW = Module.findExportByName("winsta.dll", "ServerLicensingGetPolicyInformationW")
+Interceptor.attach(ServerLicensingGetPolicyInformationW, {onLeave: function (args) {send("ServerLicensingGetPolicyInformationW");}});
+
+var ServerLicensingLoadPolicy = Module.findExportByName("winsta.dll", "ServerLicensingLoadPolicy")
+Interceptor.attach(ServerLicensingLoadPolicy, {onLeave: function (args) {send("ServerLicensingLoadPolicy");}});
+
+var ServerLicensingOpenA = Module.findExportByName("winsta.dll", "ServerLicensingOpenA")
+Interceptor.attach(ServerLicensingOpenA, {onLeave: function (args) {send("ServerLicensingOpenA");}});
+
+var ServerLicensingOpenW = Module.findExportByName("winsta.dll", "ServerLicensingOpenW")
+Interceptor.attach(ServerLicensingOpenW, {onLeave: function (args) {send("ServerLicensingOpenW");}});
+
+var ServerLicensingSetAadInfo = Module.findExportByName("winsta.dll", "ServerLicensingSetAadInfo")
+Interceptor.attach(ServerLicensingSetAadInfo, {onLeave: function (args) {send("ServerLicensingSetAadInfo");}});
+
+var ServerLicensingSetPolicy = Module.findExportByName("winsta.dll", "ServerLicensingSetPolicy")
+Interceptor.attach(ServerLicensingSetPolicy, {onLeave: function (args) {send("ServerLicensingSetPolicy");}});
+
+var ServerLicensingUnloadPolicy = Module.findExportByName("winsta.dll", "ServerLicensingUnloadPolicy")
+Interceptor.attach(ServerLicensingUnloadPolicy, {onLeave: function (args) {send("ServerLicensingUnloadPolicy");}});
+
+var ServerQueryInetConnectorInformationA = Module.findExportByName("winsta.dll", "ServerQueryInetConnectorInformationA")
+Interceptor.attach(ServerQueryInetConnectorInformationA, {onLeave: function (args) {send("ServerQueryInetConnectorInformationA");}});
+
+var ServerQueryInetConnectorInformationW = Module.findExportByName("winsta.dll", "ServerQueryInetConnectorInformationW")
+Interceptor.attach(ServerQueryInetConnectorInformationW, {onLeave: function (args) {send("ServerQueryInetConnectorInformationW");}});
+
+var ServerSetInternetConnectorStatus = Module.findExportByName("winsta.dll", "ServerSetInternetConnectorStatus")
+Interceptor.attach(ServerSetInternetConnectorStatus, {onLeave: function (args) {send("ServerSetInternetConnectorStatus");}});
+
+var WTSRegisterSessionNotificationEx = Module.findExportByName("winsta.dll", "WTSRegisterSessionNotificationEx")
+Interceptor.attach(WTSRegisterSessionNotificationEx, {onLeave: function (args) {send("WTSRegisterSessionNotificationEx");}});
+
+var WTSUnRegisterSessionNotificationEx = Module.findExportByName("winsta.dll", "WTSUnRegisterSessionNotificationEx")
+Interceptor.attach(WTSUnRegisterSessionNotificationEx, {onLeave: function (args) {send("WTSUnRegisterSessionNotificationEx");}});
+
+var WinStationActivateLicense = Module.findExportByName("winsta.dll", "WinStationActivateLicense")
+Interceptor.attach(WinStationActivateLicense, {onLeave: function (args) {send("WinStationActivateLicense");}});
+
+var WinStationAutoReconnect = Module.findExportByName("winsta.dll", "WinStationAutoReconnect")
+Interceptor.attach(WinStationAutoReconnect, {onLeave: function (args) {send("WinStationAutoReconnect");}});
+
+var WinStationBroadcastSystemMessage = Module.findExportByName("winsta.dll", "WinStationBroadcastSystemMessage")
+Interceptor.attach(WinStationBroadcastSystemMessage, {onLeave: function (args) {send("WinStationBroadcastSystemMessage");}});
+
+var WinStationCheckAccess = Module.findExportByName("winsta.dll", "WinStationCheckAccess")
+Interceptor.attach(WinStationCheckAccess, {onLeave: function (args) {send("WinStationCheckAccess");}});
+
+var WinStationCheckLoopBack = Module.findExportByName("winsta.dll", "WinStationCheckLoopBack")
+Interceptor.attach(WinStationCheckLoopBack, {onLeave: function (args) {send("WinStationCheckLoopBack");}});
+
+var WinStationCloseServer = Module.findExportByName("winsta.dll", "WinStationCloseServer")
+Interceptor.attach(WinStationCloseServer, {onLeave: function (args) {send("WinStationCloseServer");}});
+
+var WinStationConnectA = Module.findExportByName("winsta.dll", "WinStationConnectA")
+Interceptor.attach(WinStationConnectA, {onLeave: function (args) {send("WinStationConnectA");}});
+
+var WinStationConnectAndLockDesktop = Module.findExportByName("winsta.dll", "WinStationConnectAndLockDesktop")
+Interceptor.attach(WinStationConnectAndLockDesktop, {onLeave: function (args) {send("WinStationConnectAndLockDesktop");}});
+
+var WinStationConnectCallback = Module.findExportByName("winsta.dll", "WinStationConnectCallback")
+Interceptor.attach(WinStationConnectCallback, {onLeave: function (args) {send("WinStationConnectCallback");}});
+
+var WinStationConnectEx = Module.findExportByName("winsta.dll", "WinStationConnectEx")
+Interceptor.attach(WinStationConnectEx, {onLeave: function (args) {send("WinStationConnectEx");}});
+
+var WinStationConnectW = Module.findExportByName("winsta.dll", "WinStationConnectW")
+Interceptor.attach(WinStationConnectW, {onLeave: function (args) {send("WinStationConnectW");}});
+
+var WinStationConsumeCacheSession = Module.findExportByName("winsta.dll", "WinStationConsumeCacheSession")
+Interceptor.attach(WinStationConsumeCacheSession, {onLeave: function (args) {send("WinStationConsumeCacheSession");}});
+
+var WinStationCreateChildSessionTransport = Module.findExportByName("winsta.dll", "WinStationCreateChildSessionTransport")
+Interceptor.attach(WinStationCreateChildSessionTransport, {onLeave: function (args) {send("WinStationCreateChildSessionTransport");}});
+
+var WinStationDisconnect = Module.findExportByName("winsta.dll", "WinStationDisconnect")
+Interceptor.attach(WinStationDisconnect, {onLeave: function (args) {send("WinStationDisconnect");}});
+
+var WinStationEnableChildSessions = Module.findExportByName("winsta.dll", "WinStationEnableChildSessions")
+Interceptor.attach(WinStationEnableChildSessions, {onLeave: function (args) {send("WinStationEnableChildSessions");}});
+
+var WinStationEnumerateA = Module.findExportByName("winsta.dll", "WinStationEnumerateA")
+Interceptor.attach(WinStationEnumerateA, {onLeave: function (args) {send("WinStationEnumerateA");}});
+
+var WinStationEnumerateContainerSessions = Module.findExportByName("winsta.dll", "WinStationEnumerateContainerSessions")
+Interceptor.attach(WinStationEnumerateContainerSessions, {onLeave: function (args) {send("WinStationEnumerateContainerSessions");}});
+
+var WinStationEnumerateExW = Module.findExportByName("winsta.dll", "WinStationEnumerateExW")
+Interceptor.attach(WinStationEnumerateExW, {onLeave: function (args) {send("WinStationEnumerateExW");}});
+
+var WinStationEnumerateLicenses = Module.findExportByName("winsta.dll", "WinStationEnumerateLicenses")
+Interceptor.attach(WinStationEnumerateLicenses, {onLeave: function (args) {send("WinStationEnumerateLicenses");}});
+
+var WinStationEnumerateProcesses = Module.findExportByName("winsta.dll", "WinStationEnumerateProcesses")
+Interceptor.attach(WinStationEnumerateProcesses, {onLeave: function (args) {send("WinStationEnumerateProcesses");}});
+
+var WinStationEnumerateW = Module.findExportByName("winsta.dll", "WinStationEnumerateW")
+Interceptor.attach(WinStationEnumerateW, {onLeave: function (args) {send("WinStationEnumerateW");}});
+
+var WinStationEnumerate_IndexedA = Module.findExportByName("winsta.dll", "WinStationEnumerate_IndexedA")
+Interceptor.attach(WinStationEnumerate_IndexedA, {onLeave: function (args) {send("WinStationEnumerate_IndexedA");}});
+
+var WinStationEnumerate_IndexedW = Module.findExportByName("winsta.dll", "WinStationEnumerate_IndexedW")
+Interceptor.attach(WinStationEnumerate_IndexedW, {onLeave: function (args) {send("WinStationEnumerate_IndexedW");}});
+
+var WinStationFreeConsoleNotification = Module.findExportByName("winsta.dll", "WinStationFreeConsoleNotification")
+Interceptor.attach(WinStationFreeConsoleNotification, {onLeave: function (args) {send("WinStationFreeConsoleNotification");}});
+
+var WinStationFreeEXECENVDATAEX = Module.findExportByName("winsta.dll", "WinStationFreeEXECENVDATAEX")
+Interceptor.attach(WinStationFreeEXECENVDATAEX, {onLeave: function (args) {send("WinStationFreeEXECENVDATAEX");}});
+
+var WinStationFreeGAPMemory = Module.findExportByName("winsta.dll", "WinStationFreeGAPMemory")
+Interceptor.attach(WinStationFreeGAPMemory, {onLeave: function (args) {send("WinStationFreeGAPMemory");}});
+
+var WinStationFreeMemory = Module.findExportByName("winsta.dll", "WinStationFreeMemory")
+Interceptor.attach(WinStationFreeMemory, {onLeave: function (args) {send("WinStationFreeMemory");}});
+
+var WinStationFreePropertyValue = Module.findExportByName("winsta.dll", "WinStationFreePropertyValue")
+Interceptor.attach(WinStationFreePropertyValue, {onLeave: function (args) {send("WinStationFreePropertyValue");}});
+
+var WinStationFreeSessionNotification = Module.findExportByName("winsta.dll", "WinStationFreeSessionNotification")
+Interceptor.attach(WinStationFreeSessionNotification, {onLeave: function (args) {send("WinStationFreeSessionNotification");}});
+
+var WinStationFreeUserCertificates = Module.findExportByName("winsta.dll", "WinStationFreeUserCertificates")
+Interceptor.attach(WinStationFreeUserCertificates, {onLeave: function (args) {send("WinStationFreeUserCertificates");}});
+
+var WinStationFreeUserCredentials = Module.findExportByName("winsta.dll", "WinStationFreeUserCredentials")
+Interceptor.attach(WinStationFreeUserCredentials, {onLeave: function (args) {send("WinStationFreeUserCredentials");}});
+
+var WinStationFreeUserSessionInfo = Module.findExportByName("winsta.dll", "WinStationFreeUserSessionInfo")
+Interceptor.attach(WinStationFreeUserSessionInfo, {onLeave: function (args) {send("WinStationFreeUserSessionInfo");}});
+
+var WinStationGenerateLicense = Module.findExportByName("winsta.dll", "WinStationGenerateLicense")
+Interceptor.attach(WinStationGenerateLicense, {onLeave: function (args) {send("WinStationGenerateLicense");}});
+
+var WinStationGetAllProcesses = Module.findExportByName("winsta.dll", "WinStationGetAllProcesses")
+Interceptor.attach(WinStationGetAllProcesses, {onLeave: function (args) {send("WinStationGetAllProcesses");}});
+
+var WinStationGetAllSessionsEx = Module.findExportByName("winsta.dll", "WinStationGetAllSessionsEx")
+Interceptor.attach(WinStationGetAllSessionsEx, {onLeave: function (args) {send("WinStationGetAllSessionsEx");}});
+
+var WinStationGetAllSessionsW = Module.findExportByName("winsta.dll", "WinStationGetAllSessionsW")
+Interceptor.attach(WinStationGetAllSessionsW, {onLeave: function (args) {send("WinStationGetAllSessionsW");}});
+
+var WinStationGetAllUserSessions = Module.findExportByName("winsta.dll", "WinStationGetAllUserSessions")
+Interceptor.attach(WinStationGetAllUserSessions, {onLeave: function (args) {send("WinStationGetAllUserSessions");}});
+
+var WinStationGetChildSessionId = Module.findExportByName("winsta.dll", "WinStationGetChildSessionId")
+Interceptor.attach(WinStationGetChildSessionId, {onLeave: function (args) {send("WinStationGetChildSessionId");}});
+
+var WinStationGetConnectionProperty = Module.findExportByName("winsta.dll", "WinStationGetConnectionProperty")
+Interceptor.attach(WinStationGetConnectionProperty, {onLeave: function (args) {send("WinStationGetConnectionProperty");}});
+
+var WinStationGetCurrentSessionCapabilities = Module.findExportByName("winsta.dll", "WinStationGetCurrentSessionCapabilities")
+Interceptor.attach(WinStationGetCurrentSessionCapabilities, {onLeave: function (args) {send("WinStationGetCurrentSessionCapabilities");}});
+
+var WinStationGetCurrentSessionConnectionProperty = Module.findExportByName("winsta.dll", "WinStationGetCurrentSessionConnectionProperty")
+Interceptor.attach(WinStationGetCurrentSessionConnectionProperty, {onLeave: function (args) {send("WinStationGetCurrentSessionConnectionProperty");}});
+
+var WinStationGetCurrentSessionTerminalName = Module.findExportByName("winsta.dll", "WinStationGetCurrentSessionTerminalName")
+Interceptor.attach(WinStationGetCurrentSessionTerminalName, {onLeave: function (args) {send("WinStationGetCurrentSessionTerminalName");}});
+
+var WinStationGetDeviceId = Module.findExportByName("winsta.dll", "WinStationGetDeviceId")
+Interceptor.attach(WinStationGetDeviceId, {onLeave: function (args) {send("WinStationGetDeviceId");}});
+
+var WinStationGetInitialApplication = Module.findExportByName("winsta.dll", "WinStationGetInitialApplication")
+Interceptor.attach(WinStationGetInitialApplication, {onLeave: function (args) {send("WinStationGetInitialApplication");}});
+
+var WinStationGetLanAdapterNameA = Module.findExportByName("winsta.dll", "WinStationGetLanAdapterNameA")
+Interceptor.attach(WinStationGetLanAdapterNameA, {onLeave: function (args) {send("WinStationGetLanAdapterNameA");}});
+
+var WinStationGetLanAdapterNameW = Module.findExportByName("winsta.dll", "WinStationGetLanAdapterNameW")
+Interceptor.attach(WinStationGetLanAdapterNameW, {onLeave: function (args) {send("WinStationGetLanAdapterNameW");}});
+
+var WinStationGetLastWinlogonNotification = Module.findExportByName("winsta.dll", "WinStationGetLastWinlogonNotification")
+Interceptor.attach(WinStationGetLastWinlogonNotification, {onLeave: function (args) {send("WinStationGetLastWinlogonNotification");}});
+
+var WinStationGetLoggedOnCount = Module.findExportByName("winsta.dll", "WinStationGetLoggedOnCount")
+Interceptor.attach(WinStationGetLoggedOnCount, {onLeave: function (args) {send("WinStationGetLoggedOnCount");}});
+
+var WinStationGetMachinePolicy = Module.findExportByName("winsta.dll", "WinStationGetMachinePolicy")
+Interceptor.attach(WinStationGetMachinePolicy, {onLeave: function (args) {send("WinStationGetMachinePolicy");}});
+
+var WinStationGetParentSessionId = Module.findExportByName("winsta.dll", "WinStationGetParentSessionId")
+Interceptor.attach(WinStationGetParentSessionId, {onLeave: function (args) {send("WinStationGetParentSessionId");}});
+
+var WinStationGetProcessSid = Module.findExportByName("winsta.dll", "WinStationGetProcessSid")
+Interceptor.attach(WinStationGetProcessSid, {onLeave: function (args) {send("WinStationGetProcessSid");}});
+
+var WinStationGetRedirectAuthInfo = Module.findExportByName("winsta.dll", "WinStationGetRedirectAuthInfo")
+Interceptor.attach(WinStationGetRedirectAuthInfo, {onLeave: function (args) {send("WinStationGetRedirectAuthInfo");}});
+
+var WinStationGetRestrictedLogonInfo = Module.findExportByName("winsta.dll", "WinStationGetRestrictedLogonInfo")
+Interceptor.attach(WinStationGetRestrictedLogonInfo, {onLeave: function (args) {send("WinStationGetRestrictedLogonInfo");}});
+
+var WinStationGetSessionIds = Module.findExportByName("winsta.dll", "WinStationGetSessionIds")
+Interceptor.attach(WinStationGetSessionIds, {onLeave: function (args) {send("WinStationGetSessionIds");}});
+
+var WinStationGetTermSrvCountersValue = Module.findExportByName("winsta.dll", "WinStationGetTermSrvCountersValue")
+Interceptor.attach(WinStationGetTermSrvCountersValue, {onLeave: function (args) {send("WinStationGetTermSrvCountersValue");}});
+
+var WinStationGetUserCertificates = Module.findExportByName("winsta.dll", "WinStationGetUserCertificates")
+Interceptor.attach(WinStationGetUserCertificates, {onLeave: function (args) {send("WinStationGetUserCertificates");}});
+
+var WinStationGetUserCredentials = Module.findExportByName("winsta.dll", "WinStationGetUserCredentials")
+Interceptor.attach(WinStationGetUserCredentials, {onLeave: function (args) {send("WinStationGetUserCredentials");}});
+
+var WinStationGetUserProfile = Module.findExportByName("winsta.dll", "WinStationGetUserProfile")
+Interceptor.attach(WinStationGetUserProfile, {onLeave: function (args) {send("WinStationGetUserProfile");}});
+
+var WinStationInstallLicense = Module.findExportByName("winsta.dll", "WinStationInstallLicense")
+Interceptor.attach(WinStationInstallLicense, {onLeave: function (args) {send("WinStationInstallLicense");}});
+
+var WinStationIsBoundToCacheTerminal = Module.findExportByName("winsta.dll", "WinStationIsBoundToCacheTerminal")
+Interceptor.attach(WinStationIsBoundToCacheTerminal, {onLeave: function (args) {send("WinStationIsBoundToCacheTerminal");}});
+
+var WinStationIsChildSessionsEnabled = Module.findExportByName("winsta.dll", "WinStationIsChildSessionsEnabled")
+Interceptor.attach(WinStationIsChildSessionsEnabled, {onLeave: function (args) {send("WinStationIsChildSessionsEnabled");}});
+
+var WinStationIsCurrentSessionRemoteable = Module.findExportByName("winsta.dll", "WinStationIsCurrentSessionRemoteable")
+Interceptor.attach(WinStationIsCurrentSessionRemoteable, {onLeave: function (args) {send("WinStationIsCurrentSessionRemoteable");}});
+
+var WinStationIsHelpAssistantSession = Module.findExportByName("winsta.dll", "WinStationIsHelpAssistantSession")
+Interceptor.attach(WinStationIsHelpAssistantSession, {onLeave: function (args) {send("WinStationIsHelpAssistantSession");}});
+
+var WinStationIsSessionPermitted = Module.findExportByName("winsta.dll", "WinStationIsSessionPermitted")
+Interceptor.attach(WinStationIsSessionPermitted, {onLeave: function (args) {send("WinStationIsSessionPermitted");}});
+
+var WinStationIsSessionRemoteable = Module.findExportByName("winsta.dll", "WinStationIsSessionRemoteable")
+Interceptor.attach(WinStationIsSessionRemoteable, {onLeave: function (args) {send("WinStationIsSessionRemoteable");}});
+
+var WinStationNameFromLogonIdA = Module.findExportByName("winsta.dll", "WinStationNameFromLogonIdA")
+Interceptor.attach(WinStationNameFromLogonIdA, {onLeave: function (args) {send("WinStationNameFromLogonIdA");}});
+
+var WinStationNameFromLogonIdW = Module.findExportByName("winsta.dll", "WinStationNameFromLogonIdW")
+Interceptor.attach(WinStationNameFromLogonIdW, {onLeave: function (args) {send("WinStationNameFromLogonIdW");}});
+
+var WinStationNegotiateSession = Module.findExportByName("winsta.dll", "WinStationNegotiateSession")
+Interceptor.attach(WinStationNegotiateSession, {onLeave: function (args) {send("WinStationNegotiateSession");}});
+
+var WinStationNtsdDebug = Module.findExportByName("winsta.dll", "WinStationNtsdDebug")
+Interceptor.attach(WinStationNtsdDebug, {onLeave: function (args) {send("WinStationNtsdDebug");}});
+
+var WinStationOpenServerA = Module.findExportByName("winsta.dll", "WinStationOpenServerA")
+Interceptor.attach(WinStationOpenServerA, {onLeave: function (args) {send("WinStationOpenServerA");}});
+
+var WinStationOpenServerExA = Module.findExportByName("winsta.dll", "WinStationOpenServerExA")
+Interceptor.attach(WinStationOpenServerExA, {onLeave: function (args) {send("WinStationOpenServerExA");}});
+
+var WinStationOpenServerExW = Module.findExportByName("winsta.dll", "WinStationOpenServerExW")
+Interceptor.attach(WinStationOpenServerExW, {onLeave: function (args) {send("WinStationOpenServerExW");}});
+
+var WinStationOpenServerW = Module.findExportByName("winsta.dll", "WinStationOpenServerW")
+Interceptor.attach(WinStationOpenServerW, {onLeave: function (args) {send("WinStationOpenServerW");}});
+
+var WinStationPreCreateGlassReplacementSession = Module.findExportByName("winsta.dll", "WinStationPreCreateGlassReplacementSession")
+Interceptor.attach(WinStationPreCreateGlassReplacementSession, {onLeave: function (args) {send("WinStationPreCreateGlassReplacementSession");}});
+
+var WinStationPreCreateGlassReplacementSessionEx = Module.findExportByName("winsta.dll", "WinStationPreCreateGlassReplacementSessionEx")
+Interceptor.attach(WinStationPreCreateGlassReplacementSessionEx, {onLeave: function (args) {send("WinStationPreCreateGlassReplacementSessionEx");}});
+
+var WinStationQueryAllowConcurrentConnections = Module.findExportByName("winsta.dll", "WinStationQueryAllowConcurrentConnections")
+Interceptor.attach(WinStationQueryAllowConcurrentConnections, {onLeave: function (args) {send("WinStationQueryAllowConcurrentConnections");}});
+
+var WinStationQueryCurrentSessionInformation = Module.findExportByName("winsta.dll", "WinStationQueryCurrentSessionInformation")
+Interceptor.attach(WinStationQueryCurrentSessionInformation, {onLeave: function (args) {send("WinStationQueryCurrentSessionInformation");}});
+
+var WinStationQueryEnforcementCore = Module.findExportByName("winsta.dll", "WinStationQueryEnforcementCore")
+Interceptor.attach(WinStationQueryEnforcementCore, {onLeave: function (args) {send("WinStationQueryEnforcementCore");}});
+
+var WinStationQueryInformationA = Module.findExportByName("winsta.dll", "WinStationQueryInformationA")
+Interceptor.attach(WinStationQueryInformationA, {onLeave: function (args) {send("WinStationQueryInformationA");}});
+
+var WinStationQueryInformationW = Module.findExportByName("winsta.dll", "WinStationQueryInformationW")
+Interceptor.attach(WinStationQueryInformationW, {onLeave: function (args) {send("WinStationQueryInformationW");}});
+
+var WinStationQueryLicense = Module.findExportByName("winsta.dll", "WinStationQueryLicense")
+Interceptor.attach(WinStationQueryLicense, {onLeave: function (args) {send("WinStationQueryLicense");}});
+
+var WinStationQueryLogonCredentialsW = Module.findExportByName("winsta.dll", "WinStationQueryLogonCredentialsW")
+Interceptor.attach(WinStationQueryLogonCredentialsW, {onLeave: function (args) {send("WinStationQueryLogonCredentialsW");}});
+
+var WinStationQuerySessionVirtualIP = Module.findExportByName("winsta.dll", "WinStationQuerySessionVirtualIP")
+Interceptor.attach(WinStationQuerySessionVirtualIP, {onLeave: function (args) {send("WinStationQuerySessionVirtualIP");}});
+
+var WinStationQueryUpdateRequired = Module.findExportByName("winsta.dll", "WinStationQueryUpdateRequired")
+Interceptor.attach(WinStationQueryUpdateRequired, {onLeave: function (args) {send("WinStationQueryUpdateRequired");}});
+
+var WinStationRcmShadow2 = Module.findExportByName("winsta.dll", "WinStationRcmShadow2")
+Interceptor.attach(WinStationRcmShadow2, {onLeave: function (args) {send("WinStationRcmShadow2");}});
+
+var WinStationRedirectErrorMessage = Module.findExportByName("winsta.dll", "WinStationRedirectErrorMessage")
+Interceptor.attach(WinStationRedirectErrorMessage, {onLeave: function (args) {send("WinStationRedirectErrorMessage");}});
+
+var WinStationRedirectLogonBeginPainting = Module.findExportByName("winsta.dll", "WinStationRedirectLogonBeginPainting")
+Interceptor.attach(WinStationRedirectLogonBeginPainting, {onLeave: function (args) {send("WinStationRedirectLogonBeginPainting");}});
+
+var WinStationRedirectLogonError = Module.findExportByName("winsta.dll", "WinStationRedirectLogonError")
+Interceptor.attach(WinStationRedirectLogonError, {onLeave: function (args) {send("WinStationRedirectLogonError");}});
+
+var WinStationRedirectLogonMessage = Module.findExportByName("winsta.dll", "WinStationRedirectLogonMessage")
+Interceptor.attach(WinStationRedirectLogonMessage, {onLeave: function (args) {send("WinStationRedirectLogonMessage");}});
+
+var WinStationRedirectLogonStatus = Module.findExportByName("winsta.dll", "WinStationRedirectLogonStatus")
+Interceptor.attach(WinStationRedirectLogonStatus, {onLeave: function (args) {send("WinStationRedirectLogonStatus");}});
+
+var WinStationRegisterConsoleNotification = Module.findExportByName("winsta.dll", "WinStationRegisterConsoleNotification")
+Interceptor.attach(WinStationRegisterConsoleNotification, {onLeave: function (args) {send("WinStationRegisterConsoleNotification");}});
+
+var WinStationRegisterConsoleNotificationEx = Module.findExportByName("winsta.dll", "WinStationRegisterConsoleNotificationEx")
+Interceptor.attach(WinStationRegisterConsoleNotificationEx, {onLeave: function (args) {send("WinStationRegisterConsoleNotificationEx");}});
+
+var WinStationRegisterConsoleNotificationEx2 = Module.findExportByName("winsta.dll", "WinStationRegisterConsoleNotificationEx2")
+Interceptor.attach(WinStationRegisterConsoleNotificationEx2, {onLeave: function (args) {send("WinStationRegisterConsoleNotificationEx2");}});
+
+var WinStationRegisterCurrentSessionNotificationEvent = Module.findExportByName("winsta.dll", "WinStationRegisterCurrentSessionNotificationEvent")
+Interceptor.attach(WinStationRegisterCurrentSessionNotificationEvent, {onLeave: function (args) {send("WinStationRegisterCurrentSessionNotificationEvent");}});
+
+var WinStationRegisterNotificationEvent = Module.findExportByName("winsta.dll", "WinStationRegisterNotificationEvent")
+Interceptor.attach(WinStationRegisterNotificationEvent, {onLeave: function (args) {send("WinStationRegisterNotificationEvent");}});
+
+var WinStationRegisterSessionNotification = Module.findExportByName("winsta.dll", "WinStationRegisterSessionNotification")
+Interceptor.attach(WinStationRegisterSessionNotification, {onLeave: function (args) {send("WinStationRegisterSessionNotification");}});
+
+var WinStationRegisterSessionNotificationEx = Module.findExportByName("winsta.dll", "WinStationRegisterSessionNotificationEx")
+Interceptor.attach(WinStationRegisterSessionNotificationEx, {onLeave: function (args) {send("WinStationRegisterSessionNotificationEx");}});
+
+var WinStationRemoveLicense = Module.findExportByName("winsta.dll", "WinStationRemoveLicense")
+Interceptor.attach(WinStationRemoveLicense, {onLeave: function (args) {send("WinStationRemoveLicense");}});
+
+var WinStationRenameA = Module.findExportByName("winsta.dll", "WinStationRenameA")
+Interceptor.attach(WinStationRenameA, {onLeave: function (args) {send("WinStationRenameA");}});
+
+var WinStationRenameW = Module.findExportByName("winsta.dll", "WinStationRenameW")
+Interceptor.attach(WinStationRenameW, {onLeave: function (args) {send("WinStationRenameW");}});
+
+var WinStationReportLoggedOnCompleted = Module.findExportByName("winsta.dll", "WinStationReportLoggedOnCompleted")
+Interceptor.attach(WinStationReportLoggedOnCompleted, {onLeave: function (args) {send("WinStationReportLoggedOnCompleted");}});
+
+var WinStationReportUIResult = Module.findExportByName("winsta.dll", "WinStationReportUIResult")
+Interceptor.attach(WinStationReportUIResult, {onLeave: function (args) {send("WinStationReportUIResult");}});
+
+var WinStationReset = Module.findExportByName("winsta.dll", "WinStationReset")
+Interceptor.attach(WinStationReset, {onLeave: function (args) {send("WinStationReset");}});
+
+var WinStationRevertFromServicesSession = Module.findExportByName("winsta.dll", "WinStationRevertFromServicesSession")
+Interceptor.attach(WinStationRevertFromServicesSession, {onLeave: function (args) {send("WinStationRevertFromServicesSession");}});
+
+var WinStationSendMessageA = Module.findExportByName("winsta.dll", "WinStationSendMessageA")
+Interceptor.attach(WinStationSendMessageA, {onLeave: function (args) {send("WinStationSendMessageA");}});
+
+var WinStationSendMessageW = Module.findExportByName("winsta.dll", "WinStationSendMessageW")
+Interceptor.attach(WinStationSendMessageW, {onLeave: function (args) {send("WinStationSendMessageW");}});
+
+var WinStationSendWindowMessage = Module.findExportByName("winsta.dll", "WinStationSendWindowMessage")
+Interceptor.attach(WinStationSendWindowMessage, {onLeave: function (args) {send("WinStationSendWindowMessage");}});
+
+var WinStationServerPing = Module.findExportByName("winsta.dll", "WinStationServerPing")
+Interceptor.attach(WinStationServerPing, {onLeave: function (args) {send("WinStationServerPing");}});
+
+var WinStationSetAutologonPassword = Module.findExportByName("winsta.dll", "WinStationSetAutologonPassword")
+Interceptor.attach(WinStationSetAutologonPassword, {onLeave: function (args) {send("WinStationSetAutologonPassword");}});
+
+var WinStationSetInformationA = Module.findExportByName("winsta.dll", "WinStationSetInformationA")
+Interceptor.attach(WinStationSetInformationA, {onLeave: function (args) {send("WinStationSetInformationA");}});
+
+var WinStationSetInformationW = Module.findExportByName("winsta.dll", "WinStationSetInformationW")
+Interceptor.attach(WinStationSetInformationW, {onLeave: function (args) {send("WinStationSetInformationW");}});
+
+var WinStationSetLastWinlogonNotification = Module.findExportByName("winsta.dll", "WinStationSetLastWinlogonNotification")
+Interceptor.attach(WinStationSetLastWinlogonNotification, {onLeave: function (args) {send("WinStationSetLastWinlogonNotification");}});
+
+var WinStationSetPoolCount = Module.findExportByName("winsta.dll", "WinStationSetPoolCount")
+Interceptor.attach(WinStationSetPoolCount, {onLeave: function (args) {send("WinStationSetPoolCount");}});
+
+var WinStationSetRenderHint = Module.findExportByName("winsta.dll", "WinStationSetRenderHint")
+Interceptor.attach(WinStationSetRenderHint, {onLeave: function (args) {send("WinStationSetRenderHint");}});
+
+var WinStationShadow = Module.findExportByName("winsta.dll", "WinStationShadow")
+Interceptor.attach(WinStationShadow, {onLeave: function (args) {send("WinStationShadow");}});
+
+var WinStationShadowAccessCheck = Module.findExportByName("winsta.dll", "WinStationShadowAccessCheck")
+Interceptor.attach(WinStationShadowAccessCheck, {onLeave: function (args) {send("WinStationShadowAccessCheck");}});
+
+var WinStationShadowStop = Module.findExportByName("winsta.dll", "WinStationShadowStop")
+Interceptor.attach(WinStationShadowStop, {onLeave: function (args) {send("WinStationShadowStop");}});
+
+var WinStationShadowStop2 = Module.findExportByName("winsta.dll", "WinStationShadowStop2")
+Interceptor.attach(WinStationShadowStop2, {onLeave: function (args) {send("WinStationShadowStop2");}});
+
+var WinStationShutdownSystem = Module.findExportByName("winsta.dll", "WinStationShutdownSystem")
+Interceptor.attach(WinStationShutdownSystem, {onLeave: function (args) {send("WinStationShutdownSystem");}});
+
+var WinStationSwitchToServicesSession = Module.findExportByName("winsta.dll", "WinStationSwitchToServicesSession")
+Interceptor.attach(WinStationSwitchToServicesSession, {onLeave: function (args) {send("WinStationSwitchToServicesSession");}});
+
+var WinStationSystemShutdownStarted = Module.findExportByName("winsta.dll", "WinStationSystemShutdownStarted")
+Interceptor.attach(WinStationSystemShutdownStarted, {onLeave: function (args) {send("WinStationSystemShutdownStarted");}});
+
+var WinStationSystemShutdownWait = Module.findExportByName("winsta.dll", "WinStationSystemShutdownWait")
+Interceptor.attach(WinStationSystemShutdownWait, {onLeave: function (args) {send("WinStationSystemShutdownWait");}});
+
+var WinStationTerminateGlassReplacementSession = Module.findExportByName("winsta.dll", "WinStationTerminateGlassReplacementSession")
+Interceptor.attach(WinStationTerminateGlassReplacementSession, {onLeave: function (args) {send("WinStationTerminateGlassReplacementSession");}});
+
+var WinStationTerminateProcess = Module.findExportByName("winsta.dll", "WinStationTerminateProcess")
+Interceptor.attach(WinStationTerminateProcess, {onLeave: function (args) {send("WinStationTerminateProcess");}});
+
+var WinStationUnRegisterConsoleNotification = Module.findExportByName("winsta.dll", "WinStationUnRegisterConsoleNotification")
+Interceptor.attach(WinStationUnRegisterConsoleNotification, {onLeave: function (args) {send("WinStationUnRegisterConsoleNotification");}});
+
+var WinStationUnRegisterNotificationEvent = Module.findExportByName("winsta.dll", "WinStationUnRegisterNotificationEvent")
+Interceptor.attach(WinStationUnRegisterNotificationEvent, {onLeave: function (args) {send("WinStationUnRegisterNotificationEvent");}});
+
+var WinStationUnRegisterSessionNotification = Module.findExportByName("winsta.dll", "WinStationUnRegisterSessionNotification")
+Interceptor.attach(WinStationUnRegisterSessionNotification, {onLeave: function (args) {send("WinStationUnRegisterSessionNotification");}});
+
+var WinStationUserLoginAccessCheck = Module.findExportByName("winsta.dll", "WinStationUserLoginAccessCheck")
+Interceptor.attach(WinStationUserLoginAccessCheck, {onLeave: function (args) {send("WinStationUserLoginAccessCheck");}});
+
+var WinStationVerify = Module.findExportByName("winsta.dll", "WinStationVerify")
+Interceptor.attach(WinStationVerify, {onLeave: function (args) {send("WinStationVerify");}});
+
+var WinStationVirtualOpen = Module.findExportByName("winsta.dll", "WinStationVirtualOpen")
+Interceptor.attach(WinStationVirtualOpen, {onLeave: function (args) {send("WinStationVirtualOpen");}});
+
+var WinStationVirtualOpenEx = Module.findExportByName("winsta.dll", "WinStationVirtualOpenEx")
+Interceptor.attach(WinStationVirtualOpenEx, {onLeave: function (args) {send("WinStationVirtualOpenEx");}});
+
+var WinStationWaitSystemEvent = Module.findExportByName("winsta.dll", "WinStationWaitSystemEvent")
+Interceptor.attach(WinStationWaitSystemEvent, {onLeave: function (args) {send("WinStationWaitSystemEvent");}});
+
+var _NWLogonQueryAdmin = Module.findExportByName("winsta.dll", "_NWLogonQueryAdmin")
+Interceptor.attach(_NWLogonQueryAdmin, {onLeave: function (args) {send("_NWLogonQueryAdmin");}});
+
+var _NWLogonSetAdmin = Module.findExportByName("winsta.dll", "_NWLogonSetAdmin")
+Interceptor.attach(_NWLogonSetAdmin, {onLeave: function (args) {send("_NWLogonSetAdmin");}});
+
+var _WinStationAnnoyancePopup = Module.findExportByName("winsta.dll", "_WinStationAnnoyancePopup")
+Interceptor.attach(_WinStationAnnoyancePopup, {onLeave: function (args) {send("_WinStationAnnoyancePopup");}});
+
+var _WinStationBeepOpen = Module.findExportByName("winsta.dll", "_WinStationBeepOpen")
+Interceptor.attach(_WinStationBeepOpen, {onLeave: function (args) {send("_WinStationBeepOpen");}});
+
+var _WinStationBreakPoint = Module.findExportByName("winsta.dll", "_WinStationBreakPoint")
+Interceptor.attach(_WinStationBreakPoint, {onLeave: function (args) {send("_WinStationBreakPoint");}});
+
+var _WinStationCallback = Module.findExportByName("winsta.dll", "_WinStationCallback")
+Interceptor.attach(_WinStationCallback, {onLeave: function (args) {send("_WinStationCallback");}});
+
+var _WinStationCheckForApplicationName = Module.findExportByName("winsta.dll", "_WinStationCheckForApplicationName")
+Interceptor.attach(_WinStationCheckForApplicationName, {onLeave: function (args) {send("_WinStationCheckForApplicationName");}});
+
+var _WinStationFUSCanRemoteUserDisconnect = Module.findExportByName("winsta.dll", "_WinStationFUSCanRemoteUserDisconnect")
+Interceptor.attach(_WinStationFUSCanRemoteUserDisconnect, {onLeave: function (args) {send("_WinStationFUSCanRemoteUserDisconnect");}});
+
+var _WinStationGetApplicationInfo = Module.findExportByName("winsta.dll", "_WinStationGetApplicationInfo")
+Interceptor.attach(_WinStationGetApplicationInfo, {onLeave: function (args) {send("_WinStationGetApplicationInfo");}});
+
+var _WinStationNotifyDisconnectPipe = Module.findExportByName("winsta.dll", "_WinStationNotifyDisconnectPipe")
+Interceptor.attach(_WinStationNotifyDisconnectPipe, {onLeave: function (args) {send("_WinStationNotifyDisconnectPipe");}});
+
+var _WinStationNotifyLogoff = Module.findExportByName("winsta.dll", "_WinStationNotifyLogoff")
+Interceptor.attach(_WinStationNotifyLogoff, {onLeave: function (args) {send("_WinStationNotifyLogoff");}});
+
+var _WinStationNotifyLogon = Module.findExportByName("winsta.dll", "_WinStationNotifyLogon")
+Interceptor.attach(_WinStationNotifyLogon, {onLeave: function (args) {send("_WinStationNotifyLogon");}});
+
+var _WinStationNotifyNewSession = Module.findExportByName("winsta.dll", "_WinStationNotifyNewSession")
+Interceptor.attach(_WinStationNotifyNewSession, {onLeave: function (args) {send("_WinStationNotifyNewSession");}});
+
+var _WinStationOpenSessionDirectory = Module.findExportByName("winsta.dll", "_WinStationOpenSessionDirectory")
+Interceptor.attach(_WinStationOpenSessionDirectory, {onLeave: function (args) {send("_WinStationOpenSessionDirectory");}});
+
+var _WinStationReInitializeSecurity = Module.findExportByName("winsta.dll", "_WinStationReInitializeSecurity")
+Interceptor.attach(_WinStationReInitializeSecurity, {onLeave: function (args) {send("_WinStationReInitializeSecurity");}});
+
+var _WinStationReadRegistry = Module.findExportByName("winsta.dll", "_WinStationReadRegistry")
+Interceptor.attach(_WinStationReadRegistry, {onLeave: function (args) {send("_WinStationReadRegistry");}});
+
+var _WinStationSessionInitialized = Module.findExportByName("winsta.dll", "_WinStationSessionInitialized")
+Interceptor.attach(_WinStationSessionInitialized, {onLeave: function (args) {send("_WinStationSessionInitialized");}});
+
+var _WinStationShadowTarget = Module.findExportByName("winsta.dll", "_WinStationShadowTarget")
+Interceptor.attach(_WinStationShadowTarget, {onLeave: function (args) {send("_WinStationShadowTarget");}});
+
+var _WinStationShadowTarget2 = Module.findExportByName("winsta.dll", "_WinStationShadowTarget2")
+Interceptor.attach(_WinStationShadowTarget2, {onLeave: function (args) {send("_WinStationShadowTarget2");}});
+
+var _WinStationShadowTargetSetup = Module.findExportByName("winsta.dll", "_WinStationShadowTargetSetup")
+Interceptor.attach(_WinStationShadowTargetSetup, {onLeave: function (args) {send("_WinStationShadowTargetSetup");}});
+
+var _WinStationUpdateClientCachedCredentials = Module.findExportByName("winsta.dll", "_WinStationUpdateClientCachedCredentials")
+Interceptor.attach(_WinStationUpdateClientCachedCredentials, {onLeave: function (args) {send("_WinStationUpdateClientCachedCredentials");}});
+
+var _WinStationUpdateSettings = Module.findExportByName("winsta.dll", "_WinStationUpdateSettings")
+Interceptor.attach(_WinStationUpdateSettings, {onLeave: function (args) {send("_WinStationUpdateSettings");}});
+
+var _WinStationUpdateUserConfig = Module.findExportByName("winsta.dll", "_WinStationUpdateUserConfig")
+Interceptor.attach(_WinStationUpdateUserConfig, {onLeave: function (args) {send("_WinStationUpdateUserConfig");}});
+
+var _WinStationWaitForConnect = Module.findExportByName("winsta.dll", "_WinStationWaitForConnect")
+Interceptor.attach(_WinStationWaitForConnect, {onLeave: function (args) {send("_WinStationWaitForConnect");}});
+

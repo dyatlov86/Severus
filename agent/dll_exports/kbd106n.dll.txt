@@ -1,0 +1,6 @@
+var KbdLayerDescriptor = Module.findExportByName("kbd106n.dll", "KbdLayerDescriptor")
+Interceptor.attach(KbdLayerDescriptor, {onLeave: function (args) {send("KbdLayerDescriptor");}});
+
+var KbdNlsLayerDescriptor = Module.findExportByName("kbd106n.dll", "KbdNlsLayerDescriptor")
+Interceptor.attach(KbdNlsLayerDescriptor, {onLeave: function (args) {send("KbdNlsLayerDescriptor");}});
+

@@ -1,0 +1,45 @@
+var ContainerSetupFunction = Module.findExportByName("appraiser.dll", "ContainerSetupFunction")
+Interceptor.attach(ContainerSetupFunction, {onLeave: function (args) {send("ContainerSetupFunction");}});
+
+var ContainerSetupWrapper = Module.findExportByName("appraiser.dll", "ContainerSetupWrapper")
+Interceptor.attach(ContainerSetupWrapper, {onLeave: function (args) {send("ContainerSetupWrapper");}});
+
+var DoProcessRestoreApps = Module.findExportByName("appraiser.dll", "DoProcessRestoreApps")
+Interceptor.attach(DoProcessRestoreApps, {onLeave: function (args) {send("DoProcessRestoreApps");}});
+
+var DoScheduledTelemetryRun = Module.findExportByName("appraiser.dll", "DoScheduledTelemetryRun")
+Interceptor.attach(DoScheduledTelemetryRun, {onLeave: function (args) {send("DoScheduledTelemetryRun");}});
+
+var DoScheduledTelemetryRunTC = Module.findExportByName("appraiser.dll", "DoScheduledTelemetryRunTC")
+Interceptor.attach(DoScheduledTelemetryRunTC, {onLeave: function (args) {send("DoScheduledTelemetryRunTC");}});
+
+var GetCtacProvider = Module.findExportByName("appraiser.dll", "GetCtacProvider")
+Interceptor.attach(GetCtacProvider, {onLeave: function (args) {send("GetCtacProvider");}});
+
+var GetProvider = Module.findExportByName("appraiser.dll", "GetProvider")
+Interceptor.attach(GetProvider, {onLeave: function (args) {send("GetProvider");}});
+
+var GetTargetVersionList = Module.findExportByName("appraiser.dll", "GetTargetVersionList")
+Interceptor.attach(GetTargetVersionList, {onLeave: function (args) {send("GetTargetVersionList");}});
+
+var ProcessRestoreApps = Module.findExportByName("appraiser.dll", "ProcessRestoreApps")
+Interceptor.attach(ProcessRestoreApps, {onLeave: function (args) {send("ProcessRestoreApps");}});
+
+var RunTest = Module.findExportByName("appraiser.dll", "RunTest")
+Interceptor.attach(RunTest, {onLeave: function (args) {send("RunTest");}});
+
+var RunXml = Module.findExportByName("appraiser.dll", "RunXml")
+Interceptor.attach(RunXml, {onLeave: function (args) {send("RunXml");}});
+
+var Sgd = Module.findExportByName("appraiser.dll", "Sgd")
+Interceptor.attach(Sgd, {onLeave: function (args) {send("Sgd");}});
+
+var UpdateAvStatus = Module.findExportByName("appraiser.dll", "UpdateAvStatus")
+Interceptor.attach(UpdateAvStatus, {onLeave: function (args) {send("UpdateAvStatus");}});
+
+var UpdateCacheCompatStatuses = Module.findExportByName("appraiser.dll", "UpdateCacheCompatStatuses")
+Interceptor.attach(UpdateCacheCompatStatuses, {onLeave: function (args) {send("UpdateCacheCompatStatuses");}});
+
+var UpdateExperienceIndicators = Module.findExportByName("appraiser.dll", "UpdateExperienceIndicators")
+Interceptor.attach(UpdateExperienceIndicators, {onLeave: function (args) {send("UpdateExperienceIndicators");}});
+

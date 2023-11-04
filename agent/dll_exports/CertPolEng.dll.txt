@@ -1,0 +1,42 @@
+var IntPstGetCertificate = Module.findExportByName("CertPolEng.dll", "IntPstGetCertificate")
+Interceptor.attach(IntPstGetCertificate, {onLeave: function (args) {send("IntPstGetCertificate");}});
+
+var IntPstGetNameIdentifierForCertificate = Module.findExportByName("CertPolEng.dll", "IntPstGetNameIdentifierForCertificate")
+Interceptor.attach(IntPstGetNameIdentifierForCertificate, {onLeave: function (args) {send("IntPstGetNameIdentifierForCertificate");}});
+
+var IntPstGetTrustAnchors = Module.findExportByName("CertPolEng.dll", "IntPstGetTrustAnchors")
+Interceptor.attach(IntPstGetTrustAnchors, {onLeave: function (args) {send("IntPstGetTrustAnchors");}});
+
+var IntPstMapCertificateToProvider = Module.findExportByName("CertPolEng.dll", "IntPstMapCertificateToProvider")
+Interceptor.attach(IntPstMapCertificateToProvider, {onLeave: function (args) {send("IntPstMapCertificateToProvider");}});
+
+var IntPstMapUserCredsToProvider = Module.findExportByName("CertPolEng.dll", "IntPstMapUserCredsToProvider")
+Interceptor.attach(IntPstMapUserCredsToProvider, {onLeave: function (args) {send("IntPstMapUserCredsToProvider");}});
+
+var IntPstValidate = Module.findExportByName("CertPolEng.dll", "IntPstValidate")
+Interceptor.attach(IntPstValidate, {onLeave: function (args) {send("IntPstValidate");}});
+
+var PstAcquirePrivateKey = Module.findExportByName("CertPolEng.dll", "PstAcquirePrivateKey")
+Interceptor.attach(PstAcquirePrivateKey, {onLeave: function (args) {send("PstAcquirePrivateKey");}});
+
+var PstGetCertificateChain = Module.findExportByName("CertPolEng.dll", "PstGetCertificateChain")
+Interceptor.attach(PstGetCertificateChain, {onLeave: function (args) {send("PstGetCertificateChain");}});
+
+var PstGetCertificates = Module.findExportByName("CertPolEng.dll", "PstGetCertificates")
+Interceptor.attach(PstGetCertificates, {onLeave: function (args) {send("PstGetCertificates");}});
+
+var PstGetTrustAnchors = Module.findExportByName("CertPolEng.dll", "PstGetTrustAnchors")
+Interceptor.attach(PstGetTrustAnchors, {onLeave: function (args) {send("PstGetTrustAnchors");}});
+
+var PstGetTrustAnchorsEx = Module.findExportByName("CertPolEng.dll", "PstGetTrustAnchorsEx")
+Interceptor.attach(PstGetTrustAnchorsEx, {onLeave: function (args) {send("PstGetTrustAnchorsEx");}});
+
+var PstGetUserNameForCertificate = Module.findExportByName("CertPolEng.dll", "PstGetUserNameForCertificate")
+Interceptor.attach(PstGetUserNameForCertificate, {onLeave: function (args) {send("PstGetUserNameForCertificate");}});
+
+var PstMapCertificate = Module.findExportByName("CertPolEng.dll", "PstMapCertificate")
+Interceptor.attach(PstMapCertificate, {onLeave: function (args) {send("PstMapCertificate");}});
+
+var PstValidate = Module.findExportByName("CertPolEng.dll", "PstValidate")
+Interceptor.attach(PstValidate, {onLeave: function (args) {send("PstValidate");}});
+

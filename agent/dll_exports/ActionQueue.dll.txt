@@ -1,0 +1,6 @@
+var GenerateActionQueue = Module.findExportByName("ActionQueue.dll", "GenerateActionQueue")
+Interceptor.attach(GenerateActionQueue, {onLeave: function (args) {send("GenerateActionQueue");}});
+
+var ProcessActionQueue = Module.findExportByName("ActionQueue.dll", "ProcessActionQueue")
+Interceptor.attach(ProcessActionQueue, {onLeave: function (args) {send("ProcessActionQueue");}});
+

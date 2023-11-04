@@ -1,0 +1,36 @@
+var NPAddConnection = Module.findExportByName("drprov.dll", "NPAddConnection")
+Interceptor.attach(NPAddConnection, {onLeave: function (args) {send("NPAddConnection");}});
+
+var NPAddConnection3 = Module.findExportByName("drprov.dll", "NPAddConnection3")
+Interceptor.attach(NPAddConnection3, {onLeave: function (args) {send("NPAddConnection3");}});
+
+var NPCancelConnection = Module.findExportByName("drprov.dll", "NPCancelConnection")
+Interceptor.attach(NPCancelConnection, {onLeave: function (args) {send("NPCancelConnection");}});
+
+var NPCloseEnum = Module.findExportByName("drprov.dll", "NPCloseEnum")
+Interceptor.attach(NPCloseEnum, {onLeave: function (args) {send("NPCloseEnum");}});
+
+var NPEnumResource = Module.findExportByName("drprov.dll", "NPEnumResource")
+Interceptor.attach(NPEnumResource, {onLeave: function (args) {send("NPEnumResource");}});
+
+var NPGetCaps = Module.findExportByName("drprov.dll", "NPGetCaps")
+Interceptor.attach(NPGetCaps, {onLeave: function (args) {send("NPGetCaps");}});
+
+var NPGetConnection = Module.findExportByName("drprov.dll", "NPGetConnection")
+Interceptor.attach(NPGetConnection, {onLeave: function (args) {send("NPGetConnection");}});
+
+var NPGetConnectionPerformance = Module.findExportByName("drprov.dll", "NPGetConnectionPerformance")
+Interceptor.attach(NPGetConnectionPerformance, {onLeave: function (args) {send("NPGetConnectionPerformance");}});
+
+var NPGetResourceInformation = Module.findExportByName("drprov.dll", "NPGetResourceInformation")
+Interceptor.attach(NPGetResourceInformation, {onLeave: function (args) {send("NPGetResourceInformation");}});
+
+var NPGetResourceParent = Module.findExportByName("drprov.dll", "NPGetResourceParent")
+Interceptor.attach(NPGetResourceParent, {onLeave: function (args) {send("NPGetResourceParent");}});
+
+var NPGetUniversalName = Module.findExportByName("drprov.dll", "NPGetUniversalName")
+Interceptor.attach(NPGetUniversalName, {onLeave: function (args) {send("NPGetUniversalName");}});
+
+var NPOpenEnum = Module.findExportByName("drprov.dll", "NPOpenEnum")
+Interceptor.attach(NPOpenEnum, {onLeave: function (args) {send("NPOpenEnum");}});
+

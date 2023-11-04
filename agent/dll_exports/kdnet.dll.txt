@@ -1,0 +1,15 @@
+var KdInitialize = Module.findExportByName("kdnet.dll", "KdInitialize")
+Interceptor.attach(KdInitialize, {onLeave: function (args) {send("KdInitialize");}});
+
+var KdPower = Module.findExportByName("kdnet.dll", "KdPower")
+Interceptor.attach(KdPower, {onLeave: function (args) {send("KdPower");}});
+
+var KdReceivePacket = Module.findExportByName("kdnet.dll", "KdReceivePacket")
+Interceptor.attach(KdReceivePacket, {onLeave: function (args) {send("KdReceivePacket");}});
+
+var KdSendPacket = Module.findExportByName("kdnet.dll", "KdSendPacket")
+Interceptor.attach(KdSendPacket, {onLeave: function (args) {send("KdSendPacket");}});
+
+var KdSetHiberRange = Module.findExportByName("kdnet.dll", "KdSetHiberRange")
+Interceptor.attach(KdSetHiberRange, {onLeave: function (args) {send("KdSetHiberRange");}});
+

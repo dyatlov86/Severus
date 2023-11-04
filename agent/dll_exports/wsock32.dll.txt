@@ -1,0 +1,225 @@
+var AcceptEx = Module.findExportByName("wsock32.dll", "AcceptEx")
+Interceptor.attach(AcceptEx, {onLeave: function (args) {send("AcceptEx");}});
+
+var EnumProtocolsA = Module.findExportByName("wsock32.dll", "EnumProtocolsA")
+Interceptor.attach(EnumProtocolsA, {onLeave: function (args) {send("EnumProtocolsA");}});
+
+var EnumProtocolsW = Module.findExportByName("wsock32.dll", "EnumProtocolsW")
+Interceptor.attach(EnumProtocolsW, {onLeave: function (args) {send("EnumProtocolsW");}});
+
+var GetAcceptExSockaddrs = Module.findExportByName("wsock32.dll", "GetAcceptExSockaddrs")
+Interceptor.attach(GetAcceptExSockaddrs, {onLeave: function (args) {send("GetAcceptExSockaddrs");}});
+
+var GetAddressByNameA = Module.findExportByName("wsock32.dll", "GetAddressByNameA")
+Interceptor.attach(GetAddressByNameA, {onLeave: function (args) {send("GetAddressByNameA");}});
+
+var GetAddressByNameW = Module.findExportByName("wsock32.dll", "GetAddressByNameW")
+Interceptor.attach(GetAddressByNameW, {onLeave: function (args) {send("GetAddressByNameW");}});
+
+var GetNameByTypeA = Module.findExportByName("wsock32.dll", "GetNameByTypeA")
+Interceptor.attach(GetNameByTypeA, {onLeave: function (args) {send("GetNameByTypeA");}});
+
+var GetNameByTypeW = Module.findExportByName("wsock32.dll", "GetNameByTypeW")
+Interceptor.attach(GetNameByTypeW, {onLeave: function (args) {send("GetNameByTypeW");}});
+
+var GetServiceA = Module.findExportByName("wsock32.dll", "GetServiceA")
+Interceptor.attach(GetServiceA, {onLeave: function (args) {send("GetServiceA");}});
+
+var GetServiceW = Module.findExportByName("wsock32.dll", "GetServiceW")
+Interceptor.attach(GetServiceW, {onLeave: function (args) {send("GetServiceW");}});
+
+var GetTypeByNameA = Module.findExportByName("wsock32.dll", "GetTypeByNameA")
+Interceptor.attach(GetTypeByNameA, {onLeave: function (args) {send("GetTypeByNameA");}});
+
+var GetTypeByNameW = Module.findExportByName("wsock32.dll", "GetTypeByNameW")
+Interceptor.attach(GetTypeByNameW, {onLeave: function (args) {send("GetTypeByNameW");}});
+
+var MigrateWinsockConfiguration = Module.findExportByName("wsock32.dll", "MigrateWinsockConfiguration")
+Interceptor.attach(MigrateWinsockConfiguration, {onLeave: function (args) {send("MigrateWinsockConfiguration");}});
+
+var NPLoadNameSpaces = Module.findExportByName("wsock32.dll", "NPLoadNameSpaces")
+Interceptor.attach(NPLoadNameSpaces, {onLeave: function (args) {send("NPLoadNameSpaces");}});
+
+var SetServiceA = Module.findExportByName("wsock32.dll", "SetServiceA")
+Interceptor.attach(SetServiceA, {onLeave: function (args) {send("SetServiceA");}});
+
+var SetServiceW = Module.findExportByName("wsock32.dll", "SetServiceW")
+Interceptor.attach(SetServiceW, {onLeave: function (args) {send("SetServiceW");}});
+
+var TransmitFile = Module.findExportByName("wsock32.dll", "TransmitFile")
+Interceptor.attach(TransmitFile, {onLeave: function (args) {send("TransmitFile");}});
+
+var WEP = Module.findExportByName("wsock32.dll", "WEP")
+Interceptor.attach(WEP, {onLeave: function (args) {send("WEP");}});
+
+var WSAAsyncGetHostByAddr = Module.findExportByName("wsock32.dll", "WSAAsyncGetHostByAddr")
+Interceptor.attach(WSAAsyncGetHostByAddr, {onLeave: function (args) {send("WSAAsyncGetHostByAddr");}});
+
+var WSAAsyncGetHostByName = Module.findExportByName("wsock32.dll", "WSAAsyncGetHostByName")
+Interceptor.attach(WSAAsyncGetHostByName, {onLeave: function (args) {send("WSAAsyncGetHostByName");}});
+
+var WSAAsyncGetProtoByName = Module.findExportByName("wsock32.dll", "WSAAsyncGetProtoByName")
+Interceptor.attach(WSAAsyncGetProtoByName, {onLeave: function (args) {send("WSAAsyncGetProtoByName");}});
+
+var WSAAsyncGetProtoByNumber = Module.findExportByName("wsock32.dll", "WSAAsyncGetProtoByNumber")
+Interceptor.attach(WSAAsyncGetProtoByNumber, {onLeave: function (args) {send("WSAAsyncGetProtoByNumber");}});
+
+var WSAAsyncGetServByName = Module.findExportByName("wsock32.dll", "WSAAsyncGetServByName")
+Interceptor.attach(WSAAsyncGetServByName, {onLeave: function (args) {send("WSAAsyncGetServByName");}});
+
+var WSAAsyncGetServByPort = Module.findExportByName("wsock32.dll", "WSAAsyncGetServByPort")
+Interceptor.attach(WSAAsyncGetServByPort, {onLeave: function (args) {send("WSAAsyncGetServByPort");}});
+
+var WSAAsyncSelect = Module.findExportByName("wsock32.dll", "WSAAsyncSelect")
+Interceptor.attach(WSAAsyncSelect, {onLeave: function (args) {send("WSAAsyncSelect");}});
+
+var WSACancelAsyncRequest = Module.findExportByName("wsock32.dll", "WSACancelAsyncRequest")
+Interceptor.attach(WSACancelAsyncRequest, {onLeave: function (args) {send("WSACancelAsyncRequest");}});
+
+var WSACancelBlockingCall = Module.findExportByName("wsock32.dll", "WSACancelBlockingCall")
+Interceptor.attach(WSACancelBlockingCall, {onLeave: function (args) {send("WSACancelBlockingCall");}});
+
+var WSACleanup = Module.findExportByName("wsock32.dll", "WSACleanup")
+Interceptor.attach(WSACleanup, {onLeave: function (args) {send("WSACleanup");}});
+
+var WSAGetLastError = Module.findExportByName("wsock32.dll", "WSAGetLastError")
+Interceptor.attach(WSAGetLastError, {onLeave: function (args) {send("WSAGetLastError");}});
+
+var WSAIsBlocking = Module.findExportByName("wsock32.dll", "WSAIsBlocking")
+Interceptor.attach(WSAIsBlocking, {onLeave: function (args) {send("WSAIsBlocking");}});
+
+var WSARecvEx = Module.findExportByName("wsock32.dll", "WSARecvEx")
+Interceptor.attach(WSARecvEx, {onLeave: function (args) {send("WSARecvEx");}});
+
+var WSASetBlockingHook = Module.findExportByName("wsock32.dll", "WSASetBlockingHook")
+Interceptor.attach(WSASetBlockingHook, {onLeave: function (args) {send("WSASetBlockingHook");}});
+
+var WSASetLastError = Module.findExportByName("wsock32.dll", "WSASetLastError")
+Interceptor.attach(WSASetLastError, {onLeave: function (args) {send("WSASetLastError");}});
+
+var WSAStartup = Module.findExportByName("wsock32.dll", "WSAStartup")
+Interceptor.attach(WSAStartup, {onLeave: function (args) {send("WSAStartup");}});
+
+var WSAUnhookBlockingHook = Module.findExportByName("wsock32.dll", "WSAUnhookBlockingHook")
+Interceptor.attach(WSAUnhookBlockingHook, {onLeave: function (args) {send("WSAUnhookBlockingHook");}});
+
+var WSApSetPostRoutine = Module.findExportByName("wsock32.dll", "WSApSetPostRoutine")
+Interceptor.attach(WSApSetPostRoutine, {onLeave: function (args) {send("WSApSetPostRoutine");}});
+
+var __WSAFDIsSet = Module.findExportByName("wsock32.dll", "__WSAFDIsSet")
+Interceptor.attach(__WSAFDIsSet, {onLeave: function (args) {send("__WSAFDIsSet");}});
+
+var accept = Module.findExportByName("wsock32.dll", "accept")
+Interceptor.attach(accept, {onLeave: function (args) {send("accept");}});
+
+var bind = Module.findExportByName("wsock32.dll", "bind")
+Interceptor.attach(bind, {onLeave: function (args) {send("bind");}});
+
+var closesocket = Module.findExportByName("wsock32.dll", "closesocket")
+Interceptor.attach(closesocket, {onLeave: function (args) {send("closesocket");}});
+
+var connect = Module.findExportByName("wsock32.dll", "connect")
+Interceptor.attach(connect, {onLeave: function (args) {send("connect");}});
+
+var dn_expand = Module.findExportByName("wsock32.dll", "dn_expand")
+Interceptor.attach(dn_expand, {onLeave: function (args) {send("dn_expand");}});
+
+var gethostbyaddr = Module.findExportByName("wsock32.dll", "gethostbyaddr")
+Interceptor.attach(gethostbyaddr, {onLeave: function (args) {send("gethostbyaddr");}});
+
+var gethostbyname = Module.findExportByName("wsock32.dll", "gethostbyname")
+Interceptor.attach(gethostbyname, {onLeave: function (args) {send("gethostbyname");}});
+
+var gethostname = Module.findExportByName("wsock32.dll", "gethostname")
+Interceptor.attach(gethostname, {onLeave: function (args) {send("gethostname");}});
+
+var getnetbyname = Module.findExportByName("wsock32.dll", "getnetbyname")
+Interceptor.attach(getnetbyname, {onLeave: function (args) {send("getnetbyname");}});
+
+var getpeername = Module.findExportByName("wsock32.dll", "getpeername")
+Interceptor.attach(getpeername, {onLeave: function (args) {send("getpeername");}});
+
+var getprotobyname = Module.findExportByName("wsock32.dll", "getprotobyname")
+Interceptor.attach(getprotobyname, {onLeave: function (args) {send("getprotobyname");}});
+
+var getprotobynumber = Module.findExportByName("wsock32.dll", "getprotobynumber")
+Interceptor.attach(getprotobynumber, {onLeave: function (args) {send("getprotobynumber");}});
+
+var getservbyname = Module.findExportByName("wsock32.dll", "getservbyname")
+Interceptor.attach(getservbyname, {onLeave: function (args) {send("getservbyname");}});
+
+var getservbyport = Module.findExportByName("wsock32.dll", "getservbyport")
+Interceptor.attach(getservbyport, {onLeave: function (args) {send("getservbyport");}});
+
+var getsockname = Module.findExportByName("wsock32.dll", "getsockname")
+Interceptor.attach(getsockname, {onLeave: function (args) {send("getsockname");}});
+
+var getsockopt = Module.findExportByName("wsock32.dll", "getsockopt")
+Interceptor.attach(getsockopt, {onLeave: function (args) {send("getsockopt");}});
+
+var htonl = Module.findExportByName("wsock32.dll", "htonl")
+Interceptor.attach(htonl, {onLeave: function (args) {send("htonl");}});
+
+var htons = Module.findExportByName("wsock32.dll", "htons")
+Interceptor.attach(htons, {onLeave: function (args) {send("htons");}});
+
+var inet_addr = Module.findExportByName("wsock32.dll", "inet_addr")
+Interceptor.attach(inet_addr, {onLeave: function (args) {send("inet_addr");}});
+
+var inet_network = Module.findExportByName("wsock32.dll", "inet_network")
+Interceptor.attach(inet_network, {onLeave: function (args) {send("inet_network");}});
+
+var inet_ntoa = Module.findExportByName("wsock32.dll", "inet_ntoa")
+Interceptor.attach(inet_ntoa, {onLeave: function (args) {send("inet_ntoa");}});
+
+var ioctlsocket = Module.findExportByName("wsock32.dll", "ioctlsocket")
+Interceptor.attach(ioctlsocket, {onLeave: function (args) {send("ioctlsocket");}});
+
+var listen = Module.findExportByName("wsock32.dll", "listen")
+Interceptor.attach(listen, {onLeave: function (args) {send("listen");}});
+
+var ntohl = Module.findExportByName("wsock32.dll", "ntohl")
+Interceptor.attach(ntohl, {onLeave: function (args) {send("ntohl");}});
+
+var ntohs = Module.findExportByName("wsock32.dll", "ntohs")
+Interceptor.attach(ntohs, {onLeave: function (args) {send("ntohs");}});
+
+var rcmd = Module.findExportByName("wsock32.dll", "rcmd")
+Interceptor.attach(rcmd, {onLeave: function (args) {send("rcmd");}});
+
+var recv = Module.findExportByName("wsock32.dll", "recv")
+Interceptor.attach(recv, {onLeave: function (args) {send("recv");}});
+
+var recvfrom = Module.findExportByName("wsock32.dll", "recvfrom")
+Interceptor.attach(recvfrom, {onLeave: function (args) {send("recvfrom");}});
+
+var rexec = Module.findExportByName("wsock32.dll", "rexec")
+Interceptor.attach(rexec, {onLeave: function (args) {send("rexec");}});
+
+var rresvport = Module.findExportByName("wsock32.dll", "rresvport")
+Interceptor.attach(rresvport, {onLeave: function (args) {send("rresvport");}});
+
+var s_perror = Module.findExportByName("wsock32.dll", "s_perror")
+Interceptor.attach(s_perror, {onLeave: function (args) {send("s_perror");}});
+
+var select = Module.findExportByName("wsock32.dll", "select")
+Interceptor.attach(select, {onLeave: function (args) {send("select");}});
+
+var send = Module.findExportByName("wsock32.dll", "send")
+Interceptor.attach(send, {onLeave: function (args) {send("send");}});
+
+var sendto = Module.findExportByName("wsock32.dll", "sendto")
+Interceptor.attach(sendto, {onLeave: function (args) {send("sendto");}});
+
+var sethostname = Module.findExportByName("wsock32.dll", "sethostname")
+Interceptor.attach(sethostname, {onLeave: function (args) {send("sethostname");}});
+
+var setsockopt = Module.findExportByName("wsock32.dll", "setsockopt")
+Interceptor.attach(setsockopt, {onLeave: function (args) {send("setsockopt");}});
+
+var shutdown = Module.findExportByName("wsock32.dll", "shutdown")
+Interceptor.attach(shutdown, {onLeave: function (args) {send("shutdown");}});
+
+var socket = Module.findExportByName("wsock32.dll", "socket")
+Interceptor.attach(socket, {onLeave: function (args) {send("socket");}});
+

@@ -1,0 +1,3 @@
+var SpdServiceMain = Module.findExportByName("IPSECSVC.DLL", "SpdServiceMain")
+Interceptor.attach(SpdServiceMain, {onLeave: function (args) {send("SpdServiceMain");}});
+

@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("Wpc.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Wpc.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Wpc.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("Wpc.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("Wpc.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var WpcTimeRestrictionsCreateLocalOverride = Module.findExportByName("Wpc.dll", "WpcTimeRestrictionsCreateLocalOverride")
+Interceptor.attach(WpcTimeRestrictionsCreateLocalOverride, {onLeave: function (args) {send("WpcTimeRestrictionsCreateLocalOverride");}});
+

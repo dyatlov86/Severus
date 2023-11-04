@@ -1,0 +1,21 @@
+var DirectInputCreateA = Module.findExportByName("dinput.dll", "DirectInputCreateA")
+Interceptor.attach(DirectInputCreateA, {onLeave: function (args) {send("DirectInputCreateA");}});
+
+var DirectInputCreateEx = Module.findExportByName("dinput.dll", "DirectInputCreateEx")
+Interceptor.attach(DirectInputCreateEx, {onLeave: function (args) {send("DirectInputCreateEx");}});
+
+var DirectInputCreateW = Module.findExportByName("dinput.dll", "DirectInputCreateW")
+Interceptor.attach(DirectInputCreateW, {onLeave: function (args) {send("DirectInputCreateW");}});
+
+var DllCanUnloadNow = Module.findExportByName("dinput.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("dinput.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("dinput.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("dinput.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

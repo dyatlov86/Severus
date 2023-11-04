@@ -1,0 +1,834 @@
+var GetTapi16CallbackMsg = Module.findExportByName("tapi32.dll", "GetTapi16CallbackMsg")
+Interceptor.attach(GetTapi16CallbackMsg, {onLeave: function (args) {send("GetTapi16CallbackMsg");}});
+
+var LAddrParamsInited = Module.findExportByName("tapi32.dll", "LAddrParamsInited")
+Interceptor.attach(LAddrParamsInited, {onLeave: function (args) {send("LAddrParamsInited");}});
+
+var LOpenDialAsst = Module.findExportByName("tapi32.dll", "LOpenDialAsst")
+Interceptor.attach(LOpenDialAsst, {onLeave: function (args) {send("LOpenDialAsst");}});
+
+var LocWizardDlgProc = Module.findExportByName("tapi32.dll", "LocWizardDlgProc")
+Interceptor.attach(LocWizardDlgProc, {onLeave: function (args) {send("LocWizardDlgProc");}});
+
+var MMCAddProvider = Module.findExportByName("tapi32.dll", "MMCAddProvider")
+Interceptor.attach(MMCAddProvider, {onLeave: function (args) {send("MMCAddProvider");}});
+
+var MMCConfigProvider = Module.findExportByName("tapi32.dll", "MMCConfigProvider")
+Interceptor.attach(MMCConfigProvider, {onLeave: function (args) {send("MMCConfigProvider");}});
+
+var MMCGetAvailableProviders = Module.findExportByName("tapi32.dll", "MMCGetAvailableProviders")
+Interceptor.attach(MMCGetAvailableProviders, {onLeave: function (args) {send("MMCGetAvailableProviders");}});
+
+var MMCGetDeviceFlags = Module.findExportByName("tapi32.dll", "MMCGetDeviceFlags")
+Interceptor.attach(MMCGetDeviceFlags, {onLeave: function (args) {send("MMCGetDeviceFlags");}});
+
+var MMCGetLineInfo = Module.findExportByName("tapi32.dll", "MMCGetLineInfo")
+Interceptor.attach(MMCGetLineInfo, {onLeave: function (args) {send("MMCGetLineInfo");}});
+
+var MMCGetLineStatus = Module.findExportByName("tapi32.dll", "MMCGetLineStatus")
+Interceptor.attach(MMCGetLineStatus, {onLeave: function (args) {send("MMCGetLineStatus");}});
+
+var MMCGetPhoneInfo = Module.findExportByName("tapi32.dll", "MMCGetPhoneInfo")
+Interceptor.attach(MMCGetPhoneInfo, {onLeave: function (args) {send("MMCGetPhoneInfo");}});
+
+var MMCGetPhoneStatus = Module.findExportByName("tapi32.dll", "MMCGetPhoneStatus")
+Interceptor.attach(MMCGetPhoneStatus, {onLeave: function (args) {send("MMCGetPhoneStatus");}});
+
+var MMCGetProviderList = Module.findExportByName("tapi32.dll", "MMCGetProviderList")
+Interceptor.attach(MMCGetProviderList, {onLeave: function (args) {send("MMCGetProviderList");}});
+
+var MMCGetServerConfig = Module.findExportByName("tapi32.dll", "MMCGetServerConfig")
+Interceptor.attach(MMCGetServerConfig, {onLeave: function (args) {send("MMCGetServerConfig");}});
+
+var MMCInitialize = Module.findExportByName("tapi32.dll", "MMCInitialize")
+Interceptor.attach(MMCInitialize, {onLeave: function (args) {send("MMCInitialize");}});
+
+var MMCRemoveProvider = Module.findExportByName("tapi32.dll", "MMCRemoveProvider")
+Interceptor.attach(MMCRemoveProvider, {onLeave: function (args) {send("MMCRemoveProvider");}});
+
+var MMCSetLineInfo = Module.findExportByName("tapi32.dll", "MMCSetLineInfo")
+Interceptor.attach(MMCSetLineInfo, {onLeave: function (args) {send("MMCSetLineInfo");}});
+
+var MMCSetPhoneInfo = Module.findExportByName("tapi32.dll", "MMCSetPhoneInfo")
+Interceptor.attach(MMCSetPhoneInfo, {onLeave: function (args) {send("MMCSetPhoneInfo");}});
+
+var MMCSetServerConfig = Module.findExportByName("tapi32.dll", "MMCSetServerConfig")
+Interceptor.attach(MMCSetServerConfig, {onLeave: function (args) {send("MMCSetServerConfig");}});
+
+var MMCShutdown = Module.findExportByName("tapi32.dll", "MMCShutdown")
+Interceptor.attach(MMCShutdown, {onLeave: function (args) {send("MMCShutdown");}});
+
+var NonAsyncEventThread = Module.findExportByName("tapi32.dll", "NonAsyncEventThread")
+Interceptor.attach(NonAsyncEventThread, {onLeave: function (args) {send("NonAsyncEventThread");}});
+
+var TAPIWndProc = Module.findExportByName("tapi32.dll", "TAPIWndProc")
+Interceptor.attach(TAPIWndProc, {onLeave: function (args) {send("TAPIWndProc");}});
+
+var TUISPIDLLCallback = Module.findExportByName("tapi32.dll", "TUISPIDLLCallback")
+Interceptor.attach(TUISPIDLLCallback, {onLeave: function (args) {send("TUISPIDLLCallback");}});
+
+var internalConfig = Module.findExportByName("tapi32.dll", "internalConfig")
+Interceptor.attach(internalConfig, {onLeave: function (args) {send("internalConfig");}});
+
+var internalCreateDefLocation = Module.findExportByName("tapi32.dll", "internalCreateDefLocation")
+Interceptor.attach(internalCreateDefLocation, {onLeave: function (args) {send("internalCreateDefLocation");}});
+
+var internalNewLocationW = Module.findExportByName("tapi32.dll", "internalNewLocationW")
+Interceptor.attach(internalNewLocationW, {onLeave: function (args) {send("internalNewLocationW");}});
+
+var internalPerformance = Module.findExportByName("tapi32.dll", "internalPerformance")
+Interceptor.attach(internalPerformance, {onLeave: function (args) {send("internalPerformance");}});
+
+var internalRemoveLocation = Module.findExportByName("tapi32.dll", "internalRemoveLocation")
+Interceptor.attach(internalRemoveLocation, {onLeave: function (args) {send("internalRemoveLocation");}});
+
+var internalRenameLocationW = Module.findExportByName("tapi32.dll", "internalRenameLocationW")
+Interceptor.attach(internalRenameLocationW, {onLeave: function (args) {send("internalRenameLocationW");}});
+
+var lineAccept = Module.findExportByName("tapi32.dll", "lineAccept")
+Interceptor.attach(lineAccept, {onLeave: function (args) {send("lineAccept");}});
+
+var lineAddProvider = Module.findExportByName("tapi32.dll", "lineAddProvider")
+Interceptor.attach(lineAddProvider, {onLeave: function (args) {send("lineAddProvider");}});
+
+var lineAddProviderA = Module.findExportByName("tapi32.dll", "lineAddProviderA")
+Interceptor.attach(lineAddProviderA, {onLeave: function (args) {send("lineAddProviderA");}});
+
+var lineAddProviderW = Module.findExportByName("tapi32.dll", "lineAddProviderW")
+Interceptor.attach(lineAddProviderW, {onLeave: function (args) {send("lineAddProviderW");}});
+
+var lineAddToConference = Module.findExportByName("tapi32.dll", "lineAddToConference")
+Interceptor.attach(lineAddToConference, {onLeave: function (args) {send("lineAddToConference");}});
+
+var lineAgentSpecific = Module.findExportByName("tapi32.dll", "lineAgentSpecific")
+Interceptor.attach(lineAgentSpecific, {onLeave: function (args) {send("lineAgentSpecific");}});
+
+var lineAnswer = Module.findExportByName("tapi32.dll", "lineAnswer")
+Interceptor.attach(lineAnswer, {onLeave: function (args) {send("lineAnswer");}});
+
+var lineBlindTransfer = Module.findExportByName("tapi32.dll", "lineBlindTransfer")
+Interceptor.attach(lineBlindTransfer, {onLeave: function (args) {send("lineBlindTransfer");}});
+
+var lineBlindTransferA = Module.findExportByName("tapi32.dll", "lineBlindTransferA")
+Interceptor.attach(lineBlindTransferA, {onLeave: function (args) {send("lineBlindTransferA");}});
+
+var lineBlindTransferW = Module.findExportByName("tapi32.dll", "lineBlindTransferW")
+Interceptor.attach(lineBlindTransferW, {onLeave: function (args) {send("lineBlindTransferW");}});
+
+var lineClose = Module.findExportByName("tapi32.dll", "lineClose")
+Interceptor.attach(lineClose, {onLeave: function (args) {send("lineClose");}});
+
+var lineCompleteCall = Module.findExportByName("tapi32.dll", "lineCompleteCall")
+Interceptor.attach(lineCompleteCall, {onLeave: function (args) {send("lineCompleteCall");}});
+
+var lineCompleteTransfer = Module.findExportByName("tapi32.dll", "lineCompleteTransfer")
+Interceptor.attach(lineCompleteTransfer, {onLeave: function (args) {send("lineCompleteTransfer");}});
+
+var lineConfigDialog = Module.findExportByName("tapi32.dll", "lineConfigDialog")
+Interceptor.attach(lineConfigDialog, {onLeave: function (args) {send("lineConfigDialog");}});
+
+var lineConfigDialogA = Module.findExportByName("tapi32.dll", "lineConfigDialogA")
+Interceptor.attach(lineConfigDialogA, {onLeave: function (args) {send("lineConfigDialogA");}});
+
+var lineConfigDialogEdit = Module.findExportByName("tapi32.dll", "lineConfigDialogEdit")
+Interceptor.attach(lineConfigDialogEdit, {onLeave: function (args) {send("lineConfigDialogEdit");}});
+
+var lineConfigDialogEditA = Module.findExportByName("tapi32.dll", "lineConfigDialogEditA")
+Interceptor.attach(lineConfigDialogEditA, {onLeave: function (args) {send("lineConfigDialogEditA");}});
+
+var lineConfigDialogEditW = Module.findExportByName("tapi32.dll", "lineConfigDialogEditW")
+Interceptor.attach(lineConfigDialogEditW, {onLeave: function (args) {send("lineConfigDialogEditW");}});
+
+var lineConfigDialogW = Module.findExportByName("tapi32.dll", "lineConfigDialogW")
+Interceptor.attach(lineConfigDialogW, {onLeave: function (args) {send("lineConfigDialogW");}});
+
+var lineConfigProvider = Module.findExportByName("tapi32.dll", "lineConfigProvider")
+Interceptor.attach(lineConfigProvider, {onLeave: function (args) {send("lineConfigProvider");}});
+
+var lineCreateAgentA = Module.findExportByName("tapi32.dll", "lineCreateAgentA")
+Interceptor.attach(lineCreateAgentA, {onLeave: function (args) {send("lineCreateAgentA");}});
+
+var lineCreateAgentSessionA = Module.findExportByName("tapi32.dll", "lineCreateAgentSessionA")
+Interceptor.attach(lineCreateAgentSessionA, {onLeave: function (args) {send("lineCreateAgentSessionA");}});
+
+var lineCreateAgentSessionW = Module.findExportByName("tapi32.dll", "lineCreateAgentSessionW")
+Interceptor.attach(lineCreateAgentSessionW, {onLeave: function (args) {send("lineCreateAgentSessionW");}});
+
+var lineCreateAgentW = Module.findExportByName("tapi32.dll", "lineCreateAgentW")
+Interceptor.attach(lineCreateAgentW, {onLeave: function (args) {send("lineCreateAgentW");}});
+
+var lineDeallocateCall = Module.findExportByName("tapi32.dll", "lineDeallocateCall")
+Interceptor.attach(lineDeallocateCall, {onLeave: function (args) {send("lineDeallocateCall");}});
+
+var lineDevSpecific = Module.findExportByName("tapi32.dll", "lineDevSpecific")
+Interceptor.attach(lineDevSpecific, {onLeave: function (args) {send("lineDevSpecific");}});
+
+var lineDevSpecificFeature = Module.findExportByName("tapi32.dll", "lineDevSpecificFeature")
+Interceptor.attach(lineDevSpecificFeature, {onLeave: function (args) {send("lineDevSpecificFeature");}});
+
+var lineDial = Module.findExportByName("tapi32.dll", "lineDial")
+Interceptor.attach(lineDial, {onLeave: function (args) {send("lineDial");}});
+
+var lineDialA = Module.findExportByName("tapi32.dll", "lineDialA")
+Interceptor.attach(lineDialA, {onLeave: function (args) {send("lineDialA");}});
+
+var lineDialW = Module.findExportByName("tapi32.dll", "lineDialW")
+Interceptor.attach(lineDialW, {onLeave: function (args) {send("lineDialW");}});
+
+var lineDrop = Module.findExportByName("tapi32.dll", "lineDrop")
+Interceptor.attach(lineDrop, {onLeave: function (args) {send("lineDrop");}});
+
+var lineForward = Module.findExportByName("tapi32.dll", "lineForward")
+Interceptor.attach(lineForward, {onLeave: function (args) {send("lineForward");}});
+
+var lineForwardA = Module.findExportByName("tapi32.dll", "lineForwardA")
+Interceptor.attach(lineForwardA, {onLeave: function (args) {send("lineForwardA");}});
+
+var lineForwardW = Module.findExportByName("tapi32.dll", "lineForwardW")
+Interceptor.attach(lineForwardW, {onLeave: function (args) {send("lineForwardW");}});
+
+var lineGatherDigits = Module.findExportByName("tapi32.dll", "lineGatherDigits")
+Interceptor.attach(lineGatherDigits, {onLeave: function (args) {send("lineGatherDigits");}});
+
+var lineGatherDigitsA = Module.findExportByName("tapi32.dll", "lineGatherDigitsA")
+Interceptor.attach(lineGatherDigitsA, {onLeave: function (args) {send("lineGatherDigitsA");}});
+
+var lineGatherDigitsW = Module.findExportByName("tapi32.dll", "lineGatherDigitsW")
+Interceptor.attach(lineGatherDigitsW, {onLeave: function (args) {send("lineGatherDigitsW");}});
+
+var lineGenerateDigits = Module.findExportByName("tapi32.dll", "lineGenerateDigits")
+Interceptor.attach(lineGenerateDigits, {onLeave: function (args) {send("lineGenerateDigits");}});
+
+var lineGenerateDigitsA = Module.findExportByName("tapi32.dll", "lineGenerateDigitsA")
+Interceptor.attach(lineGenerateDigitsA, {onLeave: function (args) {send("lineGenerateDigitsA");}});
+
+var lineGenerateDigitsW = Module.findExportByName("tapi32.dll", "lineGenerateDigitsW")
+Interceptor.attach(lineGenerateDigitsW, {onLeave: function (args) {send("lineGenerateDigitsW");}});
+
+var lineGenerateTone = Module.findExportByName("tapi32.dll", "lineGenerateTone")
+Interceptor.attach(lineGenerateTone, {onLeave: function (args) {send("lineGenerateTone");}});
+
+var lineGetAddressCaps = Module.findExportByName("tapi32.dll", "lineGetAddressCaps")
+Interceptor.attach(lineGetAddressCaps, {onLeave: function (args) {send("lineGetAddressCaps");}});
+
+var lineGetAddressCapsA = Module.findExportByName("tapi32.dll", "lineGetAddressCapsA")
+Interceptor.attach(lineGetAddressCapsA, {onLeave: function (args) {send("lineGetAddressCapsA");}});
+
+var lineGetAddressCapsW = Module.findExportByName("tapi32.dll", "lineGetAddressCapsW")
+Interceptor.attach(lineGetAddressCapsW, {onLeave: function (args) {send("lineGetAddressCapsW");}});
+
+var lineGetAddressID = Module.findExportByName("tapi32.dll", "lineGetAddressID")
+Interceptor.attach(lineGetAddressID, {onLeave: function (args) {send("lineGetAddressID");}});
+
+var lineGetAddressIDA = Module.findExportByName("tapi32.dll", "lineGetAddressIDA")
+Interceptor.attach(lineGetAddressIDA, {onLeave: function (args) {send("lineGetAddressIDA");}});
+
+var lineGetAddressIDW = Module.findExportByName("tapi32.dll", "lineGetAddressIDW")
+Interceptor.attach(lineGetAddressIDW, {onLeave: function (args) {send("lineGetAddressIDW");}});
+
+var lineGetAddressStatus = Module.findExportByName("tapi32.dll", "lineGetAddressStatus")
+Interceptor.attach(lineGetAddressStatus, {onLeave: function (args) {send("lineGetAddressStatus");}});
+
+var lineGetAddressStatusA = Module.findExportByName("tapi32.dll", "lineGetAddressStatusA")
+Interceptor.attach(lineGetAddressStatusA, {onLeave: function (args) {send("lineGetAddressStatusA");}});
+
+var lineGetAddressStatusW = Module.findExportByName("tapi32.dll", "lineGetAddressStatusW")
+Interceptor.attach(lineGetAddressStatusW, {onLeave: function (args) {send("lineGetAddressStatusW");}});
+
+var lineGetAgentActivityListA = Module.findExportByName("tapi32.dll", "lineGetAgentActivityListA")
+Interceptor.attach(lineGetAgentActivityListA, {onLeave: function (args) {send("lineGetAgentActivityListA");}});
+
+var lineGetAgentActivityListW = Module.findExportByName("tapi32.dll", "lineGetAgentActivityListW")
+Interceptor.attach(lineGetAgentActivityListW, {onLeave: function (args) {send("lineGetAgentActivityListW");}});
+
+var lineGetAgentCapsA = Module.findExportByName("tapi32.dll", "lineGetAgentCapsA")
+Interceptor.attach(lineGetAgentCapsA, {onLeave: function (args) {send("lineGetAgentCapsA");}});
+
+var lineGetAgentCapsW = Module.findExportByName("tapi32.dll", "lineGetAgentCapsW")
+Interceptor.attach(lineGetAgentCapsW, {onLeave: function (args) {send("lineGetAgentCapsW");}});
+
+var lineGetAgentGroupListA = Module.findExportByName("tapi32.dll", "lineGetAgentGroupListA")
+Interceptor.attach(lineGetAgentGroupListA, {onLeave: function (args) {send("lineGetAgentGroupListA");}});
+
+var lineGetAgentGroupListW = Module.findExportByName("tapi32.dll", "lineGetAgentGroupListW")
+Interceptor.attach(lineGetAgentGroupListW, {onLeave: function (args) {send("lineGetAgentGroupListW");}});
+
+var lineGetAgentInfo = Module.findExportByName("tapi32.dll", "lineGetAgentInfo")
+Interceptor.attach(lineGetAgentInfo, {onLeave: function (args) {send("lineGetAgentInfo");}});
+
+var lineGetAgentSessionInfo = Module.findExportByName("tapi32.dll", "lineGetAgentSessionInfo")
+Interceptor.attach(lineGetAgentSessionInfo, {onLeave: function (args) {send("lineGetAgentSessionInfo");}});
+
+var lineGetAgentSessionList = Module.findExportByName("tapi32.dll", "lineGetAgentSessionList")
+Interceptor.attach(lineGetAgentSessionList, {onLeave: function (args) {send("lineGetAgentSessionList");}});
+
+var lineGetAgentStatusA = Module.findExportByName("tapi32.dll", "lineGetAgentStatusA")
+Interceptor.attach(lineGetAgentStatusA, {onLeave: function (args) {send("lineGetAgentStatusA");}});
+
+var lineGetAgentStatusW = Module.findExportByName("tapi32.dll", "lineGetAgentStatusW")
+Interceptor.attach(lineGetAgentStatusW, {onLeave: function (args) {send("lineGetAgentStatusW");}});
+
+var lineGetAppPriority = Module.findExportByName("tapi32.dll", "lineGetAppPriority")
+Interceptor.attach(lineGetAppPriority, {onLeave: function (args) {send("lineGetAppPriority");}});
+
+var lineGetAppPriorityA = Module.findExportByName("tapi32.dll", "lineGetAppPriorityA")
+Interceptor.attach(lineGetAppPriorityA, {onLeave: function (args) {send("lineGetAppPriorityA");}});
+
+var lineGetAppPriorityW = Module.findExportByName("tapi32.dll", "lineGetAppPriorityW")
+Interceptor.attach(lineGetAppPriorityW, {onLeave: function (args) {send("lineGetAppPriorityW");}});
+
+var lineGetCallInfo = Module.findExportByName("tapi32.dll", "lineGetCallInfo")
+Interceptor.attach(lineGetCallInfo, {onLeave: function (args) {send("lineGetCallInfo");}});
+
+var lineGetCallInfoA = Module.findExportByName("tapi32.dll", "lineGetCallInfoA")
+Interceptor.attach(lineGetCallInfoA, {onLeave: function (args) {send("lineGetCallInfoA");}});
+
+var lineGetCallInfoW = Module.findExportByName("tapi32.dll", "lineGetCallInfoW")
+Interceptor.attach(lineGetCallInfoW, {onLeave: function (args) {send("lineGetCallInfoW");}});
+
+var lineGetCallStatus = Module.findExportByName("tapi32.dll", "lineGetCallStatus")
+Interceptor.attach(lineGetCallStatus, {onLeave: function (args) {send("lineGetCallStatus");}});
+
+var lineGetConfRelatedCalls = Module.findExportByName("tapi32.dll", "lineGetConfRelatedCalls")
+Interceptor.attach(lineGetConfRelatedCalls, {onLeave: function (args) {send("lineGetConfRelatedCalls");}});
+
+var lineGetCountry = Module.findExportByName("tapi32.dll", "lineGetCountry")
+Interceptor.attach(lineGetCountry, {onLeave: function (args) {send("lineGetCountry");}});
+
+var lineGetCountryA = Module.findExportByName("tapi32.dll", "lineGetCountryA")
+Interceptor.attach(lineGetCountryA, {onLeave: function (args) {send("lineGetCountryA");}});
+
+var lineGetCountryW = Module.findExportByName("tapi32.dll", "lineGetCountryW")
+Interceptor.attach(lineGetCountryW, {onLeave: function (args) {send("lineGetCountryW");}});
+
+var lineGetDevCaps = Module.findExportByName("tapi32.dll", "lineGetDevCaps")
+Interceptor.attach(lineGetDevCaps, {onLeave: function (args) {send("lineGetDevCaps");}});
+
+var lineGetDevCapsA = Module.findExportByName("tapi32.dll", "lineGetDevCapsA")
+Interceptor.attach(lineGetDevCapsA, {onLeave: function (args) {send("lineGetDevCapsA");}});
+
+var lineGetDevCapsW = Module.findExportByName("tapi32.dll", "lineGetDevCapsW")
+Interceptor.attach(lineGetDevCapsW, {onLeave: function (args) {send("lineGetDevCapsW");}});
+
+var lineGetDevConfig = Module.findExportByName("tapi32.dll", "lineGetDevConfig")
+Interceptor.attach(lineGetDevConfig, {onLeave: function (args) {send("lineGetDevConfig");}});
+
+var lineGetDevConfigA = Module.findExportByName("tapi32.dll", "lineGetDevConfigA")
+Interceptor.attach(lineGetDevConfigA, {onLeave: function (args) {send("lineGetDevConfigA");}});
+
+var lineGetDevConfigW = Module.findExportByName("tapi32.dll", "lineGetDevConfigW")
+Interceptor.attach(lineGetDevConfigW, {onLeave: function (args) {send("lineGetDevConfigW");}});
+
+var lineGetGroupListA = Module.findExportByName("tapi32.dll", "lineGetGroupListA")
+Interceptor.attach(lineGetGroupListA, {onLeave: function (args) {send("lineGetGroupListA");}});
+
+var lineGetGroupListW = Module.findExportByName("tapi32.dll", "lineGetGroupListW")
+Interceptor.attach(lineGetGroupListW, {onLeave: function (args) {send("lineGetGroupListW");}});
+
+var lineGetID = Module.findExportByName("tapi32.dll", "lineGetID")
+Interceptor.attach(lineGetID, {onLeave: function (args) {send("lineGetID");}});
+
+var lineGetIDA = Module.findExportByName("tapi32.dll", "lineGetIDA")
+Interceptor.attach(lineGetIDA, {onLeave: function (args) {send("lineGetIDA");}});
+
+var lineGetIDW = Module.findExportByName("tapi32.dll", "lineGetIDW")
+Interceptor.attach(lineGetIDW, {onLeave: function (args) {send("lineGetIDW");}});
+
+var lineGetIcon = Module.findExportByName("tapi32.dll", "lineGetIcon")
+Interceptor.attach(lineGetIcon, {onLeave: function (args) {send("lineGetIcon");}});
+
+var lineGetIconA = Module.findExportByName("tapi32.dll", "lineGetIconA")
+Interceptor.attach(lineGetIconA, {onLeave: function (args) {send("lineGetIconA");}});
+
+var lineGetIconW = Module.findExportByName("tapi32.dll", "lineGetIconW")
+Interceptor.attach(lineGetIconW, {onLeave: function (args) {send("lineGetIconW");}});
+
+var lineGetLineDevStatus = Module.findExportByName("tapi32.dll", "lineGetLineDevStatus")
+Interceptor.attach(lineGetLineDevStatus, {onLeave: function (args) {send("lineGetLineDevStatus");}});
+
+var lineGetLineDevStatusA = Module.findExportByName("tapi32.dll", "lineGetLineDevStatusA")
+Interceptor.attach(lineGetLineDevStatusA, {onLeave: function (args) {send("lineGetLineDevStatusA");}});
+
+var lineGetLineDevStatusW = Module.findExportByName("tapi32.dll", "lineGetLineDevStatusW")
+Interceptor.attach(lineGetLineDevStatusW, {onLeave: function (args) {send("lineGetLineDevStatusW");}});
+
+var lineGetMessage = Module.findExportByName("tapi32.dll", "lineGetMessage")
+Interceptor.attach(lineGetMessage, {onLeave: function (args) {send("lineGetMessage");}});
+
+var lineGetNewCalls = Module.findExportByName("tapi32.dll", "lineGetNewCalls")
+Interceptor.attach(lineGetNewCalls, {onLeave: function (args) {send("lineGetNewCalls");}});
+
+var lineGetNumRings = Module.findExportByName("tapi32.dll", "lineGetNumRings")
+Interceptor.attach(lineGetNumRings, {onLeave: function (args) {send("lineGetNumRings");}});
+
+var lineGetProviderList = Module.findExportByName("tapi32.dll", "lineGetProviderList")
+Interceptor.attach(lineGetProviderList, {onLeave: function (args) {send("lineGetProviderList");}});
+
+var lineGetProviderListA = Module.findExportByName("tapi32.dll", "lineGetProviderListA")
+Interceptor.attach(lineGetProviderListA, {onLeave: function (args) {send("lineGetProviderListA");}});
+
+var lineGetProviderListW = Module.findExportByName("tapi32.dll", "lineGetProviderListW")
+Interceptor.attach(lineGetProviderListW, {onLeave: function (args) {send("lineGetProviderListW");}});
+
+var lineGetProxyStatus = Module.findExportByName("tapi32.dll", "lineGetProxyStatus")
+Interceptor.attach(lineGetProxyStatus, {onLeave: function (args) {send("lineGetProxyStatus");}});
+
+var lineGetQueueInfo = Module.findExportByName("tapi32.dll", "lineGetQueueInfo")
+Interceptor.attach(lineGetQueueInfo, {onLeave: function (args) {send("lineGetQueueInfo");}});
+
+var lineGetQueueListA = Module.findExportByName("tapi32.dll", "lineGetQueueListA")
+Interceptor.attach(lineGetQueueListA, {onLeave: function (args) {send("lineGetQueueListA");}});
+
+var lineGetQueueListW = Module.findExportByName("tapi32.dll", "lineGetQueueListW")
+Interceptor.attach(lineGetQueueListW, {onLeave: function (args) {send("lineGetQueueListW");}});
+
+var lineGetRequest = Module.findExportByName("tapi32.dll", "lineGetRequest")
+Interceptor.attach(lineGetRequest, {onLeave: function (args) {send("lineGetRequest");}});
+
+var lineGetRequestA = Module.findExportByName("tapi32.dll", "lineGetRequestA")
+Interceptor.attach(lineGetRequestA, {onLeave: function (args) {send("lineGetRequestA");}});
+
+var lineGetRequestW = Module.findExportByName("tapi32.dll", "lineGetRequestW")
+Interceptor.attach(lineGetRequestW, {onLeave: function (args) {send("lineGetRequestW");}});
+
+var lineGetStatusMessages = Module.findExportByName("tapi32.dll", "lineGetStatusMessages")
+Interceptor.attach(lineGetStatusMessages, {onLeave: function (args) {send("lineGetStatusMessages");}});
+
+var lineGetTranslateCaps = Module.findExportByName("tapi32.dll", "lineGetTranslateCaps")
+Interceptor.attach(lineGetTranslateCaps, {onLeave: function (args) {send("lineGetTranslateCaps");}});
+
+var lineGetTranslateCapsA = Module.findExportByName("tapi32.dll", "lineGetTranslateCapsA")
+Interceptor.attach(lineGetTranslateCapsA, {onLeave: function (args) {send("lineGetTranslateCapsA");}});
+
+var lineGetTranslateCapsW = Module.findExportByName("tapi32.dll", "lineGetTranslateCapsW")
+Interceptor.attach(lineGetTranslateCapsW, {onLeave: function (args) {send("lineGetTranslateCapsW");}});
+
+var lineHandoff = Module.findExportByName("tapi32.dll", "lineHandoff")
+Interceptor.attach(lineHandoff, {onLeave: function (args) {send("lineHandoff");}});
+
+var lineHandoffA = Module.findExportByName("tapi32.dll", "lineHandoffA")
+Interceptor.attach(lineHandoffA, {onLeave: function (args) {send("lineHandoffA");}});
+
+var lineHandoffW = Module.findExportByName("tapi32.dll", "lineHandoffW")
+Interceptor.attach(lineHandoffW, {onLeave: function (args) {send("lineHandoffW");}});
+
+var lineHold = Module.findExportByName("tapi32.dll", "lineHold")
+Interceptor.attach(lineHold, {onLeave: function (args) {send("lineHold");}});
+
+var lineInitialize = Module.findExportByName("tapi32.dll", "lineInitialize")
+Interceptor.attach(lineInitialize, {onLeave: function (args) {send("lineInitialize");}});
+
+var lineInitializeExA = Module.findExportByName("tapi32.dll", "lineInitializeExA")
+Interceptor.attach(lineInitializeExA, {onLeave: function (args) {send("lineInitializeExA");}});
+
+var lineInitializeExW = Module.findExportByName("tapi32.dll", "lineInitializeExW")
+Interceptor.attach(lineInitializeExW, {onLeave: function (args) {send("lineInitializeExW");}});
+
+var lineMakeCall = Module.findExportByName("tapi32.dll", "lineMakeCall")
+Interceptor.attach(lineMakeCall, {onLeave: function (args) {send("lineMakeCall");}});
+
+var lineMakeCallA = Module.findExportByName("tapi32.dll", "lineMakeCallA")
+Interceptor.attach(lineMakeCallA, {onLeave: function (args) {send("lineMakeCallA");}});
+
+var lineMakeCallW = Module.findExportByName("tapi32.dll", "lineMakeCallW")
+Interceptor.attach(lineMakeCallW, {onLeave: function (args) {send("lineMakeCallW");}});
+
+var lineMonitorDigits = Module.findExportByName("tapi32.dll", "lineMonitorDigits")
+Interceptor.attach(lineMonitorDigits, {onLeave: function (args) {send("lineMonitorDigits");}});
+
+var lineMonitorMedia = Module.findExportByName("tapi32.dll", "lineMonitorMedia")
+Interceptor.attach(lineMonitorMedia, {onLeave: function (args) {send("lineMonitorMedia");}});
+
+var lineMonitorTones = Module.findExportByName("tapi32.dll", "lineMonitorTones")
+Interceptor.attach(lineMonitorTones, {onLeave: function (args) {send("lineMonitorTones");}});
+
+var lineNegotiateAPIVersion = Module.findExportByName("tapi32.dll", "lineNegotiateAPIVersion")
+Interceptor.attach(lineNegotiateAPIVersion, {onLeave: function (args) {send("lineNegotiateAPIVersion");}});
+
+var lineNegotiateExtVersion = Module.findExportByName("tapi32.dll", "lineNegotiateExtVersion")
+Interceptor.attach(lineNegotiateExtVersion, {onLeave: function (args) {send("lineNegotiateExtVersion");}});
+
+var lineOpen = Module.findExportByName("tapi32.dll", "lineOpen")
+Interceptor.attach(lineOpen, {onLeave: function (args) {send("lineOpen");}});
+
+var lineOpenA = Module.findExportByName("tapi32.dll", "lineOpenA")
+Interceptor.attach(lineOpenA, {onLeave: function (args) {send("lineOpenA");}});
+
+var lineOpenW = Module.findExportByName("tapi32.dll", "lineOpenW")
+Interceptor.attach(lineOpenW, {onLeave: function (args) {send("lineOpenW");}});
+
+var linePark = Module.findExportByName("tapi32.dll", "linePark")
+Interceptor.attach(linePark, {onLeave: function (args) {send("linePark");}});
+
+var lineParkA = Module.findExportByName("tapi32.dll", "lineParkA")
+Interceptor.attach(lineParkA, {onLeave: function (args) {send("lineParkA");}});
+
+var lineParkW = Module.findExportByName("tapi32.dll", "lineParkW")
+Interceptor.attach(lineParkW, {onLeave: function (args) {send("lineParkW");}});
+
+var linePickup = Module.findExportByName("tapi32.dll", "linePickup")
+Interceptor.attach(linePickup, {onLeave: function (args) {send("linePickup");}});
+
+var linePickupA = Module.findExportByName("tapi32.dll", "linePickupA")
+Interceptor.attach(linePickupA, {onLeave: function (args) {send("linePickupA");}});
+
+var linePickupW = Module.findExportByName("tapi32.dll", "linePickupW")
+Interceptor.attach(linePickupW, {onLeave: function (args) {send("linePickupW");}});
+
+var linePrepareAddToConference = Module.findExportByName("tapi32.dll", "linePrepareAddToConference")
+Interceptor.attach(linePrepareAddToConference, {onLeave: function (args) {send("linePrepareAddToConference");}});
+
+var linePrepareAddToConferenceA = Module.findExportByName("tapi32.dll", "linePrepareAddToConferenceA")
+Interceptor.attach(linePrepareAddToConferenceA, {onLeave: function (args) {send("linePrepareAddToConferenceA");}});
+
+var linePrepareAddToConferenceW = Module.findExportByName("tapi32.dll", "linePrepareAddToConferenceW")
+Interceptor.attach(linePrepareAddToConferenceW, {onLeave: function (args) {send("linePrepareAddToConferenceW");}});
+
+var lineProxyMessage = Module.findExportByName("tapi32.dll", "lineProxyMessage")
+Interceptor.attach(lineProxyMessage, {onLeave: function (args) {send("lineProxyMessage");}});
+
+var lineProxyResponse = Module.findExportByName("tapi32.dll", "lineProxyResponse")
+Interceptor.attach(lineProxyResponse, {onLeave: function (args) {send("lineProxyResponse");}});
+
+var lineRedirect = Module.findExportByName("tapi32.dll", "lineRedirect")
+Interceptor.attach(lineRedirect, {onLeave: function (args) {send("lineRedirect");}});
+
+var lineRedirectA = Module.findExportByName("tapi32.dll", "lineRedirectA")
+Interceptor.attach(lineRedirectA, {onLeave: function (args) {send("lineRedirectA");}});
+
+var lineRedirectW = Module.findExportByName("tapi32.dll", "lineRedirectW")
+Interceptor.attach(lineRedirectW, {onLeave: function (args) {send("lineRedirectW");}});
+
+var lineRegisterRequestRecipient = Module.findExportByName("tapi32.dll", "lineRegisterRequestRecipient")
+Interceptor.attach(lineRegisterRequestRecipient, {onLeave: function (args) {send("lineRegisterRequestRecipient");}});
+
+var lineReleaseUserUserInfo = Module.findExportByName("tapi32.dll", "lineReleaseUserUserInfo")
+Interceptor.attach(lineReleaseUserUserInfo, {onLeave: function (args) {send("lineReleaseUserUserInfo");}});
+
+var lineRemoveFromConference = Module.findExportByName("tapi32.dll", "lineRemoveFromConference")
+Interceptor.attach(lineRemoveFromConference, {onLeave: function (args) {send("lineRemoveFromConference");}});
+
+var lineRemoveProvider = Module.findExportByName("tapi32.dll", "lineRemoveProvider")
+Interceptor.attach(lineRemoveProvider, {onLeave: function (args) {send("lineRemoveProvider");}});
+
+var lineSecureCall = Module.findExportByName("tapi32.dll", "lineSecureCall")
+Interceptor.attach(lineSecureCall, {onLeave: function (args) {send("lineSecureCall");}});
+
+var lineSendUserUserInfo = Module.findExportByName("tapi32.dll", "lineSendUserUserInfo")
+Interceptor.attach(lineSendUserUserInfo, {onLeave: function (args) {send("lineSendUserUserInfo");}});
+
+var lineSetAgentActivity = Module.findExportByName("tapi32.dll", "lineSetAgentActivity")
+Interceptor.attach(lineSetAgentActivity, {onLeave: function (args) {send("lineSetAgentActivity");}});
+
+var lineSetAgentGroup = Module.findExportByName("tapi32.dll", "lineSetAgentGroup")
+Interceptor.attach(lineSetAgentGroup, {onLeave: function (args) {send("lineSetAgentGroup");}});
+
+var lineSetAgentMeasurementPeriod = Module.findExportByName("tapi32.dll", "lineSetAgentMeasurementPeriod")
+Interceptor.attach(lineSetAgentMeasurementPeriod, {onLeave: function (args) {send("lineSetAgentMeasurementPeriod");}});
+
+var lineSetAgentSessionState = Module.findExportByName("tapi32.dll", "lineSetAgentSessionState")
+Interceptor.attach(lineSetAgentSessionState, {onLeave: function (args) {send("lineSetAgentSessionState");}});
+
+var lineSetAgentState = Module.findExportByName("tapi32.dll", "lineSetAgentState")
+Interceptor.attach(lineSetAgentState, {onLeave: function (args) {send("lineSetAgentState");}});
+
+var lineSetAgentStateEx = Module.findExportByName("tapi32.dll", "lineSetAgentStateEx")
+Interceptor.attach(lineSetAgentStateEx, {onLeave: function (args) {send("lineSetAgentStateEx");}});
+
+var lineSetAppPriority = Module.findExportByName("tapi32.dll", "lineSetAppPriority")
+Interceptor.attach(lineSetAppPriority, {onLeave: function (args) {send("lineSetAppPriority");}});
+
+var lineSetAppPriorityA = Module.findExportByName("tapi32.dll", "lineSetAppPriorityA")
+Interceptor.attach(lineSetAppPriorityA, {onLeave: function (args) {send("lineSetAppPriorityA");}});
+
+var lineSetAppPriorityW = Module.findExportByName("tapi32.dll", "lineSetAppPriorityW")
+Interceptor.attach(lineSetAppPriorityW, {onLeave: function (args) {send("lineSetAppPriorityW");}});
+
+var lineSetAppSpecific = Module.findExportByName("tapi32.dll", "lineSetAppSpecific")
+Interceptor.attach(lineSetAppSpecific, {onLeave: function (args) {send("lineSetAppSpecific");}});
+
+var lineSetCallData = Module.findExportByName("tapi32.dll", "lineSetCallData")
+Interceptor.attach(lineSetCallData, {onLeave: function (args) {send("lineSetCallData");}});
+
+var lineSetCallParams = Module.findExportByName("tapi32.dll", "lineSetCallParams")
+Interceptor.attach(lineSetCallParams, {onLeave: function (args) {send("lineSetCallParams");}});
+
+var lineSetCallPrivilege = Module.findExportByName("tapi32.dll", "lineSetCallPrivilege")
+Interceptor.attach(lineSetCallPrivilege, {onLeave: function (args) {send("lineSetCallPrivilege");}});
+
+var lineSetCallQualityOfService = Module.findExportByName("tapi32.dll", "lineSetCallQualityOfService")
+Interceptor.attach(lineSetCallQualityOfService, {onLeave: function (args) {send("lineSetCallQualityOfService");}});
+
+var lineSetCallTreatment = Module.findExportByName("tapi32.dll", "lineSetCallTreatment")
+Interceptor.attach(lineSetCallTreatment, {onLeave: function (args) {send("lineSetCallTreatment");}});
+
+var lineSetCurrentLocation = Module.findExportByName("tapi32.dll", "lineSetCurrentLocation")
+Interceptor.attach(lineSetCurrentLocation, {onLeave: function (args) {send("lineSetCurrentLocation");}});
+
+var lineSetDevConfig = Module.findExportByName("tapi32.dll", "lineSetDevConfig")
+Interceptor.attach(lineSetDevConfig, {onLeave: function (args) {send("lineSetDevConfig");}});
+
+var lineSetDevConfigA = Module.findExportByName("tapi32.dll", "lineSetDevConfigA")
+Interceptor.attach(lineSetDevConfigA, {onLeave: function (args) {send("lineSetDevConfigA");}});
+
+var lineSetDevConfigW = Module.findExportByName("tapi32.dll", "lineSetDevConfigW")
+Interceptor.attach(lineSetDevConfigW, {onLeave: function (args) {send("lineSetDevConfigW");}});
+
+var lineSetLineDevStatus = Module.findExportByName("tapi32.dll", "lineSetLineDevStatus")
+Interceptor.attach(lineSetLineDevStatus, {onLeave: function (args) {send("lineSetLineDevStatus");}});
+
+var lineSetMediaControl = Module.findExportByName("tapi32.dll", "lineSetMediaControl")
+Interceptor.attach(lineSetMediaControl, {onLeave: function (args) {send("lineSetMediaControl");}});
+
+var lineSetMediaMode = Module.findExportByName("tapi32.dll", "lineSetMediaMode")
+Interceptor.attach(lineSetMediaMode, {onLeave: function (args) {send("lineSetMediaMode");}});
+
+var lineSetNumRings = Module.findExportByName("tapi32.dll", "lineSetNumRings")
+Interceptor.attach(lineSetNumRings, {onLeave: function (args) {send("lineSetNumRings");}});
+
+var lineSetQueueMeasurementPeriod = Module.findExportByName("tapi32.dll", "lineSetQueueMeasurementPeriod")
+Interceptor.attach(lineSetQueueMeasurementPeriod, {onLeave: function (args) {send("lineSetQueueMeasurementPeriod");}});
+
+var lineSetStatusMessages = Module.findExportByName("tapi32.dll", "lineSetStatusMessages")
+Interceptor.attach(lineSetStatusMessages, {onLeave: function (args) {send("lineSetStatusMessages");}});
+
+var lineSetTerminal = Module.findExportByName("tapi32.dll", "lineSetTerminal")
+Interceptor.attach(lineSetTerminal, {onLeave: function (args) {send("lineSetTerminal");}});
+
+var lineSetTollList = Module.findExportByName("tapi32.dll", "lineSetTollList")
+Interceptor.attach(lineSetTollList, {onLeave: function (args) {send("lineSetTollList");}});
+
+var lineSetTollListA = Module.findExportByName("tapi32.dll", "lineSetTollListA")
+Interceptor.attach(lineSetTollListA, {onLeave: function (args) {send("lineSetTollListA");}});
+
+var lineSetTollListW = Module.findExportByName("tapi32.dll", "lineSetTollListW")
+Interceptor.attach(lineSetTollListW, {onLeave: function (args) {send("lineSetTollListW");}});
+
+var lineSetupConference = Module.findExportByName("tapi32.dll", "lineSetupConference")
+Interceptor.attach(lineSetupConference, {onLeave: function (args) {send("lineSetupConference");}});
+
+var lineSetupConferenceA = Module.findExportByName("tapi32.dll", "lineSetupConferenceA")
+Interceptor.attach(lineSetupConferenceA, {onLeave: function (args) {send("lineSetupConferenceA");}});
+
+var lineSetupConferenceW = Module.findExportByName("tapi32.dll", "lineSetupConferenceW")
+Interceptor.attach(lineSetupConferenceW, {onLeave: function (args) {send("lineSetupConferenceW");}});
+
+var lineSetupTransfer = Module.findExportByName("tapi32.dll", "lineSetupTransfer")
+Interceptor.attach(lineSetupTransfer, {onLeave: function (args) {send("lineSetupTransfer");}});
+
+var lineSetupTransferA = Module.findExportByName("tapi32.dll", "lineSetupTransferA")
+Interceptor.attach(lineSetupTransferA, {onLeave: function (args) {send("lineSetupTransferA");}});
+
+var lineSetupTransferW = Module.findExportByName("tapi32.dll", "lineSetupTransferW")
+Interceptor.attach(lineSetupTransferW, {onLeave: function (args) {send("lineSetupTransferW");}});
+
+var lineShutdown = Module.findExportByName("tapi32.dll", "lineShutdown")
+Interceptor.attach(lineShutdown, {onLeave: function (args) {send("lineShutdown");}});
+
+var lineSwapHold = Module.findExportByName("tapi32.dll", "lineSwapHold")
+Interceptor.attach(lineSwapHold, {onLeave: function (args) {send("lineSwapHold");}});
+
+var lineTranslateAddress = Module.findExportByName("tapi32.dll", "lineTranslateAddress")
+Interceptor.attach(lineTranslateAddress, {onLeave: function (args) {send("lineTranslateAddress");}});
+
+var lineTranslateAddressA = Module.findExportByName("tapi32.dll", "lineTranslateAddressA")
+Interceptor.attach(lineTranslateAddressA, {onLeave: function (args) {send("lineTranslateAddressA");}});
+
+var lineTranslateAddressW = Module.findExportByName("tapi32.dll", "lineTranslateAddressW")
+Interceptor.attach(lineTranslateAddressW, {onLeave: function (args) {send("lineTranslateAddressW");}});
+
+var lineTranslateDialog = Module.findExportByName("tapi32.dll", "lineTranslateDialog")
+Interceptor.attach(lineTranslateDialog, {onLeave: function (args) {send("lineTranslateDialog");}});
+
+var lineTranslateDialogA = Module.findExportByName("tapi32.dll", "lineTranslateDialogA")
+Interceptor.attach(lineTranslateDialogA, {onLeave: function (args) {send("lineTranslateDialogA");}});
+
+var lineTranslateDialogW = Module.findExportByName("tapi32.dll", "lineTranslateDialogW")
+Interceptor.attach(lineTranslateDialogW, {onLeave: function (args) {send("lineTranslateDialogW");}});
+
+var lineUncompleteCall = Module.findExportByName("tapi32.dll", "lineUncompleteCall")
+Interceptor.attach(lineUncompleteCall, {onLeave: function (args) {send("lineUncompleteCall");}});
+
+var lineUnhold = Module.findExportByName("tapi32.dll", "lineUnhold")
+Interceptor.attach(lineUnhold, {onLeave: function (args) {send("lineUnhold");}});
+
+var lineUnpark = Module.findExportByName("tapi32.dll", "lineUnpark")
+Interceptor.attach(lineUnpark, {onLeave: function (args) {send("lineUnpark");}});
+
+var lineUnparkA = Module.findExportByName("tapi32.dll", "lineUnparkA")
+Interceptor.attach(lineUnparkA, {onLeave: function (args) {send("lineUnparkA");}});
+
+var lineUnparkW = Module.findExportByName("tapi32.dll", "lineUnparkW")
+Interceptor.attach(lineUnparkW, {onLeave: function (args) {send("lineUnparkW");}});
+
+var phoneClose = Module.findExportByName("tapi32.dll", "phoneClose")
+Interceptor.attach(phoneClose, {onLeave: function (args) {send("phoneClose");}});
+
+var phoneConfigDialog = Module.findExportByName("tapi32.dll", "phoneConfigDialog")
+Interceptor.attach(phoneConfigDialog, {onLeave: function (args) {send("phoneConfigDialog");}});
+
+var phoneConfigDialogA = Module.findExportByName("tapi32.dll", "phoneConfigDialogA")
+Interceptor.attach(phoneConfigDialogA, {onLeave: function (args) {send("phoneConfigDialogA");}});
+
+var phoneConfigDialogW = Module.findExportByName("tapi32.dll", "phoneConfigDialogW")
+Interceptor.attach(phoneConfigDialogW, {onLeave: function (args) {send("phoneConfigDialogW");}});
+
+var phoneDevSpecific = Module.findExportByName("tapi32.dll", "phoneDevSpecific")
+Interceptor.attach(phoneDevSpecific, {onLeave: function (args) {send("phoneDevSpecific");}});
+
+var phoneGetButtonInfo = Module.findExportByName("tapi32.dll", "phoneGetButtonInfo")
+Interceptor.attach(phoneGetButtonInfo, {onLeave: function (args) {send("phoneGetButtonInfo");}});
+
+var phoneGetButtonInfoA = Module.findExportByName("tapi32.dll", "phoneGetButtonInfoA")
+Interceptor.attach(phoneGetButtonInfoA, {onLeave: function (args) {send("phoneGetButtonInfoA");}});
+
+var phoneGetButtonInfoW = Module.findExportByName("tapi32.dll", "phoneGetButtonInfoW")
+Interceptor.attach(phoneGetButtonInfoW, {onLeave: function (args) {send("phoneGetButtonInfoW");}});
+
+var phoneGetData = Module.findExportByName("tapi32.dll", "phoneGetData")
+Interceptor.attach(phoneGetData, {onLeave: function (args) {send("phoneGetData");}});
+
+var phoneGetDevCaps = Module.findExportByName("tapi32.dll", "phoneGetDevCaps")
+Interceptor.attach(phoneGetDevCaps, {onLeave: function (args) {send("phoneGetDevCaps");}});
+
+var phoneGetDevCapsA = Module.findExportByName("tapi32.dll", "phoneGetDevCapsA")
+Interceptor.attach(phoneGetDevCapsA, {onLeave: function (args) {send("phoneGetDevCapsA");}});
+
+var phoneGetDevCapsW = Module.findExportByName("tapi32.dll", "phoneGetDevCapsW")
+Interceptor.attach(phoneGetDevCapsW, {onLeave: function (args) {send("phoneGetDevCapsW");}});
+
+var phoneGetDisplay = Module.findExportByName("tapi32.dll", "phoneGetDisplay")
+Interceptor.attach(phoneGetDisplay, {onLeave: function (args) {send("phoneGetDisplay");}});
+
+var phoneGetGain = Module.findExportByName("tapi32.dll", "phoneGetGain")
+Interceptor.attach(phoneGetGain, {onLeave: function (args) {send("phoneGetGain");}});
+
+var phoneGetHookSwitch = Module.findExportByName("tapi32.dll", "phoneGetHookSwitch")
+Interceptor.attach(phoneGetHookSwitch, {onLeave: function (args) {send("phoneGetHookSwitch");}});
+
+var phoneGetID = Module.findExportByName("tapi32.dll", "phoneGetID")
+Interceptor.attach(phoneGetID, {onLeave: function (args) {send("phoneGetID");}});
+
+var phoneGetIDA = Module.findExportByName("tapi32.dll", "phoneGetIDA")
+Interceptor.attach(phoneGetIDA, {onLeave: function (args) {send("phoneGetIDA");}});
+
+var phoneGetIDW = Module.findExportByName("tapi32.dll", "phoneGetIDW")
+Interceptor.attach(phoneGetIDW, {onLeave: function (args) {send("phoneGetIDW");}});
+
+var phoneGetIcon = Module.findExportByName("tapi32.dll", "phoneGetIcon")
+Interceptor.attach(phoneGetIcon, {onLeave: function (args) {send("phoneGetIcon");}});
+
+var phoneGetIconA = Module.findExportByName("tapi32.dll", "phoneGetIconA")
+Interceptor.attach(phoneGetIconA, {onLeave: function (args) {send("phoneGetIconA");}});
+
+var phoneGetIconW = Module.findExportByName("tapi32.dll", "phoneGetIconW")
+Interceptor.attach(phoneGetIconW, {onLeave: function (args) {send("phoneGetIconW");}});
+
+var phoneGetLamp = Module.findExportByName("tapi32.dll", "phoneGetLamp")
+Interceptor.attach(phoneGetLamp, {onLeave: function (args) {send("phoneGetLamp");}});
+
+var phoneGetMessage = Module.findExportByName("tapi32.dll", "phoneGetMessage")
+Interceptor.attach(phoneGetMessage, {onLeave: function (args) {send("phoneGetMessage");}});
+
+var phoneGetRing = Module.findExportByName("tapi32.dll", "phoneGetRing")
+Interceptor.attach(phoneGetRing, {onLeave: function (args) {send("phoneGetRing");}});
+
+var phoneGetStatus = Module.findExportByName("tapi32.dll", "phoneGetStatus")
+Interceptor.attach(phoneGetStatus, {onLeave: function (args) {send("phoneGetStatus");}});
+
+var phoneGetStatusA = Module.findExportByName("tapi32.dll", "phoneGetStatusA")
+Interceptor.attach(phoneGetStatusA, {onLeave: function (args) {send("phoneGetStatusA");}});
+
+var phoneGetStatusMessages = Module.findExportByName("tapi32.dll", "phoneGetStatusMessages")
+Interceptor.attach(phoneGetStatusMessages, {onLeave: function (args) {send("phoneGetStatusMessages");}});
+
+var phoneGetStatusW = Module.findExportByName("tapi32.dll", "phoneGetStatusW")
+Interceptor.attach(phoneGetStatusW, {onLeave: function (args) {send("phoneGetStatusW");}});
+
+var phoneGetVolume = Module.findExportByName("tapi32.dll", "phoneGetVolume")
+Interceptor.attach(phoneGetVolume, {onLeave: function (args) {send("phoneGetVolume");}});
+
+var phoneInitialize = Module.findExportByName("tapi32.dll", "phoneInitialize")
+Interceptor.attach(phoneInitialize, {onLeave: function (args) {send("phoneInitialize");}});
+
+var phoneInitializeExA = Module.findExportByName("tapi32.dll", "phoneInitializeExA")
+Interceptor.attach(phoneInitializeExA, {onLeave: function (args) {send("phoneInitializeExA");}});
+
+var phoneInitializeExW = Module.findExportByName("tapi32.dll", "phoneInitializeExW")
+Interceptor.attach(phoneInitializeExW, {onLeave: function (args) {send("phoneInitializeExW");}});
+
+var phoneNegotiateAPIVersion = Module.findExportByName("tapi32.dll", "phoneNegotiateAPIVersion")
+Interceptor.attach(phoneNegotiateAPIVersion, {onLeave: function (args) {send("phoneNegotiateAPIVersion");}});
+
+var phoneNegotiateExtVersion = Module.findExportByName("tapi32.dll", "phoneNegotiateExtVersion")
+Interceptor.attach(phoneNegotiateExtVersion, {onLeave: function (args) {send("phoneNegotiateExtVersion");}});
+
+var phoneOpen = Module.findExportByName("tapi32.dll", "phoneOpen")
+Interceptor.attach(phoneOpen, {onLeave: function (args) {send("phoneOpen");}});
+
+var phoneSetButtonInfo = Module.findExportByName("tapi32.dll", "phoneSetButtonInfo")
+Interceptor.attach(phoneSetButtonInfo, {onLeave: function (args) {send("phoneSetButtonInfo");}});
+
+var phoneSetButtonInfoA = Module.findExportByName("tapi32.dll", "phoneSetButtonInfoA")
+Interceptor.attach(phoneSetButtonInfoA, {onLeave: function (args) {send("phoneSetButtonInfoA");}});
+
+var phoneSetButtonInfoW = Module.findExportByName("tapi32.dll", "phoneSetButtonInfoW")
+Interceptor.attach(phoneSetButtonInfoW, {onLeave: function (args) {send("phoneSetButtonInfoW");}});
+
+var phoneSetData = Module.findExportByName("tapi32.dll", "phoneSetData")
+Interceptor.attach(phoneSetData, {onLeave: function (args) {send("phoneSetData");}});
+
+var phoneSetDisplay = Module.findExportByName("tapi32.dll", "phoneSetDisplay")
+Interceptor.attach(phoneSetDisplay, {onLeave: function (args) {send("phoneSetDisplay");}});
+
+var phoneSetGain = Module.findExportByName("tapi32.dll", "phoneSetGain")
+Interceptor.attach(phoneSetGain, {onLeave: function (args) {send("phoneSetGain");}});
+
+var phoneSetHookSwitch = Module.findExportByName("tapi32.dll", "phoneSetHookSwitch")
+Interceptor.attach(phoneSetHookSwitch, {onLeave: function (args) {send("phoneSetHookSwitch");}});
+
+var phoneSetLamp = Module.findExportByName("tapi32.dll", "phoneSetLamp")
+Interceptor.attach(phoneSetLamp, {onLeave: function (args) {send("phoneSetLamp");}});
+
+var phoneSetRing = Module.findExportByName("tapi32.dll", "phoneSetRing")
+Interceptor.attach(phoneSetRing, {onLeave: function (args) {send("phoneSetRing");}});
+
+var phoneSetStatusMessages = Module.findExportByName("tapi32.dll", "phoneSetStatusMessages")
+Interceptor.attach(phoneSetStatusMessages, {onLeave: function (args) {send("phoneSetStatusMessages");}});
+
+var phoneSetVolume = Module.findExportByName("tapi32.dll", "phoneSetVolume")
+Interceptor.attach(phoneSetVolume, {onLeave: function (args) {send("phoneSetVolume");}});
+
+var phoneShutdown = Module.findExportByName("tapi32.dll", "phoneShutdown")
+Interceptor.attach(phoneShutdown, {onLeave: function (args) {send("phoneShutdown");}});
+
+var tapiGetLocationInfo = Module.findExportByName("tapi32.dll", "tapiGetLocationInfo")
+Interceptor.attach(tapiGetLocationInfo, {onLeave: function (args) {send("tapiGetLocationInfo");}});
+
+var tapiGetLocationInfoA = Module.findExportByName("tapi32.dll", "tapiGetLocationInfoA")
+Interceptor.attach(tapiGetLocationInfoA, {onLeave: function (args) {send("tapiGetLocationInfoA");}});
+
+var tapiGetLocationInfoW = Module.findExportByName("tapi32.dll", "tapiGetLocationInfoW")
+Interceptor.attach(tapiGetLocationInfoW, {onLeave: function (args) {send("tapiGetLocationInfoW");}});
+
+var tapiRequestDrop = Module.findExportByName("tapi32.dll", "tapiRequestDrop")
+Interceptor.attach(tapiRequestDrop, {onLeave: function (args) {send("tapiRequestDrop");}});
+
+var tapiRequestMakeCall = Module.findExportByName("tapi32.dll", "tapiRequestMakeCall")
+Interceptor.attach(tapiRequestMakeCall, {onLeave: function (args) {send("tapiRequestMakeCall");}});
+
+var tapiRequestMakeCallA = Module.findExportByName("tapi32.dll", "tapiRequestMakeCallA")
+Interceptor.attach(tapiRequestMakeCallA, {onLeave: function (args) {send("tapiRequestMakeCallA");}});
+
+var tapiRequestMakeCallW = Module.findExportByName("tapi32.dll", "tapiRequestMakeCallW")
+Interceptor.attach(tapiRequestMakeCallW, {onLeave: function (args) {send("tapiRequestMakeCallW");}});
+
+var tapiRequestMediaCall = Module.findExportByName("tapi32.dll", "tapiRequestMediaCall")
+Interceptor.attach(tapiRequestMediaCall, {onLeave: function (args) {send("tapiRequestMediaCall");}});
+
+var tapiRequestMediaCallA = Module.findExportByName("tapi32.dll", "tapiRequestMediaCallA")
+Interceptor.attach(tapiRequestMediaCallA, {onLeave: function (args) {send("tapiRequestMediaCallA");}});
+
+var tapiRequestMediaCallW = Module.findExportByName("tapi32.dll", "tapiRequestMediaCallW")
+Interceptor.attach(tapiRequestMediaCallW, {onLeave: function (args) {send("tapiRequestMediaCallW");}});
+

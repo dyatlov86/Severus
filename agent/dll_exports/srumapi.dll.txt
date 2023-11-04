@@ -1,0 +1,45 @@
+var DllCanUnloadNow = Module.findExportByName("srumapi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("srumapi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("srumapi.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("srumapi.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var SruCreateCheckpoint = Module.findExportByName("srumapi.dll", "SruCreateCheckpoint")
+Interceptor.attach(SruCreateCheckpoint, {onLeave: function (args) {send("SruCreateCheckpoint");}});
+
+var SruCreateEnergyNotificationServer = Module.findExportByName("srumapi.dll", "SruCreateEnergyNotificationServer")
+Interceptor.attach(SruCreateEnergyNotificationServer, {onLeave: function (args) {send("SruCreateEnergyNotificationServer");}});
+
+var SruDeleteStatsByAppName = Module.findExportByName("srumapi.dll", "SruDeleteStatsByAppName")
+Interceptor.attach(SruDeleteStatsByAppName, {onLeave: function (args) {send("SruDeleteStatsByAppName");}});
+
+var SruFreeRecordSet = Module.findExportByName("srumapi.dll", "SruFreeRecordSet")
+Interceptor.attach(SruFreeRecordSet, {onLeave: function (args) {send("SruFreeRecordSet");}});
+
+var SruQueryStats = Module.findExportByName("srumapi.dll", "SruQueryStats")
+Interceptor.attach(SruQueryStats, {onLeave: function (args) {send("SruQueryStats");}});
+
+var SruQueryStatsBySeqNumber = Module.findExportByName("srumapi.dll", "SruQueryStatsBySeqNumber")
+Interceptor.attach(SruQueryStatsBySeqNumber, {onLeave: function (args) {send("SruQueryStatsBySeqNumber");}});
+
+var SruQueryStatsEx = Module.findExportByName("srumapi.dll", "SruQueryStatsEx")
+Interceptor.attach(SruQueryStatsEx, {onLeave: function (args) {send("SruQueryStatsEx");}});
+
+var SruRegisterRealTimeStats = Module.findExportByName("srumapi.dll", "SruRegisterRealTimeStats")
+Interceptor.attach(SruRegisterRealTimeStats, {onLeave: function (args) {send("SruRegisterRealTimeStats");}});
+
+var SruRetrieveEnergyRecord = Module.findExportByName("srumapi.dll", "SruRetrieveEnergyRecord")
+Interceptor.attach(SruRetrieveEnergyRecord, {onLeave: function (args) {send("SruRetrieveEnergyRecord");}});
+
+var SruUnregisterRealTimeStats = Module.findExportByName("srumapi.dll", "SruUnregisterRealTimeStats")
+Interceptor.attach(SruUnregisterRealTimeStats, {onLeave: function (args) {send("SruUnregisterRealTimeStats");}});
+
+var SruUpdateStats = Module.findExportByName("srumapi.dll", "SruUpdateStats")
+Interceptor.attach(SruUpdateStats, {onLeave: function (args) {send("SruUpdateStats");}});
+

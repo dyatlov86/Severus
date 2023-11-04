@@ -1,0 +1,24 @@
+var DtcGetTransactionManager = Module.findExportByName("xolehlp.dll", "DtcGetTransactionManager")
+Interceptor.attach(DtcGetTransactionManager, {onLeave: function (args) {send("DtcGetTransactionManager");}});
+
+var DtcGetTransactionManagerC = Module.findExportByName("xolehlp.dll", "DtcGetTransactionManagerC")
+Interceptor.attach(DtcGetTransactionManagerC, {onLeave: function (args) {send("DtcGetTransactionManagerC");}});
+
+var DtcGetTransactionManagerEx = Module.findExportByName("xolehlp.dll", "DtcGetTransactionManagerEx")
+Interceptor.attach(DtcGetTransactionManagerEx, {onLeave: function (args) {send("DtcGetTransactionManagerEx");}});
+
+var DtcGetTransactionManagerExA = Module.findExportByName("xolehlp.dll", "DtcGetTransactionManagerExA")
+Interceptor.attach(DtcGetTransactionManagerExA, {onLeave: function (args) {send("DtcGetTransactionManagerExA");}});
+
+var DtcGetTransactionManagerExW = Module.findExportByName("xolehlp.dll", "DtcGetTransactionManagerExW")
+Interceptor.attach(DtcGetTransactionManagerExW, {onLeave: function (args) {send("DtcGetTransactionManagerExW");}});
+
+var FreezeLocalTransactionManagers = Module.findExportByName("xolehlp.dll", "FreezeLocalTransactionManagers")
+Interceptor.attach(FreezeLocalTransactionManagers, {onLeave: function (args) {send("FreezeLocalTransactionManagers");}});
+
+var GetDtcLocaleResourceHandle = Module.findExportByName("xolehlp.dll", "GetDtcLocaleResourceHandle")
+Interceptor.attach(GetDtcLocaleResourceHandle, {onLeave: function (args) {send("GetDtcLocaleResourceHandle");}});
+
+var ThawLocalTransactionManagers = Module.findExportByName("xolehlp.dll", "ThawLocalTransactionManagers")
+Interceptor.attach(ThawLocalTransactionManagers, {onLeave: function (args) {send("ThawLocalTransactionManagers");}});
+

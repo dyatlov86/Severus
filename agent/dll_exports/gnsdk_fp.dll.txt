@@ -1,0 +1,177 @@
+var g_gcsl_log_callback = Module.findExportByName("gnsdk_fp.dll", "g_gcsl_log_callback")
+Interceptor.attach(g_gcsl_log_callback, {onLeave: function (args) {send("g_gcsl_log_callback");}});
+
+var g_gcsl_log_enabled_pkgs = Module.findExportByName("gnsdk_fp.dll", "g_gcsl_log_enabled_pkgs")
+Interceptor.attach(g_gcsl_log_enabled_pkgs, {onLeave: function (args) {send("g_gcsl_log_enabled_pkgs");}});
+
+var g_gcsl_signal_callback = Module.findExportByName("gnsdk_fp.dll", "g_gcsl_signal_callback")
+Interceptor.attach(g_gcsl_signal_callback, {onLeave: function (args) {send("g_gcsl_signal_callback");}});
+
+var g_gcsl_thread_registrants = Module.findExportByName("gnsdk_fp.dll", "g_gcsl_thread_registrants")
+Interceptor.attach(g_gcsl_thread_registrants, {onLeave: function (args) {send("g_gcsl_thread_registrants");}});
+
+var g_gcsl_thread_store_key = Module.findExportByName("gnsdk_fp.dll", "g_gcsl_thread_store_key")
+Interceptor.attach(g_gcsl_thread_store_key, {onLeave: function (args) {send("g_gcsl_thread_store_key");}});
+
+var gcsl_fs_marker_end = Module.findExportByName("gnsdk_fp.dll", "gcsl_fs_marker_end")
+Interceptor.attach(gcsl_fs_marker_end, {onLeave: function (args) {send("gcsl_fs_marker_end");}});
+
+var gcsl_fs_marker_initialize = Module.findExportByName("gnsdk_fp.dll", "gcsl_fs_marker_initialize")
+Interceptor.attach(gcsl_fs_marker_initialize, {onLeave: function (args) {send("gcsl_fs_marker_initialize");}});
+
+var gcsl_fs_marker_start = Module.findExportByName("gnsdk_fp.dll", "gcsl_fs_marker_start")
+Interceptor.attach(gcsl_fs_marker_start, {onLeave: function (args) {send("gcsl_fs_marker_start");}});
+
+var gcsl_memory_alloc = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_alloc")
+Interceptor.attach(gcsl_memory_alloc, {onLeave: function (args) {send("gcsl_memory_alloc");}});
+
+var gcsl_memory_alloc2 = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_alloc2")
+Interceptor.attach(gcsl_memory_alloc2, {onLeave: function (args) {send("gcsl_memory_alloc2");}});
+
+var gcsl_memory_alloc_count = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_alloc_count")
+Interceptor.attach(gcsl_memory_alloc_count, {onLeave: function (args) {send("gcsl_memory_alloc_count");}});
+
+var gcsl_memory_alloc_max = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_alloc_max")
+Interceptor.attach(gcsl_memory_alloc_max, {onLeave: function (args) {send("gcsl_memory_alloc_max");}});
+
+var gcsl_memory_alloc_trace = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_alloc_trace")
+Interceptor.attach(gcsl_memory_alloc_trace, {onLeave: function (args) {send("gcsl_memory_alloc_trace");}});
+
+var gcsl_memory_alloc_trace_set = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_alloc_trace_set")
+Interceptor.attach(gcsl_memory_alloc_trace_set, {onLeave: function (args) {send("gcsl_memory_alloc_trace_set");}});
+
+var gcsl_memory_calloc = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_calloc")
+Interceptor.attach(gcsl_memory_calloc, {onLeave: function (args) {send("gcsl_memory_calloc");}});
+
+var gcsl_memory_calloc2 = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_calloc2")
+Interceptor.attach(gcsl_memory_calloc2, {onLeave: function (args) {send("gcsl_memory_calloc2");}});
+
+var gcsl_memory_checkpoint_report = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_checkpoint_report")
+Interceptor.attach(gcsl_memory_checkpoint_report, {onLeave: function (args) {send("gcsl_memory_checkpoint_report");}});
+
+var gcsl_memory_checkpoint_set = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_checkpoint_set")
+Interceptor.attach(gcsl_memory_checkpoint_set, {onLeave: function (args) {send("gcsl_memory_checkpoint_set");}});
+
+var gcsl_memory_dup = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_dup")
+Interceptor.attach(gcsl_memory_dup, {onLeave: function (args) {send("gcsl_memory_dup");}});
+
+var gcsl_memory_dup2 = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_dup2")
+Interceptor.attach(gcsl_memory_dup2, {onLeave: function (args) {send("gcsl_memory_dup2");}});
+
+var gcsl_memory_free = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_free")
+Interceptor.attach(gcsl_memory_free, {onLeave: function (args) {send("gcsl_memory_free");}});
+
+var gcsl_memory_heap_dump = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_heap_dump")
+Interceptor.attach(gcsl_memory_heap_dump, {onLeave: function (args) {send("gcsl_memory_heap_dump");}});
+
+var gcsl_memory_heap_max = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_heap_max")
+Interceptor.attach(gcsl_memory_heap_max, {onLeave: function (args) {send("gcsl_memory_heap_max");}});
+
+var gcsl_memory_heap_now = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_heap_now")
+Interceptor.attach(gcsl_memory_heap_now, {onLeave: function (args) {send("gcsl_memory_heap_now");}});
+
+var gcsl_memory_heap_warn = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_heap_warn")
+Interceptor.attach(gcsl_memory_heap_warn, {onLeave: function (args) {send("gcsl_memory_heap_warn");}});
+
+var gcsl_memory_initialize = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_initialize")
+Interceptor.attach(gcsl_memory_initialize, {onLeave: function (args) {send("gcsl_memory_initialize");}});
+
+var gcsl_memory_marker_end = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_marker_end")
+Interceptor.attach(gcsl_memory_marker_end, {onLeave: function (args) {send("gcsl_memory_marker_end");}});
+
+var gcsl_memory_marker_initialize = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_marker_initialize")
+Interceptor.attach(gcsl_memory_marker_initialize, {onLeave: function (args) {send("gcsl_memory_marker_initialize");}});
+
+var gcsl_memory_marker_start = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_marker_start")
+Interceptor.attach(gcsl_memory_marker_start, {onLeave: function (args) {send("gcsl_memory_marker_start");}});
+
+var gcsl_memory_memcmp = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_memcmp")
+Interceptor.attach(gcsl_memory_memcmp, {onLeave: function (args) {send("gcsl_memory_memcmp");}});
+
+var gcsl_memory_memcpy = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_memcpy")
+Interceptor.attach(gcsl_memory_memcpy, {onLeave: function (args) {send("gcsl_memory_memcpy");}});
+
+var gcsl_memory_memmove = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_memmove")
+Interceptor.attach(gcsl_memory_memmove, {onLeave: function (args) {send("gcsl_memory_memmove");}});
+
+var gcsl_memory_memset = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_memset")
+Interceptor.attach(gcsl_memory_memset, {onLeave: function (args) {send("gcsl_memory_memset");}});
+
+var gcsl_memory_name_set = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_name_set")
+Interceptor.attach(gcsl_memory_name_set, {onLeave: function (args) {send("gcsl_memory_name_set");}});
+
+var gcsl_memory_realloc = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_realloc")
+Interceptor.attach(gcsl_memory_realloc, {onLeave: function (args) {send("gcsl_memory_realloc");}});
+
+var gcsl_memory_realloc2 = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_realloc2")
+Interceptor.attach(gcsl_memory_realloc2, {onLeave: function (args) {send("gcsl_memory_realloc2");}});
+
+var gcsl_memory_register_provider_interface = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_register_provider_interface")
+Interceptor.attach(gcsl_memory_register_provider_interface, {onLeave: function (args) {send("gcsl_memory_register_provider_interface");}});
+
+var gcsl_memory_shutdown = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_shutdown")
+Interceptor.attach(gcsl_memory_shutdown, {onLeave: function (args) {send("gcsl_memory_shutdown");}});
+
+var gcsl_memory_sizeof = Module.findExportByName("gnsdk_fp.dll", "gcsl_memory_sizeof")
+Interceptor.attach(gcsl_memory_sizeof, {onLeave: function (args) {send("gcsl_memory_sizeof");}});
+
+var gcsl_time_marker_end = Module.findExportByName("gnsdk_fp.dll", "gcsl_time_marker_end")
+Interceptor.attach(gcsl_time_marker_end, {onLeave: function (args) {send("gcsl_time_marker_end");}});
+
+var gcsl_time_marker_initialize = Module.findExportByName("gnsdk_fp.dll", "gcsl_time_marker_initialize")
+Interceptor.attach(gcsl_time_marker_initialize, {onLeave: function (args) {send("gcsl_time_marker_initialize");}});
+
+var gcsl_time_marker_start = Module.findExportByName("gnsdk_fp.dll", "gcsl_time_marker_start")
+Interceptor.attach(gcsl_time_marker_start, {onLeave: function (args) {send("gcsl_time_marker_start");}});
+
+var gnsdk_fp_data_addref = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_data_addref")
+Interceptor.attach(gnsdk_fp_data_addref, {onLeave: function (args) {send("gnsdk_fp_data_addref");}});
+
+var gnsdk_fp_data_get_info = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_data_get_info")
+Interceptor.attach(gnsdk_fp_data_get_info, {onLeave: function (args) {send("gnsdk_fp_data_get_info");}});
+
+var gnsdk_fp_data_release = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_data_release")
+Interceptor.attach(gnsdk_fp_data_release, {onLeave: function (args) {send("gnsdk_fp_data_release");}});
+
+var gnsdk_fp_data_render = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_data_render")
+Interceptor.attach(gnsdk_fp_data_render, {onLeave: function (args) {send("gnsdk_fp_data_render");}});
+
+var gnsdk_fp_fingerprinter_audio_create = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_fingerprinter_audio_create")
+Interceptor.attach(gnsdk_fp_fingerprinter_audio_create, {onLeave: function (args) {send("gnsdk_fp_fingerprinter_audio_create");}});
+
+var gnsdk_fp_fingerprinter_audio_done = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_fingerprinter_audio_done")
+Interceptor.attach(gnsdk_fp_fingerprinter_audio_done, {onLeave: function (args) {send("gnsdk_fp_fingerprinter_audio_done");}});
+
+var gnsdk_fp_fingerprinter_audio_write = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_fingerprinter_audio_write")
+Interceptor.attach(gnsdk_fp_fingerprinter_audio_write, {onLeave: function (args) {send("gnsdk_fp_fingerprinter_audio_write");}});
+
+var gnsdk_fp_fingerprinter_audio_write_ex = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_fingerprinter_audio_write_ex")
+Interceptor.attach(gnsdk_fp_fingerprinter_audio_write_ex, {onLeave: function (args) {send("gnsdk_fp_fingerprinter_audio_write_ex");}});
+
+var gnsdk_fp_fingerprinter_release = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_fingerprinter_release")
+Interceptor.attach(gnsdk_fp_fingerprinter_release, {onLeave: function (args) {send("gnsdk_fp_fingerprinter_release");}});
+
+var gnsdk_fp_fingerprinter_video_create = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_fingerprinter_video_create")
+Interceptor.attach(gnsdk_fp_fingerprinter_video_create, {onLeave: function (args) {send("gnsdk_fp_fingerprinter_video_create");}});
+
+var gnsdk_fp_fingerprinter_video_done = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_fingerprinter_video_done")
+Interceptor.attach(gnsdk_fp_fingerprinter_video_done, {onLeave: function (args) {send("gnsdk_fp_fingerprinter_video_done");}});
+
+var gnsdk_fp_fingerprinter_video_write = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_fingerprinter_video_write")
+Interceptor.attach(gnsdk_fp_fingerprinter_video_write, {onLeave: function (args) {send("gnsdk_fp_fingerprinter_video_write");}});
+
+var gnsdk_fp_get_build_date = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_get_build_date")
+Interceptor.attach(gnsdk_fp_get_build_date, {onLeave: function (args) {send("gnsdk_fp_get_build_date");}});
+
+var gnsdk_fp_get_version = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_get_version")
+Interceptor.attach(gnsdk_fp_get_version, {onLeave: function (args) {send("gnsdk_fp_get_version");}});
+
+var gnsdk_fp_initialize = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_initialize")
+Interceptor.attach(gnsdk_fp_initialize, {onLeave: function (args) {send("gnsdk_fp_initialize");}});
+
+var gnsdk_fp_shutdown = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_shutdown")
+Interceptor.attach(gnsdk_fp_shutdown, {onLeave: function (args) {send("gnsdk_fp_shutdown");}});
+
+var gnsdk_fp_string_free = Module.findExportByName("gnsdk_fp.dll", "gnsdk_fp_string_free")
+Interceptor.attach(gnsdk_fp_string_free, {onLeave: function (args) {send("gnsdk_fp_string_free");}});
+

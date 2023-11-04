@@ -1,0 +1,12 @@
+var D3D10GetVersion = Module.findExportByName("d3d10sdklayers.dll", "D3D10GetVersion")
+Interceptor.attach(D3D10GetVersion, {onLeave: function (args) {send("D3D10GetVersion");}});
+
+var D3D10RegisterLayers = Module.findExportByName("d3d10sdklayers.dll", "D3D10RegisterLayers")
+Interceptor.attach(D3D10RegisterLayers, {onLeave: function (args) {send("D3D10RegisterLayers");}});
+
+var D3D10TranslateCreateDevice = Module.findExportByName("d3d10sdklayers.dll", "D3D10TranslateCreateDevice")
+Interceptor.attach(D3D10TranslateCreateDevice, {onLeave: function (args) {send("D3D10TranslateCreateDevice");}});
+
+var DXGI_SDK_MESSAGE = Module.findExportByName("d3d10sdklayers.dll", "DXGI_SDK_MESSAGE")
+Interceptor.attach(DXGI_SDK_MESSAGE, {onLeave: function (args) {send("DXGI_SDK_MESSAGE");}});
+

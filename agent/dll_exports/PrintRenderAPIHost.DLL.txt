@@ -1,0 +1,12 @@
+var CreatePDFFactory = Module.findExportByName("PrintRenderAPIHost.DLL", "CreatePDFFactory")
+Interceptor.attach(CreatePDFFactory, {onLeave: function (args) {send("CreatePDFFactory");}});
+
+var CreateXPSToPDFConverter = Module.findExportByName("PrintRenderAPIHost.DLL", "CreateXPSToPDFConverter")
+Interceptor.attach(CreateXPSToPDFConverter, {onLeave: function (args) {send("CreateXPSToPDFConverter");}});
+
+var DllCanUnloadNow = Module.findExportByName("PrintRenderAPIHost.DLL", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("PrintRenderAPIHost.DLL", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

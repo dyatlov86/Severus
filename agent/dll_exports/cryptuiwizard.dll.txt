@@ -1,0 +1,24 @@
+var CryptUIWizBuildCTL = Module.findExportByName("cryptuiwizard.dll", "CryptUIWizBuildCTL")
+Interceptor.attach(CryptUIWizBuildCTL, {onLeave: function (args) {send("CryptUIWizBuildCTL");}});
+
+var CryptUIWizDigitalSign = Module.findExportByName("cryptuiwizard.dll", "CryptUIWizDigitalSign")
+Interceptor.attach(CryptUIWizDigitalSign, {onLeave: function (args) {send("CryptUIWizDigitalSign");}});
+
+var CryptUIWizExport = Module.findExportByName("cryptuiwizard.dll", "CryptUIWizExport")
+Interceptor.attach(CryptUIWizExport, {onLeave: function (args) {send("CryptUIWizExport");}});
+
+var CryptUIWizFreeDigitalSignContext = Module.findExportByName("cryptuiwizard.dll", "CryptUIWizFreeDigitalSignContext")
+Interceptor.attach(CryptUIWizFreeDigitalSignContext, {onLeave: function (args) {send("CryptUIWizFreeDigitalSignContext");}});
+
+var CryptUIWizImport = Module.findExportByName("cryptuiwizard.dll", "CryptUIWizImport")
+Interceptor.attach(CryptUIWizImport, {onLeave: function (args) {send("CryptUIWizImport");}});
+
+var CryptUIWizImportInternal = Module.findExportByName("cryptuiwizard.dll", "CryptUIWizImportInternal")
+Interceptor.attach(CryptUIWizImportInternal, {onLeave: function (args) {send("CryptUIWizImportInternal");}});
+
+var DllMain = Module.findExportByName("cryptuiwizard.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GetFunctionTable = Module.findExportByName("cryptuiwizard.dll", "GetFunctionTable")
+Interceptor.attach(GetFunctionTable, {onLeave: function (args) {send("GetFunctionTable");}});
+

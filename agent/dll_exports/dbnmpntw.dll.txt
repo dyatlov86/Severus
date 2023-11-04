@@ -1,0 +1,48 @@
+var ConnectionCheckForData = Module.findExportByName("dbnmpntw.dll", "ConnectionCheckForData")
+Interceptor.attach(ConnectionCheckForData, {onLeave: function (args) {send("ConnectionCheckForData");}});
+
+var ConnectionClose = Module.findExportByName("dbnmpntw.dll", "ConnectionClose")
+Interceptor.attach(ConnectionClose, {onLeave: function (args) {send("ConnectionClose");}});
+
+var ConnectionError = Module.findExportByName("dbnmpntw.dll", "ConnectionError")
+Interceptor.attach(ConnectionError, {onLeave: function (args) {send("ConnectionError");}});
+
+var ConnectionErrorW = Module.findExportByName("dbnmpntw.dll", "ConnectionErrorW")
+Interceptor.attach(ConnectionErrorW, {onLeave: function (args) {send("ConnectionErrorW");}});
+
+var ConnectionMode = Module.findExportByName("dbnmpntw.dll", "ConnectionMode")
+Interceptor.attach(ConnectionMode, {onLeave: function (args) {send("ConnectionMode");}});
+
+var ConnectionObjectSize = Module.findExportByName("dbnmpntw.dll", "ConnectionObjectSize")
+Interceptor.attach(ConnectionObjectSize, {onLeave: function (args) {send("ConnectionObjectSize");}});
+
+var ConnectionOpen = Module.findExportByName("dbnmpntw.dll", "ConnectionOpen")
+Interceptor.attach(ConnectionOpen, {onLeave: function (args) {send("ConnectionOpen");}});
+
+var ConnectionOpenW = Module.findExportByName("dbnmpntw.dll", "ConnectionOpenW")
+Interceptor.attach(ConnectionOpenW, {onLeave: function (args) {send("ConnectionOpenW");}});
+
+var ConnectionRead = Module.findExportByName("dbnmpntw.dll", "ConnectionRead")
+Interceptor.attach(ConnectionRead, {onLeave: function (args) {send("ConnectionRead");}});
+
+var ConnectionServerEnum = Module.findExportByName("dbnmpntw.dll", "ConnectionServerEnum")
+Interceptor.attach(ConnectionServerEnum, {onLeave: function (args) {send("ConnectionServerEnum");}});
+
+var ConnectionServerEnumW = Module.findExportByName("dbnmpntw.dll", "ConnectionServerEnumW")
+Interceptor.attach(ConnectionServerEnumW, {onLeave: function (args) {send("ConnectionServerEnumW");}});
+
+var ConnectionStatus = Module.findExportByName("dbnmpntw.dll", "ConnectionStatus")
+Interceptor.attach(ConnectionStatus, {onLeave: function (args) {send("ConnectionStatus");}});
+
+var ConnectionTransact = Module.findExportByName("dbnmpntw.dll", "ConnectionTransact")
+Interceptor.attach(ConnectionTransact, {onLeave: function (args) {send("ConnectionTransact");}});
+
+var ConnectionVer = Module.findExportByName("dbnmpntw.dll", "ConnectionVer")
+Interceptor.attach(ConnectionVer, {onLeave: function (args) {send("ConnectionVer");}});
+
+var ConnectionWrite = Module.findExportByName("dbnmpntw.dll", "ConnectionWrite")
+Interceptor.attach(ConnectionWrite, {onLeave: function (args) {send("ConnectionWrite");}});
+
+var ConnectionWriteOOB = Module.findExportByName("dbnmpntw.dll", "ConnectionWriteOOB")
+Interceptor.attach(ConnectionWriteOOB, {onLeave: function (args) {send("ConnectionWriteOOB");}});
+

@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("wercplsupport.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wercplsupport.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ServiceMain = Module.findExportByName("wercplsupport.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("wercplsupport.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+
+var WerComGetAdminStores = Module.findExportByName("wercplsupport.dll", "WerComGetAdminStores")
+Interceptor.attach(WerComGetAdminStores, {onLeave: function (args) {send("WerComGetAdminStores");}});
+

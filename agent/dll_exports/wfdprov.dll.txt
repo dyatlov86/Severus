@@ -1,0 +1,12 @@
+var WFDProvConfigureAndProvisionDevice = Module.findExportByName("wfdprov.dll", "WFDProvConfigureAndProvisionDevice")
+Interceptor.attach(WFDProvConfigureAndProvisionDevice, {onLeave: function (args) {send("WFDProvConfigureAndProvisionDevice");}});
+
+var WFDProvDeinitialize = Module.findExportByName("wfdprov.dll", "WFDProvDeinitialize")
+Interceptor.attach(WFDProvDeinitialize, {onLeave: function (args) {send("WFDProvDeinitialize");}});
+
+var WFDProvGetInfo = Module.findExportByName("wfdprov.dll", "WFDProvGetInfo")
+Interceptor.attach(WFDProvGetInfo, {onLeave: function (args) {send("WFDProvGetInfo");}});
+
+var WFDProvInitialize = Module.findExportByName("wfdprov.dll", "WFDProvInitialize")
+Interceptor.attach(WFDProvInitialize, {onLeave: function (args) {send("WFDProvInitialize");}});
+

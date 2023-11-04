@@ -1,0 +1,45 @@
+var AddConnectionOptionListEntries = Module.findExportByName("connect.dll", "AddConnectionOptionListEntries")
+Interceptor.attach(AddConnectionOptionListEntries, {onLeave: function (args) {send("AddConnectionOptionListEntries");}});
+
+var CreateVPNConnection = Module.findExportByName("connect.dll", "CreateVPNConnection")
+Interceptor.attach(CreateVPNConnection, {onLeave: function (args) {send("CreateVPNConnection");}});
+
+var DllCanUnloadNow = Module.findExportByName("connect.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("connect.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetInternetConnected = Module.findExportByName("connect.dll", "GetInternetConnected")
+Interceptor.attach(GetInternetConnected, {onLeave: function (args) {send("GetInternetConnected");}});
+
+var GetNetworkConnected = Module.findExportByName("connect.dll", "GetNetworkConnected")
+Interceptor.attach(GetNetworkConnected, {onLeave: function (args) {send("GetNetworkConnected");}});
+
+var GetVPNConnected = Module.findExportByName("connect.dll", "GetVPNConnected")
+Interceptor.attach(GetVPNConnected, {onLeave: function (args) {send("GetVPNConnected");}});
+
+var HrIsInternetConnected = Module.findExportByName("connect.dll", "HrIsInternetConnected")
+Interceptor.attach(HrIsInternetConnected, {onLeave: function (args) {send("HrIsInternetConnected");}});
+
+var HrIsInternetConnectedGUID = Module.findExportByName("connect.dll", "HrIsInternetConnectedGUID")
+Interceptor.attach(HrIsInternetConnectedGUID, {onLeave: function (args) {send("HrIsInternetConnectedGUID");}});
+
+var IsInternetConnected = Module.findExportByName("connect.dll", "IsInternetConnected")
+Interceptor.attach(IsInternetConnected, {onLeave: function (args) {send("IsInternetConnected");}});
+
+var IsInternetConnectedGUID = Module.findExportByName("connect.dll", "IsInternetConnectedGUID")
+Interceptor.attach(IsInternetConnectedGUID, {onLeave: function (args) {send("IsInternetConnectedGUID");}});
+
+var IsUniqueConnectionName = Module.findExportByName("connect.dll", "IsUniqueConnectionName")
+Interceptor.attach(IsUniqueConnectionName, {onLeave: function (args) {send("IsUniqueConnectionName");}});
+
+var RegisterPageWithPage = Module.findExportByName("connect.dll", "RegisterPageWithPage")
+Interceptor.attach(RegisterPageWithPage, {onLeave: function (args) {send("RegisterPageWithPage");}});
+
+var UnregisterPage = Module.findExportByName("connect.dll", "UnregisterPage")
+Interceptor.attach(UnregisterPage, {onLeave: function (args) {send("UnregisterPage");}});
+
+var UnregisterPagesLink = Module.findExportByName("connect.dll", "UnregisterPagesLink")
+Interceptor.attach(UnregisterPagesLink, {onLeave: function (args) {send("UnregisterPagesLink");}});
+

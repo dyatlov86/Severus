@@ -1,0 +1,48 @@
+var CreateFileMappingW = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "CreateFileMappingW")
+Interceptor.attach(CreateFileMappingW, {onLeave: function (args) {send("CreateFileMappingW");}});
+
+var FlushViewOfFile = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "FlushViewOfFile")
+Interceptor.attach(FlushViewOfFile, {onLeave: function (args) {send("FlushViewOfFile");}});
+
+var MapViewOfFile = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "MapViewOfFile")
+Interceptor.attach(MapViewOfFile, {onLeave: function (args) {send("MapViewOfFile");}});
+
+var MapViewOfFileEx = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "MapViewOfFileEx")
+Interceptor.attach(MapViewOfFileEx, {onLeave: function (args) {send("MapViewOfFileEx");}});
+
+var OpenFileMappingW = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "OpenFileMappingW")
+Interceptor.attach(OpenFileMappingW, {onLeave: function (args) {send("OpenFileMappingW");}});
+
+var ReadProcessMemory = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "ReadProcessMemory")
+Interceptor.attach(ReadProcessMemory, {onLeave: function (args) {send("ReadProcessMemory");}});
+
+var UnmapViewOfFile = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "UnmapViewOfFile")
+Interceptor.attach(UnmapViewOfFile, {onLeave: function (args) {send("UnmapViewOfFile");}});
+
+var VirtualAlloc = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "VirtualAlloc")
+Interceptor.attach(VirtualAlloc, {onLeave: function (args) {send("VirtualAlloc");}});
+
+var VirtualAllocEx = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "VirtualAllocEx")
+Interceptor.attach(VirtualAllocEx, {onLeave: function (args) {send("VirtualAllocEx");}});
+
+var VirtualFree = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "VirtualFree")
+Interceptor.attach(VirtualFree, {onLeave: function (args) {send("VirtualFree");}});
+
+var VirtualFreeEx = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "VirtualFreeEx")
+Interceptor.attach(VirtualFreeEx, {onLeave: function (args) {send("VirtualFreeEx");}});
+
+var VirtualProtect = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "VirtualProtect")
+Interceptor.attach(VirtualProtect, {onLeave: function (args) {send("VirtualProtect");}});
+
+var VirtualProtectEx = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "VirtualProtectEx")
+Interceptor.attach(VirtualProtectEx, {onLeave: function (args) {send("VirtualProtectEx");}});
+
+var VirtualQuery = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "VirtualQuery")
+Interceptor.attach(VirtualQuery, {onLeave: function (args) {send("VirtualQuery");}});
+
+var VirtualQueryEx = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "VirtualQueryEx")
+Interceptor.attach(VirtualQueryEx, {onLeave: function (args) {send("VirtualQueryEx");}});
+
+var WriteProcessMemory = Module.findExportByName("api-ms-win-core-memory-l1-1-0.dll", "WriteProcessMemory")
+Interceptor.attach(WriteProcessMemory, {onLeave: function (args) {send("WriteProcessMemory");}});
+

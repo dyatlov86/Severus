@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("LockHostingFramework.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("LockHostingFramework.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("LockHostingFramework.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ShutdownLockAppHostServer = Module.findExportByName("LockHostingFramework.dll", "ShutdownLockAppHostServer")
+Interceptor.attach(ShutdownLockAppHostServer, {onLeave: function (args) {send("ShutdownLockAppHostServer");}});
+
+var StartLockAppHostServer = Module.findExportByName("LockHostingFramework.dll", "StartLockAppHostServer")
+Interceptor.attach(StartLockAppHostServer, {onLeave: function (args) {send("StartLockAppHostServer");}});
+

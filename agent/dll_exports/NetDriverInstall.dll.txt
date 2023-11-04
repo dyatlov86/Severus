@@ -1,0 +1,18 @@
+var NetDriverInstallClose = Module.findExportByName("NetDriverInstall.dll", "NetDriverInstallClose")
+Interceptor.attach(NetDriverInstallClose, {onLeave: function (args) {send("NetDriverInstallClose");}});
+
+var NetDriverInstallCommit = Module.findExportByName("NetDriverInstall.dll", "NetDriverInstallCommit")
+Interceptor.attach(NetDriverInstallCommit, {onLeave: function (args) {send("NetDriverInstallCommit");}});
+
+var NetDriverInstallInitialize = Module.findExportByName("NetDriverInstall.dll", "NetDriverInstallInitialize")
+Interceptor.attach(NetDriverInstallInitialize, {onLeave: function (args) {send("NetDriverInstallInitialize");}});
+
+var NetDriverInstallProcessAdditions = Module.findExportByName("NetDriverInstall.dll", "NetDriverInstallProcessAdditions")
+Interceptor.attach(NetDriverInstallProcessAdditions, {onLeave: function (args) {send("NetDriverInstallProcessAdditions");}});
+
+var NetDriverInstallProcessRemovals = Module.findExportByName("NetDriverInstall.dll", "NetDriverInstallProcessRemovals")
+Interceptor.attach(NetDriverInstallProcessRemovals, {onLeave: function (args) {send("NetDriverInstallProcessRemovals");}});
+
+var NetDriverInstallSync = Module.findExportByName("NetDriverInstall.dll", "NetDriverInstallSync")
+Interceptor.attach(NetDriverInstallSync, {onLeave: function (args) {send("NetDriverInstallSync");}});
+

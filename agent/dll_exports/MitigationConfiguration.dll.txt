@@ -1,0 +1,24 @@
+var DllCanUnloadNow = Module.findExportByName("MitigationConfiguration.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("MitigationConfiguration.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("MitigationConfiguration.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("MitigationConfiguration.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ExportMitigation = Module.findExportByName("MitigationConfiguration.dll", "ExportMitigation")
+Interceptor.attach(ExportMitigation, {onLeave: function (args) {send("ExportMitigation");}});
+
+var ImportMitigation = Module.findExportByName("MitigationConfiguration.dll", "ImportMitigation")
+Interceptor.attach(ImportMitigation, {onLeave: function (args) {send("ImportMitigation");}});
+
+var ValidateXML = Module.findExportByName("MitigationConfiguration.dll", "ValidateXML")
+Interceptor.attach(ValidateXML, {onLeave: function (args) {send("ValidateXML");}});
+
+var ValidateXMLFromManaged = Module.findExportByName("MitigationConfiguration.dll", "ValidateXMLFromManaged")
+Interceptor.attach(ValidateXMLFromManaged, {onLeave: function (args) {send("ValidateXMLFromManaged");}});
+

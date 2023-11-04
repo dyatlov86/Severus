@@ -1,0 +1,171 @@
+var DllRegisterServer = Module.findExportByName("wiaservc.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wiaservc.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ServiceMain = Module.findExportByName("wiaservc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var wiasCreateChildAppItem = Module.findExportByName("wiaservc.dll", "wiasCreateChildAppItem")
+Interceptor.attach(wiasCreateChildAppItem, {onLeave: function (args) {send("wiasCreateChildAppItem");}});
+
+var wiasCreateDrvItem = Module.findExportByName("wiaservc.dll", "wiasCreateDrvItem")
+Interceptor.attach(wiasCreateDrvItem, {onLeave: function (args) {send("wiasCreateDrvItem");}});
+
+var wiasCreateLogInstance = Module.findExportByName("wiaservc.dll", "wiasCreateLogInstance")
+Interceptor.attach(wiasCreateLogInstance, {onLeave: function (args) {send("wiasCreateLogInstance");}});
+
+var wiasCreatePropContext = Module.findExportByName("wiaservc.dll", "wiasCreatePropContext")
+Interceptor.attach(wiasCreatePropContext, {onLeave: function (args) {send("wiasCreatePropContext");}});
+
+var wiasDebugError = Module.findExportByName("wiaservc.dll", "wiasDebugError")
+Interceptor.attach(wiasDebugError, {onLeave: function (args) {send("wiasDebugError");}});
+
+var wiasDebugTrace = Module.findExportByName("wiaservc.dll", "wiasDebugTrace")
+Interceptor.attach(wiasDebugTrace, {onLeave: function (args) {send("wiasDebugTrace");}});
+
+var wiasDownSampleBuffer = Module.findExportByName("wiaservc.dll", "wiasDownSampleBuffer")
+Interceptor.attach(wiasDownSampleBuffer, {onLeave: function (args) {send("wiasDownSampleBuffer");}});
+
+var wiasFormatArgs = Module.findExportByName("wiaservc.dll", "wiasFormatArgs")
+Interceptor.attach(wiasFormatArgs, {onLeave: function (args) {send("wiasFormatArgs");}});
+
+var wiasFreePropContext = Module.findExportByName("wiaservc.dll", "wiasFreePropContext")
+Interceptor.attach(wiasFreePropContext, {onLeave: function (args) {send("wiasFreePropContext");}});
+
+var wiasGetChangedValueFloat = Module.findExportByName("wiaservc.dll", "wiasGetChangedValueFloat")
+Interceptor.attach(wiasGetChangedValueFloat, {onLeave: function (args) {send("wiasGetChangedValueFloat");}});
+
+var wiasGetChangedValueGuid = Module.findExportByName("wiaservc.dll", "wiasGetChangedValueGuid")
+Interceptor.attach(wiasGetChangedValueGuid, {onLeave: function (args) {send("wiasGetChangedValueGuid");}});
+
+var wiasGetChangedValueLong = Module.findExportByName("wiaservc.dll", "wiasGetChangedValueLong")
+Interceptor.attach(wiasGetChangedValueLong, {onLeave: function (args) {send("wiasGetChangedValueLong");}});
+
+var wiasGetChangedValueStr = Module.findExportByName("wiaservc.dll", "wiasGetChangedValueStr")
+Interceptor.attach(wiasGetChangedValueStr, {onLeave: function (args) {send("wiasGetChangedValueStr");}});
+
+var wiasGetChildrenContexts = Module.findExportByName("wiaservc.dll", "wiasGetChildrenContexts")
+Interceptor.attach(wiasGetChildrenContexts, {onLeave: function (args) {send("wiasGetChildrenContexts");}});
+
+var wiasGetContextFromName = Module.findExportByName("wiaservc.dll", "wiasGetContextFromName")
+Interceptor.attach(wiasGetContextFromName, {onLeave: function (args) {send("wiasGetContextFromName");}});
+
+var wiasGetDrvItem = Module.findExportByName("wiaservc.dll", "wiasGetDrvItem")
+Interceptor.attach(wiasGetDrvItem, {onLeave: function (args) {send("wiasGetDrvItem");}});
+
+var wiasGetImageInformation = Module.findExportByName("wiaservc.dll", "wiasGetImageInformation")
+Interceptor.attach(wiasGetImageInformation, {onLeave: function (args) {send("wiasGetImageInformation");}});
+
+var wiasGetItemType = Module.findExportByName("wiaservc.dll", "wiasGetItemType")
+Interceptor.attach(wiasGetItemType, {onLeave: function (args) {send("wiasGetItemType");}});
+
+var wiasGetPropertyAttributes = Module.findExportByName("wiaservc.dll", "wiasGetPropertyAttributes")
+Interceptor.attach(wiasGetPropertyAttributes, {onLeave: function (args) {send("wiasGetPropertyAttributes");}});
+
+var wiasGetRootItem = Module.findExportByName("wiaservc.dll", "wiasGetRootItem")
+Interceptor.attach(wiasGetRootItem, {onLeave: function (args) {send("wiasGetRootItem");}});
+
+var wiasIsPropChanged = Module.findExportByName("wiaservc.dll", "wiasIsPropChanged")
+Interceptor.attach(wiasIsPropChanged, {onLeave: function (args) {send("wiasIsPropChanged");}});
+
+var wiasParseEndorserString = Module.findExportByName("wiaservc.dll", "wiasParseEndorserString")
+Interceptor.attach(wiasParseEndorserString, {onLeave: function (args) {send("wiasParseEndorserString");}});
+
+var wiasPrintDebugHResult = Module.findExportByName("wiaservc.dll", "wiasPrintDebugHResult")
+Interceptor.attach(wiasPrintDebugHResult, {onLeave: function (args) {send("wiasPrintDebugHResult");}});
+
+var wiasQueueEvent = Module.findExportByName("wiaservc.dll", "wiasQueueEvent")
+Interceptor.attach(wiasQueueEvent, {onLeave: function (args) {send("wiasQueueEvent");}});
+
+var wiasReadMultiple = Module.findExportByName("wiaservc.dll", "wiasReadMultiple")
+Interceptor.attach(wiasReadMultiple, {onLeave: function (args) {send("wiasReadMultiple");}});
+
+var wiasReadPropBin = Module.findExportByName("wiaservc.dll", "wiasReadPropBin")
+Interceptor.attach(wiasReadPropBin, {onLeave: function (args) {send("wiasReadPropBin");}});
+
+var wiasReadPropFloat = Module.findExportByName("wiaservc.dll", "wiasReadPropFloat")
+Interceptor.attach(wiasReadPropFloat, {onLeave: function (args) {send("wiasReadPropFloat");}});
+
+var wiasReadPropGuid = Module.findExportByName("wiaservc.dll", "wiasReadPropGuid")
+Interceptor.attach(wiasReadPropGuid, {onLeave: function (args) {send("wiasReadPropGuid");}});
+
+var wiasReadPropLong = Module.findExportByName("wiaservc.dll", "wiasReadPropLong")
+Interceptor.attach(wiasReadPropLong, {onLeave: function (args) {send("wiasReadPropLong");}});
+
+var wiasReadPropStr = Module.findExportByName("wiaservc.dll", "wiasReadPropStr")
+Interceptor.attach(wiasReadPropStr, {onLeave: function (args) {send("wiasReadPropStr");}});
+
+var wiasSendEndOfPage = Module.findExportByName("wiaservc.dll", "wiasSendEndOfPage")
+Interceptor.attach(wiasSendEndOfPage, {onLeave: function (args) {send("wiasSendEndOfPage");}});
+
+var wiasSetItemPropAttribs = Module.findExportByName("wiaservc.dll", "wiasSetItemPropAttribs")
+Interceptor.attach(wiasSetItemPropAttribs, {onLeave: function (args) {send("wiasSetItemPropAttribs");}});
+
+var wiasSetItemPropNames = Module.findExportByName("wiaservc.dll", "wiasSetItemPropNames")
+Interceptor.attach(wiasSetItemPropNames, {onLeave: function (args) {send("wiasSetItemPropNames");}});
+
+var wiasSetPropChanged = Module.findExportByName("wiaservc.dll", "wiasSetPropChanged")
+Interceptor.attach(wiasSetPropChanged, {onLeave: function (args) {send("wiasSetPropChanged");}});
+
+var wiasSetPropertyAttributes = Module.findExportByName("wiaservc.dll", "wiasSetPropertyAttributes")
+Interceptor.attach(wiasSetPropertyAttributes, {onLeave: function (args) {send("wiasSetPropertyAttributes");}});
+
+var wiasSetValidFlag = Module.findExportByName("wiaservc.dll", "wiasSetValidFlag")
+Interceptor.attach(wiasSetValidFlag, {onLeave: function (args) {send("wiasSetValidFlag");}});
+
+var wiasSetValidListFloat = Module.findExportByName("wiaservc.dll", "wiasSetValidListFloat")
+Interceptor.attach(wiasSetValidListFloat, {onLeave: function (args) {send("wiasSetValidListFloat");}});
+
+var wiasSetValidListGuid = Module.findExportByName("wiaservc.dll", "wiasSetValidListGuid")
+Interceptor.attach(wiasSetValidListGuid, {onLeave: function (args) {send("wiasSetValidListGuid");}});
+
+var wiasSetValidListLong = Module.findExportByName("wiaservc.dll", "wiasSetValidListLong")
+Interceptor.attach(wiasSetValidListLong, {onLeave: function (args) {send("wiasSetValidListLong");}});
+
+var wiasSetValidListStr = Module.findExportByName("wiaservc.dll", "wiasSetValidListStr")
+Interceptor.attach(wiasSetValidListStr, {onLeave: function (args) {send("wiasSetValidListStr");}});
+
+var wiasSetValidRangeFloat = Module.findExportByName("wiaservc.dll", "wiasSetValidRangeFloat")
+Interceptor.attach(wiasSetValidRangeFloat, {onLeave: function (args) {send("wiasSetValidRangeFloat");}});
+
+var wiasSetValidRangeLong = Module.findExportByName("wiaservc.dll", "wiasSetValidRangeLong")
+Interceptor.attach(wiasSetValidRangeLong, {onLeave: function (args) {send("wiasSetValidRangeLong");}});
+
+var wiasUpdateScanRect = Module.findExportByName("wiaservc.dll", "wiasUpdateScanRect")
+Interceptor.attach(wiasUpdateScanRect, {onLeave: function (args) {send("wiasUpdateScanRect");}});
+
+var wiasUpdateValidFormat = Module.findExportByName("wiaservc.dll", "wiasUpdateValidFormat")
+Interceptor.attach(wiasUpdateValidFormat, {onLeave: function (args) {send("wiasUpdateValidFormat");}});
+
+var wiasValidateItemProperties = Module.findExportByName("wiaservc.dll", "wiasValidateItemProperties")
+Interceptor.attach(wiasValidateItemProperties, {onLeave: function (args) {send("wiasValidateItemProperties");}});
+
+var wiasWriteBufToFile = Module.findExportByName("wiaservc.dll", "wiasWriteBufToFile")
+Interceptor.attach(wiasWriteBufToFile, {onLeave: function (args) {send("wiasWriteBufToFile");}});
+
+var wiasWriteMultiple = Module.findExportByName("wiaservc.dll", "wiasWriteMultiple")
+Interceptor.attach(wiasWriteMultiple, {onLeave: function (args) {send("wiasWriteMultiple");}});
+
+var wiasWritePageBufToFile = Module.findExportByName("wiaservc.dll", "wiasWritePageBufToFile")
+Interceptor.attach(wiasWritePageBufToFile, {onLeave: function (args) {send("wiasWritePageBufToFile");}});
+
+var wiasWritePageBufToStream = Module.findExportByName("wiaservc.dll", "wiasWritePageBufToStream")
+Interceptor.attach(wiasWritePageBufToStream, {onLeave: function (args) {send("wiasWritePageBufToStream");}});
+
+var wiasWritePropBin = Module.findExportByName("wiaservc.dll", "wiasWritePropBin")
+Interceptor.attach(wiasWritePropBin, {onLeave: function (args) {send("wiasWritePropBin");}});
+
+var wiasWritePropFloat = Module.findExportByName("wiaservc.dll", "wiasWritePropFloat")
+Interceptor.attach(wiasWritePropFloat, {onLeave: function (args) {send("wiasWritePropFloat");}});
+
+var wiasWritePropGuid = Module.findExportByName("wiaservc.dll", "wiasWritePropGuid")
+Interceptor.attach(wiasWritePropGuid, {onLeave: function (args) {send("wiasWritePropGuid");}});
+
+var wiasWritePropLong = Module.findExportByName("wiaservc.dll", "wiasWritePropLong")
+Interceptor.attach(wiasWritePropLong, {onLeave: function (args) {send("wiasWritePropLong");}});
+
+var wiasWritePropStr = Module.findExportByName("wiaservc.dll", "wiasWritePropStr")
+Interceptor.attach(wiasWritePropStr, {onLeave: function (args) {send("wiasWritePropStr");}});
+

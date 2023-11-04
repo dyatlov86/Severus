@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("SecurityCenterBroker.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllMain = Module.findExportByName("SecurityCenterBroker.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var RegisterSecurityCenterBroker = Module.findExportByName("SecurityCenterBroker.dll", "RegisterSecurityCenterBroker")
+Interceptor.attach(RegisterSecurityCenterBroker, {onLeave: function (args) {send("RegisterSecurityCenterBroker");}});
+
+var UnregisterSecurityCenterBroker = Module.findExportByName("SecurityCenterBroker.dll", "UnregisterSecurityCenterBroker")
+Interceptor.attach(UnregisterSecurityCenterBroker, {onLeave: function (args) {send("UnregisterSecurityCenterBroker");}});
+

@@ -1,0 +1,3 @@
+var CoDeviceInstall = Module.findExportByName("ImController.CoInstaller.dll", "CoDeviceInstall")
+Interceptor.attach(CoDeviceInstall, {onLeave: function (args) {send("CoDeviceInstall");}});
+

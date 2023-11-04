@@ -1,0 +1,12 @@
+var DUIRemoveSubscriptionDialogModal = Module.findExportByName("RADCUI.dll", "DUIRemoveSubscriptionDialogModal")
+Interceptor.attach(DUIRemoveSubscriptionDialogModal, {onLeave: function (args) {send("DUIRemoveSubscriptionDialogModal");}});
+
+var DUISubscribeWizardModal = Module.findExportByName("RADCUI.dll", "DUISubscribeWizardModal")
+Interceptor.attach(DUISubscribeWizardModal, {onLeave: function (args) {send("DUISubscribeWizardModal");}});
+
+var DllCanUnloadNow = Module.findExportByName("RADCUI.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("RADCUI.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

@@ -1,0 +1,6 @@
+var MI_Application_InitializeV1 = Module.findExportByName("mi.dll", "MI_Application_InitializeV1")
+Interceptor.attach(MI_Application_InitializeV1, {onLeave: function (args) {send("MI_Application_InitializeV1");}});
+
+var mi_clientFT_V1 = Module.findExportByName("mi.dll", "mi_clientFT_V1")
+Interceptor.attach(mi_clientFT_V1, {onLeave: function (args) {send("mi_clientFT_V1");}});
+

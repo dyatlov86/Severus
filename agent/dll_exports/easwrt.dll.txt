@@ -1,0 +1,27 @@
+var DllCanUnloadNow = Module.findExportByName("easwrt.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("easwrt.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("easwrt.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var EasClientSecurityPolicyApply = Module.findExportByName("easwrt.dll", "EasClientSecurityPolicyApply")
+Interceptor.attach(EasClientSecurityPolicyApply, {onLeave: function (args) {send("EasClientSecurityPolicyApply");}});
+
+var EasClientSecurityPolicyCheckCompliance = Module.findExportByName("easwrt.dll", "EasClientSecurityPolicyCheckCompliance")
+Interceptor.attach(EasClientSecurityPolicyCheckCompliance, {onLeave: function (args) {send("EasClientSecurityPolicyCheckCompliance");}});
+
+var EasGetClientDeviceInformation = Module.findExportByName("easwrt.dll", "EasGetClientDeviceInformation")
+Interceptor.attach(EasGetClientDeviceInformation, {onLeave: function (args) {send("EasGetClientDeviceInformation");}});
+
+var EasRegisterEncryptionProvider = Module.findExportByName("easwrt.dll", "EasRegisterEncryptionProvider")
+Interceptor.attach(EasRegisterEncryptionProvider, {onLeave: function (args) {send("EasRegisterEncryptionProvider");}});
+
+var EasShowConsentDialog = Module.findExportByName("easwrt.dll", "EasShowConsentDialog")
+Interceptor.attach(EasShowConsentDialog, {onLeave: function (args) {send("EasShowConsentDialog");}});
+
+var EasUnRegisterEncryptionProvider = Module.findExportByName("easwrt.dll", "EasUnRegisterEncryptionProvider")
+Interceptor.attach(EasUnRegisterEncryptionProvider, {onLeave: function (args) {send("EasUnRegisterEncryptionProvider");}});
+

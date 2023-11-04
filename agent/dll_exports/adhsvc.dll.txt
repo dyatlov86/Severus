@@ -1,0 +1,9 @@
+var SubServiceScmNotification = Module.findExportByName("adhsvc.dll", "SubServiceScmNotification")
+Interceptor.attach(SubServiceScmNotification, {onLeave: function (args) {send("SubServiceScmNotification");}});
+
+var SubServiceStart = Module.findExportByName("adhsvc.dll", "SubServiceStart")
+Interceptor.attach(SubServiceStart, {onLeave: function (args) {send("SubServiceStart");}});
+
+var SubServiceStop = Module.findExportByName("adhsvc.dll", "SubServiceStop")
+Interceptor.attach(SubServiceStop, {onLeave: function (args) {send("SubServiceStop");}});
+

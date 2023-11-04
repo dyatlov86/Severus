@@ -1,0 +1,9 @@
+var CertPropServiceMain = Module.findExportByName("certprop.dll", "CertPropServiceMain")
+Interceptor.attach(CertPropServiceMain, {onLeave: function (args) {send("CertPropServiceMain");}});
+
+var ScPolicyServiceMain = Module.findExportByName("certprop.dll", "ScPolicyServiceMain")
+Interceptor.attach(ScPolicyServiceMain, {onLeave: function (args) {send("ScPolicyServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("certprop.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

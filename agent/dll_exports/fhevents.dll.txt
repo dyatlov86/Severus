@@ -1,0 +1,9 @@
+var DpElGetNextEvent = Module.findExportByName("fhevents.dll", "DpElGetNextEvent")
+Interceptor.attach(DpElGetNextEvent, {onLeave: function (args) {send("DpElGetNextEvent");}});
+
+var DpElReleaseObjects = Module.findExportByName("fhevents.dll", "DpElReleaseObjects")
+Interceptor.attach(DpElReleaseObjects, {onLeave: function (args) {send("DpElReleaseObjects");}});
+
+var DpElScanEvents = Module.findExportByName("fhevents.dll", "DpElScanEvents")
+Interceptor.attach(DpElScanEvents, {onLeave: function (args) {send("DpElScanEvents");}});
+

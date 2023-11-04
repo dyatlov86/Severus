@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("SensorsAlsDriver.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SensorsAlsDriver.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("SensorsAlsDriver.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("SensorsAlsDriver.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var Microsoft_WDF_UMDF_Version = Module.findExportByName("SensorsAlsDriver.dll", "Microsoft_WDF_UMDF_Version")
+Interceptor.attach(Microsoft_WDF_UMDF_Version, {onLeave: function (args) {send("Microsoft_WDF_UMDF_Version");}});
+

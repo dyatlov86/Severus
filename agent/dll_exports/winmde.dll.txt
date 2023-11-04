@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("winmde.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("winmde.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("winmde.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("winmde.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var MFCreateNetVRoot = Module.findExportByName("winmde.dll", "MFCreateNetVRoot")
+Interceptor.attach(MFCreateNetVRoot, {onLeave: function (args) {send("MFCreateNetVRoot");}});
+
+var MFCreateWMPMDEOpCenter = Module.findExportByName("winmde.dll", "MFCreateWMPMDEOpCenter")
+Interceptor.attach(MFCreateWMPMDEOpCenter, {onLeave: function (args) {send("MFCreateWMPMDEOpCenter");}});
+
+var MFCreateWinMDEOpCenter = Module.findExportByName("winmde.dll", "MFCreateWinMDEOpCenter")
+Interceptor.attach(MFCreateWinMDEOpCenter, {onLeave: function (args) {send("MFCreateWinMDEOpCenter");}});
+

@@ -1,0 +1,18 @@
+var CompileFileViaDLL = Module.findExportByName("mofd.dll", "CompileFileViaDLL")
+Interceptor.attach(CompileFileViaDLL, {onLeave: function (args) {send("CompileFileViaDLL");}});
+
+var CreateBMOFViaDLL = Module.findExportByName("mofd.dll", "CreateBMOFViaDLL")
+Interceptor.attach(CreateBMOFViaDLL, {onLeave: function (args) {send("CreateBMOFViaDLL");}});
+
+var DllCanUnloadNow = Module.findExportByName("mofd.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mofd.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("mofd.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mofd.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

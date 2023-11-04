@@ -1,0 +1,111 @@
+var ContactToNameObject = Module.findExportByName("msdtcprx.dll", "ContactToNameObject")
+Interceptor.attach(ContactToNameObject, {onLeave: function (args) {send("ContactToNameObject");}});
+
+var Create = Module.findExportByName("msdtcprx.dll", "Create")
+Interceptor.attach(Create, {onLeave: function (args) {send("Create");}});
+
+var CreateInstance = Module.findExportByName("msdtcprx.dll", "CreateInstance")
+Interceptor.attach(CreateInstance, {onLeave: function (args) {send("CreateInstance");}});
+
+var CreateLegacyTmInstance = Module.findExportByName("msdtcprx.dll", "CreateLegacyTmInstance")
+Interceptor.attach(CreateLegacyTmInstance, {onLeave: function (args) {send("CreateLegacyTmInstance");}});
+
+var CreateLocalTmInstance = Module.findExportByName("msdtcprx.dll", "CreateLocalTmInstance")
+Interceptor.attach(CreateLocalTmInstance, {onLeave: function (args) {send("CreateLocalTmInstance");}});
+
+var CreateRemoteProxyTmInstance = Module.findExportByName("msdtcprx.dll", "CreateRemoteProxyTmInstance")
+Interceptor.attach(CreateRemoteProxyTmInstance, {onLeave: function (args) {send("CreateRemoteProxyTmInstance");}});
+
+var CreateTmInstanceForRemoteAdmin = Module.findExportByName("msdtcprx.dll", "CreateTmInstanceForRemoteAdmin")
+Interceptor.attach(CreateTmInstanceForRemoteAdmin, {onLeave: function (args) {send("CreateTmInstanceForRemoteAdmin");}});
+
+var DTC_XaClose = Module.findExportByName("msdtcprx.dll", "DTC_XaClose")
+Interceptor.attach(DTC_XaClose, {onLeave: function (args) {send("DTC_XaClose");}});
+
+var DTC_XaCommit = Module.findExportByName("msdtcprx.dll", "DTC_XaCommit")
+Interceptor.attach(DTC_XaCommit, {onLeave: function (args) {send("DTC_XaCommit");}});
+
+var DTC_XaComplete = Module.findExportByName("msdtcprx.dll", "DTC_XaComplete")
+Interceptor.attach(DTC_XaComplete, {onLeave: function (args) {send("DTC_XaComplete");}});
+
+var DTC_XaEnd = Module.findExportByName("msdtcprx.dll", "DTC_XaEnd")
+Interceptor.attach(DTC_XaEnd, {onLeave: function (args) {send("DTC_XaEnd");}});
+
+var DTC_XaForget = Module.findExportByName("msdtcprx.dll", "DTC_XaForget")
+Interceptor.attach(DTC_XaForget, {onLeave: function (args) {send("DTC_XaForget");}});
+
+var DTC_XaOpen = Module.findExportByName("msdtcprx.dll", "DTC_XaOpen")
+Interceptor.attach(DTC_XaOpen, {onLeave: function (args) {send("DTC_XaOpen");}});
+
+var DTC_XaPrepare = Module.findExportByName("msdtcprx.dll", "DTC_XaPrepare")
+Interceptor.attach(DTC_XaPrepare, {onLeave: function (args) {send("DTC_XaPrepare");}});
+
+var DTC_XaRecover = Module.findExportByName("msdtcprx.dll", "DTC_XaRecover")
+Interceptor.attach(DTC_XaRecover, {onLeave: function (args) {send("DTC_XaRecover");}});
+
+var DTC_XaRollback = Module.findExportByName("msdtcprx.dll", "DTC_XaRollback")
+Interceptor.attach(DTC_XaRollback, {onLeave: function (args) {send("DTC_XaRollback");}});
+
+var DTC_XaStart = Module.findExportByName("msdtcprx.dll", "DTC_XaStart")
+Interceptor.attach(DTC_XaStart, {onLeave: function (args) {send("DTC_XaStart");}});
+
+var DeployDtc = Module.findExportByName("msdtcprx.dll", "DeployDtc")
+Interceptor.attach(DeployDtc, {onLeave: function (args) {send("DeployDtc");}});
+
+var DllGetClassObject = Module.findExportByName("msdtcprx.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllGetDTCConnectionManager = Module.findExportByName("msdtcprx.dll", "DllGetDTCConnectionManager")
+Interceptor.attach(DllGetDTCConnectionManager, {onLeave: function (args) {send("DllGetDTCConnectionManager");}});
+
+var DllGetDTCProxy = Module.findExportByName("msdtcprx.dll", "DllGetDTCProxy")
+Interceptor.attach(DllGetDTCProxy, {onLeave: function (args) {send("DllGetDTCProxy");}});
+
+var DllGetDTCUtilObject = Module.findExportByName("msdtcprx.dll", "DllGetDTCUtilObject")
+Interceptor.attach(DllGetDTCUtilObject, {onLeave: function (args) {send("DllGetDTCUtilObject");}});
+
+var DllGetDtcConfigManager = Module.findExportByName("msdtcprx.dll", "DllGetDtcConfigManager")
+Interceptor.attach(DllGetDtcConfigManager, {onLeave: function (args) {send("DllGetDtcConfigManager");}});
+
+var DllGetTransactionManagerCore = Module.findExportByName("msdtcprx.dll", "DllGetTransactionManagerCore")
+Interceptor.attach(DllGetTransactionManagerCore, {onLeave: function (args) {send("DllGetTransactionManagerCore");}});
+
+var DllRegisterServer = Module.findExportByName("msdtcprx.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msdtcprx.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetDtcLogPath = Module.findExportByName("msdtcprx.dll", "GetDtcLogPath")
+Interceptor.attach(GetDtcLogPath, {onLeave: function (args) {send("GetDtcLogPath");}});
+
+var GetTmInstance = Module.findExportByName("msdtcprx.dll", "GetTmInstance")
+Interceptor.attach(GetTmInstance, {onLeave: function (args) {send("GetTmInstance");}});
+
+var InstallContacts = Module.findExportByName("msdtcprx.dll", "InstallContacts")
+Interceptor.attach(InstallContacts, {onLeave: function (args) {send("InstallContacts");}});
+
+var InstallDtc = Module.findExportByName("msdtcprx.dll", "InstallDtc")
+Interceptor.attach(InstallDtc, {onLeave: function (args) {send("InstallDtc");}});
+
+var InstallDtcClient = Module.findExportByName("msdtcprx.dll", "InstallDtcClient")
+Interceptor.attach(InstallDtcClient, {onLeave: function (args) {send("InstallDtcClient");}});
+
+var RemoveDtc = Module.findExportByName("msdtcprx.dll", "RemoveDtc")
+Interceptor.attach(RemoveDtc, {onLeave: function (args) {send("RemoveDtc");}});
+
+var ShutDownCM = Module.findExportByName("msdtcprx.dll", "ShutDownCM")
+Interceptor.attach(ShutDownCM, {onLeave: function (args) {send("ShutDownCM");}});
+
+var SysPrepDtcCleanup = Module.findExportByName("msdtcprx.dll", "SysPrepDtcCleanup")
+Interceptor.attach(SysPrepDtcCleanup, {onLeave: function (args) {send("SysPrepDtcCleanup");}});
+
+var SysPrepDtcGeneralize = Module.findExportByName("msdtcprx.dll", "SysPrepDtcGeneralize")
+Interceptor.attach(SysPrepDtcGeneralize, {onLeave: function (args) {send("SysPrepDtcGeneralize");}});
+
+var SysPrepDtcSpecialize = Module.findExportByName("msdtcprx.dll", "SysPrepDtcSpecialize")
+Interceptor.attach(SysPrepDtcSpecialize, {onLeave: function (args) {send("SysPrepDtcSpecialize");}});
+
+var UpgradeApplySuccess = Module.findExportByName("msdtcprx.dll", "UpgradeApplySuccess")
+Interceptor.attach(UpgradeApplySuccess, {onLeave: function (args) {send("UpgradeApplySuccess");}});
+

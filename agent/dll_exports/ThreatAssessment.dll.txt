@@ -1,0 +1,12 @@
+var GetSnapshotFeatureSettings = Module.findExportByName("ThreatAssessment.dll", "GetSnapshotFeatureSettings")
+Interceptor.attach(GetSnapshotFeatureSettings, {onLeave: function (args) {send("GetSnapshotFeatureSettings");}});
+
+var PerformThreatAssessment = Module.findExportByName("ThreatAssessment.dll", "PerformThreatAssessment")
+Interceptor.attach(PerformThreatAssessment, {onLeave: function (args) {send("PerformThreatAssessment");}});
+
+var ReportAssessment = Module.findExportByName("ThreatAssessment.dll", "ReportAssessment")
+Interceptor.attach(ReportAssessment, {onLeave: function (args) {send("ReportAssessment");}});
+
+var UploadSnapshot = Module.findExportByName("ThreatAssessment.dll", "UploadSnapshot")
+Interceptor.attach(UploadSnapshot, {onLeave: function (args) {send("UploadSnapshot");}});
+

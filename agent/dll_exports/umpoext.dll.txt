@@ -1,0 +1,6 @@
+var DllMain = Module.findExportByName("umpoext.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var ExtensionInit = Module.findExportByName("umpoext.dll", "ExtensionInit")
+Interceptor.attach(ExtensionInit, {onLeave: function (args) {send("ExtensionInit");}});
+

@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("fdprint.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("fdprint.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("fdprint.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("fdprint.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var InvokeTaskW = Module.findExportByName("fdprint.dll", "InvokeTaskW")
+Interceptor.attach(InvokeTaskW, {onLeave: function (args) {send("InvokeTaskW");}});
+

@@ -1,0 +1,225 @@
+var ConvertSecurityDescriptorToText = Module.findExportByName("scecli.dll", "ConvertSecurityDescriptorToText")
+Interceptor.attach(ConvertSecurityDescriptorToText, {onLeave: function (args) {send("ConvertSecurityDescriptorToText");}});
+
+var DeltaNotify = Module.findExportByName("scecli.dll", "DeltaNotify")
+Interceptor.attach(DeltaNotify, {onLeave: function (args) {send("DeltaNotify");}});
+
+var DllRegisterServer = Module.findExportByName("scecli.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("scecli.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var InitializeChangeNotify = Module.findExportByName("scecli.dll", "InitializeChangeNotify")
+Interceptor.attach(InitializeChangeNotify, {onLeave: function (args) {send("InitializeChangeNotify");}});
+
+var SceAddToNameList = Module.findExportByName("scecli.dll", "SceAddToNameList")
+Interceptor.attach(SceAddToNameList, {onLeave: function (args) {send("SceAddToNameList");}});
+
+var SceAddToNameStatusList = Module.findExportByName("scecli.dll", "SceAddToNameStatusList")
+Interceptor.attach(SceAddToNameStatusList, {onLeave: function (args) {send("SceAddToNameStatusList");}});
+
+var SceAddToObjectList = Module.findExportByName("scecli.dll", "SceAddToObjectList")
+Interceptor.attach(SceAddToObjectList, {onLeave: function (args) {send("SceAddToObjectList");}});
+
+var SceAnalyzeSystem = Module.findExportByName("scecli.dll", "SceAnalyzeSystem")
+Interceptor.attach(SceAnalyzeSystem, {onLeave: function (args) {send("SceAnalyzeSystem");}});
+
+var SceAppendSecurityProfileInfo = Module.findExportByName("scecli.dll", "SceAppendSecurityProfileInfo")
+Interceptor.attach(SceAppendSecurityProfileInfo, {onLeave: function (args) {send("SceAppendSecurityProfileInfo");}});
+
+var SceBrowseDatabaseTable = Module.findExportByName("scecli.dll", "SceBrowseDatabaseTable")
+Interceptor.attach(SceBrowseDatabaseTable, {onLeave: function (args) {send("SceBrowseDatabaseTable");}});
+
+var SceCloseProfile = Module.findExportByName("scecli.dll", "SceCloseProfile")
+Interceptor.attach(SceCloseProfile, {onLeave: function (args) {send("SceCloseProfile");}});
+
+var SceCommitTransaction = Module.findExportByName("scecli.dll", "SceCommitTransaction")
+Interceptor.attach(SceCommitTransaction, {onLeave: function (args) {send("SceCommitTransaction");}});
+
+var SceCompareNameList = Module.findExportByName("scecli.dll", "SceCompareNameList")
+Interceptor.attach(SceCompareNameList, {onLeave: function (args) {send("SceCompareNameList");}});
+
+var SceCompareSecurityDescriptors = Module.findExportByName("scecli.dll", "SceCompareSecurityDescriptors")
+Interceptor.attach(SceCompareSecurityDescriptors, {onLeave: function (args) {send("SceCompareSecurityDescriptors");}});
+
+var SceConfigureConvertedFileSecurity = Module.findExportByName("scecli.dll", "SceConfigureConvertedFileSecurity")
+Interceptor.attach(SceConfigureConvertedFileSecurity, {onLeave: function (args) {send("SceConfigureConvertedFileSecurity");}});
+
+var SceConfigureSystem = Module.findExportByName("scecli.dll", "SceConfigureSystem")
+Interceptor.attach(SceConfigureSystem, {onLeave: function (args) {send("SceConfigureSystem");}});
+
+var SceCopyBaseProfile = Module.findExportByName("scecli.dll", "SceCopyBaseProfile")
+Interceptor.attach(SceCopyBaseProfile, {onLeave: function (args) {send("SceCopyBaseProfile");}});
+
+var SceCreateDirectory = Module.findExportByName("scecli.dll", "SceCreateDirectory")
+Interceptor.attach(SceCreateDirectory, {onLeave: function (args) {send("SceCreateDirectory");}});
+
+var SceDcPromoCreateGPOsInSysvol = Module.findExportByName("scecli.dll", "SceDcPromoCreateGPOsInSysvol")
+Interceptor.attach(SceDcPromoCreateGPOsInSysvol, {onLeave: function (args) {send("SceDcPromoCreateGPOsInSysvol");}});
+
+var SceDcPromoCreateGPOsInSysvolEx = Module.findExportByName("scecli.dll", "SceDcPromoCreateGPOsInSysvolEx")
+Interceptor.attach(SceDcPromoCreateGPOsInSysvolEx, {onLeave: function (args) {send("SceDcPromoCreateGPOsInSysvolEx");}});
+
+var SceDcPromoteSecurity = Module.findExportByName("scecli.dll", "SceDcPromoteSecurity")
+Interceptor.attach(SceDcPromoteSecurity, {onLeave: function (args) {send("SceDcPromoteSecurity");}});
+
+var SceDcPromoteSecurityEx = Module.findExportByName("scecli.dll", "SceDcPromoteSecurityEx")
+Interceptor.attach(SceDcPromoteSecurityEx, {onLeave: function (args) {send("SceDcPromoteSecurityEx");}});
+
+var SceEnforceSecurityPolicyPropagation = Module.findExportByName("scecli.dll", "SceEnforceSecurityPolicyPropagation")
+Interceptor.attach(SceEnforceSecurityPolicyPropagation, {onLeave: function (args) {send("SceEnforceSecurityPolicyPropagation");}});
+
+var SceEnumerateServices = Module.findExportByName("scecli.dll", "SceEnumerateServices")
+Interceptor.attach(SceEnumerateServices, {onLeave: function (args) {send("SceEnumerateServices");}});
+
+var SceFreeMemory = Module.findExportByName("scecli.dll", "SceFreeMemory")
+Interceptor.attach(SceFreeMemory, {onLeave: function (args) {send("SceFreeMemory");}});
+
+var SceFreeProfileMemory = Module.findExportByName("scecli.dll", "SceFreeProfileMemory")
+Interceptor.attach(SceFreeProfileMemory, {onLeave: function (args) {send("SceFreeProfileMemory");}});
+
+var SceGenerateGroupPolicy = Module.findExportByName("scecli.dll", "SceGenerateGroupPolicy")
+Interceptor.attach(SceGenerateGroupPolicy, {onLeave: function (args) {send("SceGenerateGroupPolicy");}});
+
+var SceGenerateRollback = Module.findExportByName("scecli.dll", "SceGenerateRollback")
+Interceptor.attach(SceGenerateRollback, {onLeave: function (args) {send("SceGenerateRollback");}});
+
+var SceGetAnalysisAreaSummary = Module.findExportByName("scecli.dll", "SceGetAnalysisAreaSummary")
+Interceptor.attach(SceGetAnalysisAreaSummary, {onLeave: function (args) {send("SceGetAnalysisAreaSummary");}});
+
+var SceGetAreas = Module.findExportByName("scecli.dll", "SceGetAreas")
+Interceptor.attach(SceGetAreas, {onLeave: function (args) {send("SceGetAreas");}});
+
+var SceGetDatabaseSetting = Module.findExportByName("scecli.dll", "SceGetDatabaseSetting")
+Interceptor.attach(SceGetDatabaseSetting, {onLeave: function (args) {send("SceGetDatabaseSetting");}});
+
+var SceGetDbTime = Module.findExportByName("scecli.dll", "SceGetDbTime")
+Interceptor.attach(SceGetDbTime, {onLeave: function (args) {send("SceGetDbTime");}});
+
+var SceGetObjectChildren = Module.findExportByName("scecli.dll", "SceGetObjectChildren")
+Interceptor.attach(SceGetObjectChildren, {onLeave: function (args) {send("SceGetObjectChildren");}});
+
+var SceGetObjectSecurity = Module.findExportByName("scecli.dll", "SceGetObjectSecurity")
+Interceptor.attach(SceGetObjectSecurity, {onLeave: function (args) {send("SceGetObjectSecurity");}});
+
+var SceGetScpProfileDescription = Module.findExportByName("scecli.dll", "SceGetScpProfileDescription")
+Interceptor.attach(SceGetScpProfileDescription, {onLeave: function (args) {send("SceGetScpProfileDescription");}});
+
+var SceGetSecurityProfileInfo = Module.findExportByName("scecli.dll", "SceGetSecurityProfileInfo")
+Interceptor.attach(SceGetSecurityProfileInfo, {onLeave: function (args) {send("SceGetSecurityProfileInfo");}});
+
+var SceGetServerProductType = Module.findExportByName("scecli.dll", "SceGetServerProductType")
+Interceptor.attach(SceGetServerProductType, {onLeave: function (args) {send("SceGetServerProductType");}});
+
+var SceGetTimeStamp = Module.findExportByName("scecli.dll", "SceGetTimeStamp")
+Interceptor.attach(SceGetTimeStamp, {onLeave: function (args) {send("SceGetTimeStamp");}});
+
+var SceIsSystemDatabase = Module.findExportByName("scecli.dll", "SceIsSystemDatabase")
+Interceptor.attach(SceIsSystemDatabase, {onLeave: function (args) {send("SceIsSystemDatabase");}});
+
+var SceLookupPrivRightName = Module.findExportByName("scecli.dll", "SceLookupPrivRightName")
+Interceptor.attach(SceLookupPrivRightName, {onLeave: function (args) {send("SceLookupPrivRightName");}});
+
+var SceNotifyPolicyDelta = Module.findExportByName("scecli.dll", "SceNotifyPolicyDelta")
+Interceptor.attach(SceNotifyPolicyDelta, {onLeave: function (args) {send("SceNotifyPolicyDelta");}});
+
+var SceOpenPolicy = Module.findExportByName("scecli.dll", "SceOpenPolicy")
+Interceptor.attach(SceOpenPolicy, {onLeave: function (args) {send("SceOpenPolicy");}});
+
+var SceOpenProfile = Module.findExportByName("scecli.dll", "SceOpenProfile")
+Interceptor.attach(SceOpenProfile, {onLeave: function (args) {send("SceOpenProfile");}});
+
+var SceProcessSecurityPolicyGPO = Module.findExportByName("scecli.dll", "SceProcessSecurityPolicyGPO")
+Interceptor.attach(SceProcessSecurityPolicyGPO, {onLeave: function (args) {send("SceProcessSecurityPolicyGPO");}});
+
+var SceProcessSecurityPolicyGPOEx = Module.findExportByName("scecli.dll", "SceProcessSecurityPolicyGPOEx")
+Interceptor.attach(SceProcessSecurityPolicyGPOEx, {onLeave: function (args) {send("SceProcessSecurityPolicyGPOEx");}});
+
+var SceRegisterRegValues = Module.findExportByName("scecli.dll", "SceRegisterRegValues")
+Interceptor.attach(SceRegisterRegValues, {onLeave: function (args) {send("SceRegisterRegValues");}});
+
+var SceRollbackTransaction = Module.findExportByName("scecli.dll", "SceRollbackTransaction")
+Interceptor.attach(SceRollbackTransaction, {onLeave: function (args) {send("SceRollbackTransaction");}});
+
+var SceSetDatabaseSetting = Module.findExportByName("scecli.dll", "SceSetDatabaseSetting")
+Interceptor.attach(SceSetDatabaseSetting, {onLeave: function (args) {send("SceSetDatabaseSetting");}});
+
+var SceSetupBackupSecurity = Module.findExportByName("scecli.dll", "SceSetupBackupSecurity")
+Interceptor.attach(SceSetupBackupSecurity, {onLeave: function (args) {send("SceSetupBackupSecurity");}});
+
+var SceSetupConfigureServices = Module.findExportByName("scecli.dll", "SceSetupConfigureServices")
+Interceptor.attach(SceSetupConfigureServices, {onLeave: function (args) {send("SceSetupConfigureServices");}});
+
+var SceSetupGenerateTemplate = Module.findExportByName("scecli.dll", "SceSetupGenerateTemplate")
+Interceptor.attach(SceSetupGenerateTemplate, {onLeave: function (args) {send("SceSetupGenerateTemplate");}});
+
+var SceSetupMoveSecurityFile = Module.findExportByName("scecli.dll", "SceSetupMoveSecurityFile")
+Interceptor.attach(SceSetupMoveSecurityFile, {onLeave: function (args) {send("SceSetupMoveSecurityFile");}});
+
+var SceSetupRootSecurity = Module.findExportByName("scecli.dll", "SceSetupRootSecurity")
+Interceptor.attach(SceSetupRootSecurity, {onLeave: function (args) {send("SceSetupRootSecurity");}});
+
+var SceSetupSystemByInfName = Module.findExportByName("scecli.dll", "SceSetupSystemByInfName")
+Interceptor.attach(SceSetupSystemByInfName, {onLeave: function (args) {send("SceSetupSystemByInfName");}});
+
+var SceSetupUnwindSecurityFile = Module.findExportByName("scecli.dll", "SceSetupUnwindSecurityFile")
+Interceptor.attach(SceSetupUnwindSecurityFile, {onLeave: function (args) {send("SceSetupUnwindSecurityFile");}});
+
+var SceSetupUpdateSecurityFile = Module.findExportByName("scecli.dll", "SceSetupUpdateSecurityFile")
+Interceptor.attach(SceSetupUpdateSecurityFile, {onLeave: function (args) {send("SceSetupUpdateSecurityFile");}});
+
+var SceSetupUpdateSecurityKey = Module.findExportByName("scecli.dll", "SceSetupUpdateSecurityKey")
+Interceptor.attach(SceSetupUpdateSecurityKey, {onLeave: function (args) {send("SceSetupUpdateSecurityKey");}});
+
+var SceSetupUpdateSecurityService = Module.findExportByName("scecli.dll", "SceSetupUpdateSecurityService")
+Interceptor.attach(SceSetupUpdateSecurityService, {onLeave: function (args) {send("SceSetupUpdateSecurityService");}});
+
+var SceStartTransaction = Module.findExportByName("scecli.dll", "SceStartTransaction")
+Interceptor.attach(SceStartTransaction, {onLeave: function (args) {send("SceStartTransaction");}});
+
+var SceSvcConvertSDToText = Module.findExportByName("scecli.dll", "SceSvcConvertSDToText")
+Interceptor.attach(SceSvcConvertSDToText, {onLeave: function (args) {send("SceSvcConvertSDToText");}});
+
+var SceSvcConvertTextToSD = Module.findExportByName("scecli.dll", "SceSvcConvertTextToSD")
+Interceptor.attach(SceSvcConvertTextToSD, {onLeave: function (args) {send("SceSvcConvertTextToSD");}});
+
+var SceSvcFree = Module.findExportByName("scecli.dll", "SceSvcFree")
+Interceptor.attach(SceSvcFree, {onLeave: function (args) {send("SceSvcFree");}});
+
+var SceSvcGetInformationTemplate = Module.findExportByName("scecli.dll", "SceSvcGetInformationTemplate")
+Interceptor.attach(SceSvcGetInformationTemplate, {onLeave: function (args) {send("SceSvcGetInformationTemplate");}});
+
+var SceSvcQueryInfo = Module.findExportByName("scecli.dll", "SceSvcQueryInfo")
+Interceptor.attach(SceSvcQueryInfo, {onLeave: function (args) {send("SceSvcQueryInfo");}});
+
+var SceSvcSetInfo = Module.findExportByName("scecli.dll", "SceSvcSetInfo")
+Interceptor.attach(SceSvcSetInfo, {onLeave: function (args) {send("SceSvcSetInfo");}});
+
+var SceSvcSetInformationTemplate = Module.findExportByName("scecli.dll", "SceSvcSetInformationTemplate")
+Interceptor.attach(SceSvcSetInformationTemplate, {onLeave: function (args) {send("SceSvcSetInformationTemplate");}});
+
+var SceSvcUpdateInfo = Module.findExportByName("scecli.dll", "SceSvcUpdateInfo")
+Interceptor.attach(SceSvcUpdateInfo, {onLeave: function (args) {send("SceSvcUpdateInfo");}});
+
+var SceSysPrep = Module.findExportByName("scecli.dll", "SceSysPrep")
+Interceptor.attach(SceSysPrep, {onLeave: function (args) {send("SceSysPrep");}});
+
+var SceSysPrepOffline = Module.findExportByName("scecli.dll", "SceSysPrepOffline")
+Interceptor.attach(SceSysPrepOffline, {onLeave: function (args) {send("SceSysPrepOffline");}});
+
+var SceUpdateObjectInfo = Module.findExportByName("scecli.dll", "SceUpdateObjectInfo")
+Interceptor.attach(SceUpdateObjectInfo, {onLeave: function (args) {send("SceUpdateObjectInfo");}});
+
+var SceUpdateSecurityProfile = Module.findExportByName("scecli.dll", "SceUpdateSecurityProfile")
+Interceptor.attach(SceUpdateSecurityProfile, {onLeave: function (args) {send("SceUpdateSecurityProfile");}});
+
+var SceWrapperExportSecurityProfile = Module.findExportByName("scecli.dll", "SceWrapperExportSecurityProfile")
+Interceptor.attach(SceWrapperExportSecurityProfile, {onLeave: function (args) {send("SceWrapperExportSecurityProfile");}});
+
+var SceWrapperImportSecurityProfile = Module.findExportByName("scecli.dll", "SceWrapperImportSecurityProfile")
+Interceptor.attach(SceWrapperImportSecurityProfile, {onLeave: function (args) {send("SceWrapperImportSecurityProfile");}});
+
+var SceWriteSecurityProfileInfo = Module.findExportByName("scecli.dll", "SceWriteSecurityProfileInfo")
+Interceptor.attach(SceWriteSecurityProfileInfo, {onLeave: function (args) {send("SceWriteSecurityProfileInfo");}});
+

@@ -1,0 +1,6 @@
+var VaultCDSEnumerateItems = Module.findExportByName("VaultCDS.dll", "VaultCDSEnumerateItems")
+Interceptor.attach(VaultCDSEnumerateItems, {onLeave: function (args) {send("VaultCDSEnumerateItems");}});
+
+var VaultCDSSaveItem = Module.findExportByName("VaultCDS.dll", "VaultCDSSaveItem")
+Interceptor.attach(VaultCDSSaveItem, {onLeave: function (args) {send("VaultCDSSaveItem");}});
+

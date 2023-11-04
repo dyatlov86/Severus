@@ -1,0 +1,24 @@
+var DllCanUnloadNow = Module.findExportByName("fcon.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("fcon.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("fcon.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetCtacPropertyAlloc = Module.findExportByName("fcon.dll", "GetCtacPropertyAlloc")
+Interceptor.attach(GetCtacPropertyAlloc, {onLeave: function (args) {send("GetCtacPropertyAlloc");}});
+
+var ModifyStagingControlVariants = Module.findExportByName("fcon.dll", "ModifyStagingControlVariants")
+Interceptor.attach(ModifyStagingControlVariants, {onLeave: function (args) {send("ModifyStagingControlVariants");}});
+
+var ModifyStagingControls = Module.findExportByName("fcon.dll", "ModifyStagingControls")
+Interceptor.attach(ModifyStagingControls, {onLeave: function (args) {send("ModifyStagingControls");}});
+
+var SubscribeFeatureReporting = Module.findExportByName("fcon.dll", "SubscribeFeatureReporting")
+Interceptor.attach(SubscribeFeatureReporting, {onLeave: function (args) {send("SubscribeFeatureReporting");}});
+
+var UnsubscribeFeatureReporting = Module.findExportByName("fcon.dll", "UnsubscribeFeatureReporting")
+Interceptor.attach(UnsubscribeFeatureReporting, {onLeave: function (args) {send("UnsubscribeFeatureReporting");}});
+

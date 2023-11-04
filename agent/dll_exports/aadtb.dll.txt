@@ -1,0 +1,21 @@
+var AADTBAcquireToken = Module.findExportByName("aadtb.dll", "AADTBAcquireToken")
+Interceptor.attach(AADTBAcquireToken, {onLeave: function (args) {send("AADTBAcquireToken");}});
+
+var AADTBAcquireTokenEx = Module.findExportByName("aadtb.dll", "AADTBAcquireTokenEx")
+Interceptor.attach(AADTBAcquireTokenEx, {onLeave: function (args) {send("AADTBAcquireTokenEx");}});
+
+var AADTBFreeString = Module.findExportByName("aadtb.dll", "AADTBFreeString")
+Interceptor.attach(AADTBFreeString, {onLeave: function (args) {send("AADTBFreeString");}});
+
+var AADTBFreeStruct = Module.findExportByName("aadtb.dll", "AADTBFreeStruct")
+Interceptor.attach(AADTBFreeStruct, {onLeave: function (args) {send("AADTBFreeStruct");}});
+
+var DllCanUnloadNow = Module.findExportByName("aadtb.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("aadtb.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("aadtb.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

@@ -1,0 +1,192 @@
+var DllCanUnloadNow = Module.findExportByName("wimgapi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllMain = Module.findExportByName("wimgapi.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var WIMAddImagePath = Module.findExportByName("wimgapi.dll", "WIMAddImagePath")
+Interceptor.attach(WIMAddImagePath, {onLeave: function (args) {send("WIMAddImagePath");}});
+
+var WIMAddImagePaths = Module.findExportByName("wimgapi.dll", "WIMAddImagePaths")
+Interceptor.attach(WIMAddImagePaths, {onLeave: function (args) {send("WIMAddImagePaths");}});
+
+var WIMAddWimbootEntry = Module.findExportByName("wimgapi.dll", "WIMAddWimbootEntry")
+Interceptor.attach(WIMAddWimbootEntry, {onLeave: function (args) {send("WIMAddWimbootEntry");}});
+
+var WIMApplyImage = Module.findExportByName("wimgapi.dll", "WIMApplyImage")
+Interceptor.attach(WIMApplyImage, {onLeave: function (args) {send("WIMApplyImage");}});
+
+var WIMCaptureImage = Module.findExportByName("wimgapi.dll", "WIMCaptureImage")
+Interceptor.attach(WIMCaptureImage, {onLeave: function (args) {send("WIMCaptureImage");}});
+
+var WIMCloseHandle = Module.findExportByName("wimgapi.dll", "WIMCloseHandle")
+Interceptor.attach(WIMCloseHandle, {onLeave: function (args) {send("WIMCloseHandle");}});
+
+var WIMCommitImageHandle = Module.findExportByName("wimgapi.dll", "WIMCommitImageHandle")
+Interceptor.attach(WIMCommitImageHandle, {onLeave: function (args) {send("WIMCommitImageHandle");}});
+
+var WIMCopyFile = Module.findExportByName("wimgapi.dll", "WIMCopyFile")
+Interceptor.attach(WIMCopyFile, {onLeave: function (args) {send("WIMCopyFile");}});
+
+var WIMCreateFile = Module.findExportByName("wimgapi.dll", "WIMCreateFile")
+Interceptor.attach(WIMCreateFile, {onLeave: function (args) {send("WIMCreateFile");}});
+
+var WIMCreateImageFile = Module.findExportByName("wimgapi.dll", "WIMCreateImageFile")
+Interceptor.attach(WIMCreateImageFile, {onLeave: function (args) {send("WIMCreateImageFile");}});
+
+var WIMCreateWofCompressedFile = Module.findExportByName("wimgapi.dll", "WIMCreateWofCompressedFile")
+Interceptor.attach(WIMCreateWofCompressedFile, {onLeave: function (args) {send("WIMCreateWofCompressedFile");}});
+
+var WIMDeleteImage = Module.findExportByName("wimgapi.dll", "WIMDeleteImage")
+Interceptor.attach(WIMDeleteImage, {onLeave: function (args) {send("WIMDeleteImage");}});
+
+var WIMDeleteImageMounts = Module.findExportByName("wimgapi.dll", "WIMDeleteImageMounts")
+Interceptor.attach(WIMDeleteImageMounts, {onLeave: function (args) {send("WIMDeleteImageMounts");}});
+
+var WIMEnumImageFiles = Module.findExportByName("wimgapi.dll", "WIMEnumImageFiles")
+Interceptor.attach(WIMEnumImageFiles, {onLeave: function (args) {send("WIMEnumImageFiles");}});
+
+var WIMExportImage = Module.findExportByName("wimgapi.dll", "WIMExportImage")
+Interceptor.attach(WIMExportImage, {onLeave: function (args) {send("WIMExportImage");}});
+
+var WIMExtractImageDirectory = Module.findExportByName("wimgapi.dll", "WIMExtractImageDirectory")
+Interceptor.attach(WIMExtractImageDirectory, {onLeave: function (args) {send("WIMExtractImageDirectory");}});
+
+var WIMExtractImagePath = Module.findExportByName("wimgapi.dll", "WIMExtractImagePath")
+Interceptor.attach(WIMExtractImagePath, {onLeave: function (args) {send("WIMExtractImagePath");}});
+
+var WIMExtractImagePathByWimHandle = Module.findExportByName("wimgapi.dll", "WIMExtractImagePathByWimHandle")
+Interceptor.attach(WIMExtractImagePathByWimHandle, {onLeave: function (args) {send("WIMExtractImagePathByWimHandle");}});
+
+var WIMFindFirstImageFile = Module.findExportByName("wimgapi.dll", "WIMFindFirstImageFile")
+Interceptor.attach(WIMFindFirstImageFile, {onLeave: function (args) {send("WIMFindFirstImageFile");}});
+
+var WIMFindNextImageFile = Module.findExportByName("wimgapi.dll", "WIMFindNextImageFile")
+Interceptor.attach(WIMFindNextImageFile, {onLeave: function (args) {send("WIMFindNextImageFile");}});
+
+var WIMGetAttributes = Module.findExportByName("wimgapi.dll", "WIMGetAttributes")
+Interceptor.attach(WIMGetAttributes, {onLeave: function (args) {send("WIMGetAttributes");}});
+
+var WIMGetImageCount = Module.findExportByName("wimgapi.dll", "WIMGetImageCount")
+Interceptor.attach(WIMGetImageCount, {onLeave: function (args) {send("WIMGetImageCount");}});
+
+var WIMGetImageInformation = Module.findExportByName("wimgapi.dll", "WIMGetImageInformation")
+Interceptor.attach(WIMGetImageInformation, {onLeave: function (args) {send("WIMGetImageInformation");}});
+
+var WIMGetMessageCallbackCount = Module.findExportByName("wimgapi.dll", "WIMGetMessageCallbackCount")
+Interceptor.attach(WIMGetMessageCallbackCount, {onLeave: function (args) {send("WIMGetMessageCallbackCount");}});
+
+var WIMGetMountedImageHandle = Module.findExportByName("wimgapi.dll", "WIMGetMountedImageHandle")
+Interceptor.attach(WIMGetMountedImageHandle, {onLeave: function (args) {send("WIMGetMountedImageHandle");}});
+
+var WIMGetMountedImageInfo = Module.findExportByName("wimgapi.dll", "WIMGetMountedImageInfo")
+Interceptor.attach(WIMGetMountedImageInfo, {onLeave: function (args) {send("WIMGetMountedImageInfo");}});
+
+var WIMGetMountedImageInfoFromHandle = Module.findExportByName("wimgapi.dll", "WIMGetMountedImageInfoFromHandle")
+Interceptor.attach(WIMGetMountedImageInfoFromHandle, {onLeave: function (args) {send("WIMGetMountedImageInfoFromHandle");}});
+
+var WIMGetMountedImages = Module.findExportByName("wimgapi.dll", "WIMGetMountedImages")
+Interceptor.attach(WIMGetMountedImages, {onLeave: function (args) {send("WIMGetMountedImages");}});
+
+var WIMGetWIMBootEntries = Module.findExportByName("wimgapi.dll", "WIMGetWIMBootEntries")
+Interceptor.attach(WIMGetWIMBootEntries, {onLeave: function (args) {send("WIMGetWIMBootEntries");}});
+
+var WIMGetWIMBootWIMPath = Module.findExportByName("wimgapi.dll", "WIMGetWIMBootWIMPath")
+Interceptor.attach(WIMGetWIMBootWIMPath, {onLeave: function (args) {send("WIMGetWIMBootWIMPath");}});
+
+var WIMGetWimFileSize = Module.findExportByName("wimgapi.dll", "WIMGetWimFileSize")
+Interceptor.attach(WIMGetWimFileSize, {onLeave: function (args) {send("WIMGetWimFileSize");}});
+
+var WIMInitFileIOCallbacks = Module.findExportByName("wimgapi.dll", "WIMInitFileIOCallbacks")
+Interceptor.attach(WIMInitFileIOCallbacks, {onLeave: function (args) {send("WIMInitFileIOCallbacks");}});
+
+var WIMInitializeWofDriver = Module.findExportByName("wimgapi.dll", "WIMInitializeWofDriver")
+Interceptor.attach(WIMInitializeWofDriver, {onLeave: function (args) {send("WIMInitializeWofDriver");}});
+
+var WIMIsCurrentSystemWimboot = Module.findExportByName("wimgapi.dll", "WIMIsCurrentSystemWimboot")
+Interceptor.attach(WIMIsCurrentSystemWimboot, {onLeave: function (args) {send("WIMIsCurrentSystemWimboot");}});
+
+var WIMIsReferenceWim = Module.findExportByName("wimgapi.dll", "WIMIsReferenceWim")
+Interceptor.attach(WIMIsReferenceWim, {onLeave: function (args) {send("WIMIsReferenceWim");}});
+
+var WIMLoadImage = Module.findExportByName("wimgapi.dll", "WIMLoadImage")
+Interceptor.attach(WIMLoadImage, {onLeave: function (args) {send("WIMLoadImage");}});
+
+var WIMLoadOSInformation = Module.findExportByName("wimgapi.dll", "WIMLoadOSInformation")
+Interceptor.attach(WIMLoadOSInformation, {onLeave: function (args) {send("WIMLoadOSInformation");}});
+
+var WIMMountImage = Module.findExportByName("wimgapi.dll", "WIMMountImage")
+Interceptor.attach(WIMMountImage, {onLeave: function (args) {send("WIMMountImage");}});
+
+var WIMMountImageHandle = Module.findExportByName("wimgapi.dll", "WIMMountImageHandle")
+Interceptor.attach(WIMMountImageHandle, {onLeave: function (args) {send("WIMMountImageHandle");}});
+
+var WIMProcessCustomImage = Module.findExportByName("wimgapi.dll", "WIMProcessCustomImage")
+Interceptor.attach(WIMProcessCustomImage, {onLeave: function (args) {send("WIMProcessCustomImage");}});
+
+var WIMReadFileEx = Module.findExportByName("wimgapi.dll", "WIMReadFileEx")
+Interceptor.attach(WIMReadFileEx, {onLeave: function (args) {send("WIMReadFileEx");}});
+
+var WIMReadImageFile = Module.findExportByName("wimgapi.dll", "WIMReadImageFile")
+Interceptor.attach(WIMReadImageFile, {onLeave: function (args) {send("WIMReadImageFile");}});
+
+var WIMRedirectFolderBeforeApply = Module.findExportByName("wimgapi.dll", "WIMRedirectFolderBeforeApply")
+Interceptor.attach(WIMRedirectFolderBeforeApply, {onLeave: function (args) {send("WIMRedirectFolderBeforeApply");}});
+
+var WIMRegisterLogFile = Module.findExportByName("wimgapi.dll", "WIMRegisterLogFile")
+Interceptor.attach(WIMRegisterLogFile, {onLeave: function (args) {send("WIMRegisterLogFile");}});
+
+var WIMRegisterMessageCallback = Module.findExportByName("wimgapi.dll", "WIMRegisterMessageCallback")
+Interceptor.attach(WIMRegisterMessageCallback, {onLeave: function (args) {send("WIMRegisterMessageCallback");}});
+
+var WIMRemountImage = Module.findExportByName("wimgapi.dll", "WIMRemountImage")
+Interceptor.attach(WIMRemountImage, {onLeave: function (args) {send("WIMRemountImage");}});
+
+var WIMSetBootImage = Module.findExportByName("wimgapi.dll", "WIMSetBootImage")
+Interceptor.attach(WIMSetBootImage, {onLeave: function (args) {send("WIMSetBootImage");}});
+
+var WIMSetCachedSigningLevel = Module.findExportByName("wimgapi.dll", "WIMSetCachedSigningLevel")
+Interceptor.attach(WIMSetCachedSigningLevel, {onLeave: function (args) {send("WIMSetCachedSigningLevel");}});
+
+var WIMSetFileIOCallbackTemporaryPath = Module.findExportByName("wimgapi.dll", "WIMSetFileIOCallbackTemporaryPath")
+Interceptor.attach(WIMSetFileIOCallbackTemporaryPath, {onLeave: function (args) {send("WIMSetFileIOCallbackTemporaryPath");}});
+
+var WIMSetImageInformation = Module.findExportByName("wimgapi.dll", "WIMSetImageInformation")
+Interceptor.attach(WIMSetImageInformation, {onLeave: function (args) {send("WIMSetImageInformation");}});
+
+var WIMSetImageUserSpecifiedCreationTime = Module.findExportByName("wimgapi.dll", "WIMSetImageUserSpecifiedCreationTime")
+Interceptor.attach(WIMSetImageUserSpecifiedCreationTime, {onLeave: function (args) {send("WIMSetImageUserSpecifiedCreationTime");}});
+
+var WIMSetReferenceFile = Module.findExportByName("wimgapi.dll", "WIMSetReferenceFile")
+Interceptor.attach(WIMSetReferenceFile, {onLeave: function (args) {send("WIMSetReferenceFile");}});
+
+var WIMSetTemporaryPath = Module.findExportByName("wimgapi.dll", "WIMSetTemporaryPath")
+Interceptor.attach(WIMSetTemporaryPath, {onLeave: function (args) {send("WIMSetTemporaryPath");}});
+
+var WIMSetWimGuid = Module.findExportByName("wimgapi.dll", "WIMSetWimGuid")
+Interceptor.attach(WIMSetWimGuid, {onLeave: function (args) {send("WIMSetWimGuid");}});
+
+var WIMSingleInstanceFile = Module.findExportByName("wimgapi.dll", "WIMSingleInstanceFile")
+Interceptor.attach(WIMSingleInstanceFile, {onLeave: function (args) {send("WIMSingleInstanceFile");}});
+
+var WIMSplitFile = Module.findExportByName("wimgapi.dll", "WIMSplitFile")
+Interceptor.attach(WIMSplitFile, {onLeave: function (args) {send("WIMSplitFile");}});
+
+var WIMUnmountImage = Module.findExportByName("wimgapi.dll", "WIMUnmountImage")
+Interceptor.attach(WIMUnmountImage, {onLeave: function (args) {send("WIMUnmountImage");}});
+
+var WIMUnmountImageHandle = Module.findExportByName("wimgapi.dll", "WIMUnmountImageHandle")
+Interceptor.attach(WIMUnmountImageHandle, {onLeave: function (args) {send("WIMUnmountImageHandle");}});
+
+var WIMUnregisterLogFile = Module.findExportByName("wimgapi.dll", "WIMUnregisterLogFile")
+Interceptor.attach(WIMUnregisterLogFile, {onLeave: function (args) {send("WIMUnregisterLogFile");}});
+
+var WIMUnregisterMessageCallback = Module.findExportByName("wimgapi.dll", "WIMUnregisterMessageCallback")
+Interceptor.attach(WIMUnregisterMessageCallback, {onLeave: function (args) {send("WIMUnregisterMessageCallback");}});
+
+var WIMUpdateWIMBootEntry = Module.findExportByName("wimgapi.dll", "WIMUpdateWIMBootEntry")
+Interceptor.attach(WIMUpdateWIMBootEntry, {onLeave: function (args) {send("WIMUpdateWIMBootEntry");}});
+
+var WIMWriteFileWithIntegrity = Module.findExportByName("wimgapi.dll", "WIMWriteFileWithIntegrity")
+Interceptor.attach(WIMWriteFileWithIntegrity, {onLeave: function (args) {send("WIMWriteFileWithIntegrity");}});
+

@@ -1,0 +1,15 @@
+var ActivateAudioInterfaceAsync = Module.findExportByName("MMDevAPI.dll", "ActivateAudioInterfaceAsync")
+Interceptor.attach(ActivateAudioInterfaceAsync, {onLeave: function (args) {send("ActivateAudioInterfaceAsync");}});
+
+var DllCanUnloadNow = Module.findExportByName("MMDevAPI.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("MMDevAPI.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("MMDevAPI.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("MMDevAPI.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

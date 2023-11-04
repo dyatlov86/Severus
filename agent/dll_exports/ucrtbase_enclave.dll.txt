@@ -1,0 +1,2358 @@
+var _Cbuild = Module.findExportByName("ucrtbase_enclave.dll", "_Cbuild")
+Interceptor.attach(_Cbuild, {onLeave: function (args) {send("_Cbuild");}});
+
+var _Cmulcc = Module.findExportByName("ucrtbase_enclave.dll", "_Cmulcc")
+Interceptor.attach(_Cmulcc, {onLeave: function (args) {send("_Cmulcc");}});
+
+var _Cmulcr = Module.findExportByName("ucrtbase_enclave.dll", "_Cmulcr")
+Interceptor.attach(_Cmulcr, {onLeave: function (args) {send("_Cmulcr");}});
+
+var _CreateFrameInfo = Module.findExportByName("ucrtbase_enclave.dll", "_CreateFrameInfo")
+Interceptor.attach(_CreateFrameInfo, {onLeave: function (args) {send("_CreateFrameInfo");}});
+
+var _CxxThrowException = Module.findExportByName("ucrtbase_enclave.dll", "_CxxThrowException")
+Interceptor.attach(_CxxThrowException, {onLeave: function (args) {send("_CxxThrowException");}});
+
+var _Exit = Module.findExportByName("ucrtbase_enclave.dll", "_Exit")
+Interceptor.attach(_Exit, {onLeave: function (args) {send("_Exit");}});
+
+var _FCbuild = Module.findExportByName("ucrtbase_enclave.dll", "_FCbuild")
+Interceptor.attach(_FCbuild, {onLeave: function (args) {send("_FCbuild");}});
+
+var _FCmulcc = Module.findExportByName("ucrtbase_enclave.dll", "_FCmulcc")
+Interceptor.attach(_FCmulcc, {onLeave: function (args) {send("_FCmulcc");}});
+
+var _FCmulcr = Module.findExportByName("ucrtbase_enclave.dll", "_FCmulcr")
+Interceptor.attach(_FCmulcr, {onLeave: function (args) {send("_FCmulcr");}});
+
+var _FindAndUnlinkFrame = Module.findExportByName("ucrtbase_enclave.dll", "_FindAndUnlinkFrame")
+Interceptor.attach(_FindAndUnlinkFrame, {onLeave: function (args) {send("_FindAndUnlinkFrame");}});
+
+var _GetImageBase = Module.findExportByName("ucrtbase_enclave.dll", "_GetImageBase")
+Interceptor.attach(_GetImageBase, {onLeave: function (args) {send("_GetImageBase");}});
+
+var _GetThrowImageBase = Module.findExportByName("ucrtbase_enclave.dll", "_GetThrowImageBase")
+Interceptor.attach(_GetThrowImageBase, {onLeave: function (args) {send("_GetThrowImageBase");}});
+
+var _IsExceptionObjectToBeDestroyed = Module.findExportByName("ucrtbase_enclave.dll", "_IsExceptionObjectToBeDestroyed")
+Interceptor.attach(_IsExceptionObjectToBeDestroyed, {onLeave: function (args) {send("_IsExceptionObjectToBeDestroyed");}});
+
+var _LCbuild = Module.findExportByName("ucrtbase_enclave.dll", "_LCbuild")
+Interceptor.attach(_LCbuild, {onLeave: function (args) {send("_LCbuild");}});
+
+var _LCmulcc = Module.findExportByName("ucrtbase_enclave.dll", "_LCmulcc")
+Interceptor.attach(_LCmulcc, {onLeave: function (args) {send("_LCmulcc");}});
+
+var _LCmulcr = Module.findExportByName("ucrtbase_enclave.dll", "_LCmulcr")
+Interceptor.attach(_LCmulcr, {onLeave: function (args) {send("_LCmulcr");}});
+
+var _SetImageBase = Module.findExportByName("ucrtbase_enclave.dll", "_SetImageBase")
+Interceptor.attach(_SetImageBase, {onLeave: function (args) {send("_SetImageBase");}});
+
+var _SetThrowImageBase = Module.findExportByName("ucrtbase_enclave.dll", "_SetThrowImageBase")
+Interceptor.attach(_SetThrowImageBase, {onLeave: function (args) {send("_SetThrowImageBase");}});
+
+var _SetWinRTOutOfMemoryExceptionCallback = Module.findExportByName("ucrtbase_enclave.dll", "_SetWinRTOutOfMemoryExceptionCallback")
+Interceptor.attach(_SetWinRTOutOfMemoryExceptionCallback, {onLeave: function (args) {send("_SetWinRTOutOfMemoryExceptionCallback");}});
+
+var __AdjustPointer = Module.findExportByName("ucrtbase_enclave.dll", "__AdjustPointer")
+Interceptor.attach(__AdjustPointer, {onLeave: function (args) {send("__AdjustPointer");}});
+
+var __BuildCatchObject = Module.findExportByName("ucrtbase_enclave.dll", "__BuildCatchObject")
+Interceptor.attach(__BuildCatchObject, {onLeave: function (args) {send("__BuildCatchObject");}});
+
+var __BuildCatchObjectHelper = Module.findExportByName("ucrtbase_enclave.dll", "__BuildCatchObjectHelper")
+Interceptor.attach(__BuildCatchObjectHelper, {onLeave: function (args) {send("__BuildCatchObjectHelper");}});
+
+var __C_specific_handler = Module.findExportByName("ucrtbase_enclave.dll", "__C_specific_handler")
+Interceptor.attach(__C_specific_handler, {onLeave: function (args) {send("__C_specific_handler");}});
+
+var __C_specific_handler_noexcept = Module.findExportByName("ucrtbase_enclave.dll", "__C_specific_handler_noexcept")
+Interceptor.attach(__C_specific_handler_noexcept, {onLeave: function (args) {send("__C_specific_handler_noexcept");}});
+
+var __CxxDetectRethrow = Module.findExportByName("ucrtbase_enclave.dll", "__CxxDetectRethrow")
+Interceptor.attach(__CxxDetectRethrow, {onLeave: function (args) {send("__CxxDetectRethrow");}});
+
+var __CxxExceptionFilter = Module.findExportByName("ucrtbase_enclave.dll", "__CxxExceptionFilter")
+Interceptor.attach(__CxxExceptionFilter, {onLeave: function (args) {send("__CxxExceptionFilter");}});
+
+var __CxxFrameHandler = Module.findExportByName("ucrtbase_enclave.dll", "__CxxFrameHandler")
+Interceptor.attach(__CxxFrameHandler, {onLeave: function (args) {send("__CxxFrameHandler");}});
+
+var __CxxFrameHandler2 = Module.findExportByName("ucrtbase_enclave.dll", "__CxxFrameHandler2")
+Interceptor.attach(__CxxFrameHandler2, {onLeave: function (args) {send("__CxxFrameHandler2");}});
+
+var __CxxFrameHandler3 = Module.findExportByName("ucrtbase_enclave.dll", "__CxxFrameHandler3")
+Interceptor.attach(__CxxFrameHandler3, {onLeave: function (args) {send("__CxxFrameHandler3");}});
+
+var __CxxFrameHandler4 = Module.findExportByName("ucrtbase_enclave.dll", "__CxxFrameHandler4")
+Interceptor.attach(__CxxFrameHandler4, {onLeave: function (args) {send("__CxxFrameHandler4");}});
+
+var __CxxQueryExceptionSize = Module.findExportByName("ucrtbase_enclave.dll", "__CxxQueryExceptionSize")
+Interceptor.attach(__CxxQueryExceptionSize, {onLeave: function (args) {send("__CxxQueryExceptionSize");}});
+
+var __CxxRegisterExceptionObject = Module.findExportByName("ucrtbase_enclave.dll", "__CxxRegisterExceptionObject")
+Interceptor.attach(__CxxRegisterExceptionObject, {onLeave: function (args) {send("__CxxRegisterExceptionObject");}});
+
+var __CxxUnregisterExceptionObject = Module.findExportByName("ucrtbase_enclave.dll", "__CxxUnregisterExceptionObject")
+Interceptor.attach(__CxxUnregisterExceptionObject, {onLeave: function (args) {send("__CxxUnregisterExceptionObject");}});
+
+var __DestructExceptionObject = Module.findExportByName("ucrtbase_enclave.dll", "__DestructExceptionObject")
+Interceptor.attach(__DestructExceptionObject, {onLeave: function (args) {send("__DestructExceptionObject");}});
+
+var __FrameUnwindFilter = Module.findExportByName("ucrtbase_enclave.dll", "__FrameUnwindFilter")
+Interceptor.attach(__FrameUnwindFilter, {onLeave: function (args) {send("__FrameUnwindFilter");}});
+
+var __GetPlatformExceptionInfo = Module.findExportByName("ucrtbase_enclave.dll", "__GetPlatformExceptionInfo")
+Interceptor.attach(__GetPlatformExceptionInfo, {onLeave: function (args) {send("__GetPlatformExceptionInfo");}});
+
+var __NLG_Dispatch2 = Module.findExportByName("ucrtbase_enclave.dll", "__NLG_Dispatch2")
+Interceptor.attach(__NLG_Dispatch2, {onLeave: function (args) {send("__NLG_Dispatch2");}});
+
+var __NLG_Return2 = Module.findExportByName("ucrtbase_enclave.dll", "__NLG_Return2")
+Interceptor.attach(__NLG_Return2, {onLeave: function (args) {send("__NLG_Return2");}});
+
+var __RTCastToVoid = Module.findExportByName("ucrtbase_enclave.dll", "__RTCastToVoid")
+Interceptor.attach(__RTCastToVoid, {onLeave: function (args) {send("__RTCastToVoid");}});
+
+var __RTDynamicCast = Module.findExportByName("ucrtbase_enclave.dll", "__RTDynamicCast")
+Interceptor.attach(__RTDynamicCast, {onLeave: function (args) {send("__RTDynamicCast");}});
+
+var __RTtypeid = Module.findExportByName("ucrtbase_enclave.dll", "__RTtypeid")
+Interceptor.attach(__RTtypeid, {onLeave: function (args) {send("__RTtypeid");}});
+
+var __TypeMatch = Module.findExportByName("ucrtbase_enclave.dll", "__TypeMatch")
+Interceptor.attach(__TypeMatch, {onLeave: function (args) {send("__TypeMatch");}});
+
+var ___lc_codepage_func = Module.findExportByName("ucrtbase_enclave.dll", "___lc_codepage_func")
+Interceptor.attach(___lc_codepage_func, {onLeave: function (args) {send("___lc_codepage_func");}});
+
+var ___lc_collate_cp_func = Module.findExportByName("ucrtbase_enclave.dll", "___lc_collate_cp_func")
+Interceptor.attach(___lc_collate_cp_func, {onLeave: function (args) {send("___lc_collate_cp_func");}});
+
+var ___lc_locale_name_func = Module.findExportByName("ucrtbase_enclave.dll", "___lc_locale_name_func")
+Interceptor.attach(___lc_locale_name_func, {onLeave: function (args) {send("___lc_locale_name_func");}});
+
+var ___mb_cur_max_func = Module.findExportByName("ucrtbase_enclave.dll", "___mb_cur_max_func")
+Interceptor.attach(___mb_cur_max_func, {onLeave: function (args) {send("___mb_cur_max_func");}});
+
+var ___mb_cur_max_l_func = Module.findExportByName("ucrtbase_enclave.dll", "___mb_cur_max_l_func")
+Interceptor.attach(___mb_cur_max_l_func, {onLeave: function (args) {send("___mb_cur_max_l_func");}});
+
+var __current_exception = Module.findExportByName("ucrtbase_enclave.dll", "__current_exception")
+Interceptor.attach(__current_exception, {onLeave: function (args) {send("__current_exception");}});
+
+var __current_exception_context = Module.findExportByName("ucrtbase_enclave.dll", "__current_exception_context")
+Interceptor.attach(__current_exception_context, {onLeave: function (args) {send("__current_exception_context");}});
+
+var __doserrno = Module.findExportByName("ucrtbase_enclave.dll", "__doserrno")
+Interceptor.attach(__doserrno, {onLeave: function (args) {send("__doserrno");}});
+
+var __fpe_flt_rounds = Module.findExportByName("ucrtbase_enclave.dll", "__fpe_flt_rounds")
+Interceptor.attach(__fpe_flt_rounds, {onLeave: function (args) {send("__fpe_flt_rounds");}});
+
+var __fpecode = Module.findExportByName("ucrtbase_enclave.dll", "__fpecode")
+Interceptor.attach(__fpecode, {onLeave: function (args) {send("__fpecode");}});
+
+var __intrinsic_setjmp = Module.findExportByName("ucrtbase_enclave.dll", "__intrinsic_setjmp")
+Interceptor.attach(__intrinsic_setjmp, {onLeave: function (args) {send("__intrinsic_setjmp");}});
+
+var __intrinsic_setjmpex = Module.findExportByName("ucrtbase_enclave.dll", "__intrinsic_setjmpex")
+Interceptor.attach(__intrinsic_setjmpex, {onLeave: function (args) {send("__intrinsic_setjmpex");}});
+
+var __isascii = Module.findExportByName("ucrtbase_enclave.dll", "__isascii")
+Interceptor.attach(__isascii, {onLeave: function (args) {send("__isascii");}});
+
+var __iscsym = Module.findExportByName("ucrtbase_enclave.dll", "__iscsym")
+Interceptor.attach(__iscsym, {onLeave: function (args) {send("__iscsym");}});
+
+var __iscsymf = Module.findExportByName("ucrtbase_enclave.dll", "__iscsymf")
+Interceptor.attach(__iscsymf, {onLeave: function (args) {send("__iscsymf");}});
+
+var __iswcsym = Module.findExportByName("ucrtbase_enclave.dll", "__iswcsym")
+Interceptor.attach(__iswcsym, {onLeave: function (args) {send("__iswcsym");}});
+
+var __iswcsymf = Module.findExportByName("ucrtbase_enclave.dll", "__iswcsymf")
+Interceptor.attach(__iswcsymf, {onLeave: function (args) {send("__iswcsymf");}});
+
+var __pctype_func = Module.findExportByName("ucrtbase_enclave.dll", "__pctype_func")
+Interceptor.attach(__pctype_func, {onLeave: function (args) {send("__pctype_func");}});
+
+var __processing_throw = Module.findExportByName("ucrtbase_enclave.dll", "__processing_throw")
+Interceptor.attach(__processing_throw, {onLeave: function (args) {send("__processing_throw");}});
+
+var __pwctype_func = Module.findExportByName("ucrtbase_enclave.dll", "__pwctype_func")
+Interceptor.attach(__pwctype_func, {onLeave: function (args) {send("__pwctype_func");}});
+
+var __pxcptinfoptrs = Module.findExportByName("ucrtbase_enclave.dll", "__pxcptinfoptrs")
+Interceptor.attach(__pxcptinfoptrs, {onLeave: function (args) {send("__pxcptinfoptrs");}});
+
+var __report_gsfailure = Module.findExportByName("ucrtbase_enclave.dll", "__report_gsfailure")
+Interceptor.attach(__report_gsfailure, {onLeave: function (args) {send("__report_gsfailure");}});
+
+var __setusermatherr = Module.findExportByName("ucrtbase_enclave.dll", "__setusermatherr")
+Interceptor.attach(__setusermatherr, {onLeave: function (args) {send("__setusermatherr");}});
+
+var __std_exception_copy = Module.findExportByName("ucrtbase_enclave.dll", "__std_exception_copy")
+Interceptor.attach(__std_exception_copy, {onLeave: function (args) {send("__std_exception_copy");}});
+
+var __std_exception_destroy = Module.findExportByName("ucrtbase_enclave.dll", "__std_exception_destroy")
+Interceptor.attach(__std_exception_destroy, {onLeave: function (args) {send("__std_exception_destroy");}});
+
+var __std_terminate = Module.findExportByName("ucrtbase_enclave.dll", "__std_terminate")
+Interceptor.attach(__std_terminate, {onLeave: function (args) {send("__std_terminate");}});
+
+var __std_type_info_compare = Module.findExportByName("ucrtbase_enclave.dll", "__std_type_info_compare")
+Interceptor.attach(__std_type_info_compare, {onLeave: function (args) {send("__std_type_info_compare");}});
+
+var __std_type_info_destroy_list = Module.findExportByName("ucrtbase_enclave.dll", "__std_type_info_destroy_list")
+Interceptor.attach(__std_type_info_destroy_list, {onLeave: function (args) {send("__std_type_info_destroy_list");}});
+
+var __std_type_info_hash = Module.findExportByName("ucrtbase_enclave.dll", "__std_type_info_hash")
+Interceptor.attach(__std_type_info_hash, {onLeave: function (args) {send("__std_type_info_hash");}});
+
+var __std_type_info_name = Module.findExportByName("ucrtbase_enclave.dll", "__std_type_info_name")
+Interceptor.attach(__std_type_info_name, {onLeave: function (args) {send("__std_type_info_name");}});
+
+var __stdio_common_vsnprintf_s = Module.findExportByName("ucrtbase_enclave.dll", "__stdio_common_vsnprintf_s")
+Interceptor.attach(__stdio_common_vsnprintf_s, {onLeave: function (args) {send("__stdio_common_vsnprintf_s");}});
+
+var __stdio_common_vsnwprintf_s = Module.findExportByName("ucrtbase_enclave.dll", "__stdio_common_vsnwprintf_s")
+Interceptor.attach(__stdio_common_vsnwprintf_s, {onLeave: function (args) {send("__stdio_common_vsnwprintf_s");}});
+
+var __stdio_common_vsprintf = Module.findExportByName("ucrtbase_enclave.dll", "__stdio_common_vsprintf")
+Interceptor.attach(__stdio_common_vsprintf, {onLeave: function (args) {send("__stdio_common_vsprintf");}});
+
+var __stdio_common_vsprintf_p = Module.findExportByName("ucrtbase_enclave.dll", "__stdio_common_vsprintf_p")
+Interceptor.attach(__stdio_common_vsprintf_p, {onLeave: function (args) {send("__stdio_common_vsprintf_p");}});
+
+var __stdio_common_vsprintf_s = Module.findExportByName("ucrtbase_enclave.dll", "__stdio_common_vsprintf_s")
+Interceptor.attach(__stdio_common_vsprintf_s, {onLeave: function (args) {send("__stdio_common_vsprintf_s");}});
+
+var __stdio_common_vsscanf = Module.findExportByName("ucrtbase_enclave.dll", "__stdio_common_vsscanf")
+Interceptor.attach(__stdio_common_vsscanf, {onLeave: function (args) {send("__stdio_common_vsscanf");}});
+
+var __stdio_common_vswprintf = Module.findExportByName("ucrtbase_enclave.dll", "__stdio_common_vswprintf")
+Interceptor.attach(__stdio_common_vswprintf, {onLeave: function (args) {send("__stdio_common_vswprintf");}});
+
+var __stdio_common_vswprintf_p = Module.findExportByName("ucrtbase_enclave.dll", "__stdio_common_vswprintf_p")
+Interceptor.attach(__stdio_common_vswprintf_p, {onLeave: function (args) {send("__stdio_common_vswprintf_p");}});
+
+var __stdio_common_vswprintf_s = Module.findExportByName("ucrtbase_enclave.dll", "__stdio_common_vswprintf_s")
+Interceptor.attach(__stdio_common_vswprintf_s, {onLeave: function (args) {send("__stdio_common_vswprintf_s");}});
+
+var __stdio_common_vswscanf = Module.findExportByName("ucrtbase_enclave.dll", "__stdio_common_vswscanf")
+Interceptor.attach(__stdio_common_vswscanf, {onLeave: function (args) {send("__stdio_common_vswscanf");}});
+
+var __strncnt = Module.findExportByName("ucrtbase_enclave.dll", "__strncnt")
+Interceptor.attach(__strncnt, {onLeave: function (args) {send("__strncnt");}});
+
+var __sys_errlist = Module.findExportByName("ucrtbase_enclave.dll", "__sys_errlist")
+Interceptor.attach(__sys_errlist, {onLeave: function (args) {send("__sys_errlist");}});
+
+var __sys_nerr = Module.findExportByName("ucrtbase_enclave.dll", "__sys_nerr")
+Interceptor.attach(__sys_nerr, {onLeave: function (args) {send("__sys_nerr");}});
+
+var __threadhandle = Module.findExportByName("ucrtbase_enclave.dll", "__threadhandle")
+Interceptor.attach(__threadhandle, {onLeave: function (args) {send("__threadhandle");}});
+
+var __threadid = Module.findExportByName("ucrtbase_enclave.dll", "__threadid")
+Interceptor.attach(__threadid, {onLeave: function (args) {send("__threadid");}});
+
+var __toascii = Module.findExportByName("ucrtbase_enclave.dll", "__toascii")
+Interceptor.attach(__toascii, {onLeave: function (args) {send("__toascii");}});
+
+var __unDName = Module.findExportByName("ucrtbase_enclave.dll", "__unDName")
+Interceptor.attach(__unDName, {onLeave: function (args) {send("__unDName");}});
+
+var __unDNameEx = Module.findExportByName("ucrtbase_enclave.dll", "__unDNameEx")
+Interceptor.attach(__unDNameEx, {onLeave: function (args) {send("__unDNameEx");}});
+
+var __uncaught_exception = Module.findExportByName("ucrtbase_enclave.dll", "__uncaught_exception")
+Interceptor.attach(__uncaught_exception, {onLeave: function (args) {send("__uncaught_exception");}});
+
+var __uncaught_exceptions = Module.findExportByName("ucrtbase_enclave.dll", "__uncaught_exceptions")
+Interceptor.attach(__uncaught_exceptions, {onLeave: function (args) {send("__uncaught_exceptions");}});
+
+var __wcserror = Module.findExportByName("ucrtbase_enclave.dll", "__wcserror")
+Interceptor.attach(__wcserror, {onLeave: function (args) {send("__wcserror");}});
+
+var __wcserror_s = Module.findExportByName("ucrtbase_enclave.dll", "__wcserror_s")
+Interceptor.attach(__wcserror_s, {onLeave: function (args) {send("__wcserror_s");}});
+
+var __wcsncnt = Module.findExportByName("ucrtbase_enclave.dll", "__wcsncnt")
+Interceptor.attach(__wcsncnt, {onLeave: function (args) {send("__wcsncnt");}});
+
+var _abs64 = Module.findExportByName("ucrtbase_enclave.dll", "_abs64")
+Interceptor.attach(_abs64, {onLeave: function (args) {send("_abs64");}});
+
+var _aligned_free = Module.findExportByName("ucrtbase_enclave.dll", "_aligned_free")
+Interceptor.attach(_aligned_free, {onLeave: function (args) {send("_aligned_free");}});
+
+var _aligned_malloc = Module.findExportByName("ucrtbase_enclave.dll", "_aligned_malloc")
+Interceptor.attach(_aligned_malloc, {onLeave: function (args) {send("_aligned_malloc");}});
+
+var _aligned_msize = Module.findExportByName("ucrtbase_enclave.dll", "_aligned_msize")
+Interceptor.attach(_aligned_msize, {onLeave: function (args) {send("_aligned_msize");}});
+
+var _aligned_offset_malloc = Module.findExportByName("ucrtbase_enclave.dll", "_aligned_offset_malloc")
+Interceptor.attach(_aligned_offset_malloc, {onLeave: function (args) {send("_aligned_offset_malloc");}});
+
+var _aligned_offset_realloc = Module.findExportByName("ucrtbase_enclave.dll", "_aligned_offset_realloc")
+Interceptor.attach(_aligned_offset_realloc, {onLeave: function (args) {send("_aligned_offset_realloc");}});
+
+var _aligned_offset_recalloc = Module.findExportByName("ucrtbase_enclave.dll", "_aligned_offset_recalloc")
+Interceptor.attach(_aligned_offset_recalloc, {onLeave: function (args) {send("_aligned_offset_recalloc");}});
+
+var _aligned_realloc = Module.findExportByName("ucrtbase_enclave.dll", "_aligned_realloc")
+Interceptor.attach(_aligned_realloc, {onLeave: function (args) {send("_aligned_realloc");}});
+
+var _aligned_recalloc = Module.findExportByName("ucrtbase_enclave.dll", "_aligned_recalloc")
+Interceptor.attach(_aligned_recalloc, {onLeave: function (args) {send("_aligned_recalloc");}});
+
+var _assert = Module.findExportByName("ucrtbase_enclave.dll", "_assert")
+Interceptor.attach(_assert, {onLeave: function (args) {send("_assert");}});
+
+var _atodbl = Module.findExportByName("ucrtbase_enclave.dll", "_atodbl")
+Interceptor.attach(_atodbl, {onLeave: function (args) {send("_atodbl");}});
+
+var _atodbl_l = Module.findExportByName("ucrtbase_enclave.dll", "_atodbl_l")
+Interceptor.attach(_atodbl_l, {onLeave: function (args) {send("_atodbl_l");}});
+
+var _atof_l = Module.findExportByName("ucrtbase_enclave.dll", "_atof_l")
+Interceptor.attach(_atof_l, {onLeave: function (args) {send("_atof_l");}});
+
+var _atoflt = Module.findExportByName("ucrtbase_enclave.dll", "_atoflt")
+Interceptor.attach(_atoflt, {onLeave: function (args) {send("_atoflt");}});
+
+var _atoflt_l = Module.findExportByName("ucrtbase_enclave.dll", "_atoflt_l")
+Interceptor.attach(_atoflt_l, {onLeave: function (args) {send("_atoflt_l");}});
+
+var _atoi64 = Module.findExportByName("ucrtbase_enclave.dll", "_atoi64")
+Interceptor.attach(_atoi64, {onLeave: function (args) {send("_atoi64");}});
+
+var _atoi64_l = Module.findExportByName("ucrtbase_enclave.dll", "_atoi64_l")
+Interceptor.attach(_atoi64_l, {onLeave: function (args) {send("_atoi64_l");}});
+
+var _atoi_l = Module.findExportByName("ucrtbase_enclave.dll", "_atoi_l")
+Interceptor.attach(_atoi_l, {onLeave: function (args) {send("_atoi_l");}});
+
+var _atol_l = Module.findExportByName("ucrtbase_enclave.dll", "_atol_l")
+Interceptor.attach(_atol_l, {onLeave: function (args) {send("_atol_l");}});
+
+var _atoldbl = Module.findExportByName("ucrtbase_enclave.dll", "_atoldbl")
+Interceptor.attach(_atoldbl, {onLeave: function (args) {send("_atoldbl");}});
+
+var _atoldbl_l = Module.findExportByName("ucrtbase_enclave.dll", "_atoldbl_l")
+Interceptor.attach(_atoldbl_l, {onLeave: function (args) {send("_atoldbl_l");}});
+
+var _atoll_l = Module.findExportByName("ucrtbase_enclave.dll", "_atoll_l")
+Interceptor.attach(_atoll_l, {onLeave: function (args) {send("_atoll_l");}});
+
+var _byteswap_uint64 = Module.findExportByName("ucrtbase_enclave.dll", "_byteswap_uint64")
+Interceptor.attach(_byteswap_uint64, {onLeave: function (args) {send("_byteswap_uint64");}});
+
+var _byteswap_ulong = Module.findExportByName("ucrtbase_enclave.dll", "_byteswap_ulong")
+Interceptor.attach(_byteswap_ulong, {onLeave: function (args) {send("_byteswap_ulong");}});
+
+var _byteswap_ushort = Module.findExportByName("ucrtbase_enclave.dll", "_byteswap_ushort")
+Interceptor.attach(_byteswap_ushort, {onLeave: function (args) {send("_byteswap_ushort");}});
+
+var _c_exit = Module.findExportByName("ucrtbase_enclave.dll", "_c_exit")
+Interceptor.attach(_c_exit, {onLeave: function (args) {send("_c_exit");}});
+
+var _cabs = Module.findExportByName("ucrtbase_enclave.dll", "_cabs")
+Interceptor.attach(_cabs, {onLeave: function (args) {send("_cabs");}});
+
+var _callnewh = Module.findExportByName("ucrtbase_enclave.dll", "_callnewh")
+Interceptor.attach(_callnewh, {onLeave: function (args) {send("_callnewh");}});
+
+var _calloc_base = Module.findExportByName("ucrtbase_enclave.dll", "_calloc_base")
+Interceptor.attach(_calloc_base, {onLeave: function (args) {send("_calloc_base");}});
+
+var _cexit = Module.findExportByName("ucrtbase_enclave.dll", "_cexit")
+Interceptor.attach(_cexit, {onLeave: function (args) {send("_cexit");}});
+
+var _chgsign = Module.findExportByName("ucrtbase_enclave.dll", "_chgsign")
+Interceptor.attach(_chgsign, {onLeave: function (args) {send("_chgsign");}});
+
+var _chgsignf = Module.findExportByName("ucrtbase_enclave.dll", "_chgsignf")
+Interceptor.attach(_chgsignf, {onLeave: function (args) {send("_chgsignf");}});
+
+var _clearfp = Module.findExportByName("ucrtbase_enclave.dll", "_clearfp")
+Interceptor.attach(_clearfp, {onLeave: function (args) {send("_clearfp");}});
+
+var _configthreadlocale = Module.findExportByName("ucrtbase_enclave.dll", "_configthreadlocale")
+Interceptor.attach(_configthreadlocale, {onLeave: function (args) {send("_configthreadlocale");}});
+
+var _control87 = Module.findExportByName("ucrtbase_enclave.dll", "_control87")
+Interceptor.attach(_control87, {onLeave: function (args) {send("_control87");}});
+
+var _controlfp = Module.findExportByName("ucrtbase_enclave.dll", "_controlfp")
+Interceptor.attach(_controlfp, {onLeave: function (args) {send("_controlfp");}});
+
+var _controlfp_s = Module.findExportByName("ucrtbase_enclave.dll", "_controlfp_s")
+Interceptor.attach(_controlfp_s, {onLeave: function (args) {send("_controlfp_s");}});
+
+var _copysign = Module.findExportByName("ucrtbase_enclave.dll", "_copysign")
+Interceptor.attach(_copysign, {onLeave: function (args) {send("_copysign");}});
+
+var _copysignf = Module.findExportByName("ucrtbase_enclave.dll", "_copysignf")
+Interceptor.attach(_copysignf, {onLeave: function (args) {send("_copysignf");}});
+
+var _crt_at_quick_exit = Module.findExportByName("ucrtbase_enclave.dll", "_crt_at_quick_exit")
+Interceptor.attach(_crt_at_quick_exit, {onLeave: function (args) {send("_crt_at_quick_exit");}});
+
+var _crt_atexit = Module.findExportByName("ucrtbase_enclave.dll", "_crt_atexit")
+Interceptor.attach(_crt_atexit, {onLeave: function (args) {send("_crt_atexit");}});
+
+var _d_int = Module.findExportByName("ucrtbase_enclave.dll", "_d_int")
+Interceptor.attach(_d_int, {onLeave: function (args) {send("_d_int");}});
+
+var _dclass = Module.findExportByName("ucrtbase_enclave.dll", "_dclass")
+Interceptor.attach(_dclass, {onLeave: function (args) {send("_dclass");}});
+
+var _dexp = Module.findExportByName("ucrtbase_enclave.dll", "_dexp")
+Interceptor.attach(_dexp, {onLeave: function (args) {send("_dexp");}});
+
+var _dlog = Module.findExportByName("ucrtbase_enclave.dll", "_dlog")
+Interceptor.attach(_dlog, {onLeave: function (args) {send("_dlog");}});
+
+var _dnorm = Module.findExportByName("ucrtbase_enclave.dll", "_dnorm")
+Interceptor.attach(_dnorm, {onLeave: function (args) {send("_dnorm");}});
+
+var _dpcomp = Module.findExportByName("ucrtbase_enclave.dll", "_dpcomp")
+Interceptor.attach(_dpcomp, {onLeave: function (args) {send("_dpcomp");}});
+
+var _dpoly = Module.findExportByName("ucrtbase_enclave.dll", "_dpoly")
+Interceptor.attach(_dpoly, {onLeave: function (args) {send("_dpoly");}});
+
+var _dscale = Module.findExportByName("ucrtbase_enclave.dll", "_dscale")
+Interceptor.attach(_dscale, {onLeave: function (args) {send("_dscale");}});
+
+var _dsign = Module.findExportByName("ucrtbase_enclave.dll", "_dsign")
+Interceptor.attach(_dsign, {onLeave: function (args) {send("_dsign");}});
+
+var _dsin = Module.findExportByName("ucrtbase_enclave.dll", "_dsin")
+Interceptor.attach(_dsin, {onLeave: function (args) {send("_dsin");}});
+
+var _dtest = Module.findExportByName("ucrtbase_enclave.dll", "_dtest")
+Interceptor.attach(_dtest, {onLeave: function (args) {send("_dtest");}});
+
+var _dunscale = Module.findExportByName("ucrtbase_enclave.dll", "_dunscale")
+Interceptor.attach(_dunscale, {onLeave: function (args) {send("_dunscale");}});
+
+var _ecvt = Module.findExportByName("ucrtbase_enclave.dll", "_ecvt")
+Interceptor.attach(_ecvt, {onLeave: function (args) {send("_ecvt");}});
+
+var _ecvt_s = Module.findExportByName("ucrtbase_enclave.dll", "_ecvt_s")
+Interceptor.attach(_ecvt_s, {onLeave: function (args) {send("_ecvt_s");}});
+
+var _errno = Module.findExportByName("ucrtbase_enclave.dll", "_errno")
+Interceptor.attach(_errno, {onLeave: function (args) {send("_errno");}});
+
+var _except1 = Module.findExportByName("ucrtbase_enclave.dll", "_except1")
+Interceptor.attach(_except1, {onLeave: function (args) {send("_except1");}});
+
+var _execute_onexit_table = Module.findExportByName("ucrtbase_enclave.dll", "_execute_onexit_table")
+Interceptor.attach(_execute_onexit_table, {onLeave: function (args) {send("_execute_onexit_table");}});
+
+var _exit = Module.findExportByName("ucrtbase_enclave.dll", "_exit")
+Interceptor.attach(_exit, {onLeave: function (args) {send("_exit");}});
+
+var _expand = Module.findExportByName("ucrtbase_enclave.dll", "_expand")
+Interceptor.attach(_expand, {onLeave: function (args) {send("_expand");}});
+
+var _fcvt = Module.findExportByName("ucrtbase_enclave.dll", "_fcvt")
+Interceptor.attach(_fcvt, {onLeave: function (args) {send("_fcvt");}});
+
+var _fcvt_s = Module.findExportByName("ucrtbase_enclave.dll", "_fcvt_s")
+Interceptor.attach(_fcvt_s, {onLeave: function (args) {send("_fcvt_s");}});
+
+var _fd_int = Module.findExportByName("ucrtbase_enclave.dll", "_fd_int")
+Interceptor.attach(_fd_int, {onLeave: function (args) {send("_fd_int");}});
+
+var _fdclass = Module.findExportByName("ucrtbase_enclave.dll", "_fdclass")
+Interceptor.attach(_fdclass, {onLeave: function (args) {send("_fdclass");}});
+
+var _fdexp = Module.findExportByName("ucrtbase_enclave.dll", "_fdexp")
+Interceptor.attach(_fdexp, {onLeave: function (args) {send("_fdexp");}});
+
+var _fdlog = Module.findExportByName("ucrtbase_enclave.dll", "_fdlog")
+Interceptor.attach(_fdlog, {onLeave: function (args) {send("_fdlog");}});
+
+var _fdnorm = Module.findExportByName("ucrtbase_enclave.dll", "_fdnorm")
+Interceptor.attach(_fdnorm, {onLeave: function (args) {send("_fdnorm");}});
+
+var _fdpcomp = Module.findExportByName("ucrtbase_enclave.dll", "_fdpcomp")
+Interceptor.attach(_fdpcomp, {onLeave: function (args) {send("_fdpcomp");}});
+
+var _fdpoly = Module.findExportByName("ucrtbase_enclave.dll", "_fdpoly")
+Interceptor.attach(_fdpoly, {onLeave: function (args) {send("_fdpoly");}});
+
+var _fdscale = Module.findExportByName("ucrtbase_enclave.dll", "_fdscale")
+Interceptor.attach(_fdscale, {onLeave: function (args) {send("_fdscale");}});
+
+var _fdsign = Module.findExportByName("ucrtbase_enclave.dll", "_fdsign")
+Interceptor.attach(_fdsign, {onLeave: function (args) {send("_fdsign");}});
+
+var _fdsin = Module.findExportByName("ucrtbase_enclave.dll", "_fdsin")
+Interceptor.attach(_fdsin, {onLeave: function (args) {send("_fdsin");}});
+
+var _fdtest = Module.findExportByName("ucrtbase_enclave.dll", "_fdtest")
+Interceptor.attach(_fdtest, {onLeave: function (args) {send("_fdtest");}});
+
+var _fdunscale = Module.findExportByName("ucrtbase_enclave.dll", "_fdunscale")
+Interceptor.attach(_fdunscale, {onLeave: function (args) {send("_fdunscale");}});
+
+var _finite = Module.findExportByName("ucrtbase_enclave.dll", "_finite")
+Interceptor.attach(_finite, {onLeave: function (args) {send("_finite");}});
+
+var _finitef = Module.findExportByName("ucrtbase_enclave.dll", "_finitef")
+Interceptor.attach(_finitef, {onLeave: function (args) {send("_finitef");}});
+
+var _fpclass = Module.findExportByName("ucrtbase_enclave.dll", "_fpclass")
+Interceptor.attach(_fpclass, {onLeave: function (args) {send("_fpclass");}});
+
+var _fpclassf = Module.findExportByName("ucrtbase_enclave.dll", "_fpclassf")
+Interceptor.attach(_fpclassf, {onLeave: function (args) {send("_fpclassf");}});
+
+var _fpieee_flt = Module.findExportByName("ucrtbase_enclave.dll", "_fpieee_flt")
+Interceptor.attach(_fpieee_flt, {onLeave: function (args) {send("_fpieee_flt");}});
+
+var _fpreset = Module.findExportByName("ucrtbase_enclave.dll", "_fpreset")
+Interceptor.attach(_fpreset, {onLeave: function (args) {send("_fpreset");}});
+
+var _free_base = Module.findExportByName("ucrtbase_enclave.dll", "_free_base")
+Interceptor.attach(_free_base, {onLeave: function (args) {send("_free_base");}});
+
+var _gcvt = Module.findExportByName("ucrtbase_enclave.dll", "_gcvt")
+Interceptor.attach(_gcvt, {onLeave: function (args) {send("_gcvt");}});
+
+var _gcvt_s = Module.findExportByName("ucrtbase_enclave.dll", "_gcvt_s")
+Interceptor.attach(_gcvt_s, {onLeave: function (args) {send("_gcvt_s");}});
+
+var _get_FMA3_enable = Module.findExportByName("ucrtbase_enclave.dll", "_get_FMA3_enable")
+Interceptor.attach(_get_FMA3_enable, {onLeave: function (args) {send("_get_FMA3_enable");}});
+
+var _get_current_locale = Module.findExportByName("ucrtbase_enclave.dll", "_get_current_locale")
+Interceptor.attach(_get_current_locale, {onLeave: function (args) {send("_get_current_locale");}});
+
+var _get_doserrno = Module.findExportByName("ucrtbase_enclave.dll", "_get_doserrno")
+Interceptor.attach(_get_doserrno, {onLeave: function (args) {send("_get_doserrno");}});
+
+var _get_errno = Module.findExportByName("ucrtbase_enclave.dll", "_get_errno")
+Interceptor.attach(_get_errno, {onLeave: function (args) {send("_get_errno");}});
+
+var _get_heap_handle = Module.findExportByName("ucrtbase_enclave.dll", "_get_heap_handle")
+Interceptor.attach(_get_heap_handle, {onLeave: function (args) {send("_get_heap_handle");}});
+
+var _get_invalid_parameter_handler = Module.findExportByName("ucrtbase_enclave.dll", "_get_invalid_parameter_handler")
+Interceptor.attach(_get_invalid_parameter_handler, {onLeave: function (args) {send("_get_invalid_parameter_handler");}});
+
+var _get_purecall_handler = Module.findExportByName("ucrtbase_enclave.dll", "_get_purecall_handler")
+Interceptor.attach(_get_purecall_handler, {onLeave: function (args) {send("_get_purecall_handler");}});
+
+var _get_terminate = Module.findExportByName("ucrtbase_enclave.dll", "_get_terminate")
+Interceptor.attach(_get_terminate, {onLeave: function (args) {send("_get_terminate");}});
+
+var _get_thread_local_invalid_parameter_handler = Module.findExportByName("ucrtbase_enclave.dll", "_get_thread_local_invalid_parameter_handler")
+Interceptor.attach(_get_thread_local_invalid_parameter_handler, {onLeave: function (args) {send("_get_thread_local_invalid_parameter_handler");}});
+
+var _get_unexpected = Module.findExportByName("ucrtbase_enclave.dll", "_get_unexpected")
+Interceptor.attach(_get_unexpected, {onLeave: function (args) {send("_get_unexpected");}});
+
+var _getmbcp = Module.findExportByName("ucrtbase_enclave.dll", "_getmbcp")
+Interceptor.attach(_getmbcp, {onLeave: function (args) {send("_getmbcp");}});
+
+var _hypot = Module.findExportByName("ucrtbase_enclave.dll", "_hypot")
+Interceptor.attach(_hypot, {onLeave: function (args) {send("_hypot");}});
+
+var _hypotf = Module.findExportByName("ucrtbase_enclave.dll", "_hypotf")
+Interceptor.attach(_hypotf, {onLeave: function (args) {send("_hypotf");}});
+
+var _i64toa = Module.findExportByName("ucrtbase_enclave.dll", "_i64toa")
+Interceptor.attach(_i64toa, {onLeave: function (args) {send("_i64toa");}});
+
+var _i64toa_s = Module.findExportByName("ucrtbase_enclave.dll", "_i64toa_s")
+Interceptor.attach(_i64toa_s, {onLeave: function (args) {send("_i64toa_s");}});
+
+var _i64tow = Module.findExportByName("ucrtbase_enclave.dll", "_i64tow")
+Interceptor.attach(_i64tow, {onLeave: function (args) {send("_i64tow");}});
+
+var _i64tow_s = Module.findExportByName("ucrtbase_enclave.dll", "_i64tow_s")
+Interceptor.attach(_i64tow_s, {onLeave: function (args) {send("_i64tow_s");}});
+
+var _initialize_onexit_table = Module.findExportByName("ucrtbase_enclave.dll", "_initialize_onexit_table")
+Interceptor.attach(_initialize_onexit_table, {onLeave: function (args) {send("_initialize_onexit_table");}});
+
+var _initterm = Module.findExportByName("ucrtbase_enclave.dll", "_initterm")
+Interceptor.attach(_initterm, {onLeave: function (args) {send("_initterm");}});
+
+var _initterm_e = Module.findExportByName("ucrtbase_enclave.dll", "_initterm_e")
+Interceptor.attach(_initterm_e, {onLeave: function (args) {send("_initterm_e");}});
+
+var _invalid_parameter_noinfo = Module.findExportByName("ucrtbase_enclave.dll", "_invalid_parameter_noinfo")
+Interceptor.attach(_invalid_parameter_noinfo, {onLeave: function (args) {send("_invalid_parameter_noinfo");}});
+
+var _invalid_parameter_noinfo_noreturn = Module.findExportByName("ucrtbase_enclave.dll", "_invalid_parameter_noinfo_noreturn")
+Interceptor.attach(_invalid_parameter_noinfo_noreturn, {onLeave: function (args) {send("_invalid_parameter_noinfo_noreturn");}});
+
+var _invoke_watson = Module.findExportByName("ucrtbase_enclave.dll", "_invoke_watson")
+Interceptor.attach(_invoke_watson, {onLeave: function (args) {send("_invoke_watson");}});
+
+var _is_exception_typeof = Module.findExportByName("ucrtbase_enclave.dll", "_is_exception_typeof")
+Interceptor.attach(_is_exception_typeof, {onLeave: function (args) {send("_is_exception_typeof");}});
+
+var _isalnum_l = Module.findExportByName("ucrtbase_enclave.dll", "_isalnum_l")
+Interceptor.attach(_isalnum_l, {onLeave: function (args) {send("_isalnum_l");}});
+
+var _isalpha_l = Module.findExportByName("ucrtbase_enclave.dll", "_isalpha_l")
+Interceptor.attach(_isalpha_l, {onLeave: function (args) {send("_isalpha_l");}});
+
+var _isblank_l = Module.findExportByName("ucrtbase_enclave.dll", "_isblank_l")
+Interceptor.attach(_isblank_l, {onLeave: function (args) {send("_isblank_l");}});
+
+var _iscntrl_l = Module.findExportByName("ucrtbase_enclave.dll", "_iscntrl_l")
+Interceptor.attach(_iscntrl_l, {onLeave: function (args) {send("_iscntrl_l");}});
+
+var _isctype = Module.findExportByName("ucrtbase_enclave.dll", "_isctype")
+Interceptor.attach(_isctype, {onLeave: function (args) {send("_isctype");}});
+
+var _isctype_l = Module.findExportByName("ucrtbase_enclave.dll", "_isctype_l")
+Interceptor.attach(_isctype_l, {onLeave: function (args) {send("_isctype_l");}});
+
+var _isdigit_l = Module.findExportByName("ucrtbase_enclave.dll", "_isdigit_l")
+Interceptor.attach(_isdigit_l, {onLeave: function (args) {send("_isdigit_l");}});
+
+var _isgraph_l = Module.findExportByName("ucrtbase_enclave.dll", "_isgraph_l")
+Interceptor.attach(_isgraph_l, {onLeave: function (args) {send("_isgraph_l");}});
+
+var _isleadbyte_l = Module.findExportByName("ucrtbase_enclave.dll", "_isleadbyte_l")
+Interceptor.attach(_isleadbyte_l, {onLeave: function (args) {send("_isleadbyte_l");}});
+
+var _islower_l = Module.findExportByName("ucrtbase_enclave.dll", "_islower_l")
+Interceptor.attach(_islower_l, {onLeave: function (args) {send("_islower_l");}});
+
+var _isnan = Module.findExportByName("ucrtbase_enclave.dll", "_isnan")
+Interceptor.attach(_isnan, {onLeave: function (args) {send("_isnan");}});
+
+var _isnanf = Module.findExportByName("ucrtbase_enclave.dll", "_isnanf")
+Interceptor.attach(_isnanf, {onLeave: function (args) {send("_isnanf");}});
+
+var _isprint_l = Module.findExportByName("ucrtbase_enclave.dll", "_isprint_l")
+Interceptor.attach(_isprint_l, {onLeave: function (args) {send("_isprint_l");}});
+
+var _ispunct_l = Module.findExportByName("ucrtbase_enclave.dll", "_ispunct_l")
+Interceptor.attach(_ispunct_l, {onLeave: function (args) {send("_ispunct_l");}});
+
+var _isspace_l = Module.findExportByName("ucrtbase_enclave.dll", "_isspace_l")
+Interceptor.attach(_isspace_l, {onLeave: function (args) {send("_isspace_l");}});
+
+var _isupper_l = Module.findExportByName("ucrtbase_enclave.dll", "_isupper_l")
+Interceptor.attach(_isupper_l, {onLeave: function (args) {send("_isupper_l");}});
+
+var _iswalnum_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswalnum_l")
+Interceptor.attach(_iswalnum_l, {onLeave: function (args) {send("_iswalnum_l");}});
+
+var _iswalpha_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswalpha_l")
+Interceptor.attach(_iswalpha_l, {onLeave: function (args) {send("_iswalpha_l");}});
+
+var _iswblank_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswblank_l")
+Interceptor.attach(_iswblank_l, {onLeave: function (args) {send("_iswblank_l");}});
+
+var _iswcntrl_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswcntrl_l")
+Interceptor.attach(_iswcntrl_l, {onLeave: function (args) {send("_iswcntrl_l");}});
+
+var _iswcsym_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswcsym_l")
+Interceptor.attach(_iswcsym_l, {onLeave: function (args) {send("_iswcsym_l");}});
+
+var _iswcsymf_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswcsymf_l")
+Interceptor.attach(_iswcsymf_l, {onLeave: function (args) {send("_iswcsymf_l");}});
+
+var _iswctype_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswctype_l")
+Interceptor.attach(_iswctype_l, {onLeave: function (args) {send("_iswctype_l");}});
+
+var _iswdigit_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswdigit_l")
+Interceptor.attach(_iswdigit_l, {onLeave: function (args) {send("_iswdigit_l");}});
+
+var _iswgraph_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswgraph_l")
+Interceptor.attach(_iswgraph_l, {onLeave: function (args) {send("_iswgraph_l");}});
+
+var _iswlower_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswlower_l")
+Interceptor.attach(_iswlower_l, {onLeave: function (args) {send("_iswlower_l");}});
+
+var _iswprint_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswprint_l")
+Interceptor.attach(_iswprint_l, {onLeave: function (args) {send("_iswprint_l");}});
+
+var _iswpunct_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswpunct_l")
+Interceptor.attach(_iswpunct_l, {onLeave: function (args) {send("_iswpunct_l");}});
+
+var _iswspace_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswspace_l")
+Interceptor.attach(_iswspace_l, {onLeave: function (args) {send("_iswspace_l");}});
+
+var _iswupper_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswupper_l")
+Interceptor.attach(_iswupper_l, {onLeave: function (args) {send("_iswupper_l");}});
+
+var _iswxdigit_l = Module.findExportByName("ucrtbase_enclave.dll", "_iswxdigit_l")
+Interceptor.attach(_iswxdigit_l, {onLeave: function (args) {send("_iswxdigit_l");}});
+
+var _isxdigit_l = Module.findExportByName("ucrtbase_enclave.dll", "_isxdigit_l")
+Interceptor.attach(_isxdigit_l, {onLeave: function (args) {send("_isxdigit_l");}});
+
+var _itoa = Module.findExportByName("ucrtbase_enclave.dll", "_itoa")
+Interceptor.attach(_itoa, {onLeave: function (args) {send("_itoa");}});
+
+var _itoa_s = Module.findExportByName("ucrtbase_enclave.dll", "_itoa_s")
+Interceptor.attach(_itoa_s, {onLeave: function (args) {send("_itoa_s");}});
+
+var _itow = Module.findExportByName("ucrtbase_enclave.dll", "_itow")
+Interceptor.attach(_itow, {onLeave: function (args) {send("_itow");}});
+
+var _itow_s = Module.findExportByName("ucrtbase_enclave.dll", "_itow_s")
+Interceptor.attach(_itow_s, {onLeave: function (args) {send("_itow_s");}});
+
+var _j0 = Module.findExportByName("ucrtbase_enclave.dll", "_j0")
+Interceptor.attach(_j0, {onLeave: function (args) {send("_j0");}});
+
+var _j1 = Module.findExportByName("ucrtbase_enclave.dll", "_j1")
+Interceptor.attach(_j1, {onLeave: function (args) {send("_j1");}});
+
+var _jn = Module.findExportByName("ucrtbase_enclave.dll", "_jn")
+Interceptor.attach(_jn, {onLeave: function (args) {send("_jn");}});
+
+var _ld_int = Module.findExportByName("ucrtbase_enclave.dll", "_ld_int")
+Interceptor.attach(_ld_int, {onLeave: function (args) {send("_ld_int");}});
+
+var _ldclass = Module.findExportByName("ucrtbase_enclave.dll", "_ldclass")
+Interceptor.attach(_ldclass, {onLeave: function (args) {send("_ldclass");}});
+
+var _ldexp = Module.findExportByName("ucrtbase_enclave.dll", "_ldexp")
+Interceptor.attach(_ldexp, {onLeave: function (args) {send("_ldexp");}});
+
+var _ldlog = Module.findExportByName("ucrtbase_enclave.dll", "_ldlog")
+Interceptor.attach(_ldlog, {onLeave: function (args) {send("_ldlog");}});
+
+var _ldpcomp = Module.findExportByName("ucrtbase_enclave.dll", "_ldpcomp")
+Interceptor.attach(_ldpcomp, {onLeave: function (args) {send("_ldpcomp");}});
+
+var _ldpoly = Module.findExportByName("ucrtbase_enclave.dll", "_ldpoly")
+Interceptor.attach(_ldpoly, {onLeave: function (args) {send("_ldpoly");}});
+
+var _ldscale = Module.findExportByName("ucrtbase_enclave.dll", "_ldscale")
+Interceptor.attach(_ldscale, {onLeave: function (args) {send("_ldscale");}});
+
+var _ldsign = Module.findExportByName("ucrtbase_enclave.dll", "_ldsign")
+Interceptor.attach(_ldsign, {onLeave: function (args) {send("_ldsign");}});
+
+var _ldsin = Module.findExportByName("ucrtbase_enclave.dll", "_ldsin")
+Interceptor.attach(_ldsin, {onLeave: function (args) {send("_ldsin");}});
+
+var _ldtest = Module.findExportByName("ucrtbase_enclave.dll", "_ldtest")
+Interceptor.attach(_ldtest, {onLeave: function (args) {send("_ldtest");}});
+
+var _ldunscale = Module.findExportByName("ucrtbase_enclave.dll", "_ldunscale")
+Interceptor.attach(_ldunscale, {onLeave: function (args) {send("_ldunscale");}});
+
+var _lfind = Module.findExportByName("ucrtbase_enclave.dll", "_lfind")
+Interceptor.attach(_lfind, {onLeave: function (args) {send("_lfind");}});
+
+var _lfind_s = Module.findExportByName("ucrtbase_enclave.dll", "_lfind_s")
+Interceptor.attach(_lfind_s, {onLeave: function (args) {send("_lfind_s");}});
+
+var _local_unwind = Module.findExportByName("ucrtbase_enclave.dll", "_local_unwind")
+Interceptor.attach(_local_unwind, {onLeave: function (args) {send("_local_unwind");}});
+
+var _lock_locales = Module.findExportByName("ucrtbase_enclave.dll", "_lock_locales")
+Interceptor.attach(_lock_locales, {onLeave: function (args) {send("_lock_locales");}});
+
+var _logb = Module.findExportByName("ucrtbase_enclave.dll", "_logb")
+Interceptor.attach(_logb, {onLeave: function (args) {send("_logb");}});
+
+var _logbf = Module.findExportByName("ucrtbase_enclave.dll", "_logbf")
+Interceptor.attach(_logbf, {onLeave: function (args) {send("_logbf");}});
+
+var _lrotl = Module.findExportByName("ucrtbase_enclave.dll", "_lrotl")
+Interceptor.attach(_lrotl, {onLeave: function (args) {send("_lrotl");}});
+
+var _lrotr = Module.findExportByName("ucrtbase_enclave.dll", "_lrotr")
+Interceptor.attach(_lrotr, {onLeave: function (args) {send("_lrotr");}});
+
+var _lsearch = Module.findExportByName("ucrtbase_enclave.dll", "_lsearch")
+Interceptor.attach(_lsearch, {onLeave: function (args) {send("_lsearch");}});
+
+var _lsearch_s = Module.findExportByName("ucrtbase_enclave.dll", "_lsearch_s")
+Interceptor.attach(_lsearch_s, {onLeave: function (args) {send("_lsearch_s");}});
+
+var _ltoa = Module.findExportByName("ucrtbase_enclave.dll", "_ltoa")
+Interceptor.attach(_ltoa, {onLeave: function (args) {send("_ltoa");}});
+
+var _ltoa_s = Module.findExportByName("ucrtbase_enclave.dll", "_ltoa_s")
+Interceptor.attach(_ltoa_s, {onLeave: function (args) {send("_ltoa_s");}});
+
+var _ltow = Module.findExportByName("ucrtbase_enclave.dll", "_ltow")
+Interceptor.attach(_ltow, {onLeave: function (args) {send("_ltow");}});
+
+var _ltow_s = Module.findExportByName("ucrtbase_enclave.dll", "_ltow_s")
+Interceptor.attach(_ltow_s, {onLeave: function (args) {send("_ltow_s");}});
+
+var _malloc_base = Module.findExportByName("ucrtbase_enclave.dll", "_malloc_base")
+Interceptor.attach(_malloc_base, {onLeave: function (args) {send("_malloc_base");}});
+
+var _memccpy = Module.findExportByName("ucrtbase_enclave.dll", "_memccpy")
+Interceptor.attach(_memccpy, {onLeave: function (args) {send("_memccpy");}});
+
+var _memicmp = Module.findExportByName("ucrtbase_enclave.dll", "_memicmp")
+Interceptor.attach(_memicmp, {onLeave: function (args) {send("_memicmp");}});
+
+var _memicmp_l = Module.findExportByName("ucrtbase_enclave.dll", "_memicmp_l")
+Interceptor.attach(_memicmp_l, {onLeave: function (args) {send("_memicmp_l");}});
+
+var _msize = Module.findExportByName("ucrtbase_enclave.dll", "_msize")
+Interceptor.attach(_msize, {onLeave: function (args) {send("_msize");}});
+
+var _nextafter = Module.findExportByName("ucrtbase_enclave.dll", "_nextafter")
+Interceptor.attach(_nextafter, {onLeave: function (args) {send("_nextafter");}});
+
+var _nextafterf = Module.findExportByName("ucrtbase_enclave.dll", "_nextafterf")
+Interceptor.attach(_nextafterf, {onLeave: function (args) {send("_nextafterf");}});
+
+var _purecall = Module.findExportByName("ucrtbase_enclave.dll", "_purecall")
+Interceptor.attach(_purecall, {onLeave: function (args) {send("_purecall");}});
+
+var _query_new_handler = Module.findExportByName("ucrtbase_enclave.dll", "_query_new_handler")
+Interceptor.attach(_query_new_handler, {onLeave: function (args) {send("_query_new_handler");}});
+
+var _query_new_mode = Module.findExportByName("ucrtbase_enclave.dll", "_query_new_mode")
+Interceptor.attach(_query_new_mode, {onLeave: function (args) {send("_query_new_mode");}});
+
+var _realloc_base = Module.findExportByName("ucrtbase_enclave.dll", "_realloc_base")
+Interceptor.attach(_realloc_base, {onLeave: function (args) {send("_realloc_base");}});
+
+var _recalloc = Module.findExportByName("ucrtbase_enclave.dll", "_recalloc")
+Interceptor.attach(_recalloc, {onLeave: function (args) {send("_recalloc");}});
+
+var _register_onexit_function = Module.findExportByName("ucrtbase_enclave.dll", "_register_onexit_function")
+Interceptor.attach(_register_onexit_function, {onLeave: function (args) {send("_register_onexit_function");}});
+
+var _register_thread_local_exe_atexit_callback = Module.findExportByName("ucrtbase_enclave.dll", "_register_thread_local_exe_atexit_callback")
+Interceptor.attach(_register_thread_local_exe_atexit_callback, {onLeave: function (args) {send("_register_thread_local_exe_atexit_callback");}});
+
+var _rotl = Module.findExportByName("ucrtbase_enclave.dll", "_rotl")
+Interceptor.attach(_rotl, {onLeave: function (args) {send("_rotl");}});
+
+var _rotl64 = Module.findExportByName("ucrtbase_enclave.dll", "_rotl64")
+Interceptor.attach(_rotl64, {onLeave: function (args) {send("_rotl64");}});
+
+var _rotr = Module.findExportByName("ucrtbase_enclave.dll", "_rotr")
+Interceptor.attach(_rotr, {onLeave: function (args) {send("_rotr");}});
+
+var _rotr64 = Module.findExportByName("ucrtbase_enclave.dll", "_rotr64")
+Interceptor.attach(_rotr64, {onLeave: function (args) {send("_rotr64");}});
+
+var _scalb = Module.findExportByName("ucrtbase_enclave.dll", "_scalb")
+Interceptor.attach(_scalb, {onLeave: function (args) {send("_scalb");}});
+
+var _scalbf = Module.findExportByName("ucrtbase_enclave.dll", "_scalbf")
+Interceptor.attach(_scalbf, {onLeave: function (args) {send("_scalbf");}});
+
+var _seh_filter_dll = Module.findExportByName("ucrtbase_enclave.dll", "_seh_filter_dll")
+Interceptor.attach(_seh_filter_dll, {onLeave: function (args) {send("_seh_filter_dll");}});
+
+var _seh_filter_exe = Module.findExportByName("ucrtbase_enclave.dll", "_seh_filter_exe")
+Interceptor.attach(_seh_filter_exe, {onLeave: function (args) {send("_seh_filter_exe");}});
+
+var _set_FMA3_enable = Module.findExportByName("ucrtbase_enclave.dll", "_set_FMA3_enable")
+Interceptor.attach(_set_FMA3_enable, {onLeave: function (args) {send("_set_FMA3_enable");}});
+
+var _set_abort_behavior = Module.findExportByName("ucrtbase_enclave.dll", "_set_abort_behavior")
+Interceptor.attach(_set_abort_behavior, {onLeave: function (args) {send("_set_abort_behavior");}});
+
+var _set_controlfp = Module.findExportByName("ucrtbase_enclave.dll", "_set_controlfp")
+Interceptor.attach(_set_controlfp, {onLeave: function (args) {send("_set_controlfp");}});
+
+var _set_doserrno = Module.findExportByName("ucrtbase_enclave.dll", "_set_doserrno")
+Interceptor.attach(_set_doserrno, {onLeave: function (args) {send("_set_doserrno");}});
+
+var _set_errno = Module.findExportByName("ucrtbase_enclave.dll", "_set_errno")
+Interceptor.attach(_set_errno, {onLeave: function (args) {send("_set_errno");}});
+
+var _set_error_mode = Module.findExportByName("ucrtbase_enclave.dll", "_set_error_mode")
+Interceptor.attach(_set_error_mode, {onLeave: function (args) {send("_set_error_mode");}});
+
+var _set_invalid_parameter_handler = Module.findExportByName("ucrtbase_enclave.dll", "_set_invalid_parameter_handler")
+Interceptor.attach(_set_invalid_parameter_handler, {onLeave: function (args) {send("_set_invalid_parameter_handler");}});
+
+var _set_new_handler = Module.findExportByName("ucrtbase_enclave.dll", "_set_new_handler")
+Interceptor.attach(_set_new_handler, {onLeave: function (args) {send("_set_new_handler");}});
+
+var _set_new_mode = Module.findExportByName("ucrtbase_enclave.dll", "_set_new_mode")
+Interceptor.attach(_set_new_mode, {onLeave: function (args) {send("_set_new_mode");}});
+
+var _set_purecall_handler = Module.findExportByName("ucrtbase_enclave.dll", "_set_purecall_handler")
+Interceptor.attach(_set_purecall_handler, {onLeave: function (args) {send("_set_purecall_handler");}});
+
+var _set_se_translator = Module.findExportByName("ucrtbase_enclave.dll", "_set_se_translator")
+Interceptor.attach(_set_se_translator, {onLeave: function (args) {send("_set_se_translator");}});
+
+var _set_thread_local_invalid_parameter_handler = Module.findExportByName("ucrtbase_enclave.dll", "_set_thread_local_invalid_parameter_handler")
+Interceptor.attach(_set_thread_local_invalid_parameter_handler, {onLeave: function (args) {send("_set_thread_local_invalid_parameter_handler");}});
+
+var _statusfp = Module.findExportByName("ucrtbase_enclave.dll", "_statusfp")
+Interceptor.attach(_statusfp, {onLeave: function (args) {send("_statusfp");}});
+
+var _strdup = Module.findExportByName("ucrtbase_enclave.dll", "_strdup")
+Interceptor.attach(_strdup, {onLeave: function (args) {send("_strdup");}});
+
+var _strerror = Module.findExportByName("ucrtbase_enclave.dll", "_strerror")
+Interceptor.attach(_strerror, {onLeave: function (args) {send("_strerror");}});
+
+var _strerror_s = Module.findExportByName("ucrtbase_enclave.dll", "_strerror_s")
+Interceptor.attach(_strerror_s, {onLeave: function (args) {send("_strerror_s");}});
+
+var _stricmp = Module.findExportByName("ucrtbase_enclave.dll", "_stricmp")
+Interceptor.attach(_stricmp, {onLeave: function (args) {send("_stricmp");}});
+
+var _stricmp_l = Module.findExportByName("ucrtbase_enclave.dll", "_stricmp_l")
+Interceptor.attach(_stricmp_l, {onLeave: function (args) {send("_stricmp_l");}});
+
+var _strlwr = Module.findExportByName("ucrtbase_enclave.dll", "_strlwr")
+Interceptor.attach(_strlwr, {onLeave: function (args) {send("_strlwr");}});
+
+var _strlwr_l = Module.findExportByName("ucrtbase_enclave.dll", "_strlwr_l")
+Interceptor.attach(_strlwr_l, {onLeave: function (args) {send("_strlwr_l");}});
+
+var _strlwr_s = Module.findExportByName("ucrtbase_enclave.dll", "_strlwr_s")
+Interceptor.attach(_strlwr_s, {onLeave: function (args) {send("_strlwr_s");}});
+
+var _strlwr_s_l = Module.findExportByName("ucrtbase_enclave.dll", "_strlwr_s_l")
+Interceptor.attach(_strlwr_s_l, {onLeave: function (args) {send("_strlwr_s_l");}});
+
+var _strnicmp = Module.findExportByName("ucrtbase_enclave.dll", "_strnicmp")
+Interceptor.attach(_strnicmp, {onLeave: function (args) {send("_strnicmp");}});
+
+var _strnicmp_l = Module.findExportByName("ucrtbase_enclave.dll", "_strnicmp_l")
+Interceptor.attach(_strnicmp_l, {onLeave: function (args) {send("_strnicmp_l");}});
+
+var _strnset = Module.findExportByName("ucrtbase_enclave.dll", "_strnset")
+Interceptor.attach(_strnset, {onLeave: function (args) {send("_strnset");}});
+
+var _strnset_s = Module.findExportByName("ucrtbase_enclave.dll", "_strnset_s")
+Interceptor.attach(_strnset_s, {onLeave: function (args) {send("_strnset_s");}});
+
+var _strrev = Module.findExportByName("ucrtbase_enclave.dll", "_strrev")
+Interceptor.attach(_strrev, {onLeave: function (args) {send("_strrev");}});
+
+var _strset = Module.findExportByName("ucrtbase_enclave.dll", "_strset")
+Interceptor.attach(_strset, {onLeave: function (args) {send("_strset");}});
+
+var _strset_s = Module.findExportByName("ucrtbase_enclave.dll", "_strset_s")
+Interceptor.attach(_strset_s, {onLeave: function (args) {send("_strset_s");}});
+
+var _strtod_l = Module.findExportByName("ucrtbase_enclave.dll", "_strtod_l")
+Interceptor.attach(_strtod_l, {onLeave: function (args) {send("_strtod_l");}});
+
+var _strtof_l = Module.findExportByName("ucrtbase_enclave.dll", "_strtof_l")
+Interceptor.attach(_strtof_l, {onLeave: function (args) {send("_strtof_l");}});
+
+var _strtoi64 = Module.findExportByName("ucrtbase_enclave.dll", "_strtoi64")
+Interceptor.attach(_strtoi64, {onLeave: function (args) {send("_strtoi64");}});
+
+var _strtoi64_l = Module.findExportByName("ucrtbase_enclave.dll", "_strtoi64_l")
+Interceptor.attach(_strtoi64_l, {onLeave: function (args) {send("_strtoi64_l");}});
+
+var _strtoimax_l = Module.findExportByName("ucrtbase_enclave.dll", "_strtoimax_l")
+Interceptor.attach(_strtoimax_l, {onLeave: function (args) {send("_strtoimax_l");}});
+
+var _strtol_l = Module.findExportByName("ucrtbase_enclave.dll", "_strtol_l")
+Interceptor.attach(_strtol_l, {onLeave: function (args) {send("_strtol_l");}});
+
+var _strtold_l = Module.findExportByName("ucrtbase_enclave.dll", "_strtold_l")
+Interceptor.attach(_strtold_l, {onLeave: function (args) {send("_strtold_l");}});
+
+var _strtoll_l = Module.findExportByName("ucrtbase_enclave.dll", "_strtoll_l")
+Interceptor.attach(_strtoll_l, {onLeave: function (args) {send("_strtoll_l");}});
+
+var _strtoui64 = Module.findExportByName("ucrtbase_enclave.dll", "_strtoui64")
+Interceptor.attach(_strtoui64, {onLeave: function (args) {send("_strtoui64");}});
+
+var _strtoui64_l = Module.findExportByName("ucrtbase_enclave.dll", "_strtoui64_l")
+Interceptor.attach(_strtoui64_l, {onLeave: function (args) {send("_strtoui64_l");}});
+
+var _strtoul_l = Module.findExportByName("ucrtbase_enclave.dll", "_strtoul_l")
+Interceptor.attach(_strtoul_l, {onLeave: function (args) {send("_strtoul_l");}});
+
+var _strtoull_l = Module.findExportByName("ucrtbase_enclave.dll", "_strtoull_l")
+Interceptor.attach(_strtoull_l, {onLeave: function (args) {send("_strtoull_l");}});
+
+var _strtoumax_l = Module.findExportByName("ucrtbase_enclave.dll", "_strtoumax_l")
+Interceptor.attach(_strtoumax_l, {onLeave: function (args) {send("_strtoumax_l");}});
+
+var _strupr = Module.findExportByName("ucrtbase_enclave.dll", "_strupr")
+Interceptor.attach(_strupr, {onLeave: function (args) {send("_strupr");}});
+
+var _strupr_l = Module.findExportByName("ucrtbase_enclave.dll", "_strupr_l")
+Interceptor.attach(_strupr_l, {onLeave: function (args) {send("_strupr_l");}});
+
+var _strupr_s = Module.findExportByName("ucrtbase_enclave.dll", "_strupr_s")
+Interceptor.attach(_strupr_s, {onLeave: function (args) {send("_strupr_s");}});
+
+var _strupr_s_l = Module.findExportByName("ucrtbase_enclave.dll", "_strupr_s_l")
+Interceptor.attach(_strupr_s_l, {onLeave: function (args) {send("_strupr_s_l");}});
+
+var _strxfrm_l = Module.findExportByName("ucrtbase_enclave.dll", "_strxfrm_l")
+Interceptor.attach(_strxfrm_l, {onLeave: function (args) {send("_strxfrm_l");}});
+
+var _swab = Module.findExportByName("ucrtbase_enclave.dll", "_swab")
+Interceptor.attach(_swab, {onLeave: function (args) {send("_swab");}});
+
+var _tolower = Module.findExportByName("ucrtbase_enclave.dll", "_tolower")
+Interceptor.attach(_tolower, {onLeave: function (args) {send("_tolower");}});
+
+var _tolower_l = Module.findExportByName("ucrtbase_enclave.dll", "_tolower_l")
+Interceptor.attach(_tolower_l, {onLeave: function (args) {send("_tolower_l");}});
+
+var _toupper = Module.findExportByName("ucrtbase_enclave.dll", "_toupper")
+Interceptor.attach(_toupper, {onLeave: function (args) {send("_toupper");}});
+
+var _toupper_l = Module.findExportByName("ucrtbase_enclave.dll", "_toupper_l")
+Interceptor.attach(_toupper_l, {onLeave: function (args) {send("_toupper_l");}});
+
+var _towlower_l = Module.findExportByName("ucrtbase_enclave.dll", "_towlower_l")
+Interceptor.attach(_towlower_l, {onLeave: function (args) {send("_towlower_l");}});
+
+var _towupper_l = Module.findExportByName("ucrtbase_enclave.dll", "_towupper_l")
+Interceptor.attach(_towupper_l, {onLeave: function (args) {send("_towupper_l");}});
+
+var _ui64toa = Module.findExportByName("ucrtbase_enclave.dll", "_ui64toa")
+Interceptor.attach(_ui64toa, {onLeave: function (args) {send("_ui64toa");}});
+
+var _ui64toa_s = Module.findExportByName("ucrtbase_enclave.dll", "_ui64toa_s")
+Interceptor.attach(_ui64toa_s, {onLeave: function (args) {send("_ui64toa_s");}});
+
+var _ui64tow = Module.findExportByName("ucrtbase_enclave.dll", "_ui64tow")
+Interceptor.attach(_ui64tow, {onLeave: function (args) {send("_ui64tow");}});
+
+var _ui64tow_s = Module.findExportByName("ucrtbase_enclave.dll", "_ui64tow_s")
+Interceptor.attach(_ui64tow_s, {onLeave: function (args) {send("_ui64tow_s");}});
+
+var _ultoa = Module.findExportByName("ucrtbase_enclave.dll", "_ultoa")
+Interceptor.attach(_ultoa, {onLeave: function (args) {send("_ultoa");}});
+
+var _ultoa_s = Module.findExportByName("ucrtbase_enclave.dll", "_ultoa_s")
+Interceptor.attach(_ultoa_s, {onLeave: function (args) {send("_ultoa_s");}});
+
+var _ultow = Module.findExportByName("ucrtbase_enclave.dll", "_ultow")
+Interceptor.attach(_ultow, {onLeave: function (args) {send("_ultow");}});
+
+var _ultow_s = Module.findExportByName("ucrtbase_enclave.dll", "_ultow_s")
+Interceptor.attach(_ultow_s, {onLeave: function (args) {send("_ultow_s");}});
+
+var _unlock_locales = Module.findExportByName("ucrtbase_enclave.dll", "_unlock_locales")
+Interceptor.attach(_unlock_locales, {onLeave: function (args) {send("_unlock_locales");}});
+
+var _wassert = Module.findExportByName("ucrtbase_enclave.dll", "_wassert")
+Interceptor.attach(_wassert, {onLeave: function (args) {send("_wassert");}});
+
+var _wcsdup = Module.findExportByName("ucrtbase_enclave.dll", "_wcsdup")
+Interceptor.attach(_wcsdup, {onLeave: function (args) {send("_wcsdup");}});
+
+var _wcserror = Module.findExportByName("ucrtbase_enclave.dll", "_wcserror")
+Interceptor.attach(_wcserror, {onLeave: function (args) {send("_wcserror");}});
+
+var _wcserror_s = Module.findExportByName("ucrtbase_enclave.dll", "_wcserror_s")
+Interceptor.attach(_wcserror_s, {onLeave: function (args) {send("_wcserror_s");}});
+
+var _wcsicmp = Module.findExportByName("ucrtbase_enclave.dll", "_wcsicmp")
+Interceptor.attach(_wcsicmp, {onLeave: function (args) {send("_wcsicmp");}});
+
+var _wcsicmp_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcsicmp_l")
+Interceptor.attach(_wcsicmp_l, {onLeave: function (args) {send("_wcsicmp_l");}});
+
+var _wcslwr = Module.findExportByName("ucrtbase_enclave.dll", "_wcslwr")
+Interceptor.attach(_wcslwr, {onLeave: function (args) {send("_wcslwr");}});
+
+var _wcslwr_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcslwr_l")
+Interceptor.attach(_wcslwr_l, {onLeave: function (args) {send("_wcslwr_l");}});
+
+var _wcslwr_s = Module.findExportByName("ucrtbase_enclave.dll", "_wcslwr_s")
+Interceptor.attach(_wcslwr_s, {onLeave: function (args) {send("_wcslwr_s");}});
+
+var _wcslwr_s_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcslwr_s_l")
+Interceptor.attach(_wcslwr_s_l, {onLeave: function (args) {send("_wcslwr_s_l");}});
+
+var _wcsnicmp = Module.findExportByName("ucrtbase_enclave.dll", "_wcsnicmp")
+Interceptor.attach(_wcsnicmp, {onLeave: function (args) {send("_wcsnicmp");}});
+
+var _wcsnicmp_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcsnicmp_l")
+Interceptor.attach(_wcsnicmp_l, {onLeave: function (args) {send("_wcsnicmp_l");}});
+
+var _wcsnset = Module.findExportByName("ucrtbase_enclave.dll", "_wcsnset")
+Interceptor.attach(_wcsnset, {onLeave: function (args) {send("_wcsnset");}});
+
+var _wcsnset_s = Module.findExportByName("ucrtbase_enclave.dll", "_wcsnset_s")
+Interceptor.attach(_wcsnset_s, {onLeave: function (args) {send("_wcsnset_s");}});
+
+var _wcsrev = Module.findExportByName("ucrtbase_enclave.dll", "_wcsrev")
+Interceptor.attach(_wcsrev, {onLeave: function (args) {send("_wcsrev");}});
+
+var _wcsset = Module.findExportByName("ucrtbase_enclave.dll", "_wcsset")
+Interceptor.attach(_wcsset, {onLeave: function (args) {send("_wcsset");}});
+
+var _wcsset_s = Module.findExportByName("ucrtbase_enclave.dll", "_wcsset_s")
+Interceptor.attach(_wcsset_s, {onLeave: function (args) {send("_wcsset_s");}});
+
+var _wcstod_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstod_l")
+Interceptor.attach(_wcstod_l, {onLeave: function (args) {send("_wcstod_l");}});
+
+var _wcstof_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstof_l")
+Interceptor.attach(_wcstof_l, {onLeave: function (args) {send("_wcstof_l");}});
+
+var _wcstoi64 = Module.findExportByName("ucrtbase_enclave.dll", "_wcstoi64")
+Interceptor.attach(_wcstoi64, {onLeave: function (args) {send("_wcstoi64");}});
+
+var _wcstoi64_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstoi64_l")
+Interceptor.attach(_wcstoi64_l, {onLeave: function (args) {send("_wcstoi64_l");}});
+
+var _wcstoimax_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstoimax_l")
+Interceptor.attach(_wcstoimax_l, {onLeave: function (args) {send("_wcstoimax_l");}});
+
+var _wcstol_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstol_l")
+Interceptor.attach(_wcstol_l, {onLeave: function (args) {send("_wcstol_l");}});
+
+var _wcstold_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstold_l")
+Interceptor.attach(_wcstold_l, {onLeave: function (args) {send("_wcstold_l");}});
+
+var _wcstoll_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstoll_l")
+Interceptor.attach(_wcstoll_l, {onLeave: function (args) {send("_wcstoll_l");}});
+
+var _wcstombs_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstombs_l")
+Interceptor.attach(_wcstombs_l, {onLeave: function (args) {send("_wcstombs_l");}});
+
+var _wcstombs_s_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstombs_s_l")
+Interceptor.attach(_wcstombs_s_l, {onLeave: function (args) {send("_wcstombs_s_l");}});
+
+var _wcstoui64 = Module.findExportByName("ucrtbase_enclave.dll", "_wcstoui64")
+Interceptor.attach(_wcstoui64, {onLeave: function (args) {send("_wcstoui64");}});
+
+var _wcstoui64_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstoui64_l")
+Interceptor.attach(_wcstoui64_l, {onLeave: function (args) {send("_wcstoui64_l");}});
+
+var _wcstoul_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstoul_l")
+Interceptor.attach(_wcstoul_l, {onLeave: function (args) {send("_wcstoul_l");}});
+
+var _wcstoull_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstoull_l")
+Interceptor.attach(_wcstoull_l, {onLeave: function (args) {send("_wcstoull_l");}});
+
+var _wcstoumax_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcstoumax_l")
+Interceptor.attach(_wcstoumax_l, {onLeave: function (args) {send("_wcstoumax_l");}});
+
+var _wcsupr = Module.findExportByName("ucrtbase_enclave.dll", "_wcsupr")
+Interceptor.attach(_wcsupr, {onLeave: function (args) {send("_wcsupr");}});
+
+var _wcsupr_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcsupr_l")
+Interceptor.attach(_wcsupr_l, {onLeave: function (args) {send("_wcsupr_l");}});
+
+var _wcsupr_s = Module.findExportByName("ucrtbase_enclave.dll", "_wcsupr_s")
+Interceptor.attach(_wcsupr_s, {onLeave: function (args) {send("_wcsupr_s");}});
+
+var _wcsupr_s_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcsupr_s_l")
+Interceptor.attach(_wcsupr_s_l, {onLeave: function (args) {send("_wcsupr_s_l");}});
+
+var _wcsxfrm_l = Module.findExportByName("ucrtbase_enclave.dll", "_wcsxfrm_l")
+Interceptor.attach(_wcsxfrm_l, {onLeave: function (args) {send("_wcsxfrm_l");}});
+
+var _wctomb_l = Module.findExportByName("ucrtbase_enclave.dll", "_wctomb_l")
+Interceptor.attach(_wctomb_l, {onLeave: function (args) {send("_wctomb_l");}});
+
+var _wctomb_s_l = Module.findExportByName("ucrtbase_enclave.dll", "_wctomb_s_l")
+Interceptor.attach(_wctomb_s_l, {onLeave: function (args) {send("_wctomb_s_l");}});
+
+var _wctype = Module.findExportByName("ucrtbase_enclave.dll", "_wctype")
+Interceptor.attach(_wctype, {onLeave: function (args) {send("_wctype");}});
+
+var _wtof = Module.findExportByName("ucrtbase_enclave.dll", "_wtof")
+Interceptor.attach(_wtof, {onLeave: function (args) {send("_wtof");}});
+
+var _wtof_l = Module.findExportByName("ucrtbase_enclave.dll", "_wtof_l")
+Interceptor.attach(_wtof_l, {onLeave: function (args) {send("_wtof_l");}});
+
+var _wtoi = Module.findExportByName("ucrtbase_enclave.dll", "_wtoi")
+Interceptor.attach(_wtoi, {onLeave: function (args) {send("_wtoi");}});
+
+var _wtoi64 = Module.findExportByName("ucrtbase_enclave.dll", "_wtoi64")
+Interceptor.attach(_wtoi64, {onLeave: function (args) {send("_wtoi64");}});
+
+var _wtoi64_l = Module.findExportByName("ucrtbase_enclave.dll", "_wtoi64_l")
+Interceptor.attach(_wtoi64_l, {onLeave: function (args) {send("_wtoi64_l");}});
+
+var _wtoi_l = Module.findExportByName("ucrtbase_enclave.dll", "_wtoi_l")
+Interceptor.attach(_wtoi_l, {onLeave: function (args) {send("_wtoi_l");}});
+
+var _wtol = Module.findExportByName("ucrtbase_enclave.dll", "_wtol")
+Interceptor.attach(_wtol, {onLeave: function (args) {send("_wtol");}});
+
+var _wtol_l = Module.findExportByName("ucrtbase_enclave.dll", "_wtol_l")
+Interceptor.attach(_wtol_l, {onLeave: function (args) {send("_wtol_l");}});
+
+var _wtoll = Module.findExportByName("ucrtbase_enclave.dll", "_wtoll")
+Interceptor.attach(_wtoll, {onLeave: function (args) {send("_wtoll");}});
+
+var _wtoll_l = Module.findExportByName("ucrtbase_enclave.dll", "_wtoll_l")
+Interceptor.attach(_wtoll_l, {onLeave: function (args) {send("_wtoll_l");}});
+
+var _y0 = Module.findExportByName("ucrtbase_enclave.dll", "_y0")
+Interceptor.attach(_y0, {onLeave: function (args) {send("_y0");}});
+
+var _y1 = Module.findExportByName("ucrtbase_enclave.dll", "_y1")
+Interceptor.attach(_y1, {onLeave: function (args) {send("_y1");}});
+
+var _yn = Module.findExportByName("ucrtbase_enclave.dll", "_yn")
+Interceptor.attach(_yn, {onLeave: function (args) {send("_yn");}});
+
+var abort = Module.findExportByName("ucrtbase_enclave.dll", "abort")
+Interceptor.attach(abort, {onLeave: function (args) {send("abort");}});
+
+var abs = Module.findExportByName("ucrtbase_enclave.dll", "abs")
+Interceptor.attach(abs, {onLeave: function (args) {send("abs");}});
+
+var acos = Module.findExportByName("ucrtbase_enclave.dll", "acos")
+Interceptor.attach(acos, {onLeave: function (args) {send("acos");}});
+
+var acosf = Module.findExportByName("ucrtbase_enclave.dll", "acosf")
+Interceptor.attach(acosf, {onLeave: function (args) {send("acosf");}});
+
+var acosh = Module.findExportByName("ucrtbase_enclave.dll", "acosh")
+Interceptor.attach(acosh, {onLeave: function (args) {send("acosh");}});
+
+var acoshf = Module.findExportByName("ucrtbase_enclave.dll", "acoshf")
+Interceptor.attach(acoshf, {onLeave: function (args) {send("acoshf");}});
+
+var acoshl = Module.findExportByName("ucrtbase_enclave.dll", "acoshl")
+Interceptor.attach(acoshl, {onLeave: function (args) {send("acoshl");}});
+
+var asin = Module.findExportByName("ucrtbase_enclave.dll", "asin")
+Interceptor.attach(asin, {onLeave: function (args) {send("asin");}});
+
+var asinf = Module.findExportByName("ucrtbase_enclave.dll", "asinf")
+Interceptor.attach(asinf, {onLeave: function (args) {send("asinf");}});
+
+var asinh = Module.findExportByName("ucrtbase_enclave.dll", "asinh")
+Interceptor.attach(asinh, {onLeave: function (args) {send("asinh");}});
+
+var asinhf = Module.findExportByName("ucrtbase_enclave.dll", "asinhf")
+Interceptor.attach(asinhf, {onLeave: function (args) {send("asinhf");}});
+
+var asinhl = Module.findExportByName("ucrtbase_enclave.dll", "asinhl")
+Interceptor.attach(asinhl, {onLeave: function (args) {send("asinhl");}});
+
+var atan = Module.findExportByName("ucrtbase_enclave.dll", "atan")
+Interceptor.attach(atan, {onLeave: function (args) {send("atan");}});
+
+var atan2 = Module.findExportByName("ucrtbase_enclave.dll", "atan2")
+Interceptor.attach(atan2, {onLeave: function (args) {send("atan2");}});
+
+var atan2f = Module.findExportByName("ucrtbase_enclave.dll", "atan2f")
+Interceptor.attach(atan2f, {onLeave: function (args) {send("atan2f");}});
+
+var atanf = Module.findExportByName("ucrtbase_enclave.dll", "atanf")
+Interceptor.attach(atanf, {onLeave: function (args) {send("atanf");}});
+
+var atanh = Module.findExportByName("ucrtbase_enclave.dll", "atanh")
+Interceptor.attach(atanh, {onLeave: function (args) {send("atanh");}});
+
+var atanhf = Module.findExportByName("ucrtbase_enclave.dll", "atanhf")
+Interceptor.attach(atanhf, {onLeave: function (args) {send("atanhf");}});
+
+var atanhl = Module.findExportByName("ucrtbase_enclave.dll", "atanhl")
+Interceptor.attach(atanhl, {onLeave: function (args) {send("atanhl");}});
+
+var atof = Module.findExportByName("ucrtbase_enclave.dll", "atof")
+Interceptor.attach(atof, {onLeave: function (args) {send("atof");}});
+
+var atoi = Module.findExportByName("ucrtbase_enclave.dll", "atoi")
+Interceptor.attach(atoi, {onLeave: function (args) {send("atoi");}});
+
+var atol = Module.findExportByName("ucrtbase_enclave.dll", "atol")
+Interceptor.attach(atol, {onLeave: function (args) {send("atol");}});
+
+var atoll = Module.findExportByName("ucrtbase_enclave.dll", "atoll")
+Interceptor.attach(atoll, {onLeave: function (args) {send("atoll");}});
+
+var bsearch = Module.findExportByName("ucrtbase_enclave.dll", "bsearch")
+Interceptor.attach(bsearch, {onLeave: function (args) {send("bsearch");}});
+
+var bsearch_s = Module.findExportByName("ucrtbase_enclave.dll", "bsearch_s")
+Interceptor.attach(bsearch_s, {onLeave: function (args) {send("bsearch_s");}});
+
+var btowc = Module.findExportByName("ucrtbase_enclave.dll", "btowc")
+Interceptor.attach(btowc, {onLeave: function (args) {send("btowc");}});
+
+var c16rtomb = Module.findExportByName("ucrtbase_enclave.dll", "c16rtomb")
+Interceptor.attach(c16rtomb, {onLeave: function (args) {send("c16rtomb");}});
+
+var c32rtomb = Module.findExportByName("ucrtbase_enclave.dll", "c32rtomb")
+Interceptor.attach(c32rtomb, {onLeave: function (args) {send("c32rtomb");}});
+
+var cabs = Module.findExportByName("ucrtbase_enclave.dll", "cabs")
+Interceptor.attach(cabs, {onLeave: function (args) {send("cabs");}});
+
+var cabsf = Module.findExportByName("ucrtbase_enclave.dll", "cabsf")
+Interceptor.attach(cabsf, {onLeave: function (args) {send("cabsf");}});
+
+var cabsl = Module.findExportByName("ucrtbase_enclave.dll", "cabsl")
+Interceptor.attach(cabsl, {onLeave: function (args) {send("cabsl");}});
+
+var cacos = Module.findExportByName("ucrtbase_enclave.dll", "cacos")
+Interceptor.attach(cacos, {onLeave: function (args) {send("cacos");}});
+
+var cacosf = Module.findExportByName("ucrtbase_enclave.dll", "cacosf")
+Interceptor.attach(cacosf, {onLeave: function (args) {send("cacosf");}});
+
+var cacosh = Module.findExportByName("ucrtbase_enclave.dll", "cacosh")
+Interceptor.attach(cacosh, {onLeave: function (args) {send("cacosh");}});
+
+var cacoshf = Module.findExportByName("ucrtbase_enclave.dll", "cacoshf")
+Interceptor.attach(cacoshf, {onLeave: function (args) {send("cacoshf");}});
+
+var cacoshl = Module.findExportByName("ucrtbase_enclave.dll", "cacoshl")
+Interceptor.attach(cacoshl, {onLeave: function (args) {send("cacoshl");}});
+
+var cacosl = Module.findExportByName("ucrtbase_enclave.dll", "cacosl")
+Interceptor.attach(cacosl, {onLeave: function (args) {send("cacosl");}});
+
+var calloc = Module.findExportByName("ucrtbase_enclave.dll", "calloc")
+Interceptor.attach(calloc, {onLeave: function (args) {send("calloc");}});
+
+var carg = Module.findExportByName("ucrtbase_enclave.dll", "carg")
+Interceptor.attach(carg, {onLeave: function (args) {send("carg");}});
+
+var cargf = Module.findExportByName("ucrtbase_enclave.dll", "cargf")
+Interceptor.attach(cargf, {onLeave: function (args) {send("cargf");}});
+
+var cargl = Module.findExportByName("ucrtbase_enclave.dll", "cargl")
+Interceptor.attach(cargl, {onLeave: function (args) {send("cargl");}});
+
+var casin = Module.findExportByName("ucrtbase_enclave.dll", "casin")
+Interceptor.attach(casin, {onLeave: function (args) {send("casin");}});
+
+var casinf = Module.findExportByName("ucrtbase_enclave.dll", "casinf")
+Interceptor.attach(casinf, {onLeave: function (args) {send("casinf");}});
+
+var casinh = Module.findExportByName("ucrtbase_enclave.dll", "casinh")
+Interceptor.attach(casinh, {onLeave: function (args) {send("casinh");}});
+
+var casinhf = Module.findExportByName("ucrtbase_enclave.dll", "casinhf")
+Interceptor.attach(casinhf, {onLeave: function (args) {send("casinhf");}});
+
+var casinhl = Module.findExportByName("ucrtbase_enclave.dll", "casinhl")
+Interceptor.attach(casinhl, {onLeave: function (args) {send("casinhl");}});
+
+var casinl = Module.findExportByName("ucrtbase_enclave.dll", "casinl")
+Interceptor.attach(casinl, {onLeave: function (args) {send("casinl");}});
+
+var catan = Module.findExportByName("ucrtbase_enclave.dll", "catan")
+Interceptor.attach(catan, {onLeave: function (args) {send("catan");}});
+
+var catanf = Module.findExportByName("ucrtbase_enclave.dll", "catanf")
+Interceptor.attach(catanf, {onLeave: function (args) {send("catanf");}});
+
+var catanh = Module.findExportByName("ucrtbase_enclave.dll", "catanh")
+Interceptor.attach(catanh, {onLeave: function (args) {send("catanh");}});
+
+var catanhf = Module.findExportByName("ucrtbase_enclave.dll", "catanhf")
+Interceptor.attach(catanhf, {onLeave: function (args) {send("catanhf");}});
+
+var catanhl = Module.findExportByName("ucrtbase_enclave.dll", "catanhl")
+Interceptor.attach(catanhl, {onLeave: function (args) {send("catanhl");}});
+
+var catanl = Module.findExportByName("ucrtbase_enclave.dll", "catanl")
+Interceptor.attach(catanl, {onLeave: function (args) {send("catanl");}});
+
+var cbrt = Module.findExportByName("ucrtbase_enclave.dll", "cbrt")
+Interceptor.attach(cbrt, {onLeave: function (args) {send("cbrt");}});
+
+var cbrtf = Module.findExportByName("ucrtbase_enclave.dll", "cbrtf")
+Interceptor.attach(cbrtf, {onLeave: function (args) {send("cbrtf");}});
+
+var cbrtl = Module.findExportByName("ucrtbase_enclave.dll", "cbrtl")
+Interceptor.attach(cbrtl, {onLeave: function (args) {send("cbrtl");}});
+
+var ccos = Module.findExportByName("ucrtbase_enclave.dll", "ccos")
+Interceptor.attach(ccos, {onLeave: function (args) {send("ccos");}});
+
+var ccosf = Module.findExportByName("ucrtbase_enclave.dll", "ccosf")
+Interceptor.attach(ccosf, {onLeave: function (args) {send("ccosf");}});
+
+var ccosh = Module.findExportByName("ucrtbase_enclave.dll", "ccosh")
+Interceptor.attach(ccosh, {onLeave: function (args) {send("ccosh");}});
+
+var ccoshf = Module.findExportByName("ucrtbase_enclave.dll", "ccoshf")
+Interceptor.attach(ccoshf, {onLeave: function (args) {send("ccoshf");}});
+
+var ccoshl = Module.findExportByName("ucrtbase_enclave.dll", "ccoshl")
+Interceptor.attach(ccoshl, {onLeave: function (args) {send("ccoshl");}});
+
+var ccosl = Module.findExportByName("ucrtbase_enclave.dll", "ccosl")
+Interceptor.attach(ccosl, {onLeave: function (args) {send("ccosl");}});
+
+var ceil = Module.findExportByName("ucrtbase_enclave.dll", "ceil")
+Interceptor.attach(ceil, {onLeave: function (args) {send("ceil");}});
+
+var ceilf = Module.findExportByName("ucrtbase_enclave.dll", "ceilf")
+Interceptor.attach(ceilf, {onLeave: function (args) {send("ceilf");}});
+
+var cexp = Module.findExportByName("ucrtbase_enclave.dll", "cexp")
+Interceptor.attach(cexp, {onLeave: function (args) {send("cexp");}});
+
+var cexpf = Module.findExportByName("ucrtbase_enclave.dll", "cexpf")
+Interceptor.attach(cexpf, {onLeave: function (args) {send("cexpf");}});
+
+var cexpl = Module.findExportByName("ucrtbase_enclave.dll", "cexpl")
+Interceptor.attach(cexpl, {onLeave: function (args) {send("cexpl");}});
+
+var cimag = Module.findExportByName("ucrtbase_enclave.dll", "cimag")
+Interceptor.attach(cimag, {onLeave: function (args) {send("cimag");}});
+
+var cimagf = Module.findExportByName("ucrtbase_enclave.dll", "cimagf")
+Interceptor.attach(cimagf, {onLeave: function (args) {send("cimagf");}});
+
+var cimagl = Module.findExportByName("ucrtbase_enclave.dll", "cimagl")
+Interceptor.attach(cimagl, {onLeave: function (args) {send("cimagl");}});
+
+var clog = Module.findExportByName("ucrtbase_enclave.dll", "clog")
+Interceptor.attach(clog, {onLeave: function (args) {send("clog");}});
+
+var clog10 = Module.findExportByName("ucrtbase_enclave.dll", "clog10")
+Interceptor.attach(clog10, {onLeave: function (args) {send("clog10");}});
+
+var clog10f = Module.findExportByName("ucrtbase_enclave.dll", "clog10f")
+Interceptor.attach(clog10f, {onLeave: function (args) {send("clog10f");}});
+
+var clog10l = Module.findExportByName("ucrtbase_enclave.dll", "clog10l")
+Interceptor.attach(clog10l, {onLeave: function (args) {send("clog10l");}});
+
+var clogf = Module.findExportByName("ucrtbase_enclave.dll", "clogf")
+Interceptor.attach(clogf, {onLeave: function (args) {send("clogf");}});
+
+var clogl = Module.findExportByName("ucrtbase_enclave.dll", "clogl")
+Interceptor.attach(clogl, {onLeave: function (args) {send("clogl");}});
+
+var conj = Module.findExportByName("ucrtbase_enclave.dll", "conj")
+Interceptor.attach(conj, {onLeave: function (args) {send("conj");}});
+
+var conjf = Module.findExportByName("ucrtbase_enclave.dll", "conjf")
+Interceptor.attach(conjf, {onLeave: function (args) {send("conjf");}});
+
+var conjl = Module.findExportByName("ucrtbase_enclave.dll", "conjl")
+Interceptor.attach(conjl, {onLeave: function (args) {send("conjl");}});
+
+var copysign = Module.findExportByName("ucrtbase_enclave.dll", "copysign")
+Interceptor.attach(copysign, {onLeave: function (args) {send("copysign");}});
+
+var copysignf = Module.findExportByName("ucrtbase_enclave.dll", "copysignf")
+Interceptor.attach(copysignf, {onLeave: function (args) {send("copysignf");}});
+
+var copysignl = Module.findExportByName("ucrtbase_enclave.dll", "copysignl")
+Interceptor.attach(copysignl, {onLeave: function (args) {send("copysignl");}});
+
+var cos = Module.findExportByName("ucrtbase_enclave.dll", "cos")
+Interceptor.attach(cos, {onLeave: function (args) {send("cos");}});
+
+var cosf = Module.findExportByName("ucrtbase_enclave.dll", "cosf")
+Interceptor.attach(cosf, {onLeave: function (args) {send("cosf");}});
+
+var cosh = Module.findExportByName("ucrtbase_enclave.dll", "cosh")
+Interceptor.attach(cosh, {onLeave: function (args) {send("cosh");}});
+
+var coshf = Module.findExportByName("ucrtbase_enclave.dll", "coshf")
+Interceptor.attach(coshf, {onLeave: function (args) {send("coshf");}});
+
+var cpow = Module.findExportByName("ucrtbase_enclave.dll", "cpow")
+Interceptor.attach(cpow, {onLeave: function (args) {send("cpow");}});
+
+var cpowf = Module.findExportByName("ucrtbase_enclave.dll", "cpowf")
+Interceptor.attach(cpowf, {onLeave: function (args) {send("cpowf");}});
+
+var cpowl = Module.findExportByName("ucrtbase_enclave.dll", "cpowl")
+Interceptor.attach(cpowl, {onLeave: function (args) {send("cpowl");}});
+
+var cproj = Module.findExportByName("ucrtbase_enclave.dll", "cproj")
+Interceptor.attach(cproj, {onLeave: function (args) {send("cproj");}});
+
+var cprojf = Module.findExportByName("ucrtbase_enclave.dll", "cprojf")
+Interceptor.attach(cprojf, {onLeave: function (args) {send("cprojf");}});
+
+var cprojl = Module.findExportByName("ucrtbase_enclave.dll", "cprojl")
+Interceptor.attach(cprojl, {onLeave: function (args) {send("cprojl");}});
+
+var creal = Module.findExportByName("ucrtbase_enclave.dll", "creal")
+Interceptor.attach(creal, {onLeave: function (args) {send("creal");}});
+
+var crealf = Module.findExportByName("ucrtbase_enclave.dll", "crealf")
+Interceptor.attach(crealf, {onLeave: function (args) {send("crealf");}});
+
+var creall = Module.findExportByName("ucrtbase_enclave.dll", "creall")
+Interceptor.attach(creall, {onLeave: function (args) {send("creall");}});
+
+var csin = Module.findExportByName("ucrtbase_enclave.dll", "csin")
+Interceptor.attach(csin, {onLeave: function (args) {send("csin");}});
+
+var csinf = Module.findExportByName("ucrtbase_enclave.dll", "csinf")
+Interceptor.attach(csinf, {onLeave: function (args) {send("csinf");}});
+
+var csinh = Module.findExportByName("ucrtbase_enclave.dll", "csinh")
+Interceptor.attach(csinh, {onLeave: function (args) {send("csinh");}});
+
+var csinhf = Module.findExportByName("ucrtbase_enclave.dll", "csinhf")
+Interceptor.attach(csinhf, {onLeave: function (args) {send("csinhf");}});
+
+var csinhl = Module.findExportByName("ucrtbase_enclave.dll", "csinhl")
+Interceptor.attach(csinhl, {onLeave: function (args) {send("csinhl");}});
+
+var csinl = Module.findExportByName("ucrtbase_enclave.dll", "csinl")
+Interceptor.attach(csinl, {onLeave: function (args) {send("csinl");}});
+
+var csqrt = Module.findExportByName("ucrtbase_enclave.dll", "csqrt")
+Interceptor.attach(csqrt, {onLeave: function (args) {send("csqrt");}});
+
+var csqrtf = Module.findExportByName("ucrtbase_enclave.dll", "csqrtf")
+Interceptor.attach(csqrtf, {onLeave: function (args) {send("csqrtf");}});
+
+var csqrtl = Module.findExportByName("ucrtbase_enclave.dll", "csqrtl")
+Interceptor.attach(csqrtl, {onLeave: function (args) {send("csqrtl");}});
+
+var ctan = Module.findExportByName("ucrtbase_enclave.dll", "ctan")
+Interceptor.attach(ctan, {onLeave: function (args) {send("ctan");}});
+
+var ctanf = Module.findExportByName("ucrtbase_enclave.dll", "ctanf")
+Interceptor.attach(ctanf, {onLeave: function (args) {send("ctanf");}});
+
+var ctanh = Module.findExportByName("ucrtbase_enclave.dll", "ctanh")
+Interceptor.attach(ctanh, {onLeave: function (args) {send("ctanh");}});
+
+var ctanhf = Module.findExportByName("ucrtbase_enclave.dll", "ctanhf")
+Interceptor.attach(ctanhf, {onLeave: function (args) {send("ctanhf");}});
+
+var ctanhl = Module.findExportByName("ucrtbase_enclave.dll", "ctanhl")
+Interceptor.attach(ctanhl, {onLeave: function (args) {send("ctanhl");}});
+
+var ctanl = Module.findExportByName("ucrtbase_enclave.dll", "ctanl")
+Interceptor.attach(ctanl, {onLeave: function (args) {send("ctanl");}});
+
+var div = Module.findExportByName("ucrtbase_enclave.dll", "div")
+Interceptor.attach(div, {onLeave: function (args) {send("div");}});
+
+var erf = Module.findExportByName("ucrtbase_enclave.dll", "erf")
+Interceptor.attach(erf, {onLeave: function (args) {send("erf");}});
+
+var erfc = Module.findExportByName("ucrtbase_enclave.dll", "erfc")
+Interceptor.attach(erfc, {onLeave: function (args) {send("erfc");}});
+
+var erfcf = Module.findExportByName("ucrtbase_enclave.dll", "erfcf")
+Interceptor.attach(erfcf, {onLeave: function (args) {send("erfcf");}});
+
+var erfcl = Module.findExportByName("ucrtbase_enclave.dll", "erfcl")
+Interceptor.attach(erfcl, {onLeave: function (args) {send("erfcl");}});
+
+var erff = Module.findExportByName("ucrtbase_enclave.dll", "erff")
+Interceptor.attach(erff, {onLeave: function (args) {send("erff");}});
+
+var erfl = Module.findExportByName("ucrtbase_enclave.dll", "erfl")
+Interceptor.attach(erfl, {onLeave: function (args) {send("erfl");}});
+
+var exit = Module.findExportByName("ucrtbase_enclave.dll", "exit")
+Interceptor.attach(exit, {onLeave: function (args) {send("exit");}});
+
+var exp = Module.findExportByName("ucrtbase_enclave.dll", "exp")
+Interceptor.attach(exp, {onLeave: function (args) {send("exp");}});
+
+var exp2 = Module.findExportByName("ucrtbase_enclave.dll", "exp2")
+Interceptor.attach(exp2, {onLeave: function (args) {send("exp2");}});
+
+var exp2f = Module.findExportByName("ucrtbase_enclave.dll", "exp2f")
+Interceptor.attach(exp2f, {onLeave: function (args) {send("exp2f");}});
+
+var exp2l = Module.findExportByName("ucrtbase_enclave.dll", "exp2l")
+Interceptor.attach(exp2l, {onLeave: function (args) {send("exp2l");}});
+
+var expf = Module.findExportByName("ucrtbase_enclave.dll", "expf")
+Interceptor.attach(expf, {onLeave: function (args) {send("expf");}});
+
+var expm1 = Module.findExportByName("ucrtbase_enclave.dll", "expm1")
+Interceptor.attach(expm1, {onLeave: function (args) {send("expm1");}});
+
+var expm1f = Module.findExportByName("ucrtbase_enclave.dll", "expm1f")
+Interceptor.attach(expm1f, {onLeave: function (args) {send("expm1f");}});
+
+var expm1l = Module.findExportByName("ucrtbase_enclave.dll", "expm1l")
+Interceptor.attach(expm1l, {onLeave: function (args) {send("expm1l");}});
+
+var fabs = Module.findExportByName("ucrtbase_enclave.dll", "fabs")
+Interceptor.attach(fabs, {onLeave: function (args) {send("fabs");}});
+
+var fdim = Module.findExportByName("ucrtbase_enclave.dll", "fdim")
+Interceptor.attach(fdim, {onLeave: function (args) {send("fdim");}});
+
+var fdimf = Module.findExportByName("ucrtbase_enclave.dll", "fdimf")
+Interceptor.attach(fdimf, {onLeave: function (args) {send("fdimf");}});
+
+var fdiml = Module.findExportByName("ucrtbase_enclave.dll", "fdiml")
+Interceptor.attach(fdiml, {onLeave: function (args) {send("fdiml");}});
+
+var feclearexcept = Module.findExportByName("ucrtbase_enclave.dll", "feclearexcept")
+Interceptor.attach(feclearexcept, {onLeave: function (args) {send("feclearexcept");}});
+
+var fegetexceptflag = Module.findExportByName("ucrtbase_enclave.dll", "fegetexceptflag")
+Interceptor.attach(fegetexceptflag, {onLeave: function (args) {send("fegetexceptflag");}});
+
+var fegetround = Module.findExportByName("ucrtbase_enclave.dll", "fegetround")
+Interceptor.attach(fegetround, {onLeave: function (args) {send("fegetround");}});
+
+var feholdexcept = Module.findExportByName("ucrtbase_enclave.dll", "feholdexcept")
+Interceptor.attach(feholdexcept, {onLeave: function (args) {send("feholdexcept");}});
+
+var fesetexceptflag = Module.findExportByName("ucrtbase_enclave.dll", "fesetexceptflag")
+Interceptor.attach(fesetexceptflag, {onLeave: function (args) {send("fesetexceptflag");}});
+
+var fesetround = Module.findExportByName("ucrtbase_enclave.dll", "fesetround")
+Interceptor.attach(fesetround, {onLeave: function (args) {send("fesetround");}});
+
+var fetestexcept = Module.findExportByName("ucrtbase_enclave.dll", "fetestexcept")
+Interceptor.attach(fetestexcept, {onLeave: function (args) {send("fetestexcept");}});
+
+var floor = Module.findExportByName("ucrtbase_enclave.dll", "floor")
+Interceptor.attach(floor, {onLeave: function (args) {send("floor");}});
+
+var floorf = Module.findExportByName("ucrtbase_enclave.dll", "floorf")
+Interceptor.attach(floorf, {onLeave: function (args) {send("floorf");}});
+
+var fma = Module.findExportByName("ucrtbase_enclave.dll", "fma")
+Interceptor.attach(fma, {onLeave: function (args) {send("fma");}});
+
+var fmaf = Module.findExportByName("ucrtbase_enclave.dll", "fmaf")
+Interceptor.attach(fmaf, {onLeave: function (args) {send("fmaf");}});
+
+var fmal = Module.findExportByName("ucrtbase_enclave.dll", "fmal")
+Interceptor.attach(fmal, {onLeave: function (args) {send("fmal");}});
+
+var fmax = Module.findExportByName("ucrtbase_enclave.dll", "fmax")
+Interceptor.attach(fmax, {onLeave: function (args) {send("fmax");}});
+
+var fmaxf = Module.findExportByName("ucrtbase_enclave.dll", "fmaxf")
+Interceptor.attach(fmaxf, {onLeave: function (args) {send("fmaxf");}});
+
+var fmaxl = Module.findExportByName("ucrtbase_enclave.dll", "fmaxl")
+Interceptor.attach(fmaxl, {onLeave: function (args) {send("fmaxl");}});
+
+var fmin = Module.findExportByName("ucrtbase_enclave.dll", "fmin")
+Interceptor.attach(fmin, {onLeave: function (args) {send("fmin");}});
+
+var fminf = Module.findExportByName("ucrtbase_enclave.dll", "fminf")
+Interceptor.attach(fminf, {onLeave: function (args) {send("fminf");}});
+
+var fminl = Module.findExportByName("ucrtbase_enclave.dll", "fminl")
+Interceptor.attach(fminl, {onLeave: function (args) {send("fminl");}});
+
+var fmod = Module.findExportByName("ucrtbase_enclave.dll", "fmod")
+Interceptor.attach(fmod, {onLeave: function (args) {send("fmod");}});
+
+var fmodf = Module.findExportByName("ucrtbase_enclave.dll", "fmodf")
+Interceptor.attach(fmodf, {onLeave: function (args) {send("fmodf");}});
+
+var free = Module.findExportByName("ucrtbase_enclave.dll", "free")
+Interceptor.attach(free, {onLeave: function (args) {send("free");}});
+
+var frexp = Module.findExportByName("ucrtbase_enclave.dll", "frexp")
+Interceptor.attach(frexp, {onLeave: function (args) {send("frexp");}});
+
+var hypot = Module.findExportByName("ucrtbase_enclave.dll", "hypot")
+Interceptor.attach(hypot, {onLeave: function (args) {send("hypot");}});
+
+var ilogb = Module.findExportByName("ucrtbase_enclave.dll", "ilogb")
+Interceptor.attach(ilogb, {onLeave: function (args) {send("ilogb");}});
+
+var ilogbf = Module.findExportByName("ucrtbase_enclave.dll", "ilogbf")
+Interceptor.attach(ilogbf, {onLeave: function (args) {send("ilogbf");}});
+
+var ilogbl = Module.findExportByName("ucrtbase_enclave.dll", "ilogbl")
+Interceptor.attach(ilogbl, {onLeave: function (args) {send("ilogbl");}});
+
+var imaxabs = Module.findExportByName("ucrtbase_enclave.dll", "imaxabs")
+Interceptor.attach(imaxabs, {onLeave: function (args) {send("imaxabs");}});
+
+var imaxdiv = Module.findExportByName("ucrtbase_enclave.dll", "imaxdiv")
+Interceptor.attach(imaxdiv, {onLeave: function (args) {send("imaxdiv");}});
+
+var isalnum = Module.findExportByName("ucrtbase_enclave.dll", "isalnum")
+Interceptor.attach(isalnum, {onLeave: function (args) {send("isalnum");}});
+
+var isalpha = Module.findExportByName("ucrtbase_enclave.dll", "isalpha")
+Interceptor.attach(isalpha, {onLeave: function (args) {send("isalpha");}});
+
+var isblank = Module.findExportByName("ucrtbase_enclave.dll", "isblank")
+Interceptor.attach(isblank, {onLeave: function (args) {send("isblank");}});
+
+var iscntrl = Module.findExportByName("ucrtbase_enclave.dll", "iscntrl")
+Interceptor.attach(iscntrl, {onLeave: function (args) {send("iscntrl");}});
+
+var isdigit = Module.findExportByName("ucrtbase_enclave.dll", "isdigit")
+Interceptor.attach(isdigit, {onLeave: function (args) {send("isdigit");}});
+
+var isgraph = Module.findExportByName("ucrtbase_enclave.dll", "isgraph")
+Interceptor.attach(isgraph, {onLeave: function (args) {send("isgraph");}});
+
+var isleadbyte = Module.findExportByName("ucrtbase_enclave.dll", "isleadbyte")
+Interceptor.attach(isleadbyte, {onLeave: function (args) {send("isleadbyte");}});
+
+var islower = Module.findExportByName("ucrtbase_enclave.dll", "islower")
+Interceptor.attach(islower, {onLeave: function (args) {send("islower");}});
+
+var isprint = Module.findExportByName("ucrtbase_enclave.dll", "isprint")
+Interceptor.attach(isprint, {onLeave: function (args) {send("isprint");}});
+
+var ispunct = Module.findExportByName("ucrtbase_enclave.dll", "ispunct")
+Interceptor.attach(ispunct, {onLeave: function (args) {send("ispunct");}});
+
+var isspace = Module.findExportByName("ucrtbase_enclave.dll", "isspace")
+Interceptor.attach(isspace, {onLeave: function (args) {send("isspace");}});
+
+var isupper = Module.findExportByName("ucrtbase_enclave.dll", "isupper")
+Interceptor.attach(isupper, {onLeave: function (args) {send("isupper");}});
+
+var iswalnum = Module.findExportByName("ucrtbase_enclave.dll", "iswalnum")
+Interceptor.attach(iswalnum, {onLeave: function (args) {send("iswalnum");}});
+
+var iswalpha = Module.findExportByName("ucrtbase_enclave.dll", "iswalpha")
+Interceptor.attach(iswalpha, {onLeave: function (args) {send("iswalpha");}});
+
+var iswascii = Module.findExportByName("ucrtbase_enclave.dll", "iswascii")
+Interceptor.attach(iswascii, {onLeave: function (args) {send("iswascii");}});
+
+var iswblank = Module.findExportByName("ucrtbase_enclave.dll", "iswblank")
+Interceptor.attach(iswblank, {onLeave: function (args) {send("iswblank");}});
+
+var iswcntrl = Module.findExportByName("ucrtbase_enclave.dll", "iswcntrl")
+Interceptor.attach(iswcntrl, {onLeave: function (args) {send("iswcntrl");}});
+
+var iswctype = Module.findExportByName("ucrtbase_enclave.dll", "iswctype")
+Interceptor.attach(iswctype, {onLeave: function (args) {send("iswctype");}});
+
+var iswdigit = Module.findExportByName("ucrtbase_enclave.dll", "iswdigit")
+Interceptor.attach(iswdigit, {onLeave: function (args) {send("iswdigit");}});
+
+var iswgraph = Module.findExportByName("ucrtbase_enclave.dll", "iswgraph")
+Interceptor.attach(iswgraph, {onLeave: function (args) {send("iswgraph");}});
+
+var iswlower = Module.findExportByName("ucrtbase_enclave.dll", "iswlower")
+Interceptor.attach(iswlower, {onLeave: function (args) {send("iswlower");}});
+
+var iswprint = Module.findExportByName("ucrtbase_enclave.dll", "iswprint")
+Interceptor.attach(iswprint, {onLeave: function (args) {send("iswprint");}});
+
+var iswpunct = Module.findExportByName("ucrtbase_enclave.dll", "iswpunct")
+Interceptor.attach(iswpunct, {onLeave: function (args) {send("iswpunct");}});
+
+var iswspace = Module.findExportByName("ucrtbase_enclave.dll", "iswspace")
+Interceptor.attach(iswspace, {onLeave: function (args) {send("iswspace");}});
+
+var iswupper = Module.findExportByName("ucrtbase_enclave.dll", "iswupper")
+Interceptor.attach(iswupper, {onLeave: function (args) {send("iswupper");}});
+
+var iswxdigit = Module.findExportByName("ucrtbase_enclave.dll", "iswxdigit")
+Interceptor.attach(iswxdigit, {onLeave: function (args) {send("iswxdigit");}});
+
+var isxdigit = Module.findExportByName("ucrtbase_enclave.dll", "isxdigit")
+Interceptor.attach(isxdigit, {onLeave: function (args) {send("isxdigit");}});
+
+var labs = Module.findExportByName("ucrtbase_enclave.dll", "labs")
+Interceptor.attach(labs, {onLeave: function (args) {send("labs");}});
+
+var ldexp = Module.findExportByName("ucrtbase_enclave.dll", "ldexp")
+Interceptor.attach(ldexp, {onLeave: function (args) {send("ldexp");}});
+
+var ldiv = Module.findExportByName("ucrtbase_enclave.dll", "ldiv")
+Interceptor.attach(ldiv, {onLeave: function (args) {send("ldiv");}});
+
+var lgamma = Module.findExportByName("ucrtbase_enclave.dll", "lgamma")
+Interceptor.attach(lgamma, {onLeave: function (args) {send("lgamma");}});
+
+var lgammaf = Module.findExportByName("ucrtbase_enclave.dll", "lgammaf")
+Interceptor.attach(lgammaf, {onLeave: function (args) {send("lgammaf");}});
+
+var lgammal = Module.findExportByName("ucrtbase_enclave.dll", "lgammal")
+Interceptor.attach(lgammal, {onLeave: function (args) {send("lgammal");}});
+
+var llabs = Module.findExportByName("ucrtbase_enclave.dll", "llabs")
+Interceptor.attach(llabs, {onLeave: function (args) {send("llabs");}});
+
+var lldiv = Module.findExportByName("ucrtbase_enclave.dll", "lldiv")
+Interceptor.attach(lldiv, {onLeave: function (args) {send("lldiv");}});
+
+var llrint = Module.findExportByName("ucrtbase_enclave.dll", "llrint")
+Interceptor.attach(llrint, {onLeave: function (args) {send("llrint");}});
+
+var llrintf = Module.findExportByName("ucrtbase_enclave.dll", "llrintf")
+Interceptor.attach(llrintf, {onLeave: function (args) {send("llrintf");}});
+
+var llrintl = Module.findExportByName("ucrtbase_enclave.dll", "llrintl")
+Interceptor.attach(llrintl, {onLeave: function (args) {send("llrintl");}});
+
+var llround = Module.findExportByName("ucrtbase_enclave.dll", "llround")
+Interceptor.attach(llround, {onLeave: function (args) {send("llround");}});
+
+var llroundf = Module.findExportByName("ucrtbase_enclave.dll", "llroundf")
+Interceptor.attach(llroundf, {onLeave: function (args) {send("llroundf");}});
+
+var llroundl = Module.findExportByName("ucrtbase_enclave.dll", "llroundl")
+Interceptor.attach(llroundl, {onLeave: function (args) {send("llroundl");}});
+
+var localeconv = Module.findExportByName("ucrtbase_enclave.dll", "localeconv")
+Interceptor.attach(localeconv, {onLeave: function (args) {send("localeconv");}});
+
+var log = Module.findExportByName("ucrtbase_enclave.dll", "log")
+Interceptor.attach(log, {onLeave: function (args) {send("log");}});
+
+var log10 = Module.findExportByName("ucrtbase_enclave.dll", "log10")
+Interceptor.attach(log10, {onLeave: function (args) {send("log10");}});
+
+var log10f = Module.findExportByName("ucrtbase_enclave.dll", "log10f")
+Interceptor.attach(log10f, {onLeave: function (args) {send("log10f");}});
+
+var log1p = Module.findExportByName("ucrtbase_enclave.dll", "log1p")
+Interceptor.attach(log1p, {onLeave: function (args) {send("log1p");}});
+
+var log1pf = Module.findExportByName("ucrtbase_enclave.dll", "log1pf")
+Interceptor.attach(log1pf, {onLeave: function (args) {send("log1pf");}});
+
+var log1pl = Module.findExportByName("ucrtbase_enclave.dll", "log1pl")
+Interceptor.attach(log1pl, {onLeave: function (args) {send("log1pl");}});
+
+var log2 = Module.findExportByName("ucrtbase_enclave.dll", "log2")
+Interceptor.attach(log2, {onLeave: function (args) {send("log2");}});
+
+var log2f = Module.findExportByName("ucrtbase_enclave.dll", "log2f")
+Interceptor.attach(log2f, {onLeave: function (args) {send("log2f");}});
+
+var log2l = Module.findExportByName("ucrtbase_enclave.dll", "log2l")
+Interceptor.attach(log2l, {onLeave: function (args) {send("log2l");}});
+
+var logb = Module.findExportByName("ucrtbase_enclave.dll", "logb")
+Interceptor.attach(logb, {onLeave: function (args) {send("logb");}});
+
+var logbf = Module.findExportByName("ucrtbase_enclave.dll", "logbf")
+Interceptor.attach(logbf, {onLeave: function (args) {send("logbf");}});
+
+var logbl = Module.findExportByName("ucrtbase_enclave.dll", "logbl")
+Interceptor.attach(logbl, {onLeave: function (args) {send("logbl");}});
+
+var logf = Module.findExportByName("ucrtbase_enclave.dll", "logf")
+Interceptor.attach(logf, {onLeave: function (args) {send("logf");}});
+
+var longjmp = Module.findExportByName("ucrtbase_enclave.dll", "longjmp")
+Interceptor.attach(longjmp, {onLeave: function (args) {send("longjmp");}});
+
+var lrint = Module.findExportByName("ucrtbase_enclave.dll", "lrint")
+Interceptor.attach(lrint, {onLeave: function (args) {send("lrint");}});
+
+var lrintf = Module.findExportByName("ucrtbase_enclave.dll", "lrintf")
+Interceptor.attach(lrintf, {onLeave: function (args) {send("lrintf");}});
+
+var lrintl = Module.findExportByName("ucrtbase_enclave.dll", "lrintl")
+Interceptor.attach(lrintl, {onLeave: function (args) {send("lrintl");}});
+
+var lround = Module.findExportByName("ucrtbase_enclave.dll", "lround")
+Interceptor.attach(lround, {onLeave: function (args) {send("lround");}});
+
+var lroundf = Module.findExportByName("ucrtbase_enclave.dll", "lroundf")
+Interceptor.attach(lroundf, {onLeave: function (args) {send("lroundf");}});
+
+var lroundl = Module.findExportByName("ucrtbase_enclave.dll", "lroundl")
+Interceptor.attach(lroundl, {onLeave: function (args) {send("lroundl");}});
+
+var malloc = Module.findExportByName("ucrtbase_enclave.dll", "malloc")
+Interceptor.attach(malloc, {onLeave: function (args) {send("malloc");}});
+
+var mblen = Module.findExportByName("ucrtbase_enclave.dll", "mblen")
+Interceptor.attach(mblen, {onLeave: function (args) {send("mblen");}});
+
+var mbrlen = Module.findExportByName("ucrtbase_enclave.dll", "mbrlen")
+Interceptor.attach(mbrlen, {onLeave: function (args) {send("mbrlen");}});
+
+var mbrtoc16 = Module.findExportByName("ucrtbase_enclave.dll", "mbrtoc16")
+Interceptor.attach(mbrtoc16, {onLeave: function (args) {send("mbrtoc16");}});
+
+var mbrtoc32 = Module.findExportByName("ucrtbase_enclave.dll", "mbrtoc32")
+Interceptor.attach(mbrtoc32, {onLeave: function (args) {send("mbrtoc32");}});
+
+var mbrtowc = Module.findExportByName("ucrtbase_enclave.dll", "mbrtowc")
+Interceptor.attach(mbrtowc, {onLeave: function (args) {send("mbrtowc");}});
+
+var mbsrtowcs = Module.findExportByName("ucrtbase_enclave.dll", "mbsrtowcs")
+Interceptor.attach(mbsrtowcs, {onLeave: function (args) {send("mbsrtowcs");}});
+
+var mbsrtowcs_s = Module.findExportByName("ucrtbase_enclave.dll", "mbsrtowcs_s")
+Interceptor.attach(mbsrtowcs_s, {onLeave: function (args) {send("mbsrtowcs_s");}});
+
+var mbstowcs = Module.findExportByName("ucrtbase_enclave.dll", "mbstowcs")
+Interceptor.attach(mbstowcs, {onLeave: function (args) {send("mbstowcs");}});
+
+var mbstowcs_s = Module.findExportByName("ucrtbase_enclave.dll", "mbstowcs_s")
+Interceptor.attach(mbstowcs_s, {onLeave: function (args) {send("mbstowcs_s");}});
+
+var mbtowc = Module.findExportByName("ucrtbase_enclave.dll", "mbtowc")
+Interceptor.attach(mbtowc, {onLeave: function (args) {send("mbtowc");}});
+
+var memchr = Module.findExportByName("ucrtbase_enclave.dll", "memchr")
+Interceptor.attach(memchr, {onLeave: function (args) {send("memchr");}});
+
+var memcmp = Module.findExportByName("ucrtbase_enclave.dll", "memcmp")
+Interceptor.attach(memcmp, {onLeave: function (args) {send("memcmp");}});
+
+var memcpy = Module.findExportByName("ucrtbase_enclave.dll", "memcpy")
+Interceptor.attach(memcpy, {onLeave: function (args) {send("memcpy");}});
+
+var memcpy_s = Module.findExportByName("ucrtbase_enclave.dll", "memcpy_s")
+Interceptor.attach(memcpy_s, {onLeave: function (args) {send("memcpy_s");}});
+
+var memmove = Module.findExportByName("ucrtbase_enclave.dll", "memmove")
+Interceptor.attach(memmove, {onLeave: function (args) {send("memmove");}});
+
+var memmove_s = Module.findExportByName("ucrtbase_enclave.dll", "memmove_s")
+Interceptor.attach(memmove_s, {onLeave: function (args) {send("memmove_s");}});
+
+var memset = Module.findExportByName("ucrtbase_enclave.dll", "memset")
+Interceptor.attach(memset, {onLeave: function (args) {send("memset");}});
+
+var modf = Module.findExportByName("ucrtbase_enclave.dll", "modf")
+Interceptor.attach(modf, {onLeave: function (args) {send("modf");}});
+
+var modff = Module.findExportByName("ucrtbase_enclave.dll", "modff")
+Interceptor.attach(modff, {onLeave: function (args) {send("modff");}});
+
+var nan = Module.findExportByName("ucrtbase_enclave.dll", "nan")
+Interceptor.attach(nan, {onLeave: function (args) {send("nan");}});
+
+var nanf = Module.findExportByName("ucrtbase_enclave.dll", "nanf")
+Interceptor.attach(nanf, {onLeave: function (args) {send("nanf");}});
+
+var nanl = Module.findExportByName("ucrtbase_enclave.dll", "nanl")
+Interceptor.attach(nanl, {onLeave: function (args) {send("nanl");}});
+
+var nearbyint = Module.findExportByName("ucrtbase_enclave.dll", "nearbyint")
+Interceptor.attach(nearbyint, {onLeave: function (args) {send("nearbyint");}});
+
+var nearbyintf = Module.findExportByName("ucrtbase_enclave.dll", "nearbyintf")
+Interceptor.attach(nearbyintf, {onLeave: function (args) {send("nearbyintf");}});
+
+var nearbyintl = Module.findExportByName("ucrtbase_enclave.dll", "nearbyintl")
+Interceptor.attach(nearbyintl, {onLeave: function (args) {send("nearbyintl");}});
+
+var nextafter = Module.findExportByName("ucrtbase_enclave.dll", "nextafter")
+Interceptor.attach(nextafter, {onLeave: function (args) {send("nextafter");}});
+
+var nextafterf = Module.findExportByName("ucrtbase_enclave.dll", "nextafterf")
+Interceptor.attach(nextafterf, {onLeave: function (args) {send("nextafterf");}});
+
+var nextafterl = Module.findExportByName("ucrtbase_enclave.dll", "nextafterl")
+Interceptor.attach(nextafterl, {onLeave: function (args) {send("nextafterl");}});
+
+var nexttoward = Module.findExportByName("ucrtbase_enclave.dll", "nexttoward")
+Interceptor.attach(nexttoward, {onLeave: function (args) {send("nexttoward");}});
+
+var nexttowardf = Module.findExportByName("ucrtbase_enclave.dll", "nexttowardf")
+Interceptor.attach(nexttowardf, {onLeave: function (args) {send("nexttowardf");}});
+
+var nexttowardl = Module.findExportByName("ucrtbase_enclave.dll", "nexttowardl")
+Interceptor.attach(nexttowardl, {onLeave: function (args) {send("nexttowardl");}});
+
+var norm = Module.findExportByName("ucrtbase_enclave.dll", "norm")
+Interceptor.attach(norm, {onLeave: function (args) {send("norm");}});
+
+var normf = Module.findExportByName("ucrtbase_enclave.dll", "normf")
+Interceptor.attach(normf, {onLeave: function (args) {send("normf");}});
+
+var norml = Module.findExportByName("ucrtbase_enclave.dll", "norml")
+Interceptor.attach(norml, {onLeave: function (args) {send("norml");}});
+
+var pow = Module.findExportByName("ucrtbase_enclave.dll", "pow")
+Interceptor.attach(pow, {onLeave: function (args) {send("pow");}});
+
+var powf = Module.findExportByName("ucrtbase_enclave.dll", "powf")
+Interceptor.attach(powf, {onLeave: function (args) {send("powf");}});
+
+var qsort = Module.findExportByName("ucrtbase_enclave.dll", "qsort")
+Interceptor.attach(qsort, {onLeave: function (args) {send("qsort");}});
+
+var qsort_s = Module.findExportByName("ucrtbase_enclave.dll", "qsort_s")
+Interceptor.attach(qsort_s, {onLeave: function (args) {send("qsort_s");}});
+
+var quick_exit = Module.findExportByName("ucrtbase_enclave.dll", "quick_exit")
+Interceptor.attach(quick_exit, {onLeave: function (args) {send("quick_exit");}});
+
+var raise = Module.findExportByName("ucrtbase_enclave.dll", "raise")
+Interceptor.attach(raise, {onLeave: function (args) {send("raise");}});
+
+var rand = Module.findExportByName("ucrtbase_enclave.dll", "rand")
+Interceptor.attach(rand, {onLeave: function (args) {send("rand");}});
+
+var realloc = Module.findExportByName("ucrtbase_enclave.dll", "realloc")
+Interceptor.attach(realloc, {onLeave: function (args) {send("realloc");}});
+
+var remainder = Module.findExportByName("ucrtbase_enclave.dll", "remainder")
+Interceptor.attach(remainder, {onLeave: function (args) {send("remainder");}});
+
+var remainderf = Module.findExportByName("ucrtbase_enclave.dll", "remainderf")
+Interceptor.attach(remainderf, {onLeave: function (args) {send("remainderf");}});
+
+var remainderl = Module.findExportByName("ucrtbase_enclave.dll", "remainderl")
+Interceptor.attach(remainderl, {onLeave: function (args) {send("remainderl");}});
+
+var remquo = Module.findExportByName("ucrtbase_enclave.dll", "remquo")
+Interceptor.attach(remquo, {onLeave: function (args) {send("remquo");}});
+
+var remquof = Module.findExportByName("ucrtbase_enclave.dll", "remquof")
+Interceptor.attach(remquof, {onLeave: function (args) {send("remquof");}});
+
+var remquol = Module.findExportByName("ucrtbase_enclave.dll", "remquol")
+Interceptor.attach(remquol, {onLeave: function (args) {send("remquol");}});
+
+var rint = Module.findExportByName("ucrtbase_enclave.dll", "rint")
+Interceptor.attach(rint, {onLeave: function (args) {send("rint");}});
+
+var rintf = Module.findExportByName("ucrtbase_enclave.dll", "rintf")
+Interceptor.attach(rintf, {onLeave: function (args) {send("rintf");}});
+
+var rintl = Module.findExportByName("ucrtbase_enclave.dll", "rintl")
+Interceptor.attach(rintl, {onLeave: function (args) {send("rintl");}});
+
+var round = Module.findExportByName("ucrtbase_enclave.dll", "round")
+Interceptor.attach(round, {onLeave: function (args) {send("round");}});
+
+var roundf = Module.findExportByName("ucrtbase_enclave.dll", "roundf")
+Interceptor.attach(roundf, {onLeave: function (args) {send("roundf");}});
+
+var roundl = Module.findExportByName("ucrtbase_enclave.dll", "roundl")
+Interceptor.attach(roundl, {onLeave: function (args) {send("roundl");}});
+
+var scalbln = Module.findExportByName("ucrtbase_enclave.dll", "scalbln")
+Interceptor.attach(scalbln, {onLeave: function (args) {send("scalbln");}});
+
+var scalblnf = Module.findExportByName("ucrtbase_enclave.dll", "scalblnf")
+Interceptor.attach(scalblnf, {onLeave: function (args) {send("scalblnf");}});
+
+var scalblnl = Module.findExportByName("ucrtbase_enclave.dll", "scalblnl")
+Interceptor.attach(scalblnl, {onLeave: function (args) {send("scalblnl");}});
+
+var scalbn = Module.findExportByName("ucrtbase_enclave.dll", "scalbn")
+Interceptor.attach(scalbn, {onLeave: function (args) {send("scalbn");}});
+
+var scalbnf = Module.findExportByName("ucrtbase_enclave.dll", "scalbnf")
+Interceptor.attach(scalbnf, {onLeave: function (args) {send("scalbnf");}});
+
+var scalbnl = Module.findExportByName("ucrtbase_enclave.dll", "scalbnl")
+Interceptor.attach(scalbnl, {onLeave: function (args) {send("scalbnl");}});
+
+var set_unexpected = Module.findExportByName("ucrtbase_enclave.dll", "set_unexpected")
+Interceptor.attach(set_unexpected, {onLeave: function (args) {send("set_unexpected");}});
+
+var setjmp = Module.findExportByName("ucrtbase_enclave.dll", "setjmp")
+Interceptor.attach(setjmp, {onLeave: function (args) {send("setjmp");}});
+
+var sin = Module.findExportByName("ucrtbase_enclave.dll", "sin")
+Interceptor.attach(sin, {onLeave: function (args) {send("sin");}});
+
+var sinf = Module.findExportByName("ucrtbase_enclave.dll", "sinf")
+Interceptor.attach(sinf, {onLeave: function (args) {send("sinf");}});
+
+var sinh = Module.findExportByName("ucrtbase_enclave.dll", "sinh")
+Interceptor.attach(sinh, {onLeave: function (args) {send("sinh");}});
+
+var sinhf = Module.findExportByName("ucrtbase_enclave.dll", "sinhf")
+Interceptor.attach(sinhf, {onLeave: function (args) {send("sinhf");}});
+
+var sqrt = Module.findExportByName("ucrtbase_enclave.dll", "sqrt")
+Interceptor.attach(sqrt, {onLeave: function (args) {send("sqrt");}});
+
+var sqrtf = Module.findExportByName("ucrtbase_enclave.dll", "sqrtf")
+Interceptor.attach(sqrtf, {onLeave: function (args) {send("sqrtf");}});
+
+var srand = Module.findExportByName("ucrtbase_enclave.dll", "srand")
+Interceptor.attach(srand, {onLeave: function (args) {send("srand");}});
+
+var strcat = Module.findExportByName("ucrtbase_enclave.dll", "strcat")
+Interceptor.attach(strcat, {onLeave: function (args) {send("strcat");}});
+
+var strcat_s = Module.findExportByName("ucrtbase_enclave.dll", "strcat_s")
+Interceptor.attach(strcat_s, {onLeave: function (args) {send("strcat_s");}});
+
+var strchr = Module.findExportByName("ucrtbase_enclave.dll", "strchr")
+Interceptor.attach(strchr, {onLeave: function (args) {send("strchr");}});
+
+var strcmp = Module.findExportByName("ucrtbase_enclave.dll", "strcmp")
+Interceptor.attach(strcmp, {onLeave: function (args) {send("strcmp");}});
+
+var strcpy = Module.findExportByName("ucrtbase_enclave.dll", "strcpy")
+Interceptor.attach(strcpy, {onLeave: function (args) {send("strcpy");}});
+
+var strcpy_s = Module.findExportByName("ucrtbase_enclave.dll", "strcpy_s")
+Interceptor.attach(strcpy_s, {onLeave: function (args) {send("strcpy_s");}});
+
+var strcspn = Module.findExportByName("ucrtbase_enclave.dll", "strcspn")
+Interceptor.attach(strcspn, {onLeave: function (args) {send("strcspn");}});
+
+var strerror = Module.findExportByName("ucrtbase_enclave.dll", "strerror")
+Interceptor.attach(strerror, {onLeave: function (args) {send("strerror");}});
+
+var strerror_s = Module.findExportByName("ucrtbase_enclave.dll", "strerror_s")
+Interceptor.attach(strerror_s, {onLeave: function (args) {send("strerror_s");}});
+
+var strlen = Module.findExportByName("ucrtbase_enclave.dll", "strlen")
+Interceptor.attach(strlen, {onLeave: function (args) {send("strlen");}});
+
+var strncat = Module.findExportByName("ucrtbase_enclave.dll", "strncat")
+Interceptor.attach(strncat, {onLeave: function (args) {send("strncat");}});
+
+var strncat_s = Module.findExportByName("ucrtbase_enclave.dll", "strncat_s")
+Interceptor.attach(strncat_s, {onLeave: function (args) {send("strncat_s");}});
+
+var strncmp = Module.findExportByName("ucrtbase_enclave.dll", "strncmp")
+Interceptor.attach(strncmp, {onLeave: function (args) {send("strncmp");}});
+
+var strncpy = Module.findExportByName("ucrtbase_enclave.dll", "strncpy")
+Interceptor.attach(strncpy, {onLeave: function (args) {send("strncpy");}});
+
+var strncpy_s = Module.findExportByName("ucrtbase_enclave.dll", "strncpy_s")
+Interceptor.attach(strncpy_s, {onLeave: function (args) {send("strncpy_s");}});
+
+var strnlen = Module.findExportByName("ucrtbase_enclave.dll", "strnlen")
+Interceptor.attach(strnlen, {onLeave: function (args) {send("strnlen");}});
+
+var strpbrk = Module.findExportByName("ucrtbase_enclave.dll", "strpbrk")
+Interceptor.attach(strpbrk, {onLeave: function (args) {send("strpbrk");}});
+
+var strrchr = Module.findExportByName("ucrtbase_enclave.dll", "strrchr")
+Interceptor.attach(strrchr, {onLeave: function (args) {send("strrchr");}});
+
+var strspn = Module.findExportByName("ucrtbase_enclave.dll", "strspn")
+Interceptor.attach(strspn, {onLeave: function (args) {send("strspn");}});
+
+var strstr = Module.findExportByName("ucrtbase_enclave.dll", "strstr")
+Interceptor.attach(strstr, {onLeave: function (args) {send("strstr");}});
+
+var strtod = Module.findExportByName("ucrtbase_enclave.dll", "strtod")
+Interceptor.attach(strtod, {onLeave: function (args) {send("strtod");}});
+
+var strtof = Module.findExportByName("ucrtbase_enclave.dll", "strtof")
+Interceptor.attach(strtof, {onLeave: function (args) {send("strtof");}});
+
+var strtoimax = Module.findExportByName("ucrtbase_enclave.dll", "strtoimax")
+Interceptor.attach(strtoimax, {onLeave: function (args) {send("strtoimax");}});
+
+var strtok = Module.findExportByName("ucrtbase_enclave.dll", "strtok")
+Interceptor.attach(strtok, {onLeave: function (args) {send("strtok");}});
+
+var strtok_s = Module.findExportByName("ucrtbase_enclave.dll", "strtok_s")
+Interceptor.attach(strtok_s, {onLeave: function (args) {send("strtok_s");}});
+
+var strtol = Module.findExportByName("ucrtbase_enclave.dll", "strtol")
+Interceptor.attach(strtol, {onLeave: function (args) {send("strtol");}});
+
+var strtold = Module.findExportByName("ucrtbase_enclave.dll", "strtold")
+Interceptor.attach(strtold, {onLeave: function (args) {send("strtold");}});
+
+var strtoll = Module.findExportByName("ucrtbase_enclave.dll", "strtoll")
+Interceptor.attach(strtoll, {onLeave: function (args) {send("strtoll");}});
+
+var strtoul = Module.findExportByName("ucrtbase_enclave.dll", "strtoul")
+Interceptor.attach(strtoul, {onLeave: function (args) {send("strtoul");}});
+
+var strtoull = Module.findExportByName("ucrtbase_enclave.dll", "strtoull")
+Interceptor.attach(strtoull, {onLeave: function (args) {send("strtoull");}});
+
+var strtoumax = Module.findExportByName("ucrtbase_enclave.dll", "strtoumax")
+Interceptor.attach(strtoumax, {onLeave: function (args) {send("strtoumax");}});
+
+var strxfrm = Module.findExportByName("ucrtbase_enclave.dll", "strxfrm")
+Interceptor.attach(strxfrm, {onLeave: function (args) {send("strxfrm");}});
+
+var tan = Module.findExportByName("ucrtbase_enclave.dll", "tan")
+Interceptor.attach(tan, {onLeave: function (args) {send("tan");}});
+
+var tanf = Module.findExportByName("ucrtbase_enclave.dll", "tanf")
+Interceptor.attach(tanf, {onLeave: function (args) {send("tanf");}});
+
+var tanh = Module.findExportByName("ucrtbase_enclave.dll", "tanh")
+Interceptor.attach(tanh, {onLeave: function (args) {send("tanh");}});
+
+var tanhf = Module.findExportByName("ucrtbase_enclave.dll", "tanhf")
+Interceptor.attach(tanhf, {onLeave: function (args) {send("tanhf");}});
+
+var terminate = Module.findExportByName("ucrtbase_enclave.dll", "terminate")
+Interceptor.attach(terminate, {onLeave: function (args) {send("terminate");}});
+
+var tgamma = Module.findExportByName("ucrtbase_enclave.dll", "tgamma")
+Interceptor.attach(tgamma, {onLeave: function (args) {send("tgamma");}});
+
+var tgammaf = Module.findExportByName("ucrtbase_enclave.dll", "tgammaf")
+Interceptor.attach(tgammaf, {onLeave: function (args) {send("tgammaf");}});
+
+var tgammal = Module.findExportByName("ucrtbase_enclave.dll", "tgammal")
+Interceptor.attach(tgammal, {onLeave: function (args) {send("tgammal");}});
+
+var tolower = Module.findExportByName("ucrtbase_enclave.dll", "tolower")
+Interceptor.attach(tolower, {onLeave: function (args) {send("tolower");}});
+
+var toupper = Module.findExportByName("ucrtbase_enclave.dll", "toupper")
+Interceptor.attach(toupper, {onLeave: function (args) {send("toupper");}});
+
+var towctrans = Module.findExportByName("ucrtbase_enclave.dll", "towctrans")
+Interceptor.attach(towctrans, {onLeave: function (args) {send("towctrans");}});
+
+var towlower = Module.findExportByName("ucrtbase_enclave.dll", "towlower")
+Interceptor.attach(towlower, {onLeave: function (args) {send("towlower");}});
+
+var towupper = Module.findExportByName("ucrtbase_enclave.dll", "towupper")
+Interceptor.attach(towupper, {onLeave: function (args) {send("towupper");}});
+
+var trunc = Module.findExportByName("ucrtbase_enclave.dll", "trunc")
+Interceptor.attach(trunc, {onLeave: function (args) {send("trunc");}});
+
+var truncf = Module.findExportByName("ucrtbase_enclave.dll", "truncf")
+Interceptor.attach(truncf, {onLeave: function (args) {send("truncf");}});
+
+var truncl = Module.findExportByName("ucrtbase_enclave.dll", "truncl")
+Interceptor.attach(truncl, {onLeave: function (args) {send("truncl");}});
+
+var unexpected = Module.findExportByName("ucrtbase_enclave.dll", "unexpected")
+Interceptor.attach(unexpected, {onLeave: function (args) {send("unexpected");}});
+
+var wcrtomb = Module.findExportByName("ucrtbase_enclave.dll", "wcrtomb")
+Interceptor.attach(wcrtomb, {onLeave: function (args) {send("wcrtomb");}});
+
+var wcrtomb_s = Module.findExportByName("ucrtbase_enclave.dll", "wcrtomb_s")
+Interceptor.attach(wcrtomb_s, {onLeave: function (args) {send("wcrtomb_s");}});
+
+var wcscat = Module.findExportByName("ucrtbase_enclave.dll", "wcscat")
+Interceptor.attach(wcscat, {onLeave: function (args) {send("wcscat");}});
+
+var wcscat_s = Module.findExportByName("ucrtbase_enclave.dll", "wcscat_s")
+Interceptor.attach(wcscat_s, {onLeave: function (args) {send("wcscat_s");}});
+
+var wcschr = Module.findExportByName("ucrtbase_enclave.dll", "wcschr")
+Interceptor.attach(wcschr, {onLeave: function (args) {send("wcschr");}});
+
+var wcscmp = Module.findExportByName("ucrtbase_enclave.dll", "wcscmp")
+Interceptor.attach(wcscmp, {onLeave: function (args) {send("wcscmp");}});
+
+var wcscpy = Module.findExportByName("ucrtbase_enclave.dll", "wcscpy")
+Interceptor.attach(wcscpy, {onLeave: function (args) {send("wcscpy");}});
+
+var wcscpy_s = Module.findExportByName("ucrtbase_enclave.dll", "wcscpy_s")
+Interceptor.attach(wcscpy_s, {onLeave: function (args) {send("wcscpy_s");}});
+
+var wcscspn = Module.findExportByName("ucrtbase_enclave.dll", "wcscspn")
+Interceptor.attach(wcscspn, {onLeave: function (args) {send("wcscspn");}});
+
+var wcslen = Module.findExportByName("ucrtbase_enclave.dll", "wcslen")
+Interceptor.attach(wcslen, {onLeave: function (args) {send("wcslen");}});
+
+var wcsncat = Module.findExportByName("ucrtbase_enclave.dll", "wcsncat")
+Interceptor.attach(wcsncat, {onLeave: function (args) {send("wcsncat");}});
+
+var wcsncat_s = Module.findExportByName("ucrtbase_enclave.dll", "wcsncat_s")
+Interceptor.attach(wcsncat_s, {onLeave: function (args) {send("wcsncat_s");}});
+
+var wcsncmp = Module.findExportByName("ucrtbase_enclave.dll", "wcsncmp")
+Interceptor.attach(wcsncmp, {onLeave: function (args) {send("wcsncmp");}});
+
+var wcsncpy = Module.findExportByName("ucrtbase_enclave.dll", "wcsncpy")
+Interceptor.attach(wcsncpy, {onLeave: function (args) {send("wcsncpy");}});
+
+var wcsncpy_s = Module.findExportByName("ucrtbase_enclave.dll", "wcsncpy_s")
+Interceptor.attach(wcsncpy_s, {onLeave: function (args) {send("wcsncpy_s");}});
+
+var wcsnlen = Module.findExportByName("ucrtbase_enclave.dll", "wcsnlen")
+Interceptor.attach(wcsnlen, {onLeave: function (args) {send("wcsnlen");}});
+
+var wcspbrk = Module.findExportByName("ucrtbase_enclave.dll", "wcspbrk")
+Interceptor.attach(wcspbrk, {onLeave: function (args) {send("wcspbrk");}});
+
+var wcsrchr = Module.findExportByName("ucrtbase_enclave.dll", "wcsrchr")
+Interceptor.attach(wcsrchr, {onLeave: function (args) {send("wcsrchr");}});
+
+var wcsrtombs = Module.findExportByName("ucrtbase_enclave.dll", "wcsrtombs")
+Interceptor.attach(wcsrtombs, {onLeave: function (args) {send("wcsrtombs");}});
+
+var wcsrtombs_s = Module.findExportByName("ucrtbase_enclave.dll", "wcsrtombs_s")
+Interceptor.attach(wcsrtombs_s, {onLeave: function (args) {send("wcsrtombs_s");}});
+
+var wcsspn = Module.findExportByName("ucrtbase_enclave.dll", "wcsspn")
+Interceptor.attach(wcsspn, {onLeave: function (args) {send("wcsspn");}});
+
+var wcsstr = Module.findExportByName("ucrtbase_enclave.dll", "wcsstr")
+Interceptor.attach(wcsstr, {onLeave: function (args) {send("wcsstr");}});
+
+var wcstod = Module.findExportByName("ucrtbase_enclave.dll", "wcstod")
+Interceptor.attach(wcstod, {onLeave: function (args) {send("wcstod");}});
+
+var wcstof = Module.findExportByName("ucrtbase_enclave.dll", "wcstof")
+Interceptor.attach(wcstof, {onLeave: function (args) {send("wcstof");}});
+
+var wcstoimax = Module.findExportByName("ucrtbase_enclave.dll", "wcstoimax")
+Interceptor.attach(wcstoimax, {onLeave: function (args) {send("wcstoimax");}});
+
+var wcstok = Module.findExportByName("ucrtbase_enclave.dll", "wcstok")
+Interceptor.attach(wcstok, {onLeave: function (args) {send("wcstok");}});
+
+var wcstok_s = Module.findExportByName("ucrtbase_enclave.dll", "wcstok_s")
+Interceptor.attach(wcstok_s, {onLeave: function (args) {send("wcstok_s");}});
+
+var wcstol = Module.findExportByName("ucrtbase_enclave.dll", "wcstol")
+Interceptor.attach(wcstol, {onLeave: function (args) {send("wcstol");}});
+
+var wcstold = Module.findExportByName("ucrtbase_enclave.dll", "wcstold")
+Interceptor.attach(wcstold, {onLeave: function (args) {send("wcstold");}});
+
+var wcstoll = Module.findExportByName("ucrtbase_enclave.dll", "wcstoll")
+Interceptor.attach(wcstoll, {onLeave: function (args) {send("wcstoll");}});
+
+var wcstombs = Module.findExportByName("ucrtbase_enclave.dll", "wcstombs")
+Interceptor.attach(wcstombs, {onLeave: function (args) {send("wcstombs");}});
+
+var wcstombs_s = Module.findExportByName("ucrtbase_enclave.dll", "wcstombs_s")
+Interceptor.attach(wcstombs_s, {onLeave: function (args) {send("wcstombs_s");}});
+
+var wcstoul = Module.findExportByName("ucrtbase_enclave.dll", "wcstoul")
+Interceptor.attach(wcstoul, {onLeave: function (args) {send("wcstoul");}});
+
+var wcstoull = Module.findExportByName("ucrtbase_enclave.dll", "wcstoull")
+Interceptor.attach(wcstoull, {onLeave: function (args) {send("wcstoull");}});
+
+var wcstoumax = Module.findExportByName("ucrtbase_enclave.dll", "wcstoumax")
+Interceptor.attach(wcstoumax, {onLeave: function (args) {send("wcstoumax");}});
+
+var wcsxfrm = Module.findExportByName("ucrtbase_enclave.dll", "wcsxfrm")
+Interceptor.attach(wcsxfrm, {onLeave: function (args) {send("wcsxfrm");}});
+
+var wctob = Module.findExportByName("ucrtbase_enclave.dll", "wctob")
+Interceptor.attach(wctob, {onLeave: function (args) {send("wctob");}});
+
+var wctomb = Module.findExportByName("ucrtbase_enclave.dll", "wctomb")
+Interceptor.attach(wctomb, {onLeave: function (args) {send("wctomb");}});
+
+var wctomb_s = Module.findExportByName("ucrtbase_enclave.dll", "wctomb_s")
+Interceptor.attach(wctomb_s, {onLeave: function (args) {send("wctomb_s");}});
+
+var wctrans = Module.findExportByName("ucrtbase_enclave.dll", "wctrans")
+Interceptor.attach(wctrans, {onLeave: function (args) {send("wctrans");}});
+
+var wctype = Module.findExportByName("ucrtbase_enclave.dll", "wctype")
+Interceptor.attach(wctype, {onLeave: function (args) {send("wctype");}});
+
+var wmemcpy_s = Module.findExportByName("ucrtbase_enclave.dll", "wmemcpy_s")
+Interceptor.attach(wmemcpy_s, {onLeave: function (args) {send("wmemcpy_s");}});
+
+var wmemmove_s = Module.findExportByName("ucrtbase_enclave.dll", "wmemmove_s")
+Interceptor.attach(wmemmove_s, {onLeave: function (args) {send("wmemmove_s");}});
+

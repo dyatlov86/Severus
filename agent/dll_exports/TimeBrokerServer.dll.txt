@@ -1,0 +1,6 @@
+var ServiceMain = Module.findExportByName("TimeBrokerServer.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobalsEx = Module.findExportByName("TimeBrokerServer.dll", "SvchostPushServiceGlobalsEx")
+Interceptor.attach(SvchostPushServiceGlobalsEx, {onLeave: function (args) {send("SvchostPushServiceGlobalsEx");}});
+

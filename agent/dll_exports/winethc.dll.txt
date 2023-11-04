@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("winethc.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("winethc.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("winethc.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("winethc.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ForceProxyDetectionOnNextRun = Module.findExportByName("winethc.dll", "ForceProxyDetectionOnNextRun")
+Interceptor.attach(ForceProxyDetectionOnNextRun, {onLeave: function (args) {send("ForceProxyDetectionOnNextRun");}});
+
+var SetAutoDetectProxyFlagForUser = Module.findExportByName("winethc.dll", "SetAutoDetectProxyFlagForUser")
+Interceptor.attach(SetAutoDetectProxyFlagForUser, {onLeave: function (args) {send("SetAutoDetectProxyFlagForUser");}});
+

@@ -1,0 +1,3 @@
+var GetDispenserManager = Module.findExportByName("mtxdm.dll", "GetDispenserManager")
+Interceptor.attach(GetDispenserManager, {onLeave: function (args) {send("GetDispenserManager");}});
+

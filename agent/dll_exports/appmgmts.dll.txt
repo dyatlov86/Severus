@@ -1,0 +1,57 @@
+var CsCreateClassStore = Module.findExportByName("appmgmts.dll", "CsCreateClassStore")
+Interceptor.attach(CsCreateClassStore, {onLeave: function (args) {send("CsCreateClassStore");}});
+
+var CsEnumApps = Module.findExportByName("appmgmts.dll", "CsEnumApps")
+Interceptor.attach(CsEnumApps, {onLeave: function (args) {send("CsEnumApps");}});
+
+var CsGetAppCategories = Module.findExportByName("appmgmts.dll", "CsGetAppCategories")
+Interceptor.attach(CsGetAppCategories, {onLeave: function (args) {send("CsGetAppCategories");}});
+
+var CsGetClassAccess = Module.findExportByName("appmgmts.dll", "CsGetClassAccess")
+Interceptor.attach(CsGetClassAccess, {onLeave: function (args) {send("CsGetClassAccess");}});
+
+var CsGetClassStore = Module.findExportByName("appmgmts.dll", "CsGetClassStore")
+Interceptor.attach(CsGetClassStore, {onLeave: function (args) {send("CsGetClassStore");}});
+
+var CsGetClassStorePath = Module.findExportByName("appmgmts.dll", "CsGetClassStorePath")
+Interceptor.attach(CsGetClassStorePath, {onLeave: function (args) {send("CsGetClassStorePath");}});
+
+var CsRegisterAppCategory = Module.findExportByName("appmgmts.dll", "CsRegisterAppCategory")
+Interceptor.attach(CsRegisterAppCategory, {onLeave: function (args) {send("CsRegisterAppCategory");}});
+
+var CsServerGetClassStore = Module.findExportByName("appmgmts.dll", "CsServerGetClassStore")
+Interceptor.attach(CsServerGetClassStore, {onLeave: function (args) {send("CsServerGetClassStore");}});
+
+var CsSetOptions = Module.findExportByName("appmgmts.dll", "CsSetOptions")
+Interceptor.attach(CsSetOptions, {onLeave: function (args) {send("CsSetOptions");}});
+
+var CsUnregisterAppCategory = Module.findExportByName("appmgmts.dll", "CsUnregisterAppCategory")
+Interceptor.attach(CsUnregisterAppCategory, {onLeave: function (args) {send("CsUnregisterAppCategory");}});
+
+var DllCanUnloadNow = Module.findExportByName("appmgmts.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("appmgmts.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GenerateGroupPolicy = Module.findExportByName("appmgmts.dll", "GenerateGroupPolicy")
+Interceptor.attach(GenerateGroupPolicy, {onLeave: function (args) {send("GenerateGroupPolicy");}});
+
+var IID_IClassAdmin = Module.findExportByName("appmgmts.dll", "IID_IClassAdmin")
+Interceptor.attach(IID_IClassAdmin, {onLeave: function (args) {send("IID_IClassAdmin");}});
+
+var ProcessGroupPolicyObjectsEx = Module.findExportByName("appmgmts.dll", "ProcessGroupPolicyObjectsEx")
+Interceptor.attach(ProcessGroupPolicyObjectsEx, {onLeave: function (args) {send("ProcessGroupPolicyObjectsEx");}});
+
+var ReleaseAppCategoryInfoList = Module.findExportByName("appmgmts.dll", "ReleaseAppCategoryInfoList")
+Interceptor.attach(ReleaseAppCategoryInfoList, {onLeave: function (args) {send("ReleaseAppCategoryInfoList");}});
+
+var ReleasePackageDetail = Module.findExportByName("appmgmts.dll", "ReleasePackageDetail")
+Interceptor.attach(ReleasePackageDetail, {onLeave: function (args) {send("ReleasePackageDetail");}});
+
+var ReleasePackageInfo = Module.findExportByName("appmgmts.dll", "ReleasePackageInfo")
+Interceptor.attach(ReleasePackageInfo, {onLeave: function (args) {send("ReleasePackageInfo");}});
+
+var ServiceMain = Module.findExportByName("appmgmts.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

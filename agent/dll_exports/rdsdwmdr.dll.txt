@@ -1,0 +1,9 @@
+var DwmIndirectCreate = Module.findExportByName("rdsdwmdr.dll", "DwmIndirectCreate")
+Interceptor.attach(DwmIndirectCreate, {onLeave: function (args) {send("DwmIndirectCreate");}});
+
+var DwmIndirectOutput = Module.findExportByName("rdsdwmdr.dll", "DwmIndirectOutput")
+Interceptor.attach(DwmIndirectOutput, {onLeave: function (args) {send("DwmIndirectOutput");}});
+
+var DwmIndirectSetDebugFlag = Module.findExportByName("rdsdwmdr.dll", "DwmIndirectSetDebugFlag")
+Interceptor.attach(DwmIndirectSetDebugFlag, {onLeave: function (args) {send("DwmIndirectSetDebugFlag");}});
+

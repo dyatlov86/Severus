@@ -1,0 +1,54 @@
+var BeginFileMapEnumeration = Module.findExportByName("sfc_os.dll", "BeginFileMapEnumeration")
+Interceptor.attach(BeginFileMapEnumeration, {onLeave: function (args) {send("BeginFileMapEnumeration");}});
+
+var CloseFileMapEnumeration = Module.findExportByName("sfc_os.dll", "CloseFileMapEnumeration")
+Interceptor.attach(CloseFileMapEnumeration, {onLeave: function (args) {send("CloseFileMapEnumeration");}});
+
+var GetNextFileMapContent = Module.findExportByName("sfc_os.dll", "GetNextFileMapContent")
+Interceptor.attach(GetNextFileMapContent, {onLeave: function (args) {send("GetNextFileMapContent");}});
+
+var SRSetRestorePointA = Module.findExportByName("sfc_os.dll", "SRSetRestorePointA")
+Interceptor.attach(SRSetRestorePointA, {onLeave: function (args) {send("SRSetRestorePointA");}});
+
+var SRSetRestorePointW = Module.findExportByName("sfc_os.dll", "SRSetRestorePointW")
+Interceptor.attach(SRSetRestorePointW, {onLeave: function (args) {send("SRSetRestorePointW");}});
+
+var SfcClose = Module.findExportByName("sfc_os.dll", "SfcClose")
+Interceptor.attach(SfcClose, {onLeave: function (args) {send("SfcClose");}});
+
+var SfcConnectToServer = Module.findExportByName("sfc_os.dll", "SfcConnectToServer")
+Interceptor.attach(SfcConnectToServer, {onLeave: function (args) {send("SfcConnectToServer");}});
+
+var SfcFileException = Module.findExportByName("sfc_os.dll", "SfcFileException")
+Interceptor.attach(SfcFileException, {onLeave: function (args) {send("SfcFileException");}});
+
+var SfcGetNextProtectedFile = Module.findExportByName("sfc_os.dll", "SfcGetNextProtectedFile")
+Interceptor.attach(SfcGetNextProtectedFile, {onLeave: function (args) {send("SfcGetNextProtectedFile");}});
+
+var SfcInitProt = Module.findExportByName("sfc_os.dll", "SfcInitProt")
+Interceptor.attach(SfcInitProt, {onLeave: function (args) {send("SfcInitProt");}});
+
+var SfcInitiateScan = Module.findExportByName("sfc_os.dll", "SfcInitiateScan")
+Interceptor.attach(SfcInitiateScan, {onLeave: function (args) {send("SfcInitiateScan");}});
+
+var SfcInstallProtectedFiles = Module.findExportByName("sfc_os.dll", "SfcInstallProtectedFiles")
+Interceptor.attach(SfcInstallProtectedFiles, {onLeave: function (args) {send("SfcInstallProtectedFiles");}});
+
+var SfcIsFileProtected = Module.findExportByName("sfc_os.dll", "SfcIsFileProtected")
+Interceptor.attach(SfcIsFileProtected, {onLeave: function (args) {send("SfcIsFileProtected");}});
+
+var SfcIsKeyProtected = Module.findExportByName("sfc_os.dll", "SfcIsKeyProtected")
+Interceptor.attach(SfcIsKeyProtected, {onLeave: function (args) {send("SfcIsKeyProtected");}});
+
+var SfcTerminateWatcherThread = Module.findExportByName("sfc_os.dll", "SfcTerminateWatcherThread")
+Interceptor.attach(SfcTerminateWatcherThread, {onLeave: function (args) {send("SfcTerminateWatcherThread");}});
+
+var SfpDeleteCatalog = Module.findExportByName("sfc_os.dll", "SfpDeleteCatalog")
+Interceptor.attach(SfpDeleteCatalog, {onLeave: function (args) {send("SfpDeleteCatalog");}});
+
+var SfpInstallCatalog = Module.findExportByName("sfc_os.dll", "SfpInstallCatalog")
+Interceptor.attach(SfpInstallCatalog, {onLeave: function (args) {send("SfpInstallCatalog");}});
+
+var SfpVerifyFile = Module.findExportByName("sfc_os.dll", "SfpVerifyFile")
+Interceptor.attach(SfpVerifyFile, {onLeave: function (args) {send("SfpVerifyFile");}});
+

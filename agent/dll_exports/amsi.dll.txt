@@ -1,0 +1,42 @@
+var AmsiCloseSession = Module.findExportByName("amsi.dll", "AmsiCloseSession")
+Interceptor.attach(AmsiCloseSession, {onLeave: function (args) {send("AmsiCloseSession");}});
+
+var AmsiInitialize = Module.findExportByName("amsi.dll", "AmsiInitialize")
+Interceptor.attach(AmsiInitialize, {onLeave: function (args) {send("AmsiInitialize");}});
+
+var AmsiNotifyOperation = Module.findExportByName("amsi.dll", "AmsiNotifyOperation")
+Interceptor.attach(AmsiNotifyOperation, {onLeave: function (args) {send("AmsiNotifyOperation");}});
+
+var AmsiOpenSession = Module.findExportByName("amsi.dll", "AmsiOpenSession")
+Interceptor.attach(AmsiOpenSession, {onLeave: function (args) {send("AmsiOpenSession");}});
+
+var AmsiScanBuffer = Module.findExportByName("amsi.dll", "AmsiScanBuffer")
+Interceptor.attach(AmsiScanBuffer, {onLeave: function (args) {send("AmsiScanBuffer");}});
+
+var AmsiScanString = Module.findExportByName("amsi.dll", "AmsiScanString")
+Interceptor.attach(AmsiScanString, {onLeave: function (args) {send("AmsiScanString");}});
+
+var AmsiUacInitialize = Module.findExportByName("amsi.dll", "AmsiUacInitialize")
+Interceptor.attach(AmsiUacInitialize, {onLeave: function (args) {send("AmsiUacInitialize");}});
+
+var AmsiUacScan = Module.findExportByName("amsi.dll", "AmsiUacScan")
+Interceptor.attach(AmsiUacScan, {onLeave: function (args) {send("AmsiUacScan");}});
+
+var AmsiUacUninitialize = Module.findExportByName("amsi.dll", "AmsiUacUninitialize")
+Interceptor.attach(AmsiUacUninitialize, {onLeave: function (args) {send("AmsiUacUninitialize");}});
+
+var AmsiUninitialize = Module.findExportByName("amsi.dll", "AmsiUninitialize")
+Interceptor.attach(AmsiUninitialize, {onLeave: function (args) {send("AmsiUninitialize");}});
+
+var DllCanUnloadNow = Module.findExportByName("amsi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("amsi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("amsi.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("amsi.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

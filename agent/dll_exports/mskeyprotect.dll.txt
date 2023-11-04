@@ -1,0 +1,9 @@
+var GetKeyProtectionInterface = Module.findExportByName("mskeyprotect.dll", "GetKeyProtectionInterface")
+Interceptor.attach(GetKeyProtectionInterface, {onLeave: function (args) {send("GetKeyProtectionInterface");}});
+
+var KeyFileProtectSessionTicket = Module.findExportByName("mskeyprotect.dll", "KeyFileProtectSessionTicket")
+Interceptor.attach(KeyFileProtectSessionTicket, {onLeave: function (args) {send("KeyFileProtectSessionTicket");}});
+
+var KeyFileUnprotectSessionTicket = Module.findExportByName("mskeyprotect.dll", "KeyFileUnprotectSessionTicket")
+Interceptor.attach(KeyFileUnprotectSessionTicket, {onLeave: function (args) {send("KeyFileUnprotectSessionTicket");}});
+

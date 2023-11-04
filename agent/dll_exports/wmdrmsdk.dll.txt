@@ -1,0 +1,27 @@
+var DllCanUnloadNow = Module.findExportByName("wmdrmsdk.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wmdrmsdk.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("wmdrmsdk.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wmdrmsdk.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var MFWMDRMOutputTrustAuthority_CreateInstance = Module.findExportByName("wmdrmsdk.dll", "MFWMDRMOutputTrustAuthority_CreateInstance")
+Interceptor.attach(MFWMDRMOutputTrustAuthority_CreateInstance, {onLeave: function (args) {send("MFWMDRMOutputTrustAuthority_CreateInstance");}});
+
+var WMDRMCreateProvider = Module.findExportByName("wmdrmsdk.dll", "WMDRMCreateProvider")
+Interceptor.attach(WMDRMCreateProvider, {onLeave: function (args) {send("WMDRMCreateProvider");}});
+
+var WMDRMShutdown = Module.findExportByName("wmdrmsdk.dll", "WMDRMShutdown")
+Interceptor.attach(WMDRMShutdown, {onLeave: function (args) {send("WMDRMShutdown");}});
+
+var WMDRMStartup = Module.findExportByName("wmdrmsdk.dll", "WMDRMStartup")
+Interceptor.attach(WMDRMStartup, {onLeave: function (args) {send("WMDRMStartup");}});
+
+var _WMDRMCreateProvider = Module.findExportByName("wmdrmsdk.dll", "_WMDRMCreateProvider")
+Interceptor.attach(_WMDRMCreateProvider, {onLeave: function (args) {send("_WMDRMCreateProvider");}});
+

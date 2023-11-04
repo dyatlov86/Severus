@@ -1,0 +1,9 @@
+var FujitsuOyayubiControl = Module.findExportByName("f3ahvoas.dll", "FujitsuOyayubiControl")
+Interceptor.attach(FujitsuOyayubiControl, {onLeave: function (args) {send("FujitsuOyayubiControl");}});
+
+var KbdLayerDescriptor = Module.findExportByName("f3ahvoas.dll", "KbdLayerDescriptor")
+Interceptor.attach(KbdLayerDescriptor, {onLeave: function (args) {send("KbdLayerDescriptor");}});
+
+var KbdNlsLayerDescriptor = Module.findExportByName("f3ahvoas.dll", "KbdNlsLayerDescriptor")
+Interceptor.attach(KbdNlsLayerDescriptor, {onLeave: function (args) {send("KbdNlsLayerDescriptor");}});
+

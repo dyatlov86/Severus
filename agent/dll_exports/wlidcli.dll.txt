@@ -1,0 +1,288 @@
+var AddUserToSsoGroup = Module.findExportByName("wlidcli.dll", "AddUserToSsoGroup")
+Interceptor.attach(AddUserToSsoGroup, {onLeave: function (args) {send("AddUserToSsoGroup");}});
+
+var AssociateDeviceToUser = Module.findExportByName("wlidcli.dll", "AssociateDeviceToUser")
+Interceptor.attach(AssociateDeviceToUser, {onLeave: function (args) {send("AssociateDeviceToUser");}});
+
+var AuthIdentityToService = Module.findExportByName("wlidcli.dll", "AuthIdentityToService")
+Interceptor.attach(AuthIdentityToService, {onLeave: function (args) {send("AuthIdentityToService");}});
+
+var AuthIdentityToServiceEx = Module.findExportByName("wlidcli.dll", "AuthIdentityToServiceEx")
+Interceptor.attach(AuthIdentityToServiceEx, {onLeave: function (args) {send("AuthIdentityToServiceEx");}});
+
+var CancelPendingRequest = Module.findExportByName("wlidcli.dll", "CancelPendingRequest")
+Interceptor.attach(CancelPendingRequest, {onLeave: function (args) {send("CancelPendingRequest");}});
+
+var CloseEnumIdentitiesHandle = Module.findExportByName("wlidcli.dll", "CloseEnumIdentitiesHandle")
+Interceptor.attach(CloseEnumIdentitiesHandle, {onLeave: function (args) {send("CloseEnumIdentitiesHandle");}});
+
+var CloseIdentityHandle = Module.findExportByName("wlidcli.dll", "CloseIdentityHandle")
+Interceptor.attach(CloseIdentityHandle, {onLeave: function (args) {send("CloseIdentityHandle");}});
+
+var CreateIdentityHandle = Module.findExportByName("wlidcli.dll", "CreateIdentityHandle")
+Interceptor.attach(CreateIdentityHandle, {onLeave: function (args) {send("CreateIdentityHandle");}});
+
+var CreateIdentityHandleEx = Module.findExportByName("wlidcli.dll", "CreateIdentityHandleEx")
+Interceptor.attach(CreateIdentityHandleEx, {onLeave: function (args) {send("CreateIdentityHandleEx");}});
+
+var CreateLinkedIdentityHandle = Module.findExportByName("wlidcli.dll", "CreateLinkedIdentityHandle")
+Interceptor.attach(CreateLinkedIdentityHandle, {onLeave: function (args) {send("CreateLinkedIdentityHandle");}});
+
+var DeProvisionDeviceId = Module.findExportByName("wlidcli.dll", "DeProvisionDeviceId")
+Interceptor.attach(DeProvisionDeviceId, {onLeave: function (args) {send("DeProvisionDeviceId");}});
+
+var DecryptWithSessionKey = Module.findExportByName("wlidcli.dll", "DecryptWithSessionKey")
+Interceptor.attach(DecryptWithSessionKey, {onLeave: function (args) {send("DecryptWithSessionKey");}});
+
+var DecryptWithSessionKeyEx = Module.findExportByName("wlidcli.dll", "DecryptWithSessionKeyEx")
+Interceptor.attach(DecryptWithSessionKeyEx, {onLeave: function (args) {send("DecryptWithSessionKeyEx");}});
+
+var DisassociateDeviceFromUser = Module.findExportByName("wlidcli.dll", "DisassociateDeviceFromUser")
+Interceptor.attach(DisassociateDeviceFromUser, {onLeave: function (args) {send("DisassociateDeviceFromUser");}});
+
+var DllCanUnloadNow = Module.findExportByName("wlidcli.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wlidcli.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("wlidcli.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("wlidcli.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wlidcli.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var EncryptWithSessionKey = Module.findExportByName("wlidcli.dll", "EncryptWithSessionKey")
+Interceptor.attach(EncryptWithSessionKey, {onLeave: function (args) {send("EncryptWithSessionKey");}});
+
+var EncryptWithSessionKeyEx = Module.findExportByName("wlidcli.dll", "EncryptWithSessionKeyEx")
+Interceptor.attach(EncryptWithSessionKeyEx, {onLeave: function (args) {send("EncryptWithSessionKeyEx");}});
+
+var EnumIdentitiesWithCachedCredentials = Module.findExportByName("wlidcli.dll", "EnumIdentitiesWithCachedCredentials")
+Interceptor.attach(EnumIdentitiesWithCachedCredentials, {onLeave: function (args) {send("EnumIdentitiesWithCachedCredentials");}});
+
+var EnumerateCertificates = Module.findExportByName("wlidcli.dll", "EnumerateCertificates")
+Interceptor.attach(EnumerateCertificates, {onLeave: function (args) {send("EnumerateCertificates");}});
+
+var EnumerateDeviceID = Module.findExportByName("wlidcli.dll", "EnumerateDeviceID")
+Interceptor.attach(EnumerateDeviceID, {onLeave: function (args) {send("EnumerateDeviceID");}});
+
+var EnumerateUserAssociatedDevices = Module.findExportByName("wlidcli.dll", "EnumerateUserAssociatedDevices")
+Interceptor.attach(EnumerateUserAssociatedDevices, {onLeave: function (args) {send("EnumerateUserAssociatedDevices");}});
+
+var FlushIDCRLTraceBuffer = Module.findExportByName("wlidcli.dll", "FlushIDCRLTraceBuffer")
+Interceptor.attach(FlushIDCRLTraceBuffer, {onLeave: function (args) {send("FlushIDCRLTraceBuffer");}});
+
+var GenerateCertToken = Module.findExportByName("wlidcli.dll", "GenerateCertToken")
+Interceptor.attach(GenerateCertToken, {onLeave: function (args) {send("GenerateCertToken");}});
+
+var GenerateDeviceToken = Module.findExportByName("wlidcli.dll", "GenerateDeviceToken")
+Interceptor.attach(GenerateDeviceToken, {onLeave: function (args) {send("GenerateDeviceToken");}});
+
+var GetAssertion = Module.findExportByName("wlidcli.dll", "GetAssertion")
+Interceptor.attach(GetAssertion, {onLeave: function (args) {send("GetAssertion");}});
+
+var GetAuthState = Module.findExportByName("wlidcli.dll", "GetAuthState")
+Interceptor.attach(GetAuthState, {onLeave: function (args) {send("GetAuthState");}});
+
+var GetAuthStateEx = Module.findExportByName("wlidcli.dll", "GetAuthStateEx")
+Interceptor.attach(GetAuthStateEx, {onLeave: function (args) {send("GetAuthStateEx");}});
+
+var GetAuthenticationStatus = Module.findExportByName("wlidcli.dll", "GetAuthenticationStatus")
+Interceptor.attach(GetAuthenticationStatus, {onLeave: function (args) {send("GetAuthenticationStatus");}});
+
+var GetCertificate = Module.findExportByName("wlidcli.dll", "GetCertificate")
+Interceptor.attach(GetCertificate, {onLeave: function (args) {send("GetCertificate");}});
+
+var GetConfigDWORDValue = Module.findExportByName("wlidcli.dll", "GetConfigDWORDValue")
+Interceptor.attach(GetConfigDWORDValue, {onLeave: function (args) {send("GetConfigDWORDValue");}});
+
+var GetDefaultNoUISSOUser = Module.findExportByName("wlidcli.dll", "GetDefaultNoUISSOUser")
+Interceptor.attach(GetDefaultNoUISSOUser, {onLeave: function (args) {send("GetDefaultNoUISSOUser");}});
+
+var GetDefaultUserForTarget = Module.findExportByName("wlidcli.dll", "GetDefaultUserForTarget")
+Interceptor.attach(GetDefaultUserForTarget, {onLeave: function (args) {send("GetDefaultUserForTarget");}});
+
+var GetDeviceId = Module.findExportByName("wlidcli.dll", "GetDeviceId")
+Interceptor.attach(GetDeviceId, {onLeave: function (args) {send("GetDeviceId");}});
+
+var GetDeviceIdEx = Module.findExportByName("wlidcli.dll", "GetDeviceIdEx")
+Interceptor.attach(GetDeviceIdEx, {onLeave: function (args) {send("GetDeviceIdEx");}});
+
+var GetDeviceShortLivedToken = Module.findExportByName("wlidcli.dll", "GetDeviceShortLivedToken")
+Interceptor.attach(GetDeviceShortLivedToken, {onLeave: function (args) {send("GetDeviceShortLivedToken");}});
+
+var GetErrorMessage = Module.findExportByName("wlidcli.dll", "GetErrorMessage")
+Interceptor.attach(GetErrorMessage, {onLeave: function (args) {send("GetErrorMessage");}});
+
+var GetExtendedError = Module.findExportByName("wlidcli.dll", "GetExtendedError")
+Interceptor.attach(GetExtendedError, {onLeave: function (args) {send("GetExtendedError");}});
+
+var GetExtendedProperty = Module.findExportByName("wlidcli.dll", "GetExtendedProperty")
+Interceptor.attach(GetExtendedProperty, {onLeave: function (args) {send("GetExtendedProperty");}});
+
+var GetHIPChallenge = Module.findExportByName("wlidcli.dll", "GetHIPChallenge")
+Interceptor.attach(GetHIPChallenge, {onLeave: function (args) {send("GetHIPChallenge");}});
+
+var GetIdentityProperty = Module.findExportByName("wlidcli.dll", "GetIdentityProperty")
+Interceptor.attach(GetIdentityProperty, {onLeave: function (args) {send("GetIdentityProperty");}});
+
+var GetIdentityPropertyByName = Module.findExportByName("wlidcli.dll", "GetIdentityPropertyByName")
+Interceptor.attach(GetIdentityPropertyByName, {onLeave: function (args) {send("GetIdentityPropertyByName");}});
+
+var GetRealmInfo = Module.findExportByName("wlidcli.dll", "GetRealmInfo")
+Interceptor.attach(GetRealmInfo, {onLeave: function (args) {send("GetRealmInfo");}});
+
+var GetResponseForHttpChallenge = Module.findExportByName("wlidcli.dll", "GetResponseForHttpChallenge")
+Interceptor.attach(GetResponseForHttpChallenge, {onLeave: function (args) {send("GetResponseForHttpChallenge");}});
+
+var GetServiceConfig = Module.findExportByName("wlidcli.dll", "GetServiceConfig")
+Interceptor.attach(GetServiceConfig, {onLeave: function (args) {send("GetServiceConfig");}});
+
+var GetUserExtendedProperty = Module.findExportByName("wlidcli.dll", "GetUserExtendedProperty")
+Interceptor.attach(GetUserExtendedProperty, {onLeave: function (args) {send("GetUserExtendedProperty");}});
+
+var GetUsersFromSsoGroup = Module.findExportByName("wlidcli.dll", "GetUsersFromSsoGroup")
+Interceptor.attach(GetUsersFromSsoGroup, {onLeave: function (args) {send("GetUsersFromSsoGroup");}});
+
+var GetWebAuthUrl = Module.findExportByName("wlidcli.dll", "GetWebAuthUrl")
+Interceptor.attach(GetWebAuthUrl, {onLeave: function (args) {send("GetWebAuthUrl");}});
+
+var GetWebAuthUrlEx = Module.findExportByName("wlidcli.dll", "GetWebAuthUrlEx")
+Interceptor.attach(GetWebAuthUrlEx, {onLeave: function (args) {send("GetWebAuthUrlEx");}});
+
+var HasPersistedCredential = Module.findExportByName("wlidcli.dll", "HasPersistedCredential")
+Interceptor.attach(HasPersistedCredential, {onLeave: function (args) {send("HasPersistedCredential");}});
+
+var IDCRL_GetLatestProtectionKey = Module.findExportByName("wlidcli.dll", "IDCRL_GetLatestProtectionKey")
+Interceptor.attach(IDCRL_GetLatestProtectionKey, {onLeave: function (args) {send("IDCRL_GetLatestProtectionKey");}});
+
+var IDCRL_GetSpecifiedProtectionKey = Module.findExportByName("wlidcli.dll", "IDCRL_GetSpecifiedProtectionKey")
+Interceptor.attach(IDCRL_GetSpecifiedProtectionKey, {onLeave: function (args) {send("IDCRL_GetSpecifiedProtectionKey");}});
+
+var Initialize = Module.findExportByName("wlidcli.dll", "Initialize")
+Interceptor.attach(Initialize, {onLeave: function (args) {send("Initialize");}});
+
+var InitializeApp = Module.findExportByName("wlidcli.dll", "InitializeApp")
+Interceptor.attach(InitializeApp, {onLeave: function (args) {send("InitializeApp");}});
+
+var InitializeEx = Module.findExportByName("wlidcli.dll", "InitializeEx")
+Interceptor.attach(InitializeEx, {onLeave: function (args) {send("InitializeEx");}});
+
+var InitializeIDCRLTraceBuffer = Module.findExportByName("wlidcli.dll", "InitializeIDCRLTraceBuffer")
+Interceptor.attach(InitializeIDCRLTraceBuffer, {onLeave: function (args) {send("InitializeIDCRLTraceBuffer");}});
+
+var IsDeviceIDAdmin = Module.findExportByName("wlidcli.dll", "IsDeviceIDAdmin")
+Interceptor.attach(IsDeviceIDAdmin, {onLeave: function (args) {send("IsDeviceIDAdmin");}});
+
+var IsMappedError = Module.findExportByName("wlidcli.dll", "IsMappedError")
+Interceptor.attach(IsMappedError, {onLeave: function (args) {send("IsMappedError");}});
+
+var LogonIdentity = Module.findExportByName("wlidcli.dll", "LogonIdentity")
+Interceptor.attach(LogonIdentity, {onLeave: function (args) {send("LogonIdentity");}});
+
+var LogonIdentityEx = Module.findExportByName("wlidcli.dll", "LogonIdentityEx")
+Interceptor.attach(LogonIdentityEx, {onLeave: function (args) {send("LogonIdentityEx");}});
+
+var LogonIdentityExSSO = Module.findExportByName("wlidcli.dll", "LogonIdentityExSSO")
+Interceptor.attach(LogonIdentityExSSO, {onLeave: function (args) {send("LogonIdentityExSSO");}});
+
+var LogonIdentityExWithUI = Module.findExportByName("wlidcli.dll", "LogonIdentityExWithUI")
+Interceptor.attach(LogonIdentityExWithUI, {onLeave: function (args) {send("LogonIdentityExWithUI");}});
+
+var NextIdentity = Module.findExportByName("wlidcli.dll", "NextIdentity")
+Interceptor.attach(NextIdentity, {onLeave: function (args) {send("NextIdentity");}});
+
+var OpenAuthenticatedBrowser = Module.findExportByName("wlidcli.dll", "OpenAuthenticatedBrowser")
+Interceptor.attach(OpenAuthenticatedBrowser, {onLeave: function (args) {send("OpenAuthenticatedBrowser");}});
+
+var PassportFreeMemory = Module.findExportByName("wlidcli.dll", "PassportFreeMemory")
+Interceptor.attach(PassportFreeMemory, {onLeave: function (args) {send("PassportFreeMemory");}});
+
+var PersistCredential = Module.findExportByName("wlidcli.dll", "PersistCredential")
+Interceptor.attach(PersistCredential, {onLeave: function (args) {send("PersistCredential");}});
+
+var ProvisionDeviceId = Module.findExportByName("wlidcli.dll", "ProvisionDeviceId")
+Interceptor.attach(ProvisionDeviceId, {onLeave: function (args) {send("ProvisionDeviceId");}});
+
+var RemoveChangeNotificationCallback = Module.findExportByName("wlidcli.dll", "RemoveChangeNotificationCallback")
+Interceptor.attach(RemoveChangeNotificationCallback, {onLeave: function (args) {send("RemoveChangeNotificationCallback");}});
+
+var RemovePersistedCredential = Module.findExportByName("wlidcli.dll", "RemovePersistedCredential")
+Interceptor.attach(RemovePersistedCredential, {onLeave: function (args) {send("RemovePersistedCredential");}});
+
+var RemoveUserFromSsoGroup = Module.findExportByName("wlidcli.dll", "RemoveUserFromSsoGroup")
+Interceptor.attach(RemoveUserFromSsoGroup, {onLeave: function (args) {send("RemoveUserFromSsoGroup");}});
+
+var RenewDeviceId = Module.findExportByName("wlidcli.dll", "RenewDeviceId")
+Interceptor.attach(RenewDeviceId, {onLeave: function (args) {send("RenewDeviceId");}});
+
+var SendOneTimeCode = Module.findExportByName("wlidcli.dll", "SendOneTimeCode")
+Interceptor.attach(SendOneTimeCode, {onLeave: function (args) {send("SendOneTimeCode");}});
+
+var SendWatsonReport = Module.findExportByName("wlidcli.dll", "SendWatsonReport")
+Interceptor.attach(SendWatsonReport, {onLeave: function (args) {send("SendWatsonReport");}});
+
+var SetChangeNotificationCallback = Module.findExportByName("wlidcli.dll", "SetChangeNotificationCallback")
+Interceptor.attach(SetChangeNotificationCallback, {onLeave: function (args) {send("SetChangeNotificationCallback");}});
+
+var SetCredential = Module.findExportByName("wlidcli.dll", "SetCredential")
+Interceptor.attach(SetCredential, {onLeave: function (args) {send("SetCredential");}});
+
+var SetDefaultUserForTarget = Module.findExportByName("wlidcli.dll", "SetDefaultUserForTarget")
+Interceptor.attach(SetDefaultUserForTarget, {onLeave: function (args) {send("SetDefaultUserForTarget");}});
+
+var SetDeviceConsent = Module.findExportByName("wlidcli.dll", "SetDeviceConsent")
+Interceptor.attach(SetDeviceConsent, {onLeave: function (args) {send("SetDeviceConsent");}});
+
+var SetExtendedProperty = Module.findExportByName("wlidcli.dll", "SetExtendedProperty")
+Interceptor.attach(SetExtendedProperty, {onLeave: function (args) {send("SetExtendedProperty");}});
+
+var SetHIPSolution = Module.findExportByName("wlidcli.dll", "SetHIPSolution")
+Interceptor.attach(SetHIPSolution, {onLeave: function (args) {send("SetHIPSolution");}});
+
+var SetIdcrlOptions = Module.findExportByName("wlidcli.dll", "SetIdcrlOptions")
+Interceptor.attach(SetIdcrlOptions, {onLeave: function (args) {send("SetIdcrlOptions");}});
+
+var SetIdentityCallback = Module.findExportByName("wlidcli.dll", "SetIdentityCallback")
+Interceptor.attach(SetIdentityCallback, {onLeave: function (args) {send("SetIdentityCallback");}});
+
+var SetIdentityProperty = Module.findExportByName("wlidcli.dll", "SetIdentityProperty")
+Interceptor.attach(SetIdentityProperty, {onLeave: function (args) {send("SetIdentityProperty");}});
+
+var SetUserExtendedProperty = Module.findExportByName("wlidcli.dll", "SetUserExtendedProperty")
+Interceptor.attach(SetUserExtendedProperty, {onLeave: function (args) {send("SetUserExtendedProperty");}});
+
+var StartTracing = Module.findExportByName("wlidcli.dll", "StartTracing")
+Interceptor.attach(StartTracing, {onLeave: function (args) {send("StartTracing");}});
+
+var StopTracing = Module.findExportByName("wlidcli.dll", "StopTracing")
+Interceptor.attach(StopTracing, {onLeave: function (args) {send("StopTracing");}});
+
+var UICollectCredential = Module.findExportByName("wlidcli.dll", "UICollectCredential")
+Interceptor.attach(UICollectCredential, {onLeave: function (args) {send("UICollectCredential");}});
+
+var UIEndWaitDialog = Module.findExportByName("wlidcli.dll", "UIEndWaitDialog")
+Interceptor.attach(UIEndWaitDialog, {onLeave: function (args) {send("UIEndWaitDialog");}});
+
+var UIShowWaitDialog = Module.findExportByName("wlidcli.dll", "UIShowWaitDialog")
+Interceptor.attach(UIShowWaitDialog, {onLeave: function (args) {send("UIShowWaitDialog");}});
+
+var UnPackErrorBlob = Module.findExportByName("wlidcli.dll", "UnPackErrorBlob")
+Interceptor.attach(UnPackErrorBlob, {onLeave: function (args) {send("UnPackErrorBlob");}});
+
+var Uninitialize = Module.findExportByName("wlidcli.dll", "Uninitialize")
+Interceptor.attach(Uninitialize, {onLeave: function (args) {send("Uninitialize");}});
+
+var UpdateUserAssociatedDeviceProperties = Module.findExportByName("wlidcli.dll", "UpdateUserAssociatedDeviceProperties")
+Interceptor.attach(UpdateUserAssociatedDeviceProperties, {onLeave: function (args) {send("UpdateUserAssociatedDeviceProperties");}});
+
+var VerifyAssertion = Module.findExportByName("wlidcli.dll", "VerifyAssertion")
+Interceptor.attach(VerifyAssertion, {onLeave: function (args) {send("VerifyAssertion");}});
+
+var VerifyCertificate = Module.findExportByName("wlidcli.dll", "VerifyCertificate")
+Interceptor.attach(VerifyCertificate, {onLeave: function (args) {send("VerifyCertificate");}});
+

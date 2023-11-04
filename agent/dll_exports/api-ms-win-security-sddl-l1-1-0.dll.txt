@@ -1,0 +1,12 @@
+var ConvertSecurityDescriptorToStringSecurityDescriptorW = Module.findExportByName("api-ms-win-security-sddl-l1-1-0.dll", "ConvertSecurityDescriptorToStringSecurityDescriptorW")
+Interceptor.attach(ConvertSecurityDescriptorToStringSecurityDescriptorW, {onLeave: function (args) {send("ConvertSecurityDescriptorToStringSecurityDescriptorW");}});
+
+var ConvertSidToStringSidW = Module.findExportByName("api-ms-win-security-sddl-l1-1-0.dll", "ConvertSidToStringSidW")
+Interceptor.attach(ConvertSidToStringSidW, {onLeave: function (args) {send("ConvertSidToStringSidW");}});
+
+var ConvertStringSecurityDescriptorToSecurityDescriptorW = Module.findExportByName("api-ms-win-security-sddl-l1-1-0.dll", "ConvertStringSecurityDescriptorToSecurityDescriptorW")
+Interceptor.attach(ConvertStringSecurityDescriptorToSecurityDescriptorW, {onLeave: function (args) {send("ConvertStringSecurityDescriptorToSecurityDescriptorW");}});
+
+var ConvertStringSidToSidW = Module.findExportByName("api-ms-win-security-sddl-l1-1-0.dll", "ConvertStringSidToSidW")
+Interceptor.attach(ConvertStringSidToSidW, {onLeave: function (args) {send("ConvertStringSidToSidW");}});
+

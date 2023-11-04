@@ -1,0 +1,30 @@
+var ASCDefer = Module.findExportByName("msdtctm.dll", "ASCDefer")
+Interceptor.attach(ASCDefer, {onLeave: function (args) {send("ASCDefer");}});
+
+var ASCDeliverDeferred = Module.findExportByName("msdtctm.dll", "ASCDeliverDeferred")
+Interceptor.attach(ASCDeliverDeferred, {onLeave: function (args) {send("ASCDeliverDeferred");}});
+
+var ASCGetSafeReference = Module.findExportByName("msdtctm.dll", "ASCGetSafeReference")
+Interceptor.attach(ASCGetSafeReference, {onLeave: function (args) {send("ASCGetSafeReference");}});
+
+var ASCWrapClassFactory = Module.findExportByName("msdtctm.dll", "ASCWrapClassFactory")
+Interceptor.attach(ASCWrapClassFactory, {onLeave: function (args) {send("ASCWrapClassFactory");}});
+
+var ASCWrapObject = Module.findExportByName("msdtctm.dll", "ASCWrapObject")
+Interceptor.attach(ASCWrapObject, {onLeave: function (args) {send("ASCWrapObject");}});
+
+var CreateInstance = Module.findExportByName("msdtctm.dll", "CreateInstance")
+Interceptor.attach(CreateInstance, {onLeave: function (args) {send("CreateInstance");}});
+
+var DllGetClassObject = Module.findExportByName("msdtctm.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DtcMainExt = Module.findExportByName("msdtctm.dll", "DtcMainExt")
+Interceptor.attach(DtcMainExt, {onLeave: function (args) {send("DtcMainExt");}});
+
+var GetTipFunctionalityWorking = Module.findExportByName("msdtctm.dll", "GetTipFunctionalityWorking")
+Interceptor.attach(GetTipFunctionalityWorking, {onLeave: function (args) {send("GetTipFunctionalityWorking");}});
+
+var SetTipFunctionalityWorking = Module.findExportByName("msdtctm.dll", "SetTipFunctionalityWorking")
+Interceptor.attach(SetTipFunctionalityWorking, {onLeave: function (args) {send("SetTipFunctionalityWorking");}});
+

@@ -1,0 +1,39 @@
+var DllMain = Module.findExportByName("ServicingUAPI.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var EnumerateFeatures = Module.findExportByName("ServicingUAPI.dll", "EnumerateFeatures")
+Interceptor.attach(EnumerateFeatures, {onLeave: function (args) {send("EnumerateFeatures");}});
+
+var FreeEnumerateFeaturesResult = Module.findExportByName("ServicingUAPI.dll", "FreeEnumerateFeaturesResult")
+Interceptor.attach(FreeEnumerateFeaturesResult, {onLeave: function (args) {send("FreeEnumerateFeaturesResult");}});
+
+var FreeInstallFeaturesResult = Module.findExportByName("ServicingUAPI.dll", "FreeInstallFeaturesResult")
+Interceptor.attach(FreeInstallFeaturesResult, {onLeave: function (args) {send("FreeInstallFeaturesResult");}});
+
+var FreeModifyFeaturesResult = Module.findExportByName("ServicingUAPI.dll", "FreeModifyFeaturesResult")
+Interceptor.attach(FreeModifyFeaturesResult, {onLeave: function (args) {send("FreeModifyFeaturesResult");}});
+
+var FreeUninstallFeaturesResult = Module.findExportByName("ServicingUAPI.dll", "FreeUninstallFeaturesResult")
+Interceptor.attach(FreeUninstallFeaturesResult, {onLeave: function (args) {send("FreeUninstallFeaturesResult");}});
+
+var GetFeatureState = Module.findExportByName("ServicingUAPI.dll", "GetFeatureState")
+Interceptor.attach(GetFeatureState, {onLeave: function (args) {send("GetFeatureState");}});
+
+var GetServicingStatus = Module.findExportByName("ServicingUAPI.dll", "GetServicingStatus")
+Interceptor.attach(GetServicingStatus, {onLeave: function (args) {send("GetServicingStatus");}});
+
+var InstallFeatures = Module.findExportByName("ServicingUAPI.dll", "InstallFeatures")
+Interceptor.attach(InstallFeatures, {onLeave: function (args) {send("InstallFeatures");}});
+
+var IsFeatureInstalled = Module.findExportByName("ServicingUAPI.dll", "IsFeatureInstalled")
+Interceptor.attach(IsFeatureInstalled, {onLeave: function (args) {send("IsFeatureInstalled");}});
+
+var ModifyFeatures = Module.findExportByName("ServicingUAPI.dll", "ModifyFeatures")
+Interceptor.attach(ModifyFeatures, {onLeave: function (args) {send("ModifyFeatures");}});
+
+var PrepareSandboxForInboxUse = Module.findExportByName("ServicingUAPI.dll", "PrepareSandboxForInboxUse")
+Interceptor.attach(PrepareSandboxForInboxUse, {onLeave: function (args) {send("PrepareSandboxForInboxUse");}});
+
+var UninstallFeatures = Module.findExportByName("ServicingUAPI.dll", "UninstallFeatures")
+Interceptor.attach(UninstallFeatures, {onLeave: function (args) {send("UninstallFeatures");}});
+

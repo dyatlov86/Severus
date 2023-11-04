@@ -1,0 +1,51 @@
+var DeleteSynchronizationBarrier = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "DeleteSynchronizationBarrier")
+Interceptor.attach(DeleteSynchronizationBarrier, {onLeave: function (args) {send("DeleteSynchronizationBarrier");}});
+
+var EnterSynchronizationBarrier = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "EnterSynchronizationBarrier")
+Interceptor.attach(EnterSynchronizationBarrier, {onLeave: function (args) {send("EnterSynchronizationBarrier");}});
+
+var InitOnceBeginInitialize = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "InitOnceBeginInitialize")
+Interceptor.attach(InitOnceBeginInitialize, {onLeave: function (args) {send("InitOnceBeginInitialize");}});
+
+var InitOnceComplete = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "InitOnceComplete")
+Interceptor.attach(InitOnceComplete, {onLeave: function (args) {send("InitOnceComplete");}});
+
+var InitOnceExecuteOnce = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "InitOnceExecuteOnce")
+Interceptor.attach(InitOnceExecuteOnce, {onLeave: function (args) {send("InitOnceExecuteOnce");}});
+
+var InitOnceInitialize = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "InitOnceInitialize")
+Interceptor.attach(InitOnceInitialize, {onLeave: function (args) {send("InitOnceInitialize");}});
+
+var InitializeConditionVariable = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "InitializeConditionVariable")
+Interceptor.attach(InitializeConditionVariable, {onLeave: function (args) {send("InitializeConditionVariable");}});
+
+var InitializeSynchronizationBarrier = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "InitializeSynchronizationBarrier")
+Interceptor.attach(InitializeSynchronizationBarrier, {onLeave: function (args) {send("InitializeSynchronizationBarrier");}});
+
+var SignalObjectAndWait = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "SignalObjectAndWait")
+Interceptor.attach(SignalObjectAndWait, {onLeave: function (args) {send("SignalObjectAndWait");}});
+
+var Sleep = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "Sleep")
+Interceptor.attach(Sleep, {onLeave: function (args) {send("Sleep");}});
+
+var SleepConditionVariableCS = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "SleepConditionVariableCS")
+Interceptor.attach(SleepConditionVariableCS, {onLeave: function (args) {send("SleepConditionVariableCS");}});
+
+var SleepConditionVariableSRW = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "SleepConditionVariableSRW")
+Interceptor.attach(SleepConditionVariableSRW, {onLeave: function (args) {send("SleepConditionVariableSRW");}});
+
+var WaitOnAddress = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "WaitOnAddress")
+Interceptor.attach(WaitOnAddress, {onLeave: function (args) {send("WaitOnAddress");}});
+
+var WakeAllConditionVariable = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "WakeAllConditionVariable")
+Interceptor.attach(WakeAllConditionVariable, {onLeave: function (args) {send("WakeAllConditionVariable");}});
+
+var WakeByAddressAll = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "WakeByAddressAll")
+Interceptor.attach(WakeByAddressAll, {onLeave: function (args) {send("WakeByAddressAll");}});
+
+var WakeByAddressSingle = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "WakeByAddressSingle")
+Interceptor.attach(WakeByAddressSingle, {onLeave: function (args) {send("WakeByAddressSingle");}});
+
+var WakeConditionVariable = Module.findExportByName("api-ms-win-core-synch-l1-2-0.dll", "WakeConditionVariable")
+Interceptor.attach(WakeConditionVariable, {onLeave: function (args) {send("WakeConditionVariable");}});
+

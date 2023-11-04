@@ -1,0 +1,15 @@
+var MSE_AB48_Destroy = Module.findExportByName("MonoSeparationEnrollDll.dll", "MSE_AB48_Destroy")
+Interceptor.attach(MSE_AB48_Destroy, {onLeave: function (args) {send("MSE_AB48_Destroy");}});
+
+var MSE_AB48_GetTrainDataReady = Module.findExportByName("MonoSeparationEnrollDll.dll", "MSE_AB48_GetTrainDataReady")
+Interceptor.attach(MSE_AB48_GetTrainDataReady, {onLeave: function (args) {send("MSE_AB48_GetTrainDataReady");}});
+
+var MSE_AB48_Init = Module.findExportByName("MonoSeparationEnrollDll.dll", "MSE_AB48_Init")
+Interceptor.attach(MSE_AB48_Init, {onLeave: function (args) {send("MSE_AB48_Init");}});
+
+var MSE_AB48_Process = Module.findExportByName("MonoSeparationEnrollDll.dll", "MSE_AB48_Process")
+Interceptor.attach(MSE_AB48_Process, {onLeave: function (args) {send("MSE_AB48_Process");}});
+
+var MSE_AB48_SaveTrainDataToMemory = Module.findExportByName("MonoSeparationEnrollDll.dll", "MSE_AB48_SaveTrainDataToMemory")
+Interceptor.attach(MSE_AB48_SaveTrainDataToMemory, {onLeave: function (args) {send("MSE_AB48_SaveTrainDataToMemory");}});
+

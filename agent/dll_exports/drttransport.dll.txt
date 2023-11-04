@@ -1,0 +1,6 @@
+var DrtCreateIpv6UdpTransport = Module.findExportByName("drttransport.dll", "DrtCreateIpv6UdpTransport")
+Interceptor.attach(DrtCreateIpv6UdpTransport, {onLeave: function (args) {send("DrtCreateIpv6UdpTransport");}});
+
+var DrtDeleteIpv6UdpTransport = Module.findExportByName("drttransport.dll", "DrtDeleteIpv6UdpTransport")
+Interceptor.attach(DrtDeleteIpv6UdpTransport, {onLeave: function (args) {send("DrtDeleteIpv6UdpTransport");}});
+

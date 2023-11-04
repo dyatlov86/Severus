@@ -1,0 +1,162 @@
+var ConfigDSN = Module.findExportByName("msorcl32.dll", "ConfigDSN")
+Interceptor.attach(ConfigDSN, {onLeave: function (args) {send("ConfigDSN");}});
+
+var DllMain = Module.findExportByName("msorcl32.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("msorcl32.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msorcl32.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var LoadByOrdinal = Module.findExportByName("msorcl32.dll", "LoadByOrdinal")
+Interceptor.attach(LoadByOrdinal, {onLeave: function (args) {send("LoadByOrdinal");}});
+
+var SQLAllocConnect = Module.findExportByName("msorcl32.dll", "SQLAllocConnect")
+Interceptor.attach(SQLAllocConnect, {onLeave: function (args) {send("SQLAllocConnect");}});
+
+var SQLAllocEnv = Module.findExportByName("msorcl32.dll", "SQLAllocEnv")
+Interceptor.attach(SQLAllocEnv, {onLeave: function (args) {send("SQLAllocEnv");}});
+
+var SQLAllocStmt = Module.findExportByName("msorcl32.dll", "SQLAllocStmt")
+Interceptor.attach(SQLAllocStmt, {onLeave: function (args) {send("SQLAllocStmt");}});
+
+var SQLBindCol = Module.findExportByName("msorcl32.dll", "SQLBindCol")
+Interceptor.attach(SQLBindCol, {onLeave: function (args) {send("SQLBindCol");}});
+
+var SQLBindParameter = Module.findExportByName("msorcl32.dll", "SQLBindParameter")
+Interceptor.attach(SQLBindParameter, {onLeave: function (args) {send("SQLBindParameter");}});
+
+var SQLBrowseConnect = Module.findExportByName("msorcl32.dll", "SQLBrowseConnect")
+Interceptor.attach(SQLBrowseConnect, {onLeave: function (args) {send("SQLBrowseConnect");}});
+
+var SQLCancel = Module.findExportByName("msorcl32.dll", "SQLCancel")
+Interceptor.attach(SQLCancel, {onLeave: function (args) {send("SQLCancel");}});
+
+var SQLColAttributes = Module.findExportByName("msorcl32.dll", "SQLColAttributes")
+Interceptor.attach(SQLColAttributes, {onLeave: function (args) {send("SQLColAttributes");}});
+
+var SQLColumns = Module.findExportByName("msorcl32.dll", "SQLColumns")
+Interceptor.attach(SQLColumns, {onLeave: function (args) {send("SQLColumns");}});
+
+var SQLConnect = Module.findExportByName("msorcl32.dll", "SQLConnect")
+Interceptor.attach(SQLConnect, {onLeave: function (args) {send("SQLConnect");}});
+
+var SQLDescribeCol = Module.findExportByName("msorcl32.dll", "SQLDescribeCol")
+Interceptor.attach(SQLDescribeCol, {onLeave: function (args) {send("SQLDescribeCol");}});
+
+var SQLDescribeParam = Module.findExportByName("msorcl32.dll", "SQLDescribeParam")
+Interceptor.attach(SQLDescribeParam, {onLeave: function (args) {send("SQLDescribeParam");}});
+
+var SQLDisconnect = Module.findExportByName("msorcl32.dll", "SQLDisconnect")
+Interceptor.attach(SQLDisconnect, {onLeave: function (args) {send("SQLDisconnect");}});
+
+var SQLDriverConnect = Module.findExportByName("msorcl32.dll", "SQLDriverConnect")
+Interceptor.attach(SQLDriverConnect, {onLeave: function (args) {send("SQLDriverConnect");}});
+
+var SQLError = Module.findExportByName("msorcl32.dll", "SQLError")
+Interceptor.attach(SQLError, {onLeave: function (args) {send("SQLError");}});
+
+var SQLExecDirect = Module.findExportByName("msorcl32.dll", "SQLExecDirect")
+Interceptor.attach(SQLExecDirect, {onLeave: function (args) {send("SQLExecDirect");}});
+
+var SQLExecute = Module.findExportByName("msorcl32.dll", "SQLExecute")
+Interceptor.attach(SQLExecute, {onLeave: function (args) {send("SQLExecute");}});
+
+var SQLExtendedFetch = Module.findExportByName("msorcl32.dll", "SQLExtendedFetch")
+Interceptor.attach(SQLExtendedFetch, {onLeave: function (args) {send("SQLExtendedFetch");}});
+
+var SQLFetch = Module.findExportByName("msorcl32.dll", "SQLFetch")
+Interceptor.attach(SQLFetch, {onLeave: function (args) {send("SQLFetch");}});
+
+var SQLForeignKeys = Module.findExportByName("msorcl32.dll", "SQLForeignKeys")
+Interceptor.attach(SQLForeignKeys, {onLeave: function (args) {send("SQLForeignKeys");}});
+
+var SQLFreeConnect = Module.findExportByName("msorcl32.dll", "SQLFreeConnect")
+Interceptor.attach(SQLFreeConnect, {onLeave: function (args) {send("SQLFreeConnect");}});
+
+var SQLFreeEnv = Module.findExportByName("msorcl32.dll", "SQLFreeEnv")
+Interceptor.attach(SQLFreeEnv, {onLeave: function (args) {send("SQLFreeEnv");}});
+
+var SQLFreeStmt = Module.findExportByName("msorcl32.dll", "SQLFreeStmt")
+Interceptor.attach(SQLFreeStmt, {onLeave: function (args) {send("SQLFreeStmt");}});
+
+var SQLGetConnectOption = Module.findExportByName("msorcl32.dll", "SQLGetConnectOption")
+Interceptor.attach(SQLGetConnectOption, {onLeave: function (args) {send("SQLGetConnectOption");}});
+
+var SQLGetCursorName = Module.findExportByName("msorcl32.dll", "SQLGetCursorName")
+Interceptor.attach(SQLGetCursorName, {onLeave: function (args) {send("SQLGetCursorName");}});
+
+var SQLGetData = Module.findExportByName("msorcl32.dll", "SQLGetData")
+Interceptor.attach(SQLGetData, {onLeave: function (args) {send("SQLGetData");}});
+
+var SQLGetInfo = Module.findExportByName("msorcl32.dll", "SQLGetInfo")
+Interceptor.attach(SQLGetInfo, {onLeave: function (args) {send("SQLGetInfo");}});
+
+var SQLGetStmtOption = Module.findExportByName("msorcl32.dll", "SQLGetStmtOption")
+Interceptor.attach(SQLGetStmtOption, {onLeave: function (args) {send("SQLGetStmtOption");}});
+
+var SQLGetTypeInfo = Module.findExportByName("msorcl32.dll", "SQLGetTypeInfo")
+Interceptor.attach(SQLGetTypeInfo, {onLeave: function (args) {send("SQLGetTypeInfo");}});
+
+var SQLMoreResults = Module.findExportByName("msorcl32.dll", "SQLMoreResults")
+Interceptor.attach(SQLMoreResults, {onLeave: function (args) {send("SQLMoreResults");}});
+
+var SQLNativeSql = Module.findExportByName("msorcl32.dll", "SQLNativeSql")
+Interceptor.attach(SQLNativeSql, {onLeave: function (args) {send("SQLNativeSql");}});
+
+var SQLNumParams = Module.findExportByName("msorcl32.dll", "SQLNumParams")
+Interceptor.attach(SQLNumParams, {onLeave: function (args) {send("SQLNumParams");}});
+
+var SQLNumResultCols = Module.findExportByName("msorcl32.dll", "SQLNumResultCols")
+Interceptor.attach(SQLNumResultCols, {onLeave: function (args) {send("SQLNumResultCols");}});
+
+var SQLParamData = Module.findExportByName("msorcl32.dll", "SQLParamData")
+Interceptor.attach(SQLParamData, {onLeave: function (args) {send("SQLParamData");}});
+
+var SQLPrepare = Module.findExportByName("msorcl32.dll", "SQLPrepare")
+Interceptor.attach(SQLPrepare, {onLeave: function (args) {send("SQLPrepare");}});
+
+var SQLPrimaryKeys = Module.findExportByName("msorcl32.dll", "SQLPrimaryKeys")
+Interceptor.attach(SQLPrimaryKeys, {onLeave: function (args) {send("SQLPrimaryKeys");}});
+
+var SQLProcedureColumns = Module.findExportByName("msorcl32.dll", "SQLProcedureColumns")
+Interceptor.attach(SQLProcedureColumns, {onLeave: function (args) {send("SQLProcedureColumns");}});
+
+var SQLProcedures = Module.findExportByName("msorcl32.dll", "SQLProcedures")
+Interceptor.attach(SQLProcedures, {onLeave: function (args) {send("SQLProcedures");}});
+
+var SQLPutData = Module.findExportByName("msorcl32.dll", "SQLPutData")
+Interceptor.attach(SQLPutData, {onLeave: function (args) {send("SQLPutData");}});
+
+var SQLRowCount = Module.findExportByName("msorcl32.dll", "SQLRowCount")
+Interceptor.attach(SQLRowCount, {onLeave: function (args) {send("SQLRowCount");}});
+
+var SQLSetConnectOption = Module.findExportByName("msorcl32.dll", "SQLSetConnectOption")
+Interceptor.attach(SQLSetConnectOption, {onLeave: function (args) {send("SQLSetConnectOption");}});
+
+var SQLSetCursorName = Module.findExportByName("msorcl32.dll", "SQLSetCursorName")
+Interceptor.attach(SQLSetCursorName, {onLeave: function (args) {send("SQLSetCursorName");}});
+
+var SQLSetPos = Module.findExportByName("msorcl32.dll", "SQLSetPos")
+Interceptor.attach(SQLSetPos, {onLeave: function (args) {send("SQLSetPos");}});
+
+var SQLSetScrollOptions = Module.findExportByName("msorcl32.dll", "SQLSetScrollOptions")
+Interceptor.attach(SQLSetScrollOptions, {onLeave: function (args) {send("SQLSetScrollOptions");}});
+
+var SQLSetStmtOption = Module.findExportByName("msorcl32.dll", "SQLSetStmtOption")
+Interceptor.attach(SQLSetStmtOption, {onLeave: function (args) {send("SQLSetStmtOption");}});
+
+var SQLSpecialColumns = Module.findExportByName("msorcl32.dll", "SQLSpecialColumns")
+Interceptor.attach(SQLSpecialColumns, {onLeave: function (args) {send("SQLSpecialColumns");}});
+
+var SQLStatistics = Module.findExportByName("msorcl32.dll", "SQLStatistics")
+Interceptor.attach(SQLStatistics, {onLeave: function (args) {send("SQLStatistics");}});
+
+var SQLTables = Module.findExportByName("msorcl32.dll", "SQLTables")
+Interceptor.attach(SQLTables, {onLeave: function (args) {send("SQLTables");}});
+
+var SQLTransact = Module.findExportByName("msorcl32.dll", "SQLTransact")
+Interceptor.attach(SQLTransact, {onLeave: function (args) {send("SQLTransact");}});
+

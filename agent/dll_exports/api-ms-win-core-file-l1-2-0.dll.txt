@@ -1,0 +1,12 @@
+var CreateFile2 = Module.findExportByName("api-ms-win-core-file-l1-2-0.dll", "CreateFile2")
+Interceptor.attach(CreateFile2, {onLeave: function (args) {send("CreateFile2");}});
+
+var GetTempPathW = Module.findExportByName("api-ms-win-core-file-l1-2-0.dll", "GetTempPathW")
+Interceptor.attach(GetTempPathW, {onLeave: function (args) {send("GetTempPathW");}});
+
+var GetVolumeNameForVolumeMountPointW = Module.findExportByName("api-ms-win-core-file-l1-2-0.dll", "GetVolumeNameForVolumeMountPointW")
+Interceptor.attach(GetVolumeNameForVolumeMountPointW, {onLeave: function (args) {send("GetVolumeNameForVolumeMountPointW");}});
+
+var GetVolumePathNamesForVolumeNameW = Module.findExportByName("api-ms-win-core-file-l1-2-0.dll", "GetVolumePathNamesForVolumeNameW")
+Interceptor.attach(GetVolumePathNamesForVolumeNameW, {onLeave: function (args) {send("GetVolumePathNamesForVolumeNameW");}});
+

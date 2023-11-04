@@ -1,0 +1,12 @@
+var FveBackupRecoveryPasswordToCloudDomain = Module.findExportByName("fveskybackup.dll", "FveBackupRecoveryPasswordToCloudDomain")
+Interceptor.attach(FveBackupRecoveryPasswordToCloudDomain, {onLeave: function (args) {send("FveBackupRecoveryPasswordToCloudDomain");}});
+
+var FveBackupRecoveryPasswordToSkyDrive = Module.findExportByName("fveskybackup.dll", "FveBackupRecoveryPasswordToSkyDrive")
+Interceptor.attach(FveBackupRecoveryPasswordToSkyDrive, {onLeave: function (args) {send("FveBackupRecoveryPasswordToSkyDrive");}});
+
+var FveDeleteRecoveryPasswordsFromCloudDomain = Module.findExportByName("fveskybackup.dll", "FveDeleteRecoveryPasswordsFromCloudDomain")
+Interceptor.attach(FveDeleteRecoveryPasswordsFromCloudDomain, {onLeave: function (args) {send("FveDeleteRecoveryPasswordsFromCloudDomain");}});
+
+var FveGetAllRecoveryPasswordsFromCloudDomain = Module.findExportByName("fveskybackup.dll", "FveGetAllRecoveryPasswordsFromCloudDomain")
+Interceptor.attach(FveGetAllRecoveryPasswordsFromCloudDomain, {onLeave: function (args) {send("FveGetAllRecoveryPasswordsFromCloudDomain");}});
+

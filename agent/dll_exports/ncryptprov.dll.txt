@@ -1,0 +1,9 @@
+var GetKeyStorageInterface = Module.findExportByName("ncryptprov.dll", "GetKeyStorageInterface")
+Interceptor.attach(GetKeyStorageInterface, {onLeave: function (args) {send("GetKeyStorageInterface");}});
+
+var SKCacheFlush = Module.findExportByName("ncryptprov.dll", "SKCacheFlush")
+Interceptor.attach(SKCacheFlush, {onLeave: function (args) {send("SKCacheFlush");}});
+
+var SetAuditingInterface = Module.findExportByName("ncryptprov.dll", "SetAuditingInterface")
+Interceptor.attach(SetAuditingInterface, {onLeave: function (args) {send("SetAuditingInterface");}});
+

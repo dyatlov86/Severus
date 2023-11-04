@@ -1,0 +1,45 @@
+var DllCanUnloadNow = Module.findExportByName("rastlsext.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("rastlsext.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("rastlsext.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("rastlsext.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var RasTlsExt_FreeMemory = Module.findExportByName("rastlsext.dll", "RasTlsExt_FreeMemory")
+Interceptor.attach(RasTlsExt_FreeMemory, {onLeave: function (args) {send("RasTlsExt_FreeMemory");}});
+
+var RasTlsExt_GetConfigCacheOnlyCertValidation = Module.findExportByName("rastlsext.dll", "RasTlsExt_GetConfigCacheOnlyCertValidation")
+Interceptor.attach(RasTlsExt_GetConfigCacheOnlyCertValidation, {onLeave: function (args) {send("RasTlsExt_GetConfigCacheOnlyCertValidation");}});
+
+var RasTlsExt_GetConfigForceNotDomainJoined = Module.findExportByName("rastlsext.dll", "RasTlsExt_GetConfigForceNotDomainJoined")
+Interceptor.attach(RasTlsExt_GetConfigForceNotDomainJoined, {onLeave: function (args) {send("RasTlsExt_GetConfigForceNotDomainJoined");}});
+
+var RasTlsExt_GetPinUserBlob = Module.findExportByName("rastlsext.dll", "RasTlsExt_GetPinUserBlob")
+Interceptor.attach(RasTlsExt_GetPinUserBlob, {onLeave: function (args) {send("RasTlsExt_GetPinUserBlob");}});
+
+var RasTlsExt_GetServerCertDetails = Module.findExportByName("rastlsext.dll", "RasTlsExt_GetServerCertDetails")
+Interceptor.attach(RasTlsExt_GetServerCertDetails, {onLeave: function (args) {send("RasTlsExt_GetServerCertDetails");}});
+
+var RasTlsExt_PackUserBlob = Module.findExportByName("rastlsext.dll", "RasTlsExt_PackUserBlob")
+Interceptor.attach(RasTlsExt_PackUserBlob, {onLeave: function (args) {send("RasTlsExt_PackUserBlob");}});
+
+var RasTlsExt_SelectCertificate = Module.findExportByName("rastlsext.dll", "RasTlsExt_SelectCertificate")
+Interceptor.attach(RasTlsExt_SelectCertificate, {onLeave: function (args) {send("RasTlsExt_SelectCertificate");}});
+
+var RasTlsExt_ShowHelp = Module.findExportByName("rastlsext.dll", "RasTlsExt_ShowHelp")
+Interceptor.attach(RasTlsExt_ShowHelp, {onLeave: function (args) {send("RasTlsExt_ShowHelp");}});
+
+var RasTlsExt_UnpackUserBlob = Module.findExportByName("rastlsext.dll", "RasTlsExt_UnpackUserBlob")
+Interceptor.attach(RasTlsExt_UnpackUserBlob, {onLeave: function (args) {send("RasTlsExt_UnpackUserBlob");}});
+
+var RasTlsExt_ValidateServer = Module.findExportByName("rastlsext.dll", "RasTlsExt_ValidateServer")
+Interceptor.attach(RasTlsExt_ValidateServer, {onLeave: function (args) {send("RasTlsExt_ValidateServer");}});
+
+var RasTlsExt_ValidateServerDialogProc = Module.findExportByName("rastlsext.dll", "RasTlsExt_ValidateServerDialogProc")
+Interceptor.attach(RasTlsExt_ValidateServerDialogProc, {onLeave: function (args) {send("RasTlsExt_ValidateServerDialogProc");}});
+

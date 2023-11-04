@@ -1,0 +1,15 @@
+var DllAddRef = Module.findExportByName("cmstplua.dll", "DllAddRef")
+Interceptor.attach(DllAddRef, {onLeave: function (args) {send("DllAddRef");}});
+
+var DllCanUnloadNow = Module.findExportByName("cmstplua.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("cmstplua.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("cmstplua.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRelease = Module.findExportByName("cmstplua.dll", "DllRelease")
+Interceptor.attach(DllRelease, {onLeave: function (args) {send("DllRelease");}});
+

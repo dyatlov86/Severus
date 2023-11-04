@@ -1,0 +1,3 @@
+var NullExport = Module.findExportByName("GameManager32.dll", "NullExport")
+Interceptor.attach(NullExport, {onLeave: function (args) {send("NullExport");}});
+

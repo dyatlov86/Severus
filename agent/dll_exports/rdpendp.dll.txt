@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("rdpendp.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("rdpendp.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("rdpendp.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("rdpendp.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetTSAudioEndpointEnumeratorForSession = Module.findExportByName("rdpendp.dll", "GetTSAudioEndpointEnumeratorForSession")
+Interceptor.attach(GetTSAudioEndpointEnumeratorForSession, {onLeave: function (args) {send("GetTSAudioEndpointEnumeratorForSession");}});
+

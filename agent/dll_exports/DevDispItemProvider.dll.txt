@@ -1,0 +1,3 @@
+var DevQueryEntry = Module.findExportByName("DevDispItemProvider.dll", "DevQueryEntry")
+Interceptor.attach(DevQueryEntry, {onLeave: function (args) {send("DevQueryEntry");}});
+

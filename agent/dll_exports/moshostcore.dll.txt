@@ -1,0 +1,3 @@
+var MosHostCore_ServiceManagerInstance = Module.findExportByName("moshostcore.dll", "MosHostCore_ServiceManagerInstance")
+Interceptor.attach(MosHostCore_ServiceManagerInstance, {onLeave: function (args) {send("MosHostCore_ServiceManagerInstance");}});
+

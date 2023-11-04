@@ -1,0 +1,3 @@
+var InternetErrorDlgEx = Module.findExportByName("wininetlui.dll", "InternetErrorDlgEx")
+Interceptor.attach(InternetErrorDlgEx, {onLeave: function (args) {send("InternetErrorDlgEx");}});
+

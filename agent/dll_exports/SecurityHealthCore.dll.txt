@@ -1,0 +1,9 @@
+var DllMain = Module.findExportByName("SecurityHealthCore.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var ServiceHandlerEx = Module.findExportByName("SecurityHealthCore.dll", "ServiceHandlerEx")
+Interceptor.attach(ServiceHandlerEx, {onLeave: function (args) {send("ServiceHandlerEx");}});
+
+var ServiceMainEx = Module.findExportByName("SecurityHealthCore.dll", "ServiceMainEx")
+Interceptor.attach(ServiceMainEx, {onLeave: function (args) {send("ServiceMainEx");}});
+

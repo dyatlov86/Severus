@@ -1,0 +1,81 @@
+var DllCanUnloadNow = Module.findExportByName("rasdlg.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("rasdlg.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DwTerminalDlg = Module.findExportByName("rasdlg.dll", "DwTerminalDlg")
+Interceptor.attach(DwTerminalDlg, {onLeave: function (args) {send("DwTerminalDlg");}});
+
+var GetRasDialOutProtocols = Module.findExportByName("rasdlg.dll", "GetRasDialOutProtocols")
+Interceptor.attach(GetRasDialOutProtocols, {onLeave: function (args) {send("GetRasDialOutProtocols");}});
+
+var RasAutodialQueryDlgA = Module.findExportByName("rasdlg.dll", "RasAutodialQueryDlgA")
+Interceptor.attach(RasAutodialQueryDlgA, {onLeave: function (args) {send("RasAutodialQueryDlgA");}});
+
+var RasAutodialQueryDlgW = Module.findExportByName("rasdlg.dll", "RasAutodialQueryDlgW")
+Interceptor.attach(RasAutodialQueryDlgW, {onLeave: function (args) {send("RasAutodialQueryDlgW");}});
+
+var RasDialDlgA = Module.findExportByName("rasdlg.dll", "RasDialDlgA")
+Interceptor.attach(RasDialDlgA, {onLeave: function (args) {send("RasDialDlgA");}});
+
+var RasDialDlgW = Module.findExportByName("rasdlg.dll", "RasDialDlgW")
+Interceptor.attach(RasDialDlgW, {onLeave: function (args) {send("RasDialDlgW");}});
+
+var RasEntryDlgA = Module.findExportByName("rasdlg.dll", "RasEntryDlgA")
+Interceptor.attach(RasEntryDlgA, {onLeave: function (args) {send("RasEntryDlgA");}});
+
+var RasEntryDlgW = Module.findExportByName("rasdlg.dll", "RasEntryDlgW")
+Interceptor.attach(RasEntryDlgW, {onLeave: function (args) {send("RasEntryDlgW");}});
+
+var RasHandleDiagnostics = Module.findExportByName("rasdlg.dll", "RasHandleDiagnostics")
+Interceptor.attach(RasHandleDiagnostics, {onLeave: function (args) {send("RasHandleDiagnostics");}});
+
+var RasPhonebookDlgA = Module.findExportByName("rasdlg.dll", "RasPhonebookDlgA")
+Interceptor.attach(RasPhonebookDlgA, {onLeave: function (args) {send("RasPhonebookDlgA");}});
+
+var RasPhonebookDlgW = Module.findExportByName("rasdlg.dll", "RasPhonebookDlgW")
+Interceptor.attach(RasPhonebookDlgW, {onLeave: function (args) {send("RasPhonebookDlgW");}});
+
+var RasSrvAddPropPages = Module.findExportByName("rasdlg.dll", "RasSrvAddPropPages")
+Interceptor.attach(RasSrvAddPropPages, {onLeave: function (args) {send("RasSrvAddPropPages");}});
+
+var RasSrvAllowConnectionsConfig = Module.findExportByName("rasdlg.dll", "RasSrvAllowConnectionsConfig")
+Interceptor.attach(RasSrvAllowConnectionsConfig, {onLeave: function (args) {send("RasSrvAllowConnectionsConfig");}});
+
+var RasSrvCleanupService = Module.findExportByName("rasdlg.dll", "RasSrvCleanupService")
+Interceptor.attach(RasSrvCleanupService, {onLeave: function (args) {send("RasSrvCleanupService");}});
+
+var RasSrvEnumConnections = Module.findExportByName("rasdlg.dll", "RasSrvEnumConnections")
+Interceptor.attach(RasSrvEnumConnections, {onLeave: function (args) {send("RasSrvEnumConnections");}});
+
+var RasSrvHangupConnection = Module.findExportByName("rasdlg.dll", "RasSrvHangupConnection")
+Interceptor.attach(RasSrvHangupConnection, {onLeave: function (args) {send("RasSrvHangupConnection");}});
+
+var RasSrvInitializeService = Module.findExportByName("rasdlg.dll", "RasSrvInitializeService")
+Interceptor.attach(RasSrvInitializeService, {onLeave: function (args) {send("RasSrvInitializeService");}});
+
+var RasSrvIsConnectionConnected = Module.findExportByName("rasdlg.dll", "RasSrvIsConnectionConnected")
+Interceptor.attach(RasSrvIsConnectionConnected, {onLeave: function (args) {send("RasSrvIsConnectionConnected");}});
+
+var RasSrvIsICConfigured = Module.findExportByName("rasdlg.dll", "RasSrvIsICConfigured")
+Interceptor.attach(RasSrvIsICConfigured, {onLeave: function (args) {send("RasSrvIsICConfigured");}});
+
+var RasSrvIsServiceRunning = Module.findExportByName("rasdlg.dll", "RasSrvIsServiceRunning")
+Interceptor.attach(RasSrvIsServiceRunning, {onLeave: function (args) {send("RasSrvIsServiceRunning");}});
+
+var RasUserEnableManualDial = Module.findExportByName("rasdlg.dll", "RasUserEnableManualDial")
+Interceptor.attach(RasUserEnableManualDial, {onLeave: function (args) {send("RasUserEnableManualDial");}});
+
+var RasUserGetManualDial = Module.findExportByName("rasdlg.dll", "RasUserGetManualDial")
+Interceptor.attach(RasUserGetManualDial, {onLeave: function (args) {send("RasUserGetManualDial");}});
+
+var RasUserPrefsDlg = Module.findExportByName("rasdlg.dll", "RasUserPrefsDlg")
+Interceptor.attach(RasUserPrefsDlg, {onLeave: function (args) {send("RasUserPrefsDlg");}});
+
+var RouterEntryDlgA = Module.findExportByName("rasdlg.dll", "RouterEntryDlgA")
+Interceptor.attach(RouterEntryDlgA, {onLeave: function (args) {send("RouterEntryDlgA");}});
+
+var RouterEntryDlgW = Module.findExportByName("rasdlg.dll", "RouterEntryDlgW")
+Interceptor.attach(RouterEntryDlgW, {onLeave: function (args) {send("RouterEntryDlgW");}});
+

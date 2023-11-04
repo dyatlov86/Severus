@@ -1,0 +1,111 @@
+var DllCanUnloadNow = Module.findExportByName("SensorsApi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SensorsApi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("SensorsApi.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("SensorsApi.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var SensorCloseCOM = Module.findExportByName("SensorsApi.dll", "SensorCloseCOM")
+Interceptor.attach(SensorCloseCOM, {onLeave: function (args) {send("SensorCloseCOM");}});
+
+var SensorEnableIdleOperationCOM = Module.findExportByName("SensorsApi.dll", "SensorEnableIdleOperationCOM")
+Interceptor.attach(SensorEnableIdleOperationCOM, {onLeave: function (args) {send("SensorEnableIdleOperationCOM");}});
+
+var SensorGetAccDataCOM = Module.findExportByName("SensorsApi.dll", "SensorGetAccDataCOM")
+Interceptor.attach(SensorGetAccDataCOM, {onLeave: function (args) {send("SensorGetAccDataCOM");}});
+
+var SensorGetAlsDataCOM = Module.findExportByName("SensorsApi.dll", "SensorGetAlsDataCOM")
+Interceptor.attach(SensorGetAlsDataCOM, {onLeave: function (args) {send("SensorGetAlsDataCOM");}});
+
+var SensorGetAlsDataWithColorCOM = Module.findExportByName("SensorsApi.dll", "SensorGetAlsDataWithColorCOM")
+Interceptor.attach(SensorGetAlsDataWithColorCOM, {onLeave: function (args) {send("SensorGetAlsDataWithColorCOM");}});
+
+var SensorGetBarDataCOM = Module.findExportByName("SensorsApi.dll", "SensorGetBarDataCOM")
+Interceptor.attach(SensorGetBarDataCOM, {onLeave: function (args) {send("SensorGetBarDataCOM");}});
+
+var SensorGetCapabilitiesCollectionCOM = Module.findExportByName("SensorsApi.dll", "SensorGetCapabilitiesCollectionCOM")
+Interceptor.attach(SensorGetCapabilitiesCollectionCOM, {onLeave: function (args) {send("SensorGetCapabilitiesCollectionCOM");}});
+
+var SensorGetDataCollectionCOM = Module.findExportByName("SensorsApi.dll", "SensorGetDataCollectionCOM")
+Interceptor.attach(SensorGetDataCollectionCOM, {onLeave: function (args) {send("SensorGetDataCollectionCOM");}});
+
+var SensorGetDeviceIdCOM = Module.findExportByName("SensorsApi.dll", "SensorGetDeviceIdCOM")
+Interceptor.attach(SensorGetDeviceIdCOM, {onLeave: function (args) {send("SensorGetDeviceIdCOM");}});
+
+var SensorGetFusDataCOM = Module.findExportByName("SensorsApi.dll", "SensorGetFusDataCOM")
+Interceptor.attach(SensorGetFusDataCOM, {onLeave: function (args) {send("SensorGetFusDataCOM");}});
+
+var SensorGetGyrDataCOM = Module.findExportByName("SensorsApi.dll", "SensorGetGyrDataCOM")
+Interceptor.attach(SensorGetGyrDataCOM, {onLeave: function (args) {send("SensorGetGyrDataCOM");}});
+
+var SensorGetMagDataCOM = Module.findExportByName("SensorsApi.dll", "SensorGetMagDataCOM")
+Interceptor.attach(SensorGetMagDataCOM, {onLeave: function (args) {send("SensorGetMagDataCOM");}});
+
+var SensorGetPropertiesCOM = Module.findExportByName("SensorsApi.dll", "SensorGetPropertiesCOM")
+Interceptor.attach(SensorGetPropertiesCOM, {onLeave: function (args) {send("SensorGetPropertiesCOM");}});
+
+var SensorGetPrxDataCOM = Module.findExportByName("SensorsApi.dll", "SensorGetPrxDataCOM")
+Interceptor.attach(SensorGetPrxDataCOM, {onLeave: function (args) {send("SensorGetPrxDataCOM");}});
+
+var SensorGetThresholdsCOM = Module.findExportByName("SensorsApi.dll", "SensorGetThresholdsCOM")
+Interceptor.attach(SensorGetThresholdsCOM, {onLeave: function (args) {send("SensorGetThresholdsCOM");}});
+
+var SensorOpenByInterfaceCOM = Module.findExportByName("SensorsApi.dll", "SensorOpenByInterfaceCOM")
+Interceptor.attach(SensorOpenByInterfaceCOM, {onLeave: function (args) {send("SensorOpenByInterfaceCOM");}});
+
+var SensorPermissionsHandler = Module.findExportByName("SensorsApi.dll", "SensorPermissionsHandler")
+Interceptor.attach(SensorPermissionsHandler, {onLeave: function (args) {send("SensorPermissionsHandler");}});
+
+var SensorPermissionsHandlerA = Module.findExportByName("SensorsApi.dll", "SensorPermissionsHandlerA")
+Interceptor.attach(SensorPermissionsHandlerA, {onLeave: function (args) {send("SensorPermissionsHandlerA");}});
+
+var SensorPermissionsHandlerW = Module.findExportByName("SensorsApi.dll", "SensorPermissionsHandlerW")
+Interceptor.attach(SensorPermissionsHandlerW, {onLeave: function (args) {send("SensorPermissionsHandlerW");}});
+
+var SensorRegisterEventCOM = Module.findExportByName("SensorsApi.dll", "SensorRegisterEventCOM")
+Interceptor.attach(SensorRegisterEventCOM, {onLeave: function (args) {send("SensorRegisterEventCOM");}});
+
+var SensorSetAccThresholdsCOM = Module.findExportByName("SensorsApi.dll", "SensorSetAccThresholdsCOM")
+Interceptor.attach(SensorSetAccThresholdsCOM, {onLeave: function (args) {send("SensorSetAccThresholdsCOM");}});
+
+var SensorSetAlsThresholdsCOM = Module.findExportByName("SensorsApi.dll", "SensorSetAlsThresholdsCOM")
+Interceptor.attach(SensorSetAlsThresholdsCOM, {onLeave: function (args) {send("SensorSetAlsThresholdsCOM");}});
+
+var SensorSetAlsWithColorThresholdsCOM = Module.findExportByName("SensorsApi.dll", "SensorSetAlsWithColorThresholdsCOM")
+Interceptor.attach(SensorSetAlsWithColorThresholdsCOM, {onLeave: function (args) {send("SensorSetAlsWithColorThresholdsCOM");}});
+
+var SensorSetBarThresholdsCOM = Module.findExportByName("SensorsApi.dll", "SensorSetBarThresholdsCOM")
+Interceptor.attach(SensorSetBarThresholdsCOM, {onLeave: function (args) {send("SensorSetBarThresholdsCOM");}});
+
+var SensorSetFusThresholdsCOM = Module.findExportByName("SensorsApi.dll", "SensorSetFusThresholdsCOM")
+Interceptor.attach(SensorSetFusThresholdsCOM, {onLeave: function (args) {send("SensorSetFusThresholdsCOM");}});
+
+var SensorSetGyrThresholdsCOM = Module.findExportByName("SensorsApi.dll", "SensorSetGyrThresholdsCOM")
+Interceptor.attach(SensorSetGyrThresholdsCOM, {onLeave: function (args) {send("SensorSetGyrThresholdsCOM");}});
+
+var SensorSetIntervalCOM = Module.findExportByName("SensorsApi.dll", "SensorSetIntervalCOM")
+Interceptor.attach(SensorSetIntervalCOM, {onLeave: function (args) {send("SensorSetIntervalCOM");}});
+
+var SensorSetMagThresholdsCOM = Module.findExportByName("SensorsApi.dll", "SensorSetMagThresholdsCOM")
+Interceptor.attach(SensorSetMagThresholdsCOM, {onLeave: function (args) {send("SensorSetMagThresholdsCOM");}});
+
+var SensorSetOrientationSensorThresholdsCOM = Module.findExportByName("SensorsApi.dll", "SensorSetOrientationSensorThresholdsCOM")
+Interceptor.attach(SensorSetOrientationSensorThresholdsCOM, {onLeave: function (args) {send("SensorSetOrientationSensorThresholdsCOM");}});
+
+var SensorSetThresholdsCOM = Module.findExportByName("SensorsApi.dll", "SensorSetThresholdsCOM")
+Interceptor.attach(SensorSetThresholdsCOM, {onLeave: function (args) {send("SensorSetThresholdsCOM");}});
+
+var SensorStartCollectionCOM = Module.findExportByName("SensorsApi.dll", "SensorStartCollectionCOM")
+Interceptor.attach(SensorStartCollectionCOM, {onLeave: function (args) {send("SensorStartCollectionCOM");}});
+
+var SensorStopCOM = Module.findExportByName("SensorsApi.dll", "SensorStopCOM")
+Interceptor.attach(SensorStopCOM, {onLeave: function (args) {send("SensorStopCOM");}});
+
+var SensorUnregisterEventCOM = Module.findExportByName("SensorsApi.dll", "SensorUnregisterEventCOM")
+Interceptor.attach(SensorUnregisterEventCOM, {onLeave: function (args) {send("SensorUnregisterEventCOM");}});
+

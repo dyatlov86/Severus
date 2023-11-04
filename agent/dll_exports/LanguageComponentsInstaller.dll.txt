@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("LanguageComponentsInstaller.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("LanguageComponentsInstaller.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("LanguageComponentsInstaller.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("LanguageComponentsInstaller.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetUnusedLanguageFeatures = Module.findExportByName("LanguageComponentsInstaller.dll", "GetUnusedLanguageFeatures")
+Interceptor.attach(GetUnusedLanguageFeatures, {onLeave: function (args) {send("GetUnusedLanguageFeatures");}});
+
+var RequestFeaturesInstallation = Module.findExportByName("LanguageComponentsInstaller.dll", "RequestFeaturesInstallation")
+Interceptor.attach(RequestFeaturesInstallation, {onLeave: function (args) {send("RequestFeaturesInstallation");}});
+
+var RequestFeaturesUninstallation = Module.findExportByName("LanguageComponentsInstaller.dll", "RequestFeaturesUninstallation")
+Interceptor.attach(RequestFeaturesUninstallation, {onLeave: function (args) {send("RequestFeaturesUninstallation");}});
+

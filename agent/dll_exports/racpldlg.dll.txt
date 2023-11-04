@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("racpldlg.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("racpldlg.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("racpldlg.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("racpldlg.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ShowPasswordDialog = Module.findExportByName("racpldlg.dll", "ShowPasswordDialog")
+Interceptor.attach(ShowPasswordDialog, {onLeave: function (args) {send("ShowPasswordDialog");}});
+

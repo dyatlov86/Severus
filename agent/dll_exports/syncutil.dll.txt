@@ -1,0 +1,276 @@
+var AcquireDataStoreLock = Module.findExportByName("syncutil.dll", "AcquireDataStoreLock")
+Interceptor.attach(AcquireDataStoreLock, {onLeave: function (args) {send("AcquireDataStoreLock");}});
+
+var AcquireDataStoreLockEx = Module.findExportByName("syncutil.dll", "AcquireDataStoreLockEx")
+Interceptor.attach(AcquireDataStoreLockEx, {onLeave: function (args) {send("AcquireDataStoreLockEx");}});
+
+var AggregateAccountSyncStats = Module.findExportByName("syncutil.dll", "AggregateAccountSyncStats")
+Interceptor.attach(AggregateAccountSyncStats, {onLeave: function (args) {send("AggregateAccountSyncStats");}});
+
+var AggregateSessionSyncStats = Module.findExportByName("syncutil.dll", "AggregateSessionSyncStats")
+Interceptor.attach(AggregateSessionSyncStats, {onLeave: function (args) {send("AggregateSessionSyncStats");}});
+
+var CloseDataStoreLock = Module.findExportByName("syncutil.dll", "CloseDataStoreLock")
+Interceptor.attach(CloseDataStoreLock, {onLeave: function (args) {send("CloseDataStoreLock");}});
+
+var CoCreateInstanceElevated = Module.findExportByName("syncutil.dll", "CoCreateInstanceElevated")
+Interceptor.attach(CoCreateInstanceElevated, {onLeave: function (args) {send("CoCreateInstanceElevated");}});
+
+var CreateAuthHandler = Module.findExportByName("syncutil.dll", "CreateAuthHandler")
+Interceptor.attach(CreateAuthHandler, {onLeave: function (args) {send("CreateAuthHandler");}});
+
+var CreateDataStoreLock = Module.findExportByName("syncutil.dll", "CreateDataStoreLock")
+Interceptor.attach(CreateDataStoreLock, {onLeave: function (args) {send("CreateDataStoreLock");}});
+
+var CreateSyncBufferedStream = Module.findExportByName("syncutil.dll", "CreateSyncBufferedStream")
+Interceptor.attach(CreateSyncBufferedStream, {onLeave: function (args) {send("CreateSyncBufferedStream");}});
+
+var CredVaultDelete = Module.findExportByName("syncutil.dll", "CredVaultDelete")
+Interceptor.attach(CredVaultDelete, {onLeave: function (args) {send("CredVaultDelete");}});
+
+var CredVaultRead = Module.findExportByName("syncutil.dll", "CredVaultRead")
+Interceptor.attach(CredVaultRead, {onLeave: function (args) {send("CredVaultRead");}});
+
+var CredVaultWrite = Module.findExportByName("syncutil.dll", "CredVaultWrite")
+Interceptor.attach(CredVaultWrite, {onLeave: function (args) {send("CredVaultWrite");}});
+
+var DeleteAuthCertHash = Module.findExportByName("syncutil.dll", "DeleteAuthCertHash")
+Interceptor.attach(DeleteAuthCertHash, {onLeave: function (args) {send("DeleteAuthCertHash");}});
+
+var DeleteDataSource = Module.findExportByName("syncutil.dll", "DeleteDataSource")
+Interceptor.attach(DeleteDataSource, {onLeave: function (args) {send("DeleteDataSource");}});
+
+var DeleteHttpTransport = Module.findExportByName("syncutil.dll", "DeleteHttpTransport")
+Interceptor.attach(DeleteHttpTransport, {onLeave: function (args) {send("DeleteHttpTransport");}});
+
+var DeleteOAuthRefreshTokenForPartnership = Module.findExportByName("syncutil.dll", "DeleteOAuthRefreshTokenForPartnership")
+Interceptor.attach(DeleteOAuthRefreshTokenForPartnership, {onLeave: function (args) {send("DeleteOAuthRefreshTokenForPartnership");}});
+
+var DeletePwd = Module.findExportByName("syncutil.dll", "DeletePwd")
+Interceptor.attach(DeletePwd, {onLeave: function (args) {send("DeletePwd");}});
+
+var DeviceNeedsProvisioning = Module.findExportByName("syncutil.dll", "DeviceNeedsProvisioning")
+Interceptor.attach(DeviceNeedsProvisioning, {onLeave: function (args) {send("DeviceNeedsProvisioning");}});
+
+var DllCanUnloadNow = Module.findExportByName("syncutil.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("syncutil.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DoesServerSupportAutoMoveSentItem = Module.findExportByName("syncutil.dll", "DoesServerSupportAutoMoveSentItem")
+Interceptor.attach(DoesServerSupportAutoMoveSentItem, {onLeave: function (args) {send("DoesServerSupportAutoMoveSentItem");}});
+
+var FindErrorCode = Module.findExportByName("syncutil.dll", "FindErrorCode")
+Interceptor.attach(FindErrorCode, {onLeave: function (args) {send("FindErrorCode");}});
+
+var GetAADToken = Module.findExportByName("syncutil.dll", "GetAADToken")
+Interceptor.attach(GetAADToken, {onLeave: function (args) {send("GetAADToken");}});
+
+var GetAccountSyncStats = Module.findExportByName("syncutil.dll", "GetAccountSyncStats")
+Interceptor.attach(GetAccountSyncStats, {onLeave: function (args) {send("GetAccountSyncStats");}});
+
+var GetAccountUsernameFromToken = Module.findExportByName("syncutil.dll", "GetAccountUsernameFromToken")
+Interceptor.attach(GetAccountUsernameFromToken, {onLeave: function (args) {send("GetAccountUsernameFromToken");}});
+
+var GetAuthCertHash = Module.findExportByName("syncutil.dll", "GetAuthCertHash")
+Interceptor.attach(GetAuthCertHash, {onLeave: function (args) {send("GetAuthCertHash");}});
+
+var GetAuthCertTargetAndUser = Module.findExportByName("syncutil.dll", "GetAuthCertTargetAndUser")
+Interceptor.attach(GetAuthCertTargetAndUser, {onLeave: function (args) {send("GetAuthCertTargetAndUser");}});
+
+var GetAuthority = Module.findExportByName("syncutil.dll", "GetAuthority")
+Interceptor.attach(GetAuthority, {onLeave: function (args) {send("GetAuthority");}});
+
+var GetBatterySaverWnfName = Module.findExportByName("syncutil.dll", "GetBatterySaverWnfName")
+Interceptor.attach(GetBatterySaverWnfName, {onLeave: function (args) {send("GetBatterySaverWnfName");}});
+
+var GetCurrentSyncStats = Module.findExportByName("syncutil.dll", "GetCurrentSyncStats")
+Interceptor.attach(GetCurrentSyncStats, {onLeave: function (args) {send("GetCurrentSyncStats");}});
+
+var GetCurrentSyncStatsForMessage = Module.findExportByName("syncutil.dll", "GetCurrentSyncStatsForMessage")
+Interceptor.attach(GetCurrentSyncStatsForMessage, {onLeave: function (args) {send("GetCurrentSyncStatsForMessage");}});
+
+var GetCurrentSyncStatsForStore = Module.findExportByName("syncutil.dll", "GetCurrentSyncStatsForStore")
+Interceptor.attach(GetCurrentSyncStatsForStore, {onLeave: function (args) {send("GetCurrentSyncStatsForStore");}});
+
+var GetDefaultDeviceType = Module.findExportByName("syncutil.dll", "GetDefaultDeviceType")
+Interceptor.attach(GetDefaultDeviceType, {onLeave: function (args) {send("GetDefaultDeviceType");}});
+
+var GetDefaultMsaWebAccountId = Module.findExportByName("syncutil.dll", "GetDefaultMsaWebAccountId")
+Interceptor.attach(GetDefaultMsaWebAccountId, {onLeave: function (args) {send("GetDefaultMsaWebAccountId");}});
+
+var GetDefaultStoreDirty = Module.findExportByName("syncutil.dll", "GetDefaultStoreDirty")
+Interceptor.attach(GetDefaultStoreDirty, {onLeave: function (args) {send("GetDefaultStoreDirty");}});
+
+var GetDomainFromEmail = Module.findExportByName("syncutil.dll", "GetDomainFromEmail")
+Interceptor.attach(GetDomainFromEmail, {onLeave: function (args) {send("GetDomainFromEmail");}});
+
+var GetGalSearchResultsFolderAndPartnerGuidEx = Module.findExportByName("syncutil.dll", "GetGalSearchResultsFolderAndPartnerGuidEx")
+Interceptor.attach(GetGalSearchResultsFolderAndPartnerGuidEx, {onLeave: function (args) {send("GetGalSearchResultsFolderAndPartnerGuidEx");}});
+
+var GetGoldenPartnershipId = Module.findExportByName("syncutil.dll", "GetGoldenPartnershipId")
+Interceptor.attach(GetGoldenPartnershipId, {onLeave: function (args) {send("GetGoldenPartnershipId");}});
+
+var GetMonitorDisplayState = Module.findExportByName("syncutil.dll", "GetMonitorDisplayState")
+Interceptor.attach(GetMonitorDisplayState, {onLeave: function (args) {send("GetMonitorDisplayState");}});
+
+var GetMsaCustomerId = Module.findExportByName("syncutil.dll", "GetMsaCustomerId")
+Interceptor.attach(GetMsaCustomerId, {onLeave: function (args) {send("GetMsaCustomerId");}});
+
+var GetOAuthAccessTokenForPartnership = Module.findExportByName("syncutil.dll", "GetOAuthAccessTokenForPartnership")
+Interceptor.attach(GetOAuthAccessTokenForPartnership, {onLeave: function (args) {send("GetOAuthAccessTokenForPartnership");}});
+
+var GetOAuthHelperForAccount = Module.findExportByName("syncutil.dll", "GetOAuthHelperForAccount")
+Interceptor.attach(GetOAuthHelperForAccount, {onLeave: function (args) {send("GetOAuthHelperForAccount");}});
+
+var GetOAuthHelperForProvider = Module.findExportByName("syncutil.dll", "GetOAuthHelperForProvider")
+Interceptor.attach(GetOAuthHelperForProvider, {onLeave: function (args) {send("GetOAuthHelperForProvider");}});
+
+var GetOutgoingMessageSizeLimit = Module.findExportByName("syncutil.dll", "GetOutgoingMessageSizeLimit")
+Interceptor.attach(GetOutgoingMessageSizeLimit, {onLeave: function (args) {send("GetOutgoingMessageSizeLimit");}});
+
+var GetProviderUri = Module.findExportByName("syncutil.dll", "GetProviderUri")
+Interceptor.attach(GetProviderUri, {onLeave: function (args) {send("GetProviderUri");}});
+
+var GetSHA1HashOfString = Module.findExportByName("syncutil.dll", "GetSHA1HashOfString")
+Interceptor.attach(GetSHA1HashOfString, {onLeave: function (args) {send("GetSHA1HashOfString");}});
+
+var GetSessionSyncStats = Module.findExportByName("syncutil.dll", "GetSessionSyncStats")
+Interceptor.attach(GetSessionSyncStats, {onLeave: function (args) {send("GetSessionSyncStats");}});
+
+var GetSyncTargetName = Module.findExportByName("syncutil.dll", "GetSyncTargetName")
+Interceptor.attach(GetSyncTargetName, {onLeave: function (args) {send("GetSyncTargetName");}});
+
+var GetSyncWorkOnBehalfTicket = Module.findExportByName("syncutil.dll", "GetSyncWorkOnBehalfTicket")
+Interceptor.attach(GetSyncWorkOnBehalfTicket, {onLeave: function (args) {send("GetSyncWorkOnBehalfTicket");}});
+
+var GetWebAccountId = Module.findExportByName("syncutil.dll", "GetWebAccountId")
+Interceptor.attach(GetWebAccountId, {onLeave: function (args) {send("GetWebAccountId");}});
+
+var GetWebAccountProvider = Module.findExportByName("syncutil.dll", "GetWebAccountProvider")
+Interceptor.attach(GetWebAccountProvider, {onLeave: function (args) {send("GetWebAccountProvider");}});
+
+var GetWebAccountProviderFromProviderId = Module.findExportByName("syncutil.dll", "GetWebAccountProviderFromProviderId")
+Interceptor.attach(GetWebAccountProviderFromProviderId, {onLeave: function (args) {send("GetWebAccountProviderFromProviderId");}});
+
+var HasNeverSyncedSuccessfully = Module.findExportByName("syncutil.dll", "HasNeverSyncedSuccessfully")
+Interceptor.attach(HasNeverSyncedSuccessfully, {onLeave: function (args) {send("HasNeverSyncedSuccessfully");}});
+
+var InitializeCredVault = Module.findExportByName("syncutil.dll", "InitializeCredVault")
+Interceptor.attach(InitializeCredVault, {onLeave: function (args) {send("InitializeCredVault");}});
+
+var InitializeMeContact = Module.findExportByName("syncutil.dll", "InitializeMeContact")
+Interceptor.attach(InitializeMeContact, {onLeave: function (args) {send("InitializeMeContact");}});
+
+var InitializeMsaStore = Module.findExportByName("syncutil.dll", "InitializeMsaStore")
+Interceptor.attach(InitializeMsaStore, {onLeave: function (args) {send("InitializeMsaStore");}});
+
+var InitializeServerReadyEvents = Module.findExportByName("syncutil.dll", "InitializeServerReadyEvents")
+Interceptor.attach(InitializeServerReadyEvents, {onLeave: function (args) {send("InitializeServerReadyEvents");}});
+
+var InitializeSyncStatus = Module.findExportByName("syncutil.dll", "InitializeSyncStatus")
+Interceptor.attach(InitializeSyncStatus, {onLeave: function (args) {send("InitializeSyncStatus");}});
+
+var InvalidateOAuthAccessTokenForPartnership = Module.findExportByName("syncutil.dll", "InvalidateOAuthAccessTokenForPartnership")
+Interceptor.attach(InvalidateOAuthAccessTokenForPartnership, {onLeave: function (args) {send("InvalidateOAuthAccessTokenForPartnership");}});
+
+var IsACOn = Module.findExportByName("syncutil.dll", "IsACOn")
+Interceptor.attach(IsACOn, {onLeave: function (args) {send("IsACOn");}});
+
+var IsFirstSyncEver = Module.findExportByName("syncutil.dll", "IsFirstSyncEver")
+Interceptor.attach(IsFirstSyncEver, {onLeave: function (args) {send("IsFirstSyncEver");}});
+
+var IsMatchingClientCertificateEx = Module.findExportByName("syncutil.dll", "IsMatchingClientCertificateEx")
+Interceptor.attach(IsMatchingClientCertificateEx, {onLeave: function (args) {send("IsMatchingClientCertificateEx");}});
+
+var IsPwdSaved = Module.findExportByName("syncutil.dll", "IsPwdSaved")
+Interceptor.attach(IsPwdSaved, {onLeave: function (args) {send("IsPwdSaved");}});
+
+var IsScreenOn = Module.findExportByName("syncutil.dll", "IsScreenOn")
+Interceptor.attach(IsScreenOn, {onLeave: function (args) {send("IsScreenOn");}});
+
+var IsValidAADAuthUri = Module.findExportByName("syncutil.dll", "IsValidAADAuthUri")
+Interceptor.attach(IsValidAADAuthUri, {onLeave: function (args) {send("IsValidAADAuthUri");}});
+
+var LoadHeartbeatValues = Module.findExportByName("syncutil.dll", "LoadHeartbeatValues")
+Interceptor.attach(LoadHeartbeatValues, {onLeave: function (args) {send("LoadHeartbeatValues");}});
+
+var LogSyncBiweeklySQM = Module.findExportByName("syncutil.dll", "LogSyncBiweeklySQM")
+Interceptor.attach(LogSyncBiweeklySQM, {onLeave: function (args) {send("LogSyncBiweeklySQM");}});
+
+var MarkServerReady = Module.findExportByName("syncutil.dll", "MarkServerReady")
+Interceptor.attach(MarkServerReady, {onLeave: function (args) {send("MarkServerReady");}});
+
+var MarkServerShutdown = Module.findExportByName("syncutil.dll", "MarkServerShutdown")
+Interceptor.attach(MarkServerShutdown, {onLeave: function (args) {send("MarkServerShutdown");}});
+
+var MarkUserDataAccountAsHidden = Module.findExportByName("syncutil.dll", "MarkUserDataAccountAsHidden")
+Interceptor.attach(MarkUserDataAccountAsHidden, {onLeave: function (args) {send("MarkUserDataAccountAsHidden");}});
+
+var OAuthHelper_CreateInstance = Module.findExportByName("syncutil.dll", "OAuthHelper_CreateInstance")
+Interceptor.attach(OAuthHelper_CreateInstance, {onLeave: function (args) {send("OAuthHelper_CreateInstance");}});
+
+var OpenMimeBufferedStream = Module.findExportByName("syncutil.dll", "OpenMimeBufferedStream")
+Interceptor.attach(OpenMimeBufferedStream, {onLeave: function (args) {send("OpenMimeBufferedStream");}});
+
+var OpenProviderKey = Module.findExportByName("syncutil.dll", "OpenProviderKey")
+Interceptor.attach(OpenProviderKey, {onLeave: function (args) {send("OpenProviderKey");}});
+
+var ReadOAuthRefreshTokenForPartnership = Module.findExportByName("syncutil.dll", "ReadOAuthRefreshTokenForPartnership")
+Interceptor.attach(ReadOAuthRefreshTokenForPartnership, {onLeave: function (args) {send("ReadOAuthRefreshTokenForPartnership");}});
+
+var ReadPasswordForPartnership = Module.findExportByName("syncutil.dll", "ReadPasswordForPartnership")
+Interceptor.attach(ReadPasswordForPartnership, {onLeave: function (args) {send("ReadPasswordForPartnership");}});
+
+var RegisterSsoAccountsCallback = Module.findExportByName("syncutil.dll", "RegisterSsoAccountsCallback")
+Interceptor.attach(RegisterSsoAccountsCallback, {onLeave: function (args) {send("RegisterSsoAccountsCallback");}});
+
+var ReleaseDataStoreLock = Module.findExportByName("syncutil.dll", "ReleaseDataStoreLock")
+Interceptor.attach(ReleaseDataStoreLock, {onLeave: function (args) {send("ReleaseDataStoreLock");}});
+
+var SetAuthCertHash = Module.findExportByName("syncutil.dll", "SetAuthCertHash")
+Interceptor.attach(SetAuthCertHash, {onLeave: function (args) {send("SetAuthCertHash");}});
+
+var SetBatterySaverWnfName = Module.findExportByName("syncutil.dll", "SetBatterySaverWnfName")
+Interceptor.attach(SetBatterySaverWnfName, {onLeave: function (args) {send("SetBatterySaverWnfName");}});
+
+var SetDefaultStoreDirty = Module.findExportByName("syncutil.dll", "SetDefaultStoreDirty")
+Interceptor.attach(SetDefaultStoreDirty, {onLeave: function (args) {send("SetDefaultStoreDirty");}});
+
+var SetMonitorDisplayState = Module.findExportByName("syncutil.dll", "SetMonitorDisplayState")
+Interceptor.attach(SetMonitorDisplayState, {onLeave: function (args) {send("SetMonitorDisplayState");}});
+
+var SetOutgoingMessageSizeLimit = Module.findExportByName("syncutil.dll", "SetOutgoingMessageSizeLimit")
+Interceptor.attach(SetOutgoingMessageSizeLimit, {onLeave: function (args) {send("SetOutgoingMessageSizeLimit");}});
+
+var SetSyncWorkOnBehalfTicket = Module.findExportByName("syncutil.dll", "SetSyncWorkOnBehalfTicket")
+Interceptor.attach(SetSyncWorkOnBehalfTicket, {onLeave: function (args) {send("SetSyncWorkOnBehalfTicket");}});
+
+var SyncSqmUpdateStats = Module.findExportByName("syncutil.dll", "SyncSqmUpdateStats")
+Interceptor.attach(SyncSqmUpdateStats, {onLeave: function (args) {send("SyncSqmUpdateStats");}});
+
+var TryGetDefaultSignInAccountInfo = Module.findExportByName("syncutil.dll", "TryGetDefaultSignInAccountInfo")
+Interceptor.attach(TryGetDefaultSignInAccountInfo, {onLeave: function (args) {send("TryGetDefaultSignInAccountInfo");}});
+
+var UninitializeServerReadyEvents = Module.findExportByName("syncutil.dll", "UninitializeServerReadyEvents")
+Interceptor.attach(UninitializeServerReadyEvents, {onLeave: function (args) {send("UninitializeServerReadyEvents");}});
+
+var UpdateYahooAccountType = Module.findExportByName("syncutil.dll", "UpdateYahooAccountType")
+Interceptor.attach(UpdateYahooAccountType, {onLeave: function (args) {send("UpdateYahooAccountType");}});
+
+var VerifyDataStoreLockOwner = Module.findExportByName("syncutil.dll", "VerifyDataStoreLockOwner")
+Interceptor.attach(VerifyDataStoreLockOwner, {onLeave: function (args) {send("VerifyDataStoreLockOwner");}});
+
+var WaitForServerReady = Module.findExportByName("syncutil.dll", "WaitForServerReady")
+Interceptor.attach(WaitForServerReady, {onLeave: function (args) {send("WaitForServerReady");}});
+
+var WaitForSignalOrShutdown = Module.findExportByName("syncutil.dll", "WaitForSignalOrShutdown")
+Interceptor.attach(WaitForSignalOrShutdown, {onLeave: function (args) {send("WaitForSignalOrShutdown");}});
+
+var WriteOAuthRefreshTokenForPartnership = Module.findExportByName("syncutil.dll", "WriteOAuthRefreshTokenForPartnership")
+Interceptor.attach(WriteOAuthRefreshTokenForPartnership, {onLeave: function (args) {send("WriteOAuthRefreshTokenForPartnership");}});
+
+var WritePasswordForPartnership = Module.findExportByName("syncutil.dll", "WritePasswordForPartnership")
+Interceptor.attach(WritePasswordForPartnership, {onLeave: function (args) {send("WritePasswordForPartnership");}});
+

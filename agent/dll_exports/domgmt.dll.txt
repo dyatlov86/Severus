@@ -1,0 +1,9 @@
+var DOProcessGroupPolicy = Module.findExportByName("domgmt.dll", "DOProcessGroupPolicy")
+Interceptor.attach(DOProcessGroupPolicy, {onLeave: function (args) {send("DOProcessGroupPolicy");}});
+
+var DllCanUnloadNow = Module.findExportByName("domgmt.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("domgmt.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

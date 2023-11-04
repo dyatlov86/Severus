@@ -1,0 +1,720 @@
+var AuditComputeEffectivePolicyBySid = Module.findExportByName("sechost.dll", "AuditComputeEffectivePolicyBySid")
+Interceptor.attach(AuditComputeEffectivePolicyBySid, {onLeave: function (args) {send("AuditComputeEffectivePolicyBySid");}});
+
+var AuditEnumerateCategories = Module.findExportByName("sechost.dll", "AuditEnumerateCategories")
+Interceptor.attach(AuditEnumerateCategories, {onLeave: function (args) {send("AuditEnumerateCategories");}});
+
+var AuditEnumeratePerUserPolicy = Module.findExportByName("sechost.dll", "AuditEnumeratePerUserPolicy")
+Interceptor.attach(AuditEnumeratePerUserPolicy, {onLeave: function (args) {send("AuditEnumeratePerUserPolicy");}});
+
+var AuditEnumerateSubCategories = Module.findExportByName("sechost.dll", "AuditEnumerateSubCategories")
+Interceptor.attach(AuditEnumerateSubCategories, {onLeave: function (args) {send("AuditEnumerateSubCategories");}});
+
+var AuditFree = Module.findExportByName("sechost.dll", "AuditFree")
+Interceptor.attach(AuditFree, {onLeave: function (args) {send("AuditFree");}});
+
+var AuditLookupCategoryNameW = Module.findExportByName("sechost.dll", "AuditLookupCategoryNameW")
+Interceptor.attach(AuditLookupCategoryNameW, {onLeave: function (args) {send("AuditLookupCategoryNameW");}});
+
+var AuditLookupSubCategoryNameW = Module.findExportByName("sechost.dll", "AuditLookupSubCategoryNameW")
+Interceptor.attach(AuditLookupSubCategoryNameW, {onLeave: function (args) {send("AuditLookupSubCategoryNameW");}});
+
+var AuditQueryGlobalSaclW = Module.findExportByName("sechost.dll", "AuditQueryGlobalSaclW")
+Interceptor.attach(AuditQueryGlobalSaclW, {onLeave: function (args) {send("AuditQueryGlobalSaclW");}});
+
+var AuditQueryPerUserPolicy = Module.findExportByName("sechost.dll", "AuditQueryPerUserPolicy")
+Interceptor.attach(AuditQueryPerUserPolicy, {onLeave: function (args) {send("AuditQueryPerUserPolicy");}});
+
+var AuditQuerySecurity = Module.findExportByName("sechost.dll", "AuditQuerySecurity")
+Interceptor.attach(AuditQuerySecurity, {onLeave: function (args) {send("AuditQuerySecurity");}});
+
+var AuditQuerySystemPolicy = Module.findExportByName("sechost.dll", "AuditQuerySystemPolicy")
+Interceptor.attach(AuditQuerySystemPolicy, {onLeave: function (args) {send("AuditQuerySystemPolicy");}});
+
+var AuditSetGlobalSaclW = Module.findExportByName("sechost.dll", "AuditSetGlobalSaclW")
+Interceptor.attach(AuditSetGlobalSaclW, {onLeave: function (args) {send("AuditSetGlobalSaclW");}});
+
+var AuditSetPerUserPolicy = Module.findExportByName("sechost.dll", "AuditSetPerUserPolicy")
+Interceptor.attach(AuditSetPerUserPolicy, {onLeave: function (args) {send("AuditSetPerUserPolicy");}});
+
+var AuditSetSecurity = Module.findExportByName("sechost.dll", "AuditSetSecurity")
+Interceptor.attach(AuditSetSecurity, {onLeave: function (args) {send("AuditSetSecurity");}});
+
+var AuditSetSystemPolicy = Module.findExportByName("sechost.dll", "AuditSetSystemPolicy")
+Interceptor.attach(AuditSetSystemPolicy, {onLeave: function (args) {send("AuditSetSystemPolicy");}});
+
+var BuildSecurityDescriptorForSharingAccess = Module.findExportByName("sechost.dll", "BuildSecurityDescriptorForSharingAccess")
+Interceptor.attach(BuildSecurityDescriptorForSharingAccess, {onLeave: function (args) {send("BuildSecurityDescriptorForSharingAccess");}});
+
+var BuildSecurityDescriptorForSharingAccessEx = Module.findExportByName("sechost.dll", "BuildSecurityDescriptorForSharingAccessEx")
+Interceptor.attach(BuildSecurityDescriptorForSharingAccessEx, {onLeave: function (args) {send("BuildSecurityDescriptorForSharingAccessEx");}});
+
+var CapabilityCheck = Module.findExportByName("sechost.dll", "CapabilityCheck")
+Interceptor.attach(CapabilityCheck, {onLeave: function (args) {send("CapabilityCheck");}});
+
+var CapabilityCheckForSingleSessionSku = Module.findExportByName("sechost.dll", "CapabilityCheckForSingleSessionSku")
+Interceptor.attach(CapabilityCheckForSingleSessionSku, {onLeave: function (args) {send("CapabilityCheckForSingleSessionSku");}});
+
+var ChangeServiceConfig2A = Module.findExportByName("sechost.dll", "ChangeServiceConfig2A")
+Interceptor.attach(ChangeServiceConfig2A, {onLeave: function (args) {send("ChangeServiceConfig2A");}});
+
+var ChangeServiceConfig2W = Module.findExportByName("sechost.dll", "ChangeServiceConfig2W")
+Interceptor.attach(ChangeServiceConfig2W, {onLeave: function (args) {send("ChangeServiceConfig2W");}});
+
+var ChangeServiceConfigA = Module.findExportByName("sechost.dll", "ChangeServiceConfigA")
+Interceptor.attach(ChangeServiceConfigA, {onLeave: function (args) {send("ChangeServiceConfigA");}});
+
+var ChangeServiceConfigW = Module.findExportByName("sechost.dll", "ChangeServiceConfigW")
+Interceptor.attach(ChangeServiceConfigW, {onLeave: function (args) {send("ChangeServiceConfigW");}});
+
+var CloseServiceHandle = Module.findExportByName("sechost.dll", "CloseServiceHandle")
+Interceptor.attach(CloseServiceHandle, {onLeave: function (args) {send("CloseServiceHandle");}});
+
+var CloseTrace = Module.findExportByName("sechost.dll", "CloseTrace")
+Interceptor.attach(CloseTrace, {onLeave: function (args) {send("CloseTrace");}});
+
+var ControlService = Module.findExportByName("sechost.dll", "ControlService")
+Interceptor.attach(ControlService, {onLeave: function (args) {send("ControlService");}});
+
+var ControlServiceExA = Module.findExportByName("sechost.dll", "ControlServiceExA")
+Interceptor.attach(ControlServiceExA, {onLeave: function (args) {send("ControlServiceExA");}});
+
+var ControlServiceExW = Module.findExportByName("sechost.dll", "ControlServiceExW")
+Interceptor.attach(ControlServiceExW, {onLeave: function (args) {send("ControlServiceExW");}});
+
+var ControlTraceA = Module.findExportByName("sechost.dll", "ControlTraceA")
+Interceptor.attach(ControlTraceA, {onLeave: function (args) {send("ControlTraceA");}});
+
+var ControlTraceW = Module.findExportByName("sechost.dll", "ControlTraceW")
+Interceptor.attach(ControlTraceW, {onLeave: function (args) {send("ControlTraceW");}});
+
+var ConvertSDToStringSDRootDomainW = Module.findExportByName("sechost.dll", "ConvertSDToStringSDRootDomainW")
+Interceptor.attach(ConvertSDToStringSDRootDomainW, {onLeave: function (args) {send("ConvertSDToStringSDRootDomainW");}});
+
+var ConvertSecurityDescriptorToStringSecurityDescriptorW = Module.findExportByName("sechost.dll", "ConvertSecurityDescriptorToStringSecurityDescriptorW")
+Interceptor.attach(ConvertSecurityDescriptorToStringSecurityDescriptorW, {onLeave: function (args) {send("ConvertSecurityDescriptorToStringSecurityDescriptorW");}});
+
+var ConvertSidToStringSidW = Module.findExportByName("sechost.dll", "ConvertSidToStringSidW")
+Interceptor.attach(ConvertSidToStringSidW, {onLeave: function (args) {send("ConvertSidToStringSidW");}});
+
+var ConvertStringSDToSDDomainA = Module.findExportByName("sechost.dll", "ConvertStringSDToSDDomainA")
+Interceptor.attach(ConvertStringSDToSDDomainA, {onLeave: function (args) {send("ConvertStringSDToSDDomainA");}});
+
+var ConvertStringSDToSDDomainW = Module.findExportByName("sechost.dll", "ConvertStringSDToSDDomainW")
+Interceptor.attach(ConvertStringSDToSDDomainW, {onLeave: function (args) {send("ConvertStringSDToSDDomainW");}});
+
+var ConvertStringSDToSDRootDomainW = Module.findExportByName("sechost.dll", "ConvertStringSDToSDRootDomainW")
+Interceptor.attach(ConvertStringSDToSDRootDomainW, {onLeave: function (args) {send("ConvertStringSDToSDRootDomainW");}});
+
+var ConvertStringSecurityDescriptorToSecurityDescriptorW = Module.findExportByName("sechost.dll", "ConvertStringSecurityDescriptorToSecurityDescriptorW")
+Interceptor.attach(ConvertStringSecurityDescriptorToSecurityDescriptorW, {onLeave: function (args) {send("ConvertStringSecurityDescriptorToSecurityDescriptorW");}});
+
+var ConvertStringSidToSidW = Module.findExportByName("sechost.dll", "ConvertStringSidToSidW")
+Interceptor.attach(ConvertStringSidToSidW, {onLeave: function (args) {send("ConvertStringSidToSidW");}});
+
+var CreateIsolatedProcess = Module.findExportByName("sechost.dll", "CreateIsolatedProcess")
+Interceptor.attach(CreateIsolatedProcess, {onLeave: function (args) {send("CreateIsolatedProcess");}});
+
+var CreateIsolationContainer = Module.findExportByName("sechost.dll", "CreateIsolationContainer")
+Interceptor.attach(CreateIsolationContainer, {onLeave: function (args) {send("CreateIsolationContainer");}});
+
+var CreateServiceA = Module.findExportByName("sechost.dll", "CreateServiceA")
+Interceptor.attach(CreateServiceA, {onLeave: function (args) {send("CreateServiceA");}});
+
+var CreateServiceEx = Module.findExportByName("sechost.dll", "CreateServiceEx")
+Interceptor.attach(CreateServiceEx, {onLeave: function (args) {send("CreateServiceEx");}});
+
+var CreateServiceW = Module.findExportByName("sechost.dll", "CreateServiceW")
+Interceptor.attach(CreateServiceW, {onLeave: function (args) {send("CreateServiceW");}});
+
+var CredBackupCredentials = Module.findExportByName("sechost.dll", "CredBackupCredentials")
+Interceptor.attach(CredBackupCredentials, {onLeave: function (args) {send("CredBackupCredentials");}});
+
+var CredDeleteA = Module.findExportByName("sechost.dll", "CredDeleteA")
+Interceptor.attach(CredDeleteA, {onLeave: function (args) {send("CredDeleteA");}});
+
+var CredDeleteW = Module.findExportByName("sechost.dll", "CredDeleteW")
+Interceptor.attach(CredDeleteW, {onLeave: function (args) {send("CredDeleteW");}});
+
+var CredEncryptAndMarshalBinaryBlob = Module.findExportByName("sechost.dll", "CredEncryptAndMarshalBinaryBlob")
+Interceptor.attach(CredEncryptAndMarshalBinaryBlob, {onLeave: function (args) {send("CredEncryptAndMarshalBinaryBlob");}});
+
+var CredEnumerateA = Module.findExportByName("sechost.dll", "CredEnumerateA")
+Interceptor.attach(CredEnumerateA, {onLeave: function (args) {send("CredEnumerateA");}});
+
+var CredEnumerateW = Module.findExportByName("sechost.dll", "CredEnumerateW")
+Interceptor.attach(CredEnumerateW, {onLeave: function (args) {send("CredEnumerateW");}});
+
+var CredFindBestCredentialA = Module.findExportByName("sechost.dll", "CredFindBestCredentialA")
+Interceptor.attach(CredFindBestCredentialA, {onLeave: function (args) {send("CredFindBestCredentialA");}});
+
+var CredFindBestCredentialW = Module.findExportByName("sechost.dll", "CredFindBestCredentialW")
+Interceptor.attach(CredFindBestCredentialW, {onLeave: function (args) {send("CredFindBestCredentialW");}});
+
+var CredFree = Module.findExportByName("sechost.dll", "CredFree")
+Interceptor.attach(CredFree, {onLeave: function (args) {send("CredFree");}});
+
+var CredGetSessionTypes = Module.findExportByName("sechost.dll", "CredGetSessionTypes")
+Interceptor.attach(CredGetSessionTypes, {onLeave: function (args) {send("CredGetSessionTypes");}});
+
+var CredGetTargetInfoA = Module.findExportByName("sechost.dll", "CredGetTargetInfoA")
+Interceptor.attach(CredGetTargetInfoA, {onLeave: function (args) {send("CredGetTargetInfoA");}});
+
+var CredGetTargetInfoW = Module.findExportByName("sechost.dll", "CredGetTargetInfoW")
+Interceptor.attach(CredGetTargetInfoW, {onLeave: function (args) {send("CredGetTargetInfoW");}});
+
+var CredIsMarshaledCredentialW = Module.findExportByName("sechost.dll", "CredIsMarshaledCredentialW")
+Interceptor.attach(CredIsMarshaledCredentialW, {onLeave: function (args) {send("CredIsMarshaledCredentialW");}});
+
+var CredIsProtectedA = Module.findExportByName("sechost.dll", "CredIsProtectedA")
+Interceptor.attach(CredIsProtectedA, {onLeave: function (args) {send("CredIsProtectedA");}});
+
+var CredIsProtectedW = Module.findExportByName("sechost.dll", "CredIsProtectedW")
+Interceptor.attach(CredIsProtectedW, {onLeave: function (args) {send("CredIsProtectedW");}});
+
+var CredMarshalCredentialA = Module.findExportByName("sechost.dll", "CredMarshalCredentialA")
+Interceptor.attach(CredMarshalCredentialA, {onLeave: function (args) {send("CredMarshalCredentialA");}});
+
+var CredMarshalCredentialW = Module.findExportByName("sechost.dll", "CredMarshalCredentialW")
+Interceptor.attach(CredMarshalCredentialW, {onLeave: function (args) {send("CredMarshalCredentialW");}});
+
+var CredParseUserNameWithType = Module.findExportByName("sechost.dll", "CredParseUserNameWithType")
+Interceptor.attach(CredParseUserNameWithType, {onLeave: function (args) {send("CredParseUserNameWithType");}});
+
+var CredProfileLoaded = Module.findExportByName("sechost.dll", "CredProfileLoaded")
+Interceptor.attach(CredProfileLoaded, {onLeave: function (args) {send("CredProfileLoaded");}});
+
+var CredProfileLoadedEx = Module.findExportByName("sechost.dll", "CredProfileLoadedEx")
+Interceptor.attach(CredProfileLoadedEx, {onLeave: function (args) {send("CredProfileLoadedEx");}});
+
+var CredProfileUnloaded = Module.findExportByName("sechost.dll", "CredProfileUnloaded")
+Interceptor.attach(CredProfileUnloaded, {onLeave: function (args) {send("CredProfileUnloaded");}});
+
+var CredProtectA = Module.findExportByName("sechost.dll", "CredProtectA")
+Interceptor.attach(CredProtectA, {onLeave: function (args) {send("CredProtectA");}});
+
+var CredProtectEx = Module.findExportByName("sechost.dll", "CredProtectEx")
+Interceptor.attach(CredProtectEx, {onLeave: function (args) {send("CredProtectEx");}});
+
+var CredProtectW = Module.findExportByName("sechost.dll", "CredProtectW")
+Interceptor.attach(CredProtectW, {onLeave: function (args) {send("CredProtectW");}});
+
+var CredReadA = Module.findExportByName("sechost.dll", "CredReadA")
+Interceptor.attach(CredReadA, {onLeave: function (args) {send("CredReadA");}});
+
+var CredReadByTokenHandle = Module.findExportByName("sechost.dll", "CredReadByTokenHandle")
+Interceptor.attach(CredReadByTokenHandle, {onLeave: function (args) {send("CredReadByTokenHandle");}});
+
+var CredReadDomainCredentialsA = Module.findExportByName("sechost.dll", "CredReadDomainCredentialsA")
+Interceptor.attach(CredReadDomainCredentialsA, {onLeave: function (args) {send("CredReadDomainCredentialsA");}});
+
+var CredReadDomainCredentialsW = Module.findExportByName("sechost.dll", "CredReadDomainCredentialsW")
+Interceptor.attach(CredReadDomainCredentialsW, {onLeave: function (args) {send("CredReadDomainCredentialsW");}});
+
+var CredReadW = Module.findExportByName("sechost.dll", "CredReadW")
+Interceptor.attach(CredReadW, {onLeave: function (args) {send("CredReadW");}});
+
+var CredRestoreCredentials = Module.findExportByName("sechost.dll", "CredRestoreCredentials")
+Interceptor.attach(CredRestoreCredentials, {onLeave: function (args) {send("CredRestoreCredentials");}});
+
+var CredUnmarshalCredentialA = Module.findExportByName("sechost.dll", "CredUnmarshalCredentialA")
+Interceptor.attach(CredUnmarshalCredentialA, {onLeave: function (args) {send("CredUnmarshalCredentialA");}});
+
+var CredUnmarshalCredentialW = Module.findExportByName("sechost.dll", "CredUnmarshalCredentialW")
+Interceptor.attach(CredUnmarshalCredentialW, {onLeave: function (args) {send("CredUnmarshalCredentialW");}});
+
+var CredUnprotectA = Module.findExportByName("sechost.dll", "CredUnprotectA")
+Interceptor.attach(CredUnprotectA, {onLeave: function (args) {send("CredUnprotectA");}});
+
+var CredUnprotectEx = Module.findExportByName("sechost.dll", "CredUnprotectEx")
+Interceptor.attach(CredUnprotectEx, {onLeave: function (args) {send("CredUnprotectEx");}});
+
+var CredUnprotectW = Module.findExportByName("sechost.dll", "CredUnprotectW")
+Interceptor.attach(CredUnprotectW, {onLeave: function (args) {send("CredUnprotectW");}});
+
+var CredWriteA = Module.findExportByName("sechost.dll", "CredWriteA")
+Interceptor.attach(CredWriteA, {onLeave: function (args) {send("CredWriteA");}});
+
+var CredWriteDomainCredentialsA = Module.findExportByName("sechost.dll", "CredWriteDomainCredentialsA")
+Interceptor.attach(CredWriteDomainCredentialsA, {onLeave: function (args) {send("CredWriteDomainCredentialsA");}});
+
+var CredWriteDomainCredentialsW = Module.findExportByName("sechost.dll", "CredWriteDomainCredentialsW")
+Interceptor.attach(CredWriteDomainCredentialsW, {onLeave: function (args) {send("CredWriteDomainCredentialsW");}});
+
+var CredWriteW = Module.findExportByName("sechost.dll", "CredWriteW")
+Interceptor.attach(CredWriteW, {onLeave: function (args) {send("CredWriteW");}});
+
+var CredpConvertCredential = Module.findExportByName("sechost.dll", "CredpConvertCredential")
+Interceptor.attach(CredpConvertCredential, {onLeave: function (args) {send("CredpConvertCredential");}});
+
+var CredpConvertOneCredentialSize = Module.findExportByName("sechost.dll", "CredpConvertOneCredentialSize")
+Interceptor.attach(CredpConvertOneCredentialSize, {onLeave: function (args) {send("CredpConvertOneCredentialSize");}});
+
+var CredpConvertTargetInfo = Module.findExportByName("sechost.dll", "CredpConvertTargetInfo")
+Interceptor.attach(CredpConvertTargetInfo, {onLeave: function (args) {send("CredpConvertTargetInfo");}});
+
+var CredpDecodeCredential = Module.findExportByName("sechost.dll", "CredpDecodeCredential")
+Interceptor.attach(CredpDecodeCredential, {onLeave: function (args) {send("CredpDecodeCredential");}});
+
+var CredpEncodeCredential = Module.findExportByName("sechost.dll", "CredpEncodeCredential")
+Interceptor.attach(CredpEncodeCredential, {onLeave: function (args) {send("CredpEncodeCredential");}});
+
+var CredpEncodeSecret = Module.findExportByName("sechost.dll", "CredpEncodeSecret")
+Interceptor.attach(CredpEncodeSecret, {onLeave: function (args) {send("CredpEncodeSecret");}});
+
+var DecodeAttributeName = Module.findExportByName("sechost.dll", "DecodeAttributeName")
+Interceptor.attach(DecodeAttributeName, {onLeave: function (args) {send("DecodeAttributeName");}});
+
+var DeleteIsolationContainer = Module.findExportByName("sechost.dll", "DeleteIsolationContainer")
+Interceptor.attach(DeleteIsolationContainer, {onLeave: function (args) {send("DeleteIsolationContainer");}});
+
+var DeleteService = Module.findExportByName("sechost.dll", "DeleteService")
+Interceptor.attach(DeleteService, {onLeave: function (args) {send("DeleteService");}});
+
+var EnableTraceEx2 = Module.findExportByName("sechost.dll", "EnableTraceEx2")
+Interceptor.attach(EnableTraceEx2, {onLeave: function (args) {send("EnableTraceEx2");}});
+
+var EncodeAttributeName = Module.findExportByName("sechost.dll", "EncodeAttributeName")
+Interceptor.attach(EncodeAttributeName, {onLeave: function (args) {send("EncodeAttributeName");}});
+
+var EnumDependentServicesW = Module.findExportByName("sechost.dll", "EnumDependentServicesW")
+Interceptor.attach(EnumDependentServicesW, {onLeave: function (args) {send("EnumDependentServicesW");}});
+
+var EnumServicesStatusExW = Module.findExportByName("sechost.dll", "EnumServicesStatusExW")
+Interceptor.attach(EnumServicesStatusExW, {onLeave: function (args) {send("EnumServicesStatusExW");}});
+
+var EnumerateIdentityProviders = Module.findExportByName("sechost.dll", "EnumerateIdentityProviders")
+Interceptor.attach(EnumerateIdentityProviders, {onLeave: function (args) {send("EnumerateIdentityProviders");}});
+
+var EnumerateTraceGuidsEx = Module.findExportByName("sechost.dll", "EnumerateTraceGuidsEx")
+Interceptor.attach(EnumerateTraceGuidsEx, {onLeave: function (args) {send("EnumerateTraceGuidsEx");}});
+
+var EventAccessControl = Module.findExportByName("sechost.dll", "EventAccessControl")
+Interceptor.attach(EventAccessControl, {onLeave: function (args) {send("EventAccessControl");}});
+
+var EventAccessQuery = Module.findExportByName("sechost.dll", "EventAccessQuery")
+Interceptor.attach(EventAccessQuery, {onLeave: function (args) {send("EventAccessQuery");}});
+
+var EventAccessRemove = Module.findExportByName("sechost.dll", "EventAccessRemove")
+Interceptor.attach(EventAccessRemove, {onLeave: function (args) {send("EventAccessRemove");}});
+
+var FreeContainer = Module.findExportByName("sechost.dll", "FreeContainer")
+Interceptor.attach(FreeContainer, {onLeave: function (args) {send("FreeContainer");}});
+
+var FreeOperandValue = Module.findExportByName("sechost.dll", "FreeOperandValue")
+Interceptor.attach(FreeOperandValue, {onLeave: function (args) {send("FreeOperandValue");}});
+
+var FreeTransientObjectSecurityDescriptor = Module.findExportByName("sechost.dll", "FreeTransientObjectSecurityDescriptor")
+Interceptor.attach(FreeTransientObjectSecurityDescriptor, {onLeave: function (args) {send("FreeTransientObjectSecurityDescriptor");}});
+
+var GetCharFromDigit = Module.findExportByName("sechost.dll", "GetCharFromDigit")
+Interceptor.attach(GetCharFromDigit, {onLeave: function (args) {send("GetCharFromDigit");}});
+
+var GetDefaultIdentityProvider = Module.findExportByName("sechost.dll", "GetDefaultIdentityProvider")
+Interceptor.attach(GetDefaultIdentityProvider, {onLeave: function (args) {send("GetDefaultIdentityProvider");}});
+
+var GetDigitFromChar = Module.findExportByName("sechost.dll", "GetDigitFromChar")
+Interceptor.attach(GetDigitFromChar, {onLeave: function (args) {send("GetDigitFromChar");}});
+
+var GetEmbeddedContainerIsolationPolicy = Module.findExportByName("sechost.dll", "GetEmbeddedContainerIsolationPolicy")
+Interceptor.attach(GetEmbeddedContainerIsolationPolicy, {onLeave: function (args) {send("GetEmbeddedContainerIsolationPolicy");}});
+
+var GetEmbeddedImageMitigationPolicy = Module.findExportByName("sechost.dll", "GetEmbeddedImageMitigationPolicy")
+Interceptor.attach(GetEmbeddedImageMitigationPolicy, {onLeave: function (args) {send("GetEmbeddedImageMitigationPolicy");}});
+
+var GetIdentityProviderInfoByGUID = Module.findExportByName("sechost.dll", "GetIdentityProviderInfoByGUID")
+Interceptor.attach(GetIdentityProviderInfoByGUID, {onLeave: function (args) {send("GetIdentityProviderInfoByGUID");}});
+
+var GetIdentityProviderInfoByName = Module.findExportByName("sechost.dll", "GetIdentityProviderInfoByName")
+Interceptor.attach(GetIdentityProviderInfoByName, {onLeave: function (args) {send("GetIdentityProviderInfoByName");}});
+
+var GetOperandValue = Module.findExportByName("sechost.dll", "GetOperandValue")
+Interceptor.attach(GetOperandValue, {onLeave: function (args) {send("GetOperandValue");}});
+
+var GetOperatorCodeAtIndex = Module.findExportByName("sechost.dll", "GetOperatorCodeAtIndex")
+Interceptor.attach(GetOperatorCodeAtIndex, {onLeave: function (args) {send("GetOperatorCodeAtIndex");}});
+
+var GetOperatorIndexByToken = Module.findExportByName("sechost.dll", "GetOperatorIndexByToken")
+Interceptor.attach(GetOperatorIndexByToken, {onLeave: function (args) {send("GetOperatorIndexByToken");}});
+
+var GetOperatorUnaryAtIndex = Module.findExportByName("sechost.dll", "GetOperatorUnaryAtIndex")
+Interceptor.attach(GetOperatorUnaryAtIndex, {onLeave: function (args) {send("GetOperatorUnaryAtIndex");}});
+
+var GetPrintableOperandValue = Module.findExportByName("sechost.dll", "GetPrintableOperandValue")
+Interceptor.attach(GetPrintableOperandValue, {onLeave: function (args) {send("GetPrintableOperandValue");}});
+
+var GetServiceDirectory = Module.findExportByName("sechost.dll", "GetServiceDirectory")
+Interceptor.attach(GetServiceDirectory, {onLeave: function (args) {send("GetServiceDirectory");}});
+
+var GetServiceDisplayNameW = Module.findExportByName("sechost.dll", "GetServiceDisplayNameW")
+Interceptor.attach(GetServiceDisplayNameW, {onLeave: function (args) {send("GetServiceDisplayNameW");}});
+
+var GetServiceKeyNameW = Module.findExportByName("sechost.dll", "GetServiceKeyNameW")
+Interceptor.attach(GetServiceKeyNameW, {onLeave: function (args) {send("GetServiceKeyNameW");}});
+
+var GetServiceProcessToken = Module.findExportByName("sechost.dll", "GetServiceProcessToken")
+Interceptor.attach(GetServiceProcessToken, {onLeave: function (args) {send("GetServiceProcessToken");}});
+
+var GetServiceRegistryStateKey = Module.findExportByName("sechost.dll", "GetServiceRegistryStateKey")
+Interceptor.attach(GetServiceRegistryStateKey, {onLeave: function (args) {send("GetServiceRegistryStateKey");}});
+
+var GetSharedServiceDirectory = Module.findExportByName("sechost.dll", "GetSharedServiceDirectory")
+Interceptor.attach(GetSharedServiceDirectory, {onLeave: function (args) {send("GetSharedServiceDirectory");}});
+
+var GetSharedServiceRegistryStateKey = Module.findExportByName("sechost.dll", "GetSharedServiceRegistryStateKey")
+Interceptor.attach(GetSharedServiceRegistryStateKey, {onLeave: function (args) {send("GetSharedServiceRegistryStateKey");}});
+
+var I_QueryTagInformation = Module.findExportByName("sechost.dll", "I_QueryTagInformation")
+Interceptor.attach(I_QueryTagInformation, {onLeave: function (args) {send("I_QueryTagInformation");}});
+
+var I_RegisterSvchostNotificationCallback = Module.findExportByName("sechost.dll", "I_RegisterSvchostNotificationCallback")
+Interceptor.attach(I_RegisterSvchostNotificationCallback, {onLeave: function (args) {send("I_RegisterSvchostNotificationCallback");}});
+
+var I_ScBroadcastServiceControlMessage = Module.findExportByName("sechost.dll", "I_ScBroadcastServiceControlMessage")
+Interceptor.attach(I_ScBroadcastServiceControlMessage, {onLeave: function (args) {send("I_ScBroadcastServiceControlMessage");}});
+
+var I_ScIsSecurityProcess = Module.findExportByName("sechost.dll", "I_ScIsSecurityProcess")
+Interceptor.attach(I_ScIsSecurityProcess, {onLeave: function (args) {send("I_ScIsSecurityProcess");}});
+
+var I_ScPnPGetServiceName = Module.findExportByName("sechost.dll", "I_ScPnPGetServiceName")
+Interceptor.attach(I_ScPnPGetServiceName, {onLeave: function (args) {send("I_ScPnPGetServiceName");}});
+
+var I_ScQueryServiceConfig = Module.findExportByName("sechost.dll", "I_ScQueryServiceConfig")
+Interceptor.attach(I_ScQueryServiceConfig, {onLeave: function (args) {send("I_ScQueryServiceConfig");}});
+
+var I_ScRegisterDeviceNotification = Module.findExportByName("sechost.dll", "I_ScRegisterDeviceNotification")
+Interceptor.attach(I_ScRegisterDeviceNotification, {onLeave: function (args) {send("I_ScRegisterDeviceNotification");}});
+
+var I_ScRegisterPreshutdownRestart = Module.findExportByName("sechost.dll", "I_ScRegisterPreshutdownRestart")
+Interceptor.attach(I_ScRegisterPreshutdownRestart, {onLeave: function (args) {send("I_ScRegisterPreshutdownRestart");}});
+
+var I_ScReparseServiceDatabase = Module.findExportByName("sechost.dll", "I_ScReparseServiceDatabase")
+Interceptor.attach(I_ScReparseServiceDatabase, {onLeave: function (args) {send("I_ScReparseServiceDatabase");}});
+
+var I_ScRpcBindA = Module.findExportByName("sechost.dll", "I_ScRpcBindA")
+Interceptor.attach(I_ScRpcBindA, {onLeave: function (args) {send("I_ScRpcBindA");}});
+
+var I_ScRpcBindW = Module.findExportByName("sechost.dll", "I_ScRpcBindW")
+Interceptor.attach(I_ScRpcBindW, {onLeave: function (args) {send("I_ScRpcBindW");}});
+
+var I_ScSendPnPMessage = Module.findExportByName("sechost.dll", "I_ScSendPnPMessage")
+Interceptor.attach(I_ScSendPnPMessage, {onLeave: function (args) {send("I_ScSendPnPMessage");}});
+
+var I_ScSendTSMessage = Module.findExportByName("sechost.dll", "I_ScSendTSMessage")
+Interceptor.attach(I_ScSendTSMessage, {onLeave: function (args) {send("I_ScSendTSMessage");}});
+
+var I_ScSetServiceBitsA = Module.findExportByName("sechost.dll", "I_ScSetServiceBitsA")
+Interceptor.attach(I_ScSetServiceBitsA, {onLeave: function (args) {send("I_ScSetServiceBitsA");}});
+
+var I_ScSetServiceBitsW = Module.findExportByName("sechost.dll", "I_ScSetServiceBitsW")
+Interceptor.attach(I_ScSetServiceBitsW, {onLeave: function (args) {send("I_ScSetServiceBitsW");}});
+
+var I_ScUnregisterDeviceNotification = Module.findExportByName("sechost.dll", "I_ScUnregisterDeviceNotification")
+Interceptor.attach(I_ScUnregisterDeviceNotification, {onLeave: function (args) {send("I_ScUnregisterDeviceNotification");}});
+
+var I_ScValidatePnPService = Module.findExportByName("sechost.dll", "I_ScValidatePnPService")
+Interceptor.attach(I_ScValidatePnPService, {onLeave: function (args) {send("I_ScValidatePnPService");}});
+
+var IsArrayType = Module.findExportByName("sechost.dll", "IsArrayType")
+Interceptor.attach(IsArrayType, {onLeave: function (args) {send("IsArrayType");}});
+
+var IsValueSizeFixed = Module.findExportByName("sechost.dll", "IsValueSizeFixed")
+Interceptor.attach(IsValueSizeFixed, {onLeave: function (args) {send("IsValueSizeFixed");}});
+
+var LocalGetConditionForString = Module.findExportByName("sechost.dll", "LocalGetConditionForString")
+Interceptor.attach(LocalGetConditionForString, {onLeave: function (args) {send("LocalGetConditionForString");}});
+
+var LocalGetReferencedTokenTypesForCondition = Module.findExportByName("sechost.dll", "LocalGetReferencedTokenTypesForCondition")
+Interceptor.attach(LocalGetReferencedTokenTypesForCondition, {onLeave: function (args) {send("LocalGetReferencedTokenTypesForCondition");}});
+
+var LocalGetSidForString = Module.findExportByName("sechost.dll", "LocalGetSidForString")
+Interceptor.attach(LocalGetSidForString, {onLeave: function (args) {send("LocalGetSidForString");}});
+
+var LocalGetStringForCondition = Module.findExportByName("sechost.dll", "LocalGetStringForCondition")
+Interceptor.attach(LocalGetStringForCondition, {onLeave: function (args) {send("LocalGetStringForCondition");}});
+
+var LocalGetStringForRelativeAttribute = Module.findExportByName("sechost.dll", "LocalGetStringForRelativeAttribute")
+Interceptor.attach(LocalGetStringForRelativeAttribute, {onLeave: function (args) {send("LocalGetStringForRelativeAttribute");}});
+
+var LocalRpcBindingCreateWithSecurity = Module.findExportByName("sechost.dll", "LocalRpcBindingCreateWithSecurity")
+Interceptor.attach(LocalRpcBindingCreateWithSecurity, {onLeave: function (args) {send("LocalRpcBindingCreateWithSecurity");}});
+
+var LocalRpcBindingSetAuthInfoEx = Module.findExportByName("sechost.dll", "LocalRpcBindingSetAuthInfoEx")
+Interceptor.attach(LocalRpcBindingSetAuthInfoEx, {onLeave: function (args) {send("LocalRpcBindingSetAuthInfoEx");}});
+
+var LookupAccountNameLocalA = Module.findExportByName("sechost.dll", "LookupAccountNameLocalA")
+Interceptor.attach(LookupAccountNameLocalA, {onLeave: function (args) {send("LookupAccountNameLocalA");}});
+
+var LookupAccountNameLocalW = Module.findExportByName("sechost.dll", "LookupAccountNameLocalW")
+Interceptor.attach(LookupAccountNameLocalW, {onLeave: function (args) {send("LookupAccountNameLocalW");}});
+
+var LookupAccountSidLocalA = Module.findExportByName("sechost.dll", "LookupAccountSidLocalA")
+Interceptor.attach(LookupAccountSidLocalA, {onLeave: function (args) {send("LookupAccountSidLocalA");}});
+
+var LookupAccountSidLocalW = Module.findExportByName("sechost.dll", "LookupAccountSidLocalW")
+Interceptor.attach(LookupAccountSidLocalW, {onLeave: function (args) {send("LookupAccountSidLocalW");}});
+
+var LsaAddAccountRights = Module.findExportByName("sechost.dll", "LsaAddAccountRights")
+Interceptor.attach(LsaAddAccountRights, {onLeave: function (args) {send("LsaAddAccountRights");}});
+
+var LsaClose = Module.findExportByName("sechost.dll", "LsaClose")
+Interceptor.attach(LsaClose, {onLeave: function (args) {send("LsaClose");}});
+
+var LsaCreateSecret = Module.findExportByName("sechost.dll", "LsaCreateSecret")
+Interceptor.attach(LsaCreateSecret, {onLeave: function (args) {send("LsaCreateSecret");}});
+
+var LsaDelete = Module.findExportByName("sechost.dll", "LsaDelete")
+Interceptor.attach(LsaDelete, {onLeave: function (args) {send("LsaDelete");}});
+
+var LsaEnumerateAccountRights = Module.findExportByName("sechost.dll", "LsaEnumerateAccountRights")
+Interceptor.attach(LsaEnumerateAccountRights, {onLeave: function (args) {send("LsaEnumerateAccountRights");}});
+
+var LsaEnumerateAccountsWithUserRight = Module.findExportByName("sechost.dll", "LsaEnumerateAccountsWithUserRight")
+Interceptor.attach(LsaEnumerateAccountsWithUserRight, {onLeave: function (args) {send("LsaEnumerateAccountsWithUserRight");}});
+
+var LsaFreeMemory = Module.findExportByName("sechost.dll", "LsaFreeMemory")
+Interceptor.attach(LsaFreeMemory, {onLeave: function (args) {send("LsaFreeMemory");}});
+
+var LsaICLookupNames = Module.findExportByName("sechost.dll", "LsaICLookupNames")
+Interceptor.attach(LsaICLookupNames, {onLeave: function (args) {send("LsaICLookupNames");}});
+
+var LsaICLookupNamesWithCreds = Module.findExportByName("sechost.dll", "LsaICLookupNamesWithCreds")
+Interceptor.attach(LsaICLookupNamesWithCreds, {onLeave: function (args) {send("LsaICLookupNamesWithCreds");}});
+
+var LsaICLookupSids = Module.findExportByName("sechost.dll", "LsaICLookupSids")
+Interceptor.attach(LsaICLookupSids, {onLeave: function (args) {send("LsaICLookupSids");}});
+
+var LsaICLookupSidsWithCreds = Module.findExportByName("sechost.dll", "LsaICLookupSidsWithCreds")
+Interceptor.attach(LsaICLookupSidsWithCreds, {onLeave: function (args) {send("LsaICLookupSidsWithCreds");}});
+
+var LsaLookupClose = Module.findExportByName("sechost.dll", "LsaLookupClose")
+Interceptor.attach(LsaLookupClose, {onLeave: function (args) {send("LsaLookupClose");}});
+
+var LsaLookupFreeMemory = Module.findExportByName("sechost.dll", "LsaLookupFreeMemory")
+Interceptor.attach(LsaLookupFreeMemory, {onLeave: function (args) {send("LsaLookupFreeMemory");}});
+
+var LsaLookupGetDomainInfo = Module.findExportByName("sechost.dll", "LsaLookupGetDomainInfo")
+Interceptor.attach(LsaLookupGetDomainInfo, {onLeave: function (args) {send("LsaLookupGetDomainInfo");}});
+
+var LsaLookupManageSidNameMapping = Module.findExportByName("sechost.dll", "LsaLookupManageSidNameMapping")
+Interceptor.attach(LsaLookupManageSidNameMapping, {onLeave: function (args) {send("LsaLookupManageSidNameMapping");}});
+
+var LsaLookupNames2 = Module.findExportByName("sechost.dll", "LsaLookupNames2")
+Interceptor.attach(LsaLookupNames2, {onLeave: function (args) {send("LsaLookupNames2");}});
+
+var LsaLookupOpenLocalPolicy = Module.findExportByName("sechost.dll", "LsaLookupOpenLocalPolicy")
+Interceptor.attach(LsaLookupOpenLocalPolicy, {onLeave: function (args) {send("LsaLookupOpenLocalPolicy");}});
+
+var LsaLookupSids = Module.findExportByName("sechost.dll", "LsaLookupSids")
+Interceptor.attach(LsaLookupSids, {onLeave: function (args) {send("LsaLookupSids");}});
+
+var LsaLookupSids2 = Module.findExportByName("sechost.dll", "LsaLookupSids2")
+Interceptor.attach(LsaLookupSids2, {onLeave: function (args) {send("LsaLookupSids2");}});
+
+var LsaLookupTranslateNames = Module.findExportByName("sechost.dll", "LsaLookupTranslateNames")
+Interceptor.attach(LsaLookupTranslateNames, {onLeave: function (args) {send("LsaLookupTranslateNames");}});
+
+var LsaLookupTranslateSids = Module.findExportByName("sechost.dll", "LsaLookupTranslateSids")
+Interceptor.attach(LsaLookupTranslateSids, {onLeave: function (args) {send("LsaLookupTranslateSids");}});
+
+var LsaLookupUserAccountType = Module.findExportByName("sechost.dll", "LsaLookupUserAccountType")
+Interceptor.attach(LsaLookupUserAccountType, {onLeave: function (args) {send("LsaLookupUserAccountType");}});
+
+var LsaOpenPolicy = Module.findExportByName("sechost.dll", "LsaOpenPolicy")
+Interceptor.attach(LsaOpenPolicy, {onLeave: function (args) {send("LsaOpenPolicy");}});
+
+var LsaOpenSecret = Module.findExportByName("sechost.dll", "LsaOpenSecret")
+Interceptor.attach(LsaOpenSecret, {onLeave: function (args) {send("LsaOpenSecret");}});
+
+var LsaQueryInformationPolicy = Module.findExportByName("sechost.dll", "LsaQueryInformationPolicy")
+Interceptor.attach(LsaQueryInformationPolicy, {onLeave: function (args) {send("LsaQueryInformationPolicy");}});
+
+var LsaQuerySecret = Module.findExportByName("sechost.dll", "LsaQuerySecret")
+Interceptor.attach(LsaQuerySecret, {onLeave: function (args) {send("LsaQuerySecret");}});
+
+var LsaRemoveAccountRights = Module.findExportByName("sechost.dll", "LsaRemoveAccountRights")
+Interceptor.attach(LsaRemoveAccountRights, {onLeave: function (args) {send("LsaRemoveAccountRights");}});
+
+var LsaRetrievePrivateData = Module.findExportByName("sechost.dll", "LsaRetrievePrivateData")
+Interceptor.attach(LsaRetrievePrivateData, {onLeave: function (args) {send("LsaRetrievePrivateData");}});
+
+var LsaSetInformationPolicy = Module.findExportByName("sechost.dll", "LsaSetInformationPolicy")
+Interceptor.attach(LsaSetInformationPolicy, {onLeave: function (args) {send("LsaSetInformationPolicy");}});
+
+var LsaSetSecret = Module.findExportByName("sechost.dll", "LsaSetSecret")
+Interceptor.attach(LsaSetSecret, {onLeave: function (args) {send("LsaSetSecret");}});
+
+var LsaStorePrivateData = Module.findExportByName("sechost.dll", "LsaStorePrivateData")
+Interceptor.attach(LsaStorePrivateData, {onLeave: function (args) {send("LsaStorePrivateData");}});
+
+var NotifyServiceStatusChange = Module.findExportByName("sechost.dll", "NotifyServiceStatusChange")
+Interceptor.attach(NotifyServiceStatusChange, {onLeave: function (args) {send("NotifyServiceStatusChange");}});
+
+var NotifyServiceStatusChangeA = Module.findExportByName("sechost.dll", "NotifyServiceStatusChangeA")
+Interceptor.attach(NotifyServiceStatusChangeA, {onLeave: function (args) {send("NotifyServiceStatusChangeA");}});
+
+var NotifyServiceStatusChangeW = Module.findExportByName("sechost.dll", "NotifyServiceStatusChangeW")
+Interceptor.attach(NotifyServiceStatusChangeW, {onLeave: function (args) {send("NotifyServiceStatusChangeW");}});
+
+var OpenSCManagerA = Module.findExportByName("sechost.dll", "OpenSCManagerA")
+Interceptor.attach(OpenSCManagerA, {onLeave: function (args) {send("OpenSCManagerA");}});
+
+var OpenSCManagerW = Module.findExportByName("sechost.dll", "OpenSCManagerW")
+Interceptor.attach(OpenSCManagerW, {onLeave: function (args) {send("OpenSCManagerW");}});
+
+var OpenServiceA = Module.findExportByName("sechost.dll", "OpenServiceA")
+Interceptor.attach(OpenServiceA, {onLeave: function (args) {send("OpenServiceA");}});
+
+var OpenServiceW = Module.findExportByName("sechost.dll", "OpenServiceW")
+Interceptor.attach(OpenServiceW, {onLeave: function (args) {send("OpenServiceW");}});
+
+var OpenTraceFromBufferStream = Module.findExportByName("sechost.dll", "OpenTraceFromBufferStream")
+Interceptor.attach(OpenTraceFromBufferStream, {onLeave: function (args) {send("OpenTraceFromBufferStream");}});
+
+var OpenTraceFromFile = Module.findExportByName("sechost.dll", "OpenTraceFromFile")
+Interceptor.attach(OpenTraceFromFile, {onLeave: function (args) {send("OpenTraceFromFile");}});
+
+var OpenTraceFromRealTimeLogger = Module.findExportByName("sechost.dll", "OpenTraceFromRealTimeLogger")
+Interceptor.attach(OpenTraceFromRealTimeLogger, {onLeave: function (args) {send("OpenTraceFromRealTimeLogger");}});
+
+var OpenTraceFromRealTimeLoggerWithAllocationOptions = Module.findExportByName("sechost.dll", "OpenTraceFromRealTimeLoggerWithAllocationOptions")
+Interceptor.attach(OpenTraceFromRealTimeLoggerWithAllocationOptions, {onLeave: function (args) {send("OpenTraceFromRealTimeLoggerWithAllocationOptions");}});
+
+var OpenTraceW = Module.findExportByName("sechost.dll", "OpenTraceW")
+Interceptor.attach(OpenTraceW, {onLeave: function (args) {send("OpenTraceW");}});
+
+var ProcessTrace = Module.findExportByName("sechost.dll", "ProcessTrace")
+Interceptor.attach(ProcessTrace, {onLeave: function (args) {send("ProcessTrace");}});
+
+var ProcessTraceAddBufferToBufferStream = Module.findExportByName("sechost.dll", "ProcessTraceAddBufferToBufferStream")
+Interceptor.attach(ProcessTraceAddBufferToBufferStream, {onLeave: function (args) {send("ProcessTraceAddBufferToBufferStream");}});
+
+var ProcessTraceBufferDecrementReference = Module.findExportByName("sechost.dll", "ProcessTraceBufferDecrementReference")
+Interceptor.attach(ProcessTraceBufferDecrementReference, {onLeave: function (args) {send("ProcessTraceBufferDecrementReference");}});
+
+var ProcessTraceBufferIncrementReference = Module.findExportByName("sechost.dll", "ProcessTraceBufferIncrementReference")
+Interceptor.attach(ProcessTraceBufferIncrementReference, {onLeave: function (args) {send("ProcessTraceBufferIncrementReference");}});
+
+var QueryAllTracesA = Module.findExportByName("sechost.dll", "QueryAllTracesA")
+Interceptor.attach(QueryAllTracesA, {onLeave: function (args) {send("QueryAllTracesA");}});
+
+var QueryAllTracesW = Module.findExportByName("sechost.dll", "QueryAllTracesW")
+Interceptor.attach(QueryAllTracesW, {onLeave: function (args) {send("QueryAllTracesW");}});
+
+var QueryLocalUserServiceName = Module.findExportByName("sechost.dll", "QueryLocalUserServiceName")
+Interceptor.attach(QueryLocalUserServiceName, {onLeave: function (args) {send("QueryLocalUserServiceName");}});
+
+var QueryServiceConfig2A = Module.findExportByName("sechost.dll", "QueryServiceConfig2A")
+Interceptor.attach(QueryServiceConfig2A, {onLeave: function (args) {send("QueryServiceConfig2A");}});
+
+var QueryServiceConfig2W = Module.findExportByName("sechost.dll", "QueryServiceConfig2W")
+Interceptor.attach(QueryServiceConfig2W, {onLeave: function (args) {send("QueryServiceConfig2W");}});
+
+var QueryServiceConfigA = Module.findExportByName("sechost.dll", "QueryServiceConfigA")
+Interceptor.attach(QueryServiceConfigA, {onLeave: function (args) {send("QueryServiceConfigA");}});
+
+var QueryServiceConfigW = Module.findExportByName("sechost.dll", "QueryServiceConfigW")
+Interceptor.attach(QueryServiceConfigW, {onLeave: function (args) {send("QueryServiceConfigW");}});
+
+var QueryServiceDynamicInformation = Module.findExportByName("sechost.dll", "QueryServiceDynamicInformation")
+Interceptor.attach(QueryServiceDynamicInformation, {onLeave: function (args) {send("QueryServiceDynamicInformation");}});
+
+var QueryServiceObjectSecurity = Module.findExportByName("sechost.dll", "QueryServiceObjectSecurity")
+Interceptor.attach(QueryServiceObjectSecurity, {onLeave: function (args) {send("QueryServiceObjectSecurity");}});
+
+var QueryServiceStatus = Module.findExportByName("sechost.dll", "QueryServiceStatus")
+Interceptor.attach(QueryServiceStatus, {onLeave: function (args) {send("QueryServiceStatus");}});
+
+var QueryServiceStatusEx = Module.findExportByName("sechost.dll", "QueryServiceStatusEx")
+Interceptor.attach(QueryServiceStatusEx, {onLeave: function (args) {send("QueryServiceStatusEx");}});
+
+var QueryTraceProcessingHandle = Module.findExportByName("sechost.dll", "QueryTraceProcessingHandle")
+Interceptor.attach(QueryTraceProcessingHandle, {onLeave: function (args) {send("QueryTraceProcessingHandle");}});
+
+var QueryTransientObjectSecurityDescriptor = Module.findExportByName("sechost.dll", "QueryTransientObjectSecurityDescriptor")
+Interceptor.attach(QueryTransientObjectSecurityDescriptor, {onLeave: function (args) {send("QueryTransientObjectSecurityDescriptor");}});
+
+var QueryUserServiceName = Module.findExportByName("sechost.dll", "QueryUserServiceName")
+Interceptor.attach(QueryUserServiceName, {onLeave: function (args) {send("QueryUserServiceName");}});
+
+var QueryUserServiceNameForContext = Module.findExportByName("sechost.dll", "QueryUserServiceNameForContext")
+Interceptor.attach(QueryUserServiceNameForContext, {onLeave: function (args) {send("QueryUserServiceNameForContext");}});
+
+var RegisterServiceCtrlHandlerA = Module.findExportByName("sechost.dll", "RegisterServiceCtrlHandlerA")
+Interceptor.attach(RegisterServiceCtrlHandlerA, {onLeave: function (args) {send("RegisterServiceCtrlHandlerA");}});
+
+var RegisterServiceCtrlHandlerExA = Module.findExportByName("sechost.dll", "RegisterServiceCtrlHandlerExA")
+Interceptor.attach(RegisterServiceCtrlHandlerExA, {onLeave: function (args) {send("RegisterServiceCtrlHandlerExA");}});
+
+var RegisterServiceCtrlHandlerExW = Module.findExportByName("sechost.dll", "RegisterServiceCtrlHandlerExW")
+Interceptor.attach(RegisterServiceCtrlHandlerExW, {onLeave: function (args) {send("RegisterServiceCtrlHandlerExW");}});
+
+var RegisterServiceCtrlHandlerW = Module.findExportByName("sechost.dll", "RegisterServiceCtrlHandlerW")
+Interceptor.attach(RegisterServiceCtrlHandlerW, {onLeave: function (args) {send("RegisterServiceCtrlHandlerW");}});
+
+var RegisterTraceGuidsA = Module.findExportByName("sechost.dll", "RegisterTraceGuidsA")
+Interceptor.attach(RegisterTraceGuidsA, {onLeave: function (args) {send("RegisterTraceGuidsA");}});
+
+var ReleaseIdentityProviderEnumContext = Module.findExportByName("sechost.dll", "ReleaseIdentityProviderEnumContext")
+Interceptor.attach(ReleaseIdentityProviderEnumContext, {onLeave: function (args) {send("ReleaseIdentityProviderEnumContext");}});
+
+var RemoveTraceCallback = Module.findExportByName("sechost.dll", "RemoveTraceCallback")
+Interceptor.attach(RemoveTraceCallback, {onLeave: function (args) {send("RemoveTraceCallback");}});
+
+var ReparseServiceConfig = Module.findExportByName("sechost.dll", "ReparseServiceConfig")
+Interceptor.attach(ReparseServiceConfig, {onLeave: function (args) {send("ReparseServiceConfig");}});
+
+var RpcClientCapabilityCheck = Module.findExportByName("sechost.dll", "RpcClientCapabilityCheck")
+Interceptor.attach(RpcClientCapabilityCheck, {onLeave: function (args) {send("RpcClientCapabilityCheck");}});
+
+var SetLocalRpcServerInterfaceSecurity = Module.findExportByName("sechost.dll", "SetLocalRpcServerInterfaceSecurity")
+Interceptor.attach(SetLocalRpcServerInterfaceSecurity, {onLeave: function (args) {send("SetLocalRpcServerInterfaceSecurity");}});
+
+var SetLocalRpcServerProtseqSecurity = Module.findExportByName("sechost.dll", "SetLocalRpcServerProtseqSecurity")
+Interceptor.attach(SetLocalRpcServerProtseqSecurity, {onLeave: function (args) {send("SetLocalRpcServerProtseqSecurity");}});
+
+var SetServiceObjectSecurity = Module.findExportByName("sechost.dll", "SetServiceObjectSecurity")
+Interceptor.attach(SetServiceObjectSecurity, {onLeave: function (args) {send("SetServiceObjectSecurity");}});
+
+var SetServiceStatus = Module.findExportByName("sechost.dll", "SetServiceStatus")
+Interceptor.attach(SetServiceStatus, {onLeave: function (args) {send("SetServiceStatus");}});
+
+var SetTraceCallback = Module.findExportByName("sechost.dll", "SetTraceCallback")
+Interceptor.attach(SetTraceCallback, {onLeave: function (args) {send("SetTraceCallback");}});
+
+var StartServiceA = Module.findExportByName("sechost.dll", "StartServiceA")
+Interceptor.attach(StartServiceA, {onLeave: function (args) {send("StartServiceA");}});
+
+var StartServiceCtrlDispatcherA = Module.findExportByName("sechost.dll", "StartServiceCtrlDispatcherA")
+Interceptor.attach(StartServiceCtrlDispatcherA, {onLeave: function (args) {send("StartServiceCtrlDispatcherA");}});
+
+var StartServiceCtrlDispatcherW = Module.findExportByName("sechost.dll", "StartServiceCtrlDispatcherW")
+Interceptor.attach(StartServiceCtrlDispatcherW, {onLeave: function (args) {send("StartServiceCtrlDispatcherW");}});
+
+var StartServiceW = Module.findExportByName("sechost.dll", "StartServiceW")
+Interceptor.attach(StartServiceW, {onLeave: function (args) {send("StartServiceW");}});
+
+var StartTraceA = Module.findExportByName("sechost.dll", "StartTraceA")
+Interceptor.attach(StartTraceA, {onLeave: function (args) {send("StartTraceA");}});
+
+var StartTraceW = Module.findExportByName("sechost.dll", "StartTraceW")
+Interceptor.attach(StartTraceW, {onLeave: function (args) {send("StartTraceW");}});
+
+var StopTraceW = Module.findExportByName("sechost.dll", "StopTraceW")
+Interceptor.attach(StopTraceW, {onLeave: function (args) {send("StopTraceW");}});
+
+var SubscribeServiceChangeNotifications = Module.findExportByName("sechost.dll", "SubscribeServiceChangeNotifications")
+Interceptor.attach(SubscribeServiceChangeNotifications, {onLeave: function (args) {send("SubscribeServiceChangeNotifications");}});
+
+var TraceQueryInformation = Module.findExportByName("sechost.dll", "TraceQueryInformation")
+Interceptor.attach(TraceQueryInformation, {onLeave: function (args) {send("TraceQueryInformation");}});
+
+var TraceSetInformation = Module.findExportByName("sechost.dll", "TraceSetInformation")
+Interceptor.attach(TraceSetInformation, {onLeave: function (args) {send("TraceSetInformation");}});
+
+var UnsubscribeServiceChangeNotifications = Module.findExportByName("sechost.dll", "UnsubscribeServiceChangeNotifications")
+Interceptor.attach(UnsubscribeServiceChangeNotifications, {onLeave: function (args) {send("UnsubscribeServiceChangeNotifications");}});
+
+var WaitServiceState = Module.findExportByName("sechost.dll", "WaitServiceState")
+Interceptor.attach(WaitServiceState, {onLeave: function (args) {send("WaitServiceState");}});
+

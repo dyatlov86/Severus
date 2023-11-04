@@ -1,0 +1,15 @@
+var CreateADContainers = Module.findExportByName("PolicMan.dll", "CreateADContainers")
+Interceptor.attach(CreateADContainers, {onLeave: function (args) {send("CreateADContainers");}});
+
+var DllCanUnloadNow = Module.findExportByName("PolicMan.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("PolicMan.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("PolicMan.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("PolicMan.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

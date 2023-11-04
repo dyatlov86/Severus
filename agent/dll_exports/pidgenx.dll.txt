@@ -1,0 +1,9 @@
+var GetPKeyData = Module.findExportByName("pidgenx.dll", "GetPKeyData")
+Interceptor.attach(GetPKeyData, {onLeave: function (args) {send("GetPKeyData");}});
+
+var PidGenX = Module.findExportByName("pidgenx.dll", "PidGenX")
+Interceptor.attach(PidGenX, {onLeave: function (args) {send("PidGenX");}});
+
+var PidGenX2 = Module.findExportByName("pidgenx.dll", "PidGenX2")
+Interceptor.attach(PidGenX2, {onLeave: function (args) {send("PidGenX2");}});
+

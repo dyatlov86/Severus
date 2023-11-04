@@ -1,0 +1,135 @@
+var CloseTrace = Module.findExportByName("wmi.dll", "CloseTrace")
+Interceptor.attach(CloseTrace, {onLeave: function (args) {send("CloseTrace");}});
+
+var ControlTraceA = Module.findExportByName("wmi.dll", "ControlTraceA")
+Interceptor.attach(ControlTraceA, {onLeave: function (args) {send("ControlTraceA");}});
+
+var ControlTraceW = Module.findExportByName("wmi.dll", "ControlTraceW")
+Interceptor.attach(ControlTraceW, {onLeave: function (args) {send("ControlTraceW");}});
+
+var CreateTraceInstanceId = Module.findExportByName("wmi.dll", "CreateTraceInstanceId")
+Interceptor.attach(CreateTraceInstanceId, {onLeave: function (args) {send("CreateTraceInstanceId");}});
+
+var EnableTrace = Module.findExportByName("wmi.dll", "EnableTrace")
+Interceptor.attach(EnableTrace, {onLeave: function (args) {send("EnableTrace");}});
+
+var GetTraceEnableFlags = Module.findExportByName("wmi.dll", "GetTraceEnableFlags")
+Interceptor.attach(GetTraceEnableFlags, {onLeave: function (args) {send("GetTraceEnableFlags");}});
+
+var GetTraceEnableLevel = Module.findExportByName("wmi.dll", "GetTraceEnableLevel")
+Interceptor.attach(GetTraceEnableLevel, {onLeave: function (args) {send("GetTraceEnableLevel");}});
+
+var GetTraceLoggerHandle = Module.findExportByName("wmi.dll", "GetTraceLoggerHandle")
+Interceptor.attach(GetTraceLoggerHandle, {onLeave: function (args) {send("GetTraceLoggerHandle");}});
+
+var OpenTraceA = Module.findExportByName("wmi.dll", "OpenTraceA")
+Interceptor.attach(OpenTraceA, {onLeave: function (args) {send("OpenTraceA");}});
+
+var OpenTraceW = Module.findExportByName("wmi.dll", "OpenTraceW")
+Interceptor.attach(OpenTraceW, {onLeave: function (args) {send("OpenTraceW");}});
+
+var ProcessTrace = Module.findExportByName("wmi.dll", "ProcessTrace")
+Interceptor.attach(ProcessTrace, {onLeave: function (args) {send("ProcessTrace");}});
+
+var QueryAllTracesA = Module.findExportByName("wmi.dll", "QueryAllTracesA")
+Interceptor.attach(QueryAllTracesA, {onLeave: function (args) {send("QueryAllTracesA");}});
+
+var QueryAllTracesW = Module.findExportByName("wmi.dll", "QueryAllTracesW")
+Interceptor.attach(QueryAllTracesW, {onLeave: function (args) {send("QueryAllTracesW");}});
+
+var RegisterTraceGuidsA = Module.findExportByName("wmi.dll", "RegisterTraceGuidsA")
+Interceptor.attach(RegisterTraceGuidsA, {onLeave: function (args) {send("RegisterTraceGuidsA");}});
+
+var RegisterTraceGuidsW = Module.findExportByName("wmi.dll", "RegisterTraceGuidsW")
+Interceptor.attach(RegisterTraceGuidsW, {onLeave: function (args) {send("RegisterTraceGuidsW");}});
+
+var RemoveTraceCallback = Module.findExportByName("wmi.dll", "RemoveTraceCallback")
+Interceptor.attach(RemoveTraceCallback, {onLeave: function (args) {send("RemoveTraceCallback");}});
+
+var SetTraceCallback = Module.findExportByName("wmi.dll", "SetTraceCallback")
+Interceptor.attach(SetTraceCallback, {onLeave: function (args) {send("SetTraceCallback");}});
+
+var StartTraceA = Module.findExportByName("wmi.dll", "StartTraceA")
+Interceptor.attach(StartTraceA, {onLeave: function (args) {send("StartTraceA");}});
+
+var StartTraceW = Module.findExportByName("wmi.dll", "StartTraceW")
+Interceptor.attach(StartTraceW, {onLeave: function (args) {send("StartTraceW");}});
+
+var TraceEvent = Module.findExportByName("wmi.dll", "TraceEvent")
+Interceptor.attach(TraceEvent, {onLeave: function (args) {send("TraceEvent");}});
+
+var TraceEventInstance = Module.findExportByName("wmi.dll", "TraceEventInstance")
+Interceptor.attach(TraceEventInstance, {onLeave: function (args) {send("TraceEventInstance");}});
+
+var UnregisterTraceGuids = Module.findExportByName("wmi.dll", "UnregisterTraceGuids")
+Interceptor.attach(UnregisterTraceGuids, {onLeave: function (args) {send("UnregisterTraceGuids");}});
+
+var WmiCloseBlock = Module.findExportByName("wmi.dll", "WmiCloseBlock")
+Interceptor.attach(WmiCloseBlock, {onLeave: function (args) {send("WmiCloseBlock");}});
+
+var WmiDevInstToInstanceNameA = Module.findExportByName("wmi.dll", "WmiDevInstToInstanceNameA")
+Interceptor.attach(WmiDevInstToInstanceNameA, {onLeave: function (args) {send("WmiDevInstToInstanceNameA");}});
+
+var WmiDevInstToInstanceNameW = Module.findExportByName("wmi.dll", "WmiDevInstToInstanceNameW")
+Interceptor.attach(WmiDevInstToInstanceNameW, {onLeave: function (args) {send("WmiDevInstToInstanceNameW");}});
+
+var WmiEnumerateGuids = Module.findExportByName("wmi.dll", "WmiEnumerateGuids")
+Interceptor.attach(WmiEnumerateGuids, {onLeave: function (args) {send("WmiEnumerateGuids");}});
+
+var WmiExecuteMethodA = Module.findExportByName("wmi.dll", "WmiExecuteMethodA")
+Interceptor.attach(WmiExecuteMethodA, {onLeave: function (args) {send("WmiExecuteMethodA");}});
+
+var WmiExecuteMethodW = Module.findExportByName("wmi.dll", "WmiExecuteMethodW")
+Interceptor.attach(WmiExecuteMethodW, {onLeave: function (args) {send("WmiExecuteMethodW");}});
+
+var WmiFileHandleToInstanceNameA = Module.findExportByName("wmi.dll", "WmiFileHandleToInstanceNameA")
+Interceptor.attach(WmiFileHandleToInstanceNameA, {onLeave: function (args) {send("WmiFileHandleToInstanceNameA");}});
+
+var WmiFileHandleToInstanceNameW = Module.findExportByName("wmi.dll", "WmiFileHandleToInstanceNameW")
+Interceptor.attach(WmiFileHandleToInstanceNameW, {onLeave: function (args) {send("WmiFileHandleToInstanceNameW");}});
+
+var WmiFreeBuffer = Module.findExportByName("wmi.dll", "WmiFreeBuffer")
+Interceptor.attach(WmiFreeBuffer, {onLeave: function (args) {send("WmiFreeBuffer");}});
+
+var WmiMofEnumerateResourcesA = Module.findExportByName("wmi.dll", "WmiMofEnumerateResourcesA")
+Interceptor.attach(WmiMofEnumerateResourcesA, {onLeave: function (args) {send("WmiMofEnumerateResourcesA");}});
+
+var WmiMofEnumerateResourcesW = Module.findExportByName("wmi.dll", "WmiMofEnumerateResourcesW")
+Interceptor.attach(WmiMofEnumerateResourcesW, {onLeave: function (args) {send("WmiMofEnumerateResourcesW");}});
+
+var WmiNotificationRegistrationA = Module.findExportByName("wmi.dll", "WmiNotificationRegistrationA")
+Interceptor.attach(WmiNotificationRegistrationA, {onLeave: function (args) {send("WmiNotificationRegistrationA");}});
+
+var WmiNotificationRegistrationW = Module.findExportByName("wmi.dll", "WmiNotificationRegistrationW")
+Interceptor.attach(WmiNotificationRegistrationW, {onLeave: function (args) {send("WmiNotificationRegistrationW");}});
+
+var WmiOpenBlock = Module.findExportByName("wmi.dll", "WmiOpenBlock")
+Interceptor.attach(WmiOpenBlock, {onLeave: function (args) {send("WmiOpenBlock");}});
+
+var WmiQueryAllDataA = Module.findExportByName("wmi.dll", "WmiQueryAllDataA")
+Interceptor.attach(WmiQueryAllDataA, {onLeave: function (args) {send("WmiQueryAllDataA");}});
+
+var WmiQueryAllDataW = Module.findExportByName("wmi.dll", "WmiQueryAllDataW")
+Interceptor.attach(WmiQueryAllDataW, {onLeave: function (args) {send("WmiQueryAllDataW");}});
+
+var WmiQueryGuidInformation = Module.findExportByName("wmi.dll", "WmiQueryGuidInformation")
+Interceptor.attach(WmiQueryGuidInformation, {onLeave: function (args) {send("WmiQueryGuidInformation");}});
+
+var WmiQuerySingleInstanceA = Module.findExportByName("wmi.dll", "WmiQuerySingleInstanceA")
+Interceptor.attach(WmiQuerySingleInstanceA, {onLeave: function (args) {send("WmiQuerySingleInstanceA");}});
+
+var WmiQuerySingleInstanceW = Module.findExportByName("wmi.dll", "WmiQuerySingleInstanceW")
+Interceptor.attach(WmiQuerySingleInstanceW, {onLeave: function (args) {send("WmiQuerySingleInstanceW");}});
+
+var WmiSetSingleInstanceA = Module.findExportByName("wmi.dll", "WmiSetSingleInstanceA")
+Interceptor.attach(WmiSetSingleInstanceA, {onLeave: function (args) {send("WmiSetSingleInstanceA");}});
+
+var WmiSetSingleInstanceW = Module.findExportByName("wmi.dll", "WmiSetSingleInstanceW")
+Interceptor.attach(WmiSetSingleInstanceW, {onLeave: function (args) {send("WmiSetSingleInstanceW");}});
+
+var WmiSetSingleItemA = Module.findExportByName("wmi.dll", "WmiSetSingleItemA")
+Interceptor.attach(WmiSetSingleItemA, {onLeave: function (args) {send("WmiSetSingleItemA");}});
+
+var WmiSetSingleItemW = Module.findExportByName("wmi.dll", "WmiSetSingleItemW")
+Interceptor.attach(WmiSetSingleItemW, {onLeave: function (args) {send("WmiSetSingleItemW");}});
+

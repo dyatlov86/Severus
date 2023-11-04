@@ -1,0 +1,24 @@
+var EseShadowCreateShadow = Module.findExportByName("esevss.dll", "EseShadowCreateShadow")
+Interceptor.attach(EseShadowCreateShadow, {onLeave: function (args) {send("EseShadowCreateShadow");}});
+
+var EseShadowCreateSimpleShadow = Module.findExportByName("esevss.dll", "EseShadowCreateSimpleShadow")
+Interceptor.attach(EseShadowCreateSimpleShadow, {onLeave: function (args) {send("EseShadowCreateSimpleShadow");}});
+
+var EseShadowInit = Module.findExportByName("esevss.dll", "EseShadowInit")
+Interceptor.attach(EseShadowInit, {onLeave: function (args) {send("EseShadowInit");}});
+
+var EseShadowMountShadow = Module.findExportByName("esevss.dll", "EseShadowMountShadow")
+Interceptor.attach(EseShadowMountShadow, {onLeave: function (args) {send("EseShadowMountShadow");}});
+
+var EseShadowMountSimpleShadow = Module.findExportByName("esevss.dll", "EseShadowMountSimpleShadow")
+Interceptor.attach(EseShadowMountSimpleShadow, {onLeave: function (args) {send("EseShadowMountSimpleShadow");}});
+
+var EseShadowPurgeShadow = Module.findExportByName("esevss.dll", "EseShadowPurgeShadow")
+Interceptor.attach(EseShadowPurgeShadow, {onLeave: function (args) {send("EseShadowPurgeShadow");}});
+
+var EseShadowTerm = Module.findExportByName("esevss.dll", "EseShadowTerm")
+Interceptor.attach(EseShadowTerm, {onLeave: function (args) {send("EseShadowTerm");}});
+
+var VssIdToString = Module.findExportByName("esevss.dll", "VssIdToString")
+Interceptor.attach(VssIdToString, {onLeave: function (args) {send("VssIdToString");}});
+

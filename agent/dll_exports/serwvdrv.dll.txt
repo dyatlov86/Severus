@@ -1,0 +1,9 @@
+var DriverProc = Module.findExportByName("serwvdrv.dll", "DriverProc")
+Interceptor.attach(DriverProc, {onLeave: function (args) {send("DriverProc");}});
+
+var widMessage = Module.findExportByName("serwvdrv.dll", "widMessage")
+Interceptor.attach(widMessage, {onLeave: function (args) {send("widMessage");}});
+
+var wodMessage = Module.findExportByName("serwvdrv.dll", "wodMessage")
+Interceptor.attach(wodMessage, {onLeave: function (args) {send("wodMessage");}});
+

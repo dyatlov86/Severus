@@ -1,0 +1,30 @@
+var UsbCApi_DeregisterConsumer = Module.findExportByName("UsbCApi.dll", "UsbCApi_DeregisterConsumer")
+Interceptor.attach(UsbCApi_DeregisterConsumer, {onLeave: function (args) {send("UsbCApi_DeregisterConsumer");}});
+
+var UsbCApi_FreeProviders = Module.findExportByName("UsbCApi.dll", "UsbCApi_FreeProviders")
+Interceptor.attach(UsbCApi_FreeProviders, {onLeave: function (args) {send("UsbCApi_FreeProviders");}});
+
+var UsbCApi_GetConnectorProperties = Module.findExportByName("UsbCApi.dll", "UsbCApi_GetConnectorProperties")
+Interceptor.attach(UsbCApi_GetConnectorProperties, {onLeave: function (args) {send("UsbCApi_GetConnectorProperties");}});
+
+var UsbCApi_GetConnectorState = Module.findExportByName("UsbCApi.dll", "UsbCApi_GetConnectorState")
+Interceptor.attach(UsbCApi_GetConnectorState, {onLeave: function (args) {send("UsbCApi_GetConnectorState");}});
+
+var UsbCApi_GetProviderInformation = Module.findExportByName("UsbCApi.dll", "UsbCApi_GetProviderInformation")
+Interceptor.attach(UsbCApi_GetProviderInformation, {onLeave: function (args) {send("UsbCApi_GetProviderInformation");}});
+
+var UsbCApi_GetProviders = Module.findExportByName("UsbCApi.dll", "UsbCApi_GetProviders")
+Interceptor.attach(UsbCApi_GetProviders, {onLeave: function (args) {send("UsbCApi_GetProviders");}});
+
+var UsbCApi_IsEqualChangeStamps = Module.findExportByName("UsbCApi.dll", "UsbCApi_IsEqualChangeStamps")
+Interceptor.attach(UsbCApi_IsEqualChangeStamps, {onLeave: function (args) {send("UsbCApi_IsEqualChangeStamps");}});
+
+var UsbCApi_RegisterConsumer = Module.findExportByName("UsbCApi.dll", "UsbCApi_RegisterConsumer")
+Interceptor.attach(UsbCApi_RegisterConsumer, {onLeave: function (args) {send("UsbCApi_RegisterConsumer");}});
+
+var UsbCApi_SetConnectorDataRole = Module.findExportByName("UsbCApi.dll", "UsbCApi_SetConnectorDataRole")
+Interceptor.attach(UsbCApi_SetConnectorDataRole, {onLeave: function (args) {send("UsbCApi_SetConnectorDataRole");}});
+
+var UsbCApi_SetConnectorPowerRole = Module.findExportByName("UsbCApi.dll", "UsbCApi_SetConnectorPowerRole")
+Interceptor.attach(UsbCApi_SetConnectorPowerRole, {onLeave: function (args) {send("UsbCApi_SetConnectorPowerRole");}});
+

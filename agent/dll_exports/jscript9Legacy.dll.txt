@@ -1,0 +1,291 @@
+var DllCanUnloadNow = Module.findExportByName("jscript9Legacy.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("jscript9Legacy.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("jscript9Legacy.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("jscript9Legacy.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var JsAddRef = Module.findExportByName("jscript9Legacy.dll", "JsAddRef")
+Interceptor.attach(JsAddRef, {onLeave: function (args) {send("JsAddRef");}});
+
+var JsBoolToBoolean = Module.findExportByName("jscript9Legacy.dll", "JsBoolToBoolean")
+Interceptor.attach(JsBoolToBoolean, {onLeave: function (args) {send("JsBoolToBoolean");}});
+
+var JsBooleanToBool = Module.findExportByName("jscript9Legacy.dll", "JsBooleanToBool")
+Interceptor.attach(JsBooleanToBool, {onLeave: function (args) {send("JsBooleanToBool");}});
+
+var JsCallFunction = Module.findExportByName("jscript9Legacy.dll", "JsCallFunction")
+Interceptor.attach(JsCallFunction, {onLeave: function (args) {send("JsCallFunction");}});
+
+var JsCollectGarbage = Module.findExportByName("jscript9Legacy.dll", "JsCollectGarbage")
+Interceptor.attach(JsCollectGarbage, {onLeave: function (args) {send("JsCollectGarbage");}});
+
+var JsConstructObject = Module.findExportByName("jscript9Legacy.dll", "JsConstructObject")
+Interceptor.attach(JsConstructObject, {onLeave: function (args) {send("JsConstructObject");}});
+
+var JsConvertValueToBoolean = Module.findExportByName("jscript9Legacy.dll", "JsConvertValueToBoolean")
+Interceptor.attach(JsConvertValueToBoolean, {onLeave: function (args) {send("JsConvertValueToBoolean");}});
+
+var JsConvertValueToNumber = Module.findExportByName("jscript9Legacy.dll", "JsConvertValueToNumber")
+Interceptor.attach(JsConvertValueToNumber, {onLeave: function (args) {send("JsConvertValueToNumber");}});
+
+var JsConvertValueToObject = Module.findExportByName("jscript9Legacy.dll", "JsConvertValueToObject")
+Interceptor.attach(JsConvertValueToObject, {onLeave: function (args) {send("JsConvertValueToObject");}});
+
+var JsConvertValueToString = Module.findExportByName("jscript9Legacy.dll", "JsConvertValueToString")
+Interceptor.attach(JsConvertValueToString, {onLeave: function (args) {send("JsConvertValueToString");}});
+
+var JsCreateArray = Module.findExportByName("jscript9Legacy.dll", "JsCreateArray")
+Interceptor.attach(JsCreateArray, {onLeave: function (args) {send("JsCreateArray");}});
+
+var JsCreateContext = Module.findExportByName("jscript9Legacy.dll", "JsCreateContext")
+Interceptor.attach(JsCreateContext, {onLeave: function (args) {send("JsCreateContext");}});
+
+var JsCreateError = Module.findExportByName("jscript9Legacy.dll", "JsCreateError")
+Interceptor.attach(JsCreateError, {onLeave: function (args) {send("JsCreateError");}});
+
+var JsCreateExternalObject = Module.findExportByName("jscript9Legacy.dll", "JsCreateExternalObject")
+Interceptor.attach(JsCreateExternalObject, {onLeave: function (args) {send("JsCreateExternalObject");}});
+
+var JsCreateExternalType = Module.findExportByName("jscript9Legacy.dll", "JsCreateExternalType")
+Interceptor.attach(JsCreateExternalType, {onLeave: function (args) {send("JsCreateExternalType");}});
+
+var JsCreateFunction = Module.findExportByName("jscript9Legacy.dll", "JsCreateFunction")
+Interceptor.attach(JsCreateFunction, {onLeave: function (args) {send("JsCreateFunction");}});
+
+var JsCreateObject = Module.findExportByName("jscript9Legacy.dll", "JsCreateObject")
+Interceptor.attach(JsCreateObject, {onLeave: function (args) {send("JsCreateObject");}});
+
+var JsCreateRangeError = Module.findExportByName("jscript9Legacy.dll", "JsCreateRangeError")
+Interceptor.attach(JsCreateRangeError, {onLeave: function (args) {send("JsCreateRangeError");}});
+
+var JsCreateReferenceError = Module.findExportByName("jscript9Legacy.dll", "JsCreateReferenceError")
+Interceptor.attach(JsCreateReferenceError, {onLeave: function (args) {send("JsCreateReferenceError");}});
+
+var JsCreateRuntime = Module.findExportByName("jscript9Legacy.dll", "JsCreateRuntime")
+Interceptor.attach(JsCreateRuntime, {onLeave: function (args) {send("JsCreateRuntime");}});
+
+var JsCreateSyntaxError = Module.findExportByName("jscript9Legacy.dll", "JsCreateSyntaxError")
+Interceptor.attach(JsCreateSyntaxError, {onLeave: function (args) {send("JsCreateSyntaxError");}});
+
+var JsCreateTypeError = Module.findExportByName("jscript9Legacy.dll", "JsCreateTypeError")
+Interceptor.attach(JsCreateTypeError, {onLeave: function (args) {send("JsCreateTypeError");}});
+
+var JsCreateTypedExternalObject = Module.findExportByName("jscript9Legacy.dll", "JsCreateTypedExternalObject")
+Interceptor.attach(JsCreateTypedExternalObject, {onLeave: function (args) {send("JsCreateTypedExternalObject");}});
+
+var JsCreateURIError = Module.findExportByName("jscript9Legacy.dll", "JsCreateURIError")
+Interceptor.attach(JsCreateURIError, {onLeave: function (args) {send("JsCreateURIError");}});
+
+var JsDefineProperty = Module.findExportByName("jscript9Legacy.dll", "JsDefineProperty")
+Interceptor.attach(JsDefineProperty, {onLeave: function (args) {send("JsDefineProperty");}});
+
+var JsDeleteIndexedProperty = Module.findExportByName("jscript9Legacy.dll", "JsDeleteIndexedProperty")
+Interceptor.attach(JsDeleteIndexedProperty, {onLeave: function (args) {send("JsDeleteIndexedProperty");}});
+
+var JsDeleteProperty = Module.findExportByName("jscript9Legacy.dll", "JsDeleteProperty")
+Interceptor.attach(JsDeleteProperty, {onLeave: function (args) {send("JsDeleteProperty");}});
+
+var JsDisableRuntimeExecution = Module.findExportByName("jscript9Legacy.dll", "JsDisableRuntimeExecution")
+Interceptor.attach(JsDisableRuntimeExecution, {onLeave: function (args) {send("JsDisableRuntimeExecution");}});
+
+var JsDisposeRuntime = Module.findExportByName("jscript9Legacy.dll", "JsDisposeRuntime")
+Interceptor.attach(JsDisposeRuntime, {onLeave: function (args) {send("JsDisposeRuntime");}});
+
+var JsDoubleToNumber = Module.findExportByName("jscript9Legacy.dll", "JsDoubleToNumber")
+Interceptor.attach(JsDoubleToNumber, {onLeave: function (args) {send("JsDoubleToNumber");}});
+
+var JsEnableRuntimeExecution = Module.findExportByName("jscript9Legacy.dll", "JsEnableRuntimeExecution")
+Interceptor.attach(JsEnableRuntimeExecution, {onLeave: function (args) {send("JsEnableRuntimeExecution");}});
+
+var JsEnumerateHeap = Module.findExportByName("jscript9Legacy.dll", "JsEnumerateHeap")
+Interceptor.attach(JsEnumerateHeap, {onLeave: function (args) {send("JsEnumerateHeap");}});
+
+var JsEquals = Module.findExportByName("jscript9Legacy.dll", "JsEquals")
+Interceptor.attach(JsEquals, {onLeave: function (args) {send("JsEquals");}});
+
+var JsGetAndClearException = Module.findExportByName("jscript9Legacy.dll", "JsGetAndClearException")
+Interceptor.attach(JsGetAndClearException, {onLeave: function (args) {send("JsGetAndClearException");}});
+
+var JsGetCurrentContext = Module.findExportByName("jscript9Legacy.dll", "JsGetCurrentContext")
+Interceptor.attach(JsGetCurrentContext, {onLeave: function (args) {send("JsGetCurrentContext");}});
+
+var JsGetDefaultTypeDescription = Module.findExportByName("jscript9Legacy.dll", "JsGetDefaultTypeDescription")
+Interceptor.attach(JsGetDefaultTypeDescription, {onLeave: function (args) {send("JsGetDefaultTypeDescription");}});
+
+var JsGetExtensionAllowed = Module.findExportByName("jscript9Legacy.dll", "JsGetExtensionAllowed")
+Interceptor.attach(JsGetExtensionAllowed, {onLeave: function (args) {send("JsGetExtensionAllowed");}});
+
+var JsGetExternalData = Module.findExportByName("jscript9Legacy.dll", "JsGetExternalData")
+Interceptor.attach(JsGetExternalData, {onLeave: function (args) {send("JsGetExternalData");}});
+
+var JsGetExternalType = Module.findExportByName("jscript9Legacy.dll", "JsGetExternalType")
+Interceptor.attach(JsGetExternalType, {onLeave: function (args) {send("JsGetExternalType");}});
+
+var JsGetFalseValue = Module.findExportByName("jscript9Legacy.dll", "JsGetFalseValue")
+Interceptor.attach(JsGetFalseValue, {onLeave: function (args) {send("JsGetFalseValue");}});
+
+var JsGetGlobalObject = Module.findExportByName("jscript9Legacy.dll", "JsGetGlobalObject")
+Interceptor.attach(JsGetGlobalObject, {onLeave: function (args) {send("JsGetGlobalObject");}});
+
+var JsGetIndexedProperty = Module.findExportByName("jscript9Legacy.dll", "JsGetIndexedProperty")
+Interceptor.attach(JsGetIndexedProperty, {onLeave: function (args) {send("JsGetIndexedProperty");}});
+
+var JsGetNullValue = Module.findExportByName("jscript9Legacy.dll", "JsGetNullValue")
+Interceptor.attach(JsGetNullValue, {onLeave: function (args) {send("JsGetNullValue");}});
+
+var JsGetOwnPropertyDescriptor = Module.findExportByName("jscript9Legacy.dll", "JsGetOwnPropertyDescriptor")
+Interceptor.attach(JsGetOwnPropertyDescriptor, {onLeave: function (args) {send("JsGetOwnPropertyDescriptor");}});
+
+var JsGetOwnPropertyNames = Module.findExportByName("jscript9Legacy.dll", "JsGetOwnPropertyNames")
+Interceptor.attach(JsGetOwnPropertyNames, {onLeave: function (args) {send("JsGetOwnPropertyNames");}});
+
+var JsGetProperty = Module.findExportByName("jscript9Legacy.dll", "JsGetProperty")
+Interceptor.attach(JsGetProperty, {onLeave: function (args) {send("JsGetProperty");}});
+
+var JsGetPropertyIdFromName = Module.findExportByName("jscript9Legacy.dll", "JsGetPropertyIdFromName")
+Interceptor.attach(JsGetPropertyIdFromName, {onLeave: function (args) {send("JsGetPropertyIdFromName");}});
+
+var JsGetPropertyNameFromId = Module.findExportByName("jscript9Legacy.dll", "JsGetPropertyNameFromId")
+Interceptor.attach(JsGetPropertyNameFromId, {onLeave: function (args) {send("JsGetPropertyNameFromId");}});
+
+var JsGetPrototype = Module.findExportByName("jscript9Legacy.dll", "JsGetPrototype")
+Interceptor.attach(JsGetPrototype, {onLeave: function (args) {send("JsGetPrototype");}});
+
+var JsGetRuntime = Module.findExportByName("jscript9Legacy.dll", "JsGetRuntime")
+Interceptor.attach(JsGetRuntime, {onLeave: function (args) {send("JsGetRuntime");}});
+
+var JsGetRuntimeMemoryLimit = Module.findExportByName("jscript9Legacy.dll", "JsGetRuntimeMemoryLimit")
+Interceptor.attach(JsGetRuntimeMemoryLimit, {onLeave: function (args) {send("JsGetRuntimeMemoryLimit");}});
+
+var JsGetRuntimeMemoryUsage = Module.findExportByName("jscript9Legacy.dll", "JsGetRuntimeMemoryUsage")
+Interceptor.attach(JsGetRuntimeMemoryUsage, {onLeave: function (args) {send("JsGetRuntimeMemoryUsage");}});
+
+var JsGetStringLength = Module.findExportByName("jscript9Legacy.dll", "JsGetStringLength")
+Interceptor.attach(JsGetStringLength, {onLeave: function (args) {send("JsGetStringLength");}});
+
+var JsGetTrueValue = Module.findExportByName("jscript9Legacy.dll", "JsGetTrueValue")
+Interceptor.attach(JsGetTrueValue, {onLeave: function (args) {send("JsGetTrueValue");}});
+
+var JsGetUndefinedValue = Module.findExportByName("jscript9Legacy.dll", "JsGetUndefinedValue")
+Interceptor.attach(JsGetUndefinedValue, {onLeave: function (args) {send("JsGetUndefinedValue");}});
+
+var JsGetValueType = Module.findExportByName("jscript9Legacy.dll", "JsGetValueType")
+Interceptor.attach(JsGetValueType, {onLeave: function (args) {send("JsGetValueType");}});
+
+var JsHasException = Module.findExportByName("jscript9Legacy.dll", "JsHasException")
+Interceptor.attach(JsHasException, {onLeave: function (args) {send("JsHasException");}});
+
+var JsHasExternalData = Module.findExportByName("jscript9Legacy.dll", "JsHasExternalData")
+Interceptor.attach(JsHasExternalData, {onLeave: function (args) {send("JsHasExternalData");}});
+
+var JsHasIndexedProperty = Module.findExportByName("jscript9Legacy.dll", "JsHasIndexedProperty")
+Interceptor.attach(JsHasIndexedProperty, {onLeave: function (args) {send("JsHasIndexedProperty");}});
+
+var JsHasProperty = Module.findExportByName("jscript9Legacy.dll", "JsHasProperty")
+Interceptor.attach(JsHasProperty, {onLeave: function (args) {send("JsHasProperty");}});
+
+var JsIdle = Module.findExportByName("jscript9Legacy.dll", "JsIdle")
+Interceptor.attach(JsIdle, {onLeave: function (args) {send("JsIdle");}});
+
+var JsIntToNumber = Module.findExportByName("jscript9Legacy.dll", "JsIntToNumber")
+Interceptor.attach(JsIntToNumber, {onLeave: function (args) {send("JsIntToNumber");}});
+
+var JsIsEnumeratingHeap = Module.findExportByName("jscript9Legacy.dll", "JsIsEnumeratingHeap")
+Interceptor.attach(JsIsEnumeratingHeap, {onLeave: function (args) {send("JsIsEnumeratingHeap");}});
+
+var JsIsRuntimeExecutionDisabled = Module.findExportByName("jscript9Legacy.dll", "JsIsRuntimeExecutionDisabled")
+Interceptor.attach(JsIsRuntimeExecutionDisabled, {onLeave: function (args) {send("JsIsRuntimeExecutionDisabled");}});
+
+var JsNumberToDouble = Module.findExportByName("jscript9Legacy.dll", "JsNumberToDouble")
+Interceptor.attach(JsNumberToDouble, {onLeave: function (args) {send("JsNumberToDouble");}});
+
+var JsParseScript = Module.findExportByName("jscript9Legacy.dll", "JsParseScript")
+Interceptor.attach(JsParseScript, {onLeave: function (args) {send("JsParseScript");}});
+
+var JsParseSerializedScript = Module.findExportByName("jscript9Legacy.dll", "JsParseSerializedScript")
+Interceptor.attach(JsParseSerializedScript, {onLeave: function (args) {send("JsParseSerializedScript");}});
+
+var JsPointerToString = Module.findExportByName("jscript9Legacy.dll", "JsPointerToString")
+Interceptor.attach(JsPointerToString, {onLeave: function (args) {send("JsPointerToString");}});
+
+var JsPreventExtension = Module.findExportByName("jscript9Legacy.dll", "JsPreventExtension")
+Interceptor.attach(JsPreventExtension, {onLeave: function (args) {send("JsPreventExtension");}});
+
+var JsRelease = Module.findExportByName("jscript9Legacy.dll", "JsRelease")
+Interceptor.attach(JsRelease, {onLeave: function (args) {send("JsRelease");}});
+
+var JsRunScript = Module.findExportByName("jscript9Legacy.dll", "JsRunScript")
+Interceptor.attach(JsRunScript, {onLeave: function (args) {send("JsRunScript");}});
+
+var JsRunSerializedScript = Module.findExportByName("jscript9Legacy.dll", "JsRunSerializedScript")
+Interceptor.attach(JsRunSerializedScript, {onLeave: function (args) {send("JsRunSerializedScript");}});
+
+var JsSerializeScript = Module.findExportByName("jscript9Legacy.dll", "JsSerializeScript")
+Interceptor.attach(JsSerializeScript, {onLeave: function (args) {send("JsSerializeScript");}});
+
+var JsSetCurrentContext = Module.findExportByName("jscript9Legacy.dll", "JsSetCurrentContext")
+Interceptor.attach(JsSetCurrentContext, {onLeave: function (args) {send("JsSetCurrentContext");}});
+
+var JsSetException = Module.findExportByName("jscript9Legacy.dll", "JsSetException")
+Interceptor.attach(JsSetException, {onLeave: function (args) {send("JsSetException");}});
+
+var JsSetExternalData = Module.findExportByName("jscript9Legacy.dll", "JsSetExternalData")
+Interceptor.attach(JsSetExternalData, {onLeave: function (args) {send("JsSetExternalData");}});
+
+var JsSetIndexedProperty = Module.findExportByName("jscript9Legacy.dll", "JsSetIndexedProperty")
+Interceptor.attach(JsSetIndexedProperty, {onLeave: function (args) {send("JsSetIndexedProperty");}});
+
+var JsSetProperty = Module.findExportByName("jscript9Legacy.dll", "JsSetProperty")
+Interceptor.attach(JsSetProperty, {onLeave: function (args) {send("JsSetProperty");}});
+
+var JsSetPrototype = Module.findExportByName("jscript9Legacy.dll", "JsSetPrototype")
+Interceptor.attach(JsSetPrototype, {onLeave: function (args) {send("JsSetPrototype");}});
+
+var JsSetRuntimeBeforeCollectCallback = Module.findExportByName("jscript9Legacy.dll", "JsSetRuntimeBeforeCollectCallback")
+Interceptor.attach(JsSetRuntimeBeforeCollectCallback, {onLeave: function (args) {send("JsSetRuntimeBeforeCollectCallback");}});
+
+var JsSetRuntimeMemoryAllocationCallback = Module.findExportByName("jscript9Legacy.dll", "JsSetRuntimeMemoryAllocationCallback")
+Interceptor.attach(JsSetRuntimeMemoryAllocationCallback, {onLeave: function (args) {send("JsSetRuntimeMemoryAllocationCallback");}});
+
+var JsSetRuntimeMemoryLimit = Module.findExportByName("jscript9Legacy.dll", "JsSetRuntimeMemoryLimit")
+Interceptor.attach(JsSetRuntimeMemoryLimit, {onLeave: function (args) {send("JsSetRuntimeMemoryLimit");}});
+
+var JsStartDebugging = Module.findExportByName("jscript9Legacy.dll", "JsStartDebugging")
+Interceptor.attach(JsStartDebugging, {onLeave: function (args) {send("JsStartDebugging");}});
+
+var JsStartProfiling = Module.findExportByName("jscript9Legacy.dll", "JsStartProfiling")
+Interceptor.attach(JsStartProfiling, {onLeave: function (args) {send("JsStartProfiling");}});
+
+var JsStopProfiling = Module.findExportByName("jscript9Legacy.dll", "JsStopProfiling")
+Interceptor.attach(JsStopProfiling, {onLeave: function (args) {send("JsStopProfiling");}});
+
+var JsStrictEquals = Module.findExportByName("jscript9Legacy.dll", "JsStrictEquals")
+Interceptor.attach(JsStrictEquals, {onLeave: function (args) {send("JsStrictEquals");}});
+
+var JsStringToPointer = Module.findExportByName("jscript9Legacy.dll", "JsStringToPointer")
+Interceptor.attach(JsStringToPointer, {onLeave: function (args) {send("JsStringToPointer");}});
+
+var JsValueToVariant = Module.findExportByName("jscript9Legacy.dll", "JsValueToVariant")
+Interceptor.attach(JsValueToVariant, {onLeave: function (args) {send("JsValueToVariant");}});
+
+var JsVarAddRef = Module.findExportByName("jscript9Legacy.dll", "JsVarAddRef")
+Interceptor.attach(JsVarAddRef, {onLeave: function (args) {send("JsVarAddRef");}});
+
+var JsVarRelease = Module.findExportByName("jscript9Legacy.dll", "JsVarRelease")
+Interceptor.attach(JsVarRelease, {onLeave: function (args) {send("JsVarRelease");}});
+
+var JsVarToExtension = Module.findExportByName("jscript9Legacy.dll", "JsVarToExtension")
+Interceptor.attach(JsVarToExtension, {onLeave: function (args) {send("JsVarToExtension");}});
+
+var JsVarToScriptDirect = Module.findExportByName("jscript9Legacy.dll", "JsVarToScriptDirect")
+Interceptor.attach(JsVarToScriptDirect, {onLeave: function (args) {send("JsVarToScriptDirect");}});
+
+var JsVariantToValue = Module.findExportByName("jscript9Legacy.dll", "JsVariantToValue")
+Interceptor.attach(JsVariantToValue, {onLeave: function (args) {send("JsVariantToValue");}});
+

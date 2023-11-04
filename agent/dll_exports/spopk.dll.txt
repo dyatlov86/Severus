@@ -1,0 +1,15 @@
+var Sysprep_Clean_Opk = Module.findExportByName("spopk.dll", "Sysprep_Clean_Opk")
+Interceptor.attach(Sysprep_Clean_Opk, {onLeave: function (args) {send("Sysprep_Clean_Opk");}});
+
+var Sysprep_Clean_Validate_Opk = Module.findExportByName("spopk.dll", "Sysprep_Clean_Validate_Opk")
+Interceptor.attach(Sysprep_Clean_Validate_Opk, {onLeave: function (args) {send("Sysprep_Clean_Validate_Opk");}});
+
+var Sysprep_Generalize_Opk = Module.findExportByName("spopk.dll", "Sysprep_Generalize_Opk")
+Interceptor.attach(Sysprep_Generalize_Opk, {onLeave: function (args) {send("Sysprep_Generalize_Opk");}});
+
+var Sysprep_Offline_Specialize_Opk = Module.findExportByName("spopk.dll", "Sysprep_Offline_Specialize_Opk")
+Interceptor.attach(Sysprep_Offline_Specialize_Opk, {onLeave: function (args) {send("Sysprep_Offline_Specialize_Opk");}});
+
+var Sysprep_Online_Specialize_Opk = Module.findExportByName("spopk.dll", "Sysprep_Online_Specialize_Opk")
+Interceptor.attach(Sysprep_Online_Specialize_Opk, {onLeave: function (args) {send("Sysprep_Online_Specialize_Opk");}});
+

@@ -1,0 +1,6 @@
+var MiniDumpReadDumpStream = Module.findExportByName("dbgcore.dll", "MiniDumpReadDumpStream")
+Interceptor.attach(MiniDumpReadDumpStream, {onLeave: function (args) {send("MiniDumpReadDumpStream");}});
+
+var MiniDumpWriteDump = Module.findExportByName("dbgcore.dll", "MiniDumpWriteDump")
+Interceptor.attach(MiniDumpWriteDump, {onLeave: function (args) {send("MiniDumpWriteDump");}});
+

@@ -1,0 +1,6 @@
+var Init = Module.findExportByName("amdihk64.dll", "Init")
+Interceptor.attach(Init, {onLeave: function (args) {send("Init");}});
+
+var Terminate = Module.findExportByName("amdihk64.dll", "Terminate")
+Interceptor.attach(Terminate, {onLeave: function (args) {send("Terminate");}});
+

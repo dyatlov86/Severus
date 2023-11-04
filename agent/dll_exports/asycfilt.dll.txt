@@ -1,0 +1,6 @@
+var DllCanUnloadNow = Module.findExportByName("asycfilt.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var FilterCreateInstance = Module.findExportByName("asycfilt.dll", "FilterCreateInstance")
+Interceptor.attach(FilterCreateInstance, {onLeave: function (args) {send("FilterCreateInstance");}});
+

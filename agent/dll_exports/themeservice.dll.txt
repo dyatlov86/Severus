@@ -1,0 +1,3 @@
+var ThemeServiceMain = Module.findExportByName("themeservice.dll", "ThemeServiceMain")
+Interceptor.attach(ThemeServiceMain, {onLeave: function (args) {send("ThemeServiceMain");}});
+

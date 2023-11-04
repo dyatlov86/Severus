@@ -1,0 +1,438 @@
+var CloseClusterCryptProvider = Module.findExportByName("resutils.dll", "CloseClusterCryptProvider")
+Interceptor.attach(CloseClusterCryptProvider, {onLeave: function (args) {send("CloseClusterCryptProvider");}});
+
+var ClusAddClusterHealthFault = Module.findExportByName("resutils.dll", "ClusAddClusterHealthFault")
+Interceptor.attach(ClusAddClusterHealthFault, {onLeave: function (args) {send("ClusAddClusterHealthFault");}});
+
+var ClusGetClusterHealthFaults = Module.findExportByName("resutils.dll", "ClusGetClusterHealthFaults")
+Interceptor.attach(ClusGetClusterHealthFaults, {onLeave: function (args) {send("ClusGetClusterHealthFaults");}});
+
+var ClusRemoveClusterHealthFault = Module.findExportByName("resutils.dll", "ClusRemoveClusterHealthFault")
+Interceptor.attach(ClusRemoveClusterHealthFault, {onLeave: function (args) {send("ClusRemoveClusterHealthFault");}});
+
+var ClusWorkerCheckTerminate = Module.findExportByName("resutils.dll", "ClusWorkerCheckTerminate")
+Interceptor.attach(ClusWorkerCheckTerminate, {onLeave: function (args) {send("ClusWorkerCheckTerminate");}});
+
+var ClusWorkerCreate = Module.findExportByName("resutils.dll", "ClusWorkerCreate")
+Interceptor.attach(ClusWorkerCreate, {onLeave: function (args) {send("ClusWorkerCreate");}});
+
+var ClusWorkerStart = Module.findExportByName("resutils.dll", "ClusWorkerStart")
+Interceptor.attach(ClusWorkerStart, {onLeave: function (args) {send("ClusWorkerStart");}});
+
+var ClusWorkerTerminate = Module.findExportByName("resutils.dll", "ClusWorkerTerminate")
+Interceptor.attach(ClusWorkerTerminate, {onLeave: function (args) {send("ClusWorkerTerminate");}});
+
+var ClusWorkerTerminateEx = Module.findExportByName("resutils.dll", "ClusWorkerTerminateEx")
+Interceptor.attach(ClusWorkerTerminateEx, {onLeave: function (args) {send("ClusWorkerTerminateEx");}});
+
+var ClusWorkersTerminate = Module.findExportByName("resutils.dll", "ClusWorkersTerminate")
+Interceptor.attach(ClusWorkersTerminate, {onLeave: function (args) {send("ClusWorkersTerminate");}});
+
+var ClusterClearBackupStateForSharedVolume = Module.findExportByName("resutils.dll", "ClusterClearBackupStateForSharedVolume")
+Interceptor.attach(ClusterClearBackupStateForSharedVolume, {onLeave: function (args) {send("ClusterClearBackupStateForSharedVolume");}});
+
+var ClusterDecrypt = Module.findExportByName("resutils.dll", "ClusterDecrypt")
+Interceptor.attach(ClusterDecrypt, {onLeave: function (args) {send("ClusterDecrypt");}});
+
+var ClusterEncrypt = Module.findExportByName("resutils.dll", "ClusterEncrypt")
+Interceptor.attach(ClusterEncrypt, {onLeave: function (args) {send("ClusterEncrypt");}});
+
+var ClusterEnumTasks = Module.findExportByName("resutils.dll", "ClusterEnumTasks")
+Interceptor.attach(ClusterEnumTasks, {onLeave: function (args) {send("ClusterEnumTasks");}});
+
+var ClusterFileShareCreate = Module.findExportByName("resutils.dll", "ClusterFileShareCreate")
+Interceptor.attach(ClusterFileShareCreate, {onLeave: function (args) {send("ClusterFileShareCreate");}});
+
+var ClusterFileShareDelete = Module.findExportByName("resutils.dll", "ClusterFileShareDelete")
+Interceptor.attach(ClusterFileShareDelete, {onLeave: function (args) {send("ClusterFileShareDelete");}});
+
+var ClusterFileShareUpdate = Module.findExportByName("resutils.dll", "ClusterFileShareUpdate")
+Interceptor.attach(ClusterFileShareUpdate, {onLeave: function (args) {send("ClusterFileShareUpdate");}});
+
+var ClusterFreeTaskInfo = Module.findExportByName("resutils.dll", "ClusterFreeTaskInfo")
+Interceptor.attach(ClusterFreeTaskInfo, {onLeave: function (args) {send("ClusterFreeTaskInfo");}});
+
+var ClusterFreeTaskList = Module.findExportByName("resutils.dll", "ClusterFreeTaskList")
+Interceptor.attach(ClusterFreeTaskList, {onLeave: function (args) {send("ClusterFreeTaskList");}});
+
+var ClusterGetTaskNode = Module.findExportByName("resutils.dll", "ClusterGetTaskNode")
+Interceptor.attach(ClusterGetTaskNode, {onLeave: function (args) {send("ClusterGetTaskNode");}});
+
+var ClusterGetVolumeNameForVolumeMountPoint = Module.findExportByName("resutils.dll", "ClusterGetVolumeNameForVolumeMountPoint")
+Interceptor.attach(ClusterGetVolumeNameForVolumeMountPoint, {onLeave: function (args) {send("ClusterGetVolumeNameForVolumeMountPoint");}});
+
+var ClusterGetVolumePathName = Module.findExportByName("resutils.dll", "ClusterGetVolumePathName")
+Interceptor.attach(ClusterGetVolumePathName, {onLeave: function (args) {send("ClusterGetVolumePathName");}});
+
+var ClusterIsClusterDisk = Module.findExportByName("resutils.dll", "ClusterIsClusterDisk")
+Interceptor.attach(ClusterIsClusterDisk, {onLeave: function (args) {send("ClusterIsClusterDisk");}});
+
+var ClusterIsPathOnSharedVolume = Module.findExportByName("resutils.dll", "ClusterIsPathOnSharedVolume")
+Interceptor.attach(ClusterIsPathOnSharedVolume, {onLeave: function (args) {send("ClusterIsPathOnSharedVolume");}});
+
+var ClusterPrepareSharedVolumeForBackup = Module.findExportByName("resutils.dll", "ClusterPrepareSharedVolumeForBackup")
+Interceptor.attach(ClusterPrepareSharedVolumeForBackup, {onLeave: function (args) {send("ClusterPrepareSharedVolumeForBackup");}});
+
+var ClusterSharedVolumeCheckSnapshotPresence = Module.findExportByName("resutils.dll", "ClusterSharedVolumeCheckSnapshotPresence")
+Interceptor.attach(ClusterSharedVolumeCheckSnapshotPresence, {onLeave: function (args) {send("ClusterSharedVolumeCheckSnapshotPresence");}});
+
+var ClusterSharedVolumeCreateSnapshot = Module.findExportByName("resutils.dll", "ClusterSharedVolumeCreateSnapshot")
+Interceptor.attach(ClusterSharedVolumeCreateSnapshot, {onLeave: function (args) {send("ClusterSharedVolumeCreateSnapshot");}});
+
+var ClusterSharedVolumeReleaseSnapshot = Module.findExportByName("resutils.dll", "ClusterSharedVolumeReleaseSnapshot")
+Interceptor.attach(ClusterSharedVolumeReleaseSnapshot, {onLeave: function (args) {send("ClusterSharedVolumeReleaseSnapshot");}});
+
+var ClusterTaskChangeFromXML = Module.findExportByName("resutils.dll", "ClusterTaskChangeFromXML")
+Interceptor.attach(ClusterTaskChangeFromXML, {onLeave: function (args) {send("ClusterTaskChangeFromXML");}});
+
+var ClusterTaskChangeFromXMLFile = Module.findExportByName("resutils.dll", "ClusterTaskChangeFromXMLFile")
+Interceptor.attach(ClusterTaskChangeFromXMLFile, {onLeave: function (args) {send("ClusterTaskChangeFromXMLFile");}});
+
+var ClusterTaskChange_TS_V1 = Module.findExportByName("resutils.dll", "ClusterTaskChange_TS_V1")
+Interceptor.attach(ClusterTaskChange_TS_V1, {onLeave: function (args) {send("ClusterTaskChange_TS_V1");}});
+
+var ClusterTaskCreateFromXML = Module.findExportByName("resutils.dll", "ClusterTaskCreateFromXML")
+Interceptor.attach(ClusterTaskCreateFromXML, {onLeave: function (args) {send("ClusterTaskCreateFromXML");}});
+
+var ClusterTaskCreateFromXMLFile = Module.findExportByName("resutils.dll", "ClusterTaskCreateFromXMLFile")
+Interceptor.attach(ClusterTaskCreateFromXMLFile, {onLeave: function (args) {send("ClusterTaskCreateFromXMLFile");}});
+
+var ClusterTaskCreate_TS_V1 = Module.findExportByName("resutils.dll", "ClusterTaskCreate_TS_V1")
+Interceptor.attach(ClusterTaskCreate_TS_V1, {onLeave: function (args) {send("ClusterTaskCreate_TS_V1");}});
+
+var ClusterTaskDelete = Module.findExportByName("resutils.dll", "ClusterTaskDelete")
+Interceptor.attach(ClusterTaskDelete, {onLeave: function (args) {send("ClusterTaskDelete");}});
+
+var ClusterTaskDelete_TS_V1 = Module.findExportByName("resutils.dll", "ClusterTaskDelete_TS_V1")
+Interceptor.attach(ClusterTaskDelete_TS_V1, {onLeave: function (args) {send("ClusterTaskDelete_TS_V1");}});
+
+var ClusterTaskExists_TS_V1 = Module.findExportByName("resutils.dll", "ClusterTaskExists_TS_V1")
+Interceptor.attach(ClusterTaskExists_TS_V1, {onLeave: function (args) {send("ClusterTaskExists_TS_V1");}});
+
+var ClusterTaskQuery = Module.findExportByName("resutils.dll", "ClusterTaskQuery")
+Interceptor.attach(ClusterTaskQuery, {onLeave: function (args) {send("ClusterTaskQuery");}});
+
+var CreateClusterStorageSpacesClustering = Module.findExportByName("resutils.dll", "CreateClusterStorageSpacesClustering")
+Interceptor.attach(CreateClusterStorageSpacesClustering, {onLeave: function (args) {send("CreateClusterStorageSpacesClustering");}});
+
+var CreateClusterStorageSpacesResourceLocator = Module.findExportByName("resutils.dll", "CreateClusterStorageSpacesResourceLocator")
+Interceptor.attach(CreateClusterStorageSpacesResourceLocator, {onLeave: function (args) {send("CreateClusterStorageSpacesResourceLocator");}});
+
+var CreateClusterStorageSpacesSubProvider = Module.findExportByName("resutils.dll", "CreateClusterStorageSpacesSubProvider")
+Interceptor.attach(CreateClusterStorageSpacesSubProvider, {onLeave: function (args) {send("CreateClusterStorageSpacesSubProvider");}});
+
+var FreeClusterCrypt = Module.findExportByName("resutils.dll", "FreeClusterCrypt")
+Interceptor.attach(FreeClusterCrypt, {onLeave: function (args) {send("FreeClusterCrypt");}});
+
+var FreeClusterHealthFault = Module.findExportByName("resutils.dll", "FreeClusterHealthFault")
+Interceptor.attach(FreeClusterHealthFault, {onLeave: function (args) {send("FreeClusterHealthFault");}});
+
+var FreeClusterHealthFaultArray = Module.findExportByName("resutils.dll", "FreeClusterHealthFaultArray")
+Interceptor.attach(FreeClusterHealthFaultArray, {onLeave: function (args) {send("FreeClusterHealthFaultArray");}});
+
+var InitializeClusterHealthFault = Module.findExportByName("resutils.dll", "InitializeClusterHealthFault")
+Interceptor.attach(InitializeClusterHealthFault, {onLeave: function (args) {send("InitializeClusterHealthFault");}});
+
+var InitializeClusterHealthFaultArray = Module.findExportByName("resutils.dll", "InitializeClusterHealthFaultArray")
+Interceptor.attach(InitializeClusterHealthFaultArray, {onLeave: function (args) {send("InitializeClusterHealthFaultArray");}});
+
+var OpenClusterCryptProvider = Module.findExportByName("resutils.dll", "OpenClusterCryptProvider")
+Interceptor.attach(OpenClusterCryptProvider, {onLeave: function (args) {send("OpenClusterCryptProvider");}});
+
+var OpenClusterCryptProviderEx = Module.findExportByName("resutils.dll", "OpenClusterCryptProviderEx")
+Interceptor.attach(OpenClusterCryptProviderEx, {onLeave: function (args) {send("OpenClusterCryptProviderEx");}});
+
+var ResUtilAddUnknownProperties = Module.findExportByName("resutils.dll", "ResUtilAddUnknownProperties")
+Interceptor.attach(ResUtilAddUnknownProperties, {onLeave: function (args) {send("ResUtilAddUnknownProperties");}});
+
+var ResUtilCreateDirectoryTree = Module.findExportByName("resutils.dll", "ResUtilCreateDirectoryTree")
+Interceptor.attach(ResUtilCreateDirectoryTree, {onLeave: function (args) {send("ResUtilCreateDirectoryTree");}});
+
+var ResUtilDupGroup = Module.findExportByName("resutils.dll", "ResUtilDupGroup")
+Interceptor.attach(ResUtilDupGroup, {onLeave: function (args) {send("ResUtilDupGroup");}});
+
+var ResUtilDupParameterBlock = Module.findExportByName("resutils.dll", "ResUtilDupParameterBlock")
+Interceptor.attach(ResUtilDupParameterBlock, {onLeave: function (args) {send("ResUtilDupParameterBlock");}});
+
+var ResUtilDupResource = Module.findExportByName("resutils.dll", "ResUtilDupResource")
+Interceptor.attach(ResUtilDupResource, {onLeave: function (args) {send("ResUtilDupResource");}});
+
+var ResUtilDupString = Module.findExportByName("resutils.dll", "ResUtilDupString")
+Interceptor.attach(ResUtilDupString, {onLeave: function (args) {send("ResUtilDupString");}});
+
+var ResUtilEnumGroups = Module.findExportByName("resutils.dll", "ResUtilEnumGroups")
+Interceptor.attach(ResUtilEnumGroups, {onLeave: function (args) {send("ResUtilEnumGroups");}});
+
+var ResUtilEnumGroupsEx = Module.findExportByName("resutils.dll", "ResUtilEnumGroupsEx")
+Interceptor.attach(ResUtilEnumGroupsEx, {onLeave: function (args) {send("ResUtilEnumGroupsEx");}});
+
+var ResUtilEnumPrivateProperties = Module.findExportByName("resutils.dll", "ResUtilEnumPrivateProperties")
+Interceptor.attach(ResUtilEnumPrivateProperties, {onLeave: function (args) {send("ResUtilEnumPrivateProperties");}});
+
+var ResUtilEnumProperties = Module.findExportByName("resutils.dll", "ResUtilEnumProperties")
+Interceptor.attach(ResUtilEnumProperties, {onLeave: function (args) {send("ResUtilEnumProperties");}});
+
+var ResUtilEnumResources = Module.findExportByName("resutils.dll", "ResUtilEnumResources")
+Interceptor.attach(ResUtilEnumResources, {onLeave: function (args) {send("ResUtilEnumResources");}});
+
+var ResUtilEnumResourcesEx = Module.findExportByName("resutils.dll", "ResUtilEnumResourcesEx")
+Interceptor.attach(ResUtilEnumResourcesEx, {onLeave: function (args) {send("ResUtilEnumResourcesEx");}});
+
+var ResUtilEnumResourcesEx2 = Module.findExportByName("resutils.dll", "ResUtilEnumResourcesEx2")
+Interceptor.attach(ResUtilEnumResourcesEx2, {onLeave: function (args) {send("ResUtilEnumResourcesEx2");}});
+
+var ResUtilExpandEnvironmentStrings = Module.findExportByName("resutils.dll", "ResUtilExpandEnvironmentStrings")
+Interceptor.attach(ResUtilExpandEnvironmentStrings, {onLeave: function (args) {send("ResUtilExpandEnvironmentStrings");}});
+
+var ResUtilFindBinaryProperty = Module.findExportByName("resutils.dll", "ResUtilFindBinaryProperty")
+Interceptor.attach(ResUtilFindBinaryProperty, {onLeave: function (args) {send("ResUtilFindBinaryProperty");}});
+
+var ResUtilFindDependentDiskResourceDriveLetter = Module.findExportByName("resutils.dll", "ResUtilFindDependentDiskResourceDriveLetter")
+Interceptor.attach(ResUtilFindDependentDiskResourceDriveLetter, {onLeave: function (args) {send("ResUtilFindDependentDiskResourceDriveLetter");}});
+
+var ResUtilFindDwordProperty = Module.findExportByName("resutils.dll", "ResUtilFindDwordProperty")
+Interceptor.attach(ResUtilFindDwordProperty, {onLeave: function (args) {send("ResUtilFindDwordProperty");}});
+
+var ResUtilFindExpandSzProperty = Module.findExportByName("resutils.dll", "ResUtilFindExpandSzProperty")
+Interceptor.attach(ResUtilFindExpandSzProperty, {onLeave: function (args) {send("ResUtilFindExpandSzProperty");}});
+
+var ResUtilFindExpandedSzProperty = Module.findExportByName("resutils.dll", "ResUtilFindExpandedSzProperty")
+Interceptor.attach(ResUtilFindExpandedSzProperty, {onLeave: function (args) {send("ResUtilFindExpandedSzProperty");}});
+
+var ResUtilFindFileTimeProperty = Module.findExportByName("resutils.dll", "ResUtilFindFileTimeProperty")
+Interceptor.attach(ResUtilFindFileTimeProperty, {onLeave: function (args) {send("ResUtilFindFileTimeProperty");}});
+
+var ResUtilFindLongProperty = Module.findExportByName("resutils.dll", "ResUtilFindLongProperty")
+Interceptor.attach(ResUtilFindLongProperty, {onLeave: function (args) {send("ResUtilFindLongProperty");}});
+
+var ResUtilFindMultiSzProperty = Module.findExportByName("resutils.dll", "ResUtilFindMultiSzProperty")
+Interceptor.attach(ResUtilFindMultiSzProperty, {onLeave: function (args) {send("ResUtilFindMultiSzProperty");}});
+
+var ResUtilFindSzProperty = Module.findExportByName("resutils.dll", "ResUtilFindSzProperty")
+Interceptor.attach(ResUtilFindSzProperty, {onLeave: function (args) {send("ResUtilFindSzProperty");}});
+
+var ResUtilFindULargeIntegerProperty = Module.findExportByName("resutils.dll", "ResUtilFindULargeIntegerProperty")
+Interceptor.attach(ResUtilFindULargeIntegerProperty, {onLeave: function (args) {send("ResUtilFindULargeIntegerProperty");}});
+
+var ResUtilFreeEnvironment = Module.findExportByName("resutils.dll", "ResUtilFreeEnvironment")
+Interceptor.attach(ResUtilFreeEnvironment, {onLeave: function (args) {send("ResUtilFreeEnvironment");}});
+
+var ResUtilFreeParameterBlock = Module.findExportByName("resutils.dll", "ResUtilFreeParameterBlock")
+Interceptor.attach(ResUtilFreeParameterBlock, {onLeave: function (args) {send("ResUtilFreeParameterBlock");}});
+
+var ResUtilGetAllProperties = Module.findExportByName("resutils.dll", "ResUtilGetAllProperties")
+Interceptor.attach(ResUtilGetAllProperties, {onLeave: function (args) {send("ResUtilGetAllProperties");}});
+
+var ResUtilGetBinaryProperty = Module.findExportByName("resutils.dll", "ResUtilGetBinaryProperty")
+Interceptor.attach(ResUtilGetBinaryProperty, {onLeave: function (args) {send("ResUtilGetBinaryProperty");}});
+
+var ResUtilGetBinaryValue = Module.findExportByName("resutils.dll", "ResUtilGetBinaryValue")
+Interceptor.attach(ResUtilGetBinaryValue, {onLeave: function (args) {send("ResUtilGetBinaryValue");}});
+
+var ResUtilGetClusterGroupType = Module.findExportByName("resutils.dll", "ResUtilGetClusterGroupType")
+Interceptor.attach(ResUtilGetClusterGroupType, {onLeave: function (args) {send("ResUtilGetClusterGroupType");}});
+
+var ResUtilGetClusterId = Module.findExportByName("resutils.dll", "ResUtilGetClusterId")
+Interceptor.attach(ResUtilGetClusterId, {onLeave: function (args) {send("ResUtilGetClusterId");}});
+
+var ResUtilGetClusterRoleState = Module.findExportByName("resutils.dll", "ResUtilGetClusterRoleState")
+Interceptor.attach(ResUtilGetClusterRoleState, {onLeave: function (args) {send("ResUtilGetClusterRoleState");}});
+
+var ResUtilGetCoreClusterResources = Module.findExportByName("resutils.dll", "ResUtilGetCoreClusterResources")
+Interceptor.attach(ResUtilGetCoreClusterResources, {onLeave: function (args) {send("ResUtilGetCoreClusterResources");}});
+
+var ResUtilGetCoreClusterResourcesEx = Module.findExportByName("resutils.dll", "ResUtilGetCoreClusterResourcesEx")
+Interceptor.attach(ResUtilGetCoreClusterResourcesEx, {onLeave: function (args) {send("ResUtilGetCoreClusterResourcesEx");}});
+
+var ResUtilGetCoreGroup = Module.findExportByName("resutils.dll", "ResUtilGetCoreGroup")
+Interceptor.attach(ResUtilGetCoreGroup, {onLeave: function (args) {send("ResUtilGetCoreGroup");}});
+
+var ResUtilGetDwordProperty = Module.findExportByName("resutils.dll", "ResUtilGetDwordProperty")
+Interceptor.attach(ResUtilGetDwordProperty, {onLeave: function (args) {send("ResUtilGetDwordProperty");}});
+
+var ResUtilGetDwordValue = Module.findExportByName("resutils.dll", "ResUtilGetDwordValue")
+Interceptor.attach(ResUtilGetDwordValue, {onLeave: function (args) {send("ResUtilGetDwordValue");}});
+
+var ResUtilGetEnvironmentWithNetName = Module.findExportByName("resutils.dll", "ResUtilGetEnvironmentWithNetName")
+Interceptor.attach(ResUtilGetEnvironmentWithNetName, {onLeave: function (args) {send("ResUtilGetEnvironmentWithNetName");}});
+
+var ResUtilGetFileTimeProperty = Module.findExportByName("resutils.dll", "ResUtilGetFileTimeProperty")
+Interceptor.attach(ResUtilGetFileTimeProperty, {onLeave: function (args) {send("ResUtilGetFileTimeProperty");}});
+
+var ResUtilGetLongProperty = Module.findExportByName("resutils.dll", "ResUtilGetLongProperty")
+Interceptor.attach(ResUtilGetLongProperty, {onLeave: function (args) {send("ResUtilGetLongProperty");}});
+
+var ResUtilGetMultiSzProperty = Module.findExportByName("resutils.dll", "ResUtilGetMultiSzProperty")
+Interceptor.attach(ResUtilGetMultiSzProperty, {onLeave: function (args) {send("ResUtilGetMultiSzProperty");}});
+
+var ResUtilGetPrivateProperties = Module.findExportByName("resutils.dll", "ResUtilGetPrivateProperties")
+Interceptor.attach(ResUtilGetPrivateProperties, {onLeave: function (args) {send("ResUtilGetPrivateProperties");}});
+
+var ResUtilGetProperties = Module.findExportByName("resutils.dll", "ResUtilGetProperties")
+Interceptor.attach(ResUtilGetProperties, {onLeave: function (args) {send("ResUtilGetProperties");}});
+
+var ResUtilGetPropertiesToParameterBlock = Module.findExportByName("resutils.dll", "ResUtilGetPropertiesToParameterBlock")
+Interceptor.attach(ResUtilGetPropertiesToParameterBlock, {onLeave: function (args) {send("ResUtilGetPropertiesToParameterBlock");}});
+
+var ResUtilGetProperty = Module.findExportByName("resutils.dll", "ResUtilGetProperty")
+Interceptor.attach(ResUtilGetProperty, {onLeave: function (args) {send("ResUtilGetProperty");}});
+
+var ResUtilGetPropertyFormats = Module.findExportByName("resutils.dll", "ResUtilGetPropertyFormats")
+Interceptor.attach(ResUtilGetPropertyFormats, {onLeave: function (args) {send("ResUtilGetPropertyFormats");}});
+
+var ResUtilGetPropertySize = Module.findExportByName("resutils.dll", "ResUtilGetPropertySize")
+Interceptor.attach(ResUtilGetPropertySize, {onLeave: function (args) {send("ResUtilGetPropertySize");}});
+
+var ResUtilGetQwordValue = Module.findExportByName("resutils.dll", "ResUtilGetQwordValue")
+Interceptor.attach(ResUtilGetQwordValue, {onLeave: function (args) {send("ResUtilGetQwordValue");}});
+
+var ResUtilGetResourceDependency = Module.findExportByName("resutils.dll", "ResUtilGetResourceDependency")
+Interceptor.attach(ResUtilGetResourceDependency, {onLeave: function (args) {send("ResUtilGetResourceDependency");}});
+
+var ResUtilGetResourceDependencyByClass = Module.findExportByName("resutils.dll", "ResUtilGetResourceDependencyByClass")
+Interceptor.attach(ResUtilGetResourceDependencyByClass, {onLeave: function (args) {send("ResUtilGetResourceDependencyByClass");}});
+
+var ResUtilGetResourceDependencyByClassEx = Module.findExportByName("resutils.dll", "ResUtilGetResourceDependencyByClassEx")
+Interceptor.attach(ResUtilGetResourceDependencyByClassEx, {onLeave: function (args) {send("ResUtilGetResourceDependencyByClassEx");}});
+
+var ResUtilGetResourceDependencyByName = Module.findExportByName("resutils.dll", "ResUtilGetResourceDependencyByName")
+Interceptor.attach(ResUtilGetResourceDependencyByName, {onLeave: function (args) {send("ResUtilGetResourceDependencyByName");}});
+
+var ResUtilGetResourceDependencyByNameAndClass = Module.findExportByName("resutils.dll", "ResUtilGetResourceDependencyByNameAndClass")
+Interceptor.attach(ResUtilGetResourceDependencyByNameAndClass, {onLeave: function (args) {send("ResUtilGetResourceDependencyByNameAndClass");}});
+
+var ResUtilGetResourceDependencyByNameEx = Module.findExportByName("resutils.dll", "ResUtilGetResourceDependencyByNameEx")
+Interceptor.attach(ResUtilGetResourceDependencyByNameEx, {onLeave: function (args) {send("ResUtilGetResourceDependencyByNameEx");}});
+
+var ResUtilGetResourceDependencyEx = Module.findExportByName("resutils.dll", "ResUtilGetResourceDependencyEx")
+Interceptor.attach(ResUtilGetResourceDependencyEx, {onLeave: function (args) {send("ResUtilGetResourceDependencyEx");}});
+
+var ResUtilGetResourceDependentIPAddressProps = Module.findExportByName("resutils.dll", "ResUtilGetResourceDependentIPAddressProps")
+Interceptor.attach(ResUtilGetResourceDependentIPAddressProps, {onLeave: function (args) {send("ResUtilGetResourceDependentIPAddressProps");}});
+
+var ResUtilGetResourceName = Module.findExportByName("resutils.dll", "ResUtilGetResourceName")
+Interceptor.attach(ResUtilGetResourceName, {onLeave: function (args) {send("ResUtilGetResourceName");}});
+
+var ResUtilGetResourceNameDependency = Module.findExportByName("resutils.dll", "ResUtilGetResourceNameDependency")
+Interceptor.attach(ResUtilGetResourceNameDependency, {onLeave: function (args) {send("ResUtilGetResourceNameDependency");}});
+
+var ResUtilGetResourceNameDependencyEx = Module.findExportByName("resutils.dll", "ResUtilGetResourceNameDependencyEx")
+Interceptor.attach(ResUtilGetResourceNameDependencyEx, {onLeave: function (args) {send("ResUtilGetResourceNameDependencyEx");}});
+
+var ResUtilGetSzProperty = Module.findExportByName("resutils.dll", "ResUtilGetSzProperty")
+Interceptor.attach(ResUtilGetSzProperty, {onLeave: function (args) {send("ResUtilGetSzProperty");}});
+
+var ResUtilGetSzValue = Module.findExportByName("resutils.dll", "ResUtilGetSzValue")
+Interceptor.attach(ResUtilGetSzValue, {onLeave: function (args) {send("ResUtilGetSzValue");}});
+
+var ResUtilGroupsEqual = Module.findExportByName("resutils.dll", "ResUtilGroupsEqual")
+Interceptor.attach(ResUtilGroupsEqual, {onLeave: function (args) {send("ResUtilGroupsEqual");}});
+
+var ResUtilIsPathValid = Module.findExportByName("resutils.dll", "ResUtilIsPathValid")
+Interceptor.attach(ResUtilIsPathValid, {onLeave: function (args) {send("ResUtilIsPathValid");}});
+
+var ResUtilIsResourceClassEqual = Module.findExportByName("resutils.dll", "ResUtilIsResourceClassEqual")
+Interceptor.attach(ResUtilIsResourceClassEqual, {onLeave: function (args) {send("ResUtilIsResourceClassEqual");}});
+
+var ResUtilLeftPaxosIsLessThanRight = Module.findExportByName("resutils.dll", "ResUtilLeftPaxosIsLessThanRight")
+Interceptor.attach(ResUtilLeftPaxosIsLessThanRight, {onLeave: function (args) {send("ResUtilLeftPaxosIsLessThanRight");}});
+
+var ResUtilNodeEnum = Module.findExportByName("resutils.dll", "ResUtilNodeEnum")
+Interceptor.attach(ResUtilNodeEnum, {onLeave: function (args) {send("ResUtilNodeEnum");}});
+
+var ResUtilPaxosComparer = Module.findExportByName("resutils.dll", "ResUtilPaxosComparer")
+Interceptor.attach(ResUtilPaxosComparer, {onLeave: function (args) {send("ResUtilPaxosComparer");}});
+
+var ResUtilPropertyListFromParameterBlock = Module.findExportByName("resutils.dll", "ResUtilPropertyListFromParameterBlock")
+Interceptor.attach(ResUtilPropertyListFromParameterBlock, {onLeave: function (args) {send("ResUtilPropertyListFromParameterBlock");}});
+
+var ResUtilRemoveResourceServiceEnvironment = Module.findExportByName("resutils.dll", "ResUtilRemoveResourceServiceEnvironment")
+Interceptor.attach(ResUtilRemoveResourceServiceEnvironment, {onLeave: function (args) {send("ResUtilRemoveResourceServiceEnvironment");}});
+
+var ResUtilResourceDepEnum = Module.findExportByName("resutils.dll", "ResUtilResourceDepEnum")
+Interceptor.attach(ResUtilResourceDepEnum, {onLeave: function (args) {send("ResUtilResourceDepEnum");}});
+
+var ResUtilResourceTypesEqual = Module.findExportByName("resutils.dll", "ResUtilResourceTypesEqual")
+Interceptor.attach(ResUtilResourceTypesEqual, {onLeave: function (args) {send("ResUtilResourceTypesEqual");}});
+
+var ResUtilResourcesEqual = Module.findExportByName("resutils.dll", "ResUtilResourcesEqual")
+Interceptor.attach(ResUtilResourcesEqual, {onLeave: function (args) {send("ResUtilResourcesEqual");}});
+
+var ResUtilSetBinaryValue = Module.findExportByName("resutils.dll", "ResUtilSetBinaryValue")
+Interceptor.attach(ResUtilSetBinaryValue, {onLeave: function (args) {send("ResUtilSetBinaryValue");}});
+
+var ResUtilSetDwordValue = Module.findExportByName("resutils.dll", "ResUtilSetDwordValue")
+Interceptor.attach(ResUtilSetDwordValue, {onLeave: function (args) {send("ResUtilSetDwordValue");}});
+
+var ResUtilSetExpandSzValue = Module.findExportByName("resutils.dll", "ResUtilSetExpandSzValue")
+Interceptor.attach(ResUtilSetExpandSzValue, {onLeave: function (args) {send("ResUtilSetExpandSzValue");}});
+
+var ResUtilSetMultiSzValue = Module.findExportByName("resutils.dll", "ResUtilSetMultiSzValue")
+Interceptor.attach(ResUtilSetMultiSzValue, {onLeave: function (args) {send("ResUtilSetMultiSzValue");}});
+
+var ResUtilSetPrivatePropertyList = Module.findExportByName("resutils.dll", "ResUtilSetPrivatePropertyList")
+Interceptor.attach(ResUtilSetPrivatePropertyList, {onLeave: function (args) {send("ResUtilSetPrivatePropertyList");}});
+
+var ResUtilSetPropertyParameterBlock = Module.findExportByName("resutils.dll", "ResUtilSetPropertyParameterBlock")
+Interceptor.attach(ResUtilSetPropertyParameterBlock, {onLeave: function (args) {send("ResUtilSetPropertyParameterBlock");}});
+
+var ResUtilSetPropertyParameterBlockEx = Module.findExportByName("resutils.dll", "ResUtilSetPropertyParameterBlockEx")
+Interceptor.attach(ResUtilSetPropertyParameterBlockEx, {onLeave: function (args) {send("ResUtilSetPropertyParameterBlockEx");}});
+
+var ResUtilSetPropertyTable = Module.findExportByName("resutils.dll", "ResUtilSetPropertyTable")
+Interceptor.attach(ResUtilSetPropertyTable, {onLeave: function (args) {send("ResUtilSetPropertyTable");}});
+
+var ResUtilSetPropertyTableEx = Module.findExportByName("resutils.dll", "ResUtilSetPropertyTableEx")
+Interceptor.attach(ResUtilSetPropertyTableEx, {onLeave: function (args) {send("ResUtilSetPropertyTableEx");}});
+
+var ResUtilSetQwordValue = Module.findExportByName("resutils.dll", "ResUtilSetQwordValue")
+Interceptor.attach(ResUtilSetQwordValue, {onLeave: function (args) {send("ResUtilSetQwordValue");}});
+
+var ResUtilSetResourceServiceEnvironment = Module.findExportByName("resutils.dll", "ResUtilSetResourceServiceEnvironment")
+Interceptor.attach(ResUtilSetResourceServiceEnvironment, {onLeave: function (args) {send("ResUtilSetResourceServiceEnvironment");}});
+
+var ResUtilSetResourceServiceStartParameters = Module.findExportByName("resutils.dll", "ResUtilSetResourceServiceStartParameters")
+Interceptor.attach(ResUtilSetResourceServiceStartParameters, {onLeave: function (args) {send("ResUtilSetResourceServiceStartParameters");}});
+
+var ResUtilSetResourceServiceStartParametersEx = Module.findExportByName("resutils.dll", "ResUtilSetResourceServiceStartParametersEx")
+Interceptor.attach(ResUtilSetResourceServiceStartParametersEx, {onLeave: function (args) {send("ResUtilSetResourceServiceStartParametersEx");}});
+
+var ResUtilSetSzValue = Module.findExportByName("resutils.dll", "ResUtilSetSzValue")
+Interceptor.attach(ResUtilSetSzValue, {onLeave: function (args) {send("ResUtilSetSzValue");}});
+
+var ResUtilSetUnknownProperties = Module.findExportByName("resutils.dll", "ResUtilSetUnknownProperties")
+Interceptor.attach(ResUtilSetUnknownProperties, {onLeave: function (args) {send("ResUtilSetUnknownProperties");}});
+
+var ResUtilSetValueEx = Module.findExportByName("resutils.dll", "ResUtilSetValueEx")
+Interceptor.attach(ResUtilSetValueEx, {onLeave: function (args) {send("ResUtilSetValueEx");}});
+
+var ResUtilStartResourceService = Module.findExportByName("resutils.dll", "ResUtilStartResourceService")
+Interceptor.attach(ResUtilStartResourceService, {onLeave: function (args) {send("ResUtilStartResourceService");}});
+
+var ResUtilStopResourceService = Module.findExportByName("resutils.dll", "ResUtilStopResourceService")
+Interceptor.attach(ResUtilStopResourceService, {onLeave: function (args) {send("ResUtilStopResourceService");}});
+
+var ResUtilStopService = Module.findExportByName("resutils.dll", "ResUtilStopService")
+Interceptor.attach(ResUtilStopService, {onLeave: function (args) {send("ResUtilStopService");}});
+
+var ResUtilTerminateServiceProcessFromResDll = Module.findExportByName("resutils.dll", "ResUtilTerminateServiceProcessFromResDll")
+Interceptor.attach(ResUtilTerminateServiceProcessFromResDll, {onLeave: function (args) {send("ResUtilTerminateServiceProcessFromResDll");}});
+
+var ResUtilVerifyPrivatePropertyList = Module.findExportByName("resutils.dll", "ResUtilVerifyPrivatePropertyList")
+Interceptor.attach(ResUtilVerifyPrivatePropertyList, {onLeave: function (args) {send("ResUtilVerifyPrivatePropertyList");}});
+
+var ResUtilVerifyPropertyTable = Module.findExportByName("resutils.dll", "ResUtilVerifyPropertyTable")
+Interceptor.attach(ResUtilVerifyPropertyTable, {onLeave: function (args) {send("ResUtilVerifyPropertyTable");}});
+
+var ResUtilVerifyResourceService = Module.findExportByName("resutils.dll", "ResUtilVerifyResourceService")
+Interceptor.attach(ResUtilVerifyResourceService, {onLeave: function (args) {send("ResUtilVerifyResourceService");}});
+
+var ResUtilVerifyService = Module.findExportByName("resutils.dll", "ResUtilVerifyService")
+Interceptor.attach(ResUtilVerifyService, {onLeave: function (args) {send("ResUtilVerifyService");}});
+
+var ResUtilVerifyShutdownSafe = Module.findExportByName("resutils.dll", "ResUtilVerifyShutdownSafe")
+Interceptor.attach(ResUtilVerifyShutdownSafe, {onLeave: function (args) {send("ResUtilVerifyShutdownSafe");}});
+
+var ResUtilsDeleteKeyTree = Module.findExportByName("resutils.dll", "ResUtilsDeleteKeyTree")
+Interceptor.attach(ResUtilsDeleteKeyTree, {onLeave: function (args) {send("ResUtilsDeleteKeyTree");}});
+

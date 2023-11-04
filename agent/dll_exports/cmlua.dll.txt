@@ -1,0 +1,30 @@
+var DllAddRef = Module.findExportByName("cmlua.dll", "DllAddRef")
+Interceptor.attach(DllAddRef, {onLeave: function (args) {send("DllAddRef");}});
+
+var DllCanUnloadNow = Module.findExportByName("cmlua.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("cmlua.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("cmlua.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRelease = Module.findExportByName("cmlua.dll", "DllRelease")
+Interceptor.attach(DllRelease, {onLeave: function (args) {send("DllRelease");}});
+
+var _GetCoCreateInstanceAsAdminHandle = Module.findExportByName("cmlua.dll", "_GetCoCreateInstanceAsAdminHandle")
+Interceptor.attach(_GetCoCreateInstanceAsAdminHandle, {onLeave: function (args) {send("_GetCoCreateInstanceAsAdminHandle");}});
+
+var _RemoveShieldIcon = Module.findExportByName("cmlua.dll", "_RemoveShieldIcon")
+Interceptor.attach(_RemoveShieldIcon, {onLeave: function (args) {send("_RemoveShieldIcon");}});
+
+var _SetShieldButton = Module.findExportByName("cmlua.dll", "_SetShieldButton")
+Interceptor.attach(_SetShieldButton, {onLeave: function (args) {send("_SetShieldButton");}});
+
+var _SetShieldIcon = Module.findExportByName("cmlua.dll", "_SetShieldIcon")
+Interceptor.attach(_SetShieldIcon, {onLeave: function (args) {send("_SetShieldIcon");}});
+
+var _ThrowErrorBox = Module.findExportByName("cmlua.dll", "_ThrowErrorBox")
+Interceptor.attach(_ThrowErrorBox, {onLeave: function (args) {send("_ThrowErrorBox");}});
+

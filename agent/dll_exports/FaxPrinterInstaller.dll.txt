@@ -1,0 +1,6 @@
+var InstallLocalFaxPrinter = Module.findExportByName("FaxPrinterInstaller.dll", "InstallLocalFaxPrinter")
+Interceptor.attach(InstallLocalFaxPrinter, {onLeave: function (args) {send("InstallLocalFaxPrinter");}});
+
+var UninstallLocalFaxPrinter = Module.findExportByName("FaxPrinterInstaller.dll", "UninstallLocalFaxPrinter")
+Interceptor.attach(UninstallLocalFaxPrinter, {onLeave: function (args) {send("UninstallLocalFaxPrinter");}});
+

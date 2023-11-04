@@ -1,0 +1,45 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.Networking.Vpn.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Networking.Vpn.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Networking.Vpn.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("Windows.Networking.Vpn.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("Windows.Networking.Vpn.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("Windows.Networking.Vpn.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var VpnClientGetCostedNetworkSettings = Module.findExportByName("Windows.Networking.Vpn.dll", "VpnClientGetCostedNetworkSettings")
+Interceptor.attach(VpnClientGetCostedNetworkSettings, {onLeave: function (args) {send("VpnClientGetCostedNetworkSettings");}});
+
+var VpnClientGetProxyForUrlAndSingleSessionDeviceUser = Module.findExportByName("Windows.Networking.Vpn.dll", "VpnClientGetProxyForUrlAndSingleSessionDeviceUser")
+Interceptor.attach(VpnClientGetProxyForUrlAndSingleSessionDeviceUser, {onLeave: function (args) {send("VpnClientGetProxyForUrlAndSingleSessionDeviceUser");}});
+
+var VpnClientPluginGetSecurity = Module.findExportByName("Windows.Networking.Vpn.dll", "VpnClientPluginGetSecurity")
+Interceptor.attach(VpnClientPluginGetSecurity, {onLeave: function (args) {send("VpnClientPluginGetSecurity");}});
+
+var VpnClientPluginInstall = Module.findExportByName("Windows.Networking.Vpn.dll", "VpnClientPluginInstall")
+Interceptor.attach(VpnClientPluginInstall, {onLeave: function (args) {send("VpnClientPluginInstall");}});
+
+var VpnClientPluginManifestFind = Module.findExportByName("Windows.Networking.Vpn.dll", "VpnClientPluginManifestFind")
+Interceptor.attach(VpnClientPluginManifestFind, {onLeave: function (args) {send("VpnClientPluginManifestFind");}});
+
+var VpnClientPluginUninstall = Module.findExportByName("Windows.Networking.Vpn.dll", "VpnClientPluginUninstall")
+Interceptor.attach(VpnClientPluginUninstall, {onLeave: function (args) {send("VpnClientPluginUninstall");}});
+
+var VpnClientSetCostedNetworkSettings = Module.findExportByName("Windows.Networking.Vpn.dll", "VpnClientSetCostedNetworkSettings")
+Interceptor.attach(VpnClientSetCostedNetworkSettings, {onLeave: function (args) {send("VpnClientSetCostedNetworkSettings");}});
+
+var VpnPluginEnumerate = Module.findExportByName("Windows.Networking.Vpn.dll", "VpnPluginEnumerate")
+Interceptor.attach(VpnPluginEnumerate, {onLeave: function (args) {send("VpnPluginEnumerate");}});
+
+var VpnPluginListFree = Module.findExportByName("Windows.Networking.Vpn.dll", "VpnPluginListFree")
+Interceptor.attach(VpnPluginListFree, {onLeave: function (args) {send("VpnPluginListFree");}});
+

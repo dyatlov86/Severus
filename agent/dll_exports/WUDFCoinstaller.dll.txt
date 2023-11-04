@@ -1,0 +1,3 @@
+var CoDeviceInstall = Module.findExportByName("WUDFCoinstaller.dll", "CoDeviceInstall")
+Interceptor.attach(CoDeviceInstall, {onLeave: function (args) {send("CoDeviceInstall");}});
+

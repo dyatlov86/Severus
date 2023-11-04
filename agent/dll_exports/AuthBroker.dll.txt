@@ -1,0 +1,33 @@
+var AuthBrokerClearThreadClientContext = Module.findExportByName("AuthBroker.dll", "AuthBrokerClearThreadClientContext")
+Interceptor.attach(AuthBrokerClearThreadClientContext, {onLeave: function (args) {send("AuthBrokerClearThreadClientContext");}});
+
+var AuthBrokerCreateClientContext = Module.findExportByName("AuthBroker.dll", "AuthBrokerCreateClientContext")
+Interceptor.attach(AuthBrokerCreateClientContext, {onLeave: function (args) {send("AuthBrokerCreateClientContext");}});
+
+var AuthBrokerFreeClientContext = Module.findExportByName("AuthBroker.dll", "AuthBrokerFreeClientContext")
+Interceptor.attach(AuthBrokerFreeClientContext, {onLeave: function (args) {send("AuthBrokerFreeClientContext");}});
+
+var AuthBrokerSetThreadClientContext = Module.findExportByName("AuthBroker.dll", "AuthBrokerSetThreadClientContext")
+Interceptor.attach(AuthBrokerSetThreadClientContext, {onLeave: function (args) {send("AuthBrokerSetThreadClientContext");}});
+
+var DllCanUnloadNow = Module.findExportByName("AuthBroker.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("AuthBroker.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("AuthBroker.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("AuthBroker.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("AuthBroker.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var FindCallingThreadImmersiveWindow = Module.findExportByName("AuthBroker.dll", "FindCallingThreadImmersiveWindow")
+Interceptor.attach(FindCallingThreadImmersiveWindow, {onLeave: function (args) {send("FindCallingThreadImmersiveWindow");}});
+
+var PurgeAuthHostSsoCache = Module.findExportByName("AuthBroker.dll", "PurgeAuthHostSsoCache")
+Interceptor.attach(PurgeAuthHostSsoCache, {onLeave: function (args) {send("PurgeAuthHostSsoCache");}});
+

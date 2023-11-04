@@ -1,0 +1,12 @@
+var CoGetComCatalog = Module.findExportByName("rpcss.dll", "CoGetComCatalog")
+Interceptor.attach(CoGetComCatalog, {onLeave: function (args) {send("CoGetComCatalog");}});
+
+var GetRPCSSInfo = Module.findExportByName("rpcss.dll", "GetRPCSSInfo")
+Interceptor.attach(GetRPCSSInfo, {onLeave: function (args) {send("GetRPCSSInfo");}});
+
+var ServiceMain = Module.findExportByName("rpcss.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var WhichService = Module.findExportByName("rpcss.dll", "WhichService")
+Interceptor.attach(WhichService, {onLeave: function (args) {send("WhichService");}});
+

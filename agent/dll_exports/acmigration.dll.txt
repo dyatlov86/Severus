@@ -1,0 +1,27 @@
+var AcmEngineApply = Module.findExportByName("acmigration.dll", "AcmEngineApply")
+Interceptor.attach(AcmEngineApply, {onLeave: function (args) {send("AcmEngineApply");}});
+
+var AcmEngineCollect = Module.findExportByName("acmigration.dll", "AcmEngineCollect")
+Interceptor.attach(AcmEngineCollect, {onLeave: function (args) {send("AcmEngineCollect");}});
+
+var AcmEngineCreate = Module.findExportByName("acmigration.dll", "AcmEngineCreate")
+Interceptor.attach(AcmEngineCreate, {onLeave: function (args) {send("AcmEngineCreate");}});
+
+var AcmEngineDelete = Module.findExportByName("acmigration.dll", "AcmEngineDelete")
+Interceptor.attach(AcmEngineDelete, {onLeave: function (args) {send("AcmEngineDelete");}});
+
+var AcmEngineGenerateMigXml = Module.findExportByName("acmigration.dll", "AcmEngineGenerateMigXml")
+Interceptor.attach(AcmEngineGenerateMigXml, {onLeave: function (args) {send("AcmEngineGenerateMigXml");}});
+
+var AcmEngineGetCapabilityList = Module.findExportByName("acmigration.dll", "AcmEngineGetCapabilityList")
+Interceptor.attach(AcmEngineGetCapabilityList, {onLeave: function (args) {send("AcmEngineGetCapabilityList");}});
+
+var AcmEngineSetBaseWorkingDirectory = Module.findExportByName("acmigration.dll", "AcmEngineSetBaseWorkingDirectory")
+Interceptor.attach(AcmEngineSetBaseWorkingDirectory, {onLeave: function (args) {send("AcmEngineSetBaseWorkingDirectory");}});
+
+var AcmMatchPluginExecute = Module.findExportByName("acmigration.dll", "AcmMatchPluginExecute")
+Interceptor.attach(AcmMatchPluginExecute, {onLeave: function (args) {send("AcmMatchPluginExecute");}});
+
+var ApplyMigrationShimsW = Module.findExportByName("acmigration.dll", "ApplyMigrationShimsW")
+Interceptor.attach(ApplyMigrationShimsW, {onLeave: function (args) {send("ApplyMigrationShimsW");}});
+

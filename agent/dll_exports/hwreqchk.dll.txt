@@ -1,0 +1,3 @@
+var CheckHardwareRequirement = Module.findExportByName("hwreqchk.dll", "CheckHardwareRequirement")
+Interceptor.attach(CheckHardwareRequirement, {onLeave: function (args) {send("CheckHardwareRequirement");}});
+

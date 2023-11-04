@@ -1,0 +1,15 @@
+var Initialize = Module.findExportByName("CompatAggregator.dll", "Initialize")
+Interceptor.attach(Initialize, {onLeave: function (args) {send("Initialize");}});
+
+var NotifyTimerExpiryWithId = Module.findExportByName("CompatAggregator.dll", "NotifyTimerExpiryWithId")
+Interceptor.attach(NotifyTimerExpiryWithId, {onLeave: function (args) {send("NotifyTimerExpiryWithId");}});
+
+var ProcessNextEventJsonBuilder = Module.findExportByName("CompatAggregator.dll", "ProcessNextEventJsonBuilder")
+Interceptor.attach(ProcessNextEventJsonBuilder, {onLeave: function (args) {send("ProcessNextEventJsonBuilder");}});
+
+var SetParameter = Module.findExportByName("CompatAggregator.dll", "SetParameter")
+Interceptor.attach(SetParameter, {onLeave: function (args) {send("SetParameter");}});
+
+var Uninitialize = Module.findExportByName("CompatAggregator.dll", "Uninitialize")
+Interceptor.attach(Uninitialize, {onLeave: function (args) {send("Uninitialize");}});
+

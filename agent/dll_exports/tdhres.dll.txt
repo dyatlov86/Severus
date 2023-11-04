@@ -1,0 +1,15 @@
+var GetNTStatusSymbolicName = Module.findExportByName("tdhres.dll", "GetNTStatusSymbolicName")
+Interceptor.attach(GetNTStatusSymbolicName, {onLeave: function (args) {send("GetNTStatusSymbolicName");}});
+
+var GetNdisOidSymbolicName = Module.findExportByName("tdhres.dll", "GetNdisOidSymbolicName")
+Interceptor.attach(GetNdisOidSymbolicName, {onLeave: function (args) {send("GetNdisOidSymbolicName");}});
+
+var GetNdisSymbolicName = Module.findExportByName("tdhres.dll", "GetNdisSymbolicName")
+Interceptor.attach(GetNdisSymbolicName, {onLeave: function (args) {send("GetNdisSymbolicName");}});
+
+var GetNetEventSymbolicName = Module.findExportByName("tdhres.dll", "GetNetEventSymbolicName")
+Interceptor.attach(GetNetEventSymbolicName, {onLeave: function (args) {send("GetNetEventSymbolicName");}});
+
+var GetWinErrorSymbolicName = Module.findExportByName("tdhres.dll", "GetWinErrorSymbolicName")
+Interceptor.attach(GetWinErrorSymbolicName, {onLeave: function (args) {send("GetWinErrorSymbolicName");}});
+

@@ -1,0 +1,9 @@
+var WbioQueryEngineInterface = Module.findExportByName("FaceBootstrapAdapter.dll", "WbioQueryEngineInterface")
+Interceptor.attach(WbioQueryEngineInterface, {onLeave: function (args) {send("WbioQueryEngineInterface");}});
+
+var WbioQuerySensorInterface = Module.findExportByName("FaceBootstrapAdapter.dll", "WbioQuerySensorInterface")
+Interceptor.attach(WbioQuerySensorInterface, {onLeave: function (args) {send("WbioQuerySensorInterface");}});
+
+var WbioQueryStorageInterface = Module.findExportByName("FaceBootstrapAdapter.dll", "WbioQueryStorageInterface")
+Interceptor.attach(WbioQueryStorageInterface, {onLeave: function (args) {send("WbioQueryStorageInterface");}});
+

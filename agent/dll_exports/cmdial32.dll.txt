@@ -1,0 +1,33 @@
+var AutoDialFunc = Module.findExportByName("cmdial32.dll", "AutoDialFunc")
+Interceptor.attach(AutoDialFunc, {onLeave: function (args) {send("AutoDialFunc");}});
+
+var CmCustomDialDlg = Module.findExportByName("cmdial32.dll", "CmCustomDialDlg")
+Interceptor.attach(CmCustomDialDlg, {onLeave: function (args) {send("CmCustomDialDlg");}});
+
+var CmCustomHangUp = Module.findExportByName("cmdial32.dll", "CmCustomHangUp")
+Interceptor.attach(CmCustomHangUp, {onLeave: function (args) {send("CmCustomHangUp");}});
+
+var CmReConnect = Module.findExportByName("cmdial32.dll", "CmReConnect")
+Interceptor.attach(CmReConnect, {onLeave: function (args) {send("CmReConnect");}});
+
+var GetCustomProperty = Module.findExportByName("cmdial32.dll", "GetCustomProperty")
+Interceptor.attach(GetCustomProperty, {onLeave: function (args) {send("GetCustomProperty");}});
+
+var InetDialHandler = Module.findExportByName("cmdial32.dll", "InetDialHandler")
+Interceptor.attach(InetDialHandler, {onLeave: function (args) {send("InetDialHandler");}});
+
+var RasCustomDeleteEntryNotify = Module.findExportByName("cmdial32.dll", "RasCustomDeleteEntryNotify")
+Interceptor.attach(RasCustomDeleteEntryNotify, {onLeave: function (args) {send("RasCustomDeleteEntryNotify");}});
+
+var RasCustomDial = Module.findExportByName("cmdial32.dll", "RasCustomDial")
+Interceptor.attach(RasCustomDial, {onLeave: function (args) {send("RasCustomDial");}});
+
+var RasCustomDialDlg = Module.findExportByName("cmdial32.dll", "RasCustomDialDlg")
+Interceptor.attach(RasCustomDialDlg, {onLeave: function (args) {send("RasCustomDialDlg");}});
+
+var RasCustomEntryDlg = Module.findExportByName("cmdial32.dll", "RasCustomEntryDlg")
+Interceptor.attach(RasCustomEntryDlg, {onLeave: function (args) {send("RasCustomEntryDlg");}});
+
+var RasCustomHangUp = Module.findExportByName("cmdial32.dll", "RasCustomHangUp")
+Interceptor.attach(RasCustomHangUp, {onLeave: function (args) {send("RasCustomHangUp");}});
+

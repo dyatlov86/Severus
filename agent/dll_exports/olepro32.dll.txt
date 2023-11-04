@@ -1,0 +1,33 @@
+var DllCanUnloadNow = Module.findExportByName("olepro32.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("olepro32.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("olepro32.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("olepro32.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var OleCreateFontIndirect = Module.findExportByName("olepro32.dll", "OleCreateFontIndirect")
+Interceptor.attach(OleCreateFontIndirect, {onLeave: function (args) {send("OleCreateFontIndirect");}});
+
+var OleCreatePictureIndirect = Module.findExportByName("olepro32.dll", "OleCreatePictureIndirect")
+Interceptor.attach(OleCreatePictureIndirect, {onLeave: function (args) {send("OleCreatePictureIndirect");}});
+
+var OleCreatePropertyFrame = Module.findExportByName("olepro32.dll", "OleCreatePropertyFrame")
+Interceptor.attach(OleCreatePropertyFrame, {onLeave: function (args) {send("OleCreatePropertyFrame");}});
+
+var OleCreatePropertyFrameIndirect = Module.findExportByName("olepro32.dll", "OleCreatePropertyFrameIndirect")
+Interceptor.attach(OleCreatePropertyFrameIndirect, {onLeave: function (args) {send("OleCreatePropertyFrameIndirect");}});
+
+var OleIconToCursor = Module.findExportByName("olepro32.dll", "OleIconToCursor")
+Interceptor.attach(OleIconToCursor, {onLeave: function (args) {send("OleIconToCursor");}});
+
+var OleLoadPicture = Module.findExportByName("olepro32.dll", "OleLoadPicture")
+Interceptor.attach(OleLoadPicture, {onLeave: function (args) {send("OleLoadPicture");}});
+
+var OleTranslateColor = Module.findExportByName("olepro32.dll", "OleTranslateColor")
+Interceptor.attach(OleTranslateColor, {onLeave: function (args) {send("OleTranslateColor");}});
+

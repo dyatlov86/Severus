@@ -1,0 +1,36 @@
+var DllCanUnloadNow = Module.findExportByName("sxshared.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("sxshared.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("sxshared.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("sxshared.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetLastFailureAsHRESULT = Module.findExportByName("sxshared.dll", "GetLastFailureAsHRESULT")
+Interceptor.attach(GetLastFailureAsHRESULT, {onLeave: function (args) {send("GetLastFailureAsHRESULT");}});
+
+var HRESULTFromNTSTATUS = Module.findExportByName("sxshared.dll", "HRESULTFromNTSTATUS")
+Interceptor.attach(HRESULTFromNTSTATUS, {onLeave: function (args) {send("HRESULTFromNTSTATUS");}});
+
+var SxTracerDebuggerBreak = Module.findExportByName("sxshared.dll", "SxTracerDebuggerBreak")
+Interceptor.attach(SxTracerDebuggerBreak, {onLeave: function (args) {send("SxTracerDebuggerBreak");}});
+
+var SxTracerGetThreadContextDebug = Module.findExportByName("sxshared.dll", "SxTracerGetThreadContextDebug")
+Interceptor.attach(SxTracerGetThreadContextDebug, {onLeave: function (args) {send("SxTracerGetThreadContextDebug");}});
+
+var SxTracerGetThreadContextRetail = Module.findExportByName("sxshared.dll", "SxTracerGetThreadContextRetail")
+Interceptor.attach(SxTracerGetThreadContextRetail, {onLeave: function (args) {send("SxTracerGetThreadContextRetail");}});
+
+var SxTracerShouldTrackFailure = Module.findExportByName("sxshared.dll", "SxTracerShouldTrackFailure")
+Interceptor.attach(SxTracerShouldTrackFailure, {onLeave: function (args) {send("SxTracerShouldTrackFailure");}});
+
+var Win32FromHRESULT = Module.findExportByName("sxshared.dll", "Win32FromHRESULT")
+Interceptor.attach(Win32FromHRESULT, {onLeave: function (args) {send("Win32FromHRESULT");}});
+
+var Win32FromNTSTATUS = Module.findExportByName("sxshared.dll", "Win32FromNTSTATUS")
+Interceptor.attach(Win32FromNTSTATUS, {onLeave: function (args) {send("Win32FromNTSTATUS");}});
+

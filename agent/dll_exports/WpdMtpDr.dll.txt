@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("WpdMtpDr.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("WpdMtpDr.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("WpdMtpDr.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("WpdMtpDr.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DriverEntry = Module.findExportByName("WpdMtpDr.dll", "DriverEntry")
+Interceptor.attach(DriverEntry, {onLeave: function (args) {send("DriverEntry");}});
+
+var Microsoft_WDF_UMDF_Version = Module.findExportByName("WpdMtpDr.dll", "Microsoft_WDF_UMDF_Version")
+Interceptor.attach(Microsoft_WDF_UMDF_Version, {onLeave: function (args) {send("Microsoft_WDF_UMDF_Version");}});
+

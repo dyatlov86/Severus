@@ -1,0 +1,9 @@
+var CloseOSObject = Module.findExportByName("perfos.dll", "CloseOSObject")
+Interceptor.attach(CloseOSObject, {onLeave: function (args) {send("CloseOSObject");}});
+
+var CollectOSObjectData = Module.findExportByName("perfos.dll", "CollectOSObjectData")
+Interceptor.attach(CollectOSObjectData, {onLeave: function (args) {send("CollectOSObjectData");}});
+
+var OpenOSObject = Module.findExportByName("perfos.dll", "OpenOSObject")
+Interceptor.attach(OpenOSObject, {onLeave: function (args) {send("OpenOSObject");}});
+

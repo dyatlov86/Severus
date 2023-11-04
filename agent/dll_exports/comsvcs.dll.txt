@@ -1,0 +1,60 @@
+var CoCreateActivity = Module.findExportByName("comsvcs.dll", "CoCreateActivity")
+Interceptor.attach(CoCreateActivity, {onLeave: function (args) {send("CoCreateActivity");}});
+
+var CoEnterServiceDomain = Module.findExportByName("comsvcs.dll", "CoEnterServiceDomain")
+Interceptor.attach(CoEnterServiceDomain, {onLeave: function (args) {send("CoEnterServiceDomain");}});
+
+var CoLeaveServiceDomain = Module.findExportByName("comsvcs.dll", "CoLeaveServiceDomain")
+Interceptor.attach(CoLeaveServiceDomain, {onLeave: function (args) {send("CoLeaveServiceDomain");}});
+
+var CoLoadServices = Module.findExportByName("comsvcs.dll", "CoLoadServices")
+Interceptor.attach(CoLoadServices, {onLeave: function (args) {send("CoLoadServices");}});
+
+var ComSvcsExceptionFilter = Module.findExportByName("comsvcs.dll", "ComSvcsExceptionFilter")
+Interceptor.attach(ComSvcsExceptionFilter, {onLeave: function (args) {send("ComSvcsExceptionFilter");}});
+
+var ComSvcsLogError = Module.findExportByName("comsvcs.dll", "ComSvcsLogError")
+Interceptor.attach(ComSvcsLogError, {onLeave: function (args) {send("ComSvcsLogError");}});
+
+var CosGetCallContext = Module.findExportByName("comsvcs.dll", "CosGetCallContext")
+Interceptor.attach(CosGetCallContext, {onLeave: function (args) {send("CosGetCallContext");}});
+
+var DispManGetContext = Module.findExportByName("comsvcs.dll", "DispManGetContext")
+Interceptor.attach(DispManGetContext, {onLeave: function (args) {send("DispManGetContext");}});
+
+var DllCanUnloadNow = Module.findExportByName("comsvcs.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("comsvcs.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("comsvcs.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("comsvcs.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetMTAThreadPoolMetrics = Module.findExportByName("comsvcs.dll", "GetMTAThreadPoolMetrics")
+Interceptor.attach(GetMTAThreadPoolMetrics, {onLeave: function (args) {send("GetMTAThreadPoolMetrics");}});
+
+var GetManagedExtensions = Module.findExportByName("comsvcs.dll", "GetManagedExtensions")
+Interceptor.attach(GetManagedExtensions, {onLeave: function (args) {send("GetManagedExtensions");}});
+
+var GetObjectContext = Module.findExportByName("comsvcs.dll", "GetObjectContext")
+Interceptor.attach(GetObjectContext, {onLeave: function (args) {send("GetObjectContext");}});
+
+var GetTrkSvrObject = Module.findExportByName("comsvcs.dll", "GetTrkSvrObject")
+Interceptor.attach(GetTrkSvrObject, {onLeave: function (args) {send("GetTrkSvrObject");}});
+
+var MTSCreateActivity = Module.findExportByName("comsvcs.dll", "MTSCreateActivity")
+Interceptor.attach(MTSCreateActivity, {onLeave: function (args) {send("MTSCreateActivity");}});
+
+var MiniDumpW = Module.findExportByName("comsvcs.dll", "MiniDumpW")
+Interceptor.attach(MiniDumpW, {onLeave: function (args) {send("MiniDumpW");}});
+
+var RecycleSurrogate = Module.findExportByName("comsvcs.dll", "RecycleSurrogate")
+Interceptor.attach(RecycleSurrogate, {onLeave: function (args) {send("RecycleSurrogate");}});
+
+var SafeRef = Module.findExportByName("comsvcs.dll", "SafeRef")
+Interceptor.attach(SafeRef, {onLeave: function (args) {send("SafeRef");}});
+

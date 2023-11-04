@@ -1,0 +1,9 @@
+var DllMain = Module.findExportByName("win32spl.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var InitializePrintMonitor2 = Module.findExportByName("win32spl.dll", "InitializePrintMonitor2")
+Interceptor.attach(InitializePrintMonitor2, {onLeave: function (args) {send("InitializePrintMonitor2");}});
+
+var InitializePrintProvidor = Module.findExportByName("win32spl.dll", "InitializePrintProvidor")
+Interceptor.attach(InitializePrintProvidor, {onLeave: function (args) {send("InitializePrintProvidor");}});
+

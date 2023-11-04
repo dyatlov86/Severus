@@ -1,0 +1,75 @@
+var DllCanUnloadNow = Module.findExportByName("mfds.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mfds.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("mfds.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mfds.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var InitAACAudioStream_ = Module.findExportByName("mfds.dll", "InitAACAudioStream_")
+Interceptor.attach(InitAACAudioStream_, {onLeave: function (args) {send("InitAACAudioStream_");}});
+
+var InitAC3AudioStream_ = Module.findExportByName("mfds.dll", "InitAC3AudioStream_")
+Interceptor.attach(InitAC3AudioStream_, {onLeave: function (args) {send("InitAC3AudioStream_");}});
+
+var InitAC4AudioStream_ = Module.findExportByName("mfds.dll", "InitAC4AudioStream_")
+Interceptor.attach(InitAC4AudioStream_, {onLeave: function (args) {send("InitAC4AudioStream_");}});
+
+var InitBDAVLPCMAudioStream_ = Module.findExportByName("mfds.dll", "InitBDAVLPCMAudioStream_")
+Interceptor.attach(InitBDAVLPCMAudioStream_, {onLeave: function (args) {send("InitBDAVLPCMAudioStream_");}});
+
+var InitDDPlusAudioStream_ = Module.findExportByName("mfds.dll", "InitDDPlusAudioStream_")
+Interceptor.attach(InitDDPlusAudioStream_, {onLeave: function (args) {send("InitDDPlusAudioStream_");}});
+
+var InitDTSAudioStream_ = Module.findExportByName("mfds.dll", "InitDTSAudioStream_")
+Interceptor.attach(InitDTSAudioStream_, {onLeave: function (args) {send("InitDTSAudioStream_");}});
+
+var InitH264Stream_ = Module.findExportByName("mfds.dll", "InitH264Stream_")
+Interceptor.attach(InitH264Stream_, {onLeave: function (args) {send("InitH264Stream_");}});
+
+var InitHEVCStream_ = Module.findExportByName("mfds.dll", "InitHEVCStream_")
+Interceptor.attach(InitHEVCStream_, {onLeave: function (args) {send("InitHEVCStream_");}});
+
+var InitLPCMAudioStream_ = Module.findExportByName("mfds.dll", "InitLPCMAudioStream_")
+Interceptor.attach(InitLPCMAudioStream_, {onLeave: function (args) {send("InitLPCMAudioStream_");}});
+
+var InitLPCMMiracastAudioStream_ = Module.findExportByName("mfds.dll", "InitLPCMMiracastAudioStream_")
+Interceptor.attach(InitLPCMMiracastAudioStream_, {onLeave: function (args) {send("InitLPCMMiracastAudioStream_");}});
+
+var InitMpeg1VideoStream_ = Module.findExportByName("mfds.dll", "InitMpeg1VideoStream_")
+Interceptor.attach(InitMpeg1VideoStream_, {onLeave: function (args) {send("InitMpeg1VideoStream_");}});
+
+var InitMpeg2VideoStream_ = Module.findExportByName("mfds.dll", "InitMpeg2VideoStream_")
+Interceptor.attach(InitMpeg2VideoStream_, {onLeave: function (args) {send("InitMpeg2VideoStream_");}});
+
+var InitMpegAudioStream_ = Module.findExportByName("mfds.dll", "InitMpegAudioStream_")
+Interceptor.attach(InitMpegAudioStream_, {onLeave: function (args) {send("InitMpegAudioStream_");}});
+
+var InitTrueHDAudioStream_ = Module.findExportByName("mfds.dll", "InitTrueHDAudioStream_")
+Interceptor.attach(InitTrueHDAudioStream_, {onLeave: function (args) {send("InitTrueHDAudioStream_");}});
+
+var PESHeaderLength = Module.findExportByName("mfds.dll", "PESHeaderLength")
+Interceptor.attach(PESHeaderLength, {onLeave: function (args) {send("PESHeaderLength");}});
+
+var PESPacketLength = Module.findExportByName("mfds.dll", "PESPacketLength")
+Interceptor.attach(PESPacketLength, {onLeave: function (args) {send("PESPacketLength");}});
+
+var PESPacketPTSinPCR = Module.findExportByName("mfds.dll", "PESPacketPTSinPCR")
+Interceptor.attach(PESPacketPTSinPCR, {onLeave: function (args) {send("PESPacketPTSinPCR");}});
+
+var PackMuxRate = Module.findExportByName("mfds.dll", "PackMuxRate")
+Interceptor.attach(PackMuxRate, {onLeave: function (args) {send("PackMuxRate");}});
+
+var PackSCR = Module.findExportByName("mfds.dll", "PackSCR")
+Interceptor.attach(PackSCR, {onLeave: function (args) {send("PackSCR");}});
+
+var xCreateCannedMediaType = Module.findExportByName("mfds.dll", "xCreateCannedMediaType")
+Interceptor.attach(xCreateCannedMediaType, {onLeave: function (args) {send("xCreateCannedMediaType");}});
+
+var xMediaSubTypeTransform = Module.findExportByName("mfds.dll", "xMediaSubTypeTransform")
+Interceptor.attach(xMediaSubTypeTransform, {onLeave: function (args) {send("xMediaSubTypeTransform");}});
+

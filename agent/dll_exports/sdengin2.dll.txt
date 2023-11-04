@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("sdengin2.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("sdengin2.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("sdengin2.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("sdengin2.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("sdengin2.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ExecuteScheduledBackup = Module.findExportByName("sdengin2.dll", "ExecuteScheduledBackup")
+Interceptor.attach(ExecuteScheduledBackup, {onLeave: function (args) {send("ExecuteScheduledBackup");}});
+
+var SdCheck = Module.findExportByName("sdengin2.dll", "SdCheck")
+Interceptor.attach(SdCheck, {onLeave: function (args) {send("SdCheck");}});
+

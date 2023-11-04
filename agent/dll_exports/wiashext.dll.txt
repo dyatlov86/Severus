@@ -1,0 +1,27 @@
+var AddDeviceWasChosen = Module.findExportByName("wiashext.dll", "AddDeviceWasChosen")
+Interceptor.attach(AddDeviceWasChosen, {onLeave: function (args) {send("AddDeviceWasChosen");}});
+
+var AddDeviceWasChosenA = Module.findExportByName("wiashext.dll", "AddDeviceWasChosenA")
+Interceptor.attach(AddDeviceWasChosenA, {onLeave: function (args) {send("AddDeviceWasChosenA");}});
+
+var AddDeviceWasChosenW = Module.findExportByName("wiashext.dll", "AddDeviceWasChosenW")
+Interceptor.attach(AddDeviceWasChosenW, {onLeave: function (args) {send("AddDeviceWasChosenW");}});
+
+var DllCanUnloadNow = Module.findExportByName("wiashext.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wiashext.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("wiashext.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wiashext.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DoDeleteAllItems = Module.findExportByName("wiashext.dll", "DoDeleteAllItems")
+Interceptor.attach(DoDeleteAllItems, {onLeave: function (args) {send("DoDeleteAllItems");}});
+
+var MakeFullPidlForDevice = Module.findExportByName("wiashext.dll", "MakeFullPidlForDevice")
+Interceptor.attach(MakeFullPidlForDevice, {onLeave: function (args) {send("MakeFullPidlForDevice");}});
+

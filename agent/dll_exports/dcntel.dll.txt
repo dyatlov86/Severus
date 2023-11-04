@@ -1,0 +1,21 @@
+var GetCensusPropertyAlloc = Module.findExportByName("dcntel.dll", "GetCensusPropertyAlloc")
+Interceptor.attach(GetCensusPropertyAlloc, {onLeave: function (args) {send("GetCensusPropertyAlloc");}});
+
+var GetCensusRegistryLocation = Module.findExportByName("dcntel.dll", "GetCensusRegistryLocation")
+Interceptor.attach(GetCensusRegistryLocation, {onLeave: function (args) {send("GetCensusRegistryLocation");}});
+
+var RunSystemContextCensus = Module.findExportByName("dcntel.dll", "RunSystemContextCensus")
+Interceptor.attach(RunSystemContextCensus, {onLeave: function (args) {send("RunSystemContextCensus");}});
+
+var RunUserContextCensus = Module.findExportByName("dcntel.dll", "RunUserContextCensus")
+Interceptor.attach(RunUserContextCensus, {onLeave: function (args) {send("RunUserContextCensus");}});
+
+var SetCustomTrigger = Module.findExportByName("dcntel.dll", "SetCustomTrigger")
+Interceptor.attach(SetCustomTrigger, {onLeave: function (args) {send("SetCustomTrigger");}});
+
+var SetCustomTriggerEx = Module.findExportByName("dcntel.dll", "SetCustomTriggerEx")
+Interceptor.attach(SetCustomTriggerEx, {onLeave: function (args) {send("SetCustomTriggerEx");}});
+
+var SysprepCleanupEnableCustomTrigger = Module.findExportByName("dcntel.dll", "SysprepCleanupEnableCustomTrigger")
+Interceptor.attach(SysprepCleanupEnableCustomTrigger, {onLeave: function (args) {send("SysprepCleanupEnableCustomTrigger");}});
+

@@ -1,0 +1,30 @@
+var ExGetCfgVersionInfo = Module.findExportByName("rdpcfgex.dll", "ExGetCfgVersionInfo")
+Interceptor.attach(ExGetCfgVersionInfo, {onLeave: function (args) {send("ExGetCfgVersionInfo");}});
+
+var ExtEncryptionLevels = Module.findExportByName("rdpcfgex.dll", "ExtEncryptionLevels")
+Interceptor.attach(ExtEncryptionLevels, {onLeave: function (args) {send("ExtEncryptionLevels");}});
+
+var ExtEnd = Module.findExportByName("rdpcfgex.dll", "ExtEnd")
+Interceptor.attach(ExtEnd, {onLeave: function (args) {send("ExtEnd");}});
+
+var ExtGetCapabilities = Module.findExportByName("rdpcfgex.dll", "ExtGetCapabilities")
+Interceptor.attach(ExtGetCapabilities, {onLeave: function (args) {send("ExtGetCapabilities");}});
+
+var ExtGetEncryptionLevelAndDescrEx = Module.findExportByName("rdpcfgex.dll", "ExtGetEncryptionLevelAndDescrEx")
+Interceptor.attach(ExtGetEncryptionLevelAndDescrEx, {onLeave: function (args) {send("ExtGetEncryptionLevelAndDescrEx");}});
+
+var ExtGetEncryptionLevelDescr = Module.findExportByName("rdpcfgex.dll", "ExtGetEncryptionLevelDescr")
+Interceptor.attach(ExtGetEncryptionLevelDescr, {onLeave: function (args) {send("ExtGetEncryptionLevelDescr");}});
+
+var ExtGetSecurityLayerDescrString = Module.findExportByName("rdpcfgex.dll", "ExtGetSecurityLayerDescrString")
+Interceptor.attach(ExtGetSecurityLayerDescrString, {onLeave: function (args) {send("ExtGetSecurityLayerDescrString");}});
+
+var ExtGetSecurityLayerName = Module.findExportByName("rdpcfgex.dll", "ExtGetSecurityLayerName")
+Interceptor.attach(ExtGetSecurityLayerName, {onLeave: function (args) {send("ExtGetSecurityLayerName");}});
+
+var ExtSecurityLayers = Module.findExportByName("rdpcfgex.dll", "ExtSecurityLayers")
+Interceptor.attach(ExtSecurityLayers, {onLeave: function (args) {send("ExtSecurityLayers");}});
+
+var ExtStart = Module.findExportByName("rdpcfgex.dll", "ExtStart")
+Interceptor.attach(ExtStart, {onLeave: function (args) {send("ExtStart");}});
+

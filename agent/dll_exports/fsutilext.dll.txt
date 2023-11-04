@@ -1,0 +1,42 @@
+var CheckSonyMSWorker = Module.findExportByName("fsutilext.dll", "CheckSonyMSWorker")
+Interceptor.attach(CheckSonyMSWorker, {onLeave: function (args) {send("CheckSonyMSWorker");}});
+
+var DeviceInstIsRemovableWorker = Module.findExportByName("fsutilext.dll", "DeviceInstIsRemovableWorker")
+Interceptor.attach(DeviceInstIsRemovableWorker, {onLeave: function (args) {send("DeviceInstIsRemovableWorker");}});
+
+var FindFirstVolumeMountPointWStub = Module.findExportByName("fsutilext.dll", "FindFirstVolumeMountPointWStub")
+Interceptor.attach(FindFirstVolumeMountPointWStub, {onLeave: function (args) {send("FindFirstVolumeMountPointWStub");}});
+
+var FindNextVolumeMountPointWStub = Module.findExportByName("fsutilext.dll", "FindNextVolumeMountPointWStub")
+Interceptor.attach(FindNextVolumeMountPointWStub, {onLeave: function (args) {send("FindNextVolumeMountPointWStub");}});
+
+var FindVolumeMountPointCloseStub = Module.findExportByName("fsutilext.dll", "FindVolumeMountPointCloseStub")
+Interceptor.attach(FindVolumeMountPointCloseStub, {onLeave: function (args) {send("FindVolumeMountPointCloseStub");}});
+
+var GetDeviceIDDiskFromDeviceIDVolumeWorker = Module.findExportByName("fsutilext.dll", "GetDeviceIDDiskFromDeviceIDVolumeWorker")
+Interceptor.attach(GetDeviceIDDiskFromDeviceIDVolumeWorker, {onLeave: function (args) {send("GetDeviceIDDiskFromDeviceIDVolumeWorker");}});
+
+var GetDeviceInstanceWorker = Module.findExportByName("fsutilext.dll", "GetDeviceInstanceWorker")
+Interceptor.attach(GetDeviceInstanceWorker, {onLeave: function (args) {send("GetDeviceInstanceWorker");}});
+
+var GetRemovableDeviceInstRecursWorker = Module.findExportByName("fsutilext.dll", "GetRemovableDeviceInstRecursWorker")
+Interceptor.attach(GetRemovableDeviceInstRecursWorker, {onLeave: function (args) {send("GetRemovableDeviceInstRecursWorker");}});
+
+var GetWidgetWorker = Module.findExportByName("fsutilext.dll", "GetWidgetWorker")
+Interceptor.attach(GetWidgetWorker, {onLeave: function (args) {send("GetWidgetWorker");}});
+
+var InvalidateFveWorker = Module.findExportByName("fsutilext.dll", "InvalidateFveWorker")
+Interceptor.attach(InvalidateFveWorker, {onLeave: function (args) {send("InvalidateFveWorker");}});
+
+var SendWithSenseParseWorker = Module.findExportByName("fsutilext.dll", "SendWithSenseParseWorker")
+Interceptor.attach(SendWithSenseParseWorker, {onLeave: function (args) {send("SendWithSenseParseWorker");}});
+
+var SetThreadUILanguageStub = Module.findExportByName("fsutilext.dll", "SetThreadUILanguageStub")
+Interceptor.attach(SetThreadUILanguageStub, {onLeave: function (args) {send("SetThreadUILanguageStub");}});
+
+var SystemParametersInfoWStub = Module.findExportByName("fsutilext.dll", "SystemParametersInfoWStub")
+Interceptor.attach(SystemParametersInfoWStub, {onLeave: function (args) {send("SystemParametersInfoWStub");}});
+
+var WaitForUnitAndReportProgressWorker = Module.findExportByName("fsutilext.dll", "WaitForUnitAndReportProgressWorker")
+Interceptor.attach(WaitForUnitAndReportProgressWorker, {onLeave: function (args) {send("WaitForUnitAndReportProgressWorker");}});
+

@@ -1,0 +1,3 @@
+var CreatePluginEngine = Module.findExportByName("openvino_auto_plugin.dll", "CreatePluginEngine")
+Interceptor.attach(CreatePluginEngine, {onLeave: function (args) {send("CreatePluginEngine");}});
+

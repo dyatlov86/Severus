@@ -1,0 +1,60 @@
+var CleanOnlineAppCache = Module.findExportByName("dfshim.dll", "CleanOnlineAppCache")
+Interceptor.attach(CleanOnlineAppCache, {onLeave: function (args) {send("CleanOnlineAppCache");}});
+
+var CreateActContext = Module.findExportByName("dfshim.dll", "CreateActContext")
+Interceptor.attach(CreateActContext, {onLeave: function (args) {send("CreateActContext");}});
+
+var CreateCMSFromXml = Module.findExportByName("dfshim.dll", "CreateCMSFromXml")
+Interceptor.attach(CreateCMSFromXml, {onLeave: function (args) {send("CreateCMSFromXml");}});
+
+var DllCanUnloadNow = Module.findExportByName("dfshim.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("dfshim.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetCurrentActContext = Module.findExportByName("dfshim.dll", "GetCurrentActContext")
+Interceptor.attach(GetCurrentActContext, {onLeave: function (args) {send("GetCurrentActContext");}});
+
+var GetDeploymentDataFromManifest = Module.findExportByName("dfshim.dll", "GetDeploymentDataFromManifest")
+Interceptor.attach(GetDeploymentDataFromManifest, {onLeave: function (args) {send("GetDeploymentDataFromManifest");}});
+
+var GetUserStateManager = Module.findExportByName("dfshim.dll", "GetUserStateManager")
+Interceptor.attach(GetUserStateManager, {onLeave: function (args) {send("GetUserStateManager");}});
+
+var GetUserStore = Module.findExportByName("dfshim.dll", "GetUserStore")
+Interceptor.attach(GetUserStore, {onLeave: function (args) {send("GetUserStore");}});
+
+var KillService = Module.findExportByName("dfshim.dll", "KillService")
+Interceptor.attach(KillService, {onLeave: function (args) {send("KillService");}});
+
+var LaunchApplication = Module.findExportByName("dfshim.dll", "LaunchApplication")
+Interceptor.attach(LaunchApplication, {onLeave: function (args) {send("LaunchApplication");}});
+
+var ParseManifest = Module.findExportByName("dfshim.dll", "ParseManifest")
+Interceptor.attach(ParseManifest, {onLeave: function (args) {send("ParseManifest");}});
+
+var ShArpMaintain = Module.findExportByName("dfshim.dll", "ShArpMaintain")
+Interceptor.attach(ShArpMaintain, {onLeave: function (args) {send("ShArpMaintain");}});
+
+var ShArpMaintainW = Module.findExportByName("dfshim.dll", "ShArpMaintainW")
+Interceptor.attach(ShArpMaintainW, {onLeave: function (args) {send("ShArpMaintainW");}});
+
+var ShOpenVerbApplication = Module.findExportByName("dfshim.dll", "ShOpenVerbApplication")
+Interceptor.attach(ShOpenVerbApplication, {onLeave: function (args) {send("ShOpenVerbApplication");}});
+
+var ShOpenVerbApplicationW = Module.findExportByName("dfshim.dll", "ShOpenVerbApplicationW")
+Interceptor.attach(ShOpenVerbApplicationW, {onLeave: function (args) {send("ShOpenVerbApplicationW");}});
+
+var ShOpenVerbExtension = Module.findExportByName("dfshim.dll", "ShOpenVerbExtension")
+Interceptor.attach(ShOpenVerbExtension, {onLeave: function (args) {send("ShOpenVerbExtension");}});
+
+var ShOpenVerbExtensionW = Module.findExportByName("dfshim.dll", "ShOpenVerbExtensionW")
+Interceptor.attach(ShOpenVerbExtensionW, {onLeave: function (args) {send("ShOpenVerbExtensionW");}});
+
+var ShOpenVerbShortcut = Module.findExportByName("dfshim.dll", "ShOpenVerbShortcut")
+Interceptor.attach(ShOpenVerbShortcut, {onLeave: function (args) {send("ShOpenVerbShortcut");}});
+
+var ShOpenVerbShortcutW = Module.findExportByName("dfshim.dll", "ShOpenVerbShortcutW")
+Interceptor.attach(ShOpenVerbShortcutW, {onLeave: function (args) {send("ShOpenVerbShortcutW");}});
+

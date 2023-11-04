@@ -1,0 +1,3 @@
+var CreateVirtualMonitorManager = Module.findExportByName("VirtualMonitorManager.dll", "CreateVirtualMonitorManager")
+Interceptor.attach(CreateVirtualMonitorManager, {onLeave: function (args) {send("CreateVirtualMonitorManager");}});
+

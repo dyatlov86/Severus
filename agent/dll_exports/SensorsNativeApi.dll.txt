@@ -1,0 +1,198 @@
+var DllMain = Module.findExportByName("SensorsNativeApi.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var SensorCancelHistoryRetrieval = Module.findExportByName("SensorsNativeApi.dll", "SensorCancelHistoryRetrieval")
+Interceptor.attach(SensorCancelHistoryRetrieval, {onLeave: function (args) {send("SensorCancelHistoryRetrieval");}});
+
+var SensorClearHistory = Module.findExportByName("SensorsNativeApi.dll", "SensorClearHistory")
+Interceptor.attach(SensorClearHistory, {onLeave: function (args) {send("SensorClearHistory");}});
+
+var SensorClose = Module.findExportByName("SensorsNativeApi.dll", "SensorClose")
+Interceptor.attach(SensorClose, {onLeave: function (args) {send("SensorClose");}});
+
+var SensorDetermineStackByPropertyStore = Module.findExportByName("SensorsNativeApi.dll", "SensorDetermineStackByPropertyStore")
+Interceptor.attach(SensorDetermineStackByPropertyStore, {onLeave: function (args) {send("SensorDetermineStackByPropertyStore");}});
+
+var SensorDeviceIoControl = Module.findExportByName("SensorsNativeApi.dll", "SensorDeviceIoControl")
+Interceptor.attach(SensorDeviceIoControl, {onLeave: function (args) {send("SensorDeviceIoControl");}});
+
+var SensorDisableIoPathForDataNotifications = Module.findExportByName("SensorsNativeApi.dll", "SensorDisableIoPathForDataNotifications")
+Interceptor.attach(SensorDisableIoPathForDataNotifications, {onLeave: function (args) {send("SensorDisableIoPathForDataNotifications");}});
+
+var SensorDisableWake = Module.findExportByName("SensorsNativeApi.dll", "SensorDisableWake")
+Interceptor.attach(SensorDisableWake, {onLeave: function (args) {send("SensorDisableWake");}});
+
+var SensorEnableIdleOperation = Module.findExportByName("SensorsNativeApi.dll", "SensorEnableIdleOperation")
+Interceptor.attach(SensorEnableIdleOperation, {onLeave: function (args) {send("SensorEnableIdleOperation");}});
+
+var SensorEnableWake = Module.findExportByName("SensorsNativeApi.dll", "SensorEnableWake")
+Interceptor.attach(SensorEnableWake, {onLeave: function (args) {send("SensorEnableWake");}});
+
+var SensorGetAccData = Module.findExportByName("SensorsNativeApi.dll", "SensorGetAccData")
+Interceptor.attach(SensorGetAccData, {onLeave: function (args) {send("SensorGetAccData");}});
+
+var SensorGetAlsData = Module.findExportByName("SensorsNativeApi.dll", "SensorGetAlsData")
+Interceptor.attach(SensorGetAlsData, {onLeave: function (args) {send("SensorGetAlsData");}});
+
+var SensorGetAlsDataWithColor = Module.findExportByName("SensorsNativeApi.dll", "SensorGetAlsDataWithColor")
+Interceptor.attach(SensorGetAlsDataWithColor, {onLeave: function (args) {send("SensorGetAlsDataWithColor");}});
+
+var SensorGetBarData = Module.findExportByName("SensorsNativeApi.dll", "SensorGetBarData")
+Interceptor.attach(SensorGetBarData, {onLeave: function (args) {send("SensorGetBarData");}});
+
+var SensorGetCapabilities = Module.findExportByName("SensorsNativeApi.dll", "SensorGetCapabilities")
+Interceptor.attach(SensorGetCapabilities, {onLeave: function (args) {send("SensorGetCapabilities");}});
+
+var SensorGetCapabilitiesCollection = Module.findExportByName("SensorsNativeApi.dll", "SensorGetCapabilitiesCollection")
+Interceptor.attach(SensorGetCapabilitiesCollection, {onLeave: function (args) {send("SensorGetCapabilitiesCollection");}});
+
+var SensorGetCurrentReading = Module.findExportByName("SensorsNativeApi.dll", "SensorGetCurrentReading")
+Interceptor.attach(SensorGetCurrentReading, {onLeave: function (args) {send("SensorGetCurrentReading");}});
+
+var SensorGetData = Module.findExportByName("SensorsNativeApi.dll", "SensorGetData")
+Interceptor.attach(SensorGetData, {onLeave: function (args) {send("SensorGetData");}});
+
+var SensorGetDataCollection = Module.findExportByName("SensorsNativeApi.dll", "SensorGetDataCollection")
+Interceptor.attach(SensorGetDataCollection, {onLeave: function (args) {send("SensorGetDataCollection");}});
+
+var SensorGetDataDeliveryMode = Module.findExportByName("SensorsNativeApi.dll", "SensorGetDataDeliveryMode")
+Interceptor.attach(SensorGetDataDeliveryMode, {onLeave: function (args) {send("SensorGetDataDeliveryMode");}});
+
+var SensorGetDataFieldProperties = Module.findExportByName("SensorsNativeApi.dll", "SensorGetDataFieldProperties")
+Interceptor.attach(SensorGetDataFieldProperties, {onLeave: function (args) {send("SensorGetDataFieldProperties");}});
+
+var SensorGetDefaultThresholds = Module.findExportByName("SensorsNativeApi.dll", "SensorGetDefaultThresholds")
+Interceptor.attach(SensorGetDefaultThresholds, {onLeave: function (args) {send("SensorGetDefaultThresholds");}});
+
+var SensorGetDeviceId = Module.findExportByName("SensorsNativeApi.dll", "SensorGetDeviceId")
+Interceptor.attach(SensorGetDeviceId, {onLeave: function (args) {send("SensorGetDeviceId");}});
+
+var SensorGetFifoMaxSize = Module.findExportByName("SensorsNativeApi.dll", "SensorGetFifoMaxSize")
+Interceptor.attach(SensorGetFifoMaxSize, {onLeave: function (args) {send("SensorGetFifoMaxSize");}});
+
+var SensorGetFusData = Module.findExportByName("SensorsNativeApi.dll", "SensorGetFusData")
+Interceptor.attach(SensorGetFusData, {onLeave: function (args) {send("SensorGetFusData");}});
+
+var SensorGetGyrData = Module.findExportByName("SensorsNativeApi.dll", "SensorGetGyrData")
+Interceptor.attach(SensorGetGyrData, {onLeave: function (args) {send("SensorGetGyrData");}});
+
+var SensorGetHistory = Module.findExportByName("SensorsNativeApi.dll", "SensorGetHistory")
+Interceptor.attach(SensorGetHistory, {onLeave: function (args) {send("SensorGetHistory");}});
+
+var SensorGetMagData = Module.findExportByName("SensorsNativeApi.dll", "SensorGetMagData")
+Interceptor.attach(SensorGetMagData, {onLeave: function (args) {send("SensorGetMagData");}});
+
+var SensorGetProperties = Module.findExportByName("SensorsNativeApi.dll", "SensorGetProperties")
+Interceptor.attach(SensorGetProperties, {onLeave: function (args) {send("SensorGetProperties");}});
+
+var SensorGetPrxData = Module.findExportByName("SensorsNativeApi.dll", "SensorGetPrxData")
+Interceptor.attach(SensorGetPrxData, {onLeave: function (args) {send("SensorGetPrxData");}});
+
+var SensorGetRangeResolution = Module.findExportByName("SensorsNativeApi.dll", "SensorGetRangeResolution")
+Interceptor.attach(SensorGetRangeResolution, {onLeave: function (args) {send("SensorGetRangeResolution");}});
+
+var SensorGetSupportedDataFields = Module.findExportByName("SensorsNativeApi.dll", "SensorGetSupportedDataFields")
+Interceptor.attach(SensorGetSupportedDataFields, {onLeave: function (args) {send("SensorGetSupportedDataFields");}});
+
+var SensorGetThresholds = Module.findExportByName("SensorsNativeApi.dll", "SensorGetThresholds")
+Interceptor.attach(SensorGetThresholds, {onLeave: function (args) {send("SensorGetThresholds");}});
+
+var SensorGetTypeFromInterfacePath = Module.findExportByName("SensorsNativeApi.dll", "SensorGetTypeFromInterfacePath")
+Interceptor.attach(SensorGetTypeFromInterfacePath, {onLeave: function (args) {send("SensorGetTypeFromInterfacePath");}});
+
+var SensorIsWakeEnabled = Module.findExportByName("SensorsNativeApi.dll", "SensorIsWakeEnabled")
+Interceptor.attach(SensorIsWakeEnabled, {onLeave: function (args) {send("SensorIsWakeEnabled");}});
+
+var SensorNotificationConfigure = Module.findExportByName("SensorsNativeApi.dll", "SensorNotificationConfigure")
+Interceptor.attach(SensorNotificationConfigure, {onLeave: function (args) {send("SensorNotificationConfigure");}});
+
+var SensorNotificationStart = Module.findExportByName("SensorsNativeApi.dll", "SensorNotificationStart")
+Interceptor.attach(SensorNotificationStart, {onLeave: function (args) {send("SensorNotificationStart");}});
+
+var SensorNotificationStop = Module.findExportByName("SensorsNativeApi.dll", "SensorNotificationStop")
+Interceptor.attach(SensorNotificationStop, {onLeave: function (args) {send("SensorNotificationStop");}});
+
+var SensorOpen = Module.findExportByName("SensorsNativeApi.dll", "SensorOpen")
+Interceptor.attach(SensorOpen, {onLeave: function (args) {send("SensorOpen");}});
+
+var SensorOpenByInterface = Module.findExportByName("SensorsNativeApi.dll", "SensorOpenByInterface")
+Interceptor.attach(SensorOpenByInterface, {onLeave: function (args) {send("SensorOpenByInterface");}});
+
+var SensorOpenByType = Module.findExportByName("SensorsNativeApi.dll", "SensorOpenByType")
+Interceptor.attach(SensorOpenByType, {onLeave: function (args) {send("SensorOpenByType");}});
+
+var SensorRegisterDeviceRemovalNotification = Module.findExportByName("SensorsNativeApi.dll", "SensorRegisterDeviceRemovalNotification")
+Interceptor.attach(SensorRegisterDeviceRemovalNotification, {onLeave: function (args) {send("SensorRegisterDeviceRemovalNotification");}});
+
+var SensorRegisterEvent = Module.findExportByName("SensorsNativeApi.dll", "SensorRegisterEvent")
+Interceptor.attach(SensorRegisterEvent, {onLeave: function (args) {send("SensorRegisterEvent");}});
+
+var SensorRegisterPowerNotifications = Module.findExportByName("SensorsNativeApi.dll", "SensorRegisterPowerNotifications")
+Interceptor.attach(SensorRegisterPowerNotifications, {onLeave: function (args) {send("SensorRegisterPowerNotifications");}});
+
+var SensorSelectBestDevice = Module.findExportByName("SensorsNativeApi.dll", "SensorSelectBestDevice")
+Interceptor.attach(SensorSelectBestDevice, {onLeave: function (args) {send("SensorSelectBestDevice");}});
+
+var SensorSetAccThresholds = Module.findExportByName("SensorsNativeApi.dll", "SensorSetAccThresholds")
+Interceptor.attach(SensorSetAccThresholds, {onLeave: function (args) {send("SensorSetAccThresholds");}});
+
+var SensorSetAlsThresholds = Module.findExportByName("SensorsNativeApi.dll", "SensorSetAlsThresholds")
+Interceptor.attach(SensorSetAlsThresholds, {onLeave: function (args) {send("SensorSetAlsThresholds");}});
+
+var SensorSetAlsWithColorThresholds = Module.findExportByName("SensorsNativeApi.dll", "SensorSetAlsWithColorThresholds")
+Interceptor.attach(SensorSetAlsWithColorThresholds, {onLeave: function (args) {send("SensorSetAlsWithColorThresholds");}});
+
+var SensorSetBarThresholds = Module.findExportByName("SensorsNativeApi.dll", "SensorSetBarThresholds")
+Interceptor.attach(SensorSetBarThresholds, {onLeave: function (args) {send("SensorSetBarThresholds");}});
+
+var SensorSetDataDeliveryMode = Module.findExportByName("SensorsNativeApi.dll", "SensorSetDataDeliveryMode")
+Interceptor.attach(SensorSetDataDeliveryMode, {onLeave: function (args) {send("SensorSetDataDeliveryMode");}});
+
+var SensorSetDataInterval = Module.findExportByName("SensorsNativeApi.dll", "SensorSetDataInterval")
+Interceptor.attach(SensorSetDataInterval, {onLeave: function (args) {send("SensorSetDataInterval");}});
+
+var SensorSetFusThresholds = Module.findExportByName("SensorsNativeApi.dll", "SensorSetFusThresholds")
+Interceptor.attach(SensorSetFusThresholds, {onLeave: function (args) {send("SensorSetFusThresholds");}});
+
+var SensorSetGyrThresholds = Module.findExportByName("SensorsNativeApi.dll", "SensorSetGyrThresholds")
+Interceptor.attach(SensorSetGyrThresholds, {onLeave: function (args) {send("SensorSetGyrThresholds");}});
+
+var SensorSetMagThresholds = Module.findExportByName("SensorsNativeApi.dll", "SensorSetMagThresholds")
+Interceptor.attach(SensorSetMagThresholds, {onLeave: function (args) {send("SensorSetMagThresholds");}});
+
+var SensorSetOrientationSensorThresholds = Module.findExportByName("SensorsNativeApi.dll", "SensorSetOrientationSensorThresholds")
+Interceptor.attach(SensorSetOrientationSensorThresholds, {onLeave: function (args) {send("SensorSetOrientationSensorThresholds");}});
+
+var SensorSetRangeResolution = Module.findExportByName("SensorsNativeApi.dll", "SensorSetRangeResolution")
+Interceptor.attach(SensorSetRangeResolution, {onLeave: function (args) {send("SensorSetRangeResolution");}});
+
+var SensorSetReportLatency = Module.findExportByName("SensorsNativeApi.dll", "SensorSetReportLatency")
+Interceptor.attach(SensorSetReportLatency, {onLeave: function (args) {send("SensorSetReportLatency");}});
+
+var SensorSetThresholds = Module.findExportByName("SensorsNativeApi.dll", "SensorSetThresholds")
+Interceptor.attach(SensorSetThresholds, {onLeave: function (args) {send("SensorSetThresholds");}});
+
+var SensorStart = Module.findExportByName("SensorsNativeApi.dll", "SensorStart")
+Interceptor.attach(SensorStart, {onLeave: function (args) {send("SensorStart");}});
+
+var SensorStartCollection = Module.findExportByName("SensorsNativeApi.dll", "SensorStartCollection")
+Interceptor.attach(SensorStartCollection, {onLeave: function (args) {send("SensorStartCollection");}});
+
+var SensorStartHistory = Module.findExportByName("SensorsNativeApi.dll", "SensorStartHistory")
+Interceptor.attach(SensorStartHistory, {onLeave: function (args) {send("SensorStartHistory");}});
+
+var SensorStop = Module.findExportByName("SensorsNativeApi.dll", "SensorStop")
+Interceptor.attach(SensorStop, {onLeave: function (args) {send("SensorStop");}});
+
+var SensorStopHistory = Module.findExportByName("SensorsNativeApi.dll", "SensorStopHistory")
+Interceptor.attach(SensorStopHistory, {onLeave: function (args) {send("SensorStopHistory");}});
+
+var SensorUnregisterDeviceRemovalNotification = Module.findExportByName("SensorsNativeApi.dll", "SensorUnregisterDeviceRemovalNotification")
+Interceptor.attach(SensorUnregisterDeviceRemovalNotification, {onLeave: function (args) {send("SensorUnregisterDeviceRemovalNotification");}});
+
+var SensorUnregisterEvent = Module.findExportByName("SensorsNativeApi.dll", "SensorUnregisterEvent")
+Interceptor.attach(SensorUnregisterEvent, {onLeave: function (args) {send("SensorUnregisterEvent");}});
+
+var SensorsUnregisterPowerNotifications = Module.findExportByName("SensorsNativeApi.dll", "SensorsUnregisterPowerNotifications")
+Interceptor.attach(SensorsUnregisterPowerNotifications, {onLeave: function (args) {send("SensorsUnregisterPowerNotifications");}});
+

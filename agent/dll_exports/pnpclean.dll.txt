@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("pnpclean.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("pnpclean.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("pnpclean.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("pnpclean.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var RunDLL_PnpClean = Module.findExportByName("pnpclean.dll", "RunDLL_PnpClean")
+Interceptor.attach(RunDLL_PnpClean, {onLeave: function (args) {send("RunDLL_PnpClean");}});
+

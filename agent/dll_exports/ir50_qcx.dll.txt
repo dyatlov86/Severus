@@ -1,0 +1,30 @@
+var AllocInstanceData = Module.findExportByName("ir50_qcx.dll", "AllocInstanceData")
+Interceptor.attach(AllocInstanceData, {onLeave: function (args) {send("AllocInstanceData");}});
+
+var Compress = Module.findExportByName("ir50_qcx.dll", "Compress")
+Interceptor.attach(Compress, {onLeave: function (args) {send("Compress");}});
+
+var CompressBegin = Module.findExportByName("ir50_qcx.dll", "CompressBegin")
+Interceptor.attach(CompressBegin, {onLeave: function (args) {send("CompressBegin");}});
+
+var CompressEnd = Module.findExportByName("ir50_qcx.dll", "CompressEnd")
+Interceptor.attach(CompressEnd, {onLeave: function (args) {send("CompressEnd");}});
+
+var CompressFramesInfo = Module.findExportByName("ir50_qcx.dll", "CompressFramesInfo")
+Interceptor.attach(CompressFramesInfo, {onLeave: function (args) {send("CompressFramesInfo");}});
+
+var CompressQuery = Module.findExportByName("ir50_qcx.dll", "CompressQuery")
+Interceptor.attach(CompressQuery, {onLeave: function (args) {send("CompressQuery");}});
+
+var DllMain = Module.findExportByName("ir50_qcx.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var FreeInstanceData = Module.findExportByName("ir50_qcx.dll", "FreeInstanceData")
+Interceptor.attach(FreeInstanceData, {onLeave: function (args) {send("FreeInstanceData");}});
+
+var SetCPUID = Module.findExportByName("ir50_qcx.dll", "SetCPUID")
+Interceptor.attach(SetCPUID, {onLeave: function (args) {send("SetCPUID");}});
+
+var SetScalability = Module.findExportByName("ir50_qcx.dll", "SetScalability")
+Interceptor.attach(SetScalability, {onLeave: function (args) {send("SetScalability");}});
+

@@ -1,0 +1,9 @@
+var DllMain = Module.findExportByName("netprofmsvc.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var ServiceMain = Module.findExportByName("netprofmsvc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobalsEx = Module.findExportByName("netprofmsvc.dll", "SvchostPushServiceGlobalsEx")
+Interceptor.attach(SvchostPushServiceGlobalsEx, {onLeave: function (args) {send("SvchostPushServiceGlobalsEx");}});
+

@@ -1,0 +1,12 @@
+var SnmpExtensionInit = Module.findExportByName("inetmib1.dll", "SnmpExtensionInit")
+Interceptor.attach(SnmpExtensionInit, {onLeave: function (args) {send("SnmpExtensionInit");}});
+
+var SnmpExtensionInitEx = Module.findExportByName("inetmib1.dll", "SnmpExtensionInitEx")
+Interceptor.attach(SnmpExtensionInitEx, {onLeave: function (args) {send("SnmpExtensionInitEx");}});
+
+var SnmpExtensionQuery = Module.findExportByName("inetmib1.dll", "SnmpExtensionQuery")
+Interceptor.attach(SnmpExtensionQuery, {onLeave: function (args) {send("SnmpExtensionQuery");}});
+
+var SnmpExtensionTrap = Module.findExportByName("inetmib1.dll", "SnmpExtensionTrap")
+Interceptor.attach(SnmpExtensionTrap, {onLeave: function (args) {send("SnmpExtensionTrap");}});
+

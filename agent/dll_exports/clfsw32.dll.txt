@@ -1,0 +1,189 @@
+var AddLogContainer = Module.findExportByName("clfsw32.dll", "AddLogContainer")
+Interceptor.attach(AddLogContainer, {onLeave: function (args) {send("AddLogContainer");}});
+
+var AddLogContainerSet = Module.findExportByName("clfsw32.dll", "AddLogContainerSet")
+Interceptor.attach(AddLogContainerSet, {onLeave: function (args) {send("AddLogContainerSet");}});
+
+var AdvanceLogBase = Module.findExportByName("clfsw32.dll", "AdvanceLogBase")
+Interceptor.attach(AdvanceLogBase, {onLeave: function (args) {send("AdvanceLogBase");}});
+
+var AlignReservedLog = Module.findExportByName("clfsw32.dll", "AlignReservedLog")
+Interceptor.attach(AlignReservedLog, {onLeave: function (args) {send("AlignReservedLog");}});
+
+var AllocReservedLog = Module.findExportByName("clfsw32.dll", "AllocReservedLog")
+Interceptor.attach(AllocReservedLog, {onLeave: function (args) {send("AllocReservedLog");}});
+
+var CLFS_LSN_INVALID = Module.findExportByName("clfsw32.dll", "CLFS_LSN_INVALID")
+Interceptor.attach(CLFS_LSN_INVALID, {onLeave: function (args) {send("CLFS_LSN_INVALID");}});
+
+var CLFS_LSN_NULL = Module.findExportByName("clfsw32.dll", "CLFS_LSN_NULL")
+Interceptor.attach(CLFS_LSN_NULL, {onLeave: function (args) {send("CLFS_LSN_NULL");}});
+
+var CloseAndResetLogFile = Module.findExportByName("clfsw32.dll", "CloseAndResetLogFile")
+Interceptor.attach(CloseAndResetLogFile, {onLeave: function (args) {send("CloseAndResetLogFile");}});
+
+var CreateLogContainerScanContext = Module.findExportByName("clfsw32.dll", "CreateLogContainerScanContext")
+Interceptor.attach(CreateLogContainerScanContext, {onLeave: function (args) {send("CreateLogContainerScanContext");}});
+
+var CreateLogFile = Module.findExportByName("clfsw32.dll", "CreateLogFile")
+Interceptor.attach(CreateLogFile, {onLeave: function (args) {send("CreateLogFile");}});
+
+var CreateLogMarshallingArea = Module.findExportByName("clfsw32.dll", "CreateLogMarshallingArea")
+Interceptor.attach(CreateLogMarshallingArea, {onLeave: function (args) {send("CreateLogMarshallingArea");}});
+
+var DeleteLogByHandle = Module.findExportByName("clfsw32.dll", "DeleteLogByHandle")
+Interceptor.attach(DeleteLogByHandle, {onLeave: function (args) {send("DeleteLogByHandle");}});
+
+var DeleteLogFile = Module.findExportByName("clfsw32.dll", "DeleteLogFile")
+Interceptor.attach(DeleteLogFile, {onLeave: function (args) {send("DeleteLogFile");}});
+
+var DeleteLogMarshallingArea = Module.findExportByName("clfsw32.dll", "DeleteLogMarshallingArea")
+Interceptor.attach(DeleteLogMarshallingArea, {onLeave: function (args) {send("DeleteLogMarshallingArea");}});
+
+var DeregisterManageableLogClient = Module.findExportByName("clfsw32.dll", "DeregisterManageableLogClient")
+Interceptor.attach(DeregisterManageableLogClient, {onLeave: function (args) {send("DeregisterManageableLogClient");}});
+
+var DumpLogRecords = Module.findExportByName("clfsw32.dll", "DumpLogRecords")
+Interceptor.attach(DumpLogRecords, {onLeave: function (args) {send("DumpLogRecords");}});
+
+var FlushLogBuffers = Module.findExportByName("clfsw32.dll", "FlushLogBuffers")
+Interceptor.attach(FlushLogBuffers, {onLeave: function (args) {send("FlushLogBuffers");}});
+
+var FlushLogToLsn = Module.findExportByName("clfsw32.dll", "FlushLogToLsn")
+Interceptor.attach(FlushLogToLsn, {onLeave: function (args) {send("FlushLogToLsn");}});
+
+var FreeReservedLog = Module.findExportByName("clfsw32.dll", "FreeReservedLog")
+Interceptor.attach(FreeReservedLog, {onLeave: function (args) {send("FreeReservedLog");}});
+
+var GetLogContainerName = Module.findExportByName("clfsw32.dll", "GetLogContainerName")
+Interceptor.attach(GetLogContainerName, {onLeave: function (args) {send("GetLogContainerName");}});
+
+var GetLogFileInformation = Module.findExportByName("clfsw32.dll", "GetLogFileInformation")
+Interceptor.attach(GetLogFileInformation, {onLeave: function (args) {send("GetLogFileInformation");}});
+
+var GetLogIoStatistics = Module.findExportByName("clfsw32.dll", "GetLogIoStatistics")
+Interceptor.attach(GetLogIoStatistics, {onLeave: function (args) {send("GetLogIoStatistics");}});
+
+var GetLogReservationInfo = Module.findExportByName("clfsw32.dll", "GetLogReservationInfo")
+Interceptor.attach(GetLogReservationInfo, {onLeave: function (args) {send("GetLogReservationInfo");}});
+
+var GetNextLogArchiveExtent = Module.findExportByName("clfsw32.dll", "GetNextLogArchiveExtent")
+Interceptor.attach(GetNextLogArchiveExtent, {onLeave: function (args) {send("GetNextLogArchiveExtent");}});
+
+var HandleLogFull = Module.findExportByName("clfsw32.dll", "HandleLogFull")
+Interceptor.attach(HandleLogFull, {onLeave: function (args) {send("HandleLogFull");}});
+
+var InstallLogPolicy = Module.findExportByName("clfsw32.dll", "InstallLogPolicy")
+Interceptor.attach(InstallLogPolicy, {onLeave: function (args) {send("InstallLogPolicy");}});
+
+var LogTailAdvanceFailure = Module.findExportByName("clfsw32.dll", "LogTailAdvanceFailure")
+Interceptor.attach(LogTailAdvanceFailure, {onLeave: function (args) {send("LogTailAdvanceFailure");}});
+
+var LsnBlockOffset = Module.findExportByName("clfsw32.dll", "LsnBlockOffset")
+Interceptor.attach(LsnBlockOffset, {onLeave: function (args) {send("LsnBlockOffset");}});
+
+var LsnContainer = Module.findExportByName("clfsw32.dll", "LsnContainer")
+Interceptor.attach(LsnContainer, {onLeave: function (args) {send("LsnContainer");}});
+
+var LsnCreate = Module.findExportByName("clfsw32.dll", "LsnCreate")
+Interceptor.attach(LsnCreate, {onLeave: function (args) {send("LsnCreate");}});
+
+var LsnDecrement = Module.findExportByName("clfsw32.dll", "LsnDecrement")
+Interceptor.attach(LsnDecrement, {onLeave: function (args) {send("LsnDecrement");}});
+
+var LsnEqual = Module.findExportByName("clfsw32.dll", "LsnEqual")
+Interceptor.attach(LsnEqual, {onLeave: function (args) {send("LsnEqual");}});
+
+var LsnGreater = Module.findExportByName("clfsw32.dll", "LsnGreater")
+Interceptor.attach(LsnGreater, {onLeave: function (args) {send("LsnGreater");}});
+
+var LsnIncrement = Module.findExportByName("clfsw32.dll", "LsnIncrement")
+Interceptor.attach(LsnIncrement, {onLeave: function (args) {send("LsnIncrement");}});
+
+var LsnInvalid = Module.findExportByName("clfsw32.dll", "LsnInvalid")
+Interceptor.attach(LsnInvalid, {onLeave: function (args) {send("LsnInvalid");}});
+
+var LsnLess = Module.findExportByName("clfsw32.dll", "LsnLess")
+Interceptor.attach(LsnLess, {onLeave: function (args) {send("LsnLess");}});
+
+var LsnNull = Module.findExportByName("clfsw32.dll", "LsnNull")
+Interceptor.attach(LsnNull, {onLeave: function (args) {send("LsnNull");}});
+
+var LsnRecordSequence = Module.findExportByName("clfsw32.dll", "LsnRecordSequence")
+Interceptor.attach(LsnRecordSequence, {onLeave: function (args) {send("LsnRecordSequence");}});
+
+var PrepareLogArchive = Module.findExportByName("clfsw32.dll", "PrepareLogArchive")
+Interceptor.attach(PrepareLogArchive, {onLeave: function (args) {send("PrepareLogArchive");}});
+
+var QueryLogPolicy = Module.findExportByName("clfsw32.dll", "QueryLogPolicy")
+Interceptor.attach(QueryLogPolicy, {onLeave: function (args) {send("QueryLogPolicy");}});
+
+var ReadLogArchiveMetadata = Module.findExportByName("clfsw32.dll", "ReadLogArchiveMetadata")
+Interceptor.attach(ReadLogArchiveMetadata, {onLeave: function (args) {send("ReadLogArchiveMetadata");}});
+
+var ReadLogNotification = Module.findExportByName("clfsw32.dll", "ReadLogNotification")
+Interceptor.attach(ReadLogNotification, {onLeave: function (args) {send("ReadLogNotification");}});
+
+var ReadLogRecord = Module.findExportByName("clfsw32.dll", "ReadLogRecord")
+Interceptor.attach(ReadLogRecord, {onLeave: function (args) {send("ReadLogRecord");}});
+
+var ReadLogRestartArea = Module.findExportByName("clfsw32.dll", "ReadLogRestartArea")
+Interceptor.attach(ReadLogRestartArea, {onLeave: function (args) {send("ReadLogRestartArea");}});
+
+var ReadNextLogRecord = Module.findExportByName("clfsw32.dll", "ReadNextLogRecord")
+Interceptor.attach(ReadNextLogRecord, {onLeave: function (args) {send("ReadNextLogRecord");}});
+
+var ReadPreviousLogRestartArea = Module.findExportByName("clfsw32.dll", "ReadPreviousLogRestartArea")
+Interceptor.attach(ReadPreviousLogRestartArea, {onLeave: function (args) {send("ReadPreviousLogRestartArea");}});
+
+var RegisterForLogWriteNotification = Module.findExportByName("clfsw32.dll", "RegisterForLogWriteNotification")
+Interceptor.attach(RegisterForLogWriteNotification, {onLeave: function (args) {send("RegisterForLogWriteNotification");}});
+
+var RegisterManageableLogClient = Module.findExportByName("clfsw32.dll", "RegisterManageableLogClient")
+Interceptor.attach(RegisterManageableLogClient, {onLeave: function (args) {send("RegisterManageableLogClient");}});
+
+var RemoveLogContainer = Module.findExportByName("clfsw32.dll", "RemoveLogContainer")
+Interceptor.attach(RemoveLogContainer, {onLeave: function (args) {send("RemoveLogContainer");}});
+
+var RemoveLogContainerSet = Module.findExportByName("clfsw32.dll", "RemoveLogContainerSet")
+Interceptor.attach(RemoveLogContainerSet, {onLeave: function (args) {send("RemoveLogContainerSet");}});
+
+var RemoveLogPolicy = Module.findExportByName("clfsw32.dll", "RemoveLogPolicy")
+Interceptor.attach(RemoveLogPolicy, {onLeave: function (args) {send("RemoveLogPolicy");}});
+
+var ReserveAndAppendLog = Module.findExportByName("clfsw32.dll", "ReserveAndAppendLog")
+Interceptor.attach(ReserveAndAppendLog, {onLeave: function (args) {send("ReserveAndAppendLog");}});
+
+var ReserveAndAppendLogAligned = Module.findExportByName("clfsw32.dll", "ReserveAndAppendLogAligned")
+Interceptor.attach(ReserveAndAppendLogAligned, {onLeave: function (args) {send("ReserveAndAppendLogAligned");}});
+
+var ScanLogContainers = Module.findExportByName("clfsw32.dll", "ScanLogContainers")
+Interceptor.attach(ScanLogContainers, {onLeave: function (args) {send("ScanLogContainers");}});
+
+var SetEndOfLog = Module.findExportByName("clfsw32.dll", "SetEndOfLog")
+Interceptor.attach(SetEndOfLog, {onLeave: function (args) {send("SetEndOfLog");}});
+
+var SetLogArchiveMode = Module.findExportByName("clfsw32.dll", "SetLogArchiveMode")
+Interceptor.attach(SetLogArchiveMode, {onLeave: function (args) {send("SetLogArchiveMode");}});
+
+var SetLogArchiveTail = Module.findExportByName("clfsw32.dll", "SetLogArchiveTail")
+Interceptor.attach(SetLogArchiveTail, {onLeave: function (args) {send("SetLogArchiveTail");}});
+
+var SetLogFileSizeWithPolicy = Module.findExportByName("clfsw32.dll", "SetLogFileSizeWithPolicy")
+Interceptor.attach(SetLogFileSizeWithPolicy, {onLeave: function (args) {send("SetLogFileSizeWithPolicy");}});
+
+var TerminateLogArchive = Module.findExportByName("clfsw32.dll", "TerminateLogArchive")
+Interceptor.attach(TerminateLogArchive, {onLeave: function (args) {send("TerminateLogArchive");}});
+
+var TerminateReadLog = Module.findExportByName("clfsw32.dll", "TerminateReadLog")
+Interceptor.attach(TerminateReadLog, {onLeave: function (args) {send("TerminateReadLog");}});
+
+var TruncateLog = Module.findExportByName("clfsw32.dll", "TruncateLog")
+Interceptor.attach(TruncateLog, {onLeave: function (args) {send("TruncateLog");}});
+
+var ValidateLog = Module.findExportByName("clfsw32.dll", "ValidateLog")
+Interceptor.attach(ValidateLog, {onLeave: function (args) {send("ValidateLog");}});
+
+var WriteLogRestartArea = Module.findExportByName("clfsw32.dll", "WriteLogRestartArea")
+Interceptor.attach(WriteLogRestartArea, {onLeave: function (args) {send("WriteLogRestartArea");}});
+

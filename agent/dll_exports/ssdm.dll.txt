@@ -1,0 +1,3 @@
+var s_RequestHrtfData = Module.findExportByName("ssdm.dll", "s_RequestHrtfData")
+Interceptor.attach(s_RequestHrtfData, {onLeave: function (args) {send("s_RequestHrtfData");}});
+

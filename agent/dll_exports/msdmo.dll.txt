@@ -1,0 +1,45 @@
+var DMOEnum = Module.findExportByName("msdmo.dll", "DMOEnum")
+Interceptor.attach(DMOEnum, {onLeave: function (args) {send("DMOEnum");}});
+
+var DMOGetName = Module.findExportByName("msdmo.dll", "DMOGetName")
+Interceptor.attach(DMOGetName, {onLeave: function (args) {send("DMOGetName");}});
+
+var DMOGetTypes = Module.findExportByName("msdmo.dll", "DMOGetTypes")
+Interceptor.attach(DMOGetTypes, {onLeave: function (args) {send("DMOGetTypes");}});
+
+var DMOGuidToStrA = Module.findExportByName("msdmo.dll", "DMOGuidToStrA")
+Interceptor.attach(DMOGuidToStrA, {onLeave: function (args) {send("DMOGuidToStrA");}});
+
+var DMOGuidToStrW = Module.findExportByName("msdmo.dll", "DMOGuidToStrW")
+Interceptor.attach(DMOGuidToStrW, {onLeave: function (args) {send("DMOGuidToStrW");}});
+
+var DMORegister = Module.findExportByName("msdmo.dll", "DMORegister")
+Interceptor.attach(DMORegister, {onLeave: function (args) {send("DMORegister");}});
+
+var DMOStrToGuidA = Module.findExportByName("msdmo.dll", "DMOStrToGuidA")
+Interceptor.attach(DMOStrToGuidA, {onLeave: function (args) {send("DMOStrToGuidA");}});
+
+var DMOStrToGuidW = Module.findExportByName("msdmo.dll", "DMOStrToGuidW")
+Interceptor.attach(DMOStrToGuidW, {onLeave: function (args) {send("DMOStrToGuidW");}});
+
+var DMOUnregister = Module.findExportByName("msdmo.dll", "DMOUnregister")
+Interceptor.attach(DMOUnregister, {onLeave: function (args) {send("DMOUnregister");}});
+
+var MoCopyMediaType = Module.findExportByName("msdmo.dll", "MoCopyMediaType")
+Interceptor.attach(MoCopyMediaType, {onLeave: function (args) {send("MoCopyMediaType");}});
+
+var MoCreateMediaType = Module.findExportByName("msdmo.dll", "MoCreateMediaType")
+Interceptor.attach(MoCreateMediaType, {onLeave: function (args) {send("MoCreateMediaType");}});
+
+var MoDeleteMediaType = Module.findExportByName("msdmo.dll", "MoDeleteMediaType")
+Interceptor.attach(MoDeleteMediaType, {onLeave: function (args) {send("MoDeleteMediaType");}});
+
+var MoDuplicateMediaType = Module.findExportByName("msdmo.dll", "MoDuplicateMediaType")
+Interceptor.attach(MoDuplicateMediaType, {onLeave: function (args) {send("MoDuplicateMediaType");}});
+
+var MoFreeMediaType = Module.findExportByName("msdmo.dll", "MoFreeMediaType")
+Interceptor.attach(MoFreeMediaType, {onLeave: function (args) {send("MoFreeMediaType");}});
+
+var MoInitMediaType = Module.findExportByName("msdmo.dll", "MoInitMediaType")
+Interceptor.attach(MoInitMediaType, {onLeave: function (args) {send("MoInitMediaType");}});
+

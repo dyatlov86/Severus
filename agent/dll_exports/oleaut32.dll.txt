@@ -1,0 +1,1275 @@
+var BSTR_UserFree = Module.findExportByName("oleaut32.dll", "BSTR_UserFree")
+Interceptor.attach(BSTR_UserFree, {onLeave: function (args) {send("BSTR_UserFree");}});
+
+var BSTR_UserFree64 = Module.findExportByName("oleaut32.dll", "BSTR_UserFree64")
+Interceptor.attach(BSTR_UserFree64, {onLeave: function (args) {send("BSTR_UserFree64");}});
+
+var BSTR_UserMarshal = Module.findExportByName("oleaut32.dll", "BSTR_UserMarshal")
+Interceptor.attach(BSTR_UserMarshal, {onLeave: function (args) {send("BSTR_UserMarshal");}});
+
+var BSTR_UserMarshal64 = Module.findExportByName("oleaut32.dll", "BSTR_UserMarshal64")
+Interceptor.attach(BSTR_UserMarshal64, {onLeave: function (args) {send("BSTR_UserMarshal64");}});
+
+var BSTR_UserSize = Module.findExportByName("oleaut32.dll", "BSTR_UserSize")
+Interceptor.attach(BSTR_UserSize, {onLeave: function (args) {send("BSTR_UserSize");}});
+
+var BSTR_UserSize64 = Module.findExportByName("oleaut32.dll", "BSTR_UserSize64")
+Interceptor.attach(BSTR_UserSize64, {onLeave: function (args) {send("BSTR_UserSize64");}});
+
+var BSTR_UserUnmarshal = Module.findExportByName("oleaut32.dll", "BSTR_UserUnmarshal")
+Interceptor.attach(BSTR_UserUnmarshal, {onLeave: function (args) {send("BSTR_UserUnmarshal");}});
+
+var BSTR_UserUnmarshal64 = Module.findExportByName("oleaut32.dll", "BSTR_UserUnmarshal64")
+Interceptor.attach(BSTR_UserUnmarshal64, {onLeave: function (args) {send("BSTR_UserUnmarshal64");}});
+
+var BstrFromVector = Module.findExportByName("oleaut32.dll", "BstrFromVector")
+Interceptor.attach(BstrFromVector, {onLeave: function (args) {send("BstrFromVector");}});
+
+var ClearCustData = Module.findExportByName("oleaut32.dll", "ClearCustData")
+Interceptor.attach(ClearCustData, {onLeave: function (args) {send("ClearCustData");}});
+
+var CreateDispTypeInfo = Module.findExportByName("oleaut32.dll", "CreateDispTypeInfo")
+Interceptor.attach(CreateDispTypeInfo, {onLeave: function (args) {send("CreateDispTypeInfo");}});
+
+var CreateErrorInfo = Module.findExportByName("oleaut32.dll", "CreateErrorInfo")
+Interceptor.attach(CreateErrorInfo, {onLeave: function (args) {send("CreateErrorInfo");}});
+
+var CreateStdDispatch = Module.findExportByName("oleaut32.dll", "CreateStdDispatch")
+Interceptor.attach(CreateStdDispatch, {onLeave: function (args) {send("CreateStdDispatch");}});
+
+var CreateTypeLib = Module.findExportByName("oleaut32.dll", "CreateTypeLib")
+Interceptor.attach(CreateTypeLib, {onLeave: function (args) {send("CreateTypeLib");}});
+
+var CreateTypeLib2 = Module.findExportByName("oleaut32.dll", "CreateTypeLib2")
+Interceptor.attach(CreateTypeLib2, {onLeave: function (args) {send("CreateTypeLib2");}});
+
+var DispCallFunc = Module.findExportByName("oleaut32.dll", "DispCallFunc")
+Interceptor.attach(DispCallFunc, {onLeave: function (args) {send("DispCallFunc");}});
+
+var DispGetIDsOfNames = Module.findExportByName("oleaut32.dll", "DispGetIDsOfNames")
+Interceptor.attach(DispGetIDsOfNames, {onLeave: function (args) {send("DispGetIDsOfNames");}});
+
+var DispGetParam = Module.findExportByName("oleaut32.dll", "DispGetParam")
+Interceptor.attach(DispGetParam, {onLeave: function (args) {send("DispGetParam");}});
+
+var DispInvoke = Module.findExportByName("oleaut32.dll", "DispInvoke")
+Interceptor.attach(DispInvoke, {onLeave: function (args) {send("DispInvoke");}});
+
+var DllCanUnloadNow = Module.findExportByName("oleaut32.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("oleaut32.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("oleaut32.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("oleaut32.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DosDateTimeToVariantTime = Module.findExportByName("oleaut32.dll", "DosDateTimeToVariantTime")
+Interceptor.attach(DosDateTimeToVariantTime, {onLeave: function (args) {send("DosDateTimeToVariantTime");}});
+
+var GetActiveObject = Module.findExportByName("oleaut32.dll", "GetActiveObject")
+Interceptor.attach(GetActiveObject, {onLeave: function (args) {send("GetActiveObject");}});
+
+var GetAltMonthNames = Module.findExportByName("oleaut32.dll", "GetAltMonthNames")
+Interceptor.attach(GetAltMonthNames, {onLeave: function (args) {send("GetAltMonthNames");}});
+
+var GetErrorInfo = Module.findExportByName("oleaut32.dll", "GetErrorInfo")
+Interceptor.attach(GetErrorInfo, {onLeave: function (args) {send("GetErrorInfo");}});
+
+var GetRecordInfoFromGuids = Module.findExportByName("oleaut32.dll", "GetRecordInfoFromGuids")
+Interceptor.attach(GetRecordInfoFromGuids, {onLeave: function (args) {send("GetRecordInfoFromGuids");}});
+
+var GetRecordInfoFromTypeInfo = Module.findExportByName("oleaut32.dll", "GetRecordInfoFromTypeInfo")
+Interceptor.attach(GetRecordInfoFromTypeInfo, {onLeave: function (args) {send("GetRecordInfoFromTypeInfo");}});
+
+var GetVarConversionLocaleSetting = Module.findExportByName("oleaut32.dll", "GetVarConversionLocaleSetting")
+Interceptor.attach(GetVarConversionLocaleSetting, {onLeave: function (args) {send("GetVarConversionLocaleSetting");}});
+
+var HWND_UserFree = Module.findExportByName("oleaut32.dll", "HWND_UserFree")
+Interceptor.attach(HWND_UserFree, {onLeave: function (args) {send("HWND_UserFree");}});
+
+var HWND_UserFree64 = Module.findExportByName("oleaut32.dll", "HWND_UserFree64")
+Interceptor.attach(HWND_UserFree64, {onLeave: function (args) {send("HWND_UserFree64");}});
+
+var HWND_UserMarshal = Module.findExportByName("oleaut32.dll", "HWND_UserMarshal")
+Interceptor.attach(HWND_UserMarshal, {onLeave: function (args) {send("HWND_UserMarshal");}});
+
+var HWND_UserMarshal64 = Module.findExportByName("oleaut32.dll", "HWND_UserMarshal64")
+Interceptor.attach(HWND_UserMarshal64, {onLeave: function (args) {send("HWND_UserMarshal64");}});
+
+var HWND_UserSize = Module.findExportByName("oleaut32.dll", "HWND_UserSize")
+Interceptor.attach(HWND_UserSize, {onLeave: function (args) {send("HWND_UserSize");}});
+
+var HWND_UserSize64 = Module.findExportByName("oleaut32.dll", "HWND_UserSize64")
+Interceptor.attach(HWND_UserSize64, {onLeave: function (args) {send("HWND_UserSize64");}});
+
+var HWND_UserUnmarshal = Module.findExportByName("oleaut32.dll", "HWND_UserUnmarshal")
+Interceptor.attach(HWND_UserUnmarshal, {onLeave: function (args) {send("HWND_UserUnmarshal");}});
+
+var HWND_UserUnmarshal64 = Module.findExportByName("oleaut32.dll", "HWND_UserUnmarshal64")
+Interceptor.attach(HWND_UserUnmarshal64, {onLeave: function (args) {send("HWND_UserUnmarshal64");}});
+
+var LHashValOfNameSys = Module.findExportByName("oleaut32.dll", "LHashValOfNameSys")
+Interceptor.attach(LHashValOfNameSys, {onLeave: function (args) {send("LHashValOfNameSys");}});
+
+var LHashValOfNameSysA = Module.findExportByName("oleaut32.dll", "LHashValOfNameSysA")
+Interceptor.attach(LHashValOfNameSysA, {onLeave: function (args) {send("LHashValOfNameSysA");}});
+
+var LPSAFEARRAY_Marshal = Module.findExportByName("oleaut32.dll", "LPSAFEARRAY_Marshal")
+Interceptor.attach(LPSAFEARRAY_Marshal, {onLeave: function (args) {send("LPSAFEARRAY_Marshal");}});
+
+var LPSAFEARRAY_Size = Module.findExportByName("oleaut32.dll", "LPSAFEARRAY_Size")
+Interceptor.attach(LPSAFEARRAY_Size, {onLeave: function (args) {send("LPSAFEARRAY_Size");}});
+
+var LPSAFEARRAY_Unmarshal = Module.findExportByName("oleaut32.dll", "LPSAFEARRAY_Unmarshal")
+Interceptor.attach(LPSAFEARRAY_Unmarshal, {onLeave: function (args) {send("LPSAFEARRAY_Unmarshal");}});
+
+var LPSAFEARRAY_UserFree = Module.findExportByName("oleaut32.dll", "LPSAFEARRAY_UserFree")
+Interceptor.attach(LPSAFEARRAY_UserFree, {onLeave: function (args) {send("LPSAFEARRAY_UserFree");}});
+
+var LPSAFEARRAY_UserFree64 = Module.findExportByName("oleaut32.dll", "LPSAFEARRAY_UserFree64")
+Interceptor.attach(LPSAFEARRAY_UserFree64, {onLeave: function (args) {send("LPSAFEARRAY_UserFree64");}});
+
+var LPSAFEARRAY_UserMarshal = Module.findExportByName("oleaut32.dll", "LPSAFEARRAY_UserMarshal")
+Interceptor.attach(LPSAFEARRAY_UserMarshal, {onLeave: function (args) {send("LPSAFEARRAY_UserMarshal");}});
+
+var LPSAFEARRAY_UserMarshal64 = Module.findExportByName("oleaut32.dll", "LPSAFEARRAY_UserMarshal64")
+Interceptor.attach(LPSAFEARRAY_UserMarshal64, {onLeave: function (args) {send("LPSAFEARRAY_UserMarshal64");}});
+
+var LPSAFEARRAY_UserSize = Module.findExportByName("oleaut32.dll", "LPSAFEARRAY_UserSize")
+Interceptor.attach(LPSAFEARRAY_UserSize, {onLeave: function (args) {send("LPSAFEARRAY_UserSize");}});
+
+var LPSAFEARRAY_UserSize64 = Module.findExportByName("oleaut32.dll", "LPSAFEARRAY_UserSize64")
+Interceptor.attach(LPSAFEARRAY_UserSize64, {onLeave: function (args) {send("LPSAFEARRAY_UserSize64");}});
+
+var LPSAFEARRAY_UserUnmarshal = Module.findExportByName("oleaut32.dll", "LPSAFEARRAY_UserUnmarshal")
+Interceptor.attach(LPSAFEARRAY_UserUnmarshal, {onLeave: function (args) {send("LPSAFEARRAY_UserUnmarshal");}});
+
+var LPSAFEARRAY_UserUnmarshal64 = Module.findExportByName("oleaut32.dll", "LPSAFEARRAY_UserUnmarshal64")
+Interceptor.attach(LPSAFEARRAY_UserUnmarshal64, {onLeave: function (args) {send("LPSAFEARRAY_UserUnmarshal64");}});
+
+var LoadRegTypeLib = Module.findExportByName("oleaut32.dll", "LoadRegTypeLib")
+Interceptor.attach(LoadRegTypeLib, {onLeave: function (args) {send("LoadRegTypeLib");}});
+
+var LoadTypeLib = Module.findExportByName("oleaut32.dll", "LoadTypeLib")
+Interceptor.attach(LoadTypeLib, {onLeave: function (args) {send("LoadTypeLib");}});
+
+var LoadTypeLibEx = Module.findExportByName("oleaut32.dll", "LoadTypeLibEx")
+Interceptor.attach(LoadTypeLibEx, {onLeave: function (args) {send("LoadTypeLibEx");}});
+
+var OACleanup = Module.findExportByName("oleaut32.dll", "OACleanup")
+Interceptor.attach(OACleanup, {onLeave: function (args) {send("OACleanup");}});
+
+var OACreateTypeLib2 = Module.findExportByName("oleaut32.dll", "OACreateTypeLib2")
+Interceptor.attach(OACreateTypeLib2, {onLeave: function (args) {send("OACreateTypeLib2");}});
+
+var OaBuildVersion = Module.findExportByName("oleaut32.dll", "OaBuildVersion")
+Interceptor.attach(OaBuildVersion, {onLeave: function (args) {send("OaBuildVersion");}});
+
+var OaEnablePerUserTLibRegistration = Module.findExportByName("oleaut32.dll", "OaEnablePerUserTLibRegistration")
+Interceptor.attach(OaEnablePerUserTLibRegistration, {onLeave: function (args) {send("OaEnablePerUserTLibRegistration");}});
+
+var OleCreateFontIndirect = Module.findExportByName("oleaut32.dll", "OleCreateFontIndirect")
+Interceptor.attach(OleCreateFontIndirect, {onLeave: function (args) {send("OleCreateFontIndirect");}});
+
+var OleCreatePictureIndirect = Module.findExportByName("oleaut32.dll", "OleCreatePictureIndirect")
+Interceptor.attach(OleCreatePictureIndirect, {onLeave: function (args) {send("OleCreatePictureIndirect");}});
+
+var OleCreatePropertyFrame = Module.findExportByName("oleaut32.dll", "OleCreatePropertyFrame")
+Interceptor.attach(OleCreatePropertyFrame, {onLeave: function (args) {send("OleCreatePropertyFrame");}});
+
+var OleCreatePropertyFrameIndirect = Module.findExportByName("oleaut32.dll", "OleCreatePropertyFrameIndirect")
+Interceptor.attach(OleCreatePropertyFrameIndirect, {onLeave: function (args) {send("OleCreatePropertyFrameIndirect");}});
+
+var OleIconToCursor = Module.findExportByName("oleaut32.dll", "OleIconToCursor")
+Interceptor.attach(OleIconToCursor, {onLeave: function (args) {send("OleIconToCursor");}});
+
+var OleLoadPicture = Module.findExportByName("oleaut32.dll", "OleLoadPicture")
+Interceptor.attach(OleLoadPicture, {onLeave: function (args) {send("OleLoadPicture");}});
+
+var OleLoadPictureEx = Module.findExportByName("oleaut32.dll", "OleLoadPictureEx")
+Interceptor.attach(OleLoadPictureEx, {onLeave: function (args) {send("OleLoadPictureEx");}});
+
+var OleLoadPictureFile = Module.findExportByName("oleaut32.dll", "OleLoadPictureFile")
+Interceptor.attach(OleLoadPictureFile, {onLeave: function (args) {send("OleLoadPictureFile");}});
+
+var OleLoadPictureFileEx = Module.findExportByName("oleaut32.dll", "OleLoadPictureFileEx")
+Interceptor.attach(OleLoadPictureFileEx, {onLeave: function (args) {send("OleLoadPictureFileEx");}});
+
+var OleLoadPicturePath = Module.findExportByName("oleaut32.dll", "OleLoadPicturePath")
+Interceptor.attach(OleLoadPicturePath, {onLeave: function (args) {send("OleLoadPicturePath");}});
+
+var OleSavePictureFile = Module.findExportByName("oleaut32.dll", "OleSavePictureFile")
+Interceptor.attach(OleSavePictureFile, {onLeave: function (args) {send("OleSavePictureFile");}});
+
+var OleTranslateColor = Module.findExportByName("oleaut32.dll", "OleTranslateColor")
+Interceptor.attach(OleTranslateColor, {onLeave: function (args) {send("OleTranslateColor");}});
+
+var QueryPathOfRegTypeLib = Module.findExportByName("oleaut32.dll", "QueryPathOfRegTypeLib")
+Interceptor.attach(QueryPathOfRegTypeLib, {onLeave: function (args) {send("QueryPathOfRegTypeLib");}});
+
+var RegisterActiveObject = Module.findExportByName("oleaut32.dll", "RegisterActiveObject")
+Interceptor.attach(RegisterActiveObject, {onLeave: function (args) {send("RegisterActiveObject");}});
+
+var RegisterTypeLib = Module.findExportByName("oleaut32.dll", "RegisterTypeLib")
+Interceptor.attach(RegisterTypeLib, {onLeave: function (args) {send("RegisterTypeLib");}});
+
+var RegisterTypeLibForUser = Module.findExportByName("oleaut32.dll", "RegisterTypeLibForUser")
+Interceptor.attach(RegisterTypeLibForUser, {onLeave: function (args) {send("RegisterTypeLibForUser");}});
+
+var RevokeActiveObject = Module.findExportByName("oleaut32.dll", "RevokeActiveObject")
+Interceptor.attach(RevokeActiveObject, {onLeave: function (args) {send("RevokeActiveObject");}});
+
+var SafeArrayAccessData = Module.findExportByName("oleaut32.dll", "SafeArrayAccessData")
+Interceptor.attach(SafeArrayAccessData, {onLeave: function (args) {send("SafeArrayAccessData");}});
+
+var SafeArrayAddRef = Module.findExportByName("oleaut32.dll", "SafeArrayAddRef")
+Interceptor.attach(SafeArrayAddRef, {onLeave: function (args) {send("SafeArrayAddRef");}});
+
+var SafeArrayAllocData = Module.findExportByName("oleaut32.dll", "SafeArrayAllocData")
+Interceptor.attach(SafeArrayAllocData, {onLeave: function (args) {send("SafeArrayAllocData");}});
+
+var SafeArrayAllocDescriptor = Module.findExportByName("oleaut32.dll", "SafeArrayAllocDescriptor")
+Interceptor.attach(SafeArrayAllocDescriptor, {onLeave: function (args) {send("SafeArrayAllocDescriptor");}});
+
+var SafeArrayAllocDescriptorEx = Module.findExportByName("oleaut32.dll", "SafeArrayAllocDescriptorEx")
+Interceptor.attach(SafeArrayAllocDescriptorEx, {onLeave: function (args) {send("SafeArrayAllocDescriptorEx");}});
+
+var SafeArrayCopy = Module.findExportByName("oleaut32.dll", "SafeArrayCopy")
+Interceptor.attach(SafeArrayCopy, {onLeave: function (args) {send("SafeArrayCopy");}});
+
+var SafeArrayCopyData = Module.findExportByName("oleaut32.dll", "SafeArrayCopyData")
+Interceptor.attach(SafeArrayCopyData, {onLeave: function (args) {send("SafeArrayCopyData");}});
+
+var SafeArrayCreate = Module.findExportByName("oleaut32.dll", "SafeArrayCreate")
+Interceptor.attach(SafeArrayCreate, {onLeave: function (args) {send("SafeArrayCreate");}});
+
+var SafeArrayCreateEx = Module.findExportByName("oleaut32.dll", "SafeArrayCreateEx")
+Interceptor.attach(SafeArrayCreateEx, {onLeave: function (args) {send("SafeArrayCreateEx");}});
+
+var SafeArrayCreateVector = Module.findExportByName("oleaut32.dll", "SafeArrayCreateVector")
+Interceptor.attach(SafeArrayCreateVector, {onLeave: function (args) {send("SafeArrayCreateVector");}});
+
+var SafeArrayCreateVectorEx = Module.findExportByName("oleaut32.dll", "SafeArrayCreateVectorEx")
+Interceptor.attach(SafeArrayCreateVectorEx, {onLeave: function (args) {send("SafeArrayCreateVectorEx");}});
+
+var SafeArrayDestroy = Module.findExportByName("oleaut32.dll", "SafeArrayDestroy")
+Interceptor.attach(SafeArrayDestroy, {onLeave: function (args) {send("SafeArrayDestroy");}});
+
+var SafeArrayDestroyData = Module.findExportByName("oleaut32.dll", "SafeArrayDestroyData")
+Interceptor.attach(SafeArrayDestroyData, {onLeave: function (args) {send("SafeArrayDestroyData");}});
+
+var SafeArrayDestroyDescriptor = Module.findExportByName("oleaut32.dll", "SafeArrayDestroyDescriptor")
+Interceptor.attach(SafeArrayDestroyDescriptor, {onLeave: function (args) {send("SafeArrayDestroyDescriptor");}});
+
+var SafeArrayGetDim = Module.findExportByName("oleaut32.dll", "SafeArrayGetDim")
+Interceptor.attach(SafeArrayGetDim, {onLeave: function (args) {send("SafeArrayGetDim");}});
+
+var SafeArrayGetElement = Module.findExportByName("oleaut32.dll", "SafeArrayGetElement")
+Interceptor.attach(SafeArrayGetElement, {onLeave: function (args) {send("SafeArrayGetElement");}});
+
+var SafeArrayGetElemsize = Module.findExportByName("oleaut32.dll", "SafeArrayGetElemsize")
+Interceptor.attach(SafeArrayGetElemsize, {onLeave: function (args) {send("SafeArrayGetElemsize");}});
+
+var SafeArrayGetIID = Module.findExportByName("oleaut32.dll", "SafeArrayGetIID")
+Interceptor.attach(SafeArrayGetIID, {onLeave: function (args) {send("SafeArrayGetIID");}});
+
+var SafeArrayGetLBound = Module.findExportByName("oleaut32.dll", "SafeArrayGetLBound")
+Interceptor.attach(SafeArrayGetLBound, {onLeave: function (args) {send("SafeArrayGetLBound");}});
+
+var SafeArrayGetRecordInfo = Module.findExportByName("oleaut32.dll", "SafeArrayGetRecordInfo")
+Interceptor.attach(SafeArrayGetRecordInfo, {onLeave: function (args) {send("SafeArrayGetRecordInfo");}});
+
+var SafeArrayGetUBound = Module.findExportByName("oleaut32.dll", "SafeArrayGetUBound")
+Interceptor.attach(SafeArrayGetUBound, {onLeave: function (args) {send("SafeArrayGetUBound");}});
+
+var SafeArrayGetVartype = Module.findExportByName("oleaut32.dll", "SafeArrayGetVartype")
+Interceptor.attach(SafeArrayGetVartype, {onLeave: function (args) {send("SafeArrayGetVartype");}});
+
+var SafeArrayLock = Module.findExportByName("oleaut32.dll", "SafeArrayLock")
+Interceptor.attach(SafeArrayLock, {onLeave: function (args) {send("SafeArrayLock");}});
+
+var SafeArrayPtrOfIndex = Module.findExportByName("oleaut32.dll", "SafeArrayPtrOfIndex")
+Interceptor.attach(SafeArrayPtrOfIndex, {onLeave: function (args) {send("SafeArrayPtrOfIndex");}});
+
+var SafeArrayPutElement = Module.findExportByName("oleaut32.dll", "SafeArrayPutElement")
+Interceptor.attach(SafeArrayPutElement, {onLeave: function (args) {send("SafeArrayPutElement");}});
+
+var SafeArrayRedim = Module.findExportByName("oleaut32.dll", "SafeArrayRedim")
+Interceptor.attach(SafeArrayRedim, {onLeave: function (args) {send("SafeArrayRedim");}});
+
+var SafeArrayReleaseData = Module.findExportByName("oleaut32.dll", "SafeArrayReleaseData")
+Interceptor.attach(SafeArrayReleaseData, {onLeave: function (args) {send("SafeArrayReleaseData");}});
+
+var SafeArrayReleaseDescriptor = Module.findExportByName("oleaut32.dll", "SafeArrayReleaseDescriptor")
+Interceptor.attach(SafeArrayReleaseDescriptor, {onLeave: function (args) {send("SafeArrayReleaseDescriptor");}});
+
+var SafeArraySetIID = Module.findExportByName("oleaut32.dll", "SafeArraySetIID")
+Interceptor.attach(SafeArraySetIID, {onLeave: function (args) {send("SafeArraySetIID");}});
+
+var SafeArraySetRecordInfo = Module.findExportByName("oleaut32.dll", "SafeArraySetRecordInfo")
+Interceptor.attach(SafeArraySetRecordInfo, {onLeave: function (args) {send("SafeArraySetRecordInfo");}});
+
+var SafeArrayUnaccessData = Module.findExportByName("oleaut32.dll", "SafeArrayUnaccessData")
+Interceptor.attach(SafeArrayUnaccessData, {onLeave: function (args) {send("SafeArrayUnaccessData");}});
+
+var SafeArrayUnlock = Module.findExportByName("oleaut32.dll", "SafeArrayUnlock")
+Interceptor.attach(SafeArrayUnlock, {onLeave: function (args) {send("SafeArrayUnlock");}});
+
+var SetErrorInfo = Module.findExportByName("oleaut32.dll", "SetErrorInfo")
+Interceptor.attach(SetErrorInfo, {onLeave: function (args) {send("SetErrorInfo");}});
+
+var SetOaNoCache = Module.findExportByName("oleaut32.dll", "SetOaNoCache")
+Interceptor.attach(SetOaNoCache, {onLeave: function (args) {send("SetOaNoCache");}});
+
+var SetVarConversionLocaleSetting = Module.findExportByName("oleaut32.dll", "SetVarConversionLocaleSetting")
+Interceptor.attach(SetVarConversionLocaleSetting, {onLeave: function (args) {send("SetVarConversionLocaleSetting");}});
+
+var SysAddRefString = Module.findExportByName("oleaut32.dll", "SysAddRefString")
+Interceptor.attach(SysAddRefString, {onLeave: function (args) {send("SysAddRefString");}});
+
+var SysAllocString = Module.findExportByName("oleaut32.dll", "SysAllocString")
+Interceptor.attach(SysAllocString, {onLeave: function (args) {send("SysAllocString");}});
+
+var SysAllocStringByteLen = Module.findExportByName("oleaut32.dll", "SysAllocStringByteLen")
+Interceptor.attach(SysAllocStringByteLen, {onLeave: function (args) {send("SysAllocStringByteLen");}});
+
+var SysAllocStringLen = Module.findExportByName("oleaut32.dll", "SysAllocStringLen")
+Interceptor.attach(SysAllocStringLen, {onLeave: function (args) {send("SysAllocStringLen");}});
+
+var SysFreeString = Module.findExportByName("oleaut32.dll", "SysFreeString")
+Interceptor.attach(SysFreeString, {onLeave: function (args) {send("SysFreeString");}});
+
+var SysReAllocString = Module.findExportByName("oleaut32.dll", "SysReAllocString")
+Interceptor.attach(SysReAllocString, {onLeave: function (args) {send("SysReAllocString");}});
+
+var SysReAllocStringLen = Module.findExportByName("oleaut32.dll", "SysReAllocStringLen")
+Interceptor.attach(SysReAllocStringLen, {onLeave: function (args) {send("SysReAllocStringLen");}});
+
+var SysReleaseString = Module.findExportByName("oleaut32.dll", "SysReleaseString")
+Interceptor.attach(SysReleaseString, {onLeave: function (args) {send("SysReleaseString");}});
+
+var SysStringByteLen = Module.findExportByName("oleaut32.dll", "SysStringByteLen")
+Interceptor.attach(SysStringByteLen, {onLeave: function (args) {send("SysStringByteLen");}});
+
+var SysStringLen = Module.findExportByName("oleaut32.dll", "SysStringLen")
+Interceptor.attach(SysStringLen, {onLeave: function (args) {send("SysStringLen");}});
+
+var SystemTimeToVariantTime = Module.findExportByName("oleaut32.dll", "SystemTimeToVariantTime")
+Interceptor.attach(SystemTimeToVariantTime, {onLeave: function (args) {send("SystemTimeToVariantTime");}});
+
+var UnRegisterTypeLib = Module.findExportByName("oleaut32.dll", "UnRegisterTypeLib")
+Interceptor.attach(UnRegisterTypeLib, {onLeave: function (args) {send("UnRegisterTypeLib");}});
+
+var UnRegisterTypeLibForUser = Module.findExportByName("oleaut32.dll", "UnRegisterTypeLibForUser")
+Interceptor.attach(UnRegisterTypeLibForUser, {onLeave: function (args) {send("UnRegisterTypeLibForUser");}});
+
+var VARIANT_UserFree = Module.findExportByName("oleaut32.dll", "VARIANT_UserFree")
+Interceptor.attach(VARIANT_UserFree, {onLeave: function (args) {send("VARIANT_UserFree");}});
+
+var VARIANT_UserFree64 = Module.findExportByName("oleaut32.dll", "VARIANT_UserFree64")
+Interceptor.attach(VARIANT_UserFree64, {onLeave: function (args) {send("VARIANT_UserFree64");}});
+
+var VARIANT_UserMarshal = Module.findExportByName("oleaut32.dll", "VARIANT_UserMarshal")
+Interceptor.attach(VARIANT_UserMarshal, {onLeave: function (args) {send("VARIANT_UserMarshal");}});
+
+var VARIANT_UserMarshal64 = Module.findExportByName("oleaut32.dll", "VARIANT_UserMarshal64")
+Interceptor.attach(VARIANT_UserMarshal64, {onLeave: function (args) {send("VARIANT_UserMarshal64");}});
+
+var VARIANT_UserSize = Module.findExportByName("oleaut32.dll", "VARIANT_UserSize")
+Interceptor.attach(VARIANT_UserSize, {onLeave: function (args) {send("VARIANT_UserSize");}});
+
+var VARIANT_UserSize64 = Module.findExportByName("oleaut32.dll", "VARIANT_UserSize64")
+Interceptor.attach(VARIANT_UserSize64, {onLeave: function (args) {send("VARIANT_UserSize64");}});
+
+var VARIANT_UserUnmarshal = Module.findExportByName("oleaut32.dll", "VARIANT_UserUnmarshal")
+Interceptor.attach(VARIANT_UserUnmarshal, {onLeave: function (args) {send("VARIANT_UserUnmarshal");}});
+
+var VARIANT_UserUnmarshal64 = Module.findExportByName("oleaut32.dll", "VARIANT_UserUnmarshal64")
+Interceptor.attach(VARIANT_UserUnmarshal64, {onLeave: function (args) {send("VARIANT_UserUnmarshal64");}});
+
+var VarAbs = Module.findExportByName("oleaut32.dll", "VarAbs")
+Interceptor.attach(VarAbs, {onLeave: function (args) {send("VarAbs");}});
+
+var VarAdd = Module.findExportByName("oleaut32.dll", "VarAdd")
+Interceptor.attach(VarAdd, {onLeave: function (args) {send("VarAdd");}});
+
+var VarAnd = Module.findExportByName("oleaut32.dll", "VarAnd")
+Interceptor.attach(VarAnd, {onLeave: function (args) {send("VarAnd");}});
+
+var VarBoolFromCy = Module.findExportByName("oleaut32.dll", "VarBoolFromCy")
+Interceptor.attach(VarBoolFromCy, {onLeave: function (args) {send("VarBoolFromCy");}});
+
+var VarBoolFromDate = Module.findExportByName("oleaut32.dll", "VarBoolFromDate")
+Interceptor.attach(VarBoolFromDate, {onLeave: function (args) {send("VarBoolFromDate");}});
+
+var VarBoolFromDec = Module.findExportByName("oleaut32.dll", "VarBoolFromDec")
+Interceptor.attach(VarBoolFromDec, {onLeave: function (args) {send("VarBoolFromDec");}});
+
+var VarBoolFromDisp = Module.findExportByName("oleaut32.dll", "VarBoolFromDisp")
+Interceptor.attach(VarBoolFromDisp, {onLeave: function (args) {send("VarBoolFromDisp");}});
+
+var VarBoolFromI1 = Module.findExportByName("oleaut32.dll", "VarBoolFromI1")
+Interceptor.attach(VarBoolFromI1, {onLeave: function (args) {send("VarBoolFromI1");}});
+
+var VarBoolFromI2 = Module.findExportByName("oleaut32.dll", "VarBoolFromI2")
+Interceptor.attach(VarBoolFromI2, {onLeave: function (args) {send("VarBoolFromI2");}});
+
+var VarBoolFromI4 = Module.findExportByName("oleaut32.dll", "VarBoolFromI4")
+Interceptor.attach(VarBoolFromI4, {onLeave: function (args) {send("VarBoolFromI4");}});
+
+var VarBoolFromI8 = Module.findExportByName("oleaut32.dll", "VarBoolFromI8")
+Interceptor.attach(VarBoolFromI8, {onLeave: function (args) {send("VarBoolFromI8");}});
+
+var VarBoolFromR4 = Module.findExportByName("oleaut32.dll", "VarBoolFromR4")
+Interceptor.attach(VarBoolFromR4, {onLeave: function (args) {send("VarBoolFromR4");}});
+
+var VarBoolFromR8 = Module.findExportByName("oleaut32.dll", "VarBoolFromR8")
+Interceptor.attach(VarBoolFromR8, {onLeave: function (args) {send("VarBoolFromR8");}});
+
+var VarBoolFromStr = Module.findExportByName("oleaut32.dll", "VarBoolFromStr")
+Interceptor.attach(VarBoolFromStr, {onLeave: function (args) {send("VarBoolFromStr");}});
+
+var VarBoolFromUI1 = Module.findExportByName("oleaut32.dll", "VarBoolFromUI1")
+Interceptor.attach(VarBoolFromUI1, {onLeave: function (args) {send("VarBoolFromUI1");}});
+
+var VarBoolFromUI2 = Module.findExportByName("oleaut32.dll", "VarBoolFromUI2")
+Interceptor.attach(VarBoolFromUI2, {onLeave: function (args) {send("VarBoolFromUI2");}});
+
+var VarBoolFromUI4 = Module.findExportByName("oleaut32.dll", "VarBoolFromUI4")
+Interceptor.attach(VarBoolFromUI4, {onLeave: function (args) {send("VarBoolFromUI4");}});
+
+var VarBoolFromUI8 = Module.findExportByName("oleaut32.dll", "VarBoolFromUI8")
+Interceptor.attach(VarBoolFromUI8, {onLeave: function (args) {send("VarBoolFromUI8");}});
+
+var VarBstrCat = Module.findExportByName("oleaut32.dll", "VarBstrCat")
+Interceptor.attach(VarBstrCat, {onLeave: function (args) {send("VarBstrCat");}});
+
+var VarBstrCmp = Module.findExportByName("oleaut32.dll", "VarBstrCmp")
+Interceptor.attach(VarBstrCmp, {onLeave: function (args) {send("VarBstrCmp");}});
+
+var VarBstrFromBool = Module.findExportByName("oleaut32.dll", "VarBstrFromBool")
+Interceptor.attach(VarBstrFromBool, {onLeave: function (args) {send("VarBstrFromBool");}});
+
+var VarBstrFromCy = Module.findExportByName("oleaut32.dll", "VarBstrFromCy")
+Interceptor.attach(VarBstrFromCy, {onLeave: function (args) {send("VarBstrFromCy");}});
+
+var VarBstrFromDate = Module.findExportByName("oleaut32.dll", "VarBstrFromDate")
+Interceptor.attach(VarBstrFromDate, {onLeave: function (args) {send("VarBstrFromDate");}});
+
+var VarBstrFromDec = Module.findExportByName("oleaut32.dll", "VarBstrFromDec")
+Interceptor.attach(VarBstrFromDec, {onLeave: function (args) {send("VarBstrFromDec");}});
+
+var VarBstrFromDisp = Module.findExportByName("oleaut32.dll", "VarBstrFromDisp")
+Interceptor.attach(VarBstrFromDisp, {onLeave: function (args) {send("VarBstrFromDisp");}});
+
+var VarBstrFromI1 = Module.findExportByName("oleaut32.dll", "VarBstrFromI1")
+Interceptor.attach(VarBstrFromI1, {onLeave: function (args) {send("VarBstrFromI1");}});
+
+var VarBstrFromI2 = Module.findExportByName("oleaut32.dll", "VarBstrFromI2")
+Interceptor.attach(VarBstrFromI2, {onLeave: function (args) {send("VarBstrFromI2");}});
+
+var VarBstrFromI4 = Module.findExportByName("oleaut32.dll", "VarBstrFromI4")
+Interceptor.attach(VarBstrFromI4, {onLeave: function (args) {send("VarBstrFromI4");}});
+
+var VarBstrFromI8 = Module.findExportByName("oleaut32.dll", "VarBstrFromI8")
+Interceptor.attach(VarBstrFromI8, {onLeave: function (args) {send("VarBstrFromI8");}});
+
+var VarBstrFromR4 = Module.findExportByName("oleaut32.dll", "VarBstrFromR4")
+Interceptor.attach(VarBstrFromR4, {onLeave: function (args) {send("VarBstrFromR4");}});
+
+var VarBstrFromR8 = Module.findExportByName("oleaut32.dll", "VarBstrFromR8")
+Interceptor.attach(VarBstrFromR8, {onLeave: function (args) {send("VarBstrFromR8");}});
+
+var VarBstrFromUI1 = Module.findExportByName("oleaut32.dll", "VarBstrFromUI1")
+Interceptor.attach(VarBstrFromUI1, {onLeave: function (args) {send("VarBstrFromUI1");}});
+
+var VarBstrFromUI2 = Module.findExportByName("oleaut32.dll", "VarBstrFromUI2")
+Interceptor.attach(VarBstrFromUI2, {onLeave: function (args) {send("VarBstrFromUI2");}});
+
+var VarBstrFromUI4 = Module.findExportByName("oleaut32.dll", "VarBstrFromUI4")
+Interceptor.attach(VarBstrFromUI4, {onLeave: function (args) {send("VarBstrFromUI4");}});
+
+var VarBstrFromUI8 = Module.findExportByName("oleaut32.dll", "VarBstrFromUI8")
+Interceptor.attach(VarBstrFromUI8, {onLeave: function (args) {send("VarBstrFromUI8");}});
+
+var VarCat = Module.findExportByName("oleaut32.dll", "VarCat")
+Interceptor.attach(VarCat, {onLeave: function (args) {send("VarCat");}});
+
+var VarCmp = Module.findExportByName("oleaut32.dll", "VarCmp")
+Interceptor.attach(VarCmp, {onLeave: function (args) {send("VarCmp");}});
+
+var VarCyAbs = Module.findExportByName("oleaut32.dll", "VarCyAbs")
+Interceptor.attach(VarCyAbs, {onLeave: function (args) {send("VarCyAbs");}});
+
+var VarCyAdd = Module.findExportByName("oleaut32.dll", "VarCyAdd")
+Interceptor.attach(VarCyAdd, {onLeave: function (args) {send("VarCyAdd");}});
+
+var VarCyCmp = Module.findExportByName("oleaut32.dll", "VarCyCmp")
+Interceptor.attach(VarCyCmp, {onLeave: function (args) {send("VarCyCmp");}});
+
+var VarCyCmpR8 = Module.findExportByName("oleaut32.dll", "VarCyCmpR8")
+Interceptor.attach(VarCyCmpR8, {onLeave: function (args) {send("VarCyCmpR8");}});
+
+var VarCyFix = Module.findExportByName("oleaut32.dll", "VarCyFix")
+Interceptor.attach(VarCyFix, {onLeave: function (args) {send("VarCyFix");}});
+
+var VarCyFromBool = Module.findExportByName("oleaut32.dll", "VarCyFromBool")
+Interceptor.attach(VarCyFromBool, {onLeave: function (args) {send("VarCyFromBool");}});
+
+var VarCyFromDate = Module.findExportByName("oleaut32.dll", "VarCyFromDate")
+Interceptor.attach(VarCyFromDate, {onLeave: function (args) {send("VarCyFromDate");}});
+
+var VarCyFromDec = Module.findExportByName("oleaut32.dll", "VarCyFromDec")
+Interceptor.attach(VarCyFromDec, {onLeave: function (args) {send("VarCyFromDec");}});
+
+var VarCyFromDisp = Module.findExportByName("oleaut32.dll", "VarCyFromDisp")
+Interceptor.attach(VarCyFromDisp, {onLeave: function (args) {send("VarCyFromDisp");}});
+
+var VarCyFromI1 = Module.findExportByName("oleaut32.dll", "VarCyFromI1")
+Interceptor.attach(VarCyFromI1, {onLeave: function (args) {send("VarCyFromI1");}});
+
+var VarCyFromI2 = Module.findExportByName("oleaut32.dll", "VarCyFromI2")
+Interceptor.attach(VarCyFromI2, {onLeave: function (args) {send("VarCyFromI2");}});
+
+var VarCyFromI4 = Module.findExportByName("oleaut32.dll", "VarCyFromI4")
+Interceptor.attach(VarCyFromI4, {onLeave: function (args) {send("VarCyFromI4");}});
+
+var VarCyFromI8 = Module.findExportByName("oleaut32.dll", "VarCyFromI8")
+Interceptor.attach(VarCyFromI8, {onLeave: function (args) {send("VarCyFromI8");}});
+
+var VarCyFromR4 = Module.findExportByName("oleaut32.dll", "VarCyFromR4")
+Interceptor.attach(VarCyFromR4, {onLeave: function (args) {send("VarCyFromR4");}});
+
+var VarCyFromR8 = Module.findExportByName("oleaut32.dll", "VarCyFromR8")
+Interceptor.attach(VarCyFromR8, {onLeave: function (args) {send("VarCyFromR8");}});
+
+var VarCyFromStr = Module.findExportByName("oleaut32.dll", "VarCyFromStr")
+Interceptor.attach(VarCyFromStr, {onLeave: function (args) {send("VarCyFromStr");}});
+
+var VarCyFromUI1 = Module.findExportByName("oleaut32.dll", "VarCyFromUI1")
+Interceptor.attach(VarCyFromUI1, {onLeave: function (args) {send("VarCyFromUI1");}});
+
+var VarCyFromUI2 = Module.findExportByName("oleaut32.dll", "VarCyFromUI2")
+Interceptor.attach(VarCyFromUI2, {onLeave: function (args) {send("VarCyFromUI2");}});
+
+var VarCyFromUI4 = Module.findExportByName("oleaut32.dll", "VarCyFromUI4")
+Interceptor.attach(VarCyFromUI4, {onLeave: function (args) {send("VarCyFromUI4");}});
+
+var VarCyFromUI8 = Module.findExportByName("oleaut32.dll", "VarCyFromUI8")
+Interceptor.attach(VarCyFromUI8, {onLeave: function (args) {send("VarCyFromUI8");}});
+
+var VarCyInt = Module.findExportByName("oleaut32.dll", "VarCyInt")
+Interceptor.attach(VarCyInt, {onLeave: function (args) {send("VarCyInt");}});
+
+var VarCyMul = Module.findExportByName("oleaut32.dll", "VarCyMul")
+Interceptor.attach(VarCyMul, {onLeave: function (args) {send("VarCyMul");}});
+
+var VarCyMulI4 = Module.findExportByName("oleaut32.dll", "VarCyMulI4")
+Interceptor.attach(VarCyMulI4, {onLeave: function (args) {send("VarCyMulI4");}});
+
+var VarCyMulI8 = Module.findExportByName("oleaut32.dll", "VarCyMulI8")
+Interceptor.attach(VarCyMulI8, {onLeave: function (args) {send("VarCyMulI8");}});
+
+var VarCyNeg = Module.findExportByName("oleaut32.dll", "VarCyNeg")
+Interceptor.attach(VarCyNeg, {onLeave: function (args) {send("VarCyNeg");}});
+
+var VarCyRound = Module.findExportByName("oleaut32.dll", "VarCyRound")
+Interceptor.attach(VarCyRound, {onLeave: function (args) {send("VarCyRound");}});
+
+var VarCySub = Module.findExportByName("oleaut32.dll", "VarCySub")
+Interceptor.attach(VarCySub, {onLeave: function (args) {send("VarCySub");}});
+
+var VarDateFromBool = Module.findExportByName("oleaut32.dll", "VarDateFromBool")
+Interceptor.attach(VarDateFromBool, {onLeave: function (args) {send("VarDateFromBool");}});
+
+var VarDateFromCy = Module.findExportByName("oleaut32.dll", "VarDateFromCy")
+Interceptor.attach(VarDateFromCy, {onLeave: function (args) {send("VarDateFromCy");}});
+
+var VarDateFromDec = Module.findExportByName("oleaut32.dll", "VarDateFromDec")
+Interceptor.attach(VarDateFromDec, {onLeave: function (args) {send("VarDateFromDec");}});
+
+var VarDateFromDisp = Module.findExportByName("oleaut32.dll", "VarDateFromDisp")
+Interceptor.attach(VarDateFromDisp, {onLeave: function (args) {send("VarDateFromDisp");}});
+
+var VarDateFromI1 = Module.findExportByName("oleaut32.dll", "VarDateFromI1")
+Interceptor.attach(VarDateFromI1, {onLeave: function (args) {send("VarDateFromI1");}});
+
+var VarDateFromI2 = Module.findExportByName("oleaut32.dll", "VarDateFromI2")
+Interceptor.attach(VarDateFromI2, {onLeave: function (args) {send("VarDateFromI2");}});
+
+var VarDateFromI4 = Module.findExportByName("oleaut32.dll", "VarDateFromI4")
+Interceptor.attach(VarDateFromI4, {onLeave: function (args) {send("VarDateFromI4");}});
+
+var VarDateFromI8 = Module.findExportByName("oleaut32.dll", "VarDateFromI8")
+Interceptor.attach(VarDateFromI8, {onLeave: function (args) {send("VarDateFromI8");}});
+
+var VarDateFromR4 = Module.findExportByName("oleaut32.dll", "VarDateFromR4")
+Interceptor.attach(VarDateFromR4, {onLeave: function (args) {send("VarDateFromR4");}});
+
+var VarDateFromR8 = Module.findExportByName("oleaut32.dll", "VarDateFromR8")
+Interceptor.attach(VarDateFromR8, {onLeave: function (args) {send("VarDateFromR8");}});
+
+var VarDateFromStr = Module.findExportByName("oleaut32.dll", "VarDateFromStr")
+Interceptor.attach(VarDateFromStr, {onLeave: function (args) {send("VarDateFromStr");}});
+
+var VarDateFromUI1 = Module.findExportByName("oleaut32.dll", "VarDateFromUI1")
+Interceptor.attach(VarDateFromUI1, {onLeave: function (args) {send("VarDateFromUI1");}});
+
+var VarDateFromUI2 = Module.findExportByName("oleaut32.dll", "VarDateFromUI2")
+Interceptor.attach(VarDateFromUI2, {onLeave: function (args) {send("VarDateFromUI2");}});
+
+var VarDateFromUI4 = Module.findExportByName("oleaut32.dll", "VarDateFromUI4")
+Interceptor.attach(VarDateFromUI4, {onLeave: function (args) {send("VarDateFromUI4");}});
+
+var VarDateFromUI8 = Module.findExportByName("oleaut32.dll", "VarDateFromUI8")
+Interceptor.attach(VarDateFromUI8, {onLeave: function (args) {send("VarDateFromUI8");}});
+
+var VarDateFromUdate = Module.findExportByName("oleaut32.dll", "VarDateFromUdate")
+Interceptor.attach(VarDateFromUdate, {onLeave: function (args) {send("VarDateFromUdate");}});
+
+var VarDateFromUdateEx = Module.findExportByName("oleaut32.dll", "VarDateFromUdateEx")
+Interceptor.attach(VarDateFromUdateEx, {onLeave: function (args) {send("VarDateFromUdateEx");}});
+
+var VarDecAbs = Module.findExportByName("oleaut32.dll", "VarDecAbs")
+Interceptor.attach(VarDecAbs, {onLeave: function (args) {send("VarDecAbs");}});
+
+var VarDecAdd = Module.findExportByName("oleaut32.dll", "VarDecAdd")
+Interceptor.attach(VarDecAdd, {onLeave: function (args) {send("VarDecAdd");}});
+
+var VarDecCmp = Module.findExportByName("oleaut32.dll", "VarDecCmp")
+Interceptor.attach(VarDecCmp, {onLeave: function (args) {send("VarDecCmp");}});
+
+var VarDecCmpR8 = Module.findExportByName("oleaut32.dll", "VarDecCmpR8")
+Interceptor.attach(VarDecCmpR8, {onLeave: function (args) {send("VarDecCmpR8");}});
+
+var VarDecDiv = Module.findExportByName("oleaut32.dll", "VarDecDiv")
+Interceptor.attach(VarDecDiv, {onLeave: function (args) {send("VarDecDiv");}});
+
+var VarDecFix = Module.findExportByName("oleaut32.dll", "VarDecFix")
+Interceptor.attach(VarDecFix, {onLeave: function (args) {send("VarDecFix");}});
+
+var VarDecFromBool = Module.findExportByName("oleaut32.dll", "VarDecFromBool")
+Interceptor.attach(VarDecFromBool, {onLeave: function (args) {send("VarDecFromBool");}});
+
+var VarDecFromCy = Module.findExportByName("oleaut32.dll", "VarDecFromCy")
+Interceptor.attach(VarDecFromCy, {onLeave: function (args) {send("VarDecFromCy");}});
+
+var VarDecFromDate = Module.findExportByName("oleaut32.dll", "VarDecFromDate")
+Interceptor.attach(VarDecFromDate, {onLeave: function (args) {send("VarDecFromDate");}});
+
+var VarDecFromDisp = Module.findExportByName("oleaut32.dll", "VarDecFromDisp")
+Interceptor.attach(VarDecFromDisp, {onLeave: function (args) {send("VarDecFromDisp");}});
+
+var VarDecFromI1 = Module.findExportByName("oleaut32.dll", "VarDecFromI1")
+Interceptor.attach(VarDecFromI1, {onLeave: function (args) {send("VarDecFromI1");}});
+
+var VarDecFromI2 = Module.findExportByName("oleaut32.dll", "VarDecFromI2")
+Interceptor.attach(VarDecFromI2, {onLeave: function (args) {send("VarDecFromI2");}});
+
+var VarDecFromI4 = Module.findExportByName("oleaut32.dll", "VarDecFromI4")
+Interceptor.attach(VarDecFromI4, {onLeave: function (args) {send("VarDecFromI4");}});
+
+var VarDecFromI8 = Module.findExportByName("oleaut32.dll", "VarDecFromI8")
+Interceptor.attach(VarDecFromI8, {onLeave: function (args) {send("VarDecFromI8");}});
+
+var VarDecFromR4 = Module.findExportByName("oleaut32.dll", "VarDecFromR4")
+Interceptor.attach(VarDecFromR4, {onLeave: function (args) {send("VarDecFromR4");}});
+
+var VarDecFromR8 = Module.findExportByName("oleaut32.dll", "VarDecFromR8")
+Interceptor.attach(VarDecFromR8, {onLeave: function (args) {send("VarDecFromR8");}});
+
+var VarDecFromStr = Module.findExportByName("oleaut32.dll", "VarDecFromStr")
+Interceptor.attach(VarDecFromStr, {onLeave: function (args) {send("VarDecFromStr");}});
+
+var VarDecFromUI1 = Module.findExportByName("oleaut32.dll", "VarDecFromUI1")
+Interceptor.attach(VarDecFromUI1, {onLeave: function (args) {send("VarDecFromUI1");}});
+
+var VarDecFromUI2 = Module.findExportByName("oleaut32.dll", "VarDecFromUI2")
+Interceptor.attach(VarDecFromUI2, {onLeave: function (args) {send("VarDecFromUI2");}});
+
+var VarDecFromUI4 = Module.findExportByName("oleaut32.dll", "VarDecFromUI4")
+Interceptor.attach(VarDecFromUI4, {onLeave: function (args) {send("VarDecFromUI4");}});
+
+var VarDecFromUI8 = Module.findExportByName("oleaut32.dll", "VarDecFromUI8")
+Interceptor.attach(VarDecFromUI8, {onLeave: function (args) {send("VarDecFromUI8");}});
+
+var VarDecInt = Module.findExportByName("oleaut32.dll", "VarDecInt")
+Interceptor.attach(VarDecInt, {onLeave: function (args) {send("VarDecInt");}});
+
+var VarDecMul = Module.findExportByName("oleaut32.dll", "VarDecMul")
+Interceptor.attach(VarDecMul, {onLeave: function (args) {send("VarDecMul");}});
+
+var VarDecNeg = Module.findExportByName("oleaut32.dll", "VarDecNeg")
+Interceptor.attach(VarDecNeg, {onLeave: function (args) {send("VarDecNeg");}});
+
+var VarDecRound = Module.findExportByName("oleaut32.dll", "VarDecRound")
+Interceptor.attach(VarDecRound, {onLeave: function (args) {send("VarDecRound");}});
+
+var VarDecSub = Module.findExportByName("oleaut32.dll", "VarDecSub")
+Interceptor.attach(VarDecSub, {onLeave: function (args) {send("VarDecSub");}});
+
+var VarDiv = Module.findExportByName("oleaut32.dll", "VarDiv")
+Interceptor.attach(VarDiv, {onLeave: function (args) {send("VarDiv");}});
+
+var VarEqv = Module.findExportByName("oleaut32.dll", "VarEqv")
+Interceptor.attach(VarEqv, {onLeave: function (args) {send("VarEqv");}});
+
+var VarFix = Module.findExportByName("oleaut32.dll", "VarFix")
+Interceptor.attach(VarFix, {onLeave: function (args) {send("VarFix");}});
+
+var VarFormat = Module.findExportByName("oleaut32.dll", "VarFormat")
+Interceptor.attach(VarFormat, {onLeave: function (args) {send("VarFormat");}});
+
+var VarFormatCurrency = Module.findExportByName("oleaut32.dll", "VarFormatCurrency")
+Interceptor.attach(VarFormatCurrency, {onLeave: function (args) {send("VarFormatCurrency");}});
+
+var VarFormatDateTime = Module.findExportByName("oleaut32.dll", "VarFormatDateTime")
+Interceptor.attach(VarFormatDateTime, {onLeave: function (args) {send("VarFormatDateTime");}});
+
+var VarFormatFromTokens = Module.findExportByName("oleaut32.dll", "VarFormatFromTokens")
+Interceptor.attach(VarFormatFromTokens, {onLeave: function (args) {send("VarFormatFromTokens");}});
+
+var VarFormatNumber = Module.findExportByName("oleaut32.dll", "VarFormatNumber")
+Interceptor.attach(VarFormatNumber, {onLeave: function (args) {send("VarFormatNumber");}});
+
+var VarFormatPercent = Module.findExportByName("oleaut32.dll", "VarFormatPercent")
+Interceptor.attach(VarFormatPercent, {onLeave: function (args) {send("VarFormatPercent");}});
+
+var VarI1FromBool = Module.findExportByName("oleaut32.dll", "VarI1FromBool")
+Interceptor.attach(VarI1FromBool, {onLeave: function (args) {send("VarI1FromBool");}});
+
+var VarI1FromCy = Module.findExportByName("oleaut32.dll", "VarI1FromCy")
+Interceptor.attach(VarI1FromCy, {onLeave: function (args) {send("VarI1FromCy");}});
+
+var VarI1FromDate = Module.findExportByName("oleaut32.dll", "VarI1FromDate")
+Interceptor.attach(VarI1FromDate, {onLeave: function (args) {send("VarI1FromDate");}});
+
+var VarI1FromDec = Module.findExportByName("oleaut32.dll", "VarI1FromDec")
+Interceptor.attach(VarI1FromDec, {onLeave: function (args) {send("VarI1FromDec");}});
+
+var VarI1FromDisp = Module.findExportByName("oleaut32.dll", "VarI1FromDisp")
+Interceptor.attach(VarI1FromDisp, {onLeave: function (args) {send("VarI1FromDisp");}});
+
+var VarI1FromI2 = Module.findExportByName("oleaut32.dll", "VarI1FromI2")
+Interceptor.attach(VarI1FromI2, {onLeave: function (args) {send("VarI1FromI2");}});
+
+var VarI1FromI4 = Module.findExportByName("oleaut32.dll", "VarI1FromI4")
+Interceptor.attach(VarI1FromI4, {onLeave: function (args) {send("VarI1FromI4");}});
+
+var VarI1FromI8 = Module.findExportByName("oleaut32.dll", "VarI1FromI8")
+Interceptor.attach(VarI1FromI8, {onLeave: function (args) {send("VarI1FromI8");}});
+
+var VarI1FromR4 = Module.findExportByName("oleaut32.dll", "VarI1FromR4")
+Interceptor.attach(VarI1FromR4, {onLeave: function (args) {send("VarI1FromR4");}});
+
+var VarI1FromR8 = Module.findExportByName("oleaut32.dll", "VarI1FromR8")
+Interceptor.attach(VarI1FromR8, {onLeave: function (args) {send("VarI1FromR8");}});
+
+var VarI1FromStr = Module.findExportByName("oleaut32.dll", "VarI1FromStr")
+Interceptor.attach(VarI1FromStr, {onLeave: function (args) {send("VarI1FromStr");}});
+
+var VarI1FromUI1 = Module.findExportByName("oleaut32.dll", "VarI1FromUI1")
+Interceptor.attach(VarI1FromUI1, {onLeave: function (args) {send("VarI1FromUI1");}});
+
+var VarI1FromUI2 = Module.findExportByName("oleaut32.dll", "VarI1FromUI2")
+Interceptor.attach(VarI1FromUI2, {onLeave: function (args) {send("VarI1FromUI2");}});
+
+var VarI1FromUI4 = Module.findExportByName("oleaut32.dll", "VarI1FromUI4")
+Interceptor.attach(VarI1FromUI4, {onLeave: function (args) {send("VarI1FromUI4");}});
+
+var VarI1FromUI8 = Module.findExportByName("oleaut32.dll", "VarI1FromUI8")
+Interceptor.attach(VarI1FromUI8, {onLeave: function (args) {send("VarI1FromUI8");}});
+
+var VarI2FromBool = Module.findExportByName("oleaut32.dll", "VarI2FromBool")
+Interceptor.attach(VarI2FromBool, {onLeave: function (args) {send("VarI2FromBool");}});
+
+var VarI2FromCy = Module.findExportByName("oleaut32.dll", "VarI2FromCy")
+Interceptor.attach(VarI2FromCy, {onLeave: function (args) {send("VarI2FromCy");}});
+
+var VarI2FromDate = Module.findExportByName("oleaut32.dll", "VarI2FromDate")
+Interceptor.attach(VarI2FromDate, {onLeave: function (args) {send("VarI2FromDate");}});
+
+var VarI2FromDec = Module.findExportByName("oleaut32.dll", "VarI2FromDec")
+Interceptor.attach(VarI2FromDec, {onLeave: function (args) {send("VarI2FromDec");}});
+
+var VarI2FromDisp = Module.findExportByName("oleaut32.dll", "VarI2FromDisp")
+Interceptor.attach(VarI2FromDisp, {onLeave: function (args) {send("VarI2FromDisp");}});
+
+var VarI2FromI1 = Module.findExportByName("oleaut32.dll", "VarI2FromI1")
+Interceptor.attach(VarI2FromI1, {onLeave: function (args) {send("VarI2FromI1");}});
+
+var VarI2FromI4 = Module.findExportByName("oleaut32.dll", "VarI2FromI4")
+Interceptor.attach(VarI2FromI4, {onLeave: function (args) {send("VarI2FromI4");}});
+
+var VarI2FromI8 = Module.findExportByName("oleaut32.dll", "VarI2FromI8")
+Interceptor.attach(VarI2FromI8, {onLeave: function (args) {send("VarI2FromI8");}});
+
+var VarI2FromR4 = Module.findExportByName("oleaut32.dll", "VarI2FromR4")
+Interceptor.attach(VarI2FromR4, {onLeave: function (args) {send("VarI2FromR4");}});
+
+var VarI2FromR8 = Module.findExportByName("oleaut32.dll", "VarI2FromR8")
+Interceptor.attach(VarI2FromR8, {onLeave: function (args) {send("VarI2FromR8");}});
+
+var VarI2FromStr = Module.findExportByName("oleaut32.dll", "VarI2FromStr")
+Interceptor.attach(VarI2FromStr, {onLeave: function (args) {send("VarI2FromStr");}});
+
+var VarI2FromUI1 = Module.findExportByName("oleaut32.dll", "VarI2FromUI1")
+Interceptor.attach(VarI2FromUI1, {onLeave: function (args) {send("VarI2FromUI1");}});
+
+var VarI2FromUI2 = Module.findExportByName("oleaut32.dll", "VarI2FromUI2")
+Interceptor.attach(VarI2FromUI2, {onLeave: function (args) {send("VarI2FromUI2");}});
+
+var VarI2FromUI4 = Module.findExportByName("oleaut32.dll", "VarI2FromUI4")
+Interceptor.attach(VarI2FromUI4, {onLeave: function (args) {send("VarI2FromUI4");}});
+
+var VarI2FromUI8 = Module.findExportByName("oleaut32.dll", "VarI2FromUI8")
+Interceptor.attach(VarI2FromUI8, {onLeave: function (args) {send("VarI2FromUI8");}});
+
+var VarI4FromBool = Module.findExportByName("oleaut32.dll", "VarI4FromBool")
+Interceptor.attach(VarI4FromBool, {onLeave: function (args) {send("VarI4FromBool");}});
+
+var VarI4FromCy = Module.findExportByName("oleaut32.dll", "VarI4FromCy")
+Interceptor.attach(VarI4FromCy, {onLeave: function (args) {send("VarI4FromCy");}});
+
+var VarI4FromDate = Module.findExportByName("oleaut32.dll", "VarI4FromDate")
+Interceptor.attach(VarI4FromDate, {onLeave: function (args) {send("VarI4FromDate");}});
+
+var VarI4FromDec = Module.findExportByName("oleaut32.dll", "VarI4FromDec")
+Interceptor.attach(VarI4FromDec, {onLeave: function (args) {send("VarI4FromDec");}});
+
+var VarI4FromDisp = Module.findExportByName("oleaut32.dll", "VarI4FromDisp")
+Interceptor.attach(VarI4FromDisp, {onLeave: function (args) {send("VarI4FromDisp");}});
+
+var VarI4FromI1 = Module.findExportByName("oleaut32.dll", "VarI4FromI1")
+Interceptor.attach(VarI4FromI1, {onLeave: function (args) {send("VarI4FromI1");}});
+
+var VarI4FromI2 = Module.findExportByName("oleaut32.dll", "VarI4FromI2")
+Interceptor.attach(VarI4FromI2, {onLeave: function (args) {send("VarI4FromI2");}});
+
+var VarI4FromI8 = Module.findExportByName("oleaut32.dll", "VarI4FromI8")
+Interceptor.attach(VarI4FromI8, {onLeave: function (args) {send("VarI4FromI8");}});
+
+var VarI4FromR4 = Module.findExportByName("oleaut32.dll", "VarI4FromR4")
+Interceptor.attach(VarI4FromR4, {onLeave: function (args) {send("VarI4FromR4");}});
+
+var VarI4FromR8 = Module.findExportByName("oleaut32.dll", "VarI4FromR8")
+Interceptor.attach(VarI4FromR8, {onLeave: function (args) {send("VarI4FromR8");}});
+
+var VarI4FromStr = Module.findExportByName("oleaut32.dll", "VarI4FromStr")
+Interceptor.attach(VarI4FromStr, {onLeave: function (args) {send("VarI4FromStr");}});
+
+var VarI4FromUI1 = Module.findExportByName("oleaut32.dll", "VarI4FromUI1")
+Interceptor.attach(VarI4FromUI1, {onLeave: function (args) {send("VarI4FromUI1");}});
+
+var VarI4FromUI2 = Module.findExportByName("oleaut32.dll", "VarI4FromUI2")
+Interceptor.attach(VarI4FromUI2, {onLeave: function (args) {send("VarI4FromUI2");}});
+
+var VarI4FromUI4 = Module.findExportByName("oleaut32.dll", "VarI4FromUI4")
+Interceptor.attach(VarI4FromUI4, {onLeave: function (args) {send("VarI4FromUI4");}});
+
+var VarI4FromUI8 = Module.findExportByName("oleaut32.dll", "VarI4FromUI8")
+Interceptor.attach(VarI4FromUI8, {onLeave: function (args) {send("VarI4FromUI8");}});
+
+var VarI8FromBool = Module.findExportByName("oleaut32.dll", "VarI8FromBool")
+Interceptor.attach(VarI8FromBool, {onLeave: function (args) {send("VarI8FromBool");}});
+
+var VarI8FromCy = Module.findExportByName("oleaut32.dll", "VarI8FromCy")
+Interceptor.attach(VarI8FromCy, {onLeave: function (args) {send("VarI8FromCy");}});
+
+var VarI8FromDate = Module.findExportByName("oleaut32.dll", "VarI8FromDate")
+Interceptor.attach(VarI8FromDate, {onLeave: function (args) {send("VarI8FromDate");}});
+
+var VarI8FromDec = Module.findExportByName("oleaut32.dll", "VarI8FromDec")
+Interceptor.attach(VarI8FromDec, {onLeave: function (args) {send("VarI8FromDec");}});
+
+var VarI8FromDisp = Module.findExportByName("oleaut32.dll", "VarI8FromDisp")
+Interceptor.attach(VarI8FromDisp, {onLeave: function (args) {send("VarI8FromDisp");}});
+
+var VarI8FromI1 = Module.findExportByName("oleaut32.dll", "VarI8FromI1")
+Interceptor.attach(VarI8FromI1, {onLeave: function (args) {send("VarI8FromI1");}});
+
+var VarI8FromI2 = Module.findExportByName("oleaut32.dll", "VarI8FromI2")
+Interceptor.attach(VarI8FromI2, {onLeave: function (args) {send("VarI8FromI2");}});
+
+var VarI8FromR4 = Module.findExportByName("oleaut32.dll", "VarI8FromR4")
+Interceptor.attach(VarI8FromR4, {onLeave: function (args) {send("VarI8FromR4");}});
+
+var VarI8FromR8 = Module.findExportByName("oleaut32.dll", "VarI8FromR8")
+Interceptor.attach(VarI8FromR8, {onLeave: function (args) {send("VarI8FromR8");}});
+
+var VarI8FromStr = Module.findExportByName("oleaut32.dll", "VarI8FromStr")
+Interceptor.attach(VarI8FromStr, {onLeave: function (args) {send("VarI8FromStr");}});
+
+var VarI8FromUI1 = Module.findExportByName("oleaut32.dll", "VarI8FromUI1")
+Interceptor.attach(VarI8FromUI1, {onLeave: function (args) {send("VarI8FromUI1");}});
+
+var VarI8FromUI2 = Module.findExportByName("oleaut32.dll", "VarI8FromUI2")
+Interceptor.attach(VarI8FromUI2, {onLeave: function (args) {send("VarI8FromUI2");}});
+
+var VarI8FromUI4 = Module.findExportByName("oleaut32.dll", "VarI8FromUI4")
+Interceptor.attach(VarI8FromUI4, {onLeave: function (args) {send("VarI8FromUI4");}});
+
+var VarI8FromUI8 = Module.findExportByName("oleaut32.dll", "VarI8FromUI8")
+Interceptor.attach(VarI8FromUI8, {onLeave: function (args) {send("VarI8FromUI8");}});
+
+var VarIdiv = Module.findExportByName("oleaut32.dll", "VarIdiv")
+Interceptor.attach(VarIdiv, {onLeave: function (args) {send("VarIdiv");}});
+
+var VarImp = Module.findExportByName("oleaut32.dll", "VarImp")
+Interceptor.attach(VarImp, {onLeave: function (args) {send("VarImp");}});
+
+var VarInt = Module.findExportByName("oleaut32.dll", "VarInt")
+Interceptor.attach(VarInt, {onLeave: function (args) {send("VarInt");}});
+
+var VarMod = Module.findExportByName("oleaut32.dll", "VarMod")
+Interceptor.attach(VarMod, {onLeave: function (args) {send("VarMod");}});
+
+var VarMonthName = Module.findExportByName("oleaut32.dll", "VarMonthName")
+Interceptor.attach(VarMonthName, {onLeave: function (args) {send("VarMonthName");}});
+
+var VarMul = Module.findExportByName("oleaut32.dll", "VarMul")
+Interceptor.attach(VarMul, {onLeave: function (args) {send("VarMul");}});
+
+var VarNeg = Module.findExportByName("oleaut32.dll", "VarNeg")
+Interceptor.attach(VarNeg, {onLeave: function (args) {send("VarNeg");}});
+
+var VarNot = Module.findExportByName("oleaut32.dll", "VarNot")
+Interceptor.attach(VarNot, {onLeave: function (args) {send("VarNot");}});
+
+var VarNumFromParseNum = Module.findExportByName("oleaut32.dll", "VarNumFromParseNum")
+Interceptor.attach(VarNumFromParseNum, {onLeave: function (args) {send("VarNumFromParseNum");}});
+
+var VarOr = Module.findExportByName("oleaut32.dll", "VarOr")
+Interceptor.attach(VarOr, {onLeave: function (args) {send("VarOr");}});
+
+var VarParseNumFromStr = Module.findExportByName("oleaut32.dll", "VarParseNumFromStr")
+Interceptor.attach(VarParseNumFromStr, {onLeave: function (args) {send("VarParseNumFromStr");}});
+
+var VarPow = Module.findExportByName("oleaut32.dll", "VarPow")
+Interceptor.attach(VarPow, {onLeave: function (args) {send("VarPow");}});
+
+var VarR4CmpR8 = Module.findExportByName("oleaut32.dll", "VarR4CmpR8")
+Interceptor.attach(VarR4CmpR8, {onLeave: function (args) {send("VarR4CmpR8");}});
+
+var VarR4FromBool = Module.findExportByName("oleaut32.dll", "VarR4FromBool")
+Interceptor.attach(VarR4FromBool, {onLeave: function (args) {send("VarR4FromBool");}});
+
+var VarR4FromCy = Module.findExportByName("oleaut32.dll", "VarR4FromCy")
+Interceptor.attach(VarR4FromCy, {onLeave: function (args) {send("VarR4FromCy");}});
+
+var VarR4FromDate = Module.findExportByName("oleaut32.dll", "VarR4FromDate")
+Interceptor.attach(VarR4FromDate, {onLeave: function (args) {send("VarR4FromDate");}});
+
+var VarR4FromDec = Module.findExportByName("oleaut32.dll", "VarR4FromDec")
+Interceptor.attach(VarR4FromDec, {onLeave: function (args) {send("VarR4FromDec");}});
+
+var VarR4FromDisp = Module.findExportByName("oleaut32.dll", "VarR4FromDisp")
+Interceptor.attach(VarR4FromDisp, {onLeave: function (args) {send("VarR4FromDisp");}});
+
+var VarR4FromI1 = Module.findExportByName("oleaut32.dll", "VarR4FromI1")
+Interceptor.attach(VarR4FromI1, {onLeave: function (args) {send("VarR4FromI1");}});
+
+var VarR4FromI2 = Module.findExportByName("oleaut32.dll", "VarR4FromI2")
+Interceptor.attach(VarR4FromI2, {onLeave: function (args) {send("VarR4FromI2");}});
+
+var VarR4FromI4 = Module.findExportByName("oleaut32.dll", "VarR4FromI4")
+Interceptor.attach(VarR4FromI4, {onLeave: function (args) {send("VarR4FromI4");}});
+
+var VarR4FromI8 = Module.findExportByName("oleaut32.dll", "VarR4FromI8")
+Interceptor.attach(VarR4FromI8, {onLeave: function (args) {send("VarR4FromI8");}});
+
+var VarR4FromR8 = Module.findExportByName("oleaut32.dll", "VarR4FromR8")
+Interceptor.attach(VarR4FromR8, {onLeave: function (args) {send("VarR4FromR8");}});
+
+var VarR4FromStr = Module.findExportByName("oleaut32.dll", "VarR4FromStr")
+Interceptor.attach(VarR4FromStr, {onLeave: function (args) {send("VarR4FromStr");}});
+
+var VarR4FromUI1 = Module.findExportByName("oleaut32.dll", "VarR4FromUI1")
+Interceptor.attach(VarR4FromUI1, {onLeave: function (args) {send("VarR4FromUI1");}});
+
+var VarR4FromUI2 = Module.findExportByName("oleaut32.dll", "VarR4FromUI2")
+Interceptor.attach(VarR4FromUI2, {onLeave: function (args) {send("VarR4FromUI2");}});
+
+var VarR4FromUI4 = Module.findExportByName("oleaut32.dll", "VarR4FromUI4")
+Interceptor.attach(VarR4FromUI4, {onLeave: function (args) {send("VarR4FromUI4");}});
+
+var VarR4FromUI8 = Module.findExportByName("oleaut32.dll", "VarR4FromUI8")
+Interceptor.attach(VarR4FromUI8, {onLeave: function (args) {send("VarR4FromUI8");}});
+
+var VarR8FromBool = Module.findExportByName("oleaut32.dll", "VarR8FromBool")
+Interceptor.attach(VarR8FromBool, {onLeave: function (args) {send("VarR8FromBool");}});
+
+var VarR8FromCy = Module.findExportByName("oleaut32.dll", "VarR8FromCy")
+Interceptor.attach(VarR8FromCy, {onLeave: function (args) {send("VarR8FromCy");}});
+
+var VarR8FromDate = Module.findExportByName("oleaut32.dll", "VarR8FromDate")
+Interceptor.attach(VarR8FromDate, {onLeave: function (args) {send("VarR8FromDate");}});
+
+var VarR8FromDec = Module.findExportByName("oleaut32.dll", "VarR8FromDec")
+Interceptor.attach(VarR8FromDec, {onLeave: function (args) {send("VarR8FromDec");}});
+
+var VarR8FromDisp = Module.findExportByName("oleaut32.dll", "VarR8FromDisp")
+Interceptor.attach(VarR8FromDisp, {onLeave: function (args) {send("VarR8FromDisp");}});
+
+var VarR8FromI1 = Module.findExportByName("oleaut32.dll", "VarR8FromI1")
+Interceptor.attach(VarR8FromI1, {onLeave: function (args) {send("VarR8FromI1");}});
+
+var VarR8FromI2 = Module.findExportByName("oleaut32.dll", "VarR8FromI2")
+Interceptor.attach(VarR8FromI2, {onLeave: function (args) {send("VarR8FromI2");}});
+
+var VarR8FromI4 = Module.findExportByName("oleaut32.dll", "VarR8FromI4")
+Interceptor.attach(VarR8FromI4, {onLeave: function (args) {send("VarR8FromI4");}});
+
+var VarR8FromI8 = Module.findExportByName("oleaut32.dll", "VarR8FromI8")
+Interceptor.attach(VarR8FromI8, {onLeave: function (args) {send("VarR8FromI8");}});
+
+var VarR8FromR4 = Module.findExportByName("oleaut32.dll", "VarR8FromR4")
+Interceptor.attach(VarR8FromR4, {onLeave: function (args) {send("VarR8FromR4");}});
+
+var VarR8FromStr = Module.findExportByName("oleaut32.dll", "VarR8FromStr")
+Interceptor.attach(VarR8FromStr, {onLeave: function (args) {send("VarR8FromStr");}});
+
+var VarR8FromUI1 = Module.findExportByName("oleaut32.dll", "VarR8FromUI1")
+Interceptor.attach(VarR8FromUI1, {onLeave: function (args) {send("VarR8FromUI1");}});
+
+var VarR8FromUI2 = Module.findExportByName("oleaut32.dll", "VarR8FromUI2")
+Interceptor.attach(VarR8FromUI2, {onLeave: function (args) {send("VarR8FromUI2");}});
+
+var VarR8FromUI4 = Module.findExportByName("oleaut32.dll", "VarR8FromUI4")
+Interceptor.attach(VarR8FromUI4, {onLeave: function (args) {send("VarR8FromUI4");}});
+
+var VarR8FromUI8 = Module.findExportByName("oleaut32.dll", "VarR8FromUI8")
+Interceptor.attach(VarR8FromUI8, {onLeave: function (args) {send("VarR8FromUI8");}});
+
+var VarR8Pow = Module.findExportByName("oleaut32.dll", "VarR8Pow")
+Interceptor.attach(VarR8Pow, {onLeave: function (args) {send("VarR8Pow");}});
+
+var VarR8Round = Module.findExportByName("oleaut32.dll", "VarR8Round")
+Interceptor.attach(VarR8Round, {onLeave: function (args) {send("VarR8Round");}});
+
+var VarRound = Module.findExportByName("oleaut32.dll", "VarRound")
+Interceptor.attach(VarRound, {onLeave: function (args) {send("VarRound");}});
+
+var VarSub = Module.findExportByName("oleaut32.dll", "VarSub")
+Interceptor.attach(VarSub, {onLeave: function (args) {send("VarSub");}});
+
+var VarTokenizeFormatString = Module.findExportByName("oleaut32.dll", "VarTokenizeFormatString")
+Interceptor.attach(VarTokenizeFormatString, {onLeave: function (args) {send("VarTokenizeFormatString");}});
+
+var VarUI1FromBool = Module.findExportByName("oleaut32.dll", "VarUI1FromBool")
+Interceptor.attach(VarUI1FromBool, {onLeave: function (args) {send("VarUI1FromBool");}});
+
+var VarUI1FromCy = Module.findExportByName("oleaut32.dll", "VarUI1FromCy")
+Interceptor.attach(VarUI1FromCy, {onLeave: function (args) {send("VarUI1FromCy");}});
+
+var VarUI1FromDate = Module.findExportByName("oleaut32.dll", "VarUI1FromDate")
+Interceptor.attach(VarUI1FromDate, {onLeave: function (args) {send("VarUI1FromDate");}});
+
+var VarUI1FromDec = Module.findExportByName("oleaut32.dll", "VarUI1FromDec")
+Interceptor.attach(VarUI1FromDec, {onLeave: function (args) {send("VarUI1FromDec");}});
+
+var VarUI1FromDisp = Module.findExportByName("oleaut32.dll", "VarUI1FromDisp")
+Interceptor.attach(VarUI1FromDisp, {onLeave: function (args) {send("VarUI1FromDisp");}});
+
+var VarUI1FromI1 = Module.findExportByName("oleaut32.dll", "VarUI1FromI1")
+Interceptor.attach(VarUI1FromI1, {onLeave: function (args) {send("VarUI1FromI1");}});
+
+var VarUI1FromI2 = Module.findExportByName("oleaut32.dll", "VarUI1FromI2")
+Interceptor.attach(VarUI1FromI2, {onLeave: function (args) {send("VarUI1FromI2");}});
+
+var VarUI1FromI4 = Module.findExportByName("oleaut32.dll", "VarUI1FromI4")
+Interceptor.attach(VarUI1FromI4, {onLeave: function (args) {send("VarUI1FromI4");}});
+
+var VarUI1FromI8 = Module.findExportByName("oleaut32.dll", "VarUI1FromI8")
+Interceptor.attach(VarUI1FromI8, {onLeave: function (args) {send("VarUI1FromI8");}});
+
+var VarUI1FromR4 = Module.findExportByName("oleaut32.dll", "VarUI1FromR4")
+Interceptor.attach(VarUI1FromR4, {onLeave: function (args) {send("VarUI1FromR4");}});
+
+var VarUI1FromR8 = Module.findExportByName("oleaut32.dll", "VarUI1FromR8")
+Interceptor.attach(VarUI1FromR8, {onLeave: function (args) {send("VarUI1FromR8");}});
+
+var VarUI1FromStr = Module.findExportByName("oleaut32.dll", "VarUI1FromStr")
+Interceptor.attach(VarUI1FromStr, {onLeave: function (args) {send("VarUI1FromStr");}});
+
+var VarUI1FromUI2 = Module.findExportByName("oleaut32.dll", "VarUI1FromUI2")
+Interceptor.attach(VarUI1FromUI2, {onLeave: function (args) {send("VarUI1FromUI2");}});
+
+var VarUI1FromUI4 = Module.findExportByName("oleaut32.dll", "VarUI1FromUI4")
+Interceptor.attach(VarUI1FromUI4, {onLeave: function (args) {send("VarUI1FromUI4");}});
+
+var VarUI1FromUI8 = Module.findExportByName("oleaut32.dll", "VarUI1FromUI8")
+Interceptor.attach(VarUI1FromUI8, {onLeave: function (args) {send("VarUI1FromUI8");}});
+
+var VarUI2FromBool = Module.findExportByName("oleaut32.dll", "VarUI2FromBool")
+Interceptor.attach(VarUI2FromBool, {onLeave: function (args) {send("VarUI2FromBool");}});
+
+var VarUI2FromCy = Module.findExportByName("oleaut32.dll", "VarUI2FromCy")
+Interceptor.attach(VarUI2FromCy, {onLeave: function (args) {send("VarUI2FromCy");}});
+
+var VarUI2FromDate = Module.findExportByName("oleaut32.dll", "VarUI2FromDate")
+Interceptor.attach(VarUI2FromDate, {onLeave: function (args) {send("VarUI2FromDate");}});
+
+var VarUI2FromDec = Module.findExportByName("oleaut32.dll", "VarUI2FromDec")
+Interceptor.attach(VarUI2FromDec, {onLeave: function (args) {send("VarUI2FromDec");}});
+
+var VarUI2FromDisp = Module.findExportByName("oleaut32.dll", "VarUI2FromDisp")
+Interceptor.attach(VarUI2FromDisp, {onLeave: function (args) {send("VarUI2FromDisp");}});
+
+var VarUI2FromI1 = Module.findExportByName("oleaut32.dll", "VarUI2FromI1")
+Interceptor.attach(VarUI2FromI1, {onLeave: function (args) {send("VarUI2FromI1");}});
+
+var VarUI2FromI2 = Module.findExportByName("oleaut32.dll", "VarUI2FromI2")
+Interceptor.attach(VarUI2FromI2, {onLeave: function (args) {send("VarUI2FromI2");}});
+
+var VarUI2FromI4 = Module.findExportByName("oleaut32.dll", "VarUI2FromI4")
+Interceptor.attach(VarUI2FromI4, {onLeave: function (args) {send("VarUI2FromI4");}});
+
+var VarUI2FromI8 = Module.findExportByName("oleaut32.dll", "VarUI2FromI8")
+Interceptor.attach(VarUI2FromI8, {onLeave: function (args) {send("VarUI2FromI8");}});
+
+var VarUI2FromR4 = Module.findExportByName("oleaut32.dll", "VarUI2FromR4")
+Interceptor.attach(VarUI2FromR4, {onLeave: function (args) {send("VarUI2FromR4");}});
+
+var VarUI2FromR8 = Module.findExportByName("oleaut32.dll", "VarUI2FromR8")
+Interceptor.attach(VarUI2FromR8, {onLeave: function (args) {send("VarUI2FromR8");}});
+
+var VarUI2FromStr = Module.findExportByName("oleaut32.dll", "VarUI2FromStr")
+Interceptor.attach(VarUI2FromStr, {onLeave: function (args) {send("VarUI2FromStr");}});
+
+var VarUI2FromUI1 = Module.findExportByName("oleaut32.dll", "VarUI2FromUI1")
+Interceptor.attach(VarUI2FromUI1, {onLeave: function (args) {send("VarUI2FromUI1");}});
+
+var VarUI2FromUI4 = Module.findExportByName("oleaut32.dll", "VarUI2FromUI4")
+Interceptor.attach(VarUI2FromUI4, {onLeave: function (args) {send("VarUI2FromUI4");}});
+
+var VarUI2FromUI8 = Module.findExportByName("oleaut32.dll", "VarUI2FromUI8")
+Interceptor.attach(VarUI2FromUI8, {onLeave: function (args) {send("VarUI2FromUI8");}});
+
+var VarUI4FromBool = Module.findExportByName("oleaut32.dll", "VarUI4FromBool")
+Interceptor.attach(VarUI4FromBool, {onLeave: function (args) {send("VarUI4FromBool");}});
+
+var VarUI4FromCy = Module.findExportByName("oleaut32.dll", "VarUI4FromCy")
+Interceptor.attach(VarUI4FromCy, {onLeave: function (args) {send("VarUI4FromCy");}});
+
+var VarUI4FromDate = Module.findExportByName("oleaut32.dll", "VarUI4FromDate")
+Interceptor.attach(VarUI4FromDate, {onLeave: function (args) {send("VarUI4FromDate");}});
+
+var VarUI4FromDec = Module.findExportByName("oleaut32.dll", "VarUI4FromDec")
+Interceptor.attach(VarUI4FromDec, {onLeave: function (args) {send("VarUI4FromDec");}});
+
+var VarUI4FromDisp = Module.findExportByName("oleaut32.dll", "VarUI4FromDisp")
+Interceptor.attach(VarUI4FromDisp, {onLeave: function (args) {send("VarUI4FromDisp");}});
+
+var VarUI4FromI1 = Module.findExportByName("oleaut32.dll", "VarUI4FromI1")
+Interceptor.attach(VarUI4FromI1, {onLeave: function (args) {send("VarUI4FromI1");}});
+
+var VarUI4FromI2 = Module.findExportByName("oleaut32.dll", "VarUI4FromI2")
+Interceptor.attach(VarUI4FromI2, {onLeave: function (args) {send("VarUI4FromI2");}});
+
+var VarUI4FromI4 = Module.findExportByName("oleaut32.dll", "VarUI4FromI4")
+Interceptor.attach(VarUI4FromI4, {onLeave: function (args) {send("VarUI4FromI4");}});
+
+var VarUI4FromI8 = Module.findExportByName("oleaut32.dll", "VarUI4FromI8")
+Interceptor.attach(VarUI4FromI8, {onLeave: function (args) {send("VarUI4FromI8");}});
+
+var VarUI4FromR4 = Module.findExportByName("oleaut32.dll", "VarUI4FromR4")
+Interceptor.attach(VarUI4FromR4, {onLeave: function (args) {send("VarUI4FromR4");}});
+
+var VarUI4FromR8 = Module.findExportByName("oleaut32.dll", "VarUI4FromR8")
+Interceptor.attach(VarUI4FromR8, {onLeave: function (args) {send("VarUI4FromR8");}});
+
+var VarUI4FromStr = Module.findExportByName("oleaut32.dll", "VarUI4FromStr")
+Interceptor.attach(VarUI4FromStr, {onLeave: function (args) {send("VarUI4FromStr");}});
+
+var VarUI4FromUI1 = Module.findExportByName("oleaut32.dll", "VarUI4FromUI1")
+Interceptor.attach(VarUI4FromUI1, {onLeave: function (args) {send("VarUI4FromUI1");}});
+
+var VarUI4FromUI2 = Module.findExportByName("oleaut32.dll", "VarUI4FromUI2")
+Interceptor.attach(VarUI4FromUI2, {onLeave: function (args) {send("VarUI4FromUI2");}});
+
+var VarUI4FromUI8 = Module.findExportByName("oleaut32.dll", "VarUI4FromUI8")
+Interceptor.attach(VarUI4FromUI8, {onLeave: function (args) {send("VarUI4FromUI8");}});
+
+var VarUI8FromBool = Module.findExportByName("oleaut32.dll", "VarUI8FromBool")
+Interceptor.attach(VarUI8FromBool, {onLeave: function (args) {send("VarUI8FromBool");}});
+
+var VarUI8FromCy = Module.findExportByName("oleaut32.dll", "VarUI8FromCy")
+Interceptor.attach(VarUI8FromCy, {onLeave: function (args) {send("VarUI8FromCy");}});
+
+var VarUI8FromDate = Module.findExportByName("oleaut32.dll", "VarUI8FromDate")
+Interceptor.attach(VarUI8FromDate, {onLeave: function (args) {send("VarUI8FromDate");}});
+
+var VarUI8FromDec = Module.findExportByName("oleaut32.dll", "VarUI8FromDec")
+Interceptor.attach(VarUI8FromDec, {onLeave: function (args) {send("VarUI8FromDec");}});
+
+var VarUI8FromDisp = Module.findExportByName("oleaut32.dll", "VarUI8FromDisp")
+Interceptor.attach(VarUI8FromDisp, {onLeave: function (args) {send("VarUI8FromDisp");}});
+
+var VarUI8FromI1 = Module.findExportByName("oleaut32.dll", "VarUI8FromI1")
+Interceptor.attach(VarUI8FromI1, {onLeave: function (args) {send("VarUI8FromI1");}});
+
+var VarUI8FromI2 = Module.findExportByName("oleaut32.dll", "VarUI8FromI2")
+Interceptor.attach(VarUI8FromI2, {onLeave: function (args) {send("VarUI8FromI2");}});
+
+var VarUI8FromI8 = Module.findExportByName("oleaut32.dll", "VarUI8FromI8")
+Interceptor.attach(VarUI8FromI8, {onLeave: function (args) {send("VarUI8FromI8");}});
+
+var VarUI8FromR4 = Module.findExportByName("oleaut32.dll", "VarUI8FromR4")
+Interceptor.attach(VarUI8FromR4, {onLeave: function (args) {send("VarUI8FromR4");}});
+
+var VarUI8FromR8 = Module.findExportByName("oleaut32.dll", "VarUI8FromR8")
+Interceptor.attach(VarUI8FromR8, {onLeave: function (args) {send("VarUI8FromR8");}});
+
+var VarUI8FromStr = Module.findExportByName("oleaut32.dll", "VarUI8FromStr")
+Interceptor.attach(VarUI8FromStr, {onLeave: function (args) {send("VarUI8FromStr");}});
+
+var VarUI8FromUI1 = Module.findExportByName("oleaut32.dll", "VarUI8FromUI1")
+Interceptor.attach(VarUI8FromUI1, {onLeave: function (args) {send("VarUI8FromUI1");}});
+
+var VarUI8FromUI2 = Module.findExportByName("oleaut32.dll", "VarUI8FromUI2")
+Interceptor.attach(VarUI8FromUI2, {onLeave: function (args) {send("VarUI8FromUI2");}});
+
+var VarUI8FromUI4 = Module.findExportByName("oleaut32.dll", "VarUI8FromUI4")
+Interceptor.attach(VarUI8FromUI4, {onLeave: function (args) {send("VarUI8FromUI4");}});
+
+var VarUdateFromDate = Module.findExportByName("oleaut32.dll", "VarUdateFromDate")
+Interceptor.attach(VarUdateFromDate, {onLeave: function (args) {send("VarUdateFromDate");}});
+
+var VarWeekdayName = Module.findExportByName("oleaut32.dll", "VarWeekdayName")
+Interceptor.attach(VarWeekdayName, {onLeave: function (args) {send("VarWeekdayName");}});
+
+var VarXor = Module.findExportByName("oleaut32.dll", "VarXor")
+Interceptor.attach(VarXor, {onLeave: function (args) {send("VarXor");}});
+
+var VariantChangeType = Module.findExportByName("oleaut32.dll", "VariantChangeType")
+Interceptor.attach(VariantChangeType, {onLeave: function (args) {send("VariantChangeType");}});
+
+var VariantChangeTypeEx = Module.findExportByName("oleaut32.dll", "VariantChangeTypeEx")
+Interceptor.attach(VariantChangeTypeEx, {onLeave: function (args) {send("VariantChangeTypeEx");}});
+
+var VariantClear = Module.findExportByName("oleaut32.dll", "VariantClear")
+Interceptor.attach(VariantClear, {onLeave: function (args) {send("VariantClear");}});
+
+var VariantCopy = Module.findExportByName("oleaut32.dll", "VariantCopy")
+Interceptor.attach(VariantCopy, {onLeave: function (args) {send("VariantCopy");}});
+
+var VariantCopyInd = Module.findExportByName("oleaut32.dll", "VariantCopyInd")
+Interceptor.attach(VariantCopyInd, {onLeave: function (args) {send("VariantCopyInd");}});
+
+var VariantInit = Module.findExportByName("oleaut32.dll", "VariantInit")
+Interceptor.attach(VariantInit, {onLeave: function (args) {send("VariantInit");}});
+
+var VariantTimeToDosDateTime = Module.findExportByName("oleaut32.dll", "VariantTimeToDosDateTime")
+Interceptor.attach(VariantTimeToDosDateTime, {onLeave: function (args) {send("VariantTimeToDosDateTime");}});
+
+var VariantTimeToSystemTime = Module.findExportByName("oleaut32.dll", "VariantTimeToSystemTime")
+Interceptor.attach(VariantTimeToSystemTime, {onLeave: function (args) {send("VariantTimeToSystemTime");}});
+
+var VectorFromBstr = Module.findExportByName("oleaut32.dll", "VectorFromBstr")
+Interceptor.attach(VectorFromBstr, {onLeave: function (args) {send("VectorFromBstr");}});
+

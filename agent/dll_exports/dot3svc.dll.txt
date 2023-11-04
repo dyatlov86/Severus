@@ -1,0 +1,12 @@
+var Dot3SvcMain = Module.findExportByName("dot3svc.dll", "Dot3SvcMain")
+Interceptor.attach(Dot3SvcMain, {onLeave: function (args) {send("Dot3SvcMain");}});
+
+var LanNotifyOnLogoff = Module.findExportByName("dot3svc.dll", "LanNotifyOnLogoff")
+Interceptor.attach(LanNotifyOnLogoff, {onLeave: function (args) {send("LanNotifyOnLogoff");}});
+
+var LanNotifyOnLogon = Module.findExportByName("dot3svc.dll", "LanNotifyOnLogon")
+Interceptor.attach(LanNotifyOnLogon, {onLeave: function (args) {send("LanNotifyOnLogon");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("dot3svc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

@@ -1,0 +1,9 @@
+var GcoAddMessage = Module.findExportByName("GameChatOverlayExt.dll", "GcoAddMessage")
+Interceptor.attach(GcoAddMessage, {onLeave: function (args) {send("GcoAddMessage");}});
+
+var GcoGetDesiredPosition = Module.findExportByName("GameChatOverlayExt.dll", "GcoGetDesiredPosition")
+Interceptor.attach(GcoGetDesiredPosition, {onLeave: function (args) {send("GcoGetDesiredPosition");}});
+
+var GcoSetDesiredPosition = Module.findExportByName("GameChatOverlayExt.dll", "GcoSetDesiredPosition")
+Interceptor.attach(GcoSetDesiredPosition, {onLeave: function (args) {send("GcoSetDesiredPosition");}});
+

@@ -1,0 +1,15 @@
+var DispBrokerTraceLogCallback = Module.findExportByName("DispBroker.dll", "DispBrokerTraceLogCallback")
+Interceptor.attach(DispBrokerTraceLogCallback, {onLeave: function (args) {send("DispBrokerTraceLogCallback");}});
+
+var DispBrokerTraceLogHelper = Module.findExportByName("DispBroker.dll", "DispBrokerTraceLogHelper")
+Interceptor.attach(DispBrokerTraceLogHelper, {onLeave: function (args) {send("DispBrokerTraceLogHelper");}});
+
+var DllCanUnloadNow = Module.findExportByName("DispBroker.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("DispBroker.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("DispBroker.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

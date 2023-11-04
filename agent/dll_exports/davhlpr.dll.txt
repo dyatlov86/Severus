@@ -1,0 +1,39 @@
+var DavAddConnection = Module.findExportByName("davhlpr.dll", "DavAddConnection")
+Interceptor.attach(DavAddConnection, {onLeave: function (args) {send("DavAddConnection");}});
+
+var DavCheckAndConvertHttpUrlToUncName = Module.findExportByName("davhlpr.dll", "DavCheckAndConvertHttpUrlToUncName")
+Interceptor.attach(DavCheckAndConvertHttpUrlToUncName, {onLeave: function (args) {send("DavCheckAndConvertHttpUrlToUncName");}});
+
+var DavDeleteConnection = Module.findExportByName("davhlpr.dll", "DavDeleteConnection")
+Interceptor.attach(DavDeleteConnection, {onLeave: function (args) {send("DavDeleteConnection");}});
+
+var DavFlushFile = Module.findExportByName("davhlpr.dll", "DavFlushFile")
+Interceptor.attach(DavFlushFile, {onLeave: function (args) {send("DavFlushFile");}});
+
+var DavGetExtendedError = Module.findExportByName("davhlpr.dll", "DavGetExtendedError")
+Interceptor.attach(DavGetExtendedError, {onLeave: function (args) {send("DavGetExtendedError");}});
+
+var DavGetHTTPFromUNCPath = Module.findExportByName("davhlpr.dll", "DavGetHTTPFromUNCPath")
+Interceptor.attach(DavGetHTTPFromUNCPath, {onLeave: function (args) {send("DavGetHTTPFromUNCPath");}});
+
+var DavGetUNCFromHTTPPath = Module.findExportByName("davhlpr.dll", "DavGetUNCFromHTTPPath")
+Interceptor.attach(DavGetUNCFromHTTPPath, {onLeave: function (args) {send("DavGetUNCFromHTTPPath");}});
+
+var DavParseUncServerName = Module.findExportByName("davhlpr.dll", "DavParseUncServerName")
+Interceptor.attach(DavParseUncServerName, {onLeave: function (args) {send("DavParseUncServerName");}});
+
+var DavRemoveDummyShareFromFileName = Module.findExportByName("davhlpr.dll", "DavRemoveDummyShareFromFileName")
+Interceptor.attach(DavRemoveDummyShareFromFileName, {onLeave: function (args) {send("DavRemoveDummyShareFromFileName");}});
+
+var DavRemoveDummyShareFromFileNameEx = Module.findExportByName("davhlpr.dll", "DavRemoveDummyShareFromFileNameEx")
+Interceptor.attach(DavRemoveDummyShareFromFileNameEx, {onLeave: function (args) {send("DavRemoveDummyShareFromFileNameEx");}});
+
+var DavUrlDecodeToNtPath = Module.findExportByName("davhlpr.dll", "DavUrlDecodeToNtPath")
+Interceptor.attach(DavUrlDecodeToNtPath, {onLeave: function (args) {send("DavUrlDecodeToNtPath");}});
+
+var DavUrlDecodeUtf8 = Module.findExportByName("davhlpr.dll", "DavUrlDecodeUtf8")
+Interceptor.attach(DavUrlDecodeUtf8, {onLeave: function (args) {send("DavUrlDecodeUtf8");}});
+
+var DavUrlEncodeNtPath = Module.findExportByName("davhlpr.dll", "DavUrlEncodeNtPath")
+Interceptor.attach(DavUrlEncodeNtPath, {onLeave: function (args) {send("DavUrlEncodeNtPath");}});
+

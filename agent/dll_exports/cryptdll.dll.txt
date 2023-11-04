@@ -1,0 +1,60 @@
+var CDBuildIntegrityVect = Module.findExportByName("cryptdll.dll", "CDBuildIntegrityVect")
+Interceptor.attach(CDBuildIntegrityVect, {onLeave: function (args) {send("CDBuildIntegrityVect");}});
+
+var CDBuildVect = Module.findExportByName("cryptdll.dll", "CDBuildVect")
+Interceptor.attach(CDBuildVect, {onLeave: function (args) {send("CDBuildVect");}});
+
+var CDFindCommonCSystem = Module.findExportByName("cryptdll.dll", "CDFindCommonCSystem")
+Interceptor.attach(CDFindCommonCSystem, {onLeave: function (args) {send("CDFindCommonCSystem");}});
+
+var CDFindCommonCSystemWithKey = Module.findExportByName("cryptdll.dll", "CDFindCommonCSystemWithKey")
+Interceptor.attach(CDFindCommonCSystemWithKey, {onLeave: function (args) {send("CDFindCommonCSystemWithKey");}});
+
+var CDGenerateRandomBits = Module.findExportByName("cryptdll.dll", "CDGenerateRandomBits")
+Interceptor.attach(CDGenerateRandomBits, {onLeave: function (args) {send("CDGenerateRandomBits");}});
+
+var CDGetIntegrityVect = Module.findExportByName("cryptdll.dll", "CDGetIntegrityVect")
+Interceptor.attach(CDGetIntegrityVect, {onLeave: function (args) {send("CDGetIntegrityVect");}});
+
+var CDLocateCSystem = Module.findExportByName("cryptdll.dll", "CDLocateCSystem")
+Interceptor.attach(CDLocateCSystem, {onLeave: function (args) {send("CDLocateCSystem");}});
+
+var CDLocateCheckSum = Module.findExportByName("cryptdll.dll", "CDLocateCheckSum")
+Interceptor.attach(CDLocateCheckSum, {onLeave: function (args) {send("CDLocateCheckSum");}});
+
+var CDLocateRng = Module.findExportByName("cryptdll.dll", "CDLocateRng")
+Interceptor.attach(CDLocateRng, {onLeave: function (args) {send("CDLocateRng");}});
+
+var CDRegisterCSystem = Module.findExportByName("cryptdll.dll", "CDRegisterCSystem")
+Interceptor.attach(CDRegisterCSystem, {onLeave: function (args) {send("CDRegisterCSystem");}});
+
+var CDRegisterCheckSum = Module.findExportByName("cryptdll.dll", "CDRegisterCheckSum")
+Interceptor.attach(CDRegisterCheckSum, {onLeave: function (args) {send("CDRegisterCheckSum");}});
+
+var CDRegisterRng = Module.findExportByName("cryptdll.dll", "CDRegisterRng")
+Interceptor.attach(CDRegisterRng, {onLeave: function (args) {send("CDRegisterRng");}});
+
+var HMACwithSHA = Module.findExportByName("cryptdll.dll", "HMACwithSHA")
+Interceptor.attach(HMACwithSHA, {onLeave: function (args) {send("HMACwithSHA");}});
+
+var KRBFXCF2 = Module.findExportByName("cryptdll.dll", "KRBFXCF2")
+Interceptor.attach(KRBFXCF2, {onLeave: function (args) {send("KRBFXCF2");}});
+
+var MD5Final = Module.findExportByName("cryptdll.dll", "MD5Final")
+Interceptor.attach(MD5Final, {onLeave: function (args) {send("MD5Final");}});
+
+var MD5Init = Module.findExportByName("cryptdll.dll", "MD5Init")
+Interceptor.attach(MD5Init, {onLeave: function (args) {send("MD5Init");}});
+
+var MD5Update = Module.findExportByName("cryptdll.dll", "MD5Update")
+Interceptor.attach(MD5Update, {onLeave: function (args) {send("MD5Update");}});
+
+var PBKDF2 = Module.findExportByName("cryptdll.dll", "PBKDF2")
+Interceptor.attach(PBKDF2, {onLeave: function (args) {send("PBKDF2");}});
+
+var aesCTSDecryptMsg = Module.findExportByName("cryptdll.dll", "aesCTSDecryptMsg")
+Interceptor.attach(aesCTSDecryptMsg, {onLeave: function (args) {send("aesCTSDecryptMsg");}});
+
+var aesCTSEncryptMsg = Module.findExportByName("cryptdll.dll", "aesCTSEncryptMsg")
+Interceptor.attach(aesCTSEncryptMsg, {onLeave: function (args) {send("aesCTSEncryptMsg");}});
+

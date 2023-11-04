@@ -1,0 +1,18 @@
+var ADLXInitialize = Module.findExportByName("amdadlx32.dll", "ADLXInitialize")
+Interceptor.attach(ADLXInitialize, {onLeave: function (args) {send("ADLXInitialize");}});
+
+var ADLXInitializeWithCallerAdl = Module.findExportByName("amdadlx32.dll", "ADLXInitializeWithCallerAdl")
+Interceptor.attach(ADLXInitializeWithCallerAdl, {onLeave: function (args) {send("ADLXInitializeWithCallerAdl");}});
+
+var ADLXInitializeWithIncompatibleDriver = Module.findExportByName("amdadlx32.dll", "ADLXInitializeWithIncompatibleDriver")
+Interceptor.attach(ADLXInitializeWithIncompatibleDriver, {onLeave: function (args) {send("ADLXInitializeWithIncompatibleDriver");}});
+
+var ADLXQueryFullVersion = Module.findExportByName("amdadlx32.dll", "ADLXQueryFullVersion")
+Interceptor.attach(ADLXQueryFullVersion, {onLeave: function (args) {send("ADLXQueryFullVersion");}});
+
+var ADLXQueryVersion = Module.findExportByName("amdadlx32.dll", "ADLXQueryVersion")
+Interceptor.attach(ADLXQueryVersion, {onLeave: function (args) {send("ADLXQueryVersion");}});
+
+var ADLXTerminate = Module.findExportByName("amdadlx32.dll", "ADLXTerminate")
+Interceptor.attach(ADLXTerminate, {onLeave: function (args) {send("ADLXTerminate");}});
+

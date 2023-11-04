@@ -1,0 +1,42 @@
+var CountryRunOnce = Module.findExportByName("modemui.dll", "CountryRunOnce")
+Interceptor.attach(CountryRunOnce, {onLeave: function (args) {send("CountryRunOnce");}});
+
+var InvokeControlPanel = Module.findExportByName("modemui.dll", "InvokeControlPanel")
+Interceptor.attach(InvokeControlPanel, {onLeave: function (args) {send("InvokeControlPanel");}});
+
+var ModemCplDlgProc = Module.findExportByName("modemui.dll", "ModemCplDlgProc")
+Interceptor.attach(ModemCplDlgProc, {onLeave: function (args) {send("ModemCplDlgProc");}});
+
+var ModemPropPagesProvider = Module.findExportByName("modemui.dll", "ModemPropPagesProvider")
+Interceptor.attach(ModemPropPagesProvider, {onLeave: function (args) {send("ModemPropPagesProvider");}});
+
+var QueryModemForCountrySettings = Module.findExportByName("modemui.dll", "QueryModemForCountrySettings")
+Interceptor.attach(QueryModemForCountrySettings, {onLeave: function (args) {send("QueryModemForCountrySettings");}});
+
+var UnimodemDevConfigDialog = Module.findExportByName("modemui.dll", "UnimodemDevConfigDialog")
+Interceptor.attach(UnimodemDevConfigDialog, {onLeave: function (args) {send("UnimodemDevConfigDialog");}});
+
+var UnimodemGetDefaultCommConfig = Module.findExportByName("modemui.dll", "UnimodemGetDefaultCommConfig")
+Interceptor.attach(UnimodemGetDefaultCommConfig, {onLeave: function (args) {send("UnimodemGetDefaultCommConfig");}});
+
+var UnimodemGetExtendedCaps = Module.findExportByName("modemui.dll", "UnimodemGetExtendedCaps")
+Interceptor.attach(UnimodemGetExtendedCaps, {onLeave: function (args) {send("UnimodemGetExtendedCaps");}});
+
+var drvCommConfigDialogA = Module.findExportByName("modemui.dll", "drvCommConfigDialogA")
+Interceptor.attach(drvCommConfigDialogA, {onLeave: function (args) {send("drvCommConfigDialogA");}});
+
+var drvCommConfigDialogW = Module.findExportByName("modemui.dll", "drvCommConfigDialogW")
+Interceptor.attach(drvCommConfigDialogW, {onLeave: function (args) {send("drvCommConfigDialogW");}});
+
+var drvGetDefaultCommConfigA = Module.findExportByName("modemui.dll", "drvGetDefaultCommConfigA")
+Interceptor.attach(drvGetDefaultCommConfigA, {onLeave: function (args) {send("drvGetDefaultCommConfigA");}});
+
+var drvGetDefaultCommConfigW = Module.findExportByName("modemui.dll", "drvGetDefaultCommConfigW")
+Interceptor.attach(drvGetDefaultCommConfigW, {onLeave: function (args) {send("drvGetDefaultCommConfigW");}});
+
+var drvSetDefaultCommConfigA = Module.findExportByName("modemui.dll", "drvSetDefaultCommConfigA")
+Interceptor.attach(drvSetDefaultCommConfigA, {onLeave: function (args) {send("drvSetDefaultCommConfigA");}});
+
+var drvSetDefaultCommConfigW = Module.findExportByName("modemui.dll", "drvSetDefaultCommConfigW")
+Interceptor.attach(drvSetDefaultCommConfigW, {onLeave: function (args) {send("drvSetDefaultCommConfigW");}});
+

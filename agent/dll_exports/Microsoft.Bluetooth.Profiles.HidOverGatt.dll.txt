@@ -1,0 +1,3 @@
+var FxDriverEntryUm = Module.findExportByName("Microsoft.Bluetooth.Profiles.HidOverGatt.dll", "FxDriverEntryUm")
+Interceptor.attach(FxDriverEntryUm, {onLeave: function (args) {send("FxDriverEntryUm");}});
+

@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("MaintenanceUI.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("MaintenanceUI.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("MaintenanceUI.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("MaintenanceUI.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var StartMaintenance = Module.findExportByName("MaintenanceUI.dll", "StartMaintenance")
+Interceptor.attach(StartMaintenance, {onLeave: function (args) {send("StartMaintenance");}});
+
+var StopMaintenance = Module.findExportByName("MaintenanceUI.dll", "StopMaintenance")
+Interceptor.attach(StopMaintenance, {onLeave: function (args) {send("StopMaintenance");}});
+

@@ -1,0 +1,12 @@
+var CPlApplet = Module.findExportByName("srchadmin.dll", "CPlApplet")
+Interceptor.attach(CPlApplet, {onLeave: function (args) {send("CPlApplet");}});
+
+var DllCanUnloadNow = Module.findExportByName("srchadmin.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("srchadmin.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ProcessGroupPolicy = Module.findExportByName("srchadmin.dll", "ProcessGroupPolicy")
+Interceptor.attach(ProcessGroupPolicy, {onLeave: function (args) {send("ProcessGroupPolicy");}});
+

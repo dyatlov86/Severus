@@ -1,0 +1,21 @@
+var AwaitContactPickerResults = Module.findExportByName("ContactActivation.dll", "AwaitContactPickerResults")
+Interceptor.attach(AwaitContactPickerResults, {onLeave: function (args) {send("AwaitContactPickerResults");}});
+
+var ContactToVCardString = Module.findExportByName("ContactActivation.dll", "ContactToVCardString")
+Interceptor.attach(ContactToVCardString, {onLeave: function (args) {send("ContactToVCardString");}});
+
+var DeserializeContactFromString = Module.findExportByName("ContactActivation.dll", "DeserializeContactFromString")
+Interceptor.attach(DeserializeContactFromString, {onLeave: function (args) {send("DeserializeContactFromString");}});
+
+var SerializeContactToString = Module.findExportByName("ContactActivation.dll", "SerializeContactToString")
+Interceptor.attach(SerializeContactToString, {onLeave: function (args) {send("SerializeContactToString");}});
+
+var SerializeContactToVCard = Module.findExportByName("ContactActivation.dll", "SerializeContactToVCard")
+Interceptor.attach(SerializeContactToVCard, {onLeave: function (args) {send("SerializeContactToVCard");}});
+
+var ShowContactPickerAsync = Module.findExportByName("ContactActivation.dll", "ShowContactPickerAsync")
+Interceptor.attach(ShowContactPickerAsync, {onLeave: function (args) {send("ShowContactPickerAsync");}});
+
+var VCardStringToContact = Module.findExportByName("ContactActivation.dll", "VCardStringToContact")
+Interceptor.attach(VCardStringToContact, {onLeave: function (args) {send("VCardStringToContact");}});
+

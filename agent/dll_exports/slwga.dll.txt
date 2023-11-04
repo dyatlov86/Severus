@@ -1,0 +1,3 @@
+var SLIsGenuineLocal = Module.findExportByName("slwga.dll", "SLIsGenuineLocal")
+Interceptor.attach(SLIsGenuineLocal, {onLeave: function (args) {send("SLIsGenuineLocal");}});
+

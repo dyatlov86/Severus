@@ -1,0 +1,3 @@
+var WinMLCreateRuntime = Module.findExportByName("winml.dll", "WinMLCreateRuntime")
+Interceptor.attach(WinMLCreateRuntime, {onLeave: function (args) {send("WinMLCreateRuntime");}});
+

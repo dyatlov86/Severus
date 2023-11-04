@@ -1,0 +1,6 @@
+var InitializeQec = Module.findExportByName("tsgqec.dll", "InitializeQec")
+Interceptor.attach(InitializeQec, {onLeave: function (args) {send("InitializeQec");}});
+
+var UninitializeQec = Module.findExportByName("tsgqec.dll", "UninitializeQec")
+Interceptor.attach(UninitializeQec, {onLeave: function (args) {send("UninitializeQec");}});
+

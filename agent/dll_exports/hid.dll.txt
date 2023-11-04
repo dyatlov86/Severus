@@ -1,0 +1,141 @@
+var HidD_FlushQueue = Module.findExportByName("hid.dll", "HidD_FlushQueue")
+Interceptor.attach(HidD_FlushQueue, {onLeave: function (args) {send("HidD_FlushQueue");}});
+
+var HidD_FreePreparsedData = Module.findExportByName("hid.dll", "HidD_FreePreparsedData")
+Interceptor.attach(HidD_FreePreparsedData, {onLeave: function (args) {send("HidD_FreePreparsedData");}});
+
+var HidD_GetAttributes = Module.findExportByName("hid.dll", "HidD_GetAttributes")
+Interceptor.attach(HidD_GetAttributes, {onLeave: function (args) {send("HidD_GetAttributes");}});
+
+var HidD_GetConfiguration = Module.findExportByName("hid.dll", "HidD_GetConfiguration")
+Interceptor.attach(HidD_GetConfiguration, {onLeave: function (args) {send("HidD_GetConfiguration");}});
+
+var HidD_GetFeature = Module.findExportByName("hid.dll", "HidD_GetFeature")
+Interceptor.attach(HidD_GetFeature, {onLeave: function (args) {send("HidD_GetFeature");}});
+
+var HidD_GetHidGuid = Module.findExportByName("hid.dll", "HidD_GetHidGuid")
+Interceptor.attach(HidD_GetHidGuid, {onLeave: function (args) {send("HidD_GetHidGuid");}});
+
+var HidD_GetIndexedString = Module.findExportByName("hid.dll", "HidD_GetIndexedString")
+Interceptor.attach(HidD_GetIndexedString, {onLeave: function (args) {send("HidD_GetIndexedString");}});
+
+var HidD_GetInputReport = Module.findExportByName("hid.dll", "HidD_GetInputReport")
+Interceptor.attach(HidD_GetInputReport, {onLeave: function (args) {send("HidD_GetInputReport");}});
+
+var HidD_GetManufacturerString = Module.findExportByName("hid.dll", "HidD_GetManufacturerString")
+Interceptor.attach(HidD_GetManufacturerString, {onLeave: function (args) {send("HidD_GetManufacturerString");}});
+
+var HidD_GetMsGenreDescriptor = Module.findExportByName("hid.dll", "HidD_GetMsGenreDescriptor")
+Interceptor.attach(HidD_GetMsGenreDescriptor, {onLeave: function (args) {send("HidD_GetMsGenreDescriptor");}});
+
+var HidD_GetNumInputBuffers = Module.findExportByName("hid.dll", "HidD_GetNumInputBuffers")
+Interceptor.attach(HidD_GetNumInputBuffers, {onLeave: function (args) {send("HidD_GetNumInputBuffers");}});
+
+var HidD_GetPhysicalDescriptor = Module.findExportByName("hid.dll", "HidD_GetPhysicalDescriptor")
+Interceptor.attach(HidD_GetPhysicalDescriptor, {onLeave: function (args) {send("HidD_GetPhysicalDescriptor");}});
+
+var HidD_GetPreparsedData = Module.findExportByName("hid.dll", "HidD_GetPreparsedData")
+Interceptor.attach(HidD_GetPreparsedData, {onLeave: function (args) {send("HidD_GetPreparsedData");}});
+
+var HidD_GetProductString = Module.findExportByName("hid.dll", "HidD_GetProductString")
+Interceptor.attach(HidD_GetProductString, {onLeave: function (args) {send("HidD_GetProductString");}});
+
+var HidD_GetSerialNumberString = Module.findExportByName("hid.dll", "HidD_GetSerialNumberString")
+Interceptor.attach(HidD_GetSerialNumberString, {onLeave: function (args) {send("HidD_GetSerialNumberString");}});
+
+var HidD_Hello = Module.findExportByName("hid.dll", "HidD_Hello")
+Interceptor.attach(HidD_Hello, {onLeave: function (args) {send("HidD_Hello");}});
+
+var HidD_SetConfiguration = Module.findExportByName("hid.dll", "HidD_SetConfiguration")
+Interceptor.attach(HidD_SetConfiguration, {onLeave: function (args) {send("HidD_SetConfiguration");}});
+
+var HidD_SetFeature = Module.findExportByName("hid.dll", "HidD_SetFeature")
+Interceptor.attach(HidD_SetFeature, {onLeave: function (args) {send("HidD_SetFeature");}});
+
+var HidD_SetNumInputBuffers = Module.findExportByName("hid.dll", "HidD_SetNumInputBuffers")
+Interceptor.attach(HidD_SetNumInputBuffers, {onLeave: function (args) {send("HidD_SetNumInputBuffers");}});
+
+var HidD_SetOutputReport = Module.findExportByName("hid.dll", "HidD_SetOutputReport")
+Interceptor.attach(HidD_SetOutputReport, {onLeave: function (args) {send("HidD_SetOutputReport");}});
+
+var HidP_GetButtonArray = Module.findExportByName("hid.dll", "HidP_GetButtonArray")
+Interceptor.attach(HidP_GetButtonArray, {onLeave: function (args) {send("HidP_GetButtonArray");}});
+
+var HidP_GetButtonCaps = Module.findExportByName("hid.dll", "HidP_GetButtonCaps")
+Interceptor.attach(HidP_GetButtonCaps, {onLeave: function (args) {send("HidP_GetButtonCaps");}});
+
+var HidP_GetCaps = Module.findExportByName("hid.dll", "HidP_GetCaps")
+Interceptor.attach(HidP_GetCaps, {onLeave: function (args) {send("HidP_GetCaps");}});
+
+var HidP_GetData = Module.findExportByName("hid.dll", "HidP_GetData")
+Interceptor.attach(HidP_GetData, {onLeave: function (args) {send("HidP_GetData");}});
+
+var HidP_GetExtendedAttributes = Module.findExportByName("hid.dll", "HidP_GetExtendedAttributes")
+Interceptor.attach(HidP_GetExtendedAttributes, {onLeave: function (args) {send("HidP_GetExtendedAttributes");}});
+
+var HidP_GetLinkCollectionNodes = Module.findExportByName("hid.dll", "HidP_GetLinkCollectionNodes")
+Interceptor.attach(HidP_GetLinkCollectionNodes, {onLeave: function (args) {send("HidP_GetLinkCollectionNodes");}});
+
+var HidP_GetScaledUsageValue = Module.findExportByName("hid.dll", "HidP_GetScaledUsageValue")
+Interceptor.attach(HidP_GetScaledUsageValue, {onLeave: function (args) {send("HidP_GetScaledUsageValue");}});
+
+var HidP_GetSpecificButtonCaps = Module.findExportByName("hid.dll", "HidP_GetSpecificButtonCaps")
+Interceptor.attach(HidP_GetSpecificButtonCaps, {onLeave: function (args) {send("HidP_GetSpecificButtonCaps");}});
+
+var HidP_GetSpecificValueCaps = Module.findExportByName("hid.dll", "HidP_GetSpecificValueCaps")
+Interceptor.attach(HidP_GetSpecificValueCaps, {onLeave: function (args) {send("HidP_GetSpecificValueCaps");}});
+
+var HidP_GetUsageValue = Module.findExportByName("hid.dll", "HidP_GetUsageValue")
+Interceptor.attach(HidP_GetUsageValue, {onLeave: function (args) {send("HidP_GetUsageValue");}});
+
+var HidP_GetUsageValueArray = Module.findExportByName("hid.dll", "HidP_GetUsageValueArray")
+Interceptor.attach(HidP_GetUsageValueArray, {onLeave: function (args) {send("HidP_GetUsageValueArray");}});
+
+var HidP_GetUsages = Module.findExportByName("hid.dll", "HidP_GetUsages")
+Interceptor.attach(HidP_GetUsages, {onLeave: function (args) {send("HidP_GetUsages");}});
+
+var HidP_GetUsagesEx = Module.findExportByName("hid.dll", "HidP_GetUsagesEx")
+Interceptor.attach(HidP_GetUsagesEx, {onLeave: function (args) {send("HidP_GetUsagesEx");}});
+
+var HidP_GetValueCaps = Module.findExportByName("hid.dll", "HidP_GetValueCaps")
+Interceptor.attach(HidP_GetValueCaps, {onLeave: function (args) {send("HidP_GetValueCaps");}});
+
+var HidP_GetVersionInternal = Module.findExportByName("hid.dll", "HidP_GetVersionInternal")
+Interceptor.attach(HidP_GetVersionInternal, {onLeave: function (args) {send("HidP_GetVersionInternal");}});
+
+var HidP_InitializeReportForID = Module.findExportByName("hid.dll", "HidP_InitializeReportForID")
+Interceptor.attach(HidP_InitializeReportForID, {onLeave: function (args) {send("HidP_InitializeReportForID");}});
+
+var HidP_MaxDataListLength = Module.findExportByName("hid.dll", "HidP_MaxDataListLength")
+Interceptor.attach(HidP_MaxDataListLength, {onLeave: function (args) {send("HidP_MaxDataListLength");}});
+
+var HidP_MaxUsageListLength = Module.findExportByName("hid.dll", "HidP_MaxUsageListLength")
+Interceptor.attach(HidP_MaxUsageListLength, {onLeave: function (args) {send("HidP_MaxUsageListLength");}});
+
+var HidP_SetButtonArray = Module.findExportByName("hid.dll", "HidP_SetButtonArray")
+Interceptor.attach(HidP_SetButtonArray, {onLeave: function (args) {send("HidP_SetButtonArray");}});
+
+var HidP_SetData = Module.findExportByName("hid.dll", "HidP_SetData")
+Interceptor.attach(HidP_SetData, {onLeave: function (args) {send("HidP_SetData");}});
+
+var HidP_SetScaledUsageValue = Module.findExportByName("hid.dll", "HidP_SetScaledUsageValue")
+Interceptor.attach(HidP_SetScaledUsageValue, {onLeave: function (args) {send("HidP_SetScaledUsageValue");}});
+
+var HidP_SetUsageValue = Module.findExportByName("hid.dll", "HidP_SetUsageValue")
+Interceptor.attach(HidP_SetUsageValue, {onLeave: function (args) {send("HidP_SetUsageValue");}});
+
+var HidP_SetUsageValueArray = Module.findExportByName("hid.dll", "HidP_SetUsageValueArray")
+Interceptor.attach(HidP_SetUsageValueArray, {onLeave: function (args) {send("HidP_SetUsageValueArray");}});
+
+var HidP_SetUsages = Module.findExportByName("hid.dll", "HidP_SetUsages")
+Interceptor.attach(HidP_SetUsages, {onLeave: function (args) {send("HidP_SetUsages");}});
+
+var HidP_TranslateUsagesToI8042ScanCodes = Module.findExportByName("hid.dll", "HidP_TranslateUsagesToI8042ScanCodes")
+Interceptor.attach(HidP_TranslateUsagesToI8042ScanCodes, {onLeave: function (args) {send("HidP_TranslateUsagesToI8042ScanCodes");}});
+
+var HidP_UnsetUsages = Module.findExportByName("hid.dll", "HidP_UnsetUsages")
+Interceptor.attach(HidP_UnsetUsages, {onLeave: function (args) {send("HidP_UnsetUsages");}});
+
+var HidP_UsageListDifference = Module.findExportByName("hid.dll", "HidP_UsageListDifference")
+Interceptor.attach(HidP_UsageListDifference, {onLeave: function (args) {send("HidP_UsageListDifference");}});
+

@@ -1,0 +1,15 @@
+var CloseDapControl = Module.findExportByName("Dax3DapControl.dll", "CloseDapControl")
+Interceptor.attach(CloseDapControl, {onLeave: function (args) {send("CloseDapControl");}});
+
+var GetDapParam = Module.findExportByName("Dax3DapControl.dll", "GetDapParam")
+Interceptor.attach(GetDapParam, {onLeave: function (args) {send("GetDapParam");}});
+
+var OpenDapControl = Module.findExportByName("Dax3DapControl.dll", "OpenDapControl")
+Interceptor.attach(OpenDapControl, {onLeave: function (args) {send("OpenDapControl");}});
+
+var SetDapParam = Module.findExportByName("Dax3DapControl.dll", "SetDapParam")
+Interceptor.attach(SetDapParam, {onLeave: function (args) {send("SetDapParam");}});
+
+var SetDapVariantParam = Module.findExportByName("Dax3DapControl.dll", "SetDapVariantParam")
+Interceptor.attach(SetDapVariantParam, {onLeave: function (args) {send("SetDapVariantParam");}});
+

@@ -1,0 +1,87 @@
+var CopyDropFilesFrom16 = Module.findExportByName("wow32.dll", "CopyDropFilesFrom16")
+Interceptor.attach(CopyDropFilesFrom16, {onLeave: function (args) {send("CopyDropFilesFrom16");}});
+
+var CopyDropFilesFrom32 = Module.findExportByName("wow32.dll", "CopyDropFilesFrom32")
+Interceptor.attach(CopyDropFilesFrom32, {onLeave: function (args) {send("CopyDropFilesFrom32");}});
+
+var GetCommHandle = Module.findExportByName("wow32.dll", "GetCommHandle")
+Interceptor.attach(GetCommHandle, {onLeave: function (args) {send("GetCommHandle");}});
+
+var GetCommShadowMSR = Module.findExportByName("wow32.dll", "GetCommShadowMSR")
+Interceptor.attach(GetCommShadowMSR, {onLeave: function (args) {send("GetCommShadowMSR");}});
+
+var W32Dispatch = Module.findExportByName("wow32.dll", "W32Dispatch")
+Interceptor.attach(W32Dispatch, {onLeave: function (args) {send("W32Dispatch");}});
+
+var W32HungAppNotifyThread = Module.findExportByName("wow32.dll", "W32HungAppNotifyThread")
+Interceptor.attach(W32HungAppNotifyThread, {onLeave: function (args) {send("W32HungAppNotifyThread");}});
+
+var W32Init = Module.findExportByName("wow32.dll", "W32Init")
+Interceptor.attach(W32Init, {onLeave: function (args) {send("W32Init");}});
+
+var WOW32DriverCallback = Module.findExportByName("wow32.dll", "WOW32DriverCallback")
+Interceptor.attach(WOW32DriverCallback, {onLeave: function (args) {send("WOW32DriverCallback");}});
+
+var WOW32ResolveHandle = Module.findExportByName("wow32.dll", "WOW32ResolveHandle")
+Interceptor.attach(WOW32ResolveHandle, {onLeave: function (args) {send("WOW32ResolveHandle");}});
+
+var WOW32ResolveMemory = Module.findExportByName("wow32.dll", "WOW32ResolveMemory")
+Interceptor.attach(WOW32ResolveMemory, {onLeave: function (args) {send("WOW32ResolveMemory");}});
+
+var WOWCallback16 = Module.findExportByName("wow32.dll", "WOWCallback16")
+Interceptor.attach(WOWCallback16, {onLeave: function (args) {send("WOWCallback16");}});
+
+var WOWCallback16Ex = Module.findExportByName("wow32.dll", "WOWCallback16Ex")
+Interceptor.attach(WOWCallback16Ex, {onLeave: function (args) {send("WOWCallback16Ex");}});
+
+var WOWDelayTimeGetTime = Module.findExportByName("wow32.dll", "WOWDelayTimeGetTime")
+Interceptor.attach(WOWDelayTimeGetTime, {onLeave: function (args) {send("WOWDelayTimeGetTime");}});
+
+var WOWDirectedYield16 = Module.findExportByName("wow32.dll", "WOWDirectedYield16")
+Interceptor.attach(WOWDirectedYield16, {onLeave: function (args) {send("WOWDirectedYield16");}});
+
+var WOWFreeMetafile = Module.findExportByName("wow32.dll", "WOWFreeMetafile")
+Interceptor.attach(WOWFreeMetafile, {onLeave: function (args) {send("WOWFreeMetafile");}});
+
+var WOWGetVDMPointer = Module.findExportByName("wow32.dll", "WOWGetVDMPointer")
+Interceptor.attach(WOWGetVDMPointer, {onLeave: function (args) {send("WOWGetVDMPointer");}});
+
+var WOWGetVDMPointerFix = Module.findExportByName("wow32.dll", "WOWGetVDMPointerFix")
+Interceptor.attach(WOWGetVDMPointerFix, {onLeave: function (args) {send("WOWGetVDMPointerFix");}});
+
+var WOWGetVDMPointerUnfix = Module.findExportByName("wow32.dll", "WOWGetVDMPointerUnfix")
+Interceptor.attach(WOWGetVDMPointerUnfix, {onLeave: function (args) {send("WOWGetVDMPointerUnfix");}});
+
+var WOWGlobalAlloc16 = Module.findExportByName("wow32.dll", "WOWGlobalAlloc16")
+Interceptor.attach(WOWGlobalAlloc16, {onLeave: function (args) {send("WOWGlobalAlloc16");}});
+
+var WOWGlobalAllocLock16 = Module.findExportByName("wow32.dll", "WOWGlobalAllocLock16")
+Interceptor.attach(WOWGlobalAllocLock16, {onLeave: function (args) {send("WOWGlobalAllocLock16");}});
+
+var WOWGlobalFree16 = Module.findExportByName("wow32.dll", "WOWGlobalFree16")
+Interceptor.attach(WOWGlobalFree16, {onLeave: function (args) {send("WOWGlobalFree16");}});
+
+var WOWGlobalLock16 = Module.findExportByName("wow32.dll", "WOWGlobalLock16")
+Interceptor.attach(WOWGlobalLock16, {onLeave: function (args) {send("WOWGlobalLock16");}});
+
+var WOWGlobalLockSize16 = Module.findExportByName("wow32.dll", "WOWGlobalLockSize16")
+Interceptor.attach(WOWGlobalLockSize16, {onLeave: function (args) {send("WOWGlobalLockSize16");}});
+
+var WOWGlobalUnlock16 = Module.findExportByName("wow32.dll", "WOWGlobalUnlock16")
+Interceptor.attach(WOWGlobalUnlock16, {onLeave: function (args) {send("WOWGlobalUnlock16");}});
+
+var WOWGlobalUnlockFree16 = Module.findExportByName("wow32.dll", "WOWGlobalUnlockFree16")
+Interceptor.attach(WOWGlobalUnlockFree16, {onLeave: function (args) {send("WOWGlobalUnlockFree16");}});
+
+var WOWHandle16 = Module.findExportByName("wow32.dll", "WOWHandle16")
+Interceptor.attach(WOWHandle16, {onLeave: function (args) {send("WOWHandle16");}});
+
+var WOWHandle32 = Module.findExportByName("wow32.dll", "WOWHandle32")
+Interceptor.attach(WOWHandle32, {onLeave: function (args) {send("WOWHandle32");}});
+
+var WOWUseMciavi16 = Module.findExportByName("wow32.dll", "WOWUseMciavi16")
+Interceptor.attach(WOWUseMciavi16, {onLeave: function (args) {send("WOWUseMciavi16");}});
+
+var WOWYield16 = Module.findExportByName("wow32.dll", "WOWYield16")
+Interceptor.attach(WOWYield16, {onLeave: function (args) {send("WOWYield16");}});
+

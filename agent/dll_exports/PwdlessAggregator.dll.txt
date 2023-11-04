@@ -1,0 +1,15 @@
+var Initialize = Module.findExportByName("PwdlessAggregator.dll", "Initialize")
+Interceptor.attach(Initialize, {onLeave: function (args) {send("Initialize");}});
+
+var NotifyTimerExpiryWithId = Module.findExportByName("PwdlessAggregator.dll", "NotifyTimerExpiryWithId")
+Interceptor.attach(NotifyTimerExpiryWithId, {onLeave: function (args) {send("NotifyTimerExpiryWithId");}});
+
+var ProcessNextEventJsonBuilder = Module.findExportByName("PwdlessAggregator.dll", "ProcessNextEventJsonBuilder")
+Interceptor.attach(ProcessNextEventJsonBuilder, {onLeave: function (args) {send("ProcessNextEventJsonBuilder");}});
+
+var SetParameter = Module.findExportByName("PwdlessAggregator.dll", "SetParameter")
+Interceptor.attach(SetParameter, {onLeave: function (args) {send("SetParameter");}});
+
+var Uninitialize = Module.findExportByName("PwdlessAggregator.dll", "Uninitialize")
+Interceptor.attach(Uninitialize, {onLeave: function (args) {send("Uninitialize");}});
+

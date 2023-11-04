@@ -1,0 +1,6 @@
+var WptsInitialize = Module.findExportByName("WPTaskScheduler.dll", "WptsInitialize")
+Interceptor.attach(WptsInitialize, {onLeave: function (args) {send("WptsInitialize");}});
+
+var WptsTerminate = Module.findExportByName("WPTaskScheduler.dll", "WptsTerminate")
+Interceptor.attach(WptsTerminate, {onLeave: function (args) {send("WptsTerminate");}});
+

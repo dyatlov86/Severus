@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("mydocs.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mydocs.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var PerUserInit = Module.findExportByName("mydocs.dll", "PerUserInit")
+Interceptor.attach(PerUserInit, {onLeave: function (args) {send("PerUserInit");}});
+

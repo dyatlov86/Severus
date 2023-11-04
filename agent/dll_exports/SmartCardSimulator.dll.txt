@@ -1,0 +1,45 @@
+var DllCanUnloadNow = Module.findExportByName("SmartCardSimulator.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SmartCardSimulator.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("SmartCardSimulator.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("SmartCardSimulator.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var Microsoft_WDF_UMDF_Version = Module.findExportByName("SmartCardSimulator.dll", "Microsoft_WDF_UMDF_Version")
+Interceptor.attach(Microsoft_WDF_UMDF_Version, {onLeave: function (args) {send("Microsoft_WDF_UMDF_Version");}});
+
+var VGidsSimulatorCreate = Module.findExportByName("SmartCardSimulator.dll", "VGidsSimulatorCreate")
+Interceptor.attach(VGidsSimulatorCreate, {onLeave: function (args) {send("VGidsSimulatorCreate");}});
+
+var VGidsSimulatorDestroy = Module.findExportByName("SmartCardSimulator.dll", "VGidsSimulatorDestroy")
+Interceptor.attach(VGidsSimulatorDestroy, {onLeave: function (args) {send("VGidsSimulatorDestroy");}});
+
+var VGidsSimulatorReadProperties = Module.findExportByName("SmartCardSimulator.dll", "VGidsSimulatorReadProperties")
+Interceptor.attach(VGidsSimulatorReadProperties, {onLeave: function (args) {send("VGidsSimulatorReadProperties");}});
+
+var VGidsSimulatorWriteProperties = Module.findExportByName("SmartCardSimulator.dll", "VGidsSimulatorWriteProperties")
+Interceptor.attach(VGidsSimulatorWriteProperties, {onLeave: function (args) {send("VGidsSimulatorWriteProperties");}});
+
+var VTransportClose = Module.findExportByName("SmartCardSimulator.dll", "VTransportClose")
+Interceptor.attach(VTransportClose, {onLeave: function (args) {send("VTransportClose");}});
+
+var VTransportDeinitialize = Module.findExportByName("SmartCardSimulator.dll", "VTransportDeinitialize")
+Interceptor.attach(VTransportDeinitialize, {onLeave: function (args) {send("VTransportDeinitialize");}});
+
+var VTransportInitialize = Module.findExportByName("SmartCardSimulator.dll", "VTransportInitialize")
+Interceptor.attach(VTransportInitialize, {onLeave: function (args) {send("VTransportInitialize");}});
+
+var VTransportOpen = Module.findExportByName("SmartCardSimulator.dll", "VTransportOpen")
+Interceptor.attach(VTransportOpen, {onLeave: function (args) {send("VTransportOpen");}});
+
+var VTransportReceive = Module.findExportByName("SmartCardSimulator.dll", "VTransportReceive")
+Interceptor.attach(VTransportReceive, {onLeave: function (args) {send("VTransportReceive");}});
+
+var VTransportTransmit = Module.findExportByName("SmartCardSimulator.dll", "VTransportTransmit")
+Interceptor.attach(VTransportTransmit, {onLeave: function (args) {send("VTransportTransmit");}});
+

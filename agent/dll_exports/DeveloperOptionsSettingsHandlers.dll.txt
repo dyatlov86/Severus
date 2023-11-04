@@ -1,0 +1,6 @@
+var DllCanUnloadNow = Module.findExportByName("DeveloperOptionsSettingsHandlers.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var GetSetting = Module.findExportByName("DeveloperOptionsSettingsHandlers.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+

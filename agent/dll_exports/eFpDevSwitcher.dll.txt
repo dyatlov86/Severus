@@ -1,0 +1,15 @@
+var CheckDeviceStatus = Module.findExportByName("eFpDevSwitcher.dll", "CheckDeviceStatus")
+Interceptor.attach(CheckDeviceStatus, {onLeave: function (args) {send("CheckDeviceStatus");}});
+
+var DoSwitch = Module.findExportByName("eFpDevSwitcher.dll", "DoSwitch")
+Interceptor.attach(DoSwitch, {onLeave: function (args) {send("DoSwitch");}});
+
+var GetDeviceVersion = Module.findExportByName("eFpDevSwitcher.dll", "GetDeviceVersion")
+Interceptor.attach(GetDeviceVersion, {onLeave: function (args) {send("GetDeviceVersion");}});
+
+var InitialSwitcher = Module.findExportByName("eFpDevSwitcher.dll", "InitialSwitcher")
+Interceptor.attach(InitialSwitcher, {onLeave: function (args) {send("InitialSwitcher");}});
+
+var IsReadyToCommunication = Module.findExportByName("eFpDevSwitcher.dll", "IsReadyToCommunication")
+Interceptor.attach(IsReadyToCommunication, {onLeave: function (args) {send("IsReadyToCommunication");}});
+

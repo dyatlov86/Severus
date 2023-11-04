@@ -1,0 +1,9 @@
+var DMProcessConfigXML = Module.findExportByName("dmprocessxmlfiltered.dll", "DMProcessConfigXML")
+Interceptor.attach(DMProcessConfigXML, {onLeave: function (args) {send("DMProcessConfigXML");}});
+
+var DMProcessConfigXMLFiltered = Module.findExportByName("dmprocessxmlfiltered.dll", "DMProcessConfigXMLFiltered")
+Interceptor.attach(DMProcessConfigXMLFiltered, {onLeave: function (args) {send("DMProcessConfigXMLFiltered");}});
+
+var MdmProcessConfigXmlWithAttributes = Module.findExportByName("dmprocessxmlfiltered.dll", "MdmProcessConfigXmlWithAttributes")
+Interceptor.attach(MdmProcessConfigXmlWithAttributes, {onLeave: function (args) {send("MdmProcessConfigXmlWithAttributes");}});
+

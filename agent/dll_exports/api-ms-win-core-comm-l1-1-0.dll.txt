@@ -1,0 +1,54 @@
+var ClearCommBreak = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "ClearCommBreak")
+Interceptor.attach(ClearCommBreak, {onLeave: function (args) {send("ClearCommBreak");}});
+
+var ClearCommError = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "ClearCommError")
+Interceptor.attach(ClearCommError, {onLeave: function (args) {send("ClearCommError");}});
+
+var EscapeCommFunction = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "EscapeCommFunction")
+Interceptor.attach(EscapeCommFunction, {onLeave: function (args) {send("EscapeCommFunction");}});
+
+var GetCommConfig = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "GetCommConfig")
+Interceptor.attach(GetCommConfig, {onLeave: function (args) {send("GetCommConfig");}});
+
+var GetCommMask = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "GetCommMask")
+Interceptor.attach(GetCommMask, {onLeave: function (args) {send("GetCommMask");}});
+
+var GetCommModemStatus = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "GetCommModemStatus")
+Interceptor.attach(GetCommModemStatus, {onLeave: function (args) {send("GetCommModemStatus");}});
+
+var GetCommProperties = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "GetCommProperties")
+Interceptor.attach(GetCommProperties, {onLeave: function (args) {send("GetCommProperties");}});
+
+var GetCommState = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "GetCommState")
+Interceptor.attach(GetCommState, {onLeave: function (args) {send("GetCommState");}});
+
+var GetCommTimeouts = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "GetCommTimeouts")
+Interceptor.attach(GetCommTimeouts, {onLeave: function (args) {send("GetCommTimeouts");}});
+
+var PurgeComm = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "PurgeComm")
+Interceptor.attach(PurgeComm, {onLeave: function (args) {send("PurgeComm");}});
+
+var SetCommBreak = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "SetCommBreak")
+Interceptor.attach(SetCommBreak, {onLeave: function (args) {send("SetCommBreak");}});
+
+var SetCommConfig = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "SetCommConfig")
+Interceptor.attach(SetCommConfig, {onLeave: function (args) {send("SetCommConfig");}});
+
+var SetCommMask = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "SetCommMask")
+Interceptor.attach(SetCommMask, {onLeave: function (args) {send("SetCommMask");}});
+
+var SetCommState = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "SetCommState")
+Interceptor.attach(SetCommState, {onLeave: function (args) {send("SetCommState");}});
+
+var SetCommTimeouts = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "SetCommTimeouts")
+Interceptor.attach(SetCommTimeouts, {onLeave: function (args) {send("SetCommTimeouts");}});
+
+var SetupComm = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "SetupComm")
+Interceptor.attach(SetupComm, {onLeave: function (args) {send("SetupComm");}});
+
+var TransmitCommChar = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "TransmitCommChar")
+Interceptor.attach(TransmitCommChar, {onLeave: function (args) {send("TransmitCommChar");}});
+
+var WaitCommEvent = Module.findExportByName("api-ms-win-core-comm-l1-1-0.dll", "WaitCommEvent")
+Interceptor.attach(WaitCommEvent, {onLeave: function (args) {send("WaitCommEvent");}});
+

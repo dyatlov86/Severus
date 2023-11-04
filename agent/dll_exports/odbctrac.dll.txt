@@ -1,0 +1,372 @@
+var TraceCloseLogFile = Module.findExportByName("odbctrac.dll", "TraceCloseLogFile")
+Interceptor.attach(TraceCloseLogFile, {onLeave: function (args) {send("TraceCloseLogFile");}});
+
+var TraceOpenLogFile = Module.findExportByName("odbctrac.dll", "TraceOpenLogFile")
+Interceptor.attach(TraceOpenLogFile, {onLeave: function (args) {send("TraceOpenLogFile");}});
+
+var TraceReturn = Module.findExportByName("odbctrac.dll", "TraceReturn")
+Interceptor.attach(TraceReturn, {onLeave: function (args) {send("TraceReturn");}});
+
+var TraceSQLAllocConnect = Module.findExportByName("odbctrac.dll", "TraceSQLAllocConnect")
+Interceptor.attach(TraceSQLAllocConnect, {onLeave: function (args) {send("TraceSQLAllocConnect");}});
+
+var TraceSQLAllocEnv = Module.findExportByName("odbctrac.dll", "TraceSQLAllocEnv")
+Interceptor.attach(TraceSQLAllocEnv, {onLeave: function (args) {send("TraceSQLAllocEnv");}});
+
+var TraceSQLAllocHandle = Module.findExportByName("odbctrac.dll", "TraceSQLAllocHandle")
+Interceptor.attach(TraceSQLAllocHandle, {onLeave: function (args) {send("TraceSQLAllocHandle");}});
+
+var TraceSQLAllocHandleStd = Module.findExportByName("odbctrac.dll", "TraceSQLAllocHandleStd")
+Interceptor.attach(TraceSQLAllocHandleStd, {onLeave: function (args) {send("TraceSQLAllocHandleStd");}});
+
+var TraceSQLAllocHandleStdW = Module.findExportByName("odbctrac.dll", "TraceSQLAllocHandleStdW")
+Interceptor.attach(TraceSQLAllocHandleStdW, {onLeave: function (args) {send("TraceSQLAllocHandleStdW");}});
+
+var TraceSQLAllocStmt = Module.findExportByName("odbctrac.dll", "TraceSQLAllocStmt")
+Interceptor.attach(TraceSQLAllocStmt, {onLeave: function (args) {send("TraceSQLAllocStmt");}});
+
+var TraceSQLBindCol = Module.findExportByName("odbctrac.dll", "TraceSQLBindCol")
+Interceptor.attach(TraceSQLBindCol, {onLeave: function (args) {send("TraceSQLBindCol");}});
+
+var TraceSQLBindParam = Module.findExportByName("odbctrac.dll", "TraceSQLBindParam")
+Interceptor.attach(TraceSQLBindParam, {onLeave: function (args) {send("TraceSQLBindParam");}});
+
+var TraceSQLBindParameter = Module.findExportByName("odbctrac.dll", "TraceSQLBindParameter")
+Interceptor.attach(TraceSQLBindParameter, {onLeave: function (args) {send("TraceSQLBindParameter");}});
+
+var TraceSQLBrowseConnect = Module.findExportByName("odbctrac.dll", "TraceSQLBrowseConnect")
+Interceptor.attach(TraceSQLBrowseConnect, {onLeave: function (args) {send("TraceSQLBrowseConnect");}});
+
+var TraceSQLBrowseConnectW = Module.findExportByName("odbctrac.dll", "TraceSQLBrowseConnectW")
+Interceptor.attach(TraceSQLBrowseConnectW, {onLeave: function (args) {send("TraceSQLBrowseConnectW");}});
+
+var TraceSQLBulkOperations = Module.findExportByName("odbctrac.dll", "TraceSQLBulkOperations")
+Interceptor.attach(TraceSQLBulkOperations, {onLeave: function (args) {send("TraceSQLBulkOperations");}});
+
+var TraceSQLCancel = Module.findExportByName("odbctrac.dll", "TraceSQLCancel")
+Interceptor.attach(TraceSQLCancel, {onLeave: function (args) {send("TraceSQLCancel");}});
+
+var TraceSQLCancelHandle = Module.findExportByName("odbctrac.dll", "TraceSQLCancelHandle")
+Interceptor.attach(TraceSQLCancelHandle, {onLeave: function (args) {send("TraceSQLCancelHandle");}});
+
+var TraceSQLCloseCursor = Module.findExportByName("odbctrac.dll", "TraceSQLCloseCursor")
+Interceptor.attach(TraceSQLCloseCursor, {onLeave: function (args) {send("TraceSQLCloseCursor");}});
+
+var TraceSQLColAttribute = Module.findExportByName("odbctrac.dll", "TraceSQLColAttribute")
+Interceptor.attach(TraceSQLColAttribute, {onLeave: function (args) {send("TraceSQLColAttribute");}});
+
+var TraceSQLColAttributeW = Module.findExportByName("odbctrac.dll", "TraceSQLColAttributeW")
+Interceptor.attach(TraceSQLColAttributeW, {onLeave: function (args) {send("TraceSQLColAttributeW");}});
+
+var TraceSQLColAttributes = Module.findExportByName("odbctrac.dll", "TraceSQLColAttributes")
+Interceptor.attach(TraceSQLColAttributes, {onLeave: function (args) {send("TraceSQLColAttributes");}});
+
+var TraceSQLColAttributesW = Module.findExportByName("odbctrac.dll", "TraceSQLColAttributesW")
+Interceptor.attach(TraceSQLColAttributesW, {onLeave: function (args) {send("TraceSQLColAttributesW");}});
+
+var TraceSQLColumnPrivileges = Module.findExportByName("odbctrac.dll", "TraceSQLColumnPrivileges")
+Interceptor.attach(TraceSQLColumnPrivileges, {onLeave: function (args) {send("TraceSQLColumnPrivileges");}});
+
+var TraceSQLColumnPrivilegesW = Module.findExportByName("odbctrac.dll", "TraceSQLColumnPrivilegesW")
+Interceptor.attach(TraceSQLColumnPrivilegesW, {onLeave: function (args) {send("TraceSQLColumnPrivilegesW");}});
+
+var TraceSQLColumns = Module.findExportByName("odbctrac.dll", "TraceSQLColumns")
+Interceptor.attach(TraceSQLColumns, {onLeave: function (args) {send("TraceSQLColumns");}});
+
+var TraceSQLColumnsW = Module.findExportByName("odbctrac.dll", "TraceSQLColumnsW")
+Interceptor.attach(TraceSQLColumnsW, {onLeave: function (args) {send("TraceSQLColumnsW");}});
+
+var TraceSQLCompleteAsync = Module.findExportByName("odbctrac.dll", "TraceSQLCompleteAsync")
+Interceptor.attach(TraceSQLCompleteAsync, {onLeave: function (args) {send("TraceSQLCompleteAsync");}});
+
+var TraceSQLCompleteAsyncW = Module.findExportByName("odbctrac.dll", "TraceSQLCompleteAsyncW")
+Interceptor.attach(TraceSQLCompleteAsyncW, {onLeave: function (args) {send("TraceSQLCompleteAsyncW");}});
+
+var TraceSQLConnect = Module.findExportByName("odbctrac.dll", "TraceSQLConnect")
+Interceptor.attach(TraceSQLConnect, {onLeave: function (args) {send("TraceSQLConnect");}});
+
+var TraceSQLConnectW = Module.findExportByName("odbctrac.dll", "TraceSQLConnectW")
+Interceptor.attach(TraceSQLConnectW, {onLeave: function (args) {send("TraceSQLConnectW");}});
+
+var TraceSQLCopyDesc = Module.findExportByName("odbctrac.dll", "TraceSQLCopyDesc")
+Interceptor.attach(TraceSQLCopyDesc, {onLeave: function (args) {send("TraceSQLCopyDesc");}});
+
+var TraceSQLDataSources = Module.findExportByName("odbctrac.dll", "TraceSQLDataSources")
+Interceptor.attach(TraceSQLDataSources, {onLeave: function (args) {send("TraceSQLDataSources");}});
+
+var TraceSQLDataSourcesW = Module.findExportByName("odbctrac.dll", "TraceSQLDataSourcesW")
+Interceptor.attach(TraceSQLDataSourcesW, {onLeave: function (args) {send("TraceSQLDataSourcesW");}});
+
+var TraceSQLDescribeCol = Module.findExportByName("odbctrac.dll", "TraceSQLDescribeCol")
+Interceptor.attach(TraceSQLDescribeCol, {onLeave: function (args) {send("TraceSQLDescribeCol");}});
+
+var TraceSQLDescribeColW = Module.findExportByName("odbctrac.dll", "TraceSQLDescribeColW")
+Interceptor.attach(TraceSQLDescribeColW, {onLeave: function (args) {send("TraceSQLDescribeColW");}});
+
+var TraceSQLDescribeParam = Module.findExportByName("odbctrac.dll", "TraceSQLDescribeParam")
+Interceptor.attach(TraceSQLDescribeParam, {onLeave: function (args) {send("TraceSQLDescribeParam");}});
+
+var TraceSQLDisconnect = Module.findExportByName("odbctrac.dll", "TraceSQLDisconnect")
+Interceptor.attach(TraceSQLDisconnect, {onLeave: function (args) {send("TraceSQLDisconnect");}});
+
+var TraceSQLDriverConnect = Module.findExportByName("odbctrac.dll", "TraceSQLDriverConnect")
+Interceptor.attach(TraceSQLDriverConnect, {onLeave: function (args) {send("TraceSQLDriverConnect");}});
+
+var TraceSQLDriverConnectW = Module.findExportByName("odbctrac.dll", "TraceSQLDriverConnectW")
+Interceptor.attach(TraceSQLDriverConnectW, {onLeave: function (args) {send("TraceSQLDriverConnectW");}});
+
+var TraceSQLDrivers = Module.findExportByName("odbctrac.dll", "TraceSQLDrivers")
+Interceptor.attach(TraceSQLDrivers, {onLeave: function (args) {send("TraceSQLDrivers");}});
+
+var TraceSQLDriversW = Module.findExportByName("odbctrac.dll", "TraceSQLDriversW")
+Interceptor.attach(TraceSQLDriversW, {onLeave: function (args) {send("TraceSQLDriversW");}});
+
+var TraceSQLEndTran = Module.findExportByName("odbctrac.dll", "TraceSQLEndTran")
+Interceptor.attach(TraceSQLEndTran, {onLeave: function (args) {send("TraceSQLEndTran");}});
+
+var TraceSQLError = Module.findExportByName("odbctrac.dll", "TraceSQLError")
+Interceptor.attach(TraceSQLError, {onLeave: function (args) {send("TraceSQLError");}});
+
+var TraceSQLErrorW = Module.findExportByName("odbctrac.dll", "TraceSQLErrorW")
+Interceptor.attach(TraceSQLErrorW, {onLeave: function (args) {send("TraceSQLErrorW");}});
+
+var TraceSQLExecDirect = Module.findExportByName("odbctrac.dll", "TraceSQLExecDirect")
+Interceptor.attach(TraceSQLExecDirect, {onLeave: function (args) {send("TraceSQLExecDirect");}});
+
+var TraceSQLExecDirectW = Module.findExportByName("odbctrac.dll", "TraceSQLExecDirectW")
+Interceptor.attach(TraceSQLExecDirectW, {onLeave: function (args) {send("TraceSQLExecDirectW");}});
+
+var TraceSQLExecute = Module.findExportByName("odbctrac.dll", "TraceSQLExecute")
+Interceptor.attach(TraceSQLExecute, {onLeave: function (args) {send("TraceSQLExecute");}});
+
+var TraceSQLExtendedFetch = Module.findExportByName("odbctrac.dll", "TraceSQLExtendedFetch")
+Interceptor.attach(TraceSQLExtendedFetch, {onLeave: function (args) {send("TraceSQLExtendedFetch");}});
+
+var TraceSQLFetch = Module.findExportByName("odbctrac.dll", "TraceSQLFetch")
+Interceptor.attach(TraceSQLFetch, {onLeave: function (args) {send("TraceSQLFetch");}});
+
+var TraceSQLFetchScroll = Module.findExportByName("odbctrac.dll", "TraceSQLFetchScroll")
+Interceptor.attach(TraceSQLFetchScroll, {onLeave: function (args) {send("TraceSQLFetchScroll");}});
+
+var TraceSQLForeignKeys = Module.findExportByName("odbctrac.dll", "TraceSQLForeignKeys")
+Interceptor.attach(TraceSQLForeignKeys, {onLeave: function (args) {send("TraceSQLForeignKeys");}});
+
+var TraceSQLForeignKeysW = Module.findExportByName("odbctrac.dll", "TraceSQLForeignKeysW")
+Interceptor.attach(TraceSQLForeignKeysW, {onLeave: function (args) {send("TraceSQLForeignKeysW");}});
+
+var TraceSQLFreeConnect = Module.findExportByName("odbctrac.dll", "TraceSQLFreeConnect")
+Interceptor.attach(TraceSQLFreeConnect, {onLeave: function (args) {send("TraceSQLFreeConnect");}});
+
+var TraceSQLFreeEnv = Module.findExportByName("odbctrac.dll", "TraceSQLFreeEnv")
+Interceptor.attach(TraceSQLFreeEnv, {onLeave: function (args) {send("TraceSQLFreeEnv");}});
+
+var TraceSQLFreeHandle = Module.findExportByName("odbctrac.dll", "TraceSQLFreeHandle")
+Interceptor.attach(TraceSQLFreeHandle, {onLeave: function (args) {send("TraceSQLFreeHandle");}});
+
+var TraceSQLFreeStmt = Module.findExportByName("odbctrac.dll", "TraceSQLFreeStmt")
+Interceptor.attach(TraceSQLFreeStmt, {onLeave: function (args) {send("TraceSQLFreeStmt");}});
+
+var TraceSQLGetConnectAttr = Module.findExportByName("odbctrac.dll", "TraceSQLGetConnectAttr")
+Interceptor.attach(TraceSQLGetConnectAttr, {onLeave: function (args) {send("TraceSQLGetConnectAttr");}});
+
+var TraceSQLGetConnectAttrW = Module.findExportByName("odbctrac.dll", "TraceSQLGetConnectAttrW")
+Interceptor.attach(TraceSQLGetConnectAttrW, {onLeave: function (args) {send("TraceSQLGetConnectAttrW");}});
+
+var TraceSQLGetConnectOption = Module.findExportByName("odbctrac.dll", "TraceSQLGetConnectOption")
+Interceptor.attach(TraceSQLGetConnectOption, {onLeave: function (args) {send("TraceSQLGetConnectOption");}});
+
+var TraceSQLGetConnectOptionW = Module.findExportByName("odbctrac.dll", "TraceSQLGetConnectOptionW")
+Interceptor.attach(TraceSQLGetConnectOptionW, {onLeave: function (args) {send("TraceSQLGetConnectOptionW");}});
+
+var TraceSQLGetCursorName = Module.findExportByName("odbctrac.dll", "TraceSQLGetCursorName")
+Interceptor.attach(TraceSQLGetCursorName, {onLeave: function (args) {send("TraceSQLGetCursorName");}});
+
+var TraceSQLGetCursorNameW = Module.findExportByName("odbctrac.dll", "TraceSQLGetCursorNameW")
+Interceptor.attach(TraceSQLGetCursorNameW, {onLeave: function (args) {send("TraceSQLGetCursorNameW");}});
+
+var TraceSQLGetData = Module.findExportByName("odbctrac.dll", "TraceSQLGetData")
+Interceptor.attach(TraceSQLGetData, {onLeave: function (args) {send("TraceSQLGetData");}});
+
+var TraceSQLGetDescField = Module.findExportByName("odbctrac.dll", "TraceSQLGetDescField")
+Interceptor.attach(TraceSQLGetDescField, {onLeave: function (args) {send("TraceSQLGetDescField");}});
+
+var TraceSQLGetDescFieldW = Module.findExportByName("odbctrac.dll", "TraceSQLGetDescFieldW")
+Interceptor.attach(TraceSQLGetDescFieldW, {onLeave: function (args) {send("TraceSQLGetDescFieldW");}});
+
+var TraceSQLGetDescRec = Module.findExportByName("odbctrac.dll", "TraceSQLGetDescRec")
+Interceptor.attach(TraceSQLGetDescRec, {onLeave: function (args) {send("TraceSQLGetDescRec");}});
+
+var TraceSQLGetDescRecW = Module.findExportByName("odbctrac.dll", "TraceSQLGetDescRecW")
+Interceptor.attach(TraceSQLGetDescRecW, {onLeave: function (args) {send("TraceSQLGetDescRecW");}});
+
+var TraceSQLGetDiagField = Module.findExportByName("odbctrac.dll", "TraceSQLGetDiagField")
+Interceptor.attach(TraceSQLGetDiagField, {onLeave: function (args) {send("TraceSQLGetDiagField");}});
+
+var TraceSQLGetDiagFieldW = Module.findExportByName("odbctrac.dll", "TraceSQLGetDiagFieldW")
+Interceptor.attach(TraceSQLGetDiagFieldW, {onLeave: function (args) {send("TraceSQLGetDiagFieldW");}});
+
+var TraceSQLGetDiagRec = Module.findExportByName("odbctrac.dll", "TraceSQLGetDiagRec")
+Interceptor.attach(TraceSQLGetDiagRec, {onLeave: function (args) {send("TraceSQLGetDiagRec");}});
+
+var TraceSQLGetDiagRecW = Module.findExportByName("odbctrac.dll", "TraceSQLGetDiagRecW")
+Interceptor.attach(TraceSQLGetDiagRecW, {onLeave: function (args) {send("TraceSQLGetDiagRecW");}});
+
+var TraceSQLGetEnvAttr = Module.findExportByName("odbctrac.dll", "TraceSQLGetEnvAttr")
+Interceptor.attach(TraceSQLGetEnvAttr, {onLeave: function (args) {send("TraceSQLGetEnvAttr");}});
+
+var TraceSQLGetFunctions = Module.findExportByName("odbctrac.dll", "TraceSQLGetFunctions")
+Interceptor.attach(TraceSQLGetFunctions, {onLeave: function (args) {send("TraceSQLGetFunctions");}});
+
+var TraceSQLGetInfo = Module.findExportByName("odbctrac.dll", "TraceSQLGetInfo")
+Interceptor.attach(TraceSQLGetInfo, {onLeave: function (args) {send("TraceSQLGetInfo");}});
+
+var TraceSQLGetInfoW = Module.findExportByName("odbctrac.dll", "TraceSQLGetInfoW")
+Interceptor.attach(TraceSQLGetInfoW, {onLeave: function (args) {send("TraceSQLGetInfoW");}});
+
+var TraceSQLGetStmtAttr = Module.findExportByName("odbctrac.dll", "TraceSQLGetStmtAttr")
+Interceptor.attach(TraceSQLGetStmtAttr, {onLeave: function (args) {send("TraceSQLGetStmtAttr");}});
+
+var TraceSQLGetStmtAttrW = Module.findExportByName("odbctrac.dll", "TraceSQLGetStmtAttrW")
+Interceptor.attach(TraceSQLGetStmtAttrW, {onLeave: function (args) {send("TraceSQLGetStmtAttrW");}});
+
+var TraceSQLGetStmtOption = Module.findExportByName("odbctrac.dll", "TraceSQLGetStmtOption")
+Interceptor.attach(TraceSQLGetStmtOption, {onLeave: function (args) {send("TraceSQLGetStmtOption");}});
+
+var TraceSQLGetTypeInfo = Module.findExportByName("odbctrac.dll", "TraceSQLGetTypeInfo")
+Interceptor.attach(TraceSQLGetTypeInfo, {onLeave: function (args) {send("TraceSQLGetTypeInfo");}});
+
+var TraceSQLGetTypeInfoW = Module.findExportByName("odbctrac.dll", "TraceSQLGetTypeInfoW")
+Interceptor.attach(TraceSQLGetTypeInfoW, {onLeave: function (args) {send("TraceSQLGetTypeInfoW");}});
+
+var TraceSQLMoreResults = Module.findExportByName("odbctrac.dll", "TraceSQLMoreResults")
+Interceptor.attach(TraceSQLMoreResults, {onLeave: function (args) {send("TraceSQLMoreResults");}});
+
+var TraceSQLNativeSql = Module.findExportByName("odbctrac.dll", "TraceSQLNativeSql")
+Interceptor.attach(TraceSQLNativeSql, {onLeave: function (args) {send("TraceSQLNativeSql");}});
+
+var TraceSQLNativeSqlW = Module.findExportByName("odbctrac.dll", "TraceSQLNativeSqlW")
+Interceptor.attach(TraceSQLNativeSqlW, {onLeave: function (args) {send("TraceSQLNativeSqlW");}});
+
+var TraceSQLNumParams = Module.findExportByName("odbctrac.dll", "TraceSQLNumParams")
+Interceptor.attach(TraceSQLNumParams, {onLeave: function (args) {send("TraceSQLNumParams");}});
+
+var TraceSQLNumResultCols = Module.findExportByName("odbctrac.dll", "TraceSQLNumResultCols")
+Interceptor.attach(TraceSQLNumResultCols, {onLeave: function (args) {send("TraceSQLNumResultCols");}});
+
+var TraceSQLParamData = Module.findExportByName("odbctrac.dll", "TraceSQLParamData")
+Interceptor.attach(TraceSQLParamData, {onLeave: function (args) {send("TraceSQLParamData");}});
+
+var TraceSQLParamOptions = Module.findExportByName("odbctrac.dll", "TraceSQLParamOptions")
+Interceptor.attach(TraceSQLParamOptions, {onLeave: function (args) {send("TraceSQLParamOptions");}});
+
+var TraceSQLPrepare = Module.findExportByName("odbctrac.dll", "TraceSQLPrepare")
+Interceptor.attach(TraceSQLPrepare, {onLeave: function (args) {send("TraceSQLPrepare");}});
+
+var TraceSQLPrepareW = Module.findExportByName("odbctrac.dll", "TraceSQLPrepareW")
+Interceptor.attach(TraceSQLPrepareW, {onLeave: function (args) {send("TraceSQLPrepareW");}});
+
+var TraceSQLPrimaryKeys = Module.findExportByName("odbctrac.dll", "TraceSQLPrimaryKeys")
+Interceptor.attach(TraceSQLPrimaryKeys, {onLeave: function (args) {send("TraceSQLPrimaryKeys");}});
+
+var TraceSQLPrimaryKeysW = Module.findExportByName("odbctrac.dll", "TraceSQLPrimaryKeysW")
+Interceptor.attach(TraceSQLPrimaryKeysW, {onLeave: function (args) {send("TraceSQLPrimaryKeysW");}});
+
+var TraceSQLProcedureColumns = Module.findExportByName("odbctrac.dll", "TraceSQLProcedureColumns")
+Interceptor.attach(TraceSQLProcedureColumns, {onLeave: function (args) {send("TraceSQLProcedureColumns");}});
+
+var TraceSQLProcedureColumnsW = Module.findExportByName("odbctrac.dll", "TraceSQLProcedureColumnsW")
+Interceptor.attach(TraceSQLProcedureColumnsW, {onLeave: function (args) {send("TraceSQLProcedureColumnsW");}});
+
+var TraceSQLProcedures = Module.findExportByName("odbctrac.dll", "TraceSQLProcedures")
+Interceptor.attach(TraceSQLProcedures, {onLeave: function (args) {send("TraceSQLProcedures");}});
+
+var TraceSQLProceduresW = Module.findExportByName("odbctrac.dll", "TraceSQLProceduresW")
+Interceptor.attach(TraceSQLProceduresW, {onLeave: function (args) {send("TraceSQLProceduresW");}});
+
+var TraceSQLPutData = Module.findExportByName("odbctrac.dll", "TraceSQLPutData")
+Interceptor.attach(TraceSQLPutData, {onLeave: function (args) {send("TraceSQLPutData");}});
+
+var TraceSQLRowCount = Module.findExportByName("odbctrac.dll", "TraceSQLRowCount")
+Interceptor.attach(TraceSQLRowCount, {onLeave: function (args) {send("TraceSQLRowCount");}});
+
+var TraceSQLSetConnectAttr = Module.findExportByName("odbctrac.dll", "TraceSQLSetConnectAttr")
+Interceptor.attach(TraceSQLSetConnectAttr, {onLeave: function (args) {send("TraceSQLSetConnectAttr");}});
+
+var TraceSQLSetConnectAttrW = Module.findExportByName("odbctrac.dll", "TraceSQLSetConnectAttrW")
+Interceptor.attach(TraceSQLSetConnectAttrW, {onLeave: function (args) {send("TraceSQLSetConnectAttrW");}});
+
+var TraceSQLSetConnectOption = Module.findExportByName("odbctrac.dll", "TraceSQLSetConnectOption")
+Interceptor.attach(TraceSQLSetConnectOption, {onLeave: function (args) {send("TraceSQLSetConnectOption");}});
+
+var TraceSQLSetConnectOptionW = Module.findExportByName("odbctrac.dll", "TraceSQLSetConnectOptionW")
+Interceptor.attach(TraceSQLSetConnectOptionW, {onLeave: function (args) {send("TraceSQLSetConnectOptionW");}});
+
+var TraceSQLSetCursorName = Module.findExportByName("odbctrac.dll", "TraceSQLSetCursorName")
+Interceptor.attach(TraceSQLSetCursorName, {onLeave: function (args) {send("TraceSQLSetCursorName");}});
+
+var TraceSQLSetCursorNameW = Module.findExportByName("odbctrac.dll", "TraceSQLSetCursorNameW")
+Interceptor.attach(TraceSQLSetCursorNameW, {onLeave: function (args) {send("TraceSQLSetCursorNameW");}});
+
+var TraceSQLSetDescField = Module.findExportByName("odbctrac.dll", "TraceSQLSetDescField")
+Interceptor.attach(TraceSQLSetDescField, {onLeave: function (args) {send("TraceSQLSetDescField");}});
+
+var TraceSQLSetDescFieldW = Module.findExportByName("odbctrac.dll", "TraceSQLSetDescFieldW")
+Interceptor.attach(TraceSQLSetDescFieldW, {onLeave: function (args) {send("TraceSQLSetDescFieldW");}});
+
+var TraceSQLSetDescRec = Module.findExportByName("odbctrac.dll", "TraceSQLSetDescRec")
+Interceptor.attach(TraceSQLSetDescRec, {onLeave: function (args) {send("TraceSQLSetDescRec");}});
+
+var TraceSQLSetEnvAttr = Module.findExportByName("odbctrac.dll", "TraceSQLSetEnvAttr")
+Interceptor.attach(TraceSQLSetEnvAttr, {onLeave: function (args) {send("TraceSQLSetEnvAttr");}});
+
+var TraceSQLSetParam = Module.findExportByName("odbctrac.dll", "TraceSQLSetParam")
+Interceptor.attach(TraceSQLSetParam, {onLeave: function (args) {send("TraceSQLSetParam");}});
+
+var TraceSQLSetPos = Module.findExportByName("odbctrac.dll", "TraceSQLSetPos")
+Interceptor.attach(TraceSQLSetPos, {onLeave: function (args) {send("TraceSQLSetPos");}});
+
+var TraceSQLSetScrollOptions = Module.findExportByName("odbctrac.dll", "TraceSQLSetScrollOptions")
+Interceptor.attach(TraceSQLSetScrollOptions, {onLeave: function (args) {send("TraceSQLSetScrollOptions");}});
+
+var TraceSQLSetStmtAttr = Module.findExportByName("odbctrac.dll", "TraceSQLSetStmtAttr")
+Interceptor.attach(TraceSQLSetStmtAttr, {onLeave: function (args) {send("TraceSQLSetStmtAttr");}});
+
+var TraceSQLSetStmtAttrW = Module.findExportByName("odbctrac.dll", "TraceSQLSetStmtAttrW")
+Interceptor.attach(TraceSQLSetStmtAttrW, {onLeave: function (args) {send("TraceSQLSetStmtAttrW");}});
+
+var TraceSQLSetStmtOption = Module.findExportByName("odbctrac.dll", "TraceSQLSetStmtOption")
+Interceptor.attach(TraceSQLSetStmtOption, {onLeave: function (args) {send("TraceSQLSetStmtOption");}});
+
+var TraceSQLSpecialColumns = Module.findExportByName("odbctrac.dll", "TraceSQLSpecialColumns")
+Interceptor.attach(TraceSQLSpecialColumns, {onLeave: function (args) {send("TraceSQLSpecialColumns");}});
+
+var TraceSQLSpecialColumnsW = Module.findExportByName("odbctrac.dll", "TraceSQLSpecialColumnsW")
+Interceptor.attach(TraceSQLSpecialColumnsW, {onLeave: function (args) {send("TraceSQLSpecialColumnsW");}});
+
+var TraceSQLStatistics = Module.findExportByName("odbctrac.dll", "TraceSQLStatistics")
+Interceptor.attach(TraceSQLStatistics, {onLeave: function (args) {send("TraceSQLStatistics");}});
+
+var TraceSQLStatisticsW = Module.findExportByName("odbctrac.dll", "TraceSQLStatisticsW")
+Interceptor.attach(TraceSQLStatisticsW, {onLeave: function (args) {send("TraceSQLStatisticsW");}});
+
+var TraceSQLTablePrivileges = Module.findExportByName("odbctrac.dll", "TraceSQLTablePrivileges")
+Interceptor.attach(TraceSQLTablePrivileges, {onLeave: function (args) {send("TraceSQLTablePrivileges");}});
+
+var TraceSQLTablePrivilegesW = Module.findExportByName("odbctrac.dll", "TraceSQLTablePrivilegesW")
+Interceptor.attach(TraceSQLTablePrivilegesW, {onLeave: function (args) {send("TraceSQLTablePrivilegesW");}});
+
+var TraceSQLTables = Module.findExportByName("odbctrac.dll", "TraceSQLTables")
+Interceptor.attach(TraceSQLTables, {onLeave: function (args) {send("TraceSQLTables");}});
+
+var TraceSQLTablesW = Module.findExportByName("odbctrac.dll", "TraceSQLTablesW")
+Interceptor.attach(TraceSQLTablesW, {onLeave: function (args) {send("TraceSQLTablesW");}});
+
+var TraceSQLTransact = Module.findExportByName("odbctrac.dll", "TraceSQLTransact")
+Interceptor.attach(TraceSQLTransact, {onLeave: function (args) {send("TraceSQLTransact");}});
+
+var TraceVSControl = Module.findExportByName("odbctrac.dll", "TraceVSControl")
+Interceptor.attach(TraceVSControl, {onLeave: function (args) {send("TraceVSControl");}});
+
+var TraceVersion = Module.findExportByName("odbctrac.dll", "TraceVersion")
+Interceptor.attach(TraceVersion, {onLeave: function (args) {send("TraceVersion");}});
+

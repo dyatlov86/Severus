@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("rdbui.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("rdbui.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("rdbui.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("rdbui.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var RDBMgmtLaunchPropertiesW = Module.findExportByName("rdbui.dll", "RDBMgmtLaunchPropertiesW")
+Interceptor.attach(RDBMgmtLaunchPropertiesW, {onLeave: function (args) {send("RDBMgmtLaunchPropertiesW");}});
+

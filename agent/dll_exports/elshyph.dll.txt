@@ -1,0 +1,15 @@
+var DoAction = Module.findExportByName("elshyph.dll", "DoAction")
+Interceptor.attach(DoAction, {onLeave: function (args) {send("DoAction");}});
+
+var FreePropertyBag = Module.findExportByName("elshyph.dll", "FreePropertyBag")
+Interceptor.attach(FreePropertyBag, {onLeave: function (args) {send("FreePropertyBag");}});
+
+var FreeService = Module.findExportByName("elshyph.dll", "FreeService")
+Interceptor.attach(FreeService, {onLeave: function (args) {send("FreeService");}});
+
+var InitService = Module.findExportByName("elshyph.dll", "InitService")
+Interceptor.attach(InitService, {onLeave: function (args) {send("InitService");}});
+
+var RecognizeText = Module.findExportByName("elshyph.dll", "RecognizeText")
+Interceptor.attach(RecognizeText, {onLeave: function (args) {send("RecognizeText");}});
+

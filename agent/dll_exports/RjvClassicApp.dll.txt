@@ -1,0 +1,9 @@
+var DllRejuvenationHandler = Module.findExportByName("RjvClassicApp.dll", "DllRejuvenationHandler")
+Interceptor.attach(DllRejuvenationHandler, {onLeave: function (args) {send("DllRejuvenationHandler");}});
+
+var GetICBAppList = Module.findExportByName("RjvClassicApp.dll", "GetICBAppList")
+Interceptor.attach(GetICBAppList, {onLeave: function (args) {send("GetICBAppList");}});
+
+var GetWIMAppList = Module.findExportByName("RjvClassicApp.dll", "GetWIMAppList")
+Interceptor.attach(GetWIMAppList, {onLeave: function (args) {send("GetWIMAppList");}});
+

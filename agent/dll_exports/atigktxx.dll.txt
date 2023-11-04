@@ -1,0 +1,36 @@
+var DisableSubmitThread = Module.findExportByName("atigktxx.dll", "DisableSubmitThread")
+Interceptor.attach(DisableSubmitThread, {onLeave: function (args) {send("DisableSubmitThread");}});
+
+var DllMain = Module.findExportByName("atigktxx.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GetD3DKMTProcAddress = Module.findExportByName("atigktxx.dll", "GetD3DKMTProcAddress")
+Interceptor.attach(GetD3DKMTProcAddress, {onLeave: function (args) {send("GetD3DKMTProcAddress");}});
+
+var GetThunkProxyOglVersion = Module.findExportByName("atigktxx.dll", "GetThunkProxyOglVersion")
+Interceptor.attach(GetThunkProxyOglVersion, {onLeave: function (args) {send("GetThunkProxyOglVersion");}});
+
+var IsOglCacheLocked = Module.findExportByName("atigktxx.dll", "IsOglCacheLocked")
+Interceptor.attach(IsOglCacheLocked, {onLeave: function (args) {send("IsOglCacheLocked");}});
+
+var SetThunkProxyBypassMode = Module.findExportByName("atigktxx.dll", "SetThunkProxyBypassMode")
+Interceptor.attach(SetThunkProxyBypassMode, {onLeave: function (args) {send("SetThunkProxyBypassMode");}});
+
+var XopGetNumAdapters = Module.findExportByName("atigktxx.dll", "XopGetNumAdapters")
+Interceptor.attach(XopGetNumAdapters, {onLeave: function (args) {send("XopGetNumAdapters");}});
+
+var XopGetRealDeviceId = Module.findExportByName("atigktxx.dll", "XopGetRealDeviceId")
+Interceptor.attach(XopGetRealDeviceId, {onLeave: function (args) {send("XopGetRealDeviceId");}});
+
+var XopOpenLinkedAdapter = Module.findExportByName("atigktxx.dll", "XopOpenLinkedAdapter")
+Interceptor.attach(XopOpenLinkedAdapter, {onLeave: function (args) {send("XopOpenLinkedAdapter");}});
+
+var XopQueryAdaptersOgl = Module.findExportByName("atigktxx.dll", "XopQueryAdaptersOgl")
+Interceptor.attach(XopQueryAdaptersOgl, {onLeave: function (args) {send("XopQueryAdaptersOgl");}});
+
+var XopSetAdapterIndex = Module.findExportByName("atigktxx.dll", "XopSetAdapterIndex")
+Interceptor.attach(XopSetAdapterIndex, {onLeave: function (args) {send("XopSetAdapterIndex");}});
+
+var XopSetGlobalsOgl = Module.findExportByName("atigktxx.dll", "XopSetGlobalsOgl")
+Interceptor.attach(XopSetGlobalsOgl, {onLeave: function (args) {send("XopSetGlobalsOgl");}});
+

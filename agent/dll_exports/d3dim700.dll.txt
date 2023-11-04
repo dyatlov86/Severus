@@ -1,0 +1,54 @@
+var CreateTexture = Module.findExportByName("d3dim700.dll", "CreateTexture")
+Interceptor.attach(CreateTexture, {onLeave: function (args) {send("CreateTexture");}});
+
+var D3DBreakVBLock = Module.findExportByName("d3dim700.dll", "D3DBreakVBLock")
+Interceptor.attach(D3DBreakVBLock, {onLeave: function (args) {send("D3DBreakVBLock");}});
+
+var D3DFree = Module.findExportByName("d3dim700.dll", "D3DFree")
+Interceptor.attach(D3DFree, {onLeave: function (args) {send("D3DFree");}});
+
+var D3DMalloc = Module.findExportByName("d3dim700.dll", "D3DMalloc")
+Interceptor.attach(D3DMalloc, {onLeave: function (args) {send("D3DMalloc");}});
+
+var D3DRealloc = Module.findExportByName("d3dim700.dll", "D3DRealloc")
+Interceptor.attach(D3DRealloc, {onLeave: function (args) {send("D3DRealloc");}});
+
+var D3DTextureUpdate = Module.findExportByName("d3dim700.dll", "D3DTextureUpdate")
+Interceptor.attach(D3DTextureUpdate, {onLeave: function (args) {send("D3DTextureUpdate");}});
+
+var DestroyTexture = Module.findExportByName("d3dim700.dll", "DestroyTexture")
+Interceptor.attach(DestroyTexture, {onLeave: function (args) {send("DestroyTexture");}});
+
+var Direct3DCreate = Module.findExportByName("d3dim700.dll", "Direct3DCreate")
+Interceptor.attach(Direct3DCreate, {onLeave: function (args) {send("Direct3DCreate");}});
+
+var Direct3DCreateDevice = Module.findExportByName("d3dim700.dll", "Direct3DCreateDevice")
+Interceptor.attach(Direct3DCreateDevice, {onLeave: function (args) {send("Direct3DCreateDevice");}});
+
+var Direct3D_HALCleanUp = Module.findExportByName("d3dim700.dll", "Direct3D_HALCleanUp")
+Interceptor.attach(Direct3D_HALCleanUp, {onLeave: function (args) {send("Direct3D_HALCleanUp");}});
+
+var FlushD3DDevices = Module.findExportByName("d3dim700.dll", "FlushD3DDevices")
+Interceptor.attach(FlushD3DDevices, {onLeave: function (args) {send("FlushD3DDevices");}});
+
+var GetLOD = Module.findExportByName("d3dim700.dll", "GetLOD")
+Interceptor.attach(GetLOD, {onLeave: function (args) {send("GetLOD");}});
+
+var GetPriority = Module.findExportByName("d3dim700.dll", "GetPriority")
+Interceptor.attach(GetPriority, {onLeave: function (args) {send("GetPriority");}});
+
+var PaletteAssociateNotify = Module.findExportByName("d3dim700.dll", "PaletteAssociateNotify")
+Interceptor.attach(PaletteAssociateNotify, {onLeave: function (args) {send("PaletteAssociateNotify");}});
+
+var PaletteUpdateNotify = Module.findExportByName("d3dim700.dll", "PaletteUpdateNotify")
+Interceptor.attach(PaletteUpdateNotify, {onLeave: function (args) {send("PaletteUpdateNotify");}});
+
+var SetLOD = Module.findExportByName("d3dim700.dll", "SetLOD")
+Interceptor.attach(SetLOD, {onLeave: function (args) {send("SetLOD");}});
+
+var SetPriority = Module.findExportByName("d3dim700.dll", "SetPriority")
+Interceptor.attach(SetPriority, {onLeave: function (args) {send("SetPriority");}});
+
+var SurfaceFlipNotify = Module.findExportByName("d3dim700.dll", "SurfaceFlipNotify")
+Interceptor.attach(SurfaceFlipNotify, {onLeave: function (args) {send("SurfaceFlipNotify");}});
+

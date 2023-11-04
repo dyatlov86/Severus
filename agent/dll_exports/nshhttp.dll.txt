@@ -1,0 +1,3 @@
+var InitHelperDll = Module.findExportByName("nshhttp.dll", "InitHelperDll")
+Interceptor.attach(InitHelperDll, {onLeave: function (args) {send("InitHelperDll");}});
+

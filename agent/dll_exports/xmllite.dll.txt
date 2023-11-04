@@ -1,0 +1,18 @@
+var CreateXmlReader = Module.findExportByName("xmllite.dll", "CreateXmlReader")
+Interceptor.attach(CreateXmlReader, {onLeave: function (args) {send("CreateXmlReader");}});
+
+var CreateXmlReaderInputWithEncodingCodePage = Module.findExportByName("xmllite.dll", "CreateXmlReaderInputWithEncodingCodePage")
+Interceptor.attach(CreateXmlReaderInputWithEncodingCodePage, {onLeave: function (args) {send("CreateXmlReaderInputWithEncodingCodePage");}});
+
+var CreateXmlReaderInputWithEncodingName = Module.findExportByName("xmllite.dll", "CreateXmlReaderInputWithEncodingName")
+Interceptor.attach(CreateXmlReaderInputWithEncodingName, {onLeave: function (args) {send("CreateXmlReaderInputWithEncodingName");}});
+
+var CreateXmlWriter = Module.findExportByName("xmllite.dll", "CreateXmlWriter")
+Interceptor.attach(CreateXmlWriter, {onLeave: function (args) {send("CreateXmlWriter");}});
+
+var CreateXmlWriterOutputWithEncodingCodePage = Module.findExportByName("xmllite.dll", "CreateXmlWriterOutputWithEncodingCodePage")
+Interceptor.attach(CreateXmlWriterOutputWithEncodingCodePage, {onLeave: function (args) {send("CreateXmlWriterOutputWithEncodingCodePage");}});
+
+var CreateXmlWriterOutputWithEncodingName = Module.findExportByName("xmllite.dll", "CreateXmlWriterOutputWithEncodingName")
+Interceptor.attach(CreateXmlWriterOutputWithEncodingName, {onLeave: function (args) {send("CreateXmlWriterOutputWithEncodingName");}});
+

@@ -1,0 +1,219 @@
+var AddMMAuthMethods = Module.findExportByName("winipsec.dll", "AddMMAuthMethods")
+Interceptor.attach(AddMMAuthMethods, {onLeave: function (args) {send("AddMMAuthMethods");}});
+
+var AddMMFilter = Module.findExportByName("winipsec.dll", "AddMMFilter")
+Interceptor.attach(AddMMFilter, {onLeave: function (args) {send("AddMMFilter");}});
+
+var AddMMFilterEx = Module.findExportByName("winipsec.dll", "AddMMFilterEx")
+Interceptor.attach(AddMMFilterEx, {onLeave: function (args) {send("AddMMFilterEx");}});
+
+var AddMMPolicy = Module.findExportByName("winipsec.dll", "AddMMPolicy")
+Interceptor.attach(AddMMPolicy, {onLeave: function (args) {send("AddMMPolicy");}});
+
+var AddQMPolicy = Module.findExportByName("winipsec.dll", "AddQMPolicy")
+Interceptor.attach(AddQMPolicy, {onLeave: function (args) {send("AddQMPolicy");}});
+
+var AddSAs = Module.findExportByName("winipsec.dll", "AddSAs")
+Interceptor.attach(AddSAs, {onLeave: function (args) {send("AddSAs");}});
+
+var AddTransportFilter = Module.findExportByName("winipsec.dll", "AddTransportFilter")
+Interceptor.attach(AddTransportFilter, {onLeave: function (args) {send("AddTransportFilter");}});
+
+var AddTransportFilterEx = Module.findExportByName("winipsec.dll", "AddTransportFilterEx")
+Interceptor.attach(AddTransportFilterEx, {onLeave: function (args) {send("AddTransportFilterEx");}});
+
+var AddTunnelFilter = Module.findExportByName("winipsec.dll", "AddTunnelFilter")
+Interceptor.attach(AddTunnelFilter, {onLeave: function (args) {send("AddTunnelFilter");}});
+
+var CloseIKENegotiationHandle = Module.findExportByName("winipsec.dll", "CloseIKENegotiationHandle")
+Interceptor.attach(CloseIKENegotiationHandle, {onLeave: function (args) {send("CloseIKENegotiationHandle");}});
+
+var CloseIKENotifyHandle = Module.findExportByName("winipsec.dll", "CloseIKENotifyHandle")
+Interceptor.attach(CloseIKENotifyHandle, {onLeave: function (args) {send("CloseIKENotifyHandle");}});
+
+var CloseMMFilterHandle = Module.findExportByName("winipsec.dll", "CloseMMFilterHandle")
+Interceptor.attach(CloseMMFilterHandle, {onLeave: function (args) {send("CloseMMFilterHandle");}});
+
+var CloseTransportFilterHandle = Module.findExportByName("winipsec.dll", "CloseTransportFilterHandle")
+Interceptor.attach(CloseTransportFilterHandle, {onLeave: function (args) {send("CloseTransportFilterHandle");}});
+
+var CloseTunnelFilterHandle = Module.findExportByName("winipsec.dll", "CloseTunnelFilterHandle")
+Interceptor.attach(CloseTunnelFilterHandle, {onLeave: function (args) {send("CloseTunnelFilterHandle");}});
+
+var DeleteMMAuthMethods = Module.findExportByName("winipsec.dll", "DeleteMMAuthMethods")
+Interceptor.attach(DeleteMMAuthMethods, {onLeave: function (args) {send("DeleteMMAuthMethods");}});
+
+var DeleteMMFilter = Module.findExportByName("winipsec.dll", "DeleteMMFilter")
+Interceptor.attach(DeleteMMFilter, {onLeave: function (args) {send("DeleteMMFilter");}});
+
+var DeleteMMPolicy = Module.findExportByName("winipsec.dll", "DeleteMMPolicy")
+Interceptor.attach(DeleteMMPolicy, {onLeave: function (args) {send("DeleteMMPolicy");}});
+
+var DeleteMMSAs = Module.findExportByName("winipsec.dll", "DeleteMMSAs")
+Interceptor.attach(DeleteMMSAs, {onLeave: function (args) {send("DeleteMMSAs");}});
+
+var DeleteQMPolicy = Module.findExportByName("winipsec.dll", "DeleteQMPolicy")
+Interceptor.attach(DeleteQMPolicy, {onLeave: function (args) {send("DeleteQMPolicy");}});
+
+var DeleteQMSAs = Module.findExportByName("winipsec.dll", "DeleteQMSAs")
+Interceptor.attach(DeleteQMSAs, {onLeave: function (args) {send("DeleteQMSAs");}});
+
+var DeleteTransportFilter = Module.findExportByName("winipsec.dll", "DeleteTransportFilter")
+Interceptor.attach(DeleteTransportFilter, {onLeave: function (args) {send("DeleteTransportFilter");}});
+
+var DeleteTunnelFilter = Module.findExportByName("winipsec.dll", "DeleteTunnelFilter")
+Interceptor.attach(DeleteTunnelFilter, {onLeave: function (args) {send("DeleteTunnelFilter");}});
+
+var DllMain = Module.findExportByName("winipsec.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var EnumIPSecInterfaces = Module.findExportByName("winipsec.dll", "EnumIPSecInterfaces")
+Interceptor.attach(EnumIPSecInterfaces, {onLeave: function (args) {send("EnumIPSecInterfaces");}});
+
+var EnumMMAuthMethods = Module.findExportByName("winipsec.dll", "EnumMMAuthMethods")
+Interceptor.attach(EnumMMAuthMethods, {onLeave: function (args) {send("EnumMMAuthMethods");}});
+
+var EnumMMFilters = Module.findExportByName("winipsec.dll", "EnumMMFilters")
+Interceptor.attach(EnumMMFilters, {onLeave: function (args) {send("EnumMMFilters");}});
+
+var EnumMMFiltersEx = Module.findExportByName("winipsec.dll", "EnumMMFiltersEx")
+Interceptor.attach(EnumMMFiltersEx, {onLeave: function (args) {send("EnumMMFiltersEx");}});
+
+var EnumMMPolicies = Module.findExportByName("winipsec.dll", "EnumMMPolicies")
+Interceptor.attach(EnumMMPolicies, {onLeave: function (args) {send("EnumMMPolicies");}});
+
+var EnumMMSAs = Module.findExportByName("winipsec.dll", "EnumMMSAs")
+Interceptor.attach(EnumMMSAs, {onLeave: function (args) {send("EnumMMSAs");}});
+
+var EnumQMPolicies = Module.findExportByName("winipsec.dll", "EnumQMPolicies")
+Interceptor.attach(EnumQMPolicies, {onLeave: function (args) {send("EnumQMPolicies");}});
+
+var EnumQMSAs = Module.findExportByName("winipsec.dll", "EnumQMSAs")
+Interceptor.attach(EnumQMSAs, {onLeave: function (args) {send("EnumQMSAs");}});
+
+var EnumTransportFilters = Module.findExportByName("winipsec.dll", "EnumTransportFilters")
+Interceptor.attach(EnumTransportFilters, {onLeave: function (args) {send("EnumTransportFilters");}});
+
+var EnumTransportFiltersEx = Module.findExportByName("winipsec.dll", "EnumTransportFiltersEx")
+Interceptor.attach(EnumTransportFiltersEx, {onLeave: function (args) {send("EnumTransportFiltersEx");}});
+
+var EnumTunnelFilters = Module.findExportByName("winipsec.dll", "EnumTunnelFilters")
+Interceptor.attach(EnumTunnelFilters, {onLeave: function (args) {send("EnumTunnelFilters");}});
+
+var GetConfigurationVariables = Module.findExportByName("winipsec.dll", "GetConfigurationVariables")
+Interceptor.attach(GetConfigurationVariables, {onLeave: function (args) {send("GetConfigurationVariables");}});
+
+var GetMMAuthMethods = Module.findExportByName("winipsec.dll", "GetMMAuthMethods")
+Interceptor.attach(GetMMAuthMethods, {onLeave: function (args) {send("GetMMAuthMethods");}});
+
+var GetMMFilter = Module.findExportByName("winipsec.dll", "GetMMFilter")
+Interceptor.attach(GetMMFilter, {onLeave: function (args) {send("GetMMFilter");}});
+
+var GetMMFilterEx = Module.findExportByName("winipsec.dll", "GetMMFilterEx")
+Interceptor.attach(GetMMFilterEx, {onLeave: function (args) {send("GetMMFilterEx");}});
+
+var GetMMPolicy = Module.findExportByName("winipsec.dll", "GetMMPolicy")
+Interceptor.attach(GetMMPolicy, {onLeave: function (args) {send("GetMMPolicy");}});
+
+var GetMMPolicyByID = Module.findExportByName("winipsec.dll", "GetMMPolicyByID")
+Interceptor.attach(GetMMPolicyByID, {onLeave: function (args) {send("GetMMPolicyByID");}});
+
+var GetQMPolicy = Module.findExportByName("winipsec.dll", "GetQMPolicy")
+Interceptor.attach(GetQMPolicy, {onLeave: function (args) {send("GetQMPolicy");}});
+
+var GetQMPolicyByID = Module.findExportByName("winipsec.dll", "GetQMPolicyByID")
+Interceptor.attach(GetQMPolicyByID, {onLeave: function (args) {send("GetQMPolicyByID");}});
+
+var GetTransportFilter = Module.findExportByName("winipsec.dll", "GetTransportFilter")
+Interceptor.attach(GetTransportFilter, {onLeave: function (args) {send("GetTransportFilter");}});
+
+var GetTransportFilterEx = Module.findExportByName("winipsec.dll", "GetTransportFilterEx")
+Interceptor.attach(GetTransportFilterEx, {onLeave: function (args) {send("GetTransportFilterEx");}});
+
+var GetTunnelFilter = Module.findExportByName("winipsec.dll", "GetTunnelFilter")
+Interceptor.attach(GetTunnelFilter, {onLeave: function (args) {send("GetTunnelFilter");}});
+
+var InitiateIKENegotiation = Module.findExportByName("winipsec.dll", "InitiateIKENegotiation")
+Interceptor.attach(InitiateIKENegotiation, {onLeave: function (args) {send("InitiateIKENegotiation");}});
+
+var MatchMMFilter = Module.findExportByName("winipsec.dll", "MatchMMFilter")
+Interceptor.attach(MatchMMFilter, {onLeave: function (args) {send("MatchMMFilter");}});
+
+var MatchMMFilterEx = Module.findExportByName("winipsec.dll", "MatchMMFilterEx")
+Interceptor.attach(MatchMMFilterEx, {onLeave: function (args) {send("MatchMMFilterEx");}});
+
+var MatchTransportFilter = Module.findExportByName("winipsec.dll", "MatchTransportFilter")
+Interceptor.attach(MatchTransportFilter, {onLeave: function (args) {send("MatchTransportFilter");}});
+
+var MatchTransportFilterEx = Module.findExportByName("winipsec.dll", "MatchTransportFilterEx")
+Interceptor.attach(MatchTransportFilterEx, {onLeave: function (args) {send("MatchTransportFilterEx");}});
+
+var MatchTunnelFilter = Module.findExportByName("winipsec.dll", "MatchTunnelFilter")
+Interceptor.attach(MatchTunnelFilter, {onLeave: function (args) {send("MatchTunnelFilter");}});
+
+var OpenMMFilterHandle = Module.findExportByName("winipsec.dll", "OpenMMFilterHandle")
+Interceptor.attach(OpenMMFilterHandle, {onLeave: function (args) {send("OpenMMFilterHandle");}});
+
+var OpenMMFilterHandleEx = Module.findExportByName("winipsec.dll", "OpenMMFilterHandleEx")
+Interceptor.attach(OpenMMFilterHandleEx, {onLeave: function (args) {send("OpenMMFilterHandleEx");}});
+
+var OpenTransportFilterHandle = Module.findExportByName("winipsec.dll", "OpenTransportFilterHandle")
+Interceptor.attach(OpenTransportFilterHandle, {onLeave: function (args) {send("OpenTransportFilterHandle");}});
+
+var OpenTransportFilterHandleEx = Module.findExportByName("winipsec.dll", "OpenTransportFilterHandleEx")
+Interceptor.attach(OpenTransportFilterHandleEx, {onLeave: function (args) {send("OpenTransportFilterHandleEx");}});
+
+var OpenTunnelFilterHandle = Module.findExportByName("winipsec.dll", "OpenTunnelFilterHandle")
+Interceptor.attach(OpenTunnelFilterHandle, {onLeave: function (args) {send("OpenTunnelFilterHandle");}});
+
+var QueryIKENegotiationStatus = Module.findExportByName("winipsec.dll", "QueryIKENegotiationStatus")
+Interceptor.attach(QueryIKENegotiationStatus, {onLeave: function (args) {send("QueryIKENegotiationStatus");}});
+
+var QueryIKENotifyData = Module.findExportByName("winipsec.dll", "QueryIKENotifyData")
+Interceptor.attach(QueryIKENotifyData, {onLeave: function (args) {send("QueryIKENotifyData");}});
+
+var QueryIKEStatistics = Module.findExportByName("winipsec.dll", "QueryIKEStatistics")
+Interceptor.attach(QueryIKEStatistics, {onLeave: function (args) {send("QueryIKEStatistics");}});
+
+var QueryIPSecStatistics = Module.findExportByName("winipsec.dll", "QueryIPSecStatistics")
+Interceptor.attach(QueryIPSecStatistics, {onLeave: function (args) {send("QueryIPSecStatistics");}});
+
+var QuerySpdPolicyState = Module.findExportByName("winipsec.dll", "QuerySpdPolicyState")
+Interceptor.attach(QuerySpdPolicyState, {onLeave: function (args) {send("QuerySpdPolicyState");}});
+
+var RegisterIKENotifyClient = Module.findExportByName("winipsec.dll", "RegisterIKENotifyClient")
+Interceptor.attach(RegisterIKENotifyClient, {onLeave: function (args) {send("RegisterIKENotifyClient");}});
+
+var SPDApiBufferAllocate = Module.findExportByName("winipsec.dll", "SPDApiBufferAllocate")
+Interceptor.attach(SPDApiBufferAllocate, {onLeave: function (args) {send("SPDApiBufferAllocate");}});
+
+var SPDApiBufferFree = Module.findExportByName("winipsec.dll", "SPDApiBufferFree")
+Interceptor.attach(SPDApiBufferFree, {onLeave: function (args) {send("SPDApiBufferFree");}});
+
+var SetConfigurationVariables = Module.findExportByName("winipsec.dll", "SetConfigurationVariables")
+Interceptor.attach(SetConfigurationVariables, {onLeave: function (args) {send("SetConfigurationVariables");}});
+
+var SetMMAuthMethods = Module.findExportByName("winipsec.dll", "SetMMAuthMethods")
+Interceptor.attach(SetMMAuthMethods, {onLeave: function (args) {send("SetMMAuthMethods");}});
+
+var SetMMFilter = Module.findExportByName("winipsec.dll", "SetMMFilter")
+Interceptor.attach(SetMMFilter, {onLeave: function (args) {send("SetMMFilter");}});
+
+var SetMMFilterEx = Module.findExportByName("winipsec.dll", "SetMMFilterEx")
+Interceptor.attach(SetMMFilterEx, {onLeave: function (args) {send("SetMMFilterEx");}});
+
+var SetMMPolicy = Module.findExportByName("winipsec.dll", "SetMMPolicy")
+Interceptor.attach(SetMMPolicy, {onLeave: function (args) {send("SetMMPolicy");}});
+
+var SetQMPolicy = Module.findExportByName("winipsec.dll", "SetQMPolicy")
+Interceptor.attach(SetQMPolicy, {onLeave: function (args) {send("SetQMPolicy");}});
+
+var SetTransportFilter = Module.findExportByName("winipsec.dll", "SetTransportFilter")
+Interceptor.attach(SetTransportFilter, {onLeave: function (args) {send("SetTransportFilter");}});
+
+var SetTransportFilterEx = Module.findExportByName("winipsec.dll", "SetTransportFilterEx")
+Interceptor.attach(SetTransportFilterEx, {onLeave: function (args) {send("SetTransportFilterEx");}});
+
+var SetTunnelFilter = Module.findExportByName("winipsec.dll", "SetTunnelFilter")
+Interceptor.attach(SetTunnelFilter, {onLeave: function (args) {send("SetTunnelFilter");}});
+

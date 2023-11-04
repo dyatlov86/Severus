@@ -1,0 +1,21 @@
+var AsyncUILoaderEntryW = Module.findExportByName("prnntfy.dll", "AsyncUILoaderEntryW")
+Interceptor.attach(AsyncUILoaderEntryW, {onLeave: function (args) {send("AsyncUILoaderEntryW");}});
+
+var DllCanUnloadNow = Module.findExportByName("prnntfy.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("prnntfy.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("prnntfy.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("prnntfy.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var PrintNotifyTray_Exit = Module.findExportByName("prnntfy.dll", "PrintNotifyTray_Exit")
+Interceptor.attach(PrintNotifyTray_Exit, {onLeave: function (args) {send("PrintNotifyTray_Exit");}});
+
+var PrintNotifyTray_Init = Module.findExportByName("prnntfy.dll", "PrintNotifyTray_Init")
+Interceptor.attach(PrintNotifyTray_Init, {onLeave: function (args) {send("PrintNotifyTray_Init");}});
+

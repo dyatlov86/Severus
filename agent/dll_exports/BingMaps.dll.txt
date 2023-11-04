@@ -1,0 +1,3 @@
+var GetBingMapsFactory = Module.findExportByName("BingMaps.dll", "GetBingMapsFactory")
+Interceptor.attach(GetBingMapsFactory, {onLeave: function (args) {send("GetBingMapsFactory");}});
+

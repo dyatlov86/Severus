@@ -1,0 +1,9 @@
+var CreateInProcPhoneService = Module.findExportByName("PhoneService.dll", "CreateInProcPhoneService")
+Interceptor.attach(CreateInProcPhoneService, {onLeave: function (args) {send("CreateInProcPhoneService");}});
+
+var ServiceMain = Module.findExportByName("PhoneService.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("PhoneService.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

@@ -1,0 +1,39 @@
+var ConstructHiveLocation = Module.findExportByName("SmiEngine.dll", "ConstructHiveLocation")
+Interceptor.attach(ConstructHiveLocation, {onLeave: function (args) {send("ConstructHiveLocation");}});
+
+var ConstructRegLocation = Module.findExportByName("SmiEngine.dll", "ConstructRegLocation")
+Interceptor.attach(ConstructRegLocation, {onLeave: function (args) {send("ConstructRegLocation");}});
+
+var CreateLalInstance = Module.findExportByName("SmiEngine.dll", "CreateLalInstance")
+Interceptor.attach(CreateLalInstance, {onLeave: function (args) {send("CreateLalInstance");}});
+
+var CreateSettingsEnginePriv = Module.findExportByName("SmiEngine.dll", "CreateSettingsEnginePriv")
+Interceptor.attach(CreateSettingsEnginePriv, {onLeave: function (args) {send("CreateSettingsEnginePriv");}});
+
+var CreateWcmEngineCore = Module.findExportByName("SmiEngine.dll", "CreateWcmEngineCore")
+Interceptor.attach(CreateWcmEngineCore, {onLeave: function (args) {send("CreateWcmEngineCore");}});
+
+var DeleteCompilerObject = Module.findExportByName("SmiEngine.dll", "DeleteCompilerObject")
+Interceptor.attach(DeleteCompilerObject, {onLeave: function (args) {send("DeleteCompilerObject");}});
+
+var DllCanUnloadNow = Module.findExportByName("SmiEngine.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("SmiEngine.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("SmiEngine.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("SmiEngine.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetCompilerObject = Module.findExportByName("SmiEngine.dll", "GetCompilerObject")
+Interceptor.attach(GetCompilerObject, {onLeave: function (args) {send("GetCompilerObject");}});
+
+var GetItemFromCoreObject = Module.findExportByName("SmiEngine.dll", "GetItemFromCoreObject")
+Interceptor.attach(GetItemFromCoreObject, {onLeave: function (args) {send("GetItemFromCoreObject");}});
+
+var SetLalCreator = Module.findExportByName("SmiEngine.dll", "SetLalCreator")
+Interceptor.attach(SetLalCreator, {onLeave: function (args) {send("SetLalCreator");}});
+

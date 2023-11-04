@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("fdWSD.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("fdWSD.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("fdWSD.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("fdWSD.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var FdphostSessionChange = Module.findExportByName("fdWSD.dll", "FdphostSessionChange")
+Interceptor.attach(FdphostSessionChange, {onLeave: function (args) {send("FdphostSessionChange");}});
+
+var FdphostSetComContext = Module.findExportByName("fdWSD.dll", "FdphostSetComContext")
+Interceptor.attach(FdphostSetComContext, {onLeave: function (args) {send("FdphostSetComContext");}});
+
+var FdphostSetSharedService = Module.findExportByName("fdWSD.dll", "FdphostSetSharedService")
+Interceptor.attach(FdphostSetSharedService, {onLeave: function (args) {send("FdphostSetSharedService");}});
+

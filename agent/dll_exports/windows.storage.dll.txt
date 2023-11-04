@@ -1,0 +1,783 @@
+var ApplyProviderSettings = Module.findExportByName("windows.storage.dll", "ApplyProviderSettings")
+Interceptor.attach(ApplyProviderSettings, {onLeave: function (args) {send("ApplyProviderSettings");}});
+
+var AssocCreateForClasses = Module.findExportByName("windows.storage.dll", "AssocCreateForClasses")
+Interceptor.attach(AssocCreateForClasses, {onLeave: function (args) {send("AssocCreateForClasses");}});
+
+var AssocGetDetailsOfPropKey = Module.findExportByName("windows.storage.dll", "AssocGetDetailsOfPropKey")
+Interceptor.attach(AssocGetDetailsOfPropKey, {onLeave: function (args) {send("AssocGetDetailsOfPropKey");}});
+
+var AssocShouldProcessUseAppToAppLaunching = Module.findExportByName("windows.storage.dll", "AssocShouldProcessUseAppToAppLaunching")
+Interceptor.attach(AssocShouldProcessUseAppToAppLaunching, {onLeave: function (args) {send("AssocShouldProcessUseAppToAppLaunching");}});
+
+var CCachedShellItem_CreateInstance = Module.findExportByName("windows.storage.dll", "CCachedShellItem_CreateInstance")
+Interceptor.attach(CCachedShellItem_CreateInstance, {onLeave: function (args) {send("CCachedShellItem_CreateInstance");}});
+
+var CCollectionFactory_CreateInstance = Module.findExportByName("windows.storage.dll", "CCollectionFactory_CreateInstance")
+Interceptor.attach(CCollectionFactory_CreateInstance, {onLeave: function (args) {send("CCollectionFactory_CreateInstance");}});
+
+var CDesktopFolder_CreateInstanceWithBindContext = Module.findExportByName("windows.storage.dll", "CDesktopFolder_CreateInstanceWithBindContext")
+Interceptor.attach(CDesktopFolder_CreateInstanceWithBindContext, {onLeave: function (args) {send("CDesktopFolder_CreateInstanceWithBindContext");}});
+
+var CFSFolder_AdjustForSlowColumn = Module.findExportByName("windows.storage.dll", "CFSFolder_AdjustForSlowColumn")
+Interceptor.attach(CFSFolder_AdjustForSlowColumn, {onLeave: function (args) {send("CFSFolder_AdjustForSlowColumn");}});
+
+var CFSFolder_CreateFolder = Module.findExportByName("windows.storage.dll", "CFSFolder_CreateFolder")
+Interceptor.attach(CFSFolder_CreateFolder, {onLeave: function (args) {send("CFSFolder_CreateFolder");}});
+
+var CFSFolder_IsCommonItem = Module.findExportByName("windows.storage.dll", "CFSFolder_IsCommonItem")
+Interceptor.attach(CFSFolder_IsCommonItem, {onLeave: function (args) {send("CFSFolder_IsCommonItem");}});
+
+var CFileOperationRecorder_CreateInstance = Module.findExportByName("windows.storage.dll", "CFileOperationRecorder_CreateInstance")
+Interceptor.attach(CFileOperationRecorder_CreateInstance, {onLeave: function (args) {send("CFileOperationRecorder_CreateInstance");}});
+
+var CFreeThreadedItemContainer_CreateInstance = Module.findExportByName("windows.storage.dll", "CFreeThreadedItemContainer_CreateInstance")
+Interceptor.attach(CFreeThreadedItemContainer_CreateInstance, {onLeave: function (args) {send("CFreeThreadedItemContainer_CreateInstance");}});
+
+var CMruLongList_CreateInstance = Module.findExportByName("windows.storage.dll", "CMruLongList_CreateInstance")
+Interceptor.attach(CMruLongList_CreateInstance, {onLeave: function (args) {send("CMruLongList_CreateInstance");}});
+
+var CPrivateProfileCache_Save = Module.findExportByName("windows.storage.dll", "CPrivateProfileCache_Save")
+Interceptor.attach(CPrivateProfileCache_Save, {onLeave: function (args) {send("CPrivateProfileCache_Save");}});
+
+var CRegFolder_CreateAndInit = Module.findExportByName("windows.storage.dll", "CRegFolder_CreateAndInit")
+Interceptor.attach(CRegFolder_CreateAndInit, {onLeave: function (args) {send("CRegFolder_CreateAndInit");}});
+
+var CRegFolder_CreateInstance = Module.findExportByName("windows.storage.dll", "CRegFolder_CreateInstance")
+Interceptor.attach(CRegFolder_CreateInstance, {onLeave: function (args) {send("CRegFolder_CreateInstance");}});
+
+var CShellItemArrayAsCollection_CreateInstance = Module.findExportByName("windows.storage.dll", "CShellItemArrayAsCollection_CreateInstance")
+Interceptor.attach(CShellItemArrayAsCollection_CreateInstance, {onLeave: function (args) {send("CShellItemArrayAsCollection_CreateInstance");}});
+
+var CShellItemArrayAsVirtualizedObjectArray_CreateInstance = Module.findExportByName("windows.storage.dll", "CShellItemArrayAsVirtualizedObjectArray_CreateInstance")
+Interceptor.attach(CShellItemArrayAsVirtualizedObjectArray_CreateInstance, {onLeave: function (args) {send("CShellItemArrayAsVirtualizedObjectArray_CreateInstance");}});
+
+var CShellItemArrayWithCommonParent_CreateInstance = Module.findExportByName("windows.storage.dll", "CShellItemArrayWithCommonParent_CreateInstance")
+Interceptor.attach(CShellItemArrayWithCommonParent_CreateInstance, {onLeave: function (args) {send("CShellItemArrayWithCommonParent_CreateInstance");}});
+
+var CShellItemArray_CreateInstance = Module.findExportByName("windows.storage.dll", "CShellItemArray_CreateInstance")
+Interceptor.attach(CShellItemArray_CreateInstance, {onLeave: function (args) {send("CShellItemArray_CreateInstance");}});
+
+var CShellItem_CreateInstance = Module.findExportByName("windows.storage.dll", "CShellItem_CreateInstance")
+Interceptor.attach(CShellItem_CreateInstance, {onLeave: function (args) {send("CShellItem_CreateInstance");}});
+
+var CStorageItem_GetValidatedStorageItemObject = Module.findExportByName("windows.storage.dll", "CStorageItem_GetValidatedStorageItemObject")
+Interceptor.attach(CStorageItem_GetValidatedStorageItemObject, {onLeave: function (args) {send("CStorageItem_GetValidatedStorageItemObject");}});
+
+var CTaskAddDoc_Create = Module.findExportByName("windows.storage.dll", "CTaskAddDoc_Create")
+Interceptor.attach(CTaskAddDoc_Create, {onLeave: function (args) {send("CTaskAddDoc_Create");}});
+
+var CViewSettings_CreateInstance = Module.findExportByName("windows.storage.dll", "CViewSettings_CreateInstance")
+Interceptor.attach(CViewSettings_CreateInstance, {onLeave: function (args) {send("CViewSettings_CreateInstance");}});
+
+var CheckSmartScreenWithAltFile = Module.findExportByName("windows.storage.dll", "CheckSmartScreenWithAltFile")
+Interceptor.attach(CheckSmartScreenWithAltFile, {onLeave: function (args) {send("CheckSmartScreenWithAltFile");}});
+
+var CopyDefaultLibrariesFromGroupPolicy = Module.findExportByName("windows.storage.dll", "CopyDefaultLibrariesFromGroupPolicy")
+Interceptor.attach(CopyDefaultLibrariesFromGroupPolicy, {onLeave: function (args) {send("CopyDefaultLibrariesFromGroupPolicy");}});
+
+var CreateExtrinsicPropertyStore = Module.findExportByName("windows.storage.dll", "CreateExtrinsicPropertyStore")
+Interceptor.attach(CreateExtrinsicPropertyStore, {onLeave: function (args) {send("CreateExtrinsicPropertyStore");}});
+
+var CreateItemArrayFromItemStore = Module.findExportByName("windows.storage.dll", "CreateItemArrayFromItemStore")
+Interceptor.attach(CreateItemArrayFromItemStore, {onLeave: function (args) {send("CreateItemArrayFromItemStore");}});
+
+var CreateItemArrayFromObjectArray = Module.findExportByName("windows.storage.dll", "CreateItemArrayFromObjectArray")
+Interceptor.attach(CreateItemArrayFromObjectArray, {onLeave: function (args) {send("CreateItemArrayFromObjectArray");}});
+
+var CreateLocalizationDesktopIni = Module.findExportByName("windows.storage.dll", "CreateLocalizationDesktopIni")
+Interceptor.attach(CreateLocalizationDesktopIni, {onLeave: function (args) {send("CreateLocalizationDesktopIni");}});
+
+var CreateSortColumnArray = Module.findExportByName("windows.storage.dll", "CreateSortColumnArray")
+Interceptor.attach(CreateSortColumnArray, {onLeave: function (args) {send("CreateSortColumnArray");}});
+
+var CreateStorageItemFromPath_FullTrustCaller = Module.findExportByName("windows.storage.dll", "CreateStorageItemFromPath_FullTrustCaller")
+Interceptor.attach(CreateStorageItemFromPath_FullTrustCaller, {onLeave: function (args) {send("CreateStorageItemFromPath_FullTrustCaller");}});
+
+var CreateStorageItemFromPath_FullTrustCaller_ForPackage = Module.findExportByName("windows.storage.dll", "CreateStorageItemFromPath_FullTrustCaller_ForPackage")
+Interceptor.attach(CreateStorageItemFromPath_FullTrustCaller_ForPackage, {onLeave: function (args) {send("CreateStorageItemFromPath_FullTrustCaller_ForPackage");}});
+
+var CreateStorageItemFromPath_PartialTrustCaller = Module.findExportByName("windows.storage.dll", "CreateStorageItemFromPath_PartialTrustCaller")
+Interceptor.attach(CreateStorageItemFromPath_PartialTrustCaller, {onLeave: function (args) {send("CreateStorageItemFromPath_PartialTrustCaller");}});
+
+var CreateStorageItemFromShellItem = Module.findExportByName("windows.storage.dll", "CreateStorageItemFromShellItem")
+Interceptor.attach(CreateStorageItemFromShellItem, {onLeave: function (args) {send("CreateStorageItemFromShellItem");}});
+
+var CreateStorageItemFromShellItem_FullTrustCaller_ForPackage = Module.findExportByName("windows.storage.dll", "CreateStorageItemFromShellItem_FullTrustCaller_ForPackage")
+Interceptor.attach(CreateStorageItemFromShellItem_FullTrustCaller_ForPackage, {onLeave: function (args) {send("CreateStorageItemFromShellItem_FullTrustCaller_ForPackage");}});
+
+var CreateStorageProviderPropertyStore = Module.findExportByName("windows.storage.dll", "CreateStorageProviderPropertyStore")
+Interceptor.attach(CreateStorageProviderPropertyStore, {onLeave: function (args) {send("CreateStorageProviderPropertyStore");}});
+
+var CreateVolatilePropertyStore = Module.findExportByName("windows.storage.dll", "CreateVolatilePropertyStore")
+Interceptor.attach(CreateVolatilePropertyStore, {onLeave: function (args) {send("CreateVolatilePropertyStore");}});
+
+var CustomStatePropertyDescription_CreateWithItemPropertyStore = Module.findExportByName("windows.storage.dll", "CustomStatePropertyDescription_CreateWithItemPropertyStore")
+Interceptor.attach(CustomStatePropertyDescription_CreateWithItemPropertyStore, {onLeave: function (args) {send("CustomStatePropertyDescription_CreateWithItemPropertyStore");}});
+
+var CustomStatePropertyDescription_CreateWithStateIdentifier = Module.findExportByName("windows.storage.dll", "CustomStatePropertyDescription_CreateWithStateIdentifier")
+Interceptor.attach(CustomStatePropertyDescription_CreateWithStateIdentifier, {onLeave: function (args) {send("CustomStatePropertyDescription_CreateWithStateIdentifier");}});
+
+var DataAccessCaches_InvalidateForLibrary = Module.findExportByName("windows.storage.dll", "DataAccessCaches_InvalidateForLibrary")
+Interceptor.attach(DataAccessCaches_InvalidateForLibrary, {onLeave: function (args) {send("DataAccessCaches_InvalidateForLibrary");}});
+
+var DeserializeTextToLink = Module.findExportByName("windows.storage.dll", "DeserializeTextToLink")
+Interceptor.attach(DeserializeTextToLink, {onLeave: function (args) {send("DeserializeTextToLink");}});
+
+var DetermineFolderDestinationParentAppID = Module.findExportByName("windows.storage.dll", "DetermineFolderDestinationParentAppID")
+Interceptor.attach(DetermineFolderDestinationParentAppID, {onLeave: function (args) {send("DetermineFolderDestinationParentAppID");}});
+
+var DllCanUnloadNow = Module.findExportByName("windows.storage.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("windows.storage.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("windows.storage.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("windows.storage.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("windows.storage.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("windows.storage.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DragQueryFileW = Module.findExportByName("windows.storage.dll", "DragQueryFileW")
+Interceptor.attach(DragQueryFileW, {onLeave: function (args) {send("DragQueryFileW");}});
+
+var EnumShellItemsFromEnumFullIdList = Module.findExportByName("windows.storage.dll", "EnumShellItemsFromEnumFullIdList")
+Interceptor.attach(EnumShellItemsFromEnumFullIdList, {onLeave: function (args) {send("EnumShellItemsFromEnumFullIdList");}});
+
+var GatherProviderSettings = Module.findExportByName("windows.storage.dll", "GatherProviderSettings")
+Interceptor.attach(GatherProviderSettings, {onLeave: function (args) {send("GatherProviderSettings");}});
+
+var GetCachedFileUpdateInformation = Module.findExportByName("windows.storage.dll", "GetCachedFileUpdateInformation")
+Interceptor.attach(GetCachedFileUpdateInformation, {onLeave: function (args) {send("GetCachedFileUpdateInformation");}});
+
+var GetCommandProviderForFolderType = Module.findExportByName("windows.storage.dll", "GetCommandProviderForFolderType")
+Interceptor.attach(GetCommandProviderForFolderType, {onLeave: function (args) {send("GetCommandProviderForFolderType");}});
+
+var GetFileUndoText = Module.findExportByName("windows.storage.dll", "GetFileUndoText")
+Interceptor.attach(GetFileUndoText, {onLeave: function (args) {send("GetFileUndoText");}});
+
+var GetFindDataForPath = Module.findExportByName("windows.storage.dll", "GetFindDataForPath")
+Interceptor.attach(GetFindDataForPath, {onLeave: function (args) {send("GetFindDataForPath");}});
+
+var GetFindDataFromFileInformationByHandle = Module.findExportByName("windows.storage.dll", "GetFindDataFromFileInformationByHandle")
+Interceptor.attach(GetFindDataFromFileInformationByHandle, {onLeave: function (args) {send("GetFindDataFromFileInformationByHandle");}});
+
+var GetInfoForFileInUse = Module.findExportByName("windows.storage.dll", "GetInfoForFileInUse")
+Interceptor.attach(GetInfoForFileInUse, {onLeave: function (args) {send("GetInfoForFileInUse");}});
+
+var GetRegDataDrivenCommand = Module.findExportByName("windows.storage.dll", "GetRegDataDrivenCommand")
+Interceptor.attach(GetRegDataDrivenCommand, {onLeave: function (args) {send("GetRegDataDrivenCommand");}});
+
+var GetRegDataDrivenCommandWithAssociation = Module.findExportByName("windows.storage.dll", "GetRegDataDrivenCommandWithAssociation")
+Interceptor.attach(GetRegDataDrivenCommandWithAssociation, {onLeave: function (args) {send("GetRegDataDrivenCommandWithAssociation");}});
+
+var GetSelectionStateFromItemArray = Module.findExportByName("windows.storage.dll", "GetSelectionStateFromItemArray")
+Interceptor.attach(GetSelectionStateFromItemArray, {onLeave: function (args) {send("GetSelectionStateFromItemArray");}});
+
+var GetSystemPersistedStorageItemList = Module.findExportByName("windows.storage.dll", "GetSystemPersistedStorageItemList")
+Interceptor.attach(GetSystemPersistedStorageItemList, {onLeave: function (args) {send("GetSystemPersistedStorageItemList");}});
+
+var GetSystemPersistedStorageItemListForUser = Module.findExportByName("windows.storage.dll", "GetSystemPersistedStorageItemListForUser")
+Interceptor.attach(GetSystemPersistedStorageItemListForUser, {onLeave: function (args) {send("GetSystemPersistedStorageItemListForUser");}});
+
+var GetThreadFlags = Module.findExportByName("windows.storage.dll", "GetThreadFlags")
+Interceptor.attach(GetThreadFlags, {onLeave: function (args) {send("GetThreadFlags");}});
+
+var GetUserChoiceForUrl = Module.findExportByName("windows.storage.dll", "GetUserChoiceForUrl")
+Interceptor.attach(GetUserChoiceForUrl, {onLeave: function (args) {send("GetUserChoiceForUrl");}});
+
+var Global_WindowsStorage_MaxIcons = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_MaxIcons")
+Interceptor.attach(Global_WindowsStorage_MaxIcons, {onLeave: function (args) {send("Global_WindowsStorage_MaxIcons");}});
+
+var Global_WindowsStorage_Untyped_FileClassSRWLock = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_Untyped_FileClassSRWLock")
+Interceptor.attach(Global_WindowsStorage_Untyped_FileClassSRWLock, {onLeave: function (args) {send("Global_WindowsStorage_Untyped_FileClassSRWLock");}});
+
+var Global_WindowsStorage_Untyped_MountPoint = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_Untyped_MountPoint")
+Interceptor.attach(Global_WindowsStorage_Untyped_MountPoint, {onLeave: function (args) {send("Global_WindowsStorage_Untyped_MountPoint");}});
+
+var Global_WindowsStorage_Untyped_pFileClassCacheTable = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_Untyped_pFileClassCacheTable")
+Interceptor.attach(Global_WindowsStorage_Untyped_pFileClassCacheTable, {onLeave: function (args) {send("Global_WindowsStorage_Untyped_pFileClassCacheTable");}});
+
+var Global_WindowsStorage_Untyped_pFileHanderMap = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_Untyped_pFileHanderMap")
+Interceptor.attach(Global_WindowsStorage_Untyped_pFileHanderMap, {onLeave: function (args) {send("Global_WindowsStorage_Untyped_pFileHanderMap");}});
+
+var Global_WindowsStorage_Untyped_rgshil = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_Untyped_rgshil")
+Interceptor.attach(Global_WindowsStorage_Untyped_rgshil, {onLeave: function (args) {send("Global_WindowsStorage_Untyped_rgshil");}});
+
+var Global_WindowsStorage_afNotRedirected = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_afNotRedirected")
+Interceptor.attach(Global_WindowsStorage_afNotRedirected, {onLeave: function (args) {send("Global_WindowsStorage_afNotRedirected");}});
+
+var Global_WindowsStorage_ccIcon = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_ccIcon")
+Interceptor.attach(Global_WindowsStorage_ccIcon, {onLeave: function (args) {send("Global_WindowsStorage_ccIcon");}});
+
+var Global_WindowsStorage_csIconCache = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_csIconCache")
+Interceptor.attach(Global_WindowsStorage_csIconCache, {onLeave: function (args) {send("Global_WindowsStorage_csIconCache");}});
+
+var Global_WindowsStorage_csSCN = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_csSCN")
+Interceptor.attach(Global_WindowsStorage_csSCN, {onLeave: function (args) {send("Global_WindowsStorage_csSCN");}});
+
+var Global_WindowsStorage_dwThreadBindCtx = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_dwThreadBindCtx")
+Interceptor.attach(Global_WindowsStorage_dwThreadBindCtx, {onLeave: function (args) {send("Global_WindowsStorage_dwThreadBindCtx");}});
+
+var Global_WindowsStorage_dwThreadInitializing = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_dwThreadInitializing")
+Interceptor.attach(Global_WindowsStorage_dwThreadInitializing, {onLeave: function (args) {send("Global_WindowsStorage_dwThreadInitializing");}});
+
+var Global_WindowsStorage_esServerMode = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_esServerMode")
+Interceptor.attach(Global_WindowsStorage_esServerMode, {onLeave: function (args) {send("Global_WindowsStorage_esServerMode");}});
+
+var Global_WindowsStorage_fEndInitialized = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_fEndInitialized")
+Interceptor.attach(Global_WindowsStorage_fEndInitialized, {onLeave: function (args) {send("Global_WindowsStorage_fEndInitialized");}});
+
+var Global_WindowsStorage_fIconCacheHasBeenSuccessfullyCreated = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_fIconCacheHasBeenSuccessfullyCreated")
+Interceptor.attach(Global_WindowsStorage_fIconCacheHasBeenSuccessfullyCreated, {onLeave: function (args) {send("Global_WindowsStorage_fIconCacheHasBeenSuccessfullyCreated");}});
+
+var Global_WindowsStorage_fIconCacheIsValid = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_fIconCacheIsValid")
+Interceptor.attach(Global_WindowsStorage_fIconCacheIsValid, {onLeave: function (args) {send("Global_WindowsStorage_fIconCacheIsValid");}});
+
+var Global_WindowsStorage_fNeedsInitBroadcast = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_fNeedsInitBroadcast")
+Interceptor.attach(Global_WindowsStorage_fNeedsInitBroadcast, {onLeave: function (args) {send("Global_WindowsStorage_fNeedsInitBroadcast");}});
+
+var Global_WindowsStorage_hwndSCN = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_hwndSCN")
+Interceptor.attach(Global_WindowsStorage_hwndSCN, {onLeave: function (args) {send("Global_WindowsStorage_hwndSCN");}});
+
+var Global_WindowsStorage_iLastSysIcon = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_iLastSysIcon")
+Interceptor.attach(Global_WindowsStorage_iLastSysIcon, {onLeave: function (args) {send("Global_WindowsStorage_iLastSysIcon");}});
+
+var Global_WindowsStorage_iLastSystemColorDepth = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_iLastSystemColorDepth")
+Interceptor.attach(Global_WindowsStorage_iLastSystemColorDepth, {onLeave: function (args) {send("Global_WindowsStorage_iLastSystemColorDepth");}});
+
+var Global_WindowsStorage_iUseLinkPrefix = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_iUseLinkPrefix")
+Interceptor.attach(Global_WindowsStorage_iUseLinkPrefix, {onLeave: function (args) {send("Global_WindowsStorage_iUseLinkPrefix");}});
+
+var Global_WindowsStorage_lProcessClassCount = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_lProcessClassCount")
+Interceptor.attach(Global_WindowsStorage_lProcessClassCount, {onLeave: function (args) {send("Global_WindowsStorage_lProcessClassCount");}});
+
+var Global_WindowsStorage_lrFlags = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_lrFlags")
+Interceptor.attach(Global_WindowsStorage_lrFlags, {onLeave: function (args) {send("Global_WindowsStorage_lrFlags");}});
+
+var Global_WindowsStorage_nImageManagerVersion = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_nImageManagerVersion")
+Interceptor.attach(Global_WindowsStorage_nImageManagerVersion, {onLeave: function (args) {send("Global_WindowsStorage_nImageManagerVersion");}});
+
+var Global_WindowsStorage_tlsChangeClientProxy = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_tlsChangeClientProxy")
+Interceptor.attach(Global_WindowsStorage_tlsChangeClientProxy, {onLeave: function (args) {send("Global_WindowsStorage_tlsChangeClientProxy");}});
+
+var Global_WindowsStorage_tlsIconCache = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_tlsIconCache")
+Interceptor.attach(Global_WindowsStorage_tlsIconCache, {onLeave: function (args) {send("Global_WindowsStorage_tlsIconCache");}});
+
+var Global_WindowsStorage_tlsThreadFlags = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_tlsThreadFlags")
+Interceptor.attach(Global_WindowsStorage_tlsThreadFlags, {onLeave: function (args) {send("Global_WindowsStorage_tlsThreadFlags");}});
+
+var Global_WindowsStorage_ulNextID = Module.findExportByName("windows.storage.dll", "Global_WindowsStorage_ulNextID")
+Interceptor.attach(Global_WindowsStorage_ulNextID, {onLeave: function (args) {send("Global_WindowsStorage_ulNextID");}});
+
+var GrantPathAccess_FullTrustCaller_ForPackage = Module.findExportByName("windows.storage.dll", "GrantPathAccess_FullTrustCaller_ForPackage")
+Interceptor.attach(GrantPathAccess_FullTrustCaller_ForPackage, {onLeave: function (args) {send("GrantPathAccess_FullTrustCaller_ForPackage");}});
+
+var GrantWorkingDirectoryAccess_FullTrustCaller_ForPackage = Module.findExportByName("windows.storage.dll", "GrantWorkingDirectoryAccess_FullTrustCaller_ForPackage")
+Interceptor.attach(GrantWorkingDirectoryAccess_FullTrustCaller_ForPackage, {onLeave: function (args) {send("GrantWorkingDirectoryAccess_FullTrustCaller_ForPackage");}});
+
+var HideExtension = Module.findExportByName("windows.storage.dll", "HideExtension")
+Interceptor.attach(HideExtension, {onLeave: function (args) {send("HideExtension");}});
+
+var ILAppendID = Module.findExportByName("windows.storage.dll", "ILAppendID")
+Interceptor.attach(ILAppendID, {onLeave: function (args) {send("ILAppendID");}});
+
+var ILClone = Module.findExportByName("windows.storage.dll", "ILClone")
+Interceptor.attach(ILClone, {onLeave: function (args) {send("ILClone");}});
+
+var ILCloneFirst = Module.findExportByName("windows.storage.dll", "ILCloneFirst")
+Interceptor.attach(ILCloneFirst, {onLeave: function (args) {send("ILCloneFirst");}});
+
+var ILCombine = Module.findExportByName("windows.storage.dll", "ILCombine")
+Interceptor.attach(ILCombine, {onLeave: function (args) {send("ILCombine");}});
+
+var ILFindChild = Module.findExportByName("windows.storage.dll", "ILFindChild")
+Interceptor.attach(ILFindChild, {onLeave: function (args) {send("ILFindChild");}});
+
+var ILFindLastID = Module.findExportByName("windows.storage.dll", "ILFindLastID")
+Interceptor.attach(ILFindLastID, {onLeave: function (args) {send("ILFindLastID");}});
+
+var ILFree = Module.findExportByName("windows.storage.dll", "ILFree")
+Interceptor.attach(ILFree, {onLeave: function (args) {send("ILFree");}});
+
+var ILGetNext = Module.findExportByName("windows.storage.dll", "ILGetNext")
+Interceptor.attach(ILGetNext, {onLeave: function (args) {send("ILGetNext");}});
+
+var ILGetSize = Module.findExportByName("windows.storage.dll", "ILGetSize")
+Interceptor.attach(ILGetSize, {onLeave: function (args) {send("ILGetSize");}});
+
+var ILIsEqual = Module.findExportByName("windows.storage.dll", "ILIsEqual")
+Interceptor.attach(ILIsEqual, {onLeave: function (args) {send("ILIsEqual");}});
+
+var ILIsParent = Module.findExportByName("windows.storage.dll", "ILIsParent")
+Interceptor.attach(ILIsParent, {onLeave: function (args) {send("ILIsParent");}});
+
+var ILLoadFromStreamEx = Module.findExportByName("windows.storage.dll", "ILLoadFromStreamEx")
+Interceptor.attach(ILLoadFromStreamEx, {onLeave: function (args) {send("ILLoadFromStreamEx");}});
+
+var ILRemoveLastID = Module.findExportByName("windows.storage.dll", "ILRemoveLastID")
+Interceptor.attach(ILRemoveLastID, {onLeave: function (args) {send("ILRemoveLastID");}});
+
+var ILSaveToStream = Module.findExportByName("windows.storage.dll", "ILSaveToStream")
+Interceptor.attach(ILSaveToStream, {onLeave: function (args) {send("ILSaveToStream");}});
+
+var IsLFNDriveW = Module.findExportByName("windows.storage.dll", "IsLFNDriveW")
+Interceptor.attach(IsLFNDriveW, {onLeave: function (args) {send("IsLFNDriveW");}});
+
+var IsLibraryCreatedByPolicy = Module.findExportByName("windows.storage.dll", "IsLibraryCreatedByPolicy")
+Interceptor.attach(IsLibraryCreatedByPolicy, {onLeave: function (args) {send("IsLibraryCreatedByPolicy");}});
+
+var IsLibraryPolicyEnabled = Module.findExportByName("windows.storage.dll", "IsLibraryPolicyEnabled")
+Interceptor.attach(IsLibraryPolicyEnabled, {onLeave: function (args) {send("IsLibraryPolicyEnabled");}});
+
+var IsNameListedUnderKey = Module.findExportByName("windows.storage.dll", "IsNameListedUnderKey")
+Interceptor.attach(IsNameListedUnderKey, {onLeave: function (args) {send("IsNameListedUnderKey");}});
+
+var IsUserAnAdmin = Module.findExportByName("windows.storage.dll", "IsUserAnAdmin")
+Interceptor.attach(IsUserAnAdmin, {onLeave: function (args) {send("IsUserAnAdmin");}});
+
+var NeverProvidedByJunction = Module.findExportByName("windows.storage.dll", "NeverProvidedByJunction")
+Interceptor.attach(NeverProvidedByJunction, {onLeave: function (args) {send("NeverProvidedByJunction");}});
+
+var PathCleanupSpec = Module.findExportByName("windows.storage.dll", "PathCleanupSpec")
+Interceptor.attach(PathCleanupSpec, {onLeave: function (args) {send("PathCleanupSpec");}});
+
+var PathContainedByManifestedKnownFolder_FullTrustCaller_ForPackage = Module.findExportByName("windows.storage.dll", "PathContainedByManifestedKnownFolder_FullTrustCaller_ForPackage")
+Interceptor.attach(PathContainedByManifestedKnownFolder_FullTrustCaller_ForPackage, {onLeave: function (args) {send("PathContainedByManifestedKnownFolder_FullTrustCaller_ForPackage");}});
+
+var PathIsExe = Module.findExportByName("windows.storage.dll", "PathIsExe")
+Interceptor.attach(PathIsExe, {onLeave: function (args) {send("PathIsExe");}});
+
+var PathMakeUniqueName = Module.findExportByName("windows.storage.dll", "PathMakeUniqueName")
+Interceptor.attach(PathMakeUniqueName, {onLeave: function (args) {send("PathMakeUniqueName");}});
+
+var PathYetAnotherMakeUniqueName = Module.findExportByName("windows.storage.dll", "PathYetAnotherMakeUniqueName")
+Interceptor.attach(PathYetAnotherMakeUniqueName, {onLeave: function (args) {send("PathYetAnotherMakeUniqueName");}});
+
+var QueryStorageAccess_FullTrustCaller_ForPackage = Module.findExportByName("windows.storage.dll", "QueryStorageAccess_FullTrustCaller_ForPackage")
+Interceptor.attach(QueryStorageAccess_FullTrustCaller_ForPackage, {onLeave: function (args) {send("QueryStorageAccess_FullTrustCaller_ForPackage");}});
+
+var QueryStorageAccess_FullTrustCaller_ForToken = Module.findExportByName("windows.storage.dll", "QueryStorageAccess_FullTrustCaller_ForToken")
+Interceptor.attach(QueryStorageAccess_FullTrustCaller_ForToken, {onLeave: function (args) {send("QueryStorageAccess_FullTrustCaller_ForToken");}});
+
+var RebaseOnDriveLetter = Module.findExportByName("windows.storage.dll", "RebaseOnDriveLetter")
+Interceptor.attach(RebaseOnDriveLetter, {onLeave: function (args) {send("RebaseOnDriveLetter");}});
+
+var RebaseOnVolumeID = Module.findExportByName("windows.storage.dll", "RebaseOnVolumeID")
+Interceptor.attach(RebaseOnVolumeID, {onLeave: function (args) {send("RebaseOnVolumeID");}});
+
+var RegisterChangeNotifications = Module.findExportByName("windows.storage.dll", "RegisterChangeNotifications")
+Interceptor.attach(RegisterChangeNotifications, {onLeave: function (args) {send("RegisterChangeNotifications");}});
+
+var RegistryVerbs_GetHandlerMultiSelectModel = Module.findExportByName("windows.storage.dll", "RegistryVerbs_GetHandlerMultiSelectModel")
+Interceptor.attach(RegistryVerbs_GetHandlerMultiSelectModel, {onLeave: function (args) {send("RegistryVerbs_GetHandlerMultiSelectModel");}});
+
+var SHAssocEnumHandlers = Module.findExportByName("windows.storage.dll", "SHAssocEnumHandlers")
+Interceptor.attach(SHAssocEnumHandlers, {onLeave: function (args) {send("SHAssocEnumHandlers");}});
+
+var SHAssocEnumHandlersForProtocolByApplication = Module.findExportByName("windows.storage.dll", "SHAssocEnumHandlersForProtocolByApplication")
+Interceptor.attach(SHAssocEnumHandlersForProtocolByApplication, {onLeave: function (args) {send("SHAssocEnumHandlersForProtocolByApplication");}});
+
+var SHBindToFolderIDListParent = Module.findExportByName("windows.storage.dll", "SHBindToFolderIDListParent")
+Interceptor.attach(SHBindToFolderIDListParent, {onLeave: function (args) {send("SHBindToFolderIDListParent");}});
+
+var SHBindToFolderIDListParentEx = Module.findExportByName("windows.storage.dll", "SHBindToFolderIDListParentEx")
+Interceptor.attach(SHBindToFolderIDListParentEx, {onLeave: function (args) {send("SHBindToFolderIDListParentEx");}});
+
+var SHBindToObject = Module.findExportByName("windows.storage.dll", "SHBindToObject")
+Interceptor.attach(SHBindToObject, {onLeave: function (args) {send("SHBindToObject");}});
+
+var SHBindToParent = Module.findExportByName("windows.storage.dll", "SHBindToParent")
+Interceptor.attach(SHBindToParent, {onLeave: function (args) {send("SHBindToParent");}});
+
+var SHCLSIDFromString = Module.findExportByName("windows.storage.dll", "SHCLSIDFromString")
+Interceptor.attach(SHCLSIDFromString, {onLeave: function (args) {send("SHCLSIDFromString");}});
+
+var SHChangeNotification_Lock = Module.findExportByName("windows.storage.dll", "SHChangeNotification_Lock")
+Interceptor.attach(SHChangeNotification_Lock, {onLeave: function (args) {send("SHChangeNotification_Lock");}});
+
+var SHChangeNotification_Unlock = Module.findExportByName("windows.storage.dll", "SHChangeNotification_Unlock")
+Interceptor.attach(SHChangeNotification_Unlock, {onLeave: function (args) {send("SHChangeNotification_Unlock");}});
+
+var SHChangeNotify = Module.findExportByName("windows.storage.dll", "SHChangeNotify")
+Interceptor.attach(SHChangeNotify, {onLeave: function (args) {send("SHChangeNotify");}});
+
+var SHChangeNotifyDeregister = Module.findExportByName("windows.storage.dll", "SHChangeNotifyDeregister")
+Interceptor.attach(SHChangeNotifyDeregister, {onLeave: function (args) {send("SHChangeNotifyDeregister");}});
+
+var SHChangeNotifyRegister = Module.findExportByName("windows.storage.dll", "SHChangeNotifyRegister")
+Interceptor.attach(SHChangeNotifyRegister, {onLeave: function (args) {send("SHChangeNotifyRegister");}});
+
+var SHChangeNotifyRegisterThread = Module.findExportByName("windows.storage.dll", "SHChangeNotifyRegisterThread")
+Interceptor.attach(SHChangeNotifyRegisterThread, {onLeave: function (args) {send("SHChangeNotifyRegisterThread");}});
+
+var SHChangeNotifySuspendResume = Module.findExportByName("windows.storage.dll", "SHChangeNotifySuspendResume")
+Interceptor.attach(SHChangeNotifySuspendResume, {onLeave: function (args) {send("SHChangeNotifySuspendResume");}});
+
+var SHCoCreateInstanceWorker = Module.findExportByName("windows.storage.dll", "SHCoCreateInstanceWorker")
+Interceptor.attach(SHCoCreateInstanceWorker, {onLeave: function (args) {send("SHCoCreateInstanceWorker");}});
+
+var SHCreateAssocHandler = Module.findExportByName("windows.storage.dll", "SHCreateAssocHandler")
+Interceptor.attach(SHCreateAssocHandler, {onLeave: function (args) {send("SHCreateAssocHandler");}});
+
+var SHCreateAssociationRegistration = Module.findExportByName("windows.storage.dll", "SHCreateAssociationRegistration")
+Interceptor.attach(SHCreateAssociationRegistration, {onLeave: function (args) {send("SHCreateAssociationRegistration");}});
+
+var SHCreateDataObject = Module.findExportByName("windows.storage.dll", "SHCreateDataObject")
+Interceptor.attach(SHCreateDataObject, {onLeave: function (args) {send("SHCreateDataObject");}});
+
+var SHCreateDefaultExtractIcon = Module.findExportByName("windows.storage.dll", "SHCreateDefaultExtractIcon")
+Interceptor.attach(SHCreateDefaultExtractIcon, {onLeave: function (args) {send("SHCreateDefaultExtractIcon");}});
+
+var SHCreateDirectory = Module.findExportByName("windows.storage.dll", "SHCreateDirectory")
+Interceptor.attach(SHCreateDirectory, {onLeave: function (args) {send("SHCreateDirectory");}});
+
+var SHCreateDirectoryExA = Module.findExportByName("windows.storage.dll", "SHCreateDirectoryExA")
+Interceptor.attach(SHCreateDirectoryExA, {onLeave: function (args) {send("SHCreateDirectoryExA");}});
+
+var SHCreateDirectoryExW = Module.findExportByName("windows.storage.dll", "SHCreateDirectoryExW")
+Interceptor.attach(SHCreateDirectoryExW, {onLeave: function (args) {send("SHCreateDirectoryExW");}});
+
+var SHCreateItemFromIDList = Module.findExportByName("windows.storage.dll", "SHCreateItemFromIDList")
+Interceptor.attach(SHCreateItemFromIDList, {onLeave: function (args) {send("SHCreateItemFromIDList");}});
+
+var SHCreateItemFromParsingName = Module.findExportByName("windows.storage.dll", "SHCreateItemFromParsingName")
+Interceptor.attach(SHCreateItemFromParsingName, {onLeave: function (args) {send("SHCreateItemFromParsingName");}});
+
+var SHCreateItemFromRelativeName = Module.findExportByName("windows.storage.dll", "SHCreateItemFromRelativeName")
+Interceptor.attach(SHCreateItemFromRelativeName, {onLeave: function (args) {send("SHCreateItemFromRelativeName");}});
+
+var SHCreateItemInKnownFolder = Module.findExportByName("windows.storage.dll", "SHCreateItemInKnownFolder")
+Interceptor.attach(SHCreateItemInKnownFolder, {onLeave: function (args) {send("SHCreateItemInKnownFolder");}});
+
+var SHCreateItemWithParent = Module.findExportByName("windows.storage.dll", "SHCreateItemWithParent")
+Interceptor.attach(SHCreateItemWithParent, {onLeave: function (args) {send("SHCreateItemWithParent");}});
+
+var SHCreateItemWithParentAndChildId = Module.findExportByName("windows.storage.dll", "SHCreateItemWithParentAndChildId")
+Interceptor.attach(SHCreateItemWithParentAndChildId, {onLeave: function (args) {send("SHCreateItemWithParentAndChildId");}});
+
+var SHCreateShellItemArray = Module.findExportByName("windows.storage.dll", "SHCreateShellItemArray")
+Interceptor.attach(SHCreateShellItemArray, {onLeave: function (args) {send("SHCreateShellItemArray");}});
+
+var SHCreateShellItemArrayFromDataObject = Module.findExportByName("windows.storage.dll", "SHCreateShellItemArrayFromDataObject")
+Interceptor.attach(SHCreateShellItemArrayFromDataObject, {onLeave: function (args) {send("SHCreateShellItemArrayFromDataObject");}});
+
+var SHCreateShellItemArrayFromIDLists = Module.findExportByName("windows.storage.dll", "SHCreateShellItemArrayFromIDLists")
+Interceptor.attach(SHCreateShellItemArrayFromIDLists, {onLeave: function (args) {send("SHCreateShellItemArrayFromIDLists");}});
+
+var SHCreateShellItemArrayFromShellItem = Module.findExportByName("windows.storage.dll", "SHCreateShellItemArrayFromShellItem")
+Interceptor.attach(SHCreateShellItemArrayFromShellItem, {onLeave: function (args) {send("SHCreateShellItemArrayFromShellItem");}});
+
+var SHCreateShellItemArrayWithFolderParent = Module.findExportByName("windows.storage.dll", "SHCreateShellItemArrayWithFolderParent")
+Interceptor.attach(SHCreateShellItemArrayWithFolderParent, {onLeave: function (args) {send("SHCreateShellItemArrayWithFolderParent");}});
+
+var SHCreateStdEnumFmtEtc = Module.findExportByName("windows.storage.dll", "SHCreateStdEnumFmtEtc")
+Interceptor.attach(SHCreateStdEnumFmtEtc, {onLeave: function (args) {send("SHCreateStdEnumFmtEtc");}});
+
+var SHFileOperationWithAdditionalFlags = Module.findExportByName("windows.storage.dll", "SHFileOperationWithAdditionalFlags")
+Interceptor.attach(SHFileOperationWithAdditionalFlags, {onLeave: function (args) {send("SHFileOperationWithAdditionalFlags");}});
+
+var SHFindFiles = Module.findExportByName("windows.storage.dll", "SHFindFiles")
+Interceptor.attach(SHFindFiles, {onLeave: function (args) {send("SHFindFiles");}});
+
+var SHFlushSFCache = Module.findExportByName("windows.storage.dll", "SHFlushSFCache")
+Interceptor.attach(SHFlushSFCache, {onLeave: function (args) {send("SHFlushSFCache");}});
+
+var SHGetDesktopFolder = Module.findExportByName("windows.storage.dll", "SHGetDesktopFolder")
+Interceptor.attach(SHGetDesktopFolder, {onLeave: function (args) {send("SHGetDesktopFolder");}});
+
+var SHGetFileInfoW = Module.findExportByName("windows.storage.dll", "SHGetFileInfoW")
+Interceptor.attach(SHGetFileInfoW, {onLeave: function (args) {send("SHGetFileInfoW");}});
+
+var SHGetFolderLocation = Module.findExportByName("windows.storage.dll", "SHGetFolderLocation")
+Interceptor.attach(SHGetFolderLocation, {onLeave: function (args) {send("SHGetFolderLocation");}});
+
+var SHGetFolderPathA = Module.findExportByName("windows.storage.dll", "SHGetFolderPathA")
+Interceptor.attach(SHGetFolderPathA, {onLeave: function (args) {send("SHGetFolderPathA");}});
+
+var SHGetFolderPathAndSubDirA = Module.findExportByName("windows.storage.dll", "SHGetFolderPathAndSubDirA")
+Interceptor.attach(SHGetFolderPathAndSubDirA, {onLeave: function (args) {send("SHGetFolderPathAndSubDirA");}});
+
+var SHGetFolderPathAndSubDirW = Module.findExportByName("windows.storage.dll", "SHGetFolderPathAndSubDirW")
+Interceptor.attach(SHGetFolderPathAndSubDirW, {onLeave: function (args) {send("SHGetFolderPathAndSubDirW");}});
+
+var SHGetFolderPathEx = Module.findExportByName("windows.storage.dll", "SHGetFolderPathEx")
+Interceptor.attach(SHGetFolderPathEx, {onLeave: function (args) {send("SHGetFolderPathEx");}});
+
+var SHGetFolderPathW = Module.findExportByName("windows.storage.dll", "SHGetFolderPathW")
+Interceptor.attach(SHGetFolderPathW, {onLeave: function (args) {send("SHGetFolderPathW");}});
+
+var SHGetIDListFromObject = Module.findExportByName("windows.storage.dll", "SHGetIDListFromObject")
+Interceptor.attach(SHGetIDListFromObject, {onLeave: function (args) {send("SHGetIDListFromObject");}});
+
+var SHGetInstanceExplorer = Module.findExportByName("windows.storage.dll", "SHGetInstanceExplorer")
+Interceptor.attach(SHGetInstanceExplorer, {onLeave: function (args) {send("SHGetInstanceExplorer");}});
+
+var SHGetItemFromObject = Module.findExportByName("windows.storage.dll", "SHGetItemFromObject")
+Interceptor.attach(SHGetItemFromObject, {onLeave: function (args) {send("SHGetItemFromObject");}});
+
+var SHGetKnownFolderIDList = Module.findExportByName("windows.storage.dll", "SHGetKnownFolderIDList")
+Interceptor.attach(SHGetKnownFolderIDList, {onLeave: function (args) {send("SHGetKnownFolderIDList");}});
+
+var SHGetKnownFolderIDList_Internal = Module.findExportByName("windows.storage.dll", "SHGetKnownFolderIDList_Internal")
+Interceptor.attach(SHGetKnownFolderIDList_Internal, {onLeave: function (args) {send("SHGetKnownFolderIDList_Internal");}});
+
+var SHGetKnownFolderItem = Module.findExportByName("windows.storage.dll", "SHGetKnownFolderItem")
+Interceptor.attach(SHGetKnownFolderItem, {onLeave: function (args) {send("SHGetKnownFolderItem");}});
+
+var SHGetKnownFolderPath = Module.findExportByName("windows.storage.dll", "SHGetKnownFolderPath")
+Interceptor.attach(SHGetKnownFolderPath, {onLeave: function (args) {send("SHGetKnownFolderPath");}});
+
+var SHGetNameFromIDList = Module.findExportByName("windows.storage.dll", "SHGetNameFromIDList")
+Interceptor.attach(SHGetNameFromIDList, {onLeave: function (args) {send("SHGetNameFromIDList");}});
+
+var SHGetPathFromIDListEx = Module.findExportByName("windows.storage.dll", "SHGetPathFromIDListEx")
+Interceptor.attach(SHGetPathFromIDListEx, {onLeave: function (args) {send("SHGetPathFromIDListEx");}});
+
+var SHGetPathFromIDListW = Module.findExportByName("windows.storage.dll", "SHGetPathFromIDListW")
+Interceptor.attach(SHGetPathFromIDListW, {onLeave: function (args) {send("SHGetPathFromIDListW");}});
+
+var SHGetSetSettings = Module.findExportByName("windows.storage.dll", "SHGetSetSettings")
+Interceptor.attach(SHGetSetSettings, {onLeave: function (args) {send("SHGetSetSettings");}});
+
+var SHGetSpecialFolderLocation = Module.findExportByName("windows.storage.dll", "SHGetSpecialFolderLocation")
+Interceptor.attach(SHGetSpecialFolderLocation, {onLeave: function (args) {send("SHGetSpecialFolderLocation");}});
+
+var SHGetSpecialFolderPathA = Module.findExportByName("windows.storage.dll", "SHGetSpecialFolderPathA")
+Interceptor.attach(SHGetSpecialFolderPathA, {onLeave: function (args) {send("SHGetSpecialFolderPathA");}});
+
+var SHGetSpecialFolderPathW = Module.findExportByName("windows.storage.dll", "SHGetSpecialFolderPathW")
+Interceptor.attach(SHGetSpecialFolderPathW, {onLeave: function (args) {send("SHGetSpecialFolderPathW");}});
+
+var SHGetStockIconInfo = Module.findExportByName("windows.storage.dll", "SHGetStockIconInfo")
+Interceptor.attach(SHGetStockIconInfo, {onLeave: function (args) {send("SHGetStockIconInfo");}});
+
+var SHGetTemporaryPropertyForItem = Module.findExportByName("windows.storage.dll", "SHGetTemporaryPropertyForItem")
+Interceptor.attach(SHGetTemporaryPropertyForItem, {onLeave: function (args) {send("SHGetTemporaryPropertyForItem");}});
+
+var SHHandleUpdateImage = Module.findExportByName("windows.storage.dll", "SHHandleUpdateImage")
+Interceptor.attach(SHHandleUpdateImage, {onLeave: function (args) {send("SHHandleUpdateImage");}});
+
+var SHILCreateFromPath = Module.findExportByName("windows.storage.dll", "SHILCreateFromPath")
+Interceptor.attach(SHILCreateFromPath, {onLeave: function (args) {send("SHILCreateFromPath");}});
+
+var SHKnownFolderFromCSIDL = Module.findExportByName("windows.storage.dll", "SHKnownFolderFromCSIDL")
+Interceptor.attach(SHKnownFolderFromCSIDL, {onLeave: function (args) {send("SHKnownFolderFromCSIDL");}});
+
+var SHKnownFolderToCSIDL = Module.findExportByName("windows.storage.dll", "SHKnownFolderToCSIDL")
+Interceptor.attach(SHKnownFolderToCSIDL, {onLeave: function (args) {send("SHKnownFolderToCSIDL");}});
+
+var SHOpenFolderAndSelectItems = Module.findExportByName("windows.storage.dll", "SHOpenFolderAndSelectItems")
+Interceptor.attach(SHOpenFolderAndSelectItems, {onLeave: function (args) {send("SHOpenFolderAndSelectItems");}});
+
+var SHParseDisplayName = Module.findExportByName("windows.storage.dll", "SHParseDisplayName")
+Interceptor.attach(SHParseDisplayName, {onLeave: function (args) {send("SHParseDisplayName");}});
+
+var SHPrepareKnownFoldersCommon = Module.findExportByName("windows.storage.dll", "SHPrepareKnownFoldersCommon")
+Interceptor.attach(SHPrepareKnownFoldersCommon, {onLeave: function (args) {send("SHPrepareKnownFoldersCommon");}});
+
+var SHPrepareKnownFoldersUser = Module.findExportByName("windows.storage.dll", "SHPrepareKnownFoldersUser")
+Interceptor.attach(SHPrepareKnownFoldersUser, {onLeave: function (args) {send("SHPrepareKnownFoldersUser");}});
+
+var SHResolveLibrary = Module.findExportByName("windows.storage.dll", "SHResolveLibrary")
+Interceptor.attach(SHResolveLibrary, {onLeave: function (args) {send("SHResolveLibrary");}});
+
+var SHRestricted = Module.findExportByName("windows.storage.dll", "SHRestricted")
+Interceptor.attach(SHRestricted, {onLeave: function (args) {send("SHRestricted");}});
+
+var SHSetFolderPathA = Module.findExportByName("windows.storage.dll", "SHSetFolderPathA")
+Interceptor.attach(SHSetFolderPathA, {onLeave: function (args) {send("SHSetFolderPathA");}});
+
+var SHSetFolderPathW = Module.findExportByName("windows.storage.dll", "SHSetFolderPathW")
+Interceptor.attach(SHSetFolderPathW, {onLeave: function (args) {send("SHSetFolderPathW");}});
+
+var SHSetKnownFolderPath = Module.findExportByName("windows.storage.dll", "SHSetKnownFolderPath")
+Interceptor.attach(SHSetKnownFolderPath, {onLeave: function (args) {send("SHSetKnownFolderPath");}});
+
+var SHSetLocalizedName = Module.findExportByName("windows.storage.dll", "SHSetLocalizedName")
+Interceptor.attach(SHSetLocalizedName, {onLeave: function (args) {send("SHSetLocalizedName");}});
+
+var SHSetTemporaryPropertyForItem = Module.findExportByName("windows.storage.dll", "SHSetTemporaryPropertyForItem")
+Interceptor.attach(SHSetTemporaryPropertyForItem, {onLeave: function (args) {send("SHSetTemporaryPropertyForItem");}});
+
+var SHSysErrorMessageBox = Module.findExportByName("windows.storage.dll", "SHSysErrorMessageBox")
+Interceptor.attach(SHSysErrorMessageBox, {onLeave: function (args) {send("SHSysErrorMessageBox");}});
+
+var SHTestTokenMembership = Module.findExportByName("windows.storage.dll", "SHTestTokenMembership")
+Interceptor.attach(SHTestTokenMembership, {onLeave: function (args) {send("SHTestTokenMembership");}});
+
+var SHUpdateImageA = Module.findExportByName("windows.storage.dll", "SHUpdateImageA")
+Interceptor.attach(SHUpdateImageA, {onLeave: function (args) {send("SHUpdateImageA");}});
+
+var SHUpdateImageW = Module.findExportByName("windows.storage.dll", "SHUpdateImageW")
+Interceptor.attach(SHUpdateImageW, {onLeave: function (args) {send("SHUpdateImageW");}});
+
+var STORAGE_AddItemToRecentDocs = Module.findExportByName("windows.storage.dll", "STORAGE_AddItemToRecentDocs")
+Interceptor.attach(STORAGE_AddItemToRecentDocs, {onLeave: function (args) {send("STORAGE_AddItemToRecentDocs");}});
+
+var STORAGE_AddNewFolderToFrequentPlaces = Module.findExportByName("windows.storage.dll", "STORAGE_AddNewFolderToFrequentPlaces")
+Interceptor.attach(STORAGE_AddNewFolderToFrequentPlaces, {onLeave: function (args) {send("STORAGE_AddNewFolderToFrequentPlaces");}});
+
+var STORAGE_CEnumFiles_CreateInstance = Module.findExportByName("windows.storage.dll", "STORAGE_CEnumFiles_CreateInstance")
+Interceptor.attach(STORAGE_CEnumFiles_CreateInstance, {onLeave: function (args) {send("STORAGE_CEnumFiles_CreateInstance");}});
+
+var STORAGE_CStatusProvider_CreateInstance = Module.findExportByName("windows.storage.dll", "STORAGE_CStatusProvider_CreateInstance")
+Interceptor.attach(STORAGE_CStatusProvider_CreateInstance, {onLeave: function (args) {send("STORAGE_CStatusProvider_CreateInstance");}});
+
+var STORAGE_CStorageItem_GetValidatedStorageItem = Module.findExportByName("windows.storage.dll", "STORAGE_CStorageItem_GetValidatedStorageItem")
+Interceptor.attach(STORAGE_CStorageItem_GetValidatedStorageItem, {onLeave: function (args) {send("STORAGE_CStorageItem_GetValidatedStorageItem");}});
+
+var STORAGE_CStorageItem_GetValidatedStorageItemObject = Module.findExportByName("windows.storage.dll", "STORAGE_CStorageItem_GetValidatedStorageItemObject")
+Interceptor.attach(STORAGE_CStorageItem_GetValidatedStorageItemObject, {onLeave: function (args) {send("STORAGE_CStorageItem_GetValidatedStorageItemObject");}});
+
+var STORAGE_ClearDestinationsForAllApps = Module.findExportByName("windows.storage.dll", "STORAGE_ClearDestinationsForAllApps")
+Interceptor.attach(STORAGE_ClearDestinationsForAllApps, {onLeave: function (args) {send("STORAGE_ClearDestinationsForAllApps");}});
+
+var STORAGE_CreateSortColumnArrayFromListDesc = Module.findExportByName("windows.storage.dll", "STORAGE_CreateSortColumnArrayFromListDesc")
+Interceptor.attach(STORAGE_CreateSortColumnArrayFromListDesc, {onLeave: function (args) {send("STORAGE_CreateSortColumnArrayFromListDesc");}});
+
+var STORAGE_CreateStorageItemFromPath_FullTrustCaller = Module.findExportByName("windows.storage.dll", "STORAGE_CreateStorageItemFromPath_FullTrustCaller")
+Interceptor.attach(STORAGE_CreateStorageItemFromPath_FullTrustCaller, {onLeave: function (args) {send("STORAGE_CreateStorageItemFromPath_FullTrustCaller");}});
+
+var STORAGE_CreateStorageItemFromPath_FullTrustCaller_ForPackage = Module.findExportByName("windows.storage.dll", "STORAGE_CreateStorageItemFromPath_FullTrustCaller_ForPackage")
+Interceptor.attach(STORAGE_CreateStorageItemFromPath_FullTrustCaller_ForPackage, {onLeave: function (args) {send("STORAGE_CreateStorageItemFromPath_FullTrustCaller_ForPackage");}});
+
+var STORAGE_CreateStorageItemFromPath_PartialTrustCaller = Module.findExportByName("windows.storage.dll", "STORAGE_CreateStorageItemFromPath_PartialTrustCaller")
+Interceptor.attach(STORAGE_CreateStorageItemFromPath_PartialTrustCaller, {onLeave: function (args) {send("STORAGE_CreateStorageItemFromPath_PartialTrustCaller");}});
+
+var STORAGE_CreateStorageItemFromShellItem_FullTrustCaller = Module.findExportByName("windows.storage.dll", "STORAGE_CreateStorageItemFromShellItem_FullTrustCaller")
+Interceptor.attach(STORAGE_CreateStorageItemFromShellItem_FullTrustCaller, {onLeave: function (args) {send("STORAGE_CreateStorageItemFromShellItem_FullTrustCaller");}});
+
+var STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage = Module.findExportByName("windows.storage.dll", "STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage")
+Interceptor.attach(STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage, {onLeave: function (args) {send("STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage");}});
+
+var STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandle = Module.findExportByName("windows.storage.dll", "STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandle")
+Interceptor.attach(STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandle, {onLeave: function (args) {send("STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandle");}});
+
+var STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandleAndSecondaryStreamName = Module.findExportByName("windows.storage.dll", "STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandleAndSecondaryStreamName")
+Interceptor.attach(STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandleAndSecondaryStreamName, {onLeave: function (args) {send("STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandleAndSecondaryStreamName");}});
+
+var STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_UseImplicitFlagsAndPackage = Module.findExportByName("windows.storage.dll", "STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_UseImplicitFlagsAndPackage")
+Interceptor.attach(STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_UseImplicitFlagsAndPackage, {onLeave: function (args) {send("STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_UseImplicitFlagsAndPackage");}});
+
+var STORAGE_FillResultWithNullForKeys = Module.findExportByName("windows.storage.dll", "STORAGE_FillResultWithNullForKeys")
+Interceptor.attach(STORAGE_FillResultWithNullForKeys, {onLeave: function (args) {send("STORAGE_FillResultWithNullForKeys");}});
+
+var STORAGE_GetShellItemFromStorageItem = Module.findExportByName("windows.storage.dll", "STORAGE_GetShellItemFromStorageItem")
+Interceptor.attach(STORAGE_GetShellItemFromStorageItem, {onLeave: function (args) {send("STORAGE_GetShellItemFromStorageItem");}});
+
+var STORAGE_GetSystemPersistedStorageItemList = Module.findExportByName("windows.storage.dll", "STORAGE_GetSystemPersistedStorageItemList")
+Interceptor.attach(STORAGE_GetSystemPersistedStorageItemList, {onLeave: function (args) {send("STORAGE_GetSystemPersistedStorageItemList");}});
+
+var STORAGE_MakeDestinationItem = Module.findExportByName("windows.storage.dll", "STORAGE_MakeDestinationItem")
+Interceptor.attach(STORAGE_MakeDestinationItem, {onLeave: function (args) {send("STORAGE_MakeDestinationItem");}});
+
+var STORAGE_PathIsEqualOrSubFolderOfKnownFolders = Module.findExportByName("windows.storage.dll", "STORAGE_PathIsEqualOrSubFolderOfKnownFolders")
+Interceptor.attach(STORAGE_PathIsEqualOrSubFolderOfKnownFolders, {onLeave: function (args) {send("STORAGE_PathIsEqualOrSubFolderOfKnownFolders");}});
+
+var STORAGE_SHAddToRecentDocs = Module.findExportByName("windows.storage.dll", "STORAGE_SHAddToRecentDocs")
+Interceptor.attach(STORAGE_SHAddToRecentDocs, {onLeave: function (args) {send("STORAGE_SHAddToRecentDocs");}});
+
+var STORAGE_SHAddToRecentDocsEx = Module.findExportByName("windows.storage.dll", "STORAGE_SHAddToRecentDocsEx")
+Interceptor.attach(STORAGE_SHAddToRecentDocsEx, {onLeave: function (args) {send("STORAGE_SHAddToRecentDocsEx");}});
+
+var STORAGE_SHConfirmOperation = Module.findExportByName("windows.storage.dll", "STORAGE_SHConfirmOperation")
+Interceptor.attach(STORAGE_SHConfirmOperation, {onLeave: function (args) {send("STORAGE_SHConfirmOperation");}});
+
+var STORAGE_SHCreateDirectory = Module.findExportByName("windows.storage.dll", "STORAGE_SHCreateDirectory")
+Interceptor.attach(STORAGE_SHCreateDirectory, {onLeave: function (args) {send("STORAGE_SHCreateDirectory");}});
+
+var STORAGE_SHCreateDirectoryExA = Module.findExportByName("windows.storage.dll", "STORAGE_SHCreateDirectoryExA")
+Interceptor.attach(STORAGE_SHCreateDirectoryExA, {onLeave: function (args) {send("STORAGE_SHCreateDirectoryExA");}});
+
+var STORAGE_SHCreateDirectoryExWWorker = Module.findExportByName("windows.storage.dll", "STORAGE_SHCreateDirectoryExWWorker")
+Interceptor.attach(STORAGE_SHCreateDirectoryExWWorker, {onLeave: function (args) {send("STORAGE_SHCreateDirectoryExWWorker");}});
+
+var STORAGE_SHCreateShellItemArray = Module.findExportByName("windows.storage.dll", "STORAGE_SHCreateShellItemArray")
+Interceptor.attach(STORAGE_SHCreateShellItemArray, {onLeave: function (args) {send("STORAGE_SHCreateShellItemArray");}});
+
+var STORAGE_SHCreateShellItemArrayFromDataObject = Module.findExportByName("windows.storage.dll", "STORAGE_SHCreateShellItemArrayFromDataObject")
+Interceptor.attach(STORAGE_SHCreateShellItemArrayFromDataObject, {onLeave: function (args) {send("STORAGE_SHCreateShellItemArrayFromDataObject");}});
+
+var STORAGE_SHCreateShellItemArrayFromIDLists = Module.findExportByName("windows.storage.dll", "STORAGE_SHCreateShellItemArrayFromIDLists")
+Interceptor.attach(STORAGE_SHCreateShellItemArrayFromIDLists, {onLeave: function (args) {send("STORAGE_SHCreateShellItemArrayFromIDLists");}});
+
+var STORAGE_SHCreateShellItemArrayFromShellItem = Module.findExportByName("windows.storage.dll", "STORAGE_SHCreateShellItemArrayFromShellItem")
+Interceptor.attach(STORAGE_SHCreateShellItemArrayFromShellItem, {onLeave: function (args) {send("STORAGE_SHCreateShellItemArrayFromShellItem");}});
+
+var STORAGE_SHFileOperation = Module.findExportByName("windows.storage.dll", "STORAGE_SHFileOperation")
+Interceptor.attach(STORAGE_SHFileOperation, {onLeave: function (args) {send("STORAGE_SHFileOperation");}});
+
+var STORAGE_SHFileOperationA = Module.findExportByName("windows.storage.dll", "STORAGE_SHFileOperationA")
+Interceptor.attach(STORAGE_SHFileOperationA, {onLeave: function (args) {send("STORAGE_SHFileOperationA");}});
+
+var STORAGE_SHFreeNameMappings = Module.findExportByName("windows.storage.dll", "STORAGE_SHFreeNameMappings")
+Interceptor.attach(STORAGE_SHFreeNameMappings, {onLeave: function (args) {send("STORAGE_SHFreeNameMappings");}});
+
+var STORAGE_SHGetDesktopFolderWorker = Module.findExportByName("windows.storage.dll", "STORAGE_SHGetDesktopFolderWorker")
+Interceptor.attach(STORAGE_SHGetDesktopFolderWorker, {onLeave: function (args) {send("STORAGE_SHGetDesktopFolderWorker");}});
+
+var STORAGE_SHGetPathFromMsUri = Module.findExportByName("windows.storage.dll", "STORAGE_SHGetPathFromMsUri")
+Interceptor.attach(STORAGE_SHGetPathFromMsUri, {onLeave: function (args) {send("STORAGE_SHGetPathFromMsUri");}});
+
+var STORAGE_SHOpenFolderAndSelectItems = Module.findExportByName("windows.storage.dll", "STORAGE_SHOpenFolderAndSelectItems")
+Interceptor.attach(STORAGE_SHOpenFolderAndSelectItems, {onLeave: function (args) {send("STORAGE_SHOpenFolderAndSelectItems");}});
+
+var STORAGE_SHPathPrepareForWriteA = Module.findExportByName("windows.storage.dll", "STORAGE_SHPathPrepareForWriteA")
+Interceptor.attach(STORAGE_SHPathPrepareForWriteA, {onLeave: function (args) {send("STORAGE_SHPathPrepareForWriteA");}});
+
+var STORAGE_SHPathPrepareForWriteW = Module.findExportByName("windows.storage.dll", "STORAGE_SHPathPrepareForWriteW")
+Interceptor.attach(STORAGE_SHPathPrepareForWriteW, {onLeave: function (args) {send("STORAGE_SHPathPrepareForWriteW");}});
+
+var STORAGE_SHValidateMSUri = Module.findExportByName("windows.storage.dll", "STORAGE_SHValidateMSUri")
+Interceptor.attach(STORAGE_SHValidateMSUri, {onLeave: function (args) {send("STORAGE_SHValidateMSUri");}});
+
+var SendNotificationsForLibraryItem = Module.findExportByName("windows.storage.dll", "SendNotificationsForLibraryItem")
+Interceptor.attach(SendNotificationsForLibraryItem, {onLeave: function (args) {send("SendNotificationsForLibraryItem");}});
+
+var SerializeLinkToText = Module.findExportByName("windows.storage.dll", "SerializeLinkToText")
+Interceptor.attach(SerializeLinkToText, {onLeave: function (args) {send("SerializeLinkToText");}});
+
+var SetThreadFlags = Module.findExportByName("windows.storage.dll", "SetThreadFlags")
+Interceptor.attach(SetThreadFlags, {onLeave: function (args) {send("SetThreadFlags");}});
+
+var ShellExecuteA = Module.findExportByName("windows.storage.dll", "ShellExecuteA")
+Interceptor.attach(ShellExecuteA, {onLeave: function (args) {send("ShellExecuteA");}});
+
+var ShellExecuteExW = Module.findExportByName("windows.storage.dll", "ShellExecuteExW")
+Interceptor.attach(ShellExecuteExW, {onLeave: function (args) {send("ShellExecuteExW");}});
+
+var ShellExecuteW = Module.findExportByName("windows.storage.dll", "ShellExecuteW")
+Interceptor.attach(ShellExecuteW, {onLeave: function (args) {send("ShellExecuteW");}});
+
+var StateRepoVerbsCache_Destroy = Module.findExportByName("windows.storage.dll", "StateRepoVerbsCache_Destroy")
+Interceptor.attach(StateRepoVerbsCache_Destroy, {onLeave: function (args) {send("StateRepoVerbsCache_Destroy");}});
+
+var StateRepoVerbsCache_GetContextMenuVerbs = Module.findExportByName("windows.storage.dll", "StateRepoVerbsCache_GetContextMenuVerbs")
+Interceptor.attach(StateRepoVerbsCache_GetContextMenuVerbs, {onLeave: function (args) {send("StateRepoVerbsCache_GetContextMenuVerbs");}});
+
+var StateRepoVerbsCache_RebuildCacheAsync = Module.findExportByName("windows.storage.dll", "StateRepoVerbsCache_RebuildCacheAsync")
+Interceptor.attach(StateRepoVerbsCache_RebuildCacheAsync, {onLeave: function (args) {send("StateRepoVerbsCache_RebuildCacheAsync");}});
+
+var StorageItemHelpers_IsSupportedRemovablePath = Module.findExportByName("windows.storage.dll", "StorageItemHelpers_IsSupportedRemovablePath")
+Interceptor.attach(StorageItemHelpers_IsSupportedRemovablePath, {onLeave: function (args) {send("StorageItemHelpers_IsSupportedRemovablePath");}});
+
+var Storage_Internal_GetAccessListForPackage = Module.findExportByName("windows.storage.dll", "Storage_Internal_GetAccessListForPackage")
+Interceptor.attach(Storage_Internal_GetAccessListForPackage, {onLeave: function (args) {send("Storage_Internal_GetAccessListForPackage");}});
+
+var UnregisterChangeNotifications = Module.findExportByName("windows.storage.dll", "UnregisterChangeNotifications")
+Interceptor.attach(UnregisterChangeNotifications, {onLeave: function (args) {send("UnregisterChangeNotifications");}});
+
+var _CleanRecentDocs = Module.findExportByName("windows.storage.dll", "_CleanRecentDocs")
+Interceptor.attach(_CleanRecentDocs, {onLeave: function (args) {send("_CleanRecentDocs");}});
+
+var _PredictReasonableImpact = Module.findExportByName("windows.storage.dll", "_PredictReasonableImpact")
+Interceptor.attach(_PredictReasonableImpact, {onLeave: function (args) {send("_PredictReasonableImpact");}});
+

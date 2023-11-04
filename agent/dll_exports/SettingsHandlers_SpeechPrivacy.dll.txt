@@ -1,0 +1,6 @@
+var GetSetting = Module.findExportByName("SettingsHandlers_SpeechPrivacy.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+
+var GetSettingsManagerSingleton = Module.findExportByName("SettingsHandlers_SpeechPrivacy.dll", "GetSettingsManagerSingleton")
+Interceptor.attach(GetSettingsManagerSingleton, {onLeave: function (args) {send("GetSettingsManagerSingleton");}});
+

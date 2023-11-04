@@ -1,0 +1,27 @@
+var DllCanUnloadNow = Module.findExportByName("witnesswmiv2provider.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("witnesswmiv2provider.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("witnesswmiv2provider.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("witnesswmiv2provider.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("witnesswmiv2provider.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetProviderClassID = Module.findExportByName("witnesswmiv2provider.dll", "GetProviderClassID")
+Interceptor.attach(GetProviderClassID, {onLeave: function (args) {send("GetProviderClassID");}});
+
+var MI_Main = Module.findExportByName("witnesswmiv2provider.dll", "MI_Main")
+Interceptor.attach(MI_Main, {onLeave: function (args) {send("MI_Main");}});
+
+var WitnessWmiInitialize = Module.findExportByName("witnesswmiv2provider.dll", "WitnessWmiInitialize")
+Interceptor.attach(WitnessWmiInitialize, {onLeave: function (args) {send("WitnessWmiInitialize");}});
+
+var WitnessWmiTerminate = Module.findExportByName("witnesswmiv2provider.dll", "WitnessWmiTerminate")
+Interceptor.attach(WitnessWmiTerminate, {onLeave: function (args) {send("WitnessWmiTerminate");}});
+

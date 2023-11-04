@@ -1,0 +1,69 @@
+var DevQueryPrintEx = Module.findExportByName("PrintConfig.dll", "DevQueryPrintEx")
+Interceptor.attach(DevQueryPrintEx, {onLeave: function (args) {send("DevQueryPrintEx");}});
+
+var DllCanUnloadNow = Module.findExportByName("PrintConfig.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("PrintConfig.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("PrintConfig.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("PrintConfig.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("PrintConfig.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DrvConvertDevMode = Module.findExportByName("PrintConfig.dll", "DrvConvertDevMode")
+Interceptor.attach(DrvConvertDevMode, {onLeave: function (args) {send("DrvConvertDevMode");}});
+
+var DrvDeviceCapabilities = Module.findExportByName("PrintConfig.dll", "DrvDeviceCapabilities")
+Interceptor.attach(DrvDeviceCapabilities, {onLeave: function (args) {send("DrvDeviceCapabilities");}});
+
+var DrvDevicePropertySheets = Module.findExportByName("PrintConfig.dll", "DrvDevicePropertySheets")
+Interceptor.attach(DrvDevicePropertySheets, {onLeave: function (args) {send("DrvDevicePropertySheets");}});
+
+var DrvDocumentEvent = Module.findExportByName("PrintConfig.dll", "DrvDocumentEvent")
+Interceptor.attach(DrvDocumentEvent, {onLeave: function (args) {send("DrvDocumentEvent");}});
+
+var DrvDocumentPropertySheets = Module.findExportByName("PrintConfig.dll", "DrvDocumentPropertySheets")
+Interceptor.attach(DrvDocumentPropertySheets, {onLeave: function (args) {send("DrvDocumentPropertySheets");}});
+
+var DrvDriverEvent = Module.findExportByName("PrintConfig.dll", "DrvDriverEvent")
+Interceptor.attach(DrvDriverEvent, {onLeave: function (args) {send("DrvDriverEvent");}});
+
+var DrvPopulateFilterServices = Module.findExportByName("PrintConfig.dll", "DrvPopulateFilterServices")
+Interceptor.attach(DrvPopulateFilterServices, {onLeave: function (args) {send("DrvPopulateFilterServices");}});
+
+var DrvPrinterEvent = Module.findExportByName("PrintConfig.dll", "DrvPrinterEvent")
+Interceptor.attach(DrvPrinterEvent, {onLeave: function (args) {send("DrvPrinterEvent");}});
+
+var DrvQueryColorProfile = Module.findExportByName("PrintConfig.dll", "DrvQueryColorProfile")
+Interceptor.attach(DrvQueryColorProfile, {onLeave: function (args) {send("DrvQueryColorProfile");}});
+
+var DrvQueryJobAttributes = Module.findExportByName("PrintConfig.dll", "DrvQueryJobAttributes")
+Interceptor.attach(DrvQueryJobAttributes, {onLeave: function (args) {send("DrvQueryJobAttributes");}});
+
+var DrvResetConfigCache = Module.findExportByName("PrintConfig.dll", "DrvResetConfigCache")
+Interceptor.attach(DrvResetConfigCache, {onLeave: function (args) {send("DrvResetConfigCache");}});
+
+var DrvSplDeviceCaps = Module.findExportByName("PrintConfig.dll", "DrvSplDeviceCaps")
+Interceptor.attach(DrvSplDeviceCaps, {onLeave: function (args) {send("DrvSplDeviceCaps");}});
+
+var DrvUpgradePrinter = Module.findExportByName("PrintConfig.dll", "DrvUpgradePrinter")
+Interceptor.attach(DrvUpgradePrinter, {onLeave: function (args) {send("DrvUpgradePrinter");}});
+
+var GetStandardMessageForPrinterStatus = Module.findExportByName("PrintConfig.dll", "GetStandardMessageForPrinterStatus")
+Interceptor.attach(GetStandardMessageForPrinterStatus, {onLeave: function (args) {send("GetStandardMessageForPrinterStatus");}});
+
+var MxdcGetPDEVAdjustment = Module.findExportByName("PrintConfig.dll", "MxdcGetPDEVAdjustment")
+Interceptor.attach(MxdcGetPDEVAdjustment, {onLeave: function (args) {send("MxdcGetPDEVAdjustment");}});
+
+var NotifyEntry = Module.findExportByName("PrintConfig.dll", "NotifyEntry")
+Interceptor.attach(NotifyEntry, {onLeave: function (args) {send("NotifyEntry");}});
+
+var ServiceMain = Module.findExportByName("PrintConfig.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

@@ -1,0 +1,18 @@
+var CancelIoControl = Module.findExportByName("iMDriverHelper.dll", "CancelIoControl")
+Interceptor.attach(CancelIoControl, {onLeave: function (args) {send("CancelIoControl");}});
+
+var InitDll = Module.findExportByName("iMDriverHelper.dll", "InitDll")
+Interceptor.attach(InitDll, {onLeave: function (args) {send("InitDll");}});
+
+var OnCloseFile = Module.findExportByName("iMDriverHelper.dll", "OnCloseFile")
+Interceptor.attach(OnCloseFile, {onLeave: function (args) {send("OnCloseFile");}});
+
+var OnCreateFile = Module.findExportByName("iMDriverHelper.dll", "OnCreateFile")
+Interceptor.attach(OnCreateFile, {onLeave: function (args) {send("OnCreateFile");}});
+
+var ProcessIoControl = Module.findExportByName("iMDriverHelper.dll", "ProcessIoControl")
+Interceptor.attach(ProcessIoControl, {onLeave: function (args) {send("ProcessIoControl");}});
+
+var UnInitDll = Module.findExportByName("iMDriverHelper.dll", "UnInitDll")
+Interceptor.attach(UnInitDll, {onLeave: function (args) {send("UnInitDll");}});
+

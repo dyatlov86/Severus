@@ -1,0 +1,30 @@
+var CALogFreeMemory = Module.findExportByName("Dscpspluginwkr.dll", "CALogFreeMemory")
+Interceptor.attach(CALogFreeMemory, {onLeave: function (args) {send("CALogFreeMemory");}});
+
+var CALogSetJobDeviceName = Module.findExportByName("Dscpspluginwkr.dll", "CALogSetJobDeviceName")
+Interceptor.attach(CALogSetJobDeviceName, {onLeave: function (args) {send("CALogSetJobDeviceName");}});
+
+var CAWhatIfEnabled = Module.findExportByName("Dscpspluginwkr.dll", "CAWhatIfEnabled")
+Interceptor.attach(CAWhatIfEnabled, {onLeave: function (args) {send("CAWhatIfEnabled");}});
+
+var GetResourceIdFromContext = Module.findExportByName("Dscpspluginwkr.dll", "GetResourceIdFromContext")
+Interceptor.attach(GetResourceIdFromContext, {onLeave: function (args) {send("GetResourceIdFromContext");}});
+
+var LogCADebugMessage = Module.findExportByName("Dscpspluginwkr.dll", "LogCADebugMessage")
+Interceptor.attach(LogCADebugMessage, {onLeave: function (args) {send("LogCADebugMessage");}});
+
+var LogCAProgressMessage = Module.findExportByName("Dscpspluginwkr.dll", "LogCAProgressMessage")
+Interceptor.attach(LogCAProgressMessage, {onLeave: function (args) {send("LogCAProgressMessage");}});
+
+var LogCAVerboseMessage = Module.findExportByName("Dscpspluginwkr.dll", "LogCAVerboseMessage")
+Interceptor.attach(LogCAVerboseMessage, {onLeave: function (args) {send("LogCAVerboseMessage");}});
+
+var LogCAWarningMessage = Module.findExportByName("Dscpspluginwkr.dll", "LogCAWarningMessage")
+Interceptor.attach(LogCAWarningMessage, {onLeave: function (args) {send("LogCAWarningMessage");}});
+
+var LogCAWhatIfMessage = Module.findExportByName("Dscpspluginwkr.dll", "LogCAWhatIfMessage")
+Interceptor.attach(LogCAWhatIfMessage, {onLeave: function (args) {send("LogCAWhatIfMessage");}});
+
+var LogCAWriteMIError = Module.findExportByName("Dscpspluginwkr.dll", "LogCAWriteMIError")
+Interceptor.attach(LogCAWriteMIError, {onLeave: function (args) {send("LogCAWriteMIError");}});
+

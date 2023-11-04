@@ -1,0 +1,9 @@
+var CloseTrace = Module.findExportByName("api-ms-win-eventing-consumer-l1-1-0.dll", "CloseTrace")
+Interceptor.attach(CloseTrace, {onLeave: function (args) {send("CloseTrace");}});
+
+var OpenTraceW = Module.findExportByName("api-ms-win-eventing-consumer-l1-1-0.dll", "OpenTraceW")
+Interceptor.attach(OpenTraceW, {onLeave: function (args) {send("OpenTraceW");}});
+
+var ProcessTrace = Module.findExportByName("api-ms-win-eventing-consumer-l1-1-0.dll", "ProcessTrace")
+Interceptor.attach(ProcessTrace, {onLeave: function (args) {send("ProcessTrace");}});
+

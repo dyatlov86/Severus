@@ -1,0 +1,135 @@
+var AddPorts = Module.findExportByName("rastapi.dll", "AddPorts")
+Interceptor.attach(AddPorts, {onLeave: function (args) {send("AddPorts");}});
+
+var CheckRasmanDependency = Module.findExportByName("rastapi.dll", "CheckRasmanDependency")
+Interceptor.attach(CheckRasmanDependency, {onLeave: function (args) {send("CheckRasmanDependency");}});
+
+var DeviceConnect = Module.findExportByName("rastapi.dll", "DeviceConnect")
+Interceptor.attach(DeviceConnect, {onLeave: function (args) {send("DeviceConnect");}});
+
+var DeviceDone = Module.findExportByName("rastapi.dll", "DeviceDone")
+Interceptor.attach(DeviceDone, {onLeave: function (args) {send("DeviceDone");}});
+
+var DeviceEnum = Module.findExportByName("rastapi.dll", "DeviceEnum")
+Interceptor.attach(DeviceEnum, {onLeave: function (args) {send("DeviceEnum");}});
+
+var DeviceGetDevConfig = Module.findExportByName("rastapi.dll", "DeviceGetDevConfig")
+Interceptor.attach(DeviceGetDevConfig, {onLeave: function (args) {send("DeviceGetDevConfig");}});
+
+var DeviceGetDevConfigEx = Module.findExportByName("rastapi.dll", "DeviceGetDevConfigEx")
+Interceptor.attach(DeviceGetDevConfigEx, {onLeave: function (args) {send("DeviceGetDevConfigEx");}});
+
+var DeviceGetInfo = Module.findExportByName("rastapi.dll", "DeviceGetInfo")
+Interceptor.attach(DeviceGetInfo, {onLeave: function (args) {send("DeviceGetInfo");}});
+
+var DeviceListen = Module.findExportByName("rastapi.dll", "DeviceListen")
+Interceptor.attach(DeviceListen, {onLeave: function (args) {send("DeviceListen");}});
+
+var DeviceSetDevConfig = Module.findExportByName("rastapi.dll", "DeviceSetDevConfig")
+Interceptor.attach(DeviceSetDevConfig, {onLeave: function (args) {send("DeviceSetDevConfig");}});
+
+var DeviceSetInfo = Module.findExportByName("rastapi.dll", "DeviceSetInfo")
+Interceptor.attach(DeviceSetInfo, {onLeave: function (args) {send("DeviceSetInfo");}});
+
+var DeviceWork = Module.findExportByName("rastapi.dll", "DeviceWork")
+Interceptor.attach(DeviceWork, {onLeave: function (args) {send("DeviceWork");}});
+
+var EnableDeviceForDialIn = Module.findExportByName("rastapi.dll", "EnableDeviceForDialIn")
+Interceptor.attach(EnableDeviceForDialIn, {onLeave: function (args) {send("EnableDeviceForDialIn");}});
+
+var GetConnectInfo = Module.findExportByName("rastapi.dll", "GetConnectInfo")
+Interceptor.attach(GetConnectInfo, {onLeave: function (args) {send("GetConnectInfo");}});
+
+var GetZeroDeviceInfo = Module.findExportByName("rastapi.dll", "GetZeroDeviceInfo")
+Interceptor.attach(GetZeroDeviceInfo, {onLeave: function (args) {send("GetZeroDeviceInfo");}});
+
+var InitializeDriverIoControl = Module.findExportByName("rastapi.dll", "InitializeDriverIoControl")
+Interceptor.attach(InitializeDriverIoControl, {onLeave: function (args) {send("InitializeDriverIoControl");}});
+
+var PortChangeCallback = Module.findExportByName("rastapi.dll", "PortChangeCallback")
+Interceptor.attach(PortChangeCallback, {onLeave: function (args) {send("PortChangeCallback");}});
+
+var PortClearStatistics = Module.findExportByName("rastapi.dll", "PortClearStatistics")
+Interceptor.attach(PortClearStatistics, {onLeave: function (args) {send("PortClearStatistics");}});
+
+var PortClose = Module.findExportByName("rastapi.dll", "PortClose")
+Interceptor.attach(PortClose, {onLeave: function (args) {send("PortClose");}});
+
+var PortCompressionSetInfo = Module.findExportByName("rastapi.dll", "PortCompressionSetInfo")
+Interceptor.attach(PortCompressionSetInfo, {onLeave: function (args) {send("PortCompressionSetInfo");}});
+
+var PortConnect = Module.findExportByName("rastapi.dll", "PortConnect")
+Interceptor.attach(PortConnect, {onLeave: function (args) {send("PortConnect");}});
+
+var PortDisconnect = Module.findExportByName("rastapi.dll", "PortDisconnect")
+Interceptor.attach(PortDisconnect, {onLeave: function (args) {send("PortDisconnect");}});
+
+var PortEnum = Module.findExportByName("rastapi.dll", "PortEnum")
+Interceptor.attach(PortEnum, {onLeave: function (args) {send("PortEnum");}});
+
+var PortGetIOHandle = Module.findExportByName("rastapi.dll", "PortGetIOHandle")
+Interceptor.attach(PortGetIOHandle, {onLeave: function (args) {send("PortGetIOHandle");}});
+
+var PortGetInfo = Module.findExportByName("rastapi.dll", "PortGetInfo")
+Interceptor.attach(PortGetInfo, {onLeave: function (args) {send("PortGetInfo");}});
+
+var PortGetPortState = Module.findExportByName("rastapi.dll", "PortGetPortState")
+Interceptor.attach(PortGetPortState, {onLeave: function (args) {send("PortGetPortState");}});
+
+var PortGetStatistics = Module.findExportByName("rastapi.dll", "PortGetStatistics")
+Interceptor.attach(PortGetStatistics, {onLeave: function (args) {send("PortGetStatistics");}});
+
+var PortInit = Module.findExportByName("rastapi.dll", "PortInit")
+Interceptor.attach(PortInit, {onLeave: function (args) {send("PortInit");}});
+
+var PortOpen = Module.findExportByName("rastapi.dll", "PortOpen")
+Interceptor.attach(PortOpen, {onLeave: function (args) {send("PortOpen");}});
+
+var PortOpenExternal = Module.findExportByName("rastapi.dll", "PortOpenExternal")
+Interceptor.attach(PortOpenExternal, {onLeave: function (args) {send("PortOpenExternal");}});
+
+var PortReceive = Module.findExportByName("rastapi.dll", "PortReceive")
+Interceptor.attach(PortReceive, {onLeave: function (args) {send("PortReceive");}});
+
+var PortReceiveComplete = Module.findExportByName("rastapi.dll", "PortReceiveComplete")
+Interceptor.attach(PortReceiveComplete, {onLeave: function (args) {send("PortReceiveComplete");}});
+
+var PortSend = Module.findExportByName("rastapi.dll", "PortSend")
+Interceptor.attach(PortSend, {onLeave: function (args) {send("PortSend");}});
+
+var PortSetFraming = Module.findExportByName("rastapi.dll", "PortSetFraming")
+Interceptor.attach(PortSetFraming, {onLeave: function (args) {send("PortSetFraming");}});
+
+var PortSetInfo = Module.findExportByName("rastapi.dll", "PortSetInfo")
+Interceptor.attach(PortSetInfo, {onLeave: function (args) {send("PortSetInfo");}});
+
+var PortSetIoCompletionPort = Module.findExportByName("rastapi.dll", "PortSetIoCompletionPort")
+Interceptor.attach(PortSetIoCompletionPort, {onLeave: function (args) {send("PortSetIoCompletionPort");}});
+
+var PortTestSignalState = Module.findExportByName("rastapi.dll", "PortTestSignalState")
+Interceptor.attach(PortTestSignalState, {onLeave: function (args) {send("PortTestSignalState");}});
+
+var RasTapiIsPulseDial = Module.findExportByName("rastapi.dll", "RasTapiIsPulseDial")
+Interceptor.attach(RasTapiIsPulseDial, {onLeave: function (args) {send("RasTapiIsPulseDial");}});
+
+var RastapiGetCalledID = Module.findExportByName("rastapi.dll", "RastapiGetCalledID")
+Interceptor.attach(RastapiGetCalledID, {onLeave: function (args) {send("RastapiGetCalledID");}});
+
+var RastapiSetCalledID = Module.findExportByName("rastapi.dll", "RastapiSetCalledID")
+Interceptor.attach(RastapiSetCalledID, {onLeave: function (args) {send("RastapiSetCalledID");}});
+
+var RefreshDevices = Module.findExportByName("rastapi.dll", "RefreshDevices")
+Interceptor.attach(RefreshDevices, {onLeave: function (args) {send("RefreshDevices");}});
+
+var RemovePort = Module.findExportByName("rastapi.dll", "RemovePort")
+Interceptor.attach(RemovePort, {onLeave: function (args) {send("RemovePort");}});
+
+var SetCommSettings = Module.findExportByName("rastapi.dll", "SetCommSettings")
+Interceptor.attach(SetCommSettings, {onLeave: function (args) {send("SetCommSettings");}});
+
+var UnloadRastapiDll = Module.findExportByName("rastapi.dll", "UnloadRastapiDll")
+Interceptor.attach(UnloadRastapiDll, {onLeave: function (args) {send("UnloadRastapiDll");}});
+
+var UpdateTapiService = Module.findExportByName("rastapi.dll", "UpdateTapiService")
+Interceptor.attach(UpdateTapiService, {onLeave: function (args) {send("UpdateTapiService");}});
+

@@ -1,0 +1,3 @@
+var IRCoInstaller = Module.findExportByName("CIRCoInst.dll", "IRCoInstaller")
+Interceptor.attach(IRCoInstaller, {onLeave: function (args) {send("IRCoInstaller");}});
+

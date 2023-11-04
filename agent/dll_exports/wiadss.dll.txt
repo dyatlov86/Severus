@@ -1,0 +1,21 @@
+var CloseFindContext = Module.findExportByName("wiadss.dll", "CloseFindContext")
+Interceptor.attach(CloseFindContext, {onLeave: function (args) {send("CloseFindContext");}});
+
+var FindFirstImportDS = Module.findExportByName("wiadss.dll", "FindFirstImportDS")
+Interceptor.attach(FindFirstImportDS, {onLeave: function (args) {send("FindFirstImportDS");}});
+
+var FindImportDSByDeviceName = Module.findExportByName("wiadss.dll", "FindImportDSByDeviceName")
+Interceptor.attach(FindImportDSByDeviceName, {onLeave: function (args) {send("FindImportDSByDeviceName");}});
+
+var FindNextImportDS = Module.findExportByName("wiadss.dll", "FindNextImportDS")
+Interceptor.attach(FindNextImportDS, {onLeave: function (args) {send("FindNextImportDS");}});
+
+var GetLoaderStatus = Module.findExportByName("wiadss.dll", "GetLoaderStatus")
+Interceptor.attach(GetLoaderStatus, {onLeave: function (args) {send("GetLoaderStatus");}});
+
+var LoadImportDS = Module.findExportByName("wiadss.dll", "LoadImportDS")
+Interceptor.attach(LoadImportDS, {onLeave: function (args) {send("LoadImportDS");}});
+
+var UnloadImportDS = Module.findExportByName("wiadss.dll", "UnloadImportDS")
+Interceptor.attach(UnloadImportDS, {onLeave: function (args) {send("UnloadImportDS");}});
+

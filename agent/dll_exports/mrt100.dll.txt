@@ -1,0 +1,3 @@
+var GetManagedRuntimeService = Module.findExportByName("mrt100.dll", "GetManagedRuntimeService")
+Interceptor.attach(GetManagedRuntimeService, {onLeave: function (args) {send("GetManagedRuntimeService");}});
+

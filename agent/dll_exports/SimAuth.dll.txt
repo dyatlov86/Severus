@@ -1,0 +1,9 @@
+var EapPeerFreeErrorMemory = Module.findExportByName("SimAuth.dll", "EapPeerFreeErrorMemory")
+Interceptor.attach(EapPeerFreeErrorMemory, {onLeave: function (args) {send("EapPeerFreeErrorMemory");}});
+
+var EapPeerFreeMemory = Module.findExportByName("SimAuth.dll", "EapPeerFreeMemory")
+Interceptor.attach(EapPeerFreeMemory, {onLeave: function (args) {send("EapPeerFreeMemory");}});
+
+var EapPeerGetInfo = Module.findExportByName("SimAuth.dll", "EapPeerGetInfo")
+Interceptor.attach(EapPeerGetInfo, {onLeave: function (args) {send("EapPeerGetInfo");}});
+

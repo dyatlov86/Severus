@@ -1,0 +1,6 @@
+var QueryPerformanceCounter = Module.findExportByName("api-ms-win-core-profile-l1-1-0.dll", "QueryPerformanceCounter")
+Interceptor.attach(QueryPerformanceCounter, {onLeave: function (args) {send("QueryPerformanceCounter");}});
+
+var QueryPerformanceFrequency = Module.findExportByName("api-ms-win-core-profile-l1-1-0.dll", "QueryPerformanceFrequency")
+Interceptor.attach(QueryPerformanceFrequency, {onLeave: function (args) {send("QueryPerformanceFrequency");}});
+

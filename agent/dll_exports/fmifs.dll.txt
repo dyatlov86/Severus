@@ -1,0 +1,87 @@
+var Chkdsk = Module.findExportByName("fmifs.dll", "Chkdsk")
+Interceptor.attach(Chkdsk, {onLeave: function (args) {send("Chkdsk");}});
+
+var ChkdskEx = Module.findExportByName("fmifs.dll", "ChkdskEx")
+Interceptor.attach(ChkdskEx, {onLeave: function (args) {send("ChkdskEx");}});
+
+var ClearPerMachineFileSystemState = Module.findExportByName("fmifs.dll", "ClearPerMachineFileSystemState")
+Interceptor.attach(ClearPerMachineFileSystemState, {onLeave: function (args) {send("ClearPerMachineFileSystemState");}});
+
+var ComputeFmMediaType = Module.findExportByName("fmifs.dll", "ComputeFmMediaType")
+Interceptor.attach(ComputeFmMediaType, {onLeave: function (args) {send("ComputeFmMediaType");}});
+
+var CreatePerMachineFileSystemStateKey = Module.findExportByName("fmifs.dll", "CreatePerMachineFileSystemStateKey")
+Interceptor.attach(CreatePerMachineFileSystemStateKey, {onLeave: function (args) {send("CreatePerMachineFileSystemStateKey");}});
+
+var DiskCopy = Module.findExportByName("fmifs.dll", "DiskCopy")
+Interceptor.attach(DiskCopy, {onLeave: function (args) {send("DiskCopy");}});
+
+var EnableVolumeCompression = Module.findExportByName("fmifs.dll", "EnableVolumeCompression")
+Interceptor.attach(EnableVolumeCompression, {onLeave: function (args) {send("EnableVolumeCompression");}});
+
+var EnableVolumeIntegrity = Module.findExportByName("fmifs.dll", "EnableVolumeIntegrity")
+Interceptor.attach(EnableVolumeIntegrity, {onLeave: function (args) {send("EnableVolumeIntegrity");}});
+
+var Extend = Module.findExportByName("fmifs.dll", "Extend")
+Interceptor.attach(Extend, {onLeave: function (args) {send("Extend");}});
+
+var Format = Module.findExportByName("fmifs.dll", "Format")
+Interceptor.attach(Format, {onLeave: function (args) {send("Format");}});
+
+var FormatEx = Module.findExportByName("fmifs.dll", "FormatEx")
+Interceptor.attach(FormatEx, {onLeave: function (args) {send("FormatEx");}});
+
+var FormatEx2 = Module.findExportByName("fmifs.dll", "FormatEx2")
+Interceptor.attach(FormatEx2, {onLeave: function (args) {send("FormatEx2");}});
+
+var FreeCorruptionInfo = Module.findExportByName("fmifs.dll", "FreeCorruptionInfo")
+Interceptor.attach(FreeCorruptionInfo, {onLeave: function (args) {send("FreeCorruptionInfo");}});
+
+var GetCorruptionInfoClose = Module.findExportByName("fmifs.dll", "GetCorruptionInfoClose")
+Interceptor.attach(GetCorruptionInfoClose, {onLeave: function (args) {send("GetCorruptionInfoClose");}});
+
+var GetDefaultFileSystem = Module.findExportByName("fmifs.dll", "GetDefaultFileSystem")
+Interceptor.attach(GetDefaultFileSystem, {onLeave: function (args) {send("GetDefaultFileSystem");}});
+
+var GetDefaultFileSystem2 = Module.findExportByName("fmifs.dll", "GetDefaultFileSystem2")
+Interceptor.attach(GetDefaultFileSystem2, {onLeave: function (args) {send("GetDefaultFileSystem2");}});
+
+var GetFirstCorruptionInfo = Module.findExportByName("fmifs.dll", "GetFirstCorruptionInfo")
+Interceptor.attach(GetFirstCorruptionInfo, {onLeave: function (args) {send("GetFirstCorruptionInfo");}});
+
+var GetFsFormatOptions = Module.findExportByName("fmifs.dll", "GetFsFormatOptions")
+Interceptor.attach(GetFsFormatOptions, {onLeave: function (args) {send("GetFsFormatOptions");}});
+
+var GetNextCorruptionInfo = Module.findExportByName("fmifs.dll", "GetNextCorruptionInfo")
+Interceptor.attach(GetNextCorruptionInfo, {onLeave: function (args) {send("GetNextCorruptionInfo");}});
+
+var QueryAvailableFileSystemFormat = Module.findExportByName("fmifs.dll", "QueryAvailableFileSystemFormat")
+Interceptor.attach(QueryAvailableFileSystemFormat, {onLeave: function (args) {send("QueryAvailableFileSystemFormat");}});
+
+var QueryCorruptionState = Module.findExportByName("fmifs.dll", "QueryCorruptionState")
+Interceptor.attach(QueryCorruptionState, {onLeave: function (args) {send("QueryCorruptionState");}});
+
+var QueryCorruptionStateByHandle = Module.findExportByName("fmifs.dll", "QueryCorruptionStateByHandle")
+Interceptor.attach(QueryCorruptionStateByHandle, {onLeave: function (args) {send("QueryCorruptionStateByHandle");}});
+
+var QueryDeviceInformation = Module.findExportByName("fmifs.dll", "QueryDeviceInformation")
+Interceptor.attach(QueryDeviceInformation, {onLeave: function (args) {send("QueryDeviceInformation");}});
+
+var QueryDeviceInformationByHandle = Module.findExportByName("fmifs.dll", "QueryDeviceInformationByHandle")
+Interceptor.attach(QueryDeviceInformationByHandle, {onLeave: function (args) {send("QueryDeviceInformationByHandle");}});
+
+var QueryFileSystemName = Module.findExportByName("fmifs.dll", "QueryFileSystemName")
+Interceptor.attach(QueryFileSystemName, {onLeave: function (args) {send("QueryFileSystemName");}});
+
+var QueryIsDiskCheckScheduledForNextBoot = Module.findExportByName("fmifs.dll", "QueryIsDiskCheckScheduledForNextBoot")
+Interceptor.attach(QueryIsDiskCheckScheduledForNextBoot, {onLeave: function (args) {send("QueryIsDiskCheckScheduledForNextBoot");}});
+
+var QueryLatestFileSystemVersion = Module.findExportByName("fmifs.dll", "QueryLatestFileSystemVersion")
+Interceptor.attach(QueryLatestFileSystemVersion, {onLeave: function (args) {send("QueryLatestFileSystemVersion");}});
+
+var QuerySupportedMedia = Module.findExportByName("fmifs.dll", "QuerySupportedMedia")
+Interceptor.attach(QuerySupportedMedia, {onLeave: function (args) {send("QuerySupportedMedia");}});
+
+var SetLabel = Module.findExportByName("fmifs.dll", "SetLabel")
+Interceptor.attach(SetLabel, {onLeave: function (args) {send("SetLabel");}});
+

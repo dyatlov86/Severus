@@ -1,0 +1,48 @@
+var WSHAddressToString = Module.findExportByName("WSHTCPIP.DLL", "WSHAddressToString")
+Interceptor.attach(WSHAddressToString, {onLeave: function (args) {send("WSHAddressToString");}});
+
+var WSHEnumProtocols = Module.findExportByName("WSHTCPIP.DLL", "WSHEnumProtocols")
+Interceptor.attach(WSHEnumProtocols, {onLeave: function (args) {send("WSHEnumProtocols");}});
+
+var WSHGetBroadcastSockaddr = Module.findExportByName("WSHTCPIP.DLL", "WSHGetBroadcastSockaddr")
+Interceptor.attach(WSHGetBroadcastSockaddr, {onLeave: function (args) {send("WSHGetBroadcastSockaddr");}});
+
+var WSHGetProviderGuid = Module.findExportByName("WSHTCPIP.DLL", "WSHGetProviderGuid")
+Interceptor.attach(WSHGetProviderGuid, {onLeave: function (args) {send("WSHGetProviderGuid");}});
+
+var WSHGetSockaddrType = Module.findExportByName("WSHTCPIP.DLL", "WSHGetSockaddrType")
+Interceptor.attach(WSHGetSockaddrType, {onLeave: function (args) {send("WSHGetSockaddrType");}});
+
+var WSHGetSocketInformation = Module.findExportByName("WSHTCPIP.DLL", "WSHGetSocketInformation")
+Interceptor.attach(WSHGetSocketInformation, {onLeave: function (args) {send("WSHGetSocketInformation");}});
+
+var WSHGetWSAProtocolInfo = Module.findExportByName("WSHTCPIP.DLL", "WSHGetWSAProtocolInfo")
+Interceptor.attach(WSHGetWSAProtocolInfo, {onLeave: function (args) {send("WSHGetWSAProtocolInfo");}});
+
+var WSHGetWildcardSockaddr = Module.findExportByName("WSHTCPIP.DLL", "WSHGetWildcardSockaddr")
+Interceptor.attach(WSHGetWildcardSockaddr, {onLeave: function (args) {send("WSHGetWildcardSockaddr");}});
+
+var WSHGetWinsockMapping = Module.findExportByName("WSHTCPIP.DLL", "WSHGetWinsockMapping")
+Interceptor.attach(WSHGetWinsockMapping, {onLeave: function (args) {send("WSHGetWinsockMapping");}});
+
+var WSHIoctl = Module.findExportByName("WSHTCPIP.DLL", "WSHIoctl")
+Interceptor.attach(WSHIoctl, {onLeave: function (args) {send("WSHIoctl");}});
+
+var WSHJoinLeaf = Module.findExportByName("WSHTCPIP.DLL", "WSHJoinLeaf")
+Interceptor.attach(WSHJoinLeaf, {onLeave: function (args) {send("WSHJoinLeaf");}});
+
+var WSHNotify = Module.findExportByName("WSHTCPIP.DLL", "WSHNotify")
+Interceptor.attach(WSHNotify, {onLeave: function (args) {send("WSHNotify");}});
+
+var WSHOpenSocket = Module.findExportByName("WSHTCPIP.DLL", "WSHOpenSocket")
+Interceptor.attach(WSHOpenSocket, {onLeave: function (args) {send("WSHOpenSocket");}});
+
+var WSHOpenSocket2 = Module.findExportByName("WSHTCPIP.DLL", "WSHOpenSocket2")
+Interceptor.attach(WSHOpenSocket2, {onLeave: function (args) {send("WSHOpenSocket2");}});
+
+var WSHSetSocketInformation = Module.findExportByName("WSHTCPIP.DLL", "WSHSetSocketInformation")
+Interceptor.attach(WSHSetSocketInformation, {onLeave: function (args) {send("WSHSetSocketInformation");}});
+
+var WSHStringToAddress = Module.findExportByName("WSHTCPIP.DLL", "WSHStringToAddress")
+Interceptor.attach(WSHStringToAddress, {onLeave: function (args) {send("WSHStringToAddress");}});
+

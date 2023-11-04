@@ -1,0 +1,33 @@
+var CreateCaptureAudioStateMonitor = Module.findExportByName("Windows.Media.MediaControl.dll", "CreateCaptureAudioStateMonitor")
+Interceptor.attach(CreateCaptureAudioStateMonitor, {onLeave: function (args) {send("CreateCaptureAudioStateMonitor");}});
+
+var CreateCaptureAudioStateMonitorForCategory = Module.findExportByName("Windows.Media.MediaControl.dll", "CreateCaptureAudioStateMonitorForCategory")
+Interceptor.attach(CreateCaptureAudioStateMonitorForCategory, {onLeave: function (args) {send("CreateCaptureAudioStateMonitorForCategory");}});
+
+var CreateCaptureAudioStateMonitorForCategoryAndDeviceId = Module.findExportByName("Windows.Media.MediaControl.dll", "CreateCaptureAudioStateMonitorForCategoryAndDeviceId")
+Interceptor.attach(CreateCaptureAudioStateMonitorForCategoryAndDeviceId, {onLeave: function (args) {send("CreateCaptureAudioStateMonitorForCategoryAndDeviceId");}});
+
+var CreateCaptureAudioStateMonitorForCategoryAndDeviceRole = Module.findExportByName("Windows.Media.MediaControl.dll", "CreateCaptureAudioStateMonitorForCategoryAndDeviceRole")
+Interceptor.attach(CreateCaptureAudioStateMonitorForCategoryAndDeviceRole, {onLeave: function (args) {send("CreateCaptureAudioStateMonitorForCategoryAndDeviceRole");}});
+
+var CreateRenderAudioStateMonitor = Module.findExportByName("Windows.Media.MediaControl.dll", "CreateRenderAudioStateMonitor")
+Interceptor.attach(CreateRenderAudioStateMonitor, {onLeave: function (args) {send("CreateRenderAudioStateMonitor");}});
+
+var CreateRenderAudioStateMonitorForCategory = Module.findExportByName("Windows.Media.MediaControl.dll", "CreateRenderAudioStateMonitorForCategory")
+Interceptor.attach(CreateRenderAudioStateMonitorForCategory, {onLeave: function (args) {send("CreateRenderAudioStateMonitorForCategory");}});
+
+var CreateRenderAudioStateMonitorForCategoryAndDeviceId = Module.findExportByName("Windows.Media.MediaControl.dll", "CreateRenderAudioStateMonitorForCategoryAndDeviceId")
+Interceptor.attach(CreateRenderAudioStateMonitorForCategoryAndDeviceId, {onLeave: function (args) {send("CreateRenderAudioStateMonitorForCategoryAndDeviceId");}});
+
+var CreateRenderAudioStateMonitorForCategoryAndDeviceRole = Module.findExportByName("Windows.Media.MediaControl.dll", "CreateRenderAudioStateMonitorForCategoryAndDeviceRole")
+Interceptor.attach(CreateRenderAudioStateMonitorForCategoryAndDeviceRole, {onLeave: function (args) {send("CreateRenderAudioStateMonitorForCategoryAndDeviceRole");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.Media.MediaControl.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Media.MediaControl.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Media.MediaControl.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

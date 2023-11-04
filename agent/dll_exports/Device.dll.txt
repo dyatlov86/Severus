@@ -1,0 +1,12 @@
+var ?GetDeviceManager@@YAAEAVIDeviceManager@@XZ = Module.findExportByName("Device.dll", "?GetDeviceManager@@YAAEAVIDeviceManager@@XZ")
+Interceptor.attach(?GetDeviceManager@@YAAEAVIDeviceManager@@XZ, {onLeave: function (args) {send("?GetDeviceManager@@YAAEAVIDeviceManager@@XZ");}});
+
+var ?GetErrorReportFunc@@YAP6AXHQEBDPEAD@ZXZ = Module.findExportByName("Device.dll", "?GetErrorReportFunc@@YAP6AXHQEBDPEAD@ZXZ")
+Interceptor.attach(?GetErrorReportFunc@@YAP6AXHQEBDPEAD@ZXZ, {onLeave: function (args) {send("?GetErrorReportFunc@@YAP6AXHQEBDPEAD@ZXZ");}});
+
+var ?ReportErrorMessage@@YAXHQEBDZZ = Module.findExportByName("Device.dll", "?ReportErrorMessage@@YAXHQEBDZZ")
+Interceptor.attach(?ReportErrorMessage@@YAXHQEBDZZ, {onLeave: function (args) {send("?ReportErrorMessage@@YAXHQEBDZZ");}});
+
+var ?SetErrorReportFunc@@YAXP6AXHQEBDPEAD@Z@Z = Module.findExportByName("Device.dll", "?SetErrorReportFunc@@YAXP6AXHQEBDPEAD@Z@Z")
+Interceptor.attach(?SetErrorReportFunc@@YAXP6AXHQEBDPEAD@Z@Z, {onLeave: function (args) {send("?SetErrorReportFunc@@YAXP6AXHQEBDPEAD@Z@Z");}});
+

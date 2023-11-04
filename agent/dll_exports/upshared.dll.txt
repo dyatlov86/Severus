@@ -1,0 +1,30 @@
+var ConvertJsonValueToVariant = Module.findExportByName("upshared.dll", "ConvertJsonValueToVariant")
+Interceptor.attach(ConvertJsonValueToVariant, {onLeave: function (args) {send("ConvertJsonValueToVariant");}});
+
+var CreateQueryStringBuilder = Module.findExportByName("upshared.dll", "CreateQueryStringBuilder")
+Interceptor.attach(CreateQueryStringBuilder, {onLeave: function (args) {send("CreateQueryStringBuilder");}});
+
+var ExpandCabFile = Module.findExportByName("upshared.dll", "ExpandCabFile")
+Interceptor.attach(ExpandCabFile, {onLeave: function (args) {send("ExpandCabFile");}});
+
+var LoadJsonFromFile = Module.findExportByName("upshared.dll", "LoadJsonFromFile")
+Interceptor.attach(LoadJsonFromFile, {onLeave: function (args) {send("LoadJsonFromFile");}});
+
+var MapExceptionToHResult = Module.findExportByName("upshared.dll", "MapExceptionToHResult")
+Interceptor.attach(MapExceptionToHResult, {onLeave: function (args) {send("MapExceptionToHResult");}});
+
+var ParseJson = Module.findExportByName("upshared.dll", "ParseJson")
+Interceptor.attach(ParseJson, {onLeave: function (args) {send("ParseJson");}});
+
+var SubmitRequestForData = Module.findExportByName("upshared.dll", "SubmitRequestForData")
+Interceptor.attach(SubmitRequestForData, {onLeave: function (args) {send("SubmitRequestForData");}});
+
+var SubmitRequestForSettings = Module.findExportByName("upshared.dll", "SubmitRequestForSettings")
+Interceptor.attach(SubmitRequestForSettings, {onLeave: function (args) {send("SubmitRequestForSettings");}});
+
+var ToBase64 = Module.findExportByName("upshared.dll", "ToBase64")
+Interceptor.attach(ToBase64, {onLeave: function (args) {send("ToBase64");}});
+
+var VerifySelfSignedImageFile = Module.findExportByName("upshared.dll", "VerifySelfSignedImageFile")
+Interceptor.attach(VerifySelfSignedImageFile, {onLeave: function (args) {send("VerifySelfSignedImageFile");}});
+

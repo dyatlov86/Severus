@@ -1,0 +1,21 @@
+var CreateViewObjectForContentDirectoryFolder = Module.findExportByName("CastingShellExt.dll", "CreateViewObjectForContentDirectoryFolder")
+Interceptor.attach(CreateViewObjectForContentDirectoryFolder, {onLeave: function (args) {send("CreateViewObjectForContentDirectoryFolder");}});
+
+var CreateViewObjectForMediaServerFolder = Module.findExportByName("CastingShellExt.dll", "CreateViewObjectForMediaServerFolder")
+Interceptor.attach(CreateViewObjectForMediaServerFolder, {onLeave: function (args) {send("CreateViewObjectForMediaServerFolder");}});
+
+var DllMain = Module.findExportByName("CastingShellExt.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GetContextMenuForContentDirectoryFolder = Module.findExportByName("CastingShellExt.dll", "GetContextMenuForContentDirectoryFolder")
+Interceptor.attach(GetContextMenuForContentDirectoryFolder, {onLeave: function (args) {send("GetContextMenuForContentDirectoryFolder");}});
+
+var GetContextMenuForMediaServerFolder = Module.findExportByName("CastingShellExt.dll", "GetContextMenuForMediaServerFolder")
+Interceptor.attach(GetContextMenuForMediaServerFolder, {onLeave: function (args) {send("GetContextMenuForMediaServerFolder");}});
+
+var GetExtractIconForContentDirectoryFolder = Module.findExportByName("CastingShellExt.dll", "GetExtractIconForContentDirectoryFolder")
+Interceptor.attach(GetExtractIconForContentDirectoryFolder, {onLeave: function (args) {send("GetExtractIconForContentDirectoryFolder");}});
+
+var GetExtractIconForMediaServerFolder = Module.findExportByName("CastingShellExt.dll", "GetExtractIconForMediaServerFolder")
+Interceptor.attach(GetExtractIconForMediaServerFolder, {onLeave: function (args) {send("GetExtractIconForMediaServerFolder");}});
+

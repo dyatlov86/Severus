@@ -1,0 +1,48 @@
+var AddERExcludedApplicationA = Module.findExportByName("Faultrep.dll", "AddERExcludedApplicationA")
+Interceptor.attach(AddERExcludedApplicationA, {onLeave: function (args) {send("AddERExcludedApplicationA");}});
+
+var AddERExcludedApplicationW = Module.findExportByName("Faultrep.dll", "AddERExcludedApplicationW")
+Interceptor.attach(AddERExcludedApplicationW, {onLeave: function (args) {send("AddERExcludedApplicationW");}});
+
+var BasepReportFault = Module.findExportByName("Faultrep.dll", "BasepReportFault")
+Interceptor.attach(BasepReportFault, {onLeave: function (args) {send("BasepReportFault");}});
+
+var CancelHangReporting = Module.findExportByName("Faultrep.dll", "CancelHangReporting")
+Interceptor.attach(CancelHangReporting, {onLeave: function (args) {send("CancelHangReporting");}});
+
+var CheckForReadOnlyResourceFilter = Module.findExportByName("Faultrep.dll", "CheckForReadOnlyResourceFilter")
+Interceptor.attach(CheckForReadOnlyResourceFilter, {onLeave: function (args) {send("CheckForReadOnlyResourceFilter");}});
+
+var CheckPerUserCrossProcessThrottle = Module.findExportByName("Faultrep.dll", "CheckPerUserCrossProcessThrottle")
+Interceptor.attach(CheckPerUserCrossProcessThrottle, {onLeave: function (args) {send("CheckPerUserCrossProcessThrottle");}});
+
+var DllCanUnloadNow = Module.findExportByName("Faultrep.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("Faultrep.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ReportCoreHang = Module.findExportByName("Faultrep.dll", "ReportCoreHang")
+Interceptor.attach(ReportCoreHang, {onLeave: function (args) {send("ReportCoreHang");}});
+
+var ReportFault = Module.findExportByName("Faultrep.dll", "ReportFault")
+Interceptor.attach(ReportFault, {onLeave: function (args) {send("ReportFault");}});
+
+var ReportHang = Module.findExportByName("Faultrep.dll", "ReportHang")
+Interceptor.attach(ReportHang, {onLeave: function (args) {send("ReportHang");}});
+
+var UpdatePerUserLastCrossProcessCollectionTime = Module.findExportByName("Faultrep.dll", "UpdatePerUserLastCrossProcessCollectionTime")
+Interceptor.attach(UpdatePerUserLastCrossProcessCollectionTime, {onLeave: function (args) {send("UpdatePerUserLastCrossProcessCollectionTime");}});
+
+var WerReportHang = Module.findExportByName("Faultrep.dll", "WerReportHang")
+Interceptor.attach(WerReportHang, {onLeave: function (args) {send("WerReportHang");}});
+
+var WerpGetDebugger = Module.findExportByName("Faultrep.dll", "WerpGetDebugger")
+Interceptor.attach(WerpGetDebugger, {onLeave: function (args) {send("WerpGetDebugger");}});
+
+var WerpInitiateCrashReporting = Module.findExportByName("Faultrep.dll", "WerpInitiateCrashReporting")
+Interceptor.attach(WerpInitiateCrashReporting, {onLeave: function (args) {send("WerpInitiateCrashReporting");}});
+
+var WerpLaunchAeDebug = Module.findExportByName("Faultrep.dll", "WerpLaunchAeDebug")
+Interceptor.attach(WerpLaunchAeDebug, {onLeave: function (args) {send("WerpLaunchAeDebug");}});
+

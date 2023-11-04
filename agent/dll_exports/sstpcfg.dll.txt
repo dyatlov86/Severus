@@ -1,0 +1,60 @@
+var CheckIfCertificateAllowed = Module.findExportByName("sstpcfg.dll", "CheckIfCertificateAllowed")
+Interceptor.attach(CheckIfCertificateAllowed, {onLeave: function (args) {send("CheckIfCertificateAllowed");}});
+
+var ClearSstpCfgParams = Module.findExportByName("sstpcfg.dll", "ClearSstpCfgParams")
+Interceptor.attach(ClearSstpCfgParams, {onLeave: function (args) {send("ClearSstpCfgParams");}});
+
+var FreeSstpCertList = Module.findExportByName("sstpcfg.dll", "FreeSstpCertList")
+Interceptor.attach(FreeSstpCertList, {onLeave: function (args) {send("FreeSstpCertList");}});
+
+var FreeSstpCertNode = Module.findExportByName("sstpcfg.dll", "FreeSstpCertNode")
+Interceptor.attach(FreeSstpCertNode, {onLeave: function (args) {send("FreeSstpCertNode");}});
+
+var GetCertificateFromHash = Module.findExportByName("sstpcfg.dll", "GetCertificateFromHash")
+Interceptor.attach(GetCertificateFromHash, {onLeave: function (args) {send("GetCertificateFromHash");}});
+
+var GetCertificateFromSha256Hash = Module.findExportByName("sstpcfg.dll", "GetCertificateFromSha256Hash")
+Interceptor.attach(GetCertificateFromSha256Hash, {onLeave: function (args) {send("GetCertificateFromSha256Hash");}});
+
+var GetCertificateFromStoreForSha256Hash = Module.findExportByName("sstpcfg.dll", "GetCertificateFromStoreForSha256Hash")
+Interceptor.attach(GetCertificateFromStoreForSha256Hash, {onLeave: function (args) {send("GetCertificateFromStoreForSha256Hash");}});
+
+var GetCryptoBindingInfo = Module.findExportByName("sstpcfg.dll", "GetCryptoBindingInfo")
+Interceptor.attach(GetCryptoBindingInfo, {onLeave: function (args) {send("GetCryptoBindingInfo");}});
+
+var GetCryptoBindingSupportedAlgoInfo = Module.findExportByName("sstpcfg.dll", "GetCryptoBindingSupportedAlgoInfo")
+Interceptor.attach(GetCryptoBindingSupportedAlgoInfo, {onLeave: function (args) {send("GetCryptoBindingSupportedAlgoInfo");}});
+
+var GetHashFromCertificate = Module.findExportByName("sstpcfg.dll", "GetHashFromCertificate")
+Interceptor.attach(GetHashFromCertificate, {onLeave: function (args) {send("GetHashFromCertificate");}});
+
+var GetSstpCertListRemote = Module.findExportByName("sstpcfg.dll", "GetSstpCertListRemote")
+Interceptor.attach(GetSstpCertListRemote, {onLeave: function (args) {send("GetSstpCertListRemote");}});
+
+var GetSstpConfiguration = Module.findExportByName("sstpcfg.dll", "GetSstpConfiguration")
+Interceptor.attach(GetSstpConfiguration, {onLeave: function (args) {send("GetSstpConfiguration");}});
+
+var GetSstpProxyConfig = Module.findExportByName("sstpcfg.dll", "GetSstpProxyConfig")
+Interceptor.attach(GetSstpProxyConfig, {onLeave: function (args) {send("GetSstpProxyConfig");}});
+
+var GetSstpServerConfig = Module.findExportByName("sstpcfg.dll", "GetSstpServerConfig")
+Interceptor.attach(GetSstpServerConfig, {onLeave: function (args) {send("GetSstpServerConfig");}});
+
+var GetUrlForConfig = Module.findExportByName("sstpcfg.dll", "GetUrlForConfig")
+Interceptor.attach(GetUrlForConfig, {onLeave: function (args) {send("GetUrlForConfig");}});
+
+var IsCertificateEKUServerAuth = Module.findExportByName("sstpcfg.dll", "IsCertificateEKUServerAuth")
+Interceptor.attach(IsCertificateEKUServerAuth, {onLeave: function (args) {send("IsCertificateEKUServerAuth");}});
+
+var SetSstpCfgParams = Module.findExportByName("sstpcfg.dll", "SetSstpCfgParams")
+Interceptor.attach(SetSstpCfgParams, {onLeave: function (args) {send("SetSstpCfgParams");}});
+
+var SetSstpConfiguration = Module.findExportByName("sstpcfg.dll", "SetSstpConfiguration")
+Interceptor.attach(SetSstpConfiguration, {onLeave: function (args) {send("SetSstpConfiguration");}});
+
+var SetSstpProxyConfig = Module.findExportByName("sstpcfg.dll", "SetSstpProxyConfig")
+Interceptor.attach(SetSstpProxyConfig, {onLeave: function (args) {send("SetSstpProxyConfig");}});
+
+var SetupSstpServerConfig = Module.findExportByName("sstpcfg.dll", "SetupSstpServerConfig")
+Interceptor.attach(SetupSstpServerConfig, {onLeave: function (args) {send("SetupSstpServerConfig");}});
+

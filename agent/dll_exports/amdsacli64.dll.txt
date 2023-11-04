@@ -1,0 +1,3 @@
+var SA_Init = Module.findExportByName("amdsacli64.dll", "SA_Init")
+Interceptor.attach(SA_Init, {onLeave: function (args) {send("SA_Init");}});
+

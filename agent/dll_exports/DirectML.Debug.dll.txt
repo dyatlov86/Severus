@@ -1,0 +1,3 @@
+var DMLCreateDebugDevice = Module.findExportByName("DirectML.Debug.dll", "DMLCreateDebugDevice")
+Interceptor.attach(DMLCreateDebugDevice, {onLeave: function (args) {send("DMLCreateDebugDevice");}});
+

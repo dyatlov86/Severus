@@ -1,0 +1,9 @@
+var SysprepGeneralizeEntry = Module.findExportByName("vbssysprep.dll", "SysprepGeneralizeEntry")
+Interceptor.attach(SysprepGeneralizeEntry, {onLeave: function (args) {send("SysprepGeneralizeEntry");}});
+
+var SysprepSpecializeOfflineEntry = Module.findExportByName("vbssysprep.dll", "SysprepSpecializeOfflineEntry")
+Interceptor.attach(SysprepSpecializeOfflineEntry, {onLeave: function (args) {send("SysprepSpecializeOfflineEntry");}});
+
+var SysprepSpecializeOnlineEntry = Module.findExportByName("vbssysprep.dll", "SysprepSpecializeOnlineEntry")
+Interceptor.attach(SysprepSpecializeOnlineEntry, {onLeave: function (args) {send("SysprepSpecializeOnlineEntry");}});
+

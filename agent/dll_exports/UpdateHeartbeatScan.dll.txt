@@ -1,0 +1,15 @@
+var Initialize = Module.findExportByName("UpdateHeartbeatScan.dll", "Initialize")
+Interceptor.attach(Initialize, {onLeave: function (args) {send("Initialize");}});
+
+var NotifyTimerExpiryWithId = Module.findExportByName("UpdateHeartbeatScan.dll", "NotifyTimerExpiryWithId")
+Interceptor.attach(NotifyTimerExpiryWithId, {onLeave: function (args) {send("NotifyTimerExpiryWithId");}});
+
+var ProcessNextEventJsonBuilder = Module.findExportByName("UpdateHeartbeatScan.dll", "ProcessNextEventJsonBuilder")
+Interceptor.attach(ProcessNextEventJsonBuilder, {onLeave: function (args) {send("ProcessNextEventJsonBuilder");}});
+
+var SetParameter = Module.findExportByName("UpdateHeartbeatScan.dll", "SetParameter")
+Interceptor.attach(SetParameter, {onLeave: function (args) {send("SetParameter");}});
+
+var Uninitialize = Module.findExportByName("UpdateHeartbeatScan.dll", "Uninitialize")
+Interceptor.attach(Uninitialize, {onLeave: function (args) {send("Uninitialize");}});
+

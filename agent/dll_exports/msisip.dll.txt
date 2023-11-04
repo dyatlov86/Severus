@@ -1,0 +1,24 @@
+var DllRegisterServer = Module.findExportByName("msisip.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("msisip.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var MsiSIPCreateIndirectData = Module.findExportByName("msisip.dll", "MsiSIPCreateIndirectData")
+Interceptor.attach(MsiSIPCreateIndirectData, {onLeave: function (args) {send("MsiSIPCreateIndirectData");}});
+
+var MsiSIPGetSignedDataMsg = Module.findExportByName("msisip.dll", "MsiSIPGetSignedDataMsg")
+Interceptor.attach(MsiSIPGetSignedDataMsg, {onLeave: function (args) {send("MsiSIPGetSignedDataMsg");}});
+
+var MsiSIPIsMyTypeOfFile = Module.findExportByName("msisip.dll", "MsiSIPIsMyTypeOfFile")
+Interceptor.attach(MsiSIPIsMyTypeOfFile, {onLeave: function (args) {send("MsiSIPIsMyTypeOfFile");}});
+
+var MsiSIPPutSignedDataMsg = Module.findExportByName("msisip.dll", "MsiSIPPutSignedDataMsg")
+Interceptor.attach(MsiSIPPutSignedDataMsg, {onLeave: function (args) {send("MsiSIPPutSignedDataMsg");}});
+
+var MsiSIPRemoveSignedDataMsg = Module.findExportByName("msisip.dll", "MsiSIPRemoveSignedDataMsg")
+Interceptor.attach(MsiSIPRemoveSignedDataMsg, {onLeave: function (args) {send("MsiSIPRemoveSignedDataMsg");}});
+
+var MsiSIPVerifyIndirectData = Module.findExportByName("msisip.dll", "MsiSIPVerifyIndirectData")
+Interceptor.attach(MsiSIPVerifyIndirectData, {onLeave: function (args) {send("MsiSIPVerifyIndirectData");}});
+

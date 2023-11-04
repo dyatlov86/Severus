@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("remotepg.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("remotepg.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("remotepg.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("remotepg.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var LaunchRemoteUsersDialog = Module.findExportByName("remotepg.dll", "LaunchRemoteUsersDialog")
+Interceptor.attach(LaunchRemoteUsersDialog, {onLeave: function (args) {send("LaunchRemoteUsersDialog");}});
+

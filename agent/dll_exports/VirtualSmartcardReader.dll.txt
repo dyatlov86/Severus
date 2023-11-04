@@ -1,0 +1,18 @@
+var DllGetClassObject = Module.findExportByName("VirtualSmartcardReader.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var Microsoft_WDF_UMDF_Version = Module.findExportByName("VirtualSmartcardReader.dll", "Microsoft_WDF_UMDF_Version")
+Interceptor.attach(Microsoft_WDF_UMDF_Version, {onLeave: function (args) {send("Microsoft_WDF_UMDF_Version");}});
+
+var VReaderCreate = Module.findExportByName("VirtualSmartcardReader.dll", "VReaderCreate")
+Interceptor.attach(VReaderCreate, {onLeave: function (args) {send("VReaderCreate");}});
+
+var VReaderDeinitialize = Module.findExportByName("VirtualSmartcardReader.dll", "VReaderDeinitialize")
+Interceptor.attach(VReaderDeinitialize, {onLeave: function (args) {send("VReaderDeinitialize");}});
+
+var VReaderDestroy = Module.findExportByName("VirtualSmartcardReader.dll", "VReaderDestroy")
+Interceptor.attach(VReaderDestroy, {onLeave: function (args) {send("VReaderDestroy");}});
+
+var VReaderInitialize = Module.findExportByName("VirtualSmartcardReader.dll", "VReaderInitialize")
+Interceptor.attach(VReaderInitialize, {onLeave: function (args) {send("VReaderInitialize");}});
+

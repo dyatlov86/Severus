@@ -1,0 +1,132 @@
+var CommitComplete = Module.findExportByName("ktmw32.dll", "CommitComplete")
+Interceptor.attach(CommitComplete, {onLeave: function (args) {send("CommitComplete");}});
+
+var CommitEnlistment = Module.findExportByName("ktmw32.dll", "CommitEnlistment")
+Interceptor.attach(CommitEnlistment, {onLeave: function (args) {send("CommitEnlistment");}});
+
+var CommitTransaction = Module.findExportByName("ktmw32.dll", "CommitTransaction")
+Interceptor.attach(CommitTransaction, {onLeave: function (args) {send("CommitTransaction");}});
+
+var CommitTransactionAsync = Module.findExportByName("ktmw32.dll", "CommitTransactionAsync")
+Interceptor.attach(CommitTransactionAsync, {onLeave: function (args) {send("CommitTransactionAsync");}});
+
+var CreateEnlistment = Module.findExportByName("ktmw32.dll", "CreateEnlistment")
+Interceptor.attach(CreateEnlistment, {onLeave: function (args) {send("CreateEnlistment");}});
+
+var CreateResourceManager = Module.findExportByName("ktmw32.dll", "CreateResourceManager")
+Interceptor.attach(CreateResourceManager, {onLeave: function (args) {send("CreateResourceManager");}});
+
+var CreateTransaction = Module.findExportByName("ktmw32.dll", "CreateTransaction")
+Interceptor.attach(CreateTransaction, {onLeave: function (args) {send("CreateTransaction");}});
+
+var CreateTransactionManager = Module.findExportByName("ktmw32.dll", "CreateTransactionManager")
+Interceptor.attach(CreateTransactionManager, {onLeave: function (args) {send("CreateTransactionManager");}});
+
+var GetCurrentClockTransactionManager = Module.findExportByName("ktmw32.dll", "GetCurrentClockTransactionManager")
+Interceptor.attach(GetCurrentClockTransactionManager, {onLeave: function (args) {send("GetCurrentClockTransactionManager");}});
+
+var GetEnlistmentId = Module.findExportByName("ktmw32.dll", "GetEnlistmentId")
+Interceptor.attach(GetEnlistmentId, {onLeave: function (args) {send("GetEnlistmentId");}});
+
+var GetEnlistmentRecoveryInformation = Module.findExportByName("ktmw32.dll", "GetEnlistmentRecoveryInformation")
+Interceptor.attach(GetEnlistmentRecoveryInformation, {onLeave: function (args) {send("GetEnlistmentRecoveryInformation");}});
+
+var GetNotificationResourceManager = Module.findExportByName("ktmw32.dll", "GetNotificationResourceManager")
+Interceptor.attach(GetNotificationResourceManager, {onLeave: function (args) {send("GetNotificationResourceManager");}});
+
+var GetNotificationResourceManagerAsync = Module.findExportByName("ktmw32.dll", "GetNotificationResourceManagerAsync")
+Interceptor.attach(GetNotificationResourceManagerAsync, {onLeave: function (args) {send("GetNotificationResourceManagerAsync");}});
+
+var GetTransactionId = Module.findExportByName("ktmw32.dll", "GetTransactionId")
+Interceptor.attach(GetTransactionId, {onLeave: function (args) {send("GetTransactionId");}});
+
+var GetTransactionInformation = Module.findExportByName("ktmw32.dll", "GetTransactionInformation")
+Interceptor.attach(GetTransactionInformation, {onLeave: function (args) {send("GetTransactionInformation");}});
+
+var GetTransactionManagerId = Module.findExportByName("ktmw32.dll", "GetTransactionManagerId")
+Interceptor.attach(GetTransactionManagerId, {onLeave: function (args) {send("GetTransactionManagerId");}});
+
+var OpenEnlistment = Module.findExportByName("ktmw32.dll", "OpenEnlistment")
+Interceptor.attach(OpenEnlistment, {onLeave: function (args) {send("OpenEnlistment");}});
+
+var OpenResourceManager = Module.findExportByName("ktmw32.dll", "OpenResourceManager")
+Interceptor.attach(OpenResourceManager, {onLeave: function (args) {send("OpenResourceManager");}});
+
+var OpenTransaction = Module.findExportByName("ktmw32.dll", "OpenTransaction")
+Interceptor.attach(OpenTransaction, {onLeave: function (args) {send("OpenTransaction");}});
+
+var OpenTransactionManager = Module.findExportByName("ktmw32.dll", "OpenTransactionManager")
+Interceptor.attach(OpenTransactionManager, {onLeave: function (args) {send("OpenTransactionManager");}});
+
+var OpenTransactionManagerById = Module.findExportByName("ktmw32.dll", "OpenTransactionManagerById")
+Interceptor.attach(OpenTransactionManagerById, {onLeave: function (args) {send("OpenTransactionManagerById");}});
+
+var PrePrepareComplete = Module.findExportByName("ktmw32.dll", "PrePrepareComplete")
+Interceptor.attach(PrePrepareComplete, {onLeave: function (args) {send("PrePrepareComplete");}});
+
+var PrePrepareEnlistment = Module.findExportByName("ktmw32.dll", "PrePrepareEnlistment")
+Interceptor.attach(PrePrepareEnlistment, {onLeave: function (args) {send("PrePrepareEnlistment");}});
+
+var PrepareComplete = Module.findExportByName("ktmw32.dll", "PrepareComplete")
+Interceptor.attach(PrepareComplete, {onLeave: function (args) {send("PrepareComplete");}});
+
+var PrepareEnlistment = Module.findExportByName("ktmw32.dll", "PrepareEnlistment")
+Interceptor.attach(PrepareEnlistment, {onLeave: function (args) {send("PrepareEnlistment");}});
+
+var PrivCreateTransaction = Module.findExportByName("ktmw32.dll", "PrivCreateTransaction")
+Interceptor.attach(PrivCreateTransaction, {onLeave: function (args) {send("PrivCreateTransaction");}});
+
+var PrivIsLogWritableTransactionManager = Module.findExportByName("ktmw32.dll", "PrivIsLogWritableTransactionManager")
+Interceptor.attach(PrivIsLogWritableTransactionManager, {onLeave: function (args) {send("PrivIsLogWritableTransactionManager");}});
+
+var PrivPropagationComplete = Module.findExportByName("ktmw32.dll", "PrivPropagationComplete")
+Interceptor.attach(PrivPropagationComplete, {onLeave: function (args) {send("PrivPropagationComplete");}});
+
+var PrivPropagationFailed = Module.findExportByName("ktmw32.dll", "PrivPropagationFailed")
+Interceptor.attach(PrivPropagationFailed, {onLeave: function (args) {send("PrivPropagationFailed");}});
+
+var PrivRegisterProtocolAddressInformation = Module.findExportByName("ktmw32.dll", "PrivRegisterProtocolAddressInformation")
+Interceptor.attach(PrivRegisterProtocolAddressInformation, {onLeave: function (args) {send("PrivRegisterProtocolAddressInformation");}});
+
+var ReadOnlyEnlistment = Module.findExportByName("ktmw32.dll", "ReadOnlyEnlistment")
+Interceptor.attach(ReadOnlyEnlistment, {onLeave: function (args) {send("ReadOnlyEnlistment");}});
+
+var RecoverEnlistment = Module.findExportByName("ktmw32.dll", "RecoverEnlistment")
+Interceptor.attach(RecoverEnlistment, {onLeave: function (args) {send("RecoverEnlistment");}});
+
+var RecoverResourceManager = Module.findExportByName("ktmw32.dll", "RecoverResourceManager")
+Interceptor.attach(RecoverResourceManager, {onLeave: function (args) {send("RecoverResourceManager");}});
+
+var RecoverTransactionManager = Module.findExportByName("ktmw32.dll", "RecoverTransactionManager")
+Interceptor.attach(RecoverTransactionManager, {onLeave: function (args) {send("RecoverTransactionManager");}});
+
+var RenameTransactionManager = Module.findExportByName("ktmw32.dll", "RenameTransactionManager")
+Interceptor.attach(RenameTransactionManager, {onLeave: function (args) {send("RenameTransactionManager");}});
+
+var RollbackComplete = Module.findExportByName("ktmw32.dll", "RollbackComplete")
+Interceptor.attach(RollbackComplete, {onLeave: function (args) {send("RollbackComplete");}});
+
+var RollbackEnlistment = Module.findExportByName("ktmw32.dll", "RollbackEnlistment")
+Interceptor.attach(RollbackEnlistment, {onLeave: function (args) {send("RollbackEnlistment");}});
+
+var RollbackTransaction = Module.findExportByName("ktmw32.dll", "RollbackTransaction")
+Interceptor.attach(RollbackTransaction, {onLeave: function (args) {send("RollbackTransaction");}});
+
+var RollbackTransactionAsync = Module.findExportByName("ktmw32.dll", "RollbackTransactionAsync")
+Interceptor.attach(RollbackTransactionAsync, {onLeave: function (args) {send("RollbackTransactionAsync");}});
+
+var RollforwardTransactionManager = Module.findExportByName("ktmw32.dll", "RollforwardTransactionManager")
+Interceptor.attach(RollforwardTransactionManager, {onLeave: function (args) {send("RollforwardTransactionManager");}});
+
+var SetEnlistmentRecoveryInformation = Module.findExportByName("ktmw32.dll", "SetEnlistmentRecoveryInformation")
+Interceptor.attach(SetEnlistmentRecoveryInformation, {onLeave: function (args) {send("SetEnlistmentRecoveryInformation");}});
+
+var SetResourceManagerCompletionPort = Module.findExportByName("ktmw32.dll", "SetResourceManagerCompletionPort")
+Interceptor.attach(SetResourceManagerCompletionPort, {onLeave: function (args) {send("SetResourceManagerCompletionPort");}});
+
+var SetTransactionInformation = Module.findExportByName("ktmw32.dll", "SetTransactionInformation")
+Interceptor.attach(SetTransactionInformation, {onLeave: function (args) {send("SetTransactionInformation");}});
+
+var SinglePhaseReject = Module.findExportByName("ktmw32.dll", "SinglePhaseReject")
+Interceptor.attach(SinglePhaseReject, {onLeave: function (args) {send("SinglePhaseReject");}});
+

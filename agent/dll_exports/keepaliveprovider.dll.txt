@@ -1,0 +1,6 @@
+var KAMSS_DeregisterProvider = Module.findExportByName("keepaliveprovider.dll", "KAMSS_DeregisterProvider")
+Interceptor.attach(KAMSS_DeregisterProvider, {onLeave: function (args) {send("KAMSS_DeregisterProvider");}});
+
+var KAMSS_RegisterProvider = Module.findExportByName("keepaliveprovider.dll", "KAMSS_RegisterProvider")
+Interceptor.attach(KAMSS_RegisterProvider, {onLeave: function (args) {send("KAMSS_RegisterProvider");}});
+

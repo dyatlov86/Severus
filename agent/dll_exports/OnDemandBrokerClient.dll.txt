@@ -1,0 +1,3 @@
+var CreateOnDemandBrokerClient = Module.findExportByName("OnDemandBrokerClient.dll", "CreateOnDemandBrokerClient")
+Interceptor.attach(CreateOnDemandBrokerClient, {onLeave: function (args) {send("CreateOnDemandBrokerClient");}});
+

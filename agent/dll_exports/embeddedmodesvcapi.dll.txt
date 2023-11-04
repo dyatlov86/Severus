@@ -1,0 +1,15 @@
+var ActivatePackage = Module.findExportByName("embeddedmodesvcapi.dll", "ActivatePackage")
+Interceptor.attach(ActivatePackage, {onLeave: function (args) {send("ActivatePackage");}});
+
+var DllCanUnloadNow = Module.findExportByName("embeddedmodesvcapi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("embeddedmodesvcapi.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("embeddedmodesvcapi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var IsEmbeddedModeAllowed = Module.findExportByName("embeddedmodesvcapi.dll", "IsEmbeddedModeAllowed")
+Interceptor.attach(IsEmbeddedModeAllowed, {onLeave: function (args) {send("IsEmbeddedModeAllowed");}});
+

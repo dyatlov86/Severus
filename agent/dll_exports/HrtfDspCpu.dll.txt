@@ -1,0 +1,15 @@
+var CreateHrtfDataHelper = Module.findExportByName("HrtfDspCpu.dll", "CreateHrtfDataHelper")
+Interceptor.attach(CreateHrtfDataHelper, {onLeave: function (args) {send("CreateHrtfDataHelper");}});
+
+var CreateHrtfDspFactory = Module.findExportByName("HrtfDspCpu.dll", "CreateHrtfDspFactory")
+Interceptor.attach(CreateHrtfDspFactory, {onLeave: function (args) {send("CreateHrtfDspFactory");}});
+
+var DllCanUnloadNow = Module.findExportByName("HrtfDspCpu.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("HrtfDspCpu.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("HrtfDspCpu.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

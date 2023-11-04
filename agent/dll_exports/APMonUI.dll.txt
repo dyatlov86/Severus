@@ -1,0 +1,6 @@
+var InitializePrintMonitorUI = Module.findExportByName("APMonUI.dll", "InitializePrintMonitorUI")
+Interceptor.attach(InitializePrintMonitorUI, {onLeave: function (args) {send("InitializePrintMonitorUI");}});
+
+var LocalConfigurePortUI = Module.findExportByName("APMonUI.dll", "LocalConfigurePortUI")
+Interceptor.attach(LocalConfigurePortUI, {onLeave: function (args) {send("LocalConfigurePortUI");}});
+

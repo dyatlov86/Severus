@@ -1,0 +1,3 @@
+var CloudAPPluginInitialize = Module.findExportByName("MicrosoftAccountCloudAP.dll", "CloudAPPluginInitialize")
+Interceptor.attach(CloudAPPluginInitialize, {onLeave: function (args) {send("CloudAPPluginInitialize");}});
+

@@ -1,0 +1,15 @@
+var SensNotifyNetconEvent = Module.findExportByName("Sens.dll", "SensNotifyNetconEvent")
+Interceptor.attach(SensNotifyNetconEvent, {onLeave: function (args) {send("SensNotifyNetconEvent");}});
+
+var SensNotifyRasEvent = Module.findExportByName("Sens.dll", "SensNotifyRasEvent")
+Interceptor.attach(SensNotifyRasEvent, {onLeave: function (args) {send("SensNotifyRasEvent");}});
+
+var SensNotifyWinlogonEvent = Module.findExportByName("Sens.dll", "SensNotifyWinlogonEvent")
+Interceptor.attach(SensNotifyWinlogonEvent, {onLeave: function (args) {send("SensNotifyWinlogonEvent");}});
+
+var ServiceMain = Module.findExportByName("Sens.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("Sens.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

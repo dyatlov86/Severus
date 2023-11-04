@@ -1,0 +1,33 @@
+var DevQueryPrintEx = Module.findExportByName("FXSUI.DLL", "DevQueryPrintEx")
+Interceptor.attach(DevQueryPrintEx, {onLeave: function (args) {send("DevQueryPrintEx");}});
+
+var DrvAdvancedDocumentProperties = Module.findExportByName("FXSUI.DLL", "DrvAdvancedDocumentProperties")
+Interceptor.attach(DrvAdvancedDocumentProperties, {onLeave: function (args) {send("DrvAdvancedDocumentProperties");}});
+
+var DrvConvertDevMode = Module.findExportByName("FXSUI.DLL", "DrvConvertDevMode")
+Interceptor.attach(DrvConvertDevMode, {onLeave: function (args) {send("DrvConvertDevMode");}});
+
+var DrvDeviceCapabilities = Module.findExportByName("FXSUI.DLL", "DrvDeviceCapabilities")
+Interceptor.attach(DrvDeviceCapabilities, {onLeave: function (args) {send("DrvDeviceCapabilities");}});
+
+var DrvDevicePropertySheets = Module.findExportByName("FXSUI.DLL", "DrvDevicePropertySheets")
+Interceptor.attach(DrvDevicePropertySheets, {onLeave: function (args) {send("DrvDevicePropertySheets");}});
+
+var DrvDocumentEvent = Module.findExportByName("FXSUI.DLL", "DrvDocumentEvent")
+Interceptor.attach(DrvDocumentEvent, {onLeave: function (args) {send("DrvDocumentEvent");}});
+
+var DrvDocumentProperties = Module.findExportByName("FXSUI.DLL", "DrvDocumentProperties")
+Interceptor.attach(DrvDocumentProperties, {onLeave: function (args) {send("DrvDocumentProperties");}});
+
+var DrvDocumentPropertySheets = Module.findExportByName("FXSUI.DLL", "DrvDocumentPropertySheets")
+Interceptor.attach(DrvDocumentPropertySheets, {onLeave: function (args) {send("DrvDocumentPropertySheets");}});
+
+var DrvDriverEvent = Module.findExportByName("FXSUI.DLL", "DrvDriverEvent")
+Interceptor.attach(DrvDriverEvent, {onLeave: function (args) {send("DrvDriverEvent");}});
+
+var DrvPrinterEvent = Module.findExportByName("FXSUI.DLL", "DrvPrinterEvent")
+Interceptor.attach(DrvPrinterEvent, {onLeave: function (args) {send("DrvPrinterEvent");}});
+
+var PrinterProperties = Module.findExportByName("FXSUI.DLL", "PrinterProperties")
+Interceptor.attach(PrinterProperties, {onLeave: function (args) {send("PrinterProperties");}});
+

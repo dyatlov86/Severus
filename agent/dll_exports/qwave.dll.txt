@@ -1,0 +1,42 @@
+var QDLHPathDiagnostics = Module.findExportByName("qwave.dll", "QDLHPathDiagnostics")
+Interceptor.attach(QDLHPathDiagnostics, {onLeave: function (args) {send("QDLHPathDiagnostics");}});
+
+var QDLHStartDiagnosingPath = Module.findExportByName("qwave.dll", "QDLHStartDiagnosingPath")
+Interceptor.attach(QDLHStartDiagnosingPath, {onLeave: function (args) {send("QDLHStartDiagnosingPath");}});
+
+var QOSAddSocketToFlow = Module.findExportByName("qwave.dll", "QOSAddSocketToFlow")
+Interceptor.attach(QOSAddSocketToFlow, {onLeave: function (args) {send("QOSAddSocketToFlow");}});
+
+var QOSCancel = Module.findExportByName("qwave.dll", "QOSCancel")
+Interceptor.attach(QOSCancel, {onLeave: function (args) {send("QOSCancel");}});
+
+var QOSCloseHandle = Module.findExportByName("qwave.dll", "QOSCloseHandle")
+Interceptor.attach(QOSCloseHandle, {onLeave: function (args) {send("QOSCloseHandle");}});
+
+var QOSCreateHandle = Module.findExportByName("qwave.dll", "QOSCreateHandle")
+Interceptor.attach(QOSCreateHandle, {onLeave: function (args) {send("QOSCreateHandle");}});
+
+var QOSEnumerateFlows = Module.findExportByName("qwave.dll", "QOSEnumerateFlows")
+Interceptor.attach(QOSEnumerateFlows, {onLeave: function (args) {send("QOSEnumerateFlows");}});
+
+var QOSNotifyFlow = Module.findExportByName("qwave.dll", "QOSNotifyFlow")
+Interceptor.attach(QOSNotifyFlow, {onLeave: function (args) {send("QOSNotifyFlow");}});
+
+var QOSQueryFlow = Module.findExportByName("qwave.dll", "QOSQueryFlow")
+Interceptor.attach(QOSQueryFlow, {onLeave: function (args) {send("QOSQueryFlow");}});
+
+var QOSRemoveSocketFromFlow = Module.findExportByName("qwave.dll", "QOSRemoveSocketFromFlow")
+Interceptor.attach(QOSRemoveSocketFromFlow, {onLeave: function (args) {send("QOSRemoveSocketFromFlow");}});
+
+var QOSSetFlow = Module.findExportByName("qwave.dll", "QOSSetFlow")
+Interceptor.attach(QOSSetFlow, {onLeave: function (args) {send("QOSSetFlow");}});
+
+var QOSStartTrackingClient = Module.findExportByName("qwave.dll", "QOSStartTrackingClient")
+Interceptor.attach(QOSStartTrackingClient, {onLeave: function (args) {send("QOSStartTrackingClient");}});
+
+var QOSStopTrackingClient = Module.findExportByName("qwave.dll", "QOSStopTrackingClient")
+Interceptor.attach(QOSStopTrackingClient, {onLeave: function (args) {send("QOSStopTrackingClient");}});
+
+var ServiceMain = Module.findExportByName("qwave.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

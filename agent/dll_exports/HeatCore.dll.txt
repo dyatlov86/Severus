@@ -1,0 +1,3 @@
+var InitializeHeatFramework = Module.findExportByName("HeatCore.dll", "InitializeHeatFramework")
+Interceptor.attach(InitializeHeatFramework, {onLeave: function (args) {send("InitializeHeatFramework");}});
+

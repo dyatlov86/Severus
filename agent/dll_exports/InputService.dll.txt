@@ -1,0 +1,18 @@
+var CreateInputMethodClient = Module.findExportByName("InputService.dll", "CreateInputMethodClient")
+Interceptor.attach(CreateInputMethodClient, {onLeave: function (args) {send("CreateInputMethodClient");}});
+
+var CreateKeyEventProcessor = Module.findExportByName("InputService.dll", "CreateKeyEventProcessor")
+Interceptor.attach(CreateKeyEventProcessor, {onLeave: function (args) {send("CreateKeyEventProcessor");}});
+
+var InitializeService = Module.findExportByName("InputService.dll", "InitializeService")
+Interceptor.attach(InitializeService, {onLeave: function (args) {send("InitializeService");}});
+
+var ServiceMain = Module.findExportByName("InputService.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("InputService.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+
+var UninitializeService = Module.findExportByName("InputService.dll", "UninitializeService")
+Interceptor.attach(UninitializeService, {onLeave: function (args) {send("UninitializeService");}});
+

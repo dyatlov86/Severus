@@ -1,0 +1,33 @@
+var DllCanUnloadNow = Module.findExportByName("scrobj.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("scrobj.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("scrobj.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("scrobj.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllRegisterServerEx = Module.findExportByName("scrobj.dll", "DllRegisterServerEx")
+Interceptor.attach(DllRegisterServerEx, {onLeave: function (args) {send("DllRegisterServerEx");}});
+
+var DllRegisterServerExA = Module.findExportByName("scrobj.dll", "DllRegisterServerExA")
+Interceptor.attach(DllRegisterServerExA, {onLeave: function (args) {send("DllRegisterServerExA");}});
+
+var DllRegisterServerExW = Module.findExportByName("scrobj.dll", "DllRegisterServerExW")
+Interceptor.attach(DllRegisterServerExW, {onLeave: function (args) {send("DllRegisterServerExW");}});
+
+var DllUnregisterServer = Module.findExportByName("scrobj.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DllUnregisterServerEx = Module.findExportByName("scrobj.dll", "DllUnregisterServerEx")
+Interceptor.attach(DllUnregisterServerEx, {onLeave: function (args) {send("DllUnregisterServerEx");}});
+
+var GenerateTypeLib = Module.findExportByName("scrobj.dll", "GenerateTypeLib")
+Interceptor.attach(GenerateTypeLib, {onLeave: function (args) {send("GenerateTypeLib");}});
+
+var GenerateTypeLibW = Module.findExportByName("scrobj.dll", "GenerateTypeLibW")
+Interceptor.attach(GenerateTypeLibW, {onLeave: function (args) {send("GenerateTypeLibW");}});
+

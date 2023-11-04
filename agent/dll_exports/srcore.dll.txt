@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("srcore.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("srcore.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("srcore.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("srcore.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var ShutdownContinuation = Module.findExportByName("srcore.dll", "ShutdownContinuation")
+Interceptor.attach(ShutdownContinuation, {onLeave: function (args) {send("ShutdownContinuation");}});
+
+var SrFreeRestoreStatus = Module.findExportByName("srcore.dll", "SrFreeRestoreStatus")
+Interceptor.attach(SrFreeRestoreStatus, {onLeave: function (args) {send("SrFreeRestoreStatus");}});
+
+var SrFreeRpPropArray = Module.findExportByName("srcore.dll", "SrFreeRpPropArray")
+Interceptor.attach(SrFreeRpPropArray, {onLeave: function (args) {send("SrFreeRpPropArray");}});
+

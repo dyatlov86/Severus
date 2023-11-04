@@ -1,0 +1,369 @@
+var CLRCreateInstance = Module.findExportByName("mscoree.dll", "CLRCreateInstance")
+Interceptor.attach(CLRCreateInstance, {onLeave: function (args) {send("CLRCreateInstance");}});
+
+var CallFunctionShim = Module.findExportByName("mscoree.dll", "CallFunctionShim")
+Interceptor.attach(CallFunctionShim, {onLeave: function (args) {send("CallFunctionShim");}});
+
+var CloseCtrs = Module.findExportByName("mscoree.dll", "CloseCtrs")
+Interceptor.attach(CloseCtrs, {onLeave: function (args) {send("CloseCtrs");}});
+
+var ClrCreateManagedInstance = Module.findExportByName("mscoree.dll", "ClrCreateManagedInstance")
+Interceptor.attach(ClrCreateManagedInstance, {onLeave: function (args) {send("ClrCreateManagedInstance");}});
+
+var CoEEShutDownCOM = Module.findExportByName("mscoree.dll", "CoEEShutDownCOM")
+Interceptor.attach(CoEEShutDownCOM, {onLeave: function (args) {send("CoEEShutDownCOM");}});
+
+var CoInitializeCor = Module.findExportByName("mscoree.dll", "CoInitializeCor")
+Interceptor.attach(CoInitializeCor, {onLeave: function (args) {send("CoInitializeCor");}});
+
+var CoInitializeEE = Module.findExportByName("mscoree.dll", "CoInitializeEE")
+Interceptor.attach(CoInitializeEE, {onLeave: function (args) {send("CoInitializeEE");}});
+
+var CoUninitializeCor = Module.findExportByName("mscoree.dll", "CoUninitializeCor")
+Interceptor.attach(CoUninitializeCor, {onLeave: function (args) {send("CoUninitializeCor");}});
+
+var CoUninitializeEE = Module.findExportByName("mscoree.dll", "CoUninitializeEE")
+Interceptor.attach(CoUninitializeEE, {onLeave: function (args) {send("CoUninitializeEE");}});
+
+var CollectCtrs = Module.findExportByName("mscoree.dll", "CollectCtrs")
+Interceptor.attach(CollectCtrs, {onLeave: function (args) {send("CollectCtrs");}});
+
+var CorBindToCurrentRuntime = Module.findExportByName("mscoree.dll", "CorBindToCurrentRuntime")
+Interceptor.attach(CorBindToCurrentRuntime, {onLeave: function (args) {send("CorBindToCurrentRuntime");}});
+
+var CorBindToRuntime = Module.findExportByName("mscoree.dll", "CorBindToRuntime")
+Interceptor.attach(CorBindToRuntime, {onLeave: function (args) {send("CorBindToRuntime");}});
+
+var CorBindToRuntimeByCfg = Module.findExportByName("mscoree.dll", "CorBindToRuntimeByCfg")
+Interceptor.attach(CorBindToRuntimeByCfg, {onLeave: function (args) {send("CorBindToRuntimeByCfg");}});
+
+var CorBindToRuntimeByPath = Module.findExportByName("mscoree.dll", "CorBindToRuntimeByPath")
+Interceptor.attach(CorBindToRuntimeByPath, {onLeave: function (args) {send("CorBindToRuntimeByPath");}});
+
+var CorBindToRuntimeByPathEx = Module.findExportByName("mscoree.dll", "CorBindToRuntimeByPathEx")
+Interceptor.attach(CorBindToRuntimeByPathEx, {onLeave: function (args) {send("CorBindToRuntimeByPathEx");}});
+
+var CorBindToRuntimeEx = Module.findExportByName("mscoree.dll", "CorBindToRuntimeEx")
+Interceptor.attach(CorBindToRuntimeEx, {onLeave: function (args) {send("CorBindToRuntimeEx");}});
+
+var CorBindToRuntimeHost = Module.findExportByName("mscoree.dll", "CorBindToRuntimeHost")
+Interceptor.attach(CorBindToRuntimeHost, {onLeave: function (args) {send("CorBindToRuntimeHost");}});
+
+var CorDllMainWorker = Module.findExportByName("mscoree.dll", "CorDllMainWorker")
+Interceptor.attach(CorDllMainWorker, {onLeave: function (args) {send("CorDllMainWorker");}});
+
+var CorExitProcess = Module.findExportByName("mscoree.dll", "CorExitProcess")
+Interceptor.attach(CorExitProcess, {onLeave: function (args) {send("CorExitProcess");}});
+
+var CorGetSvc = Module.findExportByName("mscoree.dll", "CorGetSvc")
+Interceptor.attach(CorGetSvc, {onLeave: function (args) {send("CorGetSvc");}});
+
+var CorIsLatestSvc = Module.findExportByName("mscoree.dll", "CorIsLatestSvc")
+Interceptor.attach(CorIsLatestSvc, {onLeave: function (args) {send("CorIsLatestSvc");}});
+
+var CorMarkThreadInThreadPool = Module.findExportByName("mscoree.dll", "CorMarkThreadInThreadPool")
+Interceptor.attach(CorMarkThreadInThreadPool, {onLeave: function (args) {send("CorMarkThreadInThreadPool");}});
+
+var CorTickleSvc = Module.findExportByName("mscoree.dll", "CorTickleSvc")
+Interceptor.attach(CorTickleSvc, {onLeave: function (args) {send("CorTickleSvc");}});
+
+var CreateConfigStream = Module.findExportByName("mscoree.dll", "CreateConfigStream")
+Interceptor.attach(CreateConfigStream, {onLeave: function (args) {send("CreateConfigStream");}});
+
+var CreateDebuggingInterfaceFromVersion = Module.findExportByName("mscoree.dll", "CreateDebuggingInterfaceFromVersion")
+Interceptor.attach(CreateDebuggingInterfaceFromVersion, {onLeave: function (args) {send("CreateDebuggingInterfaceFromVersion");}});
+
+var CreateInterface = Module.findExportByName("mscoree.dll", "CreateInterface")
+Interceptor.attach(CreateInterface, {onLeave: function (args) {send("CreateInterface");}});
+
+var DllCanUnloadNow = Module.findExportByName("mscoree.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mscoree.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("mscoree.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mscoree.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var EEDllGetClassObjectFromClass = Module.findExportByName("mscoree.dll", "EEDllGetClassObjectFromClass")
+Interceptor.attach(EEDllGetClassObjectFromClass, {onLeave: function (args) {send("EEDllGetClassObjectFromClass");}});
+
+var EEDllRegisterServer = Module.findExportByName("mscoree.dll", "EEDllRegisterServer")
+Interceptor.attach(EEDllRegisterServer, {onLeave: function (args) {send("EEDllRegisterServer");}});
+
+var EEDllUnregisterServer = Module.findExportByName("mscoree.dll", "EEDllUnregisterServer")
+Interceptor.attach(EEDllUnregisterServer, {onLeave: function (args) {send("EEDllUnregisterServer");}});
+
+var GetAssemblyMDImport = Module.findExportByName("mscoree.dll", "GetAssemblyMDImport")
+Interceptor.attach(GetAssemblyMDImport, {onLeave: function (args) {send("GetAssemblyMDImport");}});
+
+var GetCLRMetaHost = Module.findExportByName("mscoree.dll", "GetCLRMetaHost")
+Interceptor.attach(GetCLRMetaHost, {onLeave: function (args) {send("GetCLRMetaHost");}});
+
+var GetCORRequiredVersion = Module.findExportByName("mscoree.dll", "GetCORRequiredVersion")
+Interceptor.attach(GetCORRequiredVersion, {onLeave: function (args) {send("GetCORRequiredVersion");}});
+
+var GetCORRootDirectory = Module.findExportByName("mscoree.dll", "GetCORRootDirectory")
+Interceptor.attach(GetCORRootDirectory, {onLeave: function (args) {send("GetCORRootDirectory");}});
+
+var GetCORSystemDirectory = Module.findExportByName("mscoree.dll", "GetCORSystemDirectory")
+Interceptor.attach(GetCORSystemDirectory, {onLeave: function (args) {send("GetCORSystemDirectory");}});
+
+var GetCORVersion = Module.findExportByName("mscoree.dll", "GetCORVersion")
+Interceptor.attach(GetCORVersion, {onLeave: function (args) {send("GetCORVersion");}});
+
+var GetCompileInfo = Module.findExportByName("mscoree.dll", "GetCompileInfo")
+Interceptor.attach(GetCompileInfo, {onLeave: function (args) {send("GetCompileInfo");}});
+
+var GetFileVersion = Module.findExportByName("mscoree.dll", "GetFileVersion")
+Interceptor.attach(GetFileVersion, {onLeave: function (args) {send("GetFileVersion");}});
+
+var GetHashFromAssemblyFile = Module.findExportByName("mscoree.dll", "GetHashFromAssemblyFile")
+Interceptor.attach(GetHashFromAssemblyFile, {onLeave: function (args) {send("GetHashFromAssemblyFile");}});
+
+var GetHashFromAssemblyFileW = Module.findExportByName("mscoree.dll", "GetHashFromAssemblyFileW")
+Interceptor.attach(GetHashFromAssemblyFileW, {onLeave: function (args) {send("GetHashFromAssemblyFileW");}});
+
+var GetHashFromBlob = Module.findExportByName("mscoree.dll", "GetHashFromBlob")
+Interceptor.attach(GetHashFromBlob, {onLeave: function (args) {send("GetHashFromBlob");}});
+
+var GetHashFromFile = Module.findExportByName("mscoree.dll", "GetHashFromFile")
+Interceptor.attach(GetHashFromFile, {onLeave: function (args) {send("GetHashFromFile");}});
+
+var GetHashFromFileW = Module.findExportByName("mscoree.dll", "GetHashFromFileW")
+Interceptor.attach(GetHashFromFileW, {onLeave: function (args) {send("GetHashFromFileW");}});
+
+var GetHashFromHandle = Module.findExportByName("mscoree.dll", "GetHashFromHandle")
+Interceptor.attach(GetHashFromHandle, {onLeave: function (args) {send("GetHashFromHandle");}});
+
+var GetHostConfigurationFile = Module.findExportByName("mscoree.dll", "GetHostConfigurationFile")
+Interceptor.attach(GetHostConfigurationFile, {onLeave: function (args) {send("GetHostConfigurationFile");}});
+
+var GetMetaDataInternalInterface = Module.findExportByName("mscoree.dll", "GetMetaDataInternalInterface")
+Interceptor.attach(GetMetaDataInternalInterface, {onLeave: function (args) {send("GetMetaDataInternalInterface");}});
+
+var GetMetaDataInternalInterfaceFromPublic = Module.findExportByName("mscoree.dll", "GetMetaDataInternalInterfaceFromPublic")
+Interceptor.attach(GetMetaDataInternalInterfaceFromPublic, {onLeave: function (args) {send("GetMetaDataInternalInterfaceFromPublic");}});
+
+var GetMetaDataPublicInterfaceFromInternal = Module.findExportByName("mscoree.dll", "GetMetaDataPublicInterfaceFromInternal")
+Interceptor.attach(GetMetaDataPublicInterfaceFromInternal, {onLeave: function (args) {send("GetMetaDataPublicInterfaceFromInternal");}});
+
+var GetPermissionRequests = Module.findExportByName("mscoree.dll", "GetPermissionRequests")
+Interceptor.attach(GetPermissionRequests, {onLeave: function (args) {send("GetPermissionRequests");}});
+
+var GetPrivateContextsPerfCounters = Module.findExportByName("mscoree.dll", "GetPrivateContextsPerfCounters")
+Interceptor.attach(GetPrivateContextsPerfCounters, {onLeave: function (args) {send("GetPrivateContextsPerfCounters");}});
+
+var GetProcessExecutableHeap = Module.findExportByName("mscoree.dll", "GetProcessExecutableHeap")
+Interceptor.attach(GetProcessExecutableHeap, {onLeave: function (args) {send("GetProcessExecutableHeap");}});
+
+var GetRealProcAddress = Module.findExportByName("mscoree.dll", "GetRealProcAddress")
+Interceptor.attach(GetRealProcAddress, {onLeave: function (args) {send("GetRealProcAddress");}});
+
+var GetRequestedRuntimeInfo = Module.findExportByName("mscoree.dll", "GetRequestedRuntimeInfo")
+Interceptor.attach(GetRequestedRuntimeInfo, {onLeave: function (args) {send("GetRequestedRuntimeInfo");}});
+
+var GetRequestedRuntimeVersion = Module.findExportByName("mscoree.dll", "GetRequestedRuntimeVersion")
+Interceptor.attach(GetRequestedRuntimeVersion, {onLeave: function (args) {send("GetRequestedRuntimeVersion");}});
+
+var GetRequestedRuntimeVersionForCLSID = Module.findExportByName("mscoree.dll", "GetRequestedRuntimeVersionForCLSID")
+Interceptor.attach(GetRequestedRuntimeVersionForCLSID, {onLeave: function (args) {send("GetRequestedRuntimeVersionForCLSID");}});
+
+var GetStartupFlags = Module.findExportByName("mscoree.dll", "GetStartupFlags")
+Interceptor.attach(GetStartupFlags, {onLeave: function (args) {send("GetStartupFlags");}});
+
+var GetTargetForVTableEntry = Module.findExportByName("mscoree.dll", "GetTargetForVTableEntry")
+Interceptor.attach(GetTargetForVTableEntry, {onLeave: function (args) {send("GetTargetForVTableEntry");}});
+
+var GetTokenForVTableEntry = Module.findExportByName("mscoree.dll", "GetTokenForVTableEntry")
+Interceptor.attach(GetTokenForVTableEntry, {onLeave: function (args) {send("GetTokenForVTableEntry");}});
+
+var GetVersionFromProcess = Module.findExportByName("mscoree.dll", "GetVersionFromProcess")
+Interceptor.attach(GetVersionFromProcess, {onLeave: function (args) {send("GetVersionFromProcess");}});
+
+var GetXMLElement = Module.findExportByName("mscoree.dll", "GetXMLElement")
+Interceptor.attach(GetXMLElement, {onLeave: function (args) {send("GetXMLElement");}});
+
+var GetXMLElementAttribute = Module.findExportByName("mscoree.dll", "GetXMLElementAttribute")
+Interceptor.attach(GetXMLElementAttribute, {onLeave: function (args) {send("GetXMLElementAttribute");}});
+
+var GetXMLObject = Module.findExportByName("mscoree.dll", "GetXMLObject")
+Interceptor.attach(GetXMLObject, {onLeave: function (args) {send("GetXMLObject");}});
+
+var IEE = Module.findExportByName("mscoree.dll", "IEE")
+Interceptor.attach(IEE, {onLeave: function (args) {send("IEE");}});
+
+var InitErrors = Module.findExportByName("mscoree.dll", "InitErrors")
+Interceptor.attach(InitErrors, {onLeave: function (args) {send("InitErrors");}});
+
+var InitSSAutoEnterThread = Module.findExportByName("mscoree.dll", "InitSSAutoEnterThread")
+Interceptor.attach(InitSSAutoEnterThread, {onLeave: function (args) {send("InitSSAutoEnterThread");}});
+
+var LoadLibraryShim = Module.findExportByName("mscoree.dll", "LoadLibraryShim")
+Interceptor.attach(LoadLibraryShim, {onLeave: function (args) {send("LoadLibraryShim");}});
+
+var LoadLibraryWithPolicyShim = Module.findExportByName("mscoree.dll", "LoadLibraryWithPolicyShim")
+Interceptor.attach(LoadLibraryWithPolicyShim, {onLeave: function (args) {send("LoadLibraryWithPolicyShim");}});
+
+var LoadStringRC = Module.findExportByName("mscoree.dll", "LoadStringRC")
+Interceptor.attach(LoadStringRC, {onLeave: function (args) {send("LoadStringRC");}});
+
+var LoadStringRCEx = Module.findExportByName("mscoree.dll", "LoadStringRCEx")
+Interceptor.attach(LoadStringRCEx, {onLeave: function (args) {send("LoadStringRCEx");}});
+
+var LockClrVersion = Module.findExportByName("mscoree.dll", "LockClrVersion")
+Interceptor.attach(LockClrVersion, {onLeave: function (args) {send("LockClrVersion");}});
+
+var LogHelp_LogAssert = Module.findExportByName("mscoree.dll", "LogHelp_LogAssert")
+Interceptor.attach(LogHelp_LogAssert, {onLeave: function (args) {send("LogHelp_LogAssert");}});
+
+var LogHelp_NoGuiOnAssert = Module.findExportByName("mscoree.dll", "LogHelp_NoGuiOnAssert")
+Interceptor.attach(LogHelp_NoGuiOnAssert, {onLeave: function (args) {send("LogHelp_NoGuiOnAssert");}});
+
+var LogHelp_TerminateOnAssert = Module.findExportByName("mscoree.dll", "LogHelp_TerminateOnAssert")
+Interceptor.attach(LogHelp_TerminateOnAssert, {onLeave: function (args) {send("LogHelp_TerminateOnAssert");}});
+
+var MetaDataGetDispenser = Module.findExportByName("mscoree.dll", "MetaDataGetDispenser")
+Interceptor.attach(MetaDataGetDispenser, {onLeave: function (args) {send("MetaDataGetDispenser");}});
+
+var ND_CopyObjDst = Module.findExportByName("mscoree.dll", "ND_CopyObjDst")
+Interceptor.attach(ND_CopyObjDst, {onLeave: function (args) {send("ND_CopyObjDst");}});
+
+var ND_CopyObjSrc = Module.findExportByName("mscoree.dll", "ND_CopyObjSrc")
+Interceptor.attach(ND_CopyObjSrc, {onLeave: function (args) {send("ND_CopyObjSrc");}});
+
+var ND_RI2 = Module.findExportByName("mscoree.dll", "ND_RI2")
+Interceptor.attach(ND_RI2, {onLeave: function (args) {send("ND_RI2");}});
+
+var ND_RI4 = Module.findExportByName("mscoree.dll", "ND_RI4")
+Interceptor.attach(ND_RI4, {onLeave: function (args) {send("ND_RI4");}});
+
+var ND_RI8 = Module.findExportByName("mscoree.dll", "ND_RI8")
+Interceptor.attach(ND_RI8, {onLeave: function (args) {send("ND_RI8");}});
+
+var ND_RU1 = Module.findExportByName("mscoree.dll", "ND_RU1")
+Interceptor.attach(ND_RU1, {onLeave: function (args) {send("ND_RU1");}});
+
+var ND_WI2 = Module.findExportByName("mscoree.dll", "ND_WI2")
+Interceptor.attach(ND_WI2, {onLeave: function (args) {send("ND_WI2");}});
+
+var ND_WI4 = Module.findExportByName("mscoree.dll", "ND_WI4")
+Interceptor.attach(ND_WI4, {onLeave: function (args) {send("ND_WI4");}});
+
+var ND_WI8 = Module.findExportByName("mscoree.dll", "ND_WI8")
+Interceptor.attach(ND_WI8, {onLeave: function (args) {send("ND_WI8");}});
+
+var ND_WU1 = Module.findExportByName("mscoree.dll", "ND_WU1")
+Interceptor.attach(ND_WU1, {onLeave: function (args) {send("ND_WU1");}});
+
+var OpenCtrs = Module.findExportByName("mscoree.dll", "OpenCtrs")
+Interceptor.attach(OpenCtrs, {onLeave: function (args) {send("OpenCtrs");}});
+
+var PostError = Module.findExportByName("mscoree.dll", "PostError")
+Interceptor.attach(PostError, {onLeave: function (args) {send("PostError");}});
+
+var ReOpenMetaDataWithMemory = Module.findExportByName("mscoree.dll", "ReOpenMetaDataWithMemory")
+Interceptor.attach(ReOpenMetaDataWithMemory, {onLeave: function (args) {send("ReOpenMetaDataWithMemory");}});
+
+var ReOpenMetaDataWithMemoryEx = Module.findExportByName("mscoree.dll", "ReOpenMetaDataWithMemoryEx")
+Interceptor.attach(ReOpenMetaDataWithMemoryEx, {onLeave: function (args) {send("ReOpenMetaDataWithMemoryEx");}});
+
+var RunDll32ShimW = Module.findExportByName("mscoree.dll", "RunDll32ShimW")
+Interceptor.attach(RunDll32ShimW, {onLeave: function (args) {send("RunDll32ShimW");}});
+
+var RuntimeOSHandle = Module.findExportByName("mscoree.dll", "RuntimeOSHandle")
+Interceptor.attach(RuntimeOSHandle, {onLeave: function (args) {send("RuntimeOSHandle");}});
+
+var RuntimeOpenImage = Module.findExportByName("mscoree.dll", "RuntimeOpenImage")
+Interceptor.attach(RuntimeOpenImage, {onLeave: function (args) {send("RuntimeOpenImage");}});
+
+var RuntimeReleaseHandle = Module.findExportByName("mscoree.dll", "RuntimeReleaseHandle")
+Interceptor.attach(RuntimeReleaseHandle, {onLeave: function (args) {send("RuntimeReleaseHandle");}});
+
+var SetTargetForVTableEntry = Module.findExportByName("mscoree.dll", "SetTargetForVTableEntry")
+Interceptor.attach(SetTargetForVTableEntry, {onLeave: function (args) {send("SetTargetForVTableEntry");}});
+
+var StrongNameCompareAssemblies = Module.findExportByName("mscoree.dll", "StrongNameCompareAssemblies")
+Interceptor.attach(StrongNameCompareAssemblies, {onLeave: function (args) {send("StrongNameCompareAssemblies");}});
+
+var StrongNameErrorInfo = Module.findExportByName("mscoree.dll", "StrongNameErrorInfo")
+Interceptor.attach(StrongNameErrorInfo, {onLeave: function (args) {send("StrongNameErrorInfo");}});
+
+var StrongNameFreeBuffer = Module.findExportByName("mscoree.dll", "StrongNameFreeBuffer")
+Interceptor.attach(StrongNameFreeBuffer, {onLeave: function (args) {send("StrongNameFreeBuffer");}});
+
+var StrongNameGetBlob = Module.findExportByName("mscoree.dll", "StrongNameGetBlob")
+Interceptor.attach(StrongNameGetBlob, {onLeave: function (args) {send("StrongNameGetBlob");}});
+
+var StrongNameGetBlobFromImage = Module.findExportByName("mscoree.dll", "StrongNameGetBlobFromImage")
+Interceptor.attach(StrongNameGetBlobFromImage, {onLeave: function (args) {send("StrongNameGetBlobFromImage");}});
+
+var StrongNameGetPublicKey = Module.findExportByName("mscoree.dll", "StrongNameGetPublicKey")
+Interceptor.attach(StrongNameGetPublicKey, {onLeave: function (args) {send("StrongNameGetPublicKey");}});
+
+var StrongNameHashSize = Module.findExportByName("mscoree.dll", "StrongNameHashSize")
+Interceptor.attach(StrongNameHashSize, {onLeave: function (args) {send("StrongNameHashSize");}});
+
+var StrongNameKeyDelete = Module.findExportByName("mscoree.dll", "StrongNameKeyDelete")
+Interceptor.attach(StrongNameKeyDelete, {onLeave: function (args) {send("StrongNameKeyDelete");}});
+
+var StrongNameKeyGen = Module.findExportByName("mscoree.dll", "StrongNameKeyGen")
+Interceptor.attach(StrongNameKeyGen, {onLeave: function (args) {send("StrongNameKeyGen");}});
+
+var StrongNameKeyGenEx = Module.findExportByName("mscoree.dll", "StrongNameKeyGenEx")
+Interceptor.attach(StrongNameKeyGenEx, {onLeave: function (args) {send("StrongNameKeyGenEx");}});
+
+var StrongNameKeyInstall = Module.findExportByName("mscoree.dll", "StrongNameKeyInstall")
+Interceptor.attach(StrongNameKeyInstall, {onLeave: function (args) {send("StrongNameKeyInstall");}});
+
+var StrongNameSignatureGeneration = Module.findExportByName("mscoree.dll", "StrongNameSignatureGeneration")
+Interceptor.attach(StrongNameSignatureGeneration, {onLeave: function (args) {send("StrongNameSignatureGeneration");}});
+
+var StrongNameSignatureGenerationEx = Module.findExportByName("mscoree.dll", "StrongNameSignatureGenerationEx")
+Interceptor.attach(StrongNameSignatureGenerationEx, {onLeave: function (args) {send("StrongNameSignatureGenerationEx");}});
+
+var StrongNameSignatureSize = Module.findExportByName("mscoree.dll", "StrongNameSignatureSize")
+Interceptor.attach(StrongNameSignatureSize, {onLeave: function (args) {send("StrongNameSignatureSize");}});
+
+var StrongNameSignatureVerification = Module.findExportByName("mscoree.dll", "StrongNameSignatureVerification")
+Interceptor.attach(StrongNameSignatureVerification, {onLeave: function (args) {send("StrongNameSignatureVerification");}});
+
+var StrongNameSignatureVerificationEx = Module.findExportByName("mscoree.dll", "StrongNameSignatureVerificationEx")
+Interceptor.attach(StrongNameSignatureVerificationEx, {onLeave: function (args) {send("StrongNameSignatureVerificationEx");}});
+
+var StrongNameSignatureVerificationFromImage = Module.findExportByName("mscoree.dll", "StrongNameSignatureVerificationFromImage")
+Interceptor.attach(StrongNameSignatureVerificationFromImage, {onLeave: function (args) {send("StrongNameSignatureVerificationFromImage");}});
+
+var StrongNameTokenFromAssembly = Module.findExportByName("mscoree.dll", "StrongNameTokenFromAssembly")
+Interceptor.attach(StrongNameTokenFromAssembly, {onLeave: function (args) {send("StrongNameTokenFromAssembly");}});
+
+var StrongNameTokenFromAssemblyEx = Module.findExportByName("mscoree.dll", "StrongNameTokenFromAssemblyEx")
+Interceptor.attach(StrongNameTokenFromAssemblyEx, {onLeave: function (args) {send("StrongNameTokenFromAssemblyEx");}});
+
+var StrongNameTokenFromPublicKey = Module.findExportByName("mscoree.dll", "StrongNameTokenFromPublicKey")
+Interceptor.attach(StrongNameTokenFromPublicKey, {onLeave: function (args) {send("StrongNameTokenFromPublicKey");}});
+
+var TranslateSecurityAttributes = Module.findExportByName("mscoree.dll", "TranslateSecurityAttributes")
+Interceptor.attach(TranslateSecurityAttributes, {onLeave: function (args) {send("TranslateSecurityAttributes");}});
+
+var UpdateError = Module.findExportByName("mscoree.dll", "UpdateError")
+Interceptor.attach(UpdateError, {onLeave: function (args) {send("UpdateError");}});
+
+var _CorDllMain = Module.findExportByName("mscoree.dll", "_CorDllMain")
+Interceptor.attach(_CorDllMain, {onLeave: function (args) {send("_CorDllMain");}});
+
+var _CorExeMain = Module.findExportByName("mscoree.dll", "_CorExeMain")
+Interceptor.attach(_CorExeMain, {onLeave: function (args) {send("_CorExeMain");}});
+
+var _CorExeMain2 = Module.findExportByName("mscoree.dll", "_CorExeMain2")
+Interceptor.attach(_CorExeMain2, {onLeave: function (args) {send("_CorExeMain2");}});
+
+var _CorImageUnloading = Module.findExportByName("mscoree.dll", "_CorImageUnloading")
+Interceptor.attach(_CorImageUnloading, {onLeave: function (args) {send("_CorImageUnloading");}});
+
+var _CorValidateImage = Module.findExportByName("mscoree.dll", "_CorValidateImage")
+Interceptor.attach(_CorValidateImage, {onLeave: function (args) {send("_CorValidateImage");}});
+

@@ -1,0 +1,117 @@
+var AddToPurgeList = Module.findExportByName("AppXDeploymentServer.dll", "AddToPurgeList")
+Interceptor.attach(AddToPurgeList, {onLeave: function (args) {send("AddToPurgeList");}});
+
+var AppXApplyTrustLabelToFolder = Module.findExportByName("AppXDeploymentServer.dll", "AppXApplyTrustLabelToFolder")
+Interceptor.attach(AppXApplyTrustLabelToFolder, {onLeave: function (args) {send("AppXApplyTrustLabelToFolder");}});
+
+var AppXSetTrustLabelOnPackage = Module.findExportByName("AppXDeploymentServer.dll", "AppXSetTrustLabelOnPackage")
+Interceptor.attach(AppXSetTrustLabelOnPackage, {onLeave: function (args) {send("AppXSetTrustLabelOnPackage");}});
+
+var CancelDeploymentImplementation = Module.findExportByName("AppXDeploymentServer.dll", "CancelDeploymentImplementation")
+Interceptor.attach(CancelDeploymentImplementation, {onLeave: function (args) {send("CancelDeploymentImplementation");}});
+
+var CreateCanonicalPriFileImplementation = Module.findExportByName("AppXDeploymentServer.dll", "CreateCanonicalPriFileImplementation")
+Interceptor.attach(CreateCanonicalPriFileImplementation, {onLeave: function (args) {send("CreateCanonicalPriFileImplementation");}});
+
+var CreateWnfStateNameImplementation = Module.findExportByName("AppXDeploymentServer.dll", "CreateWnfStateNameImplementation")
+Interceptor.attach(CreateWnfStateNameImplementation, {onLeave: function (args) {send("CreateWnfStateNameImplementation");}});
+
+var DllCanUnloadNow = Module.findExportByName("AppXDeploymentServer.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("AppXDeploymentServer.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var EnumPackagesByUserSidInternal = Module.findExportByName("AppXDeploymentServer.dll", "EnumPackagesByUserSidInternal")
+Interceptor.attach(EnumPackagesByUserSidInternal, {onLeave: function (args) {send("EnumPackagesByUserSidInternal");}});
+
+var EnumPackagesByUserSidNamePublisherInternal = Module.findExportByName("AppXDeploymentServer.dll", "EnumPackagesByUserSidNamePublisherInternal")
+Interceptor.attach(EnumPackagesByUserSidNamePublisherInternal, {onLeave: function (args) {send("EnumPackagesByUserSidNamePublisherInternal");}});
+
+var EnumPackagesByUserSidPackageFamilyNameInternal = Module.findExportByName("AppXDeploymentServer.dll", "EnumPackagesByUserSidPackageFamilyNameInternal")
+Interceptor.attach(EnumPackagesByUserSidPackageFamilyNameInternal, {onLeave: function (args) {send("EnumPackagesByUserSidPackageFamilyNameInternal");}});
+
+var EnumProvisionedPackagesInternal = Module.findExportByName("AppXDeploymentServer.dll", "EnumProvisionedPackagesInternal")
+Interceptor.attach(EnumProvisionedPackagesInternal, {onLeave: function (args) {send("EnumProvisionedPackagesInternal");}});
+
+var EnumVisibilityByPackageFullNameInternal = Module.findExportByName("AppXDeploymentServer.dll", "EnumVisibilityByPackageFullNameInternal")
+Interceptor.attach(EnumVisibilityByPackageFullNameInternal, {onLeave: function (args) {send("EnumVisibilityByPackageFullNameInternal");}});
+
+var FindPackageByUserSidPackageFullNameInternal = Module.findExportByName("AppXDeploymentServer.dll", "FindPackageByUserSidPackageFullNameInternal")
+Interceptor.attach(FindPackageByUserSidPackageFullNameInternal, {onLeave: function (args) {send("FindPackageByUserSidPackageFullNameInternal");}});
+
+var GenerateBytecodeForPackageImplementation = Module.findExportByName("AppXDeploymentServer.dll", "GenerateBytecodeForPackageImplementation")
+Interceptor.attach(GenerateBytecodeForPackageImplementation, {onLeave: function (args) {send("GenerateBytecodeForPackageImplementation");}});
+
+var GenerateBytecodeForPackagesImplementation = Module.findExportByName("AppXDeploymentServer.dll", "GenerateBytecodeForPackagesImplementation")
+Interceptor.attach(GenerateBytecodeForPackagesImplementation, {onLeave: function (args) {send("GenerateBytecodeForPackagesImplementation");}});
+
+var GetApplicability5Implementation = Module.findExportByName("AppXDeploymentServer.dll", "GetApplicability5Implementation")
+Interceptor.attach(GetApplicability5Implementation, {onLeave: function (args) {send("GetApplicability5Implementation");}});
+
+var GetApplicabilityForPackageImplementation = Module.findExportByName("AppXDeploymentServer.dll", "GetApplicabilityForPackageImplementation")
+Interceptor.attach(GetApplicabilityForPackageImplementation, {onLeave: function (args) {send("GetApplicabilityForPackageImplementation");}});
+
+var GetApplicabilityImplementation = Module.findExportByName("AppXDeploymentServer.dll", "GetApplicabilityImplementation")
+Interceptor.attach(GetApplicabilityImplementation, {onLeave: function (args) {send("GetApplicabilityImplementation");}});
+
+var GetDeploymentError = Module.findExportByName("AppXDeploymentServer.dll", "GetDeploymentError")
+Interceptor.attach(GetDeploymentError, {onLeave: function (args) {send("GetDeploymentError");}});
+
+var GetPackageFilesDiskUsageImplementation = Module.findExportByName("AppXDeploymentServer.dll", "GetPackageFilesDiskUsageImplementation")
+Interceptor.attach(GetPackageFilesDiskUsageImplementation, {onLeave: function (args) {send("GetPackageFilesDiskUsageImplementation");}});
+
+var GetPackageFilesDiskUsagePerVolumeImplementation = Module.findExportByName("AppXDeploymentServer.dll", "GetPackageFilesDiskUsagePerVolumeImplementation")
+Interceptor.attach(GetPackageFilesDiskUsagePerVolumeImplementation, {onLeave: function (args) {send("GetPackageFilesDiskUsagePerVolumeImplementation");}});
+
+var GetSessionIdsOwnedByUser = Module.findExportByName("AppXDeploymentServer.dll", "GetSessionIdsOwnedByUser")
+Interceptor.attach(GetSessionIdsOwnedByUser, {onLeave: function (args) {send("GetSessionIdsOwnedByUser");}});
+
+var IsPackageInstalledInternal = Module.findExportByName("AppXDeploymentServer.dll", "IsPackageInstalledInternal")
+Interceptor.attach(IsPackageInstalledInternal, {onLeave: function (args) {send("IsPackageInstalledInternal");}});
+
+var MergeSystemResourceFilesImplementation = Module.findExportByName("AppXDeploymentServer.dll", "MergeSystemResourceFilesImplementation")
+Interceptor.attach(MergeSystemResourceFilesImplementation, {onLeave: function (args) {send("MergeSystemResourceFilesImplementation");}});
+
+var PackageRepositoryAllocate = Module.findExportByName("AppXDeploymentServer.dll", "PackageRepositoryAllocate")
+Interceptor.attach(PackageRepositoryAllocate, {onLeave: function (args) {send("PackageRepositoryAllocate");}});
+
+var PackageRepositoryFree = Module.findExportByName("AppXDeploymentServer.dll", "PackageRepositoryFree")
+Interceptor.attach(PackageRepositoryFree, {onLeave: function (args) {send("PackageRepositoryFree");}});
+
+var PackageStatusOperationImplementation = Module.findExportByName("AppXDeploymentServer.dll", "PackageStatusOperationImplementation")
+Interceptor.attach(PackageStatusOperationImplementation, {onLeave: function (args) {send("PackageStatusOperationImplementation");}});
+
+var PackageVolumeStatusImplementation = Module.findExportByName("AppXDeploymentServer.dll", "PackageVolumeStatusImplementation")
+Interceptor.attach(PackageVolumeStatusImplementation, {onLeave: function (args) {send("PackageVolumeStatusImplementation");}});
+
+var RDSRecoverRequestsImplementation = Module.findExportByName("AppXDeploymentServer.dll", "RDSRecoverRequestsImplementation")
+Interceptor.attach(RDSRecoverRequestsImplementation, {onLeave: function (args) {send("RDSRecoverRequestsImplementation");}});
+
+var RepairResourcesPriAclsImplementation = Module.findExportByName("AppXDeploymentServer.dll", "RepairResourcesPriAclsImplementation")
+Interceptor.attach(RepairResourcesPriAclsImplementation, {onLeave: function (args) {send("RepairResourcesPriAclsImplementation");}});
+
+var RequestPackageOperationImplementation = Module.findExportByName("AppXDeploymentServer.dll", "RequestPackageOperationImplementation")
+Interceptor.attach(RequestPackageOperationImplementation, {onLeave: function (args) {send("RequestPackageOperationImplementation");}});
+
+var ServerSideRequestContentGroupsImplementation = Module.findExportByName("AppXDeploymentServer.dll", "ServerSideRequestContentGroupsImplementation")
+Interceptor.attach(ServerSideRequestContentGroupsImplementation, {onLeave: function (args) {send("ServerSideRequestContentGroupsImplementation");}});
+
+var ServiceMain = Module.findExportByName("AppXDeploymentServer.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SetDeploymentError = Module.findExportByName("AppXDeploymentServer.dll", "SetDeploymentError")
+Interceptor.attach(SetDeploymentError, {onLeave: function (args) {send("SetDeploymentError");}});
+
+var SetPackageStatusBlockingForUserImplementation = Module.findExportByName("AppXDeploymentServer.dll", "SetPackageStatusBlockingForUserImplementation")
+Interceptor.attach(SetPackageStatusBlockingForUserImplementation, {onLeave: function (args) {send("SetPackageStatusBlockingForUserImplementation");}});
+
+var SetPackageStatusBlockingImplementation = Module.findExportByName("AppXDeploymentServer.dll", "SetPackageStatusBlockingImplementation")
+Interceptor.attach(SetPackageStatusBlockingImplementation, {onLeave: function (args) {send("SetPackageStatusBlockingImplementation");}});
+
+var StartDeploymentImplementation = Module.findExportByName("AppXDeploymentServer.dll", "StartDeploymentImplementation")
+Interceptor.attach(StartDeploymentImplementation, {onLeave: function (args) {send("StartDeploymentImplementation");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("AppXDeploymentServer.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

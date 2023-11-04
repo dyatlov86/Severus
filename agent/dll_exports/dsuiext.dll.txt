@@ -1,0 +1,27 @@
+var DllCanUnloadNow = Module.findExportByName("dsuiext.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("dsuiext.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("dsuiext.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("dsuiext.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("dsuiext.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DsBrowseForContainerA = Module.findExportByName("dsuiext.dll", "DsBrowseForContainerA")
+Interceptor.attach(DsBrowseForContainerA, {onLeave: function (args) {send("DsBrowseForContainerA");}});
+
+var DsBrowseForContainerW = Module.findExportByName("dsuiext.dll", "DsBrowseForContainerW")
+Interceptor.attach(DsBrowseForContainerW, {onLeave: function (args) {send("DsBrowseForContainerW");}});
+
+var DsGetFriendlyClassName = Module.findExportByName("dsuiext.dll", "DsGetFriendlyClassName")
+Interceptor.attach(DsGetFriendlyClassName, {onLeave: function (args) {send("DsGetFriendlyClassName");}});
+
+var DsGetIcon = Module.findExportByName("dsuiext.dll", "DsGetIcon")
+Interceptor.attach(DsGetIcon, {onLeave: function (args) {send("DsGetIcon");}});
+

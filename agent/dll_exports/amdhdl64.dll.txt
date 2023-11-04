@@ -1,0 +1,9 @@
+var QueryDListForApplication1 = Module.findExportByName("amdhdl64.dll", "QueryDListForApplication1")
+Interceptor.attach(QueryDListForApplication1, {onLeave: function (args) {send("QueryDListForApplication1");}});
+
+var QueryDListForApplication2 = Module.findExportByName("amdhdl64.dll", "QueryDListForApplication2")
+Interceptor.attach(QueryDListForApplication2, {onLeave: function (args) {send("QueryDListForApplication2");}});
+
+var QueryDListForApplicationByEEU = Module.findExportByName("amdhdl64.dll", "QueryDListForApplicationByEEU")
+Interceptor.attach(QueryDListForApplicationByEEU, {onLeave: function (args) {send("QueryDListForApplicationByEEU");}});
+

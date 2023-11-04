@@ -1,0 +1,27 @@
+var BrokeredOpenCommPort = Module.findExportByName("deviceaccess.dll", "BrokeredOpenCommPort")
+Interceptor.attach(BrokeredOpenCommPort, {onLeave: function (args) {send("BrokeredOpenCommPort");}});
+
+var CreateDeviceAccessInstance = Module.findExportByName("deviceaccess.dll", "CreateDeviceAccessInstance")
+Interceptor.attach(CreateDeviceAccessInstance, {onLeave: function (args) {send("CreateDeviceAccessInstance");}});
+
+var DllCanUnloadNow = Module.findExportByName("deviceaccess.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("deviceaccess.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("deviceaccess.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ProcessTrackerInsertOrWait = Module.findExportByName("deviceaccess.dll", "ProcessTrackerInsertOrWait")
+Interceptor.attach(ProcessTrackerInsertOrWait, {onLeave: function (args) {send("ProcessTrackerInsertOrWait");}});
+
+var ProcessTrackerRemove = Module.findExportByName("deviceaccess.dll", "ProcessTrackerRemove")
+Interceptor.attach(ProcessTrackerRemove, {onLeave: function (args) {send("ProcessTrackerRemove");}});
+
+var ServiceMain = Module.findExportByName("deviceaccess.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("deviceaccess.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

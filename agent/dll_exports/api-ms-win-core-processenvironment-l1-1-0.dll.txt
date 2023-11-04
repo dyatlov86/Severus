@@ -1,0 +1,63 @@
+var ExpandEnvironmentStringsA = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "ExpandEnvironmentStringsA")
+Interceptor.attach(ExpandEnvironmentStringsA, {onLeave: function (args) {send("ExpandEnvironmentStringsA");}});
+
+var ExpandEnvironmentStringsW = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "ExpandEnvironmentStringsW")
+Interceptor.attach(ExpandEnvironmentStringsW, {onLeave: function (args) {send("ExpandEnvironmentStringsW");}});
+
+var FreeEnvironmentStringsA = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "FreeEnvironmentStringsA")
+Interceptor.attach(FreeEnvironmentStringsA, {onLeave: function (args) {send("FreeEnvironmentStringsA");}});
+
+var FreeEnvironmentStringsW = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "FreeEnvironmentStringsW")
+Interceptor.attach(FreeEnvironmentStringsW, {onLeave: function (args) {send("FreeEnvironmentStringsW");}});
+
+var GetCommandLineA = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "GetCommandLineA")
+Interceptor.attach(GetCommandLineA, {onLeave: function (args) {send("GetCommandLineA");}});
+
+var GetCommandLineW = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "GetCommandLineW")
+Interceptor.attach(GetCommandLineW, {onLeave: function (args) {send("GetCommandLineW");}});
+
+var GetCurrentDirectoryA = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "GetCurrentDirectoryA")
+Interceptor.attach(GetCurrentDirectoryA, {onLeave: function (args) {send("GetCurrentDirectoryA");}});
+
+var GetCurrentDirectoryW = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "GetCurrentDirectoryW")
+Interceptor.attach(GetCurrentDirectoryW, {onLeave: function (args) {send("GetCurrentDirectoryW");}});
+
+var GetEnvironmentStrings = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "GetEnvironmentStrings")
+Interceptor.attach(GetEnvironmentStrings, {onLeave: function (args) {send("GetEnvironmentStrings");}});
+
+var GetEnvironmentStringsW = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "GetEnvironmentStringsW")
+Interceptor.attach(GetEnvironmentStringsW, {onLeave: function (args) {send("GetEnvironmentStringsW");}});
+
+var GetEnvironmentVariableA = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "GetEnvironmentVariableA")
+Interceptor.attach(GetEnvironmentVariableA, {onLeave: function (args) {send("GetEnvironmentVariableA");}});
+
+var GetEnvironmentVariableW = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "GetEnvironmentVariableW")
+Interceptor.attach(GetEnvironmentVariableW, {onLeave: function (args) {send("GetEnvironmentVariableW");}});
+
+var GetStdHandle = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "GetStdHandle")
+Interceptor.attach(GetStdHandle, {onLeave: function (args) {send("GetStdHandle");}});
+
+var SearchPathW = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "SearchPathW")
+Interceptor.attach(SearchPathW, {onLeave: function (args) {send("SearchPathW");}});
+
+var SetCurrentDirectoryA = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "SetCurrentDirectoryA")
+Interceptor.attach(SetCurrentDirectoryA, {onLeave: function (args) {send("SetCurrentDirectoryA");}});
+
+var SetCurrentDirectoryW = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "SetCurrentDirectoryW")
+Interceptor.attach(SetCurrentDirectoryW, {onLeave: function (args) {send("SetCurrentDirectoryW");}});
+
+var SetEnvironmentStringsW = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "SetEnvironmentStringsW")
+Interceptor.attach(SetEnvironmentStringsW, {onLeave: function (args) {send("SetEnvironmentStringsW");}});
+
+var SetEnvironmentVariableA = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "SetEnvironmentVariableA")
+Interceptor.attach(SetEnvironmentVariableA, {onLeave: function (args) {send("SetEnvironmentVariableA");}});
+
+var SetEnvironmentVariableW = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "SetEnvironmentVariableW")
+Interceptor.attach(SetEnvironmentVariableW, {onLeave: function (args) {send("SetEnvironmentVariableW");}});
+
+var SetStdHandle = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "SetStdHandle")
+Interceptor.attach(SetStdHandle, {onLeave: function (args) {send("SetStdHandle");}});
+
+var SetStdHandleEx = Module.findExportByName("api-ms-win-core-processenvironment-l1-1-0.dll", "SetStdHandleEx")
+Interceptor.attach(SetStdHandleEx, {onLeave: function (args) {send("SetStdHandleEx");}});
+

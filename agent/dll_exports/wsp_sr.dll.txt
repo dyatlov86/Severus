@@ -1,0 +1,30 @@
+var DllCanUnloadNow = Module.findExportByName("wsp_sr.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wsp_sr.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("wsp_sr.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("wsp_sr.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("wsp_sr.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetProviderClassID = Module.findExportByName("wsp_sr.dll", "GetProviderClassID")
+Interceptor.attach(GetProviderClassID, {onLeave: function (args) {send("GetProviderClassID");}});
+
+var MI_Main = Module.findExportByName("wsp_sr.dll", "MI_Main")
+Interceptor.attach(MI_Main, {onLeave: function (args) {send("MI_Main");}});
+
+var PreShutdown = Module.findExportByName("wsp_sr.dll", "PreShutdown")
+Interceptor.attach(PreShutdown, {onLeave: function (args) {send("PreShutdown");}});
+
+var SetShutdownCallback = Module.findExportByName("wsp_sr.dll", "SetShutdownCallback")
+Interceptor.attach(SetShutdownCallback, {onLeave: function (args) {send("SetShutdownCallback");}});
+
+var SmpUnload = Module.findExportByName("wsp_sr.dll", "SmpUnload")
+Interceptor.attach(SmpUnload, {onLeave: function (args) {send("SmpUnload");}});
+

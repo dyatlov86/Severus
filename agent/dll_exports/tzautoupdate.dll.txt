@@ -1,0 +1,30 @@
+var AttemptToUpdateTimeZone = Module.findExportByName("tzautoupdate.dll", "AttemptToUpdateTimeZone")
+Interceptor.attach(AttemptToUpdateTimeZone, {onLeave: function (args) {send("AttemptToUpdateTimeZone");}});
+
+var AttemptToUpdateTimeZoneAndEnableChangeDetection = Module.findExportByName("tzautoupdate.dll", "AttemptToUpdateTimeZoneAndEnableChangeDetection")
+Interceptor.attach(AttemptToUpdateTimeZoneAndEnableChangeDetection, {onLeave: function (args) {send("AttemptToUpdateTimeZoneAndEnableChangeDetection");}});
+
+var DisableTimeZoneAutoUpdate = Module.findExportByName("tzautoupdate.dll", "DisableTimeZoneAutoUpdate")
+Interceptor.attach(DisableTimeZoneAutoUpdate, {onLeave: function (args) {send("DisableTimeZoneAutoUpdate");}});
+
+var DllCanUnloadNow = Module.findExportByName("tzautoupdate.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("tzautoupdate.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("tzautoupdate.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var EnableTimeZoneAutoUpdate = Module.findExportByName("tzautoupdate.dll", "EnableTimeZoneAutoUpdate")
+Interceptor.attach(EnableTimeZoneAutoUpdate, {onLeave: function (args) {send("EnableTimeZoneAutoUpdate");}});
+
+var IsTimeZoneAutoUpdateEnabled = Module.findExportByName("tzautoupdate.dll", "IsTimeZoneAutoUpdateEnabled")
+Interceptor.attach(IsTimeZoneAutoUpdateEnabled, {onLeave: function (args) {send("IsTimeZoneAutoUpdateEnabled");}});
+
+var ServiceMain = Module.findExportByName("tzautoupdate.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("tzautoupdate.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

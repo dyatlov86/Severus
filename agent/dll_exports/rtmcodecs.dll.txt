@@ -1,0 +1,285 @@
+var GetNumofSupportedMLDs = Module.findExportByName("rtmcodecs.dll", "GetNumofSupportedMLDs")
+Interceptor.attach(GetNumofSupportedMLDs, {onLeave: function (args) {send("GetNumofSupportedMLDs");}});
+
+var MLDCallTestApi = Module.findExportByName("rtmcodecs.dll", "MLDCallTestApi")
+Interceptor.attach(MLDCallTestApi, {onLeave: function (args) {send("MLDCallTestApi");}});
+
+var MLDDestroy = Module.findExportByName("rtmcodecs.dll", "MLDDestroy")
+Interceptor.attach(MLDDestroy, {onLeave: function (args) {send("MLDDestroy");}});
+
+var MLDEnumerate = Module.findExportByName("rtmcodecs.dll", "MLDEnumerate")
+Interceptor.attach(MLDEnumerate, {onLeave: function (args) {send("MLDEnumerate");}});
+
+var MLDGetParameter = Module.findExportByName("rtmcodecs.dll", "MLDGetParameter")
+Interceptor.attach(MLDGetParameter, {onLeave: function (args) {send("MLDGetParameter");}});
+
+var MLDGetQueueStatus = Module.findExportByName("rtmcodecs.dll", "MLDGetQueueStatus")
+Interceptor.attach(MLDGetQueueStatus, {onLeave: function (args) {send("MLDGetQueueStatus");}});
+
+var MLDInstantiate = Module.findExportByName("rtmcodecs.dll", "MLDInstantiate")
+Interceptor.attach(MLDInstantiate, {onLeave: function (args) {send("MLDInstantiate");}});
+
+var MLDInstantiateDecoder = Module.findExportByName("rtmcodecs.dll", "MLDInstantiateDecoder")
+Interceptor.attach(MLDInstantiateDecoder, {onLeave: function (args) {send("MLDInstantiateDecoder");}});
+
+var MLDIsHWDecoderResourceAvailable = Module.findExportByName("rtmcodecs.dll", "MLDIsHWDecoderResourceAvailable")
+Interceptor.attach(MLDIsHWDecoderResourceAvailable, {onLeave: function (args) {send("MLDIsHWDecoderResourceAvailable");}});
+
+var MLDProcessInput = Module.findExportByName("rtmcodecs.dll", "MLDProcessInput")
+Interceptor.attach(MLDProcessInput, {onLeave: function (args) {send("MLDProcessInput");}});
+
+var MLDSetParameter = Module.findExportByName("rtmcodecs.dll", "MLDSetParameter")
+Interceptor.attach(MLDSetParameter, {onLeave: function (args) {send("MLDSetParameter");}});
+
+var MLECallTestApi = Module.findExportByName("rtmcodecs.dll", "MLECallTestApi")
+Interceptor.attach(MLECallTestApi, {onLeave: function (args) {send("MLECallTestApi");}});
+
+var MLEDestroy = Module.findExportByName("rtmcodecs.dll", "MLEDestroy")
+Interceptor.attach(MLEDestroy, {onLeave: function (args) {send("MLEDestroy");}});
+
+var MLEEnumerate = Module.findExportByName("rtmcodecs.dll", "MLEEnumerate")
+Interceptor.attach(MLEEnumerate, {onLeave: function (args) {send("MLEEnumerate");}});
+
+var MLEGetHeader = Module.findExportByName("rtmcodecs.dll", "MLEGetHeader")
+Interceptor.attach(MLEGetHeader, {onLeave: function (args) {send("MLEGetHeader");}});
+
+var MLEGetParameter = Module.findExportByName("rtmcodecs.dll", "MLEGetParameter")
+Interceptor.attach(MLEGetParameter, {onLeave: function (args) {send("MLEGetParameter");}});
+
+var MLEInitializeEncoder = Module.findExportByName("rtmcodecs.dll", "MLEInitializeEncoder")
+Interceptor.attach(MLEInitializeEncoder, {onLeave: function (args) {send("MLEInitializeEncoder");}});
+
+var MLEInstantiate = Module.findExportByName("rtmcodecs.dll", "MLEInstantiate")
+Interceptor.attach(MLEInstantiate, {onLeave: function (args) {send("MLEInstantiate");}});
+
+var MLEIsColorFormatSupported = Module.findExportByName("rtmcodecs.dll", "MLEIsColorFormatSupported")
+Interceptor.attach(MLEIsColorFormatSupported, {onLeave: function (args) {send("MLEIsColorFormatSupported");}});
+
+var MLEProcessInput = Module.findExportByName("rtmcodecs.dll", "MLEProcessInput")
+Interceptor.attach(MLEProcessInput, {onLeave: function (args) {send("MLEProcessInput");}});
+
+var MLEProcessOutput = Module.findExportByName("rtmcodecs.dll", "MLEProcessOutput")
+Interceptor.attach(MLEProcessOutput, {onLeave: function (args) {send("MLEProcessOutput");}});
+
+var MLEQueryFrameBeingEncoded = Module.findExportByName("rtmcodecs.dll", "MLEQueryFrameBeingEncoded")
+Interceptor.attach(MLEQueryFrameBeingEncoded, {onLeave: function (args) {send("MLEQueryFrameBeingEncoded");}});
+
+var MLEQuerySupportedInputFormats = Module.findExportByName("rtmcodecs.dll", "MLEQuerySupportedInputFormats")
+Interceptor.attach(MLEQuerySupportedInputFormats, {onLeave: function (args) {send("MLEQuerySupportedInputFormats");}});
+
+var MLESetParameter = Module.findExportByName("rtmcodecs.dll", "MLESetParameter")
+Interceptor.attach(MLESetParameter, {onLeave: function (args) {send("MLESetParameter");}});
+
+var RtcPalGetComponentStateTrackerBlob = Module.findExportByName("rtmcodecs.dll", "RtcPalGetComponentStateTrackerBlob")
+Interceptor.attach(RtcPalGetComponentStateTrackerBlob, {onLeave: function (args) {send("RtcPalGetComponentStateTrackerBlob");}});
+
+var RtcPalGetVirtualVideoSourceManager = Module.findExportByName("rtmcodecs.dll", "RtcPalGetVirtualVideoSourceManager")
+Interceptor.attach(RtcPalGetVirtualVideoSourceManager, {onLeave: function (args) {send("RtcPalGetVirtualVideoSourceManager");}});
+
+var RtcPalVideoConfigurationReset = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoConfigurationReset")
+Interceptor.attach(RtcPalVideoConfigurationReset, {onLeave: function (args) {send("RtcPalVideoConfigurationReset");}});
+
+var RtcPalVideoConfigurationSetBoolean = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoConfigurationSetBoolean")
+Interceptor.attach(RtcPalVideoConfigurationSetBoolean, {onLeave: function (args) {send("RtcPalVideoConfigurationSetBoolean");}});
+
+var RtcPalVideoConfigurationSetInteger = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoConfigurationSetInteger")
+Interceptor.attach(RtcPalVideoConfigurationSetInteger, {onLeave: function (args) {send("RtcPalVideoConfigurationSetInteger");}});
+
+var RtcPalVideoPlatformClose = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPlatformClose")
+Interceptor.attach(RtcPalVideoPlatformClose, {onLeave: function (args) {send("RtcPalVideoPlatformClose");}});
+
+var RtcPalVideoPlatformCloseSource = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPlatformCloseSource")
+Interceptor.attach(RtcPalVideoPlatformCloseSource, {onLeave: function (args) {send("RtcPalVideoPlatformCloseSource");}});
+
+var RtcPalVideoPlatformGetMediaExtension = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPlatformGetMediaExtension")
+Interceptor.attach(RtcPalVideoPlatformGetMediaExtension, {onLeave: function (args) {send("RtcPalVideoPlatformGetMediaExtension");}});
+
+var RtcPalVideoPlatformOpen = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPlatformOpen")
+Interceptor.attach(RtcPalVideoPlatformOpen, {onLeave: function (args) {send("RtcPalVideoPlatformOpen");}});
+
+var RtcPalVideoPlatformOpenSource = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPlatformOpenSource")
+Interceptor.attach(RtcPalVideoPlatformOpenSource, {onLeave: function (args) {send("RtcPalVideoPlatformOpenSource");}});
+
+var RtcPalVideoPlatformQuerySourceList = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPlatformQuerySourceList")
+Interceptor.attach(RtcPalVideoPlatformQuerySourceList, {onLeave: function (args) {send("RtcPalVideoPlatformQuerySourceList");}});
+
+var RtcPalVideoPlatformRegisterVirtualSource = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPlatformRegisterVirtualSource")
+Interceptor.attach(RtcPalVideoPlatformRegisterVirtualSource, {onLeave: function (args) {send("RtcPalVideoPlatformRegisterVirtualSource");}});
+
+var RtcPalVideoPlatformUnregisterVirtualSource = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPlatformUnregisterVirtualSource")
+Interceptor.attach(RtcPalVideoPlatformUnregisterVirtualSource, {onLeave: function (args) {send("RtcPalVideoPlatformUnregisterVirtualSource");}});
+
+var RtcPalVideoPreviewGetCurrentFormat = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPreviewGetCurrentFormat")
+Interceptor.attach(RtcPalVideoPreviewGetCurrentFormat, {onLeave: function (args) {send("RtcPalVideoPreviewGetCurrentFormat");}});
+
+var RtcPalVideoPreviewGetSupportedFormatList = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPreviewGetSupportedFormatList")
+Interceptor.attach(RtcPalVideoPreviewGetSupportedFormatList, {onLeave: function (args) {send("RtcPalVideoPreviewGetSupportedFormatList");}});
+
+var RtcPalVideoPreviewSetCurrentFormat = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPreviewSetCurrentFormat")
+Interceptor.attach(RtcPalVideoPreviewSetCurrentFormat, {onLeave: function (args) {send("RtcPalVideoPreviewSetCurrentFormat");}});
+
+var RtcPalVideoPreviewStart = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPreviewStart")
+Interceptor.attach(RtcPalVideoPreviewStart, {onLeave: function (args) {send("RtcPalVideoPreviewStart");}});
+
+var RtcPalVideoPreviewStop = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoPreviewStop")
+Interceptor.attach(RtcPalVideoPreviewStop, {onLeave: function (args) {send("RtcPalVideoPreviewStop");}});
+
+var RtcPalVideoSourceApplyCurrentFormat = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceApplyCurrentFormat")
+Interceptor.attach(RtcPalVideoSourceApplyCurrentFormat, {onLeave: function (args) {send("RtcPalVideoSourceApplyCurrentFormat");}});
+
+var RtcPalVideoSourceCallRsmTestApi = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceCallRsmTestApi")
+Interceptor.attach(RtcPalVideoSourceCallRsmTestApi, {onLeave: function (args) {send("RtcPalVideoSourceCallRsmTestApi");}});
+
+var RtcPalVideoSourceControlGetState = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceControlGetState")
+Interceptor.attach(RtcPalVideoSourceControlGetState, {onLeave: function (args) {send("RtcPalVideoSourceControlGetState");}});
+
+var RtcPalVideoSourceControlGetValue = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceControlGetValue")
+Interceptor.attach(RtcPalVideoSourceControlGetValue, {onLeave: function (args) {send("RtcPalVideoSourceControlGetValue");}});
+
+var RtcPalVideoSourceCreateAnalyzer = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceCreateAnalyzer")
+Interceptor.attach(RtcPalVideoSourceCreateAnalyzer, {onLeave: function (args) {send("RtcPalVideoSourceCreateAnalyzer");}});
+
+var RtcPalVideoSourceCreateEncoder = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceCreateEncoder")
+Interceptor.attach(RtcPalVideoSourceCreateEncoder, {onLeave: function (args) {send("RtcPalVideoSourceCreateEncoder");}});
+
+var RtcPalVideoSourceCreatePreview = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceCreatePreview")
+Interceptor.attach(RtcPalVideoSourceCreatePreview, {onLeave: function (args) {send("RtcPalVideoSourceCreatePreview");}});
+
+var RtcPalVideoSourceDeleteAnalyzer = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceDeleteAnalyzer")
+Interceptor.attach(RtcPalVideoSourceDeleteAnalyzer, {onLeave: function (args) {send("RtcPalVideoSourceDeleteAnalyzer");}});
+
+var RtcPalVideoSourceDeleteEncoder = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceDeleteEncoder")
+Interceptor.attach(RtcPalVideoSourceDeleteEncoder, {onLeave: function (args) {send("RtcPalVideoSourceDeleteEncoder");}});
+
+var RtcPalVideoSourceDeletePreview = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceDeletePreview")
+Interceptor.attach(RtcPalVideoSourceDeletePreview, {onLeave: function (args) {send("RtcPalVideoSourceDeletePreview");}});
+
+var RtcPalVideoSourceGetCurrentFormat = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceGetCurrentFormat")
+Interceptor.attach(RtcPalVideoSourceGetCurrentFormat, {onLeave: function (args) {send("RtcPalVideoSourceGetCurrentFormat");}});
+
+var RtcPalVideoSourceGetDefaultRotationAngle = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceGetDefaultRotationAngle")
+Interceptor.attach(RtcPalVideoSourceGetDefaultRotationAngle, {onLeave: function (args) {send("RtcPalVideoSourceGetDefaultRotationAngle");}});
+
+var RtcPalVideoSourceGetLastFrameInfo = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceGetLastFrameInfo")
+Interceptor.attach(RtcPalVideoSourceGetLastFrameInfo, {onLeave: function (args) {send("RtcPalVideoSourceGetLastFrameInfo");}});
+
+var RtcPalVideoSourceGetStatistics = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceGetStatistics")
+Interceptor.attach(RtcPalVideoSourceGetStatistics, {onLeave: function (args) {send("RtcPalVideoSourceGetStatistics");}});
+
+var RtcPalVideoSourceGetSupportedFormatList = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceGetSupportedFormatList")
+Interceptor.attach(RtcPalVideoSourceGetSupportedFormatList, {onLeave: function (args) {send("RtcPalVideoSourceGetSupportedFormatList");}});
+
+var RtcPalVideoSourceIsScreenScraper = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceIsScreenScraper")
+Interceptor.attach(RtcPalVideoSourceIsScreenScraper, {onLeave: function (args) {send("RtcPalVideoSourceIsScreenScraper");}});
+
+var RtcPalVideoSourceQueryEncodeCapabilities = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceQueryEncodeCapabilities")
+Interceptor.attach(RtcPalVideoSourceQueryEncodeCapabilities, {onLeave: function (args) {send("RtcPalVideoSourceQueryEncodeCapabilities");}});
+
+var RtcPalVideoSourceResetStatistics = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceResetStatistics")
+Interceptor.attach(RtcPalVideoSourceResetStatistics, {onLeave: function (args) {send("RtcPalVideoSourceResetStatistics");}});
+
+var RtcPalVideoSourceRestart = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceRestart")
+Interceptor.attach(RtcPalVideoSourceRestart, {onLeave: function (args) {send("RtcPalVideoSourceRestart");}});
+
+var RtcPalVideoSourceSetCurrentFormat = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceSetCurrentFormat")
+Interceptor.attach(RtcPalVideoSourceSetCurrentFormat, {onLeave: function (args) {send("RtcPalVideoSourceSetCurrentFormat");}});
+
+var RtcPalVideoSourceSetRotationAngle = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceSetRotationAngle")
+Interceptor.attach(RtcPalVideoSourceSetRotationAngle, {onLeave: function (args) {send("RtcPalVideoSourceSetRotationAngle");}});
+
+var RtcPalVideoSourceSetVideoCropInfo = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceSetVideoCropInfo")
+Interceptor.attach(RtcPalVideoSourceSetVideoCropInfo, {onLeave: function (args) {send("RtcPalVideoSourceSetVideoCropInfo");}});
+
+var RtcPalVideoSourceStart = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceStart")
+Interceptor.attach(RtcPalVideoSourceStart, {onLeave: function (args) {send("RtcPalVideoSourceStart");}});
+
+var RtcPalVideoSourceStop = Module.findExportByName("rtmcodecs.dll", "RtcPalVideoSourceStop")
+Interceptor.attach(RtcPalVideoSourceStop, {onLeave: function (args) {send("RtcPalVideoSourceStop");}});
+
+var RtmCodecGetFrameCountersFromPacsi = Module.findExportByName("rtmcodecs.dll", "RtmCodecGetFrameCountersFromPacsi")
+Interceptor.attach(RtmCodecGetFrameCountersFromPacsi, {onLeave: function (args) {send("RtmCodecGetFrameCountersFromPacsi");}});
+
+var RtmCodecsCloseVideoMomentConverter = Module.findExportByName("rtmcodecs.dll", "RtmCodecsCloseVideoMomentConverter")
+Interceptor.attach(RtmCodecsCloseVideoMomentConverter, {onLeave: function (args) {send("RtmCodecsCloseVideoMomentConverter");}});
+
+var RtmCodecsCreateMjpegDec = Module.findExportByName("rtmcodecs.dll", "RtmCodecsCreateMjpegDec")
+Interceptor.attach(RtmCodecsCreateMjpegDec, {onLeave: function (args) {send("RtmCodecsCreateMjpegDec");}});
+
+var RtmCodecsCreateVideoMomentConverter = Module.findExportByName("rtmcodecs.dll", "RtmCodecsCreateVideoMomentConverter")
+Interceptor.attach(RtmCodecsCreateVideoMomentConverter, {onLeave: function (args) {send("RtmCodecsCreateVideoMomentConverter");}});
+
+var RtmCodecsDecodeMjpegFrame = Module.findExportByName("rtmcodecs.dll", "RtmCodecsDecodeMjpegFrame")
+Interceptor.attach(RtmCodecsDecodeMjpegFrame, {onLeave: function (args) {send("RtmCodecsDecodeMjpegFrame");}});
+
+var RtmCodecsDestroyMjpegDec = Module.findExportByName("rtmcodecs.dll", "RtmCodecsDestroyMjpegDec")
+Interceptor.attach(RtmCodecsDestroyMjpegDec, {onLeave: function (args) {send("RtmCodecsDestroyMjpegDec");}});
+
+var RtmCodecsGetGfxMetrics = Module.findExportByName("rtmcodecs.dll", "RtmCodecsGetGfxMetrics")
+Interceptor.attach(RtmCodecsGetGfxMetrics, {onLeave: function (args) {send("RtmCodecsGetGfxMetrics");}});
+
+var RtmCodecsGetMjpegFrameInfo = Module.findExportByName("rtmcodecs.dll", "RtmCodecsGetMjpegFrameInfo")
+Interceptor.attach(RtmCodecsGetMjpegFrameInfo, {onLeave: function (args) {send("RtmCodecsGetMjpegFrameInfo");}});
+
+var RtmCodecsMjpegGetOutSize = Module.findExportByName("rtmcodecs.dll", "RtmCodecsMjpegGetOutSize")
+Interceptor.attach(RtmCodecsMjpegGetOutSize, {onLeave: function (args) {send("RtmCodecsMjpegGetOutSize");}});
+
+var RtmCodecsMjpegIsFormatSupported = Module.findExportByName("rtmcodecs.dll", "RtmCodecsMjpegIsFormatSupported")
+Interceptor.attach(RtmCodecsMjpegIsFormatSupported, {onLeave: function (args) {send("RtmCodecsMjpegIsFormatSupported");}});
+
+var RtmCodecsPalComplete = Module.findExportByName("rtmcodecs.dll", "RtmCodecsPalComplete")
+Interceptor.attach(RtmCodecsPalComplete, {onLeave: function (args) {send("RtmCodecsPalComplete");}});
+
+var RtmCodecsPalStartup = Module.findExportByName("rtmcodecs.dll", "RtmCodecsPalStartup")
+Interceptor.attach(RtmCodecsPalStartup, {onLeave: function (args) {send("RtmCodecsPalStartup");}});
+
+var RtmCodecsQueryVideoProcessorCapability = Module.findExportByName("rtmcodecs.dll", "RtmCodecsQueryVideoProcessorCapability")
+Interceptor.attach(RtmCodecsQueryVideoProcessorCapability, {onLeave: function (args) {send("RtmCodecsQueryVideoProcessorCapability");}});
+
+var RtmCodecsUpdateMjpegMetrics = Module.findExportByName("rtmcodecs.dll", "RtmCodecsUpdateMjpegMetrics")
+Interceptor.attach(RtmCodecsUpdateMjpegMetrics, {onLeave: function (args) {send("RtmCodecsUpdateMjpegMetrics");}});
+
+var RtmCodecsVideoFrameAllocateFrameWrapper = Module.findExportByName("rtmcodecs.dll", "RtmCodecsVideoFrameAllocateFrameWrapper")
+Interceptor.attach(RtmCodecsVideoFrameAllocateFrameWrapper, {onLeave: function (args) {send("RtmCodecsVideoFrameAllocateFrameWrapper");}});
+
+var RtmCodecsVideoFrameAllocateRawFrame = Module.findExportByName("rtmcodecs.dll", "RtmCodecsVideoFrameAllocateRawFrame")
+Interceptor.attach(RtmCodecsVideoFrameAllocateRawFrame, {onLeave: function (args) {send("RtmCodecsVideoFrameAllocateRawFrame");}});
+
+var RtmCodecsVideoMomentConvert = Module.findExportByName("rtmcodecs.dll", "RtmCodecsVideoMomentConvert")
+Interceptor.attach(RtmCodecsVideoMomentConvert, {onLeave: function (args) {send("RtmCodecsVideoMomentConvert");}});
+
+var RtmCodecsVscaCreateFecUtility = Module.findExportByName("rtmcodecs.dll", "RtmCodecsVscaCreateFecUtility")
+Interceptor.attach(RtmCodecsVscaCreateFecUtility, {onLeave: function (args) {send("RtmCodecsVscaCreateFecUtility");}});
+
+var RtmCodecsVscaCreatePacsiGenerator = Module.findExportByName("rtmcodecs.dll", "RtmCodecsVscaCreatePacsiGenerator")
+Interceptor.attach(RtmCodecsVscaCreatePacsiGenerator, {onLeave: function (args) {send("RtmCodecsVscaCreatePacsiGenerator");}});
+
+var RtmCodecsVscaDestroyEncodedUnit = Module.findExportByName("rtmcodecs.dll", "RtmCodecsVscaDestroyEncodedUnit")
+Interceptor.attach(RtmCodecsVscaDestroyEncodedUnit, {onLeave: function (args) {send("RtmCodecsVscaDestroyEncodedUnit");}});
+
+var RtmCodecsVscaGetDecodingMetrics = Module.findExportByName("rtmcodecs.dll", "RtmCodecsVscaGetDecodingMetrics")
+Interceptor.attach(RtmCodecsVscaGetDecodingMetrics, {onLeave: function (args) {send("RtmCodecsVscaGetDecodingMetrics");}});
+
+var RtmCodecsVscaGetEncodingMetrics = Module.findExportByName("rtmcodecs.dll", "RtmCodecsVscaGetEncodingMetrics")
+Interceptor.attach(RtmCodecsVscaGetEncodingMetrics, {onLeave: function (args) {send("RtmCodecsVscaGetEncodingMetrics");}});
+
+var RtmCodecsVscaGetManager = Module.findExportByName("rtmcodecs.dll", "RtmCodecsVscaGetManager")
+Interceptor.attach(RtmCodecsVscaGetManager, {onLeave: function (args) {send("RtmCodecsVscaGetManager");}});
+
+var RtmCodecsVscaGetPacsiInfo = Module.findExportByName("rtmcodecs.dll", "RtmCodecsVscaGetPacsiInfo")
+Interceptor.attach(RtmCodecsVscaGetPacsiInfo, {onLeave: function (args) {send("RtmCodecsVscaGetPacsiInfo");}});
+
+var RtmCodecsVscaGetStreamCountStatistics = Module.findExportByName("rtmcodecs.dll", "RtmCodecsVscaGetStreamCountStatistics")
+Interceptor.attach(RtmCodecsVscaGetStreamCountStatistics, {onLeave: function (args) {send("RtmCodecsVscaGetStreamCountStatistics");}});
+
+var RtmVPConvert = Module.findExportByName("rtmcodecs.dll", "RtmVPConvert")
+Interceptor.attach(RtmVPConvert, {onLeave: function (args) {send("RtmVPConvert");}});
+
+var RtmVPCreate = Module.findExportByName("rtmcodecs.dll", "RtmVPCreate")
+Interceptor.attach(RtmVPCreate, {onLeave: function (args) {send("RtmVPCreate");}});
+
+var RtmVPDestroy = Module.findExportByName("rtmcodecs.dll", "RtmVPDestroy")
+Interceptor.attach(RtmVPDestroy, {onLeave: function (args) {send("RtmVPDestroy");}});
+
+var RtmVideoAnalyzerEnumerate = Module.findExportByName("rtmcodecs.dll", "RtmVideoAnalyzerEnumerate")
+Interceptor.attach(RtmVideoAnalyzerEnumerate, {onLeave: function (args) {send("RtmVideoAnalyzerEnumerate");}});
+

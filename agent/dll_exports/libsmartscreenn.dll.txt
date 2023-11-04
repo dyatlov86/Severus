@@ -1,0 +1,96 @@
+var CreateSmartScreenClient = Module.findExportByName("libsmartscreenn.dll", "CreateSmartScreenClient")
+Interceptor.attach(CreateSmartScreenClient, {onLeave: function (args) {send("CreateSmartScreenClient");}});
+
+var CreateTestWebClientProxy = Module.findExportByName("libsmartscreenn.dll", "CreateTestWebClientProxy")
+Interceptor.attach(CreateTestWebClientProxy, {onLeave: function (args) {send("CreateTestWebClientProxy");}});
+
+var OQS_CPU_has_extension = Module.findExportByName("libsmartscreenn.dll", "OQS_CPU_has_extension")
+Interceptor.attach(OQS_CPU_has_extension, {onLeave: function (args) {send("OQS_CPU_has_extension");}});
+
+var OQS_KEM_alg_count = Module.findExportByName("libsmartscreenn.dll", "OQS_KEM_alg_count")
+Interceptor.attach(OQS_KEM_alg_count, {onLeave: function (args) {send("OQS_KEM_alg_count");}});
+
+var OQS_KEM_alg_identifier = Module.findExportByName("libsmartscreenn.dll", "OQS_KEM_alg_identifier")
+Interceptor.attach(OQS_KEM_alg_identifier, {onLeave: function (args) {send("OQS_KEM_alg_identifier");}});
+
+var OQS_KEM_alg_is_enabled = Module.findExportByName("libsmartscreenn.dll", "OQS_KEM_alg_is_enabled")
+Interceptor.attach(OQS_KEM_alg_is_enabled, {onLeave: function (args) {send("OQS_KEM_alg_is_enabled");}});
+
+var OQS_KEM_decaps = Module.findExportByName("libsmartscreenn.dll", "OQS_KEM_decaps")
+Interceptor.attach(OQS_KEM_decaps, {onLeave: function (args) {send("OQS_KEM_decaps");}});
+
+var OQS_KEM_encaps = Module.findExportByName("libsmartscreenn.dll", "OQS_KEM_encaps")
+Interceptor.attach(OQS_KEM_encaps, {onLeave: function (args) {send("OQS_KEM_encaps");}});
+
+var OQS_KEM_free = Module.findExportByName("libsmartscreenn.dll", "OQS_KEM_free")
+Interceptor.attach(OQS_KEM_free, {onLeave: function (args) {send("OQS_KEM_free");}});
+
+var OQS_KEM_keypair = Module.findExportByName("libsmartscreenn.dll", "OQS_KEM_keypair")
+Interceptor.attach(OQS_KEM_keypair, {onLeave: function (args) {send("OQS_KEM_keypair");}});
+
+var OQS_KEM_kyber_768_decaps = Module.findExportByName("libsmartscreenn.dll", "OQS_KEM_kyber_768_decaps")
+Interceptor.attach(OQS_KEM_kyber_768_decaps, {onLeave: function (args) {send("OQS_KEM_kyber_768_decaps");}});
+
+var OQS_KEM_kyber_768_encaps = Module.findExportByName("libsmartscreenn.dll", "OQS_KEM_kyber_768_encaps")
+Interceptor.attach(OQS_KEM_kyber_768_encaps, {onLeave: function (args) {send("OQS_KEM_kyber_768_encaps");}});
+
+var OQS_KEM_kyber_768_keypair = Module.findExportByName("libsmartscreenn.dll", "OQS_KEM_kyber_768_keypair")
+Interceptor.attach(OQS_KEM_kyber_768_keypair, {onLeave: function (args) {send("OQS_KEM_kyber_768_keypair");}});
+
+var OQS_KEM_new = Module.findExportByName("libsmartscreenn.dll", "OQS_KEM_new")
+Interceptor.attach(OQS_KEM_new, {onLeave: function (args) {send("OQS_KEM_new");}});
+
+var OQS_MEM_cleanse = Module.findExportByName("libsmartscreenn.dll", "OQS_MEM_cleanse")
+Interceptor.attach(OQS_MEM_cleanse, {onLeave: function (args) {send("OQS_MEM_cleanse");}});
+
+var OQS_MEM_insecure_free = Module.findExportByName("libsmartscreenn.dll", "OQS_MEM_insecure_free")
+Interceptor.attach(OQS_MEM_insecure_free, {onLeave: function (args) {send("OQS_MEM_insecure_free");}});
+
+var OQS_MEM_secure_bcmp = Module.findExportByName("libsmartscreenn.dll", "OQS_MEM_secure_bcmp")
+Interceptor.attach(OQS_MEM_secure_bcmp, {onLeave: function (args) {send("OQS_MEM_secure_bcmp");}});
+
+var OQS_MEM_secure_free = Module.findExportByName("libsmartscreenn.dll", "OQS_MEM_secure_free")
+Interceptor.attach(OQS_MEM_secure_free, {onLeave: function (args) {send("OQS_MEM_secure_free");}});
+
+var OQS_SIG_alg_count = Module.findExportByName("libsmartscreenn.dll", "OQS_SIG_alg_count")
+Interceptor.attach(OQS_SIG_alg_count, {onLeave: function (args) {send("OQS_SIG_alg_count");}});
+
+var OQS_SIG_alg_identifier = Module.findExportByName("libsmartscreenn.dll", "OQS_SIG_alg_identifier")
+Interceptor.attach(OQS_SIG_alg_identifier, {onLeave: function (args) {send("OQS_SIG_alg_identifier");}});
+
+var OQS_SIG_alg_is_enabled = Module.findExportByName("libsmartscreenn.dll", "OQS_SIG_alg_is_enabled")
+Interceptor.attach(OQS_SIG_alg_is_enabled, {onLeave: function (args) {send("OQS_SIG_alg_is_enabled");}});
+
+var OQS_SIG_free = Module.findExportByName("libsmartscreenn.dll", "OQS_SIG_free")
+Interceptor.attach(OQS_SIG_free, {onLeave: function (args) {send("OQS_SIG_free");}});
+
+var OQS_SIG_keypair = Module.findExportByName("libsmartscreenn.dll", "OQS_SIG_keypair")
+Interceptor.attach(OQS_SIG_keypair, {onLeave: function (args) {send("OQS_SIG_keypair");}});
+
+var OQS_SIG_new = Module.findExportByName("libsmartscreenn.dll", "OQS_SIG_new")
+Interceptor.attach(OQS_SIG_new, {onLeave: function (args) {send("OQS_SIG_new");}});
+
+var OQS_SIG_sign = Module.findExportByName("libsmartscreenn.dll", "OQS_SIG_sign")
+Interceptor.attach(OQS_SIG_sign, {onLeave: function (args) {send("OQS_SIG_sign");}});
+
+var OQS_SIG_verify = Module.findExportByName("libsmartscreenn.dll", "OQS_SIG_verify")
+Interceptor.attach(OQS_SIG_verify, {onLeave: function (args) {send("OQS_SIG_verify");}});
+
+var OQS_init = Module.findExportByName("libsmartscreenn.dll", "OQS_init")
+Interceptor.attach(OQS_init, {onLeave: function (args) {send("OQS_init");}});
+
+var OQS_randombytes = Module.findExportByName("libsmartscreenn.dll", "OQS_randombytes")
+Interceptor.attach(OQS_randombytes, {onLeave: function (args) {send("OQS_randombytes");}});
+
+var OQS_randombytes_custom_algorithm = Module.findExportByName("libsmartscreenn.dll", "OQS_randombytes_custom_algorithm")
+Interceptor.attach(OQS_randombytes_custom_algorithm, {onLeave: function (args) {send("OQS_randombytes_custom_algorithm");}});
+
+var OQS_randombytes_nist_kat_init_256bit = Module.findExportByName("libsmartscreenn.dll", "OQS_randombytes_nist_kat_init_256bit")
+Interceptor.attach(OQS_randombytes_nist_kat_init_256bit, {onLeave: function (args) {send("OQS_randombytes_nist_kat_init_256bit");}});
+
+var OQS_randombytes_switch_algorithm = Module.findExportByName("libsmartscreenn.dll", "OQS_randombytes_switch_algorithm")
+Interceptor.attach(OQS_randombytes_switch_algorithm, {onLeave: function (args) {send("OQS_randombytes_switch_algorithm");}});
+
+var OQS_version = Module.findExportByName("libsmartscreenn.dll", "OQS_version")
+Interceptor.attach(OQS_version, {onLeave: function (args) {send("OQS_version");}});
+

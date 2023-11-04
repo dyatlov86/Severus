@@ -1,0 +1,33 @@
+var DevQueryPrintEx = Module.findExportByName("tsprint.dll", "DevQueryPrintEx")
+Interceptor.attach(DevQueryPrintEx, {onLeave: function (args) {send("DevQueryPrintEx");}});
+
+var DllCanUnloadNow = Module.findExportByName("tsprint.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("tsprint.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("tsprint.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DrvConvertDevMode = Module.findExportByName("tsprint.dll", "DrvConvertDevMode")
+Interceptor.attach(DrvConvertDevMode, {onLeave: function (args) {send("DrvConvertDevMode");}});
+
+var DrvDeviceCapabilities = Module.findExportByName("tsprint.dll", "DrvDeviceCapabilities")
+Interceptor.attach(DrvDeviceCapabilities, {onLeave: function (args) {send("DrvDeviceCapabilities");}});
+
+var DrvDevicePropertySheets = Module.findExportByName("tsprint.dll", "DrvDevicePropertySheets")
+Interceptor.attach(DrvDevicePropertySheets, {onLeave: function (args) {send("DrvDevicePropertySheets");}});
+
+var DrvDocumentPropertySheets = Module.findExportByName("tsprint.dll", "DrvDocumentPropertySheets")
+Interceptor.attach(DrvDocumentPropertySheets, {onLeave: function (args) {send("DrvDocumentPropertySheets");}});
+
+var DrvPrinterEvent = Module.findExportByName("tsprint.dll", "DrvPrinterEvent")
+Interceptor.attach(DrvPrinterEvent, {onLeave: function (args) {send("DrvPrinterEvent");}});
+
+var DrvSplDeviceCaps = Module.findExportByName("tsprint.dll", "DrvSplDeviceCaps")
+Interceptor.attach(DrvSplDeviceCaps, {onLeave: function (args) {send("DrvSplDeviceCaps");}});
+
+var MxdcGetPDEVAdjustment = Module.findExportByName("tsprint.dll", "MxdcGetPDEVAdjustment")
+Interceptor.attach(MxdcGetPDEVAdjustment, {onLeave: function (args) {send("MxdcGetPDEVAdjustment");}});
+

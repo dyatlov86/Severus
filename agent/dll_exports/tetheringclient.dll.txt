@@ -1,0 +1,144 @@
+var IsTetheringGPAllowed = Module.findExportByName("tetheringclient.dll", "IsTetheringGPAllowed")
+Interceptor.attach(IsTetheringGPAllowed, {onLeave: function (args) {send("IsTetheringGPAllowed");}});
+
+var TetheringAuthorize = Module.findExportByName("tetheringclient.dll", "TetheringAuthorize")
+Interceptor.attach(TetheringAuthorize, {onLeave: function (args) {send("TetheringAuthorize");}});
+
+var TetheringDeinitApi = Module.findExportByName("tetheringclient.dll", "TetheringDeinitApi")
+Interceptor.attach(TetheringDeinitApi, {onLeave: function (args) {send("TetheringDeinitApi");}});
+
+var TetheringFreeMemory = Module.findExportByName("tetheringclient.dll", "TetheringFreeMemory")
+Interceptor.attach(TetheringFreeMemory, {onLeave: function (args) {send("TetheringFreeMemory");}});
+
+var TetheringFreePeerList = Module.findExportByName("tetheringclient.dll", "TetheringFreePeerList")
+Interceptor.attach(TetheringFreePeerList, {onLeave: function (args) {send("TetheringFreePeerList");}});
+
+var TetheringGetClientCount = Module.findExportByName("tetheringclient.dll", "TetheringGetClientCount")
+Interceptor.attach(TetheringGetClientCount, {onLeave: function (args) {send("TetheringGetClientCount");}});
+
+var TetheringGetDefaultInterface = Module.findExportByName("tetheringclient.dll", "TetheringGetDefaultInterface")
+Interceptor.attach(TetheringGetDefaultInterface, {onLeave: function (args) {send("TetheringGetDefaultInterface");}});
+
+var TetheringGetErrorString = Module.findExportByName("tetheringclient.dll", "TetheringGetErrorString")
+Interceptor.attach(TetheringGetErrorString, {onLeave: function (args) {send("TetheringGetErrorString");}});
+
+var TetheringGetIsPeerlessTimeoutEnabled = Module.findExportByName("tetheringclient.dll", "TetheringGetIsPeerlessTimeoutEnabled")
+Interceptor.attach(TetheringGetIsPeerlessTimeoutEnabled, {onLeave: function (args) {send("TetheringGetIsPeerlessTimeoutEnabled");}});
+
+var TetheringGetLastApiError = Module.findExportByName("tetheringclient.dll", "TetheringGetLastApiError")
+Interceptor.attach(TetheringGetLastApiError, {onLeave: function (args) {send("TetheringGetLastApiError");}});
+
+var TetheringGetMaxClientCount = Module.findExportByName("tetheringclient.dll", "TetheringGetMaxClientCount")
+Interceptor.attach(TetheringGetMaxClientCount, {onLeave: function (args) {send("TetheringGetMaxClientCount");}});
+
+var TetheringGetPeerList = Module.findExportByName("tetheringclient.dll", "TetheringGetPeerList")
+Interceptor.attach(TetheringGetPeerList, {onLeave: function (args) {send("TetheringGetPeerList");}});
+
+var TetheringGetPreferredInterface = Module.findExportByName("tetheringclient.dll", "TetheringGetPreferredInterface")
+Interceptor.attach(TetheringGetPreferredInterface, {onLeave: function (args) {send("TetheringGetPreferredInterface");}});
+
+var TetheringGetPrivateConnectionSettings = Module.findExportByName("tetheringclient.dll", "TetheringGetPrivateConnectionSettings")
+Interceptor.attach(TetheringGetPrivateConnectionSettings, {onLeave: function (args) {send("TetheringGetPrivateConnectionSettings");}});
+
+var TetheringGetPublicConnectionSettings = Module.findExportByName("tetheringclient.dll", "TetheringGetPublicConnectionSettings")
+Interceptor.attach(TetheringGetPublicConnectionSettings, {onLeave: function (args) {send("TetheringGetPublicConnectionSettings");}});
+
+var TetheringGetSharedInterfaceIndices = Module.findExportByName("tetheringclient.dll", "TetheringGetSharedInterfaceIndices")
+Interceptor.attach(TetheringGetSharedInterfaceIndices, {onLeave: function (args) {send("TetheringGetSharedInterfaceIndices");}});
+
+var TetheringGetSharingState = Module.findExportByName("tetheringclient.dll", "TetheringGetSharingState")
+Interceptor.attach(TetheringGetSharingState, {onLeave: function (args) {send("TetheringGetSharingState");}});
+
+var TetheringGetSimIccidForInterfaceGuid = Module.findExportByName("tetheringclient.dll", "TetheringGetSimIccidForInterfaceGuid")
+Interceptor.attach(TetheringGetSimIccidForInterfaceGuid, {onLeave: function (args) {send("TetheringGetSimIccidForInterfaceGuid");}});
+
+var TetheringInitApi = Module.findExportByName("tetheringclient.dll", "TetheringInitApi")
+Interceptor.attach(TetheringInitApi, {onLeave: function (args) {send("TetheringInitApi");}});
+
+var TetheringIs5GHzSupported = Module.findExportByName("tetheringclient.dll", "TetheringIs5GHzSupported")
+Interceptor.attach(TetheringIs5GHzSupported, {onLeave: function (args) {send("TetheringIs5GHzSupported");}});
+
+var TetheringIsAllowed = Module.findExportByName("tetheringclient.dll", "TetheringIsAllowed")
+Interceptor.attach(TetheringIsAllowed, {onLeave: function (args) {send("TetheringIsAllowed");}});
+
+var TetheringRegisterNotification = Module.findExportByName("tetheringclient.dll", "TetheringRegisterNotification")
+Interceptor.attach(TetheringRegisterNotification, {onLeave: function (args) {send("TetheringRegisterNotification");}});
+
+var TetheringSetIsPeerlessTimeoutEnabled = Module.findExportByName("tetheringclient.dll", "TetheringSetIsPeerlessTimeoutEnabled")
+Interceptor.attach(TetheringSetIsPeerlessTimeoutEnabled, {onLeave: function (args) {send("TetheringSetIsPeerlessTimeoutEnabled");}});
+
+var TetheringSetPreferredInterface = Module.findExportByName("tetheringclient.dll", "TetheringSetPreferredInterface")
+Interceptor.attach(TetheringSetPreferredInterface, {onLeave: function (args) {send("TetheringSetPreferredInterface");}});
+
+var TetheringSetPrivateConnectionSettings = Module.findExportByName("tetheringclient.dll", "TetheringSetPrivateConnectionSettings")
+Interceptor.attach(TetheringSetPrivateConnectionSettings, {onLeave: function (args) {send("TetheringSetPrivateConnectionSettings");}});
+
+var TetheringSetPrivateConnectionSettingsAsync = Module.findExportByName("tetheringclient.dll", "TetheringSetPrivateConnectionSettingsAsync")
+Interceptor.attach(TetheringSetPrivateConnectionSettingsAsync, {onLeave: function (args) {send("TetheringSetPrivateConnectionSettingsAsync");}});
+
+var TetheringSetPublicConnectionSettings = Module.findExportByName("tetheringclient.dll", "TetheringSetPublicConnectionSettings")
+Interceptor.attach(TetheringSetPublicConnectionSettings, {onLeave: function (args) {send("TetheringSetPublicConnectionSettings");}});
+
+var TetheringSetSharingState = Module.findExportByName("tetheringclient.dll", "TetheringSetSharingState")
+Interceptor.attach(TetheringSetSharingState, {onLeave: function (args) {send("TetheringSetSharingState");}});
+
+var TetheringSetSharingStateAsync = Module.findExportByName("tetheringclient.dll", "TetheringSetSharingStateAsync")
+Interceptor.attach(TetheringSetSharingStateAsync, {onLeave: function (args) {send("TetheringSetSharingStateAsync");}});
+
+var TetheringSettingsFreeAutoLoadSettings = Module.findExportByName("tetheringclient.dll", "TetheringSettingsFreeAutoLoadSettings")
+Interceptor.attach(TetheringSettingsFreeAutoLoadSettings, {onLeave: function (args) {send("TetheringSettingsFreeAutoLoadSettings");}});
+
+var TetheringSettingsFreeSettingValue = Module.findExportByName("tetheringclient.dll", "TetheringSettingsFreeSettingValue")
+Interceptor.attach(TetheringSettingsFreeSettingValue, {onLeave: function (args) {send("TetheringSettingsFreeSettingValue");}});
+
+var TetheringSettingsGenerateDefaultPrivateConnectionSettings = Module.findExportByName("tetheringclient.dll", "TetheringSettingsGenerateDefaultPrivateConnectionSettings")
+Interceptor.attach(TetheringSettingsGenerateDefaultPrivateConnectionSettings, {onLeave: function (args) {send("TetheringSettingsGenerateDefaultPrivateConnectionSettings");}});
+
+var TetheringSettingsGenerateDefaultPublicConnectionSettings = Module.findExportByName("tetheringclient.dll", "TetheringSettingsGenerateDefaultPublicConnectionSettings")
+Interceptor.attach(TetheringSettingsGenerateDefaultPublicConnectionSettings, {onLeave: function (args) {send("TetheringSettingsGenerateDefaultPublicConnectionSettings");}});
+
+var TetheringSettingsGetSettingValueGlobal = Module.findExportByName("tetheringclient.dll", "TetheringSettingsGetSettingValueGlobal")
+Interceptor.attach(TetheringSettingsGetSettingValueGlobal, {onLeave: function (args) {send("TetheringSettingsGetSettingValueGlobal");}});
+
+var TetheringSettingsGetSettingValueWithGuid = Module.findExportByName("tetheringclient.dll", "TetheringSettingsGetSettingValueWithGuid")
+Interceptor.attach(TetheringSettingsGetSettingValueWithGuid, {onLeave: function (args) {send("TetheringSettingsGetSettingValueWithGuid");}});
+
+var TetheringSettingsGetSettingValueWithIccid = Module.findExportByName("tetheringclient.dll", "TetheringSettingsGetSettingValueWithIccid")
+Interceptor.attach(TetheringSettingsGetSettingValueWithIccid, {onLeave: function (args) {send("TetheringSettingsGetSettingValueWithIccid");}});
+
+var TetheringSettingsLoadAutoLoadSettings = Module.findExportByName("tetheringclient.dll", "TetheringSettingsLoadAutoLoadSettings")
+Interceptor.attach(TetheringSettingsLoadAutoLoadSettings, {onLeave: function (args) {send("TetheringSettingsLoadAutoLoadSettings");}});
+
+var TetheringSettingsResetSettingToDefaultGlobal = Module.findExportByName("tetheringclient.dll", "TetheringSettingsResetSettingToDefaultGlobal")
+Interceptor.attach(TetheringSettingsResetSettingToDefaultGlobal, {onLeave: function (args) {send("TetheringSettingsResetSettingToDefaultGlobal");}});
+
+var TetheringSettingsResetSettingToDefaultWithGuid = Module.findExportByName("tetheringclient.dll", "TetheringSettingsResetSettingToDefaultWithGuid")
+Interceptor.attach(TetheringSettingsResetSettingToDefaultWithGuid, {onLeave: function (args) {send("TetheringSettingsResetSettingToDefaultWithGuid");}});
+
+var TetheringSettingsResetSettingToDefaultWithIccid = Module.findExportByName("tetheringclient.dll", "TetheringSettingsResetSettingToDefaultWithIccid")
+Interceptor.attach(TetheringSettingsResetSettingToDefaultWithIccid, {onLeave: function (args) {send("TetheringSettingsResetSettingToDefaultWithIccid");}});
+
+var TetheringSettingsSaveSettingGlobal = Module.findExportByName("tetheringclient.dll", "TetheringSettingsSaveSettingGlobal")
+Interceptor.attach(TetheringSettingsSaveSettingGlobal, {onLeave: function (args) {send("TetheringSettingsSaveSettingGlobal");}});
+
+var TetheringSettingsSaveSettingWithGuid = Module.findExportByName("tetheringclient.dll", "TetheringSettingsSaveSettingWithGuid")
+Interceptor.attach(TetheringSettingsSaveSettingWithGuid, {onLeave: function (args) {send("TetheringSettingsSaveSettingWithGuid");}});
+
+var TetheringSettingsSaveSettingWithIccid = Module.findExportByName("tetheringclient.dll", "TetheringSettingsSaveSettingWithIccid")
+Interceptor.attach(TetheringSettingsSaveSettingWithIccid, {onLeave: function (args) {send("TetheringSettingsSaveSettingWithIccid");}});
+
+var TetheringStartSharing = Module.findExportByName("tetheringclient.dll", "TetheringStartSharing")
+Interceptor.attach(TetheringStartSharing, {onLeave: function (args) {send("TetheringStartSharing");}});
+
+var TetheringStartSharingAsync = Module.findExportByName("tetheringclient.dll", "TetheringStartSharingAsync")
+Interceptor.attach(TetheringStartSharingAsync, {onLeave: function (args) {send("TetheringStartSharingAsync");}});
+
+var TetheringStopSharing = Module.findExportByName("tetheringclient.dll", "TetheringStopSharing")
+Interceptor.attach(TetheringStopSharing, {onLeave: function (args) {send("TetheringStopSharing");}});
+
+var TetheringStopSharingAsync = Module.findExportByName("tetheringclient.dll", "TetheringStopSharingAsync")
+Interceptor.attach(TetheringStopSharingAsync, {onLeave: function (args) {send("TetheringStopSharingAsync");}});
+
+var TetheringUnregisterNotification = Module.findExportByName("tetheringclient.dll", "TetheringUnregisterNotification")
+Interceptor.attach(TetheringUnregisterNotification, {onLeave: function (args) {send("TetheringUnregisterNotification");}});
+

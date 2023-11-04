@@ -1,0 +1,30 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.Networking.Connectivity.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Networking.Connectivity.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Networking.Connectivity.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("Windows.Networking.Connectivity.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("Windows.Networking.Connectivity.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var FixDisabledComponentsForTeredo = Module.findExportByName("Windows.Networking.Connectivity.dll", "FixDisabledComponentsForTeredo")
+Interceptor.attach(FixDisabledComponentsForTeredo, {onLeave: function (args) {send("FixDisabledComponentsForTeredo");}});
+
+var RefreshTeredoClientState = Module.findExportByName("Windows.Networking.Connectivity.dll", "RefreshTeredoClientState")
+Interceptor.attach(RefreshTeredoClientState, {onLeave: function (args) {send("RefreshTeredoClientState");}});
+
+var SetHostNameMediaStreamingMode = Module.findExportByName("Windows.Networking.Connectivity.dll", "SetHostNameMediaStreamingMode")
+Interceptor.attach(SetHostNameMediaStreamingMode, {onLeave: function (args) {send("SetHostNameMediaStreamingMode");}});
+
+var TeredoExtAcquireTeredoConsumerHandle = Module.findExportByName("Windows.Networking.Connectivity.dll", "TeredoExtAcquireTeredoConsumerHandle")
+Interceptor.attach(TeredoExtAcquireTeredoConsumerHandle, {onLeave: function (args) {send("TeredoExtAcquireTeredoConsumerHandle");}});
+
+var TeredoExtReleaseTeredoConsumerHandle = Module.findExportByName("Windows.Networking.Connectivity.dll", "TeredoExtReleaseTeredoConsumerHandle")
+Interceptor.attach(TeredoExtReleaseTeredoConsumerHandle, {onLeave: function (args) {send("TeredoExtReleaseTeredoConsumerHandle");}});
+

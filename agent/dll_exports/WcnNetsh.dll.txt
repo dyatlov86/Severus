@@ -1,0 +1,6 @@
+var GetResourceString = Module.findExportByName("WcnNetsh.dll", "GetResourceString")
+Interceptor.attach(GetResourceString, {onLeave: function (args) {send("GetResourceString");}});
+
+var InitHelperDll = Module.findExportByName("WcnNetsh.dll", "InitHelperDll")
+Interceptor.attach(InitHelperDll, {onLeave: function (args) {send("InitHelperDll");}});
+

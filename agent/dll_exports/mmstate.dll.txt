@@ -1,0 +1,9 @@
+var EnterMicMuteStateTracking = Module.findExportByName("mmstate.dll", "EnterMicMuteStateTracking")
+Interceptor.attach(EnterMicMuteStateTracking, {onLeave: function (args) {send("EnterMicMuteStateTracking");}});
+
+var GetState = Module.findExportByName("mmstate.dll", "GetState")
+Interceptor.attach(GetState, {onLeave: function (args) {send("GetState");}});
+
+var LeaveMicMuteStateTracking = Module.findExportByName("mmstate.dll", "LeaveMicMuteStateTracking")
+Interceptor.attach(LeaveMicMuteStateTracking, {onLeave: function (args) {send("LeaveMicMuteStateTracking");}});
+

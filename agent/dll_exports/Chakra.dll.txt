@@ -1,0 +1,480 @@
+var CreateChakraEngine = Module.findExportByName("Chakra.dll", "CreateChakraEngine")
+Interceptor.attach(CreateChakraEngine, {onLeave: function (args) {send("CreateChakraEngine");}});
+
+var DllCanUnloadNow = Module.findExportByName("Chakra.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("Chakra.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("Chakra.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("Chakra.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DumpDiagInfo = Module.findExportByName("Chakra.dll", "DumpDiagInfo")
+Interceptor.attach(DumpDiagInfo, {onLeave: function (args) {send("DumpDiagInfo");}});
+
+var JsAddRef = Module.findExportByName("Chakra.dll", "JsAddRef")
+Interceptor.attach(JsAddRef, {onLeave: function (args) {send("JsAddRef");}});
+
+var JsBoolToBoolean = Module.findExportByName("Chakra.dll", "JsBoolToBoolean")
+Interceptor.attach(JsBoolToBoolean, {onLeave: function (args) {send("JsBoolToBoolean");}});
+
+var JsBooleanToBool = Module.findExportByName("Chakra.dll", "JsBooleanToBool")
+Interceptor.attach(JsBooleanToBool, {onLeave: function (args) {send("JsBooleanToBool");}});
+
+var JsCallFunction = Module.findExportByName("Chakra.dll", "JsCallFunction")
+Interceptor.attach(JsCallFunction, {onLeave: function (args) {send("JsCallFunction");}});
+
+var JsCollectGarbage = Module.findExportByName("Chakra.dll", "JsCollectGarbage")
+Interceptor.attach(JsCollectGarbage, {onLeave: function (args) {send("JsCollectGarbage");}});
+
+var JsConstructObject = Module.findExportByName("Chakra.dll", "JsConstructObject")
+Interceptor.attach(JsConstructObject, {onLeave: function (args) {send("JsConstructObject");}});
+
+var JsConvertValueToBoolean = Module.findExportByName("Chakra.dll", "JsConvertValueToBoolean")
+Interceptor.attach(JsConvertValueToBoolean, {onLeave: function (args) {send("JsConvertValueToBoolean");}});
+
+var JsConvertValueToNumber = Module.findExportByName("Chakra.dll", "JsConvertValueToNumber")
+Interceptor.attach(JsConvertValueToNumber, {onLeave: function (args) {send("JsConvertValueToNumber");}});
+
+var JsConvertValueToObject = Module.findExportByName("Chakra.dll", "JsConvertValueToObject")
+Interceptor.attach(JsConvertValueToObject, {onLeave: function (args) {send("JsConvertValueToObject");}});
+
+var JsConvertValueToString = Module.findExportByName("Chakra.dll", "JsConvertValueToString")
+Interceptor.attach(JsConvertValueToString, {onLeave: function (args) {send("JsConvertValueToString");}});
+
+var JsCreateArray = Module.findExportByName("Chakra.dll", "JsCreateArray")
+Interceptor.attach(JsCreateArray, {onLeave: function (args) {send("JsCreateArray");}});
+
+var JsCreateArrayBuffer = Module.findExportByName("Chakra.dll", "JsCreateArrayBuffer")
+Interceptor.attach(JsCreateArrayBuffer, {onLeave: function (args) {send("JsCreateArrayBuffer");}});
+
+var JsCreateContext = Module.findExportByName("Chakra.dll", "JsCreateContext")
+Interceptor.attach(JsCreateContext, {onLeave: function (args) {send("JsCreateContext");}});
+
+var JsCreateDataView = Module.findExportByName("Chakra.dll", "JsCreateDataView")
+Interceptor.attach(JsCreateDataView, {onLeave: function (args) {send("JsCreateDataView");}});
+
+var JsCreateError = Module.findExportByName("Chakra.dll", "JsCreateError")
+Interceptor.attach(JsCreateError, {onLeave: function (args) {send("JsCreateError");}});
+
+var JsCreateExternalArrayBuffer = Module.findExportByName("Chakra.dll", "JsCreateExternalArrayBuffer")
+Interceptor.attach(JsCreateExternalArrayBuffer, {onLeave: function (args) {send("JsCreateExternalArrayBuffer");}});
+
+var JsCreateExternalObject = Module.findExportByName("Chakra.dll", "JsCreateExternalObject")
+Interceptor.attach(JsCreateExternalObject, {onLeave: function (args) {send("JsCreateExternalObject");}});
+
+var JsCreateFunction = Module.findExportByName("Chakra.dll", "JsCreateFunction")
+Interceptor.attach(JsCreateFunction, {onLeave: function (args) {send("JsCreateFunction");}});
+
+var JsCreateNamedFunction = Module.findExportByName("Chakra.dll", "JsCreateNamedFunction")
+Interceptor.attach(JsCreateNamedFunction, {onLeave: function (args) {send("JsCreateNamedFunction");}});
+
+var JsCreateObject = Module.findExportByName("Chakra.dll", "JsCreateObject")
+Interceptor.attach(JsCreateObject, {onLeave: function (args) {send("JsCreateObject");}});
+
+var JsCreateRangeError = Module.findExportByName("Chakra.dll", "JsCreateRangeError")
+Interceptor.attach(JsCreateRangeError, {onLeave: function (args) {send("JsCreateRangeError");}});
+
+var JsCreateReferenceError = Module.findExportByName("Chakra.dll", "JsCreateReferenceError")
+Interceptor.attach(JsCreateReferenceError, {onLeave: function (args) {send("JsCreateReferenceError");}});
+
+var JsCreateRuntime = Module.findExportByName("Chakra.dll", "JsCreateRuntime")
+Interceptor.attach(JsCreateRuntime, {onLeave: function (args) {send("JsCreateRuntime");}});
+
+var JsCreateSymbol = Module.findExportByName("Chakra.dll", "JsCreateSymbol")
+Interceptor.attach(JsCreateSymbol, {onLeave: function (args) {send("JsCreateSymbol");}});
+
+var JsCreateSyntaxError = Module.findExportByName("Chakra.dll", "JsCreateSyntaxError")
+Interceptor.attach(JsCreateSyntaxError, {onLeave: function (args) {send("JsCreateSyntaxError");}});
+
+var JsCreateThreadService = Module.findExportByName("Chakra.dll", "JsCreateThreadService")
+Interceptor.attach(JsCreateThreadService, {onLeave: function (args) {send("JsCreateThreadService");}});
+
+var JsCreateTypeError = Module.findExportByName("Chakra.dll", "JsCreateTypeError")
+Interceptor.attach(JsCreateTypeError, {onLeave: function (args) {send("JsCreateTypeError");}});
+
+var JsCreateTypedArray = Module.findExportByName("Chakra.dll", "JsCreateTypedArray")
+Interceptor.attach(JsCreateTypedArray, {onLeave: function (args) {send("JsCreateTypedArray");}});
+
+var JsCreateURIError = Module.findExportByName("Chakra.dll", "JsCreateURIError")
+Interceptor.attach(JsCreateURIError, {onLeave: function (args) {send("JsCreateURIError");}});
+
+var JsDefineProperty = Module.findExportByName("Chakra.dll", "JsDefineProperty")
+Interceptor.attach(JsDefineProperty, {onLeave: function (args) {send("JsDefineProperty");}});
+
+var JsDeleteIndexedProperty = Module.findExportByName("Chakra.dll", "JsDeleteIndexedProperty")
+Interceptor.attach(JsDeleteIndexedProperty, {onLeave: function (args) {send("JsDeleteIndexedProperty");}});
+
+var JsDeleteProperty = Module.findExportByName("Chakra.dll", "JsDeleteProperty")
+Interceptor.attach(JsDeleteProperty, {onLeave: function (args) {send("JsDeleteProperty");}});
+
+var JsDisableRuntimeExecution = Module.findExportByName("Chakra.dll", "JsDisableRuntimeExecution")
+Interceptor.attach(JsDisableRuntimeExecution, {onLeave: function (args) {send("JsDisableRuntimeExecution");}});
+
+var JsDiscardBackgroundParse = Module.findExportByName("Chakra.dll", "JsDiscardBackgroundParse")
+Interceptor.attach(JsDiscardBackgroundParse, {onLeave: function (args) {send("JsDiscardBackgroundParse");}});
+
+var JsDisposeRuntime = Module.findExportByName("Chakra.dll", "JsDisposeRuntime")
+Interceptor.attach(JsDisposeRuntime, {onLeave: function (args) {send("JsDisposeRuntime");}});
+
+var JsDoubleToNumber = Module.findExportByName("Chakra.dll", "JsDoubleToNumber")
+Interceptor.attach(JsDoubleToNumber, {onLeave: function (args) {send("JsDoubleToNumber");}});
+
+var JsEnableRuntimeExecution = Module.findExportByName("Chakra.dll", "JsEnableRuntimeExecution")
+Interceptor.attach(JsEnableRuntimeExecution, {onLeave: function (args) {send("JsEnableRuntimeExecution");}});
+
+var JsEnumerateHeap = Module.findExportByName("Chakra.dll", "JsEnumerateHeap")
+Interceptor.attach(JsEnumerateHeap, {onLeave: function (args) {send("JsEnumerateHeap");}});
+
+var JsEquals = Module.findExportByName("Chakra.dll", "JsEquals")
+Interceptor.attach(JsEquals, {onLeave: function (args) {send("JsEquals");}});
+
+var JsGetAndClearException = Module.findExportByName("Chakra.dll", "JsGetAndClearException")
+Interceptor.attach(JsGetAndClearException, {onLeave: function (args) {send("JsGetAndClearException");}});
+
+var JsGetArrayBufferStorage = Module.findExportByName("Chakra.dll", "JsGetArrayBufferStorage")
+Interceptor.attach(JsGetArrayBufferStorage, {onLeave: function (args) {send("JsGetArrayBufferStorage");}});
+
+var JsGetContextData = Module.findExportByName("Chakra.dll", "JsGetContextData")
+Interceptor.attach(JsGetContextData, {onLeave: function (args) {send("JsGetContextData");}});
+
+var JsGetContextOfObject = Module.findExportByName("Chakra.dll", "JsGetContextOfObject")
+Interceptor.attach(JsGetContextOfObject, {onLeave: function (args) {send("JsGetContextOfObject");}});
+
+var JsGetCurrentContext = Module.findExportByName("Chakra.dll", "JsGetCurrentContext")
+Interceptor.attach(JsGetCurrentContext, {onLeave: function (args) {send("JsGetCurrentContext");}});
+
+var JsGetDataViewStorage = Module.findExportByName("Chakra.dll", "JsGetDataViewStorage")
+Interceptor.attach(JsGetDataViewStorage, {onLeave: function (args) {send("JsGetDataViewStorage");}});
+
+var JsGetExtensionAllowed = Module.findExportByName("Chakra.dll", "JsGetExtensionAllowed")
+Interceptor.attach(JsGetExtensionAllowed, {onLeave: function (args) {send("JsGetExtensionAllowed");}});
+
+var JsGetExternalData = Module.findExportByName("Chakra.dll", "JsGetExternalData")
+Interceptor.attach(JsGetExternalData, {onLeave: function (args) {send("JsGetExternalData");}});
+
+var JsGetFalseValue = Module.findExportByName("Chakra.dll", "JsGetFalseValue")
+Interceptor.attach(JsGetFalseValue, {onLeave: function (args) {send("JsGetFalseValue");}});
+
+var JsGetGlobalObject = Module.findExportByName("Chakra.dll", "JsGetGlobalObject")
+Interceptor.attach(JsGetGlobalObject, {onLeave: function (args) {send("JsGetGlobalObject");}});
+
+var JsGetIndexedPropertiesExternalData = Module.findExportByName("Chakra.dll", "JsGetIndexedPropertiesExternalData")
+Interceptor.attach(JsGetIndexedPropertiesExternalData, {onLeave: function (args) {send("JsGetIndexedPropertiesExternalData");}});
+
+var JsGetIndexedProperty = Module.findExportByName("Chakra.dll", "JsGetIndexedProperty")
+Interceptor.attach(JsGetIndexedProperty, {onLeave: function (args) {send("JsGetIndexedProperty");}});
+
+var JsGetNullValue = Module.findExportByName("Chakra.dll", "JsGetNullValue")
+Interceptor.attach(JsGetNullValue, {onLeave: function (args) {send("JsGetNullValue");}});
+
+var JsGetOwnPropertyDescriptor = Module.findExportByName("Chakra.dll", "JsGetOwnPropertyDescriptor")
+Interceptor.attach(JsGetOwnPropertyDescriptor, {onLeave: function (args) {send("JsGetOwnPropertyDescriptor");}});
+
+var JsGetOwnPropertyNames = Module.findExportByName("Chakra.dll", "JsGetOwnPropertyNames")
+Interceptor.attach(JsGetOwnPropertyNames, {onLeave: function (args) {send("JsGetOwnPropertyNames");}});
+
+var JsGetOwnPropertySymbols = Module.findExportByName("Chakra.dll", "JsGetOwnPropertySymbols")
+Interceptor.attach(JsGetOwnPropertySymbols, {onLeave: function (args) {send("JsGetOwnPropertySymbols");}});
+
+var JsGetProperty = Module.findExportByName("Chakra.dll", "JsGetProperty")
+Interceptor.attach(JsGetProperty, {onLeave: function (args) {send("JsGetProperty");}});
+
+var JsGetPropertyIdFromName = Module.findExportByName("Chakra.dll", "JsGetPropertyIdFromName")
+Interceptor.attach(JsGetPropertyIdFromName, {onLeave: function (args) {send("JsGetPropertyIdFromName");}});
+
+var JsGetPropertyIdFromSymbol = Module.findExportByName("Chakra.dll", "JsGetPropertyIdFromSymbol")
+Interceptor.attach(JsGetPropertyIdFromSymbol, {onLeave: function (args) {send("JsGetPropertyIdFromSymbol");}});
+
+var JsGetPropertyIdType = Module.findExportByName("Chakra.dll", "JsGetPropertyIdType")
+Interceptor.attach(JsGetPropertyIdType, {onLeave: function (args) {send("JsGetPropertyIdType");}});
+
+var JsGetPropertyNameFromId = Module.findExportByName("Chakra.dll", "JsGetPropertyNameFromId")
+Interceptor.attach(JsGetPropertyNameFromId, {onLeave: function (args) {send("JsGetPropertyNameFromId");}});
+
+var JsGetPrototype = Module.findExportByName("Chakra.dll", "JsGetPrototype")
+Interceptor.attach(JsGetPrototype, {onLeave: function (args) {send("JsGetPrototype");}});
+
+var JsGetRuntime = Module.findExportByName("Chakra.dll", "JsGetRuntime")
+Interceptor.attach(JsGetRuntime, {onLeave: function (args) {send("JsGetRuntime");}});
+
+var JsGetRuntimeMemoryLimit = Module.findExportByName("Chakra.dll", "JsGetRuntimeMemoryLimit")
+Interceptor.attach(JsGetRuntimeMemoryLimit, {onLeave: function (args) {send("JsGetRuntimeMemoryLimit");}});
+
+var JsGetRuntimeMemoryUsage = Module.findExportByName("Chakra.dll", "JsGetRuntimeMemoryUsage")
+Interceptor.attach(JsGetRuntimeMemoryUsage, {onLeave: function (args) {send("JsGetRuntimeMemoryUsage");}});
+
+var JsGetStringLength = Module.findExportByName("Chakra.dll", "JsGetStringLength")
+Interceptor.attach(JsGetStringLength, {onLeave: function (args) {send("JsGetStringLength");}});
+
+var JsGetSymbolFromPropertyId = Module.findExportByName("Chakra.dll", "JsGetSymbolFromPropertyId")
+Interceptor.attach(JsGetSymbolFromPropertyId, {onLeave: function (args) {send("JsGetSymbolFromPropertyId");}});
+
+var JsGetTrueValue = Module.findExportByName("Chakra.dll", "JsGetTrueValue")
+Interceptor.attach(JsGetTrueValue, {onLeave: function (args) {send("JsGetTrueValue");}});
+
+var JsGetTypedArrayInfo = Module.findExportByName("Chakra.dll", "JsGetTypedArrayInfo")
+Interceptor.attach(JsGetTypedArrayInfo, {onLeave: function (args) {send("JsGetTypedArrayInfo");}});
+
+var JsGetTypedArrayStorage = Module.findExportByName("Chakra.dll", "JsGetTypedArrayStorage")
+Interceptor.attach(JsGetTypedArrayStorage, {onLeave: function (args) {send("JsGetTypedArrayStorage");}});
+
+var JsGetUndefinedValue = Module.findExportByName("Chakra.dll", "JsGetUndefinedValue")
+Interceptor.attach(JsGetUndefinedValue, {onLeave: function (args) {send("JsGetUndefinedValue");}});
+
+var JsGetValueType = Module.findExportByName("Chakra.dll", "JsGetValueType")
+Interceptor.attach(JsGetValueType, {onLeave: function (args) {send("JsGetValueType");}});
+
+var JsHasException = Module.findExportByName("Chakra.dll", "JsHasException")
+Interceptor.attach(JsHasException, {onLeave: function (args) {send("JsHasException");}});
+
+var JsHasExternalData = Module.findExportByName("Chakra.dll", "JsHasExternalData")
+Interceptor.attach(JsHasExternalData, {onLeave: function (args) {send("JsHasExternalData");}});
+
+var JsHasIndexedPropertiesExternalData = Module.findExportByName("Chakra.dll", "JsHasIndexedPropertiesExternalData")
+Interceptor.attach(JsHasIndexedPropertiesExternalData, {onLeave: function (args) {send("JsHasIndexedPropertiesExternalData");}});
+
+var JsHasIndexedProperty = Module.findExportByName("Chakra.dll", "JsHasIndexedProperty")
+Interceptor.attach(JsHasIndexedProperty, {onLeave: function (args) {send("JsHasIndexedProperty");}});
+
+var JsHasProperty = Module.findExportByName("Chakra.dll", "JsHasProperty")
+Interceptor.attach(JsHasProperty, {onLeave: function (args) {send("JsHasProperty");}});
+
+var JsIdle = Module.findExportByName("Chakra.dll", "JsIdle")
+Interceptor.attach(JsIdle, {onLeave: function (args) {send("JsIdle");}});
+
+var JsInitializeJITServer = Module.findExportByName("Chakra.dll", "JsInitializeJITServer")
+Interceptor.attach(JsInitializeJITServer, {onLeave: function (args) {send("JsInitializeJITServer");}});
+
+var JsInspectableToObject = Module.findExportByName("Chakra.dll", "JsInspectableToObject")
+Interceptor.attach(JsInspectableToObject, {onLeave: function (args) {send("JsInspectableToObject");}});
+
+var JsInstanceOf = Module.findExportByName("Chakra.dll", "JsInstanceOf")
+Interceptor.attach(JsInstanceOf, {onLeave: function (args) {send("JsInstanceOf");}});
+
+var JsIntToNumber = Module.findExportByName("Chakra.dll", "JsIntToNumber")
+Interceptor.attach(JsIntToNumber, {onLeave: function (args) {send("JsIntToNumber");}});
+
+var JsIsEnumeratingHeap = Module.findExportByName("Chakra.dll", "JsIsEnumeratingHeap")
+Interceptor.attach(JsIsEnumeratingHeap, {onLeave: function (args) {send("JsIsEnumeratingHeap");}});
+
+var JsIsRuntimeExecutionDisabled = Module.findExportByName("Chakra.dll", "JsIsRuntimeExecutionDisabled")
+Interceptor.attach(JsIsRuntimeExecutionDisabled, {onLeave: function (args) {send("JsIsRuntimeExecutionDisabled");}});
+
+var JsNumberToDouble = Module.findExportByName("Chakra.dll", "JsNumberToDouble")
+Interceptor.attach(JsNumberToDouble, {onLeave: function (args) {send("JsNumberToDouble");}});
+
+var JsNumberToInt = Module.findExportByName("Chakra.dll", "JsNumberToInt")
+Interceptor.attach(JsNumberToInt, {onLeave: function (args) {send("JsNumberToInt");}});
+
+var JsObjectToInspectable = Module.findExportByName("Chakra.dll", "JsObjectToInspectable")
+Interceptor.attach(JsObjectToInspectable, {onLeave: function (args) {send("JsObjectToInspectable");}});
+
+var JsParseScript = Module.findExportByName("Chakra.dll", "JsParseScript")
+Interceptor.attach(JsParseScript, {onLeave: function (args) {send("JsParseScript");}});
+
+var JsParseScriptWithAttributes = Module.findExportByName("Chakra.dll", "JsParseScriptWithAttributes")
+Interceptor.attach(JsParseScriptWithAttributes, {onLeave: function (args) {send("JsParseScriptWithAttributes");}});
+
+var JsParseSerializedScript = Module.findExportByName("Chakra.dll", "JsParseSerializedScript")
+Interceptor.attach(JsParseSerializedScript, {onLeave: function (args) {send("JsParseSerializedScript");}});
+
+var JsParseSerializedScriptWithCallback = Module.findExportByName("Chakra.dll", "JsParseSerializedScriptWithCallback")
+Interceptor.attach(JsParseSerializedScriptWithCallback, {onLeave: function (args) {send("JsParseSerializedScriptWithCallback");}});
+
+var JsPointerToString = Module.findExportByName("Chakra.dll", "JsPointerToString")
+Interceptor.attach(JsPointerToString, {onLeave: function (args) {send("JsPointerToString");}});
+
+var JsPreventExtension = Module.findExportByName("Chakra.dll", "JsPreventExtension")
+Interceptor.attach(JsPreventExtension, {onLeave: function (args) {send("JsPreventExtension");}});
+
+var JsProjectWinRTNamespace = Module.findExportByName("Chakra.dll", "JsProjectWinRTNamespace")
+Interceptor.attach(JsProjectWinRTNamespace, {onLeave: function (args) {send("JsProjectWinRTNamespace");}});
+
+var JsQueueBackgroundParse = Module.findExportByName("Chakra.dll", "JsQueueBackgroundParse")
+Interceptor.attach(JsQueueBackgroundParse, {onLeave: function (args) {send("JsQueueBackgroundParse");}});
+
+var JsRelease = Module.findExportByName("Chakra.dll", "JsRelease")
+Interceptor.attach(JsRelease, {onLeave: function (args) {send("JsRelease");}});
+
+var JsRunScript = Module.findExportByName("Chakra.dll", "JsRunScript")
+Interceptor.attach(JsRunScript, {onLeave: function (args) {send("JsRunScript");}});
+
+var JsRunSerializedScript = Module.findExportByName("Chakra.dll", "JsRunSerializedScript")
+Interceptor.attach(JsRunSerializedScript, {onLeave: function (args) {send("JsRunSerializedScript");}});
+
+var JsRunSerializedScriptWithCallback = Module.findExportByName("Chakra.dll", "JsRunSerializedScriptWithCallback")
+Interceptor.attach(JsRunSerializedScriptWithCallback, {onLeave: function (args) {send("JsRunSerializedScriptWithCallback");}});
+
+var JsSerializeScript = Module.findExportByName("Chakra.dll", "JsSerializeScript")
+Interceptor.attach(JsSerializeScript, {onLeave: function (args) {send("JsSerializeScript");}});
+
+var JsSetContextData = Module.findExportByName("Chakra.dll", "JsSetContextData")
+Interceptor.attach(JsSetContextData, {onLeave: function (args) {send("JsSetContextData");}});
+
+var JsSetCurrentContext = Module.findExportByName("Chakra.dll", "JsSetCurrentContext")
+Interceptor.attach(JsSetCurrentContext, {onLeave: function (args) {send("JsSetCurrentContext");}});
+
+var JsSetException = Module.findExportByName("Chakra.dll", "JsSetException")
+Interceptor.attach(JsSetException, {onLeave: function (args) {send("JsSetException");}});
+
+var JsSetExternalData = Module.findExportByName("Chakra.dll", "JsSetExternalData")
+Interceptor.attach(JsSetExternalData, {onLeave: function (args) {send("JsSetExternalData");}});
+
+var JsSetIndexedPropertiesToExternalData = Module.findExportByName("Chakra.dll", "JsSetIndexedPropertiesToExternalData")
+Interceptor.attach(JsSetIndexedPropertiesToExternalData, {onLeave: function (args) {send("JsSetIndexedPropertiesToExternalData");}});
+
+var JsSetIndexedProperty = Module.findExportByName("Chakra.dll", "JsSetIndexedProperty")
+Interceptor.attach(JsSetIndexedProperty, {onLeave: function (args) {send("JsSetIndexedProperty");}});
+
+var JsSetObjectBeforeCollectCallback = Module.findExportByName("Chakra.dll", "JsSetObjectBeforeCollectCallback")
+Interceptor.attach(JsSetObjectBeforeCollectCallback, {onLeave: function (args) {send("JsSetObjectBeforeCollectCallback");}});
+
+var JsSetProjectionEnqueueCallback = Module.findExportByName("Chakra.dll", "JsSetProjectionEnqueueCallback")
+Interceptor.attach(JsSetProjectionEnqueueCallback, {onLeave: function (args) {send("JsSetProjectionEnqueueCallback");}});
+
+var JsSetPromiseContinuationCallback = Module.findExportByName("Chakra.dll", "JsSetPromiseContinuationCallback")
+Interceptor.attach(JsSetPromiseContinuationCallback, {onLeave: function (args) {send("JsSetPromiseContinuationCallback");}});
+
+var JsSetProperty = Module.findExportByName("Chakra.dll", "JsSetProperty")
+Interceptor.attach(JsSetProperty, {onLeave: function (args) {send("JsSetProperty");}});
+
+var JsSetPrototype = Module.findExportByName("Chakra.dll", "JsSetPrototype")
+Interceptor.attach(JsSetPrototype, {onLeave: function (args) {send("JsSetPrototype");}});
+
+var JsSetRuntimeBeforeCollectCallback = Module.findExportByName("Chakra.dll", "JsSetRuntimeBeforeCollectCallback")
+Interceptor.attach(JsSetRuntimeBeforeCollectCallback, {onLeave: function (args) {send("JsSetRuntimeBeforeCollectCallback");}});
+
+var JsSetRuntimeMemoryAllocationCallback = Module.findExportByName("Chakra.dll", "JsSetRuntimeMemoryAllocationCallback")
+Interceptor.attach(JsSetRuntimeMemoryAllocationCallback, {onLeave: function (args) {send("JsSetRuntimeMemoryAllocationCallback");}});
+
+var JsSetRuntimeMemoryLimit = Module.findExportByName("Chakra.dll", "JsSetRuntimeMemoryLimit")
+Interceptor.attach(JsSetRuntimeMemoryLimit, {onLeave: function (args) {send("JsSetRuntimeMemoryLimit");}});
+
+var JsStartDebugging = Module.findExportByName("Chakra.dll", "JsStartDebugging")
+Interceptor.attach(JsStartDebugging, {onLeave: function (args) {send("JsStartDebugging");}});
+
+var JsStartProfiling = Module.findExportByName("Chakra.dll", "JsStartProfiling")
+Interceptor.attach(JsStartProfiling, {onLeave: function (args) {send("JsStartProfiling");}});
+
+var JsStopProfiling = Module.findExportByName("Chakra.dll", "JsStopProfiling")
+Interceptor.attach(JsStopProfiling, {onLeave: function (args) {send("JsStopProfiling");}});
+
+var JsStrictEquals = Module.findExportByName("Chakra.dll", "JsStrictEquals")
+Interceptor.attach(JsStrictEquals, {onLeave: function (args) {send("JsStrictEquals");}});
+
+var JsStringToPointer = Module.findExportByName("Chakra.dll", "JsStringToPointer")
+Interceptor.attach(JsStringToPointer, {onLeave: function (args) {send("JsStringToPointer");}});
+
+var JsValueToVariant = Module.findExportByName("Chakra.dll", "JsValueToVariant")
+Interceptor.attach(JsValueToVariant, {onLeave: function (args) {send("JsValueToVariant");}});
+
+var JsVarAddRef = Module.findExportByName("Chakra.dll", "JsVarAddRef")
+Interceptor.attach(JsVarAddRef, {onLeave: function (args) {send("JsVarAddRef");}});
+
+var JsVarRelease = Module.findExportByName("Chakra.dll", "JsVarRelease")
+Interceptor.attach(JsVarRelease, {onLeave: function (args) {send("JsVarRelease");}});
+
+var JsVarToExtension = Module.findExportByName("Chakra.dll", "JsVarToExtension")
+Interceptor.attach(JsVarToExtension, {onLeave: function (args) {send("JsVarToExtension");}});
+
+var JsVarToScriptDirect = Module.findExportByName("Chakra.dll", "JsVarToScriptDirect")
+Interceptor.attach(JsVarToScriptDirect, {onLeave: function (args) {send("JsVarToScriptDirect");}});
+
+var JsVariantToValue = Module.findExportByName("Chakra.dll", "JsVariantToValue")
+Interceptor.attach(JsVariantToValue, {onLeave: function (args) {send("JsVariantToValue");}});
+
+var MemProtectHeapAddRootSection = Module.findExportByName("Chakra.dll", "MemProtectHeapAddRootSection")
+Interceptor.attach(MemProtectHeapAddRootSection, {onLeave: function (args) {send("MemProtectHeapAddRootSection");}});
+
+var MemProtectHeapCollect = Module.findExportByName("Chakra.dll", "MemProtectHeapCollect")
+Interceptor.attach(MemProtectHeapCollect, {onLeave: function (args) {send("MemProtectHeapCollect");}});
+
+var MemProtectHeapCreate = Module.findExportByName("Chakra.dll", "MemProtectHeapCreate")
+Interceptor.attach(MemProtectHeapCreate, {onLeave: function (args) {send("MemProtectHeapCreate");}});
+
+var MemProtectHeapDestroy = Module.findExportByName("Chakra.dll", "MemProtectHeapDestroy")
+Interceptor.attach(MemProtectHeapDestroy, {onLeave: function (args) {send("MemProtectHeapDestroy");}});
+
+var MemProtectHeapDisableCollection = Module.findExportByName("Chakra.dll", "MemProtectHeapDisableCollection")
+Interceptor.attach(MemProtectHeapDisableCollection, {onLeave: function (args) {send("MemProtectHeapDisableCollection");}});
+
+var MemProtectHeapIsValidObject = Module.findExportByName("Chakra.dll", "MemProtectHeapIsValidObject")
+Interceptor.attach(MemProtectHeapIsValidObject, {onLeave: function (args) {send("MemProtectHeapIsValidObject");}});
+
+var MemProtectHeapMemSize = Module.findExportByName("Chakra.dll", "MemProtectHeapMemSize")
+Interceptor.attach(MemProtectHeapMemSize, {onLeave: function (args) {send("MemProtectHeapMemSize");}});
+
+var MemProtectHeapNotifyCurrentThreadDetach = Module.findExportByName("Chakra.dll", "MemProtectHeapNotifyCurrentThreadDetach")
+Interceptor.attach(MemProtectHeapNotifyCurrentThreadDetach, {onLeave: function (args) {send("MemProtectHeapNotifyCurrentThreadDetach");}});
+
+var MemProtectHeapProtectCurrentThread = Module.findExportByName("Chakra.dll", "MemProtectHeapProtectCurrentThread")
+Interceptor.attach(MemProtectHeapProtectCurrentThread, {onLeave: function (args) {send("MemProtectHeapProtectCurrentThread");}});
+
+var MemProtectHeapRemoveRootSection = Module.findExportByName("Chakra.dll", "MemProtectHeapRemoveRootSection")
+Interceptor.attach(MemProtectHeapRemoveRootSection, {onLeave: function (args) {send("MemProtectHeapRemoveRootSection");}});
+
+var MemProtectHeapReportHeapSize = Module.findExportByName("Chakra.dll", "MemProtectHeapReportHeapSize")
+Interceptor.attach(MemProtectHeapReportHeapSize, {onLeave: function (args) {send("MemProtectHeapReportHeapSize");}});
+
+var MemProtectHeapRootAlloc = Module.findExportByName("Chakra.dll", "MemProtectHeapRootAlloc")
+Interceptor.attach(MemProtectHeapRootAlloc, {onLeave: function (args) {send("MemProtectHeapRootAlloc");}});
+
+var MemProtectHeapRootAllocLeaf = Module.findExportByName("Chakra.dll", "MemProtectHeapRootAllocLeaf")
+Interceptor.attach(MemProtectHeapRootAllocLeaf, {onLeave: function (args) {send("MemProtectHeapRootAllocLeaf");}});
+
+var MemProtectHeapRootRealloc = Module.findExportByName("Chakra.dll", "MemProtectHeapRootRealloc")
+Interceptor.attach(MemProtectHeapRootRealloc, {onLeave: function (args) {send("MemProtectHeapRootRealloc");}});
+
+var MemProtectHeapRootReallocLeaf = Module.findExportByName("Chakra.dll", "MemProtectHeapRootReallocLeaf")
+Interceptor.attach(MemProtectHeapRootReallocLeaf, {onLeave: function (args) {send("MemProtectHeapRootReallocLeaf");}});
+
+var MemProtectHeapSynchronizeWithCollector = Module.findExportByName("Chakra.dll", "MemProtectHeapSynchronizeWithCollector")
+Interceptor.attach(MemProtectHeapSynchronizeWithCollector, {onLeave: function (args) {send("MemProtectHeapSynchronizeWithCollector");}});
+
+var MemProtectHeapUnprotectCurrentThread = Module.findExportByName("Chakra.dll", "MemProtectHeapUnprotectCurrentThread")
+Interceptor.attach(MemProtectHeapUnprotectCurrentThread, {onLeave: function (args) {send("MemProtectHeapUnprotectCurrentThread");}});
+
+var MemProtectHeapUnrootAndZero = Module.findExportByName("Chakra.dll", "MemProtectHeapUnrootAndZero")
+Interceptor.attach(MemProtectHeapUnrootAndZero, {onLeave: function (args) {send("MemProtectHeapUnrootAndZero");}});
+
+var RecyclerNativeHeapAddExternalMemoryUsage = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapAddExternalMemoryUsage")
+Interceptor.attach(RecyclerNativeHeapAddExternalMemoryUsage, {onLeave: function (args) {send("RecyclerNativeHeapAddExternalMemoryUsage");}});
+
+var RecyclerNativeHeapAllocLeaf = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapAllocLeaf")
+Interceptor.attach(RecyclerNativeHeapAllocLeaf, {onLeave: function (args) {send("RecyclerNativeHeapAllocLeaf");}});
+
+var RecyclerNativeHeapAllocLeafFinalized = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapAllocLeafFinalized")
+Interceptor.attach(RecyclerNativeHeapAllocLeafFinalized, {onLeave: function (args) {send("RecyclerNativeHeapAllocLeafFinalized");}});
+
+var RecyclerNativeHeapAllocTraced = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapAllocTraced")
+Interceptor.attach(RecyclerNativeHeapAllocTraced, {onLeave: function (args) {send("RecyclerNativeHeapAllocTraced");}});
+
+var RecyclerNativeHeapAllocTracedFinalized = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapAllocTracedFinalized")
+Interceptor.attach(RecyclerNativeHeapAllocTracedFinalized, {onLeave: function (args) {send("RecyclerNativeHeapAllocTracedFinalized");}});
+
+var RecyclerNativeHeapCollectGarbageInThread = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapCollectGarbageInThread")
+Interceptor.attach(RecyclerNativeHeapCollectGarbageInThread, {onLeave: function (args) {send("RecyclerNativeHeapCollectGarbageInThread");}});
+
+var RecyclerNativeHeapCreateWeakReference = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapCreateWeakReference")
+Interceptor.attach(RecyclerNativeHeapCreateWeakReference, {onLeave: function (args) {send("RecyclerNativeHeapCreateWeakReference");}});
+
+var RecyclerNativeHeapGetRealAddressFromInterior = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapGetRealAddressFromInterior")
+Interceptor.attach(RecyclerNativeHeapGetRealAddressFromInterior, {onLeave: function (args) {send("RecyclerNativeHeapGetRealAddressFromInterior");}});
+
+var RecyclerNativeHeapGetStrongReference = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapGetStrongReference")
+Interceptor.attach(RecyclerNativeHeapGetStrongReference, {onLeave: function (args) {send("RecyclerNativeHeapGetStrongReference");}});
+
+var RecyclerNativeHeapHasWeakReferenceCleanupOccurred = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapHasWeakReferenceCleanupOccurred")
+Interceptor.attach(RecyclerNativeHeapHasWeakReferenceCleanupOccurred, {onLeave: function (args) {send("RecyclerNativeHeapHasWeakReferenceCleanupOccurred");}});
+
+var RecyclerNativeHeapRootAddRef = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapRootAddRef")
+Interceptor.attach(RecyclerNativeHeapRootAddRef, {onLeave: function (args) {send("RecyclerNativeHeapRootAddRef");}});
+
+var RecyclerNativeHeapRootRelease = Module.findExportByName("Chakra.dll", "RecyclerNativeHeapRootRelease")
+Interceptor.attach(RecyclerNativeHeapRootRelease, {onLeave: function (args) {send("RecyclerNativeHeapRootRelease");}});
+

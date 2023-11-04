@@ -1,0 +1,33 @@
+var DllCanUnloadNow = Module.findExportByName("Print.Workflow.Source.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var WfpAbortSession = Module.findExportByName("Print.Workflow.Source.dll", "WfpAbortSession")
+Interceptor.attach(WfpAbortSession, {onLeave: function (args) {send("WfpAbortSession");}});
+
+var WfpCloseSession = Module.findExportByName("Print.Workflow.Source.dll", "WfpCloseSession")
+Interceptor.attach(WfpCloseSession, {onLeave: function (args) {send("WfpCloseSession");}});
+
+var WfpCreateWorkflowSession = Module.findExportByName("Print.Workflow.Source.dll", "WfpCreateWorkflowSession")
+Interceptor.attach(WfpCreateWorkflowSession, {onLeave: function (args) {send("WfpCreateWorkflowSession");}});
+
+var WfpGetOutputFileName = Module.findExportByName("Print.Workflow.Source.dll", "WfpGetOutputFileName")
+Interceptor.attach(WfpGetOutputFileName, {onLeave: function (args) {send("WfpGetOutputFileName");}});
+
+var WfpGetWorkFlowStream = Module.findExportByName("Print.Workflow.Source.dll", "WfpGetWorkFlowStream")
+Interceptor.attach(WfpGetWorkFlowStream, {onLeave: function (args) {send("WfpGetWorkFlowStream");}});
+
+var WfpSetJobInfo = Module.findExportByName("Print.Workflow.Source.dll", "WfpSetJobInfo")
+Interceptor.attach(WfpSetJobInfo, {onLeave: function (args) {send("WfpSetJobInfo");}});
+
+var WfpSetOutputFileName = Module.findExportByName("Print.Workflow.Source.dll", "WfpSetOutputFileName")
+Interceptor.attach(WfpSetOutputFileName, {onLeave: function (args) {send("WfpSetOutputFileName");}});
+
+var WfpSetPrintTicket = Module.findExportByName("Print.Workflow.Source.dll", "WfpSetPrintTicket")
+Interceptor.attach(WfpSetPrintTicket, {onLeave: function (args) {send("WfpSetPrintTicket");}});
+
+var WfpSetXpsDataType = Module.findExportByName("Print.Workflow.Source.dll", "WfpSetXpsDataType")
+Interceptor.attach(WfpSetXpsDataType, {onLeave: function (args) {send("WfpSetXpsDataType");}});
+
+var WfpWaitforJobCompletion = Module.findExportByName("Print.Workflow.Source.dll", "WfpWaitforJobCompletion")
+Interceptor.attach(WfpWaitforJobCompletion, {onLeave: function (args) {send("WfpWaitforJobCompletion");}});
+

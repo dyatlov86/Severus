@@ -1,0 +1,6 @@
+var ServiceCtrlHandler = Module.findExportByName("svsvc.dll", "ServiceCtrlHandler")
+Interceptor.attach(ServiceCtrlHandler, {onLeave: function (args) {send("ServiceCtrlHandler");}});
+
+var ServiceMain = Module.findExportByName("svsvc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

@@ -1,0 +1,102 @@
+var NetCreateProvisioningPackage = Module.findExportByName("netjoin.dll", "NetCreateProvisioningPackage")
+Interceptor.attach(NetCreateProvisioningPackage, {onLeave: function (args) {send("NetCreateProvisioningPackage");}});
+
+var NetProvisionComputerAccount = Module.findExportByName("netjoin.dll", "NetProvisionComputerAccount")
+Interceptor.attach(NetProvisionComputerAccount, {onLeave: function (args) {send("NetProvisionComputerAccount");}});
+
+var NetRequestOfflineDomainJoin = Module.findExportByName("netjoin.dll", "NetRequestOfflineDomainJoin")
+Interceptor.attach(NetRequestOfflineDomainJoin, {onLeave: function (args) {send("NetRequestOfflineDomainJoin");}});
+
+var NetRequestProvisioningPackageInstall = Module.findExportByName("netjoin.dll", "NetRequestProvisioningPackageInstall")
+Interceptor.attach(NetRequestProvisioningPackageInstall, {onLeave: function (args) {send("NetRequestProvisioningPackageInstall");}});
+
+var NetSetuppCloseLog = Module.findExportByName("netjoin.dll", "NetSetuppCloseLog")
+Interceptor.attach(NetSetuppCloseLog, {onLeave: function (args) {send("NetSetuppCloseLog");}});
+
+var NetSetuppOpenLog = Module.findExportByName("netjoin.dll", "NetSetuppOpenLog")
+Interceptor.attach(NetSetuppOpenLog, {onLeave: function (args) {send("NetSetuppOpenLog");}});
+
+var NetpAvoidNetlogonSpnSet = Module.findExportByName("netjoin.dll", "NetpAvoidNetlogonSpnSet")
+Interceptor.attach(NetpAvoidNetlogonSpnSet, {onLeave: function (args) {send("NetpAvoidNetlogonSpnSet");}});
+
+var NetpChangeMachineName = Module.findExportByName("netjoin.dll", "NetpChangeMachineName")
+Interceptor.attach(NetpChangeMachineName, {onLeave: function (args) {send("NetpChangeMachineName");}});
+
+var NetpControlServices = Module.findExportByName("netjoin.dll", "NetpControlServices")
+Interceptor.attach(NetpControlServices, {onLeave: function (args) {send("NetpControlServices");}});
+
+var NetpCrackNamesStatus2Win32Error = Module.findExportByName("netjoin.dll", "NetpCrackNamesStatus2Win32Error")
+Interceptor.attach(NetpCrackNamesStatus2Win32Error, {onLeave: function (args) {send("NetpCrackNamesStatus2Win32Error");}});
+
+var NetpCreateComputerObjectInDs = Module.findExportByName("netjoin.dll", "NetpCreateComputerObjectInDs")
+Interceptor.attach(NetpCreateComputerObjectInDs, {onLeave: function (args) {send("NetpCreateComputerObjectInDs");}});
+
+var NetpDoDomainJoin = Module.findExportByName("netjoin.dll", "NetpDoDomainJoin")
+Interceptor.attach(NetpDoDomainJoin, {onLeave: function (args) {send("NetpDoDomainJoin");}});
+
+var NetpDomainJoinLicensingCheck = Module.findExportByName("netjoin.dll", "NetpDomainJoinLicensingCheck")
+Interceptor.attach(NetpDomainJoinLicensingCheck, {onLeave: function (args) {send("NetpDomainJoinLicensingCheck");}});
+
+var NetpGetJoinInformation = Module.findExportByName("netjoin.dll", "NetpGetJoinInformation")
+Interceptor.attach(NetpGetJoinInformation, {onLeave: function (args) {send("NetpGetJoinInformation");}});
+
+var NetpGetListOfJoinableOUs = Module.findExportByName("netjoin.dll", "NetpGetListOfJoinableOUs")
+Interceptor.attach(NetpGetListOfJoinableOUs, {onLeave: function (args) {send("NetpGetListOfJoinableOUs");}});
+
+var NetpGetLsaPrimaryDomain = Module.findExportByName("netjoin.dll", "NetpGetLsaPrimaryDomain")
+Interceptor.attach(NetpGetLsaPrimaryDomain, {onLeave: function (args) {send("NetpGetLsaPrimaryDomain");}});
+
+var NetpGetMachineAccountName = Module.findExportByName("netjoin.dll", "NetpGetMachineAccountName")
+Interceptor.attach(NetpGetMachineAccountName, {onLeave: function (args) {send("NetpGetMachineAccountName");}});
+
+var NetpIsSetupInProgress = Module.findExportByName("netjoin.dll", "NetpIsSetupInProgress")
+Interceptor.attach(NetpIsSetupInProgress, {onLeave: function (args) {send("NetpIsSetupInProgress");}});
+
+var NetpJoinProvider2Initialize = Module.findExportByName("netjoin.dll", "NetpJoinProvider2Initialize")
+Interceptor.attach(NetpJoinProvider2Initialize, {onLeave: function (args) {send("NetpJoinProvider2Initialize");}});
+
+var NetpJoinProvider3Initialize = Module.findExportByName("netjoin.dll", "NetpJoinProvider3Initialize")
+Interceptor.attach(NetpJoinProvider3Initialize, {onLeave: function (args) {send("NetpJoinProvider3Initialize");}});
+
+var NetpJoinProvider4Initialize = Module.findExportByName("netjoin.dll", "NetpJoinProvider4Initialize")
+Interceptor.attach(NetpJoinProvider4Initialize, {onLeave: function (args) {send("NetpJoinProvider4Initialize");}});
+
+var NetpJoinProviderInitialize = Module.findExportByName("netjoin.dll", "NetpJoinProviderInitialize")
+Interceptor.attach(NetpJoinProviderInitialize, {onLeave: function (args) {send("NetpJoinProviderInitialize");}});
+
+var NetpLogPrintHelper = Module.findExportByName("netjoin.dll", "NetpLogPrintHelper")
+Interceptor.attach(NetpLogPrintHelper, {onLeave: function (args) {send("NetpLogPrintHelper");}});
+
+var NetpMachineValidToJoin = Module.findExportByName("netjoin.dll", "NetpMachineValidToJoin")
+Interceptor.attach(NetpMachineValidToJoin, {onLeave: function (args) {send("NetpMachineValidToJoin");}});
+
+var NetpManageIPCConnect = Module.findExportByName("netjoin.dll", "NetpManageIPCConnect")
+Interceptor.attach(NetpManageIPCConnect, {onLeave: function (args) {send("NetpManageIPCConnect");}});
+
+var NetpManageMachineAccountWithSid = Module.findExportByName("netjoin.dll", "NetpManageMachineAccountWithSid")
+Interceptor.attach(NetpManageMachineAccountWithSid, {onLeave: function (args) {send("NetpManageMachineAccountWithSid");}});
+
+var NetpQueryService = Module.findExportByName("netjoin.dll", "NetpQueryService")
+Interceptor.attach(NetpQueryService, {onLeave: function (args) {send("NetpQueryService");}});
+
+var NetpSeparateUserAndDomain = Module.findExportByName("netjoin.dll", "NetpSeparateUserAndDomain")
+Interceptor.attach(NetpSeparateUserAndDomain, {onLeave: function (args) {send("NetpSeparateUserAndDomain");}});
+
+var NetpSetComputerAccountPassword = Module.findExportByName("netjoin.dll", "NetpSetComputerAccountPassword")
+Interceptor.attach(NetpSetComputerAccountPassword, {onLeave: function (args) {send("NetpSetComputerAccountPassword");}});
+
+var NetpStopService = Module.findExportByName("netjoin.dll", "NetpStopService")
+Interceptor.attach(NetpStopService, {onLeave: function (args) {send("NetpStopService");}});
+
+var NetpUnJoinDomain = Module.findExportByName("netjoin.dll", "NetpUnJoinDomain")
+Interceptor.attach(NetpUnJoinDomain, {onLeave: function (args) {send("NetpUnJoinDomain");}});
+
+var NetpUpdateAutoenrolConfig = Module.findExportByName("netjoin.dll", "NetpUpdateAutoenrolConfig")
+Interceptor.attach(NetpUpdateAutoenrolConfig, {onLeave: function (args) {send("NetpUpdateAutoenrolConfig");}});
+
+var NetpUpgradePreNT5JoinInfo = Module.findExportByName("netjoin.dll", "NetpUpgradePreNT5JoinInfo")
+Interceptor.attach(NetpUpgradePreNT5JoinInfo, {onLeave: function (args) {send("NetpUpgradePreNT5JoinInfo");}});
+
+var NetpValidateName = Module.findExportByName("netjoin.dll", "NetpValidateName")
+Interceptor.attach(NetpValidateName, {onLeave: function (args) {send("NetpValidateName");}});
+

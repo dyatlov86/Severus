@@ -1,0 +1,6 @@
+var RampOldTri = Module.findExportByName("d3dramp.dll", "RampOldTri")
+Interceptor.attach(RampOldTri, {onLeave: function (args) {send("RampOldTri");}});
+
+var g_RampOld_BeadTbl = Module.findExportByName("d3dramp.dll", "g_RampOld_BeadTbl")
+Interceptor.attach(g_RampOld_BeadTbl, {onLeave: function (args) {send("g_RampOld_BeadTbl");}});
+

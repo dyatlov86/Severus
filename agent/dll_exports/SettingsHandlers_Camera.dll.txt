@@ -1,0 +1,6 @@
+var DllCanUnloadNow = Module.findExportByName("SettingsHandlers_Camera.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var GetSetting = Module.findExportByName("SettingsHandlers_Camera.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+

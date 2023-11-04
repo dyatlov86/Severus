@@ -1,0 +1,114 @@
+var IsInteractiveUserSession = Module.findExportByName("usermgrcli.dll", "IsInteractiveUserSession")
+Interceptor.attach(IsInteractiveUserSession, {onLeave: function (args) {send("IsInteractiveUserSession");}});
+
+var QueryActiveSession = Module.findExportByName("usermgrcli.dll", "QueryActiveSession")
+Interceptor.attach(QueryActiveSession, {onLeave: function (args) {send("QueryActiveSession");}});
+
+var QueryUserToken = Module.findExportByName("usermgrcli.dll", "QueryUserToken")
+Interceptor.attach(QueryUserToken, {onLeave: function (args) {send("QueryUserToken");}});
+
+var RegisterUsertokenForNoWinlogon = Module.findExportByName("usermgrcli.dll", "RegisterUsertokenForNoWinlogon")
+Interceptor.attach(RegisterUsertokenForNoWinlogon, {onLeave: function (args) {send("RegisterUsertokenForNoWinlogon");}});
+
+var UMgrChangeSessionActiveShellUser = Module.findExportByName("usermgrcli.dll", "UMgrChangeSessionActiveShellUser")
+Interceptor.attach(UMgrChangeSessionActiveShellUser, {onLeave: function (args) {send("UMgrChangeSessionActiveShellUser");}});
+
+var UMgrChangeSessionUserToken = Module.findExportByName("usermgrcli.dll", "UMgrChangeSessionUserToken")
+Interceptor.attach(UMgrChangeSessionUserToken, {onLeave: function (args) {send("UMgrChangeSessionUserToken");}});
+
+var UMgrClearDefaultSignInAccount = Module.findExportByName("usermgrcli.dll", "UMgrClearDefaultSignInAccount")
+Interceptor.attach(UMgrClearDefaultSignInAccount, {onLeave: function (args) {send("UMgrClearDefaultSignInAccount");}});
+
+var UMgrConnectLocalUser = Module.findExportByName("usermgrcli.dll", "UMgrConnectLocalUser")
+Interceptor.attach(UMgrConnectLocalUser, {onLeave: function (args) {send("UMgrConnectLocalUser");}});
+
+var UMgrDisconnectLocalUser = Module.findExportByName("usermgrcli.dll", "UMgrDisconnectLocalUser")
+Interceptor.attach(UMgrDisconnectLocalUser, {onLeave: function (args) {send("UMgrDisconnectLocalUser");}});
+
+var UMgrEnumerateSessionUsers = Module.findExportByName("usermgrcli.dll", "UMgrEnumerateSessionUsers")
+Interceptor.attach(UMgrEnumerateSessionUsers, {onLeave: function (args) {send("UMgrEnumerateSessionUsers");}});
+
+var UMgrFreeSessionUsers = Module.findExportByName("usermgrcli.dll", "UMgrFreeSessionUsers")
+Interceptor.attach(UMgrFreeSessionUsers, {onLeave: function (args) {send("UMgrFreeSessionUsers");}});
+
+var UMgrFreeUserCredentials = Module.findExportByName("usermgrcli.dll", "UMgrFreeUserCredentials")
+Interceptor.attach(UMgrFreeUserCredentials, {onLeave: function (args) {send("UMgrFreeUserCredentials");}});
+
+var UMgrGetCachedCredentials = Module.findExportByName("usermgrcli.dll", "UMgrGetCachedCredentials")
+Interceptor.attach(UMgrGetCachedCredentials, {onLeave: function (args) {send("UMgrGetCachedCredentials");}});
+
+var UMgrGetConstrainedUserToken = Module.findExportByName("usermgrcli.dll", "UMgrGetConstrainedUserToken")
+Interceptor.attach(UMgrGetConstrainedUserToken, {onLeave: function (args) {send("UMgrGetConstrainedUserToken");}});
+
+var UMgrGetDefaultSignInAccount = Module.findExportByName("usermgrcli.dll", "UMgrGetDefaultSignInAccount")
+Interceptor.attach(UMgrGetDefaultSignInAccount, {onLeave: function (args) {send("UMgrGetDefaultSignInAccount");}});
+
+var UMgrGetImpersonationTokenForContext = Module.findExportByName("usermgrcli.dll", "UMgrGetImpersonationTokenForContext")
+Interceptor.attach(UMgrGetImpersonationTokenForContext, {onLeave: function (args) {send("UMgrGetImpersonationTokenForContext");}});
+
+var UMgrGetSessionActiveShellUserToken = Module.findExportByName("usermgrcli.dll", "UMgrGetSessionActiveShellUserToken")
+Interceptor.attach(UMgrGetSessionActiveShellUserToken, {onLeave: function (args) {send("UMgrGetSessionActiveShellUserToken");}});
+
+var UMgrInformFlags = Module.findExportByName("usermgrcli.dll", "UMgrInformFlags")
+Interceptor.attach(UMgrInformFlags, {onLeave: function (args) {send("UMgrInformFlags");}});
+
+var UMgrInformUserLogoff = Module.findExportByName("usermgrcli.dll", "UMgrInformUserLogoff")
+Interceptor.attach(UMgrInformUserLogoff, {onLeave: function (args) {send("UMgrInformUserLogoff");}});
+
+var UMgrInformUserLogon = Module.findExportByName("usermgrcli.dll", "UMgrInformUserLogon")
+Interceptor.attach(UMgrInformUserLogon, {onLeave: function (args) {send("UMgrInformUserLogon");}});
+
+var UMgrIsAllowedToActivateAsUser = Module.findExportByName("usermgrcli.dll", "UMgrIsAllowedToActivateAsUser")
+Interceptor.attach(UMgrIsAllowedToActivateAsUser, {onLeave: function (args) {send("UMgrIsAllowedToActivateAsUser");}});
+
+var UMgrLaunchShell = Module.findExportByName("usermgrcli.dll", "UMgrLaunchShell")
+Interceptor.attach(UMgrLaunchShell, {onLeave: function (args) {send("UMgrLaunchShell");}});
+
+var UMgrLaunchShellInfrastructureHost = Module.findExportByName("usermgrcli.dll", "UMgrLaunchShellInfrastructureHost")
+Interceptor.attach(UMgrLaunchShellInfrastructureHost, {onLeave: function (args) {send("UMgrLaunchShellInfrastructureHost");}});
+
+var UMgrLogonUser = Module.findExportByName("usermgrcli.dll", "UMgrLogonUser")
+Interceptor.attach(UMgrLogonUser, {onLeave: function (args) {send("UMgrLogonUser");}});
+
+var UMgrOpenProcessHandleForAccess = Module.findExportByName("usermgrcli.dll", "UMgrOpenProcessHandleForAccess")
+Interceptor.attach(UMgrOpenProcessHandleForAccess, {onLeave: function (args) {send("UMgrOpenProcessHandleForAccess");}});
+
+var UMgrOpenProcessTokenForQuery = Module.findExportByName("usermgrcli.dll", "UMgrOpenProcessTokenForQuery")
+Interceptor.attach(UMgrOpenProcessTokenForQuery, {onLeave: function (args) {send("UMgrOpenProcessTokenForQuery");}});
+
+var UMgrQueryDefaultAccountToken = Module.findExportByName("usermgrcli.dll", "UMgrQueryDefaultAccountToken")
+Interceptor.attach(UMgrQueryDefaultAccountToken, {onLeave: function (args) {send("UMgrQueryDefaultAccountToken");}});
+
+var UMgrQuerySessionUserToken = Module.findExportByName("usermgrcli.dll", "UMgrQuerySessionUserToken")
+Interceptor.attach(UMgrQuerySessionUserToken, {onLeave: function (args) {send("UMgrQuerySessionUserToken");}});
+
+var UMgrQuerySessionVirtualAccountToken = Module.findExportByName("usermgrcli.dll", "UMgrQuerySessionVirtualAccountToken")
+Interceptor.attach(UMgrQuerySessionVirtualAccountToken, {onLeave: function (args) {send("UMgrQuerySessionVirtualAccountToken");}});
+
+var UMgrQueryUserContext = Module.findExportByName("usermgrcli.dll", "UMgrQueryUserContext")
+Interceptor.attach(UMgrQueryUserContext, {onLeave: function (args) {send("UMgrQueryUserContext");}});
+
+var UMgrQueryUserContextFromName = Module.findExportByName("usermgrcli.dll", "UMgrQueryUserContextFromName")
+Interceptor.attach(UMgrQueryUserContextFromName, {onLeave: function (args) {send("UMgrQueryUserContextFromName");}});
+
+var UMgrQueryUserContextFromSid = Module.findExportByName("usermgrcli.dll", "UMgrQueryUserContextFromSid")
+Interceptor.attach(UMgrQueryUserContextFromSid, {onLeave: function (args) {send("UMgrQueryUserContextFromSid");}});
+
+var UMgrQueryUserToken = Module.findExportByName("usermgrcli.dll", "UMgrQueryUserToken")
+Interceptor.attach(UMgrQueryUserToken, {onLeave: function (args) {send("UMgrQueryUserToken");}});
+
+var UMgrQueryUserTokenFromName = Module.findExportByName("usermgrcli.dll", "UMgrQueryUserTokenFromName")
+Interceptor.attach(UMgrQueryUserTokenFromName, {onLeave: function (args) {send("UMgrQueryUserTokenFromName");}});
+
+var UMgrQueryUserTokenFromSid = Module.findExportByName("usermgrcli.dll", "UMgrQueryUserTokenFromSid")
+Interceptor.attach(UMgrQueryUserTokenFromSid, {onLeave: function (args) {send("UMgrQueryUserTokenFromSid");}});
+
+var UMgrSetCachedCredentials = Module.findExportByName("usermgrcli.dll", "UMgrSetCachedCredentials")
+Interceptor.attach(UMgrSetCachedCredentials, {onLeave: function (args) {send("UMgrSetCachedCredentials");}});
+
+var UMgrSetShellInformation = Module.findExportByName("usermgrcli.dll", "UMgrSetShellInformation")
+Interceptor.attach(UMgrSetShellInformation, {onLeave: function (args) {send("UMgrSetShellInformation");}});
+
+var UMgrpGetRegistryLocation = Module.findExportByName("usermgrcli.dll", "UMgrpGetRegistryLocation")
+Interceptor.attach(UMgrpGetRegistryLocation, {onLeave: function (args) {send("UMgrpGetRegistryLocation");}});
+

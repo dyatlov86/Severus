@@ -1,0 +1,9 @@
+var DecodeReadResBDeinit = Module.findExportByName("ResBParser.dll", "DecodeReadResBDeinit")
+Interceptor.attach(DecodeReadResBDeinit, {onLeave: function (args) {send("DecodeReadResBDeinit");}});
+
+var DecodeReadResBInit = Module.findExportByName("ResBParser.dll", "DecodeReadResBInit")
+Interceptor.attach(DecodeReadResBInit, {onLeave: function (args) {send("DecodeReadResBInit");}});
+
+var EnumerateResBStrings = Module.findExportByName("ResBParser.dll", "EnumerateResBStrings")
+Interceptor.attach(EnumerateResBStrings, {onLeave: function (args) {send("EnumerateResBStrings");}});
+

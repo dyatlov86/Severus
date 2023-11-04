@@ -1,0 +1,6 @@
+var FC_CreateFCManager = Module.findExportByName("Facilitator.dll", "FC_CreateFCManager")
+Interceptor.attach(FC_CreateFCManager, {onLeave: function (args) {send("FC_CreateFCManager");}});
+
+var FC_CreateFCRegistrar = Module.findExportByName("Facilitator.dll", "FC_CreateFCRegistrar")
+Interceptor.attach(FC_CreateFCRegistrar, {onLeave: function (args) {send("FC_CreateFCRegistrar");}});
+

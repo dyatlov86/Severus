@@ -1,0 +1,30 @@
+var CompareStringA = Module.findExportByName("API-MS-Win-core-localization-obsolete-l1-2-0.dll", "CompareStringA")
+Interceptor.attach(CompareStringA, {onLeave: function (args) {send("CompareStringA");}});
+
+var EnumLanguageGroupLocalesW = Module.findExportByName("API-MS-Win-core-localization-obsolete-l1-2-0.dll", "EnumLanguageGroupLocalesW")
+Interceptor.attach(EnumLanguageGroupLocalesW, {onLeave: function (args) {send("EnumLanguageGroupLocalesW");}});
+
+var EnumSystemLanguageGroupsW = Module.findExportByName("API-MS-Win-core-localization-obsolete-l1-2-0.dll", "EnumSystemLanguageGroupsW")
+Interceptor.attach(EnumSystemLanguageGroupsW, {onLeave: function (args) {send("EnumSystemLanguageGroupsW");}});
+
+var EnumUILanguagesW = Module.findExportByName("API-MS-Win-core-localization-obsolete-l1-2-0.dll", "EnumUILanguagesW")
+Interceptor.attach(EnumUILanguagesW, {onLeave: function (args) {send("EnumUILanguagesW");}});
+
+var GetNumberFormatW = Module.findExportByName("API-MS-Win-core-localization-obsolete-l1-2-0.dll", "GetNumberFormatW")
+Interceptor.attach(GetNumberFormatW, {onLeave: function (args) {send("GetNumberFormatW");}});
+
+var GetStringTypeA = Module.findExportByName("API-MS-Win-core-localization-obsolete-l1-2-0.dll", "GetStringTypeA")
+Interceptor.attach(GetStringTypeA, {onLeave: function (args) {send("GetStringTypeA");}});
+
+var GetSystemDefaultLocaleName = Module.findExportByName("API-MS-Win-core-localization-obsolete-l1-2-0.dll", "GetSystemDefaultLocaleName")
+Interceptor.attach(GetSystemDefaultLocaleName, {onLeave: function (args) {send("GetSystemDefaultLocaleName");}});
+
+var GetSystemDefaultUILanguage = Module.findExportByName("API-MS-Win-core-localization-obsolete-l1-2-0.dll", "GetSystemDefaultUILanguage")
+Interceptor.attach(GetSystemDefaultUILanguage, {onLeave: function (args) {send("GetSystemDefaultUILanguage");}});
+
+var GetUserDefaultUILanguage = Module.findExportByName("API-MS-Win-core-localization-obsolete-l1-2-0.dll", "GetUserDefaultUILanguage")
+Interceptor.attach(GetUserDefaultUILanguage, {onLeave: function (args) {send("GetUserDefaultUILanguage");}});
+
+var LCIDToLocaleName = Module.findExportByName("API-MS-Win-core-localization-obsolete-l1-2-0.dll", "LCIDToLocaleName")
+Interceptor.attach(LCIDToLocaleName, {onLeave: function (args) {send("LCIDToLocaleName");}});
+

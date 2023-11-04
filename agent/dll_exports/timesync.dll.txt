@@ -1,0 +1,27 @@
+var DisableNTPSync = Module.findExportByName("timesync.dll", "DisableNTPSync")
+Interceptor.attach(DisableNTPSync, {onLeave: function (args) {send("DisableNTPSync");}});
+
+var FreeTimeStatusInfo = Module.findExportByName("timesync.dll", "FreeTimeStatusInfo")
+Interceptor.attach(FreeTimeStatusInfo, {onLeave: function (args) {send("FreeTimeStatusInfo");}});
+
+var GetTimeStatusInfo = Module.findExportByName("timesync.dll", "GetTimeStatusInfo")
+Interceptor.attach(GetTimeStatusInfo, {onLeave: function (args) {send("GetTimeStatusInfo");}});
+
+var GetW32timeParameterSz = Module.findExportByName("timesync.dll", "GetW32timeParameterSz")
+Interceptor.attach(GetW32timeParameterSz, {onLeave: function (args) {send("GetW32timeParameterSz");}});
+
+var IsNTPSyncEnabled = Module.findExportByName("timesync.dll", "IsNTPSyncEnabled")
+Interceptor.attach(IsNTPSyncEnabled, {onLeave: function (args) {send("IsNTPSyncEnabled");}});
+
+var ReadLastKnownGoodTimeFromRegistry = Module.findExportByName("timesync.dll", "ReadLastKnownGoodTimeFromRegistry")
+Interceptor.attach(ReadLastKnownGoodTimeFromRegistry, {onLeave: function (args) {send("ReadLastKnownGoodTimeFromRegistry");}});
+
+var SetNTPSync = Module.findExportByName("timesync.dll", "SetNTPSync")
+Interceptor.attach(SetNTPSync, {onLeave: function (args) {send("SetNTPSync");}});
+
+var StartTimeService = Module.findExportByName("timesync.dll", "StartTimeService")
+Interceptor.attach(StartTimeService, {onLeave: function (args) {send("StartTimeService");}});
+
+var SyncW32Time = Module.findExportByName("timesync.dll", "SyncW32Time")
+Interceptor.attach(SyncW32Time, {onLeave: function (args) {send("SyncW32Time");}});
+

@@ -1,0 +1,27 @@
+var DrtCreateDerivedKey = Module.findExportByName("drtprov.dll", "DrtCreateDerivedKey")
+Interceptor.attach(DrtCreateDerivedKey, {onLeave: function (args) {send("DrtCreateDerivedKey");}});
+
+var DrtCreateDerivedKeySecurityProvider = Module.findExportByName("drtprov.dll", "DrtCreateDerivedKeySecurityProvider")
+Interceptor.attach(DrtCreateDerivedKeySecurityProvider, {onLeave: function (args) {send("DrtCreateDerivedKeySecurityProvider");}});
+
+var DrtCreateDnsBootstrapResolver = Module.findExportByName("drtprov.dll", "DrtCreateDnsBootstrapResolver")
+Interceptor.attach(DrtCreateDnsBootstrapResolver, {onLeave: function (args) {send("DrtCreateDnsBootstrapResolver");}});
+
+var DrtCreateNullSecurityProvider = Module.findExportByName("drtprov.dll", "DrtCreateNullSecurityProvider")
+Interceptor.attach(DrtCreateNullSecurityProvider, {onLeave: function (args) {send("DrtCreateNullSecurityProvider");}});
+
+var DrtCreatePnrpBootstrapResolver = Module.findExportByName("drtprov.dll", "DrtCreatePnrpBootstrapResolver")
+Interceptor.attach(DrtCreatePnrpBootstrapResolver, {onLeave: function (args) {send("DrtCreatePnrpBootstrapResolver");}});
+
+var DrtDeleteDerivedKeySecurityProvider = Module.findExportByName("drtprov.dll", "DrtDeleteDerivedKeySecurityProvider")
+Interceptor.attach(DrtDeleteDerivedKeySecurityProvider, {onLeave: function (args) {send("DrtDeleteDerivedKeySecurityProvider");}});
+
+var DrtDeleteDnsBootstrapResolver = Module.findExportByName("drtprov.dll", "DrtDeleteDnsBootstrapResolver")
+Interceptor.attach(DrtDeleteDnsBootstrapResolver, {onLeave: function (args) {send("DrtDeleteDnsBootstrapResolver");}});
+
+var DrtDeleteNullSecurityProvider = Module.findExportByName("drtprov.dll", "DrtDeleteNullSecurityProvider")
+Interceptor.attach(DrtDeleteNullSecurityProvider, {onLeave: function (args) {send("DrtDeleteNullSecurityProvider");}});
+
+var DrtDeletePnrpBootstrapResolver = Module.findExportByName("drtprov.dll", "DrtDeletePnrpBootstrapResolver")
+Interceptor.attach(DrtDeletePnrpBootstrapResolver, {onLeave: function (args) {send("DrtDeletePnrpBootstrapResolver");}});
+

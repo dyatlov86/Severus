@@ -1,0 +1,18 @@
+var InternetDeInitializeAutoProxyDll = Module.findExportByName("jsproxy.dll", "InternetDeInitializeAutoProxyDll")
+Interceptor.attach(InternetDeInitializeAutoProxyDll, {onLeave: function (args) {send("InternetDeInitializeAutoProxyDll");}});
+
+var InternetDeInitializeAutoProxyDllEx = Module.findExportByName("jsproxy.dll", "InternetDeInitializeAutoProxyDllEx")
+Interceptor.attach(InternetDeInitializeAutoProxyDllEx, {onLeave: function (args) {send("InternetDeInitializeAutoProxyDllEx");}});
+
+var InternetGetProxyInfo = Module.findExportByName("jsproxy.dll", "InternetGetProxyInfo")
+Interceptor.attach(InternetGetProxyInfo, {onLeave: function (args) {send("InternetGetProxyInfo");}});
+
+var InternetGetProxyInfoEx = Module.findExportByName("jsproxy.dll", "InternetGetProxyInfoEx")
+Interceptor.attach(InternetGetProxyInfoEx, {onLeave: function (args) {send("InternetGetProxyInfoEx");}});
+
+var InternetInitializeAutoProxyDll = Module.findExportByName("jsproxy.dll", "InternetInitializeAutoProxyDll")
+Interceptor.attach(InternetInitializeAutoProxyDll, {onLeave: function (args) {send("InternetInitializeAutoProxyDll");}});
+
+var InternetInitializeAutoProxyDllEx = Module.findExportByName("jsproxy.dll", "InternetInitializeAutoProxyDllEx")
+Interceptor.attach(InternetInitializeAutoProxyDllEx, {onLeave: function (args) {send("InternetInitializeAutoProxyDllEx");}});
+

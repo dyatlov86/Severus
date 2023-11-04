@@ -1,0 +1,2043 @@
+var CMP_GetBlockedDriverInfo = Module.findExportByName("setupapi.dll", "CMP_GetBlockedDriverInfo")
+Interceptor.attach(CMP_GetBlockedDriverInfo, {onLeave: function (args) {send("CMP_GetBlockedDriverInfo");}});
+
+var CMP_GetServerSideDeviceInstallFlags = Module.findExportByName("setupapi.dll", "CMP_GetServerSideDeviceInstallFlags")
+Interceptor.attach(CMP_GetServerSideDeviceInstallFlags, {onLeave: function (args) {send("CMP_GetServerSideDeviceInstallFlags");}});
+
+var CMP_Init_Detection = Module.findExportByName("setupapi.dll", "CMP_Init_Detection")
+Interceptor.attach(CMP_Init_Detection, {onLeave: function (args) {send("CMP_Init_Detection");}});
+
+var CMP_Report_LogOn = Module.findExportByName("setupapi.dll", "CMP_Report_LogOn")
+Interceptor.attach(CMP_Report_LogOn, {onLeave: function (args) {send("CMP_Report_LogOn");}});
+
+var CMP_WaitNoPendingInstallEvents = Module.findExportByName("setupapi.dll", "CMP_WaitNoPendingInstallEvents")
+Interceptor.attach(CMP_WaitNoPendingInstallEvents, {onLeave: function (args) {send("CMP_WaitNoPendingInstallEvents");}});
+
+var CMP_WaitServicesAvailable = Module.findExportByName("setupapi.dll", "CMP_WaitServicesAvailable")
+Interceptor.attach(CMP_WaitServicesAvailable, {onLeave: function (args) {send("CMP_WaitServicesAvailable");}});
+
+var CM_Add_Driver_PackageW = Module.findExportByName("setupapi.dll", "CM_Add_Driver_PackageW")
+Interceptor.attach(CM_Add_Driver_PackageW, {onLeave: function (args) {send("CM_Add_Driver_PackageW");}});
+
+var CM_Add_Empty_Log_Conf = Module.findExportByName("setupapi.dll", "CM_Add_Empty_Log_Conf")
+Interceptor.attach(CM_Add_Empty_Log_Conf, {onLeave: function (args) {send("CM_Add_Empty_Log_Conf");}});
+
+var CM_Add_Empty_Log_Conf_Ex = Module.findExportByName("setupapi.dll", "CM_Add_Empty_Log_Conf_Ex")
+Interceptor.attach(CM_Add_Empty_Log_Conf_Ex, {onLeave: function (args) {send("CM_Add_Empty_Log_Conf_Ex");}});
+
+var CM_Add_IDA = Module.findExportByName("setupapi.dll", "CM_Add_IDA")
+Interceptor.attach(CM_Add_IDA, {onLeave: function (args) {send("CM_Add_IDA");}});
+
+var CM_Add_IDW = Module.findExportByName("setupapi.dll", "CM_Add_IDW")
+Interceptor.attach(CM_Add_IDW, {onLeave: function (args) {send("CM_Add_IDW");}});
+
+var CM_Add_ID_ExA = Module.findExportByName("setupapi.dll", "CM_Add_ID_ExA")
+Interceptor.attach(CM_Add_ID_ExA, {onLeave: function (args) {send("CM_Add_ID_ExA");}});
+
+var CM_Add_ID_ExW = Module.findExportByName("setupapi.dll", "CM_Add_ID_ExW")
+Interceptor.attach(CM_Add_ID_ExW, {onLeave: function (args) {send("CM_Add_ID_ExW");}});
+
+var CM_Add_Range = Module.findExportByName("setupapi.dll", "CM_Add_Range")
+Interceptor.attach(CM_Add_Range, {onLeave: function (args) {send("CM_Add_Range");}});
+
+var CM_Add_Res_Des = Module.findExportByName("setupapi.dll", "CM_Add_Res_Des")
+Interceptor.attach(CM_Add_Res_Des, {onLeave: function (args) {send("CM_Add_Res_Des");}});
+
+var CM_Add_Res_Des_Ex = Module.findExportByName("setupapi.dll", "CM_Add_Res_Des_Ex")
+Interceptor.attach(CM_Add_Res_Des_Ex, {onLeave: function (args) {send("CM_Add_Res_Des_Ex");}});
+
+var CM_Apply_PowerScheme = Module.findExportByName("setupapi.dll", "CM_Apply_PowerScheme")
+Interceptor.attach(CM_Apply_PowerScheme, {onLeave: function (args) {send("CM_Apply_PowerScheme");}});
+
+var CM_Connect_MachineA = Module.findExportByName("setupapi.dll", "CM_Connect_MachineA")
+Interceptor.attach(CM_Connect_MachineA, {onLeave: function (args) {send("CM_Connect_MachineA");}});
+
+var CM_Connect_MachineW = Module.findExportByName("setupapi.dll", "CM_Connect_MachineW")
+Interceptor.attach(CM_Connect_MachineW, {onLeave: function (args) {send("CM_Connect_MachineW");}});
+
+var CM_Create_DevNodeA = Module.findExportByName("setupapi.dll", "CM_Create_DevNodeA")
+Interceptor.attach(CM_Create_DevNodeA, {onLeave: function (args) {send("CM_Create_DevNodeA");}});
+
+var CM_Create_DevNodeW = Module.findExportByName("setupapi.dll", "CM_Create_DevNodeW")
+Interceptor.attach(CM_Create_DevNodeW, {onLeave: function (args) {send("CM_Create_DevNodeW");}});
+
+var CM_Create_DevNode_ExA = Module.findExportByName("setupapi.dll", "CM_Create_DevNode_ExA")
+Interceptor.attach(CM_Create_DevNode_ExA, {onLeave: function (args) {send("CM_Create_DevNode_ExA");}});
+
+var CM_Create_DevNode_ExW = Module.findExportByName("setupapi.dll", "CM_Create_DevNode_ExW")
+Interceptor.attach(CM_Create_DevNode_ExW, {onLeave: function (args) {send("CM_Create_DevNode_ExW");}});
+
+var CM_Create_Range_List = Module.findExportByName("setupapi.dll", "CM_Create_Range_List")
+Interceptor.attach(CM_Create_Range_List, {onLeave: function (args) {send("CM_Create_Range_List");}});
+
+var CM_Delete_Class_Key = Module.findExportByName("setupapi.dll", "CM_Delete_Class_Key")
+Interceptor.attach(CM_Delete_Class_Key, {onLeave: function (args) {send("CM_Delete_Class_Key");}});
+
+var CM_Delete_Class_Key_Ex = Module.findExportByName("setupapi.dll", "CM_Delete_Class_Key_Ex")
+Interceptor.attach(CM_Delete_Class_Key_Ex, {onLeave: function (args) {send("CM_Delete_Class_Key_Ex");}});
+
+var CM_Delete_DevNode_Key = Module.findExportByName("setupapi.dll", "CM_Delete_DevNode_Key")
+Interceptor.attach(CM_Delete_DevNode_Key, {onLeave: function (args) {send("CM_Delete_DevNode_Key");}});
+
+var CM_Delete_DevNode_Key_Ex = Module.findExportByName("setupapi.dll", "CM_Delete_DevNode_Key_Ex")
+Interceptor.attach(CM_Delete_DevNode_Key_Ex, {onLeave: function (args) {send("CM_Delete_DevNode_Key_Ex");}});
+
+var CM_Delete_Device_Interface_KeyA = Module.findExportByName("setupapi.dll", "CM_Delete_Device_Interface_KeyA")
+Interceptor.attach(CM_Delete_Device_Interface_KeyA, {onLeave: function (args) {send("CM_Delete_Device_Interface_KeyA");}});
+
+var CM_Delete_Device_Interface_KeyW = Module.findExportByName("setupapi.dll", "CM_Delete_Device_Interface_KeyW")
+Interceptor.attach(CM_Delete_Device_Interface_KeyW, {onLeave: function (args) {send("CM_Delete_Device_Interface_KeyW");}});
+
+var CM_Delete_Device_Interface_Key_ExA = Module.findExportByName("setupapi.dll", "CM_Delete_Device_Interface_Key_ExA")
+Interceptor.attach(CM_Delete_Device_Interface_Key_ExA, {onLeave: function (args) {send("CM_Delete_Device_Interface_Key_ExA");}});
+
+var CM_Delete_Device_Interface_Key_ExW = Module.findExportByName("setupapi.dll", "CM_Delete_Device_Interface_Key_ExW")
+Interceptor.attach(CM_Delete_Device_Interface_Key_ExW, {onLeave: function (args) {send("CM_Delete_Device_Interface_Key_ExW");}});
+
+var CM_Delete_Driver_PackageW = Module.findExportByName("setupapi.dll", "CM_Delete_Driver_PackageW")
+Interceptor.attach(CM_Delete_Driver_PackageW, {onLeave: function (args) {send("CM_Delete_Driver_PackageW");}});
+
+var CM_Delete_PowerScheme = Module.findExportByName("setupapi.dll", "CM_Delete_PowerScheme")
+Interceptor.attach(CM_Delete_PowerScheme, {onLeave: function (args) {send("CM_Delete_PowerScheme");}});
+
+var CM_Delete_Range = Module.findExportByName("setupapi.dll", "CM_Delete_Range")
+Interceptor.attach(CM_Delete_Range, {onLeave: function (args) {send("CM_Delete_Range");}});
+
+var CM_Detect_Resource_Conflict = Module.findExportByName("setupapi.dll", "CM_Detect_Resource_Conflict")
+Interceptor.attach(CM_Detect_Resource_Conflict, {onLeave: function (args) {send("CM_Detect_Resource_Conflict");}});
+
+var CM_Detect_Resource_Conflict_Ex = Module.findExportByName("setupapi.dll", "CM_Detect_Resource_Conflict_Ex")
+Interceptor.attach(CM_Detect_Resource_Conflict_Ex, {onLeave: function (args) {send("CM_Detect_Resource_Conflict_Ex");}});
+
+var CM_Disable_DevNode = Module.findExportByName("setupapi.dll", "CM_Disable_DevNode")
+Interceptor.attach(CM_Disable_DevNode, {onLeave: function (args) {send("CM_Disable_DevNode");}});
+
+var CM_Disable_DevNode_Ex = Module.findExportByName("setupapi.dll", "CM_Disable_DevNode_Ex")
+Interceptor.attach(CM_Disable_DevNode_Ex, {onLeave: function (args) {send("CM_Disable_DevNode_Ex");}});
+
+var CM_Disconnect_Machine = Module.findExportByName("setupapi.dll", "CM_Disconnect_Machine")
+Interceptor.attach(CM_Disconnect_Machine, {onLeave: function (args) {send("CM_Disconnect_Machine");}});
+
+var CM_Dup_Range_List = Module.findExportByName("setupapi.dll", "CM_Dup_Range_List")
+Interceptor.attach(CM_Dup_Range_List, {onLeave: function (args) {send("CM_Dup_Range_List");}});
+
+var CM_Duplicate_PowerScheme = Module.findExportByName("setupapi.dll", "CM_Duplicate_PowerScheme")
+Interceptor.attach(CM_Duplicate_PowerScheme, {onLeave: function (args) {send("CM_Duplicate_PowerScheme");}});
+
+var CM_Enable_DevNode = Module.findExportByName("setupapi.dll", "CM_Enable_DevNode")
+Interceptor.attach(CM_Enable_DevNode, {onLeave: function (args) {send("CM_Enable_DevNode");}});
+
+var CM_Enable_DevNode_Ex = Module.findExportByName("setupapi.dll", "CM_Enable_DevNode_Ex")
+Interceptor.attach(CM_Enable_DevNode_Ex, {onLeave: function (args) {send("CM_Enable_DevNode_Ex");}});
+
+var CM_Enumerate_Classes = Module.findExportByName("setupapi.dll", "CM_Enumerate_Classes")
+Interceptor.attach(CM_Enumerate_Classes, {onLeave: function (args) {send("CM_Enumerate_Classes");}});
+
+var CM_Enumerate_Classes_Ex = Module.findExportByName("setupapi.dll", "CM_Enumerate_Classes_Ex")
+Interceptor.attach(CM_Enumerate_Classes_Ex, {onLeave: function (args) {send("CM_Enumerate_Classes_Ex");}});
+
+var CM_Enumerate_EnumeratorsA = Module.findExportByName("setupapi.dll", "CM_Enumerate_EnumeratorsA")
+Interceptor.attach(CM_Enumerate_EnumeratorsA, {onLeave: function (args) {send("CM_Enumerate_EnumeratorsA");}});
+
+var CM_Enumerate_EnumeratorsW = Module.findExportByName("setupapi.dll", "CM_Enumerate_EnumeratorsW")
+Interceptor.attach(CM_Enumerate_EnumeratorsW, {onLeave: function (args) {send("CM_Enumerate_EnumeratorsW");}});
+
+var CM_Enumerate_Enumerators_ExA = Module.findExportByName("setupapi.dll", "CM_Enumerate_Enumerators_ExA")
+Interceptor.attach(CM_Enumerate_Enumerators_ExA, {onLeave: function (args) {send("CM_Enumerate_Enumerators_ExA");}});
+
+var CM_Enumerate_Enumerators_ExW = Module.findExportByName("setupapi.dll", "CM_Enumerate_Enumerators_ExW")
+Interceptor.attach(CM_Enumerate_Enumerators_ExW, {onLeave: function (args) {send("CM_Enumerate_Enumerators_ExW");}});
+
+var CM_Find_Range = Module.findExportByName("setupapi.dll", "CM_Find_Range")
+Interceptor.attach(CM_Find_Range, {onLeave: function (args) {send("CM_Find_Range");}});
+
+var CM_First_Range = Module.findExportByName("setupapi.dll", "CM_First_Range")
+Interceptor.attach(CM_First_Range, {onLeave: function (args) {send("CM_First_Range");}});
+
+var CM_Free_Log_Conf = Module.findExportByName("setupapi.dll", "CM_Free_Log_Conf")
+Interceptor.attach(CM_Free_Log_Conf, {onLeave: function (args) {send("CM_Free_Log_Conf");}});
+
+var CM_Free_Log_Conf_Ex = Module.findExportByName("setupapi.dll", "CM_Free_Log_Conf_Ex")
+Interceptor.attach(CM_Free_Log_Conf_Ex, {onLeave: function (args) {send("CM_Free_Log_Conf_Ex");}});
+
+var CM_Free_Log_Conf_Handle = Module.findExportByName("setupapi.dll", "CM_Free_Log_Conf_Handle")
+Interceptor.attach(CM_Free_Log_Conf_Handle, {onLeave: function (args) {send("CM_Free_Log_Conf_Handle");}});
+
+var CM_Free_Range_List = Module.findExportByName("setupapi.dll", "CM_Free_Range_List")
+Interceptor.attach(CM_Free_Range_List, {onLeave: function (args) {send("CM_Free_Range_List");}});
+
+var CM_Free_Res_Des = Module.findExportByName("setupapi.dll", "CM_Free_Res_Des")
+Interceptor.attach(CM_Free_Res_Des, {onLeave: function (args) {send("CM_Free_Res_Des");}});
+
+var CM_Free_Res_Des_Ex = Module.findExportByName("setupapi.dll", "CM_Free_Res_Des_Ex")
+Interceptor.attach(CM_Free_Res_Des_Ex, {onLeave: function (args) {send("CM_Free_Res_Des_Ex");}});
+
+var CM_Free_Res_Des_Handle = Module.findExportByName("setupapi.dll", "CM_Free_Res_Des_Handle")
+Interceptor.attach(CM_Free_Res_Des_Handle, {onLeave: function (args) {send("CM_Free_Res_Des_Handle");}});
+
+var CM_Free_Resource_Conflict_Handle = Module.findExportByName("setupapi.dll", "CM_Free_Resource_Conflict_Handle")
+Interceptor.attach(CM_Free_Resource_Conflict_Handle, {onLeave: function (args) {send("CM_Free_Resource_Conflict_Handle");}});
+
+var CM_Get_Child = Module.findExportByName("setupapi.dll", "CM_Get_Child")
+Interceptor.attach(CM_Get_Child, {onLeave: function (args) {send("CM_Get_Child");}});
+
+var CM_Get_Child_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Child_Ex")
+Interceptor.attach(CM_Get_Child_Ex, {onLeave: function (args) {send("CM_Get_Child_Ex");}});
+
+var CM_Get_Class_Key_NameA = Module.findExportByName("setupapi.dll", "CM_Get_Class_Key_NameA")
+Interceptor.attach(CM_Get_Class_Key_NameA, {onLeave: function (args) {send("CM_Get_Class_Key_NameA");}});
+
+var CM_Get_Class_Key_NameW = Module.findExportByName("setupapi.dll", "CM_Get_Class_Key_NameW")
+Interceptor.attach(CM_Get_Class_Key_NameW, {onLeave: function (args) {send("CM_Get_Class_Key_NameW");}});
+
+var CM_Get_Class_Key_Name_ExA = Module.findExportByName("setupapi.dll", "CM_Get_Class_Key_Name_ExA")
+Interceptor.attach(CM_Get_Class_Key_Name_ExA, {onLeave: function (args) {send("CM_Get_Class_Key_Name_ExA");}});
+
+var CM_Get_Class_Key_Name_ExW = Module.findExportByName("setupapi.dll", "CM_Get_Class_Key_Name_ExW")
+Interceptor.attach(CM_Get_Class_Key_Name_ExW, {onLeave: function (args) {send("CM_Get_Class_Key_Name_ExW");}});
+
+var CM_Get_Class_NameA = Module.findExportByName("setupapi.dll", "CM_Get_Class_NameA")
+Interceptor.attach(CM_Get_Class_NameA, {onLeave: function (args) {send("CM_Get_Class_NameA");}});
+
+var CM_Get_Class_NameW = Module.findExportByName("setupapi.dll", "CM_Get_Class_NameW")
+Interceptor.attach(CM_Get_Class_NameW, {onLeave: function (args) {send("CM_Get_Class_NameW");}});
+
+var CM_Get_Class_Name_ExA = Module.findExportByName("setupapi.dll", "CM_Get_Class_Name_ExA")
+Interceptor.attach(CM_Get_Class_Name_ExA, {onLeave: function (args) {send("CM_Get_Class_Name_ExA");}});
+
+var CM_Get_Class_Name_ExW = Module.findExportByName("setupapi.dll", "CM_Get_Class_Name_ExW")
+Interceptor.attach(CM_Get_Class_Name_ExW, {onLeave: function (args) {send("CM_Get_Class_Name_ExW");}});
+
+var CM_Get_Class_Registry_PropertyA = Module.findExportByName("setupapi.dll", "CM_Get_Class_Registry_PropertyA")
+Interceptor.attach(CM_Get_Class_Registry_PropertyA, {onLeave: function (args) {send("CM_Get_Class_Registry_PropertyA");}});
+
+var CM_Get_Class_Registry_PropertyW = Module.findExportByName("setupapi.dll", "CM_Get_Class_Registry_PropertyW")
+Interceptor.attach(CM_Get_Class_Registry_PropertyW, {onLeave: function (args) {send("CM_Get_Class_Registry_PropertyW");}});
+
+var CM_Get_Depth = Module.findExportByName("setupapi.dll", "CM_Get_Depth")
+Interceptor.attach(CM_Get_Depth, {onLeave: function (args) {send("CM_Get_Depth");}});
+
+var CM_Get_Depth_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Depth_Ex")
+Interceptor.attach(CM_Get_Depth_Ex, {onLeave: function (args) {send("CM_Get_Depth_Ex");}});
+
+var CM_Get_DevNode_Custom_PropertyA = Module.findExportByName("setupapi.dll", "CM_Get_DevNode_Custom_PropertyA")
+Interceptor.attach(CM_Get_DevNode_Custom_PropertyA, {onLeave: function (args) {send("CM_Get_DevNode_Custom_PropertyA");}});
+
+var CM_Get_DevNode_Custom_PropertyW = Module.findExportByName("setupapi.dll", "CM_Get_DevNode_Custom_PropertyW")
+Interceptor.attach(CM_Get_DevNode_Custom_PropertyW, {onLeave: function (args) {send("CM_Get_DevNode_Custom_PropertyW");}});
+
+var CM_Get_DevNode_Custom_Property_ExA = Module.findExportByName("setupapi.dll", "CM_Get_DevNode_Custom_Property_ExA")
+Interceptor.attach(CM_Get_DevNode_Custom_Property_ExA, {onLeave: function (args) {send("CM_Get_DevNode_Custom_Property_ExA");}});
+
+var CM_Get_DevNode_Custom_Property_ExW = Module.findExportByName("setupapi.dll", "CM_Get_DevNode_Custom_Property_ExW")
+Interceptor.attach(CM_Get_DevNode_Custom_Property_ExW, {onLeave: function (args) {send("CM_Get_DevNode_Custom_Property_ExW");}});
+
+var CM_Get_DevNode_Registry_PropertyA = Module.findExportByName("setupapi.dll", "CM_Get_DevNode_Registry_PropertyA")
+Interceptor.attach(CM_Get_DevNode_Registry_PropertyA, {onLeave: function (args) {send("CM_Get_DevNode_Registry_PropertyA");}});
+
+var CM_Get_DevNode_Registry_PropertyW = Module.findExportByName("setupapi.dll", "CM_Get_DevNode_Registry_PropertyW")
+Interceptor.attach(CM_Get_DevNode_Registry_PropertyW, {onLeave: function (args) {send("CM_Get_DevNode_Registry_PropertyW");}});
+
+var CM_Get_DevNode_Registry_Property_ExA = Module.findExportByName("setupapi.dll", "CM_Get_DevNode_Registry_Property_ExA")
+Interceptor.attach(CM_Get_DevNode_Registry_Property_ExA, {onLeave: function (args) {send("CM_Get_DevNode_Registry_Property_ExA");}});
+
+var CM_Get_DevNode_Registry_Property_ExW = Module.findExportByName("setupapi.dll", "CM_Get_DevNode_Registry_Property_ExW")
+Interceptor.attach(CM_Get_DevNode_Registry_Property_ExW, {onLeave: function (args) {send("CM_Get_DevNode_Registry_Property_ExW");}});
+
+var CM_Get_DevNode_Status = Module.findExportByName("setupapi.dll", "CM_Get_DevNode_Status")
+Interceptor.attach(CM_Get_DevNode_Status, {onLeave: function (args) {send("CM_Get_DevNode_Status");}});
+
+var CM_Get_DevNode_Status_Ex = Module.findExportByName("setupapi.dll", "CM_Get_DevNode_Status_Ex")
+Interceptor.attach(CM_Get_DevNode_Status_Ex, {onLeave: function (args) {send("CM_Get_DevNode_Status_Ex");}});
+
+var CM_Get_Device_IDA = Module.findExportByName("setupapi.dll", "CM_Get_Device_IDA")
+Interceptor.attach(CM_Get_Device_IDA, {onLeave: function (args) {send("CM_Get_Device_IDA");}});
+
+var CM_Get_Device_IDW = Module.findExportByName("setupapi.dll", "CM_Get_Device_IDW")
+Interceptor.attach(CM_Get_Device_IDW, {onLeave: function (args) {send("CM_Get_Device_IDW");}});
+
+var CM_Get_Device_ID_ExA = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_ExA")
+Interceptor.attach(CM_Get_Device_ID_ExA, {onLeave: function (args) {send("CM_Get_Device_ID_ExA");}});
+
+var CM_Get_Device_ID_ExW = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_ExW")
+Interceptor.attach(CM_Get_Device_ID_ExW, {onLeave: function (args) {send("CM_Get_Device_ID_ExW");}});
+
+var CM_Get_Device_ID_ListA = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_ListA")
+Interceptor.attach(CM_Get_Device_ID_ListA, {onLeave: function (args) {send("CM_Get_Device_ID_ListA");}});
+
+var CM_Get_Device_ID_ListW = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_ListW")
+Interceptor.attach(CM_Get_Device_ID_ListW, {onLeave: function (args) {send("CM_Get_Device_ID_ListW");}});
+
+var CM_Get_Device_ID_List_ExA = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_List_ExA")
+Interceptor.attach(CM_Get_Device_ID_List_ExA, {onLeave: function (args) {send("CM_Get_Device_ID_List_ExA");}});
+
+var CM_Get_Device_ID_List_ExW = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_List_ExW")
+Interceptor.attach(CM_Get_Device_ID_List_ExW, {onLeave: function (args) {send("CM_Get_Device_ID_List_ExW");}});
+
+var CM_Get_Device_ID_List_SizeA = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_List_SizeA")
+Interceptor.attach(CM_Get_Device_ID_List_SizeA, {onLeave: function (args) {send("CM_Get_Device_ID_List_SizeA");}});
+
+var CM_Get_Device_ID_List_SizeW = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_List_SizeW")
+Interceptor.attach(CM_Get_Device_ID_List_SizeW, {onLeave: function (args) {send("CM_Get_Device_ID_List_SizeW");}});
+
+var CM_Get_Device_ID_List_Size_ExA = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_List_Size_ExA")
+Interceptor.attach(CM_Get_Device_ID_List_Size_ExA, {onLeave: function (args) {send("CM_Get_Device_ID_List_Size_ExA");}});
+
+var CM_Get_Device_ID_List_Size_ExW = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_List_Size_ExW")
+Interceptor.attach(CM_Get_Device_ID_List_Size_ExW, {onLeave: function (args) {send("CM_Get_Device_ID_List_Size_ExW");}});
+
+var CM_Get_Device_ID_Size = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_Size")
+Interceptor.attach(CM_Get_Device_ID_Size, {onLeave: function (args) {send("CM_Get_Device_ID_Size");}});
+
+var CM_Get_Device_ID_Size_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Device_ID_Size_Ex")
+Interceptor.attach(CM_Get_Device_ID_Size_Ex, {onLeave: function (args) {send("CM_Get_Device_ID_Size_Ex");}});
+
+var CM_Get_Device_Interface_AliasA = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_AliasA")
+Interceptor.attach(CM_Get_Device_Interface_AliasA, {onLeave: function (args) {send("CM_Get_Device_Interface_AliasA");}});
+
+var CM_Get_Device_Interface_AliasW = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_AliasW")
+Interceptor.attach(CM_Get_Device_Interface_AliasW, {onLeave: function (args) {send("CM_Get_Device_Interface_AliasW");}});
+
+var CM_Get_Device_Interface_Alias_ExA = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_Alias_ExA")
+Interceptor.attach(CM_Get_Device_Interface_Alias_ExA, {onLeave: function (args) {send("CM_Get_Device_Interface_Alias_ExA");}});
+
+var CM_Get_Device_Interface_Alias_ExW = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_Alias_ExW")
+Interceptor.attach(CM_Get_Device_Interface_Alias_ExW, {onLeave: function (args) {send("CM_Get_Device_Interface_Alias_ExW");}});
+
+var CM_Get_Device_Interface_ListA = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_ListA")
+Interceptor.attach(CM_Get_Device_Interface_ListA, {onLeave: function (args) {send("CM_Get_Device_Interface_ListA");}});
+
+var CM_Get_Device_Interface_ListW = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_ListW")
+Interceptor.attach(CM_Get_Device_Interface_ListW, {onLeave: function (args) {send("CM_Get_Device_Interface_ListW");}});
+
+var CM_Get_Device_Interface_List_ExA = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_List_ExA")
+Interceptor.attach(CM_Get_Device_Interface_List_ExA, {onLeave: function (args) {send("CM_Get_Device_Interface_List_ExA");}});
+
+var CM_Get_Device_Interface_List_ExW = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_List_ExW")
+Interceptor.attach(CM_Get_Device_Interface_List_ExW, {onLeave: function (args) {send("CM_Get_Device_Interface_List_ExW");}});
+
+var CM_Get_Device_Interface_List_SizeA = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_List_SizeA")
+Interceptor.attach(CM_Get_Device_Interface_List_SizeA, {onLeave: function (args) {send("CM_Get_Device_Interface_List_SizeA");}});
+
+var CM_Get_Device_Interface_List_SizeW = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_List_SizeW")
+Interceptor.attach(CM_Get_Device_Interface_List_SizeW, {onLeave: function (args) {send("CM_Get_Device_Interface_List_SizeW");}});
+
+var CM_Get_Device_Interface_List_Size_ExA = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_List_Size_ExA")
+Interceptor.attach(CM_Get_Device_Interface_List_Size_ExA, {onLeave: function (args) {send("CM_Get_Device_Interface_List_Size_ExA");}});
+
+var CM_Get_Device_Interface_List_Size_ExW = Module.findExportByName("setupapi.dll", "CM_Get_Device_Interface_List_Size_ExW")
+Interceptor.attach(CM_Get_Device_Interface_List_Size_ExW, {onLeave: function (args) {send("CM_Get_Device_Interface_List_Size_ExW");}});
+
+var CM_Get_First_Log_Conf = Module.findExportByName("setupapi.dll", "CM_Get_First_Log_Conf")
+Interceptor.attach(CM_Get_First_Log_Conf, {onLeave: function (args) {send("CM_Get_First_Log_Conf");}});
+
+var CM_Get_First_Log_Conf_Ex = Module.findExportByName("setupapi.dll", "CM_Get_First_Log_Conf_Ex")
+Interceptor.attach(CM_Get_First_Log_Conf_Ex, {onLeave: function (args) {send("CM_Get_First_Log_Conf_Ex");}});
+
+var CM_Get_Global_State = Module.findExportByName("setupapi.dll", "CM_Get_Global_State")
+Interceptor.attach(CM_Get_Global_State, {onLeave: function (args) {send("CM_Get_Global_State");}});
+
+var CM_Get_Global_State_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Global_State_Ex")
+Interceptor.attach(CM_Get_Global_State_Ex, {onLeave: function (args) {send("CM_Get_Global_State_Ex");}});
+
+var CM_Get_HW_Prof_FlagsA = Module.findExportByName("setupapi.dll", "CM_Get_HW_Prof_FlagsA")
+Interceptor.attach(CM_Get_HW_Prof_FlagsA, {onLeave: function (args) {send("CM_Get_HW_Prof_FlagsA");}});
+
+var CM_Get_HW_Prof_FlagsW = Module.findExportByName("setupapi.dll", "CM_Get_HW_Prof_FlagsW")
+Interceptor.attach(CM_Get_HW_Prof_FlagsW, {onLeave: function (args) {send("CM_Get_HW_Prof_FlagsW");}});
+
+var CM_Get_HW_Prof_Flags_ExA = Module.findExportByName("setupapi.dll", "CM_Get_HW_Prof_Flags_ExA")
+Interceptor.attach(CM_Get_HW_Prof_Flags_ExA, {onLeave: function (args) {send("CM_Get_HW_Prof_Flags_ExA");}});
+
+var CM_Get_HW_Prof_Flags_ExW = Module.findExportByName("setupapi.dll", "CM_Get_HW_Prof_Flags_ExW")
+Interceptor.attach(CM_Get_HW_Prof_Flags_ExW, {onLeave: function (args) {send("CM_Get_HW_Prof_Flags_ExW");}});
+
+var CM_Get_Hardware_Profile_InfoA = Module.findExportByName("setupapi.dll", "CM_Get_Hardware_Profile_InfoA")
+Interceptor.attach(CM_Get_Hardware_Profile_InfoA, {onLeave: function (args) {send("CM_Get_Hardware_Profile_InfoA");}});
+
+var CM_Get_Hardware_Profile_InfoW = Module.findExportByName("setupapi.dll", "CM_Get_Hardware_Profile_InfoW")
+Interceptor.attach(CM_Get_Hardware_Profile_InfoW, {onLeave: function (args) {send("CM_Get_Hardware_Profile_InfoW");}});
+
+var CM_Get_Hardware_Profile_Info_ExA = Module.findExportByName("setupapi.dll", "CM_Get_Hardware_Profile_Info_ExA")
+Interceptor.attach(CM_Get_Hardware_Profile_Info_ExA, {onLeave: function (args) {send("CM_Get_Hardware_Profile_Info_ExA");}});
+
+var CM_Get_Hardware_Profile_Info_ExW = Module.findExportByName("setupapi.dll", "CM_Get_Hardware_Profile_Info_ExW")
+Interceptor.attach(CM_Get_Hardware_Profile_Info_ExW, {onLeave: function (args) {send("CM_Get_Hardware_Profile_Info_ExW");}});
+
+var CM_Get_Log_Conf_Priority = Module.findExportByName("setupapi.dll", "CM_Get_Log_Conf_Priority")
+Interceptor.attach(CM_Get_Log_Conf_Priority, {onLeave: function (args) {send("CM_Get_Log_Conf_Priority");}});
+
+var CM_Get_Log_Conf_Priority_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Log_Conf_Priority_Ex")
+Interceptor.attach(CM_Get_Log_Conf_Priority_Ex, {onLeave: function (args) {send("CM_Get_Log_Conf_Priority_Ex");}});
+
+var CM_Get_Next_Log_Conf = Module.findExportByName("setupapi.dll", "CM_Get_Next_Log_Conf")
+Interceptor.attach(CM_Get_Next_Log_Conf, {onLeave: function (args) {send("CM_Get_Next_Log_Conf");}});
+
+var CM_Get_Next_Log_Conf_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Next_Log_Conf_Ex")
+Interceptor.attach(CM_Get_Next_Log_Conf_Ex, {onLeave: function (args) {send("CM_Get_Next_Log_Conf_Ex");}});
+
+var CM_Get_Next_Res_Des = Module.findExportByName("setupapi.dll", "CM_Get_Next_Res_Des")
+Interceptor.attach(CM_Get_Next_Res_Des, {onLeave: function (args) {send("CM_Get_Next_Res_Des");}});
+
+var CM_Get_Next_Res_Des_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Next_Res_Des_Ex")
+Interceptor.attach(CM_Get_Next_Res_Des_Ex, {onLeave: function (args) {send("CM_Get_Next_Res_Des_Ex");}});
+
+var CM_Get_Parent = Module.findExportByName("setupapi.dll", "CM_Get_Parent")
+Interceptor.attach(CM_Get_Parent, {onLeave: function (args) {send("CM_Get_Parent");}});
+
+var CM_Get_Parent_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Parent_Ex")
+Interceptor.attach(CM_Get_Parent_Ex, {onLeave: function (args) {send("CM_Get_Parent_Ex");}});
+
+var CM_Get_Res_Des_Data = Module.findExportByName("setupapi.dll", "CM_Get_Res_Des_Data")
+Interceptor.attach(CM_Get_Res_Des_Data, {onLeave: function (args) {send("CM_Get_Res_Des_Data");}});
+
+var CM_Get_Res_Des_Data_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Res_Des_Data_Ex")
+Interceptor.attach(CM_Get_Res_Des_Data_Ex, {onLeave: function (args) {send("CM_Get_Res_Des_Data_Ex");}});
+
+var CM_Get_Res_Des_Data_Size = Module.findExportByName("setupapi.dll", "CM_Get_Res_Des_Data_Size")
+Interceptor.attach(CM_Get_Res_Des_Data_Size, {onLeave: function (args) {send("CM_Get_Res_Des_Data_Size");}});
+
+var CM_Get_Res_Des_Data_Size_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Res_Des_Data_Size_Ex")
+Interceptor.attach(CM_Get_Res_Des_Data_Size_Ex, {onLeave: function (args) {send("CM_Get_Res_Des_Data_Size_Ex");}});
+
+var CM_Get_Resource_Conflict_Count = Module.findExportByName("setupapi.dll", "CM_Get_Resource_Conflict_Count")
+Interceptor.attach(CM_Get_Resource_Conflict_Count, {onLeave: function (args) {send("CM_Get_Resource_Conflict_Count");}});
+
+var CM_Get_Resource_Conflict_DetailsA = Module.findExportByName("setupapi.dll", "CM_Get_Resource_Conflict_DetailsA")
+Interceptor.attach(CM_Get_Resource_Conflict_DetailsA, {onLeave: function (args) {send("CM_Get_Resource_Conflict_DetailsA");}});
+
+var CM_Get_Resource_Conflict_DetailsW = Module.findExportByName("setupapi.dll", "CM_Get_Resource_Conflict_DetailsW")
+Interceptor.attach(CM_Get_Resource_Conflict_DetailsW, {onLeave: function (args) {send("CM_Get_Resource_Conflict_DetailsW");}});
+
+var CM_Get_Sibling = Module.findExportByName("setupapi.dll", "CM_Get_Sibling")
+Interceptor.attach(CM_Get_Sibling, {onLeave: function (args) {send("CM_Get_Sibling");}});
+
+var CM_Get_Sibling_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Sibling_Ex")
+Interceptor.attach(CM_Get_Sibling_Ex, {onLeave: function (args) {send("CM_Get_Sibling_Ex");}});
+
+var CM_Get_Version = Module.findExportByName("setupapi.dll", "CM_Get_Version")
+Interceptor.attach(CM_Get_Version, {onLeave: function (args) {send("CM_Get_Version");}});
+
+var CM_Get_Version_Ex = Module.findExportByName("setupapi.dll", "CM_Get_Version_Ex")
+Interceptor.attach(CM_Get_Version_Ex, {onLeave: function (args) {send("CM_Get_Version_Ex");}});
+
+var CM_Import_PowerScheme = Module.findExportByName("setupapi.dll", "CM_Import_PowerScheme")
+Interceptor.attach(CM_Import_PowerScheme, {onLeave: function (args) {send("CM_Import_PowerScheme");}});
+
+var CM_Install_DevNodeW = Module.findExportByName("setupapi.dll", "CM_Install_DevNodeW")
+Interceptor.attach(CM_Install_DevNodeW, {onLeave: function (args) {send("CM_Install_DevNodeW");}});
+
+var CM_Install_DevNode_ExW = Module.findExportByName("setupapi.dll", "CM_Install_DevNode_ExW")
+Interceptor.attach(CM_Install_DevNode_ExW, {onLeave: function (args) {send("CM_Install_DevNode_ExW");}});
+
+var CM_Intersect_Range_List = Module.findExportByName("setupapi.dll", "CM_Intersect_Range_List")
+Interceptor.attach(CM_Intersect_Range_List, {onLeave: function (args) {send("CM_Intersect_Range_List");}});
+
+var CM_Invert_Range_List = Module.findExportByName("setupapi.dll", "CM_Invert_Range_List")
+Interceptor.attach(CM_Invert_Range_List, {onLeave: function (args) {send("CM_Invert_Range_List");}});
+
+var CM_Is_Dock_Station_Present = Module.findExportByName("setupapi.dll", "CM_Is_Dock_Station_Present")
+Interceptor.attach(CM_Is_Dock_Station_Present, {onLeave: function (args) {send("CM_Is_Dock_Station_Present");}});
+
+var CM_Is_Dock_Station_Present_Ex = Module.findExportByName("setupapi.dll", "CM_Is_Dock_Station_Present_Ex")
+Interceptor.attach(CM_Is_Dock_Station_Present_Ex, {onLeave: function (args) {send("CM_Is_Dock_Station_Present_Ex");}});
+
+var CM_Is_Version_Available = Module.findExportByName("setupapi.dll", "CM_Is_Version_Available")
+Interceptor.attach(CM_Is_Version_Available, {onLeave: function (args) {send("CM_Is_Version_Available");}});
+
+var CM_Is_Version_Available_Ex = Module.findExportByName("setupapi.dll", "CM_Is_Version_Available_Ex")
+Interceptor.attach(CM_Is_Version_Available_Ex, {onLeave: function (args) {send("CM_Is_Version_Available_Ex");}});
+
+var CM_Locate_DevNodeA = Module.findExportByName("setupapi.dll", "CM_Locate_DevNodeA")
+Interceptor.attach(CM_Locate_DevNodeA, {onLeave: function (args) {send("CM_Locate_DevNodeA");}});
+
+var CM_Locate_DevNodeW = Module.findExportByName("setupapi.dll", "CM_Locate_DevNodeW")
+Interceptor.attach(CM_Locate_DevNodeW, {onLeave: function (args) {send("CM_Locate_DevNodeW");}});
+
+var CM_Locate_DevNode_ExA = Module.findExportByName("setupapi.dll", "CM_Locate_DevNode_ExA")
+Interceptor.attach(CM_Locate_DevNode_ExA, {onLeave: function (args) {send("CM_Locate_DevNode_ExA");}});
+
+var CM_Locate_DevNode_ExW = Module.findExportByName("setupapi.dll", "CM_Locate_DevNode_ExW")
+Interceptor.attach(CM_Locate_DevNode_ExW, {onLeave: function (args) {send("CM_Locate_DevNode_ExW");}});
+
+var CM_Merge_Range_List = Module.findExportByName("setupapi.dll", "CM_Merge_Range_List")
+Interceptor.attach(CM_Merge_Range_List, {onLeave: function (args) {send("CM_Merge_Range_List");}});
+
+var CM_Modify_Res_Des = Module.findExportByName("setupapi.dll", "CM_Modify_Res_Des")
+Interceptor.attach(CM_Modify_Res_Des, {onLeave: function (args) {send("CM_Modify_Res_Des");}});
+
+var CM_Modify_Res_Des_Ex = Module.findExportByName("setupapi.dll", "CM_Modify_Res_Des_Ex")
+Interceptor.attach(CM_Modify_Res_Des_Ex, {onLeave: function (args) {send("CM_Modify_Res_Des_Ex");}});
+
+var CM_Move_DevNode = Module.findExportByName("setupapi.dll", "CM_Move_DevNode")
+Interceptor.attach(CM_Move_DevNode, {onLeave: function (args) {send("CM_Move_DevNode");}});
+
+var CM_Move_DevNode_Ex = Module.findExportByName("setupapi.dll", "CM_Move_DevNode_Ex")
+Interceptor.attach(CM_Move_DevNode_Ex, {onLeave: function (args) {send("CM_Move_DevNode_Ex");}});
+
+var CM_Next_Range = Module.findExportByName("setupapi.dll", "CM_Next_Range")
+Interceptor.attach(CM_Next_Range, {onLeave: function (args) {send("CM_Next_Range");}});
+
+var CM_Open_Class_KeyA = Module.findExportByName("setupapi.dll", "CM_Open_Class_KeyA")
+Interceptor.attach(CM_Open_Class_KeyA, {onLeave: function (args) {send("CM_Open_Class_KeyA");}});
+
+var CM_Open_Class_KeyW = Module.findExportByName("setupapi.dll", "CM_Open_Class_KeyW")
+Interceptor.attach(CM_Open_Class_KeyW, {onLeave: function (args) {send("CM_Open_Class_KeyW");}});
+
+var CM_Open_Class_Key_ExA = Module.findExportByName("setupapi.dll", "CM_Open_Class_Key_ExA")
+Interceptor.attach(CM_Open_Class_Key_ExA, {onLeave: function (args) {send("CM_Open_Class_Key_ExA");}});
+
+var CM_Open_Class_Key_ExW = Module.findExportByName("setupapi.dll", "CM_Open_Class_Key_ExW")
+Interceptor.attach(CM_Open_Class_Key_ExW, {onLeave: function (args) {send("CM_Open_Class_Key_ExW");}});
+
+var CM_Open_DevNode_Key = Module.findExportByName("setupapi.dll", "CM_Open_DevNode_Key")
+Interceptor.attach(CM_Open_DevNode_Key, {onLeave: function (args) {send("CM_Open_DevNode_Key");}});
+
+var CM_Open_DevNode_Key_Ex = Module.findExportByName("setupapi.dll", "CM_Open_DevNode_Key_Ex")
+Interceptor.attach(CM_Open_DevNode_Key_Ex, {onLeave: function (args) {send("CM_Open_DevNode_Key_Ex");}});
+
+var CM_Open_Device_Interface_KeyA = Module.findExportByName("setupapi.dll", "CM_Open_Device_Interface_KeyA")
+Interceptor.attach(CM_Open_Device_Interface_KeyA, {onLeave: function (args) {send("CM_Open_Device_Interface_KeyA");}});
+
+var CM_Open_Device_Interface_KeyW = Module.findExportByName("setupapi.dll", "CM_Open_Device_Interface_KeyW")
+Interceptor.attach(CM_Open_Device_Interface_KeyW, {onLeave: function (args) {send("CM_Open_Device_Interface_KeyW");}});
+
+var CM_Open_Device_Interface_Key_ExA = Module.findExportByName("setupapi.dll", "CM_Open_Device_Interface_Key_ExA")
+Interceptor.attach(CM_Open_Device_Interface_Key_ExA, {onLeave: function (args) {send("CM_Open_Device_Interface_Key_ExA");}});
+
+var CM_Open_Device_Interface_Key_ExW = Module.findExportByName("setupapi.dll", "CM_Open_Device_Interface_Key_ExW")
+Interceptor.attach(CM_Open_Device_Interface_Key_ExW, {onLeave: function (args) {send("CM_Open_Device_Interface_Key_ExW");}});
+
+var CM_Query_And_Remove_SubTreeA = Module.findExportByName("setupapi.dll", "CM_Query_And_Remove_SubTreeA")
+Interceptor.attach(CM_Query_And_Remove_SubTreeA, {onLeave: function (args) {send("CM_Query_And_Remove_SubTreeA");}});
+
+var CM_Query_And_Remove_SubTreeW = Module.findExportByName("setupapi.dll", "CM_Query_And_Remove_SubTreeW")
+Interceptor.attach(CM_Query_And_Remove_SubTreeW, {onLeave: function (args) {send("CM_Query_And_Remove_SubTreeW");}});
+
+var CM_Query_And_Remove_SubTree_ExA = Module.findExportByName("setupapi.dll", "CM_Query_And_Remove_SubTree_ExA")
+Interceptor.attach(CM_Query_And_Remove_SubTree_ExA, {onLeave: function (args) {send("CM_Query_And_Remove_SubTree_ExA");}});
+
+var CM_Query_And_Remove_SubTree_ExW = Module.findExportByName("setupapi.dll", "CM_Query_And_Remove_SubTree_ExW")
+Interceptor.attach(CM_Query_And_Remove_SubTree_ExW, {onLeave: function (args) {send("CM_Query_And_Remove_SubTree_ExW");}});
+
+var CM_Query_Arbitrator_Free_Data = Module.findExportByName("setupapi.dll", "CM_Query_Arbitrator_Free_Data")
+Interceptor.attach(CM_Query_Arbitrator_Free_Data, {onLeave: function (args) {send("CM_Query_Arbitrator_Free_Data");}});
+
+var CM_Query_Arbitrator_Free_Data_Ex = Module.findExportByName("setupapi.dll", "CM_Query_Arbitrator_Free_Data_Ex")
+Interceptor.attach(CM_Query_Arbitrator_Free_Data_Ex, {onLeave: function (args) {send("CM_Query_Arbitrator_Free_Data_Ex");}});
+
+var CM_Query_Arbitrator_Free_Size = Module.findExportByName("setupapi.dll", "CM_Query_Arbitrator_Free_Size")
+Interceptor.attach(CM_Query_Arbitrator_Free_Size, {onLeave: function (args) {send("CM_Query_Arbitrator_Free_Size");}});
+
+var CM_Query_Arbitrator_Free_Size_Ex = Module.findExportByName("setupapi.dll", "CM_Query_Arbitrator_Free_Size_Ex")
+Interceptor.attach(CM_Query_Arbitrator_Free_Size_Ex, {onLeave: function (args) {send("CM_Query_Arbitrator_Free_Size_Ex");}});
+
+var CM_Query_Remove_SubTree = Module.findExportByName("setupapi.dll", "CM_Query_Remove_SubTree")
+Interceptor.attach(CM_Query_Remove_SubTree, {onLeave: function (args) {send("CM_Query_Remove_SubTree");}});
+
+var CM_Query_Remove_SubTree_Ex = Module.findExportByName("setupapi.dll", "CM_Query_Remove_SubTree_Ex")
+Interceptor.attach(CM_Query_Remove_SubTree_Ex, {onLeave: function (args) {send("CM_Query_Remove_SubTree_Ex");}});
+
+var CM_Query_Resource_Conflict_List = Module.findExportByName("setupapi.dll", "CM_Query_Resource_Conflict_List")
+Interceptor.attach(CM_Query_Resource_Conflict_List, {onLeave: function (args) {send("CM_Query_Resource_Conflict_List");}});
+
+var CM_Reenumerate_DevNode = Module.findExportByName("setupapi.dll", "CM_Reenumerate_DevNode")
+Interceptor.attach(CM_Reenumerate_DevNode, {onLeave: function (args) {send("CM_Reenumerate_DevNode");}});
+
+var CM_Reenumerate_DevNode_Ex = Module.findExportByName("setupapi.dll", "CM_Reenumerate_DevNode_Ex")
+Interceptor.attach(CM_Reenumerate_DevNode_Ex, {onLeave: function (args) {send("CM_Reenumerate_DevNode_Ex");}});
+
+var CM_Register_Device_Driver = Module.findExportByName("setupapi.dll", "CM_Register_Device_Driver")
+Interceptor.attach(CM_Register_Device_Driver, {onLeave: function (args) {send("CM_Register_Device_Driver");}});
+
+var CM_Register_Device_Driver_Ex = Module.findExportByName("setupapi.dll", "CM_Register_Device_Driver_Ex")
+Interceptor.attach(CM_Register_Device_Driver_Ex, {onLeave: function (args) {send("CM_Register_Device_Driver_Ex");}});
+
+var CM_Register_Device_InterfaceA = Module.findExportByName("setupapi.dll", "CM_Register_Device_InterfaceA")
+Interceptor.attach(CM_Register_Device_InterfaceA, {onLeave: function (args) {send("CM_Register_Device_InterfaceA");}});
+
+var CM_Register_Device_InterfaceW = Module.findExportByName("setupapi.dll", "CM_Register_Device_InterfaceW")
+Interceptor.attach(CM_Register_Device_InterfaceW, {onLeave: function (args) {send("CM_Register_Device_InterfaceW");}});
+
+var CM_Register_Device_Interface_ExA = Module.findExportByName("setupapi.dll", "CM_Register_Device_Interface_ExA")
+Interceptor.attach(CM_Register_Device_Interface_ExA, {onLeave: function (args) {send("CM_Register_Device_Interface_ExA");}});
+
+var CM_Register_Device_Interface_ExW = Module.findExportByName("setupapi.dll", "CM_Register_Device_Interface_ExW")
+Interceptor.attach(CM_Register_Device_Interface_ExW, {onLeave: function (args) {send("CM_Register_Device_Interface_ExW");}});
+
+var CM_Remove_SubTree = Module.findExportByName("setupapi.dll", "CM_Remove_SubTree")
+Interceptor.attach(CM_Remove_SubTree, {onLeave: function (args) {send("CM_Remove_SubTree");}});
+
+var CM_Remove_SubTree_Ex = Module.findExportByName("setupapi.dll", "CM_Remove_SubTree_Ex")
+Interceptor.attach(CM_Remove_SubTree_Ex, {onLeave: function (args) {send("CM_Remove_SubTree_Ex");}});
+
+var CM_Request_Device_EjectA = Module.findExportByName("setupapi.dll", "CM_Request_Device_EjectA")
+Interceptor.attach(CM_Request_Device_EjectA, {onLeave: function (args) {send("CM_Request_Device_EjectA");}});
+
+var CM_Request_Device_EjectW = Module.findExportByName("setupapi.dll", "CM_Request_Device_EjectW")
+Interceptor.attach(CM_Request_Device_EjectW, {onLeave: function (args) {send("CM_Request_Device_EjectW");}});
+
+var CM_Request_Device_Eject_ExA = Module.findExportByName("setupapi.dll", "CM_Request_Device_Eject_ExA")
+Interceptor.attach(CM_Request_Device_Eject_ExA, {onLeave: function (args) {send("CM_Request_Device_Eject_ExA");}});
+
+var CM_Request_Device_Eject_ExW = Module.findExportByName("setupapi.dll", "CM_Request_Device_Eject_ExW")
+Interceptor.attach(CM_Request_Device_Eject_ExW, {onLeave: function (args) {send("CM_Request_Device_Eject_ExW");}});
+
+var CM_Request_Eject_PC = Module.findExportByName("setupapi.dll", "CM_Request_Eject_PC")
+Interceptor.attach(CM_Request_Eject_PC, {onLeave: function (args) {send("CM_Request_Eject_PC");}});
+
+var CM_Request_Eject_PC_Ex = Module.findExportByName("setupapi.dll", "CM_Request_Eject_PC_Ex")
+Interceptor.attach(CM_Request_Eject_PC_Ex, {onLeave: function (args) {send("CM_Request_Eject_PC_Ex");}});
+
+var CM_RestoreAll_DefaultPowerSchemes = Module.findExportByName("setupapi.dll", "CM_RestoreAll_DefaultPowerSchemes")
+Interceptor.attach(CM_RestoreAll_DefaultPowerSchemes, {onLeave: function (args) {send("CM_RestoreAll_DefaultPowerSchemes");}});
+
+var CM_Restore_DefaultPowerScheme = Module.findExportByName("setupapi.dll", "CM_Restore_DefaultPowerScheme")
+Interceptor.attach(CM_Restore_DefaultPowerScheme, {onLeave: function (args) {send("CM_Restore_DefaultPowerScheme");}});
+
+var CM_Run_Detection = Module.findExportByName("setupapi.dll", "CM_Run_Detection")
+Interceptor.attach(CM_Run_Detection, {onLeave: function (args) {send("CM_Run_Detection");}});
+
+var CM_Run_Detection_Ex = Module.findExportByName("setupapi.dll", "CM_Run_Detection_Ex")
+Interceptor.attach(CM_Run_Detection_Ex, {onLeave: function (args) {send("CM_Run_Detection_Ex");}});
+
+var CM_Set_ActiveScheme = Module.findExportByName("setupapi.dll", "CM_Set_ActiveScheme")
+Interceptor.attach(CM_Set_ActiveScheme, {onLeave: function (args) {send("CM_Set_ActiveScheme");}});
+
+var CM_Set_Class_Registry_PropertyA = Module.findExportByName("setupapi.dll", "CM_Set_Class_Registry_PropertyA")
+Interceptor.attach(CM_Set_Class_Registry_PropertyA, {onLeave: function (args) {send("CM_Set_Class_Registry_PropertyA");}});
+
+var CM_Set_Class_Registry_PropertyW = Module.findExportByName("setupapi.dll", "CM_Set_Class_Registry_PropertyW")
+Interceptor.attach(CM_Set_Class_Registry_PropertyW, {onLeave: function (args) {send("CM_Set_Class_Registry_PropertyW");}});
+
+var CM_Set_DevNode_Problem = Module.findExportByName("setupapi.dll", "CM_Set_DevNode_Problem")
+Interceptor.attach(CM_Set_DevNode_Problem, {onLeave: function (args) {send("CM_Set_DevNode_Problem");}});
+
+var CM_Set_DevNode_Problem_Ex = Module.findExportByName("setupapi.dll", "CM_Set_DevNode_Problem_Ex")
+Interceptor.attach(CM_Set_DevNode_Problem_Ex, {onLeave: function (args) {send("CM_Set_DevNode_Problem_Ex");}});
+
+var CM_Set_DevNode_Registry_PropertyA = Module.findExportByName("setupapi.dll", "CM_Set_DevNode_Registry_PropertyA")
+Interceptor.attach(CM_Set_DevNode_Registry_PropertyA, {onLeave: function (args) {send("CM_Set_DevNode_Registry_PropertyA");}});
+
+var CM_Set_DevNode_Registry_PropertyW = Module.findExportByName("setupapi.dll", "CM_Set_DevNode_Registry_PropertyW")
+Interceptor.attach(CM_Set_DevNode_Registry_PropertyW, {onLeave: function (args) {send("CM_Set_DevNode_Registry_PropertyW");}});
+
+var CM_Set_DevNode_Registry_Property_ExA = Module.findExportByName("setupapi.dll", "CM_Set_DevNode_Registry_Property_ExA")
+Interceptor.attach(CM_Set_DevNode_Registry_Property_ExA, {onLeave: function (args) {send("CM_Set_DevNode_Registry_Property_ExA");}});
+
+var CM_Set_DevNode_Registry_Property_ExW = Module.findExportByName("setupapi.dll", "CM_Set_DevNode_Registry_Property_ExW")
+Interceptor.attach(CM_Set_DevNode_Registry_Property_ExW, {onLeave: function (args) {send("CM_Set_DevNode_Registry_Property_ExW");}});
+
+var CM_Set_HW_Prof = Module.findExportByName("setupapi.dll", "CM_Set_HW_Prof")
+Interceptor.attach(CM_Set_HW_Prof, {onLeave: function (args) {send("CM_Set_HW_Prof");}});
+
+var CM_Set_HW_Prof_Ex = Module.findExportByName("setupapi.dll", "CM_Set_HW_Prof_Ex")
+Interceptor.attach(CM_Set_HW_Prof_Ex, {onLeave: function (args) {send("CM_Set_HW_Prof_Ex");}});
+
+var CM_Set_HW_Prof_FlagsA = Module.findExportByName("setupapi.dll", "CM_Set_HW_Prof_FlagsA")
+Interceptor.attach(CM_Set_HW_Prof_FlagsA, {onLeave: function (args) {send("CM_Set_HW_Prof_FlagsA");}});
+
+var CM_Set_HW_Prof_FlagsW = Module.findExportByName("setupapi.dll", "CM_Set_HW_Prof_FlagsW")
+Interceptor.attach(CM_Set_HW_Prof_FlagsW, {onLeave: function (args) {send("CM_Set_HW_Prof_FlagsW");}});
+
+var CM_Set_HW_Prof_Flags_ExA = Module.findExportByName("setupapi.dll", "CM_Set_HW_Prof_Flags_ExA")
+Interceptor.attach(CM_Set_HW_Prof_Flags_ExA, {onLeave: function (args) {send("CM_Set_HW_Prof_Flags_ExA");}});
+
+var CM_Set_HW_Prof_Flags_ExW = Module.findExportByName("setupapi.dll", "CM_Set_HW_Prof_Flags_ExW")
+Interceptor.attach(CM_Set_HW_Prof_Flags_ExW, {onLeave: function (args) {send("CM_Set_HW_Prof_Flags_ExW");}});
+
+var CM_Setup_DevNode = Module.findExportByName("setupapi.dll", "CM_Setup_DevNode")
+Interceptor.attach(CM_Setup_DevNode, {onLeave: function (args) {send("CM_Setup_DevNode");}});
+
+var CM_Setup_DevNode_Ex = Module.findExportByName("setupapi.dll", "CM_Setup_DevNode_Ex")
+Interceptor.attach(CM_Setup_DevNode_Ex, {onLeave: function (args) {send("CM_Setup_DevNode_Ex");}});
+
+var CM_Test_Range_Available = Module.findExportByName("setupapi.dll", "CM_Test_Range_Available")
+Interceptor.attach(CM_Test_Range_Available, {onLeave: function (args) {send("CM_Test_Range_Available");}});
+
+var CM_Uninstall_DevNode = Module.findExportByName("setupapi.dll", "CM_Uninstall_DevNode")
+Interceptor.attach(CM_Uninstall_DevNode, {onLeave: function (args) {send("CM_Uninstall_DevNode");}});
+
+var CM_Uninstall_DevNode_Ex = Module.findExportByName("setupapi.dll", "CM_Uninstall_DevNode_Ex")
+Interceptor.attach(CM_Uninstall_DevNode_Ex, {onLeave: function (args) {send("CM_Uninstall_DevNode_Ex");}});
+
+var CM_Unregister_Device_InterfaceA = Module.findExportByName("setupapi.dll", "CM_Unregister_Device_InterfaceA")
+Interceptor.attach(CM_Unregister_Device_InterfaceA, {onLeave: function (args) {send("CM_Unregister_Device_InterfaceA");}});
+
+var CM_Unregister_Device_InterfaceW = Module.findExportByName("setupapi.dll", "CM_Unregister_Device_InterfaceW")
+Interceptor.attach(CM_Unregister_Device_InterfaceW, {onLeave: function (args) {send("CM_Unregister_Device_InterfaceW");}});
+
+var CM_Unregister_Device_Interface_ExA = Module.findExportByName("setupapi.dll", "CM_Unregister_Device_Interface_ExA")
+Interceptor.attach(CM_Unregister_Device_Interface_ExA, {onLeave: function (args) {send("CM_Unregister_Device_Interface_ExA");}});
+
+var CM_Unregister_Device_Interface_ExW = Module.findExportByName("setupapi.dll", "CM_Unregister_Device_Interface_ExW")
+Interceptor.attach(CM_Unregister_Device_Interface_ExW, {onLeave: function (args) {send("CM_Unregister_Device_Interface_ExW");}});
+
+var CM_Write_UserPowerKey = Module.findExportByName("setupapi.dll", "CM_Write_UserPowerKey")
+Interceptor.attach(CM_Write_UserPowerKey, {onLeave: function (args) {send("CM_Write_UserPowerKey");}});
+
+var DoesUserHavePrivilege = Module.findExportByName("setupapi.dll", "DoesUserHavePrivilege")
+Interceptor.attach(DoesUserHavePrivilege, {onLeave: function (args) {send("DoesUserHavePrivilege");}});
+
+var DriverStoreAddDriverPackageA = Module.findExportByName("setupapi.dll", "DriverStoreAddDriverPackageA")
+Interceptor.attach(DriverStoreAddDriverPackageA, {onLeave: function (args) {send("DriverStoreAddDriverPackageA");}});
+
+var DriverStoreAddDriverPackageW = Module.findExportByName("setupapi.dll", "DriverStoreAddDriverPackageW")
+Interceptor.attach(DriverStoreAddDriverPackageW, {onLeave: function (args) {send("DriverStoreAddDriverPackageW");}});
+
+var DriverStoreDeleteDriverPackageA = Module.findExportByName("setupapi.dll", "DriverStoreDeleteDriverPackageA")
+Interceptor.attach(DriverStoreDeleteDriverPackageA, {onLeave: function (args) {send("DriverStoreDeleteDriverPackageA");}});
+
+var DriverStoreDeleteDriverPackageW = Module.findExportByName("setupapi.dll", "DriverStoreDeleteDriverPackageW")
+Interceptor.attach(DriverStoreDeleteDriverPackageW, {onLeave: function (args) {send("DriverStoreDeleteDriverPackageW");}});
+
+var DriverStoreEnumDriverPackageA = Module.findExportByName("setupapi.dll", "DriverStoreEnumDriverPackageA")
+Interceptor.attach(DriverStoreEnumDriverPackageA, {onLeave: function (args) {send("DriverStoreEnumDriverPackageA");}});
+
+var DriverStoreEnumDriverPackageW = Module.findExportByName("setupapi.dll", "DriverStoreEnumDriverPackageW")
+Interceptor.attach(DriverStoreEnumDriverPackageW, {onLeave: function (args) {send("DriverStoreEnumDriverPackageW");}});
+
+var DriverStoreFindDriverPackageA = Module.findExportByName("setupapi.dll", "DriverStoreFindDriverPackageA")
+Interceptor.attach(DriverStoreFindDriverPackageA, {onLeave: function (args) {send("DriverStoreFindDriverPackageA");}});
+
+var DriverStoreFindDriverPackageW = Module.findExportByName("setupapi.dll", "DriverStoreFindDriverPackageW")
+Interceptor.attach(DriverStoreFindDriverPackageW, {onLeave: function (args) {send("DriverStoreFindDriverPackageW");}});
+
+var ExtensionPropSheetPageProc = Module.findExportByName("setupapi.dll", "ExtensionPropSheetPageProc")
+Interceptor.attach(ExtensionPropSheetPageProc, {onLeave: function (args) {send("ExtensionPropSheetPageProc");}});
+
+var InstallCatalog = Module.findExportByName("setupapi.dll", "InstallCatalog")
+Interceptor.attach(InstallCatalog, {onLeave: function (args) {send("InstallCatalog");}});
+
+var InstallHinfSection = Module.findExportByName("setupapi.dll", "InstallHinfSection")
+Interceptor.attach(InstallHinfSection, {onLeave: function (args) {send("InstallHinfSection");}});
+
+var InstallHinfSectionA = Module.findExportByName("setupapi.dll", "InstallHinfSectionA")
+Interceptor.attach(InstallHinfSectionA, {onLeave: function (args) {send("InstallHinfSectionA");}});
+
+var InstallHinfSectionW = Module.findExportByName("setupapi.dll", "InstallHinfSectionW")
+Interceptor.attach(InstallHinfSectionW, {onLeave: function (args) {send("InstallHinfSectionW");}});
+
+var IsUserAdmin = Module.findExportByName("setupapi.dll", "IsUserAdmin")
+Interceptor.attach(IsUserAdmin, {onLeave: function (args) {send("IsUserAdmin");}});
+
+var MyFree = Module.findExportByName("setupapi.dll", "MyFree")
+Interceptor.attach(MyFree, {onLeave: function (args) {send("MyFree");}});
+
+var MyMalloc = Module.findExportByName("setupapi.dll", "MyMalloc")
+Interceptor.attach(MyMalloc, {onLeave: function (args) {send("MyMalloc");}});
+
+var MyRealloc = Module.findExportByName("setupapi.dll", "MyRealloc")
+Interceptor.attach(MyRealloc, {onLeave: function (args) {send("MyRealloc");}});
+
+var PnpEnumDrpFile = Module.findExportByName("setupapi.dll", "PnpEnumDrpFile")
+Interceptor.attach(PnpEnumDrpFile, {onLeave: function (args) {send("PnpEnumDrpFile");}});
+
+var PnpIsFileAclIntact = Module.findExportByName("setupapi.dll", "PnpIsFileAclIntact")
+Interceptor.attach(PnpIsFileAclIntact, {onLeave: function (args) {send("PnpIsFileAclIntact");}});
+
+var PnpIsFileContentIntact = Module.findExportByName("setupapi.dll", "PnpIsFileContentIntact")
+Interceptor.attach(PnpIsFileContentIntact, {onLeave: function (args) {send("PnpIsFileContentIntact");}});
+
+var PnpIsFilePnpDriver = Module.findExportByName("setupapi.dll", "PnpIsFilePnpDriver")
+Interceptor.attach(PnpIsFilePnpDriver, {onLeave: function (args) {send("PnpIsFilePnpDriver");}});
+
+var PnpRepairWindowsProtectedDriver = Module.findExportByName("setupapi.dll", "PnpRepairWindowsProtectedDriver")
+Interceptor.attach(PnpRepairWindowsProtectedDriver, {onLeave: function (args) {send("PnpRepairWindowsProtectedDriver");}});
+
+var SetupAddInstallSectionToDiskSpaceListA = Module.findExportByName("setupapi.dll", "SetupAddInstallSectionToDiskSpaceListA")
+Interceptor.attach(SetupAddInstallSectionToDiskSpaceListA, {onLeave: function (args) {send("SetupAddInstallSectionToDiskSpaceListA");}});
+
+var SetupAddInstallSectionToDiskSpaceListW = Module.findExportByName("setupapi.dll", "SetupAddInstallSectionToDiskSpaceListW")
+Interceptor.attach(SetupAddInstallSectionToDiskSpaceListW, {onLeave: function (args) {send("SetupAddInstallSectionToDiskSpaceListW");}});
+
+var SetupAddSectionToDiskSpaceListA = Module.findExportByName("setupapi.dll", "SetupAddSectionToDiskSpaceListA")
+Interceptor.attach(SetupAddSectionToDiskSpaceListA, {onLeave: function (args) {send("SetupAddSectionToDiskSpaceListA");}});
+
+var SetupAddSectionToDiskSpaceListW = Module.findExportByName("setupapi.dll", "SetupAddSectionToDiskSpaceListW")
+Interceptor.attach(SetupAddSectionToDiskSpaceListW, {onLeave: function (args) {send("SetupAddSectionToDiskSpaceListW");}});
+
+var SetupAddToDiskSpaceListA = Module.findExportByName("setupapi.dll", "SetupAddToDiskSpaceListA")
+Interceptor.attach(SetupAddToDiskSpaceListA, {onLeave: function (args) {send("SetupAddToDiskSpaceListA");}});
+
+var SetupAddToDiskSpaceListW = Module.findExportByName("setupapi.dll", "SetupAddToDiskSpaceListW")
+Interceptor.attach(SetupAddToDiskSpaceListW, {onLeave: function (args) {send("SetupAddToDiskSpaceListW");}});
+
+var SetupAddToSourceListA = Module.findExportByName("setupapi.dll", "SetupAddToSourceListA")
+Interceptor.attach(SetupAddToSourceListA, {onLeave: function (args) {send("SetupAddToSourceListA");}});
+
+var SetupAddToSourceListW = Module.findExportByName("setupapi.dll", "SetupAddToSourceListW")
+Interceptor.attach(SetupAddToSourceListW, {onLeave: function (args) {send("SetupAddToSourceListW");}});
+
+var SetupAdjustDiskSpaceListA = Module.findExportByName("setupapi.dll", "SetupAdjustDiskSpaceListA")
+Interceptor.attach(SetupAdjustDiskSpaceListA, {onLeave: function (args) {send("SetupAdjustDiskSpaceListA");}});
+
+var SetupAdjustDiskSpaceListW = Module.findExportByName("setupapi.dll", "SetupAdjustDiskSpaceListW")
+Interceptor.attach(SetupAdjustDiskSpaceListW, {onLeave: function (args) {send("SetupAdjustDiskSpaceListW");}});
+
+var SetupBackupErrorA = Module.findExportByName("setupapi.dll", "SetupBackupErrorA")
+Interceptor.attach(SetupBackupErrorA, {onLeave: function (args) {send("SetupBackupErrorA");}});
+
+var SetupBackupErrorW = Module.findExportByName("setupapi.dll", "SetupBackupErrorW")
+Interceptor.attach(SetupBackupErrorW, {onLeave: function (args) {send("SetupBackupErrorW");}});
+
+var SetupCancelTemporarySourceList = Module.findExportByName("setupapi.dll", "SetupCancelTemporarySourceList")
+Interceptor.attach(SetupCancelTemporarySourceList, {onLeave: function (args) {send("SetupCancelTemporarySourceList");}});
+
+var SetupCloseFileQueue = Module.findExportByName("setupapi.dll", "SetupCloseFileQueue")
+Interceptor.attach(SetupCloseFileQueue, {onLeave: function (args) {send("SetupCloseFileQueue");}});
+
+var SetupCloseInfFile = Module.findExportByName("setupapi.dll", "SetupCloseInfFile")
+Interceptor.attach(SetupCloseInfFile, {onLeave: function (args) {send("SetupCloseInfFile");}});
+
+var SetupCloseLog = Module.findExportByName("setupapi.dll", "SetupCloseLog")
+Interceptor.attach(SetupCloseLog, {onLeave: function (args) {send("SetupCloseLog");}});
+
+var SetupCommitFileQueue = Module.findExportByName("setupapi.dll", "SetupCommitFileQueue")
+Interceptor.attach(SetupCommitFileQueue, {onLeave: function (args) {send("SetupCommitFileQueue");}});
+
+var SetupCommitFileQueueA = Module.findExportByName("setupapi.dll", "SetupCommitFileQueueA")
+Interceptor.attach(SetupCommitFileQueueA, {onLeave: function (args) {send("SetupCommitFileQueueA");}});
+
+var SetupCommitFileQueueW = Module.findExportByName("setupapi.dll", "SetupCommitFileQueueW")
+Interceptor.attach(SetupCommitFileQueueW, {onLeave: function (args) {send("SetupCommitFileQueueW");}});
+
+var SetupConfigureWmiFromInfSectionA = Module.findExportByName("setupapi.dll", "SetupConfigureWmiFromInfSectionA")
+Interceptor.attach(SetupConfigureWmiFromInfSectionA, {onLeave: function (args) {send("SetupConfigureWmiFromInfSectionA");}});
+
+var SetupConfigureWmiFromInfSectionW = Module.findExportByName("setupapi.dll", "SetupConfigureWmiFromInfSectionW")
+Interceptor.attach(SetupConfigureWmiFromInfSectionW, {onLeave: function (args) {send("SetupConfigureWmiFromInfSectionW");}});
+
+var SetupCopyErrorA = Module.findExportByName("setupapi.dll", "SetupCopyErrorA")
+Interceptor.attach(SetupCopyErrorA, {onLeave: function (args) {send("SetupCopyErrorA");}});
+
+var SetupCopyErrorW = Module.findExportByName("setupapi.dll", "SetupCopyErrorW")
+Interceptor.attach(SetupCopyErrorW, {onLeave: function (args) {send("SetupCopyErrorW");}});
+
+var SetupCopyOEMInfA = Module.findExportByName("setupapi.dll", "SetupCopyOEMInfA")
+Interceptor.attach(SetupCopyOEMInfA, {onLeave: function (args) {send("SetupCopyOEMInfA");}});
+
+var SetupCopyOEMInfW = Module.findExportByName("setupapi.dll", "SetupCopyOEMInfW")
+Interceptor.attach(SetupCopyOEMInfW, {onLeave: function (args) {send("SetupCopyOEMInfW");}});
+
+var SetupCreateDiskSpaceListA = Module.findExportByName("setupapi.dll", "SetupCreateDiskSpaceListA")
+Interceptor.attach(SetupCreateDiskSpaceListA, {onLeave: function (args) {send("SetupCreateDiskSpaceListA");}});
+
+var SetupCreateDiskSpaceListW = Module.findExportByName("setupapi.dll", "SetupCreateDiskSpaceListW")
+Interceptor.attach(SetupCreateDiskSpaceListW, {onLeave: function (args) {send("SetupCreateDiskSpaceListW");}});
+
+var SetupDecompressOrCopyFileA = Module.findExportByName("setupapi.dll", "SetupDecompressOrCopyFileA")
+Interceptor.attach(SetupDecompressOrCopyFileA, {onLeave: function (args) {send("SetupDecompressOrCopyFileA");}});
+
+var SetupDecompressOrCopyFileW = Module.findExportByName("setupapi.dll", "SetupDecompressOrCopyFileW")
+Interceptor.attach(SetupDecompressOrCopyFileW, {onLeave: function (args) {send("SetupDecompressOrCopyFileW");}});
+
+var SetupDefaultQueueCallback = Module.findExportByName("setupapi.dll", "SetupDefaultQueueCallback")
+Interceptor.attach(SetupDefaultQueueCallback, {onLeave: function (args) {send("SetupDefaultQueueCallback");}});
+
+var SetupDefaultQueueCallbackA = Module.findExportByName("setupapi.dll", "SetupDefaultQueueCallbackA")
+Interceptor.attach(SetupDefaultQueueCallbackA, {onLeave: function (args) {send("SetupDefaultQueueCallbackA");}});
+
+var SetupDefaultQueueCallbackW = Module.findExportByName("setupapi.dll", "SetupDefaultQueueCallbackW")
+Interceptor.attach(SetupDefaultQueueCallbackW, {onLeave: function (args) {send("SetupDefaultQueueCallbackW");}});
+
+var SetupDeleteErrorA = Module.findExportByName("setupapi.dll", "SetupDeleteErrorA")
+Interceptor.attach(SetupDeleteErrorA, {onLeave: function (args) {send("SetupDeleteErrorA");}});
+
+var SetupDeleteErrorW = Module.findExportByName("setupapi.dll", "SetupDeleteErrorW")
+Interceptor.attach(SetupDeleteErrorW, {onLeave: function (args) {send("SetupDeleteErrorW");}});
+
+var SetupDestroyDiskSpaceList = Module.findExportByName("setupapi.dll", "SetupDestroyDiskSpaceList")
+Interceptor.attach(SetupDestroyDiskSpaceList, {onLeave: function (args) {send("SetupDestroyDiskSpaceList");}});
+
+var SetupDiApplyPowerScheme = Module.findExportByName("setupapi.dll", "SetupDiApplyPowerScheme")
+Interceptor.attach(SetupDiApplyPowerScheme, {onLeave: function (args) {send("SetupDiApplyPowerScheme");}});
+
+var SetupDiAskForOEMDisk = Module.findExportByName("setupapi.dll", "SetupDiAskForOEMDisk")
+Interceptor.attach(SetupDiAskForOEMDisk, {onLeave: function (args) {send("SetupDiAskForOEMDisk");}});
+
+var SetupDiBuildClassInfoList = Module.findExportByName("setupapi.dll", "SetupDiBuildClassInfoList")
+Interceptor.attach(SetupDiBuildClassInfoList, {onLeave: function (args) {send("SetupDiBuildClassInfoList");}});
+
+var SetupDiBuildClassInfoListExA = Module.findExportByName("setupapi.dll", "SetupDiBuildClassInfoListExA")
+Interceptor.attach(SetupDiBuildClassInfoListExA, {onLeave: function (args) {send("SetupDiBuildClassInfoListExA");}});
+
+var SetupDiBuildClassInfoListExW = Module.findExportByName("setupapi.dll", "SetupDiBuildClassInfoListExW")
+Interceptor.attach(SetupDiBuildClassInfoListExW, {onLeave: function (args) {send("SetupDiBuildClassInfoListExW");}});
+
+var SetupDiBuildDriverInfoList = Module.findExportByName("setupapi.dll", "SetupDiBuildDriverInfoList")
+Interceptor.attach(SetupDiBuildDriverInfoList, {onLeave: function (args) {send("SetupDiBuildDriverInfoList");}});
+
+var SetupDiCallClassInstaller = Module.findExportByName("setupapi.dll", "SetupDiCallClassInstaller")
+Interceptor.attach(SetupDiCallClassInstaller, {onLeave: function (args) {send("SetupDiCallClassInstaller");}});
+
+var SetupDiCancelDriverInfoSearch = Module.findExportByName("setupapi.dll", "SetupDiCancelDriverInfoSearch")
+Interceptor.attach(SetupDiCancelDriverInfoSearch, {onLeave: function (args) {send("SetupDiCancelDriverInfoSearch");}});
+
+var SetupDiChangeState = Module.findExportByName("setupapi.dll", "SetupDiChangeState")
+Interceptor.attach(SetupDiChangeState, {onLeave: function (args) {send("SetupDiChangeState");}});
+
+var SetupDiClassGuidsFromNameA = Module.findExportByName("setupapi.dll", "SetupDiClassGuidsFromNameA")
+Interceptor.attach(SetupDiClassGuidsFromNameA, {onLeave: function (args) {send("SetupDiClassGuidsFromNameA");}});
+
+var SetupDiClassGuidsFromNameExA = Module.findExportByName("setupapi.dll", "SetupDiClassGuidsFromNameExA")
+Interceptor.attach(SetupDiClassGuidsFromNameExA, {onLeave: function (args) {send("SetupDiClassGuidsFromNameExA");}});
+
+var SetupDiClassGuidsFromNameExW = Module.findExportByName("setupapi.dll", "SetupDiClassGuidsFromNameExW")
+Interceptor.attach(SetupDiClassGuidsFromNameExW, {onLeave: function (args) {send("SetupDiClassGuidsFromNameExW");}});
+
+var SetupDiClassGuidsFromNameW = Module.findExportByName("setupapi.dll", "SetupDiClassGuidsFromNameW")
+Interceptor.attach(SetupDiClassGuidsFromNameW, {onLeave: function (args) {send("SetupDiClassGuidsFromNameW");}});
+
+var SetupDiClassNameFromGuidA = Module.findExportByName("setupapi.dll", "SetupDiClassNameFromGuidA")
+Interceptor.attach(SetupDiClassNameFromGuidA, {onLeave: function (args) {send("SetupDiClassNameFromGuidA");}});
+
+var SetupDiClassNameFromGuidExA = Module.findExportByName("setupapi.dll", "SetupDiClassNameFromGuidExA")
+Interceptor.attach(SetupDiClassNameFromGuidExA, {onLeave: function (args) {send("SetupDiClassNameFromGuidExA");}});
+
+var SetupDiClassNameFromGuidExW = Module.findExportByName("setupapi.dll", "SetupDiClassNameFromGuidExW")
+Interceptor.attach(SetupDiClassNameFromGuidExW, {onLeave: function (args) {send("SetupDiClassNameFromGuidExW");}});
+
+var SetupDiClassNameFromGuidW = Module.findExportByName("setupapi.dll", "SetupDiClassNameFromGuidW")
+Interceptor.attach(SetupDiClassNameFromGuidW, {onLeave: function (args) {send("SetupDiClassNameFromGuidW");}});
+
+var SetupDiCreateDevRegKeyA = Module.findExportByName("setupapi.dll", "SetupDiCreateDevRegKeyA")
+Interceptor.attach(SetupDiCreateDevRegKeyA, {onLeave: function (args) {send("SetupDiCreateDevRegKeyA");}});
+
+var SetupDiCreateDevRegKeyW = Module.findExportByName("setupapi.dll", "SetupDiCreateDevRegKeyW")
+Interceptor.attach(SetupDiCreateDevRegKeyW, {onLeave: function (args) {send("SetupDiCreateDevRegKeyW");}});
+
+var SetupDiCreateDeviceInfoA = Module.findExportByName("setupapi.dll", "SetupDiCreateDeviceInfoA")
+Interceptor.attach(SetupDiCreateDeviceInfoA, {onLeave: function (args) {send("SetupDiCreateDeviceInfoA");}});
+
+var SetupDiCreateDeviceInfoList = Module.findExportByName("setupapi.dll", "SetupDiCreateDeviceInfoList")
+Interceptor.attach(SetupDiCreateDeviceInfoList, {onLeave: function (args) {send("SetupDiCreateDeviceInfoList");}});
+
+var SetupDiCreateDeviceInfoListExA = Module.findExportByName("setupapi.dll", "SetupDiCreateDeviceInfoListExA")
+Interceptor.attach(SetupDiCreateDeviceInfoListExA, {onLeave: function (args) {send("SetupDiCreateDeviceInfoListExA");}});
+
+var SetupDiCreateDeviceInfoListExW = Module.findExportByName("setupapi.dll", "SetupDiCreateDeviceInfoListExW")
+Interceptor.attach(SetupDiCreateDeviceInfoListExW, {onLeave: function (args) {send("SetupDiCreateDeviceInfoListExW");}});
+
+var SetupDiCreateDeviceInfoW = Module.findExportByName("setupapi.dll", "SetupDiCreateDeviceInfoW")
+Interceptor.attach(SetupDiCreateDeviceInfoW, {onLeave: function (args) {send("SetupDiCreateDeviceInfoW");}});
+
+var SetupDiCreateDeviceInterfaceA = Module.findExportByName("setupapi.dll", "SetupDiCreateDeviceInterfaceA")
+Interceptor.attach(SetupDiCreateDeviceInterfaceA, {onLeave: function (args) {send("SetupDiCreateDeviceInterfaceA");}});
+
+var SetupDiCreateDeviceInterfaceRegKeyA = Module.findExportByName("setupapi.dll", "SetupDiCreateDeviceInterfaceRegKeyA")
+Interceptor.attach(SetupDiCreateDeviceInterfaceRegKeyA, {onLeave: function (args) {send("SetupDiCreateDeviceInterfaceRegKeyA");}});
+
+var SetupDiCreateDeviceInterfaceRegKeyW = Module.findExportByName("setupapi.dll", "SetupDiCreateDeviceInterfaceRegKeyW")
+Interceptor.attach(SetupDiCreateDeviceInterfaceRegKeyW, {onLeave: function (args) {send("SetupDiCreateDeviceInterfaceRegKeyW");}});
+
+var SetupDiCreateDeviceInterfaceW = Module.findExportByName("setupapi.dll", "SetupDiCreateDeviceInterfaceW")
+Interceptor.attach(SetupDiCreateDeviceInterfaceW, {onLeave: function (args) {send("SetupDiCreateDeviceInterfaceW");}});
+
+var SetupDiDeleteDevRegKey = Module.findExportByName("setupapi.dll", "SetupDiDeleteDevRegKey")
+Interceptor.attach(SetupDiDeleteDevRegKey, {onLeave: function (args) {send("SetupDiDeleteDevRegKey");}});
+
+var SetupDiDeleteDeviceInfo = Module.findExportByName("setupapi.dll", "SetupDiDeleteDeviceInfo")
+Interceptor.attach(SetupDiDeleteDeviceInfo, {onLeave: function (args) {send("SetupDiDeleteDeviceInfo");}});
+
+var SetupDiDeleteDeviceInterfaceData = Module.findExportByName("setupapi.dll", "SetupDiDeleteDeviceInterfaceData")
+Interceptor.attach(SetupDiDeleteDeviceInterfaceData, {onLeave: function (args) {send("SetupDiDeleteDeviceInterfaceData");}});
+
+var SetupDiDeleteDeviceInterfaceRegKey = Module.findExportByName("setupapi.dll", "SetupDiDeleteDeviceInterfaceRegKey")
+Interceptor.attach(SetupDiDeleteDeviceInterfaceRegKey, {onLeave: function (args) {send("SetupDiDeleteDeviceInterfaceRegKey");}});
+
+var SetupDiDestroyClassImageList = Module.findExportByName("setupapi.dll", "SetupDiDestroyClassImageList")
+Interceptor.attach(SetupDiDestroyClassImageList, {onLeave: function (args) {send("SetupDiDestroyClassImageList");}});
+
+var SetupDiDestroyDeviceInfoList = Module.findExportByName("setupapi.dll", "SetupDiDestroyDeviceInfoList")
+Interceptor.attach(SetupDiDestroyDeviceInfoList, {onLeave: function (args) {send("SetupDiDestroyDeviceInfoList");}});
+
+var SetupDiDestroyDriverInfoList = Module.findExportByName("setupapi.dll", "SetupDiDestroyDriverInfoList")
+Interceptor.attach(SetupDiDestroyDriverInfoList, {onLeave: function (args) {send("SetupDiDestroyDriverInfoList");}});
+
+var SetupDiDrawMiniIcon = Module.findExportByName("setupapi.dll", "SetupDiDrawMiniIcon")
+Interceptor.attach(SetupDiDrawMiniIcon, {onLeave: function (args) {send("SetupDiDrawMiniIcon");}});
+
+var SetupDiEnumDeviceInfo = Module.findExportByName("setupapi.dll", "SetupDiEnumDeviceInfo")
+Interceptor.attach(SetupDiEnumDeviceInfo, {onLeave: function (args) {send("SetupDiEnumDeviceInfo");}});
+
+var SetupDiEnumDeviceInterfaces = Module.findExportByName("setupapi.dll", "SetupDiEnumDeviceInterfaces")
+Interceptor.attach(SetupDiEnumDeviceInterfaces, {onLeave: function (args) {send("SetupDiEnumDeviceInterfaces");}});
+
+var SetupDiEnumDriverInfoA = Module.findExportByName("setupapi.dll", "SetupDiEnumDriverInfoA")
+Interceptor.attach(SetupDiEnumDriverInfoA, {onLeave: function (args) {send("SetupDiEnumDriverInfoA");}});
+
+var SetupDiEnumDriverInfoW = Module.findExportByName("setupapi.dll", "SetupDiEnumDriverInfoW")
+Interceptor.attach(SetupDiEnumDriverInfoW, {onLeave: function (args) {send("SetupDiEnumDriverInfoW");}});
+
+var SetupDiGetActualModelsSectionA = Module.findExportByName("setupapi.dll", "SetupDiGetActualModelsSectionA")
+Interceptor.attach(SetupDiGetActualModelsSectionA, {onLeave: function (args) {send("SetupDiGetActualModelsSectionA");}});
+
+var SetupDiGetActualModelsSectionW = Module.findExportByName("setupapi.dll", "SetupDiGetActualModelsSectionW")
+Interceptor.attach(SetupDiGetActualModelsSectionW, {onLeave: function (args) {send("SetupDiGetActualModelsSectionW");}});
+
+var SetupDiGetActualSectionToInstallA = Module.findExportByName("setupapi.dll", "SetupDiGetActualSectionToInstallA")
+Interceptor.attach(SetupDiGetActualSectionToInstallA, {onLeave: function (args) {send("SetupDiGetActualSectionToInstallA");}});
+
+var SetupDiGetActualSectionToInstallExA = Module.findExportByName("setupapi.dll", "SetupDiGetActualSectionToInstallExA")
+Interceptor.attach(SetupDiGetActualSectionToInstallExA, {onLeave: function (args) {send("SetupDiGetActualSectionToInstallExA");}});
+
+var SetupDiGetActualSectionToInstallExW = Module.findExportByName("setupapi.dll", "SetupDiGetActualSectionToInstallExW")
+Interceptor.attach(SetupDiGetActualSectionToInstallExW, {onLeave: function (args) {send("SetupDiGetActualSectionToInstallExW");}});
+
+var SetupDiGetActualSectionToInstallW = Module.findExportByName("setupapi.dll", "SetupDiGetActualSectionToInstallW")
+Interceptor.attach(SetupDiGetActualSectionToInstallW, {onLeave: function (args) {send("SetupDiGetActualSectionToInstallW");}});
+
+var SetupDiGetClassBitmapIndex = Module.findExportByName("setupapi.dll", "SetupDiGetClassBitmapIndex")
+Interceptor.attach(SetupDiGetClassBitmapIndex, {onLeave: function (args) {send("SetupDiGetClassBitmapIndex");}});
+
+var SetupDiGetClassDescriptionA = Module.findExportByName("setupapi.dll", "SetupDiGetClassDescriptionA")
+Interceptor.attach(SetupDiGetClassDescriptionA, {onLeave: function (args) {send("SetupDiGetClassDescriptionA");}});
+
+var SetupDiGetClassDescriptionExA = Module.findExportByName("setupapi.dll", "SetupDiGetClassDescriptionExA")
+Interceptor.attach(SetupDiGetClassDescriptionExA, {onLeave: function (args) {send("SetupDiGetClassDescriptionExA");}});
+
+var SetupDiGetClassDescriptionExW = Module.findExportByName("setupapi.dll", "SetupDiGetClassDescriptionExW")
+Interceptor.attach(SetupDiGetClassDescriptionExW, {onLeave: function (args) {send("SetupDiGetClassDescriptionExW");}});
+
+var SetupDiGetClassDescriptionW = Module.findExportByName("setupapi.dll", "SetupDiGetClassDescriptionW")
+Interceptor.attach(SetupDiGetClassDescriptionW, {onLeave: function (args) {send("SetupDiGetClassDescriptionW");}});
+
+var SetupDiGetClassDevPropertySheetsA = Module.findExportByName("setupapi.dll", "SetupDiGetClassDevPropertySheetsA")
+Interceptor.attach(SetupDiGetClassDevPropertySheetsA, {onLeave: function (args) {send("SetupDiGetClassDevPropertySheetsA");}});
+
+var SetupDiGetClassDevPropertySheetsW = Module.findExportByName("setupapi.dll", "SetupDiGetClassDevPropertySheetsW")
+Interceptor.attach(SetupDiGetClassDevPropertySheetsW, {onLeave: function (args) {send("SetupDiGetClassDevPropertySheetsW");}});
+
+var SetupDiGetClassDevsA = Module.findExportByName("setupapi.dll", "SetupDiGetClassDevsA")
+Interceptor.attach(SetupDiGetClassDevsA, {onLeave: function (args) {send("SetupDiGetClassDevsA");}});
+
+var SetupDiGetClassDevsExA = Module.findExportByName("setupapi.dll", "SetupDiGetClassDevsExA")
+Interceptor.attach(SetupDiGetClassDevsExA, {onLeave: function (args) {send("SetupDiGetClassDevsExA");}});
+
+var SetupDiGetClassDevsExW = Module.findExportByName("setupapi.dll", "SetupDiGetClassDevsExW")
+Interceptor.attach(SetupDiGetClassDevsExW, {onLeave: function (args) {send("SetupDiGetClassDevsExW");}});
+
+var SetupDiGetClassDevsW = Module.findExportByName("setupapi.dll", "SetupDiGetClassDevsW")
+Interceptor.attach(SetupDiGetClassDevsW, {onLeave: function (args) {send("SetupDiGetClassDevsW");}});
+
+var SetupDiGetClassImageIndex = Module.findExportByName("setupapi.dll", "SetupDiGetClassImageIndex")
+Interceptor.attach(SetupDiGetClassImageIndex, {onLeave: function (args) {send("SetupDiGetClassImageIndex");}});
+
+var SetupDiGetClassImageList = Module.findExportByName("setupapi.dll", "SetupDiGetClassImageList")
+Interceptor.attach(SetupDiGetClassImageList, {onLeave: function (args) {send("SetupDiGetClassImageList");}});
+
+var SetupDiGetClassImageListExA = Module.findExportByName("setupapi.dll", "SetupDiGetClassImageListExA")
+Interceptor.attach(SetupDiGetClassImageListExA, {onLeave: function (args) {send("SetupDiGetClassImageListExA");}});
+
+var SetupDiGetClassImageListExW = Module.findExportByName("setupapi.dll", "SetupDiGetClassImageListExW")
+Interceptor.attach(SetupDiGetClassImageListExW, {onLeave: function (args) {send("SetupDiGetClassImageListExW");}});
+
+var SetupDiGetClassInstallParamsA = Module.findExportByName("setupapi.dll", "SetupDiGetClassInstallParamsA")
+Interceptor.attach(SetupDiGetClassInstallParamsA, {onLeave: function (args) {send("SetupDiGetClassInstallParamsA");}});
+
+var SetupDiGetClassInstallParamsW = Module.findExportByName("setupapi.dll", "SetupDiGetClassInstallParamsW")
+Interceptor.attach(SetupDiGetClassInstallParamsW, {onLeave: function (args) {send("SetupDiGetClassInstallParamsW");}});
+
+var SetupDiGetClassPropertyExW = Module.findExportByName("setupapi.dll", "SetupDiGetClassPropertyExW")
+Interceptor.attach(SetupDiGetClassPropertyExW, {onLeave: function (args) {send("SetupDiGetClassPropertyExW");}});
+
+var SetupDiGetClassPropertyKeys = Module.findExportByName("setupapi.dll", "SetupDiGetClassPropertyKeys")
+Interceptor.attach(SetupDiGetClassPropertyKeys, {onLeave: function (args) {send("SetupDiGetClassPropertyKeys");}});
+
+var SetupDiGetClassPropertyKeysExW = Module.findExportByName("setupapi.dll", "SetupDiGetClassPropertyKeysExW")
+Interceptor.attach(SetupDiGetClassPropertyKeysExW, {onLeave: function (args) {send("SetupDiGetClassPropertyKeysExW");}});
+
+var SetupDiGetClassPropertyW = Module.findExportByName("setupapi.dll", "SetupDiGetClassPropertyW")
+Interceptor.attach(SetupDiGetClassPropertyW, {onLeave: function (args) {send("SetupDiGetClassPropertyW");}});
+
+var SetupDiGetClassRegistryPropertyA = Module.findExportByName("setupapi.dll", "SetupDiGetClassRegistryPropertyA")
+Interceptor.attach(SetupDiGetClassRegistryPropertyA, {onLeave: function (args) {send("SetupDiGetClassRegistryPropertyA");}});
+
+var SetupDiGetClassRegistryPropertyW = Module.findExportByName("setupapi.dll", "SetupDiGetClassRegistryPropertyW")
+Interceptor.attach(SetupDiGetClassRegistryPropertyW, {onLeave: function (args) {send("SetupDiGetClassRegistryPropertyW");}});
+
+var SetupDiGetCustomDevicePropertyA = Module.findExportByName("setupapi.dll", "SetupDiGetCustomDevicePropertyA")
+Interceptor.attach(SetupDiGetCustomDevicePropertyA, {onLeave: function (args) {send("SetupDiGetCustomDevicePropertyA");}});
+
+var SetupDiGetCustomDevicePropertyW = Module.findExportByName("setupapi.dll", "SetupDiGetCustomDevicePropertyW")
+Interceptor.attach(SetupDiGetCustomDevicePropertyW, {onLeave: function (args) {send("SetupDiGetCustomDevicePropertyW");}});
+
+var SetupDiGetDeviceInfoListClass = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInfoListClass")
+Interceptor.attach(SetupDiGetDeviceInfoListClass, {onLeave: function (args) {send("SetupDiGetDeviceInfoListClass");}});
+
+var SetupDiGetDeviceInfoListDetailA = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInfoListDetailA")
+Interceptor.attach(SetupDiGetDeviceInfoListDetailA, {onLeave: function (args) {send("SetupDiGetDeviceInfoListDetailA");}});
+
+var SetupDiGetDeviceInfoListDetailW = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInfoListDetailW")
+Interceptor.attach(SetupDiGetDeviceInfoListDetailW, {onLeave: function (args) {send("SetupDiGetDeviceInfoListDetailW");}});
+
+var SetupDiGetDeviceInstallParamsA = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInstallParamsA")
+Interceptor.attach(SetupDiGetDeviceInstallParamsA, {onLeave: function (args) {send("SetupDiGetDeviceInstallParamsA");}});
+
+var SetupDiGetDeviceInstallParamsW = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInstallParamsW")
+Interceptor.attach(SetupDiGetDeviceInstallParamsW, {onLeave: function (args) {send("SetupDiGetDeviceInstallParamsW");}});
+
+var SetupDiGetDeviceInstanceIdA = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInstanceIdA")
+Interceptor.attach(SetupDiGetDeviceInstanceIdA, {onLeave: function (args) {send("SetupDiGetDeviceInstanceIdA");}});
+
+var SetupDiGetDeviceInstanceIdW = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInstanceIdW")
+Interceptor.attach(SetupDiGetDeviceInstanceIdW, {onLeave: function (args) {send("SetupDiGetDeviceInstanceIdW");}});
+
+var SetupDiGetDeviceInterfaceAlias = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInterfaceAlias")
+Interceptor.attach(SetupDiGetDeviceInterfaceAlias, {onLeave: function (args) {send("SetupDiGetDeviceInterfaceAlias");}});
+
+var SetupDiGetDeviceInterfaceDetailA = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInterfaceDetailA")
+Interceptor.attach(SetupDiGetDeviceInterfaceDetailA, {onLeave: function (args) {send("SetupDiGetDeviceInterfaceDetailA");}});
+
+var SetupDiGetDeviceInterfaceDetailW = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInterfaceDetailW")
+Interceptor.attach(SetupDiGetDeviceInterfaceDetailW, {onLeave: function (args) {send("SetupDiGetDeviceInterfaceDetailW");}});
+
+var SetupDiGetDeviceInterfacePropertyKeys = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInterfacePropertyKeys")
+Interceptor.attach(SetupDiGetDeviceInterfacePropertyKeys, {onLeave: function (args) {send("SetupDiGetDeviceInterfacePropertyKeys");}});
+
+var SetupDiGetDeviceInterfacePropertyW = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceInterfacePropertyW")
+Interceptor.attach(SetupDiGetDeviceInterfacePropertyW, {onLeave: function (args) {send("SetupDiGetDeviceInterfacePropertyW");}});
+
+var SetupDiGetDevicePropertyKeys = Module.findExportByName("setupapi.dll", "SetupDiGetDevicePropertyKeys")
+Interceptor.attach(SetupDiGetDevicePropertyKeys, {onLeave: function (args) {send("SetupDiGetDevicePropertyKeys");}});
+
+var SetupDiGetDevicePropertyW = Module.findExportByName("setupapi.dll", "SetupDiGetDevicePropertyW")
+Interceptor.attach(SetupDiGetDevicePropertyW, {onLeave: function (args) {send("SetupDiGetDevicePropertyW");}});
+
+var SetupDiGetDeviceRegistryPropertyA = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceRegistryPropertyA")
+Interceptor.attach(SetupDiGetDeviceRegistryPropertyA, {onLeave: function (args) {send("SetupDiGetDeviceRegistryPropertyA");}});
+
+var SetupDiGetDeviceRegistryPropertyW = Module.findExportByName("setupapi.dll", "SetupDiGetDeviceRegistryPropertyW")
+Interceptor.attach(SetupDiGetDeviceRegistryPropertyW, {onLeave: function (args) {send("SetupDiGetDeviceRegistryPropertyW");}});
+
+var SetupDiGetDriverInfoDetailA = Module.findExportByName("setupapi.dll", "SetupDiGetDriverInfoDetailA")
+Interceptor.attach(SetupDiGetDriverInfoDetailA, {onLeave: function (args) {send("SetupDiGetDriverInfoDetailA");}});
+
+var SetupDiGetDriverInfoDetailW = Module.findExportByName("setupapi.dll", "SetupDiGetDriverInfoDetailW")
+Interceptor.attach(SetupDiGetDriverInfoDetailW, {onLeave: function (args) {send("SetupDiGetDriverInfoDetailW");}});
+
+var SetupDiGetDriverInstallParamsA = Module.findExportByName("setupapi.dll", "SetupDiGetDriverInstallParamsA")
+Interceptor.attach(SetupDiGetDriverInstallParamsA, {onLeave: function (args) {send("SetupDiGetDriverInstallParamsA");}});
+
+var SetupDiGetDriverInstallParamsW = Module.findExportByName("setupapi.dll", "SetupDiGetDriverInstallParamsW")
+Interceptor.attach(SetupDiGetDriverInstallParamsW, {onLeave: function (args) {send("SetupDiGetDriverInstallParamsW");}});
+
+var SetupDiGetHwProfileFriendlyNameA = Module.findExportByName("setupapi.dll", "SetupDiGetHwProfileFriendlyNameA")
+Interceptor.attach(SetupDiGetHwProfileFriendlyNameA, {onLeave: function (args) {send("SetupDiGetHwProfileFriendlyNameA");}});
+
+var SetupDiGetHwProfileFriendlyNameExA = Module.findExportByName("setupapi.dll", "SetupDiGetHwProfileFriendlyNameExA")
+Interceptor.attach(SetupDiGetHwProfileFriendlyNameExA, {onLeave: function (args) {send("SetupDiGetHwProfileFriendlyNameExA");}});
+
+var SetupDiGetHwProfileFriendlyNameExW = Module.findExportByName("setupapi.dll", "SetupDiGetHwProfileFriendlyNameExW")
+Interceptor.attach(SetupDiGetHwProfileFriendlyNameExW, {onLeave: function (args) {send("SetupDiGetHwProfileFriendlyNameExW");}});
+
+var SetupDiGetHwProfileFriendlyNameW = Module.findExportByName("setupapi.dll", "SetupDiGetHwProfileFriendlyNameW")
+Interceptor.attach(SetupDiGetHwProfileFriendlyNameW, {onLeave: function (args) {send("SetupDiGetHwProfileFriendlyNameW");}});
+
+var SetupDiGetHwProfileList = Module.findExportByName("setupapi.dll", "SetupDiGetHwProfileList")
+Interceptor.attach(SetupDiGetHwProfileList, {onLeave: function (args) {send("SetupDiGetHwProfileList");}});
+
+var SetupDiGetHwProfileListExA = Module.findExportByName("setupapi.dll", "SetupDiGetHwProfileListExA")
+Interceptor.attach(SetupDiGetHwProfileListExA, {onLeave: function (args) {send("SetupDiGetHwProfileListExA");}});
+
+var SetupDiGetHwProfileListExW = Module.findExportByName("setupapi.dll", "SetupDiGetHwProfileListExW")
+Interceptor.attach(SetupDiGetHwProfileListExW, {onLeave: function (args) {send("SetupDiGetHwProfileListExW");}});
+
+var SetupDiGetINFClassA = Module.findExportByName("setupapi.dll", "SetupDiGetINFClassA")
+Interceptor.attach(SetupDiGetINFClassA, {onLeave: function (args) {send("SetupDiGetINFClassA");}});
+
+var SetupDiGetINFClassW = Module.findExportByName("setupapi.dll", "SetupDiGetINFClassW")
+Interceptor.attach(SetupDiGetINFClassW, {onLeave: function (args) {send("SetupDiGetINFClassW");}});
+
+var SetupDiGetSelectedDevice = Module.findExportByName("setupapi.dll", "SetupDiGetSelectedDevice")
+Interceptor.attach(SetupDiGetSelectedDevice, {onLeave: function (args) {send("SetupDiGetSelectedDevice");}});
+
+var SetupDiGetSelectedDriverA = Module.findExportByName("setupapi.dll", "SetupDiGetSelectedDriverA")
+Interceptor.attach(SetupDiGetSelectedDriverA, {onLeave: function (args) {send("SetupDiGetSelectedDriverA");}});
+
+var SetupDiGetSelectedDriverW = Module.findExportByName("setupapi.dll", "SetupDiGetSelectedDriverW")
+Interceptor.attach(SetupDiGetSelectedDriverW, {onLeave: function (args) {send("SetupDiGetSelectedDriverW");}});
+
+var SetupDiGetWizardPage = Module.findExportByName("setupapi.dll", "SetupDiGetWizardPage")
+Interceptor.attach(SetupDiGetWizardPage, {onLeave: function (args) {send("SetupDiGetWizardPage");}});
+
+var SetupDiInstallClassA = Module.findExportByName("setupapi.dll", "SetupDiInstallClassA")
+Interceptor.attach(SetupDiInstallClassA, {onLeave: function (args) {send("SetupDiInstallClassA");}});
+
+var SetupDiInstallClassExA = Module.findExportByName("setupapi.dll", "SetupDiInstallClassExA")
+Interceptor.attach(SetupDiInstallClassExA, {onLeave: function (args) {send("SetupDiInstallClassExA");}});
+
+var SetupDiInstallClassExW = Module.findExportByName("setupapi.dll", "SetupDiInstallClassExW")
+Interceptor.attach(SetupDiInstallClassExW, {onLeave: function (args) {send("SetupDiInstallClassExW");}});
+
+var SetupDiInstallClassW = Module.findExportByName("setupapi.dll", "SetupDiInstallClassW")
+Interceptor.attach(SetupDiInstallClassW, {onLeave: function (args) {send("SetupDiInstallClassW");}});
+
+var SetupDiInstallDevice = Module.findExportByName("setupapi.dll", "SetupDiInstallDevice")
+Interceptor.attach(SetupDiInstallDevice, {onLeave: function (args) {send("SetupDiInstallDevice");}});
+
+var SetupDiInstallDeviceInterfaces = Module.findExportByName("setupapi.dll", "SetupDiInstallDeviceInterfaces")
+Interceptor.attach(SetupDiInstallDeviceInterfaces, {onLeave: function (args) {send("SetupDiInstallDeviceInterfaces");}});
+
+var SetupDiInstallDriverFiles = Module.findExportByName("setupapi.dll", "SetupDiInstallDriverFiles")
+Interceptor.attach(SetupDiInstallDriverFiles, {onLeave: function (args) {send("SetupDiInstallDriverFiles");}});
+
+var SetupDiLoadClassIcon = Module.findExportByName("setupapi.dll", "SetupDiLoadClassIcon")
+Interceptor.attach(SetupDiLoadClassIcon, {onLeave: function (args) {send("SetupDiLoadClassIcon");}});
+
+var SetupDiLoadDeviceIcon = Module.findExportByName("setupapi.dll", "SetupDiLoadDeviceIcon")
+Interceptor.attach(SetupDiLoadDeviceIcon, {onLeave: function (args) {send("SetupDiLoadDeviceIcon");}});
+
+var SetupDiMoveDuplicateDevice = Module.findExportByName("setupapi.dll", "SetupDiMoveDuplicateDevice")
+Interceptor.attach(SetupDiMoveDuplicateDevice, {onLeave: function (args) {send("SetupDiMoveDuplicateDevice");}});
+
+var SetupDiOpenClassRegKey = Module.findExportByName("setupapi.dll", "SetupDiOpenClassRegKey")
+Interceptor.attach(SetupDiOpenClassRegKey, {onLeave: function (args) {send("SetupDiOpenClassRegKey");}});
+
+var SetupDiOpenClassRegKeyExA = Module.findExportByName("setupapi.dll", "SetupDiOpenClassRegKeyExA")
+Interceptor.attach(SetupDiOpenClassRegKeyExA, {onLeave: function (args) {send("SetupDiOpenClassRegKeyExA");}});
+
+var SetupDiOpenClassRegKeyExW = Module.findExportByName("setupapi.dll", "SetupDiOpenClassRegKeyExW")
+Interceptor.attach(SetupDiOpenClassRegKeyExW, {onLeave: function (args) {send("SetupDiOpenClassRegKeyExW");}});
+
+var SetupDiOpenDevRegKey = Module.findExportByName("setupapi.dll", "SetupDiOpenDevRegKey")
+Interceptor.attach(SetupDiOpenDevRegKey, {onLeave: function (args) {send("SetupDiOpenDevRegKey");}});
+
+var SetupDiOpenDeviceInfoA = Module.findExportByName("setupapi.dll", "SetupDiOpenDeviceInfoA")
+Interceptor.attach(SetupDiOpenDeviceInfoA, {onLeave: function (args) {send("SetupDiOpenDeviceInfoA");}});
+
+var SetupDiOpenDeviceInfoW = Module.findExportByName("setupapi.dll", "SetupDiOpenDeviceInfoW")
+Interceptor.attach(SetupDiOpenDeviceInfoW, {onLeave: function (args) {send("SetupDiOpenDeviceInfoW");}});
+
+var SetupDiOpenDeviceInterfaceA = Module.findExportByName("setupapi.dll", "SetupDiOpenDeviceInterfaceA")
+Interceptor.attach(SetupDiOpenDeviceInterfaceA, {onLeave: function (args) {send("SetupDiOpenDeviceInterfaceA");}});
+
+var SetupDiOpenDeviceInterfaceRegKey = Module.findExportByName("setupapi.dll", "SetupDiOpenDeviceInterfaceRegKey")
+Interceptor.attach(SetupDiOpenDeviceInterfaceRegKey, {onLeave: function (args) {send("SetupDiOpenDeviceInterfaceRegKey");}});
+
+var SetupDiOpenDeviceInterfaceW = Module.findExportByName("setupapi.dll", "SetupDiOpenDeviceInterfaceW")
+Interceptor.attach(SetupDiOpenDeviceInterfaceW, {onLeave: function (args) {send("SetupDiOpenDeviceInterfaceW");}});
+
+var SetupDiRegisterCoDeviceInstallers = Module.findExportByName("setupapi.dll", "SetupDiRegisterCoDeviceInstallers")
+Interceptor.attach(SetupDiRegisterCoDeviceInstallers, {onLeave: function (args) {send("SetupDiRegisterCoDeviceInstallers");}});
+
+var SetupDiRegisterDeviceInfo = Module.findExportByName("setupapi.dll", "SetupDiRegisterDeviceInfo")
+Interceptor.attach(SetupDiRegisterDeviceInfo, {onLeave: function (args) {send("SetupDiRegisterDeviceInfo");}});
+
+var SetupDiRemoveDevice = Module.findExportByName("setupapi.dll", "SetupDiRemoveDevice")
+Interceptor.attach(SetupDiRemoveDevice, {onLeave: function (args) {send("SetupDiRemoveDevice");}});
+
+var SetupDiRemoveDeviceInterface = Module.findExportByName("setupapi.dll", "SetupDiRemoveDeviceInterface")
+Interceptor.attach(SetupDiRemoveDeviceInterface, {onLeave: function (args) {send("SetupDiRemoveDeviceInterface");}});
+
+var SetupDiReportAdditionalSoftwareRequested = Module.findExportByName("setupapi.dll", "SetupDiReportAdditionalSoftwareRequested")
+Interceptor.attach(SetupDiReportAdditionalSoftwareRequested, {onLeave: function (args) {send("SetupDiReportAdditionalSoftwareRequested");}});
+
+var SetupDiReportDeviceInstallError = Module.findExportByName("setupapi.dll", "SetupDiReportDeviceInstallError")
+Interceptor.attach(SetupDiReportDeviceInstallError, {onLeave: function (args) {send("SetupDiReportDeviceInstallError");}});
+
+var SetupDiReportDriverNotFoundError = Module.findExportByName("setupapi.dll", "SetupDiReportDriverNotFoundError")
+Interceptor.attach(SetupDiReportDriverNotFoundError, {onLeave: function (args) {send("SetupDiReportDriverNotFoundError");}});
+
+var SetupDiReportDriverPackageImportationError = Module.findExportByName("setupapi.dll", "SetupDiReportDriverPackageImportationError")
+Interceptor.attach(SetupDiReportDriverPackageImportationError, {onLeave: function (args) {send("SetupDiReportDriverPackageImportationError");}});
+
+var SetupDiReportGenericDriverInstalled = Module.findExportByName("setupapi.dll", "SetupDiReportGenericDriverInstalled")
+Interceptor.attach(SetupDiReportGenericDriverInstalled, {onLeave: function (args) {send("SetupDiReportGenericDriverInstalled");}});
+
+var SetupDiReportPnPDeviceProblem = Module.findExportByName("setupapi.dll", "SetupDiReportPnPDeviceProblem")
+Interceptor.attach(SetupDiReportPnPDeviceProblem, {onLeave: function (args) {send("SetupDiReportPnPDeviceProblem");}});
+
+var SetupDiRestartDevices = Module.findExportByName("setupapi.dll", "SetupDiRestartDevices")
+Interceptor.attach(SetupDiRestartDevices, {onLeave: function (args) {send("SetupDiRestartDevices");}});
+
+var SetupDiSelectBestCompatDrv = Module.findExportByName("setupapi.dll", "SetupDiSelectBestCompatDrv")
+Interceptor.attach(SetupDiSelectBestCompatDrv, {onLeave: function (args) {send("SetupDiSelectBestCompatDrv");}});
+
+var SetupDiSelectDevice = Module.findExportByName("setupapi.dll", "SetupDiSelectDevice")
+Interceptor.attach(SetupDiSelectDevice, {onLeave: function (args) {send("SetupDiSelectDevice");}});
+
+var SetupDiSelectOEMDrv = Module.findExportByName("setupapi.dll", "SetupDiSelectOEMDrv")
+Interceptor.attach(SetupDiSelectOEMDrv, {onLeave: function (args) {send("SetupDiSelectOEMDrv");}});
+
+var SetupDiSetClassInstallParamsA = Module.findExportByName("setupapi.dll", "SetupDiSetClassInstallParamsA")
+Interceptor.attach(SetupDiSetClassInstallParamsA, {onLeave: function (args) {send("SetupDiSetClassInstallParamsA");}});
+
+var SetupDiSetClassInstallParamsW = Module.findExportByName("setupapi.dll", "SetupDiSetClassInstallParamsW")
+Interceptor.attach(SetupDiSetClassInstallParamsW, {onLeave: function (args) {send("SetupDiSetClassInstallParamsW");}});
+
+var SetupDiSetClassPropertyExW = Module.findExportByName("setupapi.dll", "SetupDiSetClassPropertyExW")
+Interceptor.attach(SetupDiSetClassPropertyExW, {onLeave: function (args) {send("SetupDiSetClassPropertyExW");}});
+
+var SetupDiSetClassPropertyW = Module.findExportByName("setupapi.dll", "SetupDiSetClassPropertyW")
+Interceptor.attach(SetupDiSetClassPropertyW, {onLeave: function (args) {send("SetupDiSetClassPropertyW");}});
+
+var SetupDiSetClassRegistryPropertyA = Module.findExportByName("setupapi.dll", "SetupDiSetClassRegistryPropertyA")
+Interceptor.attach(SetupDiSetClassRegistryPropertyA, {onLeave: function (args) {send("SetupDiSetClassRegistryPropertyA");}});
+
+var SetupDiSetClassRegistryPropertyW = Module.findExportByName("setupapi.dll", "SetupDiSetClassRegistryPropertyW")
+Interceptor.attach(SetupDiSetClassRegistryPropertyW, {onLeave: function (args) {send("SetupDiSetClassRegistryPropertyW");}});
+
+var SetupDiSetDeviceInstallParamsA = Module.findExportByName("setupapi.dll", "SetupDiSetDeviceInstallParamsA")
+Interceptor.attach(SetupDiSetDeviceInstallParamsA, {onLeave: function (args) {send("SetupDiSetDeviceInstallParamsA");}});
+
+var SetupDiSetDeviceInstallParamsW = Module.findExportByName("setupapi.dll", "SetupDiSetDeviceInstallParamsW")
+Interceptor.attach(SetupDiSetDeviceInstallParamsW, {onLeave: function (args) {send("SetupDiSetDeviceInstallParamsW");}});
+
+var SetupDiSetDeviceInterfaceDefault = Module.findExportByName("setupapi.dll", "SetupDiSetDeviceInterfaceDefault")
+Interceptor.attach(SetupDiSetDeviceInterfaceDefault, {onLeave: function (args) {send("SetupDiSetDeviceInterfaceDefault");}});
+
+var SetupDiSetDeviceInterfacePropertyW = Module.findExportByName("setupapi.dll", "SetupDiSetDeviceInterfacePropertyW")
+Interceptor.attach(SetupDiSetDeviceInterfacePropertyW, {onLeave: function (args) {send("SetupDiSetDeviceInterfacePropertyW");}});
+
+var SetupDiSetDevicePropertyW = Module.findExportByName("setupapi.dll", "SetupDiSetDevicePropertyW")
+Interceptor.attach(SetupDiSetDevicePropertyW, {onLeave: function (args) {send("SetupDiSetDevicePropertyW");}});
+
+var SetupDiSetDeviceRegistryPropertyA = Module.findExportByName("setupapi.dll", "SetupDiSetDeviceRegistryPropertyA")
+Interceptor.attach(SetupDiSetDeviceRegistryPropertyA, {onLeave: function (args) {send("SetupDiSetDeviceRegistryPropertyA");}});
+
+var SetupDiSetDeviceRegistryPropertyW = Module.findExportByName("setupapi.dll", "SetupDiSetDeviceRegistryPropertyW")
+Interceptor.attach(SetupDiSetDeviceRegistryPropertyW, {onLeave: function (args) {send("SetupDiSetDeviceRegistryPropertyW");}});
+
+var SetupDiSetDriverInstallParamsA = Module.findExportByName("setupapi.dll", "SetupDiSetDriverInstallParamsA")
+Interceptor.attach(SetupDiSetDriverInstallParamsA, {onLeave: function (args) {send("SetupDiSetDriverInstallParamsA");}});
+
+var SetupDiSetDriverInstallParamsW = Module.findExportByName("setupapi.dll", "SetupDiSetDriverInstallParamsW")
+Interceptor.attach(SetupDiSetDriverInstallParamsW, {onLeave: function (args) {send("SetupDiSetDriverInstallParamsW");}});
+
+var SetupDiSetSelectedDevice = Module.findExportByName("setupapi.dll", "SetupDiSetSelectedDevice")
+Interceptor.attach(SetupDiSetSelectedDevice, {onLeave: function (args) {send("SetupDiSetSelectedDevice");}});
+
+var SetupDiSetSelectedDriverA = Module.findExportByName("setupapi.dll", "SetupDiSetSelectedDriverA")
+Interceptor.attach(SetupDiSetSelectedDriverA, {onLeave: function (args) {send("SetupDiSetSelectedDriverA");}});
+
+var SetupDiSetSelectedDriverW = Module.findExportByName("setupapi.dll", "SetupDiSetSelectedDriverW")
+Interceptor.attach(SetupDiSetSelectedDriverW, {onLeave: function (args) {send("SetupDiSetSelectedDriverW");}});
+
+var SetupDiUnremoveDevice = Module.findExportByName("setupapi.dll", "SetupDiUnremoveDevice")
+Interceptor.attach(SetupDiUnremoveDevice, {onLeave: function (args) {send("SetupDiUnremoveDevice");}});
+
+var SetupDuplicateDiskSpaceListA = Module.findExportByName("setupapi.dll", "SetupDuplicateDiskSpaceListA")
+Interceptor.attach(SetupDuplicateDiskSpaceListA, {onLeave: function (args) {send("SetupDuplicateDiskSpaceListA");}});
+
+var SetupDuplicateDiskSpaceListW = Module.findExportByName("setupapi.dll", "SetupDuplicateDiskSpaceListW")
+Interceptor.attach(SetupDuplicateDiskSpaceListW, {onLeave: function (args) {send("SetupDuplicateDiskSpaceListW");}});
+
+var SetupEnumInfSectionsA = Module.findExportByName("setupapi.dll", "SetupEnumInfSectionsA")
+Interceptor.attach(SetupEnumInfSectionsA, {onLeave: function (args) {send("SetupEnumInfSectionsA");}});
+
+var SetupEnumInfSectionsW = Module.findExportByName("setupapi.dll", "SetupEnumInfSectionsW")
+Interceptor.attach(SetupEnumInfSectionsW, {onLeave: function (args) {send("SetupEnumInfSectionsW");}});
+
+var SetupEnumPublishedInfA = Module.findExportByName("setupapi.dll", "SetupEnumPublishedInfA")
+Interceptor.attach(SetupEnumPublishedInfA, {onLeave: function (args) {send("SetupEnumPublishedInfA");}});
+
+var SetupEnumPublishedInfW = Module.findExportByName("setupapi.dll", "SetupEnumPublishedInfW")
+Interceptor.attach(SetupEnumPublishedInfW, {onLeave: function (args) {send("SetupEnumPublishedInfW");}});
+
+var SetupFindFirstLineA = Module.findExportByName("setupapi.dll", "SetupFindFirstLineA")
+Interceptor.attach(SetupFindFirstLineA, {onLeave: function (args) {send("SetupFindFirstLineA");}});
+
+var SetupFindFirstLineW = Module.findExportByName("setupapi.dll", "SetupFindFirstLineW")
+Interceptor.attach(SetupFindFirstLineW, {onLeave: function (args) {send("SetupFindFirstLineW");}});
+
+var SetupFindNextLine = Module.findExportByName("setupapi.dll", "SetupFindNextLine")
+Interceptor.attach(SetupFindNextLine, {onLeave: function (args) {send("SetupFindNextLine");}});
+
+var SetupFindNextMatchLineA = Module.findExportByName("setupapi.dll", "SetupFindNextMatchLineA")
+Interceptor.attach(SetupFindNextMatchLineA, {onLeave: function (args) {send("SetupFindNextMatchLineA");}});
+
+var SetupFindNextMatchLineW = Module.findExportByName("setupapi.dll", "SetupFindNextMatchLineW")
+Interceptor.attach(SetupFindNextMatchLineW, {onLeave: function (args) {send("SetupFindNextMatchLineW");}});
+
+var SetupFreeSourceListA = Module.findExportByName("setupapi.dll", "SetupFreeSourceListA")
+Interceptor.attach(SetupFreeSourceListA, {onLeave: function (args) {send("SetupFreeSourceListA");}});
+
+var SetupFreeSourceListW = Module.findExportByName("setupapi.dll", "SetupFreeSourceListW")
+Interceptor.attach(SetupFreeSourceListW, {onLeave: function (args) {send("SetupFreeSourceListW");}});
+
+var SetupGetBackupInformationA = Module.findExportByName("setupapi.dll", "SetupGetBackupInformationA")
+Interceptor.attach(SetupGetBackupInformationA, {onLeave: function (args) {send("SetupGetBackupInformationA");}});
+
+var SetupGetBackupInformationW = Module.findExportByName("setupapi.dll", "SetupGetBackupInformationW")
+Interceptor.attach(SetupGetBackupInformationW, {onLeave: function (args) {send("SetupGetBackupInformationW");}});
+
+var SetupGetBinaryField = Module.findExportByName("setupapi.dll", "SetupGetBinaryField")
+Interceptor.attach(SetupGetBinaryField, {onLeave: function (args) {send("SetupGetBinaryField");}});
+
+var SetupGetFieldCount = Module.findExportByName("setupapi.dll", "SetupGetFieldCount")
+Interceptor.attach(SetupGetFieldCount, {onLeave: function (args) {send("SetupGetFieldCount");}});
+
+var SetupGetFileCompressionInfoA = Module.findExportByName("setupapi.dll", "SetupGetFileCompressionInfoA")
+Interceptor.attach(SetupGetFileCompressionInfoA, {onLeave: function (args) {send("SetupGetFileCompressionInfoA");}});
+
+var SetupGetFileCompressionInfoExA = Module.findExportByName("setupapi.dll", "SetupGetFileCompressionInfoExA")
+Interceptor.attach(SetupGetFileCompressionInfoExA, {onLeave: function (args) {send("SetupGetFileCompressionInfoExA");}});
+
+var SetupGetFileCompressionInfoExW = Module.findExportByName("setupapi.dll", "SetupGetFileCompressionInfoExW")
+Interceptor.attach(SetupGetFileCompressionInfoExW, {onLeave: function (args) {send("SetupGetFileCompressionInfoExW");}});
+
+var SetupGetFileCompressionInfoW = Module.findExportByName("setupapi.dll", "SetupGetFileCompressionInfoW")
+Interceptor.attach(SetupGetFileCompressionInfoW, {onLeave: function (args) {send("SetupGetFileCompressionInfoW");}});
+
+var SetupGetFileQueueCount = Module.findExportByName("setupapi.dll", "SetupGetFileQueueCount")
+Interceptor.attach(SetupGetFileQueueCount, {onLeave: function (args) {send("SetupGetFileQueueCount");}});
+
+var SetupGetFileQueueFlags = Module.findExportByName("setupapi.dll", "SetupGetFileQueueFlags")
+Interceptor.attach(SetupGetFileQueueFlags, {onLeave: function (args) {send("SetupGetFileQueueFlags");}});
+
+var SetupGetInfDriverStoreLocationA = Module.findExportByName("setupapi.dll", "SetupGetInfDriverStoreLocationA")
+Interceptor.attach(SetupGetInfDriverStoreLocationA, {onLeave: function (args) {send("SetupGetInfDriverStoreLocationA");}});
+
+var SetupGetInfDriverStoreLocationW = Module.findExportByName("setupapi.dll", "SetupGetInfDriverStoreLocationW")
+Interceptor.attach(SetupGetInfDriverStoreLocationW, {onLeave: function (args) {send("SetupGetInfDriverStoreLocationW");}});
+
+var SetupGetInfFileListA = Module.findExportByName("setupapi.dll", "SetupGetInfFileListA")
+Interceptor.attach(SetupGetInfFileListA, {onLeave: function (args) {send("SetupGetInfFileListA");}});
+
+var SetupGetInfFileListW = Module.findExportByName("setupapi.dll", "SetupGetInfFileListW")
+Interceptor.attach(SetupGetInfFileListW, {onLeave: function (args) {send("SetupGetInfFileListW");}});
+
+var SetupGetInfInformationA = Module.findExportByName("setupapi.dll", "SetupGetInfInformationA")
+Interceptor.attach(SetupGetInfInformationA, {onLeave: function (args) {send("SetupGetInfInformationA");}});
+
+var SetupGetInfInformationW = Module.findExportByName("setupapi.dll", "SetupGetInfInformationW")
+Interceptor.attach(SetupGetInfInformationW, {onLeave: function (args) {send("SetupGetInfInformationW");}});
+
+var SetupGetInfPublishedNameA = Module.findExportByName("setupapi.dll", "SetupGetInfPublishedNameA")
+Interceptor.attach(SetupGetInfPublishedNameA, {onLeave: function (args) {send("SetupGetInfPublishedNameA");}});
+
+var SetupGetInfPublishedNameW = Module.findExportByName("setupapi.dll", "SetupGetInfPublishedNameW")
+Interceptor.attach(SetupGetInfPublishedNameW, {onLeave: function (args) {send("SetupGetInfPublishedNameW");}});
+
+var SetupGetInfSections = Module.findExportByName("setupapi.dll", "SetupGetInfSections")
+Interceptor.attach(SetupGetInfSections, {onLeave: function (args) {send("SetupGetInfSections");}});
+
+var SetupGetIntField = Module.findExportByName("setupapi.dll", "SetupGetIntField")
+Interceptor.attach(SetupGetIntField, {onLeave: function (args) {send("SetupGetIntField");}});
+
+var SetupGetLineByIndexA = Module.findExportByName("setupapi.dll", "SetupGetLineByIndexA")
+Interceptor.attach(SetupGetLineByIndexA, {onLeave: function (args) {send("SetupGetLineByIndexA");}});
+
+var SetupGetLineByIndexW = Module.findExportByName("setupapi.dll", "SetupGetLineByIndexW")
+Interceptor.attach(SetupGetLineByIndexW, {onLeave: function (args) {send("SetupGetLineByIndexW");}});
+
+var SetupGetLineCountA = Module.findExportByName("setupapi.dll", "SetupGetLineCountA")
+Interceptor.attach(SetupGetLineCountA, {onLeave: function (args) {send("SetupGetLineCountA");}});
+
+var SetupGetLineCountW = Module.findExportByName("setupapi.dll", "SetupGetLineCountW")
+Interceptor.attach(SetupGetLineCountW, {onLeave: function (args) {send("SetupGetLineCountW");}});
+
+var SetupGetLineTextA = Module.findExportByName("setupapi.dll", "SetupGetLineTextA")
+Interceptor.attach(SetupGetLineTextA, {onLeave: function (args) {send("SetupGetLineTextA");}});
+
+var SetupGetLineTextW = Module.findExportByName("setupapi.dll", "SetupGetLineTextW")
+Interceptor.attach(SetupGetLineTextW, {onLeave: function (args) {send("SetupGetLineTextW");}});
+
+var SetupGetMultiSzFieldA = Module.findExportByName("setupapi.dll", "SetupGetMultiSzFieldA")
+Interceptor.attach(SetupGetMultiSzFieldA, {onLeave: function (args) {send("SetupGetMultiSzFieldA");}});
+
+var SetupGetMultiSzFieldW = Module.findExportByName("setupapi.dll", "SetupGetMultiSzFieldW")
+Interceptor.attach(SetupGetMultiSzFieldW, {onLeave: function (args) {send("SetupGetMultiSzFieldW");}});
+
+var SetupGetNonInteractiveMode = Module.findExportByName("setupapi.dll", "SetupGetNonInteractiveMode")
+Interceptor.attach(SetupGetNonInteractiveMode, {onLeave: function (args) {send("SetupGetNonInteractiveMode");}});
+
+var SetupGetSourceFileLocationA = Module.findExportByName("setupapi.dll", "SetupGetSourceFileLocationA")
+Interceptor.attach(SetupGetSourceFileLocationA, {onLeave: function (args) {send("SetupGetSourceFileLocationA");}});
+
+var SetupGetSourceFileLocationW = Module.findExportByName("setupapi.dll", "SetupGetSourceFileLocationW")
+Interceptor.attach(SetupGetSourceFileLocationW, {onLeave: function (args) {send("SetupGetSourceFileLocationW");}});
+
+var SetupGetSourceFileSizeA = Module.findExportByName("setupapi.dll", "SetupGetSourceFileSizeA")
+Interceptor.attach(SetupGetSourceFileSizeA, {onLeave: function (args) {send("SetupGetSourceFileSizeA");}});
+
+var SetupGetSourceFileSizeW = Module.findExportByName("setupapi.dll", "SetupGetSourceFileSizeW")
+Interceptor.attach(SetupGetSourceFileSizeW, {onLeave: function (args) {send("SetupGetSourceFileSizeW");}});
+
+var SetupGetSourceInfoA = Module.findExportByName("setupapi.dll", "SetupGetSourceInfoA")
+Interceptor.attach(SetupGetSourceInfoA, {onLeave: function (args) {send("SetupGetSourceInfoA");}});
+
+var SetupGetSourceInfoW = Module.findExportByName("setupapi.dll", "SetupGetSourceInfoW")
+Interceptor.attach(SetupGetSourceInfoW, {onLeave: function (args) {send("SetupGetSourceInfoW");}});
+
+var SetupGetStringFieldA = Module.findExportByName("setupapi.dll", "SetupGetStringFieldA")
+Interceptor.attach(SetupGetStringFieldA, {onLeave: function (args) {send("SetupGetStringFieldA");}});
+
+var SetupGetStringFieldW = Module.findExportByName("setupapi.dll", "SetupGetStringFieldW")
+Interceptor.attach(SetupGetStringFieldW, {onLeave: function (args) {send("SetupGetStringFieldW");}});
+
+var SetupGetTargetPathA = Module.findExportByName("setupapi.dll", "SetupGetTargetPathA")
+Interceptor.attach(SetupGetTargetPathA, {onLeave: function (args) {send("SetupGetTargetPathA");}});
+
+var SetupGetTargetPathW = Module.findExportByName("setupapi.dll", "SetupGetTargetPathW")
+Interceptor.attach(SetupGetTargetPathW, {onLeave: function (args) {send("SetupGetTargetPathW");}});
+
+var SetupGetThreadLogToken = Module.findExportByName("setupapi.dll", "SetupGetThreadLogToken")
+Interceptor.attach(SetupGetThreadLogToken, {onLeave: function (args) {send("SetupGetThreadLogToken");}});
+
+var SetupInitDefaultQueueCallback = Module.findExportByName("setupapi.dll", "SetupInitDefaultQueueCallback")
+Interceptor.attach(SetupInitDefaultQueueCallback, {onLeave: function (args) {send("SetupInitDefaultQueueCallback");}});
+
+var SetupInitDefaultQueueCallbackEx = Module.findExportByName("setupapi.dll", "SetupInitDefaultQueueCallbackEx")
+Interceptor.attach(SetupInitDefaultQueueCallbackEx, {onLeave: function (args) {send("SetupInitDefaultQueueCallbackEx");}});
+
+var SetupInitializeFileLogA = Module.findExportByName("setupapi.dll", "SetupInitializeFileLogA")
+Interceptor.attach(SetupInitializeFileLogA, {onLeave: function (args) {send("SetupInitializeFileLogA");}});
+
+var SetupInitializeFileLogW = Module.findExportByName("setupapi.dll", "SetupInitializeFileLogW")
+Interceptor.attach(SetupInitializeFileLogW, {onLeave: function (args) {send("SetupInitializeFileLogW");}});
+
+var SetupInstallFileA = Module.findExportByName("setupapi.dll", "SetupInstallFileA")
+Interceptor.attach(SetupInstallFileA, {onLeave: function (args) {send("SetupInstallFileA");}});
+
+var SetupInstallFileExA = Module.findExportByName("setupapi.dll", "SetupInstallFileExA")
+Interceptor.attach(SetupInstallFileExA, {onLeave: function (args) {send("SetupInstallFileExA");}});
+
+var SetupInstallFileExW = Module.findExportByName("setupapi.dll", "SetupInstallFileExW")
+Interceptor.attach(SetupInstallFileExW, {onLeave: function (args) {send("SetupInstallFileExW");}});
+
+var SetupInstallFileW = Module.findExportByName("setupapi.dll", "SetupInstallFileW")
+Interceptor.attach(SetupInstallFileW, {onLeave: function (args) {send("SetupInstallFileW");}});
+
+var SetupInstallFilesFromInfSectionA = Module.findExportByName("setupapi.dll", "SetupInstallFilesFromInfSectionA")
+Interceptor.attach(SetupInstallFilesFromInfSectionA, {onLeave: function (args) {send("SetupInstallFilesFromInfSectionA");}});
+
+var SetupInstallFilesFromInfSectionW = Module.findExportByName("setupapi.dll", "SetupInstallFilesFromInfSectionW")
+Interceptor.attach(SetupInstallFilesFromInfSectionW, {onLeave: function (args) {send("SetupInstallFilesFromInfSectionW");}});
+
+var SetupInstallFromInfSectionA = Module.findExportByName("setupapi.dll", "SetupInstallFromInfSectionA")
+Interceptor.attach(SetupInstallFromInfSectionA, {onLeave: function (args) {send("SetupInstallFromInfSectionA");}});
+
+var SetupInstallFromInfSectionW = Module.findExportByName("setupapi.dll", "SetupInstallFromInfSectionW")
+Interceptor.attach(SetupInstallFromInfSectionW, {onLeave: function (args) {send("SetupInstallFromInfSectionW");}});
+
+var SetupInstallLogCloseEventGroup = Module.findExportByName("setupapi.dll", "SetupInstallLogCloseEventGroup")
+Interceptor.attach(SetupInstallLogCloseEventGroup, {onLeave: function (args) {send("SetupInstallLogCloseEventGroup");}});
+
+var SetupInstallLogCreateEventGroup = Module.findExportByName("setupapi.dll", "SetupInstallLogCreateEventGroup")
+Interceptor.attach(SetupInstallLogCreateEventGroup, {onLeave: function (args) {send("SetupInstallLogCreateEventGroup");}});
+
+var SetupInstallServicesFromInfSectionA = Module.findExportByName("setupapi.dll", "SetupInstallServicesFromInfSectionA")
+Interceptor.attach(SetupInstallServicesFromInfSectionA, {onLeave: function (args) {send("SetupInstallServicesFromInfSectionA");}});
+
+var SetupInstallServicesFromInfSectionExA = Module.findExportByName("setupapi.dll", "SetupInstallServicesFromInfSectionExA")
+Interceptor.attach(SetupInstallServicesFromInfSectionExA, {onLeave: function (args) {send("SetupInstallServicesFromInfSectionExA");}});
+
+var SetupInstallServicesFromInfSectionExW = Module.findExportByName("setupapi.dll", "SetupInstallServicesFromInfSectionExW")
+Interceptor.attach(SetupInstallServicesFromInfSectionExW, {onLeave: function (args) {send("SetupInstallServicesFromInfSectionExW");}});
+
+var SetupInstallServicesFromInfSectionW = Module.findExportByName("setupapi.dll", "SetupInstallServicesFromInfSectionW")
+Interceptor.attach(SetupInstallServicesFromInfSectionW, {onLeave: function (args) {send("SetupInstallServicesFromInfSectionW");}});
+
+var SetupIterateCabinetA = Module.findExportByName("setupapi.dll", "SetupIterateCabinetA")
+Interceptor.attach(SetupIterateCabinetA, {onLeave: function (args) {send("SetupIterateCabinetA");}});
+
+var SetupIterateCabinetW = Module.findExportByName("setupapi.dll", "SetupIterateCabinetW")
+Interceptor.attach(SetupIterateCabinetW, {onLeave: function (args) {send("SetupIterateCabinetW");}});
+
+var SetupLogErrorA = Module.findExportByName("setupapi.dll", "SetupLogErrorA")
+Interceptor.attach(SetupLogErrorA, {onLeave: function (args) {send("SetupLogErrorA");}});
+
+var SetupLogErrorW = Module.findExportByName("setupapi.dll", "SetupLogErrorW")
+Interceptor.attach(SetupLogErrorW, {onLeave: function (args) {send("SetupLogErrorW");}});
+
+var SetupLogFileA = Module.findExportByName("setupapi.dll", "SetupLogFileA")
+Interceptor.attach(SetupLogFileA, {onLeave: function (args) {send("SetupLogFileA");}});
+
+var SetupLogFileW = Module.findExportByName("setupapi.dll", "SetupLogFileW")
+Interceptor.attach(SetupLogFileW, {onLeave: function (args) {send("SetupLogFileW");}});
+
+var SetupOpenAppendInfFileA = Module.findExportByName("setupapi.dll", "SetupOpenAppendInfFileA")
+Interceptor.attach(SetupOpenAppendInfFileA, {onLeave: function (args) {send("SetupOpenAppendInfFileA");}});
+
+var SetupOpenAppendInfFileW = Module.findExportByName("setupapi.dll", "SetupOpenAppendInfFileW")
+Interceptor.attach(SetupOpenAppendInfFileW, {onLeave: function (args) {send("SetupOpenAppendInfFileW");}});
+
+var SetupOpenFileQueue = Module.findExportByName("setupapi.dll", "SetupOpenFileQueue")
+Interceptor.attach(SetupOpenFileQueue, {onLeave: function (args) {send("SetupOpenFileQueue");}});
+
+var SetupOpenInfFileA = Module.findExportByName("setupapi.dll", "SetupOpenInfFileA")
+Interceptor.attach(SetupOpenInfFileA, {onLeave: function (args) {send("SetupOpenInfFileA");}});
+
+var SetupOpenInfFileW = Module.findExportByName("setupapi.dll", "SetupOpenInfFileW")
+Interceptor.attach(SetupOpenInfFileW, {onLeave: function (args) {send("SetupOpenInfFileW");}});
+
+var SetupOpenLog = Module.findExportByName("setupapi.dll", "SetupOpenLog")
+Interceptor.attach(SetupOpenLog, {onLeave: function (args) {send("SetupOpenLog");}});
+
+var SetupOpenMasterInf = Module.findExportByName("setupapi.dll", "SetupOpenMasterInf")
+Interceptor.attach(SetupOpenMasterInf, {onLeave: function (args) {send("SetupOpenMasterInf");}});
+
+var SetupPrepareQueueForRestoreA = Module.findExportByName("setupapi.dll", "SetupPrepareQueueForRestoreA")
+Interceptor.attach(SetupPrepareQueueForRestoreA, {onLeave: function (args) {send("SetupPrepareQueueForRestoreA");}});
+
+var SetupPrepareQueueForRestoreW = Module.findExportByName("setupapi.dll", "SetupPrepareQueueForRestoreW")
+Interceptor.attach(SetupPrepareQueueForRestoreW, {onLeave: function (args) {send("SetupPrepareQueueForRestoreW");}});
+
+var SetupPromptForDiskA = Module.findExportByName("setupapi.dll", "SetupPromptForDiskA")
+Interceptor.attach(SetupPromptForDiskA, {onLeave: function (args) {send("SetupPromptForDiskA");}});
+
+var SetupPromptForDiskW = Module.findExportByName("setupapi.dll", "SetupPromptForDiskW")
+Interceptor.attach(SetupPromptForDiskW, {onLeave: function (args) {send("SetupPromptForDiskW");}});
+
+var SetupPromptReboot = Module.findExportByName("setupapi.dll", "SetupPromptReboot")
+Interceptor.attach(SetupPromptReboot, {onLeave: function (args) {send("SetupPromptReboot");}});
+
+var SetupQueryDrivesInDiskSpaceListA = Module.findExportByName("setupapi.dll", "SetupQueryDrivesInDiskSpaceListA")
+Interceptor.attach(SetupQueryDrivesInDiskSpaceListA, {onLeave: function (args) {send("SetupQueryDrivesInDiskSpaceListA");}});
+
+var SetupQueryDrivesInDiskSpaceListW = Module.findExportByName("setupapi.dll", "SetupQueryDrivesInDiskSpaceListW")
+Interceptor.attach(SetupQueryDrivesInDiskSpaceListW, {onLeave: function (args) {send("SetupQueryDrivesInDiskSpaceListW");}});
+
+var SetupQueryFileLogA = Module.findExportByName("setupapi.dll", "SetupQueryFileLogA")
+Interceptor.attach(SetupQueryFileLogA, {onLeave: function (args) {send("SetupQueryFileLogA");}});
+
+var SetupQueryFileLogW = Module.findExportByName("setupapi.dll", "SetupQueryFileLogW")
+Interceptor.attach(SetupQueryFileLogW, {onLeave: function (args) {send("SetupQueryFileLogW");}});
+
+var SetupQueryInfFileInformationA = Module.findExportByName("setupapi.dll", "SetupQueryInfFileInformationA")
+Interceptor.attach(SetupQueryInfFileInformationA, {onLeave: function (args) {send("SetupQueryInfFileInformationA");}});
+
+var SetupQueryInfFileInformationW = Module.findExportByName("setupapi.dll", "SetupQueryInfFileInformationW")
+Interceptor.attach(SetupQueryInfFileInformationW, {onLeave: function (args) {send("SetupQueryInfFileInformationW");}});
+
+var SetupQueryInfOriginalFileInformationA = Module.findExportByName("setupapi.dll", "SetupQueryInfOriginalFileInformationA")
+Interceptor.attach(SetupQueryInfOriginalFileInformationA, {onLeave: function (args) {send("SetupQueryInfOriginalFileInformationA");}});
+
+var SetupQueryInfOriginalFileInformationW = Module.findExportByName("setupapi.dll", "SetupQueryInfOriginalFileInformationW")
+Interceptor.attach(SetupQueryInfOriginalFileInformationW, {onLeave: function (args) {send("SetupQueryInfOriginalFileInformationW");}});
+
+var SetupQueryInfVersionInformationA = Module.findExportByName("setupapi.dll", "SetupQueryInfVersionInformationA")
+Interceptor.attach(SetupQueryInfVersionInformationA, {onLeave: function (args) {send("SetupQueryInfVersionInformationA");}});
+
+var SetupQueryInfVersionInformationW = Module.findExportByName("setupapi.dll", "SetupQueryInfVersionInformationW")
+Interceptor.attach(SetupQueryInfVersionInformationW, {onLeave: function (args) {send("SetupQueryInfVersionInformationW");}});
+
+var SetupQuerySourceListA = Module.findExportByName("setupapi.dll", "SetupQuerySourceListA")
+Interceptor.attach(SetupQuerySourceListA, {onLeave: function (args) {send("SetupQuerySourceListA");}});
+
+var SetupQuerySourceListW = Module.findExportByName("setupapi.dll", "SetupQuerySourceListW")
+Interceptor.attach(SetupQuerySourceListW, {onLeave: function (args) {send("SetupQuerySourceListW");}});
+
+var SetupQuerySpaceRequiredOnDriveA = Module.findExportByName("setupapi.dll", "SetupQuerySpaceRequiredOnDriveA")
+Interceptor.attach(SetupQuerySpaceRequiredOnDriveA, {onLeave: function (args) {send("SetupQuerySpaceRequiredOnDriveA");}});
+
+var SetupQuerySpaceRequiredOnDriveW = Module.findExportByName("setupapi.dll", "SetupQuerySpaceRequiredOnDriveW")
+Interceptor.attach(SetupQuerySpaceRequiredOnDriveW, {onLeave: function (args) {send("SetupQuerySpaceRequiredOnDriveW");}});
+
+var SetupQueueCopyA = Module.findExportByName("setupapi.dll", "SetupQueueCopyA")
+Interceptor.attach(SetupQueueCopyA, {onLeave: function (args) {send("SetupQueueCopyA");}});
+
+var SetupQueueCopyIndirectA = Module.findExportByName("setupapi.dll", "SetupQueueCopyIndirectA")
+Interceptor.attach(SetupQueueCopyIndirectA, {onLeave: function (args) {send("SetupQueueCopyIndirectA");}});
+
+var SetupQueueCopyIndirectW = Module.findExportByName("setupapi.dll", "SetupQueueCopyIndirectW")
+Interceptor.attach(SetupQueueCopyIndirectW, {onLeave: function (args) {send("SetupQueueCopyIndirectW");}});
+
+var SetupQueueCopySectionA = Module.findExportByName("setupapi.dll", "SetupQueueCopySectionA")
+Interceptor.attach(SetupQueueCopySectionA, {onLeave: function (args) {send("SetupQueueCopySectionA");}});
+
+var SetupQueueCopySectionW = Module.findExportByName("setupapi.dll", "SetupQueueCopySectionW")
+Interceptor.attach(SetupQueueCopySectionW, {onLeave: function (args) {send("SetupQueueCopySectionW");}});
+
+var SetupQueueCopyW = Module.findExportByName("setupapi.dll", "SetupQueueCopyW")
+Interceptor.attach(SetupQueueCopyW, {onLeave: function (args) {send("SetupQueueCopyW");}});
+
+var SetupQueueDefaultCopyA = Module.findExportByName("setupapi.dll", "SetupQueueDefaultCopyA")
+Interceptor.attach(SetupQueueDefaultCopyA, {onLeave: function (args) {send("SetupQueueDefaultCopyA");}});
+
+var SetupQueueDefaultCopyW = Module.findExportByName("setupapi.dll", "SetupQueueDefaultCopyW")
+Interceptor.attach(SetupQueueDefaultCopyW, {onLeave: function (args) {send("SetupQueueDefaultCopyW");}});
+
+var SetupQueueDeleteA = Module.findExportByName("setupapi.dll", "SetupQueueDeleteA")
+Interceptor.attach(SetupQueueDeleteA, {onLeave: function (args) {send("SetupQueueDeleteA");}});
+
+var SetupQueueDeleteSectionA = Module.findExportByName("setupapi.dll", "SetupQueueDeleteSectionA")
+Interceptor.attach(SetupQueueDeleteSectionA, {onLeave: function (args) {send("SetupQueueDeleteSectionA");}});
+
+var SetupQueueDeleteSectionW = Module.findExportByName("setupapi.dll", "SetupQueueDeleteSectionW")
+Interceptor.attach(SetupQueueDeleteSectionW, {onLeave: function (args) {send("SetupQueueDeleteSectionW");}});
+
+var SetupQueueDeleteW = Module.findExportByName("setupapi.dll", "SetupQueueDeleteW")
+Interceptor.attach(SetupQueueDeleteW, {onLeave: function (args) {send("SetupQueueDeleteW");}});
+
+var SetupQueueRenameA = Module.findExportByName("setupapi.dll", "SetupQueueRenameA")
+Interceptor.attach(SetupQueueRenameA, {onLeave: function (args) {send("SetupQueueRenameA");}});
+
+var SetupQueueRenameSectionA = Module.findExportByName("setupapi.dll", "SetupQueueRenameSectionA")
+Interceptor.attach(SetupQueueRenameSectionA, {onLeave: function (args) {send("SetupQueueRenameSectionA");}});
+
+var SetupQueueRenameSectionW = Module.findExportByName("setupapi.dll", "SetupQueueRenameSectionW")
+Interceptor.attach(SetupQueueRenameSectionW, {onLeave: function (args) {send("SetupQueueRenameSectionW");}});
+
+var SetupQueueRenameW = Module.findExportByName("setupapi.dll", "SetupQueueRenameW")
+Interceptor.attach(SetupQueueRenameW, {onLeave: function (args) {send("SetupQueueRenameW");}});
+
+var SetupRemoveFileLogEntryA = Module.findExportByName("setupapi.dll", "SetupRemoveFileLogEntryA")
+Interceptor.attach(SetupRemoveFileLogEntryA, {onLeave: function (args) {send("SetupRemoveFileLogEntryA");}});
+
+var SetupRemoveFileLogEntryW = Module.findExportByName("setupapi.dll", "SetupRemoveFileLogEntryW")
+Interceptor.attach(SetupRemoveFileLogEntryW, {onLeave: function (args) {send("SetupRemoveFileLogEntryW");}});
+
+var SetupRemoveFromDiskSpaceListA = Module.findExportByName("setupapi.dll", "SetupRemoveFromDiskSpaceListA")
+Interceptor.attach(SetupRemoveFromDiskSpaceListA, {onLeave: function (args) {send("SetupRemoveFromDiskSpaceListA");}});
+
+var SetupRemoveFromDiskSpaceListW = Module.findExportByName("setupapi.dll", "SetupRemoveFromDiskSpaceListW")
+Interceptor.attach(SetupRemoveFromDiskSpaceListW, {onLeave: function (args) {send("SetupRemoveFromDiskSpaceListW");}});
+
+var SetupRemoveFromSourceListA = Module.findExportByName("setupapi.dll", "SetupRemoveFromSourceListA")
+Interceptor.attach(SetupRemoveFromSourceListA, {onLeave: function (args) {send("SetupRemoveFromSourceListA");}});
+
+var SetupRemoveFromSourceListW = Module.findExportByName("setupapi.dll", "SetupRemoveFromSourceListW")
+Interceptor.attach(SetupRemoveFromSourceListW, {onLeave: function (args) {send("SetupRemoveFromSourceListW");}});
+
+var SetupRemoveInstallSectionFromDiskSpaceListA = Module.findExportByName("setupapi.dll", "SetupRemoveInstallSectionFromDiskSpaceListA")
+Interceptor.attach(SetupRemoveInstallSectionFromDiskSpaceListA, {onLeave: function (args) {send("SetupRemoveInstallSectionFromDiskSpaceListA");}});
+
+var SetupRemoveInstallSectionFromDiskSpaceListW = Module.findExportByName("setupapi.dll", "SetupRemoveInstallSectionFromDiskSpaceListW")
+Interceptor.attach(SetupRemoveInstallSectionFromDiskSpaceListW, {onLeave: function (args) {send("SetupRemoveInstallSectionFromDiskSpaceListW");}});
+
+var SetupRemoveSectionFromDiskSpaceListA = Module.findExportByName("setupapi.dll", "SetupRemoveSectionFromDiskSpaceListA")
+Interceptor.attach(SetupRemoveSectionFromDiskSpaceListA, {onLeave: function (args) {send("SetupRemoveSectionFromDiskSpaceListA");}});
+
+var SetupRemoveSectionFromDiskSpaceListW = Module.findExportByName("setupapi.dll", "SetupRemoveSectionFromDiskSpaceListW")
+Interceptor.attach(SetupRemoveSectionFromDiskSpaceListW, {onLeave: function (args) {send("SetupRemoveSectionFromDiskSpaceListW");}});
+
+var SetupRenameErrorA = Module.findExportByName("setupapi.dll", "SetupRenameErrorA")
+Interceptor.attach(SetupRenameErrorA, {onLeave: function (args) {send("SetupRenameErrorA");}});
+
+var SetupRenameErrorW = Module.findExportByName("setupapi.dll", "SetupRenameErrorW")
+Interceptor.attach(SetupRenameErrorW, {onLeave: function (args) {send("SetupRenameErrorW");}});
+
+var SetupScanFileQueue = Module.findExportByName("setupapi.dll", "SetupScanFileQueue")
+Interceptor.attach(SetupScanFileQueue, {onLeave: function (args) {send("SetupScanFileQueue");}});
+
+var SetupScanFileQueueA = Module.findExportByName("setupapi.dll", "SetupScanFileQueueA")
+Interceptor.attach(SetupScanFileQueueA, {onLeave: function (args) {send("SetupScanFileQueueA");}});
+
+var SetupScanFileQueueW = Module.findExportByName("setupapi.dll", "SetupScanFileQueueW")
+Interceptor.attach(SetupScanFileQueueW, {onLeave: function (args) {send("SetupScanFileQueueW");}});
+
+var SetupSetDirectoryIdA = Module.findExportByName("setupapi.dll", "SetupSetDirectoryIdA")
+Interceptor.attach(SetupSetDirectoryIdA, {onLeave: function (args) {send("SetupSetDirectoryIdA");}});
+
+var SetupSetDirectoryIdExA = Module.findExportByName("setupapi.dll", "SetupSetDirectoryIdExA")
+Interceptor.attach(SetupSetDirectoryIdExA, {onLeave: function (args) {send("SetupSetDirectoryIdExA");}});
+
+var SetupSetDirectoryIdExW = Module.findExportByName("setupapi.dll", "SetupSetDirectoryIdExW")
+Interceptor.attach(SetupSetDirectoryIdExW, {onLeave: function (args) {send("SetupSetDirectoryIdExW");}});
+
+var SetupSetDirectoryIdW = Module.findExportByName("setupapi.dll", "SetupSetDirectoryIdW")
+Interceptor.attach(SetupSetDirectoryIdW, {onLeave: function (args) {send("SetupSetDirectoryIdW");}});
+
+var SetupSetFileQueueAlternatePlatformA = Module.findExportByName("setupapi.dll", "SetupSetFileQueueAlternatePlatformA")
+Interceptor.attach(SetupSetFileQueueAlternatePlatformA, {onLeave: function (args) {send("SetupSetFileQueueAlternatePlatformA");}});
+
+var SetupSetFileQueueAlternatePlatformW = Module.findExportByName("setupapi.dll", "SetupSetFileQueueAlternatePlatformW")
+Interceptor.attach(SetupSetFileQueueAlternatePlatformW, {onLeave: function (args) {send("SetupSetFileQueueAlternatePlatformW");}});
+
+var SetupSetFileQueueFlags = Module.findExportByName("setupapi.dll", "SetupSetFileQueueFlags")
+Interceptor.attach(SetupSetFileQueueFlags, {onLeave: function (args) {send("SetupSetFileQueueFlags");}});
+
+var SetupSetNonInteractiveMode = Module.findExportByName("setupapi.dll", "SetupSetNonInteractiveMode")
+Interceptor.attach(SetupSetNonInteractiveMode, {onLeave: function (args) {send("SetupSetNonInteractiveMode");}});
+
+var SetupSetPlatformPathOverrideA = Module.findExportByName("setupapi.dll", "SetupSetPlatformPathOverrideA")
+Interceptor.attach(SetupSetPlatformPathOverrideA, {onLeave: function (args) {send("SetupSetPlatformPathOverrideA");}});
+
+var SetupSetPlatformPathOverrideW = Module.findExportByName("setupapi.dll", "SetupSetPlatformPathOverrideW")
+Interceptor.attach(SetupSetPlatformPathOverrideW, {onLeave: function (args) {send("SetupSetPlatformPathOverrideW");}});
+
+var SetupSetSourceListA = Module.findExportByName("setupapi.dll", "SetupSetSourceListA")
+Interceptor.attach(SetupSetSourceListA, {onLeave: function (args) {send("SetupSetSourceListA");}});
+
+var SetupSetSourceListW = Module.findExportByName("setupapi.dll", "SetupSetSourceListW")
+Interceptor.attach(SetupSetSourceListW, {onLeave: function (args) {send("SetupSetSourceListW");}});
+
+var SetupSetThreadLogToken = Module.findExportByName("setupapi.dll", "SetupSetThreadLogToken")
+Interceptor.attach(SetupSetThreadLogToken, {onLeave: function (args) {send("SetupSetThreadLogToken");}});
+
+var SetupTermDefaultQueueCallback = Module.findExportByName("setupapi.dll", "SetupTermDefaultQueueCallback")
+Interceptor.attach(SetupTermDefaultQueueCallback, {onLeave: function (args) {send("SetupTermDefaultQueueCallback");}});
+
+var SetupTerminateFileLog = Module.findExportByName("setupapi.dll", "SetupTerminateFileLog")
+Interceptor.attach(SetupTerminateFileLog, {onLeave: function (args) {send("SetupTerminateFileLog");}});
+
+var SetupUninstallNewlyCopiedInfs = Module.findExportByName("setupapi.dll", "SetupUninstallNewlyCopiedInfs")
+Interceptor.attach(SetupUninstallNewlyCopiedInfs, {onLeave: function (args) {send("SetupUninstallNewlyCopiedInfs");}});
+
+var SetupUninstallOEMInfA = Module.findExportByName("setupapi.dll", "SetupUninstallOEMInfA")
+Interceptor.attach(SetupUninstallOEMInfA, {onLeave: function (args) {send("SetupUninstallOEMInfA");}});
+
+var SetupUninstallOEMInfW = Module.findExportByName("setupapi.dll", "SetupUninstallOEMInfW")
+Interceptor.attach(SetupUninstallOEMInfW, {onLeave: function (args) {send("SetupUninstallOEMInfW");}});
+
+var SetupVerifyInfFileA = Module.findExportByName("setupapi.dll", "SetupVerifyInfFileA")
+Interceptor.attach(SetupVerifyInfFileA, {onLeave: function (args) {send("SetupVerifyInfFileA");}});
+
+var SetupVerifyInfFileW = Module.findExportByName("setupapi.dll", "SetupVerifyInfFileW")
+Interceptor.attach(SetupVerifyInfFileW, {onLeave: function (args) {send("SetupVerifyInfFileW");}});
+
+var SetupWriteTextLog = Module.findExportByName("setupapi.dll", "SetupWriteTextLog")
+Interceptor.attach(SetupWriteTextLog, {onLeave: function (args) {send("SetupWriteTextLog");}});
+
+var SetupWriteTextLogError = Module.findExportByName("setupapi.dll", "SetupWriteTextLogError")
+Interceptor.attach(SetupWriteTextLogError, {onLeave: function (args) {send("SetupWriteTextLogError");}});
+
+var SetupWriteTextLogInfLine = Module.findExportByName("setupapi.dll", "SetupWriteTextLogInfLine")
+Interceptor.attach(SetupWriteTextLogInfLine, {onLeave: function (args) {send("SetupWriteTextLogInfLine");}});
+
+var UnicodeToMultiByte = Module.findExportByName("setupapi.dll", "UnicodeToMultiByte")
+Interceptor.attach(UnicodeToMultiByte, {onLeave: function (args) {send("UnicodeToMultiByte");}});
+
+var VerifyCatalogFile = Module.findExportByName("setupapi.dll", "VerifyCatalogFile")
+Interceptor.attach(VerifyCatalogFile, {onLeave: function (args) {send("VerifyCatalogFile");}});
+
+var pGetDriverPackageHash = Module.findExportByName("setupapi.dll", "pGetDriverPackageHash")
+Interceptor.attach(pGetDriverPackageHash, {onLeave: function (args) {send("pGetDriverPackageHash");}});
+
+var pSetupAccessRunOnceNodeList = Module.findExportByName("setupapi.dll", "pSetupAccessRunOnceNodeList")
+Interceptor.attach(pSetupAccessRunOnceNodeList, {onLeave: function (args) {send("pSetupAccessRunOnceNodeList");}});
+
+var pSetupAddMiniIconToList = Module.findExportByName("setupapi.dll", "pSetupAddMiniIconToList")
+Interceptor.attach(pSetupAddMiniIconToList, {onLeave: function (args) {send("pSetupAddMiniIconToList");}});
+
+var pSetupAddTagToGroupOrderListEntry = Module.findExportByName("setupapi.dll", "pSetupAddTagToGroupOrderListEntry")
+Interceptor.attach(pSetupAddTagToGroupOrderListEntry, {onLeave: function (args) {send("pSetupAddTagToGroupOrderListEntry");}});
+
+var pSetupAppendPath = Module.findExportByName("setupapi.dll", "pSetupAppendPath")
+Interceptor.attach(pSetupAppendPath, {onLeave: function (args) {send("pSetupAppendPath");}});
+
+var pSetupCaptureAndConvertAnsiArg = Module.findExportByName("setupapi.dll", "pSetupCaptureAndConvertAnsiArg")
+Interceptor.attach(pSetupCaptureAndConvertAnsiArg, {onLeave: function (args) {send("pSetupCaptureAndConvertAnsiArg");}});
+
+var pSetupCenterWindowRelativeToParent = Module.findExportByName("setupapi.dll", "pSetupCenterWindowRelativeToParent")
+Interceptor.attach(pSetupCenterWindowRelativeToParent, {onLeave: function (args) {send("pSetupCenterWindowRelativeToParent");}});
+
+var pSetupCloseTextLogSection = Module.findExportByName("setupapi.dll", "pSetupCloseTextLogSection")
+Interceptor.attach(pSetupCloseTextLogSection, {onLeave: function (args) {send("pSetupCloseTextLogSection");}});
+
+var pSetupConcatenatePaths = Module.findExportByName("setupapi.dll", "pSetupConcatenatePaths")
+Interceptor.attach(pSetupConcatenatePaths, {onLeave: function (args) {send("pSetupConcatenatePaths");}});
+
+var pSetupCreateTextLogSectionA = Module.findExportByName("setupapi.dll", "pSetupCreateTextLogSectionA")
+Interceptor.attach(pSetupCreateTextLogSectionA, {onLeave: function (args) {send("pSetupCreateTextLogSectionA");}});
+
+var pSetupCreateTextLogSectionW = Module.findExportByName("setupapi.dll", "pSetupCreateTextLogSectionW")
+Interceptor.attach(pSetupCreateTextLogSectionW, {onLeave: function (args) {send("pSetupCreateTextLogSectionW");}});
+
+var pSetupDestroyRunOnceNodeList = Module.findExportByName("setupapi.dll", "pSetupDestroyRunOnceNodeList")
+Interceptor.attach(pSetupDestroyRunOnceNodeList, {onLeave: function (args) {send("pSetupDestroyRunOnceNodeList");}});
+
+var pSetupDiBuildInfoDataFromStrongName = Module.findExportByName("setupapi.dll", "pSetupDiBuildInfoDataFromStrongName")
+Interceptor.attach(pSetupDiBuildInfoDataFromStrongName, {onLeave: function (args) {send("pSetupDiBuildInfoDataFromStrongName");}});
+
+var pSetupDiCrimsonLogDeviceInstall = Module.findExportByName("setupapi.dll", "pSetupDiCrimsonLogDeviceInstall")
+Interceptor.attach(pSetupDiCrimsonLogDeviceInstall, {onLeave: function (args) {send("pSetupDiCrimsonLogDeviceInstall");}});
+
+var pSetupDiEnumSelectedDrivers = Module.findExportByName("setupapi.dll", "pSetupDiEnumSelectedDrivers")
+Interceptor.attach(pSetupDiEnumSelectedDrivers, {onLeave: function (args) {send("pSetupDiEnumSelectedDrivers");}});
+
+var pSetupDiGetDriverInfoExtensionId = Module.findExportByName("setupapi.dll", "pSetupDiGetDriverInfoExtensionId")
+Interceptor.attach(pSetupDiGetDriverInfoExtensionId, {onLeave: function (args) {send("pSetupDiGetDriverInfoExtensionId");}});
+
+var pSetupDiGetStrongNameForDriverNode = Module.findExportByName("setupapi.dll", "pSetupDiGetStrongNameForDriverNode")
+Interceptor.attach(pSetupDiGetStrongNameForDriverNode, {onLeave: function (args) {send("pSetupDiGetStrongNameForDriverNode");}});
+
+var pSetupDiInvalidateHelperModules = Module.findExportByName("setupapi.dll", "pSetupDiInvalidateHelperModules")
+Interceptor.attach(pSetupDiInvalidateHelperModules, {onLeave: function (args) {send("pSetupDiInvalidateHelperModules");}});
+
+var pSetupDoLastKnownGoodBackup = Module.findExportByName("setupapi.dll", "pSetupDoLastKnownGoodBackup")
+Interceptor.attach(pSetupDoLastKnownGoodBackup, {onLeave: function (args) {send("pSetupDoLastKnownGoodBackup");}});
+
+var pSetupDoesUserHavePrivilege = Module.findExportByName("setupapi.dll", "pSetupDoesUserHavePrivilege")
+Interceptor.attach(pSetupDoesUserHavePrivilege, {onLeave: function (args) {send("pSetupDoesUserHavePrivilege");}});
+
+var pSetupDuplicateString = Module.findExportByName("setupapi.dll", "pSetupDuplicateString")
+Interceptor.attach(pSetupDuplicateString, {onLeave: function (args) {send("pSetupDuplicateString");}});
+
+var pSetupEnablePrivilege = Module.findExportByName("setupapi.dll", "pSetupEnablePrivilege")
+Interceptor.attach(pSetupEnablePrivilege, {onLeave: function (args) {send("pSetupEnablePrivilege");}});
+
+var pSetupFree = Module.findExportByName("setupapi.dll", "pSetupFree")
+Interceptor.attach(pSetupFree, {onLeave: function (args) {send("pSetupFree");}});
+
+var pSetupGetCurrentDriverSigningPolicy = Module.findExportByName("setupapi.dll", "pSetupGetCurrentDriverSigningPolicy")
+Interceptor.attach(pSetupGetCurrentDriverSigningPolicy, {onLeave: function (args) {send("pSetupGetCurrentDriverSigningPolicy");}});
+
+var pSetupGetDriverDate = Module.findExportByName("setupapi.dll", "pSetupGetDriverDate")
+Interceptor.attach(pSetupGetDriverDate, {onLeave: function (args) {send("pSetupGetDriverDate");}});
+
+var pSetupGetDriverVersion = Module.findExportByName("setupapi.dll", "pSetupGetDriverVersion")
+Interceptor.attach(pSetupGetDriverVersion, {onLeave: function (args) {send("pSetupGetDriverVersion");}});
+
+var pSetupGetField = Module.findExportByName("setupapi.dll", "pSetupGetField")
+Interceptor.attach(pSetupGetField, {onLeave: function (args) {send("pSetupGetField");}});
+
+var pSetupGetFileTitle = Module.findExportByName("setupapi.dll", "pSetupGetFileTitle")
+Interceptor.attach(pSetupGetFileTitle, {onLeave: function (args) {send("pSetupGetFileTitle");}});
+
+var pSetupGetGlobalFlags = Module.findExportByName("setupapi.dll", "pSetupGetGlobalFlags")
+Interceptor.attach(pSetupGetGlobalFlags, {onLeave: function (args) {send("pSetupGetGlobalFlags");}});
+
+var pSetupGetIndirectStringsFromDriverInfo = Module.findExportByName("setupapi.dll", "pSetupGetIndirectStringsFromDriverInfo")
+Interceptor.attach(pSetupGetIndirectStringsFromDriverInfo, {onLeave: function (args) {send("pSetupGetIndirectStringsFromDriverInfo");}});
+
+var pSetupGetInfSections = Module.findExportByName("setupapi.dll", "pSetupGetInfSections")
+Interceptor.attach(pSetupGetInfSections, {onLeave: function (args) {send("pSetupGetInfSections");}});
+
+var pSetupGetQueueFlags = Module.findExportByName("setupapi.dll", "pSetupGetQueueFlags")
+Interceptor.attach(pSetupGetQueueFlags, {onLeave: function (args) {send("pSetupGetQueueFlags");}});
+
+var pSetupGetRealSystemTime = Module.findExportByName("setupapi.dll", "pSetupGetRealSystemTime")
+Interceptor.attach(pSetupGetRealSystemTime, {onLeave: function (args) {send("pSetupGetRealSystemTime");}});
+
+var pSetupGetSourceInfFilename = Module.findExportByName("setupapi.dll", "pSetupGetSourceInfFilename")
+Interceptor.attach(pSetupGetSourceInfFilename, {onLeave: function (args) {send("pSetupGetSourceInfFilename");}});
+
+var pSetupGetUniqueServiceName = Module.findExportByName("setupapi.dll", "pSetupGetUniqueServiceName")
+Interceptor.attach(pSetupGetUniqueServiceName, {onLeave: function (args) {send("pSetupGetUniqueServiceName");}});
+
+var pSetupGuidFromString = Module.findExportByName("setupapi.dll", "pSetupGuidFromString")
+Interceptor.attach(pSetupGuidFromString, {onLeave: function (args) {send("pSetupGuidFromString");}});
+
+var pSetupHandleFailedVerification = Module.findExportByName("setupapi.dll", "pSetupHandleFailedVerification")
+Interceptor.attach(pSetupHandleFailedVerification, {onLeave: function (args) {send("pSetupHandleFailedVerification");}});
+
+var pSetupInfGetDigitalSignatureInfo = Module.findExportByName("setupapi.dll", "pSetupInfGetDigitalSignatureInfo")
+Interceptor.attach(pSetupInfGetDigitalSignatureInfo, {onLeave: function (args) {send("pSetupInfGetDigitalSignatureInfo");}});
+
+var pSetupInfIsInbox = Module.findExportByName("setupapi.dll", "pSetupInfIsInbox")
+Interceptor.attach(pSetupInfIsInbox, {onLeave: function (args) {send("pSetupInfIsInbox");}});
+
+var pSetupInfSetDigitalSignatureInfo = Module.findExportByName("setupapi.dll", "pSetupInfSetDigitalSignatureInfo")
+Interceptor.attach(pSetupInfSetDigitalSignatureInfo, {onLeave: function (args) {send("pSetupInfSetDigitalSignatureInfo");}});
+
+var pSetupInstallCatalog = Module.findExportByName("setupapi.dll", "pSetupInstallCatalog")
+Interceptor.attach(pSetupInstallCatalog, {onLeave: function (args) {send("pSetupInstallCatalog");}});
+
+var pSetupIsBiDiLocalizedSystemEx = Module.findExportByName("setupapi.dll", "pSetupIsBiDiLocalizedSystemEx")
+Interceptor.attach(pSetupIsBiDiLocalizedSystemEx, {onLeave: function (args) {send("pSetupIsBiDiLocalizedSystemEx");}});
+
+var pSetupIsGuidNull = Module.findExportByName("setupapi.dll", "pSetupIsGuidNull")
+Interceptor.attach(pSetupIsGuidNull, {onLeave: function (args) {send("pSetupIsGuidNull");}});
+
+var pSetupIsLocalSystem = Module.findExportByName("setupapi.dll", "pSetupIsLocalSystem")
+Interceptor.attach(pSetupIsLocalSystem, {onLeave: function (args) {send("pSetupIsLocalSystem");}});
+
+var pSetupIsUserAdmin = Module.findExportByName("setupapi.dll", "pSetupIsUserAdmin")
+Interceptor.attach(pSetupIsUserAdmin, {onLeave: function (args) {send("pSetupIsUserAdmin");}});
+
+var pSetupIsUserTrustedInstaller = Module.findExportByName("setupapi.dll", "pSetupIsUserTrustedInstaller")
+Interceptor.attach(pSetupIsUserTrustedInstaller, {onLeave: function (args) {send("pSetupIsUserTrustedInstaller");}});
+
+var pSetupLoadIndirectString = Module.findExportByName("setupapi.dll", "pSetupLoadIndirectString")
+Interceptor.attach(pSetupLoadIndirectString, {onLeave: function (args) {send("pSetupLoadIndirectString");}});
+
+var pSetupMakeSurePathExists = Module.findExportByName("setupapi.dll", "pSetupMakeSurePathExists")
+Interceptor.attach(pSetupMakeSurePathExists, {onLeave: function (args) {send("pSetupMakeSurePathExists");}});
+
+var pSetupMalloc = Module.findExportByName("setupapi.dll", "pSetupMalloc")
+Interceptor.attach(pSetupMalloc, {onLeave: function (args) {send("pSetupMalloc");}});
+
+var pSetupModifyGlobalFlags = Module.findExportByName("setupapi.dll", "pSetupModifyGlobalFlags")
+Interceptor.attach(pSetupModifyGlobalFlags, {onLeave: function (args) {send("pSetupModifyGlobalFlags");}});
+
+var pSetupMultiByteToUnicode = Module.findExportByName("setupapi.dll", "pSetupMultiByteToUnicode")
+Interceptor.attach(pSetupMultiByteToUnicode, {onLeave: function (args) {send("pSetupMultiByteToUnicode");}});
+
+var pSetupOpenAndMapFileForRead = Module.findExportByName("setupapi.dll", "pSetupOpenAndMapFileForRead")
+Interceptor.attach(pSetupOpenAndMapFileForRead, {onLeave: function (args) {send("pSetupOpenAndMapFileForRead");}});
+
+var pSetupOutOfMemory = Module.findExportByName("setupapi.dll", "pSetupOutOfMemory")
+Interceptor.attach(pSetupOutOfMemory, {onLeave: function (args) {send("pSetupOutOfMemory");}});
+
+var pSetupQueryMultiSzValueToArray = Module.findExportByName("setupapi.dll", "pSetupQueryMultiSzValueToArray")
+Interceptor.attach(pSetupQueryMultiSzValueToArray, {onLeave: function (args) {send("pSetupQueryMultiSzValueToArray");}});
+
+var pSetupRealloc = Module.findExportByName("setupapi.dll", "pSetupRealloc")
+Interceptor.attach(pSetupRealloc, {onLeave: function (args) {send("pSetupRealloc");}});
+
+var pSetupRegistryDelnode = Module.findExportByName("setupapi.dll", "pSetupRegistryDelnode")
+Interceptor.attach(pSetupRegistryDelnode, {onLeave: function (args) {send("pSetupRegistryDelnode");}});
+
+var pSetupRetrieveServiceConfig = Module.findExportByName("setupapi.dll", "pSetupRetrieveServiceConfig")
+Interceptor.attach(pSetupRetrieveServiceConfig, {onLeave: function (args) {send("pSetupRetrieveServiceConfig");}});
+
+var pSetupSetArrayToMultiSzValue = Module.findExportByName("setupapi.dll", "pSetupSetArrayToMultiSzValue")
+Interceptor.attach(pSetupSetArrayToMultiSzValue, {onLeave: function (args) {send("pSetupSetArrayToMultiSzValue");}});
+
+var pSetupSetGlobalFlags = Module.findExportByName("setupapi.dll", "pSetupSetGlobalFlags")
+Interceptor.attach(pSetupSetGlobalFlags, {onLeave: function (args) {send("pSetupSetGlobalFlags");}});
+
+var pSetupSetQueueFlags = Module.findExportByName("setupapi.dll", "pSetupSetQueueFlags")
+Interceptor.attach(pSetupSetQueueFlags, {onLeave: function (args) {send("pSetupSetQueueFlags");}});
+
+var pSetupShouldDeviceBeExcluded = Module.findExportByName("setupapi.dll", "pSetupShouldDeviceBeExcluded")
+Interceptor.attach(pSetupShouldDeviceBeExcluded, {onLeave: function (args) {send("pSetupShouldDeviceBeExcluded");}});
+
+var pSetupStringFromGuid = Module.findExportByName("setupapi.dll", "pSetupStringFromGuid")
+Interceptor.attach(pSetupStringFromGuid, {onLeave: function (args) {send("pSetupStringFromGuid");}});
+
+var pSetupStringTableAddString = Module.findExportByName("setupapi.dll", "pSetupStringTableAddString")
+Interceptor.attach(pSetupStringTableAddString, {onLeave: function (args) {send("pSetupStringTableAddString");}});
+
+var pSetupStringTableAddStringEx = Module.findExportByName("setupapi.dll", "pSetupStringTableAddStringEx")
+Interceptor.attach(pSetupStringTableAddStringEx, {onLeave: function (args) {send("pSetupStringTableAddStringEx");}});
+
+var pSetupStringTableDestroy = Module.findExportByName("setupapi.dll", "pSetupStringTableDestroy")
+Interceptor.attach(pSetupStringTableDestroy, {onLeave: function (args) {send("pSetupStringTableDestroy");}});
+
+var pSetupStringTableDuplicate = Module.findExportByName("setupapi.dll", "pSetupStringTableDuplicate")
+Interceptor.attach(pSetupStringTableDuplicate, {onLeave: function (args) {send("pSetupStringTableDuplicate");}});
+
+var pSetupStringTableEnum = Module.findExportByName("setupapi.dll", "pSetupStringTableEnum")
+Interceptor.attach(pSetupStringTableEnum, {onLeave: function (args) {send("pSetupStringTableEnum");}});
+
+var pSetupStringTableGetExtraData = Module.findExportByName("setupapi.dll", "pSetupStringTableGetExtraData")
+Interceptor.attach(pSetupStringTableGetExtraData, {onLeave: function (args) {send("pSetupStringTableGetExtraData");}});
+
+var pSetupStringTableInitialize = Module.findExportByName("setupapi.dll", "pSetupStringTableInitialize")
+Interceptor.attach(pSetupStringTableInitialize, {onLeave: function (args) {send("pSetupStringTableInitialize");}});
+
+var pSetupStringTableInitializeEx = Module.findExportByName("setupapi.dll", "pSetupStringTableInitializeEx")
+Interceptor.attach(pSetupStringTableInitializeEx, {onLeave: function (args) {send("pSetupStringTableInitializeEx");}});
+
+var pSetupStringTableLookUpString = Module.findExportByName("setupapi.dll", "pSetupStringTableLookUpString")
+Interceptor.attach(pSetupStringTableLookUpString, {onLeave: function (args) {send("pSetupStringTableLookUpString");}});
+
+var pSetupStringTableLookUpStringEx = Module.findExportByName("setupapi.dll", "pSetupStringTableLookUpStringEx")
+Interceptor.attach(pSetupStringTableLookUpStringEx, {onLeave: function (args) {send("pSetupStringTableLookUpStringEx");}});
+
+var pSetupStringTableSetExtraData = Module.findExportByName("setupapi.dll", "pSetupStringTableSetExtraData")
+Interceptor.attach(pSetupStringTableSetExtraData, {onLeave: function (args) {send("pSetupStringTableSetExtraData");}});
+
+var pSetupStringTableStringFromId = Module.findExportByName("setupapi.dll", "pSetupStringTableStringFromId")
+Interceptor.attach(pSetupStringTableStringFromId, {onLeave: function (args) {send("pSetupStringTableStringFromId");}});
+
+var pSetupStringTableStringFromIdEx = Module.findExportByName("setupapi.dll", "pSetupStringTableStringFromIdEx")
+Interceptor.attach(pSetupStringTableStringFromIdEx, {onLeave: function (args) {send("pSetupStringTableStringFromIdEx");}});
+
+var pSetupUnicodeToMultiByte = Module.findExportByName("setupapi.dll", "pSetupUnicodeToMultiByte")
+Interceptor.attach(pSetupUnicodeToMultiByte, {onLeave: function (args) {send("pSetupUnicodeToMultiByte");}});
+
+var pSetupUninstallCatalog = Module.findExportByName("setupapi.dll", "pSetupUninstallCatalog")
+Interceptor.attach(pSetupUninstallCatalog, {onLeave: function (args) {send("pSetupUninstallCatalog");}});
+
+var pSetupUnmapAndCloseFile = Module.findExportByName("setupapi.dll", "pSetupUnmapAndCloseFile")
+Interceptor.attach(pSetupUnmapAndCloseFile, {onLeave: function (args) {send("pSetupUnmapAndCloseFile");}});
+
+var pSetupVerifyCatalogFile = Module.findExportByName("setupapi.dll", "pSetupVerifyCatalogFile")
+Interceptor.attach(pSetupVerifyCatalogFile, {onLeave: function (args) {send("pSetupVerifyCatalogFile");}});
+
+var pSetupVerifyQueuedCatalogs = Module.findExportByName("setupapi.dll", "pSetupVerifyQueuedCatalogs")
+Interceptor.attach(pSetupVerifyQueuedCatalogs, {onLeave: function (args) {send("pSetupVerifyQueuedCatalogs");}});
+
+var pSetupWriteLogEntry = Module.findExportByName("setupapi.dll", "pSetupWriteLogEntry")
+Interceptor.attach(pSetupWriteLogEntry, {onLeave: function (args) {send("pSetupWriteLogEntry");}});
+
+var pSetupWriteLogError = Module.findExportByName("setupapi.dll", "pSetupWriteLogError")
+Interceptor.attach(pSetupWriteLogError, {onLeave: function (args) {send("pSetupWriteLogError");}});
+

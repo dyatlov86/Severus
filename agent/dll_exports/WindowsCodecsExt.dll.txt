@@ -1,0 +1,9 @@
+var DllGetClassObject = Module.findExportByName("WindowsCodecsExt.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var IWICColorTransform_Initialize_Proxy = Module.findExportByName("WindowsCodecsExt.dll", "IWICColorTransform_Initialize_Proxy")
+Interceptor.attach(IWICColorTransform_Initialize_Proxy, {onLeave: function (args) {send("IWICColorTransform_Initialize_Proxy");}});
+
+var WICCreateColorTransform_Proxy = Module.findExportByName("WindowsCodecsExt.dll", "WICCreateColorTransform_Proxy")
+Interceptor.attach(WICCreateColorTransform_Proxy, {onLeave: function (args) {send("WICCreateColorTransform_Proxy");}});
+

@@ -1,0 +1,6 @@
+var NciGetConnectionName = Module.findExportByName("nci.dll", "NciGetConnectionName")
+Interceptor.attach(NciGetConnectionName, {onLeave: function (args) {send("NciGetConnectionName");}});
+
+var NciSetConnectionName = Module.findExportByName("nci.dll", "NciSetConnectionName")
+Interceptor.attach(NciSetConnectionName, {onLeave: function (args) {send("NciSetConnectionName");}});
+

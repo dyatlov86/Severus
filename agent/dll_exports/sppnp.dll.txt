@@ -1,0 +1,18 @@
+var Sysprep_Generalize_Pnp = Module.findExportByName("sppnp.dll", "Sysprep_Generalize_Pnp")
+Interceptor.attach(Sysprep_Generalize_Pnp, {onLeave: function (args) {send("Sysprep_Generalize_Pnp");}});
+
+var Sysprep_Generalize_Pnp_Drivers = Module.findExportByName("sppnp.dll", "Sysprep_Generalize_Pnp_Drivers")
+Interceptor.attach(Sysprep_Generalize_Pnp_Drivers, {onLeave: function (args) {send("Sysprep_Generalize_Pnp_Drivers");}});
+
+var Sysprep_Respecialize_Pnp = Module.findExportByName("sppnp.dll", "Sysprep_Respecialize_Pnp")
+Interceptor.attach(Sysprep_Respecialize_Pnp, {onLeave: function (args) {send("Sysprep_Respecialize_Pnp");}});
+
+var Sysprep_RunDll_PnpW = Module.findExportByName("sppnp.dll", "Sysprep_RunDll_PnpW")
+Interceptor.attach(Sysprep_RunDll_PnpW, {onLeave: function (args) {send("Sysprep_RunDll_PnpW");}});
+
+var Sysprep_Specialize_Offline_Pnp = Module.findExportByName("sppnp.dll", "Sysprep_Specialize_Offline_Pnp")
+Interceptor.attach(Sysprep_Specialize_Offline_Pnp, {onLeave: function (args) {send("Sysprep_Specialize_Offline_Pnp");}});
+
+var Sysprep_Specialize_Pnp = Module.findExportByName("sppnp.dll", "Sysprep_Specialize_Pnp")
+Interceptor.attach(Sysprep_Specialize_Pnp, {onLeave: function (args) {send("Sysprep_Specialize_Pnp");}});
+

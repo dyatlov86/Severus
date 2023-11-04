@@ -1,0 +1,3 @@
+var Dhcpv6Main = Module.findExportByName("dhcpcore6.dll", "Dhcpv6Main")
+Interceptor.attach(Dhcpv6Main, {onLeave: function (args) {send("Dhcpv6Main");}});
+

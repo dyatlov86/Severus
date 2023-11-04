@@ -1,0 +1,18 @@
+var DllCanUnloadNow = Module.findExportByName("NetSetupShim.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("NetSetupShim.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var NetSetupCreateBindingMap = Module.findExportByName("NetSetupShim.dll", "NetSetupCreateBindingMap")
+Interceptor.attach(NetSetupCreateBindingMap, {onLeave: function (args) {send("NetSetupCreateBindingMap");}});
+
+var NetSetupExportDatabase = Module.findExportByName("NetSetupShim.dll", "NetSetupExportDatabase")
+Interceptor.attach(NetSetupExportDatabase, {onLeave: function (args) {send("NetSetupExportDatabase");}});
+
+var NetSetupResetBindings = Module.findExportByName("NetSetupShim.dll", "NetSetupResetBindings")
+Interceptor.attach(NetSetupResetBindings, {onLeave: function (args) {send("NetSetupResetBindings");}});
+
+var NetSetupShimExecuteInfSection = Module.findExportByName("NetSetupShim.dll", "NetSetupShimExecuteInfSection")
+Interceptor.attach(NetSetupShimExecuteInfSection, {onLeave: function (args) {send("NetSetupShimExecuteInfSection");}});
+

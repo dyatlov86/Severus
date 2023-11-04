@@ -1,0 +1,75 @@
+var CreateTextServices = Module.findExportByName("msftedit.dll", "CreateTextServices")
+Interceptor.attach(CreateTextServices, {onLeave: function (args) {send("CreateTextServices");}});
+
+var DisableOleinitCheck = Module.findExportByName("msftedit.dll", "DisableOleinitCheck")
+Interceptor.attach(DisableOleinitCheck, {onLeave: function (args) {send("DisableOleinitCheck");}});
+
+var DllGetActivationFactory = Module.findExportByName("msftedit.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetVersion = Module.findExportByName("msftedit.dll", "DllGetVersion")
+Interceptor.attach(DllGetVersion, {onLeave: function (args) {send("DllGetVersion");}});
+
+var GetMathAlphanumeric = Module.findExportByName("msftedit.dll", "GetMathAlphanumeric")
+Interceptor.attach(GetMathAlphanumeric, {onLeave: function (args) {send("GetMathAlphanumeric");}});
+
+var GetMathAlphanumericCode = Module.findExportByName("msftedit.dll", "GetMathAlphanumericCode")
+Interceptor.attach(GetMathAlphanumericCode, {onLeave: function (args) {send("GetMathAlphanumericCode");}});
+
+var IID_IRichEditOle = Module.findExportByName("msftedit.dll", "IID_IRichEditOle")
+Interceptor.attach(IID_IRichEditOle, {onLeave: function (args) {send("IID_IRichEditOle");}});
+
+var IID_IRichEditOleCallback = Module.findExportByName("msftedit.dll", "IID_IRichEditOleCallback")
+Interceptor.attach(IID_IRichEditOleCallback, {onLeave: function (args) {send("IID_IRichEditOleCallback");}});
+
+var IID_IRicheditUiaNotificationOverrides = Module.findExportByName("msftedit.dll", "IID_IRicheditUiaNotificationOverrides")
+Interceptor.attach(IID_IRicheditUiaNotificationOverrides, {onLeave: function (args) {send("IID_IRicheditUiaNotificationOverrides");}});
+
+var IID_IRicheditUiaOverrides = Module.findExportByName("msftedit.dll", "IID_IRicheditUiaOverrides")
+Interceptor.attach(IID_IRicheditUiaOverrides, {onLeave: function (args) {send("IID_IRicheditUiaOverrides");}});
+
+var IID_IRicheditWindowlessAccessibility = Module.findExportByName("msftedit.dll", "IID_IRicheditWindowlessAccessibility")
+Interceptor.attach(IID_IRicheditWindowlessAccessibility, {onLeave: function (args) {send("IID_IRicheditWindowlessAccessibility");}});
+
+var IID_ITextDocument2 = Module.findExportByName("msftedit.dll", "IID_ITextDocument2")
+Interceptor.attach(IID_ITextDocument2, {onLeave: function (args) {send("IID_ITextDocument2");}});
+
+var IID_ITextHost = Module.findExportByName("msftedit.dll", "IID_ITextHost")
+Interceptor.attach(IID_ITextHost, {onLeave: function (args) {send("IID_ITextHost");}});
+
+var IID_ITextHost2 = Module.findExportByName("msftedit.dll", "IID_ITextHost2")
+Interceptor.attach(IID_ITextHost2, {onLeave: function (args) {send("IID_ITextHost2");}});
+
+var IID_ITextServices = Module.findExportByName("msftedit.dll", "IID_ITextServices")
+Interceptor.attach(IID_ITextServices, {onLeave: function (args) {send("IID_ITextServices");}});
+
+var IID_ITextServices2 = Module.findExportByName("msftedit.dll", "IID_ITextServices2")
+Interceptor.attach(IID_ITextServices2, {onLeave: function (args) {send("IID_ITextServices2");}});
+
+var MathBuildDown = Module.findExportByName("msftedit.dll", "MathBuildDown")
+Interceptor.attach(MathBuildDown, {onLeave: function (args) {send("MathBuildDown");}});
+
+var MathBuildUp = Module.findExportByName("msftedit.dll", "MathBuildUp")
+Interceptor.attach(MathBuildUp, {onLeave: function (args) {send("MathBuildUp");}});
+
+var MathTranslate = Module.findExportByName("msftedit.dll", "MathTranslate")
+Interceptor.attach(MathTranslate, {onLeave: function (args) {send("MathTranslate");}});
+
+var RichEdit10ANSIWndProc = Module.findExportByName("msftedit.dll", "RichEdit10ANSIWndProc")
+Interceptor.attach(RichEdit10ANSIWndProc, {onLeave: function (args) {send("RichEdit10ANSIWndProc");}});
+
+var RichEditANSIWndProc = Module.findExportByName("msftedit.dll", "RichEditANSIWndProc")
+Interceptor.attach(RichEditANSIWndProc, {onLeave: function (args) {send("RichEditANSIWndProc");}});
+
+var RichEditWndProc = Module.findExportByName("msftedit.dll", "RichEditWndProc")
+Interceptor.attach(RichEditWndProc, {onLeave: function (args) {send("RichEditWndProc");}});
+
+var SetCustomTextOutHandlerEx = Module.findExportByName("msftedit.dll", "SetCustomTextOutHandlerEx")
+Interceptor.attach(SetCustomTextOutHandlerEx, {onLeave: function (args) {send("SetCustomTextOutHandlerEx");}});
+
+var SetTextServicesDpiCalculationOverride = Module.findExportByName("msftedit.dll", "SetTextServicesDpiCalculationOverride")
+Interceptor.attach(SetTextServicesDpiCalculationOverride, {onLeave: function (args) {send("SetTextServicesDpiCalculationOverride");}});
+
+var ShutdownTextServices = Module.findExportByName("msftedit.dll", "ShutdownTextServices")
+Interceptor.attach(ShutdownTextServices, {onLeave: function (args) {send("ShutdownTextServices");}});
+

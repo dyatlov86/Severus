@@ -1,0 +1,3 @@
+var IsDeviceEnrolled = Module.findExportByName("enrollmentapi.dll", "IsDeviceEnrolled")
+Interceptor.attach(IsDeviceEnrolled, {onLeave: function (args) {send("IsDeviceEnrolled");}});
+

@@ -1,0 +1,15 @@
+var SssBindServicingStack = Module.findExportByName("SSShim.dll", "SssBindServicingStack")
+Interceptor.attach(SssBindServicingStack, {onLeave: function (args) {send("SssBindServicingStack");}});
+
+var SssGetServicingStackFilePath = Module.findExportByName("SSShim.dll", "SssGetServicingStackFilePath")
+Interceptor.attach(SssGetServicingStackFilePath, {onLeave: function (args) {send("SssGetServicingStackFilePath");}});
+
+var SssGetServicingStackFilePathLength = Module.findExportByName("SSShim.dll", "SssGetServicingStackFilePathLength")
+Interceptor.attach(SssGetServicingStackFilePathLength, {onLeave: function (args) {send("SssGetServicingStackFilePathLength");}});
+
+var SssPreloadDownlevelDependencies = Module.findExportByName("SSShim.dll", "SssPreloadDownlevelDependencies")
+Interceptor.attach(SssPreloadDownlevelDependencies, {onLeave: function (args) {send("SssPreloadDownlevelDependencies");}});
+
+var SssReleaseServicingStack = Module.findExportByName("SSShim.dll", "SssReleaseServicingStack")
+Interceptor.attach(SssReleaseServicingStack, {onLeave: function (args) {send("SssReleaseServicingStack");}});
+

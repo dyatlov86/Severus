@@ -1,0 +1,15 @@
+var DllMain = Module.findExportByName("atiumdag.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var OpenAdapter = Module.findExportByName("atiumdag.dll", "OpenAdapter")
+Interceptor.attach(OpenAdapter, {onLeave: function (args) {send("OpenAdapter");}});
+
+var XdxInitXopAdapterServices = Module.findExportByName("atiumdag.dll", "XdxInitXopAdapterServices")
+Interceptor.attach(XdxInitXopAdapterServices, {onLeave: function (args) {send("XdxInitXopAdapterServices");}});
+
+var XdxInitXopServices = Module.findExportByName("atiumdag.dll", "XdxInitXopServices")
+Interceptor.attach(XdxInitXopServices, {onLeave: function (args) {send("XdxInitXopServices");}});
+
+var XlatXdxInitXopServices = Module.findExportByName("atiumdag.dll", "XlatXdxInitXopServices")
+Interceptor.attach(XlatXdxInitXopServices, {onLeave: function (args) {send("XlatXdxInitXopServices");}});
+

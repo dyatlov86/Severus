@@ -1,0 +1,12 @@
+var DllGetClassObject = Module.findExportByName("sxsstore.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("sxsstore.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var SxsStoreFinalize = Module.findExportByName("sxsstore.dll", "SxsStoreFinalize")
+Interceptor.attach(SxsStoreFinalize, {onLeave: function (args) {send("SxsStoreFinalize");}});
+
+var SxsStoreInitialize = Module.findExportByName("sxsstore.dll", "SxsStoreInitialize")
+Interceptor.attach(SxsStoreInitialize, {onLeave: function (args) {send("SxsStoreInitialize");}});
+

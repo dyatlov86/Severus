@@ -1,0 +1,3 @@
+var InitializeCollector = Module.findExportByName("LicensingDiagSpp.dll", "InitializeCollector")
+Interceptor.attach(InitializeCollector, {onLeave: function (args) {send("InitializeCollector");}});
+

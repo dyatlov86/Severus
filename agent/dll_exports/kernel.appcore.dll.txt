@@ -1,0 +1,753 @@
+var AcquireStateLock = Module.findExportByName("kernel.appcore.dll", "AcquireStateLock")
+Interceptor.attach(AcquireStateLock, {onLeave: function (args) {send("AcquireStateLock");}});
+
+var AddDependencyToProcessPackageGraph = Module.findExportByName("kernel.appcore.dll", "AddDependencyToProcessPackageGraph")
+Interceptor.attach(AddDependencyToProcessPackageGraph, {onLeave: function (args) {send("AddDependencyToProcessPackageGraph");}});
+
+var AddExtensionProgId = Module.findExportByName("kernel.appcore.dll", "AddExtensionProgId")
+Interceptor.attach(AddExtensionProgId, {onLeave: function (args) {send("AddExtensionProgId");}});
+
+var AddPackageDependency = Module.findExportByName("kernel.appcore.dll", "AddPackageDependency")
+Interceptor.attach(AddPackageDependency, {onLeave: function (args) {send("AddPackageDependency");}});
+
+var AppContainerDeriveSidFromMoniker = Module.findExportByName("kernel.appcore.dll", "AppContainerDeriveSidFromMoniker")
+Interceptor.attach(AppContainerDeriveSidFromMoniker, {onLeave: function (args) {send("AppContainerDeriveSidFromMoniker");}});
+
+var AppContainerFreeMemory = Module.findExportByName("kernel.appcore.dll", "AppContainerFreeMemory")
+Interceptor.attach(AppContainerFreeMemory, {onLeave: function (args) {send("AppContainerFreeMemory");}});
+
+var AppContainerLookupDisplayNameMrtReference = Module.findExportByName("kernel.appcore.dll", "AppContainerLookupDisplayNameMrtReference")
+Interceptor.attach(AppContainerLookupDisplayNameMrtReference, {onLeave: function (args) {send("AppContainerLookupDisplayNameMrtReference");}});
+
+var AppContainerLookupMoniker = Module.findExportByName("kernel.appcore.dll", "AppContainerLookupMoniker")
+Interceptor.attach(AppContainerLookupMoniker, {onLeave: function (args) {send("AppContainerLookupMoniker");}});
+
+var AppContainerRegisterSid = Module.findExportByName("kernel.appcore.dll", "AppContainerRegisterSid")
+Interceptor.attach(AppContainerRegisterSid, {onLeave: function (args) {send("AppContainerRegisterSid");}});
+
+var AppContainerUnregisterSid = Module.findExportByName("kernel.appcore.dll", "AppContainerUnregisterSid")
+Interceptor.attach(AppContainerUnregisterSid, {onLeave: function (args) {send("AppContainerUnregisterSid");}});
+
+var AppPolicyGetClrCompat = Module.findExportByName("kernel.appcore.dll", "AppPolicyGetClrCompat")
+Interceptor.attach(AppPolicyGetClrCompat, {onLeave: function (args) {send("AppPolicyGetClrCompat");}});
+
+var AppPolicyGetCreateFileAccess = Module.findExportByName("kernel.appcore.dll", "AppPolicyGetCreateFileAccess")
+Interceptor.attach(AppPolicyGetCreateFileAccess, {onLeave: function (args) {send("AppPolicyGetCreateFileAccess");}});
+
+var AppPolicyGetLifecycleManagement = Module.findExportByName("kernel.appcore.dll", "AppPolicyGetLifecycleManagement")
+Interceptor.attach(AppPolicyGetLifecycleManagement, {onLeave: function (args) {send("AppPolicyGetLifecycleManagement");}});
+
+var AppPolicyGetMediaFoundationCodecLoading = Module.findExportByName("kernel.appcore.dll", "AppPolicyGetMediaFoundationCodecLoading")
+Interceptor.attach(AppPolicyGetMediaFoundationCodecLoading, {onLeave: function (args) {send("AppPolicyGetMediaFoundationCodecLoading");}});
+
+var AppPolicyGetProcessTerminationMethod = Module.findExportByName("kernel.appcore.dll", "AppPolicyGetProcessTerminationMethod")
+Interceptor.attach(AppPolicyGetProcessTerminationMethod, {onLeave: function (args) {send("AppPolicyGetProcessTerminationMethod");}});
+
+var AppPolicyGetShowDeveloperDiagnostic = Module.findExportByName("kernel.appcore.dll", "AppPolicyGetShowDeveloperDiagnostic")
+Interceptor.attach(AppPolicyGetShowDeveloperDiagnostic, {onLeave: function (args) {send("AppPolicyGetShowDeveloperDiagnostic");}});
+
+var AppPolicyGetThreadInitializationType = Module.findExportByName("kernel.appcore.dll", "AppPolicyGetThreadInitializationType")
+Interceptor.attach(AppPolicyGetThreadInitializationType, {onLeave: function (args) {send("AppPolicyGetThreadInitializationType");}});
+
+var AppPolicyGetWindowingModel = Module.findExportByName("kernel.appcore.dll", "AppPolicyGetWindowingModel")
+Interceptor.attach(AppPolicyGetWindowingModel, {onLeave: function (args) {send("AppPolicyGetWindowingModel");}});
+
+var AppXFreeMemory = Module.findExportByName("kernel.appcore.dll", "AppXFreeMemory")
+Interceptor.attach(AppXFreeMemory, {onLeave: function (args) {send("AppXFreeMemory");}});
+
+var AppXGetApplicationData = Module.findExportByName("kernel.appcore.dll", "AppXGetApplicationData")
+Interceptor.attach(AppXGetApplicationData, {onLeave: function (args) {send("AppXGetApplicationData");}});
+
+var AppXGetDevelopmentMode = Module.findExportByName("kernel.appcore.dll", "AppXGetDevelopmentMode")
+Interceptor.attach(AppXGetDevelopmentMode, {onLeave: function (args) {send("AppXGetDevelopmentMode");}});
+
+var AppXGetOSMaxVersionTested = Module.findExportByName("kernel.appcore.dll", "AppXGetOSMaxVersionTested")
+Interceptor.attach(AppXGetOSMaxVersionTested, {onLeave: function (args) {send("AppXGetOSMaxVersionTested");}});
+
+var AppXGetOSMinVersion = Module.findExportByName("kernel.appcore.dll", "AppXGetOSMinVersion")
+Interceptor.attach(AppXGetOSMinVersion, {onLeave: function (args) {send("AppXGetOSMinVersion");}});
+
+var AppXGetPackageCapabilities = Module.findExportByName("kernel.appcore.dll", "AppXGetPackageCapabilities")
+Interceptor.attach(AppXGetPackageCapabilities, {onLeave: function (args) {send("AppXGetPackageCapabilities");}});
+
+var AppXGetPackageSid = Module.findExportByName("kernel.appcore.dll", "AppXGetPackageSid")
+Interceptor.attach(AppXGetPackageSid, {onLeave: function (args) {send("AppXGetPackageSid");}});
+
+var AppXLookupDisplayName = Module.findExportByName("kernel.appcore.dll", "AppXLookupDisplayName")
+Interceptor.attach(AppXLookupDisplayName, {onLeave: function (args) {send("AppXLookupDisplayName");}});
+
+var AppXLookupMoniker = Module.findExportByName("kernel.appcore.dll", "AppXLookupMoniker")
+Interceptor.attach(AppXLookupMoniker, {onLeave: function (args) {send("AppXLookupMoniker");}});
+
+var AppXUpdatePackageCapabilities = Module.findExportByName("kernel.appcore.dll", "AppXUpdatePackageCapabilities")
+Interceptor.attach(AppXUpdatePackageCapabilities, {onLeave: function (args) {send("AppXUpdatePackageCapabilities");}});
+
+var ApplicationUserModelIdFromProductId = Module.findExportByName("kernel.appcore.dll", "ApplicationUserModelIdFromProductId")
+Interceptor.attach(ApplicationUserModelIdFromProductId, {onLeave: function (args) {send("ApplicationUserModelIdFromProductId");}});
+
+var BuildProcThreadAttributeListFromBlob = Module.findExportByName("kernel.appcore.dll", "BuildProcThreadAttributeListFromBlob")
+Interceptor.attach(BuildProcThreadAttributeListFromBlob, {onLeave: function (args) {send("BuildProcThreadAttributeListFromBlob");}});
+
+var CheckIfStateChangeNotificationExists = Module.findExportByName("kernel.appcore.dll", "CheckIfStateChangeNotificationExists")
+Interceptor.attach(CheckIfStateChangeNotificationExists, {onLeave: function (args) {send("CheckIfStateChangeNotificationExists");}});
+
+var CheckIsMSIXPackage = Module.findExportByName("kernel.appcore.dll", "CheckIsMSIXPackage")
+Interceptor.attach(CheckIsMSIXPackage, {onLeave: function (args) {send("CheckIsMSIXPackage");}});
+
+var ClosePackageInfo = Module.findExportByName("kernel.appcore.dll", "ClosePackageInfo")
+Interceptor.attach(ClosePackageInfo, {onLeave: function (args) {send("ClosePackageInfo");}});
+
+var CloseState = Module.findExportByName("kernel.appcore.dll", "CloseState")
+Interceptor.attach(CloseState, {onLeave: function (args) {send("CloseState");}});
+
+var CloseStateAtom = Module.findExportByName("kernel.appcore.dll", "CloseStateAtom")
+Interceptor.attach(CloseStateAtom, {onLeave: function (args) {send("CloseStateAtom");}});
+
+var CloseStateChangeNotification = Module.findExportByName("kernel.appcore.dll", "CloseStateChangeNotification")
+Interceptor.attach(CloseStateChangeNotification, {onLeave: function (args) {send("CloseStateChangeNotification");}});
+
+var CloseStateContainer = Module.findExportByName("kernel.appcore.dll", "CloseStateContainer")
+Interceptor.attach(CloseStateContainer, {onLeave: function (args) {send("CloseStateContainer");}});
+
+var CloseStateLock = Module.findExportByName("kernel.appcore.dll", "CloseStateLock")
+Interceptor.attach(CloseStateLock, {onLeave: function (args) {send("CloseStateLock");}});
+
+var CommitStateAtom = Module.findExportByName("kernel.appcore.dll", "CommitStateAtom")
+Interceptor.attach(CommitStateAtom, {onLeave: function (args) {send("CommitStateAtom");}});
+
+var CouldMultiUserAppsBehaviorBePossibleForPackage = Module.findExportByName("kernel.appcore.dll", "CouldMultiUserAppsBehaviorBePossibleForPackage")
+Interceptor.attach(CouldMultiUserAppsBehaviorBePossibleForPackage, {onLeave: function (args) {send("CouldMultiUserAppsBehaviorBePossibleForPackage");}});
+
+var CreateNewAdvertisingId = Module.findExportByName("kernel.appcore.dll", "CreateNewAdvertisingId")
+Interceptor.attach(CreateNewAdvertisingId, {onLeave: function (args) {send("CreateNewAdvertisingId");}});
+
+var CreateStateAtom = Module.findExportByName("kernel.appcore.dll", "CreateStateAtom")
+Interceptor.attach(CreateStateAtom, {onLeave: function (args) {send("CreateStateAtom");}});
+
+var CreateStateChangeNotification = Module.findExportByName("kernel.appcore.dll", "CreateStateChangeNotification")
+Interceptor.attach(CreateStateChangeNotification, {onLeave: function (args) {send("CreateStateChangeNotification");}});
+
+var CreateStateContainer = Module.findExportByName("kernel.appcore.dll", "CreateStateContainer")
+Interceptor.attach(CreateStateContainer, {onLeave: function (args) {send("CreateStateContainer");}});
+
+var CreateStateLock = Module.findExportByName("kernel.appcore.dll", "CreateStateLock")
+Interceptor.attach(CreateStateLock, {onLeave: function (args) {send("CreateStateLock");}});
+
+var CreateStateSubcontainer = Module.findExportByName("kernel.appcore.dll", "CreateStateSubcontainer")
+Interceptor.attach(CreateStateSubcontainer, {onLeave: function (args) {send("CreateStateSubcontainer");}});
+
+var DeletePackageDependency = Module.findExportByName("kernel.appcore.dll", "DeletePackageDependency")
+Interceptor.attach(DeletePackageDependency, {onLeave: function (args) {send("DeletePackageDependency");}});
+
+var DeleteStateAtomValue = Module.findExportByName("kernel.appcore.dll", "DeleteStateAtomValue")
+Interceptor.attach(DeleteStateAtomValue, {onLeave: function (args) {send("DeleteStateAtomValue");}});
+
+var DeleteStateContainer = Module.findExportByName("kernel.appcore.dll", "DeleteStateContainer")
+Interceptor.attach(DeleteStateContainer, {onLeave: function (args) {send("DeleteStateContainer");}});
+
+var DeleteStateContainerValue = Module.findExportByName("kernel.appcore.dll", "DeleteStateContainerValue")
+Interceptor.attach(DeleteStateContainerValue, {onLeave: function (args) {send("DeleteStateContainerValue");}});
+
+var DuplicateStateContainerHandle = Module.findExportByName("kernel.appcore.dll", "DuplicateStateContainerHandle")
+Interceptor.attach(DuplicateStateContainerHandle, {onLeave: function (args) {send("DuplicateStateContainerHandle");}});
+
+var EnableAdvertisingId = Module.findExportByName("kernel.appcore.dll", "EnableAdvertisingId")
+Interceptor.attach(EnableAdvertisingId, {onLeave: function (args) {send("EnableAdvertisingId");}});
+
+var EnableAdvertisingIdForUser = Module.findExportByName("kernel.appcore.dll", "EnableAdvertisingIdForUser")
+Interceptor.attach(EnableAdvertisingIdForUser, {onLeave: function (args) {send("EnableAdvertisingIdForUser");}});
+
+var EnumerateExtensionNames = Module.findExportByName("kernel.appcore.dll", "EnumerateExtensionNames")
+Interceptor.attach(EnumerateExtensionNames, {onLeave: function (args) {send("EnumerateExtensionNames");}});
+
+var EnumerateStateAtomValues = Module.findExportByName("kernel.appcore.dll", "EnumerateStateAtomValues")
+Interceptor.attach(EnumerateStateAtomValues, {onLeave: function (args) {send("EnumerateStateAtomValues");}});
+
+var EnumerateStateContainerItems = Module.findExportByName("kernel.appcore.dll", "EnumerateStateContainerItems")
+Interceptor.attach(EnumerateStateContainerItems, {onLeave: function (args) {send("EnumerateStateContainerItems");}});
+
+var ExtensionProgIdExists = Module.findExportByName("kernel.appcore.dll", "ExtensionProgIdExists")
+Interceptor.attach(ExtensionProgIdExists, {onLeave: function (args) {send("ExtensionProgIdExists");}});
+
+var FindPackagesByPackageFamily = Module.findExportByName("kernel.appcore.dll", "FindPackagesByPackageFamily")
+Interceptor.attach(FindPackagesByPackageFamily, {onLeave: function (args) {send("FindPackagesByPackageFamily");}});
+
+var FormatApplicationUserModelId = Module.findExportByName("kernel.appcore.dll", "FormatApplicationUserModelId")
+Interceptor.attach(FormatApplicationUserModelId, {onLeave: function (args) {send("FormatApplicationUserModelId");}});
+
+var FormatApplicationUserModelIdA = Module.findExportByName("kernel.appcore.dll", "FormatApplicationUserModelIdA")
+Interceptor.attach(FormatApplicationUserModelIdA, {onLeave: function (args) {send("FormatApplicationUserModelIdA");}});
+
+var GenerateProcThreadAttributeBlob = Module.findExportByName("kernel.appcore.dll", "GenerateProcThreadAttributeBlob")
+Interceptor.attach(GenerateProcThreadAttributeBlob, {onLeave: function (args) {send("GenerateProcThreadAttributeBlob");}});
+
+var GetAlternatePackageRoots = Module.findExportByName("kernel.appcore.dll", "GetAlternatePackageRoots")
+Interceptor.attach(GetAlternatePackageRoots, {onLeave: function (args) {send("GetAlternatePackageRoots");}});
+
+var GetAppDataFolder = Module.findExportByName("kernel.appcore.dll", "GetAppDataFolder")
+Interceptor.attach(GetAppDataFolder, {onLeave: function (args) {send("GetAppDataFolder");}});
+
+var GetAppModelVersion = Module.findExportByName("kernel.appcore.dll", "GetAppModelVersion")
+Interceptor.attach(GetAppModelVersion, {onLeave: function (args) {send("GetAppModelVersion");}});
+
+var GetApplicationUserModelId = Module.findExportByName("kernel.appcore.dll", "GetApplicationUserModelId")
+Interceptor.attach(GetApplicationUserModelId, {onLeave: function (args) {send("GetApplicationUserModelId");}});
+
+var GetApplicationUserModelIdFromToken = Module.findExportByName("kernel.appcore.dll", "GetApplicationUserModelIdFromToken")
+Interceptor.attach(GetApplicationUserModelIdFromToken, {onLeave: function (args) {send("GetApplicationUserModelIdFromToken");}});
+
+var GetCurrentApplicationUserModelId = Module.findExportByName("kernel.appcore.dll", "GetCurrentApplicationUserModelId")
+Interceptor.attach(GetCurrentApplicationUserModelId, {onLeave: function (args) {send("GetCurrentApplicationUserModelId");}});
+
+var GetCurrentPackageApplicationContext = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageApplicationContext")
+Interceptor.attach(GetCurrentPackageApplicationContext, {onLeave: function (args) {send("GetCurrentPackageApplicationContext");}});
+
+var GetCurrentPackageApplicationResourcesContext = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageApplicationResourcesContext")
+Interceptor.attach(GetCurrentPackageApplicationResourcesContext, {onLeave: function (args) {send("GetCurrentPackageApplicationResourcesContext");}});
+
+var GetCurrentPackageContext = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageContext")
+Interceptor.attach(GetCurrentPackageContext, {onLeave: function (args) {send("GetCurrentPackageContext");}});
+
+var GetCurrentPackageFamilyName = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageFamilyName")
+Interceptor.attach(GetCurrentPackageFamilyName, {onLeave: function (args) {send("GetCurrentPackageFamilyName");}});
+
+var GetCurrentPackageFullName = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageFullName")
+Interceptor.attach(GetCurrentPackageFullName, {onLeave: function (args) {send("GetCurrentPackageFullName");}});
+
+var GetCurrentPackageGlobalizationContext = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageGlobalizationContext")
+Interceptor.attach(GetCurrentPackageGlobalizationContext, {onLeave: function (args) {send("GetCurrentPackageGlobalizationContext");}});
+
+var GetCurrentPackageId = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageId")
+Interceptor.attach(GetCurrentPackageId, {onLeave: function (args) {send("GetCurrentPackageId");}});
+
+var GetCurrentPackageInfo = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageInfo")
+Interceptor.attach(GetCurrentPackageInfo, {onLeave: function (args) {send("GetCurrentPackageInfo");}});
+
+var GetCurrentPackageInfo2 = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageInfo2")
+Interceptor.attach(GetCurrentPackageInfo2, {onLeave: function (args) {send("GetCurrentPackageInfo2");}});
+
+var GetCurrentPackageInfo3 = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageInfo3")
+Interceptor.attach(GetCurrentPackageInfo3, {onLeave: function (args) {send("GetCurrentPackageInfo3");}});
+
+var GetCurrentPackagePath = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackagePath")
+Interceptor.attach(GetCurrentPackagePath, {onLeave: function (args) {send("GetCurrentPackagePath");}});
+
+var GetCurrentPackagePath2 = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackagePath2")
+Interceptor.attach(GetCurrentPackagePath2, {onLeave: function (args) {send("GetCurrentPackagePath2");}});
+
+var GetCurrentPackageResourcesContext = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageResourcesContext")
+Interceptor.attach(GetCurrentPackageResourcesContext, {onLeave: function (args) {send("GetCurrentPackageResourcesContext");}});
+
+var GetCurrentPackageSecurityContext = Module.findExportByName("kernel.appcore.dll", "GetCurrentPackageSecurityContext")
+Interceptor.attach(GetCurrentPackageSecurityContext, {onLeave: function (args) {send("GetCurrentPackageSecurityContext");}});
+
+var GetCurrentTargetPlatformContext = Module.findExportByName("kernel.appcore.dll", "GetCurrentTargetPlatformContext")
+Interceptor.attach(GetCurrentTargetPlatformContext, {onLeave: function (args) {send("GetCurrentTargetPlatformContext");}});
+
+var GetEffectivePackageStatusForUser = Module.findExportByName("kernel.appcore.dll", "GetEffectivePackageStatusForUser")
+Interceptor.attach(GetEffectivePackageStatusForUser, {onLeave: function (args) {send("GetEffectivePackageStatusForUser");}});
+
+var GetEffectivePackageStatusForUserSid = Module.findExportByName("kernel.appcore.dll", "GetEffectivePackageStatusForUserSid")
+Interceptor.attach(GetEffectivePackageStatusForUserSid, {onLeave: function (args) {send("GetEffectivePackageStatusForUserSid");}});
+
+var GetExtensionApplicationUserModelId = Module.findExportByName("kernel.appcore.dll", "GetExtensionApplicationUserModelId")
+Interceptor.attach(GetExtensionApplicationUserModelId, {onLeave: function (args) {send("GetExtensionApplicationUserModelId");}});
+
+var GetExtensionProgIds = Module.findExportByName("kernel.appcore.dll", "GetExtensionProgIds")
+Interceptor.attach(GetExtensionProgIds, {onLeave: function (args) {send("GetExtensionProgIds");}});
+
+var GetExtensionProperty = Module.findExportByName("kernel.appcore.dll", "GetExtensionProperty")
+Interceptor.attach(GetExtensionProperty, {onLeave: function (args) {send("GetExtensionProperty");}});
+
+var GetExtensionProperty2 = Module.findExportByName("kernel.appcore.dll", "GetExtensionProperty2")
+Interceptor.attach(GetExtensionProperty2, {onLeave: function (args) {send("GetExtensionProperty2");}});
+
+var GetHivePath = Module.findExportByName("kernel.appcore.dll", "GetHivePath")
+Interceptor.attach(GetHivePath, {onLeave: function (args) {send("GetHivePath");}});
+
+var GetIdForPackageDependencyContext = Module.findExportByName("kernel.appcore.dll", "GetIdForPackageDependencyContext")
+Interceptor.attach(GetIdForPackageDependencyContext, {onLeave: function (args) {send("GetIdForPackageDependencyContext");}});
+
+var GetPackageApplicationContext = Module.findExportByName("kernel.appcore.dll", "GetPackageApplicationContext")
+Interceptor.attach(GetPackageApplicationContext, {onLeave: function (args) {send("GetPackageApplicationContext");}});
+
+var GetPackageApplicationIds = Module.findExportByName("kernel.appcore.dll", "GetPackageApplicationIds")
+Interceptor.attach(GetPackageApplicationIds, {onLeave: function (args) {send("GetPackageApplicationIds");}});
+
+var GetPackageApplicationProperty = Module.findExportByName("kernel.appcore.dll", "GetPackageApplicationProperty")
+Interceptor.attach(GetPackageApplicationProperty, {onLeave: function (args) {send("GetPackageApplicationProperty");}});
+
+var GetPackageApplicationPropertyString = Module.findExportByName("kernel.appcore.dll", "GetPackageApplicationPropertyString")
+Interceptor.attach(GetPackageApplicationPropertyString, {onLeave: function (args) {send("GetPackageApplicationPropertyString");}});
+
+var GetPackageApplicationResourcesContext = Module.findExportByName("kernel.appcore.dll", "GetPackageApplicationResourcesContext")
+Interceptor.attach(GetPackageApplicationResourcesContext, {onLeave: function (args) {send("GetPackageApplicationResourcesContext");}});
+
+var GetPackageContext = Module.findExportByName("kernel.appcore.dll", "GetPackageContext")
+Interceptor.attach(GetPackageContext, {onLeave: function (args) {send("GetPackageContext");}});
+
+var GetPackageFamilyName = Module.findExportByName("kernel.appcore.dll", "GetPackageFamilyName")
+Interceptor.attach(GetPackageFamilyName, {onLeave: function (args) {send("GetPackageFamilyName");}});
+
+var GetPackageFamilyNameFromFilePath = Module.findExportByName("kernel.appcore.dll", "GetPackageFamilyNameFromFilePath")
+Interceptor.attach(GetPackageFamilyNameFromFilePath, {onLeave: function (args) {send("GetPackageFamilyNameFromFilePath");}});
+
+var GetPackageFamilyNameFromProgId = Module.findExportByName("kernel.appcore.dll", "GetPackageFamilyNameFromProgId")
+Interceptor.attach(GetPackageFamilyNameFromProgId, {onLeave: function (args) {send("GetPackageFamilyNameFromProgId");}});
+
+var GetPackageFamilyNameFromToken = Module.findExportByName("kernel.appcore.dll", "GetPackageFamilyNameFromToken")
+Interceptor.attach(GetPackageFamilyNameFromToken, {onLeave: function (args) {send("GetPackageFamilyNameFromToken");}});
+
+var GetPackageFullName = Module.findExportByName("kernel.appcore.dll", "GetPackageFullName")
+Interceptor.attach(GetPackageFullName, {onLeave: function (args) {send("GetPackageFullName");}});
+
+var GetPackageFullNameFromToken = Module.findExportByName("kernel.appcore.dll", "GetPackageFullNameFromToken")
+Interceptor.attach(GetPackageFullNameFromToken, {onLeave: function (args) {send("GetPackageFullNameFromToken");}});
+
+var GetPackageGlobalizationContext = Module.findExportByName("kernel.appcore.dll", "GetPackageGlobalizationContext")
+Interceptor.attach(GetPackageGlobalizationContext, {onLeave: function (args) {send("GetPackageGlobalizationContext");}});
+
+var GetPackageGlobalizationProperty = Module.findExportByName("kernel.appcore.dll", "GetPackageGlobalizationProperty")
+Interceptor.attach(GetPackageGlobalizationProperty, {onLeave: function (args) {send("GetPackageGlobalizationProperty");}});
+
+var GetPackageGraphRevisionId = Module.findExportByName("kernel.appcore.dll", "GetPackageGraphRevisionId")
+Interceptor.attach(GetPackageGraphRevisionId, {onLeave: function (args) {send("GetPackageGraphRevisionId");}});
+
+var GetPackageId = Module.findExportByName("kernel.appcore.dll", "GetPackageId")
+Interceptor.attach(GetPackageId, {onLeave: function (args) {send("GetPackageId");}});
+
+var GetPackageInfo = Module.findExportByName("kernel.appcore.dll", "GetPackageInfo")
+Interceptor.attach(GetPackageInfo, {onLeave: function (args) {send("GetPackageInfo");}});
+
+var GetPackageInfo2 = Module.findExportByName("kernel.appcore.dll", "GetPackageInfo2")
+Interceptor.attach(GetPackageInfo2, {onLeave: function (args) {send("GetPackageInfo2");}});
+
+var GetPackageInfo3 = Module.findExportByName("kernel.appcore.dll", "GetPackageInfo3")
+Interceptor.attach(GetPackageInfo3, {onLeave: function (args) {send("GetPackageInfo3");}});
+
+var GetPackageOSMaxVersionTested = Module.findExportByName("kernel.appcore.dll", "GetPackageOSMaxVersionTested")
+Interceptor.attach(GetPackageOSMaxVersionTested, {onLeave: function (args) {send("GetPackageOSMaxVersionTested");}});
+
+var GetPackagePath = Module.findExportByName("kernel.appcore.dll", "GetPackagePath")
+Interceptor.attach(GetPackagePath, {onLeave: function (args) {send("GetPackagePath");}});
+
+var GetPackagePathByFullName = Module.findExportByName("kernel.appcore.dll", "GetPackagePathByFullName")
+Interceptor.attach(GetPackagePathByFullName, {onLeave: function (args) {send("GetPackagePathByFullName");}});
+
+var GetPackagePathByFullName2 = Module.findExportByName("kernel.appcore.dll", "GetPackagePathByFullName2")
+Interceptor.attach(GetPackagePathByFullName2, {onLeave: function (args) {send("GetPackagePathByFullName2");}});
+
+var GetPackagePathOnVolume = Module.findExportByName("kernel.appcore.dll", "GetPackagePathOnVolume")
+Interceptor.attach(GetPackagePathOnVolume, {onLeave: function (args) {send("GetPackagePathOnVolume");}});
+
+var GetPackageProperty = Module.findExportByName("kernel.appcore.dll", "GetPackageProperty")
+Interceptor.attach(GetPackageProperty, {onLeave: function (args) {send("GetPackageProperty");}});
+
+var GetPackagePropertyString = Module.findExportByName("kernel.appcore.dll", "GetPackagePropertyString")
+Interceptor.attach(GetPackagePropertyString, {onLeave: function (args) {send("GetPackagePropertyString");}});
+
+var GetPackageResourcesContext = Module.findExportByName("kernel.appcore.dll", "GetPackageResourcesContext")
+Interceptor.attach(GetPackageResourcesContext, {onLeave: function (args) {send("GetPackageResourcesContext");}});
+
+var GetPackageResourcesProperty = Module.findExportByName("kernel.appcore.dll", "GetPackageResourcesProperty")
+Interceptor.attach(GetPackageResourcesProperty, {onLeave: function (args) {send("GetPackageResourcesProperty");}});
+
+var GetPackageSecurityContext = Module.findExportByName("kernel.appcore.dll", "GetPackageSecurityContext")
+Interceptor.attach(GetPackageSecurityContext, {onLeave: function (args) {send("GetPackageSecurityContext");}});
+
+var GetPackageSecurityProperty = Module.findExportByName("kernel.appcore.dll", "GetPackageSecurityProperty")
+Interceptor.attach(GetPackageSecurityProperty, {onLeave: function (args) {send("GetPackageSecurityProperty");}});
+
+var GetPackageStatus = Module.findExportByName("kernel.appcore.dll", "GetPackageStatus")
+Interceptor.attach(GetPackageStatus, {onLeave: function (args) {send("GetPackageStatus");}});
+
+var GetPackageStatusForUser = Module.findExportByName("kernel.appcore.dll", "GetPackageStatusForUser")
+Interceptor.attach(GetPackageStatusForUser, {onLeave: function (args) {send("GetPackageStatusForUser");}});
+
+var GetPackageStatusForUserSid = Module.findExportByName("kernel.appcore.dll", "GetPackageStatusForUserSid")
+Interceptor.attach(GetPackageStatusForUserSid, {onLeave: function (args) {send("GetPackageStatusForUserSid");}});
+
+var GetPackageTargetPlatformProperty = Module.findExportByName("kernel.appcore.dll", "GetPackageTargetPlatformProperty")
+Interceptor.attach(GetPackageTargetPlatformProperty, {onLeave: function (args) {send("GetPackageTargetPlatformProperty");}});
+
+var GetPackageVolumeSisPath = Module.findExportByName("kernel.appcore.dll", "GetPackageVolumeSisPath")
+Interceptor.attach(GetPackageVolumeSisPath, {onLeave: function (args) {send("GetPackageVolumeSisPath");}});
+
+var GetPackagesByPackageFamily = Module.findExportByName("kernel.appcore.dll", "GetPackagesByPackageFamily")
+Interceptor.attach(GetPackagesByPackageFamily, {onLeave: function (args) {send("GetPackagesByPackageFamily");}});
+
+var GetProtocolAumid = Module.findExportByName("kernel.appcore.dll", "GetProtocolAumid")
+Interceptor.attach(GetProtocolAumid, {onLeave: function (args) {send("GetProtocolAumid");}});
+
+var GetProtocolProperty = Module.findExportByName("kernel.appcore.dll", "GetProtocolProperty")
+Interceptor.attach(GetProtocolProperty, {onLeave: function (args) {send("GetProtocolProperty");}});
+
+var GetPublisherCacheFolder = Module.findExportByName("kernel.appcore.dll", "GetPublisherCacheFolder")
+Interceptor.attach(GetPublisherCacheFolder, {onLeave: function (args) {send("GetPublisherCacheFolder");}});
+
+var GetPublisherRootFolder = Module.findExportByName("kernel.appcore.dll", "GetPublisherRootFolder")
+Interceptor.attach(GetPublisherRootFolder, {onLeave: function (args) {send("GetPublisherRootFolder");}});
+
+var GetResolvedPackageFullNameForPackageDependency = Module.findExportByName("kernel.appcore.dll", "GetResolvedPackageFullNameForPackageDependency")
+Interceptor.attach(GetResolvedPackageFullNameForPackageDependency, {onLeave: function (args) {send("GetResolvedPackageFullNameForPackageDependency");}});
+
+var GetRoamingLastObservedChangeTime = Module.findExportByName("kernel.appcore.dll", "GetRoamingLastObservedChangeTime")
+Interceptor.attach(GetRoamingLastObservedChangeTime, {onLeave: function (args) {send("GetRoamingLastObservedChangeTime");}});
+
+var GetSecureSystemAppDataFolder = Module.findExportByName("kernel.appcore.dll", "GetSecureSystemAppDataFolder")
+Interceptor.attach(GetSecureSystemAppDataFolder, {onLeave: function (args) {send("GetSecureSystemAppDataFolder");}});
+
+var GetSerializedAtomBytes = Module.findExportByName("kernel.appcore.dll", "GetSerializedAtomBytes")
+Interceptor.attach(GetSerializedAtomBytes, {onLeave: function (args) {send("GetSerializedAtomBytes");}});
+
+var GetSharedLocalFolder = Module.findExportByName("kernel.appcore.dll", "GetSharedLocalFolder")
+Interceptor.attach(GetSharedLocalFolder, {onLeave: function (args) {send("GetSharedLocalFolder");}});
+
+var GetStagedPackageOrigin = Module.findExportByName("kernel.appcore.dll", "GetStagedPackageOrigin")
+Interceptor.attach(GetStagedPackageOrigin, {onLeave: function (args) {send("GetStagedPackageOrigin");}});
+
+var GetStagedPackagePathByFullName = Module.findExportByName("kernel.appcore.dll", "GetStagedPackagePathByFullName")
+Interceptor.attach(GetStagedPackagePathByFullName, {onLeave: function (args) {send("GetStagedPackagePathByFullName");}});
+
+var GetStagedPackagePathByFullName2 = Module.findExportByName("kernel.appcore.dll", "GetStagedPackagePathByFullName2")
+Interceptor.attach(GetStagedPackagePathByFullName2, {onLeave: function (args) {send("GetStagedPackagePathByFullName2");}});
+
+var GetStateContainerDepth = Module.findExportByName("kernel.appcore.dll", "GetStateContainerDepth")
+Interceptor.attach(GetStateContainerDepth, {onLeave: function (args) {send("GetStateContainerDepth");}});
+
+var GetStateFolder = Module.findExportByName("kernel.appcore.dll", "GetStateFolder")
+Interceptor.attach(GetStateFolder, {onLeave: function (args) {send("GetStateFolder");}});
+
+var GetStateRootFolder = Module.findExportByName("kernel.appcore.dll", "GetStateRootFolder")
+Interceptor.attach(GetStateRootFolder, {onLeave: function (args) {send("GetStateRootFolder");}});
+
+var GetStateRootFolderBase = Module.findExportByName("kernel.appcore.dll", "GetStateRootFolderBase")
+Interceptor.attach(GetStateRootFolderBase, {onLeave: function (args) {send("GetStateRootFolderBase");}});
+
+var GetStateSettingsFolder = Module.findExportByName("kernel.appcore.dll", "GetStateSettingsFolder")
+Interceptor.attach(GetStateSettingsFolder, {onLeave: function (args) {send("GetStateSettingsFolder");}});
+
+var GetStateVersion = Module.findExportByName("kernel.appcore.dll", "GetStateVersion")
+Interceptor.attach(GetStateVersion, {onLeave: function (args) {send("GetStateVersion");}});
+
+var GetSystemAppDataFolder = Module.findExportByName("kernel.appcore.dll", "GetSystemAppDataFolder")
+Interceptor.attach(GetSystemAppDataFolder, {onLeave: function (args) {send("GetSystemAppDataFolder");}});
+
+var GetSystemAppDataKey = Module.findExportByName("kernel.appcore.dll", "GetSystemAppDataKey")
+Interceptor.attach(GetSystemAppDataKey, {onLeave: function (args) {send("GetSystemAppDataKey");}});
+
+var GetSystemMetadataPath = Module.findExportByName("kernel.appcore.dll", "GetSystemMetadataPath")
+Interceptor.attach(GetSystemMetadataPath, {onLeave: function (args) {send("GetSystemMetadataPath");}});
+
+var GetSystemMetadataPathForPackage = Module.findExportByName("kernel.appcore.dll", "GetSystemMetadataPathForPackage")
+Interceptor.attach(GetSystemMetadataPathForPackage, {onLeave: function (args) {send("GetSystemMetadataPathForPackage");}});
+
+var GetSystemMetadataPathForPackageFamily = Module.findExportByName("kernel.appcore.dll", "GetSystemMetadataPathForPackageFamily")
+Interceptor.attach(GetSystemMetadataPathForPackageFamily, {onLeave: function (args) {send("GetSystemMetadataPathForPackageFamily");}});
+
+var GetSystemStateRootFolder = Module.findExportByName("kernel.appcore.dll", "GetSystemStateRootFolder")
+Interceptor.attach(GetSystemStateRootFolder, {onLeave: function (args) {send("GetSystemStateRootFolder");}});
+
+var GetTargetPlatformContext = Module.findExportByName("kernel.appcore.dll", "GetTargetPlatformContext")
+Interceptor.attach(GetTargetPlatformContext, {onLeave: function (args) {send("GetTargetPlatformContext");}});
+
+var IncrementPackageStatusVersion = Module.findExportByName("kernel.appcore.dll", "IncrementPackageStatusVersion")
+Interceptor.attach(IncrementPackageStatusVersion, {onLeave: function (args) {send("IncrementPackageStatusVersion");}});
+
+var InvalidateAppModelVersionCache = Module.findExportByName("kernel.appcore.dll", "InvalidateAppModelVersionCache")
+Interceptor.attach(InvalidateAppModelVersionCache, {onLeave: function (args) {send("InvalidateAppModelVersionCache");}});
+
+var IsDeveloperModeEnabled = Module.findExportByName("kernel.appcore.dll", "IsDeveloperModeEnabled")
+Interceptor.attach(IsDeveloperModeEnabled, {onLeave: function (args) {send("IsDeveloperModeEnabled");}});
+
+var IsDeveloperModePolicyApplied = Module.findExportByName("kernel.appcore.dll", "IsDeveloperModePolicyApplied")
+Interceptor.attach(IsDeveloperModePolicyApplied, {onLeave: function (args) {send("IsDeveloperModePolicyApplied");}});
+
+var IsMrtResourceRedirectionEnabled = Module.findExportByName("kernel.appcore.dll", "IsMrtResourceRedirectionEnabled")
+Interceptor.attach(IsMrtResourceRedirectionEnabled, {onLeave: function (args) {send("IsMrtResourceRedirectionEnabled");}});
+
+var IsOnDemandRegistrationSupportedForExtensionCategory = Module.findExportByName("kernel.appcore.dll", "IsOnDemandRegistrationSupportedForExtensionCategory")
+Interceptor.attach(IsOnDemandRegistrationSupportedForExtensionCategory, {onLeave: function (args) {send("IsOnDemandRegistrationSupportedForExtensionCategory");}});
+
+var IsSideloadingEnabled = Module.findExportByName("kernel.appcore.dll", "IsSideloadingEnabled")
+Interceptor.attach(IsSideloadingEnabled, {onLeave: function (args) {send("IsSideloadingEnabled");}});
+
+var IsSideloadingPolicyApplied = Module.findExportByName("kernel.appcore.dll", "IsSideloadingPolicyApplied")
+Interceptor.attach(IsSideloadingPolicyApplied, {onLeave: function (args) {send("IsSideloadingPolicyApplied");}});
+
+var OpenPackageInfoByFullName = Module.findExportByName("kernel.appcore.dll", "OpenPackageInfoByFullName")
+Interceptor.attach(OpenPackageInfoByFullName, {onLeave: function (args) {send("OpenPackageInfoByFullName");}});
+
+var OpenPackageInfoByFullNameForMachine = Module.findExportByName("kernel.appcore.dll", "OpenPackageInfoByFullNameForMachine")
+Interceptor.attach(OpenPackageInfoByFullNameForMachine, {onLeave: function (args) {send("OpenPackageInfoByFullNameForMachine");}});
+
+var OpenPackageInfoByFullNameForUser = Module.findExportByName("kernel.appcore.dll", "OpenPackageInfoByFullNameForUser")
+Interceptor.attach(OpenPackageInfoByFullNameForUser, {onLeave: function (args) {send("OpenPackageInfoByFullNameForUser");}});
+
+var OpenState = Module.findExportByName("kernel.appcore.dll", "OpenState")
+Interceptor.attach(OpenState, {onLeave: function (args) {send("OpenState");}});
+
+var OpenStateAtom = Module.findExportByName("kernel.appcore.dll", "OpenStateAtom")
+Interceptor.attach(OpenStateAtom, {onLeave: function (args) {send("OpenStateAtom");}});
+
+var OpenStateExplicit = Module.findExportByName("kernel.appcore.dll", "OpenStateExplicit")
+Interceptor.attach(OpenStateExplicit, {onLeave: function (args) {send("OpenStateExplicit");}});
+
+var OpenStateExplicitForUserSid = Module.findExportByName("kernel.appcore.dll", "OpenStateExplicitForUserSid")
+Interceptor.attach(OpenStateExplicitForUserSid, {onLeave: function (args) {send("OpenStateExplicitForUserSid");}});
+
+var OpenStateExplicitForUserSidString = Module.findExportByName("kernel.appcore.dll", "OpenStateExplicitForUserSidString")
+Interceptor.attach(OpenStateExplicitForUserSidString, {onLeave: function (args) {send("OpenStateExplicitForUserSidString");}});
+
+var OverrideRoamingDataModificationTimesInRange = Module.findExportByName("kernel.appcore.dll", "OverrideRoamingDataModificationTimesInRange")
+Interceptor.attach(OverrideRoamingDataModificationTimesInRange, {onLeave: function (args) {send("OverrideRoamingDataModificationTimesInRange");}});
+
+var PackageFamilyNameFromFullName = Module.findExportByName("kernel.appcore.dll", "PackageFamilyNameFromFullName")
+Interceptor.attach(PackageFamilyNameFromFullName, {onLeave: function (args) {send("PackageFamilyNameFromFullName");}});
+
+var PackageFamilyNameFromFullNameA = Module.findExportByName("kernel.appcore.dll", "PackageFamilyNameFromFullNameA")
+Interceptor.attach(PackageFamilyNameFromFullNameA, {onLeave: function (args) {send("PackageFamilyNameFromFullNameA");}});
+
+var PackageFamilyNameFromId = Module.findExportByName("kernel.appcore.dll", "PackageFamilyNameFromId")
+Interceptor.attach(PackageFamilyNameFromId, {onLeave: function (args) {send("PackageFamilyNameFromId");}});
+
+var PackageFamilyNameFromIdA = Module.findExportByName("kernel.appcore.dll", "PackageFamilyNameFromIdA")
+Interceptor.attach(PackageFamilyNameFromIdA, {onLeave: function (args) {send("PackageFamilyNameFromIdA");}});
+
+var PackageFamilyNameFromProductId = Module.findExportByName("kernel.appcore.dll", "PackageFamilyNameFromProductId")
+Interceptor.attach(PackageFamilyNameFromProductId, {onLeave: function (args) {send("PackageFamilyNameFromProductId");}});
+
+var PackageFullNameFromId = Module.findExportByName("kernel.appcore.dll", "PackageFullNameFromId")
+Interceptor.attach(PackageFullNameFromId, {onLeave: function (args) {send("PackageFullNameFromId");}});
+
+var PackageFullNameFromIdA = Module.findExportByName("kernel.appcore.dll", "PackageFullNameFromIdA")
+Interceptor.attach(PackageFullNameFromIdA, {onLeave: function (args) {send("PackageFullNameFromIdA");}});
+
+var PackageFullNameFromProductId = Module.findExportByName("kernel.appcore.dll", "PackageFullNameFromProductId")
+Interceptor.attach(PackageFullNameFromProductId, {onLeave: function (args) {send("PackageFullNameFromProductId");}});
+
+var PackageIdFromFullName = Module.findExportByName("kernel.appcore.dll", "PackageIdFromFullName")
+Interceptor.attach(PackageIdFromFullName, {onLeave: function (args) {send("PackageIdFromFullName");}});
+
+var PackageIdFromFullNameA = Module.findExportByName("kernel.appcore.dll", "PackageIdFromFullNameA")
+Interceptor.attach(PackageIdFromFullNameA, {onLeave: function (args) {send("PackageIdFromFullNameA");}});
+
+var PackageIdFromProductId = Module.findExportByName("kernel.appcore.dll", "PackageIdFromProductId")
+Interceptor.attach(PackageIdFromProductId, {onLeave: function (args) {send("PackageIdFromProductId");}});
+
+var PackageIsEffectiveSupportedUsersMultiple = Module.findExportByName("kernel.appcore.dll", "PackageIsEffectiveSupportedUsersMultiple")
+Interceptor.attach(PackageIsEffectiveSupportedUsersMultiple, {onLeave: function (args) {send("PackageIsEffectiveSupportedUsersMultiple");}});
+
+var PackageNameAndPublisherIdFromFamilyName = Module.findExportByName("kernel.appcore.dll", "PackageNameAndPublisherIdFromFamilyName")
+Interceptor.attach(PackageNameAndPublisherIdFromFamilyName, {onLeave: function (args) {send("PackageNameAndPublisherIdFromFamilyName");}});
+
+var PackageNameAndPublisherIdFromFamilyNameA = Module.findExportByName("kernel.appcore.dll", "PackageNameAndPublisherIdFromFamilyNameA")
+Interceptor.attach(PackageNameAndPublisherIdFromFamilyNameA, {onLeave: function (args) {send("PackageNameAndPublisherIdFromFamilyNameA");}});
+
+var PackagePublisherIdFromPublisher = Module.findExportByName("kernel.appcore.dll", "PackagePublisherIdFromPublisher")
+Interceptor.attach(PackagePublisherIdFromPublisher, {onLeave: function (args) {send("PackagePublisherIdFromPublisher");}});
+
+var PackageRelativeApplicationIdFromProductId = Module.findExportByName("kernel.appcore.dll", "PackageRelativeApplicationIdFromProductId")
+Interceptor.attach(PackageRelativeApplicationIdFromProductId, {onLeave: function (args) {send("PackageRelativeApplicationIdFromProductId");}});
+
+var PackageSidFromFamilyName = Module.findExportByName("kernel.appcore.dll", "PackageSidFromFamilyName")
+Interceptor.attach(PackageSidFromFamilyName, {onLeave: function (args) {send("PackageSidFromFamilyName");}});
+
+var PackageSidFromProductId = Module.findExportByName("kernel.appcore.dll", "PackageSidFromProductId")
+Interceptor.attach(PackageSidFromProductId, {onLeave: function (args) {send("PackageSidFromProductId");}});
+
+var ParseApplicationUserModelId = Module.findExportByName("kernel.appcore.dll", "ParseApplicationUserModelId")
+Interceptor.attach(ParseApplicationUserModelId, {onLeave: function (args) {send("ParseApplicationUserModelId");}});
+
+var ParseApplicationUserModelIdA = Module.findExportByName("kernel.appcore.dll", "ParseApplicationUserModelIdA")
+Interceptor.attach(ParseApplicationUserModelIdA, {onLeave: function (args) {send("ParseApplicationUserModelIdA");}});
+
+var ProductIdFromPackageFamilyName = Module.findExportByName("kernel.appcore.dll", "ProductIdFromPackageFamilyName")
+Interceptor.attach(ProductIdFromPackageFamilyName, {onLeave: function (args) {send("ProductIdFromPackageFamilyName");}});
+
+var PsmActivateApplicationByToken = Module.findExportByName("kernel.appcore.dll", "PsmActivateApplicationByToken")
+Interceptor.attach(PsmActivateApplicationByToken, {onLeave: function (args) {send("PsmActivateApplicationByToken");}});
+
+var PsmAdjustActivationToken = Module.findExportByName("kernel.appcore.dll", "PsmAdjustActivationToken")
+Interceptor.attach(PsmAdjustActivationToken, {onLeave: function (args) {send("PsmAdjustActivationToken");}});
+
+var PsmAdjustActivationTokenEx = Module.findExportByName("kernel.appcore.dll", "PsmAdjustActivationTokenEx")
+Interceptor.attach(PsmAdjustActivationTokenEx, {onLeave: function (args) {send("PsmAdjustActivationTokenEx");}});
+
+var PsmAdjustActivationTokenEx2 = Module.findExportByName("kernel.appcore.dll", "PsmAdjustActivationTokenEx2")
+Interceptor.attach(PsmAdjustActivationTokenEx2, {onLeave: function (args) {send("PsmAdjustActivationTokenEx2");}});
+
+var PsmAdjustActivationTokenPkgClaim = Module.findExportByName("kernel.appcore.dll", "PsmAdjustActivationTokenPkgClaim")
+Interceptor.attach(PsmAdjustActivationTokenPkgClaim, {onLeave: function (args) {send("PsmAdjustActivationTokenPkgClaim");}});
+
+var PsmAdjustActivationTokenWithDynamicId = Module.findExportByName("kernel.appcore.dll", "PsmAdjustActivationTokenWithDynamicId")
+Interceptor.attach(PsmAdjustActivationTokenWithDynamicId, {onLeave: function (args) {send("PsmAdjustActivationTokenWithDynamicId");}});
+
+var PsmCreateBrokerToken = Module.findExportByName("kernel.appcore.dll", "PsmCreateBrokerToken")
+Interceptor.attach(PsmCreateBrokerToken, {onLeave: function (args) {send("PsmCreateBrokerToken");}});
+
+var PsmCreateMatchToken = Module.findExportByName("kernel.appcore.dll", "PsmCreateMatchToken")
+Interceptor.attach(PsmCreateMatchToken, {onLeave: function (args) {send("PsmCreateMatchToken");}});
+
+var PsmQueryBackgroundActivationType = Module.findExportByName("kernel.appcore.dll", "PsmQueryBackgroundActivationType")
+Interceptor.attach(PsmQueryBackgroundActivationType, {onLeave: function (args) {send("PsmQueryBackgroundActivationType");}});
+
+var PsmRegisterApplicationProcess = Module.findExportByName("kernel.appcore.dll", "PsmRegisterApplicationProcess")
+Interceptor.attach(PsmRegisterApplicationProcess, {onLeave: function (args) {send("PsmRegisterApplicationProcess");}});
+
+var PsmRegisterDesktopProcess = Module.findExportByName("kernel.appcore.dll", "PsmRegisterDesktopProcess")
+Interceptor.attach(PsmRegisterDesktopProcess, {onLeave: function (args) {send("PsmRegisterDesktopProcess");}});
+
+var PsmRegisterServiceProcess = Module.findExportByName("kernel.appcore.dll", "PsmRegisterServiceProcess")
+Interceptor.attach(PsmRegisterServiceProcess, {onLeave: function (args) {send("PsmRegisterServiceProcess");}});
+
+var PublishStateChangeNotification = Module.findExportByName("kernel.appcore.dll", "PublishStateChangeNotification")
+Interceptor.attach(PublishStateChangeNotification, {onLeave: function (args) {send("PublishStateChangeNotification");}});
+
+var PublisherFromPackageFullName = Module.findExportByName("kernel.appcore.dll", "PublisherFromPackageFullName")
+Interceptor.attach(PublisherFromPackageFullName, {onLeave: function (args) {send("PublisherFromPackageFullName");}});
+
+var QueryAdvertisingId = Module.findExportByName("kernel.appcore.dll", "QueryAdvertisingId")
+Interceptor.attach(QueryAdvertisingId, {onLeave: function (args) {send("QueryAdvertisingId");}});
+
+var QueryAdvertisingIdStatus = Module.findExportByName("kernel.appcore.dll", "QueryAdvertisingIdStatus")
+Interceptor.attach(QueryAdvertisingIdStatus, {onLeave: function (args) {send("QueryAdvertisingIdStatus");}});
+
+var QueryAdvertisingIdStatusForUser = Module.findExportByName("kernel.appcore.dll", "QueryAdvertisingIdStatusForUser")
+Interceptor.attach(QueryAdvertisingIdStatusForUser, {onLeave: function (args) {send("QueryAdvertisingIdStatusForUser");}});
+
+var QueryStateAtomValueInfo = Module.findExportByName("kernel.appcore.dll", "QueryStateAtomValueInfo")
+Interceptor.attach(QueryStateAtomValueInfo, {onLeave: function (args) {send("QueryStateAtomValueInfo");}});
+
+var QueryStateContainerCreatedNew = Module.findExportByName("kernel.appcore.dll", "QueryStateContainerCreatedNew")
+Interceptor.attach(QueryStateContainerCreatedNew, {onLeave: function (args) {send("QueryStateContainerCreatedNew");}});
+
+var QueryStateContainerItemInfo = Module.findExportByName("kernel.appcore.dll", "QueryStateContainerItemInfo")
+Interceptor.attach(QueryStateContainerItemInfo, {onLeave: function (args) {send("QueryStateContainerItemInfo");}});
+
+var ReadStateAtomValue = Module.findExportByName("kernel.appcore.dll", "ReadStateAtomValue")
+Interceptor.attach(ReadStateAtomValue, {onLeave: function (args) {send("ReadStateAtomValue");}});
+
+var ReadStateContainerValue = Module.findExportByName("kernel.appcore.dll", "ReadStateContainerValue")
+Interceptor.attach(ReadStateContainerValue, {onLeave: function (args) {send("ReadStateContainerValue");}});
+
+var RefreshPackageInfo = Module.findExportByName("kernel.appcore.dll", "RefreshPackageInfo")
+Interceptor.attach(RefreshPackageInfo, {onLeave: function (args) {send("RefreshPackageInfo");}});
+
+var RegisterStateChangeNotification = Module.findExportByName("kernel.appcore.dll", "RegisterStateChangeNotification")
+Interceptor.attach(RegisterStateChangeNotification, {onLeave: function (args) {send("RegisterStateChangeNotification");}});
+
+var RegisterStateLock = Module.findExportByName("kernel.appcore.dll", "RegisterStateLock")
+Interceptor.attach(RegisterStateLock, {onLeave: function (args) {send("RegisterStateLock");}});
+
+var ReleaseStateLock = Module.findExportByName("kernel.appcore.dll", "ReleaseStateLock")
+Interceptor.attach(ReleaseStateLock, {onLeave: function (args) {send("ReleaseStateLock");}});
+
+var RemoveExtensionProgIds = Module.findExportByName("kernel.appcore.dll", "RemoveExtensionProgIds")
+Interceptor.attach(RemoveExtensionProgIds, {onLeave: function (args) {send("RemoveExtensionProgIds");}});
+
+var RemovePackageDependency = Module.findExportByName("kernel.appcore.dll", "RemovePackageDependency")
+Interceptor.attach(RemovePackageDependency, {onLeave: function (args) {send("RemovePackageDependency");}});
+
+var RemovePackageStatus = Module.findExportByName("kernel.appcore.dll", "RemovePackageStatus")
+Interceptor.attach(RemovePackageStatus, {onLeave: function (args) {send("RemovePackageStatus");}});
+
+var RemovePackageStatusForUser = Module.findExportByName("kernel.appcore.dll", "RemovePackageStatusForUser")
+Interceptor.attach(RemovePackageStatusForUser, {onLeave: function (args) {send("RemovePackageStatusForUser");}});
+
+var ResetState = Module.findExportByName("kernel.appcore.dll", "ResetState")
+Interceptor.attach(ResetState, {onLeave: function (args) {send("ResetState");}});
+
+var SaveAlternatePackageRootPath = Module.findExportByName("kernel.appcore.dll", "SaveAlternatePackageRootPath")
+Interceptor.attach(SaveAlternatePackageRootPath, {onLeave: function (args) {send("SaveAlternatePackageRootPath");}});
+
+var SaveStateRootFolderPath = Module.findExportByName("kernel.appcore.dll", "SaveStateRootFolderPath")
+Interceptor.attach(SaveStateRootFolderPath, {onLeave: function (args) {send("SaveStateRootFolderPath");}});
+
+var SetExtensionProperty = Module.findExportByName("kernel.appcore.dll", "SetExtensionProperty")
+Interceptor.attach(SetExtensionProperty, {onLeave: function (args) {send("SetExtensionProperty");}});
+
+var SetIsDeveloperModeEnabled = Module.findExportByName("kernel.appcore.dll", "SetIsDeveloperModeEnabled")
+Interceptor.attach(SetIsDeveloperModeEnabled, {onLeave: function (args) {send("SetIsDeveloperModeEnabled");}});
+
+var SetIsSideloadingEnabled = Module.findExportByName("kernel.appcore.dll", "SetIsSideloadingEnabled")
+Interceptor.attach(SetIsSideloadingEnabled, {onLeave: function (args) {send("SetIsSideloadingEnabled");}});
+
+var SetProtocolProperty = Module.findExportByName("kernel.appcore.dll", "SetProtocolProperty")
+Interceptor.attach(SetProtocolProperty, {onLeave: function (args) {send("SetProtocolProperty");}});
+
+var SetRoamingLastObservedChangeTime = Module.findExportByName("kernel.appcore.dll", "SetRoamingLastObservedChangeTime")
+Interceptor.attach(SetRoamingLastObservedChangeTime, {onLeave: function (args) {send("SetRoamingLastObservedChangeTime");}});
+
+var SetStateVersion = Module.findExportByName("kernel.appcore.dll", "SetStateVersion")
+Interceptor.attach(SetStateVersion, {onLeave: function (args) {send("SetStateVersion");}});
+
+var SharedLocalIsEnabled = Module.findExportByName("kernel.appcore.dll", "SharedLocalIsEnabled")
+Interceptor.attach(SharedLocalIsEnabled, {onLeave: function (args) {send("SharedLocalIsEnabled");}});
+
+var SubscribeStateChangeNotification = Module.findExportByName("kernel.appcore.dll", "SubscribeStateChangeNotification")
+Interceptor.attach(SubscribeStateChangeNotification, {onLeave: function (args) {send("SubscribeStateChangeNotification");}});
+
+var TryCreatePackageDependency = Module.findExportByName("kernel.appcore.dll", "TryCreatePackageDependency")
+Interceptor.attach(TryCreatePackageDependency, {onLeave: function (args) {send("TryCreatePackageDependency");}});
+
+var UnregisterStateChangeNotification = Module.findExportByName("kernel.appcore.dll", "UnregisterStateChangeNotification")
+Interceptor.attach(UnregisterStateChangeNotification, {onLeave: function (args) {send("UnregisterStateChangeNotification");}});
+
+var UnregisterStateLock = Module.findExportByName("kernel.appcore.dll", "UnregisterStateLock")
+Interceptor.attach(UnregisterStateLock, {onLeave: function (args) {send("UnregisterStateLock");}});
+
+var UnsubscribeStateChangeNotification = Module.findExportByName("kernel.appcore.dll", "UnsubscribeStateChangeNotification")
+Interceptor.attach(UnsubscribeStateChangeNotification, {onLeave: function (args) {send("UnsubscribeStateChangeNotification");}});
+
+var UpdatePackageStatus = Module.findExportByName("kernel.appcore.dll", "UpdatePackageStatus")
+Interceptor.attach(UpdatePackageStatus, {onLeave: function (args) {send("UpdatePackageStatus");}});
+
+var UpdatePackageStatusForUser = Module.findExportByName("kernel.appcore.dll", "UpdatePackageStatusForUser")
+Interceptor.attach(UpdatePackageStatusForUser, {onLeave: function (args) {send("UpdatePackageStatusForUser");}});
+
+var UpdatePackageStatusForUserSid = Module.findExportByName("kernel.appcore.dll", "UpdatePackageStatusForUserSid")
+Interceptor.attach(UpdatePackageStatusForUserSid, {onLeave: function (args) {send("UpdatePackageStatusForUserSid");}});
+
+var VerifyApplicationUserModelId = Module.findExportByName("kernel.appcore.dll", "VerifyApplicationUserModelId")
+Interceptor.attach(VerifyApplicationUserModelId, {onLeave: function (args) {send("VerifyApplicationUserModelId");}});
+
+var VerifyApplicationUserModelIdA = Module.findExportByName("kernel.appcore.dll", "VerifyApplicationUserModelIdA")
+Interceptor.attach(VerifyApplicationUserModelIdA, {onLeave: function (args) {send("VerifyApplicationUserModelIdA");}});
+
+var VerifyPackageFamilyName = Module.findExportByName("kernel.appcore.dll", "VerifyPackageFamilyName")
+Interceptor.attach(VerifyPackageFamilyName, {onLeave: function (args) {send("VerifyPackageFamilyName");}});
+
+var VerifyPackageFamilyNameA = Module.findExportByName("kernel.appcore.dll", "VerifyPackageFamilyNameA")
+Interceptor.attach(VerifyPackageFamilyNameA, {onLeave: function (args) {send("VerifyPackageFamilyNameA");}});
+
+var VerifyPackageFullName = Module.findExportByName("kernel.appcore.dll", "VerifyPackageFullName")
+Interceptor.attach(VerifyPackageFullName, {onLeave: function (args) {send("VerifyPackageFullName");}});
+
+var VerifyPackageFullNameA = Module.findExportByName("kernel.appcore.dll", "VerifyPackageFullNameA")
+Interceptor.attach(VerifyPackageFullNameA, {onLeave: function (args) {send("VerifyPackageFullNameA");}});
+
+var VerifyPackageId = Module.findExportByName("kernel.appcore.dll", "VerifyPackageId")
+Interceptor.attach(VerifyPackageId, {onLeave: function (args) {send("VerifyPackageId");}});
+
+var VerifyPackageIdA = Module.findExportByName("kernel.appcore.dll", "VerifyPackageIdA")
+Interceptor.attach(VerifyPackageIdA, {onLeave: function (args) {send("VerifyPackageIdA");}});
+
+var VerifyPackagePublisher = Module.findExportByName("kernel.appcore.dll", "VerifyPackagePublisher")
+Interceptor.attach(VerifyPackagePublisher, {onLeave: function (args) {send("VerifyPackagePublisher");}});
+
+var VerifyPackagePublisherA = Module.findExportByName("kernel.appcore.dll", "VerifyPackagePublisherA")
+Interceptor.attach(VerifyPackagePublisherA, {onLeave: function (args) {send("VerifyPackagePublisherA");}});
+
+var VerifyPackageRelativeApplicationId = Module.findExportByName("kernel.appcore.dll", "VerifyPackageRelativeApplicationId")
+Interceptor.attach(VerifyPackageRelativeApplicationId, {onLeave: function (args) {send("VerifyPackageRelativeApplicationId");}});
+
+var VerifyPackageRelativeApplicationIdA = Module.findExportByName("kernel.appcore.dll", "VerifyPackageRelativeApplicationIdA")
+Interceptor.attach(VerifyPackageRelativeApplicationIdA, {onLeave: function (args) {send("VerifyPackageRelativeApplicationIdA");}});
+
+var WriteStateAtomValue = Module.findExportByName("kernel.appcore.dll", "WriteStateAtomValue")
+Interceptor.attach(WriteStateAtomValue, {onLeave: function (args) {send("WriteStateAtomValue");}});
+
+var WriteStateContainerValue = Module.findExportByName("kernel.appcore.dll", "WriteStateContainerValue")
+Interceptor.attach(WriteStateContainerValue, {onLeave: function (args) {send("WriteStateContainerValue");}});
+

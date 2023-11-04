@@ -1,0 +1,177 @@
+var GenerateIPSECPolicy = Module.findExportByName("polstore.dll", "GenerateIPSECPolicy")
+Interceptor.attach(GenerateIPSECPolicy, {onLeave: function (args) {send("GenerateIPSECPolicy");}});
+
+var IPSecAllocPolMem = Module.findExportByName("polstore.dll", "IPSecAllocPolMem")
+Interceptor.attach(IPSecAllocPolMem, {onLeave: function (args) {send("IPSecAllocPolMem");}});
+
+var IPSecAllocPolStr = Module.findExportByName("polstore.dll", "IPSecAllocPolStr")
+Interceptor.attach(IPSecAllocPolStr, {onLeave: function (args) {send("IPSecAllocPolStr");}});
+
+var IPSecAssignPolicy = Module.findExportByName("polstore.dll", "IPSecAssignPolicy")
+Interceptor.attach(IPSecAssignPolicy, {onLeave: function (args) {send("IPSecAssignPolicy");}});
+
+var IPSecClearWMIStore = Module.findExportByName("polstore.dll", "IPSecClearWMIStore")
+Interceptor.attach(IPSecClearWMIStore, {onLeave: function (args) {send("IPSecClearWMIStore");}});
+
+var IPSecClosePolicyStore = Module.findExportByName("polstore.dll", "IPSecClosePolicyStore")
+Interceptor.attach(IPSecClosePolicyStore, {onLeave: function (args) {send("IPSecClosePolicyStore");}});
+
+var IPSecCopyAuthMethod = Module.findExportByName("polstore.dll", "IPSecCopyAuthMethod")
+Interceptor.attach(IPSecCopyAuthMethod, {onLeave: function (args) {send("IPSecCopyAuthMethod");}});
+
+var IPSecCopyFilterData = Module.findExportByName("polstore.dll", "IPSecCopyFilterData")
+Interceptor.attach(IPSecCopyFilterData, {onLeave: function (args) {send("IPSecCopyFilterData");}});
+
+var IPSecCopyFilterSpec = Module.findExportByName("polstore.dll", "IPSecCopyFilterSpec")
+Interceptor.attach(IPSecCopyFilterSpec, {onLeave: function (args) {send("IPSecCopyFilterSpec");}});
+
+var IPSecCopyISAKMPData = Module.findExportByName("polstore.dll", "IPSecCopyISAKMPData")
+Interceptor.attach(IPSecCopyISAKMPData, {onLeave: function (args) {send("IPSecCopyISAKMPData");}});
+
+var IPSecCopyNFAData = Module.findExportByName("polstore.dll", "IPSecCopyNFAData")
+Interceptor.attach(IPSecCopyNFAData, {onLeave: function (args) {send("IPSecCopyNFAData");}});
+
+var IPSecCopyNegPolData = Module.findExportByName("polstore.dll", "IPSecCopyNegPolData")
+Interceptor.attach(IPSecCopyNegPolData, {onLeave: function (args) {send("IPSecCopyNegPolData");}});
+
+var IPSecCopyPolicyData = Module.findExportByName("polstore.dll", "IPSecCopyPolicyData")
+Interceptor.attach(IPSecCopyPolicyData, {onLeave: function (args) {send("IPSecCopyPolicyData");}});
+
+var IPSecCreateFilterData = Module.findExportByName("polstore.dll", "IPSecCreateFilterData")
+Interceptor.attach(IPSecCreateFilterData, {onLeave: function (args) {send("IPSecCreateFilterData");}});
+
+var IPSecCreateISAKMPData = Module.findExportByName("polstore.dll", "IPSecCreateISAKMPData")
+Interceptor.attach(IPSecCreateISAKMPData, {onLeave: function (args) {send("IPSecCreateISAKMPData");}});
+
+var IPSecCreateNFAData = Module.findExportByName("polstore.dll", "IPSecCreateNFAData")
+Interceptor.attach(IPSecCreateNFAData, {onLeave: function (args) {send("IPSecCreateNFAData");}});
+
+var IPSecCreateNegPolData = Module.findExportByName("polstore.dll", "IPSecCreateNegPolData")
+Interceptor.attach(IPSecCreateNegPolData, {onLeave: function (args) {send("IPSecCreateNegPolData");}});
+
+var IPSecCreatePolicyData = Module.findExportByName("polstore.dll", "IPSecCreatePolicyData")
+Interceptor.attach(IPSecCreatePolicyData, {onLeave: function (args) {send("IPSecCreatePolicyData");}});
+
+var IPSecDeleteFilterData = Module.findExportByName("polstore.dll", "IPSecDeleteFilterData")
+Interceptor.attach(IPSecDeleteFilterData, {onLeave: function (args) {send("IPSecDeleteFilterData");}});
+
+var IPSecDeleteISAKMPData = Module.findExportByName("polstore.dll", "IPSecDeleteISAKMPData")
+Interceptor.attach(IPSecDeleteISAKMPData, {onLeave: function (args) {send("IPSecDeleteISAKMPData");}});
+
+var IPSecDeleteNFAData = Module.findExportByName("polstore.dll", "IPSecDeleteNFAData")
+Interceptor.attach(IPSecDeleteNFAData, {onLeave: function (args) {send("IPSecDeleteNFAData");}});
+
+var IPSecDeleteNegPolData = Module.findExportByName("polstore.dll", "IPSecDeleteNegPolData")
+Interceptor.attach(IPSecDeleteNegPolData, {onLeave: function (args) {send("IPSecDeleteNegPolData");}});
+
+var IPSecDeletePolicyData = Module.findExportByName("polstore.dll", "IPSecDeletePolicyData")
+Interceptor.attach(IPSecDeletePolicyData, {onLeave: function (args) {send("IPSecDeletePolicyData");}});
+
+var IPSecEnumFilterData = Module.findExportByName("polstore.dll", "IPSecEnumFilterData")
+Interceptor.attach(IPSecEnumFilterData, {onLeave: function (args) {send("IPSecEnumFilterData");}});
+
+var IPSecEnumISAKMPData = Module.findExportByName("polstore.dll", "IPSecEnumISAKMPData")
+Interceptor.attach(IPSecEnumISAKMPData, {onLeave: function (args) {send("IPSecEnumISAKMPData");}});
+
+var IPSecEnumNFAData = Module.findExportByName("polstore.dll", "IPSecEnumNFAData")
+Interceptor.attach(IPSecEnumNFAData, {onLeave: function (args) {send("IPSecEnumNFAData");}});
+
+var IPSecEnumNegPolData = Module.findExportByName("polstore.dll", "IPSecEnumNegPolData")
+Interceptor.attach(IPSecEnumNegPolData, {onLeave: function (args) {send("IPSecEnumNegPolData");}});
+
+var IPSecEnumPolicyData = Module.findExportByName("polstore.dll", "IPSecEnumPolicyData")
+Interceptor.attach(IPSecEnumPolicyData, {onLeave: function (args) {send("IPSecEnumPolicyData");}});
+
+var IPSecExportPolicies = Module.findExportByName("polstore.dll", "IPSecExportPolicies")
+Interceptor.attach(IPSecExportPolicies, {onLeave: function (args) {send("IPSecExportPolicies");}});
+
+var IPSecFreeFilterData = Module.findExportByName("polstore.dll", "IPSecFreeFilterData")
+Interceptor.attach(IPSecFreeFilterData, {onLeave: function (args) {send("IPSecFreeFilterData");}});
+
+var IPSecFreeFilterSpec = Module.findExportByName("polstore.dll", "IPSecFreeFilterSpec")
+Interceptor.attach(IPSecFreeFilterSpec, {onLeave: function (args) {send("IPSecFreeFilterSpec");}});
+
+var IPSecFreeFilterSpecs = Module.findExportByName("polstore.dll", "IPSecFreeFilterSpecs")
+Interceptor.attach(IPSecFreeFilterSpecs, {onLeave: function (args) {send("IPSecFreeFilterSpecs");}});
+
+var IPSecFreeISAKMPData = Module.findExportByName("polstore.dll", "IPSecFreeISAKMPData")
+Interceptor.attach(IPSecFreeISAKMPData, {onLeave: function (args) {send("IPSecFreeISAKMPData");}});
+
+var IPSecFreeMulFilterData = Module.findExportByName("polstore.dll", "IPSecFreeMulFilterData")
+Interceptor.attach(IPSecFreeMulFilterData, {onLeave: function (args) {send("IPSecFreeMulFilterData");}});
+
+var IPSecFreeMulISAKMPData = Module.findExportByName("polstore.dll", "IPSecFreeMulISAKMPData")
+Interceptor.attach(IPSecFreeMulISAKMPData, {onLeave: function (args) {send("IPSecFreeMulISAKMPData");}});
+
+var IPSecFreeMulNFAData = Module.findExportByName("polstore.dll", "IPSecFreeMulNFAData")
+Interceptor.attach(IPSecFreeMulNFAData, {onLeave: function (args) {send("IPSecFreeMulNFAData");}});
+
+var IPSecFreeMulNegPolData = Module.findExportByName("polstore.dll", "IPSecFreeMulNegPolData")
+Interceptor.attach(IPSecFreeMulNegPolData, {onLeave: function (args) {send("IPSecFreeMulNegPolData");}});
+
+var IPSecFreeMulPolicyData = Module.findExportByName("polstore.dll", "IPSecFreeMulPolicyData")
+Interceptor.attach(IPSecFreeMulPolicyData, {onLeave: function (args) {send("IPSecFreeMulPolicyData");}});
+
+var IPSecFreeNFAData = Module.findExportByName("polstore.dll", "IPSecFreeNFAData")
+Interceptor.attach(IPSecFreeNFAData, {onLeave: function (args) {send("IPSecFreeNFAData");}});
+
+var IPSecFreeNegPolData = Module.findExportByName("polstore.dll", "IPSecFreeNegPolData")
+Interceptor.attach(IPSecFreeNegPolData, {onLeave: function (args) {send("IPSecFreeNegPolData");}});
+
+var IPSecFreePolStr = Module.findExportByName("polstore.dll", "IPSecFreePolStr")
+Interceptor.attach(IPSecFreePolStr, {onLeave: function (args) {send("IPSecFreePolStr");}});
+
+var IPSecFreePolicyData = Module.findExportByName("polstore.dll", "IPSecFreePolicyData")
+Interceptor.attach(IPSecFreePolicyData, {onLeave: function (args) {send("IPSecFreePolicyData");}});
+
+var IPSecGetAssignedPolicyData = Module.findExportByName("polstore.dll", "IPSecGetAssignedPolicyData")
+Interceptor.attach(IPSecGetAssignedPolicyData, {onLeave: function (args) {send("IPSecGetAssignedPolicyData");}});
+
+var IPSecGetFilterData = Module.findExportByName("polstore.dll", "IPSecGetFilterData")
+Interceptor.attach(IPSecGetFilterData, {onLeave: function (args) {send("IPSecGetFilterData");}});
+
+var IPSecGetISAKMPData = Module.findExportByName("polstore.dll", "IPSecGetISAKMPData")
+Interceptor.attach(IPSecGetISAKMPData, {onLeave: function (args) {send("IPSecGetISAKMPData");}});
+
+var IPSecGetNegPolData = Module.findExportByName("polstore.dll", "IPSecGetNegPolData")
+Interceptor.attach(IPSecGetNegPolData, {onLeave: function (args) {send("IPSecGetNegPolData");}});
+
+var IPSecImportPolicies = Module.findExportByName("polstore.dll", "IPSecImportPolicies")
+Interceptor.attach(IPSecImportPolicies, {onLeave: function (args) {send("IPSecImportPolicies");}});
+
+var IPSecIsDomainPolicyAssigned = Module.findExportByName("polstore.dll", "IPSecIsDomainPolicyAssigned")
+Interceptor.attach(IPSecIsDomainPolicyAssigned, {onLeave: function (args) {send("IPSecIsDomainPolicyAssigned");}});
+
+var IPSecOpenPolicyStore = Module.findExportByName("polstore.dll", "IPSecOpenPolicyStore")
+Interceptor.attach(IPSecOpenPolicyStore, {onLeave: function (args) {send("IPSecOpenPolicyStore");}});
+
+var IPSecSetFilterData = Module.findExportByName("polstore.dll", "IPSecSetFilterData")
+Interceptor.attach(IPSecSetFilterData, {onLeave: function (args) {send("IPSecSetFilterData");}});
+
+var IPSecSetISAKMPData = Module.findExportByName("polstore.dll", "IPSecSetISAKMPData")
+Interceptor.attach(IPSecSetISAKMPData, {onLeave: function (args) {send("IPSecSetISAKMPData");}});
+
+var IPSecSetNFAData = Module.findExportByName("polstore.dll", "IPSecSetNFAData")
+Interceptor.attach(IPSecSetNFAData, {onLeave: function (args) {send("IPSecSetNFAData");}});
+
+var IPSecSetNegPolData = Module.findExportByName("polstore.dll", "IPSecSetNegPolData")
+Interceptor.attach(IPSecSetNegPolData, {onLeave: function (args) {send("IPSecSetNegPolData");}});
+
+var IPSecSetPolicyData = Module.findExportByName("polstore.dll", "IPSecSetPolicyData")
+Interceptor.attach(IPSecSetPolicyData, {onLeave: function (args) {send("IPSecSetPolicyData");}});
+
+var IPSecUnassignPolicy = Module.findExportByName("polstore.dll", "IPSecUnassignPolicy")
+Interceptor.attach(IPSecUnassignPolicy, {onLeave: function (args) {send("IPSecUnassignPolicy");}});
+
+var ProcessIPSECPolicyEx = Module.findExportByName("polstore.dll", "ProcessIPSECPolicyEx")
+Interceptor.attach(ProcessIPSECPolicyEx, {onLeave: function (args) {send("ProcessIPSECPolicyEx");}});
+
+var RegCreateNFAData = Module.findExportByName("polstore.dll", "RegCreateNFAData")
+Interceptor.attach(RegCreateNFAData, {onLeave: function (args) {send("RegCreateNFAData");}});
+
+var RegCreatePolicyData = Module.findExportByName("polstore.dll", "RegCreatePolicyData")
+Interceptor.attach(RegCreatePolicyData, {onLeave: function (args) {send("RegCreatePolicyData");}});
+
+var WriteDirectoryPolicyToWMI = Module.findExportByName("polstore.dll", "WriteDirectoryPolicyToWMI")
+Interceptor.attach(WriteDirectoryPolicyToWMI, {onLeave: function (args) {send("WriteDirectoryPolicyToWMI");}});
+

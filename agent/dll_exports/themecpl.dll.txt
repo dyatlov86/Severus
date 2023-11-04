@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("themecpl.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("themecpl.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var OpenThemeActionW = Module.findExportByName("themecpl.dll", "OpenThemeActionW")
+Interceptor.attach(OpenThemeActionW, {onLeave: function (args) {send("OpenThemeActionW");}});
+

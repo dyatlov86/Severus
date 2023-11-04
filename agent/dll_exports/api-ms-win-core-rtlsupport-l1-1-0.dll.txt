@@ -1,0 +1,42 @@
+var RtlAddFunctionTable = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlAddFunctionTable")
+Interceptor.attach(RtlAddFunctionTable, {onLeave: function (args) {send("RtlAddFunctionTable");}});
+
+var RtlCaptureContext = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlCaptureContext")
+Interceptor.attach(RtlCaptureContext, {onLeave: function (args) {send("RtlCaptureContext");}});
+
+var RtlCaptureStackBackTrace = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlCaptureStackBackTrace")
+Interceptor.attach(RtlCaptureStackBackTrace, {onLeave: function (args) {send("RtlCaptureStackBackTrace");}});
+
+var RtlCompareMemory = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlCompareMemory")
+Interceptor.attach(RtlCompareMemory, {onLeave: function (args) {send("RtlCompareMemory");}});
+
+var RtlDeleteFunctionTable = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlDeleteFunctionTable")
+Interceptor.attach(RtlDeleteFunctionTable, {onLeave: function (args) {send("RtlDeleteFunctionTable");}});
+
+var RtlInstallFunctionTableCallback = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlInstallFunctionTableCallback")
+Interceptor.attach(RtlInstallFunctionTableCallback, {onLeave: function (args) {send("RtlInstallFunctionTableCallback");}});
+
+var RtlIsEcCode = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlIsEcCode")
+Interceptor.attach(RtlIsEcCode, {onLeave: function (args) {send("RtlIsEcCode");}});
+
+var RtlLookupFunctionEntry = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlLookupFunctionEntry")
+Interceptor.attach(RtlLookupFunctionEntry, {onLeave: function (args) {send("RtlLookupFunctionEntry");}});
+
+var RtlPcToFileHeader = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlPcToFileHeader")
+Interceptor.attach(RtlPcToFileHeader, {onLeave: function (args) {send("RtlPcToFileHeader");}});
+
+var RtlRaiseException = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlRaiseException")
+Interceptor.attach(RtlRaiseException, {onLeave: function (args) {send("RtlRaiseException");}});
+
+var RtlRestoreContext = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlRestoreContext")
+Interceptor.attach(RtlRestoreContext, {onLeave: function (args) {send("RtlRestoreContext");}});
+
+var RtlUnwind = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlUnwind")
+Interceptor.attach(RtlUnwind, {onLeave: function (args) {send("RtlUnwind");}});
+
+var RtlUnwindEx = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlUnwindEx")
+Interceptor.attach(RtlUnwindEx, {onLeave: function (args) {send("RtlUnwindEx");}});
+
+var RtlVirtualUnwind = Module.findExportByName("api-ms-win-core-rtlsupport-l1-1-0.dll", "RtlVirtualUnwind")
+Interceptor.attach(RtlVirtualUnwind, {onLeave: function (args) {send("RtlVirtualUnwind");}});
+

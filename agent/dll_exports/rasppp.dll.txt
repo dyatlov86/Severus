@@ -1,0 +1,24 @@
+var InitializeProtocolEngine = Module.findExportByName("rasppp.dll", "InitializeProtocolEngine")
+Interceptor.attach(InitializeProtocolEngine, {onLeave: function (args) {send("InitializeProtocolEngine");}});
+
+var InitializeServerProtocolEngine = Module.findExportByName("rasppp.dll", "InitializeServerProtocolEngine")
+Interceptor.attach(InitializeServerProtocolEngine, {onLeave: function (args) {send("InitializeServerProtocolEngine");}});
+
+var PppStop = Module.findExportByName("rasppp.dll", "PppStop")
+Interceptor.attach(PppStop, {onLeave: function (args) {send("PppStop");}});
+
+var RasCpEnumProtocolIds = Module.findExportByName("rasppp.dll", "RasCpEnumProtocolIds")
+Interceptor.attach(RasCpEnumProtocolIds, {onLeave: function (args) {send("RasCpEnumProtocolIds");}});
+
+var RasCpGetInfo = Module.findExportByName("rasppp.dll", "RasCpGetInfo")
+Interceptor.attach(RasCpGetInfo, {onLeave: function (args) {send("RasCpGetInfo");}});
+
+var SendMessageToProtocolEngine = Module.findExportByName("rasppp.dll", "SendMessageToProtocolEngine")
+Interceptor.attach(SendMessageToProtocolEngine, {onLeave: function (args) {send("SendMessageToProtocolEngine");}});
+
+var UninitializeProtocolEngine = Module.findExportByName("rasppp.dll", "UninitializeProtocolEngine")
+Interceptor.attach(UninitializeProtocolEngine, {onLeave: function (args) {send("UninitializeProtocolEngine");}});
+
+var UninitializeServerProtocolEngine = Module.findExportByName("rasppp.dll", "UninitializeServerProtocolEngine")
+Interceptor.attach(UninitializeServerProtocolEngine, {onLeave: function (args) {send("UninitializeServerProtocolEngine");}});
+

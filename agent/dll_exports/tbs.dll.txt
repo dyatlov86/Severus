@@ -1,0 +1,66 @@
+var GetDeviceID = Module.findExportByName("tbs.dll", "GetDeviceID")
+Interceptor.attach(GetDeviceID, {onLeave: function (args) {send("GetDeviceID");}});
+
+var GetDeviceIDString = Module.findExportByName("tbs.dll", "GetDeviceIDString")
+Interceptor.attach(GetDeviceIDString, {onLeave: function (args) {send("GetDeviceIDString");}});
+
+var GetDeviceIDWithTimeout = Module.findExportByName("tbs.dll", "GetDeviceIDWithTimeout")
+Interceptor.attach(GetDeviceIDWithTimeout, {onLeave: function (args) {send("GetDeviceIDWithTimeout");}});
+
+var Tbsi_Context_Create = Module.findExportByName("tbs.dll", "Tbsi_Context_Create")
+Interceptor.attach(Tbsi_Context_Create, {onLeave: function (args) {send("Tbsi_Context_Create");}});
+
+var Tbsi_Create_Attestation_From_Log = Module.findExportByName("tbs.dll", "Tbsi_Create_Attestation_From_Log")
+Interceptor.attach(Tbsi_Create_Attestation_From_Log, {onLeave: function (args) {send("Tbsi_Create_Attestation_From_Log");}});
+
+var Tbsi_Create_Windows_Key = Module.findExportByName("tbs.dll", "Tbsi_Create_Windows_Key")
+Interceptor.attach(Tbsi_Create_Windows_Key, {onLeave: function (args) {send("Tbsi_Create_Windows_Key");}});
+
+var Tbsi_FilterLog = Module.findExportByName("tbs.dll", "Tbsi_FilterLog")
+Interceptor.attach(Tbsi_FilterLog, {onLeave: function (args) {send("Tbsi_FilterLog");}});
+
+var Tbsi_GetDeviceInfo = Module.findExportByName("tbs.dll", "Tbsi_GetDeviceInfo")
+Interceptor.attach(Tbsi_GetDeviceInfo, {onLeave: function (args) {send("Tbsi_GetDeviceInfo");}});
+
+var Tbsi_Get_OwnerAuth = Module.findExportByName("tbs.dll", "Tbsi_Get_OwnerAuth")
+Interceptor.attach(Tbsi_Get_OwnerAuth, {onLeave: function (args) {send("Tbsi_Get_OwnerAuth");}});
+
+var Tbsi_Get_TCG_Log = Module.findExportByName("tbs.dll", "Tbsi_Get_TCG_Log")
+Interceptor.attach(Tbsi_Get_TCG_Log, {onLeave: function (args) {send("Tbsi_Get_TCG_Log");}});
+
+var Tbsi_Get_TCG_Log_Ex = Module.findExportByName("tbs.dll", "Tbsi_Get_TCG_Log_Ex")
+Interceptor.attach(Tbsi_Get_TCG_Log_Ex, {onLeave: function (args) {send("Tbsi_Get_TCG_Log_Ex");}});
+
+var Tbsi_Get_TCG_Logs = Module.findExportByName("tbs.dll", "Tbsi_Get_TCG_Logs")
+Interceptor.attach(Tbsi_Get_TCG_Logs, {onLeave: function (args) {send("Tbsi_Get_TCG_Logs");}});
+
+var Tbsi_Is_Tpm_Present = Module.findExportByName("tbs.dll", "Tbsi_Is_Tpm_Present")
+Interceptor.attach(Tbsi_Is_Tpm_Present, {onLeave: function (args) {send("Tbsi_Is_Tpm_Present");}});
+
+var Tbsi_Physical_Presence_Command = Module.findExportByName("tbs.dll", "Tbsi_Physical_Presence_Command")
+Interceptor.attach(Tbsi_Physical_Presence_Command, {onLeave: function (args) {send("Tbsi_Physical_Presence_Command");}});
+
+var Tbsi_Revoke_Attestation = Module.findExportByName("tbs.dll", "Tbsi_Revoke_Attestation")
+Interceptor.attach(Tbsi_Revoke_Attestation, {onLeave: function (args) {send("Tbsi_Revoke_Attestation");}});
+
+var Tbsi_ShaHash = Module.findExportByName("tbs.dll", "Tbsi_ShaHash")
+Interceptor.attach(Tbsi_ShaHash, {onLeave: function (args) {send("Tbsi_ShaHash");}});
+
+var Tbsip_Cancel_Commands = Module.findExportByName("tbs.dll", "Tbsip_Cancel_Commands")
+Interceptor.attach(Tbsip_Cancel_Commands, {onLeave: function (args) {send("Tbsip_Cancel_Commands");}});
+
+var Tbsip_Context_Close = Module.findExportByName("tbs.dll", "Tbsip_Context_Close")
+Interceptor.attach(Tbsip_Context_Close, {onLeave: function (args) {send("Tbsip_Context_Close");}});
+
+var Tbsip_Submit_Command = Module.findExportByName("tbs.dll", "Tbsip_Submit_Command")
+Interceptor.attach(Tbsip_Submit_Command, {onLeave: function (args) {send("Tbsip_Submit_Command");}});
+
+var Tbsip_Submit_Command_NonBlocking = Module.findExportByName("tbs.dll", "Tbsip_Submit_Command_NonBlocking")
+Interceptor.attach(Tbsip_Submit_Command_NonBlocking, {onLeave: function (args) {send("Tbsip_Submit_Command_NonBlocking");}});
+
+var Tbsip_TestInterruptInformation = Module.findExportByName("tbs.dll", "Tbsip_TestInterruptInformation")
+Interceptor.attach(Tbsip_TestInterruptInformation, {onLeave: function (args) {send("Tbsip_TestInterruptInformation");}});
+
+var Tbsip_TestMorBit = Module.findExportByName("tbs.dll", "Tbsip_TestMorBit")
+Interceptor.attach(Tbsip_TestMorBit, {onLeave: function (args) {send("Tbsip_TestMorBit");}});
+

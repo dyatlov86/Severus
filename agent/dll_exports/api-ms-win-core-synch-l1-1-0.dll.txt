@@ -1,0 +1,123 @@
+var AcquireSRWLockExclusive = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "AcquireSRWLockExclusive")
+Interceptor.attach(AcquireSRWLockExclusive, {onLeave: function (args) {send("AcquireSRWLockExclusive");}});
+
+var AcquireSRWLockShared = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "AcquireSRWLockShared")
+Interceptor.attach(AcquireSRWLockShared, {onLeave: function (args) {send("AcquireSRWLockShared");}});
+
+var CancelWaitableTimer = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "CancelWaitableTimer")
+Interceptor.attach(CancelWaitableTimer, {onLeave: function (args) {send("CancelWaitableTimer");}});
+
+var CreateEventA = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "CreateEventA")
+Interceptor.attach(CreateEventA, {onLeave: function (args) {send("CreateEventA");}});
+
+var CreateEventExA = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "CreateEventExA")
+Interceptor.attach(CreateEventExA, {onLeave: function (args) {send("CreateEventExA");}});
+
+var CreateEventExW = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "CreateEventExW")
+Interceptor.attach(CreateEventExW, {onLeave: function (args) {send("CreateEventExW");}});
+
+var CreateEventW = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "CreateEventW")
+Interceptor.attach(CreateEventW, {onLeave: function (args) {send("CreateEventW");}});
+
+var CreateMutexA = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "CreateMutexA")
+Interceptor.attach(CreateMutexA, {onLeave: function (args) {send("CreateMutexA");}});
+
+var CreateMutexExA = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "CreateMutexExA")
+Interceptor.attach(CreateMutexExA, {onLeave: function (args) {send("CreateMutexExA");}});
+
+var CreateMutexExW = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "CreateMutexExW")
+Interceptor.attach(CreateMutexExW, {onLeave: function (args) {send("CreateMutexExW");}});
+
+var CreateMutexW = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "CreateMutexW")
+Interceptor.attach(CreateMutexW, {onLeave: function (args) {send("CreateMutexW");}});
+
+var CreateSemaphoreExW = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "CreateSemaphoreExW")
+Interceptor.attach(CreateSemaphoreExW, {onLeave: function (args) {send("CreateSemaphoreExW");}});
+
+var CreateWaitableTimerExW = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "CreateWaitableTimerExW")
+Interceptor.attach(CreateWaitableTimerExW, {onLeave: function (args) {send("CreateWaitableTimerExW");}});
+
+var DeleteCriticalSection = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "DeleteCriticalSection")
+Interceptor.attach(DeleteCriticalSection, {onLeave: function (args) {send("DeleteCriticalSection");}});
+
+var EnterCriticalSection = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "EnterCriticalSection")
+Interceptor.attach(EnterCriticalSection, {onLeave: function (args) {send("EnterCriticalSection");}});
+
+var InitializeCriticalSection = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "InitializeCriticalSection")
+Interceptor.attach(InitializeCriticalSection, {onLeave: function (args) {send("InitializeCriticalSection");}});
+
+var InitializeCriticalSectionAndSpinCount = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "InitializeCriticalSectionAndSpinCount")
+Interceptor.attach(InitializeCriticalSectionAndSpinCount, {onLeave: function (args) {send("InitializeCriticalSectionAndSpinCount");}});
+
+var InitializeCriticalSectionEx = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "InitializeCriticalSectionEx")
+Interceptor.attach(InitializeCriticalSectionEx, {onLeave: function (args) {send("InitializeCriticalSectionEx");}});
+
+var InitializeSRWLock = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "InitializeSRWLock")
+Interceptor.attach(InitializeSRWLock, {onLeave: function (args) {send("InitializeSRWLock");}});
+
+var LeaveCriticalSection = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "LeaveCriticalSection")
+Interceptor.attach(LeaveCriticalSection, {onLeave: function (args) {send("LeaveCriticalSection");}});
+
+var OpenEventA = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "OpenEventA")
+Interceptor.attach(OpenEventA, {onLeave: function (args) {send("OpenEventA");}});
+
+var OpenEventW = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "OpenEventW")
+Interceptor.attach(OpenEventW, {onLeave: function (args) {send("OpenEventW");}});
+
+var OpenMutexW = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "OpenMutexW")
+Interceptor.attach(OpenMutexW, {onLeave: function (args) {send("OpenMutexW");}});
+
+var OpenSemaphoreW = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "OpenSemaphoreW")
+Interceptor.attach(OpenSemaphoreW, {onLeave: function (args) {send("OpenSemaphoreW");}});
+
+var OpenWaitableTimerW = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "OpenWaitableTimerW")
+Interceptor.attach(OpenWaitableTimerW, {onLeave: function (args) {send("OpenWaitableTimerW");}});
+
+var ReleaseMutex = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "ReleaseMutex")
+Interceptor.attach(ReleaseMutex, {onLeave: function (args) {send("ReleaseMutex");}});
+
+var ReleaseSRWLockExclusive = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "ReleaseSRWLockExclusive")
+Interceptor.attach(ReleaseSRWLockExclusive, {onLeave: function (args) {send("ReleaseSRWLockExclusive");}});
+
+var ReleaseSRWLockShared = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "ReleaseSRWLockShared")
+Interceptor.attach(ReleaseSRWLockShared, {onLeave: function (args) {send("ReleaseSRWLockShared");}});
+
+var ReleaseSemaphore = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "ReleaseSemaphore")
+Interceptor.attach(ReleaseSemaphore, {onLeave: function (args) {send("ReleaseSemaphore");}});
+
+var ResetEvent = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "ResetEvent")
+Interceptor.attach(ResetEvent, {onLeave: function (args) {send("ResetEvent");}});
+
+var SetCriticalSectionSpinCount = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "SetCriticalSectionSpinCount")
+Interceptor.attach(SetCriticalSectionSpinCount, {onLeave: function (args) {send("SetCriticalSectionSpinCount");}});
+
+var SetEvent = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "SetEvent")
+Interceptor.attach(SetEvent, {onLeave: function (args) {send("SetEvent");}});
+
+var SetWaitableTimer = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "SetWaitableTimer")
+Interceptor.attach(SetWaitableTimer, {onLeave: function (args) {send("SetWaitableTimer");}});
+
+var SetWaitableTimerEx = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "SetWaitableTimerEx")
+Interceptor.attach(SetWaitableTimerEx, {onLeave: function (args) {send("SetWaitableTimerEx");}});
+
+var SleepEx = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "SleepEx")
+Interceptor.attach(SleepEx, {onLeave: function (args) {send("SleepEx");}});
+
+var TryAcquireSRWLockExclusive = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "TryAcquireSRWLockExclusive")
+Interceptor.attach(TryAcquireSRWLockExclusive, {onLeave: function (args) {send("TryAcquireSRWLockExclusive");}});
+
+var TryAcquireSRWLockShared = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "TryAcquireSRWLockShared")
+Interceptor.attach(TryAcquireSRWLockShared, {onLeave: function (args) {send("TryAcquireSRWLockShared");}});
+
+var TryEnterCriticalSection = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "TryEnterCriticalSection")
+Interceptor.attach(TryEnterCriticalSection, {onLeave: function (args) {send("TryEnterCriticalSection");}});
+
+var WaitForMultipleObjectsEx = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "WaitForMultipleObjectsEx")
+Interceptor.attach(WaitForMultipleObjectsEx, {onLeave: function (args) {send("WaitForMultipleObjectsEx");}});
+
+var WaitForSingleObject = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "WaitForSingleObject")
+Interceptor.attach(WaitForSingleObject, {onLeave: function (args) {send("WaitForSingleObject");}});
+
+var WaitForSingleObjectEx = Module.findExportByName("api-ms-win-core-synch-l1-1-0.dll", "WaitForSingleObjectEx")
+Interceptor.attach(WaitForSingleObjectEx, {onLeave: function (args) {send("WaitForSingleObjectEx");}});
+

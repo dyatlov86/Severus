@@ -1,0 +1,3 @@
+var SpLsaModeInitialize = Module.findExportByName("SFAPM.dll", "SpLsaModeInitialize")
+Interceptor.attach(SpLsaModeInitialize, {onLeave: function (args) {send("SpLsaModeInitialize");}});
+

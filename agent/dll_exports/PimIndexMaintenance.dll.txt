@@ -1,0 +1,12 @@
+var CreateInprocPimimConnectionHandle = Module.findExportByName("PimIndexMaintenance.dll", "CreateInprocPimimConnectionHandle")
+Interceptor.attach(CreateInprocPimimConnectionHandle, {onLeave: function (args) {send("CreateInprocPimimConnectionHandle");}});
+
+var PimIMService_ResetInprocService = Module.findExportByName("PimIndexMaintenance.dll", "PimIMService_ResetInprocService")
+Interceptor.attach(PimIMService_ResetInprocService, {onLeave: function (args) {send("PimIMService_ResetInprocService");}});
+
+var ServiceMain = Module.findExportByName("PimIndexMaintenance.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("PimIndexMaintenance.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

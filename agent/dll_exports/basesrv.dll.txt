@@ -1,0 +1,18 @@
+var BaseGetProcessCrtlRoutine = Module.findExportByName("basesrv.dll", "BaseGetProcessCrtlRoutine")
+Interceptor.attach(BaseGetProcessCrtlRoutine, {onLeave: function (args) {send("BaseGetProcessCrtlRoutine");}});
+
+var BaseSetProcessCreateNotify = Module.findExportByName("basesrv.dll", "BaseSetProcessCreateNotify")
+Interceptor.attach(BaseSetProcessCreateNotify, {onLeave: function (args) {send("BaseSetProcessCreateNotify");}});
+
+var BaseSrvNlsLogon = Module.findExportByName("basesrv.dll", "BaseSrvNlsLogon")
+Interceptor.attach(BaseSrvNlsLogon, {onLeave: function (args) {send("BaseSrvNlsLogon");}});
+
+var BaseSrvNlsUpdateRegistryCache = Module.findExportByName("basesrv.dll", "BaseSrvNlsUpdateRegistryCache")
+Interceptor.attach(BaseSrvNlsUpdateRegistryCache, {onLeave: function (args) {send("BaseSrvNlsUpdateRegistryCache");}});
+
+var BaseSrvRegisterSxS = Module.findExportByName("basesrv.dll", "BaseSrvRegisterSxS")
+Interceptor.attach(BaseSrvRegisterSxS, {onLeave: function (args) {send("BaseSrvRegisterSxS");}});
+
+var ServerDllInitialization = Module.findExportByName("basesrv.dll", "ServerDllInitialization")
+Interceptor.attach(ServerDllInitialization, {onLeave: function (args) {send("ServerDllInitialization");}});
+

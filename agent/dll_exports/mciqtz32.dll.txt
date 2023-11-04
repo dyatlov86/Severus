@@ -1,0 +1,3 @@
+var DriverProc = Module.findExportByName("mciqtz32.dll", "DriverProc")
+Interceptor.attach(DriverProc, {onLeave: function (args) {send("DriverProc");}});
+

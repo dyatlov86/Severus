@@ -1,0 +1,156 @@
+var DllCanUnloadNow = Module.findExportByName("puiapi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("puiapi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("puiapi.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("puiapi.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var PUIAPI_CreateInstance = Module.findExportByName("puiapi.dll", "PUIAPI_CreateInstance")
+Interceptor.attach(PUIAPI_CreateInstance, {onLeave: function (args) {send("PUIAPI_CreateInstance");}});
+
+var PUIAPI_GetErrorString = Module.findExportByName("puiapi.dll", "PUIAPI_GetErrorString")
+Interceptor.attach(PUIAPI_GetErrorString, {onLeave: function (args) {send("PUIAPI_GetErrorString");}});
+
+var PUIAPI_GetPrinter = Module.findExportByName("puiapi.dll", "PUIAPI_GetPrinter")
+Interceptor.attach(PUIAPI_GetPrinter, {onLeave: function (args) {send("PUIAPI_GetPrinter");}});
+
+var PUIAPI_IWaitNotify_CreateInstance = Module.findExportByName("puiapi.dll", "PUIAPI_IWaitNotify_CreateInstance")
+Interceptor.attach(PUIAPI_IWaitNotify_CreateInstance, {onLeave: function (args) {send("PUIAPI_IWaitNotify_CreateInstance");}});
+
+var PUIAPI_IWaitNotify_RegisterTimer = Module.findExportByName("puiapi.dll", "PUIAPI_IWaitNotify_RegisterTimer")
+Interceptor.attach(PUIAPI_IWaitNotify_RegisterTimer, {onLeave: function (args) {send("PUIAPI_IWaitNotify_RegisterTimer");}});
+
+var PUIAPI_IWaitNotify_RegisterWaitObject = Module.findExportByName("puiapi.dll", "PUIAPI_IWaitNotify_RegisterWaitObject")
+Interceptor.attach(PUIAPI_IWaitNotify_RegisterWaitObject, {onLeave: function (args) {send("PUIAPI_IWaitNotify_RegisterWaitObject");}});
+
+var PUIAPI_IWaitNotify_UnregisterCookie = Module.findExportByName("puiapi.dll", "PUIAPI_IWaitNotify_UnregisterCookie")
+Interceptor.attach(PUIAPI_IWaitNotify_UnregisterCookie, {onLeave: function (args) {send("PUIAPI_IWaitNotify_UnregisterCookie");}});
+
+var PUIAPI_ShowBrowseForPrinterDialog = Module.findExportByName("puiapi.dll", "PUIAPI_ShowBrowseForPrinterDialog")
+Interceptor.attach(PUIAPI_ShowBrowseForPrinterDialog, {onLeave: function (args) {send("PUIAPI_ShowBrowseForPrinterDialog");}});
+
+var PUIAPI_ShowDetailsMessageBox = Module.findExportByName("puiapi.dll", "PUIAPI_ShowDetailsMessageBox")
+Interceptor.attach(PUIAPI_ShowDetailsMessageBox, {onLeave: function (args) {send("PUIAPI_ShowDetailsMessageBox");}});
+
+var PUIAPI_ShowDriverPackageRemovalUI = Module.findExportByName("puiapi.dll", "PUIAPI_ShowDriverPackageRemovalUI")
+Interceptor.attach(PUIAPI_ShowDriverPackageRemovalUI, {onLeave: function (args) {send("PUIAPI_ShowDriverPackageRemovalUI");}});
+
+var STRAPI_ConvertCase = Module.findExportByName("puiapi.dll", "STRAPI_ConvertCase")
+Interceptor.attach(STRAPI_ConvertCase, {onLeave: function (args) {send("STRAPI_ConvertCase");}});
+
+var STRAPI_CrackPrintUNCName = Module.findExportByName("puiapi.dll", "STRAPI_CrackPrintUNCName")
+Interceptor.attach(STRAPI_CrackPrintUNCName, {onLeave: function (args) {send("STRAPI_CrackPrintUNCName");}});
+
+var STRAPI_FindAndReplace = Module.findExportByName("puiapi.dll", "STRAPI_FindAndReplace")
+Interceptor.attach(STRAPI_FindAndReplace, {onLeave: function (args) {send("STRAPI_FindAndReplace");}});
+
+var STRAPI_Format = Module.findExportByName("puiapi.dll", "STRAPI_Format")
+Interceptor.attach(STRAPI_Format, {onLeave: function (args) {send("STRAPI_Format");}});
+
+var STRAPI_FormatMsg = Module.findExportByName("puiapi.dll", "STRAPI_FormatMsg")
+Interceptor.attach(STRAPI_FormatMsg, {onLeave: function (args) {send("STRAPI_FormatMsg");}});
+
+var STRAPI_FormatMsgV = Module.findExportByName("puiapi.dll", "STRAPI_FormatMsgV")
+Interceptor.attach(STRAPI_FormatMsgV, {onLeave: function (args) {send("STRAPI_FormatMsgV");}});
+
+var STRAPI_FormatV = Module.findExportByName("puiapi.dll", "STRAPI_FormatV")
+Interceptor.attach(STRAPI_FormatV, {onLeave: function (args) {send("STRAPI_FormatV");}});
+
+var STRAPI_GUID2String = Module.findExportByName("puiapi.dll", "STRAPI_GUID2String")
+Interceptor.attach(STRAPI_GUID2String, {onLeave: function (args) {send("STRAPI_GUID2String");}});
+
+var STRAPI_GetJobStatusString = Module.findExportByName("puiapi.dll", "STRAPI_GetJobStatusString")
+Interceptor.attach(STRAPI_GetJobStatusString, {onLeave: function (args) {send("STRAPI_GetJobStatusString");}});
+
+var STRAPI_GetPrinterStatusString = Module.findExportByName("puiapi.dll", "STRAPI_GetPrinterStatusString")
+Interceptor.attach(STRAPI_GetPrinterStatusString, {onLeave: function (args) {send("STRAPI_GetPrinterStatusString");}});
+
+var STRAPI_LoadString = Module.findExportByName("puiapi.dll", "STRAPI_LoadString")
+Interceptor.attach(STRAPI_LoadString, {onLeave: function (args) {send("STRAPI_LoadString");}});
+
+var STRAPI_MultiCat = Module.findExportByName("puiapi.dll", "STRAPI_MultiCat")
+Interceptor.attach(STRAPI_MultiCat, {onLeave: function (args) {send("STRAPI_MultiCat");}});
+
+var STRAPI_String2GUID = Module.findExportByName("puiapi.dll", "STRAPI_String2GUID")
+Interceptor.attach(STRAPI_String2GUID, {onLeave: function (args) {send("STRAPI_String2GUID");}});
+
+var STRAPI_TrimString = Module.findExportByName("puiapi.dll", "STRAPI_TrimString")
+Interceptor.attach(STRAPI_TrimString, {onLeave: function (args) {send("STRAPI_TrimString");}});
+
+var STRAPI_XMLSafeText = Module.findExportByName("puiapi.dll", "STRAPI_XMLSafeText")
+Interceptor.attach(STRAPI_XMLSafeText, {onLeave: function (args) {send("STRAPI_XMLSafeText");}});
+
+var STRBUF_AppendString = Module.findExportByName("puiapi.dll", "STRBUF_AppendString")
+Interceptor.attach(STRBUF_AppendString, {onLeave: function (args) {send("STRBUF_AppendString");}});
+
+var STRBUF_Create = Module.findExportByName("puiapi.dll", "STRBUF_Create")
+Interceptor.attach(STRBUF_Create, {onLeave: function (args) {send("STRBUF_Create");}});
+
+var STRBUF_CreateBSTR = Module.findExportByName("puiapi.dll", "STRBUF_CreateBSTR")
+Interceptor.attach(STRBUF_CreateBSTR, {onLeave: function (args) {send("STRBUF_CreateBSTR");}});
+
+var STRBUF_DeleteSubstring = Module.findExportByName("puiapi.dll", "STRBUF_DeleteSubstring")
+Interceptor.attach(STRBUF_DeleteSubstring, {onLeave: function (args) {send("STRBUF_DeleteSubstring");}});
+
+var STRBUF_Destroy = Module.findExportByName("puiapi.dll", "STRBUF_Destroy")
+Interceptor.attach(STRBUF_Destroy, {onLeave: function (args) {send("STRBUF_Destroy");}});
+
+var STRBUF_FindAndReplace = Module.findExportByName("puiapi.dll", "STRBUF_FindAndReplace")
+Interceptor.attach(STRBUF_FindAndReplace, {onLeave: function (args) {send("STRBUF_FindAndReplace");}});
+
+var STRBUF_Format = Module.findExportByName("puiapi.dll", "STRBUF_Format")
+Interceptor.attach(STRBUF_Format, {onLeave: function (args) {send("STRBUF_Format");}});
+
+var STRBUF_InsertString = Module.findExportByName("puiapi.dll", "STRBUF_InsertString")
+Interceptor.attach(STRBUF_InsertString, {onLeave: function (args) {send("STRBUF_InsertString");}});
+
+var STRBUF_MultiCat = Module.findExportByName("puiapi.dll", "STRBUF_MultiCat")
+Interceptor.attach(STRBUF_MultiCat, {onLeave: function (args) {send("STRBUF_MultiCat");}});
+
+var STRBUF_ToLower = Module.findExportByName("puiapi.dll", "STRBUF_ToLower")
+Interceptor.attach(STRBUF_ToLower, {onLeave: function (args) {send("STRBUF_ToLower");}});
+
+var STRBUF_ToUpper = Module.findExportByName("puiapi.dll", "STRBUF_ToUpper")
+Interceptor.attach(STRBUF_ToUpper, {onLeave: function (args) {send("STRBUF_ToUpper");}});
+
+var STRBUF_TrimLeft = Module.findExportByName("puiapi.dll", "STRBUF_TrimLeft")
+Interceptor.attach(STRBUF_TrimLeft, {onLeave: function (args) {send("STRBUF_TrimLeft");}});
+
+var STRBUF_TrimRight = Module.findExportByName("puiapi.dll", "STRBUF_TrimRight")
+Interceptor.attach(STRBUF_TrimRight, {onLeave: function (args) {send("STRBUF_TrimRight");}});
+
+var STRBUF_Truncate = Module.findExportByName("puiapi.dll", "STRBUF_Truncate")
+Interceptor.attach(STRBUF_Truncate, {onLeave: function (args) {send("STRBUF_Truncate");}});
+
+var STRBUF_Update = Module.findExportByName("puiapi.dll", "STRBUF_Update")
+Interceptor.attach(STRBUF_Update, {onLeave: function (args) {send("STRBUF_Update");}});
+
+var XMLAPI_GetAttributeDouble = Module.findExportByName("puiapi.dll", "XMLAPI_GetAttributeDouble")
+Interceptor.attach(XMLAPI_GetAttributeDouble, {onLeave: function (args) {send("XMLAPI_GetAttributeDouble");}});
+
+var XMLAPI_GetAttributeLong = Module.findExportByName("puiapi.dll", "XMLAPI_GetAttributeLong")
+Interceptor.attach(XMLAPI_GetAttributeLong, {onLeave: function (args) {send("XMLAPI_GetAttributeLong");}});
+
+var XMLAPI_GetAttributeString = Module.findExportByName("puiapi.dll", "XMLAPI_GetAttributeString")
+Interceptor.attach(XMLAPI_GetAttributeString, {onLeave: function (args) {send("XMLAPI_GetAttributeString");}});
+
+var XMLAPI_GetAttributeULongLong = Module.findExportByName("puiapi.dll", "XMLAPI_GetAttributeULongLong")
+Interceptor.attach(XMLAPI_GetAttributeULongLong, {onLeave: function (args) {send("XMLAPI_GetAttributeULongLong");}});
+
+var XMLAPI_SetAttributeDouble = Module.findExportByName("puiapi.dll", "XMLAPI_SetAttributeDouble")
+Interceptor.attach(XMLAPI_SetAttributeDouble, {onLeave: function (args) {send("XMLAPI_SetAttributeDouble");}});
+
+var XMLAPI_SetAttributeLong = Module.findExportByName("puiapi.dll", "XMLAPI_SetAttributeLong")
+Interceptor.attach(XMLAPI_SetAttributeLong, {onLeave: function (args) {send("XMLAPI_SetAttributeLong");}});
+
+var XMLAPI_SetAttributeString = Module.findExportByName("puiapi.dll", "XMLAPI_SetAttributeString")
+Interceptor.attach(XMLAPI_SetAttributeString, {onLeave: function (args) {send("XMLAPI_SetAttributeString");}});
+
+var XMLAPI_SetAttributeULongLong = Module.findExportByName("puiapi.dll", "XMLAPI_SetAttributeULongLong")
+Interceptor.attach(XMLAPI_SetAttributeULongLong, {onLeave: function (args) {send("XMLAPI_SetAttributeULongLong");}});
+

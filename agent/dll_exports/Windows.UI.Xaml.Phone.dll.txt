@@ -1,0 +1,42 @@
+var CreateApplicationBarProxy = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "CreateApplicationBarProxy")
+Interceptor.attach(CreateApplicationBarProxy, {onLeave: function (args) {send("CreateApplicationBarProxy");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetDependencyLocatorStorage = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "GetDependencyLocatorStorage")
+Interceptor.attach(GetDependencyLocatorStorage, {onLeave: function (args) {send("GetDependencyLocatorStorage");}});
+
+var SendTelemetryOnSuspend = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "SendTelemetryOnSuspend")
+Interceptor.attach(SendTelemetryOnSuspend, {onLeave: function (args) {send("SendTelemetryOnSuspend");}});
+
+var XamlControlsCalculateFlyoutPlacement = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "XamlControlsCalculateFlyoutPlacement")
+Interceptor.attach(XamlControlsCalculateFlyoutPlacement, {onLeave: function (args) {send("XamlControlsCalculateFlyoutPlacement");}});
+
+var XamlControlsGetDatePickerSelection = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "XamlControlsGetDatePickerSelection")
+Interceptor.attach(XamlControlsGetDatePickerSelection, {onLeave: function (args) {send("XamlControlsGetDatePickerSelection");}});
+
+var XamlControlsGetListPickerSelection = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "XamlControlsGetListPickerSelection")
+Interceptor.attach(XamlControlsGetListPickerSelection, {onLeave: function (args) {send("XamlControlsGetListPickerSelection");}});
+
+var XamlControlsGetPlatformMetadataProvider = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "XamlControlsGetPlatformMetadataProvider")
+Interceptor.attach(XamlControlsGetPlatformMetadataProvider, {onLeave: function (args) {send("XamlControlsGetPlatformMetadataProvider");}});
+
+var XamlControlsGetPlatformResourcesModuleHandle = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "XamlControlsGetPlatformResourcesModuleHandle")
+Interceptor.attach(XamlControlsGetPlatformResourcesModuleHandle, {onLeave: function (args) {send("XamlControlsGetPlatformResourcesModuleHandle");}});
+
+var XamlControlsGetTimePickerSelection = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "XamlControlsGetTimePickerSelection")
+Interceptor.attach(XamlControlsGetTimePickerSelection, {onLeave: function (args) {send("XamlControlsGetTimePickerSelection");}});
+
+var XamlControlsTestHookCreateLoopingSelector = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "XamlControlsTestHookCreateLoopingSelector")
+Interceptor.attach(XamlControlsTestHookCreateLoopingSelector, {onLeave: function (args) {send("XamlControlsTestHookCreateLoopingSelector");}});
+
+var XamlTestHookFreePhoneResourceLibrary = Module.findExportByName("Windows.UI.Xaml.Phone.dll", "XamlTestHookFreePhoneResourceLibrary")
+Interceptor.attach(XamlTestHookFreePhoneResourceLibrary, {onLeave: function (args) {send("XamlTestHookFreePhoneResourceLibrary");}});
+

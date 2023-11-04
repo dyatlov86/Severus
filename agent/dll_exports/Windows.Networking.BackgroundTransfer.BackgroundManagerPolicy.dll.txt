@@ -1,0 +1,6 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.Networking.BackgroundTransfer.BackgroundManagerPolicy.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Networking.BackgroundTransfer.BackgroundManagerPolicy.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

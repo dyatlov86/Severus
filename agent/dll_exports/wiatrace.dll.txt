@@ -1,0 +1,24 @@
+var WIATRACE_DecrementIndentLevel = Module.findExportByName("wiatrace.dll", "WIATRACE_DecrementIndentLevel")
+Interceptor.attach(WIATRACE_DecrementIndentLevel, {onLeave: function (args) {send("WIATRACE_DecrementIndentLevel");}});
+
+var WIATRACE_GetIndentLevel = Module.findExportByName("wiatrace.dll", "WIATRACE_GetIndentLevel")
+Interceptor.attach(WIATRACE_GetIndentLevel, {onLeave: function (args) {send("WIATRACE_GetIndentLevel");}});
+
+var WIATRACE_GetTraceSettings = Module.findExportByName("wiatrace.dll", "WIATRACE_GetTraceSettings")
+Interceptor.attach(WIATRACE_GetTraceSettings, {onLeave: function (args) {send("WIATRACE_GetTraceSettings");}});
+
+var WIATRACE_IncrementIndentLevel = Module.findExportByName("wiatrace.dll", "WIATRACE_IncrementIndentLevel")
+Interceptor.attach(WIATRACE_IncrementIndentLevel, {onLeave: function (args) {send("WIATRACE_IncrementIndentLevel");}});
+
+var WIATRACE_Init = Module.findExportByName("wiatrace.dll", "WIATRACE_Init")
+Interceptor.attach(WIATRACE_Init, {onLeave: function (args) {send("WIATRACE_Init");}});
+
+var WIATRACE_OutputString = Module.findExportByName("wiatrace.dll", "WIATRACE_OutputString")
+Interceptor.attach(WIATRACE_OutputString, {onLeave: function (args) {send("WIATRACE_OutputString");}});
+
+var WIATRACE_SetTraceSettings = Module.findExportByName("wiatrace.dll", "WIATRACE_SetTraceSettings")
+Interceptor.attach(WIATRACE_SetTraceSettings, {onLeave: function (args) {send("WIATRACE_SetTraceSettings");}});
+
+var WIATRACE_Term = Module.findExportByName("wiatrace.dll", "WIATRACE_Term")
+Interceptor.attach(WIATRACE_Term, {onLeave: function (args) {send("WIATRACE_Term");}});
+

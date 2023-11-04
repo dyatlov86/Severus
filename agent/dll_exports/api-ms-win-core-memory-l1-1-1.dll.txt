@@ -1,0 +1,54 @@
+var CreateFileMappingFromApp = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "CreateFileMappingFromApp")
+Interceptor.attach(CreateFileMappingFromApp, {onLeave: function (args) {send("CreateFileMappingFromApp");}});
+
+var CreateFileMappingNumaW = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "CreateFileMappingNumaW")
+Interceptor.attach(CreateFileMappingNumaW, {onLeave: function (args) {send("CreateFileMappingNumaW");}});
+
+var CreateMemoryResourceNotification = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "CreateMemoryResourceNotification")
+Interceptor.attach(CreateMemoryResourceNotification, {onLeave: function (args) {send("CreateMemoryResourceNotification");}});
+
+var GetLargePageMinimum = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "GetLargePageMinimum")
+Interceptor.attach(GetLargePageMinimum, {onLeave: function (args) {send("GetLargePageMinimum");}});
+
+var GetProcessWorkingSetSize = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "GetProcessWorkingSetSize")
+Interceptor.attach(GetProcessWorkingSetSize, {onLeave: function (args) {send("GetProcessWorkingSetSize");}});
+
+var GetProcessWorkingSetSizeEx = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "GetProcessWorkingSetSizeEx")
+Interceptor.attach(GetProcessWorkingSetSizeEx, {onLeave: function (args) {send("GetProcessWorkingSetSizeEx");}});
+
+var GetSystemFileCacheSize = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "GetSystemFileCacheSize")
+Interceptor.attach(GetSystemFileCacheSize, {onLeave: function (args) {send("GetSystemFileCacheSize");}});
+
+var GetWriteWatch = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "GetWriteWatch")
+Interceptor.attach(GetWriteWatch, {onLeave: function (args) {send("GetWriteWatch");}});
+
+var MapViewOfFileFromApp = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "MapViewOfFileFromApp")
+Interceptor.attach(MapViewOfFileFromApp, {onLeave: function (args) {send("MapViewOfFileFromApp");}});
+
+var PrefetchVirtualMemory = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "PrefetchVirtualMemory")
+Interceptor.attach(PrefetchVirtualMemory, {onLeave: function (args) {send("PrefetchVirtualMemory");}});
+
+var QueryMemoryResourceNotification = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "QueryMemoryResourceNotification")
+Interceptor.attach(QueryMemoryResourceNotification, {onLeave: function (args) {send("QueryMemoryResourceNotification");}});
+
+var ResetWriteWatch = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "ResetWriteWatch")
+Interceptor.attach(ResetWriteWatch, {onLeave: function (args) {send("ResetWriteWatch");}});
+
+var SetProcessWorkingSetSize = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "SetProcessWorkingSetSize")
+Interceptor.attach(SetProcessWorkingSetSize, {onLeave: function (args) {send("SetProcessWorkingSetSize");}});
+
+var SetProcessWorkingSetSizeEx = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "SetProcessWorkingSetSizeEx")
+Interceptor.attach(SetProcessWorkingSetSizeEx, {onLeave: function (args) {send("SetProcessWorkingSetSizeEx");}});
+
+var SetSystemFileCacheSize = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "SetSystemFileCacheSize")
+Interceptor.attach(SetSystemFileCacheSize, {onLeave: function (args) {send("SetSystemFileCacheSize");}});
+
+var UnmapViewOfFileEx = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "UnmapViewOfFileEx")
+Interceptor.attach(UnmapViewOfFileEx, {onLeave: function (args) {send("UnmapViewOfFileEx");}});
+
+var VirtualLock = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "VirtualLock")
+Interceptor.attach(VirtualLock, {onLeave: function (args) {send("VirtualLock");}});
+
+var VirtualUnlock = Module.findExportByName("api-ms-win-core-memory-l1-1-1.dll", "VirtualUnlock")
+Interceptor.attach(VirtualUnlock, {onLeave: function (args) {send("VirtualUnlock");}});
+

@@ -1,0 +1,3 @@
+var CreatePassThrough = Module.findExportByName("storagewmi_passthru.dll", "CreatePassThrough")
+Interceptor.attach(CreatePassThrough, {onLeave: function (args) {send("CreatePassThrough");}});
+

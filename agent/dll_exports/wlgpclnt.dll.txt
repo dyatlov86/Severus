@@ -1,0 +1,12 @@
+var GenerateWLANPolicy = Module.findExportByName("wlgpclnt.dll", "GenerateWLANPolicy")
+Interceptor.attach(GenerateWLANPolicy, {onLeave: function (args) {send("GenerateWLANPolicy");}});
+
+var ProcessWLANPolicyEx = Module.findExportByName("wlgpclnt.dll", "ProcessWLANPolicyEx")
+Interceptor.attach(ProcessWLANPolicyEx, {onLeave: function (args) {send("ProcessWLANPolicyEx");}});
+
+var WLGPADeInit = Module.findExportByName("wlgpclnt.dll", "WLGPADeInit")
+Interceptor.attach(WLGPADeInit, {onLeave: function (args) {send("WLGPADeInit");}});
+
+var WLGPAInit = Module.findExportByName("wlgpclnt.dll", "WLGPAInit")
+Interceptor.attach(WLGPAInit, {onLeave: function (args) {send("WLGPAInit");}});
+

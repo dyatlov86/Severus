@@ -1,0 +1,114 @@
+var CapabilitiesRequestAndCapabilitiesReply = Module.findExportByName("dxva2.dll", "CapabilitiesRequestAndCapabilitiesReply")
+Interceptor.attach(CapabilitiesRequestAndCapabilitiesReply, {onLeave: function (args) {send("CapabilitiesRequestAndCapabilitiesReply");}});
+
+var DXVA2CreateDirect3DDeviceManager9 = Module.findExportByName("dxva2.dll", "DXVA2CreateDirect3DDeviceManager9")
+Interceptor.attach(DXVA2CreateDirect3DDeviceManager9, {onLeave: function (args) {send("DXVA2CreateDirect3DDeviceManager9");}});
+
+var DXVA2CreateVideoService = Module.findExportByName("dxva2.dll", "DXVA2CreateVideoService")
+Interceptor.attach(DXVA2CreateVideoService, {onLeave: function (args) {send("DXVA2CreateVideoService");}});
+
+var DXVAHD_CreateDevice = Module.findExportByName("dxva2.dll", "DXVAHD_CreateDevice")
+Interceptor.attach(DXVAHD_CreateDevice, {onLeave: function (args) {send("DXVAHD_CreateDevice");}});
+
+var DegaussMonitor = Module.findExportByName("dxva2.dll", "DegaussMonitor")
+Interceptor.attach(DegaussMonitor, {onLeave: function (args) {send("DegaussMonitor");}});
+
+var DestroyPhysicalMonitor = Module.findExportByName("dxva2.dll", "DestroyPhysicalMonitor")
+Interceptor.attach(DestroyPhysicalMonitor, {onLeave: function (args) {send("DestroyPhysicalMonitor");}});
+
+var DestroyPhysicalMonitors = Module.findExportByName("dxva2.dll", "DestroyPhysicalMonitors")
+Interceptor.attach(DestroyPhysicalMonitors, {onLeave: function (args) {send("DestroyPhysicalMonitors");}});
+
+var GetCapabilitiesStringLength = Module.findExportByName("dxva2.dll", "GetCapabilitiesStringLength")
+Interceptor.attach(GetCapabilitiesStringLength, {onLeave: function (args) {send("GetCapabilitiesStringLength");}});
+
+var GetMonitorBrightness = Module.findExportByName("dxva2.dll", "GetMonitorBrightness")
+Interceptor.attach(GetMonitorBrightness, {onLeave: function (args) {send("GetMonitorBrightness");}});
+
+var GetMonitorCapabilities = Module.findExportByName("dxva2.dll", "GetMonitorCapabilities")
+Interceptor.attach(GetMonitorCapabilities, {onLeave: function (args) {send("GetMonitorCapabilities");}});
+
+var GetMonitorColorTemperature = Module.findExportByName("dxva2.dll", "GetMonitorColorTemperature")
+Interceptor.attach(GetMonitorColorTemperature, {onLeave: function (args) {send("GetMonitorColorTemperature");}});
+
+var GetMonitorContrast = Module.findExportByName("dxva2.dll", "GetMonitorContrast")
+Interceptor.attach(GetMonitorContrast, {onLeave: function (args) {send("GetMonitorContrast");}});
+
+var GetMonitorDisplayAreaPosition = Module.findExportByName("dxva2.dll", "GetMonitorDisplayAreaPosition")
+Interceptor.attach(GetMonitorDisplayAreaPosition, {onLeave: function (args) {send("GetMonitorDisplayAreaPosition");}});
+
+var GetMonitorDisplayAreaSize = Module.findExportByName("dxva2.dll", "GetMonitorDisplayAreaSize")
+Interceptor.attach(GetMonitorDisplayAreaSize, {onLeave: function (args) {send("GetMonitorDisplayAreaSize");}});
+
+var GetMonitorRedGreenOrBlueDrive = Module.findExportByName("dxva2.dll", "GetMonitorRedGreenOrBlueDrive")
+Interceptor.attach(GetMonitorRedGreenOrBlueDrive, {onLeave: function (args) {send("GetMonitorRedGreenOrBlueDrive");}});
+
+var GetMonitorRedGreenOrBlueGain = Module.findExportByName("dxva2.dll", "GetMonitorRedGreenOrBlueGain")
+Interceptor.attach(GetMonitorRedGreenOrBlueGain, {onLeave: function (args) {send("GetMonitorRedGreenOrBlueGain");}});
+
+var GetMonitorTechnologyType = Module.findExportByName("dxva2.dll", "GetMonitorTechnologyType")
+Interceptor.attach(GetMonitorTechnologyType, {onLeave: function (args) {send("GetMonitorTechnologyType");}});
+
+var GetNumberOfPhysicalMonitorsFromHMONITOR = Module.findExportByName("dxva2.dll", "GetNumberOfPhysicalMonitorsFromHMONITOR")
+Interceptor.attach(GetNumberOfPhysicalMonitorsFromHMONITOR, {onLeave: function (args) {send("GetNumberOfPhysicalMonitorsFromHMONITOR");}});
+
+var GetNumberOfPhysicalMonitorsFromIDirect3DDevice9 = Module.findExportByName("dxva2.dll", "GetNumberOfPhysicalMonitorsFromIDirect3DDevice9")
+Interceptor.attach(GetNumberOfPhysicalMonitorsFromIDirect3DDevice9, {onLeave: function (args) {send("GetNumberOfPhysicalMonitorsFromIDirect3DDevice9");}});
+
+var GetPhysicalMonitorsFromHMONITOR = Module.findExportByName("dxva2.dll", "GetPhysicalMonitorsFromHMONITOR")
+Interceptor.attach(GetPhysicalMonitorsFromHMONITOR, {onLeave: function (args) {send("GetPhysicalMonitorsFromHMONITOR");}});
+
+var GetPhysicalMonitorsFromIDirect3DDevice9 = Module.findExportByName("dxva2.dll", "GetPhysicalMonitorsFromIDirect3DDevice9")
+Interceptor.attach(GetPhysicalMonitorsFromIDirect3DDevice9, {onLeave: function (args) {send("GetPhysicalMonitorsFromIDirect3DDevice9");}});
+
+var GetTimingReport = Module.findExportByName("dxva2.dll", "GetTimingReport")
+Interceptor.attach(GetTimingReport, {onLeave: function (args) {send("GetTimingReport");}});
+
+var GetVCPFeatureAndVCPFeatureReply = Module.findExportByName("dxva2.dll", "GetVCPFeatureAndVCPFeatureReply")
+Interceptor.attach(GetVCPFeatureAndVCPFeatureReply, {onLeave: function (args) {send("GetVCPFeatureAndVCPFeatureReply");}});
+
+var OPMGetVideoOutputForTarget = Module.findExportByName("dxva2.dll", "OPMGetVideoOutputForTarget")
+Interceptor.attach(OPMGetVideoOutputForTarget, {onLeave: function (args) {send("OPMGetVideoOutputForTarget");}});
+
+var OPMGetVideoOutputsFromHMONITOR = Module.findExportByName("dxva2.dll", "OPMGetVideoOutputsFromHMONITOR")
+Interceptor.attach(OPMGetVideoOutputsFromHMONITOR, {onLeave: function (args) {send("OPMGetVideoOutputsFromHMONITOR");}});
+
+var OPMGetVideoOutputsFromIDirect3DDevice9Object = Module.findExportByName("dxva2.dll", "OPMGetVideoOutputsFromIDirect3DDevice9Object")
+Interceptor.attach(OPMGetVideoOutputsFromIDirect3DDevice9Object, {onLeave: function (args) {send("OPMGetVideoOutputsFromIDirect3DDevice9Object");}});
+
+var RestoreMonitorFactoryColorDefaults = Module.findExportByName("dxva2.dll", "RestoreMonitorFactoryColorDefaults")
+Interceptor.attach(RestoreMonitorFactoryColorDefaults, {onLeave: function (args) {send("RestoreMonitorFactoryColorDefaults");}});
+
+var RestoreMonitorFactoryDefaults = Module.findExportByName("dxva2.dll", "RestoreMonitorFactoryDefaults")
+Interceptor.attach(RestoreMonitorFactoryDefaults, {onLeave: function (args) {send("RestoreMonitorFactoryDefaults");}});
+
+var SaveCurrentMonitorSettings = Module.findExportByName("dxva2.dll", "SaveCurrentMonitorSettings")
+Interceptor.attach(SaveCurrentMonitorSettings, {onLeave: function (args) {send("SaveCurrentMonitorSettings");}});
+
+var SaveCurrentSettings = Module.findExportByName("dxva2.dll", "SaveCurrentSettings")
+Interceptor.attach(SaveCurrentSettings, {onLeave: function (args) {send("SaveCurrentSettings");}});
+
+var SetMonitorBrightness = Module.findExportByName("dxva2.dll", "SetMonitorBrightness")
+Interceptor.attach(SetMonitorBrightness, {onLeave: function (args) {send("SetMonitorBrightness");}});
+
+var SetMonitorColorTemperature = Module.findExportByName("dxva2.dll", "SetMonitorColorTemperature")
+Interceptor.attach(SetMonitorColorTemperature, {onLeave: function (args) {send("SetMonitorColorTemperature");}});
+
+var SetMonitorContrast = Module.findExportByName("dxva2.dll", "SetMonitorContrast")
+Interceptor.attach(SetMonitorContrast, {onLeave: function (args) {send("SetMonitorContrast");}});
+
+var SetMonitorDisplayAreaPosition = Module.findExportByName("dxva2.dll", "SetMonitorDisplayAreaPosition")
+Interceptor.attach(SetMonitorDisplayAreaPosition, {onLeave: function (args) {send("SetMonitorDisplayAreaPosition");}});
+
+var SetMonitorDisplayAreaSize = Module.findExportByName("dxva2.dll", "SetMonitorDisplayAreaSize")
+Interceptor.attach(SetMonitorDisplayAreaSize, {onLeave: function (args) {send("SetMonitorDisplayAreaSize");}});
+
+var SetMonitorRedGreenOrBlueDrive = Module.findExportByName("dxva2.dll", "SetMonitorRedGreenOrBlueDrive")
+Interceptor.attach(SetMonitorRedGreenOrBlueDrive, {onLeave: function (args) {send("SetMonitorRedGreenOrBlueDrive");}});
+
+var SetMonitorRedGreenOrBlueGain = Module.findExportByName("dxva2.dll", "SetMonitorRedGreenOrBlueGain")
+Interceptor.attach(SetMonitorRedGreenOrBlueGain, {onLeave: function (args) {send("SetMonitorRedGreenOrBlueGain");}});
+
+var SetVCPFeature = Module.findExportByName("dxva2.dll", "SetVCPFeature")
+Interceptor.attach(SetVCPFeature, {onLeave: function (args) {send("SetVCPFeature");}});
+

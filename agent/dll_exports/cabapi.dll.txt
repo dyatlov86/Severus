@@ -1,0 +1,42 @@
+var Cab_CheckForFile = Module.findExportByName("cabapi.dll", "Cab_CheckForFile")
+Interceptor.attach(Cab_CheckForFile, {onLeave: function (args) {send("Cab_CheckForFile");}});
+
+var Cab_CheckIsCabinet = Module.findExportByName("cabapi.dll", "Cab_CheckIsCabinet")
+Interceptor.attach(Cab_CheckIsCabinet, {onLeave: function (args) {send("Cab_CheckIsCabinet");}});
+
+var Cab_CreateCab = Module.findExportByName("cabapi.dll", "Cab_CreateCab")
+Interceptor.attach(Cab_CreateCab, {onLeave: function (args) {send("Cab_CreateCab");}});
+
+var Cab_CreateCabSelected = Module.findExportByName("cabapi.dll", "Cab_CreateCabSelected")
+Interceptor.attach(Cab_CreateCabSelected, {onLeave: function (args) {send("Cab_CreateCabSelected");}});
+
+var Cab_Extract = Module.findExportByName("cabapi.dll", "Cab_Extract")
+Interceptor.attach(Cab_Extract, {onLeave: function (args) {send("Cab_Extract");}});
+
+var Cab_ExtractOne = Module.findExportByName("cabapi.dll", "Cab_ExtractOne")
+Interceptor.attach(Cab_ExtractOne, {onLeave: function (args) {send("Cab_ExtractOne");}});
+
+var Cab_ExtractOneToBuffer = Module.findExportByName("cabapi.dll", "Cab_ExtractOneToBuffer")
+Interceptor.attach(Cab_ExtractOneToBuffer, {onLeave: function (args) {send("Cab_ExtractOneToBuffer");}});
+
+var Cab_ExtractSelected = Module.findExportByName("cabapi.dll", "Cab_ExtractSelected")
+Interceptor.attach(Cab_ExtractSelected, {onLeave: function (args) {send("Cab_ExtractSelected");}});
+
+var Cab_ExtractSelectedToTarget = Module.findExportByName("cabapi.dll", "Cab_ExtractSelectedToTarget")
+Interceptor.attach(Cab_ExtractSelectedToTarget, {onLeave: function (args) {send("Cab_ExtractSelectedToTarget");}});
+
+var Cab_FreeBuffer = Module.findExportByName("cabapi.dll", "Cab_FreeBuffer")
+Interceptor.attach(Cab_FreeBuffer, {onLeave: function (args) {send("Cab_FreeBuffer");}});
+
+var Cab_FreeFileList = Module.findExportByName("cabapi.dll", "Cab_FreeFileList")
+Interceptor.attach(Cab_FreeFileList, {onLeave: function (args) {send("Cab_FreeFileList");}});
+
+var Cab_FreeFileSizeList = Module.findExportByName("cabapi.dll", "Cab_FreeFileSizeList")
+Interceptor.attach(Cab_FreeFileSizeList, {onLeave: function (args) {send("Cab_FreeFileSizeList");}});
+
+var Cab_GetFileList = Module.findExportByName("cabapi.dll", "Cab_GetFileList")
+Interceptor.attach(Cab_GetFileList, {onLeave: function (args) {send("Cab_GetFileList");}});
+
+var Cab_GetFileSizeList = Module.findExportByName("cabapi.dll", "Cab_GetFileSizeList")
+Interceptor.attach(Cab_GetFileSizeList, {onLeave: function (args) {send("Cab_GetFileSizeList");}});
+

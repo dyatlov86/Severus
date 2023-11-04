@@ -1,0 +1,51 @@
+var CreateDefaultWindowsLiveAccount = Module.findExportByName("accountaccessor.dll", "CreateDefaultWindowsLiveAccount")
+Interceptor.attach(CreateDefaultWindowsLiveAccount, {onLeave: function (args) {send("CreateDefaultWindowsLiveAccount");}});
+
+var DllCanUnloadNow = Module.findExportByName("accountaccessor.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("accountaccessor.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var FindMatchingPartnership = Module.findExportByName("accountaccessor.dll", "FindMatchingPartnership")
+Interceptor.attach(FindMatchingPartnership, {onLeave: function (args) {send("FindMatchingPartnership");}});
+
+var GetConversationSyncDateFilter = Module.findExportByName("accountaccessor.dll", "GetConversationSyncDateFilter")
+Interceptor.attach(GetConversationSyncDateFilter, {onLeave: function (args) {send("GetConversationSyncDateFilter");}});
+
+var GetConversationSyncEnabled = Module.findExportByName("accountaccessor.dll", "GetConversationSyncEnabled")
+Interceptor.attach(GetConversationSyncEnabled, {onLeave: function (args) {send("GetConversationSyncEnabled");}});
+
+var GetUnifiedInboxEnabled = Module.findExportByName("accountaccessor.dll", "GetUnifiedInboxEnabled")
+Interceptor.attach(GetUnifiedInboxEnabled, {onLeave: function (args) {send("GetUnifiedInboxEnabled");}});
+
+var GetUnifiedInboxServerValue = Module.findExportByName("accountaccessor.dll", "GetUnifiedInboxServerValue")
+Interceptor.attach(GetUnifiedInboxServerValue, {onLeave: function (args) {send("GetUnifiedInboxServerValue");}});
+
+var IsExtendedConversationSyncDateFiltersSupported = Module.findExportByName("accountaccessor.dll", "IsExtendedConversationSyncDateFiltersSupported")
+Interceptor.attach(IsExtendedConversationSyncDateFiltersSupported, {onLeave: function (args) {send("IsExtendedConversationSyncDateFiltersSupported");}});
+
+var LoadGoldenPartnershipAccessor = Module.findExportByName("accountaccessor.dll", "LoadGoldenPartnershipAccessor")
+Interceptor.attach(LoadGoldenPartnershipAccessor, {onLeave: function (args) {send("LoadGoldenPartnershipAccessor");}});
+
+var SetConversationSyncDateFilter = Module.findExportByName("accountaccessor.dll", "SetConversationSyncDateFilter")
+Interceptor.attach(SetConversationSyncDateFilter, {onLeave: function (args) {send("SetConversationSyncDateFilter");}});
+
+var SetConversationSyncEnabled = Module.findExportByName("accountaccessor.dll", "SetConversationSyncEnabled")
+Interceptor.attach(SetConversationSyncEnabled, {onLeave: function (args) {send("SetConversationSyncEnabled");}});
+
+var SetUnifiedInboxEnabled = Module.findExportByName("accountaccessor.dll", "SetUnifiedInboxEnabled")
+Interceptor.attach(SetUnifiedInboxEnabled, {onLeave: function (args) {send("SetUnifiedInboxEnabled");}});
+
+var UnenrollAndMarkAccountForDeletion = Module.findExportByName("accountaccessor.dll", "UnenrollAndMarkAccountForDeletion")
+Interceptor.attach(UnenrollAndMarkAccountForDeletion, {onLeave: function (args) {send("UnenrollAndMarkAccountForDeletion");}});
+
+var UpdateGoogleAccountConversationFlags = Module.findExportByName("accountaccessor.dll", "UpdateGoogleAccountConversationFlags")
+Interceptor.attach(UpdateGoogleAccountConversationFlags, {onLeave: function (args) {send("UpdateGoogleAccountConversationFlags");}});
+
+var UpdateGoogleAccountServerSendsMeetingProp = Module.findExportByName("accountaccessor.dll", "UpdateGoogleAccountServerSendsMeetingProp")
+Interceptor.attach(UpdateGoogleAccountServerSendsMeetingProp, {onLeave: function (args) {send("UpdateGoogleAccountServerSendsMeetingProp");}});
+
+var UpdateWebDavAccountProperties = Module.findExportByName("accountaccessor.dll", "UpdateWebDavAccountProperties")
+Interceptor.attach(UpdateWebDavAccountProperties, {onLeave: function (args) {send("UpdateWebDavAccountProperties");}});
+

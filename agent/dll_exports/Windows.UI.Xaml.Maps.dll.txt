@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.UI.Xaml.Maps.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.UI.Xaml.Maps.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.UI.Xaml.Maps.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetDependencyLocatorStorage = Module.findExportByName("Windows.UI.Xaml.Maps.dll", "GetDependencyLocatorStorage")
+Interceptor.attach(GetDependencyLocatorStorage, {onLeave: function (args) {send("GetDependencyLocatorStorage");}});
+
+var XamlTestHookFreeMapsResourceLibrary = Module.findExportByName("Windows.UI.Xaml.Maps.dll", "XamlTestHookFreeMapsResourceLibrary")
+Interceptor.attach(XamlTestHookFreeMapsResourceLibrary, {onLeave: function (args) {send("XamlTestHookFreeMapsResourceLibrary");}});
+

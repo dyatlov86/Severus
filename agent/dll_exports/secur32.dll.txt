@@ -1,0 +1,294 @@
+var AcceptSecurityContext = Module.findExportByName("secur32.dll", "AcceptSecurityContext")
+Interceptor.attach(AcceptSecurityContext, {onLeave: function (args) {send("AcceptSecurityContext");}});
+
+var AcquireCredentialsHandleA = Module.findExportByName("secur32.dll", "AcquireCredentialsHandleA")
+Interceptor.attach(AcquireCredentialsHandleA, {onLeave: function (args) {send("AcquireCredentialsHandleA");}});
+
+var AcquireCredentialsHandleW = Module.findExportByName("secur32.dll", "AcquireCredentialsHandleW")
+Interceptor.attach(AcquireCredentialsHandleW, {onLeave: function (args) {send("AcquireCredentialsHandleW");}});
+
+var AddCredentialsA = Module.findExportByName("secur32.dll", "AddCredentialsA")
+Interceptor.attach(AddCredentialsA, {onLeave: function (args) {send("AddCredentialsA");}});
+
+var AddCredentialsW = Module.findExportByName("secur32.dll", "AddCredentialsW")
+Interceptor.attach(AddCredentialsW, {onLeave: function (args) {send("AddCredentialsW");}});
+
+var AddSecurityPackageA = Module.findExportByName("secur32.dll", "AddSecurityPackageA")
+Interceptor.attach(AddSecurityPackageA, {onLeave: function (args) {send("AddSecurityPackageA");}});
+
+var AddSecurityPackageW = Module.findExportByName("secur32.dll", "AddSecurityPackageW")
+Interceptor.attach(AddSecurityPackageW, {onLeave: function (args) {send("AddSecurityPackageW");}});
+
+var ApplyControlToken = Module.findExportByName("secur32.dll", "ApplyControlToken")
+Interceptor.attach(ApplyControlToken, {onLeave: function (args) {send("ApplyControlToken");}});
+
+var ChangeAccountPasswordA = Module.findExportByName("secur32.dll", "ChangeAccountPasswordA")
+Interceptor.attach(ChangeAccountPasswordA, {onLeave: function (args) {send("ChangeAccountPasswordA");}});
+
+var ChangeAccountPasswordW = Module.findExportByName("secur32.dll", "ChangeAccountPasswordW")
+Interceptor.attach(ChangeAccountPasswordW, {onLeave: function (args) {send("ChangeAccountPasswordW");}});
+
+var CompleteAuthToken = Module.findExportByName("secur32.dll", "CompleteAuthToken")
+Interceptor.attach(CompleteAuthToken, {onLeave: function (args) {send("CompleteAuthToken");}});
+
+var CredMarshalTargetInfo = Module.findExportByName("secur32.dll", "CredMarshalTargetInfo")
+Interceptor.attach(CredMarshalTargetInfo, {onLeave: function (args) {send("CredMarshalTargetInfo");}});
+
+var CredUnmarshalTargetInfo = Module.findExportByName("secur32.dll", "CredUnmarshalTargetInfo")
+Interceptor.attach(CredUnmarshalTargetInfo, {onLeave: function (args) {send("CredUnmarshalTargetInfo");}});
+
+var DecryptMessage = Module.findExportByName("secur32.dll", "DecryptMessage")
+Interceptor.attach(DecryptMessage, {onLeave: function (args) {send("DecryptMessage");}});
+
+var DeleteSecurityContext = Module.findExportByName("secur32.dll", "DeleteSecurityContext")
+Interceptor.attach(DeleteSecurityContext, {onLeave: function (args) {send("DeleteSecurityContext");}});
+
+var DeleteSecurityPackageA = Module.findExportByName("secur32.dll", "DeleteSecurityPackageA")
+Interceptor.attach(DeleteSecurityPackageA, {onLeave: function (args) {send("DeleteSecurityPackageA");}});
+
+var DeleteSecurityPackageW = Module.findExportByName("secur32.dll", "DeleteSecurityPackageW")
+Interceptor.attach(DeleteSecurityPackageW, {onLeave: function (args) {send("DeleteSecurityPackageW");}});
+
+var EncryptMessage = Module.findExportByName("secur32.dll", "EncryptMessage")
+Interceptor.attach(EncryptMessage, {onLeave: function (args) {send("EncryptMessage");}});
+
+var EnumerateSecurityPackagesA = Module.findExportByName("secur32.dll", "EnumerateSecurityPackagesA")
+Interceptor.attach(EnumerateSecurityPackagesA, {onLeave: function (args) {send("EnumerateSecurityPackagesA");}});
+
+var EnumerateSecurityPackagesW = Module.findExportByName("secur32.dll", "EnumerateSecurityPackagesW")
+Interceptor.attach(EnumerateSecurityPackagesW, {onLeave: function (args) {send("EnumerateSecurityPackagesW");}});
+
+var ExportSecurityContext = Module.findExportByName("secur32.dll", "ExportSecurityContext")
+Interceptor.attach(ExportSecurityContext, {onLeave: function (args) {send("ExportSecurityContext");}});
+
+var FreeContextBuffer = Module.findExportByName("secur32.dll", "FreeContextBuffer")
+Interceptor.attach(FreeContextBuffer, {onLeave: function (args) {send("FreeContextBuffer");}});
+
+var FreeCredentialsHandle = Module.findExportByName("secur32.dll", "FreeCredentialsHandle")
+Interceptor.attach(FreeCredentialsHandle, {onLeave: function (args) {send("FreeCredentialsHandle");}});
+
+var GetComputerObjectNameA = Module.findExportByName("secur32.dll", "GetComputerObjectNameA")
+Interceptor.attach(GetComputerObjectNameA, {onLeave: function (args) {send("GetComputerObjectNameA");}});
+
+var GetComputerObjectNameW = Module.findExportByName("secur32.dll", "GetComputerObjectNameW")
+Interceptor.attach(GetComputerObjectNameW, {onLeave: function (args) {send("GetComputerObjectNameW");}});
+
+var GetSecurityUserInfo = Module.findExportByName("secur32.dll", "GetSecurityUserInfo")
+Interceptor.attach(GetSecurityUserInfo, {onLeave: function (args) {send("GetSecurityUserInfo");}});
+
+var GetUserNameExA = Module.findExportByName("secur32.dll", "GetUserNameExA")
+Interceptor.attach(GetUserNameExA, {onLeave: function (args) {send("GetUserNameExA");}});
+
+var GetUserNameExW = Module.findExportByName("secur32.dll", "GetUserNameExW")
+Interceptor.attach(GetUserNameExW, {onLeave: function (args) {send("GetUserNameExW");}});
+
+var ImpersonateSecurityContext = Module.findExportByName("secur32.dll", "ImpersonateSecurityContext")
+Interceptor.attach(ImpersonateSecurityContext, {onLeave: function (args) {send("ImpersonateSecurityContext");}});
+
+var ImportSecurityContextA = Module.findExportByName("secur32.dll", "ImportSecurityContextA")
+Interceptor.attach(ImportSecurityContextA, {onLeave: function (args) {send("ImportSecurityContextA");}});
+
+var ImportSecurityContextW = Module.findExportByName("secur32.dll", "ImportSecurityContextW")
+Interceptor.attach(ImportSecurityContextW, {onLeave: function (args) {send("ImportSecurityContextW");}});
+
+var InitSecurityInterfaceA = Module.findExportByName("secur32.dll", "InitSecurityInterfaceA")
+Interceptor.attach(InitSecurityInterfaceA, {onLeave: function (args) {send("InitSecurityInterfaceA");}});
+
+var InitSecurityInterfaceW = Module.findExportByName("secur32.dll", "InitSecurityInterfaceW")
+Interceptor.attach(InitSecurityInterfaceW, {onLeave: function (args) {send("InitSecurityInterfaceW");}});
+
+var InitializeSecurityContextA = Module.findExportByName("secur32.dll", "InitializeSecurityContextA")
+Interceptor.attach(InitializeSecurityContextA, {onLeave: function (args) {send("InitializeSecurityContextA");}});
+
+var InitializeSecurityContextW = Module.findExportByName("secur32.dll", "InitializeSecurityContextW")
+Interceptor.attach(InitializeSecurityContextW, {onLeave: function (args) {send("InitializeSecurityContextW");}});
+
+var LsaCallAuthenticationPackage = Module.findExportByName("secur32.dll", "LsaCallAuthenticationPackage")
+Interceptor.attach(LsaCallAuthenticationPackage, {onLeave: function (args) {send("LsaCallAuthenticationPackage");}});
+
+var LsaConnectUntrusted = Module.findExportByName("secur32.dll", "LsaConnectUntrusted")
+Interceptor.attach(LsaConnectUntrusted, {onLeave: function (args) {send("LsaConnectUntrusted");}});
+
+var LsaDeregisterLogonProcess = Module.findExportByName("secur32.dll", "LsaDeregisterLogonProcess")
+Interceptor.attach(LsaDeregisterLogonProcess, {onLeave: function (args) {send("LsaDeregisterLogonProcess");}});
+
+var LsaEnumerateLogonSessions = Module.findExportByName("secur32.dll", "LsaEnumerateLogonSessions")
+Interceptor.attach(LsaEnumerateLogonSessions, {onLeave: function (args) {send("LsaEnumerateLogonSessions");}});
+
+var LsaFreeReturnBuffer = Module.findExportByName("secur32.dll", "LsaFreeReturnBuffer")
+Interceptor.attach(LsaFreeReturnBuffer, {onLeave: function (args) {send("LsaFreeReturnBuffer");}});
+
+var LsaGetLogonSessionData = Module.findExportByName("secur32.dll", "LsaGetLogonSessionData")
+Interceptor.attach(LsaGetLogonSessionData, {onLeave: function (args) {send("LsaGetLogonSessionData");}});
+
+var LsaLogonUser = Module.findExportByName("secur32.dll", "LsaLogonUser")
+Interceptor.attach(LsaLogonUser, {onLeave: function (args) {send("LsaLogonUser");}});
+
+var LsaLookupAuthenticationPackage = Module.findExportByName("secur32.dll", "LsaLookupAuthenticationPackage")
+Interceptor.attach(LsaLookupAuthenticationPackage, {onLeave: function (args) {send("LsaLookupAuthenticationPackage");}});
+
+var LsaRegisterLogonProcess = Module.findExportByName("secur32.dll", "LsaRegisterLogonProcess")
+Interceptor.attach(LsaRegisterLogonProcess, {onLeave: function (args) {send("LsaRegisterLogonProcess");}});
+
+var LsaRegisterPolicyChangeNotification = Module.findExportByName("secur32.dll", "LsaRegisterPolicyChangeNotification")
+Interceptor.attach(LsaRegisterPolicyChangeNotification, {onLeave: function (args) {send("LsaRegisterPolicyChangeNotification");}});
+
+var LsaUnregisterPolicyChangeNotification = Module.findExportByName("secur32.dll", "LsaUnregisterPolicyChangeNotification")
+Interceptor.attach(LsaUnregisterPolicyChangeNotification, {onLeave: function (args) {send("LsaUnregisterPolicyChangeNotification");}});
+
+var MakeSignature = Module.findExportByName("secur32.dll", "MakeSignature")
+Interceptor.attach(MakeSignature, {onLeave: function (args) {send("MakeSignature");}});
+
+var QueryContextAttributesA = Module.findExportByName("secur32.dll", "QueryContextAttributesA")
+Interceptor.attach(QueryContextAttributesA, {onLeave: function (args) {send("QueryContextAttributesA");}});
+
+var QueryContextAttributesW = Module.findExportByName("secur32.dll", "QueryContextAttributesW")
+Interceptor.attach(QueryContextAttributesW, {onLeave: function (args) {send("QueryContextAttributesW");}});
+
+var QueryCredentialsAttributesA = Module.findExportByName("secur32.dll", "QueryCredentialsAttributesA")
+Interceptor.attach(QueryCredentialsAttributesA, {onLeave: function (args) {send("QueryCredentialsAttributesA");}});
+
+var QueryCredentialsAttributesW = Module.findExportByName("secur32.dll", "QueryCredentialsAttributesW")
+Interceptor.attach(QueryCredentialsAttributesW, {onLeave: function (args) {send("QueryCredentialsAttributesW");}});
+
+var QuerySecurityContextToken = Module.findExportByName("secur32.dll", "QuerySecurityContextToken")
+Interceptor.attach(QuerySecurityContextToken, {onLeave: function (args) {send("QuerySecurityContextToken");}});
+
+var QuerySecurityPackageInfoA = Module.findExportByName("secur32.dll", "QuerySecurityPackageInfoA")
+Interceptor.attach(QuerySecurityPackageInfoA, {onLeave: function (args) {send("QuerySecurityPackageInfoA");}});
+
+var QuerySecurityPackageInfoW = Module.findExportByName("secur32.dll", "QuerySecurityPackageInfoW")
+Interceptor.attach(QuerySecurityPackageInfoW, {onLeave: function (args) {send("QuerySecurityPackageInfoW");}});
+
+var RevertSecurityContext = Module.findExportByName("secur32.dll", "RevertSecurityContext")
+Interceptor.attach(RevertSecurityContext, {onLeave: function (args) {send("RevertSecurityContext");}});
+
+var SaslAcceptSecurityContext = Module.findExportByName("secur32.dll", "SaslAcceptSecurityContext")
+Interceptor.attach(SaslAcceptSecurityContext, {onLeave: function (args) {send("SaslAcceptSecurityContext");}});
+
+var SaslEnumerateProfilesA = Module.findExportByName("secur32.dll", "SaslEnumerateProfilesA")
+Interceptor.attach(SaslEnumerateProfilesA, {onLeave: function (args) {send("SaslEnumerateProfilesA");}});
+
+var SaslEnumerateProfilesW = Module.findExportByName("secur32.dll", "SaslEnumerateProfilesW")
+Interceptor.attach(SaslEnumerateProfilesW, {onLeave: function (args) {send("SaslEnumerateProfilesW");}});
+
+var SaslGetContextOption = Module.findExportByName("secur32.dll", "SaslGetContextOption")
+Interceptor.attach(SaslGetContextOption, {onLeave: function (args) {send("SaslGetContextOption");}});
+
+var SaslGetProfilePackageA = Module.findExportByName("secur32.dll", "SaslGetProfilePackageA")
+Interceptor.attach(SaslGetProfilePackageA, {onLeave: function (args) {send("SaslGetProfilePackageA");}});
+
+var SaslGetProfilePackageW = Module.findExportByName("secur32.dll", "SaslGetProfilePackageW")
+Interceptor.attach(SaslGetProfilePackageW, {onLeave: function (args) {send("SaslGetProfilePackageW");}});
+
+var SaslIdentifyPackageA = Module.findExportByName("secur32.dll", "SaslIdentifyPackageA")
+Interceptor.attach(SaslIdentifyPackageA, {onLeave: function (args) {send("SaslIdentifyPackageA");}});
+
+var SaslIdentifyPackageW = Module.findExportByName("secur32.dll", "SaslIdentifyPackageW")
+Interceptor.attach(SaslIdentifyPackageW, {onLeave: function (args) {send("SaslIdentifyPackageW");}});
+
+var SaslInitializeSecurityContextA = Module.findExportByName("secur32.dll", "SaslInitializeSecurityContextA")
+Interceptor.attach(SaslInitializeSecurityContextA, {onLeave: function (args) {send("SaslInitializeSecurityContextA");}});
+
+var SaslInitializeSecurityContextW = Module.findExportByName("secur32.dll", "SaslInitializeSecurityContextW")
+Interceptor.attach(SaslInitializeSecurityContextW, {onLeave: function (args) {send("SaslInitializeSecurityContextW");}});
+
+var SaslSetContextOption = Module.findExportByName("secur32.dll", "SaslSetContextOption")
+Interceptor.attach(SaslSetContextOption, {onLeave: function (args) {send("SaslSetContextOption");}});
+
+var SealMessage = Module.findExportByName("secur32.dll", "SealMessage")
+Interceptor.attach(SealMessage, {onLeave: function (args) {send("SealMessage");}});
+
+var SeciAllocateAndSetCallFlags = Module.findExportByName("secur32.dll", "SeciAllocateAndSetCallFlags")
+Interceptor.attach(SeciAllocateAndSetCallFlags, {onLeave: function (args) {send("SeciAllocateAndSetCallFlags");}});
+
+var SeciAllocateAndSetIPAddress = Module.findExportByName("secur32.dll", "SeciAllocateAndSetIPAddress")
+Interceptor.attach(SeciAllocateAndSetIPAddress, {onLeave: function (args) {send("SeciAllocateAndSetIPAddress");}});
+
+var SeciFreeCallContext = Module.findExportByName("secur32.dll", "SeciFreeCallContext")
+Interceptor.attach(SeciFreeCallContext, {onLeave: function (args) {send("SeciFreeCallContext");}});
+
+var SecpFreeMemory = Module.findExportByName("secur32.dll", "SecpFreeMemory")
+Interceptor.attach(SecpFreeMemory, {onLeave: function (args) {send("SecpFreeMemory");}});
+
+var SecpTranslateName = Module.findExportByName("secur32.dll", "SecpTranslateName")
+Interceptor.attach(SecpTranslateName, {onLeave: function (args) {send("SecpTranslateName");}});
+
+var SecpTranslateNameEx = Module.findExportByName("secur32.dll", "SecpTranslateNameEx")
+Interceptor.attach(SecpTranslateNameEx, {onLeave: function (args) {send("SecpTranslateNameEx");}});
+
+var SetContextAttributesA = Module.findExportByName("secur32.dll", "SetContextAttributesA")
+Interceptor.attach(SetContextAttributesA, {onLeave: function (args) {send("SetContextAttributesA");}});
+
+var SetContextAttributesW = Module.findExportByName("secur32.dll", "SetContextAttributesW")
+Interceptor.attach(SetContextAttributesW, {onLeave: function (args) {send("SetContextAttributesW");}});
+
+var SetCredentialsAttributesA = Module.findExportByName("secur32.dll", "SetCredentialsAttributesA")
+Interceptor.attach(SetCredentialsAttributesA, {onLeave: function (args) {send("SetCredentialsAttributesA");}});
+
+var SetCredentialsAttributesW = Module.findExportByName("secur32.dll", "SetCredentialsAttributesW")
+Interceptor.attach(SetCredentialsAttributesW, {onLeave: function (args) {send("SetCredentialsAttributesW");}});
+
+var SspiCompareAuthIdentities = Module.findExportByName("secur32.dll", "SspiCompareAuthIdentities")
+Interceptor.attach(SspiCompareAuthIdentities, {onLeave: function (args) {send("SspiCompareAuthIdentities");}});
+
+var SspiCopyAuthIdentity = Module.findExportByName("secur32.dll", "SspiCopyAuthIdentity")
+Interceptor.attach(SspiCopyAuthIdentity, {onLeave: function (args) {send("SspiCopyAuthIdentity");}});
+
+var SspiDecryptAuthIdentity = Module.findExportByName("secur32.dll", "SspiDecryptAuthIdentity")
+Interceptor.attach(SspiDecryptAuthIdentity, {onLeave: function (args) {send("SspiDecryptAuthIdentity");}});
+
+var SspiEncodeAuthIdentityAsStrings = Module.findExportByName("secur32.dll", "SspiEncodeAuthIdentityAsStrings")
+Interceptor.attach(SspiEncodeAuthIdentityAsStrings, {onLeave: function (args) {send("SspiEncodeAuthIdentityAsStrings");}});
+
+var SspiEncodeStringsAsAuthIdentity = Module.findExportByName("secur32.dll", "SspiEncodeStringsAsAuthIdentity")
+Interceptor.attach(SspiEncodeStringsAsAuthIdentity, {onLeave: function (args) {send("SspiEncodeStringsAsAuthIdentity");}});
+
+var SspiEncryptAuthIdentity = Module.findExportByName("secur32.dll", "SspiEncryptAuthIdentity")
+Interceptor.attach(SspiEncryptAuthIdentity, {onLeave: function (args) {send("SspiEncryptAuthIdentity");}});
+
+var SspiExcludePackage = Module.findExportByName("secur32.dll", "SspiExcludePackage")
+Interceptor.attach(SspiExcludePackage, {onLeave: function (args) {send("SspiExcludePackage");}});
+
+var SspiFreeAuthIdentity = Module.findExportByName("secur32.dll", "SspiFreeAuthIdentity")
+Interceptor.attach(SspiFreeAuthIdentity, {onLeave: function (args) {send("SspiFreeAuthIdentity");}});
+
+var SspiGetTargetHostName = Module.findExportByName("secur32.dll", "SspiGetTargetHostName")
+Interceptor.attach(SspiGetTargetHostName, {onLeave: function (args) {send("SspiGetTargetHostName");}});
+
+var SspiIsAuthIdentityEncrypted = Module.findExportByName("secur32.dll", "SspiIsAuthIdentityEncrypted")
+Interceptor.attach(SspiIsAuthIdentityEncrypted, {onLeave: function (args) {send("SspiIsAuthIdentityEncrypted");}});
+
+var SspiLocalFree = Module.findExportByName("secur32.dll", "SspiLocalFree")
+Interceptor.attach(SspiLocalFree, {onLeave: function (args) {send("SspiLocalFree");}});
+
+var SspiMarshalAuthIdentity = Module.findExportByName("secur32.dll", "SspiMarshalAuthIdentity")
+Interceptor.attach(SspiMarshalAuthIdentity, {onLeave: function (args) {send("SspiMarshalAuthIdentity");}});
+
+var SspiPrepareForCredRead = Module.findExportByName("secur32.dll", "SspiPrepareForCredRead")
+Interceptor.attach(SspiPrepareForCredRead, {onLeave: function (args) {send("SspiPrepareForCredRead");}});
+
+var SspiPrepareForCredWrite = Module.findExportByName("secur32.dll", "SspiPrepareForCredWrite")
+Interceptor.attach(SspiPrepareForCredWrite, {onLeave: function (args) {send("SspiPrepareForCredWrite");}});
+
+var SspiUnmarshalAuthIdentity = Module.findExportByName("secur32.dll", "SspiUnmarshalAuthIdentity")
+Interceptor.attach(SspiUnmarshalAuthIdentity, {onLeave: function (args) {send("SspiUnmarshalAuthIdentity");}});
+
+var SspiValidateAuthIdentity = Module.findExportByName("secur32.dll", "SspiValidateAuthIdentity")
+Interceptor.attach(SspiValidateAuthIdentity, {onLeave: function (args) {send("SspiValidateAuthIdentity");}});
+
+var SspiZeroAuthIdentity = Module.findExportByName("secur32.dll", "SspiZeroAuthIdentity")
+Interceptor.attach(SspiZeroAuthIdentity, {onLeave: function (args) {send("SspiZeroAuthIdentity");}});
+
+var TranslateNameA = Module.findExportByName("secur32.dll", "TranslateNameA")
+Interceptor.attach(TranslateNameA, {onLeave: function (args) {send("TranslateNameA");}});
+
+var TranslateNameW = Module.findExportByName("secur32.dll", "TranslateNameW")
+Interceptor.attach(TranslateNameW, {onLeave: function (args) {send("TranslateNameW");}});
+
+var UnsealMessage = Module.findExportByName("secur32.dll", "UnsealMessage")
+Interceptor.attach(UnsealMessage, {onLeave: function (args) {send("UnsealMessage");}});
+
+var VerifySignature = Module.findExportByName("secur32.dll", "VerifySignature")
+Interceptor.attach(VerifySignature, {onLeave: function (args) {send("VerifySignature");}});
+

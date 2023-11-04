@@ -1,0 +1,27 @@
+var CloseGenericCounters = Module.findExportByName("aspnet_counters.dll", "CloseGenericCounters")
+Interceptor.attach(CloseGenericCounters, {onLeave: function (args) {send("CloseGenericCounters");}});
+
+var CloseStateCounters = Module.findExportByName("aspnet_counters.dll", "CloseStateCounters")
+Interceptor.attach(CloseStateCounters, {onLeave: function (args) {send("CloseStateCounters");}});
+
+var CloseVersion4Counters = Module.findExportByName("aspnet_counters.dll", "CloseVersion4Counters")
+Interceptor.attach(CloseVersion4Counters, {onLeave: function (args) {send("CloseVersion4Counters");}});
+
+var CollectGenericCounters = Module.findExportByName("aspnet_counters.dll", "CollectGenericCounters")
+Interceptor.attach(CollectGenericCounters, {onLeave: function (args) {send("CollectGenericCounters");}});
+
+var CollectStateCounters = Module.findExportByName("aspnet_counters.dll", "CollectStateCounters")
+Interceptor.attach(CollectStateCounters, {onLeave: function (args) {send("CollectStateCounters");}});
+
+var CollectVersion4Counters = Module.findExportByName("aspnet_counters.dll", "CollectVersion4Counters")
+Interceptor.attach(CollectVersion4Counters, {onLeave: function (args) {send("CollectVersion4Counters");}});
+
+var OpenGenericCounters = Module.findExportByName("aspnet_counters.dll", "OpenGenericCounters")
+Interceptor.attach(OpenGenericCounters, {onLeave: function (args) {send("OpenGenericCounters");}});
+
+var OpenStateCounters = Module.findExportByName("aspnet_counters.dll", "OpenStateCounters")
+Interceptor.attach(OpenStateCounters, {onLeave: function (args) {send("OpenStateCounters");}});
+
+var OpenVersion4Counters = Module.findExportByName("aspnet_counters.dll", "OpenVersion4Counters")
+Interceptor.attach(OpenVersion4Counters, {onLeave: function (args) {send("OpenVersion4Counters");}});
+

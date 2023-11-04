@@ -1,0 +1,51 @@
+var DllCanUnloadNow = Module.findExportByName("vaultcli.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("vaultcli.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("vaultcli.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var VaultAddItem = Module.findExportByName("vaultcli.dll", "VaultAddItem")
+Interceptor.attach(VaultAddItem, {onLeave: function (args) {send("VaultAddItem");}});
+
+var VaultCloseVault = Module.findExportByName("vaultcli.dll", "VaultCloseVault")
+Interceptor.attach(VaultCloseVault, {onLeave: function (args) {send("VaultCloseVault");}});
+
+var VaultCreateItemType = Module.findExportByName("vaultcli.dll", "VaultCreateItemType")
+Interceptor.attach(VaultCreateItemType, {onLeave: function (args) {send("VaultCreateItemType");}});
+
+var VaultDeleteItemType = Module.findExportByName("vaultcli.dll", "VaultDeleteItemType")
+Interceptor.attach(VaultDeleteItemType, {onLeave: function (args) {send("VaultDeleteItemType");}});
+
+var VaultEnumerateItemTypes = Module.findExportByName("vaultcli.dll", "VaultEnumerateItemTypes")
+Interceptor.attach(VaultEnumerateItemTypes, {onLeave: function (args) {send("VaultEnumerateItemTypes");}});
+
+var VaultEnumerateItems = Module.findExportByName("vaultcli.dll", "VaultEnumerateItems")
+Interceptor.attach(VaultEnumerateItems, {onLeave: function (args) {send("VaultEnumerateItems");}});
+
+var VaultEnumerateVaults = Module.findExportByName("vaultcli.dll", "VaultEnumerateVaults")
+Interceptor.attach(VaultEnumerateVaults, {onLeave: function (args) {send("VaultEnumerateVaults");}});
+
+var VaultFindItems = Module.findExportByName("vaultcli.dll", "VaultFindItems")
+Interceptor.attach(VaultFindItems, {onLeave: function (args) {send("VaultFindItems");}});
+
+var VaultFree = Module.findExportByName("vaultcli.dll", "VaultFree")
+Interceptor.attach(VaultFree, {onLeave: function (args) {send("VaultFree");}});
+
+var VaultGetInformation = Module.findExportByName("vaultcli.dll", "VaultGetInformation")
+Interceptor.attach(VaultGetInformation, {onLeave: function (args) {send("VaultGetInformation");}});
+
+var VaultGetItem = Module.findExportByName("vaultcli.dll", "VaultGetItem")
+Interceptor.attach(VaultGetItem, {onLeave: function (args) {send("VaultGetItem");}});
+
+var VaultGetItemType = Module.findExportByName("vaultcli.dll", "VaultGetItemType")
+Interceptor.attach(VaultGetItemType, {onLeave: function (args) {send("VaultGetItemType");}});
+
+var VaultOpenVault = Module.findExportByName("vaultcli.dll", "VaultOpenVault")
+Interceptor.attach(VaultOpenVault, {onLeave: function (args) {send("VaultOpenVault");}});
+
+var VaultRemoveItem = Module.findExportByName("vaultcli.dll", "VaultRemoveItem")
+Interceptor.attach(VaultRemoveItem, {onLeave: function (args) {send("VaultRemoveItem");}});
+

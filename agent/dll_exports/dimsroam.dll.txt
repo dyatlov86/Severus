@@ -1,0 +1,3 @@
+var DimsRoamEntry = Module.findExportByName("dimsroam.dll", "DimsRoamEntry")
+Interceptor.attach(DimsRoamEntry, {onLeave: function (args) {send("DimsRoamEntry");}});
+

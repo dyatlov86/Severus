@@ -1,0 +1,6 @@
+var WmiPropCoInstaller = Module.findExportByName("wmiprop.dll", "WmiPropCoInstaller")
+Interceptor.attach(WmiPropCoInstaller, {onLeave: function (args) {send("WmiPropCoInstaller");}});
+
+var WmiPropPageProvider = Module.findExportByName("wmiprop.dll", "WmiPropPageProvider")
+Interceptor.attach(WmiPropPageProvider, {onLeave: function (args) {send("WmiPropPageProvider");}});
+

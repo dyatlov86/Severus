@@ -1,0 +1,3 @@
+var CreateFX = Module.findExportByName("XAPOFX1_3.dll", "CreateFX")
+Interceptor.attach(CreateFX, {onLeave: function (args) {send("CreateFX");}});
+

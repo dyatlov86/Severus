@@ -1,0 +1,36 @@
+var VidBitBlt = Module.findExportByName("BOOTVID.DLL", "VidBitBlt")
+Interceptor.attach(VidBitBlt, {onLeave: function (args) {send("VidBitBlt");}});
+
+var VidBitBltEx = Module.findExportByName("BOOTVID.DLL", "VidBitBltEx")
+Interceptor.attach(VidBitBltEx, {onLeave: function (args) {send("VidBitBltEx");}});
+
+var VidBufferToScreenBlt = Module.findExportByName("BOOTVID.DLL", "VidBufferToScreenBlt")
+Interceptor.attach(VidBufferToScreenBlt, {onLeave: function (args) {send("VidBufferToScreenBlt");}});
+
+var VidCleanUp = Module.findExportByName("BOOTVID.DLL", "VidCleanUp")
+Interceptor.attach(VidCleanUp, {onLeave: function (args) {send("VidCleanUp");}});
+
+var VidDisplayString = Module.findExportByName("BOOTVID.DLL", "VidDisplayString")
+Interceptor.attach(VidDisplayString, {onLeave: function (args) {send("VidDisplayString");}});
+
+var VidDisplayStringXY = Module.findExportByName("BOOTVID.DLL", "VidDisplayStringXY")
+Interceptor.attach(VidDisplayStringXY, {onLeave: function (args) {send("VidDisplayStringXY");}});
+
+var VidInitialize = Module.findExportByName("BOOTVID.DLL", "VidInitialize")
+Interceptor.attach(VidInitialize, {onLeave: function (args) {send("VidInitialize");}});
+
+var VidResetDisplay = Module.findExportByName("BOOTVID.DLL", "VidResetDisplay")
+Interceptor.attach(VidResetDisplay, {onLeave: function (args) {send("VidResetDisplay");}});
+
+var VidScreenToBufferBlt = Module.findExportByName("BOOTVID.DLL", "VidScreenToBufferBlt")
+Interceptor.attach(VidScreenToBufferBlt, {onLeave: function (args) {send("VidScreenToBufferBlt");}});
+
+var VidSetScrollRegion = Module.findExportByName("BOOTVID.DLL", "VidSetScrollRegion")
+Interceptor.attach(VidSetScrollRegion, {onLeave: function (args) {send("VidSetScrollRegion");}});
+
+var VidSetTextColor = Module.findExportByName("BOOTVID.DLL", "VidSetTextColor")
+Interceptor.attach(VidSetTextColor, {onLeave: function (args) {send("VidSetTextColor");}});
+
+var VidSolidColorFill = Module.findExportByName("BOOTVID.DLL", "VidSolidColorFill")
+Interceptor.attach(VidSolidColorFill, {onLeave: function (args) {send("VidSolidColorFill");}});
+

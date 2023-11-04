@@ -1,0 +1,63 @@
+var CreateAssemblyCache = Module.findExportByName("sxs.dll", "CreateAssemblyCache")
+Interceptor.attach(CreateAssemblyCache, {onLeave: function (args) {send("CreateAssemblyCache");}});
+
+var CreateAssemblyNameObject = Module.findExportByName("sxs.dll", "CreateAssemblyNameObject")
+Interceptor.attach(CreateAssemblyNameObject, {onLeave: function (args) {send("CreateAssemblyNameObject");}});
+
+var SxsBeginAssemblyInstall = Module.findExportByName("sxs.dll", "SxsBeginAssemblyInstall")
+Interceptor.attach(SxsBeginAssemblyInstall, {onLeave: function (args) {send("SxsBeginAssemblyInstall");}});
+
+var SxsEndAssemblyInstall = Module.findExportByName("sxs.dll", "SxsEndAssemblyInstall")
+Interceptor.attach(SxsEndAssemblyInstall, {onLeave: function (args) {send("SxsEndAssemblyInstall");}});
+
+var SxsFindClrClassInformation = Module.findExportByName("sxs.dll", "SxsFindClrClassInformation")
+Interceptor.attach(SxsFindClrClassInformation, {onLeave: function (args) {send("SxsFindClrClassInformation");}});
+
+var SxsFindClrSurrogateInformation = Module.findExportByName("sxs.dll", "SxsFindClrSurrogateInformation")
+Interceptor.attach(SxsFindClrSurrogateInformation, {onLeave: function (args) {send("SxsFindClrSurrogateInformation");}});
+
+var SxsGenerateActivationContext = Module.findExportByName("sxs.dll", "SxsGenerateActivationContext")
+Interceptor.attach(SxsGenerateActivationContext, {onLeave: function (args) {send("SxsGenerateActivationContext");}});
+
+var SxsInstallW = Module.findExportByName("sxs.dll", "SxsInstallW")
+Interceptor.attach(SxsInstallW, {onLeave: function (args) {send("SxsInstallW");}});
+
+var SxsLookupClrGuid = Module.findExportByName("sxs.dll", "SxsLookupClrGuid")
+Interceptor.attach(SxsLookupClrGuid, {onLeave: function (args) {send("SxsLookupClrGuid");}});
+
+var SxsOleAut32MapConfiguredClsidToReferenceClsid = Module.findExportByName("sxs.dll", "SxsOleAut32MapConfiguredClsidToReferenceClsid")
+Interceptor.attach(SxsOleAut32MapConfiguredClsidToReferenceClsid, {onLeave: function (args) {send("SxsOleAut32MapConfiguredClsidToReferenceClsid");}});
+
+var SxsOleAut32MapIIDOrCLSIDToTypeLibrary = Module.findExportByName("sxs.dll", "SxsOleAut32MapIIDOrCLSIDToTypeLibrary")
+Interceptor.attach(SxsOleAut32MapIIDOrCLSIDToTypeLibrary, {onLeave: function (args) {send("SxsOleAut32MapIIDOrCLSIDToTypeLibrary");}});
+
+var SxsOleAut32MapIIDToProxyStubCLSID = Module.findExportByName("sxs.dll", "SxsOleAut32MapIIDToProxyStubCLSID")
+Interceptor.attach(SxsOleAut32MapIIDToProxyStubCLSID, {onLeave: function (args) {send("SxsOleAut32MapIIDToProxyStubCLSID");}});
+
+var SxsOleAut32MapIIDToTLBPath = Module.findExportByName("sxs.dll", "SxsOleAut32MapIIDToTLBPath")
+Interceptor.attach(SxsOleAut32MapIIDToTLBPath, {onLeave: function (args) {send("SxsOleAut32MapIIDToTLBPath");}});
+
+var SxsOleAut32MapReferenceClsidToConfiguredClsid = Module.findExportByName("sxs.dll", "SxsOleAut32MapReferenceClsidToConfiguredClsid")
+Interceptor.attach(SxsOleAut32MapReferenceClsidToConfiguredClsid, {onLeave: function (args) {send("SxsOleAut32MapReferenceClsidToConfiguredClsid");}});
+
+var SxsOleAut32RedirectTypeLibrary = Module.findExportByName("sxs.dll", "SxsOleAut32RedirectTypeLibrary")
+Interceptor.attach(SxsOleAut32RedirectTypeLibrary, {onLeave: function (args) {send("SxsOleAut32RedirectTypeLibrary");}});
+
+var SxsProbeAssemblyInstallation = Module.findExportByName("sxs.dll", "SxsProbeAssemblyInstallation")
+Interceptor.attach(SxsProbeAssemblyInstallation, {onLeave: function (args) {send("SxsProbeAssemblyInstallation");}});
+
+var SxsQueryManifestInformation = Module.findExportByName("sxs.dll", "SxsQueryManifestInformation")
+Interceptor.attach(SxsQueryManifestInformation, {onLeave: function (args) {send("SxsQueryManifestInformation");}});
+
+var SxsRunDllInstallAssembly = Module.findExportByName("sxs.dll", "SxsRunDllInstallAssembly")
+Interceptor.attach(SxsRunDllInstallAssembly, {onLeave: function (args) {send("SxsRunDllInstallAssembly");}});
+
+var SxsRunDllInstallAssemblyW = Module.findExportByName("sxs.dll", "SxsRunDllInstallAssemblyW")
+Interceptor.attach(SxsRunDllInstallAssemblyW, {onLeave: function (args) {send("SxsRunDllInstallAssemblyW");}});
+
+var SxsUninstallW = Module.findExportByName("sxs.dll", "SxsUninstallW")
+Interceptor.attach(SxsUninstallW, {onLeave: function (args) {send("SxsUninstallW");}});
+
+var SxspGenerateManifestPathOnAssemblyIdentity = Module.findExportByName("sxs.dll", "SxspGenerateManifestPathOnAssemblyIdentity")
+Interceptor.attach(SxspGenerateManifestPathOnAssemblyIdentity, {onLeave: function (args) {send("SxspGenerateManifestPathOnAssemblyIdentity");}});
+

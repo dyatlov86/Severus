@@ -1,0 +1,51 @@
+var D3DPERF_BeginEvent = Module.findExportByName("d3d9.dll", "D3DPERF_BeginEvent")
+Interceptor.attach(D3DPERF_BeginEvent, {onLeave: function (args) {send("D3DPERF_BeginEvent");}});
+
+var D3DPERF_EndEvent = Module.findExportByName("d3d9.dll", "D3DPERF_EndEvent")
+Interceptor.attach(D3DPERF_EndEvent, {onLeave: function (args) {send("D3DPERF_EndEvent");}});
+
+var D3DPERF_GetStatus = Module.findExportByName("d3d9.dll", "D3DPERF_GetStatus")
+Interceptor.attach(D3DPERF_GetStatus, {onLeave: function (args) {send("D3DPERF_GetStatus");}});
+
+var D3DPERF_QueryRepeatFrame = Module.findExportByName("d3d9.dll", "D3DPERF_QueryRepeatFrame")
+Interceptor.attach(D3DPERF_QueryRepeatFrame, {onLeave: function (args) {send("D3DPERF_QueryRepeatFrame");}});
+
+var D3DPERF_SetMarker = Module.findExportByName("d3d9.dll", "D3DPERF_SetMarker")
+Interceptor.attach(D3DPERF_SetMarker, {onLeave: function (args) {send("D3DPERF_SetMarker");}});
+
+var D3DPERF_SetOptions = Module.findExportByName("d3d9.dll", "D3DPERF_SetOptions")
+Interceptor.attach(D3DPERF_SetOptions, {onLeave: function (args) {send("D3DPERF_SetOptions");}});
+
+var D3DPERF_SetRegion = Module.findExportByName("d3d9.dll", "D3DPERF_SetRegion")
+Interceptor.attach(D3DPERF_SetRegion, {onLeave: function (args) {send("D3DPERF_SetRegion");}});
+
+var DebugSetLevel = Module.findExportByName("d3d9.dll", "DebugSetLevel")
+Interceptor.attach(DebugSetLevel, {onLeave: function (args) {send("DebugSetLevel");}});
+
+var DebugSetMute = Module.findExportByName("d3d9.dll", "DebugSetMute")
+Interceptor.attach(DebugSetMute, {onLeave: function (args) {send("DebugSetMute");}});
+
+var Direct3D9EnableMaximizedWindowedModeShim = Module.findExportByName("d3d9.dll", "Direct3D9EnableMaximizedWindowedModeShim")
+Interceptor.attach(Direct3D9EnableMaximizedWindowedModeShim, {onLeave: function (args) {send("Direct3D9EnableMaximizedWindowedModeShim");}});
+
+var Direct3DCreate9 = Module.findExportByName("d3d9.dll", "Direct3DCreate9")
+Interceptor.attach(Direct3DCreate9, {onLeave: function (args) {send("Direct3DCreate9");}});
+
+var Direct3DCreate9Ex = Module.findExportByName("d3d9.dll", "Direct3DCreate9Ex")
+Interceptor.attach(Direct3DCreate9Ex, {onLeave: function (args) {send("Direct3DCreate9Ex");}});
+
+var Direct3DCreate9On12 = Module.findExportByName("d3d9.dll", "Direct3DCreate9On12")
+Interceptor.attach(Direct3DCreate9On12, {onLeave: function (args) {send("Direct3DCreate9On12");}});
+
+var Direct3DCreate9On12Ex = Module.findExportByName("d3d9.dll", "Direct3DCreate9On12Ex")
+Interceptor.attach(Direct3DCreate9On12Ex, {onLeave: function (args) {send("Direct3DCreate9On12Ex");}});
+
+var Direct3DShaderValidatorCreate9 = Module.findExportByName("d3d9.dll", "Direct3DShaderValidatorCreate9")
+Interceptor.attach(Direct3DShaderValidatorCreate9, {onLeave: function (args) {send("Direct3DShaderValidatorCreate9");}});
+
+var PSGPError = Module.findExportByName("d3d9.dll", "PSGPError")
+Interceptor.attach(PSGPError, {onLeave: function (args) {send("PSGPError");}});
+
+var PSGPSampleTexture = Module.findExportByName("d3d9.dll", "PSGPSampleTexture")
+Interceptor.attach(PSGPSampleTexture, {onLeave: function (args) {send("PSGPSampleTexture");}});
+

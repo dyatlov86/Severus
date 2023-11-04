@@ -1,0 +1,33 @@
+var AddDirectXFeatureLevelToContext = Module.findExportByName("AppxApplicabilityEngine.dll", "AddDirectXFeatureLevelToContext")
+Interceptor.attach(AddDirectXFeatureLevelToContext, {onLeave: function (args) {send("AddDirectXFeatureLevelToContext");}});
+
+var AddUserLanguagesToContext = Module.findExportByName("AppxApplicabilityEngine.dll", "AddUserLanguagesToContext")
+Interceptor.attach(AddUserLanguagesToContext, {onLeave: function (args) {send("AddUserLanguagesToContext");}});
+
+var CreateApplicabilityContext = Module.findExportByName("AppxApplicabilityEngine.dll", "CreateApplicabilityContext")
+Interceptor.attach(CreateApplicabilityContext, {onLeave: function (args) {send("CreateApplicabilityContext");}});
+
+var CreateApplicabilityContextFromString = Module.findExportByName("AppxApplicabilityEngine.dll", "CreateApplicabilityContextFromString")
+Interceptor.attach(CreateApplicabilityContextFromString, {onLeave: function (args) {send("CreateApplicabilityContextFromString");}});
+
+var FreeApplicabilityContext = Module.findExportByName("AppxApplicabilityEngine.dll", "FreeApplicabilityContext")
+Interceptor.attach(FreeApplicabilityContext, {onLeave: function (args) {send("FreeApplicabilityContext");}});
+
+var FreeApplicablePackages = Module.findExportByName("AppxApplicabilityEngine.dll", "FreeApplicablePackages")
+Interceptor.attach(FreeApplicablePackages, {onLeave: function (args) {send("FreeApplicablePackages");}});
+
+var GetApplicabilityContext = Module.findExportByName("AppxApplicabilityEngine.dll", "GetApplicabilityContext")
+Interceptor.attach(GetApplicabilityContext, {onLeave: function (args) {send("GetApplicabilityContext");}});
+
+var GetApplicablePackages = Module.findExportByName("AppxApplicabilityEngine.dll", "GetApplicablePackages")
+Interceptor.attach(GetApplicablePackages, {onLeave: function (args) {send("GetApplicablePackages");}});
+
+var GetApplicablePackagesForUser = Module.findExportByName("AppxApplicabilityEngine.dll", "GetApplicablePackagesForUser")
+Interceptor.attach(GetApplicablePackagesForUser, {onLeave: function (args) {send("GetApplicablePackagesForUser");}});
+
+var GetApplicablePackagesForUserWithAppChosenResources = Module.findExportByName("AppxApplicabilityEngine.dll", "GetApplicablePackagesForUserWithAppChosenResources")
+Interceptor.attach(GetApplicablePackagesForUserWithAppChosenResources, {onLeave: function (args) {send("GetApplicablePackagesForUserWithAppChosenResources");}});
+
+var GetApplicablePackagesWithAppChosenResources = Module.findExportByName("AppxApplicabilityEngine.dll", "GetApplicablePackagesWithAppChosenResources")
+Interceptor.attach(GetApplicablePackagesWithAppChosenResources, {onLeave: function (args) {send("GetApplicablePackagesWithAppChosenResources");}});
+

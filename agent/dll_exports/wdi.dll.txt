@@ -1,0 +1,159 @@
+var DllCanUnloadNow = Module.findExportByName("wdi.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wdi.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ServiceMain = Module.findExportByName("wdi.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var WdiAddFileToInstance = Module.findExportByName("wdi.dll", "WdiAddFileToInstance")
+Interceptor.attach(WdiAddFileToInstance, {onLeave: function (args) {send("WdiAddFileToInstance");}});
+
+var WdiAddParameter = Module.findExportByName("wdi.dll", "WdiAddParameter")
+Interceptor.attach(WdiAddParameter, {onLeave: function (args) {send("WdiAddParameter");}});
+
+var WdiCancel = Module.findExportByName("wdi.dll", "WdiCancel")
+Interceptor.attach(WdiCancel, {onLeave: function (args) {send("WdiCancel");}});
+
+var WdiCloseInstance = Module.findExportByName("wdi.dll", "WdiCloseInstance")
+Interceptor.attach(WdiCloseInstance, {onLeave: function (args) {send("WdiCloseInstance");}});
+
+var WdiCreateInstance = Module.findExportByName("wdi.dll", "WdiCreateInstance")
+Interceptor.attach(WdiCreateInstance, {onLeave: function (args) {send("WdiCreateInstance");}});
+
+var WdiDeleteQueuedResolution = Module.findExportByName("wdi.dll", "WdiDeleteQueuedResolution")
+Interceptor.attach(WdiDeleteQueuedResolution, {onLeave: function (args) {send("WdiDeleteQueuedResolution");}});
+
+var WdiDiagnose = Module.findExportByName("wdi.dll", "WdiDiagnose")
+Interceptor.attach(WdiDiagnose, {onLeave: function (args) {send("WdiDiagnose");}});
+
+var WdiGetClientActivityId = Module.findExportByName("wdi.dll", "WdiGetClientActivityId")
+Interceptor.attach(WdiGetClientActivityId, {onLeave: function (args) {send("WdiGetClientActivityId");}});
+
+var WdiGetClientLCID = Module.findExportByName("wdi.dll", "WdiGetClientLCID")
+Interceptor.attach(WdiGetClientLCID, {onLeave: function (args) {send("WdiGetClientLCID");}});
+
+var WdiGetDiagnosticModuleId = Module.findExportByName("wdi.dll", "WdiGetDiagnosticModuleId")
+Interceptor.attach(WdiGetDiagnosticModuleId, {onLeave: function (args) {send("WdiGetDiagnosticModuleId");}});
+
+var WdiGetEvent = Module.findExportByName("wdi.dll", "WdiGetEvent")
+Interceptor.attach(WdiGetEvent, {onLeave: function (args) {send("WdiGetEvent");}});
+
+var WdiGetInstanceFilePath = Module.findExportByName("wdi.dll", "WdiGetInstanceFilePath")
+Interceptor.attach(WdiGetInstanceFilePath, {onLeave: function (args) {send("WdiGetInstanceFilePath");}});
+
+var WdiGetInstanceId = Module.findExportByName("wdi.dll", "WdiGetInstanceId")
+Interceptor.attach(WdiGetInstanceId, {onLeave: function (args) {send("WdiGetInstanceId");}});
+
+var WdiGetLoggerSnapshotPath = Module.findExportByName("wdi.dll", "WdiGetLoggerSnapshotPath")
+Interceptor.attach(WdiGetLoggerSnapshotPath, {onLeave: function (args) {send("WdiGetLoggerSnapshotPath");}});
+
+var WdiGetParameterByIndex = Module.findExportByName("wdi.dll", "WdiGetParameterByIndex")
+Interceptor.attach(WdiGetParameterByIndex, {onLeave: function (args) {send("WdiGetParameterByIndex");}});
+
+var WdiGetParameterByName = Module.findExportByName("wdi.dll", "WdiGetParameterByName")
+Interceptor.attach(WdiGetParameterByName, {onLeave: function (args) {send("WdiGetParameterByName");}});
+
+var WdiGetParameterCount = Module.findExportByName("wdi.dll", "WdiGetParameterCount")
+Interceptor.attach(WdiGetParameterCount, {onLeave: function (args) {send("WdiGetParameterCount");}});
+
+var WdiGetParameterData = Module.findExportByName("wdi.dll", "WdiGetParameterData")
+Interceptor.attach(WdiGetParameterData, {onLeave: function (args) {send("WdiGetParameterData");}});
+
+var WdiGetParameterDataLength = Module.findExportByName("wdi.dll", "WdiGetParameterDataLength")
+Interceptor.attach(WdiGetParameterDataLength, {onLeave: function (args) {send("WdiGetParameterDataLength");}});
+
+var WdiGetParameterDiagnosticModuleId = Module.findExportByName("wdi.dll", "WdiGetParameterDiagnosticModuleId")
+Interceptor.attach(WdiGetParameterDiagnosticModuleId, {onLeave: function (args) {send("WdiGetParameterDiagnosticModuleId");}});
+
+var WdiGetParameterFlags = Module.findExportByName("wdi.dll", "WdiGetParameterFlags")
+Interceptor.attach(WdiGetParameterFlags, {onLeave: function (args) {send("WdiGetParameterFlags");}});
+
+var WdiGetParameterName = Module.findExportByName("wdi.dll", "WdiGetParameterName")
+Interceptor.attach(WdiGetParameterName, {onLeave: function (args) {send("WdiGetParameterName");}});
+
+var WdiGetProgress = Module.findExportByName("wdi.dll", "WdiGetProgress")
+Interceptor.attach(WdiGetProgress, {onLeave: function (args) {send("WdiGetProgress");}});
+
+var WdiGetQueuedResolutionAudience = Module.findExportByName("wdi.dll", "WdiGetQueuedResolutionAudience")
+Interceptor.attach(WdiGetQueuedResolutionAudience, {onLeave: function (args) {send("WdiGetQueuedResolutionAudience");}});
+
+var WdiGetQueuedResolutionExpirationDate = Module.findExportByName("wdi.dll", "WdiGetQueuedResolutionExpirationDate")
+Interceptor.attach(WdiGetQueuedResolutionExpirationDate, {onLeave: function (args) {send("WdiGetQueuedResolutionExpirationDate");}});
+
+var WdiGetQueuedResolutionId = Module.findExportByName("wdi.dll", "WdiGetQueuedResolutionId")
+Interceptor.attach(WdiGetQueuedResolutionId, {onLeave: function (args) {send("WdiGetQueuedResolutionId");}});
+
+var WdiGetQueuedResolutionName = Module.findExportByName("wdi.dll", "WdiGetQueuedResolutionName")
+Interceptor.attach(WdiGetQueuedResolutionName, {onLeave: function (args) {send("WdiGetQueuedResolutionName");}});
+
+var WdiGetQueuedResolutionPriority = Module.findExportByName("wdi.dll", "WdiGetQueuedResolutionPriority")
+Interceptor.attach(WdiGetQueuedResolutionPriority, {onLeave: function (args) {send("WdiGetQueuedResolutionPriority");}});
+
+var WdiGetResult = Module.findExportByName("wdi.dll", "WdiGetResult")
+Interceptor.attach(WdiGetResult, {onLeave: function (args) {send("WdiGetResult");}});
+
+var WdiGetScenarioIcon = Module.findExportByName("wdi.dll", "WdiGetScenarioIcon")
+Interceptor.attach(WdiGetScenarioIcon, {onLeave: function (args) {send("WdiGetScenarioIcon");}});
+
+var WdiGetScenarioInfo = Module.findExportByName("wdi.dll", "WdiGetScenarioInfo")
+Interceptor.attach(WdiGetScenarioInfo, {onLeave: function (args) {send("WdiGetScenarioInfo");}});
+
+var WdiGetScenarioInstanceCreatedDate = Module.findExportByName("wdi.dll", "WdiGetScenarioInstanceCreatedDate")
+Interceptor.attach(WdiGetScenarioInstanceCreatedDate, {onLeave: function (args) {send("WdiGetScenarioInstanceCreatedDate");}});
+
+var WdiGetScenarioInstanceFilePath = Module.findExportByName("wdi.dll", "WdiGetScenarioInstanceFilePath")
+Interceptor.attach(WdiGetScenarioInstanceFilePath, {onLeave: function (args) {send("WdiGetScenarioInstanceFilePath");}});
+
+var WdiGetScenarioInstanceId = Module.findExportByName("wdi.dll", "WdiGetScenarioInstanceId")
+Interceptor.attach(WdiGetScenarioInstanceId, {onLeave: function (args) {send("WdiGetScenarioInstanceId");}});
+
+var WdiGetScenarioInstances = Module.findExportByName("wdi.dll", "WdiGetScenarioInstances")
+Interceptor.attach(WdiGetScenarioInstances, {onLeave: function (args) {send("WdiGetScenarioInstances");}});
+
+var WdiGetScenarioSourceName = Module.findExportByName("wdi.dll", "WdiGetScenarioSourceName")
+Interceptor.attach(WdiGetScenarioSourceName, {onLeave: function (args) {send("WdiGetScenarioSourceName");}});
+
+var WdiGetScenarioTypeName = Module.findExportByName("wdi.dll", "WdiGetScenarioTypeName")
+Interceptor.attach(WdiGetScenarioTypeName, {onLeave: function (args) {send("WdiGetScenarioTypeName");}});
+
+var WdiImpersonateClient = Module.findExportByName("wdi.dll", "WdiImpersonateClient")
+Interceptor.attach(WdiImpersonateClient, {onLeave: function (args) {send("WdiImpersonateClient");}});
+
+var WdiIsQueuedResolutionAdmin = Module.findExportByName("wdi.dll", "WdiIsQueuedResolutionAdmin")
+Interceptor.attach(WdiIsQueuedResolutionAdmin, {onLeave: function (args) {send("WdiIsQueuedResolutionAdmin");}});
+
+var WdiLaunchQueuedResolution = Module.findExportByName("wdi.dll", "WdiLaunchQueuedResolution")
+Interceptor.attach(WdiLaunchQueuedResolution, {onLeave: function (args) {send("WdiLaunchQueuedResolution");}});
+
+var WdiOpenInstance = Module.findExportByName("wdi.dll", "WdiOpenInstance")
+Interceptor.attach(WdiOpenInstance, {onLeave: function (args) {send("WdiOpenInstance");}});
+
+var WdiQueueCurrentResolution = Module.findExportByName("wdi.dll", "WdiQueueCurrentResolution")
+Interceptor.attach(WdiQueueCurrentResolution, {onLeave: function (args) {send("WdiQueueCurrentResolution");}});
+
+var WdiResolve = Module.findExportByName("wdi.dll", "WdiResolve")
+Interceptor.attach(WdiResolve, {onLeave: function (args) {send("WdiResolve");}});
+
+var WdiRevertToSelf = Module.findExportByName("wdi.dll", "WdiRevertToSelf")
+Interceptor.attach(WdiRevertToSelf, {onLeave: function (args) {send("WdiRevertToSelf");}});
+
+var WdiSetFeedback = Module.findExportByName("wdi.dll", "WdiSetFeedback")
+Interceptor.attach(WdiSetFeedback, {onLeave: function (args) {send("WdiSetFeedback");}});
+
+var WdiSetProblemDetectionResult = Module.findExportByName("wdi.dll", "WdiSetProblemDetectionResult")
+Interceptor.attach(WdiSetProblemDetectionResult, {onLeave: function (args) {send("WdiSetProblemDetectionResult");}});
+
+var WdiSetProgress = Module.findExportByName("wdi.dll", "WdiSetProgress")
+Interceptor.attach(WdiSetProgress, {onLeave: function (args) {send("WdiSetProgress");}});
+
+var WdiSetResolution = Module.findExportByName("wdi.dll", "WdiSetResolution")
+Interceptor.attach(WdiSetResolution, {onLeave: function (args) {send("WdiSetResolution");}});
+
+var WdipLaunchLocalHost = Module.findExportByName("wdi.dll", "WdipLaunchLocalHost")
+Interceptor.attach(WdipLaunchLocalHost, {onLeave: function (args) {send("WdipLaunchLocalHost");}});
+
+var WdipLaunchRunDLLUserHost = Module.findExportByName("wdi.dll", "WdipLaunchRunDLLUserHost")
+Interceptor.attach(WdipLaunchRunDLLUserHost, {onLeave: function (args) {send("WdipLaunchRunDLLUserHost");}});
+

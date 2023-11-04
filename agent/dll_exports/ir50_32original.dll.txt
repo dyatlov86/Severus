@@ -1,0 +1,24 @@
+var AboutDialogProc = Module.findExportByName("ir50_32original.dll", "AboutDialogProc")
+Interceptor.attach(AboutDialogProc, {onLeave: function (args) {send("AboutDialogProc");}});
+
+var ConfigureDialogProc = Module.findExportByName("ir50_32original.dll", "ConfigureDialogProc")
+Interceptor.attach(ConfigureDialogProc, {onLeave: function (args) {send("ConfigureDialogProc");}});
+
+var DllCanUnloadNow = Module.findExportByName("ir50_32original.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("ir50_32original.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("ir50_32original.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("ir50_32original.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("ir50_32original.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DriverProc = Module.findExportByName("ir50_32original.dll", "DriverProc")
+Interceptor.attach(DriverProc, {onLeave: function (args) {send("DriverProc");}});
+

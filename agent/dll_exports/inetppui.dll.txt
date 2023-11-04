@@ -1,0 +1,3 @@
+var InitializePrintMonitorUI = Module.findExportByName("inetppui.dll", "InitializePrintMonitorUI")
+Interceptor.attach(InitializePrintMonitorUI, {onLeave: function (args) {send("InitializePrintMonitorUI");}});
+

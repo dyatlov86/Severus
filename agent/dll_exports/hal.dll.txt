@@ -1,0 +1,273 @@
+var HalAcpiGetTableEx = Module.findExportByName("hal.dll", "HalAcpiGetTableEx")
+Interceptor.attach(HalAcpiGetTableEx, {onLeave: function (args) {send("HalAcpiGetTableEx");}});
+
+var HalAcquireDisplayOwnership = Module.findExportByName("hal.dll", "HalAcquireDisplayOwnership")
+Interceptor.attach(HalAcquireDisplayOwnership, {onLeave: function (args) {send("HalAcquireDisplayOwnership");}});
+
+var HalAdjustResourceList = Module.findExportByName("hal.dll", "HalAdjustResourceList")
+Interceptor.attach(HalAdjustResourceList, {onLeave: function (args) {send("HalAdjustResourceList");}});
+
+var HalAllProcessorsStarted = Module.findExportByName("hal.dll", "HalAllProcessorsStarted")
+Interceptor.attach(HalAllProcessorsStarted, {onLeave: function (args) {send("HalAllProcessorsStarted");}});
+
+var HalAllocateAdapterChannel = Module.findExportByName("hal.dll", "HalAllocateAdapterChannel")
+Interceptor.attach(HalAllocateAdapterChannel, {onLeave: function (args) {send("HalAllocateAdapterChannel");}});
+
+var HalAllocateCommonBuffer = Module.findExportByName("hal.dll", "HalAllocateCommonBuffer")
+Interceptor.attach(HalAllocateCommonBuffer, {onLeave: function (args) {send("HalAllocateCommonBuffer");}});
+
+var HalAllocateCrashDumpRegisters = Module.findExportByName("hal.dll", "HalAllocateCrashDumpRegisters")
+Interceptor.attach(HalAllocateCrashDumpRegisters, {onLeave: function (args) {send("HalAllocateCrashDumpRegisters");}});
+
+var HalAllocateHardwareCounters = Module.findExportByName("hal.dll", "HalAllocateHardwareCounters")
+Interceptor.attach(HalAllocateHardwareCounters, {onLeave: function (args) {send("HalAllocateHardwareCounters");}});
+
+var HalAssignSlotResources = Module.findExportByName("hal.dll", "HalAssignSlotResources")
+Interceptor.attach(HalAssignSlotResources, {onLeave: function (args) {send("HalAssignSlotResources");}});
+
+var HalBugCheckSystem = Module.findExportByName("hal.dll", "HalBugCheckSystem")
+Interceptor.attach(HalBugCheckSystem, {onLeave: function (args) {send("HalBugCheckSystem");}});
+
+var HalCalibratePerformanceCounter = Module.findExportByName("hal.dll", "HalCalibratePerformanceCounter")
+Interceptor.attach(HalCalibratePerformanceCounter, {onLeave: function (args) {send("HalCalibratePerformanceCounter");}});
+
+var HalClearSoftwareInterrupt = Module.findExportByName("hal.dll", "HalClearSoftwareInterrupt")
+Interceptor.attach(HalClearSoftwareInterrupt, {onLeave: function (args) {send("HalClearSoftwareInterrupt");}});
+
+var HalConvertDeviceIdtToIrql = Module.findExportByName("hal.dll", "HalConvertDeviceIdtToIrql")
+Interceptor.attach(HalConvertDeviceIdtToIrql, {onLeave: function (args) {send("HalConvertDeviceIdtToIrql");}});
+
+var HalDisableInterrupt = Module.findExportByName("hal.dll", "HalDisableInterrupt")
+Interceptor.attach(HalDisableInterrupt, {onLeave: function (args) {send("HalDisableInterrupt");}});
+
+var HalDisplayString = Module.findExportByName("hal.dll", "HalDisplayString")
+Interceptor.attach(HalDisplayString, {onLeave: function (args) {send("HalDisplayString");}});
+
+var HalDmaAllocateCrashDumpRegistersEx = Module.findExportByName("hal.dll", "HalDmaAllocateCrashDumpRegistersEx")
+Interceptor.attach(HalDmaAllocateCrashDumpRegistersEx, {onLeave: function (args) {send("HalDmaAllocateCrashDumpRegistersEx");}});
+
+var HalDmaFreeCrashDumpRegistersEx = Module.findExportByName("hal.dll", "HalDmaFreeCrashDumpRegistersEx")
+Interceptor.attach(HalDmaFreeCrashDumpRegistersEx, {onLeave: function (args) {send("HalDmaFreeCrashDumpRegistersEx");}});
+
+var HalEnableInterrupt = Module.findExportByName("hal.dll", "HalEnableInterrupt")
+Interceptor.attach(HalEnableInterrupt, {onLeave: function (args) {send("HalEnableInterrupt");}});
+
+var HalEnumerateEnvironmentVariablesEx = Module.findExportByName("hal.dll", "HalEnumerateEnvironmentVariablesEx")
+Interceptor.attach(HalEnumerateEnvironmentVariablesEx, {onLeave: function (args) {send("HalEnumerateEnvironmentVariablesEx");}});
+
+var HalEnumerateProcessors = Module.findExportByName("hal.dll", "HalEnumerateProcessors")
+Interceptor.attach(HalEnumerateProcessors, {onLeave: function (args) {send("HalEnumerateProcessors");}});
+
+var HalFlushCommonBuffer = Module.findExportByName("hal.dll", "HalFlushCommonBuffer")
+Interceptor.attach(HalFlushCommonBuffer, {onLeave: function (args) {send("HalFlushCommonBuffer");}});
+
+var HalFreeCommonBuffer = Module.findExportByName("hal.dll", "HalFreeCommonBuffer")
+Interceptor.attach(HalFreeCommonBuffer, {onLeave: function (args) {send("HalFreeCommonBuffer");}});
+
+var HalFreeHardwareCounters = Module.findExportByName("hal.dll", "HalFreeHardwareCounters")
+Interceptor.attach(HalFreeHardwareCounters, {onLeave: function (args) {send("HalFreeHardwareCounters");}});
+
+var HalGetAdapter = Module.findExportByName("hal.dll", "HalGetAdapter")
+Interceptor.attach(HalGetAdapter, {onLeave: function (args) {send("HalGetAdapter");}});
+
+var HalGetBusData = Module.findExportByName("hal.dll", "HalGetBusData")
+Interceptor.attach(HalGetBusData, {onLeave: function (args) {send("HalGetBusData");}});
+
+var HalGetBusDataByOffset = Module.findExportByName("hal.dll", "HalGetBusDataByOffset")
+Interceptor.attach(HalGetBusDataByOffset, {onLeave: function (args) {send("HalGetBusDataByOffset");}});
+
+var HalGetEnvironmentVariable = Module.findExportByName("hal.dll", "HalGetEnvironmentVariable")
+Interceptor.attach(HalGetEnvironmentVariable, {onLeave: function (args) {send("HalGetEnvironmentVariable");}});
+
+var HalGetEnvironmentVariableEx = Module.findExportByName("hal.dll", "HalGetEnvironmentVariableEx")
+Interceptor.attach(HalGetEnvironmentVariableEx, {onLeave: function (args) {send("HalGetEnvironmentVariableEx");}});
+
+var HalGetInterruptTargetInformation = Module.findExportByName("hal.dll", "HalGetInterruptTargetInformation")
+Interceptor.attach(HalGetInterruptTargetInformation, {onLeave: function (args) {send("HalGetInterruptTargetInformation");}});
+
+var HalGetInterruptVector = Module.findExportByName("hal.dll", "HalGetInterruptVector")
+Interceptor.attach(HalGetInterruptVector, {onLeave: function (args) {send("HalGetInterruptVector");}});
+
+var HalGetMemoryCachingRequirements = Module.findExportByName("hal.dll", "HalGetMemoryCachingRequirements")
+Interceptor.attach(HalGetMemoryCachingRequirements, {onLeave: function (args) {send("HalGetMemoryCachingRequirements");}});
+
+var HalGetMessageRoutingInfo = Module.findExportByName("hal.dll", "HalGetMessageRoutingInfo")
+Interceptor.attach(HalGetMessageRoutingInfo, {onLeave: function (args) {send("HalGetMessageRoutingInfo");}});
+
+var HalGetProcessorIdByNtNumber = Module.findExportByName("hal.dll", "HalGetProcessorIdByNtNumber")
+Interceptor.attach(HalGetProcessorIdByNtNumber, {onLeave: function (args) {send("HalGetProcessorIdByNtNumber");}});
+
+var HalGetVectorInput = Module.findExportByName("hal.dll", "HalGetVectorInput")
+Interceptor.attach(HalGetVectorInput, {onLeave: function (args) {send("HalGetVectorInput");}});
+
+var HalHandleMcheck = Module.findExportByName("hal.dll", "HalHandleMcheck")
+Interceptor.attach(HalHandleMcheck, {onLeave: function (args) {send("HalHandleMcheck");}});
+
+var HalHandleNMI = Module.findExportByName("hal.dll", "HalHandleNMI")
+Interceptor.attach(HalHandleNMI, {onLeave: function (args) {send("HalHandleNMI");}});
+
+var HalInitSystem = Module.findExportByName("hal.dll", "HalInitSystem")
+Interceptor.attach(HalInitSystem, {onLeave: function (args) {send("HalInitSystem");}});
+
+var HalInitializeBios = Module.findExportByName("hal.dll", "HalInitializeBios")
+Interceptor.attach(HalInitializeBios, {onLeave: function (args) {send("HalInitializeBios");}});
+
+var HalInitializeOnResume = Module.findExportByName("hal.dll", "HalInitializeOnResume")
+Interceptor.attach(HalInitializeOnResume, {onLeave: function (args) {send("HalInitializeOnResume");}});
+
+var HalInitializeProcessor = Module.findExportByName("hal.dll", "HalInitializeProcessor")
+Interceptor.attach(HalInitializeProcessor, {onLeave: function (args) {send("HalInitializeProcessor");}});
+
+var HalIsHyperThreadingEnabled = Module.findExportByName("hal.dll", "HalIsHyperThreadingEnabled")
+Interceptor.attach(HalIsHyperThreadingEnabled, {onLeave: function (args) {send("HalIsHyperThreadingEnabled");}});
+
+var HalMakeBeep = Module.findExportByName("hal.dll", "HalMakeBeep")
+Interceptor.attach(HalMakeBeep, {onLeave: function (args) {send("HalMakeBeep");}});
+
+var HalPerformEndOfInterrupt = Module.findExportByName("hal.dll", "HalPerformEndOfInterrupt")
+Interceptor.attach(HalPerformEndOfInterrupt, {onLeave: function (args) {send("HalPerformEndOfInterrupt");}});
+
+var HalProcessorIdle = Module.findExportByName("hal.dll", "HalProcessorIdle")
+Interceptor.attach(HalProcessorIdle, {onLeave: function (args) {send("HalProcessorIdle");}});
+
+var HalQueryDisplayParameters = Module.findExportByName("hal.dll", "HalQueryDisplayParameters")
+Interceptor.attach(HalQueryDisplayParameters, {onLeave: function (args) {send("HalQueryDisplayParameters");}});
+
+var HalQueryEnvironmentVariableInfoEx = Module.findExportByName("hal.dll", "HalQueryEnvironmentVariableInfoEx")
+Interceptor.attach(HalQueryEnvironmentVariableInfoEx, {onLeave: function (args) {send("HalQueryEnvironmentVariableInfoEx");}});
+
+var HalQueryMaximumProcessorCount = Module.findExportByName("hal.dll", "HalQueryMaximumProcessorCount")
+Interceptor.attach(HalQueryMaximumProcessorCount, {onLeave: function (args) {send("HalQueryMaximumProcessorCount");}});
+
+var HalQueryRealTimeClock = Module.findExportByName("hal.dll", "HalQueryRealTimeClock")
+Interceptor.attach(HalQueryRealTimeClock, {onLeave: function (args) {send("HalQueryRealTimeClock");}});
+
+var HalReadDmaCounter = Module.findExportByName("hal.dll", "HalReadDmaCounter")
+Interceptor.attach(HalReadDmaCounter, {onLeave: function (args) {send("HalReadDmaCounter");}});
+
+var HalRegisterDynamicProcessor = Module.findExportByName("hal.dll", "HalRegisterDynamicProcessor")
+Interceptor.attach(HalRegisterDynamicProcessor, {onLeave: function (args) {send("HalRegisterDynamicProcessor");}});
+
+var HalRegisterErrataCallbacks = Module.findExportByName("hal.dll", "HalRegisterErrataCallbacks")
+Interceptor.attach(HalRegisterErrataCallbacks, {onLeave: function (args) {send("HalRegisterErrataCallbacks");}});
+
+var HalReportResourceUsage = Module.findExportByName("hal.dll", "HalReportResourceUsage")
+Interceptor.attach(HalReportResourceUsage, {onLeave: function (args) {send("HalReportResourceUsage");}});
+
+var HalRequestClockInterrupt = Module.findExportByName("hal.dll", "HalRequestClockInterrupt")
+Interceptor.attach(HalRequestClockInterrupt, {onLeave: function (args) {send("HalRequestClockInterrupt");}});
+
+var HalRequestDeferredRecoveryServiceInterrupt = Module.findExportByName("hal.dll", "HalRequestDeferredRecoveryServiceInterrupt")
+Interceptor.attach(HalRequestDeferredRecoveryServiceInterrupt, {onLeave: function (args) {send("HalRequestDeferredRecoveryServiceInterrupt");}});
+
+var HalRequestIpi = Module.findExportByName("hal.dll", "HalRequestIpi")
+Interceptor.attach(HalRequestIpi, {onLeave: function (args) {send("HalRequestIpi");}});
+
+var HalRequestIpiSpecifyVector = Module.findExportByName("hal.dll", "HalRequestIpiSpecifyVector")
+Interceptor.attach(HalRequestIpiSpecifyVector, {onLeave: function (args) {send("HalRequestIpiSpecifyVector");}});
+
+var HalRequestSoftwareInterrupt = Module.findExportByName("hal.dll", "HalRequestSoftwareInterrupt")
+Interceptor.attach(HalRequestSoftwareInterrupt, {onLeave: function (args) {send("HalRequestSoftwareInterrupt");}});
+
+var HalReturnToFirmware = Module.findExportByName("hal.dll", "HalReturnToFirmware")
+Interceptor.attach(HalReturnToFirmware, {onLeave: function (args) {send("HalReturnToFirmware");}});
+
+var HalSendNMI = Module.findExportByName("hal.dll", "HalSendNMI")
+Interceptor.attach(HalSendNMI, {onLeave: function (args) {send("HalSendNMI");}});
+
+var HalSendSoftwareInterrupt = Module.findExportByName("hal.dll", "HalSendSoftwareInterrupt")
+Interceptor.attach(HalSendSoftwareInterrupt, {onLeave: function (args) {send("HalSendSoftwareInterrupt");}});
+
+var HalSetBusData = Module.findExportByName("hal.dll", "HalSetBusData")
+Interceptor.attach(HalSetBusData, {onLeave: function (args) {send("HalSetBusData");}});
+
+var HalSetBusDataByOffset = Module.findExportByName("hal.dll", "HalSetBusDataByOffset")
+Interceptor.attach(HalSetBusDataByOffset, {onLeave: function (args) {send("HalSetBusDataByOffset");}});
+
+var HalSetDisplayParameters = Module.findExportByName("hal.dll", "HalSetDisplayParameters")
+Interceptor.attach(HalSetDisplayParameters, {onLeave: function (args) {send("HalSetDisplayParameters");}});
+
+var HalSetEnvironmentVariable = Module.findExportByName("hal.dll", "HalSetEnvironmentVariable")
+Interceptor.attach(HalSetEnvironmentVariable, {onLeave: function (args) {send("HalSetEnvironmentVariable");}});
+
+var HalSetEnvironmentVariableEx = Module.findExportByName("hal.dll", "HalSetEnvironmentVariableEx")
+Interceptor.attach(HalSetEnvironmentVariableEx, {onLeave: function (args) {send("HalSetEnvironmentVariableEx");}});
+
+var HalSetProfileInterval = Module.findExportByName("hal.dll", "HalSetProfileInterval")
+Interceptor.attach(HalSetProfileInterval, {onLeave: function (args) {send("HalSetProfileInterval");}});
+
+var HalSetRealTimeClock = Module.findExportByName("hal.dll", "HalSetRealTimeClock")
+Interceptor.attach(HalSetRealTimeClock, {onLeave: function (args) {send("HalSetRealTimeClock");}});
+
+var HalStartDynamicProcessor = Module.findExportByName("hal.dll", "HalStartDynamicProcessor")
+Interceptor.attach(HalStartDynamicProcessor, {onLeave: function (args) {send("HalStartDynamicProcessor");}});
+
+var HalStartNextProcessor = Module.findExportByName("hal.dll", "HalStartNextProcessor")
+Interceptor.attach(HalStartNextProcessor, {onLeave: function (args) {send("HalStartNextProcessor");}});
+
+var HalStartProfileInterrupt = Module.findExportByName("hal.dll", "HalStartProfileInterrupt")
+Interceptor.attach(HalStartProfileInterrupt, {onLeave: function (args) {send("HalStartProfileInterrupt");}});
+
+var HalStopProfileInterrupt = Module.findExportByName("hal.dll", "HalStopProfileInterrupt")
+Interceptor.attach(HalStopProfileInterrupt, {onLeave: function (args) {send("HalStopProfileInterrupt");}});
+
+var HalSystemVectorDispatchEntry = Module.findExportByName("hal.dll", "HalSystemVectorDispatchEntry")
+Interceptor.attach(HalSystemVectorDispatchEntry, {onLeave: function (args) {send("HalSystemVectorDispatchEntry");}});
+
+var HalTranslateBusAddress = Module.findExportByName("hal.dll", "HalTranslateBusAddress")
+Interceptor.attach(HalTranslateBusAddress, {onLeave: function (args) {send("HalTranslateBusAddress");}});
+
+var HalWheaUpdateCmciPolicy = Module.findExportByName("hal.dll", "HalWheaUpdateCmciPolicy")
+Interceptor.attach(HalWheaUpdateCmciPolicy, {onLeave: function (args) {send("HalWheaUpdateCmciPolicy");}});
+
+var IoFlushAdapterBuffers = Module.findExportByName("hal.dll", "IoFlushAdapterBuffers")
+Interceptor.attach(IoFlushAdapterBuffers, {onLeave: function (args) {send("IoFlushAdapterBuffers");}});
+
+var IoFreeAdapterChannel = Module.findExportByName("hal.dll", "IoFreeAdapterChannel")
+Interceptor.attach(IoFreeAdapterChannel, {onLeave: function (args) {send("IoFreeAdapterChannel");}});
+
+var IoFreeMapRegisters = Module.findExportByName("hal.dll", "IoFreeMapRegisters")
+Interceptor.attach(IoFreeMapRegisters, {onLeave: function (args) {send("IoFreeMapRegisters");}});
+
+var IoMapTransfer = Module.findExportByName("hal.dll", "IoMapTransfer")
+Interceptor.attach(IoMapTransfer, {onLeave: function (args) {send("IoMapTransfer");}});
+
+var IoReadPartitionTable = Module.findExportByName("hal.dll", "IoReadPartitionTable")
+Interceptor.attach(IoReadPartitionTable, {onLeave: function (args) {send("IoReadPartitionTable");}});
+
+var IoSetPartitionInformation = Module.findExportByName("hal.dll", "IoSetPartitionInformation")
+Interceptor.attach(IoSetPartitionInformation, {onLeave: function (args) {send("IoSetPartitionInformation");}});
+
+var IoWritePartitionTable = Module.findExportByName("hal.dll", "IoWritePartitionTable")
+Interceptor.attach(IoWritePartitionTable, {onLeave: function (args) {send("IoWritePartitionTable");}});
+
+var KdComPortInUse = Module.findExportByName("hal.dll", "KdComPortInUse")
+Interceptor.attach(KdComPortInUse, {onLeave: function (args) {send("KdComPortInUse");}});
+
+var KdHvComPortInUse = Module.findExportByName("hal.dll", "KdHvComPortInUse")
+Interceptor.attach(KdHvComPortInUse, {onLeave: function (args) {send("KdHvComPortInUse");}});
+
+var KeFlushWriteBuffer = Module.findExportByName("hal.dll", "KeFlushWriteBuffer")
+Interceptor.attach(KeFlushWriteBuffer, {onLeave: function (args) {send("KeFlushWriteBuffer");}});
+
+var KeQueryPerformanceCounter = Module.findExportByName("hal.dll", "KeQueryPerformanceCounter")
+Interceptor.attach(KeQueryPerformanceCounter, {onLeave: function (args) {send("KeQueryPerformanceCounter");}});
+
+var KeStallExecutionProcessor = Module.findExportByName("hal.dll", "KeStallExecutionProcessor")
+Interceptor.attach(KeStallExecutionProcessor, {onLeave: function (args) {send("KeStallExecutionProcessor");}});
+
+var x86BiosAllocateBuffer = Module.findExportByName("hal.dll", "x86BiosAllocateBuffer")
+Interceptor.attach(x86BiosAllocateBuffer, {onLeave: function (args) {send("x86BiosAllocateBuffer");}});
+
+var x86BiosCall = Module.findExportByName("hal.dll", "x86BiosCall")
+Interceptor.attach(x86BiosCall, {onLeave: function (args) {send("x86BiosCall");}});
+
+var x86BiosFreeBuffer = Module.findExportByName("hal.dll", "x86BiosFreeBuffer")
+Interceptor.attach(x86BiosFreeBuffer, {onLeave: function (args) {send("x86BiosFreeBuffer");}});
+
+var x86BiosReadMemory = Module.findExportByName("hal.dll", "x86BiosReadMemory")
+Interceptor.attach(x86BiosReadMemory, {onLeave: function (args) {send("x86BiosReadMemory");}});
+
+var x86BiosWriteMemory = Module.findExportByName("hal.dll", "x86BiosWriteMemory")
+Interceptor.attach(x86BiosWriteMemory, {onLeave: function (args) {send("x86BiosWriteMemory");}});
+

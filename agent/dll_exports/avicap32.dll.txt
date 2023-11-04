@@ -1,0 +1,18 @@
+var AppCleanup = Module.findExportByName("avicap32.dll", "AppCleanup")
+Interceptor.attach(AppCleanup, {onLeave: function (args) {send("AppCleanup");}});
+
+var capCreateCaptureWindowA = Module.findExportByName("avicap32.dll", "capCreateCaptureWindowA")
+Interceptor.attach(capCreateCaptureWindowA, {onLeave: function (args) {send("capCreateCaptureWindowA");}});
+
+var capCreateCaptureWindowW = Module.findExportByName("avicap32.dll", "capCreateCaptureWindowW")
+Interceptor.attach(capCreateCaptureWindowW, {onLeave: function (args) {send("capCreateCaptureWindowW");}});
+
+var capGetDriverDescriptionA = Module.findExportByName("avicap32.dll", "capGetDriverDescriptionA")
+Interceptor.attach(capGetDriverDescriptionA, {onLeave: function (args) {send("capGetDriverDescriptionA");}});
+
+var capGetDriverDescriptionW = Module.findExportByName("avicap32.dll", "capGetDriverDescriptionW")
+Interceptor.attach(capGetDriverDescriptionW, {onLeave: function (args) {send("capGetDriverDescriptionW");}});
+
+var videoThunk32 = Module.findExportByName("avicap32.dll", "videoThunk32")
+Interceptor.attach(videoThunk32, {onLeave: function (args) {send("videoThunk32");}});
+

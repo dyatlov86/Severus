@@ -1,0 +1,12 @@
+var NetScheduleJobAdd = Module.findExportByName("schedcli.dll", "NetScheduleJobAdd")
+Interceptor.attach(NetScheduleJobAdd, {onLeave: function (args) {send("NetScheduleJobAdd");}});
+
+var NetScheduleJobDel = Module.findExportByName("schedcli.dll", "NetScheduleJobDel")
+Interceptor.attach(NetScheduleJobDel, {onLeave: function (args) {send("NetScheduleJobDel");}});
+
+var NetScheduleJobEnum = Module.findExportByName("schedcli.dll", "NetScheduleJobEnum")
+Interceptor.attach(NetScheduleJobEnum, {onLeave: function (args) {send("NetScheduleJobEnum");}});
+
+var NetScheduleJobGetInfo = Module.findExportByName("schedcli.dll", "NetScheduleJobGetInfo")
+Interceptor.attach(NetScheduleJobGetInfo, {onLeave: function (args) {send("NetScheduleJobGetInfo");}});
+

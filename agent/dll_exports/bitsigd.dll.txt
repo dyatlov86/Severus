@@ -1,0 +1,6 @@
+var InitializeEx = Module.findExportByName("bitsigd.dll", "InitializeEx")
+Interceptor.attach(InitializeEx, {onLeave: function (args) {send("InitializeEx");}});
+
+var UninitializeEx = Module.findExportByName("bitsigd.dll", "UninitializeEx")
+Interceptor.attach(UninitializeEx, {onLeave: function (args) {send("UninitializeEx");}});
+

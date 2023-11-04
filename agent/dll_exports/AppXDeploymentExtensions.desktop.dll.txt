@@ -1,0 +1,18 @@
+var CreateRegistryCompatibilityCollector = Module.findExportByName("AppXDeploymentExtensions.desktop.dll", "CreateRegistryCompatibilityCollector")
+Interceptor.attach(CreateRegistryCompatibilityCollector, {onLeave: function (args) {send("CreateRegistryCompatibilityCollector");}});
+
+var CreateRegistryCompatibilityCollectorForUserOrSystemRegister = Module.findExportByName("AppXDeploymentExtensions.desktop.dll", "CreateRegistryCompatibilityCollectorForUserOrSystemRegister")
+Interceptor.attach(CreateRegistryCompatibilityCollectorForUserOrSystemRegister, {onLeave: function (args) {send("CreateRegistryCompatibilityCollectorForUserOrSystemRegister");}});
+
+var CreateRegistryCompatibilityManager = Module.findExportByName("AppXDeploymentExtensions.desktop.dll", "CreateRegistryCompatibilityManager")
+Interceptor.attach(CreateRegistryCompatibilityManager, {onLeave: function (args) {send("CreateRegistryCompatibilityManager");}});
+
+var LoadCategoryNameTable = Module.findExportByName("AppXDeploymentExtensions.desktop.dll", "LoadCategoryNameTable")
+Interceptor.attach(LoadCategoryNameTable, {onLeave: function (args) {send("LoadCategoryNameTable");}});
+
+var LoadExtensionRegistrationTable = Module.findExportByName("AppXDeploymentExtensions.desktop.dll", "LoadExtensionRegistrationTable")
+Interceptor.attach(LoadExtensionRegistrationTable, {onLeave: function (args) {send("LoadExtensionRegistrationTable");}});
+
+var ShellRefresh = Module.findExportByName("AppXDeploymentExtensions.desktop.dll", "ShellRefresh")
+Interceptor.attach(ShellRefresh, {onLeave: function (args) {send("ShellRefresh");}});
+

@@ -1,0 +1,51 @@
+var GetFileVersionInfoA = Module.findExportByName("version.dll", "GetFileVersionInfoA")
+Interceptor.attach(GetFileVersionInfoA, {onLeave: function (args) {send("GetFileVersionInfoA");}});
+
+var GetFileVersionInfoByHandle = Module.findExportByName("version.dll", "GetFileVersionInfoByHandle")
+Interceptor.attach(GetFileVersionInfoByHandle, {onLeave: function (args) {send("GetFileVersionInfoByHandle");}});
+
+var GetFileVersionInfoExA = Module.findExportByName("version.dll", "GetFileVersionInfoExA")
+Interceptor.attach(GetFileVersionInfoExA, {onLeave: function (args) {send("GetFileVersionInfoExA");}});
+
+var GetFileVersionInfoExW = Module.findExportByName("version.dll", "GetFileVersionInfoExW")
+Interceptor.attach(GetFileVersionInfoExW, {onLeave: function (args) {send("GetFileVersionInfoExW");}});
+
+var GetFileVersionInfoSizeA = Module.findExportByName("version.dll", "GetFileVersionInfoSizeA")
+Interceptor.attach(GetFileVersionInfoSizeA, {onLeave: function (args) {send("GetFileVersionInfoSizeA");}});
+
+var GetFileVersionInfoSizeExA = Module.findExportByName("version.dll", "GetFileVersionInfoSizeExA")
+Interceptor.attach(GetFileVersionInfoSizeExA, {onLeave: function (args) {send("GetFileVersionInfoSizeExA");}});
+
+var GetFileVersionInfoSizeExW = Module.findExportByName("version.dll", "GetFileVersionInfoSizeExW")
+Interceptor.attach(GetFileVersionInfoSizeExW, {onLeave: function (args) {send("GetFileVersionInfoSizeExW");}});
+
+var GetFileVersionInfoSizeW = Module.findExportByName("version.dll", "GetFileVersionInfoSizeW")
+Interceptor.attach(GetFileVersionInfoSizeW, {onLeave: function (args) {send("GetFileVersionInfoSizeW");}});
+
+var GetFileVersionInfoW = Module.findExportByName("version.dll", "GetFileVersionInfoW")
+Interceptor.attach(GetFileVersionInfoW, {onLeave: function (args) {send("GetFileVersionInfoW");}});
+
+var VerFindFileA = Module.findExportByName("version.dll", "VerFindFileA")
+Interceptor.attach(VerFindFileA, {onLeave: function (args) {send("VerFindFileA");}});
+
+var VerFindFileW = Module.findExportByName("version.dll", "VerFindFileW")
+Interceptor.attach(VerFindFileW, {onLeave: function (args) {send("VerFindFileW");}});
+
+var VerInstallFileA = Module.findExportByName("version.dll", "VerInstallFileA")
+Interceptor.attach(VerInstallFileA, {onLeave: function (args) {send("VerInstallFileA");}});
+
+var VerInstallFileW = Module.findExportByName("version.dll", "VerInstallFileW")
+Interceptor.attach(VerInstallFileW, {onLeave: function (args) {send("VerInstallFileW");}});
+
+var VerLanguageNameA = Module.findExportByName("version.dll", "VerLanguageNameA")
+Interceptor.attach(VerLanguageNameA, {onLeave: function (args) {send("VerLanguageNameA");}});
+
+var VerLanguageNameW = Module.findExportByName("version.dll", "VerLanguageNameW")
+Interceptor.attach(VerLanguageNameW, {onLeave: function (args) {send("VerLanguageNameW");}});
+
+var VerQueryValueA = Module.findExportByName("version.dll", "VerQueryValueA")
+Interceptor.attach(VerQueryValueA, {onLeave: function (args) {send("VerQueryValueA");}});
+
+var VerQueryValueW = Module.findExportByName("version.dll", "VerQueryValueW")
+Interceptor.attach(VerQueryValueW, {onLeave: function (args) {send("VerQueryValueW");}});
+

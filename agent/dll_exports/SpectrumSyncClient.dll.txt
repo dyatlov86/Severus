@@ -1,0 +1,6 @@
+var SpectrumSyncJoinFrameRendezvous = Module.findExportByName("SpectrumSyncClient.dll", "SpectrumSyncJoinFrameRendezvous")
+Interceptor.attach(SpectrumSyncJoinFrameRendezvous, {onLeave: function (args) {send("SpectrumSyncJoinFrameRendezvous");}});
+
+var SpectrumSyncSignalFrameRendezvous = Module.findExportByName("SpectrumSyncClient.dll", "SpectrumSyncSignalFrameRendezvous")
+Interceptor.attach(SpectrumSyncSignalFrameRendezvous, {onLeave: function (args) {send("SpectrumSyncSignalFrameRendezvous");}});
+

@@ -1,0 +1,921 @@
+var AddIPAddress = Module.findExportByName("IPHLPAPI.DLL", "AddIPAddress")
+Interceptor.attach(AddIPAddress, {onLeave: function (args) {send("AddIPAddress");}});
+
+var AllocateAndGetInterfaceInfoFromStack = Module.findExportByName("IPHLPAPI.DLL", "AllocateAndGetInterfaceInfoFromStack")
+Interceptor.attach(AllocateAndGetInterfaceInfoFromStack, {onLeave: function (args) {send("AllocateAndGetInterfaceInfoFromStack");}});
+
+var AllocateAndGetIpAddrTableFromStack = Module.findExportByName("IPHLPAPI.DLL", "AllocateAndGetIpAddrTableFromStack")
+Interceptor.attach(AllocateAndGetIpAddrTableFromStack, {onLeave: function (args) {send("AllocateAndGetIpAddrTableFromStack");}});
+
+var CancelIPChangeNotify = Module.findExportByName("IPHLPAPI.DLL", "CancelIPChangeNotify")
+Interceptor.attach(CancelIPChangeNotify, {onLeave: function (args) {send("CancelIPChangeNotify");}});
+
+var CancelIfTimestampConfigChange = Module.findExportByName("IPHLPAPI.DLL", "CancelIfTimestampConfigChange")
+Interceptor.attach(CancelIfTimestampConfigChange, {onLeave: function (args) {send("CancelIfTimestampConfigChange");}});
+
+var CancelMibChangeNotify2 = Module.findExportByName("IPHLPAPI.DLL", "CancelMibChangeNotify2")
+Interceptor.attach(CancelMibChangeNotify2, {onLeave: function (args) {send("CancelMibChangeNotify2");}});
+
+var CaptureInterfaceHardwareCrossTimestamp = Module.findExportByName("IPHLPAPI.DLL", "CaptureInterfaceHardwareCrossTimestamp")
+Interceptor.attach(CaptureInterfaceHardwareCrossTimestamp, {onLeave: function (args) {send("CaptureInterfaceHardwareCrossTimestamp");}});
+
+var CloseCompartment = Module.findExportByName("IPHLPAPI.DLL", "CloseCompartment")
+Interceptor.attach(CloseCompartment, {onLeave: function (args) {send("CloseCompartment");}});
+
+var CloseGetIPPhysicalInterfaceForDestination = Module.findExportByName("IPHLPAPI.DLL", "CloseGetIPPhysicalInterfaceForDestination")
+Interceptor.attach(CloseGetIPPhysicalInterfaceForDestination, {onLeave: function (args) {send("CloseGetIPPhysicalInterfaceForDestination");}});
+
+var ConvertCompartmentGuidToId = Module.findExportByName("IPHLPAPI.DLL", "ConvertCompartmentGuidToId")
+Interceptor.attach(ConvertCompartmentGuidToId, {onLeave: function (args) {send("ConvertCompartmentGuidToId");}});
+
+var ConvertCompartmentIdToGuid = Module.findExportByName("IPHLPAPI.DLL", "ConvertCompartmentIdToGuid")
+Interceptor.attach(ConvertCompartmentIdToGuid, {onLeave: function (args) {send("ConvertCompartmentIdToGuid");}});
+
+var ConvertGuidToStringA = Module.findExportByName("IPHLPAPI.DLL", "ConvertGuidToStringA")
+Interceptor.attach(ConvertGuidToStringA, {onLeave: function (args) {send("ConvertGuidToStringA");}});
+
+var ConvertGuidToStringW = Module.findExportByName("IPHLPAPI.DLL", "ConvertGuidToStringW")
+Interceptor.attach(ConvertGuidToStringW, {onLeave: function (args) {send("ConvertGuidToStringW");}});
+
+var ConvertInterfaceAliasToLuid = Module.findExportByName("IPHLPAPI.DLL", "ConvertInterfaceAliasToLuid")
+Interceptor.attach(ConvertInterfaceAliasToLuid, {onLeave: function (args) {send("ConvertInterfaceAliasToLuid");}});
+
+var ConvertInterfaceGuidToLuid = Module.findExportByName("IPHLPAPI.DLL", "ConvertInterfaceGuidToLuid")
+Interceptor.attach(ConvertInterfaceGuidToLuid, {onLeave: function (args) {send("ConvertInterfaceGuidToLuid");}});
+
+var ConvertInterfaceIndexToLuid = Module.findExportByName("IPHLPAPI.DLL", "ConvertInterfaceIndexToLuid")
+Interceptor.attach(ConvertInterfaceIndexToLuid, {onLeave: function (args) {send("ConvertInterfaceIndexToLuid");}});
+
+var ConvertInterfaceLuidToAlias = Module.findExportByName("IPHLPAPI.DLL", "ConvertInterfaceLuidToAlias")
+Interceptor.attach(ConvertInterfaceLuidToAlias, {onLeave: function (args) {send("ConvertInterfaceLuidToAlias");}});
+
+var ConvertInterfaceLuidToGuid = Module.findExportByName("IPHLPAPI.DLL", "ConvertInterfaceLuidToGuid")
+Interceptor.attach(ConvertInterfaceLuidToGuid, {onLeave: function (args) {send("ConvertInterfaceLuidToGuid");}});
+
+var ConvertInterfaceLuidToIndex = Module.findExportByName("IPHLPAPI.DLL", "ConvertInterfaceLuidToIndex")
+Interceptor.attach(ConvertInterfaceLuidToIndex, {onLeave: function (args) {send("ConvertInterfaceLuidToIndex");}});
+
+var ConvertInterfaceLuidToNameA = Module.findExportByName("IPHLPAPI.DLL", "ConvertInterfaceLuidToNameA")
+Interceptor.attach(ConvertInterfaceLuidToNameA, {onLeave: function (args) {send("ConvertInterfaceLuidToNameA");}});
+
+var ConvertInterfaceLuidToNameW = Module.findExportByName("IPHLPAPI.DLL", "ConvertInterfaceLuidToNameW")
+Interceptor.attach(ConvertInterfaceLuidToNameW, {onLeave: function (args) {send("ConvertInterfaceLuidToNameW");}});
+
+var ConvertInterfaceNameToLuidA = Module.findExportByName("IPHLPAPI.DLL", "ConvertInterfaceNameToLuidA")
+Interceptor.attach(ConvertInterfaceNameToLuidA, {onLeave: function (args) {send("ConvertInterfaceNameToLuidA");}});
+
+var ConvertInterfaceNameToLuidW = Module.findExportByName("IPHLPAPI.DLL", "ConvertInterfaceNameToLuidW")
+Interceptor.attach(ConvertInterfaceNameToLuidW, {onLeave: function (args) {send("ConvertInterfaceNameToLuidW");}});
+
+var ConvertInterfacePhysicalAddressToLuid = Module.findExportByName("IPHLPAPI.DLL", "ConvertInterfacePhysicalAddressToLuid")
+Interceptor.attach(ConvertInterfacePhysicalAddressToLuid, {onLeave: function (args) {send("ConvertInterfacePhysicalAddressToLuid");}});
+
+var ConvertIpv4MaskToLength = Module.findExportByName("IPHLPAPI.DLL", "ConvertIpv4MaskToLength")
+Interceptor.attach(ConvertIpv4MaskToLength, {onLeave: function (args) {send("ConvertIpv4MaskToLength");}});
+
+var ConvertLengthToIpv4Mask = Module.findExportByName("IPHLPAPI.DLL", "ConvertLengthToIpv4Mask")
+Interceptor.attach(ConvertLengthToIpv4Mask, {onLeave: function (args) {send("ConvertLengthToIpv4Mask");}});
+
+var ConvertRemoteInterfaceAliasToLuid = Module.findExportByName("IPHLPAPI.DLL", "ConvertRemoteInterfaceAliasToLuid")
+Interceptor.attach(ConvertRemoteInterfaceAliasToLuid, {onLeave: function (args) {send("ConvertRemoteInterfaceAliasToLuid");}});
+
+var ConvertRemoteInterfaceGuidToLuid = Module.findExportByName("IPHLPAPI.DLL", "ConvertRemoteInterfaceGuidToLuid")
+Interceptor.attach(ConvertRemoteInterfaceGuidToLuid, {onLeave: function (args) {send("ConvertRemoteInterfaceGuidToLuid");}});
+
+var ConvertRemoteInterfaceIndexToLuid = Module.findExportByName("IPHLPAPI.DLL", "ConvertRemoteInterfaceIndexToLuid")
+Interceptor.attach(ConvertRemoteInterfaceIndexToLuid, {onLeave: function (args) {send("ConvertRemoteInterfaceIndexToLuid");}});
+
+var ConvertRemoteInterfaceLuidToAlias = Module.findExportByName("IPHLPAPI.DLL", "ConvertRemoteInterfaceLuidToAlias")
+Interceptor.attach(ConvertRemoteInterfaceLuidToAlias, {onLeave: function (args) {send("ConvertRemoteInterfaceLuidToAlias");}});
+
+var ConvertRemoteInterfaceLuidToGuid = Module.findExportByName("IPHLPAPI.DLL", "ConvertRemoteInterfaceLuidToGuid")
+Interceptor.attach(ConvertRemoteInterfaceLuidToGuid, {onLeave: function (args) {send("ConvertRemoteInterfaceLuidToGuid");}});
+
+var ConvertRemoteInterfaceLuidToIndex = Module.findExportByName("IPHLPAPI.DLL", "ConvertRemoteInterfaceLuidToIndex")
+Interceptor.attach(ConvertRemoteInterfaceLuidToIndex, {onLeave: function (args) {send("ConvertRemoteInterfaceLuidToIndex");}});
+
+var ConvertStringToGuidA = Module.findExportByName("IPHLPAPI.DLL", "ConvertStringToGuidA")
+Interceptor.attach(ConvertStringToGuidA, {onLeave: function (args) {send("ConvertStringToGuidA");}});
+
+var ConvertStringToGuidW = Module.findExportByName("IPHLPAPI.DLL", "ConvertStringToGuidW")
+Interceptor.attach(ConvertStringToGuidW, {onLeave: function (args) {send("ConvertStringToGuidW");}});
+
+var ConvertStringToInterfacePhysicalAddress = Module.findExportByName("IPHLPAPI.DLL", "ConvertStringToInterfacePhysicalAddress")
+Interceptor.attach(ConvertStringToInterfacePhysicalAddress, {onLeave: function (args) {send("ConvertStringToInterfacePhysicalAddress");}});
+
+var CreateAnycastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "CreateAnycastIpAddressEntry")
+Interceptor.attach(CreateAnycastIpAddressEntry, {onLeave: function (args) {send("CreateAnycastIpAddressEntry");}});
+
+var CreateCompartment = Module.findExportByName("IPHLPAPI.DLL", "CreateCompartment")
+Interceptor.attach(CreateCompartment, {onLeave: function (args) {send("CreateCompartment");}});
+
+var CreateIpForwardEntry = Module.findExportByName("IPHLPAPI.DLL", "CreateIpForwardEntry")
+Interceptor.attach(CreateIpForwardEntry, {onLeave: function (args) {send("CreateIpForwardEntry");}});
+
+var CreateIpForwardEntry2 = Module.findExportByName("IPHLPAPI.DLL", "CreateIpForwardEntry2")
+Interceptor.attach(CreateIpForwardEntry2, {onLeave: function (args) {send("CreateIpForwardEntry2");}});
+
+var CreateIpNetEntry = Module.findExportByName("IPHLPAPI.DLL", "CreateIpNetEntry")
+Interceptor.attach(CreateIpNetEntry, {onLeave: function (args) {send("CreateIpNetEntry");}});
+
+var CreateIpNetEntry2 = Module.findExportByName("IPHLPAPI.DLL", "CreateIpNetEntry2")
+Interceptor.attach(CreateIpNetEntry2, {onLeave: function (args) {send("CreateIpNetEntry2");}});
+
+var CreatePersistentTcpPortReservation = Module.findExportByName("IPHLPAPI.DLL", "CreatePersistentTcpPortReservation")
+Interceptor.attach(CreatePersistentTcpPortReservation, {onLeave: function (args) {send("CreatePersistentTcpPortReservation");}});
+
+var CreatePersistentUdpPortReservation = Module.findExportByName("IPHLPAPI.DLL", "CreatePersistentUdpPortReservation")
+Interceptor.attach(CreatePersistentUdpPortReservation, {onLeave: function (args) {send("CreatePersistentUdpPortReservation");}});
+
+var CreateProxyArpEntry = Module.findExportByName("IPHLPAPI.DLL", "CreateProxyArpEntry")
+Interceptor.attach(CreateProxyArpEntry, {onLeave: function (args) {send("CreateProxyArpEntry");}});
+
+var CreateSortedAddressPairs = Module.findExportByName("IPHLPAPI.DLL", "CreateSortedAddressPairs")
+Interceptor.attach(CreateSortedAddressPairs, {onLeave: function (args) {send("CreateSortedAddressPairs");}});
+
+var CreateUnicastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "CreateUnicastIpAddressEntry")
+Interceptor.attach(CreateUnicastIpAddressEntry, {onLeave: function (args) {send("CreateUnicastIpAddressEntry");}});
+
+var DeleteAnycastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "DeleteAnycastIpAddressEntry")
+Interceptor.attach(DeleteAnycastIpAddressEntry, {onLeave: function (args) {send("DeleteAnycastIpAddressEntry");}});
+
+var DeleteCompartment = Module.findExportByName("IPHLPAPI.DLL", "DeleteCompartment")
+Interceptor.attach(DeleteCompartment, {onLeave: function (args) {send("DeleteCompartment");}});
+
+var DeleteIPAddress = Module.findExportByName("IPHLPAPI.DLL", "DeleteIPAddress")
+Interceptor.attach(DeleteIPAddress, {onLeave: function (args) {send("DeleteIPAddress");}});
+
+var DeleteIpForwardEntry = Module.findExportByName("IPHLPAPI.DLL", "DeleteIpForwardEntry")
+Interceptor.attach(DeleteIpForwardEntry, {onLeave: function (args) {send("DeleteIpForwardEntry");}});
+
+var DeleteIpForwardEntry2 = Module.findExportByName("IPHLPAPI.DLL", "DeleteIpForwardEntry2")
+Interceptor.attach(DeleteIpForwardEntry2, {onLeave: function (args) {send("DeleteIpForwardEntry2");}});
+
+var DeleteIpNetEntry = Module.findExportByName("IPHLPAPI.DLL", "DeleteIpNetEntry")
+Interceptor.attach(DeleteIpNetEntry, {onLeave: function (args) {send("DeleteIpNetEntry");}});
+
+var DeleteIpNetEntry2 = Module.findExportByName("IPHLPAPI.DLL", "DeleteIpNetEntry2")
+Interceptor.attach(DeleteIpNetEntry2, {onLeave: function (args) {send("DeleteIpNetEntry2");}});
+
+var DeletePersistentTcpPortReservation = Module.findExportByName("IPHLPAPI.DLL", "DeletePersistentTcpPortReservation")
+Interceptor.attach(DeletePersistentTcpPortReservation, {onLeave: function (args) {send("DeletePersistentTcpPortReservation");}});
+
+var DeletePersistentUdpPortReservation = Module.findExportByName("IPHLPAPI.DLL", "DeletePersistentUdpPortReservation")
+Interceptor.attach(DeletePersistentUdpPortReservation, {onLeave: function (args) {send("DeletePersistentUdpPortReservation");}});
+
+var DeleteProxyArpEntry = Module.findExportByName("IPHLPAPI.DLL", "DeleteProxyArpEntry")
+Interceptor.attach(DeleteProxyArpEntry, {onLeave: function (args) {send("DeleteProxyArpEntry");}});
+
+var DeleteUnicastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "DeleteUnicastIpAddressEntry")
+Interceptor.attach(DeleteUnicastIpAddressEntry, {onLeave: function (args) {send("DeleteUnicastIpAddressEntry");}});
+
+var DisableMediaSense = Module.findExportByName("IPHLPAPI.DLL", "DisableMediaSense")
+Interceptor.attach(DisableMediaSense, {onLeave: function (args) {send("DisableMediaSense");}});
+
+var EnableRouter = Module.findExportByName("IPHLPAPI.DLL", "EnableRouter")
+Interceptor.attach(EnableRouter, {onLeave: function (args) {send("EnableRouter");}});
+
+var FlushIpNetTable = Module.findExportByName("IPHLPAPI.DLL", "FlushIpNetTable")
+Interceptor.attach(FlushIpNetTable, {onLeave: function (args) {send("FlushIpNetTable");}});
+
+var FlushIpNetTable2 = Module.findExportByName("IPHLPAPI.DLL", "FlushIpNetTable2")
+Interceptor.attach(FlushIpNetTable2, {onLeave: function (args) {send("FlushIpNetTable2");}});
+
+var FlushIpPathTable = Module.findExportByName("IPHLPAPI.DLL", "FlushIpPathTable")
+Interceptor.attach(FlushIpPathTable, {onLeave: function (args) {send("FlushIpPathTable");}});
+
+var FreeDnsSettings = Module.findExportByName("IPHLPAPI.DLL", "FreeDnsSettings")
+Interceptor.attach(FreeDnsSettings, {onLeave: function (args) {send("FreeDnsSettings");}});
+
+var FreeInterfaceDnsSettings = Module.findExportByName("IPHLPAPI.DLL", "FreeInterfaceDnsSettings")
+Interceptor.attach(FreeInterfaceDnsSettings, {onLeave: function (args) {send("FreeInterfaceDnsSettings");}});
+
+var FreeMibTable = Module.findExportByName("IPHLPAPI.DLL", "FreeMibTable")
+Interceptor.attach(FreeMibTable, {onLeave: function (args) {send("FreeMibTable");}});
+
+var GetAdapterIndex = Module.findExportByName("IPHLPAPI.DLL", "GetAdapterIndex")
+Interceptor.attach(GetAdapterIndex, {onLeave: function (args) {send("GetAdapterIndex");}});
+
+var GetAdapterOrderMap = Module.findExportByName("IPHLPAPI.DLL", "GetAdapterOrderMap")
+Interceptor.attach(GetAdapterOrderMap, {onLeave: function (args) {send("GetAdapterOrderMap");}});
+
+var GetAdaptersAddresses = Module.findExportByName("IPHLPAPI.DLL", "GetAdaptersAddresses")
+Interceptor.attach(GetAdaptersAddresses, {onLeave: function (args) {send("GetAdaptersAddresses");}});
+
+var GetAdaptersInfo = Module.findExportByName("IPHLPAPI.DLL", "GetAdaptersInfo")
+Interceptor.attach(GetAdaptersInfo, {onLeave: function (args) {send("GetAdaptersInfo");}});
+
+var GetAnycastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "GetAnycastIpAddressEntry")
+Interceptor.attach(GetAnycastIpAddressEntry, {onLeave: function (args) {send("GetAnycastIpAddressEntry");}});
+
+var GetAnycastIpAddressTable = Module.findExportByName("IPHLPAPI.DLL", "GetAnycastIpAddressTable")
+Interceptor.attach(GetAnycastIpAddressTable, {onLeave: function (args) {send("GetAnycastIpAddressTable");}});
+
+var GetBestInterface = Module.findExportByName("IPHLPAPI.DLL", "GetBestInterface")
+Interceptor.attach(GetBestInterface, {onLeave: function (args) {send("GetBestInterface");}});
+
+var GetBestInterfaceEx = Module.findExportByName("IPHLPAPI.DLL", "GetBestInterfaceEx")
+Interceptor.attach(GetBestInterfaceEx, {onLeave: function (args) {send("GetBestInterfaceEx");}});
+
+var GetBestRoute = Module.findExportByName("IPHLPAPI.DLL", "GetBestRoute")
+Interceptor.attach(GetBestRoute, {onLeave: function (args) {send("GetBestRoute");}});
+
+var GetBestRoute2 = Module.findExportByName("IPHLPAPI.DLL", "GetBestRoute2")
+Interceptor.attach(GetBestRoute2, {onLeave: function (args) {send("GetBestRoute2");}});
+
+var GetCurrentThreadCompartmentId = Module.findExportByName("IPHLPAPI.DLL", "GetCurrentThreadCompartmentId")
+Interceptor.attach(GetCurrentThreadCompartmentId, {onLeave: function (args) {send("GetCurrentThreadCompartmentId");}});
+
+var GetCurrentThreadCompartmentScope = Module.findExportByName("IPHLPAPI.DLL", "GetCurrentThreadCompartmentScope")
+Interceptor.attach(GetCurrentThreadCompartmentScope, {onLeave: function (args) {send("GetCurrentThreadCompartmentScope");}});
+
+var GetDefaultCompartmentId = Module.findExportByName("IPHLPAPI.DLL", "GetDefaultCompartmentId")
+Interceptor.attach(GetDefaultCompartmentId, {onLeave: function (args) {send("GetDefaultCompartmentId");}});
+
+var GetDnsSettings = Module.findExportByName("IPHLPAPI.DLL", "GetDnsSettings")
+Interceptor.attach(GetDnsSettings, {onLeave: function (args) {send("GetDnsSettings");}});
+
+var GetExtendedTcpTable = Module.findExportByName("IPHLPAPI.DLL", "GetExtendedTcpTable")
+Interceptor.attach(GetExtendedTcpTable, {onLeave: function (args) {send("GetExtendedTcpTable");}});
+
+var GetExtendedUdpTable = Module.findExportByName("IPHLPAPI.DLL", "GetExtendedUdpTable")
+Interceptor.attach(GetExtendedUdpTable, {onLeave: function (args) {send("GetExtendedUdpTable");}});
+
+var GetFriendlyIfIndex = Module.findExportByName("IPHLPAPI.DLL", "GetFriendlyIfIndex")
+Interceptor.attach(GetFriendlyIfIndex, {onLeave: function (args) {send("GetFriendlyIfIndex");}});
+
+var GetIcmpStatistics = Module.findExportByName("IPHLPAPI.DLL", "GetIcmpStatistics")
+Interceptor.attach(GetIcmpStatistics, {onLeave: function (args) {send("GetIcmpStatistics");}});
+
+var GetIcmpStatisticsEx = Module.findExportByName("IPHLPAPI.DLL", "GetIcmpStatisticsEx")
+Interceptor.attach(GetIcmpStatisticsEx, {onLeave: function (args) {send("GetIcmpStatisticsEx");}});
+
+var GetIfEntry = Module.findExportByName("IPHLPAPI.DLL", "GetIfEntry")
+Interceptor.attach(GetIfEntry, {onLeave: function (args) {send("GetIfEntry");}});
+
+var GetIfEntry2 = Module.findExportByName("IPHLPAPI.DLL", "GetIfEntry2")
+Interceptor.attach(GetIfEntry2, {onLeave: function (args) {send("GetIfEntry2");}});
+
+var GetIfEntry2Ex = Module.findExportByName("IPHLPAPI.DLL", "GetIfEntry2Ex")
+Interceptor.attach(GetIfEntry2Ex, {onLeave: function (args) {send("GetIfEntry2Ex");}});
+
+var GetIfStackTable = Module.findExportByName("IPHLPAPI.DLL", "GetIfStackTable")
+Interceptor.attach(GetIfStackTable, {onLeave: function (args) {send("GetIfStackTable");}});
+
+var GetIfTable = Module.findExportByName("IPHLPAPI.DLL", "GetIfTable")
+Interceptor.attach(GetIfTable, {onLeave: function (args) {send("GetIfTable");}});
+
+var GetIfTable2 = Module.findExportByName("IPHLPAPI.DLL", "GetIfTable2")
+Interceptor.attach(GetIfTable2, {onLeave: function (args) {send("GetIfTable2");}});
+
+var GetIfTable2Ex = Module.findExportByName("IPHLPAPI.DLL", "GetIfTable2Ex")
+Interceptor.attach(GetIfTable2Ex, {onLeave: function (args) {send("GetIfTable2Ex");}});
+
+var GetInterfaceActiveTimestampCapabilities = Module.findExportByName("IPHLPAPI.DLL", "GetInterfaceActiveTimestampCapabilities")
+Interceptor.attach(GetInterfaceActiveTimestampCapabilities, {onLeave: function (args) {send("GetInterfaceActiveTimestampCapabilities");}});
+
+var GetInterfaceCompartmentId = Module.findExportByName("IPHLPAPI.DLL", "GetInterfaceCompartmentId")
+Interceptor.attach(GetInterfaceCompartmentId, {onLeave: function (args) {send("GetInterfaceCompartmentId");}});
+
+var GetInterfaceCurrentTimestampCapabilities = Module.findExportByName("IPHLPAPI.DLL", "GetInterfaceCurrentTimestampCapabilities")
+Interceptor.attach(GetInterfaceCurrentTimestampCapabilities, {onLeave: function (args) {send("GetInterfaceCurrentTimestampCapabilities");}});
+
+var GetInterfaceDnsSettings = Module.findExportByName("IPHLPAPI.DLL", "GetInterfaceDnsSettings")
+Interceptor.attach(GetInterfaceDnsSettings, {onLeave: function (args) {send("GetInterfaceDnsSettings");}});
+
+var GetInterfaceHardwareTimestampCapabilities = Module.findExportByName("IPHLPAPI.DLL", "GetInterfaceHardwareTimestampCapabilities")
+Interceptor.attach(GetInterfaceHardwareTimestampCapabilities, {onLeave: function (args) {send("GetInterfaceHardwareTimestampCapabilities");}});
+
+var GetInterfaceInfo = Module.findExportByName("IPHLPAPI.DLL", "GetInterfaceInfo")
+Interceptor.attach(GetInterfaceInfo, {onLeave: function (args) {send("GetInterfaceInfo");}});
+
+var GetInterfaceSupportedTimestampCapabilities = Module.findExportByName("IPHLPAPI.DLL", "GetInterfaceSupportedTimestampCapabilities")
+Interceptor.attach(GetInterfaceSupportedTimestampCapabilities, {onLeave: function (args) {send("GetInterfaceSupportedTimestampCapabilities");}});
+
+var GetInvertedIfStackTable = Module.findExportByName("IPHLPAPI.DLL", "GetInvertedIfStackTable")
+Interceptor.attach(GetInvertedIfStackTable, {onLeave: function (args) {send("GetInvertedIfStackTable");}});
+
+var GetIpAddrTable = Module.findExportByName("IPHLPAPI.DLL", "GetIpAddrTable")
+Interceptor.attach(GetIpAddrTable, {onLeave: function (args) {send("GetIpAddrTable");}});
+
+var GetIpErrorString = Module.findExportByName("IPHLPAPI.DLL", "GetIpErrorString")
+Interceptor.attach(GetIpErrorString, {onLeave: function (args) {send("GetIpErrorString");}});
+
+var GetIpForwardEntry2 = Module.findExportByName("IPHLPAPI.DLL", "GetIpForwardEntry2")
+Interceptor.attach(GetIpForwardEntry2, {onLeave: function (args) {send("GetIpForwardEntry2");}});
+
+var GetIpForwardTable = Module.findExportByName("IPHLPAPI.DLL", "GetIpForwardTable")
+Interceptor.attach(GetIpForwardTable, {onLeave: function (args) {send("GetIpForwardTable");}});
+
+var GetIpForwardTable2 = Module.findExportByName("IPHLPAPI.DLL", "GetIpForwardTable2")
+Interceptor.attach(GetIpForwardTable2, {onLeave: function (args) {send("GetIpForwardTable2");}});
+
+var GetIpInterfaceEntry = Module.findExportByName("IPHLPAPI.DLL", "GetIpInterfaceEntry")
+Interceptor.attach(GetIpInterfaceEntry, {onLeave: function (args) {send("GetIpInterfaceEntry");}});
+
+var GetIpInterfaceTable = Module.findExportByName("IPHLPAPI.DLL", "GetIpInterfaceTable")
+Interceptor.attach(GetIpInterfaceTable, {onLeave: function (args) {send("GetIpInterfaceTable");}});
+
+var GetIpNetEntry2 = Module.findExportByName("IPHLPAPI.DLL", "GetIpNetEntry2")
+Interceptor.attach(GetIpNetEntry2, {onLeave: function (args) {send("GetIpNetEntry2");}});
+
+var GetIpNetTable = Module.findExportByName("IPHLPAPI.DLL", "GetIpNetTable")
+Interceptor.attach(GetIpNetTable, {onLeave: function (args) {send("GetIpNetTable");}});
+
+var GetIpNetTable2 = Module.findExportByName("IPHLPAPI.DLL", "GetIpNetTable2")
+Interceptor.attach(GetIpNetTable2, {onLeave: function (args) {send("GetIpNetTable2");}});
+
+var GetIpNetworkConnectionBandwidthEstimates = Module.findExportByName("IPHLPAPI.DLL", "GetIpNetworkConnectionBandwidthEstimates")
+Interceptor.attach(GetIpNetworkConnectionBandwidthEstimates, {onLeave: function (args) {send("GetIpNetworkConnectionBandwidthEstimates");}});
+
+var GetIpPathEntry = Module.findExportByName("IPHLPAPI.DLL", "GetIpPathEntry")
+Interceptor.attach(GetIpPathEntry, {onLeave: function (args) {send("GetIpPathEntry");}});
+
+var GetIpPathTable = Module.findExportByName("IPHLPAPI.DLL", "GetIpPathTable")
+Interceptor.attach(GetIpPathTable, {onLeave: function (args) {send("GetIpPathTable");}});
+
+var GetIpStatistics = Module.findExportByName("IPHLPAPI.DLL", "GetIpStatistics")
+Interceptor.attach(GetIpStatistics, {onLeave: function (args) {send("GetIpStatistics");}});
+
+var GetIpStatisticsEx = Module.findExportByName("IPHLPAPI.DLL", "GetIpStatisticsEx")
+Interceptor.attach(GetIpStatisticsEx, {onLeave: function (args) {send("GetIpStatisticsEx");}});
+
+var GetJobCompartmentId = Module.findExportByName("IPHLPAPI.DLL", "GetJobCompartmentId")
+Interceptor.attach(GetJobCompartmentId, {onLeave: function (args) {send("GetJobCompartmentId");}});
+
+var GetMulticastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "GetMulticastIpAddressEntry")
+Interceptor.attach(GetMulticastIpAddressEntry, {onLeave: function (args) {send("GetMulticastIpAddressEntry");}});
+
+var GetMulticastIpAddressTable = Module.findExportByName("IPHLPAPI.DLL", "GetMulticastIpAddressTable")
+Interceptor.attach(GetMulticastIpAddressTable, {onLeave: function (args) {send("GetMulticastIpAddressTable");}});
+
+var GetNetworkConnectivityHint = Module.findExportByName("IPHLPAPI.DLL", "GetNetworkConnectivityHint")
+Interceptor.attach(GetNetworkConnectivityHint, {onLeave: function (args) {send("GetNetworkConnectivityHint");}});
+
+var GetNetworkConnectivityHintForInterface = Module.findExportByName("IPHLPAPI.DLL", "GetNetworkConnectivityHintForInterface")
+Interceptor.attach(GetNetworkConnectivityHintForInterface, {onLeave: function (args) {send("GetNetworkConnectivityHintForInterface");}});
+
+var GetNetworkInformation = Module.findExportByName("IPHLPAPI.DLL", "GetNetworkInformation")
+Interceptor.attach(GetNetworkInformation, {onLeave: function (args) {send("GetNetworkInformation");}});
+
+var GetNetworkParams = Module.findExportByName("IPHLPAPI.DLL", "GetNetworkParams")
+Interceptor.attach(GetNetworkParams, {onLeave: function (args) {send("GetNetworkParams");}});
+
+var GetNumberOfInterfaces = Module.findExportByName("IPHLPAPI.DLL", "GetNumberOfInterfaces")
+Interceptor.attach(GetNumberOfInterfaces, {onLeave: function (args) {send("GetNumberOfInterfaces");}});
+
+var GetOwnerModuleFromPidAndInfo = Module.findExportByName("IPHLPAPI.DLL", "GetOwnerModuleFromPidAndInfo")
+Interceptor.attach(GetOwnerModuleFromPidAndInfo, {onLeave: function (args) {send("GetOwnerModuleFromPidAndInfo");}});
+
+var GetOwnerModuleFromTcp6Entry = Module.findExportByName("IPHLPAPI.DLL", "GetOwnerModuleFromTcp6Entry")
+Interceptor.attach(GetOwnerModuleFromTcp6Entry, {onLeave: function (args) {send("GetOwnerModuleFromTcp6Entry");}});
+
+var GetOwnerModuleFromTcpEntry = Module.findExportByName("IPHLPAPI.DLL", "GetOwnerModuleFromTcpEntry")
+Interceptor.attach(GetOwnerModuleFromTcpEntry, {onLeave: function (args) {send("GetOwnerModuleFromTcpEntry");}});
+
+var GetOwnerModuleFromUdp6Entry = Module.findExportByName("IPHLPAPI.DLL", "GetOwnerModuleFromUdp6Entry")
+Interceptor.attach(GetOwnerModuleFromUdp6Entry, {onLeave: function (args) {send("GetOwnerModuleFromUdp6Entry");}});
+
+var GetOwnerModuleFromUdpEntry = Module.findExportByName("IPHLPAPI.DLL", "GetOwnerModuleFromUdpEntry")
+Interceptor.attach(GetOwnerModuleFromUdpEntry, {onLeave: function (args) {send("GetOwnerModuleFromUdpEntry");}});
+
+var GetPerAdapterInfo = Module.findExportByName("IPHLPAPI.DLL", "GetPerAdapterInfo")
+Interceptor.attach(GetPerAdapterInfo, {onLeave: function (args) {send("GetPerAdapterInfo");}});
+
+var GetPerTcp6ConnectionEStats = Module.findExportByName("IPHLPAPI.DLL", "GetPerTcp6ConnectionEStats")
+Interceptor.attach(GetPerTcp6ConnectionEStats, {onLeave: function (args) {send("GetPerTcp6ConnectionEStats");}});
+
+var GetPerTcp6ConnectionStats = Module.findExportByName("IPHLPAPI.DLL", "GetPerTcp6ConnectionStats")
+Interceptor.attach(GetPerTcp6ConnectionStats, {onLeave: function (args) {send("GetPerTcp6ConnectionStats");}});
+
+var GetPerTcpConnectionEStats = Module.findExportByName("IPHLPAPI.DLL", "GetPerTcpConnectionEStats")
+Interceptor.attach(GetPerTcpConnectionEStats, {onLeave: function (args) {send("GetPerTcpConnectionEStats");}});
+
+var GetPerTcpConnectionStats = Module.findExportByName("IPHLPAPI.DLL", "GetPerTcpConnectionStats")
+Interceptor.attach(GetPerTcpConnectionStats, {onLeave: function (args) {send("GetPerTcpConnectionStats");}});
+
+var GetRTTAndHopCount = Module.findExportByName("IPHLPAPI.DLL", "GetRTTAndHopCount")
+Interceptor.attach(GetRTTAndHopCount, {onLeave: function (args) {send("GetRTTAndHopCount");}});
+
+var GetSessionCompartmentId = Module.findExportByName("IPHLPAPI.DLL", "GetSessionCompartmentId")
+Interceptor.attach(GetSessionCompartmentId, {onLeave: function (args) {send("GetSessionCompartmentId");}});
+
+var GetTcp6Table = Module.findExportByName("IPHLPAPI.DLL", "GetTcp6Table")
+Interceptor.attach(GetTcp6Table, {onLeave: function (args) {send("GetTcp6Table");}});
+
+var GetTcp6Table2 = Module.findExportByName("IPHLPAPI.DLL", "GetTcp6Table2")
+Interceptor.attach(GetTcp6Table2, {onLeave: function (args) {send("GetTcp6Table2");}});
+
+var GetTcpStatistics = Module.findExportByName("IPHLPAPI.DLL", "GetTcpStatistics")
+Interceptor.attach(GetTcpStatistics, {onLeave: function (args) {send("GetTcpStatistics");}});
+
+var GetTcpStatisticsEx = Module.findExportByName("IPHLPAPI.DLL", "GetTcpStatisticsEx")
+Interceptor.attach(GetTcpStatisticsEx, {onLeave: function (args) {send("GetTcpStatisticsEx");}});
+
+var GetTcpStatisticsEx2 = Module.findExportByName("IPHLPAPI.DLL", "GetTcpStatisticsEx2")
+Interceptor.attach(GetTcpStatisticsEx2, {onLeave: function (args) {send("GetTcpStatisticsEx2");}});
+
+var GetTcpTable = Module.findExportByName("IPHLPAPI.DLL", "GetTcpTable")
+Interceptor.attach(GetTcpTable, {onLeave: function (args) {send("GetTcpTable");}});
+
+var GetTcpTable2 = Module.findExportByName("IPHLPAPI.DLL", "GetTcpTable2")
+Interceptor.attach(GetTcpTable2, {onLeave: function (args) {send("GetTcpTable2");}});
+
+var GetTeredoPort = Module.findExportByName("IPHLPAPI.DLL", "GetTeredoPort")
+Interceptor.attach(GetTeredoPort, {onLeave: function (args) {send("GetTeredoPort");}});
+
+var GetUdp6Table = Module.findExportByName("IPHLPAPI.DLL", "GetUdp6Table")
+Interceptor.attach(GetUdp6Table, {onLeave: function (args) {send("GetUdp6Table");}});
+
+var GetUdpStatistics = Module.findExportByName("IPHLPAPI.DLL", "GetUdpStatistics")
+Interceptor.attach(GetUdpStatistics, {onLeave: function (args) {send("GetUdpStatistics");}});
+
+var GetUdpStatisticsEx = Module.findExportByName("IPHLPAPI.DLL", "GetUdpStatisticsEx")
+Interceptor.attach(GetUdpStatisticsEx, {onLeave: function (args) {send("GetUdpStatisticsEx");}});
+
+var GetUdpStatisticsEx2 = Module.findExportByName("IPHLPAPI.DLL", "GetUdpStatisticsEx2")
+Interceptor.attach(GetUdpStatisticsEx2, {onLeave: function (args) {send("GetUdpStatisticsEx2");}});
+
+var GetUdpTable = Module.findExportByName("IPHLPAPI.DLL", "GetUdpTable")
+Interceptor.attach(GetUdpTable, {onLeave: function (args) {send("GetUdpTable");}});
+
+var GetUniDirectionalAdapterInfo = Module.findExportByName("IPHLPAPI.DLL", "GetUniDirectionalAdapterInfo")
+Interceptor.attach(GetUniDirectionalAdapterInfo, {onLeave: function (args) {send("GetUniDirectionalAdapterInfo");}});
+
+var GetUnicastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "GetUnicastIpAddressEntry")
+Interceptor.attach(GetUnicastIpAddressEntry, {onLeave: function (args) {send("GetUnicastIpAddressEntry");}});
+
+var GetUnicastIpAddressTable = Module.findExportByName("IPHLPAPI.DLL", "GetUnicastIpAddressTable")
+Interceptor.attach(GetUnicastIpAddressTable, {onLeave: function (args) {send("GetUnicastIpAddressTable");}});
+
+var GetWPAOACSupportLevel = Module.findExportByName("IPHLPAPI.DLL", "GetWPAOACSupportLevel")
+Interceptor.attach(GetWPAOACSupportLevel, {onLeave: function (args) {send("GetWPAOACSupportLevel");}});
+
+var Icmp6CreateFile = Module.findExportByName("IPHLPAPI.DLL", "Icmp6CreateFile")
+Interceptor.attach(Icmp6CreateFile, {onLeave: function (args) {send("Icmp6CreateFile");}});
+
+var Icmp6ParseReplies = Module.findExportByName("IPHLPAPI.DLL", "Icmp6ParseReplies")
+Interceptor.attach(Icmp6ParseReplies, {onLeave: function (args) {send("Icmp6ParseReplies");}});
+
+var Icmp6SendEcho2 = Module.findExportByName("IPHLPAPI.DLL", "Icmp6SendEcho2")
+Interceptor.attach(Icmp6SendEcho2, {onLeave: function (args) {send("Icmp6SendEcho2");}});
+
+var IcmpCloseHandle = Module.findExportByName("IPHLPAPI.DLL", "IcmpCloseHandle")
+Interceptor.attach(IcmpCloseHandle, {onLeave: function (args) {send("IcmpCloseHandle");}});
+
+var IcmpCreateFile = Module.findExportByName("IPHLPAPI.DLL", "IcmpCreateFile")
+Interceptor.attach(IcmpCreateFile, {onLeave: function (args) {send("IcmpCreateFile");}});
+
+var IcmpParseReplies = Module.findExportByName("IPHLPAPI.DLL", "IcmpParseReplies")
+Interceptor.attach(IcmpParseReplies, {onLeave: function (args) {send("IcmpParseReplies");}});
+
+var IcmpSendEcho = Module.findExportByName("IPHLPAPI.DLL", "IcmpSendEcho")
+Interceptor.attach(IcmpSendEcho, {onLeave: function (args) {send("IcmpSendEcho");}});
+
+var IcmpSendEcho2 = Module.findExportByName("IPHLPAPI.DLL", "IcmpSendEcho2")
+Interceptor.attach(IcmpSendEcho2, {onLeave: function (args) {send("IcmpSendEcho2");}});
+
+var IcmpSendEcho2Ex = Module.findExportByName("IPHLPAPI.DLL", "IcmpSendEcho2Ex")
+Interceptor.attach(IcmpSendEcho2Ex, {onLeave: function (args) {send("IcmpSendEcho2Ex");}});
+
+var InitializeCompartmentEntry = Module.findExportByName("IPHLPAPI.DLL", "InitializeCompartmentEntry")
+Interceptor.attach(InitializeCompartmentEntry, {onLeave: function (args) {send("InitializeCompartmentEntry");}});
+
+var InitializeIpForwardEntry = Module.findExportByName("IPHLPAPI.DLL", "InitializeIpForwardEntry")
+Interceptor.attach(InitializeIpForwardEntry, {onLeave: function (args) {send("InitializeIpForwardEntry");}});
+
+var InitializeIpInterfaceEntry = Module.findExportByName("IPHLPAPI.DLL", "InitializeIpInterfaceEntry")
+Interceptor.attach(InitializeIpInterfaceEntry, {onLeave: function (args) {send("InitializeIpInterfaceEntry");}});
+
+var InitializeUnicastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "InitializeUnicastIpAddressEntry")
+Interceptor.attach(InitializeUnicastIpAddressEntry, {onLeave: function (args) {send("InitializeUnicastIpAddressEntry");}});
+
+var InternalCleanupPersistentStore = Module.findExportByName("IPHLPAPI.DLL", "InternalCleanupPersistentStore")
+Interceptor.attach(InternalCleanupPersistentStore, {onLeave: function (args) {send("InternalCleanupPersistentStore");}});
+
+var InternalCreateAnycastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalCreateAnycastIpAddressEntry")
+Interceptor.attach(InternalCreateAnycastIpAddressEntry, {onLeave: function (args) {send("InternalCreateAnycastIpAddressEntry");}});
+
+var InternalCreateIpForwardEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalCreateIpForwardEntry")
+Interceptor.attach(InternalCreateIpForwardEntry, {onLeave: function (args) {send("InternalCreateIpForwardEntry");}});
+
+var InternalCreateIpForwardEntry2 = Module.findExportByName("IPHLPAPI.DLL", "InternalCreateIpForwardEntry2")
+Interceptor.attach(InternalCreateIpForwardEntry2, {onLeave: function (args) {send("InternalCreateIpForwardEntry2");}});
+
+var InternalCreateIpNetEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalCreateIpNetEntry")
+Interceptor.attach(InternalCreateIpNetEntry, {onLeave: function (args) {send("InternalCreateIpNetEntry");}});
+
+var InternalCreateIpNetEntry2 = Module.findExportByName("IPHLPAPI.DLL", "InternalCreateIpNetEntry2")
+Interceptor.attach(InternalCreateIpNetEntry2, {onLeave: function (args) {send("InternalCreateIpNetEntry2");}});
+
+var InternalCreateOrRefIpForwardEntry2 = Module.findExportByName("IPHLPAPI.DLL", "InternalCreateOrRefIpForwardEntry2")
+Interceptor.attach(InternalCreateOrRefIpForwardEntry2, {onLeave: function (args) {send("InternalCreateOrRefIpForwardEntry2");}});
+
+var InternalCreateUnicastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalCreateUnicastIpAddressEntry")
+Interceptor.attach(InternalCreateUnicastIpAddressEntry, {onLeave: function (args) {send("InternalCreateUnicastIpAddressEntry");}});
+
+var InternalDeleteAnycastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalDeleteAnycastIpAddressEntry")
+Interceptor.attach(InternalDeleteAnycastIpAddressEntry, {onLeave: function (args) {send("InternalDeleteAnycastIpAddressEntry");}});
+
+var InternalDeleteIpForwardEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalDeleteIpForwardEntry")
+Interceptor.attach(InternalDeleteIpForwardEntry, {onLeave: function (args) {send("InternalDeleteIpForwardEntry");}});
+
+var InternalDeleteIpForwardEntry2 = Module.findExportByName("IPHLPAPI.DLL", "InternalDeleteIpForwardEntry2")
+Interceptor.attach(InternalDeleteIpForwardEntry2, {onLeave: function (args) {send("InternalDeleteIpForwardEntry2");}});
+
+var InternalDeleteIpNetEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalDeleteIpNetEntry")
+Interceptor.attach(InternalDeleteIpNetEntry, {onLeave: function (args) {send("InternalDeleteIpNetEntry");}});
+
+var InternalDeleteIpNetEntry2 = Module.findExportByName("IPHLPAPI.DLL", "InternalDeleteIpNetEntry2")
+Interceptor.attach(InternalDeleteIpNetEntry2, {onLeave: function (args) {send("InternalDeleteIpNetEntry2");}});
+
+var InternalDeleteUnicastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalDeleteUnicastIpAddressEntry")
+Interceptor.attach(InternalDeleteUnicastIpAddressEntry, {onLeave: function (args) {send("InternalDeleteUnicastIpAddressEntry");}});
+
+var InternalFindInterfaceByAddress = Module.findExportByName("IPHLPAPI.DLL", "InternalFindInterfaceByAddress")
+Interceptor.attach(InternalFindInterfaceByAddress, {onLeave: function (args) {send("InternalFindInterfaceByAddress");}});
+
+var InternalGetAnycastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalGetAnycastIpAddressEntry")
+Interceptor.attach(InternalGetAnycastIpAddressEntry, {onLeave: function (args) {send("InternalGetAnycastIpAddressEntry");}});
+
+var InternalGetAnycastIpAddressTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetAnycastIpAddressTable")
+Interceptor.attach(InternalGetAnycastIpAddressTable, {onLeave: function (args) {send("InternalGetAnycastIpAddressTable");}});
+
+var InternalGetBoundTcp6EndpointTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetBoundTcp6EndpointTable")
+Interceptor.attach(InternalGetBoundTcp6EndpointTable, {onLeave: function (args) {send("InternalGetBoundTcp6EndpointTable");}});
+
+var InternalGetBoundTcpEndpointTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetBoundTcpEndpointTable")
+Interceptor.attach(InternalGetBoundTcpEndpointTable, {onLeave: function (args) {send("InternalGetBoundTcpEndpointTable");}});
+
+var InternalGetForwardIpTable2 = Module.findExportByName("IPHLPAPI.DLL", "InternalGetForwardIpTable2")
+Interceptor.attach(InternalGetForwardIpTable2, {onLeave: function (args) {send("InternalGetForwardIpTable2");}});
+
+var InternalGetIPPhysicalInterfaceForDestination = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIPPhysicalInterfaceForDestination")
+Interceptor.attach(InternalGetIPPhysicalInterfaceForDestination, {onLeave: function (args) {send("InternalGetIPPhysicalInterfaceForDestination");}});
+
+var InternalGetIfEntry2 = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIfEntry2")
+Interceptor.attach(InternalGetIfEntry2, {onLeave: function (args) {send("InternalGetIfEntry2");}});
+
+var InternalGetIfTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIfTable")
+Interceptor.attach(InternalGetIfTable, {onLeave: function (args) {send("InternalGetIfTable");}});
+
+var InternalGetIfTable2 = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIfTable2")
+Interceptor.attach(InternalGetIfTable2, {onLeave: function (args) {send("InternalGetIfTable2");}});
+
+var InternalGetIpAddrTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIpAddrTable")
+Interceptor.attach(InternalGetIpAddrTable, {onLeave: function (args) {send("InternalGetIpAddrTable");}});
+
+var InternalGetIpForwardEntry2 = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIpForwardEntry2")
+Interceptor.attach(InternalGetIpForwardEntry2, {onLeave: function (args) {send("InternalGetIpForwardEntry2");}});
+
+var InternalGetIpForwardTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIpForwardTable")
+Interceptor.attach(InternalGetIpForwardTable, {onLeave: function (args) {send("InternalGetIpForwardTable");}});
+
+var InternalGetIpInterfaceEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIpInterfaceEntry")
+Interceptor.attach(InternalGetIpInterfaceEntry, {onLeave: function (args) {send("InternalGetIpInterfaceEntry");}});
+
+var InternalGetIpInterfaceTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIpInterfaceTable")
+Interceptor.attach(InternalGetIpInterfaceTable, {onLeave: function (args) {send("InternalGetIpInterfaceTable");}});
+
+var InternalGetIpNetEntry2 = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIpNetEntry2")
+Interceptor.attach(InternalGetIpNetEntry2, {onLeave: function (args) {send("InternalGetIpNetEntry2");}});
+
+var InternalGetIpNetTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIpNetTable")
+Interceptor.attach(InternalGetIpNetTable, {onLeave: function (args) {send("InternalGetIpNetTable");}});
+
+var InternalGetIpNetTable2 = Module.findExportByName("IPHLPAPI.DLL", "InternalGetIpNetTable2")
+Interceptor.attach(InternalGetIpNetTable2, {onLeave: function (args) {send("InternalGetIpNetTable2");}});
+
+var InternalGetMulticastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalGetMulticastIpAddressEntry")
+Interceptor.attach(InternalGetMulticastIpAddressEntry, {onLeave: function (args) {send("InternalGetMulticastIpAddressEntry");}});
+
+var InternalGetMulticastIpAddressTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetMulticastIpAddressTable")
+Interceptor.attach(InternalGetMulticastIpAddressTable, {onLeave: function (args) {send("InternalGetMulticastIpAddressTable");}});
+
+var InternalGetRtcSlotInformation = Module.findExportByName("IPHLPAPI.DLL", "InternalGetRtcSlotInformation")
+Interceptor.attach(InternalGetRtcSlotInformation, {onLeave: function (args) {send("InternalGetRtcSlotInformation");}});
+
+var InternalGetTcp6Table2 = Module.findExportByName("IPHLPAPI.DLL", "InternalGetTcp6Table2")
+Interceptor.attach(InternalGetTcp6Table2, {onLeave: function (args) {send("InternalGetTcp6Table2");}});
+
+var InternalGetTcp6TableWithOwnerModule = Module.findExportByName("IPHLPAPI.DLL", "InternalGetTcp6TableWithOwnerModule")
+Interceptor.attach(InternalGetTcp6TableWithOwnerModule, {onLeave: function (args) {send("InternalGetTcp6TableWithOwnerModule");}});
+
+var InternalGetTcp6TableWithOwnerPid = Module.findExportByName("IPHLPAPI.DLL", "InternalGetTcp6TableWithOwnerPid")
+Interceptor.attach(InternalGetTcp6TableWithOwnerPid, {onLeave: function (args) {send("InternalGetTcp6TableWithOwnerPid");}});
+
+var InternalGetTcpDynamicPortRange = Module.findExportByName("IPHLPAPI.DLL", "InternalGetTcpDynamicPortRange")
+Interceptor.attach(InternalGetTcpDynamicPortRange, {onLeave: function (args) {send("InternalGetTcpDynamicPortRange");}});
+
+var InternalGetTcpTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetTcpTable")
+Interceptor.attach(InternalGetTcpTable, {onLeave: function (args) {send("InternalGetTcpTable");}});
+
+var InternalGetTcpTable2 = Module.findExportByName("IPHLPAPI.DLL", "InternalGetTcpTable2")
+Interceptor.attach(InternalGetTcpTable2, {onLeave: function (args) {send("InternalGetTcpTable2");}});
+
+var InternalGetTcpTableEx = Module.findExportByName("IPHLPAPI.DLL", "InternalGetTcpTableEx")
+Interceptor.attach(InternalGetTcpTableEx, {onLeave: function (args) {send("InternalGetTcpTableEx");}});
+
+var InternalGetTcpTableWithOwnerModule = Module.findExportByName("IPHLPAPI.DLL", "InternalGetTcpTableWithOwnerModule")
+Interceptor.attach(InternalGetTcpTableWithOwnerModule, {onLeave: function (args) {send("InternalGetTcpTableWithOwnerModule");}});
+
+var InternalGetTcpTableWithOwnerPid = Module.findExportByName("IPHLPAPI.DLL", "InternalGetTcpTableWithOwnerPid")
+Interceptor.attach(InternalGetTcpTableWithOwnerPid, {onLeave: function (args) {send("InternalGetTcpTableWithOwnerPid");}});
+
+var InternalGetTunnelPhysicalAdapter = Module.findExportByName("IPHLPAPI.DLL", "InternalGetTunnelPhysicalAdapter")
+Interceptor.attach(InternalGetTunnelPhysicalAdapter, {onLeave: function (args) {send("InternalGetTunnelPhysicalAdapter");}});
+
+var InternalGetUdp6Table2 = Module.findExportByName("IPHLPAPI.DLL", "InternalGetUdp6Table2")
+Interceptor.attach(InternalGetUdp6Table2, {onLeave: function (args) {send("InternalGetUdp6Table2");}});
+
+var InternalGetUdp6TableWithOwnerModule = Module.findExportByName("IPHLPAPI.DLL", "InternalGetUdp6TableWithOwnerModule")
+Interceptor.attach(InternalGetUdp6TableWithOwnerModule, {onLeave: function (args) {send("InternalGetUdp6TableWithOwnerModule");}});
+
+var InternalGetUdp6TableWithOwnerPid = Module.findExportByName("IPHLPAPI.DLL", "InternalGetUdp6TableWithOwnerPid")
+Interceptor.attach(InternalGetUdp6TableWithOwnerPid, {onLeave: function (args) {send("InternalGetUdp6TableWithOwnerPid");}});
+
+var InternalGetUdpDynamicPortRange = Module.findExportByName("IPHLPAPI.DLL", "InternalGetUdpDynamicPortRange")
+Interceptor.attach(InternalGetUdpDynamicPortRange, {onLeave: function (args) {send("InternalGetUdpDynamicPortRange");}});
+
+var InternalGetUdpTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetUdpTable")
+Interceptor.attach(InternalGetUdpTable, {onLeave: function (args) {send("InternalGetUdpTable");}});
+
+var InternalGetUdpTable2 = Module.findExportByName("IPHLPAPI.DLL", "InternalGetUdpTable2")
+Interceptor.attach(InternalGetUdpTable2, {onLeave: function (args) {send("InternalGetUdpTable2");}});
+
+var InternalGetUdpTableEx = Module.findExportByName("IPHLPAPI.DLL", "InternalGetUdpTableEx")
+Interceptor.attach(InternalGetUdpTableEx, {onLeave: function (args) {send("InternalGetUdpTableEx");}});
+
+var InternalGetUdpTableWithOwnerModule = Module.findExportByName("IPHLPAPI.DLL", "InternalGetUdpTableWithOwnerModule")
+Interceptor.attach(InternalGetUdpTableWithOwnerModule, {onLeave: function (args) {send("InternalGetUdpTableWithOwnerModule");}});
+
+var InternalGetUdpTableWithOwnerPid = Module.findExportByName("IPHLPAPI.DLL", "InternalGetUdpTableWithOwnerPid")
+Interceptor.attach(InternalGetUdpTableWithOwnerPid, {onLeave: function (args) {send("InternalGetUdpTableWithOwnerPid");}});
+
+var InternalGetUnicastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalGetUnicastIpAddressEntry")
+Interceptor.attach(InternalGetUnicastIpAddressEntry, {onLeave: function (args) {send("InternalGetUnicastIpAddressEntry");}});
+
+var InternalGetUnicastIpAddressTable = Module.findExportByName("IPHLPAPI.DLL", "InternalGetUnicastIpAddressTable")
+Interceptor.attach(InternalGetUnicastIpAddressTable, {onLeave: function (args) {send("InternalGetUnicastIpAddressTable");}});
+
+var InternalIcmpCreateFileEx = Module.findExportByName("IPHLPAPI.DLL", "InternalIcmpCreateFileEx")
+Interceptor.attach(InternalIcmpCreateFileEx, {onLeave: function (args) {send("InternalIcmpCreateFileEx");}});
+
+var InternalSetIfEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalSetIfEntry")
+Interceptor.attach(InternalSetIfEntry, {onLeave: function (args) {send("InternalSetIfEntry");}});
+
+var InternalSetIpForwardEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalSetIpForwardEntry")
+Interceptor.attach(InternalSetIpForwardEntry, {onLeave: function (args) {send("InternalSetIpForwardEntry");}});
+
+var InternalSetIpForwardEntry2 = Module.findExportByName("IPHLPAPI.DLL", "InternalSetIpForwardEntry2")
+Interceptor.attach(InternalSetIpForwardEntry2, {onLeave: function (args) {send("InternalSetIpForwardEntry2");}});
+
+var InternalSetIpInterfaceEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalSetIpInterfaceEntry")
+Interceptor.attach(InternalSetIpInterfaceEntry, {onLeave: function (args) {send("InternalSetIpInterfaceEntry");}});
+
+var InternalSetIpNetEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalSetIpNetEntry")
+Interceptor.attach(InternalSetIpNetEntry, {onLeave: function (args) {send("InternalSetIpNetEntry");}});
+
+var InternalSetIpNetEntry2 = Module.findExportByName("IPHLPAPI.DLL", "InternalSetIpNetEntry2")
+Interceptor.attach(InternalSetIpNetEntry2, {onLeave: function (args) {send("InternalSetIpNetEntry2");}});
+
+var InternalSetIpStats = Module.findExportByName("IPHLPAPI.DLL", "InternalSetIpStats")
+Interceptor.attach(InternalSetIpStats, {onLeave: function (args) {send("InternalSetIpStats");}});
+
+var InternalSetTcpDynamicPortRange = Module.findExportByName("IPHLPAPI.DLL", "InternalSetTcpDynamicPortRange")
+Interceptor.attach(InternalSetTcpDynamicPortRange, {onLeave: function (args) {send("InternalSetTcpDynamicPortRange");}});
+
+var InternalSetTcpEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalSetTcpEntry")
+Interceptor.attach(InternalSetTcpEntry, {onLeave: function (args) {send("InternalSetTcpEntry");}});
+
+var InternalSetTeredoPort = Module.findExportByName("IPHLPAPI.DLL", "InternalSetTeredoPort")
+Interceptor.attach(InternalSetTeredoPort, {onLeave: function (args) {send("InternalSetTeredoPort");}});
+
+var InternalSetUdpDynamicPortRange = Module.findExportByName("IPHLPAPI.DLL", "InternalSetUdpDynamicPortRange")
+Interceptor.attach(InternalSetUdpDynamicPortRange, {onLeave: function (args) {send("InternalSetUdpDynamicPortRange");}});
+
+var InternalSetUnicastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "InternalSetUnicastIpAddressEntry")
+Interceptor.attach(InternalSetUnicastIpAddressEntry, {onLeave: function (args) {send("InternalSetUnicastIpAddressEntry");}});
+
+var IpReleaseAddress = Module.findExportByName("IPHLPAPI.DLL", "IpReleaseAddress")
+Interceptor.attach(IpReleaseAddress, {onLeave: function (args) {send("IpReleaseAddress");}});
+
+var IpRenewAddress = Module.findExportByName("IPHLPAPI.DLL", "IpRenewAddress")
+Interceptor.attach(IpRenewAddress, {onLeave: function (args) {send("IpRenewAddress");}});
+
+var LookupPersistentTcpPortReservation = Module.findExportByName("IPHLPAPI.DLL", "LookupPersistentTcpPortReservation")
+Interceptor.attach(LookupPersistentTcpPortReservation, {onLeave: function (args) {send("LookupPersistentTcpPortReservation");}});
+
+var LookupPersistentUdpPortReservation = Module.findExportByName("IPHLPAPI.DLL", "LookupPersistentUdpPortReservation")
+Interceptor.attach(LookupPersistentUdpPortReservation, {onLeave: function (args) {send("LookupPersistentUdpPortReservation");}});
+
+var NTPTimeToNTFileTime = Module.findExportByName("IPHLPAPI.DLL", "NTPTimeToNTFileTime")
+Interceptor.attach(NTPTimeToNTFileTime, {onLeave: function (args) {send("NTPTimeToNTFileTime");}});
+
+var NTTimeToNTPTime = Module.findExportByName("IPHLPAPI.DLL", "NTTimeToNTPTime")
+Interceptor.attach(NTTimeToNTPTime, {onLeave: function (args) {send("NTTimeToNTPTime");}});
+
+var NhGetGuidFromInterfaceName = Module.findExportByName("IPHLPAPI.DLL", "NhGetGuidFromInterfaceName")
+Interceptor.attach(NhGetGuidFromInterfaceName, {onLeave: function (args) {send("NhGetGuidFromInterfaceName");}});
+
+var NhGetInterfaceDescriptionFromGuid = Module.findExportByName("IPHLPAPI.DLL", "NhGetInterfaceDescriptionFromGuid")
+Interceptor.attach(NhGetInterfaceDescriptionFromGuid, {onLeave: function (args) {send("NhGetInterfaceDescriptionFromGuid");}});
+
+var NhGetInterfaceNameFromDeviceGuid = Module.findExportByName("IPHLPAPI.DLL", "NhGetInterfaceNameFromDeviceGuid")
+Interceptor.attach(NhGetInterfaceNameFromDeviceGuid, {onLeave: function (args) {send("NhGetInterfaceNameFromDeviceGuid");}});
+
+var NhGetInterfaceNameFromGuid = Module.findExportByName("IPHLPAPI.DLL", "NhGetInterfaceNameFromGuid")
+Interceptor.attach(NhGetInterfaceNameFromGuid, {onLeave: function (args) {send("NhGetInterfaceNameFromGuid");}});
+
+var NhpAllocateAndGetInterfaceInfoFromStack = Module.findExportByName("IPHLPAPI.DLL", "NhpAllocateAndGetInterfaceInfoFromStack")
+Interceptor.attach(NhpAllocateAndGetInterfaceInfoFromStack, {onLeave: function (args) {send("NhpAllocateAndGetInterfaceInfoFromStack");}});
+
+var NotifyAddrChange = Module.findExportByName("IPHLPAPI.DLL", "NotifyAddrChange")
+Interceptor.attach(NotifyAddrChange, {onLeave: function (args) {send("NotifyAddrChange");}});
+
+var NotifyCompartmentChange = Module.findExportByName("IPHLPAPI.DLL", "NotifyCompartmentChange")
+Interceptor.attach(NotifyCompartmentChange, {onLeave: function (args) {send("NotifyCompartmentChange");}});
+
+var NotifyIfTimestampConfigChange = Module.findExportByName("IPHLPAPI.DLL", "NotifyIfTimestampConfigChange")
+Interceptor.attach(NotifyIfTimestampConfigChange, {onLeave: function (args) {send("NotifyIfTimestampConfigChange");}});
+
+var NotifyIpInterfaceChange = Module.findExportByName("IPHLPAPI.DLL", "NotifyIpInterfaceChange")
+Interceptor.attach(NotifyIpInterfaceChange, {onLeave: function (args) {send("NotifyIpInterfaceChange");}});
+
+var NotifyNetworkConnectivityHintChange = Module.findExportByName("IPHLPAPI.DLL", "NotifyNetworkConnectivityHintChange")
+Interceptor.attach(NotifyNetworkConnectivityHintChange, {onLeave: function (args) {send("NotifyNetworkConnectivityHintChange");}});
+
+var NotifyRouteChange = Module.findExportByName("IPHLPAPI.DLL", "NotifyRouteChange")
+Interceptor.attach(NotifyRouteChange, {onLeave: function (args) {send("NotifyRouteChange");}});
+
+var NotifyRouteChange2 = Module.findExportByName("IPHLPAPI.DLL", "NotifyRouteChange2")
+Interceptor.attach(NotifyRouteChange2, {onLeave: function (args) {send("NotifyRouteChange2");}});
+
+var NotifyStableUnicastIpAddressTable = Module.findExportByName("IPHLPAPI.DLL", "NotifyStableUnicastIpAddressTable")
+Interceptor.attach(NotifyStableUnicastIpAddressTable, {onLeave: function (args) {send("NotifyStableUnicastIpAddressTable");}});
+
+var NotifyTeredoPortChange = Module.findExportByName("IPHLPAPI.DLL", "NotifyTeredoPortChange")
+Interceptor.attach(NotifyTeredoPortChange, {onLeave: function (args) {send("NotifyTeredoPortChange");}});
+
+var NotifyUnicastIpAddressChange = Module.findExportByName("IPHLPAPI.DLL", "NotifyUnicastIpAddressChange")
+Interceptor.attach(NotifyUnicastIpAddressChange, {onLeave: function (args) {send("NotifyUnicastIpAddressChange");}});
+
+var OpenCompartment = Module.findExportByName("IPHLPAPI.DLL", "OpenCompartment")
+Interceptor.attach(OpenCompartment, {onLeave: function (args) {send("OpenCompartment");}});
+
+var ParseNetworkString = Module.findExportByName("IPHLPAPI.DLL", "ParseNetworkString")
+Interceptor.attach(ParseNetworkString, {onLeave: function (args) {send("ParseNetworkString");}});
+
+var PfAddFiltersToInterface = Module.findExportByName("IPHLPAPI.DLL", "PfAddFiltersToInterface")
+Interceptor.attach(PfAddFiltersToInterface, {onLeave: function (args) {send("PfAddFiltersToInterface");}});
+
+var PfAddGlobalFilterToInterface = Module.findExportByName("IPHLPAPI.DLL", "PfAddGlobalFilterToInterface")
+Interceptor.attach(PfAddGlobalFilterToInterface, {onLeave: function (args) {send("PfAddGlobalFilterToInterface");}});
+
+var PfBindInterfaceToIPAddress = Module.findExportByName("IPHLPAPI.DLL", "PfBindInterfaceToIPAddress")
+Interceptor.attach(PfBindInterfaceToIPAddress, {onLeave: function (args) {send("PfBindInterfaceToIPAddress");}});
+
+var PfBindInterfaceToIndex = Module.findExportByName("IPHLPAPI.DLL", "PfBindInterfaceToIndex")
+Interceptor.attach(PfBindInterfaceToIndex, {onLeave: function (args) {send("PfBindInterfaceToIndex");}});
+
+var PfCreateInterface = Module.findExportByName("IPHLPAPI.DLL", "PfCreateInterface")
+Interceptor.attach(PfCreateInterface, {onLeave: function (args) {send("PfCreateInterface");}});
+
+var PfDeleteInterface = Module.findExportByName("IPHLPAPI.DLL", "PfDeleteInterface")
+Interceptor.attach(PfDeleteInterface, {onLeave: function (args) {send("PfDeleteInterface");}});
+
+var PfDeleteLog = Module.findExportByName("IPHLPAPI.DLL", "PfDeleteLog")
+Interceptor.attach(PfDeleteLog, {onLeave: function (args) {send("PfDeleteLog");}});
+
+var PfGetInterfaceStatistics = Module.findExportByName("IPHLPAPI.DLL", "PfGetInterfaceStatistics")
+Interceptor.attach(PfGetInterfaceStatistics, {onLeave: function (args) {send("PfGetInterfaceStatistics");}});
+
+var PfMakeLog = Module.findExportByName("IPHLPAPI.DLL", "PfMakeLog")
+Interceptor.attach(PfMakeLog, {onLeave: function (args) {send("PfMakeLog");}});
+
+var PfRebindFilters = Module.findExportByName("IPHLPAPI.DLL", "PfRebindFilters")
+Interceptor.attach(PfRebindFilters, {onLeave: function (args) {send("PfRebindFilters");}});
+
+var PfRemoveFilterHandles = Module.findExportByName("IPHLPAPI.DLL", "PfRemoveFilterHandles")
+Interceptor.attach(PfRemoveFilterHandles, {onLeave: function (args) {send("PfRemoveFilterHandles");}});
+
+var PfRemoveFiltersFromInterface = Module.findExportByName("IPHLPAPI.DLL", "PfRemoveFiltersFromInterface")
+Interceptor.attach(PfRemoveFiltersFromInterface, {onLeave: function (args) {send("PfRemoveFiltersFromInterface");}});
+
+var PfRemoveGlobalFilterFromInterface = Module.findExportByName("IPHLPAPI.DLL", "PfRemoveGlobalFilterFromInterface")
+Interceptor.attach(PfRemoveGlobalFilterFromInterface, {onLeave: function (args) {send("PfRemoveGlobalFilterFromInterface");}});
+
+var PfSetLogBuffer = Module.findExportByName("IPHLPAPI.DLL", "PfSetLogBuffer")
+Interceptor.attach(PfSetLogBuffer, {onLeave: function (args) {send("PfSetLogBuffer");}});
+
+var PfTestPacket = Module.findExportByName("IPHLPAPI.DLL", "PfTestPacket")
+Interceptor.attach(PfTestPacket, {onLeave: function (args) {send("PfTestPacket");}});
+
+var PfUnBindInterface = Module.findExportByName("IPHLPAPI.DLL", "PfUnBindInterface")
+Interceptor.attach(PfUnBindInterface, {onLeave: function (args) {send("PfUnBindInterface");}});
+
+var RegisterInterfaceTimestampConfigChange = Module.findExportByName("IPHLPAPI.DLL", "RegisterInterfaceTimestampConfigChange")
+Interceptor.attach(RegisterInterfaceTimestampConfigChange, {onLeave: function (args) {send("RegisterInterfaceTimestampConfigChange");}});
+
+var ResolveIpNetEntry2 = Module.findExportByName("IPHLPAPI.DLL", "ResolveIpNetEntry2")
+Interceptor.attach(ResolveIpNetEntry2, {onLeave: function (args) {send("ResolveIpNetEntry2");}});
+
+var ResolveNeighbor = Module.findExportByName("IPHLPAPI.DLL", "ResolveNeighbor")
+Interceptor.attach(ResolveNeighbor, {onLeave: function (args) {send("ResolveNeighbor");}});
+
+var RestoreMediaSense = Module.findExportByName("IPHLPAPI.DLL", "RestoreMediaSense")
+Interceptor.attach(RestoreMediaSense, {onLeave: function (args) {send("RestoreMediaSense");}});
+
+var SendARP = Module.findExportByName("IPHLPAPI.DLL", "SendARP")
+Interceptor.attach(SendARP, {onLeave: function (args) {send("SendARP");}});
+
+var SetAdapterIpAddress = Module.findExportByName("IPHLPAPI.DLL", "SetAdapterIpAddress")
+Interceptor.attach(SetAdapterIpAddress, {onLeave: function (args) {send("SetAdapterIpAddress");}});
+
+var SetCurrentThreadCompartmentId = Module.findExportByName("IPHLPAPI.DLL", "SetCurrentThreadCompartmentId")
+Interceptor.attach(SetCurrentThreadCompartmentId, {onLeave: function (args) {send("SetCurrentThreadCompartmentId");}});
+
+var SetCurrentThreadCompartmentScope = Module.findExportByName("IPHLPAPI.DLL", "SetCurrentThreadCompartmentScope")
+Interceptor.attach(SetCurrentThreadCompartmentScope, {onLeave: function (args) {send("SetCurrentThreadCompartmentScope");}});
+
+var SetDnsSettings = Module.findExportByName("IPHLPAPI.DLL", "SetDnsSettings")
+Interceptor.attach(SetDnsSettings, {onLeave: function (args) {send("SetDnsSettings");}});
+
+var SetIfEntry = Module.findExportByName("IPHLPAPI.DLL", "SetIfEntry")
+Interceptor.attach(SetIfEntry, {onLeave: function (args) {send("SetIfEntry");}});
+
+var SetInterfaceDnsSettings = Module.findExportByName("IPHLPAPI.DLL", "SetInterfaceDnsSettings")
+Interceptor.attach(SetInterfaceDnsSettings, {onLeave: function (args) {send("SetInterfaceDnsSettings");}});
+
+var SetIpForwardEntry = Module.findExportByName("IPHLPAPI.DLL", "SetIpForwardEntry")
+Interceptor.attach(SetIpForwardEntry, {onLeave: function (args) {send("SetIpForwardEntry");}});
+
+var SetIpForwardEntry2 = Module.findExportByName("IPHLPAPI.DLL", "SetIpForwardEntry2")
+Interceptor.attach(SetIpForwardEntry2, {onLeave: function (args) {send("SetIpForwardEntry2");}});
+
+var SetIpInterfaceEntry = Module.findExportByName("IPHLPAPI.DLL", "SetIpInterfaceEntry")
+Interceptor.attach(SetIpInterfaceEntry, {onLeave: function (args) {send("SetIpInterfaceEntry");}});
+
+var SetIpNetEntry = Module.findExportByName("IPHLPAPI.DLL", "SetIpNetEntry")
+Interceptor.attach(SetIpNetEntry, {onLeave: function (args) {send("SetIpNetEntry");}});
+
+var SetIpNetEntry2 = Module.findExportByName("IPHLPAPI.DLL", "SetIpNetEntry2")
+Interceptor.attach(SetIpNetEntry2, {onLeave: function (args) {send("SetIpNetEntry2");}});
+
+var SetIpStatistics = Module.findExportByName("IPHLPAPI.DLL", "SetIpStatistics")
+Interceptor.attach(SetIpStatistics, {onLeave: function (args) {send("SetIpStatistics");}});
+
+var SetIpStatisticsEx = Module.findExportByName("IPHLPAPI.DLL", "SetIpStatisticsEx")
+Interceptor.attach(SetIpStatisticsEx, {onLeave: function (args) {send("SetIpStatisticsEx");}});
+
+var SetIpTTL = Module.findExportByName("IPHLPAPI.DLL", "SetIpTTL")
+Interceptor.attach(SetIpTTL, {onLeave: function (args) {send("SetIpTTL");}});
+
+var SetJobCompartmentId = Module.findExportByName("IPHLPAPI.DLL", "SetJobCompartmentId")
+Interceptor.attach(SetJobCompartmentId, {onLeave: function (args) {send("SetJobCompartmentId");}});
+
+var SetNetworkInformation = Module.findExportByName("IPHLPAPI.DLL", "SetNetworkInformation")
+Interceptor.attach(SetNetworkInformation, {onLeave: function (args) {send("SetNetworkInformation");}});
+
+var SetPerTcp6ConnectionEStats = Module.findExportByName("IPHLPAPI.DLL", "SetPerTcp6ConnectionEStats")
+Interceptor.attach(SetPerTcp6ConnectionEStats, {onLeave: function (args) {send("SetPerTcp6ConnectionEStats");}});
+
+var SetPerTcp6ConnectionStats = Module.findExportByName("IPHLPAPI.DLL", "SetPerTcp6ConnectionStats")
+Interceptor.attach(SetPerTcp6ConnectionStats, {onLeave: function (args) {send("SetPerTcp6ConnectionStats");}});
+
+var SetPerTcpConnectionEStats = Module.findExportByName("IPHLPAPI.DLL", "SetPerTcpConnectionEStats")
+Interceptor.attach(SetPerTcpConnectionEStats, {onLeave: function (args) {send("SetPerTcpConnectionEStats");}});
+
+var SetPerTcpConnectionStats = Module.findExportByName("IPHLPAPI.DLL", "SetPerTcpConnectionStats")
+Interceptor.attach(SetPerTcpConnectionStats, {onLeave: function (args) {send("SetPerTcpConnectionStats");}});
+
+var SetSessionCompartmentId = Module.findExportByName("IPHLPAPI.DLL", "SetSessionCompartmentId")
+Interceptor.attach(SetSessionCompartmentId, {onLeave: function (args) {send("SetSessionCompartmentId");}});
+
+var SetTcpEntry = Module.findExportByName("IPHLPAPI.DLL", "SetTcpEntry")
+Interceptor.attach(SetTcpEntry, {onLeave: function (args) {send("SetTcpEntry");}});
+
+var SetUnicastIpAddressEntry = Module.findExportByName("IPHLPAPI.DLL", "SetUnicastIpAddressEntry")
+Interceptor.attach(SetUnicastIpAddressEntry, {onLeave: function (args) {send("SetUnicastIpAddressEntry");}});
+
+var UnenableRouter = Module.findExportByName("IPHLPAPI.DLL", "UnenableRouter")
+Interceptor.attach(UnenableRouter, {onLeave: function (args) {send("UnenableRouter");}});
+
+var UnregisterInterfaceTimestampConfigChange = Module.findExportByName("IPHLPAPI.DLL", "UnregisterInterfaceTimestampConfigChange")
+Interceptor.attach(UnregisterInterfaceTimestampConfigChange, {onLeave: function (args) {send("UnregisterInterfaceTimestampConfigChange");}});
+
+var do_echo_rep = Module.findExportByName("IPHLPAPI.DLL", "do_echo_rep")
+Interceptor.attach(do_echo_rep, {onLeave: function (args) {send("do_echo_rep");}});
+
+var do_echo_req = Module.findExportByName("IPHLPAPI.DLL", "do_echo_req")
+Interceptor.attach(do_echo_req, {onLeave: function (args) {send("do_echo_req");}});
+
+var if_indextoname = Module.findExportByName("IPHLPAPI.DLL", "if_indextoname")
+Interceptor.attach(if_indextoname, {onLeave: function (args) {send("if_indextoname");}});
+
+var if_nametoindex = Module.findExportByName("IPHLPAPI.DLL", "if_nametoindex")
+Interceptor.attach(if_nametoindex, {onLeave: function (args) {send("if_nametoindex");}});
+
+var register_icmp = Module.findExportByName("IPHLPAPI.DLL", "register_icmp")
+Interceptor.attach(register_icmp, {onLeave: function (args) {send("register_icmp");}});
+

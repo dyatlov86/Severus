@@ -1,0 +1,3 @@
+var CreateFontDownloadManager = Module.findExportByName("FontProvider.dll", "CreateFontDownloadManager")
+Interceptor.attach(CreateFontDownloadManager, {onLeave: function (args) {send("CreateFontDownloadManager");}});
+

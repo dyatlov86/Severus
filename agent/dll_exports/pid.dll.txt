@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("pid.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("pid.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var PID_GetFFEffectSettingsFromMemory = Module.findExportByName("pid.dll", "PID_GetFFEffectSettingsFromMemory")
+Interceptor.attach(PID_GetFFEffectSettingsFromMemory, {onLeave: function (args) {send("PID_GetFFEffectSettingsFromMemory");}});
+
+var PID_WriteFFEffectSettingsToMemory = Module.findExportByName("pid.dll", "PID_WriteFFEffectSettingsToMemory")
+Interceptor.attach(PID_WriteFFEffectSettingsToMemory, {onLeave: function (args) {send("PID_WriteFFEffectSettingsToMemory");}});
+

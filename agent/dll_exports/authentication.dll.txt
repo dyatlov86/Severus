@@ -1,0 +1,18 @@
+var AuthzGetAccountType = Module.findExportByName("authentication.dll", "AuthzGetAccountType")
+Interceptor.attach(AuthzGetAccountType, {onLeave: function (args) {send("AuthzGetAccountType");}});
+
+var AuthzRequestTicketWithWindow = Module.findExportByName("authentication.dll", "AuthzRequestTicketWithWindow")
+Interceptor.attach(AuthzRequestTicketWithWindow, {onLeave: function (args) {send("AuthzRequestTicketWithWindow");}});
+
+var AuthzRequestTicketWithoutWindow = Module.findExportByName("authentication.dll", "AuthzRequestTicketWithoutWindow")
+Interceptor.attach(AuthzRequestTicketWithoutWindow, {onLeave: function (args) {send("AuthzRequestTicketWithoutWindow");}});
+
+var GetAccountType = Module.findExportByName("authentication.dll", "GetAccountType")
+Interceptor.attach(GetAccountType, {onLeave: function (args) {send("GetAccountType");}});
+
+var RequestTicketWithWindow = Module.findExportByName("authentication.dll", "RequestTicketWithWindow")
+Interceptor.attach(RequestTicketWithWindow, {onLeave: function (args) {send("RequestTicketWithWindow");}});
+
+var RequestTicketWithoutWindow = Module.findExportByName("authentication.dll", "RequestTicketWithoutWindow")
+Interceptor.attach(RequestTicketWithoutWindow, {onLeave: function (args) {send("RequestTicketWithoutWindow");}});
+

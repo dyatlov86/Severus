@@ -1,0 +1,6 @@
+var CreateInputController = Module.findExportByName("InputController.dll", "CreateInputController")
+Interceptor.attach(CreateInputController, {onLeave: function (args) {send("CreateInputController");}});
+
+var CreateInputControllerEx = Module.findExportByName("InputController.dll", "CreateInputControllerEx")
+Interceptor.attach(CreateInputControllerEx, {onLeave: function (args) {send("CreateInputControllerEx");}});
+

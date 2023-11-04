@@ -1,0 +1,30 @@
+var CloseFidoAuthenticationSession = Module.findExportByName("aadauthhelper.dll", "CloseFidoAuthenticationSession")
+Interceptor.attach(CloseFidoAuthenticationSession, {onLeave: function (args) {send("CloseFidoAuthenticationSession");}});
+
+var CreateAuthBuffer = Module.findExportByName("aadauthhelper.dll", "CreateAuthBuffer")
+Interceptor.attach(CreateAuthBuffer, {onLeave: function (args) {send("CreateAuthBuffer");}});
+
+var CreateResourceAccountAuthBuffer = Module.findExportByName("aadauthhelper.dll", "CreateResourceAccountAuthBuffer")
+Interceptor.attach(CreateResourceAccountAuthBuffer, {onLeave: function (args) {send("CreateResourceAccountAuthBuffer");}});
+
+var CreateTokenAuthBuffer = Module.findExportByName("aadauthhelper.dll", "CreateTokenAuthBuffer")
+Interceptor.attach(CreateTokenAuthBuffer, {onLeave: function (args) {send("CreateTokenAuthBuffer");}});
+
+var CreateTokenAuthBufferEx = Module.findExportByName("aadauthhelper.dll", "CreateTokenAuthBufferEx")
+Interceptor.attach(CreateTokenAuthBufferEx, {onLeave: function (args) {send("CreateTokenAuthBufferEx");}});
+
+var GetFidoAuthenticationSessionStatus = Module.findExportByName("aadauthhelper.dll", "GetFidoAuthenticationSessionStatus")
+Interceptor.attach(GetFidoAuthenticationSessionStatus, {onLeave: function (args) {send("GetFidoAuthenticationSessionStatus");}});
+
+var GetSerializedAuthBuffer = Module.findExportByName("aadauthhelper.dll", "GetSerializedAuthBuffer")
+Interceptor.attach(GetSerializedAuthBuffer, {onLeave: function (args) {send("GetSerializedAuthBuffer");}});
+
+var StartChangingFidoPin = Module.findExportByName("aadauthhelper.dll", "StartChangingFidoPin")
+Interceptor.attach(StartChangingFidoPin, {onLeave: function (args) {send("StartChangingFidoPin");}});
+
+var StartFidoAuthenticationSession = Module.findExportByName("aadauthhelper.dll", "StartFidoAuthenticationSession")
+Interceptor.attach(StartFidoAuthenticationSession, {onLeave: function (args) {send("StartFidoAuthenticationSession");}});
+
+var StartSigningFidoClientData = Module.findExportByName("aadauthhelper.dll", "StartSigningFidoClientData")
+Interceptor.attach(StartSigningFidoClientData, {onLeave: function (args) {send("StartSigningFidoClientData");}});
+

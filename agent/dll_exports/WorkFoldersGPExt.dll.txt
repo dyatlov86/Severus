@@ -1,0 +1,3 @@
+var ProcessGroupPolicy = Module.findExportByName("WorkFoldersGPExt.dll", "ProcessGroupPolicy")
+Interceptor.attach(ProcessGroupPolicy, {onLeave: function (args) {send("ProcessGroupPolicy");}});
+

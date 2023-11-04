@@ -1,0 +1,42 @@
+var CHttpTransport_CreateInstance = Module.findExportByName("networkhelper.dll", "CHttpTransport_CreateInstance")
+Interceptor.attach(CHttpTransport_CreateInstance, {onLeave: function (args) {send("CHttpTransport_CreateInstance");}});
+
+var CheckPdcRenewal = Module.findExportByName("networkhelper.dll", "CheckPdcRenewal")
+Interceptor.attach(CheckPdcRenewal, {onLeave: function (args) {send("CheckPdcRenewal");}});
+
+var CreateControlChannelTriggerConnectionManager = Module.findExportByName("networkhelper.dll", "CreateControlChannelTriggerConnectionManager")
+Interceptor.attach(CreateControlChannelTriggerConnectionManager, {onLeave: function (args) {send("CreateControlChannelTriggerConnectionManager");}});
+
+var GetOrCreateNullPowerDependencyCoordinatorManager = Module.findExportByName("networkhelper.dll", "GetOrCreateNullPowerDependencyCoordinatorManager")
+Interceptor.attach(GetOrCreateNullPowerDependencyCoordinatorManager, {onLeave: function (args) {send("GetOrCreateNullPowerDependencyCoordinatorManager");}});
+
+var GetSerializedAppMetadata = Module.findExportByName("networkhelper.dll", "GetSerializedAppMetadata")
+Interceptor.attach(GetSerializedAppMetadata, {onLeave: function (args) {send("GetSerializedAppMetadata");}});
+
+var InitializePowerDependencyCoordinatorManager = Module.findExportByName("networkhelper.dll", "InitializePowerDependencyCoordinatorManager")
+Interceptor.attach(InitializePowerDependencyCoordinatorManager, {onLeave: function (args) {send("InitializePowerDependencyCoordinatorManager");}});
+
+var IsNetworkConnectionCostRestricted = Module.findExportByName("networkhelper.dll", "IsNetworkConnectionCostRestricted")
+Interceptor.attach(IsNetworkConnectionCostRestricted, {onLeave: function (args) {send("IsNetworkConnectionCostRestricted");}});
+
+var ProgressStatus = Module.findExportByName("networkhelper.dll", "ProgressStatus")
+Interceptor.attach(ProgressStatus, {onLeave: function (args) {send("ProgressStatus");}});
+
+var ReleasePowerDependencyCoordinatorManager = Module.findExportByName("networkhelper.dll", "ReleasePowerDependencyCoordinatorManager")
+Interceptor.attach(ReleasePowerDependencyCoordinatorManager, {onLeave: function (args) {send("ReleasePowerDependencyCoordinatorManager");}});
+
+var ReportSyncProgress = Module.findExportByName("networkhelper.dll", "ReportSyncProgress")
+Interceptor.attach(ReportSyncProgress, {onLeave: function (args) {send("ReportSyncProgress");}});
+
+var SyncPdcReference_WatchdogReport = Module.findExportByName("networkhelper.dll", "SyncPdcReference_WatchdogReport")
+Interceptor.attach(SyncPdcReference_WatchdogReport, {onLeave: function (args) {send("SyncPdcReference_WatchdogReport");}});
+
+var SyncPdcReference_WatchdogsEnabled = Module.findExportByName("networkhelper.dll", "SyncPdcReference_WatchdogsEnabled")
+Interceptor.attach(SyncPdcReference_WatchdogsEnabled, {onLeave: function (args) {send("SyncPdcReference_WatchdogsEnabled");}});
+
+var SyncWerReportComponentName = Module.findExportByName("networkhelper.dll", "SyncWerReportComponentName")
+Interceptor.attach(SyncWerReportComponentName, {onLeave: function (args) {send("SyncWerReportComponentName");}});
+
+var SyncWerReportGenerator = Module.findExportByName("networkhelper.dll", "SyncWerReportGenerator")
+Interceptor.attach(SyncWerReportGenerator, {onLeave: function (args) {send("SyncWerReportGenerator");}});
+

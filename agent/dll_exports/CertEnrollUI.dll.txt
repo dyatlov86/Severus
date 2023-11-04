@@ -1,0 +1,3 @@
+var CreateUIObject = Module.findExportByName("CertEnrollUI.dll", "CreateUIObject")
+Interceptor.attach(CreateUIObject, {onLeave: function (args) {send("CreateUIObject");}});
+

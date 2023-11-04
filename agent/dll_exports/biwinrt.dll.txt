@@ -1,0 +1,33 @@
+var BiRtCreateEventForApp = Module.findExportByName("biwinrt.dll", "BiRtCreateEventForApp")
+Interceptor.attach(BiRtCreateEventForApp, {onLeave: function (args) {send("BiRtCreateEventForApp");}});
+
+var BiRtDeleteEventForApp = Module.findExportByName("biwinrt.dll", "BiRtDeleteEventForApp")
+Interceptor.attach(BiRtDeleteEventForApp, {onLeave: function (args) {send("BiRtDeleteEventForApp");}});
+
+var BiRtEnumerateBrokeredEvents = Module.findExportByName("biwinrt.dll", "BiRtEnumerateBrokeredEvents")
+Interceptor.attach(BiRtEnumerateBrokeredEvents, {onLeave: function (args) {send("BiRtEnumerateBrokeredEvents");}});
+
+var BiRtIsValidActivationTypeForEventType = Module.findExportByName("biwinrt.dll", "BiRtIsValidActivationTypeForEventType")
+Interceptor.attach(BiRtIsValidActivationTypeForEventType, {onLeave: function (args) {send("BiRtIsValidActivationTypeForEventType");}});
+
+var BiRtQueryBrokerEventId = Module.findExportByName("biwinrt.dll", "BiRtQueryBrokerEventId")
+Interceptor.attach(BiRtQueryBrokerEventId, {onLeave: function (args) {send("BiRtQueryBrokerEventId");}});
+
+var BiRtRegisterWorkItem = Module.findExportByName("biwinrt.dll", "BiRtRegisterWorkItem")
+Interceptor.attach(BiRtRegisterWorkItem, {onLeave: function (args) {send("BiRtRegisterWorkItem");}});
+
+var BiRtRegisterWorkItemClsid = Module.findExportByName("biwinrt.dll", "BiRtRegisterWorkItemClsid")
+Interceptor.attach(BiRtRegisterWorkItemClsid, {onLeave: function (args) {send("BiRtRegisterWorkItemClsid");}});
+
+var DllCanUnloadNow = Module.findExportByName("biwinrt.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("biwinrt.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("biwinrt.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("biwinrt.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+

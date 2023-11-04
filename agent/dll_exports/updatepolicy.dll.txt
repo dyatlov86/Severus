@@ -1,0 +1,39 @@
+var DllCanUnloadNow = Module.findExportByName("updatepolicy.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("updatepolicy.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("updatepolicy.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("updatepolicy.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetAutoUpdatePolicy = Module.findExportByName("updatepolicy.dll", "GetAutoUpdatePolicy")
+Interceptor.attach(GetAutoUpdatePolicy, {onLeave: function (args) {send("GetAutoUpdatePolicy");}});
+
+var GetEnterprisePolicyName = Module.findExportByName("updatepolicy.dll", "GetEnterprisePolicyName")
+Interceptor.attach(GetEnterprisePolicyName, {onLeave: function (args) {send("GetEnterprisePolicyName");}});
+
+var GetSkuUpdateManagementGroup = Module.findExportByName("updatepolicy.dll", "GetSkuUpdateManagementGroup")
+Interceptor.attach(GetSkuUpdateManagementGroup, {onLeave: function (args) {send("GetSkuUpdateManagementGroup");}});
+
+var GetUpdatePolicyName = Module.findExportByName("updatepolicy.dll", "GetUpdatePolicyName")
+Interceptor.attach(GetUpdatePolicyName, {onLeave: function (args) {send("GetUpdatePolicyName");}});
+
+var ReadPolicy = Module.findExportByName("updatepolicy.dll", "ReadPolicy")
+Interceptor.attach(ReadPolicy, {onLeave: function (args) {send("ReadPolicy");}});
+
+var ReadPolicyWithFallback = Module.findExportByName("updatepolicy.dll", "ReadPolicyWithFallback")
+Interceptor.attach(ReadPolicyWithFallback, {onLeave: function (args) {send("ReadPolicyWithFallback");}});
+
+var ReleaseAutoUpdatePolicy = Module.findExportByName("updatepolicy.dll", "ReleaseAutoUpdatePolicy")
+Interceptor.attach(ReleaseAutoUpdatePolicy, {onLeave: function (args) {send("ReleaseAutoUpdatePolicy");}});
+
+var ReleaseEnterprisePolicyValue = Module.findExportByName("updatepolicy.dll", "ReleaseEnterprisePolicyValue")
+Interceptor.attach(ReleaseEnterprisePolicyValue, {onLeave: function (args) {send("ReleaseEnterprisePolicyValue");}});
+
+var ReleaseUpdatePolicyValue = Module.findExportByName("updatepolicy.dll", "ReleaseUpdatePolicyValue")
+Interceptor.attach(ReleaseUpdatePolicyValue, {onLeave: function (args) {send("ReleaseUpdatePolicyValue");}});
+

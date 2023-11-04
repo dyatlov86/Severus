@@ -1,0 +1,12 @@
+var GenerateGroupPolicy = Module.findExportByName("auditcse.dll", "GenerateGroupPolicy")
+Interceptor.attach(GenerateGroupPolicy, {onLeave: function (args) {send("GenerateGroupPolicy");}});
+
+var GenerateGroupPolicyCap = Module.findExportByName("auditcse.dll", "GenerateGroupPolicyCap")
+Interceptor.attach(GenerateGroupPolicyCap, {onLeave: function (args) {send("GenerateGroupPolicyCap");}});
+
+var ProcessGroupPolicyEx = Module.findExportByName("auditcse.dll", "ProcessGroupPolicyEx")
+Interceptor.attach(ProcessGroupPolicyEx, {onLeave: function (args) {send("ProcessGroupPolicyEx");}});
+
+var ProcessGroupPolicyExCap = Module.findExportByName("auditcse.dll", "ProcessGroupPolicyExCap")
+Interceptor.attach(ProcessGroupPolicyExCap, {onLeave: function (args) {send("ProcessGroupPolicyExCap");}});
+

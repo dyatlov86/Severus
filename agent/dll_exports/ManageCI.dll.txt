@@ -1,0 +1,156 @@
+var BeginRemoveCIPolicy = Module.findExportByName("ManageCI.dll", "BeginRemoveCIPolicy")
+Interceptor.attach(BeginRemoveCIPolicy, {onLeave: function (args) {send("BeginRemoveCIPolicy");}});
+
+var BeginRemoveSBCPToken = Module.findExportByName("ManageCI.dll", "BeginRemoveSBCPToken")
+Interceptor.attach(BeginRemoveSBCPToken, {onLeave: function (args) {send("BeginRemoveSBCPToken");}});
+
+var BeginSetSBCPToken = Module.findExportByName("ManageCI.dll", "BeginSetSBCPToken")
+Interceptor.attach(BeginSetSBCPToken, {onLeave: function (args) {send("BeginSetSBCPToken");}});
+
+var BeginTransaction = Module.findExportByName("ManageCI.dll", "BeginTransaction")
+Interceptor.attach(BeginTransaction, {onLeave: function (args) {send("BeginTransaction");}});
+
+var BeginUpsertCIPolicy = Module.findExportByName("ManageCI.dll", "BeginUpsertCIPolicy")
+Interceptor.attach(BeginUpsertCIPolicy, {onLeave: function (args) {send("BeginUpsertCIPolicy");}});
+
+var Commit = Module.findExportByName("ManageCI.dll", "Commit")
+Interceptor.attach(Commit, {onLeave: function (args) {send("Commit");}});
+
+var End = Module.findExportByName("ManageCI.dll", "End")
+Interceptor.attach(End, {onLeave: function (args) {send("End");}});
+
+var GetAllCIPolicies = Module.findExportByName("ManageCI.dll", "GetAllCIPolicies")
+Interceptor.attach(GetAllCIPolicies, {onLeave: function (args) {send("GetAllCIPolicies");}});
+
+var GetAllSBCPTokens = Module.findExportByName("ManageCI.dll", "GetAllSBCPTokens")
+Interceptor.attach(GetAllSBCPTokens, {onLeave: function (args) {send("GetAllSBCPTokens");}});
+
+var GetCIPolicyByID = Module.findExportByName("ManageCI.dll", "GetCIPolicyByID")
+Interceptor.attach(GetCIPolicyByID, {onLeave: function (args) {send("GetCIPolicyByID");}});
+
+var GetPoliciesAuthorizedBySBCPToken = Module.findExportByName("ManageCI.dll", "GetPoliciesAuthorizedBySBCPToken")
+Interceptor.attach(GetPoliciesAuthorizedBySBCPToken, {onLeave: function (args) {send("GetPoliciesAuthorizedBySBCPToken");}});
+
+var GetPolicyInformation = Module.findExportByName("ManageCI.dll", "GetPolicyInformation")
+Interceptor.attach(GetPolicyInformation, {onLeave: function (args) {send("GetPolicyInformation");}});
+
+var GetSBCPTokenByID = Module.findExportByName("ManageCI.dll", "GetSBCPTokenByID")
+Interceptor.attach(GetSBCPTokenByID, {onLeave: function (args) {send("GetSBCPTokenByID");}});
+
+var GetSBCPTokensForPolicyID = Module.findExportByName("ManageCI.dll", "GetSBCPTokensForPolicyID")
+Interceptor.attach(GetSBCPTokensForPolicyID, {onLeave: function (args) {send("GetSBCPTokensForPolicyID");}});
+
+var GetSModeUnlockID = Module.findExportByName("ManageCI.dll", "GetSModeUnlockID")
+Interceptor.attach(GetSModeUnlockID, {onLeave: function (args) {send("GetSModeUnlockID");}});
+
+var GetTenantID = Module.findExportByName("ManageCI.dll", "GetTenantID")
+Interceptor.attach(GetTenantID, {onLeave: function (args) {send("GetTenantID");}});
+
+var GetTokenInformation = Module.findExportByName("ManageCI.dll", "GetTokenInformation")
+Interceptor.attach(GetTokenInformation, {onLeave: function (args) {send("GetTokenInformation");}});
+
+var IsInProgress = Module.findExportByName("ManageCI.dll", "IsInProgress")
+Interceptor.attach(IsInProgress, {onLeave: function (args) {send("IsInProgress");}});
+
+var ManageCI = Module.findExportByName("ManageCI.dll", "ManageCI")
+Interceptor.attach(ManageCI, {onLeave: function (args) {send("ManageCI");}});
+
+var ManageCI_BeginRemoveCIPolicy = Module.findExportByName("ManageCI.dll", "ManageCI_BeginRemoveCIPolicy")
+Interceptor.attach(ManageCI_BeginRemoveCIPolicy, {onLeave: function (args) {send("ManageCI_BeginRemoveCIPolicy");}});
+
+var ManageCI_BeginRemoveSBCPToken = Module.findExportByName("ManageCI.dll", "ManageCI_BeginRemoveSBCPToken")
+Interceptor.attach(ManageCI_BeginRemoveSBCPToken, {onLeave: function (args) {send("ManageCI_BeginRemoveSBCPToken");}});
+
+var ManageCI_BeginSetSBCPToken = Module.findExportByName("ManageCI.dll", "ManageCI_BeginSetSBCPToken")
+Interceptor.attach(ManageCI_BeginSetSBCPToken, {onLeave: function (args) {send("ManageCI_BeginSetSBCPToken");}});
+
+var ManageCI_BeginTransaction = Module.findExportByName("ManageCI.dll", "ManageCI_BeginTransaction")
+Interceptor.attach(ManageCI_BeginTransaction, {onLeave: function (args) {send("ManageCI_BeginTransaction");}});
+
+var ManageCI_BeginUpsertCIPolicy = Module.findExportByName("ManageCI.dll", "ManageCI_BeginUpsertCIPolicy")
+Interceptor.attach(ManageCI_BeginUpsertCIPolicy, {onLeave: function (args) {send("ManageCI_BeginUpsertCIPolicy");}});
+
+var ManageCI_Commit = Module.findExportByName("ManageCI.dll", "ManageCI_Commit")
+Interceptor.attach(ManageCI_Commit, {onLeave: function (args) {send("ManageCI_Commit");}});
+
+var ManageCI_End = Module.findExportByName("ManageCI.dll", "ManageCI_End")
+Interceptor.attach(ManageCI_End, {onLeave: function (args) {send("ManageCI_End");}});
+
+var ManageCI_FreeSbcpHandle = Module.findExportByName("ManageCI.dll", "ManageCI_FreeSbcpHandle")
+Interceptor.attach(ManageCI_FreeSbcpHandle, {onLeave: function (args) {send("ManageCI_FreeSbcpHandle");}});
+
+var ManageCI_GetAllCIPolicies = Module.findExportByName("ManageCI.dll", "ManageCI_GetAllCIPolicies")
+Interceptor.attach(ManageCI_GetAllCIPolicies, {onLeave: function (args) {send("ManageCI_GetAllCIPolicies");}});
+
+var ManageCI_GetAllSBCPTokens = Module.findExportByName("ManageCI.dll", "ManageCI_GetAllSBCPTokens")
+Interceptor.attach(ManageCI_GetAllSBCPTokens, {onLeave: function (args) {send("ManageCI_GetAllSBCPTokens");}});
+
+var ManageCI_GetCIPolicyByID = Module.findExportByName("ManageCI.dll", "ManageCI_GetCIPolicyByID")
+Interceptor.attach(ManageCI_GetCIPolicyByID, {onLeave: function (args) {send("ManageCI_GetCIPolicyByID");}});
+
+var ManageCI_GetPoliciesAuthorizedBySBCPToken = Module.findExportByName("ManageCI.dll", "ManageCI_GetPoliciesAuthorizedBySBCPToken")
+Interceptor.attach(ManageCI_GetPoliciesAuthorizedBySBCPToken, {onLeave: function (args) {send("ManageCI_GetPoliciesAuthorizedBySBCPToken");}});
+
+var ManageCI_GetPolicyInformation = Module.findExportByName("ManageCI.dll", "ManageCI_GetPolicyInformation")
+Interceptor.attach(ManageCI_GetPolicyInformation, {onLeave: function (args) {send("ManageCI_GetPolicyInformation");}});
+
+var ManageCI_GetSBCPTokenByID = Module.findExportByName("ManageCI.dll", "ManageCI_GetSBCPTokenByID")
+Interceptor.attach(ManageCI_GetSBCPTokenByID, {onLeave: function (args) {send("ManageCI_GetSBCPTokenByID");}});
+
+var ManageCI_GetSBCPTokensForPolicyID = Module.findExportByName("ManageCI.dll", "ManageCI_GetSBCPTokensForPolicyID")
+Interceptor.attach(ManageCI_GetSBCPTokensForPolicyID, {onLeave: function (args) {send("ManageCI_GetSBCPTokensForPolicyID");}});
+
+var ManageCI_GetSModeUnlockID = Module.findExportByName("ManageCI.dll", "ManageCI_GetSModeUnlockID")
+Interceptor.attach(ManageCI_GetSModeUnlockID, {onLeave: function (args) {send("ManageCI_GetSModeUnlockID");}});
+
+var ManageCI_GetTenantID = Module.findExportByName("ManageCI.dll", "ManageCI_GetTenantID")
+Interceptor.attach(ManageCI_GetTenantID, {onLeave: function (args) {send("ManageCI_GetTenantID");}});
+
+var ManageCI_GetTokenInformation = Module.findExportByName("ManageCI.dll", "ManageCI_GetTokenInformation")
+Interceptor.attach(ManageCI_GetTokenInformation, {onLeave: function (args) {send("ManageCI_GetTokenInformation");}});
+
+var ManageCI_IsInProgress = Module.findExportByName("ManageCI.dll", "ManageCI_IsInProgress")
+Interceptor.attach(ManageCI_IsInProgress, {onLeave: function (args) {send("ManageCI_IsInProgress");}});
+
+var ManageCI_ParsePolicy = Module.findExportByName("ManageCI.dll", "ManageCI_ParsePolicy")
+Interceptor.attach(ManageCI_ParsePolicy, {onLeave: function (args) {send("ManageCI_ParsePolicy");}});
+
+var ManageCI_ParseSbcpToken = Module.findExportByName("ManageCI.dll", "ManageCI_ParseSbcpToken")
+Interceptor.attach(ManageCI_ParseSbcpToken, {onLeave: function (args) {send("ManageCI_ParseSbcpToken");}});
+
+var ManageCI_QueryBinary = Module.findExportByName("ManageCI.dll", "ManageCI_QueryBinary")
+Interceptor.attach(ManageCI_QueryBinary, {onLeave: function (args) {send("ManageCI_QueryBinary");}});
+
+var ManageCI_QueryDword = Module.findExportByName("ManageCI.dll", "ManageCI_QueryDword")
+Interceptor.attach(ManageCI_QueryDword, {onLeave: function (args) {send("ManageCI_QueryDword");}});
+
+var ManageCI_QueryQword = Module.findExportByName("ManageCI.dll", "ManageCI_QueryQword")
+Interceptor.attach(ManageCI_QueryQword, {onLeave: function (args) {send("ManageCI_QueryQword");}});
+
+var ManageCI_QueryString = Module.findExportByName("ManageCI.dll", "ManageCI_QueryString")
+Interceptor.attach(ManageCI_QueryString, {onLeave: function (args) {send("ManageCI_QueryString");}});
+
+var ManageCI_Rollback = Module.findExportByName("ManageCI.dll", "ManageCI_Rollback")
+Interceptor.attach(ManageCI_Rollback, {onLeave: function (args) {send("ManageCI_Rollback");}});
+
+var ManageCI_ShouldIgnoreRemoval = Module.findExportByName("ManageCI.dll", "ManageCI_ShouldIgnoreRemoval")
+Interceptor.attach(ManageCI_ShouldIgnoreRemoval, {onLeave: function (args) {send("ManageCI_ShouldIgnoreRemoval");}});
+
+var ManageCI_Start = Module.findExportByName("ManageCI.dll", "ManageCI_Start")
+Interceptor.attach(ManageCI_Start, {onLeave: function (args) {send("ManageCI_Start");}});
+
+var ManageCI_ValidateState = Module.findExportByName("ManageCI.dll", "ManageCI_ValidateState")
+Interceptor.attach(ManageCI_ValidateState, {onLeave: function (args) {send("ManageCI_ValidateState");}});
+
+var ParsePolicy = Module.findExportByName("ManageCI.dll", "ParsePolicy")
+Interceptor.attach(ParsePolicy, {onLeave: function (args) {send("ParsePolicy");}});
+
+var Rollback = Module.findExportByName("ManageCI.dll", "Rollback")
+Interceptor.attach(Rollback, {onLeave: function (args) {send("Rollback");}});
+
+var Start = Module.findExportByName("ManageCI.dll", "Start")
+Interceptor.attach(Start, {onLeave: function (args) {send("Start");}});
+
+var ValidateState = Module.findExportByName("ManageCI.dll", "ValidateState")
+Interceptor.attach(ValidateState, {onLeave: function (args) {send("ValidateState");}});
+

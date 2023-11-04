@@ -1,0 +1,6 @@
+var VpnWscFreeProductInfo = Module.findExportByName("VpnSohDesktop.dll", "VpnWscFreeProductInfo")
+Interceptor.attach(VpnWscFreeProductInfo, {onLeave: function (args) {send("VpnWscFreeProductInfo");}});
+
+var VpnWscGetProductInfo = Module.findExportByName("VpnSohDesktop.dll", "VpnWscGetProductInfo")
+Interceptor.attach(VpnWscGetProductInfo, {onLeave: function (args) {send("VpnWscGetProductInfo");}});
+

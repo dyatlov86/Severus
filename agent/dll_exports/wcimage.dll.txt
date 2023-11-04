@@ -1,0 +1,42 @@
+var WcCompressFile = Module.findExportByName("wcimage.dll", "WcCompressFile")
+Interceptor.attach(WcCompressFile, {onLeave: function (args) {send("WcCompressFile");}});
+
+var WcCompressFileAsync = Module.findExportByName("wcimage.dll", "WcCompressFileAsync")
+Interceptor.attach(WcCompressFileAsync, {onLeave: function (args) {send("WcCompressFileAsync");}});
+
+var WcConvertToReparsePoint = Module.findExportByName("wcimage.dll", "WcConvertToReparsePoint")
+Interceptor.attach(WcConvertToReparsePoint, {onLeave: function (args) {send("WcConvertToReparsePoint");}});
+
+var WcCreateContainerImageFromPortableBaseLayer = Module.findExportByName("wcimage.dll", "WcCreateContainerImageFromPortableBaseLayer")
+Interceptor.attach(WcCreateContainerImageFromPortableBaseLayer, {onLeave: function (args) {send("WcCreateContainerImageFromPortableBaseLayer");}});
+
+var WcCreateContainerImageFromWim = Module.findExportByName("wcimage.dll", "WcCreateContainerImageFromWim")
+Interceptor.attach(WcCreateContainerImageFromWim, {onLeave: function (args) {send("WcCreateContainerImageFromWim");}});
+
+var WcCreateContainerImageFromWimEx = Module.findExportByName("wcimage.dll", "WcCreateContainerImageFromWimEx")
+Interceptor.attach(WcCreateContainerImageFromWimEx, {onLeave: function (args) {send("WcCreateContainerImageFromWimEx");}});
+
+var WcDismountVirtualDisk = Module.findExportByName("wcimage.dll", "WcDismountVirtualDisk")
+Interceptor.attach(WcDismountVirtualDisk, {onLeave: function (args) {send("WcDismountVirtualDisk");}});
+
+var WcDismountVirtualDiskFromHandle = Module.findExportByName("wcimage.dll", "WcDismountVirtualDiskFromHandle")
+Interceptor.attach(WcDismountVirtualDiskFromHandle, {onLeave: function (args) {send("WcDismountVirtualDiskFromHandle");}});
+
+var WcEnsurePathExists = Module.findExportByName("wcimage.dll", "WcEnsurePathExists")
+Interceptor.attach(WcEnsurePathExists, {onLeave: function (args) {send("WcEnsurePathExists");}});
+
+var WcExpandContainerWim = Module.findExportByName("wcimage.dll", "WcExpandContainerWim")
+Interceptor.attach(WcExpandContainerWim, {onLeave: function (args) {send("WcExpandContainerWim");}});
+
+var WcMountVirtualDisk = Module.findExportByName("wcimage.dll", "WcMountVirtualDisk")
+Interceptor.attach(WcMountVirtualDisk, {onLeave: function (args) {send("WcMountVirtualDisk");}});
+
+var WcProcessContainerLayer = Module.findExportByName("wcimage.dll", "WcProcessContainerLayer")
+Interceptor.attach(WcProcessContainerLayer, {onLeave: function (args) {send("WcProcessContainerLayer");}});
+
+var WcSetVirtualDiskAttributes = Module.findExportByName("wcimage.dll", "WcSetVirtualDiskAttributes")
+Interceptor.attach(WcSetVirtualDiskAttributes, {onLeave: function (args) {send("WcSetVirtualDiskAttributes");}});
+
+var WcWaitForPendingFileCompressionOperations = Module.findExportByName("wcimage.dll", "WcWaitForPendingFileCompressionOperations")
+Interceptor.attach(WcWaitForPendingFileCompressionOperations, {onLeave: function (args) {send("WcWaitForPendingFileCompressionOperations");}});
+

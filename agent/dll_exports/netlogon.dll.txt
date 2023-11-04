@@ -1,0 +1,72 @@
+var DsrGetDcNameEx2 = Module.findExportByName("netlogon.dll", "DsrGetDcNameEx2")
+Interceptor.attach(DsrGetDcNameEx2, {onLeave: function (args) {send("DsrGetDcNameEx2");}});
+
+var I_NetLogonAddressToSiteName = Module.findExportByName("netlogon.dll", "I_NetLogonAddressToSiteName")
+Interceptor.attach(I_NetLogonAddressToSiteName, {onLeave: function (args) {send("I_NetLogonAddressToSiteName");}});
+
+var I_NetLogonAppendChangeLog = Module.findExportByName("netlogon.dll", "I_NetLogonAppendChangeLog")
+Interceptor.attach(I_NetLogonAppendChangeLog, {onLeave: function (args) {send("I_NetLogonAppendChangeLog");}});
+
+var I_NetLogonCloseChangeLog = Module.findExportByName("netlogon.dll", "I_NetLogonCloseChangeLog")
+Interceptor.attach(I_NetLogonCloseChangeLog, {onLeave: function (args) {send("I_NetLogonCloseChangeLog");}});
+
+var I_NetLogonFree = Module.findExportByName("netlogon.dll", "I_NetLogonFree")
+Interceptor.attach(I_NetLogonFree, {onLeave: function (args) {send("I_NetLogonFree");}});
+
+var I_NetLogonGetAuthDataEx = Module.findExportByName("netlogon.dll", "I_NetLogonGetAuthDataEx")
+Interceptor.attach(I_NetLogonGetAuthDataEx, {onLeave: function (args) {send("I_NetLogonGetAuthDataEx");}});
+
+var I_NetLogonGetSerialNumber = Module.findExportByName("netlogon.dll", "I_NetLogonGetSerialNumber")
+Interceptor.attach(I_NetLogonGetSerialNumber, {onLeave: function (args) {send("I_NetLogonGetSerialNumber");}});
+
+var I_NetLogonLdapLookupEx = Module.findExportByName("netlogon.dll", "I_NetLogonLdapLookupEx")
+Interceptor.attach(I_NetLogonLdapLookupEx, {onLeave: function (args) {send("I_NetLogonLdapLookupEx");}});
+
+var I_NetLogonMixedDomain = Module.findExportByName("netlogon.dll", "I_NetLogonMixedDomain")
+Interceptor.attach(I_NetLogonMixedDomain, {onLeave: function (args) {send("I_NetLogonMixedDomain");}});
+
+var I_NetLogonNewChangeLog = Module.findExportByName("netlogon.dll", "I_NetLogonNewChangeLog")
+Interceptor.attach(I_NetLogonNewChangeLog, {onLeave: function (args) {send("I_NetLogonNewChangeLog");}});
+
+var I_NetLogonReadChangeLog = Module.findExportByName("netlogon.dll", "I_NetLogonReadChangeLog")
+Interceptor.attach(I_NetLogonReadChangeLog, {onLeave: function (args) {send("I_NetLogonReadChangeLog");}});
+
+var I_NetLogonSendToSamOnDc = Module.findExportByName("netlogon.dll", "I_NetLogonSendToSamOnDc")
+Interceptor.attach(I_NetLogonSendToSamOnDc, {onLeave: function (args) {send("I_NetLogonSendToSamOnDc");}});
+
+var I_NetLogonSetServiceBits = Module.findExportByName("netlogon.dll", "I_NetLogonSetServiceBits")
+Interceptor.attach(I_NetLogonSetServiceBits, {onLeave: function (args) {send("I_NetLogonSetServiceBits");}});
+
+var I_NetNotifyDelta = Module.findExportByName("netlogon.dll", "I_NetNotifyDelta")
+Interceptor.attach(I_NetNotifyDelta, {onLeave: function (args) {send("I_NetNotifyDelta");}});
+
+var I_NetNotifyDsChange = Module.findExportByName("netlogon.dll", "I_NetNotifyDsChange")
+Interceptor.attach(I_NetNotifyDsChange, {onLeave: function (args) {send("I_NetNotifyDsChange");}});
+
+var I_NetNotifyMachineAccount = Module.findExportByName("netlogon.dll", "I_NetNotifyMachineAccount")
+Interceptor.attach(I_NetNotifyMachineAccount, {onLeave: function (args) {send("I_NetNotifyMachineAccount");}});
+
+var I_NetNotifyNetlogonDllHandle = Module.findExportByName("netlogon.dll", "I_NetNotifyNetlogonDllHandle")
+Interceptor.attach(I_NetNotifyNetlogonDllHandle, {onLeave: function (args) {send("I_NetNotifyNetlogonDllHandle");}});
+
+var I_NetNotifyNtdsDsaDeletion = Module.findExportByName("netlogon.dll", "I_NetNotifyNtdsDsaDeletion")
+Interceptor.attach(I_NetNotifyNtdsDsaDeletion, {onLeave: function (args) {send("I_NetNotifyNtdsDsaDeletion");}});
+
+var I_NetNotifyRole = Module.findExportByName("netlogon.dll", "I_NetNotifyRole")
+Interceptor.attach(I_NetNotifyRole, {onLeave: function (args) {send("I_NetNotifyRole");}});
+
+var I_NetNotifyTrustedDomain = Module.findExportByName("netlogon.dll", "I_NetNotifyTrustedDomain")
+Interceptor.attach(I_NetNotifyTrustedDomain, {onLeave: function (args) {send("I_NetNotifyTrustedDomain");}});
+
+var InitSecurityInterfaceW = Module.findExportByName("netlogon.dll", "InitSecurityInterfaceW")
+Interceptor.attach(InitSecurityInterfaceW, {onLeave: function (args) {send("InitSecurityInterfaceW");}});
+
+var NetIGetEncTypes = Module.findExportByName("netlogon.dll", "NetIGetEncTypes")
+Interceptor.attach(NetIGetEncTypes, {onLeave: function (args) {send("NetIGetEncTypes");}});
+
+var NetILogonSamLogon = Module.findExportByName("netlogon.dll", "NetILogonSamLogon")
+Interceptor.attach(NetILogonSamLogon, {onLeave: function (args) {send("NetILogonSamLogon");}});
+
+var NlNetlogonMain = Module.findExportByName("netlogon.dll", "NlNetlogonMain")
+Interceptor.attach(NlNetlogonMain, {onLeave: function (args) {send("NlNetlogonMain");}});
+

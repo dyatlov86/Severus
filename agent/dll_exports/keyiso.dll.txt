@@ -1,0 +1,6 @@
+var KeyIsoServiceMain = Module.findExportByName("keyiso.dll", "KeyIsoServiceMain")
+Interceptor.attach(KeyIsoServiceMain, {onLeave: function (args) {send("KeyIsoServiceMain");}});
+
+var KeyIsoSetAuditingInterface = Module.findExportByName("keyiso.dll", "KeyIsoSetAuditingInterface")
+Interceptor.attach(KeyIsoSetAuditingInterface, {onLeave: function (args) {send("KeyIsoSetAuditingInterface");}});
+

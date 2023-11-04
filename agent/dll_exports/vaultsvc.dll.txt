@@ -1,0 +1,6 @@
+var ServiceMain = Module.findExportByName("vaultsvc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var VaultSvcStopCallback = Module.findExportByName("vaultsvc.dll", "VaultSvcStopCallback")
+Interceptor.attach(VaultSvcStopCallback, {onLeave: function (args) {send("VaultSvcStopCallback");}});
+

@@ -1,0 +1,9 @@
+var VmRdvCore_CreateInstance = Module.findExportByName("vmrdvcore.dll", "VmRdvCore_CreateInstance")
+Interceptor.attach(VmRdvCore_CreateInstance, {onLeave: function (args) {send("VmRdvCore_CreateInstance");}});
+
+var VmRdvCore_GetInstance = Module.findExportByName("vmrdvcore.dll", "VmRdvCore_GetInstance")
+Interceptor.attach(VmRdvCore_GetInstance, {onLeave: function (args) {send("VmRdvCore_GetInstance");}});
+
+var VmRdvCore_TerminateInstance = Module.findExportByName("vmrdvcore.dll", "VmRdvCore_TerminateInstance")
+Interceptor.attach(VmRdvCore_TerminateInstance, {onLeave: function (args) {send("VmRdvCore_TerminateInstance");}});
+

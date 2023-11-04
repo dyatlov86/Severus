@@ -1,0 +1,42 @@
+var AllocConsole = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "AllocConsole")
+Interceptor.attach(AllocConsole, {onLeave: function (args) {send("AllocConsole");}});
+
+var GetConsoleCP = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "GetConsoleCP")
+Interceptor.attach(GetConsoleCP, {onLeave: function (args) {send("GetConsoleCP");}});
+
+var GetConsoleMode = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "GetConsoleMode")
+Interceptor.attach(GetConsoleMode, {onLeave: function (args) {send("GetConsoleMode");}});
+
+var GetConsoleOutputCP = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "GetConsoleOutputCP")
+Interceptor.attach(GetConsoleOutputCP, {onLeave: function (args) {send("GetConsoleOutputCP");}});
+
+var GetNumberOfConsoleInputEvents = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "GetNumberOfConsoleInputEvents")
+Interceptor.attach(GetNumberOfConsoleInputEvents, {onLeave: function (args) {send("GetNumberOfConsoleInputEvents");}});
+
+var PeekConsoleInputA = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "PeekConsoleInputA")
+Interceptor.attach(PeekConsoleInputA, {onLeave: function (args) {send("PeekConsoleInputA");}});
+
+var ReadConsoleA = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "ReadConsoleA")
+Interceptor.attach(ReadConsoleA, {onLeave: function (args) {send("ReadConsoleA");}});
+
+var ReadConsoleInputA = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "ReadConsoleInputA")
+Interceptor.attach(ReadConsoleInputA, {onLeave: function (args) {send("ReadConsoleInputA");}});
+
+var ReadConsoleInputW = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "ReadConsoleInputW")
+Interceptor.attach(ReadConsoleInputW, {onLeave: function (args) {send("ReadConsoleInputW");}});
+
+var ReadConsoleW = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "ReadConsoleW")
+Interceptor.attach(ReadConsoleW, {onLeave: function (args) {send("ReadConsoleW");}});
+
+var SetConsoleCtrlHandler = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "SetConsoleCtrlHandler")
+Interceptor.attach(SetConsoleCtrlHandler, {onLeave: function (args) {send("SetConsoleCtrlHandler");}});
+
+var SetConsoleMode = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "SetConsoleMode")
+Interceptor.attach(SetConsoleMode, {onLeave: function (args) {send("SetConsoleMode");}});
+
+var WriteConsoleA = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "WriteConsoleA")
+Interceptor.attach(WriteConsoleA, {onLeave: function (args) {send("WriteConsoleA");}});
+
+var WriteConsoleW = Module.findExportByName("api-ms-win-core-console-l1-1-0.dll", "WriteConsoleW")
+Interceptor.attach(WriteConsoleW, {onLeave: function (args) {send("WriteConsoleW");}});
+

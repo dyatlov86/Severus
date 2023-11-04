@@ -1,0 +1,45 @@
+var CanShareFolder = Module.findExportByName("ntshrui.dll", "CanShareFolder")
+Interceptor.attach(CanShareFolder, {onLeave: function (args) {send("CanShareFolder");}});
+
+var DllCanUnloadNow = Module.findExportByName("ntshrui.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("ntshrui.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetLocalPathFromNetResource = Module.findExportByName("ntshrui.dll", "GetLocalPathFromNetResource")
+Interceptor.attach(GetLocalPathFromNetResource, {onLeave: function (args) {send("GetLocalPathFromNetResource");}});
+
+var GetLocalPathFromNetResourceA = Module.findExportByName("ntshrui.dll", "GetLocalPathFromNetResourceA")
+Interceptor.attach(GetLocalPathFromNetResourceA, {onLeave: function (args) {send("GetLocalPathFromNetResourceA");}});
+
+var GetLocalPathFromNetResourceW = Module.findExportByName("ntshrui.dll", "GetLocalPathFromNetResourceW")
+Interceptor.attach(GetLocalPathFromNetResourceW, {onLeave: function (args) {send("GetLocalPathFromNetResourceW");}});
+
+var GetNetResourceFromLocalPath = Module.findExportByName("ntshrui.dll", "GetNetResourceFromLocalPath")
+Interceptor.attach(GetNetResourceFromLocalPath, {onLeave: function (args) {send("GetNetResourceFromLocalPath");}});
+
+var GetNetResourceFromLocalPathA = Module.findExportByName("ntshrui.dll", "GetNetResourceFromLocalPathA")
+Interceptor.attach(GetNetResourceFromLocalPathA, {onLeave: function (args) {send("GetNetResourceFromLocalPathA");}});
+
+var GetNetResourceFromLocalPathW = Module.findExportByName("ntshrui.dll", "GetNetResourceFromLocalPathW")
+Interceptor.attach(GetNetResourceFromLocalPathW, {onLeave: function (args) {send("GetNetResourceFromLocalPathW");}});
+
+var IsFolderPrivateForUser = Module.findExportByName("ntshrui.dll", "IsFolderPrivateForUser")
+Interceptor.attach(IsFolderPrivateForUser, {onLeave: function (args) {send("IsFolderPrivateForUser");}});
+
+var IsPathShared = Module.findExportByName("ntshrui.dll", "IsPathShared")
+Interceptor.attach(IsPathShared, {onLeave: function (args) {send("IsPathShared");}});
+
+var IsPathSharedA = Module.findExportByName("ntshrui.dll", "IsPathSharedA")
+Interceptor.attach(IsPathSharedA, {onLeave: function (args) {send("IsPathSharedA");}});
+
+var IsPathSharedW = Module.findExportByName("ntshrui.dll", "IsPathSharedW")
+Interceptor.attach(IsPathSharedW, {onLeave: function (args) {send("IsPathSharedW");}});
+
+var SetFolderPermissionsForSharing = Module.findExportByName("ntshrui.dll", "SetFolderPermissionsForSharing")
+Interceptor.attach(SetFolderPermissionsForSharing, {onLeave: function (args) {send("SetFolderPermissionsForSharing");}});
+
+var ShowShareFolderUI = Module.findExportByName("ntshrui.dll", "ShowShareFolderUI")
+Interceptor.attach(ShowShareFolderUI, {onLeave: function (args) {send("ShowShareFolderUI");}});
+

@@ -1,0 +1,24 @@
+var CLSID_CfgComp = Module.findExportByName("cfgbkend.dll", "CLSID_CfgComp")
+Interceptor.attach(CLSID_CfgComp, {onLeave: function (args) {send("CLSID_CfgComp");}});
+
+var DllCanUnloadNow = Module.findExportByName("cfgbkend.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("cfgbkend.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("cfgbkend.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("cfgbkend.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var IID_ICfgComp = Module.findExportByName("cfgbkend.dll", "IID_ICfgComp")
+Interceptor.attach(IID_ICfgComp, {onLeave: function (args) {send("IID_ICfgComp");}});
+
+var IID_ISettingsComp = Module.findExportByName("cfgbkend.dll", "IID_ISettingsComp")
+Interceptor.attach(IID_ISettingsComp, {onLeave: function (args) {send("IID_ISettingsComp");}});
+
+var IID_ISettingsComp2 = Module.findExportByName("cfgbkend.dll", "IID_ISettingsComp2")
+Interceptor.attach(IID_ISettingsComp2, {onLeave: function (args) {send("IID_ISettingsComp2");}});
+

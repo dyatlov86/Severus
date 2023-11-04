@@ -1,0 +1,18 @@
+var CreateForegroundTaskManager = Module.findExportByName("ExecModelClient.dll", "CreateForegroundTaskManager")
+Interceptor.attach(CreateForegroundTaskManager, {onLeave: function (args) {send("CreateForegroundTaskManager");}});
+
+var CreateModernVoipPolicy = Module.findExportByName("ExecModelClient.dll", "CreateModernVoipPolicy")
+Interceptor.attach(CreateModernVoipPolicy, {onLeave: function (args) {send("CreateModernVoipPolicy");}});
+
+var DllCanUnloadNow = Module.findExportByName("ExecModelClient.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("ExecModelClient.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("ExecModelClient.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var TestHook_CancelShutdown = Module.findExportByName("ExecModelClient.dll", "TestHook_CancelShutdown")
+Interceptor.attach(TestHook_CancelShutdown, {onLeave: function (args) {send("TestHook_CancelShutdown");}});
+

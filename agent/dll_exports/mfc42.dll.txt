@@ -1,0 +1,24 @@
+var ?AfxFreeLibrary@@YAHPEAUHINSTANCE__@@@Z = Module.findExportByName("mfc42.dll", "?AfxFreeLibrary@@YAHPEAUHINSTANCE__@@@Z")
+Interceptor.attach(?AfxFreeLibrary@@YAHPEAUHINSTANCE__@@@Z, {onLeave: function (args) {send("?AfxFreeLibrary@@YAHPEAUHINSTANCE__@@@Z");}});
+
+var ?AfxLoadLibrary@@YAPEAUHINSTANCE__@@PEBD@Z = Module.findExportByName("mfc42.dll", "?AfxLoadLibrary@@YAPEAUHINSTANCE__@@PEBD@Z")
+Interceptor.attach(?AfxLoadLibrary@@YAPEAUHINSTANCE__@@PEBD@Z, {onLeave: function (args) {send("?AfxLoadLibrary@@YAPEAUHINSTANCE__@@PEBD@Z");}});
+
+var ?AfxLockGlobals@@YAXH@Z = Module.findExportByName("mfc42.dll", "?AfxLockGlobals@@YAXH@Z")
+Interceptor.attach(?AfxLockGlobals@@YAXH@Z, {onLeave: function (args) {send("?AfxLockGlobals@@YAXH@Z");}});
+
+var ?AfxUnlockGlobals@@YAXH@Z = Module.findExportByName("mfc42.dll", "?AfxUnlockGlobals@@YAXH@Z")
+Interceptor.attach(?AfxUnlockGlobals@@YAXH@Z, {onLeave: function (args) {send("?AfxUnlockGlobals@@YAXH@Z");}});
+
+var DllCanUnloadNow = Module.findExportByName("mfc42.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("mfc42.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("mfc42.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("mfc42.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

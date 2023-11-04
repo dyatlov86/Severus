@@ -1,0 +1,279 @@
+var HBA_CloseAdapter = Module.findExportByName("hbaapi.dll", "HBA_CloseAdapter")
+Interceptor.attach(HBA_CloseAdapter, {onLeave: function (args) {send("HBA_CloseAdapter");}});
+
+var HBA_FreeLibrary = Module.findExportByName("hbaapi.dll", "HBA_FreeLibrary")
+Interceptor.attach(HBA_FreeLibrary, {onLeave: function (args) {send("HBA_FreeLibrary");}});
+
+var HBA_GetAdapterAttributes = Module.findExportByName("hbaapi.dll", "HBA_GetAdapterAttributes")
+Interceptor.attach(HBA_GetAdapterAttributes, {onLeave: function (args) {send("HBA_GetAdapterAttributes");}});
+
+var HBA_GetAdapterName = Module.findExportByName("hbaapi.dll", "HBA_GetAdapterName")
+Interceptor.attach(HBA_GetAdapterName, {onLeave: function (args) {send("HBA_GetAdapterName");}});
+
+var HBA_GetAdapterPortAttributes = Module.findExportByName("hbaapi.dll", "HBA_GetAdapterPortAttributes")
+Interceptor.attach(HBA_GetAdapterPortAttributes, {onLeave: function (args) {send("HBA_GetAdapterPortAttributes");}});
+
+var HBA_GetBindingCapability = Module.findExportByName("hbaapi.dll", "HBA_GetBindingCapability")
+Interceptor.attach(HBA_GetBindingCapability, {onLeave: function (args) {send("HBA_GetBindingCapability");}});
+
+var HBA_GetBindingSupport = Module.findExportByName("hbaapi.dll", "HBA_GetBindingSupport")
+Interceptor.attach(HBA_GetBindingSupport, {onLeave: function (args) {send("HBA_GetBindingSupport");}});
+
+var HBA_GetDiscoveredPortAttributes = Module.findExportByName("hbaapi.dll", "HBA_GetDiscoveredPortAttributes")
+Interceptor.attach(HBA_GetDiscoveredPortAttributes, {onLeave: function (args) {send("HBA_GetDiscoveredPortAttributes");}});
+
+var HBA_GetEventBuffer = Module.findExportByName("hbaapi.dll", "HBA_GetEventBuffer")
+Interceptor.attach(HBA_GetEventBuffer, {onLeave: function (args) {send("HBA_GetEventBuffer");}});
+
+var HBA_GetFC4Statistics = Module.findExportByName("hbaapi.dll", "HBA_GetFC4Statistics")
+Interceptor.attach(HBA_GetFC4Statistics, {onLeave: function (args) {send("HBA_GetFC4Statistics");}});
+
+var HBA_GetFCPStatistics = Module.findExportByName("hbaapi.dll", "HBA_GetFCPStatistics")
+Interceptor.attach(HBA_GetFCPStatistics, {onLeave: function (args) {send("HBA_GetFCPStatistics");}});
+
+var HBA_GetFcpPersistentBinding = Module.findExportByName("hbaapi.dll", "HBA_GetFcpPersistentBinding")
+Interceptor.attach(HBA_GetFcpPersistentBinding, {onLeave: function (args) {send("HBA_GetFcpPersistentBinding");}});
+
+var HBA_GetFcpTargetMapping = Module.findExportByName("hbaapi.dll", "HBA_GetFcpTargetMapping")
+Interceptor.attach(HBA_GetFcpTargetMapping, {onLeave: function (args) {send("HBA_GetFcpTargetMapping");}});
+
+var HBA_GetFcpTargetMappingV2 = Module.findExportByName("hbaapi.dll", "HBA_GetFcpTargetMappingV2")
+Interceptor.attach(HBA_GetFcpTargetMappingV2, {onLeave: function (args) {send("HBA_GetFcpTargetMappingV2");}});
+
+var HBA_GetNumberOfAdapters = Module.findExportByName("hbaapi.dll", "HBA_GetNumberOfAdapters")
+Interceptor.attach(HBA_GetNumberOfAdapters, {onLeave: function (args) {send("HBA_GetNumberOfAdapters");}});
+
+var HBA_GetPersistentBindingV2 = Module.findExportByName("hbaapi.dll", "HBA_GetPersistentBindingV2")
+Interceptor.attach(HBA_GetPersistentBindingV2, {onLeave: function (args) {send("HBA_GetPersistentBindingV2");}});
+
+var HBA_GetPortAttributesByWWN = Module.findExportByName("hbaapi.dll", "HBA_GetPortAttributesByWWN")
+Interceptor.attach(HBA_GetPortAttributesByWWN, {onLeave: function (args) {send("HBA_GetPortAttributesByWWN");}});
+
+var HBA_GetPortStatistics = Module.findExportByName("hbaapi.dll", "HBA_GetPortStatistics")
+Interceptor.attach(HBA_GetPortStatistics, {onLeave: function (args) {send("HBA_GetPortStatistics");}});
+
+var HBA_GetRNIDMgmtInfo = Module.findExportByName("hbaapi.dll", "HBA_GetRNIDMgmtInfo")
+Interceptor.attach(HBA_GetRNIDMgmtInfo, {onLeave: function (args) {send("HBA_GetRNIDMgmtInfo");}});
+
+var HBA_GetVendorLibraryAttributes = Module.findExportByName("hbaapi.dll", "HBA_GetVendorLibraryAttributes")
+Interceptor.attach(HBA_GetVendorLibraryAttributes, {onLeave: function (args) {send("HBA_GetVendorLibraryAttributes");}});
+
+var HBA_GetVersion = Module.findExportByName("hbaapi.dll", "HBA_GetVersion")
+Interceptor.attach(HBA_GetVersion, {onLeave: function (args) {send("HBA_GetVersion");}});
+
+var HBA_GetWrapperLibraryAttributes = Module.findExportByName("hbaapi.dll", "HBA_GetWrapperLibraryAttributes")
+Interceptor.attach(HBA_GetWrapperLibraryAttributes, {onLeave: function (args) {send("HBA_GetWrapperLibraryAttributes");}});
+
+var HBA_LoadLibrary = Module.findExportByName("hbaapi.dll", "HBA_LoadLibrary")
+Interceptor.attach(HBA_LoadLibrary, {onLeave: function (args) {send("HBA_LoadLibrary");}});
+
+var HBA_OpenAdapter = Module.findExportByName("hbaapi.dll", "HBA_OpenAdapter")
+Interceptor.attach(HBA_OpenAdapter, {onLeave: function (args) {send("HBA_OpenAdapter");}});
+
+var HBA_OpenAdapterByWWN = Module.findExportByName("hbaapi.dll", "HBA_OpenAdapterByWWN")
+Interceptor.attach(HBA_OpenAdapterByWWN, {onLeave: function (args) {send("HBA_OpenAdapterByWWN");}});
+
+var HBA_RefreshAdapterConfiguration = Module.findExportByName("hbaapi.dll", "HBA_RefreshAdapterConfiguration")
+Interceptor.attach(HBA_RefreshAdapterConfiguration, {onLeave: function (args) {send("HBA_RefreshAdapterConfiguration");}});
+
+var HBA_RefreshInformation = Module.findExportByName("hbaapi.dll", "HBA_RefreshInformation")
+Interceptor.attach(HBA_RefreshInformation, {onLeave: function (args) {send("HBA_RefreshInformation");}});
+
+var HBA_RegisterForAdapterAddEvents = Module.findExportByName("hbaapi.dll", "HBA_RegisterForAdapterAddEvents")
+Interceptor.attach(HBA_RegisterForAdapterAddEvents, {onLeave: function (args) {send("HBA_RegisterForAdapterAddEvents");}});
+
+var HBA_RegisterForAdapterEvents = Module.findExportByName("hbaapi.dll", "HBA_RegisterForAdapterEvents")
+Interceptor.attach(HBA_RegisterForAdapterEvents, {onLeave: function (args) {send("HBA_RegisterForAdapterEvents");}});
+
+var HBA_RegisterForAdapterPortEvents = Module.findExportByName("hbaapi.dll", "HBA_RegisterForAdapterPortEvents")
+Interceptor.attach(HBA_RegisterForAdapterPortEvents, {onLeave: function (args) {send("HBA_RegisterForAdapterPortEvents");}});
+
+var HBA_RegisterForAdapterPortStatEvents = Module.findExportByName("hbaapi.dll", "HBA_RegisterForAdapterPortStatEvents")
+Interceptor.attach(HBA_RegisterForAdapterPortStatEvents, {onLeave: function (args) {send("HBA_RegisterForAdapterPortStatEvents");}});
+
+var HBA_RegisterForLinkEvents = Module.findExportByName("hbaapi.dll", "HBA_RegisterForLinkEvents")
+Interceptor.attach(HBA_RegisterForLinkEvents, {onLeave: function (args) {send("HBA_RegisterForLinkEvents");}});
+
+var HBA_RegisterForTargetEvents = Module.findExportByName("hbaapi.dll", "HBA_RegisterForTargetEvents")
+Interceptor.attach(HBA_RegisterForTargetEvents, {onLeave: function (args) {send("HBA_RegisterForTargetEvents");}});
+
+var HBA_RegisterLibrary = Module.findExportByName("hbaapi.dll", "HBA_RegisterLibrary")
+Interceptor.attach(HBA_RegisterLibrary, {onLeave: function (args) {send("HBA_RegisterLibrary");}});
+
+var HBA_RegisterLibraryV2 = Module.findExportByName("hbaapi.dll", "HBA_RegisterLibraryV2")
+Interceptor.attach(HBA_RegisterLibraryV2, {onLeave: function (args) {send("HBA_RegisterLibraryV2");}});
+
+var HBA_RemoveAllPersistentBindings = Module.findExportByName("hbaapi.dll", "HBA_RemoveAllPersistentBindings")
+Interceptor.attach(HBA_RemoveAllPersistentBindings, {onLeave: function (args) {send("HBA_RemoveAllPersistentBindings");}});
+
+var HBA_RemoveCallback = Module.findExportByName("hbaapi.dll", "HBA_RemoveCallback")
+Interceptor.attach(HBA_RemoveCallback, {onLeave: function (args) {send("HBA_RemoveCallback");}});
+
+var HBA_RemovePersistentBinding = Module.findExportByName("hbaapi.dll", "HBA_RemovePersistentBinding")
+Interceptor.attach(HBA_RemovePersistentBinding, {onLeave: function (args) {send("HBA_RemovePersistentBinding");}});
+
+var HBA_ResetStatistics = Module.findExportByName("hbaapi.dll", "HBA_ResetStatistics")
+Interceptor.attach(HBA_ResetStatistics, {onLeave: function (args) {send("HBA_ResetStatistics");}});
+
+var HBA_ScsiInquiryV2 = Module.findExportByName("hbaapi.dll", "HBA_ScsiInquiryV2")
+Interceptor.attach(HBA_ScsiInquiryV2, {onLeave: function (args) {send("HBA_ScsiInquiryV2");}});
+
+var HBA_ScsiReadCapacityV2 = Module.findExportByName("hbaapi.dll", "HBA_ScsiReadCapacityV2")
+Interceptor.attach(HBA_ScsiReadCapacityV2, {onLeave: function (args) {send("HBA_ScsiReadCapacityV2");}});
+
+var HBA_ScsiReportLUNsV2 = Module.findExportByName("hbaapi.dll", "HBA_ScsiReportLUNsV2")
+Interceptor.attach(HBA_ScsiReportLUNsV2, {onLeave: function (args) {send("HBA_ScsiReportLUNsV2");}});
+
+var HBA_SendCTPassThru = Module.findExportByName("hbaapi.dll", "HBA_SendCTPassThru")
+Interceptor.attach(HBA_SendCTPassThru, {onLeave: function (args) {send("HBA_SendCTPassThru");}});
+
+var HBA_SendCTPassThruV2 = Module.findExportByName("hbaapi.dll", "HBA_SendCTPassThruV2")
+Interceptor.attach(HBA_SendCTPassThruV2, {onLeave: function (args) {send("HBA_SendCTPassThruV2");}});
+
+var HBA_SendLIRR = Module.findExportByName("hbaapi.dll", "HBA_SendLIRR")
+Interceptor.attach(HBA_SendLIRR, {onLeave: function (args) {send("HBA_SendLIRR");}});
+
+var HBA_SendRLS = Module.findExportByName("hbaapi.dll", "HBA_SendRLS")
+Interceptor.attach(HBA_SendRLS, {onLeave: function (args) {send("HBA_SendRLS");}});
+
+var HBA_SendRNID = Module.findExportByName("hbaapi.dll", "HBA_SendRNID")
+Interceptor.attach(HBA_SendRNID, {onLeave: function (args) {send("HBA_SendRNID");}});
+
+var HBA_SendRNIDV2 = Module.findExportByName("hbaapi.dll", "HBA_SendRNIDV2")
+Interceptor.attach(HBA_SendRNIDV2, {onLeave: function (args) {send("HBA_SendRNIDV2");}});
+
+var HBA_SendRPL = Module.findExportByName("hbaapi.dll", "HBA_SendRPL")
+Interceptor.attach(HBA_SendRPL, {onLeave: function (args) {send("HBA_SendRPL");}});
+
+var HBA_SendRPS = Module.findExportByName("hbaapi.dll", "HBA_SendRPS")
+Interceptor.attach(HBA_SendRPS, {onLeave: function (args) {send("HBA_SendRPS");}});
+
+var HBA_SendReadCapacity = Module.findExportByName("hbaapi.dll", "HBA_SendReadCapacity")
+Interceptor.attach(HBA_SendReadCapacity, {onLeave: function (args) {send("HBA_SendReadCapacity");}});
+
+var HBA_SendReportLUNs = Module.findExportByName("hbaapi.dll", "HBA_SendReportLUNs")
+Interceptor.attach(HBA_SendReportLUNs, {onLeave: function (args) {send("HBA_SendReportLUNs");}});
+
+var HBA_SendSRL = Module.findExportByName("hbaapi.dll", "HBA_SendSRL")
+Interceptor.attach(HBA_SendSRL, {onLeave: function (args) {send("HBA_SendSRL");}});
+
+var HBA_SendScsiInquiry = Module.findExportByName("hbaapi.dll", "HBA_SendScsiInquiry")
+Interceptor.attach(HBA_SendScsiInquiry, {onLeave: function (args) {send("HBA_SendScsiInquiry");}});
+
+var HBA_SetBindingSupport = Module.findExportByName("hbaapi.dll", "HBA_SetBindingSupport")
+Interceptor.attach(HBA_SetBindingSupport, {onLeave: function (args) {send("HBA_SetBindingSupport");}});
+
+var HBA_SetPersistentBindingV2 = Module.findExportByName("hbaapi.dll", "HBA_SetPersistentBindingV2")
+Interceptor.attach(HBA_SetPersistentBindingV2, {onLeave: function (args) {send("HBA_SetPersistentBindingV2");}});
+
+var HBA_SetRNIDMgmtInfo = Module.findExportByName("hbaapi.dll", "HBA_SetRNIDMgmtInfo")
+Interceptor.attach(HBA_SetRNIDMgmtInfo, {onLeave: function (args) {send("HBA_SetRNIDMgmtInfo");}});
+
+var HbaGetAdapterNameByDeviceInstanceId = Module.findExportByName("hbaapi.dll", "HbaGetAdapterNameByDeviceInstanceId")
+Interceptor.attach(HbaGetAdapterNameByDeviceInstanceId, {onLeave: function (args) {send("HbaGetAdapterNameByDeviceInstanceId");}});
+
+var SMHBA_GetAdapterAttributes = Module.findExportByName("hbaapi.dll", "SMHBA_GetAdapterAttributes")
+Interceptor.attach(SMHBA_GetAdapterAttributes, {onLeave: function (args) {send("SMHBA_GetAdapterAttributes");}});
+
+var SMHBA_GetAdapterPortAttributes = Module.findExportByName("hbaapi.dll", "SMHBA_GetAdapterPortAttributes")
+Interceptor.attach(SMHBA_GetAdapterPortAttributes, {onLeave: function (args) {send("SMHBA_GetAdapterPortAttributes");}});
+
+var SMHBA_GetBindingCapability = Module.findExportByName("hbaapi.dll", "SMHBA_GetBindingCapability")
+Interceptor.attach(SMHBA_GetBindingCapability, {onLeave: function (args) {send("SMHBA_GetBindingCapability");}});
+
+var SMHBA_GetBindingSupport = Module.findExportByName("hbaapi.dll", "SMHBA_GetBindingSupport")
+Interceptor.attach(SMHBA_GetBindingSupport, {onLeave: function (args) {send("SMHBA_GetBindingSupport");}});
+
+var SMHBA_GetDiscoveredPortAttributes = Module.findExportByName("hbaapi.dll", "SMHBA_GetDiscoveredPortAttributes")
+Interceptor.attach(SMHBA_GetDiscoveredPortAttributes, {onLeave: function (args) {send("SMHBA_GetDiscoveredPortAttributes");}});
+
+var SMHBA_GetFCPhyAttributes = Module.findExportByName("hbaapi.dll", "SMHBA_GetFCPhyAttributes")
+Interceptor.attach(SMHBA_GetFCPhyAttributes, {onLeave: function (args) {send("SMHBA_GetFCPhyAttributes");}});
+
+var SMHBA_GetLUNStatistics = Module.findExportByName("hbaapi.dll", "SMHBA_GetLUNStatistics")
+Interceptor.attach(SMHBA_GetLUNStatistics, {onLeave: function (args) {send("SMHBA_GetLUNStatistics");}});
+
+var SMHBA_GetNumberOfPorts = Module.findExportByName("hbaapi.dll", "SMHBA_GetNumberOfPorts")
+Interceptor.attach(SMHBA_GetNumberOfPorts, {onLeave: function (args) {send("SMHBA_GetNumberOfPorts");}});
+
+var SMHBA_GetPersistentBinding = Module.findExportByName("hbaapi.dll", "SMHBA_GetPersistentBinding")
+Interceptor.attach(SMHBA_GetPersistentBinding, {onLeave: function (args) {send("SMHBA_GetPersistentBinding");}});
+
+var SMHBA_GetPhyStatistics = Module.findExportByName("hbaapi.dll", "SMHBA_GetPhyStatistics")
+Interceptor.attach(SMHBA_GetPhyStatistics, {onLeave: function (args) {send("SMHBA_GetPhyStatistics");}});
+
+var SMHBA_GetPortAttributesByWWN = Module.findExportByName("hbaapi.dll", "SMHBA_GetPortAttributesByWWN")
+Interceptor.attach(SMHBA_GetPortAttributesByWWN, {onLeave: function (args) {send("SMHBA_GetPortAttributesByWWN");}});
+
+var SMHBA_GetPortType = Module.findExportByName("hbaapi.dll", "SMHBA_GetPortType")
+Interceptor.attach(SMHBA_GetPortType, {onLeave: function (args) {send("SMHBA_GetPortType");}});
+
+var SMHBA_GetProtocolStatistics = Module.findExportByName("hbaapi.dll", "SMHBA_GetProtocolStatistics")
+Interceptor.attach(SMHBA_GetProtocolStatistics, {onLeave: function (args) {send("SMHBA_GetProtocolStatistics");}});
+
+var SMHBA_GetSASPhyAttributes = Module.findExportByName("hbaapi.dll", "SMHBA_GetSASPhyAttributes")
+Interceptor.attach(SMHBA_GetSASPhyAttributes, {onLeave: function (args) {send("SMHBA_GetSASPhyAttributes");}});
+
+var SMHBA_GetTargetMapping = Module.findExportByName("hbaapi.dll", "SMHBA_GetTargetMapping")
+Interceptor.attach(SMHBA_GetTargetMapping, {onLeave: function (args) {send("SMHBA_GetTargetMapping");}});
+
+var SMHBA_GetVendorLibraryAttributes = Module.findExportByName("hbaapi.dll", "SMHBA_GetVendorLibraryAttributes")
+Interceptor.attach(SMHBA_GetVendorLibraryAttributes, {onLeave: function (args) {send("SMHBA_GetVendorLibraryAttributes");}});
+
+var SMHBA_GetVersion = Module.findExportByName("hbaapi.dll", "SMHBA_GetVersion")
+Interceptor.attach(SMHBA_GetVersion, {onLeave: function (args) {send("SMHBA_GetVersion");}});
+
+var SMHBA_GetWrapperLibraryAttributes = Module.findExportByName("hbaapi.dll", "SMHBA_GetWrapperLibraryAttributes")
+Interceptor.attach(SMHBA_GetWrapperLibraryAttributes, {onLeave: function (args) {send("SMHBA_GetWrapperLibraryAttributes");}});
+
+var SMHBA_RegisterForAdapterAddEvents = Module.findExportByName("hbaapi.dll", "SMHBA_RegisterForAdapterAddEvents")
+Interceptor.attach(SMHBA_RegisterForAdapterAddEvents, {onLeave: function (args) {send("SMHBA_RegisterForAdapterAddEvents");}});
+
+var SMHBA_RegisterForAdapterEvents = Module.findExportByName("hbaapi.dll", "SMHBA_RegisterForAdapterEvents")
+Interceptor.attach(SMHBA_RegisterForAdapterEvents, {onLeave: function (args) {send("SMHBA_RegisterForAdapterEvents");}});
+
+var SMHBA_RegisterForAdapterPhyStatEvents = Module.findExportByName("hbaapi.dll", "SMHBA_RegisterForAdapterPhyStatEvents")
+Interceptor.attach(SMHBA_RegisterForAdapterPhyStatEvents, {onLeave: function (args) {send("SMHBA_RegisterForAdapterPhyStatEvents");}});
+
+var SMHBA_RegisterForAdapterPortEvents = Module.findExportByName("hbaapi.dll", "SMHBA_RegisterForAdapterPortEvents")
+Interceptor.attach(SMHBA_RegisterForAdapterPortEvents, {onLeave: function (args) {send("SMHBA_RegisterForAdapterPortEvents");}});
+
+var SMHBA_RegisterForAdapterPortStatEvents = Module.findExportByName("hbaapi.dll", "SMHBA_RegisterForAdapterPortStatEvents")
+Interceptor.attach(SMHBA_RegisterForAdapterPortStatEvents, {onLeave: function (args) {send("SMHBA_RegisterForAdapterPortStatEvents");}});
+
+var SMHBA_RegisterForTargetEvents = Module.findExportByName("hbaapi.dll", "SMHBA_RegisterForTargetEvents")
+Interceptor.attach(SMHBA_RegisterForTargetEvents, {onLeave: function (args) {send("SMHBA_RegisterForTargetEvents");}});
+
+var SMHBA_RegisterLibrary = Module.findExportByName("hbaapi.dll", "SMHBA_RegisterLibrary")
+Interceptor.attach(SMHBA_RegisterLibrary, {onLeave: function (args) {send("SMHBA_RegisterLibrary");}});
+
+var SMHBA_RemoveAllPersistentBindings = Module.findExportByName("hbaapi.dll", "SMHBA_RemoveAllPersistentBindings")
+Interceptor.attach(SMHBA_RemoveAllPersistentBindings, {onLeave: function (args) {send("SMHBA_RemoveAllPersistentBindings");}});
+
+var SMHBA_RemovePersistentBinding = Module.findExportByName("hbaapi.dll", "SMHBA_RemovePersistentBinding")
+Interceptor.attach(SMHBA_RemovePersistentBinding, {onLeave: function (args) {send("SMHBA_RemovePersistentBinding");}});
+
+var SMHBA_ScsiInquiry = Module.findExportByName("hbaapi.dll", "SMHBA_ScsiInquiry")
+Interceptor.attach(SMHBA_ScsiInquiry, {onLeave: function (args) {send("SMHBA_ScsiInquiry");}});
+
+var SMHBA_ScsiReadCapacity = Module.findExportByName("hbaapi.dll", "SMHBA_ScsiReadCapacity")
+Interceptor.attach(SMHBA_ScsiReadCapacity, {onLeave: function (args) {send("SMHBA_ScsiReadCapacity");}});
+
+var SMHBA_ScsiReportLuns = Module.findExportByName("hbaapi.dll", "SMHBA_ScsiReportLuns")
+Interceptor.attach(SMHBA_ScsiReportLuns, {onLeave: function (args) {send("SMHBA_ScsiReportLuns");}});
+
+var SMHBA_SendECHO = Module.findExportByName("hbaapi.dll", "SMHBA_SendECHO")
+Interceptor.attach(SMHBA_SendECHO, {onLeave: function (args) {send("SMHBA_SendECHO");}});
+
+var SMHBA_SendSMPPassThru = Module.findExportByName("hbaapi.dll", "SMHBA_SendSMPPassThru")
+Interceptor.attach(SMHBA_SendSMPPassThru, {onLeave: function (args) {send("SMHBA_SendSMPPassThru");}});
+
+var SMHBA_SendTEST = Module.findExportByName("hbaapi.dll", "SMHBA_SendTEST")
+Interceptor.attach(SMHBA_SendTEST, {onLeave: function (args) {send("SMHBA_SendTEST");}});
+
+var SMHBA_SetBindingSupport = Module.findExportByName("hbaapi.dll", "SMHBA_SetBindingSupport")
+Interceptor.attach(SMHBA_SetBindingSupport, {onLeave: function (args) {send("SMHBA_SetBindingSupport");}});
+
+var SMHBA_SetPersistentBinding = Module.findExportByName("hbaapi.dll", "SMHBA_SetPersistentBinding")
+Interceptor.attach(SMHBA_SetPersistentBinding, {onLeave: function (args) {send("SMHBA_SetPersistentBinding");}});
+

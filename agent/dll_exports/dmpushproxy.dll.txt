@@ -1,0 +1,24 @@
+var PushRouter_Close = Module.findExportByName("dmpushproxy.dll", "PushRouter_Close")
+Interceptor.attach(PushRouter_Close, {onLeave: function (args) {send("PushRouter_Close");}});
+
+var PushRouter_FreeGetMessageEventName = Module.findExportByName("dmpushproxy.dll", "PushRouter_FreeGetMessageEventName")
+Interceptor.attach(PushRouter_FreeGetMessageEventName, {onLeave: function (args) {send("PushRouter_FreeGetMessageEventName");}});
+
+var PushRouter_FreeMessage = Module.findExportByName("dmpushproxy.dll", "PushRouter_FreeMessage")
+Interceptor.attach(PushRouter_FreeMessage, {onLeave: function (args) {send("PushRouter_FreeMessage");}});
+
+var PushRouter_FreeMessageEx = Module.findExportByName("dmpushproxy.dll", "PushRouter_FreeMessageEx")
+Interceptor.attach(PushRouter_FreeMessageEx, {onLeave: function (args) {send("PushRouter_FreeMessageEx");}});
+
+var PushRouter_GetMessage = Module.findExportByName("dmpushproxy.dll", "PushRouter_GetMessage")
+Interceptor.attach(PushRouter_GetMessage, {onLeave: function (args) {send("PushRouter_GetMessage");}});
+
+var PushRouter_GetMessageEx = Module.findExportByName("dmpushproxy.dll", "PushRouter_GetMessageEx")
+Interceptor.attach(PushRouter_GetMessageEx, {onLeave: function (args) {send("PushRouter_GetMessageEx");}});
+
+var PushRouter_Open = Module.findExportByName("dmpushproxy.dll", "PushRouter_Open")
+Interceptor.attach(PushRouter_Open, {onLeave: function (args) {send("PushRouter_Open");}});
+
+var PushRouter_SubmitPush = Module.findExportByName("dmpushproxy.dll", "PushRouter_SubmitPush")
+Interceptor.attach(PushRouter_SubmitPush, {onLeave: function (args) {send("PushRouter_SubmitPush");}});
+

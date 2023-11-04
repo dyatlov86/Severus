@@ -1,0 +1,81 @@
+var DllMain = Module.findExportByName("ntlanman.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var I_SystemFocusDialog = Module.findExportByName("ntlanman.dll", "I_SystemFocusDialog")
+Interceptor.attach(I_SystemFocusDialog, {onLeave: function (args) {send("I_SystemFocusDialog");}});
+
+var NPAddConnection = Module.findExportByName("ntlanman.dll", "NPAddConnection")
+Interceptor.attach(NPAddConnection, {onLeave: function (args) {send("NPAddConnection");}});
+
+var NPAddConnection3 = Module.findExportByName("ntlanman.dll", "NPAddConnection3")
+Interceptor.attach(NPAddConnection3, {onLeave: function (args) {send("NPAddConnection3");}});
+
+var NPAddConnection4 = Module.findExportByName("ntlanman.dll", "NPAddConnection4")
+Interceptor.attach(NPAddConnection4, {onLeave: function (args) {send("NPAddConnection4");}});
+
+var NPCancelConnection = Module.findExportByName("ntlanman.dll", "NPCancelConnection")
+Interceptor.attach(NPCancelConnection, {onLeave: function (args) {send("NPCancelConnection");}});
+
+var NPCancelConnection2 = Module.findExportByName("ntlanman.dll", "NPCancelConnection2")
+Interceptor.attach(NPCancelConnection2, {onLeave: function (args) {send("NPCancelConnection2");}});
+
+var NPCloseEnum = Module.findExportByName("ntlanman.dll", "NPCloseEnum")
+Interceptor.attach(NPCloseEnum, {onLeave: function (args) {send("NPCloseEnum");}});
+
+var NPEnumResource = Module.findExportByName("ntlanman.dll", "NPEnumResource")
+Interceptor.attach(NPEnumResource, {onLeave: function (args) {send("NPEnumResource");}});
+
+var NPFormatNetworkName = Module.findExportByName("ntlanman.dll", "NPFormatNetworkName")
+Interceptor.attach(NPFormatNetworkName, {onLeave: function (args) {send("NPFormatNetworkName");}});
+
+var NPGetCaps = Module.findExportByName("ntlanman.dll", "NPGetCaps")
+Interceptor.attach(NPGetCaps, {onLeave: function (args) {send("NPGetCaps");}});
+
+var NPGetConnection = Module.findExportByName("ntlanman.dll", "NPGetConnection")
+Interceptor.attach(NPGetConnection, {onLeave: function (args) {send("NPGetConnection");}});
+
+var NPGetConnection3 = Module.findExportByName("ntlanman.dll", "NPGetConnection3")
+Interceptor.attach(NPGetConnection3, {onLeave: function (args) {send("NPGetConnection3");}});
+
+var NPGetConnectionPerformance = Module.findExportByName("ntlanman.dll", "NPGetConnectionPerformance")
+Interceptor.attach(NPGetConnectionPerformance, {onLeave: function (args) {send("NPGetConnectionPerformance");}});
+
+var NPGetPersistentUseOptionsForConnection = Module.findExportByName("ntlanman.dll", "NPGetPersistentUseOptionsForConnection")
+Interceptor.attach(NPGetPersistentUseOptionsForConnection, {onLeave: function (args) {send("NPGetPersistentUseOptionsForConnection");}});
+
+var NPGetPersistentUseOptionsForConnection2 = Module.findExportByName("ntlanman.dll", "NPGetPersistentUseOptionsForConnection2")
+Interceptor.attach(NPGetPersistentUseOptionsForConnection2, {onLeave: function (args) {send("NPGetPersistentUseOptionsForConnection2");}});
+
+var NPGetReconnectFlags = Module.findExportByName("ntlanman.dll", "NPGetReconnectFlags")
+Interceptor.attach(NPGetReconnectFlags, {onLeave: function (args) {send("NPGetReconnectFlags");}});
+
+var NPGetResourceInformation = Module.findExportByName("ntlanman.dll", "NPGetResourceInformation")
+Interceptor.attach(NPGetResourceInformation, {onLeave: function (args) {send("NPGetResourceInformation");}});
+
+var NPGetResourceParent = Module.findExportByName("ntlanman.dll", "NPGetResourceParent")
+Interceptor.attach(NPGetResourceParent, {onLeave: function (args) {send("NPGetResourceParent");}});
+
+var NPGetUniversalName = Module.findExportByName("ntlanman.dll", "NPGetUniversalName")
+Interceptor.attach(NPGetUniversalName, {onLeave: function (args) {send("NPGetUniversalName");}});
+
+var NPGetUser = Module.findExportByName("ntlanman.dll", "NPGetUser")
+Interceptor.attach(NPGetUser, {onLeave: function (args) {send("NPGetUser");}});
+
+var NPOpenEnum = Module.findExportByName("ntlanman.dll", "NPOpenEnum")
+Interceptor.attach(NPOpenEnum, {onLeave: function (args) {send("NPOpenEnum");}});
+
+var QueryAppInstanceVersion = Module.findExportByName("ntlanman.dll", "QueryAppInstanceVersion")
+Interceptor.attach(QueryAppInstanceVersion, {onLeave: function (args) {send("QueryAppInstanceVersion");}});
+
+var RegisterAppInstance = Module.findExportByName("ntlanman.dll", "RegisterAppInstance")
+Interceptor.attach(RegisterAppInstance, {onLeave: function (args) {send("RegisterAppInstance");}});
+
+var RegisterAppInstanceVersion = Module.findExportByName("ntlanman.dll", "RegisterAppInstanceVersion")
+Interceptor.attach(RegisterAppInstanceVersion, {onLeave: function (args) {send("RegisterAppInstanceVersion");}});
+
+var ResetAllAppInstanceVersions = Module.findExportByName("ntlanman.dll", "ResetAllAppInstanceVersions")
+Interceptor.attach(ResetAllAppInstanceVersions, {onLeave: function (args) {send("ResetAllAppInstanceVersions");}});
+
+var SetAppInstanceCsvFlags = Module.findExportByName("ntlanman.dll", "SetAppInstanceCsvFlags")
+Interceptor.attach(SetAppInstanceCsvFlags, {onLeave: function (args) {send("SetAppInstanceCsvFlags");}});
+

@@ -1,0 +1,12 @@
+var SrvEndTask = Module.findExportByName("winsrv.dll", "SrvEndTask")
+Interceptor.attach(SrvEndTask, {onLeave: function (args) {send("SrvEndTask");}});
+
+var UserCreateCallbackThread = Module.findExportByName("winsrv.dll", "UserCreateCallbackThread")
+Interceptor.attach(UserCreateCallbackThread, {onLeave: function (args) {send("UserCreateCallbackThread");}});
+
+var UserHardError = Module.findExportByName("winsrv.dll", "UserHardError")
+Interceptor.attach(UserHardError, {onLeave: function (args) {send("UserHardError");}});
+
+var UserServerDllInitialization = Module.findExportByName("winsrv.dll", "UserServerDllInitialization")
+Interceptor.attach(UserServerDllInitialization, {onLeave: function (args) {send("UserServerDllInitialization");}});
+

@@ -1,0 +1,24 @@
+var JsThunk_AllocateData = Module.findExportByName("Chakrathunk.dll", "JsThunk_AllocateData")
+Interceptor.attach(JsThunk_AllocateData, {onLeave: function (args) {send("JsThunk_AllocateData");}});
+
+var JsThunk_Cleanup = Module.findExportByName("Chakrathunk.dll", "JsThunk_Cleanup")
+Interceptor.attach(JsThunk_Cleanup, {onLeave: function (args) {send("JsThunk_Cleanup");}});
+
+var JsThunk_CleanupDefer = Module.findExportByName("Chakrathunk.dll", "JsThunk_CleanupDefer")
+Interceptor.attach(JsThunk_CleanupDefer, {onLeave: function (args) {send("JsThunk_CleanupDefer");}});
+
+var JsThunk_CleanupFinish = Module.findExportByName("Chakrathunk.dll", "JsThunk_CleanupFinish")
+Interceptor.attach(JsThunk_CleanupFinish, {onLeave: function (args) {send("JsThunk_CleanupFinish");}});
+
+var JsThunk_DataToCode = Module.findExportByName("Chakrathunk.dll", "JsThunk_DataToCode")
+Interceptor.attach(JsThunk_DataToCode, {onLeave: function (args) {send("JsThunk_DataToCode");}});
+
+var JsThunk_GetSize = Module.findExportByName("Chakrathunk.dll", "JsThunk_GetSize")
+Interceptor.attach(JsThunk_GetSize, {onLeave: function (args) {send("JsThunk_GetSize");}});
+
+var JsThunk_InitData = Module.findExportByName("Chakrathunk.dll", "JsThunk_InitData")
+Interceptor.attach(JsThunk_InitData, {onLeave: function (args) {send("JsThunk_InitData");}});
+
+var JsThunk_Is = Module.findExportByName("Chakrathunk.dll", "JsThunk_Is")
+Interceptor.attach(JsThunk_Is, {onLeave: function (args) {send("JsThunk_Is");}});
+

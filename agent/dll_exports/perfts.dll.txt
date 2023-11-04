@@ -1,0 +1,18 @@
+var CloseLagPerfData = Module.findExportByName("perfts.dll", "CloseLagPerfData")
+Interceptor.attach(CloseLagPerfData, {onLeave: function (args) {send("CloseLagPerfData");}});
+
+var CloseTSObject = Module.findExportByName("perfts.dll", "CloseTSObject")
+Interceptor.attach(CloseTSObject, {onLeave: function (args) {send("CloseTSObject");}});
+
+var CollectLagPerfData = Module.findExportByName("perfts.dll", "CollectLagPerfData")
+Interceptor.attach(CollectLagPerfData, {onLeave: function (args) {send("CollectLagPerfData");}});
+
+var CollectTSObjectData = Module.findExportByName("perfts.dll", "CollectTSObjectData")
+Interceptor.attach(CollectTSObjectData, {onLeave: function (args) {send("CollectTSObjectData");}});
+
+var OpenLagPerfData = Module.findExportByName("perfts.dll", "OpenLagPerfData")
+Interceptor.attach(OpenLagPerfData, {onLeave: function (args) {send("OpenLagPerfData");}});
+
+var OpenTSObject = Module.findExportByName("perfts.dll", "OpenTSObject")
+Interceptor.attach(OpenTSObject, {onLeave: function (args) {send("OpenTSObject");}});
+

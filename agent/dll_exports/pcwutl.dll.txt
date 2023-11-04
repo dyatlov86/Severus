@@ -1,0 +1,30 @@
+var GetAppInformationFromCloud = Module.findExportByName("pcwutl.dll", "GetAppInformationFromCloud")
+Interceptor.attach(GetAppInformationFromCloud, {onLeave: function (args) {send("GetAppInformationFromCloud");}});
+
+var GetLayerFromGenome = Module.findExportByName("pcwutl.dll", "GetLayerFromGenome")
+Interceptor.attach(GetLayerFromGenome, {onLeave: function (args) {send("GetLayerFromGenome");}});
+
+var GetMatchingInfo = Module.findExportByName("pcwutl.dll", "GetMatchingInfo")
+Interceptor.attach(GetMatchingInfo, {onLeave: function (args) {send("GetMatchingInfo");}});
+
+var GetTempFile = Module.findExportByName("pcwutl.dll", "GetTempFile")
+Interceptor.attach(GetTempFile, {onLeave: function (args) {send("GetTempFile");}});
+
+var LaunchApplicationW = Module.findExportByName("pcwutl.dll", "LaunchApplicationW")
+Interceptor.attach(LaunchApplicationW, {onLeave: function (args) {send("LaunchApplicationW");}});
+
+var LogAeEvent = Module.findExportByName("pcwutl.dll", "LogAeEvent")
+Interceptor.attach(LogAeEvent, {onLeave: function (args) {send("LogAeEvent");}});
+
+var LogPCWDebugEvent = Module.findExportByName("pcwutl.dll", "LogPCWDebugEvent")
+Interceptor.attach(LogPCWDebugEvent, {onLeave: function (args) {send("LogPCWDebugEvent");}});
+
+var RetrieveFileAndProgramId = Module.findExportByName("pcwutl.dll", "RetrieveFileAndProgramId")
+Interceptor.attach(RetrieveFileAndProgramId, {onLeave: function (args) {send("RetrieveFileAndProgramId");}});
+
+var SanitizeFullPath = Module.findExportByName("pcwutl.dll", "SanitizeFullPath")
+Interceptor.attach(SanitizeFullPath, {onLeave: function (args) {send("SanitizeFullPath");}});
+
+var SendPcwWerReport = Module.findExportByName("pcwutl.dll", "SendPcwWerReport")
+Interceptor.attach(SendPcwWerReport, {onLeave: function (args) {send("SendPcwWerReport");}});
+

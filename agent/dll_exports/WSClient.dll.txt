@@ -1,0 +1,90 @@
+var AcquireDeveloperLicense = Module.findExportByName("WSClient.dll", "AcquireDeveloperLicense")
+Interceptor.attach(AcquireDeveloperLicense, {onLeave: function (args) {send("AcquireDeveloperLicense");}});
+
+var CheckDeveloperLicense = Module.findExportByName("WSClient.dll", "CheckDeveloperLicense")
+Interceptor.attach(CheckDeveloperLicense, {onLeave: function (args) {send("CheckDeveloperLicense");}});
+
+var GetApplicationURL = Module.findExportByName("WSClient.dll", "GetApplicationURL")
+Interceptor.attach(GetApplicationURL, {onLeave: function (args) {send("GetApplicationURL");}});
+
+var RefreshBannedAppsList = Module.findExportByName("WSClient.dll", "RefreshBannedAppsList")
+Interceptor.attach(RefreshBannedAppsList, {onLeave: function (args) {send("RefreshBannedAppsList");}});
+
+var RemoveDeveloperLicense = Module.findExportByName("WSClient.dll", "RemoveDeveloperLicense")
+Interceptor.attach(RemoveDeveloperLicense, {onLeave: function (args) {send("RemoveDeveloperLicense");}});
+
+var WSCallServer = Module.findExportByName("WSClient.dll", "WSCallServer")
+Interceptor.attach(WSCallServer, {onLeave: function (args) {send("WSCallServer");}});
+
+var WSCheckForConsumable = Module.findExportByName("WSClient.dll", "WSCheckForConsumable")
+Interceptor.attach(WSCheckForConsumable, {onLeave: function (args) {send("WSCheckForConsumable");}});
+
+var WSEvaluatePackage = Module.findExportByName("WSClient.dll", "WSEvaluatePackage")
+Interceptor.attach(WSEvaluatePackage, {onLeave: function (args) {send("WSEvaluatePackage");}});
+
+var WSGetEvaluatePackageAttempted = Module.findExportByName("WSClient.dll", "WSGetEvaluatePackageAttempted")
+Interceptor.attach(WSGetEvaluatePackageAttempted, {onLeave: function (args) {send("WSGetEvaluatePackageAttempted");}});
+
+var WSLicenseCleanUpState = Module.findExportByName("WSClient.dll", "WSLicenseCleanUpState")
+Interceptor.attach(WSLicenseCleanUpState, {onLeave: function (args) {send("WSLicenseCleanUpState");}});
+
+var WSLicenseClose = Module.findExportByName("WSClient.dll", "WSLicenseClose")
+Interceptor.attach(WSLicenseClose, {onLeave: function (args) {send("WSLicenseClose");}});
+
+var WSLicenseFilterValidAppCategoryIds = Module.findExportByName("WSClient.dll", "WSLicenseFilterValidAppCategoryIds")
+Interceptor.attach(WSLicenseFilterValidAppCategoryIds, {onLeave: function (args) {send("WSLicenseFilterValidAppCategoryIds");}});
+
+var WSLicenseGetAllUserTokens = Module.findExportByName("WSClient.dll", "WSLicenseGetAllUserTokens")
+Interceptor.attach(WSLicenseGetAllUserTokens, {onLeave: function (args) {send("WSLicenseGetAllUserTokens");}});
+
+var WSLicenseGetAllValidAppCategoryIds = Module.findExportByName("WSClient.dll", "WSLicenseGetAllValidAppCategoryIds")
+Interceptor.attach(WSLicenseGetAllValidAppCategoryIds, {onLeave: function (args) {send("WSLicenseGetAllValidAppCategoryIds");}});
+
+var WSLicenseGetDevInstalledApps = Module.findExportByName("WSClient.dll", "WSLicenseGetDevInstalledApps")
+Interceptor.attach(WSLicenseGetDevInstalledApps, {onLeave: function (args) {send("WSLicenseGetDevInstalledApps");}});
+
+var WSLicenseGetExtendedUserInfo = Module.findExportByName("WSClient.dll", "WSLicenseGetExtendedUserInfo")
+Interceptor.attach(WSLicenseGetExtendedUserInfo, {onLeave: function (args) {send("WSLicenseGetExtendedUserInfo");}});
+
+var WSLicenseGetFeatureLicenseResults = Module.findExportByName("WSClient.dll", "WSLicenseGetFeatureLicenseResults")
+Interceptor.attach(WSLicenseGetFeatureLicenseResults, {onLeave: function (args) {send("WSLicenseGetFeatureLicenseResults");}});
+
+var WSLicenseGetLicensesForProducts = Module.findExportByName("WSClient.dll", "WSLicenseGetLicensesForProducts")
+Interceptor.attach(WSLicenseGetLicensesForProducts, {onLeave: function (args) {send("WSLicenseGetLicensesForProducts");}});
+
+var WSLicenseGetOAuthServiceTicket = Module.findExportByName("WSClient.dll", "WSLicenseGetOAuthServiceTicket")
+Interceptor.attach(WSLicenseGetOAuthServiceTicket, {onLeave: function (args) {send("WSLicenseGetOAuthServiceTicket");}});
+
+var WSLicenseGetProductLicenseResults = Module.findExportByName("WSClient.dll", "WSLicenseGetProductLicenseResults")
+Interceptor.attach(WSLicenseGetProductLicenseResults, {onLeave: function (args) {send("WSLicenseGetProductLicenseResults");}});
+
+var WSLicenseInstallLicense = Module.findExportByName("WSClient.dll", "WSLicenseInstallLicense")
+Interceptor.attach(WSLicenseInstallLicense, {onLeave: function (args) {send("WSLicenseInstallLicense");}});
+
+var WSLicenseOpen = Module.findExportByName("WSClient.dll", "WSLicenseOpen")
+Interceptor.attach(WSLicenseOpen, {onLeave: function (args) {send("WSLicenseOpen");}});
+
+var WSLicenseRefreshLicense = Module.findExportByName("WSClient.dll", "WSLicenseRefreshLicense")
+Interceptor.attach(WSLicenseRefreshLicense, {onLeave: function (args) {send("WSLicenseRefreshLicense");}});
+
+var WSLicenseRetrieveMachineID = Module.findExportByName("WSClient.dll", "WSLicenseRetrieveMachineID")
+Interceptor.attach(WSLicenseRetrieveMachineID, {onLeave: function (args) {send("WSLicenseRetrieveMachineID");}});
+
+var WSLicenseRevokeLicenses = Module.findExportByName("WSClient.dll", "WSLicenseRevokeLicenses")
+Interceptor.attach(WSLicenseRevokeLicenses, {onLeave: function (args) {send("WSLicenseRevokeLicenses");}});
+
+var WSLicenseUninstallLicense = Module.findExportByName("WSClient.dll", "WSLicenseUninstallLicense")
+Interceptor.attach(WSLicenseUninstallLicense, {onLeave: function (args) {send("WSLicenseUninstallLicense");}});
+
+var WSNotifyOOBECompletion = Module.findExportByName("WSClient.dll", "WSNotifyOOBECompletion")
+Interceptor.attach(WSNotifyOOBECompletion, {onLeave: function (args) {send("WSNotifyOOBECompletion");}});
+
+var WSNotifyPackageInstalled = Module.findExportByName("WSClient.dll", "WSNotifyPackageInstalled")
+Interceptor.attach(WSNotifyPackageInstalled, {onLeave: function (args) {send("WSNotifyPackageInstalled");}});
+
+var WSTriggerOOBEFileValidation = Module.findExportByName("WSClient.dll", "WSTriggerOOBEFileValidation")
+Interceptor.attach(WSTriggerOOBEFileValidation, {onLeave: function (args) {send("WSTriggerOOBEFileValidation");}});
+
+var WSpTLRW = Module.findExportByName("WSClient.dll", "WSpTLRW")
+Interceptor.attach(WSpTLRW, {onLeave: function (args) {send("WSpTLRW");}});
+

@@ -1,0 +1,102 @@
+var CreateMAPITableWalker = Module.findExportByName("cemapi.dll", "CreateMAPITableWalker")
+Interceptor.attach(CreateMAPITableWalker, {onLeave: function (args) {send("CreateMAPITableWalker");}});
+
+var CreateMAPITableWalkerEx = Module.findExportByName("cemapi.dll", "CreateMAPITableWalkerEx")
+Interceptor.attach(CreateMAPITableWalkerEx, {onLeave: function (args) {send("CreateMAPITableWalkerEx");}});
+
+var FlushMailStore = Module.findExportByName("cemapi.dll", "FlushMailStore")
+Interceptor.attach(FlushMailStore, {onLeave: function (args) {send("FlushMailStore");}});
+
+var FreeProws = Module.findExportByName("cemapi.dll", "FreeProws")
+Interceptor.attach(FreeProws, {onLeave: function (args) {send("FreeProws");}});
+
+var GetEntryIDType = Module.findExportByName("cemapi.dll", "GetEntryIDType")
+Interceptor.attach(GetEntryIDType, {onLeave: function (args) {send("GetEntryIDType");}});
+
+var GetMAPIStorePropTags = Module.findExportByName("cemapi.dll", "GetMAPIStorePropTags")
+Interceptor.attach(GetMAPIStorePropTags, {onLeave: function (args) {send("GetMAPIStorePropTags");}});
+
+var GetMsgClassEnum = Module.findExportByName("cemapi.dll", "GetMsgClassEnum")
+Interceptor.attach(GetMsgClassEnum, {onLeave: function (args) {send("GetMsgClassEnum");}});
+
+var GetMsgClassEnumFromMsg = Module.findExportByName("cemapi.dll", "GetMsgClassEnumFromMsg")
+Interceptor.attach(GetMsgClassEnumFromMsg, {onLeave: function (args) {send("GetMsgClassEnumFromMsg");}});
+
+var GetMsgStoreFromMessage = Module.findExportByName("cemapi.dll", "GetMsgStoreFromMessage")
+Interceptor.attach(GetMsgStoreFromMessage, {onLeave: function (args) {send("GetMsgStoreFromMessage");}});
+
+var GetNamedPropTag = Module.findExportByName("cemapi.dll", "GetNamedPropTag")
+Interceptor.attach(GetNamedPropTag, {onLeave: function (args) {send("GetNamedPropTag");}});
+
+var HrGetOneProp = Module.findExportByName("cemapi.dll", "HrGetOneProp")
+Interceptor.attach(HrGetOneProp, {onLeave: function (args) {send("HrGetOneProp");}});
+
+var HrSetOneProp = Module.findExportByName("cemapi.dll", "HrSetOneProp")
+Interceptor.attach(HrSetOneProp, {onLeave: function (args) {send("HrSetOneProp");}});
+
+var InitializeServiceProps = Module.findExportByName("cemapi.dll", "InitializeServiceProps")
+Interceptor.attach(InitializeServiceProps, {onLeave: function (args) {send("InitializeServiceProps");}});
+
+var IsMessageClassDeviceGenerated = Module.findExportByName("cemapi.dll", "IsMessageClassDeviceGenerated")
+Interceptor.attach(IsMessageClassDeviceGenerated, {onLeave: function (args) {send("IsMessageClassDeviceGenerated");}});
+
+var IsMessageClassReadRequest = Module.findExportByName("cemapi.dll", "IsMessageClassReadRequest")
+Interceptor.attach(IsMessageClassReadRequest, {onLeave: function (args) {send("IsMessageClassReadRequest");}});
+
+var IsMessageClassSPlusV2 = Module.findExportByName("cemapi.dll", "IsMessageClassSPlusV2")
+Interceptor.attach(IsMessageClassSPlusV2, {onLeave: function (args) {send("IsMessageClassSPlusV2");}});
+
+var MAPIAllocateBuffer = Module.findExportByName("cemapi.dll", "MAPIAllocateBuffer")
+Interceptor.attach(MAPIAllocateBuffer, {onLeave: function (args) {send("MAPIAllocateBuffer");}});
+
+var MAPIAllocateBuffer_dbg = Module.findExportByName("cemapi.dll", "MAPIAllocateBuffer_dbg")
+Interceptor.attach(MAPIAllocateBuffer_dbg, {onLeave: function (args) {send("MAPIAllocateBuffer_dbg");}});
+
+var MAPIAllocateMore = Module.findExportByName("cemapi.dll", "MAPIAllocateMore")
+Interceptor.attach(MAPIAllocateMore, {onLeave: function (args) {send("MAPIAllocateMore");}});
+
+var MAPIAllocateMore_dbg = Module.findExportByName("cemapi.dll", "MAPIAllocateMore_dbg")
+Interceptor.attach(MAPIAllocateMore_dbg, {onLeave: function (args) {send("MAPIAllocateMore_dbg");}});
+
+var MAPIDeleteMessageById = Module.findExportByName("cemapi.dll", "MAPIDeleteMessageById")
+Interceptor.attach(MAPIDeleteMessageById, {onLeave: function (args) {send("MAPIDeleteMessageById");}});
+
+var MAPIDupString = Module.findExportByName("cemapi.dll", "MAPIDupString")
+Interceptor.attach(MAPIDupString, {onLeave: function (args) {send("MAPIDupString");}});
+
+var MAPIFreeBuffer = Module.findExportByName("cemapi.dll", "MAPIFreeBuffer")
+Interceptor.attach(MAPIFreeBuffer, {onLeave: function (args) {send("MAPIFreeBuffer");}});
+
+var MAPIGetContext = Module.findExportByName("cemapi.dll", "MAPIGetContext")
+Interceptor.attach(MAPIGetContext, {onLeave: function (args) {send("MAPIGetContext");}});
+
+var MAPIInitialize = Module.findExportByName("cemapi.dll", "MAPIInitialize")
+Interceptor.attach(MAPIInitialize, {onLeave: function (args) {send("MAPIInitialize");}});
+
+var MAPILogonEx = Module.findExportByName("cemapi.dll", "MAPILogonEx")
+Interceptor.attach(MAPILogonEx, {onLeave: function (args) {send("MAPILogonEx");}});
+
+var MAPIUninitialize = Module.findExportByName("cemapi.dll", "MAPIUninitialize")
+Interceptor.attach(MAPIUninitialize, {onLeave: function (args) {send("MAPIUninitialize");}});
+
+var MAPI_CompareEntryIDs = Module.findExportByName("cemapi.dll", "MAPI_CompareEntryIDs")
+Interceptor.attach(MAPI_CompareEntryIDs, {onLeave: function (args) {send("MAPI_CompareEntryIDs");}});
+
+var MAPI_GetStoreByName = Module.findExportByName("cemapi.dll", "MAPI_GetStoreByName")
+Interceptor.attach(MAPI_GetStoreByName, {onLeave: function (args) {send("MAPI_GetStoreByName");}});
+
+var ReadMailVolumeNameEx = Module.findExportByName("cemapi.dll", "ReadMailVolumeNameEx")
+Interceptor.attach(ReadMailVolumeNameEx, {onLeave: function (args) {send("ReadMailVolumeNameEx");}});
+
+var SetConversationId = Module.findExportByName("cemapi.dll", "SetConversationId")
+Interceptor.attach(SetConversationId, {onLeave: function (args) {send("SetConversationId");}});
+
+var TranslateSPlusV1MessageClassToV2 = Module.findExportByName("cemapi.dll", "TranslateSPlusV1MessageClassToV2")
+Interceptor.attach(TranslateSPlusV1MessageClassToV2, {onLeave: function (args) {send("TranslateSPlusV1MessageClassToV2");}});
+
+var USOIDfromCEENTRYID = Module.findExportByName("cemapi.dll", "USOIDfromCEENTRYID")
+Interceptor.attach(USOIDfromCEENTRYID, {onLeave: function (args) {send("USOIDfromCEENTRYID");}});
+
+var USOIDtoCEENTRYID = Module.findExportByName("cemapi.dll", "USOIDtoCEENTRYID")
+Interceptor.attach(USOIDtoCEENTRYID, {onLeave: function (args) {send("USOIDtoCEENTRYID");}});
+

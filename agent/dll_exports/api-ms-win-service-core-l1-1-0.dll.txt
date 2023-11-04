@@ -1,0 +1,9 @@
+var RegisterServiceCtrlHandlerExW = Module.findExportByName("api-ms-win-service-core-l1-1-0.dll", "RegisterServiceCtrlHandlerExW")
+Interceptor.attach(RegisterServiceCtrlHandlerExW, {onLeave: function (args) {send("RegisterServiceCtrlHandlerExW");}});
+
+var SetServiceStatus = Module.findExportByName("api-ms-win-service-core-l1-1-0.dll", "SetServiceStatus")
+Interceptor.attach(SetServiceStatus, {onLeave: function (args) {send("SetServiceStatus");}});
+
+var StartServiceCtrlDispatcherW = Module.findExportByName("api-ms-win-service-core-l1-1-0.dll", "StartServiceCtrlDispatcherW")
+Interceptor.attach(StartServiceCtrlDispatcherW, {onLeave: function (args) {send("StartServiceCtrlDispatcherW");}});
+

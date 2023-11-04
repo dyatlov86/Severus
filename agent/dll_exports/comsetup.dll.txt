@@ -1,0 +1,21 @@
+var ComPlusCompleteCbbSetup = Module.findExportByName("comsetup.dll", "ComPlusCompleteCbbSetup")
+Interceptor.attach(ComPlusCompleteCbbSetup, {onLeave: function (args) {send("ComPlusCompleteCbbSetup");}});
+
+var ComPlusGetWebApplicationServerRole = Module.findExportByName("comsetup.dll", "ComPlusGetWebApplicationServerRole")
+Interceptor.attach(ComPlusGetWebApplicationServerRole, {onLeave: function (args) {send("ComPlusGetWebApplicationServerRole");}});
+
+var ComPlusSetWebApplicationServerRole = Module.findExportByName("comsetup.dll", "ComPlusSetWebApplicationServerRole")
+Interceptor.attach(ComPlusSetWebApplicationServerRole, {onLeave: function (args) {send("ComPlusSetWebApplicationServerRole");}});
+
+var InstallOnReboot = Module.findExportByName("comsetup.dll", "InstallOnReboot")
+Interceptor.attach(InstallOnReboot, {onLeave: function (args) {send("InstallOnReboot");}});
+
+var RunComPlusSetWebApplicationServerRoleW = Module.findExportByName("comsetup.dll", "RunComPlusSetWebApplicationServerRoleW")
+Interceptor.attach(RunComPlusSetWebApplicationServerRoleW, {onLeave: function (args) {send("RunComPlusSetWebApplicationServerRoleW");}});
+
+var SetupPrintLog = Module.findExportByName("comsetup.dll", "SetupPrintLog")
+Interceptor.attach(SetupPrintLog, {onLeave: function (args) {send("SetupPrintLog");}});
+
+var UpgradeDSSchema = Module.findExportByName("comsetup.dll", "UpgradeDSSchema")
+Interceptor.attach(UpgradeDSSchema, {onLeave: function (args) {send("UpgradeDSSchema");}});
+

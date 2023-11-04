@@ -1,0 +1,6 @@
+var GetSetting = Module.findExportByName("SettingsHandlers_OneCore_BatterySaver.dll", "GetSetting")
+Interceptor.attach(GetSetting, {onLeave: function (args) {send("GetSetting");}});
+
+var NotifyBatterySaver = Module.findExportByName("SettingsHandlers_OneCore_BatterySaver.dll", "NotifyBatterySaver")
+Interceptor.attach(NotifyBatterySaver, {onLeave: function (args) {send("NotifyBatterySaver");}});
+

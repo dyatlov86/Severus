@@ -1,0 +1,15 @@
+var CloseLayoutPolicyCheckerInstance = Module.findExportByName("iuilp.dll", "CloseLayoutPolicyCheckerInstance")
+Interceptor.attach(CloseLayoutPolicyCheckerInstance, {onLeave: function (args) {send("CloseLayoutPolicyCheckerInstance");}});
+
+var GetAllDefaultApps = Module.findExportByName("iuilp.dll", "GetAllDefaultApps")
+Interceptor.attach(GetAllDefaultApps, {onLeave: function (args) {send("GetAllDefaultApps");}});
+
+var GetDefaultAppsList = Module.findExportByName("iuilp.dll", "GetDefaultAppsList")
+Interceptor.attach(GetDefaultAppsList, {onLeave: function (args) {send("GetDefaultAppsList");}});
+
+var GetLayoutPolicy = Module.findExportByName("iuilp.dll", "GetLayoutPolicy")
+Interceptor.attach(GetLayoutPolicy, {onLeave: function (args) {send("GetLayoutPolicy");}});
+
+var GetLayoutPolicyCheckerInstance = Module.findExportByName("iuilp.dll", "GetLayoutPolicyCheckerInstance")
+Interceptor.attach(GetLayoutPolicyCheckerInstance, {onLeave: function (args) {send("GetLayoutPolicyCheckerInstance");}});
+

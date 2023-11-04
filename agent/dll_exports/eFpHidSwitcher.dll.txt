@@ -1,0 +1,30 @@
+var CheckDeviceStatus = Module.findExportByName("eFpHidSwitcher.dll", "CheckDeviceStatus")
+Interceptor.attach(CheckDeviceStatus, {onLeave: function (args) {send("CheckDeviceStatus");}});
+
+var DoSwitch = Module.findExportByName("eFpHidSwitcher.dll", "DoSwitch")
+Interceptor.attach(DoSwitch, {onLeave: function (args) {send("DoSwitch");}});
+
+var FnKeyTest = Module.findExportByName("eFpHidSwitcher.dll", "FnKeyTest")
+Interceptor.attach(FnKeyTest, {onLeave: function (args) {send("FnKeyTest");}});
+
+var GetDeviceVersion = Module.findExportByName("eFpHidSwitcher.dll", "GetDeviceVersion")
+Interceptor.attach(GetDeviceVersion, {onLeave: function (args) {send("GetDeviceVersion");}});
+
+var GetFeatureReportLength = Module.findExportByName("eFpHidSwitcher.dll", "GetFeatureReportLength")
+Interceptor.attach(GetFeatureReportLength, {onLeave: function (args) {send("GetFeatureReportLength");}});
+
+var GetMatrixScanResult = Module.findExportByName("eFpHidSwitcher.dll", "GetMatrixScanResult")
+Interceptor.attach(GetMatrixScanResult, {onLeave: function (args) {send("GetMatrixScanResult");}});
+
+var InitialSwitcher = Module.findExportByName("eFpHidSwitcher.dll", "InitialSwitcher")
+Interceptor.attach(InitialSwitcher, {onLeave: function (args) {send("InitialSwitcher");}});
+
+var MatrixScanTest = Module.findExportByName("eFpHidSwitcher.dll", "MatrixScanTest")
+Interceptor.attach(MatrixScanTest, {onLeave: function (args) {send("MatrixScanTest");}});
+
+var ReadKeyBoardType = Module.findExportByName("eFpHidSwitcher.dll", "ReadKeyBoardType")
+Interceptor.attach(ReadKeyBoardType, {onLeave: function (args) {send("ReadKeyBoardType");}});
+
+var WriteKeyBoardType = Module.findExportByName("eFpHidSwitcher.dll", "WriteKeyBoardType")
+Interceptor.attach(WriteKeyBoardType, {onLeave: function (args) {send("WriteKeyBoardType");}});
+

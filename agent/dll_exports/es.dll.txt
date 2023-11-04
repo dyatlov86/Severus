@@ -1,0 +1,21 @@
+var DllCanUnloadNow = Module.findExportByName("es.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("es.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var LCEControlServer = Module.findExportByName("es.dll", "LCEControlServer")
+Interceptor.attach(LCEControlServer, {onLeave: function (args) {send("LCEControlServer");}});
+
+var NotifyLogoffUser = Module.findExportByName("es.dll", "NotifyLogoffUser")
+Interceptor.attach(NotifyLogoffUser, {onLeave: function (args) {send("NotifyLogoffUser");}});
+
+var NotifyLogonUser = Module.findExportByName("es.dll", "NotifyLogonUser")
+Interceptor.attach(NotifyLogonUser, {onLeave: function (args) {send("NotifyLogonUser");}});
+
+var ServiceMain = Module.findExportByName("es.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("es.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

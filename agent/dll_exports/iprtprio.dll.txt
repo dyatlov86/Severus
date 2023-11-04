@@ -1,0 +1,15 @@
+var CleanUpIpPriority = Module.findExportByName("iprtprio.dll", "CleanUpIpPriority")
+Interceptor.attach(CleanUpIpPriority, {onLeave: function (args) {send("CleanUpIpPriority");}});
+
+var ComputeRouteMetric = Module.findExportByName("iprtprio.dll", "ComputeRouteMetric")
+Interceptor.attach(ComputeRouteMetric, {onLeave: function (args) {send("ComputeRouteMetric");}});
+
+var ComputeRouteMetricEx = Module.findExportByName("iprtprio.dll", "ComputeRouteMetricEx")
+Interceptor.attach(ComputeRouteMetricEx, {onLeave: function (args) {send("ComputeRouteMetricEx");}});
+
+var GetPriorityInfo = Module.findExportByName("iprtprio.dll", "GetPriorityInfo")
+Interceptor.attach(GetPriorityInfo, {onLeave: function (args) {send("GetPriorityInfo");}});
+
+var SetPriorityInfo = Module.findExportByName("iprtprio.dll", "SetPriorityInfo")
+Interceptor.attach(SetPriorityInfo, {onLeave: function (args) {send("SetPriorityInfo");}});
+

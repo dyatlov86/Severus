@@ -1,0 +1,42 @@
+var CreatePatchFileA = Module.findExportByName("mspatchc.dll", "CreatePatchFileA")
+Interceptor.attach(CreatePatchFileA, {onLeave: function (args) {send("CreatePatchFileA");}});
+
+var CreatePatchFileByHandles = Module.findExportByName("mspatchc.dll", "CreatePatchFileByHandles")
+Interceptor.attach(CreatePatchFileByHandles, {onLeave: function (args) {send("CreatePatchFileByHandles");}});
+
+var CreatePatchFileByHandlesEx = Module.findExportByName("mspatchc.dll", "CreatePatchFileByHandlesEx")
+Interceptor.attach(CreatePatchFileByHandlesEx, {onLeave: function (args) {send("CreatePatchFileByHandlesEx");}});
+
+var CreatePatchFileExA = Module.findExportByName("mspatchc.dll", "CreatePatchFileExA")
+Interceptor.attach(CreatePatchFileExA, {onLeave: function (args) {send("CreatePatchFileExA");}});
+
+var CreatePatchFileExW = Module.findExportByName("mspatchc.dll", "CreatePatchFileExW")
+Interceptor.attach(CreatePatchFileExW, {onLeave: function (args) {send("CreatePatchFileExW");}});
+
+var CreatePatchFileW = Module.findExportByName("mspatchc.dll", "CreatePatchFileW")
+Interceptor.attach(CreatePatchFileW, {onLeave: function (args) {send("CreatePatchFileW");}});
+
+var ExtractPatchHeaderToFileA = Module.findExportByName("mspatchc.dll", "ExtractPatchHeaderToFileA")
+Interceptor.attach(ExtractPatchHeaderToFileA, {onLeave: function (args) {send("ExtractPatchHeaderToFileA");}});
+
+var ExtractPatchHeaderToFileByHandles = Module.findExportByName("mspatchc.dll", "ExtractPatchHeaderToFileByHandles")
+Interceptor.attach(ExtractPatchHeaderToFileByHandles, {onLeave: function (args) {send("ExtractPatchHeaderToFileByHandles");}});
+
+var ExtractPatchHeaderToFileW = Module.findExportByName("mspatchc.dll", "ExtractPatchHeaderToFileW")
+Interceptor.attach(ExtractPatchHeaderToFileW, {onLeave: function (args) {send("ExtractPatchHeaderToFileW");}});
+
+var GetFilePatchSignatureA = Module.findExportByName("mspatchc.dll", "GetFilePatchSignatureA")
+Interceptor.attach(GetFilePatchSignatureA, {onLeave: function (args) {send("GetFilePatchSignatureA");}});
+
+var GetFilePatchSignatureByBuffer = Module.findExportByName("mspatchc.dll", "GetFilePatchSignatureByBuffer")
+Interceptor.attach(GetFilePatchSignatureByBuffer, {onLeave: function (args) {send("GetFilePatchSignatureByBuffer");}});
+
+var GetFilePatchSignatureByHandle = Module.findExportByName("mspatchc.dll", "GetFilePatchSignatureByHandle")
+Interceptor.attach(GetFilePatchSignatureByHandle, {onLeave: function (args) {send("GetFilePatchSignatureByHandle");}});
+
+var GetFilePatchSignatureW = Module.findExportByName("mspatchc.dll", "GetFilePatchSignatureW")
+Interceptor.attach(GetFilePatchSignatureW, {onLeave: function (args) {send("GetFilePatchSignatureW");}});
+
+var NormalizeFileForPatchSignature = Module.findExportByName("mspatchc.dll", "NormalizeFileForPatchSignature")
+Interceptor.attach(NormalizeFileForPatchSignature, {onLeave: function (args) {send("NormalizeFileForPatchSignature");}});
+

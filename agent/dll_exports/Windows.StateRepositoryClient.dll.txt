@@ -1,0 +1,114 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.StateRepositoryClient.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.StateRepositoryClient.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.StateRepositoryClient.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var SRAddPackageDependency = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRAddPackageDependency")
+Interceptor.attach(SRAddPackageDependency, {onLeave: function (args) {send("SRAddPackageDependency");}});
+
+var SRAppExtensionIterator_Close = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRAppExtensionIterator_Close")
+Interceptor.attach(SRAppExtensionIterator_Close, {onLeave: function (args) {send("SRAppExtensionIterator_Close");}});
+
+var SRAppExtensionIterator_GetNext = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRAppExtensionIterator_GetNext")
+Interceptor.attach(SRAppExtensionIterator_GetNext, {onLeave: function (args) {send("SRAppExtensionIterator_GetNext");}});
+
+var SRAppExtension_FindByUserAndName = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRAppExtension_FindByUserAndName")
+Interceptor.attach(SRAppExtension_FindByUserAndName, {onLeave: function (args) {send("SRAppExtension_FindByUserAndName");}});
+
+var SRCacheCheckIntegrity = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRCacheCheckIntegrity")
+Interceptor.attach(SRCacheCheckIntegrity, {onLeave: function (args) {send("SRCacheCheckIntegrity");}});
+
+var SRCheckIntegrity = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRCheckIntegrity")
+Interceptor.attach(SRCheckIntegrity, {onLeave: function (args) {send("SRCheckIntegrity");}});
+
+var SRCheckIntegrity2 = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRCheckIntegrity2")
+Interceptor.attach(SRCheckIntegrity2, {onLeave: function (args) {send("SRCheckIntegrity2");}});
+
+var SRDeletePackageDependency = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRDeletePackageDependency")
+Interceptor.attach(SRDeletePackageDependency, {onLeave: function (args) {send("SRDeletePackageDependency");}});
+
+var SRDictionaryFree = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRDictionaryFree")
+Interceptor.attach(SRDictionaryFree, {onLeave: function (args) {send("SRDictionaryFree");}});
+
+var SRDictionaryToPropertySet = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRDictionaryToPropertySet")
+Interceptor.attach(SRDictionaryToPropertySet, {onLeave: function (args) {send("SRDictionaryToPropertySet");}});
+
+var SREnsureCacheIsInitialized = Module.findExportByName("Windows.StateRepositoryClient.dll", "SREnsureCacheIsInitialized")
+Interceptor.attach(SREnsureCacheIsInitialized, {onLeave: function (args) {send("SREnsureCacheIsInitialized");}});
+
+var SRGetEffectivePackageStatusForUserFromToken = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRGetEffectivePackageStatusForUserFromToken")
+Interceptor.attach(SRGetEffectivePackageStatusForUserFromToken, {onLeave: function (args) {send("SRGetEffectivePackageStatusForUserFromToken");}});
+
+var SRGetEffectivePackageStatusForUserSid = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRGetEffectivePackageStatusForUserSid")
+Interceptor.attach(SRGetEffectivePackageStatusForUserSid, {onLeave: function (args) {send("SRGetEffectivePackageStatusForUserSid");}});
+
+var SRGetExternalLocation = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRGetExternalLocation")
+Interceptor.attach(SRGetExternalLocation, {onLeave: function (args) {send("SRGetExternalLocation");}});
+
+var SRGetIdForPackageDependencyContext = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRGetIdForPackageDependencyContext")
+Interceptor.attach(SRGetIdForPackageDependencyContext, {onLeave: function (args) {send("SRGetIdForPackageDependencyContext");}});
+
+var SRGetIsEffectiveSupportedUsersMultiple = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRGetIsEffectiveSupportedUsersMultiple")
+Interceptor.attach(SRGetIsEffectiveSupportedUsersMultiple, {onLeave: function (args) {send("SRGetIsEffectiveSupportedUsersMultiple");}});
+
+var SRGetPackageOriginForUser = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRGetPackageOriginForUser")
+Interceptor.attach(SRGetPackageOriginForUser, {onLeave: function (args) {send("SRGetPackageOriginForUser");}});
+
+var SRGetPackageStatus = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRGetPackageStatus")
+Interceptor.attach(SRGetPackageStatus, {onLeave: function (args) {send("SRGetPackageStatus");}});
+
+var SRGetPackageStatusForUserFromToken = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRGetPackageStatusForUserFromToken")
+Interceptor.attach(SRGetPackageStatusForUserFromToken, {onLeave: function (args) {send("SRGetPackageStatusForUserFromToken");}});
+
+var SRGetPackageStatusForUserSid = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRGetPackageStatusForUserSid")
+Interceptor.attach(SRGetPackageStatusForUserSid, {onLeave: function (args) {send("SRGetPackageStatusForUserSid");}});
+
+var SRGetResolvedPackageFullNameForPackageDependency = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRGetResolvedPackageFullNameForPackageDependency")
+Interceptor.attach(SRGetResolvedPackageFullNameForPackageDependency, {onLeave: function (args) {send("SRGetResolvedPackageFullNameForPackageDependency");}});
+
+var SRGetStagedPackageOrigin = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRGetStagedPackageOrigin")
+Interceptor.attach(SRGetStagedPackageOrigin, {onLeave: function (args) {send("SRGetStagedPackageOrigin");}});
+
+var SRImportPackageUserStatus = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRImportPackageUserStatus")
+Interceptor.attach(SRImportPackageUserStatus, {onLeave: function (args) {send("SRImportPackageUserStatus");}});
+
+var SRPackageDependencyExistsByUserAndPackageFullName = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRPackageDependencyExistsByUserAndPackageFullName")
+Interceptor.attach(SRPackageDependencyExistsByUserAndPackageFullName, {onLeave: function (args) {send("SRPackageDependencyExistsByUserAndPackageFullName");}});
+
+var SRPropertySetToDictionary = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRPropertySetToDictionary")
+Interceptor.attach(SRPropertySetToDictionary, {onLeave: function (args) {send("SRPropertySetToDictionary");}});
+
+var SRRemovePackageDependency = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRRemovePackageDependency")
+Interceptor.attach(SRRemovePackageDependency, {onLeave: function (args) {send("SRRemovePackageDependency");}});
+
+var SRRemovePackageStatus = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRRemovePackageStatus")
+Interceptor.attach(SRRemovePackageStatus, {onLeave: function (args) {send("SRRemovePackageStatus");}});
+
+var SRRemovePackageStatusForUserFromToken = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRRemovePackageStatusForUserFromToken")
+Interceptor.attach(SRRemovePackageStatusForUserFromToken, {onLeave: function (args) {send("SRRemovePackageStatusForUserFromToken");}});
+
+var SRRemovePackageStatusForUserSid = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRRemovePackageStatusForUserSid")
+Interceptor.attach(SRRemovePackageStatusForUserSid, {onLeave: function (args) {send("SRRemovePackageStatusForUserSid");}});
+
+var SRRepair = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRRepair")
+Interceptor.attach(SRRepair, {onLeave: function (args) {send("SRRepair");}});
+
+var SRTryCreatePackageDependency = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRTryCreatePackageDependency")
+Interceptor.attach(SRTryCreatePackageDependency, {onLeave: function (args) {send("SRTryCreatePackageDependency");}});
+
+var SRUpdatePackageStatus = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRUpdatePackageStatus")
+Interceptor.attach(SRUpdatePackageStatus, {onLeave: function (args) {send("SRUpdatePackageStatus");}});
+
+var SRUpdatePackageStatusForUserFromToken = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRUpdatePackageStatusForUserFromToken")
+Interceptor.attach(SRUpdatePackageStatusForUserFromToken, {onLeave: function (args) {send("SRUpdatePackageStatusForUserFromToken");}});
+
+var SRUpdatePackageStatusForUserSid = Module.findExportByName("Windows.StateRepositoryClient.dll", "SRUpdatePackageStatusForUserSid")
+Interceptor.attach(SRUpdatePackageStatusForUserSid, {onLeave: function (args) {send("SRUpdatePackageStatusForUserSid");}});
+
+var StateRepositoryDoMaintenanceTasks = Module.findExportByName("Windows.StateRepositoryClient.dll", "StateRepositoryDoMaintenanceTasks")
+Interceptor.attach(StateRepositoryDoMaintenanceTasks, {onLeave: function (args) {send("StateRepositoryDoMaintenanceTasks");}});
+

@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("wsecedit.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("wsecedit.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var InvokeCAPEACLEditor = Module.findExportByName("wsecedit.dll", "InvokeCAPEACLEditor")
+Interceptor.attach(InvokeCAPEACLEditor, {onLeave: function (args) {send("InvokeCAPEACLEditor");}});
+
+var TranslateAceMasksAndCondition = Module.findExportByName("wsecedit.dll", "TranslateAceMasksAndCondition")
+Interceptor.attach(TranslateAceMasksAndCondition, {onLeave: function (args) {send("TranslateAceMasksAndCondition");}});
+

@@ -1,0 +1,6 @@
+var ConvertEmfToWmf = Module.findExportByName("mf3216.dll", "ConvertEmfToWmf")
+Interceptor.attach(ConvertEmfToWmf, {onLeave: function (args) {send("ConvertEmfToWmf");}});
+
+var Mf3216DllInitialize = Module.findExportByName("mf3216.dll", "Mf3216DllInitialize")
+Interceptor.attach(Mf3216DllInitialize, {onLeave: function (args) {send("Mf3216DllInitialize");}});
+

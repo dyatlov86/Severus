@@ -1,0 +1,6 @@
+var ValidateAssembly = Module.findExportByName("Lenovo.AssemblyValidation.Native.dll", "ValidateAssembly")
+Interceptor.attach(ValidateAssembly, {onLeave: function (args) {send("ValidateAssembly");}});
+
+var ValidateCertFile = Module.findExportByName("Lenovo.AssemblyValidation.Native.dll", "ValidateCertFile")
+Interceptor.attach(ValidateCertFile, {onLeave: function (args) {send("ValidateCertFile");}});
+

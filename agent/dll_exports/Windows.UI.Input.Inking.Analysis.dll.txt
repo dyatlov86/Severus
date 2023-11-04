@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.UI.Input.Inking.Analysis.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.UI.Input.Inking.Analysis.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllMain = Module.findExportByName("Windows.UI.Input.Inking.Analysis.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+

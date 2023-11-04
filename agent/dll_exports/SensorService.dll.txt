@@ -1,0 +1,9 @@
+var DllCanUnloadNow = Module.findExportByName("SensorService.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var ServiceMain = Module.findExportByName("SensorService.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobalsEx = Module.findExportByName("SensorService.dll", "SvchostPushServiceGlobalsEx")
+Interceptor.attach(SvchostPushServiceGlobalsEx, {onLeave: function (args) {send("SvchostPushServiceGlobalsEx");}});
+

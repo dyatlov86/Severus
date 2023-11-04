@@ -1,0 +1,18 @@
+var EthernetCspDeInit = Module.findExportByName("wcmcsp.dll", "EthernetCspDeInit")
+Interceptor.attach(EthernetCspDeInit, {onLeave: function (args) {send("EthernetCspDeInit");}});
+
+var EthernetCspInit = Module.findExportByName("wcmcsp.dll", "EthernetCspInit")
+Interceptor.attach(EthernetCspInit, {onLeave: function (args) {send("EthernetCspInit");}});
+
+var WlanCspDeInit = Module.findExportByName("wcmcsp.dll", "WlanCspDeInit")
+Interceptor.attach(WlanCspDeInit, {onLeave: function (args) {send("WlanCspDeInit");}});
+
+var WlanCspInit = Module.findExportByName("wcmcsp.dll", "WlanCspInit")
+Interceptor.attach(WlanCspInit, {onLeave: function (args) {send("WlanCspInit");}});
+
+var WwanCspDeInit = Module.findExportByName("wcmcsp.dll", "WwanCspDeInit")
+Interceptor.attach(WwanCspDeInit, {onLeave: function (args) {send("WwanCspDeInit");}});
+
+var WwanCspInit = Module.findExportByName("wcmcsp.dll", "WwanCspInit")
+Interceptor.attach(WwanCspInit, {onLeave: function (args) {send("WwanCspInit");}});
+

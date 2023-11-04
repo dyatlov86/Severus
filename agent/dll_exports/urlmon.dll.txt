@@ -1,0 +1,393 @@
+var AsyncGetClassBits = Module.findExportByName("urlmon.dll", "AsyncGetClassBits")
+Interceptor.attach(AsyncGetClassBits, {onLeave: function (args) {send("AsyncGetClassBits");}});
+
+var AsyncInstallDistributionUnit = Module.findExportByName("urlmon.dll", "AsyncInstallDistributionUnit")
+Interceptor.attach(AsyncInstallDistributionUnit, {onLeave: function (args) {send("AsyncInstallDistributionUnit");}});
+
+var BindAsyncMoniker = Module.findExportByName("urlmon.dll", "BindAsyncMoniker")
+Interceptor.attach(BindAsyncMoniker, {onLeave: function (args) {send("BindAsyncMoniker");}});
+
+var CAuthenticateHostUI_CreateInstance = Module.findExportByName("urlmon.dll", "CAuthenticateHostUI_CreateInstance")
+Interceptor.attach(CAuthenticateHostUI_CreateInstance, {onLeave: function (args) {send("CAuthenticateHostUI_CreateInstance");}});
+
+var CDLGetLongPathNameA = Module.findExportByName("urlmon.dll", "CDLGetLongPathNameA")
+Interceptor.attach(CDLGetLongPathNameA, {onLeave: function (args) {send("CDLGetLongPathNameA");}});
+
+var CDLGetLongPathNameW = Module.findExportByName("urlmon.dll", "CDLGetLongPathNameW")
+Interceptor.attach(CDLGetLongPathNameW, {onLeave: function (args) {send("CDLGetLongPathNameW");}});
+
+var CORPolicyProvider = Module.findExportByName("urlmon.dll", "CORPolicyProvider")
+Interceptor.attach(CORPolicyProvider, {onLeave: function (args) {send("CORPolicyProvider");}});
+
+var CoGetClassObjectFromURL = Module.findExportByName("urlmon.dll", "CoGetClassObjectFromURL")
+Interceptor.attach(CoGetClassObjectFromURL, {onLeave: function (args) {send("CoGetClassObjectFromURL");}});
+
+var CoInstall = Module.findExportByName("urlmon.dll", "CoInstall")
+Interceptor.attach(CoInstall, {onLeave: function (args) {send("CoInstall");}});
+
+var CoInternetCanonicalizeIUri = Module.findExportByName("urlmon.dll", "CoInternetCanonicalizeIUri")
+Interceptor.attach(CoInternetCanonicalizeIUri, {onLeave: function (args) {send("CoInternetCanonicalizeIUri");}});
+
+var CoInternetCombineIUri = Module.findExportByName("urlmon.dll", "CoInternetCombineIUri")
+Interceptor.attach(CoInternetCombineIUri, {onLeave: function (args) {send("CoInternetCombineIUri");}});
+
+var CoInternetCombineUrl = Module.findExportByName("urlmon.dll", "CoInternetCombineUrl")
+Interceptor.attach(CoInternetCombineUrl, {onLeave: function (args) {send("CoInternetCombineUrl");}});
+
+var CoInternetCombineUrlEx = Module.findExportByName("urlmon.dll", "CoInternetCombineUrlEx")
+Interceptor.attach(CoInternetCombineUrlEx, {onLeave: function (args) {send("CoInternetCombineUrlEx");}});
+
+var CoInternetCompareUrl = Module.findExportByName("urlmon.dll", "CoInternetCompareUrl")
+Interceptor.attach(CoInternetCompareUrl, {onLeave: function (args) {send("CoInternetCompareUrl");}});
+
+var CoInternetCreateSecurityManager = Module.findExportByName("urlmon.dll", "CoInternetCreateSecurityManager")
+Interceptor.attach(CoInternetCreateSecurityManager, {onLeave: function (args) {send("CoInternetCreateSecurityManager");}});
+
+var CoInternetCreateZoneManager = Module.findExportByName("urlmon.dll", "CoInternetCreateZoneManager")
+Interceptor.attach(CoInternetCreateZoneManager, {onLeave: function (args) {send("CoInternetCreateZoneManager");}});
+
+var CoInternetFeatureSettingsChanged = Module.findExportByName("urlmon.dll", "CoInternetFeatureSettingsChanged")
+Interceptor.attach(CoInternetFeatureSettingsChanged, {onLeave: function (args) {send("CoInternetFeatureSettingsChanged");}});
+
+var CoInternetGetMobileBrowserAppCompatMode = Module.findExportByName("urlmon.dll", "CoInternetGetMobileBrowserAppCompatMode")
+Interceptor.attach(CoInternetGetMobileBrowserAppCompatMode, {onLeave: function (args) {send("CoInternetGetMobileBrowserAppCompatMode");}});
+
+var CoInternetGetMobileBrowserForceDesktopMode = Module.findExportByName("urlmon.dll", "CoInternetGetMobileBrowserForceDesktopMode")
+Interceptor.attach(CoInternetGetMobileBrowserForceDesktopMode, {onLeave: function (args) {send("CoInternetGetMobileBrowserForceDesktopMode");}});
+
+var CoInternetGetProtocolFlags = Module.findExportByName("urlmon.dll", "CoInternetGetProtocolFlags")
+Interceptor.attach(CoInternetGetProtocolFlags, {onLeave: function (args) {send("CoInternetGetProtocolFlags");}});
+
+var CoInternetGetSecurityUrl = Module.findExportByName("urlmon.dll", "CoInternetGetSecurityUrl")
+Interceptor.attach(CoInternetGetSecurityUrl, {onLeave: function (args) {send("CoInternetGetSecurityUrl");}});
+
+var CoInternetGetSecurityUrlEx = Module.findExportByName("urlmon.dll", "CoInternetGetSecurityUrlEx")
+Interceptor.attach(CoInternetGetSecurityUrlEx, {onLeave: function (args) {send("CoInternetGetSecurityUrlEx");}});
+
+var CoInternetGetSession = Module.findExportByName("urlmon.dll", "CoInternetGetSession")
+Interceptor.attach(CoInternetGetSession, {onLeave: function (args) {send("CoInternetGetSession");}});
+
+var CoInternetIsFeatureEnabled = Module.findExportByName("urlmon.dll", "CoInternetIsFeatureEnabled")
+Interceptor.attach(CoInternetIsFeatureEnabled, {onLeave: function (args) {send("CoInternetIsFeatureEnabled");}});
+
+var CoInternetIsFeatureEnabledForIUri = Module.findExportByName("urlmon.dll", "CoInternetIsFeatureEnabledForIUri")
+Interceptor.attach(CoInternetIsFeatureEnabledForIUri, {onLeave: function (args) {send("CoInternetIsFeatureEnabledForIUri");}});
+
+var CoInternetIsFeatureEnabledForUrl = Module.findExportByName("urlmon.dll", "CoInternetIsFeatureEnabledForUrl")
+Interceptor.attach(CoInternetIsFeatureEnabledForUrl, {onLeave: function (args) {send("CoInternetIsFeatureEnabledForUrl");}});
+
+var CoInternetIsFeatureZoneElevationEnabled = Module.findExportByName("urlmon.dll", "CoInternetIsFeatureZoneElevationEnabled")
+Interceptor.attach(CoInternetIsFeatureZoneElevationEnabled, {onLeave: function (args) {send("CoInternetIsFeatureZoneElevationEnabled");}});
+
+var CoInternetParseIUri = Module.findExportByName("urlmon.dll", "CoInternetParseIUri")
+Interceptor.attach(CoInternetParseIUri, {onLeave: function (args) {send("CoInternetParseIUri");}});
+
+var CoInternetParseUrl = Module.findExportByName("urlmon.dll", "CoInternetParseUrl")
+Interceptor.attach(CoInternetParseUrl, {onLeave: function (args) {send("CoInternetParseUrl");}});
+
+var CoInternetQueryInfo = Module.findExportByName("urlmon.dll", "CoInternetQueryInfo")
+Interceptor.attach(CoInternetQueryInfo, {onLeave: function (args) {send("CoInternetQueryInfo");}});
+
+var CoInternetSetFeatureEnabled = Module.findExportByName("urlmon.dll", "CoInternetSetFeatureEnabled")
+Interceptor.attach(CoInternetSetFeatureEnabled, {onLeave: function (args) {send("CoInternetSetFeatureEnabled");}});
+
+var CoInternetSetMobileBrowserAppCompatMode = Module.findExportByName("urlmon.dll", "CoInternetSetMobileBrowserAppCompatMode")
+Interceptor.attach(CoInternetSetMobileBrowserAppCompatMode, {onLeave: function (args) {send("CoInternetSetMobileBrowserAppCompatMode");}});
+
+var CoInternetSetMobileBrowserForceDesktopMode = Module.findExportByName("urlmon.dll", "CoInternetSetMobileBrowserForceDesktopMode")
+Interceptor.attach(CoInternetSetMobileBrowserForceDesktopMode, {onLeave: function (args) {send("CoInternetSetMobileBrowserForceDesktopMode");}});
+
+var CompareSecurityIds = Module.findExportByName("urlmon.dll", "CompareSecurityIds")
+Interceptor.attach(CompareSecurityIds, {onLeave: function (args) {send("CompareSecurityIds");}});
+
+var CompatFlagsFromClsid = Module.findExportByName("urlmon.dll", "CompatFlagsFromClsid")
+Interceptor.attach(CompatFlagsFromClsid, {onLeave: function (args) {send("CompatFlagsFromClsid");}});
+
+var CopyBindInfo = Module.findExportByName("urlmon.dll", "CopyBindInfo")
+Interceptor.attach(CopyBindInfo, {onLeave: function (args) {send("CopyBindInfo");}});
+
+var CopyStgMedium = Module.findExportByName("urlmon.dll", "CopyStgMedium")
+Interceptor.attach(CopyStgMedium, {onLeave: function (args) {send("CopyStgMedium");}});
+
+var CreateAsyncBindCtx = Module.findExportByName("urlmon.dll", "CreateAsyncBindCtx")
+Interceptor.attach(CreateAsyncBindCtx, {onLeave: function (args) {send("CreateAsyncBindCtx");}});
+
+var CreateAsyncBindCtxEx = Module.findExportByName("urlmon.dll", "CreateAsyncBindCtxEx")
+Interceptor.attach(CreateAsyncBindCtxEx, {onLeave: function (args) {send("CreateAsyncBindCtxEx");}});
+
+var CreateFormatEnumerator = Module.findExportByName("urlmon.dll", "CreateFormatEnumerator")
+Interceptor.attach(CreateFormatEnumerator, {onLeave: function (args) {send("CreateFormatEnumerator");}});
+
+var CreateIUriBuilder = Module.findExportByName("urlmon.dll", "CreateIUriBuilder")
+Interceptor.attach(CreateIUriBuilder, {onLeave: function (args) {send("CreateIUriBuilder");}});
+
+var CreateURLMoniker = Module.findExportByName("urlmon.dll", "CreateURLMoniker")
+Interceptor.attach(CreateURLMoniker, {onLeave: function (args) {send("CreateURLMoniker");}});
+
+var CreateURLMonikerEx = Module.findExportByName("urlmon.dll", "CreateURLMonikerEx")
+Interceptor.attach(CreateURLMonikerEx, {onLeave: function (args) {send("CreateURLMonikerEx");}});
+
+var CreateURLMonikerEx2 = Module.findExportByName("urlmon.dll", "CreateURLMonikerEx2")
+Interceptor.attach(CreateURLMonikerEx2, {onLeave: function (args) {send("CreateURLMonikerEx2");}});
+
+var CreateUri = Module.findExportByName("urlmon.dll", "CreateUri")
+Interceptor.attach(CreateUri, {onLeave: function (args) {send("CreateUri");}});
+
+var CreateUriFromMultiByteString = Module.findExportByName("urlmon.dll", "CreateUriFromMultiByteString")
+Interceptor.attach(CreateUriFromMultiByteString, {onLeave: function (args) {send("CreateUriFromMultiByteString");}});
+
+var CreateUriPriv = Module.findExportByName("urlmon.dll", "CreateUriPriv")
+Interceptor.attach(CreateUriPriv, {onLeave: function (args) {send("CreateUriPriv");}});
+
+var CreateUriWithFragment = Module.findExportByName("urlmon.dll", "CreateUriWithFragment")
+Interceptor.attach(CreateUriWithFragment, {onLeave: function (args) {send("CreateUriWithFragment");}});
+
+var DllCanUnloadNow = Module.findExportByName("urlmon.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("urlmon.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllInstall = Module.findExportByName("urlmon.dll", "DllInstall")
+Interceptor.attach(DllInstall, {onLeave: function (args) {send("DllInstall");}});
+
+var DllRegisterServer = Module.findExportByName("urlmon.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllRegisterServerEx = Module.findExportByName("urlmon.dll", "DllRegisterServerEx")
+Interceptor.attach(DllRegisterServerEx, {onLeave: function (args) {send("DllRegisterServerEx");}});
+
+var DllUnregisterServer = Module.findExportByName("urlmon.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var Extract = Module.findExportByName("urlmon.dll", "Extract")
+Interceptor.attach(Extract, {onLeave: function (args) {send("Extract");}});
+
+var FaultInIEFeature = Module.findExportByName("urlmon.dll", "FaultInIEFeature")
+Interceptor.attach(FaultInIEFeature, {onLeave: function (args) {send("FaultInIEFeature");}});
+
+var FileBearsMarkOfTheWeb = Module.findExportByName("urlmon.dll", "FileBearsMarkOfTheWeb")
+Interceptor.attach(FileBearsMarkOfTheWeb, {onLeave: function (args) {send("FileBearsMarkOfTheWeb");}});
+
+var FindMediaType = Module.findExportByName("urlmon.dll", "FindMediaType")
+Interceptor.attach(FindMediaType, {onLeave: function (args) {send("FindMediaType");}});
+
+var FindMediaTypeClass = Module.findExportByName("urlmon.dll", "FindMediaTypeClass")
+Interceptor.attach(FindMediaTypeClass, {onLeave: function (args) {send("FindMediaTypeClass");}});
+
+var FindMimeFromData = Module.findExportByName("urlmon.dll", "FindMimeFromData")
+Interceptor.attach(FindMimeFromData, {onLeave: function (args) {send("FindMimeFromData");}});
+
+var GetAddSitesFileUrl = Module.findExportByName("urlmon.dll", "GetAddSitesFileUrl")
+Interceptor.attach(GetAddSitesFileUrl, {onLeave: function (args) {send("GetAddSitesFileUrl");}});
+
+var GetClassFileOrMime = Module.findExportByName("urlmon.dll", "GetClassFileOrMime")
+Interceptor.attach(GetClassFileOrMime, {onLeave: function (args) {send("GetClassFileOrMime");}});
+
+var GetClassURL = Module.findExportByName("urlmon.dll", "GetClassURL")
+Interceptor.attach(GetClassURL, {onLeave: function (args) {send("GetClassURL");}});
+
+var GetComponentIDFromCLSSPEC = Module.findExportByName("urlmon.dll", "GetComponentIDFromCLSSPEC")
+Interceptor.attach(GetComponentIDFromCLSSPEC, {onLeave: function (args) {send("GetComponentIDFromCLSSPEC");}});
+
+var GetIDNFlagsForUri = Module.findExportByName("urlmon.dll", "GetIDNFlagsForUri")
+Interceptor.attach(GetIDNFlagsForUri, {onLeave: function (args) {send("GetIDNFlagsForUri");}});
+
+var GetIUriPriv = Module.findExportByName("urlmon.dll", "GetIUriPriv")
+Interceptor.attach(GetIUriPriv, {onLeave: function (args) {send("GetIUriPriv");}});
+
+var GetIUriPriv2 = Module.findExportByName("urlmon.dll", "GetIUriPriv2")
+Interceptor.attach(GetIUriPriv2, {onLeave: function (args) {send("GetIUriPriv2");}});
+
+var GetLabelsFromNamedHost = Module.findExportByName("urlmon.dll", "GetLabelsFromNamedHost")
+Interceptor.attach(GetLabelsFromNamedHost, {onLeave: function (args) {send("GetLabelsFromNamedHost");}});
+
+var GetMarkOfTheWeb = Module.findExportByName("urlmon.dll", "GetMarkOfTheWeb")
+Interceptor.attach(GetMarkOfTheWeb, {onLeave: function (args) {send("GetMarkOfTheWeb");}});
+
+var GetPortFromUrlScheme = Module.findExportByName("urlmon.dll", "GetPortFromUrlScheme")
+Interceptor.attach(GetPortFromUrlScheme, {onLeave: function (args) {send("GetPortFromUrlScheme");}});
+
+var GetPropertyFromName = Module.findExportByName("urlmon.dll", "GetPropertyFromName")
+Interceptor.attach(GetPropertyFromName, {onLeave: function (args) {send("GetPropertyFromName");}});
+
+var GetPropertyName = Module.findExportByName("urlmon.dll", "GetPropertyName")
+Interceptor.attach(GetPropertyName, {onLeave: function (args) {send("GetPropertyName");}});
+
+var GetSoftwareUpdateInfo = Module.findExportByName("urlmon.dll", "GetSoftwareUpdateInfo")
+Interceptor.attach(GetSoftwareUpdateInfo, {onLeave: function (args) {send("GetSoftwareUpdateInfo");}});
+
+var GetUrlmonThreadNotificationHwnd = Module.findExportByName("urlmon.dll", "GetUrlmonThreadNotificationHwnd")
+Interceptor.attach(GetUrlmonThreadNotificationHwnd, {onLeave: function (args) {send("GetUrlmonThreadNotificationHwnd");}});
+
+var GetZoneFromAlternateDataStreamEx = Module.findExportByName("urlmon.dll", "GetZoneFromAlternateDataStreamEx")
+Interceptor.attach(GetZoneFromAlternateDataStreamEx, {onLeave: function (args) {send("GetZoneFromAlternateDataStreamEx");}});
+
+var HlinkGoBack = Module.findExportByName("urlmon.dll", "HlinkGoBack")
+Interceptor.attach(HlinkGoBack, {onLeave: function (args) {send("HlinkGoBack");}});
+
+var HlinkGoForward = Module.findExportByName("urlmon.dll", "HlinkGoForward")
+Interceptor.attach(HlinkGoForward, {onLeave: function (args) {send("HlinkGoForward");}});
+
+var HlinkNavigateMoniker = Module.findExportByName("urlmon.dll", "HlinkNavigateMoniker")
+Interceptor.attach(HlinkNavigateMoniker, {onLeave: function (args) {send("HlinkNavigateMoniker");}});
+
+var HlinkNavigateString = Module.findExportByName("urlmon.dll", "HlinkNavigateString")
+Interceptor.attach(HlinkNavigateString, {onLeave: function (args) {send("HlinkNavigateString");}});
+
+var HlinkSimpleNavigateToMoniker = Module.findExportByName("urlmon.dll", "HlinkSimpleNavigateToMoniker")
+Interceptor.attach(HlinkSimpleNavigateToMoniker, {onLeave: function (args) {send("HlinkSimpleNavigateToMoniker");}});
+
+var HlinkSimpleNavigateToString = Module.findExportByName("urlmon.dll", "HlinkSimpleNavigateToString")
+Interceptor.attach(HlinkSimpleNavigateToString, {onLeave: function (args) {send("HlinkSimpleNavigateToString");}});
+
+var IECompatLogCSSFix = Module.findExportByName("urlmon.dll", "IECompatLogCSSFix")
+Interceptor.attach(IECompatLogCSSFix, {onLeave: function (args) {send("IECompatLogCSSFix");}});
+
+var IEGetUserPrivateNamespaceName = Module.findExportByName("urlmon.dll", "IEGetUserPrivateNamespaceName")
+Interceptor.attach(IEGetUserPrivateNamespaceName, {onLeave: function (args) {send("IEGetUserPrivateNamespaceName");}});
+
+var IEInstallScope = Module.findExportByName("urlmon.dll", "IEInstallScope")
+Interceptor.attach(IEInstallScope, {onLeave: function (args) {send("IEInstallScope");}});
+
+var IntlPercentEncodeNormalize = Module.findExportByName("urlmon.dll", "IntlPercentEncodeNormalize")
+Interceptor.attach(IntlPercentEncodeNormalize, {onLeave: function (args) {send("IntlPercentEncodeNormalize");}});
+
+var IsAsyncMoniker = Module.findExportByName("urlmon.dll", "IsAsyncMoniker")
+Interceptor.attach(IsAsyncMoniker, {onLeave: function (args) {send("IsAsyncMoniker");}});
+
+var IsDWORDProperty = Module.findExportByName("urlmon.dll", "IsDWORDProperty")
+Interceptor.attach(IsDWORDProperty, {onLeave: function (args) {send("IsDWORDProperty");}});
+
+var IsIntranetAvailable = Module.findExportByName("urlmon.dll", "IsIntranetAvailable")
+Interceptor.attach(IsIntranetAvailable, {onLeave: function (args) {send("IsIntranetAvailable");}});
+
+var IsJITInProgress = Module.findExportByName("urlmon.dll", "IsJITInProgress")
+Interceptor.attach(IsJITInProgress, {onLeave: function (args) {send("IsJITInProgress");}});
+
+var IsLoggingEnabledA = Module.findExportByName("urlmon.dll", "IsLoggingEnabledA")
+Interceptor.attach(IsLoggingEnabledA, {onLeave: function (args) {send("IsLoggingEnabledA");}});
+
+var IsLoggingEnabledW = Module.findExportByName("urlmon.dll", "IsLoggingEnabledW")
+Interceptor.attach(IsLoggingEnabledW, {onLeave: function (args) {send("IsLoggingEnabledW");}});
+
+var IsStringProperty = Module.findExportByName("urlmon.dll", "IsStringProperty")
+Interceptor.attach(IsStringProperty, {onLeave: function (args) {send("IsStringProperty");}});
+
+var IsValidURL = Module.findExportByName("urlmon.dll", "IsValidURL")
+Interceptor.attach(IsValidURL, {onLeave: function (args) {send("IsValidURL");}});
+
+var MkParseDisplayNameEx = Module.findExportByName("urlmon.dll", "MkParseDisplayNameEx")
+Interceptor.attach(MkParseDisplayNameEx, {onLeave: function (args) {send("MkParseDisplayNameEx");}});
+
+var ObtainUserAgentString = Module.findExportByName("urlmon.dll", "ObtainUserAgentString")
+Interceptor.attach(ObtainUserAgentString, {onLeave: function (args) {send("ObtainUserAgentString");}});
+
+var PrivateCoInstall = Module.findExportByName("urlmon.dll", "PrivateCoInstall")
+Interceptor.attach(PrivateCoInstall, {onLeave: function (args) {send("PrivateCoInstall");}});
+
+var QueryAssociations = Module.findExportByName("urlmon.dll", "QueryAssociations")
+Interceptor.attach(QueryAssociations, {onLeave: function (args) {send("QueryAssociations");}});
+
+var QueryClsidAssociation = Module.findExportByName("urlmon.dll", "QueryClsidAssociation")
+Interceptor.attach(QueryClsidAssociation, {onLeave: function (args) {send("QueryClsidAssociation");}});
+
+var RegisterBindStatusCallback = Module.findExportByName("urlmon.dll", "RegisterBindStatusCallback")
+Interceptor.attach(RegisterBindStatusCallback, {onLeave: function (args) {send("RegisterBindStatusCallback");}});
+
+var RegisterFormatEnumerator = Module.findExportByName("urlmon.dll", "RegisterFormatEnumerator")
+Interceptor.attach(RegisterFormatEnumerator, {onLeave: function (args) {send("RegisterFormatEnumerator");}});
+
+var RegisterMediaTypeClass = Module.findExportByName("urlmon.dll", "RegisterMediaTypeClass")
+Interceptor.attach(RegisterMediaTypeClass, {onLeave: function (args) {send("RegisterMediaTypeClass");}});
+
+var RegisterMediaTypes = Module.findExportByName("urlmon.dll", "RegisterMediaTypes")
+Interceptor.attach(RegisterMediaTypes, {onLeave: function (args) {send("RegisterMediaTypes");}});
+
+var RegisterWebPlatformPermanentSecurityManager = Module.findExportByName("urlmon.dll", "RegisterWebPlatformPermanentSecurityManager")
+Interceptor.attach(RegisterWebPlatformPermanentSecurityManager, {onLeave: function (args) {send("RegisterWebPlatformPermanentSecurityManager");}});
+
+var ReleaseBindInfo = Module.findExportByName("urlmon.dll", "ReleaseBindInfo")
+Interceptor.attach(ReleaseBindInfo, {onLeave: function (args) {send("ReleaseBindInfo");}});
+
+var RestrictHTTP2 = Module.findExportByName("urlmon.dll", "RestrictHTTP2")
+Interceptor.attach(RestrictHTTP2, {onLeave: function (args) {send("RestrictHTTP2");}});
+
+var RevokeBindStatusCallback = Module.findExportByName("urlmon.dll", "RevokeBindStatusCallback")
+Interceptor.attach(RevokeBindStatusCallback, {onLeave: function (args) {send("RevokeBindStatusCallback");}});
+
+var RevokeFormatEnumerator = Module.findExportByName("urlmon.dll", "RevokeFormatEnumerator")
+Interceptor.attach(RevokeFormatEnumerator, {onLeave: function (args) {send("RevokeFormatEnumerator");}});
+
+var SetAccessForIEAppContainer = Module.findExportByName("urlmon.dll", "SetAccessForIEAppContainer")
+Interceptor.attach(SetAccessForIEAppContainer, {onLeave: function (args) {send("SetAccessForIEAppContainer");}});
+
+var SetSoftwareUpdateAdvertisementState = Module.findExportByName("urlmon.dll", "SetSoftwareUpdateAdvertisementState")
+Interceptor.attach(SetSoftwareUpdateAdvertisementState, {onLeave: function (args) {send("SetSoftwareUpdateAdvertisementState");}});
+
+var ShouldDisplayPunycodeForUri = Module.findExportByName("urlmon.dll", "ShouldDisplayPunycodeForUri")
+Interceptor.attach(ShouldDisplayPunycodeForUri, {onLeave: function (args) {send("ShouldDisplayPunycodeForUri");}});
+
+var ShouldShowIntranetWarningSecband = Module.findExportByName("urlmon.dll", "ShouldShowIntranetWarningSecband")
+Interceptor.attach(ShouldShowIntranetWarningSecband, {onLeave: function (args) {send("ShouldShowIntranetWarningSecband");}});
+
+var ShowTrustAlertDialog = Module.findExportByName("urlmon.dll", "ShowTrustAlertDialog")
+Interceptor.attach(ShowTrustAlertDialog, {onLeave: function (args) {send("ShowTrustAlertDialog");}});
+
+var URLDownloadA = Module.findExportByName("urlmon.dll", "URLDownloadA")
+Interceptor.attach(URLDownloadA, {onLeave: function (args) {send("URLDownloadA");}});
+
+var URLDownloadToCacheFileA = Module.findExportByName("urlmon.dll", "URLDownloadToCacheFileA")
+Interceptor.attach(URLDownloadToCacheFileA, {onLeave: function (args) {send("URLDownloadToCacheFileA");}});
+
+var URLDownloadToCacheFileW = Module.findExportByName("urlmon.dll", "URLDownloadToCacheFileW")
+Interceptor.attach(URLDownloadToCacheFileW, {onLeave: function (args) {send("URLDownloadToCacheFileW");}});
+
+var URLDownloadToFileA = Module.findExportByName("urlmon.dll", "URLDownloadToFileA")
+Interceptor.attach(URLDownloadToFileA, {onLeave: function (args) {send("URLDownloadToFileA");}});
+
+var URLDownloadToFileW = Module.findExportByName("urlmon.dll", "URLDownloadToFileW")
+Interceptor.attach(URLDownloadToFileW, {onLeave: function (args) {send("URLDownloadToFileW");}});
+
+var URLDownloadW = Module.findExportByName("urlmon.dll", "URLDownloadW")
+Interceptor.attach(URLDownloadW, {onLeave: function (args) {send("URLDownloadW");}});
+
+var URLOpenBlockingStreamA = Module.findExportByName("urlmon.dll", "URLOpenBlockingStreamA")
+Interceptor.attach(URLOpenBlockingStreamA, {onLeave: function (args) {send("URLOpenBlockingStreamA");}});
+
+var URLOpenBlockingStreamW = Module.findExportByName("urlmon.dll", "URLOpenBlockingStreamW")
+Interceptor.attach(URLOpenBlockingStreamW, {onLeave: function (args) {send("URLOpenBlockingStreamW");}});
+
+var URLOpenPullStreamA = Module.findExportByName("urlmon.dll", "URLOpenPullStreamA")
+Interceptor.attach(URLOpenPullStreamA, {onLeave: function (args) {send("URLOpenPullStreamA");}});
+
+var URLOpenPullStreamW = Module.findExportByName("urlmon.dll", "URLOpenPullStreamW")
+Interceptor.attach(URLOpenPullStreamW, {onLeave: function (args) {send("URLOpenPullStreamW");}});
+
+var URLOpenStreamA = Module.findExportByName("urlmon.dll", "URLOpenStreamA")
+Interceptor.attach(URLOpenStreamA, {onLeave: function (args) {send("URLOpenStreamA");}});
+
+var URLOpenStreamW = Module.findExportByName("urlmon.dll", "URLOpenStreamW")
+Interceptor.attach(URLOpenStreamW, {onLeave: function (args) {send("URLOpenStreamW");}});
+
+var UnregisterWebPlatformPermanentSecurityManager = Module.findExportByName("urlmon.dll", "UnregisterWebPlatformPermanentSecurityManager")
+Interceptor.attach(UnregisterWebPlatformPermanentSecurityManager, {onLeave: function (args) {send("UnregisterWebPlatformPermanentSecurityManager");}});
+
+var UrlMkBuildVersion = Module.findExportByName("urlmon.dll", "UrlMkBuildVersion")
+Interceptor.attach(UrlMkBuildVersion, {onLeave: function (args) {send("UrlMkBuildVersion");}});
+
+var UrlMkGetSessionOption = Module.findExportByName("urlmon.dll", "UrlMkGetSessionOption")
+Interceptor.attach(UrlMkGetSessionOption, {onLeave: function (args) {send("UrlMkGetSessionOption");}});
+
+var UrlMkSetSessionOption = Module.findExportByName("urlmon.dll", "UrlMkSetSessionOption")
+Interceptor.attach(UrlMkSetSessionOption, {onLeave: function (args) {send("UrlMkSetSessionOption");}});
+
+var UrlmonCleanupCurrentThread = Module.findExportByName("urlmon.dll", "UrlmonCleanupCurrentThread")
+Interceptor.attach(UrlmonCleanupCurrentThread, {onLeave: function (args) {send("UrlmonCleanupCurrentThread");}});
+
+var WriteHitLogging = Module.findExportByName("urlmon.dll", "WriteHitLogging")
+Interceptor.attach(WriteHitLogging, {onLeave: function (args) {send("WriteHitLogging");}});
+
+var ZonesReInit = Module.findExportByName("urlmon.dll", "ZonesReInit")
+Interceptor.attach(ZonesReInit, {onLeave: function (args) {send("ZonesReInit");}});
+

@@ -1,0 +1,39 @@
+var DisableSR = Module.findExportByName("srclient.dll", "DisableSR")
+Interceptor.attach(DisableSR, {onLeave: function (args) {send("DisableSR");}});
+
+var DisableSRInternal = Module.findExportByName("srclient.dll", "DisableSRInternal")
+Interceptor.attach(DisableSRInternal, {onLeave: function (args) {send("DisableSRInternal");}});
+
+var EnableSR = Module.findExportByName("srclient.dll", "EnableSR")
+Interceptor.attach(EnableSR, {onLeave: function (args) {send("EnableSR");}});
+
+var EnableSREx = Module.findExportByName("srclient.dll", "EnableSREx")
+Interceptor.attach(EnableSREx, {onLeave: function (args) {send("EnableSREx");}});
+
+var EnableSRInternal = Module.findExportByName("srclient.dll", "EnableSRInternal")
+Interceptor.attach(EnableSRInternal, {onLeave: function (args) {send("EnableSRInternal");}});
+
+var SRNewSystemId = Module.findExportByName("srclient.dll", "SRNewSystemId")
+Interceptor.attach(SRNewSystemId, {onLeave: function (args) {send("SRNewSystemId");}});
+
+var SRRemoveRestorePoint = Module.findExportByName("srclient.dll", "SRRemoveRestorePoint")
+Interceptor.attach(SRRemoveRestorePoint, {onLeave: function (args) {send("SRRemoveRestorePoint");}});
+
+var SRSetRestorePointA = Module.findExportByName("srclient.dll", "SRSetRestorePointA")
+Interceptor.attach(SRSetRestorePointA, {onLeave: function (args) {send("SRSetRestorePointA");}});
+
+var SRSetRestorePointInternal = Module.findExportByName("srclient.dll", "SRSetRestorePointInternal")
+Interceptor.attach(SRSetRestorePointInternal, {onLeave: function (args) {send("SRSetRestorePointInternal");}});
+
+var SRSetRestorePointW = Module.findExportByName("srclient.dll", "SRSetRestorePointW")
+Interceptor.attach(SRSetRestorePointW, {onLeave: function (args) {send("SRSetRestorePointW");}});
+
+var SetSRStateAfterSetup = Module.findExportByName("srclient.dll", "SetSRStateAfterSetup")
+Interceptor.attach(SetSRStateAfterSetup, {onLeave: function (args) {send("SetSRStateAfterSetup");}});
+
+var SysprepCleanup = Module.findExportByName("srclient.dll", "SysprepCleanup")
+Interceptor.attach(SysprepCleanup, {onLeave: function (args) {send("SysprepCleanup");}});
+
+var SysprepGeneralize = Module.findExportByName("srclient.dll", "SysprepGeneralize")
+Interceptor.attach(SysprepGeneralize, {onLeave: function (args) {send("SysprepGeneralize");}});
+

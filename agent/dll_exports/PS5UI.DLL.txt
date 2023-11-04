@@ -1,0 +1,54 @@
+var DevQueryPrintEx = Module.findExportByName("PS5UI.DLL", "DevQueryPrintEx")
+Interceptor.attach(DevQueryPrintEx, {onLeave: function (args) {send("DevQueryPrintEx");}});
+
+var DllCanUnloadNow = Module.findExportByName("PS5UI.DLL", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("PS5UI.DLL", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("PS5UI.DLL", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DrvConvertDevMode = Module.findExportByName("PS5UI.DLL", "DrvConvertDevMode")
+Interceptor.attach(DrvConvertDevMode, {onLeave: function (args) {send("DrvConvertDevMode");}});
+
+var DrvDeviceCapabilities = Module.findExportByName("PS5UI.DLL", "DrvDeviceCapabilities")
+Interceptor.attach(DrvDeviceCapabilities, {onLeave: function (args) {send("DrvDeviceCapabilities");}});
+
+var DrvDevicePropertySheets = Module.findExportByName("PS5UI.DLL", "DrvDevicePropertySheets")
+Interceptor.attach(DrvDevicePropertySheets, {onLeave: function (args) {send("DrvDevicePropertySheets");}});
+
+var DrvDocumentEvent = Module.findExportByName("PS5UI.DLL", "DrvDocumentEvent")
+Interceptor.attach(DrvDocumentEvent, {onLeave: function (args) {send("DrvDocumentEvent");}});
+
+var DrvDocumentPropertySheets = Module.findExportByName("PS5UI.DLL", "DrvDocumentPropertySheets")
+Interceptor.attach(DrvDocumentPropertySheets, {onLeave: function (args) {send("DrvDocumentPropertySheets");}});
+
+var DrvDriverEvent = Module.findExportByName("PS5UI.DLL", "DrvDriverEvent")
+Interceptor.attach(DrvDriverEvent, {onLeave: function (args) {send("DrvDriverEvent");}});
+
+var DrvPopulateFilterServices = Module.findExportByName("PS5UI.DLL", "DrvPopulateFilterServices")
+Interceptor.attach(DrvPopulateFilterServices, {onLeave: function (args) {send("DrvPopulateFilterServices");}});
+
+var DrvPrinterEvent = Module.findExportByName("PS5UI.DLL", "DrvPrinterEvent")
+Interceptor.attach(DrvPrinterEvent, {onLeave: function (args) {send("DrvPrinterEvent");}});
+
+var DrvQueryColorProfile = Module.findExportByName("PS5UI.DLL", "DrvQueryColorProfile")
+Interceptor.attach(DrvQueryColorProfile, {onLeave: function (args) {send("DrvQueryColorProfile");}});
+
+var DrvQueryJobAttributes = Module.findExportByName("PS5UI.DLL", "DrvQueryJobAttributes")
+Interceptor.attach(DrvQueryJobAttributes, {onLeave: function (args) {send("DrvQueryJobAttributes");}});
+
+var DrvResetConfigCache = Module.findExportByName("PS5UI.DLL", "DrvResetConfigCache")
+Interceptor.attach(DrvResetConfigCache, {onLeave: function (args) {send("DrvResetConfigCache");}});
+
+var DrvSplDeviceCaps = Module.findExportByName("PS5UI.DLL", "DrvSplDeviceCaps")
+Interceptor.attach(DrvSplDeviceCaps, {onLeave: function (args) {send("DrvSplDeviceCaps");}});
+
+var DrvUpgradePrinter = Module.findExportByName("PS5UI.DLL", "DrvUpgradePrinter")
+Interceptor.attach(DrvUpgradePrinter, {onLeave: function (args) {send("DrvUpgradePrinter");}});
+
+var MxdcGetPDEVAdjustment = Module.findExportByName("PS5UI.DLL", "MxdcGetPDEVAdjustment")
+Interceptor.attach(MxdcGetPDEVAdjustment, {onLeave: function (args) {send("MxdcGetPDEVAdjustment");}});
+

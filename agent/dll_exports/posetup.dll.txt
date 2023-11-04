@@ -1,0 +1,6 @@
+var PowerCustomizePlatformPowerSettingsOffline = Module.findExportByName("posetup.dll", "PowerCustomizePlatformPowerSettingsOffline")
+Interceptor.attach(PowerCustomizePlatformPowerSettingsOffline, {onLeave: function (args) {send("PowerCustomizePlatformPowerSettingsOffline");}});
+
+var PowerCustomizePlatformPowerSettingsOnline = Module.findExportByName("posetup.dll", "PowerCustomizePlatformPowerSettingsOnline")
+Interceptor.attach(PowerCustomizePlatformPowerSettingsOnline, {onLeave: function (args) {send("PowerCustomizePlatformPowerSettingsOnline");}});
+

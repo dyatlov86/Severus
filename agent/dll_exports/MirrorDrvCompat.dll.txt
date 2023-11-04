@@ -1,0 +1,3 @@
+var MirrorDrvLoadedNotify = Module.findExportByName("MirrorDrvCompat.dll", "MirrorDrvLoadedNotify")
+Interceptor.attach(MirrorDrvLoadedNotify, {onLeave: function (args) {send("MirrorDrvLoadedNotify");}});
+

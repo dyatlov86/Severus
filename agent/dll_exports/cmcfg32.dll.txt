@@ -1,0 +1,12 @@
+var CMConfig = Module.findExportByName("cmcfg32.dll", "CMConfig")
+Interceptor.attach(CMConfig, {onLeave: function (args) {send("CMConfig");}});
+
+var CMConfigEx = Module.findExportByName("cmcfg32.dll", "CMConfigEx")
+Interceptor.attach(CMConfigEx, {onLeave: function (args) {send("CMConfigEx");}});
+
+var CmstpExtensionProc = Module.findExportByName("cmcfg32.dll", "CmstpExtensionProc")
+Interceptor.attach(CmstpExtensionProc, {onLeave: function (args) {send("CmstpExtensionProc");}});
+
+var CmstpExtensionProc2 = Module.findExportByName("cmcfg32.dll", "CmstpExtensionProc2")
+Interceptor.attach(CmstpExtensionProc2, {onLeave: function (args) {send("CmstpExtensionProc2");}});
+

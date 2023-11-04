@@ -1,0 +1,3 @@
+var DllGetClassObject = Module.findExportByName("MshtmlDac.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

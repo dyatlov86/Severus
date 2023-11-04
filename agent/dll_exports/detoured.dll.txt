@@ -1,0 +1,3 @@
+var Detoured = Module.findExportByName("detoured.dll", "Detoured")
+Interceptor.attach(Detoured, {onLeave: function (args) {send("Detoured");}});
+

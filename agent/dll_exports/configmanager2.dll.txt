@@ -1,0 +1,12 @@
+var CmLockSvcDeinit = Module.findExportByName("configmanager2.dll", "CmLockSvcDeinit")
+Interceptor.attach(CmLockSvcDeinit, {onLeave: function (args) {send("CmLockSvcDeinit");}});
+
+var CmLockSvcInit = Module.findExportByName("configmanager2.dll", "CmLockSvcInit")
+Interceptor.attach(CmLockSvcInit, {onLeave: function (args) {send("CmLockSvcInit");}});
+
+var DllCanUnloadNow = Module.findExportByName("configmanager2.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("configmanager2.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+

@@ -1,0 +1,30 @@
+var DuplicateCertificate = Module.findExportByName("RpcRtRemote.dll", "DuplicateCertificate")
+Interceptor.attach(DuplicateCertificate, {onLeave: function (args) {send("DuplicateCertificate");}});
+
+var FreeCertificate = Module.findExportByName("RpcRtRemote.dll", "FreeCertificate")
+Interceptor.attach(FreeCertificate, {onLeave: function (args) {send("FreeCertificate");}});
+
+var GeneratePrincipalName = Module.findExportByName("RpcRtRemote.dll", "GeneratePrincipalName")
+Interceptor.attach(GeneratePrincipalName, {onLeave: function (args) {send("GeneratePrincipalName");}});
+
+var I_RpcExtInitializeExtensionPoint = Module.findExportByName("RpcRtRemote.dll", "I_RpcExtInitializeExtensionPoint")
+Interceptor.attach(I_RpcExtInitializeExtensionPoint, {onLeave: function (args) {send("I_RpcExtInitializeExtensionPoint");}});
+
+var IndicatePortInUse = Module.findExportByName("RpcRtRemote.dll", "IndicatePortInUse")
+Interceptor.attach(IndicatePortInUse, {onLeave: function (args) {send("IndicatePortInUse");}});
+
+var IsMarshaledCredential = Module.findExportByName("RpcRtRemote.dll", "IsMarshaledCredential")
+Interceptor.attach(IsMarshaledCredential, {onLeave: function (args) {send("IsMarshaledCredential");}});
+
+var MatchPrincipalName = Module.findExportByName("RpcRtRemote.dll", "MatchPrincipalName")
+Interceptor.attach(MatchPrincipalName, {onLeave: function (args) {send("MatchPrincipalName");}});
+
+var ProcessAndProvisionCertificate = Module.findExportByName("RpcRtRemote.dll", "ProcessAndProvisionCertificate")
+Interceptor.attach(ProcessAndProvisionCertificate, {onLeave: function (args) {send("ProcessAndProvisionCertificate");}});
+
+var ResetIndicatedPortsInUse = Module.findExportByName("RpcRtRemote.dll", "ResetIndicatedPortsInUse")
+Interceptor.attach(ResetIndicatedPortsInUse, {onLeave: function (args) {send("ResetIndicatedPortsInUse");}});
+
+var ValidatePrincipalName = Module.findExportByName("RpcRtRemote.dll", "ValidatePrincipalName")
+Interceptor.attach(ValidatePrincipalName, {onLeave: function (args) {send("ValidatePrincipalName");}});
+

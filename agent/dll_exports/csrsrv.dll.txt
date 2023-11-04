@@ -1,0 +1,96 @@
+var CsrAddStaticServerThread = Module.findExportByName("csrsrv.dll", "CsrAddStaticServerThread")
+Interceptor.attach(CsrAddStaticServerThread, {onLeave: function (args) {send("CsrAddStaticServerThread");}});
+
+var CsrCallServerFromServer = Module.findExportByName("csrsrv.dll", "CsrCallServerFromServer")
+Interceptor.attach(CsrCallServerFromServer, {onLeave: function (args) {send("CsrCallServerFromServer");}});
+
+var CsrConnectToUser = Module.findExportByName("csrsrv.dll", "CsrConnectToUser")
+Interceptor.attach(CsrConnectToUser, {onLeave: function (args) {send("CsrConnectToUser");}});
+
+var CsrCreateProcess = Module.findExportByName("csrsrv.dll", "CsrCreateProcess")
+Interceptor.attach(CsrCreateProcess, {onLeave: function (args) {send("CsrCreateProcess");}});
+
+var CsrCreateRemoteThread = Module.findExportByName("csrsrv.dll", "CsrCreateRemoteThread")
+Interceptor.attach(CsrCreateRemoteThread, {onLeave: function (args) {send("CsrCreateRemoteThread");}});
+
+var CsrCreateThread = Module.findExportByName("csrsrv.dll", "CsrCreateThread")
+Interceptor.attach(CsrCreateThread, {onLeave: function (args) {send("CsrCreateThread");}});
+
+var CsrDeferredCreateProcess = Module.findExportByName("csrsrv.dll", "CsrDeferredCreateProcess")
+Interceptor.attach(CsrDeferredCreateProcess, {onLeave: function (args) {send("CsrDeferredCreateProcess");}});
+
+var CsrDereferenceProcess = Module.findExportByName("csrsrv.dll", "CsrDereferenceProcess")
+Interceptor.attach(CsrDereferenceProcess, {onLeave: function (args) {send("CsrDereferenceProcess");}});
+
+var CsrDereferenceThread = Module.findExportByName("csrsrv.dll", "CsrDereferenceThread")
+Interceptor.attach(CsrDereferenceThread, {onLeave: function (args) {send("CsrDereferenceThread");}});
+
+var CsrDestroyProcess = Module.findExportByName("csrsrv.dll", "CsrDestroyProcess")
+Interceptor.attach(CsrDestroyProcess, {onLeave: function (args) {send("CsrDestroyProcess");}});
+
+var CsrDestroyThread = Module.findExportByName("csrsrv.dll", "CsrDestroyThread")
+Interceptor.attach(CsrDestroyThread, {onLeave: function (args) {send("CsrDestroyThread");}});
+
+var CsrExecServerThread = Module.findExportByName("csrsrv.dll", "CsrExecServerThread")
+Interceptor.attach(CsrExecServerThread, {onLeave: function (args) {send("CsrExecServerThread");}});
+
+var CsrGetProcessLuid = Module.findExportByName("csrsrv.dll", "CsrGetProcessLuid")
+Interceptor.attach(CsrGetProcessLuid, {onLeave: function (args) {send("CsrGetProcessLuid");}});
+
+var CsrImpersonateClient = Module.findExportByName("csrsrv.dll", "CsrImpersonateClient")
+Interceptor.attach(CsrImpersonateClient, {onLeave: function (args) {send("CsrImpersonateClient");}});
+
+var CsrIsClientSandboxed = Module.findExportByName("csrsrv.dll", "CsrIsClientSandboxed")
+Interceptor.attach(CsrIsClientSandboxed, {onLeave: function (args) {send("CsrIsClientSandboxed");}});
+
+var CsrLockProcessByClientId = Module.findExportByName("csrsrv.dll", "CsrLockProcessByClientId")
+Interceptor.attach(CsrLockProcessByClientId, {onLeave: function (args) {send("CsrLockProcessByClientId");}});
+
+var CsrLockThreadByClientId = Module.findExportByName("csrsrv.dll", "CsrLockThreadByClientId")
+Interceptor.attach(CsrLockThreadByClientId, {onLeave: function (args) {send("CsrLockThreadByClientId");}});
+
+var CsrLockedReferenceProcess = Module.findExportByName("csrsrv.dll", "CsrLockedReferenceProcess")
+Interceptor.attach(CsrLockedReferenceProcess, {onLeave: function (args) {send("CsrLockedReferenceProcess");}});
+
+var CsrQueryApiPort = Module.findExportByName("csrsrv.dll", "CsrQueryApiPort")
+Interceptor.attach(CsrQueryApiPort, {onLeave: function (args) {send("CsrQueryApiPort");}});
+
+var CsrReferenceThread = Module.findExportByName("csrsrv.dll", "CsrReferenceThread")
+Interceptor.attach(CsrReferenceThread, {onLeave: function (args) {send("CsrReferenceThread");}});
+
+var CsrRegisterClientThreadSetup = Module.findExportByName("csrsrv.dll", "CsrRegisterClientThreadSetup")
+Interceptor.attach(CsrRegisterClientThreadSetup, {onLeave: function (args) {send("CsrRegisterClientThreadSetup");}});
+
+var CsrReplyToMessage = Module.findExportByName("csrsrv.dll", "CsrReplyToMessage")
+Interceptor.attach(CsrReplyToMessage, {onLeave: function (args) {send("CsrReplyToMessage");}});
+
+var CsrRevertToSelf = Module.findExportByName("csrsrv.dll", "CsrRevertToSelf")
+Interceptor.attach(CsrRevertToSelf, {onLeave: function (args) {send("CsrRevertToSelf");}});
+
+var CsrServerInitialization = Module.findExportByName("csrsrv.dll", "CsrServerInitialization")
+Interceptor.attach(CsrServerInitialization, {onLeave: function (args) {send("CsrServerInitialization");}});
+
+var CsrSetBackgroundPriority = Module.findExportByName("csrsrv.dll", "CsrSetBackgroundPriority")
+Interceptor.attach(CsrSetBackgroundPriority, {onLeave: function (args) {send("CsrSetBackgroundPriority");}});
+
+var CsrSetForegroundPriority = Module.findExportByName("csrsrv.dll", "CsrSetForegroundPriority")
+Interceptor.attach(CsrSetForegroundPriority, {onLeave: function (args) {send("CsrSetForegroundPriority");}});
+
+var CsrShutdownProcesses = Module.findExportByName("csrsrv.dll", "CsrShutdownProcesses")
+Interceptor.attach(CsrShutdownProcesses, {onLeave: function (args) {send("CsrShutdownProcesses");}});
+
+var CsrUnhandledExceptionFilter = Module.findExportByName("csrsrv.dll", "CsrUnhandledExceptionFilter")
+Interceptor.attach(CsrUnhandledExceptionFilter, {onLeave: function (args) {send("CsrUnhandledExceptionFilter");}});
+
+var CsrUnlockProcess = Module.findExportByName("csrsrv.dll", "CsrUnlockProcess")
+Interceptor.attach(CsrUnlockProcess, {onLeave: function (args) {send("CsrUnlockProcess");}});
+
+var CsrUnlockThread = Module.findExportByName("csrsrv.dll", "CsrUnlockThread")
+Interceptor.attach(CsrUnlockThread, {onLeave: function (args) {send("CsrUnlockThread");}});
+
+var CsrValidateMessageBuffer = Module.findExportByName("csrsrv.dll", "CsrValidateMessageBuffer")
+Interceptor.attach(CsrValidateMessageBuffer, {onLeave: function (args) {send("CsrValidateMessageBuffer");}});
+
+var CsrValidateMessageString = Module.findExportByName("csrsrv.dll", "CsrValidateMessageString")
+Interceptor.attach(CsrValidateMessageString, {onLeave: function (args) {send("CsrValidateMessageString");}});
+

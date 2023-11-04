@@ -1,0 +1,18 @@
+var CSebCreateCustomEvent = Module.findExportByName("CSystemEventsBrokerClient.dll", "CSebCreateCustomEvent")
+Interceptor.attach(CSebCreateCustomEvent, {onLeave: function (args) {send("CSebCreateCustomEvent");}});
+
+var CSebCreatePrivateEvent = Module.findExportByName("CSystemEventsBrokerClient.dll", "CSebCreatePrivateEvent")
+Interceptor.attach(CSebCreatePrivateEvent, {onLeave: function (args) {send("CSebCreatePrivateEvent");}});
+
+var CSebCreateWellKnownEvent = Module.findExportByName("CSystemEventsBrokerClient.dll", "CSebCreateWellKnownEvent")
+Interceptor.attach(CSebCreateWellKnownEvent, {onLeave: function (args) {send("CSebCreateWellKnownEvent");}});
+
+var CSebDeleteEvent = Module.findExportByName("CSystemEventsBrokerClient.dll", "CSebDeleteEvent")
+Interceptor.attach(CSebDeleteEvent, {onLeave: function (args) {send("CSebDeleteEvent");}});
+
+var CSebEnumerateEvents = Module.findExportByName("CSystemEventsBrokerClient.dll", "CSebEnumerateEvents")
+Interceptor.attach(CSebEnumerateEvents, {onLeave: function (args) {send("CSebEnumerateEvents");}});
+
+var CSebQueryEventData = Module.findExportByName("CSystemEventsBrokerClient.dll", "CSebQueryEventData")
+Interceptor.attach(CSebQueryEventData, {onLeave: function (args) {send("CSebQueryEventData");}});
+

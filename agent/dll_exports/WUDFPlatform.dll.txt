@@ -1,0 +1,51 @@
+var ClearPlatformTestingCallbacks = Module.findExportByName("WUDFPlatform.dll", "ClearPlatformTestingCallbacks")
+Interceptor.attach(ClearPlatformTestingCallbacks, {onLeave: function (args) {send("ClearPlatformTestingCallbacks");}});
+
+var DllGetClassObject = Module.findExportByName("WUDFPlatform.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("WUDFPlatform.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GetAndInitializePlatformObject = Module.findExportByName("WUDFPlatform.dll", "GetAndInitializePlatformObject")
+Interceptor.attach(GetAndInitializePlatformObject, {onLeave: function (args) {send("GetAndInitializePlatformObject");}});
+
+var GetPlatformObject = Module.findExportByName("WUDFPlatform.dll", "GetPlatformObject")
+Interceptor.attach(GetPlatformObject, {onLeave: function (args) {send("GetPlatformObject");}});
+
+var InitializePlatformLibrary = Module.findExportByName("WUDFPlatform.dll", "InitializePlatformLibrary")
+Interceptor.attach(InitializePlatformLibrary, {onLeave: function (args) {send("InitializePlatformLibrary");}});
+
+var PlatformSimulateUnhandledException = Module.findExportByName("WUDFPlatform.dll", "PlatformSimulateUnhandledException")
+Interceptor.attach(PlatformSimulateUnhandledException, {onLeave: function (args) {send("PlatformSimulateUnhandledException");}});
+
+var PlatformUnhandledExceptionFilter = Module.findExportByName("WUDFPlatform.dll", "PlatformUnhandledExceptionFilter")
+Interceptor.attach(PlatformUnhandledExceptionFilter, {onLeave: function (args) {send("PlatformUnhandledExceptionFilter");}});
+
+var SetPlatformErrorReportingCallbacks = Module.findExportByName("WUDFPlatform.dll", "SetPlatformErrorReportingCallbacks")
+Interceptor.attach(SetPlatformErrorReportingCallbacks, {onLeave: function (args) {send("SetPlatformErrorReportingCallbacks");}});
+
+var SetPlatformTestingCallbacks = Module.findExportByName("WUDFPlatform.dll", "SetPlatformTestingCallbacks")
+Interceptor.attach(SetPlatformTestingCallbacks, {onLeave: function (args) {send("SetPlatformTestingCallbacks");}});
+
+var ShutdownPlatformLibrary = Module.findExportByName("WUDFPlatform.dll", "ShutdownPlatformLibrary")
+Interceptor.attach(ShutdownPlatformLibrary, {onLeave: function (args) {send("ShutdownPlatformLibrary");}});
+
+var WdfGetLpcInterface = Module.findExportByName("WUDFPlatform.dll", "WdfGetLpcInterface")
+Interceptor.attach(WdfGetLpcInterface, {onLeave: function (args) {send("WdfGetLpcInterface");}});
+
+var WudfDebugBreakPoint = Module.findExportByName("WUDFPlatform.dll", "WudfDebugBreakPoint")
+Interceptor.attach(WudfDebugBreakPoint, {onLeave: function (args) {send("WudfDebugBreakPoint");}});
+
+var WudfIsAnyDebuggerPresent = Module.findExportByName("WUDFPlatform.dll", "WudfIsAnyDebuggerPresent")
+Interceptor.attach(WudfIsAnyDebuggerPresent, {onLeave: function (args) {send("WudfIsAnyDebuggerPresent");}});
+
+var WudfIsKernelDebuggerPresent = Module.findExportByName("WUDFPlatform.dll", "WudfIsKernelDebuggerPresent")
+Interceptor.attach(WudfIsKernelDebuggerPresent, {onLeave: function (args) {send("WudfIsKernelDebuggerPresent");}});
+
+var WudfIsUserDebuggerPresent = Module.findExportByName("WUDFPlatform.dll", "WudfIsUserDebuggerPresent")
+Interceptor.attach(WudfIsUserDebuggerPresent, {onLeave: function (args) {send("WudfIsUserDebuggerPresent");}});
+
+var WudfWaitForDebugger = Module.findExportByName("WUDFPlatform.dll", "WudfWaitForDebugger")
+Interceptor.attach(WudfWaitForDebugger, {onLeave: function (args) {send("WudfWaitForDebugger");}});
+

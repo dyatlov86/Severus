@@ -1,0 +1,15 @@
+var WSManPluginShutdown = Module.findExportByName("wevtfwd.dll", "WSManPluginShutdown")
+Interceptor.attach(WSManPluginShutdown, {onLeave: function (args) {send("WSManPluginShutdown");}});
+
+var WSManPluginStartup = Module.findExportByName("wevtfwd.dll", "WSManPluginStartup")
+Interceptor.attach(WSManPluginStartup, {onLeave: function (args) {send("WSManPluginStartup");}});
+
+var WSManProvPullEvents = Module.findExportByName("wevtfwd.dll", "WSManProvPullEvents")
+Interceptor.attach(WSManProvPullEvents, {onLeave: function (args) {send("WSManProvPullEvents");}});
+
+var WSManProvSubscribe = Module.findExportByName("wevtfwd.dll", "WSManProvSubscribe")
+Interceptor.attach(WSManProvSubscribe, {onLeave: function (args) {send("WSManProvSubscribe");}});
+
+var WSManProvUnsubscribe = Module.findExportByName("wevtfwd.dll", "WSManProvUnsubscribe")
+Interceptor.attach(WSManProvUnsubscribe, {onLeave: function (args) {send("WSManProvUnsubscribe");}});
+

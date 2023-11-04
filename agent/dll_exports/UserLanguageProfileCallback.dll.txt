@@ -1,0 +1,3 @@
+var OnUserProfileChanged = Module.findExportByName("UserLanguageProfileCallback.dll", "OnUserProfileChanged")
+Interceptor.attach(OnUserProfileChanged, {onLeave: function (args) {send("OnUserProfileChanged");}});
+

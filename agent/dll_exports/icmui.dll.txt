@@ -1,0 +1,6 @@
+var SetupColorMatchingA = Module.findExportByName("icmui.dll", "SetupColorMatchingA")
+Interceptor.attach(SetupColorMatchingA, {onLeave: function (args) {send("SetupColorMatchingA");}});
+
+var SetupColorMatchingW = Module.findExportByName("icmui.dll", "SetupColorMatchingW")
+Interceptor.attach(SetupColorMatchingW, {onLeave: function (args) {send("SetupColorMatchingW");}});
+

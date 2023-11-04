@@ -1,0 +1,6 @@
+var NetSetupServiceMain = Module.findExportByName("NetSetupSvc.dll", "NetSetupServiceMain")
+Interceptor.attach(NetSetupServiceMain, {onLeave: function (args) {send("NetSetupServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("NetSetupSvc.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

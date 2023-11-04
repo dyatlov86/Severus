@@ -1,0 +1,12 @@
+var GetDateFormatA = Module.findExportByName("api-ms-win-core-datetime-l1-1-0.dll", "GetDateFormatA")
+Interceptor.attach(GetDateFormatA, {onLeave: function (args) {send("GetDateFormatA");}});
+
+var GetDateFormatW = Module.findExportByName("api-ms-win-core-datetime-l1-1-0.dll", "GetDateFormatW")
+Interceptor.attach(GetDateFormatW, {onLeave: function (args) {send("GetDateFormatW");}});
+
+var GetTimeFormatA = Module.findExportByName("api-ms-win-core-datetime-l1-1-0.dll", "GetTimeFormatA")
+Interceptor.attach(GetTimeFormatA, {onLeave: function (args) {send("GetTimeFormatA");}});
+
+var GetTimeFormatW = Module.findExportByName("api-ms-win-core-datetime-l1-1-0.dll", "GetTimeFormatW")
+Interceptor.attach(GetTimeFormatW, {onLeave: function (args) {send("GetTimeFormatW");}});
+

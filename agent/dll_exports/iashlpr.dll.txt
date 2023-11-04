@@ -1,0 +1,48 @@
+var AllocateAttributes = Module.findExportByName("iashlpr.dll", "AllocateAttributes")
+Interceptor.attach(AllocateAttributes, {onLeave: function (args) {send("AllocateAttributes");}});
+
+var ConfigureIas = Module.findExportByName("iashlpr.dll", "ConfigureIas")
+Interceptor.attach(ConfigureIas, {onLeave: function (args) {send("ConfigureIas");}});
+
+var DllCanUnloadNow = Module.findExportByName("iashlpr.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("iashlpr.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("iashlpr.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("iashlpr.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var DoRequest = Module.findExportByName("iashlpr.dll", "DoRequest")
+Interceptor.attach(DoRequest, {onLeave: function (args) {send("DoRequest");}});
+
+var DoRequestAsync = Module.findExportByName("iashlpr.dll", "DoRequestAsync")
+Interceptor.attach(DoRequestAsync, {onLeave: function (args) {send("DoRequestAsync");}});
+
+var FreeAttributes = Module.findExportByName("iashlpr.dll", "FreeAttributes")
+Interceptor.attach(FreeAttributes, {onLeave: function (args) {send("FreeAttributes");}});
+
+var GetOptionIas = Module.findExportByName("iashlpr.dll", "GetOptionIas")
+Interceptor.attach(GetOptionIas, {onLeave: function (args) {send("GetOptionIas");}});
+
+var InitializeIas = Module.findExportByName("iashlpr.dll", "InitializeIas")
+Interceptor.attach(InitializeIas, {onLeave: function (args) {send("InitializeIas");}});
+
+var MemAllocIas = Module.findExportByName("iashlpr.dll", "MemAllocIas")
+Interceptor.attach(MemAllocIas, {onLeave: function (args) {send("MemAllocIas");}});
+
+var MemFreeIas = Module.findExportByName("iashlpr.dll", "MemFreeIas")
+Interceptor.attach(MemFreeIas, {onLeave: function (args) {send("MemFreeIas");}});
+
+var MemReallocIas = Module.findExportByName("iashlpr.dll", "MemReallocIas")
+Interceptor.attach(MemReallocIas, {onLeave: function (args) {send("MemReallocIas");}});
+
+var SetOptionIas = Module.findExportByName("iashlpr.dll", "SetOptionIas")
+Interceptor.attach(SetOptionIas, {onLeave: function (args) {send("SetOptionIas");}});
+
+var ShutdownIas = Module.findExportByName("iashlpr.dll", "ShutdownIas")
+Interceptor.attach(ShutdownIas, {onLeave: function (args) {send("ShutdownIas");}});
+

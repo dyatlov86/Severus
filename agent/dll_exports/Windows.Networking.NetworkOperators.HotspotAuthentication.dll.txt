@@ -1,0 +1,15 @@
+var CleanupHotspotProfiles = Module.findExportByName("Windows.Networking.NetworkOperators.HotspotAuthentication.dll", "CleanupHotspotProfiles")
+Interceptor.attach(CleanupHotspotProfiles, {onLeave: function (args) {send("CleanupHotspotProfiles");}});
+
+var DllCanUnloadNow = Module.findExportByName("Windows.Networking.NetworkOperators.HotspotAuthentication.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Networking.NetworkOperators.HotspotAuthentication.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Networking.NetworkOperators.HotspotAuthentication.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var RegisterHotspotProfile = Module.findExportByName("Windows.Networking.NetworkOperators.HotspotAuthentication.dll", "RegisterHotspotProfile")
+Interceptor.attach(RegisterHotspotProfile, {onLeave: function (args) {send("RegisterHotspotProfile");}});
+

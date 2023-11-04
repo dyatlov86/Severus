@@ -1,0 +1,30 @@
+var DllCanUnloadNow = Module.findExportByName("WininetPlugin.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("WininetPlugin.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("WininetPlugin.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DllRegisterServer = Module.findExportByName("WininetPlugin.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("WininetPlugin.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var EnumerateCacheEntriesFromIndexDatFile = Module.findExportByName("WininetPlugin.dll", "EnumerateCacheEntriesFromIndexDatFile")
+Interceptor.attach(EnumerateCacheEntriesFromIndexDatFile, {onLeave: function (args) {send("EnumerateCacheEntriesFromIndexDatFile");}});
+
+var EnumerateNewCacheForCurrentUser = Module.findExportByName("WininetPlugin.dll", "EnumerateNewCacheForCurrentUser")
+Interceptor.attach(EnumerateNewCacheForCurrentUser, {onLeave: function (args) {send("EnumerateNewCacheForCurrentUser");}});
+
+var EnumerateOldCacheForCurrentUser = Module.findExportByName("WininetPlugin.dll", "EnumerateOldCacheForCurrentUser")
+Interceptor.attach(EnumerateOldCacheForCurrentUser, {onLeave: function (args) {send("EnumerateOldCacheForCurrentUser");}});
+
+var MigrateCacheForCurrentUser = Module.findExportByName("WininetPlugin.dll", "MigrateCacheForCurrentUser")
+Interceptor.attach(MigrateCacheForCurrentUser, {onLeave: function (args) {send("MigrateCacheForCurrentUser");}});
+
+var MigrateCacheForUser = Module.findExportByName("WininetPlugin.dll", "MigrateCacheForUser")
+Interceptor.attach(MigrateCacheForUser, {onLeave: function (args) {send("MigrateCacheForUser");}});
+

@@ -1,0 +1,3 @@
+var InitializeDebugging = Module.findExportByName("VSD3DRefDebug.dll", "InitializeDebugging")
+Interceptor.attach(InitializeDebugging, {onLeave: function (args) {send("InitializeDebugging");}});
+

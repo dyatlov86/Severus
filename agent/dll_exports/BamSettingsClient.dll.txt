@@ -1,0 +1,15 @@
+var BamCreateSettingsClientLib = Module.findExportByName("BamSettingsClient.dll", "BamCreateSettingsClientLib")
+Interceptor.attach(BamCreateSettingsClientLib, {onLeave: function (args) {send("BamCreateSettingsClientLib");}});
+
+var BamDestroySettingsClientLib = Module.findExportByName("BamSettingsClient.dll", "BamDestroySettingsClientLib")
+Interceptor.attach(BamDestroySettingsClientLib, {onLeave: function (args) {send("BamDestroySettingsClientLib");}});
+
+var BamFreeQueriedApplications = Module.findExportByName("BamSettingsClient.dll", "BamFreeQueriedApplications")
+Interceptor.attach(BamFreeQueriedApplications, {onLeave: function (args) {send("BamFreeQueriedApplications");}});
+
+var BamQueryKnownApplications = Module.findExportByName("BamSettingsClient.dll", "BamQueryKnownApplications")
+Interceptor.attach(BamQueryKnownApplications, {onLeave: function (args) {send("BamQueryKnownApplications");}});
+
+var BamSetUserManagementState = Module.findExportByName("BamSettingsClient.dll", "BamSetUserManagementState")
+Interceptor.attach(BamSetUserManagementState, {onLeave: function (args) {send("BamSetUserManagementState");}});
+

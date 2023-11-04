@@ -1,0 +1,27 @@
+var DllCanUnloadNow = Module.findExportByName("PinEnrollmentHelper.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("PinEnrollmentHelper.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("PinEnrollmentHelper.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var EnablePinForSignIn = Module.findExportByName("PinEnrollmentHelper.dll", "EnablePinForSignIn")
+Interceptor.attach(EnablePinForSignIn, {onLeave: function (args) {send("EnablePinForSignIn");}});
+
+var EnrollEnterpriseKey = Module.findExportByName("PinEnrollmentHelper.dll", "EnrollEnterpriseKey")
+Interceptor.attach(EnrollEnterpriseKey, {onLeave: function (args) {send("EnrollEnterpriseKey");}});
+
+var EnrollPin = Module.findExportByName("PinEnrollmentHelper.dll", "EnrollPin")
+Interceptor.attach(EnrollPin, {onLeave: function (args) {send("EnrollPin");}});
+
+var GetProxyDllInfo = Module.findExportByName("PinEnrollmentHelper.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+
+var IsArsoAllowedByPolicy = Module.findExportByName("PinEnrollmentHelper.dll", "IsArsoAllowedByPolicy")
+Interceptor.attach(IsArsoAllowedByPolicy, {onLeave: function (args) {send("IsArsoAllowedByPolicy");}});
+
+var IsEnrollmentPermittedForLocalAccountWithoutPassword = Module.findExportByName("PinEnrollmentHelper.dll", "IsEnrollmentPermittedForLocalAccountWithoutPassword")
+Interceptor.attach(IsEnrollmentPermittedForLocalAccountWithoutPassword, {onLeave: function (args) {send("IsEnrollmentPermittedForLocalAccountWithoutPassword");}});
+

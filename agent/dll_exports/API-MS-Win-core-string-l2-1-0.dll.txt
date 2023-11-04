@@ -1,0 +1,30 @@
+var CharLowerBuffW = Module.findExportByName("API-MS-Win-core-string-l2-1-0.dll", "CharLowerBuffW")
+Interceptor.attach(CharLowerBuffW, {onLeave: function (args) {send("CharLowerBuffW");}});
+
+var CharLowerW = Module.findExportByName("API-MS-Win-core-string-l2-1-0.dll", "CharLowerW")
+Interceptor.attach(CharLowerW, {onLeave: function (args) {send("CharLowerW");}});
+
+var CharNextW = Module.findExportByName("API-MS-Win-core-string-l2-1-0.dll", "CharNextW")
+Interceptor.attach(CharNextW, {onLeave: function (args) {send("CharNextW");}});
+
+var CharPrevW = Module.findExportByName("API-MS-Win-core-string-l2-1-0.dll", "CharPrevW")
+Interceptor.attach(CharPrevW, {onLeave: function (args) {send("CharPrevW");}});
+
+var CharUpperBuffW = Module.findExportByName("API-MS-Win-core-string-l2-1-0.dll", "CharUpperBuffW")
+Interceptor.attach(CharUpperBuffW, {onLeave: function (args) {send("CharUpperBuffW");}});
+
+var CharUpperW = Module.findExportByName("API-MS-Win-core-string-l2-1-0.dll", "CharUpperW")
+Interceptor.attach(CharUpperW, {onLeave: function (args) {send("CharUpperW");}});
+
+var IsCharAlphaNumericW = Module.findExportByName("API-MS-Win-core-string-l2-1-0.dll", "IsCharAlphaNumericW")
+Interceptor.attach(IsCharAlphaNumericW, {onLeave: function (args) {send("IsCharAlphaNumericW");}});
+
+var IsCharAlphaW = Module.findExportByName("API-MS-Win-core-string-l2-1-0.dll", "IsCharAlphaW")
+Interceptor.attach(IsCharAlphaW, {onLeave: function (args) {send("IsCharAlphaW");}});
+
+var IsCharLowerW = Module.findExportByName("API-MS-Win-core-string-l2-1-0.dll", "IsCharLowerW")
+Interceptor.attach(IsCharLowerW, {onLeave: function (args) {send("IsCharLowerW");}});
+
+var IsCharUpperW = Module.findExportByName("API-MS-Win-core-string-l2-1-0.dll", "IsCharUpperW")
+Interceptor.attach(IsCharUpperW, {onLeave: function (args) {send("IsCharUpperW");}});
+

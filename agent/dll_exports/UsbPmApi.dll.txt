@@ -1,0 +1,21 @@
+var UsbPm_AssignConnectorPowerLevel = Module.findExportByName("UsbPmApi.dll", "UsbPm_AssignConnectorPowerLevel")
+Interceptor.attach(UsbPm_AssignConnectorPowerLevel, {onLeave: function (args) {send("UsbPm_AssignConnectorPowerLevel");}});
+
+var UsbPm_Deregister = Module.findExportByName("UsbPmApi.dll", "UsbPm_Deregister")
+Interceptor.attach(UsbPm_Deregister, {onLeave: function (args) {send("UsbPm_Deregister");}});
+
+var UsbPm_Register = Module.findExportByName("UsbPmApi.dll", "UsbPm_Register")
+Interceptor.attach(UsbPm_Register, {onLeave: function (args) {send("UsbPm_Register");}});
+
+var UsbPm_RetrieveConnectorProperties = Module.findExportByName("UsbPmApi.dll", "UsbPm_RetrieveConnectorProperties")
+Interceptor.attach(UsbPm_RetrieveConnectorProperties, {onLeave: function (args) {send("UsbPm_RetrieveConnectorProperties");}});
+
+var UsbPm_RetrieveConnectorState = Module.findExportByName("UsbPmApi.dll", "UsbPm_RetrieveConnectorState")
+Interceptor.attach(UsbPm_RetrieveConnectorState, {onLeave: function (args) {send("UsbPm_RetrieveConnectorState");}});
+
+var UsbPm_RetrieveHubConnectorHandles = Module.findExportByName("UsbPmApi.dll", "UsbPm_RetrieveHubConnectorHandles")
+Interceptor.attach(UsbPm_RetrieveHubConnectorHandles, {onLeave: function (args) {send("UsbPm_RetrieveHubConnectorHandles");}});
+
+var UsbPm_RetrieveHubProperties = Module.findExportByName("UsbPmApi.dll", "UsbPm_RetrieveHubProperties")
+Interceptor.attach(UsbPm_RetrieveHubProperties, {onLeave: function (args) {send("UsbPm_RetrieveHubProperties");}});
+

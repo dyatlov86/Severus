@@ -1,0 +1,3 @@
+var WinReGetConfig = Module.findExportByName("ReInfo.dll", "WinReGetConfig")
+Interceptor.attach(WinReGetConfig, {onLeave: function (args) {send("WinReGetConfig");}});
+

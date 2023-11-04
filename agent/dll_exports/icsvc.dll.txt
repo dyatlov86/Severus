@@ -1,0 +1,24 @@
+var DllRegisterServer = Module.findExportByName("icsvc.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("icsvc.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GuestInterfaceServiceMain = Module.findExportByName("icsvc.dll", "GuestInterfaceServiceMain")
+Interceptor.attach(GuestInterfaceServiceMain, {onLeave: function (args) {send("GuestInterfaceServiceMain");}});
+
+var HeartbeatServiceMain = Module.findExportByName("icsvc.dll", "HeartbeatServiceMain")
+Interceptor.attach(HeartbeatServiceMain, {onLeave: function (args) {send("HeartbeatServiceMain");}});
+
+var KvpexchangeServiceMain = Module.findExportByName("icsvc.dll", "KvpexchangeServiceMain")
+Interceptor.attach(KvpexchangeServiceMain, {onLeave: function (args) {send("KvpexchangeServiceMain");}});
+
+var ShutdownServiceMain = Module.findExportByName("icsvc.dll", "ShutdownServiceMain")
+Interceptor.attach(ShutdownServiceMain, {onLeave: function (args) {send("ShutdownServiceMain");}});
+
+var TimesyncServiceMain = Module.findExportByName("icsvc.dll", "TimesyncServiceMain")
+Interceptor.attach(TimesyncServiceMain, {onLeave: function (args) {send("TimesyncServiceMain");}});
+
+var VMSessionServiceMain = Module.findExportByName("icsvc.dll", "VMSessionServiceMain")
+Interceptor.attach(VMSessionServiceMain, {onLeave: function (args) {send("VMSessionServiceMain");}});
+

@@ -1,0 +1,54 @@
+var DevQueryPrintEx = Module.findExportByName("UNIDRVUI.DLL", "DevQueryPrintEx")
+Interceptor.attach(DevQueryPrintEx, {onLeave: function (args) {send("DevQueryPrintEx");}});
+
+var DllCanUnloadNow = Module.findExportByName("UNIDRVUI.DLL", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("UNIDRVUI.DLL", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("UNIDRVUI.DLL", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var DrvConvertDevMode = Module.findExportByName("UNIDRVUI.DLL", "DrvConvertDevMode")
+Interceptor.attach(DrvConvertDevMode, {onLeave: function (args) {send("DrvConvertDevMode");}});
+
+var DrvDeviceCapabilities = Module.findExportByName("UNIDRVUI.DLL", "DrvDeviceCapabilities")
+Interceptor.attach(DrvDeviceCapabilities, {onLeave: function (args) {send("DrvDeviceCapabilities");}});
+
+var DrvDevicePropertySheets = Module.findExportByName("UNIDRVUI.DLL", "DrvDevicePropertySheets")
+Interceptor.attach(DrvDevicePropertySheets, {onLeave: function (args) {send("DrvDevicePropertySheets");}});
+
+var DrvDocumentEvent = Module.findExportByName("UNIDRVUI.DLL", "DrvDocumentEvent")
+Interceptor.attach(DrvDocumentEvent, {onLeave: function (args) {send("DrvDocumentEvent");}});
+
+var DrvDocumentPropertySheets = Module.findExportByName("UNIDRVUI.DLL", "DrvDocumentPropertySheets")
+Interceptor.attach(DrvDocumentPropertySheets, {onLeave: function (args) {send("DrvDocumentPropertySheets");}});
+
+var DrvDriverEvent = Module.findExportByName("UNIDRVUI.DLL", "DrvDriverEvent")
+Interceptor.attach(DrvDriverEvent, {onLeave: function (args) {send("DrvDriverEvent");}});
+
+var DrvPopulateFilterServices = Module.findExportByName("UNIDRVUI.DLL", "DrvPopulateFilterServices")
+Interceptor.attach(DrvPopulateFilterServices, {onLeave: function (args) {send("DrvPopulateFilterServices");}});
+
+var DrvPrinterEvent = Module.findExportByName("UNIDRVUI.DLL", "DrvPrinterEvent")
+Interceptor.attach(DrvPrinterEvent, {onLeave: function (args) {send("DrvPrinterEvent");}});
+
+var DrvQueryColorProfile = Module.findExportByName("UNIDRVUI.DLL", "DrvQueryColorProfile")
+Interceptor.attach(DrvQueryColorProfile, {onLeave: function (args) {send("DrvQueryColorProfile");}});
+
+var DrvQueryJobAttributes = Module.findExportByName("UNIDRVUI.DLL", "DrvQueryJobAttributes")
+Interceptor.attach(DrvQueryJobAttributes, {onLeave: function (args) {send("DrvQueryJobAttributes");}});
+
+var DrvResetConfigCache = Module.findExportByName("UNIDRVUI.DLL", "DrvResetConfigCache")
+Interceptor.attach(DrvResetConfigCache, {onLeave: function (args) {send("DrvResetConfigCache");}});
+
+var DrvSplDeviceCaps = Module.findExportByName("UNIDRVUI.DLL", "DrvSplDeviceCaps")
+Interceptor.attach(DrvSplDeviceCaps, {onLeave: function (args) {send("DrvSplDeviceCaps");}});
+
+var DrvUpgradePrinter = Module.findExportByName("UNIDRVUI.DLL", "DrvUpgradePrinter")
+Interceptor.attach(DrvUpgradePrinter, {onLeave: function (args) {send("DrvUpgradePrinter");}});
+
+var MxdcGetPDEVAdjustment = Module.findExportByName("UNIDRVUI.DLL", "MxdcGetPDEVAdjustment")
+Interceptor.attach(MxdcGetPDEVAdjustment, {onLeave: function (args) {send("MxdcGetPDEVAdjustment");}});
+

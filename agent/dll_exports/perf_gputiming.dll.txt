@@ -1,0 +1,42 @@
+var CleanUpViewerSyncObjects = Module.findExportByName("perf_gputiming.dll", "CleanUpViewerSyncObjects")
+Interceptor.attach(CleanUpViewerSyncObjects, {onLeave: function (args) {send("CleanUpViewerSyncObjects");}});
+
+var CreateCallbackSync = Module.findExportByName("perf_gputiming.dll", "CreateCallbackSync")
+Interceptor.attach(CreateCallbackSync, {onLeave: function (args) {send("CreateCallbackSync");}});
+
+var CreateETWViewerSynchronizer = Module.findExportByName("perf_gputiming.dll", "CreateETWViewerSynchronizer")
+Interceptor.attach(CreateETWViewerSynchronizer, {onLeave: function (args) {send("CreateETWViewerSynchronizer");}});
+
+var CreateViewerSync = Module.findExportByName("perf_gputiming.dll", "CreateViewerSync")
+Interceptor.attach(CreateViewerSync, {onLeave: function (args) {send("CreateViewerSync");}});
+
+var DesktopDuplicationProvider = Module.findExportByName("perf_gputiming.dll", "DesktopDuplicationProvider")
+Interceptor.attach(DesktopDuplicationProvider, {onLeave: function (args) {send("DesktopDuplicationProvider");}});
+
+var DisplayFeatureSupport = Module.findExportByName("perf_gputiming.dll", "DisplayFeatureSupport")
+Interceptor.attach(DisplayFeatureSupport, {onLeave: function (args) {send("DisplayFeatureSupport");}});
+
+var DllCanUnloadNow = Module.findExportByName("perf_gputiming.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("perf_gputiming.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("perf_gputiming.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("perf_gputiming.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetFeatureSupport = Module.findExportByName("perf_gputiming.dll", "GetFeatureSupport")
+Interceptor.attach(GetFeatureSupport, {onLeave: function (args) {send("GetFeatureSupport");}});
+
+var GetInfosourceVersion = Module.findExportByName("perf_gputiming.dll", "GetInfosourceVersion")
+Interceptor.attach(GetInfosourceVersion, {onLeave: function (args) {send("GetInfosourceVersion");}});
+
+var GetMarkerNameTable = Module.findExportByName("perf_gputiming.dll", "GetMarkerNameTable")
+Interceptor.attach(GetMarkerNameTable, {onLeave: function (args) {send("GetMarkerNameTable");}});
+
+var UpdateZoomInfo = Module.findExportByName("perf_gputiming.dll", "UpdateZoomInfo")
+Interceptor.attach(UpdateZoomInfo, {onLeave: function (args) {send("UpdateZoomInfo");}});
+

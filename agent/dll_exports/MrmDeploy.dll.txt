@@ -1,0 +1,27 @@
+var DllMain = Module.findExportByName("MrmDeploy.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var GetCanonicalMergedPriFileName = Module.findExportByName("MrmDeploy.dll", "GetCanonicalMergedPriFileName")
+Interceptor.attach(GetCanonicalMergedPriFileName, {onLeave: function (args) {send("GetCanonicalMergedPriFileName");}});
+
+var GetCanonicalMergedPriFileNameForPackages = Module.findExportByName("MrmDeploy.dll", "GetCanonicalMergedPriFileNameForPackages")
+Interceptor.attach(GetCanonicalMergedPriFileNameForPackages, {onLeave: function (args) {send("GetCanonicalMergedPriFileNameForPackages");}});
+
+var GetInitInfoByPackageFullName = Module.findExportByName("MrmDeploy.dll", "GetInitInfoByPackageFullName")
+Interceptor.attach(GetInitInfoByPackageFullName, {onLeave: function (args) {send("GetInitInfoByPackageFullName");}});
+
+var GetOrCreatePriFileForApplicablePackages = Module.findExportByName("MrmDeploy.dll", "GetOrCreatePriFileForApplicablePackages")
+Interceptor.attach(GetOrCreatePriFileForApplicablePackages, {onLeave: function (args) {send("GetOrCreatePriFileForApplicablePackages");}});
+
+var GetOrCreatePriFileForAvailablePackages = Module.findExportByName("MrmDeploy.dll", "GetOrCreatePriFileForAvailablePackages")
+Interceptor.attach(GetOrCreatePriFileForAvailablePackages, {onLeave: function (args) {send("GetOrCreatePriFileForAvailablePackages");}});
+
+var GetOrCreatePriFileForRelatedPackages = Module.findExportByName("MrmDeploy.dll", "GetOrCreatePriFileForRelatedPackages")
+Interceptor.attach(GetOrCreatePriFileForRelatedPackages, {onLeave: function (args) {send("GetOrCreatePriFileForRelatedPackages");}});
+
+var GetPriFileForPackageOnly = Module.findExportByName("MrmDeploy.dll", "GetPriFileForPackageOnly")
+Interceptor.attach(GetPriFileForPackageOnly, {onLeave: function (args) {send("GetPriFileForPackageOnly");}});
+
+var MergeRelatedPriFiles = Module.findExportByName("MrmDeploy.dll", "MergeRelatedPriFiles")
+Interceptor.attach(MergeRelatedPriFiles, {onLeave: function (args) {send("MergeRelatedPriFiles");}});
+

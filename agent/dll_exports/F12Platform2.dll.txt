@@ -1,0 +1,12 @@
+var CreatePlatform = Module.findExportByName("F12Platform2.dll", "CreatePlatform")
+Interceptor.attach(CreatePlatform, {onLeave: function (args) {send("CreatePlatform");}});
+
+var DllCanUnloadNow = Module.findExportByName("F12Platform2.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllRegisterServer = Module.findExportByName("F12Platform2.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("F12Platform2.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

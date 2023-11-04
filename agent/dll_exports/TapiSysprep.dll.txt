@@ -1,0 +1,3 @@
+var TapiSysPrepClean = Module.findExportByName("TapiSysprep.dll", "TapiSysPrepClean")
+Interceptor.attach(TapiSysPrepClean, {onLeave: function (args) {send("TapiSysPrepClean");}});
+

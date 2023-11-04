@@ -1,0 +1,24 @@
+var CompareStringEx = Module.findExportByName("api-ms-win-core-string-l1-1-0.dll", "CompareStringEx")
+Interceptor.attach(CompareStringEx, {onLeave: function (args) {send("CompareStringEx");}});
+
+var CompareStringOrdinal = Module.findExportByName("api-ms-win-core-string-l1-1-0.dll", "CompareStringOrdinal")
+Interceptor.attach(CompareStringOrdinal, {onLeave: function (args) {send("CompareStringOrdinal");}});
+
+var CompareStringW = Module.findExportByName("api-ms-win-core-string-l1-1-0.dll", "CompareStringW")
+Interceptor.attach(CompareStringW, {onLeave: function (args) {send("CompareStringW");}});
+
+var FoldStringW = Module.findExportByName("api-ms-win-core-string-l1-1-0.dll", "FoldStringW")
+Interceptor.attach(FoldStringW, {onLeave: function (args) {send("FoldStringW");}});
+
+var GetStringTypeExW = Module.findExportByName("api-ms-win-core-string-l1-1-0.dll", "GetStringTypeExW")
+Interceptor.attach(GetStringTypeExW, {onLeave: function (args) {send("GetStringTypeExW");}});
+
+var GetStringTypeW = Module.findExportByName("api-ms-win-core-string-l1-1-0.dll", "GetStringTypeW")
+Interceptor.attach(GetStringTypeW, {onLeave: function (args) {send("GetStringTypeW");}});
+
+var MultiByteToWideChar = Module.findExportByName("api-ms-win-core-string-l1-1-0.dll", "MultiByteToWideChar")
+Interceptor.attach(MultiByteToWideChar, {onLeave: function (args) {send("MultiByteToWideChar");}});
+
+var WideCharToMultiByte = Module.findExportByName("api-ms-win-core-string-l1-1-0.dll", "WideCharToMultiByte")
+Interceptor.attach(WideCharToMultiByte, {onLeave: function (args) {send("WideCharToMultiByte");}});
+

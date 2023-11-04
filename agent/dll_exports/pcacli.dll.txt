@@ -1,0 +1,36 @@
+var PcaApiSamplingSetValue = Module.findExportByName("pcacli.dll", "PcaApiSamplingSetValue")
+Interceptor.attach(PcaApiSamplingSetValue, {onLeave: function (args) {send("PcaApiSamplingSetValue");}});
+
+var PcaApiSamplingStart = Module.findExportByName("pcacli.dll", "PcaApiSamplingStart")
+Interceptor.attach(PcaApiSamplingStart, {onLeave: function (args) {send("PcaApiSamplingStart");}});
+
+var PcaApiSamplingStop = Module.findExportByName("pcacli.dll", "PcaApiSamplingStop")
+Interceptor.attach(PcaApiSamplingStop, {onLeave: function (args) {send("PcaApiSamplingStop");}});
+
+var PcaGetFileInfoFromPath = Module.findExportByName("pcacli.dll", "PcaGetFileInfoFromPath")
+Interceptor.attach(PcaGetFileInfoFromPath, {onLeave: function (args) {send("PcaGetFileInfoFromPath");}});
+
+var PcaIsPcaDisabled = Module.findExportByName("pcacli.dll", "PcaIsPcaDisabled")
+Interceptor.attach(PcaIsPcaDisabled, {onLeave: function (args) {send("PcaIsPcaDisabled");}});
+
+var PcaLinkChildProcessToParent = Module.findExportByName("pcacli.dll", "PcaLinkChildProcessToParent")
+Interceptor.attach(PcaLinkChildProcessToParent, {onLeave: function (args) {send("PcaLinkChildProcessToParent");}});
+
+var PcaMonitorProcess = Module.findExportByName("pcacli.dll", "PcaMonitorProcess")
+Interceptor.attach(PcaMonitorProcess, {onLeave: function (args) {send("PcaMonitorProcess");}});
+
+var PcaMonitorProcess2 = Module.findExportByName("pcacli.dll", "PcaMonitorProcess2")
+Interceptor.attach(PcaMonitorProcess2, {onLeave: function (args) {send("PcaMonitorProcess2");}});
+
+var PcaNotifyMsiCustomAction = Module.findExportByName("pcacli.dll", "PcaNotifyMsiCustomAction")
+Interceptor.attach(PcaNotifyMsiCustomAction, {onLeave: function (args) {send("PcaNotifyMsiCustomAction");}});
+
+var PcaNotifyMsiInstall = Module.findExportByName("pcacli.dll", "PcaNotifyMsiInstall")
+Interceptor.attach(PcaNotifyMsiInstall, {onLeave: function (args) {send("PcaNotifyMsiInstall");}});
+
+var PcaNotifyStatusIcon = Module.findExportByName("pcacli.dll", "PcaNotifyStatusIcon")
+Interceptor.attach(PcaNotifyStatusIcon, {onLeave: function (args) {send("PcaNotifyStatusIcon");}});
+
+var PcaSendToService = Module.findExportByName("pcacli.dll", "PcaSendToService")
+Interceptor.attach(PcaSendToService, {onLeave: function (args) {send("PcaSendToService");}});
+

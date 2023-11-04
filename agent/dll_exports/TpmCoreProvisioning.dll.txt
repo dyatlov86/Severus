@@ -1,0 +1,444 @@
+var DllCanUnloadNow = Module.findExportByName("TpmCoreProvisioning.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var Tpm20CanClearUsingAuthPolicy = Module.findExportByName("TpmCoreProvisioning.dll", "Tpm20CanClearUsingAuthPolicy")
+Interceptor.attach(Tpm20CanClearUsingAuthPolicy, {onLeave: function (args) {send("Tpm20CanClearUsingAuthPolicy");}});
+
+var Tpm20ClearUsingAuthPolicy = Module.findExportByName("TpmCoreProvisioning.dll", "Tpm20ClearUsingAuthPolicy")
+Interceptor.attach(Tpm20ClearUsingAuthPolicy, {onLeave: function (args) {send("Tpm20ClearUsingAuthPolicy");}});
+
+var Tpm20GetCompleteManufacturerVersion = Module.findExportByName("TpmCoreProvisioning.dll", "Tpm20GetCompleteManufacturerVersion")
+Interceptor.attach(Tpm20GetCompleteManufacturerVersion, {onLeave: function (args) {send("Tpm20GetCompleteManufacturerVersion");}});
+
+var Tpm20GetResetResumeCount = Module.findExportByName("TpmCoreProvisioning.dll", "Tpm20GetResetResumeCount")
+Interceptor.attach(Tpm20GetResetResumeCount, {onLeave: function (args) {send("Tpm20GetResetResumeCount");}});
+
+var Tpm20IsResetLockoutCountNeeded = Module.findExportByName("TpmCoreProvisioning.dll", "Tpm20IsResetLockoutCountNeeded")
+Interceptor.attach(Tpm20IsResetLockoutCountNeeded, {onLeave: function (args) {send("Tpm20IsResetLockoutCountNeeded");}});
+
+var Tpm20ResetLockoutCountIfNeeded = Module.findExportByName("TpmCoreProvisioning.dll", "Tpm20ResetLockoutCountIfNeeded")
+Interceptor.attach(Tpm20ResetLockoutCountIfNeeded, {onLeave: function (args) {send("Tpm20ResetLockoutCountIfNeeded");}});
+
+var Tpm2CreateWindowsNvBits = Module.findExportByName("TpmCoreProvisioning.dll", "Tpm2CreateWindowsNvBits")
+Interceptor.attach(Tpm2CreateWindowsNvBits, {onLeave: function (args) {send("Tpm2CreateWindowsNvBits");}});
+
+var Tpm2ReadWindowsNvBit = Module.findExportByName("TpmCoreProvisioning.dll", "Tpm2ReadWindowsNvBit")
+Interceptor.attach(Tpm2ReadWindowsNvBit, {onLeave: function (args) {send("Tpm2ReadWindowsNvBit");}});
+
+var Tpm2SetWindowsNvBit = Module.findExportByName("TpmCoreProvisioning.dll", "Tpm2SetWindowsNvBit")
+Interceptor.attach(Tpm2SetWindowsNvBit, {onLeave: function (args) {send("Tpm2SetWindowsNvBit");}});
+
+var TpmAddBlockedCommand = Module.findExportByName("TpmCoreProvisioning.dll", "TpmAddBlockedCommand")
+Interceptor.attach(TpmAddBlockedCommand, {onLeave: function (args) {send("TpmAddBlockedCommand");}});
+
+var TpmCertCheckEkCertMatchedEkPub = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertCheckEkCertMatchedEkPub")
+Interceptor.attach(TpmCertCheckEkCertMatchedEkPub, {onLeave: function (args) {send("TpmCertCheckEkCertMatchedEkPub");}});
+
+var TpmCertDeleteHealthCert = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertDeleteHealthCert")
+Interceptor.attach(TpmCertDeleteHealthCert, {onLeave: function (args) {send("TpmCertDeleteHealthCert");}});
+
+var TpmCertDeleteHealthEndpoint = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertDeleteHealthEndpoint")
+Interceptor.attach(TpmCertDeleteHealthEndpoint, {onLeave: function (args) {send("TpmCertDeleteHealthEndpoint");}});
+
+var TpmCertGetCurrentProtocolVersion = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetCurrentProtocolVersion")
+Interceptor.attach(TpmCertGetCurrentProtocolVersion, {onLeave: function (args) {send("TpmCertGetCurrentProtocolVersion");}});
+
+var TpmCertGetEkCertFromWeb = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetEkCertFromWeb")
+Interceptor.attach(TpmCertGetEkCertFromWeb, {onLeave: function (args) {send("TpmCertGetEkCertFromWeb");}});
+
+var TpmCertGetFormattedHASUrl = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetFormattedHASUrl")
+Interceptor.attach(TpmCertGetFormattedHASUrl, {onLeave: function (args) {send("TpmCertGetFormattedHASUrl");}});
+
+var TpmCertGetFormattedUrl = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetFormattedUrl")
+Interceptor.attach(TpmCertGetFormattedUrl, {onLeave: function (args) {send("TpmCertGetFormattedUrl");}});
+
+var TpmCertGetFwLinkId = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetFwLinkId")
+Interceptor.attach(TpmCertGetFwLinkId, {onLeave: function (args) {send("TpmCertGetFwLinkId");}});
+
+var TpmCertGetHASProtocolVersion = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetHASProtocolVersion")
+Interceptor.attach(TpmCertGetHASProtocolVersion, {onLeave: function (args) {send("TpmCertGetHASProtocolVersion");}});
+
+var TpmCertGetHealthCert = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetHealthCert")
+Interceptor.attach(TpmCertGetHealthCert, {onLeave: function (args) {send("TpmCertGetHealthCert");}});
+
+var TpmCertGetHealthCertFromWeb = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetHealthCertFromWeb")
+Interceptor.attach(TpmCertGetHealthCertFromWeb, {onLeave: function (args) {send("TpmCertGetHealthCertFromWeb");}});
+
+var TpmCertGetHealthCorrelationId = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetHealthCorrelationId")
+Interceptor.attach(TpmCertGetHealthCorrelationId, {onLeave: function (args) {send("TpmCertGetHealthCorrelationId");}});
+
+var TpmCertGetHealthEndpoint = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetHealthEndpoint")
+Interceptor.attach(TpmCertGetHealthEndpoint, {onLeave: function (args) {send("TpmCertGetHealthEndpoint");}});
+
+var TpmCertGetHealthForceRetrieve = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetHealthForceRetrieve")
+Interceptor.attach(TpmCertGetHealthForceRetrieve, {onLeave: function (args) {send("TpmCertGetHealthForceRetrieve");}});
+
+var TpmCertGetHealthStatusCode = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetHealthStatusCode")
+Interceptor.attach(TpmCertGetHealthStatusCode, {onLeave: function (args) {send("TpmCertGetHealthStatusCode");}});
+
+var TpmCertGetHealthStatusRequestBlob = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetHealthStatusRequestBlob")
+Interceptor.attach(TpmCertGetHealthStatusRequestBlob, {onLeave: function (args) {send("TpmCertGetHealthStatusRequestBlob");}});
+
+var TpmCertGetIsActiveZeroExhaust = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetIsActiveZeroExhaust")
+Interceptor.attach(TpmCertGetIsActiveZeroExhaust, {onLeave: function (args) {send("TpmCertGetIsActiveZeroExhaust");}});
+
+var TpmCertGetMaximumSupportedProtocolVersion = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetMaximumSupportedProtocolVersion")
+Interceptor.attach(TpmCertGetMaximumSupportedProtocolVersion, {onLeave: function (args) {send("TpmCertGetMaximumSupportedProtocolVersion");}});
+
+var TpmCertGetPreferredMaximumProtocolVersion = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetPreferredMaximumProtocolVersion")
+Interceptor.attach(TpmCertGetPreferredMaximumProtocolVersion, {onLeave: function (args) {send("TpmCertGetPreferredMaximumProtocolVersion");}});
+
+var TpmCertGetTpmManufacturerId = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetTpmManufacturerId")
+Interceptor.attach(TpmCertGetTpmManufacturerId, {onLeave: function (args) {send("TpmCertGetTpmManufacturerId");}});
+
+var TpmCertGetWindowsAik = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertGetWindowsAik")
+Interceptor.attach(TpmCertGetWindowsAik, {onLeave: function (args) {send("TpmCertGetWindowsAik");}});
+
+var TpmCertInstallEkCertInRegistry = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertInstallEkCertInRegistry")
+Interceptor.attach(TpmCertInstallEkCertInRegistry, {onLeave: function (args) {send("TpmCertInstallEkCertInRegistry");}});
+
+var TpmCertInstallNvEkCerts = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertInstallNvEkCerts")
+Interceptor.attach(TpmCertInstallNvEkCerts, {onLeave: function (args) {send("TpmCertInstallNvEkCerts");}});
+
+var TpmCertIsHealthCertOnBootEnabled = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertIsHealthCertOnBootEnabled")
+Interceptor.attach(TpmCertIsHealthCertOnBootEnabled, {onLeave: function (args) {send("TpmCertIsHealthCertOnBootEnabled");}});
+
+var TpmCertParseHealthResponse = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertParseHealthResponse")
+Interceptor.attach(TpmCertParseHealthResponse, {onLeave: function (args) {send("TpmCertParseHealthResponse");}});
+
+var TpmCertPostHealthXmlData = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertPostHealthXmlData")
+Interceptor.attach(TpmCertPostHealthXmlData, {onLeave: function (args) {send("TpmCertPostHealthXmlData");}});
+
+var TpmCertQueryEkPub = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertQueryEkPub")
+Interceptor.attach(TpmCertQueryEkPub, {onLeave: function (args) {send("TpmCertQueryEkPub");}});
+
+var TpmCertSetEkAttestationOverride = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertSetEkAttestationOverride")
+Interceptor.attach(TpmCertSetEkAttestationOverride, {onLeave: function (args) {send("TpmCertSetEkAttestationOverride");}});
+
+var TpmCertSetHealthEndpoint = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertSetHealthEndpoint")
+Interceptor.attach(TpmCertSetHealthEndpoint, {onLeave: function (args) {send("TpmCertSetHealthEndpoint");}});
+
+var TpmCertSetHealthForceRetrieve = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertSetHealthForceRetrieve")
+Interceptor.attach(TpmCertSetHealthForceRetrieve, {onLeave: function (args) {send("TpmCertSetHealthForceRetrieve");}});
+
+var TpmCertSetHealthStatusCode = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertSetHealthStatusCode")
+Interceptor.attach(TpmCertSetHealthStatusCode, {onLeave: function (args) {send("TpmCertSetHealthStatusCode");}});
+
+var TpmCertSetPreferredMaximumProtocolVersion = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertSetPreferredMaximumProtocolVersion")
+Interceptor.attach(TpmCertSetPreferredMaximumProtocolVersion, {onLeave: function (args) {send("TpmCertSetPreferredMaximumProtocolVersion");}});
+
+var TpmCertVerifyHealthCertFromWeb = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCertVerifyHealthCertFromWeb")
+Interceptor.attach(TpmCertVerifyHealthCertFromWeb, {onLeave: function (args) {send("TpmCertVerifyHealthCertFromWeb");}});
+
+var TpmChangeOwnerAuth = Module.findExportByName("TpmCoreProvisioning.dll", "TpmChangeOwnerAuth")
+Interceptor.attach(TpmChangeOwnerAuth, {onLeave: function (args) {send("TpmChangeOwnerAuth");}});
+
+var TpmCheckCreateWindowsAIK = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCheckCreateWindowsAIK")
+Interceptor.attach(TpmCheckCreateWindowsAIK, {onLeave: function (args) {send("TpmCheckCreateWindowsAIK");}});
+
+var TpmCheckIFXRSAKeyGenVulnerability = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCheckIFXRSAKeyGenVulnerability")
+Interceptor.attach(TpmCheckIFXRSAKeyGenVulnerability, {onLeave: function (args) {send("TpmCheckIFXRSAKeyGenVulnerability");}});
+
+var TpmClear = Module.findExportByName("TpmCoreProvisioning.dll", "TpmClear")
+Interceptor.attach(TpmClear, {onLeave: function (args) {send("TpmClear");}});
+
+var TpmClearUsingPhysicalPresence = Module.findExportByName("TpmCoreProvisioning.dll", "TpmClearUsingPhysicalPresence")
+Interceptor.attach(TpmClearUsingPhysicalPresence, {onLeave: function (args) {send("TpmClearUsingPhysicalPresence");}});
+
+var TpmClearWithPolicyOrPPI = Module.findExportByName("TpmCoreProvisioning.dll", "TpmClearWithPolicyOrPPI")
+Interceptor.attach(TpmClearWithPolicyOrPPI, {onLeave: function (args) {send("TpmClearWithPolicyOrPPI");}});
+
+var TpmConvertToOwnerAuth = Module.findExportByName("TpmCoreProvisioning.dll", "TpmConvertToOwnerAuth")
+Interceptor.attach(TpmConvertToOwnerAuth, {onLeave: function (args) {send("TpmConvertToOwnerAuth");}});
+
+var TpmCreateEndorsementKeyPair = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCreateEndorsementKeyPair")
+Interceptor.attach(TpmCreateEndorsementKeyPair, {onLeave: function (args) {send("TpmCreateEndorsementKeyPair");}});
+
+var TpmCreateHealthAttestationClaim = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCreateHealthAttestationClaim")
+Interceptor.attach(TpmCreateHealthAttestationClaim, {onLeave: function (args) {send("TpmCreateHealthAttestationClaim");}});
+
+var TpmCreateHealthStatusClaim = Module.findExportByName("TpmCoreProvisioning.dll", "TpmCreateHealthStatusClaim")
+Interceptor.attach(TpmCreateHealthStatusClaim, {onLeave: function (args) {send("TpmCreateHealthStatusClaim");}});
+
+var TpmDeleteOwnerAuth = Module.findExportByName("TpmCoreProvisioning.dll", "TpmDeleteOwnerAuth")
+Interceptor.attach(TpmDeleteOwnerAuth, {onLeave: function (args) {send("TpmDeleteOwnerAuth");}});
+
+var TpmDisable = Module.findExportByName("TpmCoreProvisioning.dll", "TpmDisable")
+Interceptor.attach(TpmDisable, {onLeave: function (args) {send("TpmDisable");}});
+
+var TpmDisableAutoProvisioning = Module.findExportByName("TpmCoreProvisioning.dll", "TpmDisableAutoProvisioning")
+Interceptor.attach(TpmDisableAutoProvisioning, {onLeave: function (args) {send("TpmDisableAutoProvisioning");}});
+
+var TpmEKCertValidateAndCleanup = Module.findExportByName("TpmCoreProvisioning.dll", "TpmEKCertValidateAndCleanup")
+Interceptor.attach(TpmEKCertValidateAndCleanup, {onLeave: function (args) {send("TpmEKCertValidateAndCleanup");}});
+
+var TpmEnable = Module.findExportByName("TpmCoreProvisioning.dll", "TpmEnable")
+Interceptor.attach(TpmEnable, {onLeave: function (args) {send("TpmEnable");}});
+
+var TpmEnableAutoProvisioning = Module.findExportByName("TpmCoreProvisioning.dll", "TpmEnableAutoProvisioning")
+Interceptor.attach(TpmEnableAutoProvisioning, {onLeave: function (args) {send("TpmEnableAutoProvisioning");}});
+
+var TpmEnrollWindowsAikCertificate = Module.findExportByName("TpmCoreProvisioning.dll", "TpmEnrollWindowsAikCertificate")
+Interceptor.attach(TpmEnrollWindowsAikCertificate, {onLeave: function (args) {send("TpmEnrollWindowsAikCertificate");}});
+
+var TpmFetchEkCertificate = Module.findExportByName("TpmCoreProvisioning.dll", "TpmFetchEkCertificate")
+Interceptor.attach(TpmFetchEkCertificate, {onLeave: function (args) {send("TpmFetchEkCertificate");}});
+
+var TpmGatherLogs = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGatherLogs")
+Interceptor.attach(TpmGatherLogs, {onLeave: function (args) {send("TpmGatherLogs");}});
+
+var TpmGatherTpmData = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGatherTpmData")
+Interceptor.attach(TpmGatherTpmData, {onLeave: function (args) {send("TpmGatherTpmData");}});
+
+var TpmGetCapLockoutInfo = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetCapLockoutInfo")
+Interceptor.attach(TpmGetCapLockoutInfo, {onLeave: function (args) {send("TpmGetCapLockoutInfo");}});
+
+var TpmGetDeviceInformation = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetDeviceInformation")
+Interceptor.attach(TpmGetDeviceInformation, {onLeave: function (args) {send("TpmGetDeviceInformation");}});
+
+var TpmGetDictionaryAttackParameters = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetDictionaryAttackParameters")
+Interceptor.attach(TpmGetDictionaryAttackParameters, {onLeave: function (args) {send("TpmGetDictionaryAttackParameters");}});
+
+var TpmGetEffectiveGroupPolicyOwnerAuthLevel = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetEffectiveGroupPolicyOwnerAuthLevel")
+Interceptor.attach(TpmGetEffectiveGroupPolicyOwnerAuthLevel, {onLeave: function (args) {send("TpmGetEffectiveGroupPolicyOwnerAuthLevel");}});
+
+var TpmGetEndorsementKeyCertificateState = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetEndorsementKeyCertificateState")
+Interceptor.attach(TpmGetEndorsementKeyCertificateState, {onLeave: function (args) {send("TpmGetEndorsementKeyCertificateState");}});
+
+var TpmGetHealthCertRequest = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetHealthCertRequest")
+Interceptor.attach(TpmGetHealthCertRequest, {onLeave: function (args) {send("TpmGetHealthCertRequest");}});
+
+var TpmGetInstalledEkCertificateCount = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetInstalledEkCertificateCount")
+Interceptor.attach(TpmGetInstalledEkCertificateCount, {onLeave: function (args) {send("TpmGetInstalledEkCertificateCount");}});
+
+var TpmGetNumberOfEkCertsInNV = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetNumberOfEkCertsInNV")
+Interceptor.attach(TpmGetNumberOfEkCertsInNV, {onLeave: function (args) {send("TpmGetNumberOfEkCertsInNV");}});
+
+var TpmGetOrderlyShutdownInfo = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetOrderlyShutdownInfo")
+Interceptor.attach(TpmGetOrderlyShutdownInfo, {onLeave: function (args) {send("TpmGetOrderlyShutdownInfo");}});
+
+var TpmGetOwnerAuth = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetOwnerAuth")
+Interceptor.attach(TpmGetOwnerAuth, {onLeave: function (args) {send("TpmGetOwnerAuth");}});
+
+var TpmGetOwnerAuthForEscrow = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetOwnerAuthForEscrow")
+Interceptor.attach(TpmGetOwnerAuthForEscrow, {onLeave: function (args) {send("TpmGetOwnerAuthForEscrow");}});
+
+var TpmGetOwnerAuthStatus = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetOwnerAuthStatus")
+Interceptor.attach(TpmGetOwnerAuthStatus, {onLeave: function (args) {send("TpmGetOwnerAuthStatus");}});
+
+var TpmGetOwnershipAuthBits = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetOwnershipAuthBits")
+Interceptor.attach(TpmGetOwnershipAuthBits, {onLeave: function (args) {send("TpmGetOwnershipAuthBits");}});
+
+var TpmGetPPIVersion = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetPPIVersion")
+Interceptor.attach(TpmGetPPIVersion, {onLeave: function (args) {send("TpmGetPPIVersion");}});
+
+var TpmGetPhysicalPresenceConfirmationStatus = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetPhysicalPresenceConfirmationStatus")
+Interceptor.attach(TpmGetPhysicalPresenceConfirmationStatus, {onLeave: function (args) {send("TpmGetPhysicalPresenceConfirmationStatus");}});
+
+var TpmGetPhysicalPresenceRequest = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetPhysicalPresenceRequest")
+Interceptor.attach(TpmGetPhysicalPresenceRequest, {onLeave: function (args) {send("TpmGetPhysicalPresenceRequest");}});
+
+var TpmGetPhysicalPresenceResponse = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetPhysicalPresenceResponse")
+Interceptor.attach(TpmGetPhysicalPresenceResponse, {onLeave: function (args) {send("TpmGetPhysicalPresenceResponse");}});
+
+var TpmGetPhysicalPresenceTransition = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetPhysicalPresenceTransition")
+Interceptor.attach(TpmGetPhysicalPresenceTransition, {onLeave: function (args) {send("TpmGetPhysicalPresenceTransition");}});
+
+var TpmGetPssSalt = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetPssSalt")
+Interceptor.attach(TpmGetPssSalt, {onLeave: function (args) {send("TpmGetPssSalt");}});
+
+var TpmGetRandomAuthValue = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetRandomAuthValue")
+Interceptor.attach(TpmGetRandomAuthValue, {onLeave: function (args) {send("TpmGetRandomAuthValue");}});
+
+var TpmGetSignedEKFromVendorCommand = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetSignedEKFromVendorCommand")
+Interceptor.attach(TpmGetSignedEKFromVendorCommand, {onLeave: function (args) {send("TpmGetSignedEKFromVendorCommand");}});
+
+var TpmGetSrkADThumbprint = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetSrkADThumbprint")
+Interceptor.attach(TpmGetSrkADThumbprint, {onLeave: function (args) {send("TpmGetSrkADThumbprint");}});
+
+var TpmGetSrkPublicKeyModulus = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetSrkPublicKeyModulus")
+Interceptor.attach(TpmGetSrkPublicKeyModulus, {onLeave: function (args) {send("TpmGetSrkPublicKeyModulus");}});
+
+var TpmGetTaskCompletionStatus = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetTaskCompletionStatus")
+Interceptor.attach(TpmGetTaskCompletionStatus, {onLeave: function (args) {send("TpmGetTaskCompletionStatus");}});
+
+var TpmGetTcgLog = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetTcgLog")
+Interceptor.attach(TpmGetTcgLog, {onLeave: function (args) {send("TpmGetTcgLog");}});
+
+var TpmGetTpmVersion = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetTpmVersion")
+Interceptor.attach(TpmGetTpmVersion, {onLeave: function (args) {send("TpmGetTpmVersion");}});
+
+var TpmGetVerificationRequest = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGetVerificationRequest")
+Interceptor.attach(TpmGetVerificationRequest, {onLeave: function (args) {send("TpmGetVerificationRequest");}});
+
+var TpmGet_IsPpiVersion12 = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGet_IsPpiVersion12")
+Interceptor.attach(TpmGet_IsPpiVersion12, {onLeave: function (args) {send("TpmGet_IsPpiVersion12");}});
+
+var TpmGet_IsTpmPresent = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGet_IsTpmPresent")
+Interceptor.attach(TpmGet_IsTpmPresent, {onLeave: function (args) {send("TpmGet_IsTpmPresent");}});
+
+var TpmGet_IsTpmVersion20 = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGet_IsTpmVersion20")
+Interceptor.attach(TpmGet_IsTpmVersion20, {onLeave: function (args) {send("TpmGet_IsTpmVersion20");}});
+
+var TpmGet_ManufacturerId = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGet_ManufacturerId")
+Interceptor.attach(TpmGet_ManufacturerId, {onLeave: function (args) {send("TpmGet_ManufacturerId");}});
+
+var TpmGet_ManufacturerVersion = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGet_ManufacturerVersion")
+Interceptor.attach(TpmGet_ManufacturerVersion, {onLeave: function (args) {send("TpmGet_ManufacturerVersion");}});
+
+var TpmGet_ManufacturerVersionInfo = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGet_ManufacturerVersionInfo")
+Interceptor.attach(TpmGet_ManufacturerVersionInfo, {onLeave: function (args) {send("TpmGet_ManufacturerVersionInfo");}});
+
+var TpmGet_PhysicalPresenceVersionInfo = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGet_PhysicalPresenceVersionInfo")
+Interceptor.attach(TpmGet_PhysicalPresenceVersionInfo, {onLeave: function (args) {send("TpmGet_PhysicalPresenceVersionInfo");}});
+
+var TpmGet_SpecVersion = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGet_SpecVersion")
+Interceptor.attach(TpmGet_SpecVersion, {onLeave: function (args) {send("TpmGet_SpecVersion");}});
+
+var TpmGet_TpmVersionInfo = Module.findExportByName("TpmCoreProvisioning.dll", "TpmGet_TpmVersionInfo")
+Interceptor.attach(TpmGet_TpmVersionInfo, {onLeave: function (args) {send("TpmGet_TpmVersionInfo");}});
+
+var TpmHasVulnerableFW = Module.findExportByName("TpmCoreProvisioning.dll", "TpmHasVulnerableFW")
+Interceptor.attach(TpmHasVulnerableFW, {onLeave: function (args) {send("TpmHasVulnerableFW");}});
+
+var TpmHealthCertGetAndVerify = Module.findExportByName("TpmCoreProvisioning.dll", "TpmHealthCertGetAndVerify")
+Interceptor.attach(TpmHealthCertGetAndVerify, {onLeave: function (args) {send("TpmHealthCertGetAndVerify");}});
+
+var TpmImportOwnerAuth = Module.findExportByName("TpmCoreProvisioning.dll", "TpmImportOwnerAuth")
+Interceptor.attach(TpmImportOwnerAuth, {onLeave: function (args) {send("TpmImportOwnerAuth");}});
+
+var TpmIsActivated = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsActivated")
+Interceptor.attach(TpmIsActivated, {onLeave: function (args) {send("TpmIsActivated");}});
+
+var TpmIsAutoProvisioningEnabled = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsAutoProvisioningEnabled")
+Interceptor.attach(TpmIsAutoProvisioningEnabled, {onLeave: function (args) {send("TpmIsAutoProvisioningEnabled");}});
+
+var TpmIsAutoProvisioningEnabledEx = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsAutoProvisioningEnabledEx")
+Interceptor.attach(TpmIsAutoProvisioningEnabledEx, {onLeave: function (args) {send("TpmIsAutoProvisioningEnabledEx");}});
+
+var TpmIsCommandBlocked = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsCommandBlocked")
+Interceptor.attach(TpmIsCommandBlocked, {onLeave: function (args) {send("TpmIsCommandBlocked");}});
+
+var TpmIsCommandPresent = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsCommandPresent")
+Interceptor.attach(TpmIsCommandPresent, {onLeave: function (args) {send("TpmIsCommandPresent");}});
+
+var TpmIsEnabled = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsEnabled")
+Interceptor.attach(TpmIsEnabled, {onLeave: function (args) {send("TpmIsEnabled");}});
+
+var TpmIsEndorsementKeyPairPresent = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsEndorsementKeyPairPresent")
+Interceptor.attach(TpmIsEndorsementKeyPairPresent, {onLeave: function (args) {send("TpmIsEndorsementKeyPairPresent");}});
+
+var TpmIsFIPS = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsFIPS")
+Interceptor.attach(TpmIsFIPS, {onLeave: function (args) {send("TpmIsFIPS");}});
+
+var TpmIsKeyAttestationCapable = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsKeyAttestationCapable")
+Interceptor.attach(TpmIsKeyAttestationCapable, {onLeave: function (args) {send("TpmIsKeyAttestationCapable");}});
+
+var TpmIsLockedOut = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsLockedOut")
+Interceptor.attach(TpmIsLockedOut, {onLeave: function (args) {send("TpmIsLockedOut");}});
+
+var TpmIsOwned = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsOwned")
+Interceptor.attach(TpmIsOwned, {onLeave: function (args) {send("TpmIsOwned");}});
+
+var TpmIsOwnerClearDisabled = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsOwnerClearDisabled")
+Interceptor.attach(TpmIsOwnerClearDisabled, {onLeave: function (args) {send("TpmIsOwnerClearDisabled");}});
+
+var TpmIsOwnershipAllowed = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsOwnershipAllowed")
+Interceptor.attach(TpmIsOwnershipAllowed, {onLeave: function (args) {send("TpmIsOwnershipAllowed");}});
+
+var TpmIsPhysicalClearDisabled = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsPhysicalClearDisabled")
+Interceptor.attach(TpmIsPhysicalClearDisabled, {onLeave: function (args) {send("TpmIsPhysicalClearDisabled");}});
+
+var TpmIsPhysicalPresenceHardwareEnabled = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsPhysicalPresenceHardwareEnabled")
+Interceptor.attach(TpmIsPhysicalPresenceHardwareEnabled, {onLeave: function (args) {send("TpmIsPhysicalPresenceHardwareEnabled");}});
+
+var TpmIsReady = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsReady")
+Interceptor.attach(TpmIsReady, {onLeave: function (args) {send("TpmIsReady");}});
+
+var TpmIsReadyInformation = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsReadyInformation")
+Interceptor.attach(TpmIsReadyInformation, {onLeave: function (args) {send("TpmIsReadyInformation");}});
+
+var TpmIsSrkAuthCompatible = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsSrkAuthCompatible")
+Interceptor.attach(TpmIsSrkAuthCompatible, {onLeave: function (args) {send("TpmIsSrkAuthCompatible");}});
+
+var TpmIsUseLegacyDictionaryAttackParametersPolicySet = Module.findExportByName("TpmCoreProvisioning.dll", "TpmIsUseLegacyDictionaryAttackParametersPolicySet")
+Interceptor.attach(TpmIsUseLegacyDictionaryAttackParametersPolicySet, {onLeave: function (args) {send("TpmIsUseLegacyDictionaryAttackParametersPolicySet");}});
+
+var TpmManufacturerId_From_TpmVersionInfo = Module.findExportByName("TpmCoreProvisioning.dll", "TpmManufacturerId_From_TpmVersionInfo")
+Interceptor.attach(TpmManufacturerId_From_TpmVersionInfo, {onLeave: function (args) {send("TpmManufacturerId_From_TpmVersionInfo");}});
+
+var TpmManufacturerVersionInfo_From_TpmVersionInfo = Module.findExportByName("TpmCoreProvisioning.dll", "TpmManufacturerVersionInfo_From_TpmVersionInfo")
+Interceptor.attach(TpmManufacturerVersionInfo_From_TpmVersionInfo, {onLeave: function (args) {send("TpmManufacturerVersionInfo_From_TpmVersionInfo");}});
+
+var TpmManufacturerVersion_From_TpmVersionInfo = Module.findExportByName("TpmCoreProvisioning.dll", "TpmManufacturerVersion_From_TpmVersionInfo")
+Interceptor.attach(TpmManufacturerVersion_From_TpmVersionInfo, {onLeave: function (args) {send("TpmManufacturerVersion_From_TpmVersionInfo");}});
+
+var TpmOwnerAuthEscrowed = Module.findExportByName("TpmCoreProvisioning.dll", "TpmOwnerAuthEscrowed")
+Interceptor.attach(TpmOwnerAuthEscrowed, {onLeave: function (args) {send("TpmOwnerAuthEscrowed");}});
+
+var TpmPrepForNgc = Module.findExportByName("TpmCoreProvisioning.dll", "TpmPrepForNgc")
+Interceptor.attach(TpmPrepForNgc, {onLeave: function (args) {send("TpmPrepForNgc");}});
+
+var TpmProvision = Module.findExportByName("TpmCoreProvisioning.dll", "TpmProvision")
+Interceptor.attach(TpmProvision, {onLeave: function (args) {send("TpmProvision");}});
+
+var TpmRemoveBlockedCommand = Module.findExportByName("TpmCoreProvisioning.dll", "TpmRemoveBlockedCommand")
+Interceptor.attach(TpmRemoveBlockedCommand, {onLeave: function (args) {send("TpmRemoveBlockedCommand");}});
+
+var TpmRemoveRegisteredWindowsAIK = Module.findExportByName("TpmCoreProvisioning.dll", "TpmRemoveRegisteredWindowsAIK")
+Interceptor.attach(TpmRemoveRegisteredWindowsAIK, {onLeave: function (args) {send("TpmRemoveRegisteredWindowsAIK");}});
+
+var TpmResetAuthLockOut = Module.findExportByName("TpmCoreProvisioning.dll", "TpmResetAuthLockOut")
+Interceptor.attach(TpmResetAuthLockOut, {onLeave: function (args) {send("TpmResetAuthLockOut");}});
+
+var TpmResetSrkAuth = Module.findExportByName("TpmCoreProvisioning.dll", "TpmResetSrkAuth")
+Interceptor.attach(TpmResetSrkAuth, {onLeave: function (args) {send("TpmResetSrkAuth");}});
+
+var TpmRetrieveEkCertOrReschedule = Module.findExportByName("TpmCoreProvisioning.dll", "TpmRetrieveEkCertOrReschedule")
+Interceptor.attach(TpmRetrieveEkCertOrReschedule, {onLeave: function (args) {send("TpmRetrieveEkCertOrReschedule");}});
+
+var TpmRetrieveEkCertificate = Module.findExportByName("TpmCoreProvisioning.dll", "TpmRetrieveEkCertificate")
+Interceptor.attach(TpmRetrieveEkCertificate, {onLeave: function (args) {send("TpmRetrieveEkCertificate");}});
+
+var TpmRetrieveEkCertificateURL = Module.findExportByName("TpmCoreProvisioning.dll", "TpmRetrieveEkCertificateURL")
+Interceptor.attach(TpmRetrieveEkCertificateURL, {onLeave: function (args) {send("TpmRetrieveEkCertificateURL");}});
+
+var TpmRetrieveHealthCertOrReschedule = Module.findExportByName("TpmCoreProvisioning.dll", "TpmRetrieveHealthCertOrReschedule")
+Interceptor.attach(TpmRetrieveHealthCertOrReschedule, {onLeave: function (args) {send("TpmRetrieveHealthCertOrReschedule");}});
+
+var TpmRetrieveHealthCertificate = Module.findExportByName("TpmCoreProvisioning.dll", "TpmRetrieveHealthCertificate")
+Interceptor.attach(TpmRetrieveHealthCertificate, {onLeave: function (args) {send("TpmRetrieveHealthCertificate");}});
+
+var TpmSelfTest = Module.findExportByName("TpmCoreProvisioning.dll", "TpmSelfTest")
+Interceptor.attach(TpmSelfTest, {onLeave: function (args) {send("TpmSelfTest");}});
+
+var TpmSetDictionaryAttackParameters = Module.findExportByName("TpmCoreProvisioning.dll", "TpmSetDictionaryAttackParameters")
+Interceptor.attach(TpmSetDictionaryAttackParameters, {onLeave: function (args) {send("TpmSetDictionaryAttackParameters");}});
+
+var TpmSetInstance = Module.findExportByName("TpmCoreProvisioning.dll", "TpmSetInstance")
+Interceptor.attach(TpmSetInstance, {onLeave: function (args) {send("TpmSetInstance");}});
+
+var TpmSetPhysicalPresenceRequest = Module.findExportByName("TpmCoreProvisioning.dll", "TpmSetPhysicalPresenceRequest")
+Interceptor.attach(TpmSetPhysicalPresenceRequest, {onLeave: function (args) {send("TpmSetPhysicalPresenceRequest");}});
+
+var TpmSetPhysicalPresenceRequestEx = Module.findExportByName("TpmCoreProvisioning.dll", "TpmSetPhysicalPresenceRequestEx")
+Interceptor.attach(TpmSetPhysicalPresenceRequestEx, {onLeave: function (args) {send("TpmSetPhysicalPresenceRequestEx");}});
+
+var TpmSetToLegacyDictionaryAttackParameters = Module.findExportByName("TpmCoreProvisioning.dll", "TpmSetToLegacyDictionaryAttackParameters")
+Interceptor.attach(TpmSetToLegacyDictionaryAttackParameters, {onLeave: function (args) {send("TpmSetToLegacyDictionaryAttackParameters");}});
+
+var TpmSpecVersion_From_TpmVersionInfo = Module.findExportByName("TpmCoreProvisioning.dll", "TpmSpecVersion_From_TpmVersionInfo")
+Interceptor.attach(TpmSpecVersion_From_TpmVersionInfo, {onLeave: function (args) {send("TpmSpecVersion_From_TpmVersionInfo");}});
+
+var TpmTakeOwnership = Module.findExportByName("TpmCoreProvisioning.dll", "TpmTakeOwnership")
+Interceptor.attach(TpmTakeOwnership, {onLeave: function (args) {send("TpmTakeOwnership");}});
+
+var TpmUnattendedSetup = Module.findExportByName("TpmCoreProvisioning.dll", "TpmUnattendedSetup")
+Interceptor.attach(TpmUnattendedSetup, {onLeave: function (args) {send("TpmUnattendedSetup");}});
+
+var TpmVerifyDeviceHealth = Module.findExportByName("TpmCoreProvisioning.dll", "TpmVerifyDeviceHealth")
+Interceptor.attach(TpmVerifyDeviceHealth, {onLeave: function (args) {send("TpmVerifyDeviceHealth");}});
+
+var TpmWriteInformationSnapshotFile = Module.findExportByName("TpmCoreProvisioning.dll", "TpmWriteInformationSnapshotFile")
+Interceptor.attach(TpmWriteInformationSnapshotFile, {onLeave: function (args) {send("TpmWriteInformationSnapshotFile");}});
+

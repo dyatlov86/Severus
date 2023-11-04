@@ -1,0 +1,3 @@
+var DllBidEntryPoint = Module.findExportByName("msdadiag.dll", "DllBidEntryPoint")
+Interceptor.attach(DllBidEntryPoint, {onLeave: function (args) {send("DllBidEntryPoint");}});
+

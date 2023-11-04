@@ -1,0 +1,84 @@
+var AccGetRunningUtilityState = Module.findExportByName("oleacc.dll", "AccGetRunningUtilityState")
+Interceptor.attach(AccGetRunningUtilityState, {onLeave: function (args) {send("AccGetRunningUtilityState");}});
+
+var AccNotifyTouchInteraction = Module.findExportByName("oleacc.dll", "AccNotifyTouchInteraction")
+Interceptor.attach(AccNotifyTouchInteraction, {onLeave: function (args) {send("AccNotifyTouchInteraction");}});
+
+var AccSetRunningUtilityState = Module.findExportByName("oleacc.dll", "AccSetRunningUtilityState")
+Interceptor.attach(AccSetRunningUtilityState, {onLeave: function (args) {send("AccSetRunningUtilityState");}});
+
+var AccessibleChildren = Module.findExportByName("oleacc.dll", "AccessibleChildren")
+Interceptor.attach(AccessibleChildren, {onLeave: function (args) {send("AccessibleChildren");}});
+
+var AccessibleObjectFromEvent = Module.findExportByName("oleacc.dll", "AccessibleObjectFromEvent")
+Interceptor.attach(AccessibleObjectFromEvent, {onLeave: function (args) {send("AccessibleObjectFromEvent");}});
+
+var AccessibleObjectFromPoint = Module.findExportByName("oleacc.dll", "AccessibleObjectFromPoint")
+Interceptor.attach(AccessibleObjectFromPoint, {onLeave: function (args) {send("AccessibleObjectFromPoint");}});
+
+var AccessibleObjectFromWindow = Module.findExportByName("oleacc.dll", "AccessibleObjectFromWindow")
+Interceptor.attach(AccessibleObjectFromWindow, {onLeave: function (args) {send("AccessibleObjectFromWindow");}});
+
+var AccessibleObjectFromWindowTimeout = Module.findExportByName("oleacc.dll", "AccessibleObjectFromWindowTimeout")
+Interceptor.attach(AccessibleObjectFromWindowTimeout, {onLeave: function (args) {send("AccessibleObjectFromWindowTimeout");}});
+
+var CreateStdAccessibleObject = Module.findExportByName("oleacc.dll", "CreateStdAccessibleObject")
+Interceptor.attach(CreateStdAccessibleObject, {onLeave: function (args) {send("CreateStdAccessibleObject");}});
+
+var CreateStdAccessibleProxyA = Module.findExportByName("oleacc.dll", "CreateStdAccessibleProxyA")
+Interceptor.attach(CreateStdAccessibleProxyA, {onLeave: function (args) {send("CreateStdAccessibleProxyA");}});
+
+var CreateStdAccessibleProxyW = Module.findExportByName("oleacc.dll", "CreateStdAccessibleProxyW")
+Interceptor.attach(CreateStdAccessibleProxyW, {onLeave: function (args) {send("CreateStdAccessibleProxyW");}});
+
+var DllCanUnloadNow = Module.findExportByName("oleacc.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("oleacc.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("oleacc.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("oleacc.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetOleaccVersionInfo = Module.findExportByName("oleacc.dll", "GetOleaccVersionInfo")
+Interceptor.attach(GetOleaccVersionInfo, {onLeave: function (args) {send("GetOleaccVersionInfo");}});
+
+var GetProcessHandleFromHwnd = Module.findExportByName("oleacc.dll", "GetProcessHandleFromHwnd")
+Interceptor.attach(GetProcessHandleFromHwnd, {onLeave: function (args) {send("GetProcessHandleFromHwnd");}});
+
+var GetRoleTextA = Module.findExportByName("oleacc.dll", "GetRoleTextA")
+Interceptor.attach(GetRoleTextA, {onLeave: function (args) {send("GetRoleTextA");}});
+
+var GetRoleTextW = Module.findExportByName("oleacc.dll", "GetRoleTextW")
+Interceptor.attach(GetRoleTextW, {onLeave: function (args) {send("GetRoleTextW");}});
+
+var GetStateTextA = Module.findExportByName("oleacc.dll", "GetStateTextA")
+Interceptor.attach(GetStateTextA, {onLeave: function (args) {send("GetStateTextA");}});
+
+var GetStateTextW = Module.findExportByName("oleacc.dll", "GetStateTextW")
+Interceptor.attach(GetStateTextW, {onLeave: function (args) {send("GetStateTextW");}});
+
+var IID_IAccessible = Module.findExportByName("oleacc.dll", "IID_IAccessible")
+Interceptor.attach(IID_IAccessible, {onLeave: function (args) {send("IID_IAccessible");}});
+
+var IID_IAccessibleHandler = Module.findExportByName("oleacc.dll", "IID_IAccessibleHandler")
+Interceptor.attach(IID_IAccessibleHandler, {onLeave: function (args) {send("IID_IAccessibleHandler");}});
+
+var LIBID_Accessibility = Module.findExportByName("oleacc.dll", "LIBID_Accessibility")
+Interceptor.attach(LIBID_Accessibility, {onLeave: function (args) {send("LIBID_Accessibility");}});
+
+var LresultFromObject = Module.findExportByName("oleacc.dll", "LresultFromObject")
+Interceptor.attach(LresultFromObject, {onLeave: function (args) {send("LresultFromObject");}});
+
+var ObjectFromLresult = Module.findExportByName("oleacc.dll", "ObjectFromLresult")
+Interceptor.attach(ObjectFromLresult, {onLeave: function (args) {send("ObjectFromLresult");}});
+
+var PropMgrClient_LookupProp = Module.findExportByName("oleacc.dll", "PropMgrClient_LookupProp")
+Interceptor.attach(PropMgrClient_LookupProp, {onLeave: function (args) {send("PropMgrClient_LookupProp");}});
+
+var WindowFromAccessibleObject = Module.findExportByName("oleacc.dll", "WindowFromAccessibleObject")
+Interceptor.attach(WindowFromAccessibleObject, {onLeave: function (args) {send("WindowFromAccessibleObject");}});
+

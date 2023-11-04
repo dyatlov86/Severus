@@ -1,0 +1,15 @@
+var DLLGetDISMProviderCLSID = Module.findExportByName("FfuProvider.dll", "DLLGetDISMProviderCLSID")
+Interceptor.attach(DLLGetDISMProviderCLSID, {onLeave: function (args) {send("DLLGetDISMProviderCLSID");}});
+
+var DllCanUnloadNow = Module.findExportByName("FfuProvider.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("FfuProvider.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("FfuProvider.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("FfuProvider.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+

@@ -1,0 +1,36 @@
+var CreateAppxPackageInventory = Module.findExportByName("aeinv.dll", "CreateAppxPackageInventory")
+Interceptor.attach(CreateAppxPackageInventory, {onLeave: function (args) {send("CreateAppxPackageInventory");}});
+
+var CreateAppxPackageInventoryExtracted = Module.findExportByName("aeinv.dll", "CreateAppxPackageInventoryExtracted")
+Interceptor.attach(CreateAppxPackageInventoryExtracted, {onLeave: function (args) {send("CreateAppxPackageInventoryExtracted");}});
+
+var CreateSoftwareInventory = Module.findExportByName("aeinv.dll", "CreateSoftwareInventory")
+Interceptor.attach(CreateSoftwareInventory, {onLeave: function (args) {send("CreateSoftwareInventory");}});
+
+var GetAppInfo = Module.findExportByName("aeinv.dll", "GetAppInfo")
+Interceptor.attach(GetAppInfo, {onLeave: function (args) {send("GetAppInfo");}});
+
+var GetAppInfo2 = Module.findExportByName("aeinv.dll", "GetAppInfo2")
+Interceptor.attach(GetAppInfo2, {onLeave: function (args) {send("GetAppInfo2");}});
+
+var GetAppInventory = Module.findExportByName("aeinv.dll", "GetAppInventory")
+Interceptor.attach(GetAppInventory, {onLeave: function (args) {send("GetAppInventory");}});
+
+var GetApplicationKBsTC2 = Module.findExportByName("aeinv.dll", "GetApplicationKBsTC2")
+Interceptor.attach(GetApplicationKBsTC2, {onLeave: function (args) {send("GetApplicationKBsTC2");}});
+
+var GetCachedAppInventory = Module.findExportByName("aeinv.dll", "GetCachedAppInventory")
+Interceptor.attach(GetCachedAppInventory, {onLeave: function (args) {send("GetCachedAppInventory");}});
+
+var GetDetailedAppInventory = Module.findExportByName("aeinv.dll", "GetDetailedAppInventory")
+Interceptor.attach(GetDetailedAppInventory, {onLeave: function (args) {send("GetDetailedAppInventory");}});
+
+var GetDetailedAppInventoryFile = Module.findExportByName("aeinv.dll", "GetDetailedAppInventoryFile")
+Interceptor.attach(GetDetailedAppInventoryFile, {onLeave: function (args) {send("GetDetailedAppInventoryFile");}});
+
+var GetDetailedAppInventoryOrphanFile = Module.findExportByName("aeinv.dll", "GetDetailedAppInventoryOrphanFile")
+Interceptor.attach(GetDetailedAppInventoryOrphanFile, {onLeave: function (args) {send("GetDetailedAppInventoryOrphanFile");}});
+
+var UpdateSoftwareInventoryW = Module.findExportByName("aeinv.dll", "UpdateSoftwareInventoryW")
+Interceptor.attach(UpdateSoftwareInventoryW, {onLeave: function (args) {send("UpdateSoftwareInventoryW");}});
+

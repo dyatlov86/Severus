@@ -1,0 +1,12 @@
+var XblGameSave_GetUserStorageRoot = Module.findExportByName("XblGameSaveExt.dll", "XblGameSave_GetUserStorageRoot")
+Interceptor.attach(XblGameSave_GetUserStorageRoot, {onLeave: function (args) {send("XblGameSave_GetUserStorageRoot");}});
+
+var XblGameSave_NTMSCreateInstance = Module.findExportByName("XblGameSaveExt.dll", "XblGameSave_NTMSCreateInstance")
+Interceptor.attach(XblGameSave_NTMSCreateInstance, {onLeave: function (args) {send("XblGameSave_NTMSCreateInstance");}});
+
+var XblGameSave_NTMSServerStart = Module.findExportByName("XblGameSaveExt.dll", "XblGameSave_NTMSServerStart")
+Interceptor.attach(XblGameSave_NTMSServerStart, {onLeave: function (args) {send("XblGameSave_NTMSServerStart");}});
+
+var XblGameSave_NTMSServerStop = Module.findExportByName("XblGameSaveExt.dll", "XblGameSave_NTMSServerStop")
+Interceptor.attach(XblGameSave_NTMSServerStop, {onLeave: function (args) {send("XblGameSave_NTMSServerStop");}});
+

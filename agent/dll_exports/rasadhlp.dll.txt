@@ -1,0 +1,12 @@
+var AcsHlpNbConnection = Module.findExportByName("rasadhlp.dll", "AcsHlpNbConnection")
+Interceptor.attach(AcsHlpNbConnection, {onLeave: function (args) {send("AcsHlpNbConnection");}});
+
+var WSAttemptAutodialAddr = Module.findExportByName("rasadhlp.dll", "WSAttemptAutodialAddr")
+Interceptor.attach(WSAttemptAutodialAddr, {onLeave: function (args) {send("WSAttemptAutodialAddr");}});
+
+var WSAttemptAutodialName = Module.findExportByName("rasadhlp.dll", "WSAttemptAutodialName")
+Interceptor.attach(WSAttemptAutodialName, {onLeave: function (args) {send("WSAttemptAutodialName");}});
+
+var WSNoteSuccessfulHostentLookup = Module.findExportByName("rasadhlp.dll", "WSNoteSuccessfulHostentLookup")
+Interceptor.attach(WSNoteSuccessfulHostentLookup, {onLeave: function (args) {send("WSNoteSuccessfulHostentLookup");}});
+

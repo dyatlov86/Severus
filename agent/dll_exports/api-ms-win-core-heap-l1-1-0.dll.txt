@@ -1,0 +1,48 @@
+var GetProcessHeap = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "GetProcessHeap")
+Interceptor.attach(GetProcessHeap, {onLeave: function (args) {send("GetProcessHeap");}});
+
+var GetProcessHeaps = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "GetProcessHeaps")
+Interceptor.attach(GetProcessHeaps, {onLeave: function (args) {send("GetProcessHeaps");}});
+
+var HeapAlloc = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapAlloc")
+Interceptor.attach(HeapAlloc, {onLeave: function (args) {send("HeapAlloc");}});
+
+var HeapCompact = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapCompact")
+Interceptor.attach(HeapCompact, {onLeave: function (args) {send("HeapCompact");}});
+
+var HeapCreate = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapCreate")
+Interceptor.attach(HeapCreate, {onLeave: function (args) {send("HeapCreate");}});
+
+var HeapDestroy = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapDestroy")
+Interceptor.attach(HeapDestroy, {onLeave: function (args) {send("HeapDestroy");}});
+
+var HeapFree = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapFree")
+Interceptor.attach(HeapFree, {onLeave: function (args) {send("HeapFree");}});
+
+var HeapLock = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapLock")
+Interceptor.attach(HeapLock, {onLeave: function (args) {send("HeapLock");}});
+
+var HeapQueryInformation = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapQueryInformation")
+Interceptor.attach(HeapQueryInformation, {onLeave: function (args) {send("HeapQueryInformation");}});
+
+var HeapReAlloc = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapReAlloc")
+Interceptor.attach(HeapReAlloc, {onLeave: function (args) {send("HeapReAlloc");}});
+
+var HeapSetInformation = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapSetInformation")
+Interceptor.attach(HeapSetInformation, {onLeave: function (args) {send("HeapSetInformation");}});
+
+var HeapSize = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapSize")
+Interceptor.attach(HeapSize, {onLeave: function (args) {send("HeapSize");}});
+
+var HeapSummary = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapSummary")
+Interceptor.attach(HeapSummary, {onLeave: function (args) {send("HeapSummary");}});
+
+var HeapUnlock = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapUnlock")
+Interceptor.attach(HeapUnlock, {onLeave: function (args) {send("HeapUnlock");}});
+
+var HeapValidate = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapValidate")
+Interceptor.attach(HeapValidate, {onLeave: function (args) {send("HeapValidate");}});
+
+var HeapWalk = Module.findExportByName("api-ms-win-core-heap-l1-1-0.dll", "HeapWalk")
+Interceptor.attach(HeapWalk, {onLeave: function (args) {send("HeapWalk");}});
+

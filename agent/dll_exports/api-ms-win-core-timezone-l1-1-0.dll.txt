@@ -1,0 +1,39 @@
+var EnumDynamicTimeZoneInformation = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "EnumDynamicTimeZoneInformation")
+Interceptor.attach(EnumDynamicTimeZoneInformation, {onLeave: function (args) {send("EnumDynamicTimeZoneInformation");}});
+
+var FileTimeToSystemTime = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "FileTimeToSystemTime")
+Interceptor.attach(FileTimeToSystemTime, {onLeave: function (args) {send("FileTimeToSystemTime");}});
+
+var GetDynamicTimeZoneInformation = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "GetDynamicTimeZoneInformation")
+Interceptor.attach(GetDynamicTimeZoneInformation, {onLeave: function (args) {send("GetDynamicTimeZoneInformation");}});
+
+var GetDynamicTimeZoneInformationEffectiveYears = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "GetDynamicTimeZoneInformationEffectiveYears")
+Interceptor.attach(GetDynamicTimeZoneInformationEffectiveYears, {onLeave: function (args) {send("GetDynamicTimeZoneInformationEffectiveYears");}});
+
+var GetTimeZoneInformation = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "GetTimeZoneInformation")
+Interceptor.attach(GetTimeZoneInformation, {onLeave: function (args) {send("GetTimeZoneInformation");}});
+
+var GetTimeZoneInformationForYear = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "GetTimeZoneInformationForYear")
+Interceptor.attach(GetTimeZoneInformationForYear, {onLeave: function (args) {send("GetTimeZoneInformationForYear");}});
+
+var SetDynamicTimeZoneInformation = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "SetDynamicTimeZoneInformation")
+Interceptor.attach(SetDynamicTimeZoneInformation, {onLeave: function (args) {send("SetDynamicTimeZoneInformation");}});
+
+var SetTimeZoneInformation = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "SetTimeZoneInformation")
+Interceptor.attach(SetTimeZoneInformation, {onLeave: function (args) {send("SetTimeZoneInformation");}});
+
+var SystemTimeToFileTime = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "SystemTimeToFileTime")
+Interceptor.attach(SystemTimeToFileTime, {onLeave: function (args) {send("SystemTimeToFileTime");}});
+
+var SystemTimeToTzSpecificLocalTime = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "SystemTimeToTzSpecificLocalTime")
+Interceptor.attach(SystemTimeToTzSpecificLocalTime, {onLeave: function (args) {send("SystemTimeToTzSpecificLocalTime");}});
+
+var SystemTimeToTzSpecificLocalTimeEx = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "SystemTimeToTzSpecificLocalTimeEx")
+Interceptor.attach(SystemTimeToTzSpecificLocalTimeEx, {onLeave: function (args) {send("SystemTimeToTzSpecificLocalTimeEx");}});
+
+var TzSpecificLocalTimeToSystemTime = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "TzSpecificLocalTimeToSystemTime")
+Interceptor.attach(TzSpecificLocalTimeToSystemTime, {onLeave: function (args) {send("TzSpecificLocalTimeToSystemTime");}});
+
+var TzSpecificLocalTimeToSystemTimeEx = Module.findExportByName("api-ms-win-core-timezone-l1-1-0.dll", "TzSpecificLocalTimeToSystemTimeEx")
+Interceptor.attach(TzSpecificLocalTimeToSystemTimeEx, {onLeave: function (args) {send("TzSpecificLocalTimeToSystemTimeEx");}});
+

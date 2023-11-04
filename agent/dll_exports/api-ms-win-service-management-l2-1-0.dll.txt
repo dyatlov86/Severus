@@ -1,0 +1,24 @@
+var ChangeServiceConfig2W = Module.findExportByName("api-ms-win-service-management-l2-1-0.dll", "ChangeServiceConfig2W")
+Interceptor.attach(ChangeServiceConfig2W, {onLeave: function (args) {send("ChangeServiceConfig2W");}});
+
+var ChangeServiceConfigW = Module.findExportByName("api-ms-win-service-management-l2-1-0.dll", "ChangeServiceConfigW")
+Interceptor.attach(ChangeServiceConfigW, {onLeave: function (args) {send("ChangeServiceConfigW");}});
+
+var NotifyServiceStatusChangeW = Module.findExportByName("api-ms-win-service-management-l2-1-0.dll", "NotifyServiceStatusChangeW")
+Interceptor.attach(NotifyServiceStatusChangeW, {onLeave: function (args) {send("NotifyServiceStatusChangeW");}});
+
+var QueryServiceConfig2W = Module.findExportByName("api-ms-win-service-management-l2-1-0.dll", "QueryServiceConfig2W")
+Interceptor.attach(QueryServiceConfig2W, {onLeave: function (args) {send("QueryServiceConfig2W");}});
+
+var QueryServiceConfigW = Module.findExportByName("api-ms-win-service-management-l2-1-0.dll", "QueryServiceConfigW")
+Interceptor.attach(QueryServiceConfigW, {onLeave: function (args) {send("QueryServiceConfigW");}});
+
+var QueryServiceObjectSecurity = Module.findExportByName("api-ms-win-service-management-l2-1-0.dll", "QueryServiceObjectSecurity")
+Interceptor.attach(QueryServiceObjectSecurity, {onLeave: function (args) {send("QueryServiceObjectSecurity");}});
+
+var QueryServiceStatusEx = Module.findExportByName("api-ms-win-service-management-l2-1-0.dll", "QueryServiceStatusEx")
+Interceptor.attach(QueryServiceStatusEx, {onLeave: function (args) {send("QueryServiceStatusEx");}});
+
+var SetServiceObjectSecurity = Module.findExportByName("api-ms-win-service-management-l2-1-0.dll", "SetServiceObjectSecurity")
+Interceptor.attach(SetServiceObjectSecurity, {onLeave: function (args) {send("SetServiceObjectSecurity");}});
+

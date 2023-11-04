@@ -1,0 +1,30 @@
+var LpkDrawTextEx = Module.findExportByName("lpk.dll", "LpkDrawTextEx")
+Interceptor.attach(LpkDrawTextEx, {onLeave: function (args) {send("LpkDrawTextEx");}});
+
+var LpkEditControl = Module.findExportByName("lpk.dll", "LpkEditControl")
+Interceptor.attach(LpkEditControl, {onLeave: function (args) {send("LpkEditControl");}});
+
+var LpkExtTextOut = Module.findExportByName("lpk.dll", "LpkExtTextOut")
+Interceptor.attach(LpkExtTextOut, {onLeave: function (args) {send("LpkExtTextOut");}});
+
+var LpkGetCharacterPlacement = Module.findExportByName("lpk.dll", "LpkGetCharacterPlacement")
+Interceptor.attach(LpkGetCharacterPlacement, {onLeave: function (args) {send("LpkGetCharacterPlacement");}});
+
+var LpkGetTextExtentExPoint = Module.findExportByName("lpk.dll", "LpkGetTextExtentExPoint")
+Interceptor.attach(LpkGetTextExtentExPoint, {onLeave: function (args) {send("LpkGetTextExtentExPoint");}});
+
+var LpkInitialize = Module.findExportByName("lpk.dll", "LpkInitialize")
+Interceptor.attach(LpkInitialize, {onLeave: function (args) {send("LpkInitialize");}});
+
+var LpkPSMTextOut = Module.findExportByName("lpk.dll", "LpkPSMTextOut")
+Interceptor.attach(LpkPSMTextOut, {onLeave: function (args) {send("LpkPSMTextOut");}});
+
+var LpkTabbedTextOut = Module.findExportByName("lpk.dll", "LpkTabbedTextOut")
+Interceptor.attach(LpkTabbedTextOut, {onLeave: function (args) {send("LpkTabbedTextOut");}});
+
+var LpkUseGDIWidthCache = Module.findExportByName("lpk.dll", "LpkUseGDIWidthCache")
+Interceptor.attach(LpkUseGDIWidthCache, {onLeave: function (args) {send("LpkUseGDIWidthCache");}});
+
+var ftsWordBreak = Module.findExportByName("lpk.dll", "ftsWordBreak")
+Interceptor.attach(ftsWordBreak, {onLeave: function (args) {send("ftsWordBreak");}});
+

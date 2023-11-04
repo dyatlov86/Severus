@@ -1,0 +1,33 @@
+var DllCanUnloadNow = Module.findExportByName("WinTypes.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("WinTypes.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("WinTypes.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var RoCreateNonAgilePropertySet = Module.findExportByName("WinTypes.dll", "RoCreateNonAgilePropertySet")
+Interceptor.attach(RoCreateNonAgilePropertySet, {onLeave: function (args) {send("RoCreateNonAgilePropertySet");}});
+
+var RoCreatePropertySetSerializer = Module.findExportByName("WinTypes.dll", "RoCreatePropertySetSerializer")
+Interceptor.attach(RoCreatePropertySetSerializer, {onLeave: function (args) {send("RoCreatePropertySetSerializer");}});
+
+var RoGetBufferMarshaler = Module.findExportByName("WinTypes.dll", "RoGetBufferMarshaler")
+Interceptor.attach(RoGetBufferMarshaler, {onLeave: function (args) {send("RoGetBufferMarshaler");}});
+
+var RoGetMetaDataFile = Module.findExportByName("WinTypes.dll", "RoGetMetaDataFile")
+Interceptor.attach(RoGetMetaDataFile, {onLeave: function (args) {send("RoGetMetaDataFile");}});
+
+var RoIsApiContractMajorVersionPresent = Module.findExportByName("WinTypes.dll", "RoIsApiContractMajorVersionPresent")
+Interceptor.attach(RoIsApiContractMajorVersionPresent, {onLeave: function (args) {send("RoIsApiContractMajorVersionPresent");}});
+
+var RoIsApiContractPresent = Module.findExportByName("WinTypes.dll", "RoIsApiContractPresent")
+Interceptor.attach(RoIsApiContractPresent, {onLeave: function (args) {send("RoIsApiContractPresent");}});
+
+var RoParseTypeName = Module.findExportByName("WinTypes.dll", "RoParseTypeName")
+Interceptor.attach(RoParseTypeName, {onLeave: function (args) {send("RoParseTypeName");}});
+
+var RoResolveNamespace = Module.findExportByName("WinTypes.dll", "RoResolveNamespace")
+Interceptor.attach(RoResolveNamespace, {onLeave: function (args) {send("RoResolveNamespace");}});
+

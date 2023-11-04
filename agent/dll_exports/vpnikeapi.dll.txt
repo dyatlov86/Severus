@@ -1,0 +1,72 @@
+var CancelProcessEapAuthPacket = Module.findExportByName("vpnikeapi.dll", "CancelProcessEapAuthPacket")
+Interceptor.attach(CancelProcessEapAuthPacket, {onLeave: function (args) {send("CancelProcessEapAuthPacket");}});
+
+var CloseTunnel = Module.findExportByName("vpnikeapi.dll", "CloseTunnel")
+Interceptor.attach(CloseTunnel, {onLeave: function (args) {send("CloseTunnel");}});
+
+var CreateTunnel = Module.findExportByName("vpnikeapi.dll", "CreateTunnel")
+Interceptor.attach(CreateTunnel, {onLeave: function (args) {send("CreateTunnel");}});
+
+var FreeConfigurationPayloadBuffer = Module.findExportByName("vpnikeapi.dll", "FreeConfigurationPayloadBuffer")
+Interceptor.attach(FreeConfigurationPayloadBuffer, {onLeave: function (args) {send("FreeConfigurationPayloadBuffer");}});
+
+var FreeEapAuthAttributes = Module.findExportByName("vpnikeapi.dll", "FreeEapAuthAttributes")
+Interceptor.attach(FreeEapAuthAttributes, {onLeave: function (args) {send("FreeEapAuthAttributes");}});
+
+var FreeEapAuthPacket = Module.findExportByName("vpnikeapi.dll", "FreeEapAuthPacket")
+Interceptor.attach(FreeEapAuthPacket, {onLeave: function (args) {send("FreeEapAuthPacket");}});
+
+var FreeIDPayloadBuffer = Module.findExportByName("vpnikeapi.dll", "FreeIDPayloadBuffer")
+Interceptor.attach(FreeIDPayloadBuffer, {onLeave: function (args) {send("FreeIDPayloadBuffer");}});
+
+var FreeTrafficSelectors = Module.findExportByName("vpnikeapi.dll", "FreeTrafficSelectors")
+Interceptor.attach(FreeTrafficSelectors, {onLeave: function (args) {send("FreeTrafficSelectors");}});
+
+var GetConfigurationPayloadRequest = Module.findExportByName("vpnikeapi.dll", "GetConfigurationPayloadRequest")
+Interceptor.attach(GetConfigurationPayloadRequest, {onLeave: function (args) {send("GetConfigurationPayloadRequest");}});
+
+var GetIDPayload = Module.findExportByName("vpnikeapi.dll", "GetIDPayload")
+Interceptor.attach(GetIDPayload, {onLeave: function (args) {send("GetIDPayload");}});
+
+var GetOptionalIDrPayload = Module.findExportByName("vpnikeapi.dll", "GetOptionalIDrPayload")
+Interceptor.attach(GetOptionalIDrPayload, {onLeave: function (args) {send("GetOptionalIDrPayload");}});
+
+var GetServerEapAuthRequestPacket = Module.findExportByName("vpnikeapi.dll", "GetServerEapAuthRequestPacket")
+Interceptor.attach(GetServerEapAuthRequestPacket, {onLeave: function (args) {send("GetServerEapAuthRequestPacket");}});
+
+var GetTrafficSelectorsRequest = Module.findExportByName("vpnikeapi.dll", "GetTrafficSelectorsRequest")
+Interceptor.attach(GetTrafficSelectorsRequest, {onLeave: function (args) {send("GetTrafficSelectorsRequest");}});
+
+var NewRasIncomingCall = Module.findExportByName("vpnikeapi.dll", "NewRasIncomingCall")
+Interceptor.attach(NewRasIncomingCall, {onLeave: function (args) {send("NewRasIncomingCall");}});
+
+var ProcessAdditionalAddressNotification = Module.findExportByName("vpnikeapi.dll", "ProcessAdditionalAddressNotification")
+Interceptor.attach(ProcessAdditionalAddressNotification, {onLeave: function (args) {send("ProcessAdditionalAddressNotification");}});
+
+var ProcessConfigurationPayloadReply = Module.findExportByName("vpnikeapi.dll", "ProcessConfigurationPayloadReply")
+Interceptor.attach(ProcessConfigurationPayloadReply, {onLeave: function (args) {send("ProcessConfigurationPayloadReply");}});
+
+var ProcessConfigurationPayloadRequest = Module.findExportByName("vpnikeapi.dll", "ProcessConfigurationPayloadRequest")
+Interceptor.attach(ProcessConfigurationPayloadRequest, {onLeave: function (args) {send("ProcessConfigurationPayloadRequest");}});
+
+var ProcessEapAuthPacket = Module.findExportByName("vpnikeapi.dll", "ProcessEapAuthPacket")
+Interceptor.attach(ProcessEapAuthPacket, {onLeave: function (args) {send("ProcessEapAuthPacket");}});
+
+var ProcessTrafficSelectorsReply = Module.findExportByName("vpnikeapi.dll", "ProcessTrafficSelectorsReply")
+Interceptor.attach(ProcessTrafficSelectorsReply, {onLeave: function (args) {send("ProcessTrafficSelectorsReply");}});
+
+var ProcessTrafficSelectorsRequest = Module.findExportByName("vpnikeapi.dll", "ProcessTrafficSelectorsRequest")
+Interceptor.attach(ProcessTrafficSelectorsRequest, {onLeave: function (args) {send("ProcessTrafficSelectorsRequest");}});
+
+var QueryEapAuthAttributes = Module.findExportByName("vpnikeapi.dll", "QueryEapAuthAttributes")
+Interceptor.attach(QueryEapAuthAttributes, {onLeave: function (args) {send("QueryEapAuthAttributes");}});
+
+var RemoveTrafficSelectors = Module.findExportByName("vpnikeapi.dll", "RemoveTrafficSelectors")
+Interceptor.attach(RemoveTrafficSelectors, {onLeave: function (args) {send("RemoveTrafficSelectors");}});
+
+var TunnelAuthDone = Module.findExportByName("vpnikeapi.dll", "TunnelAuthDone")
+Interceptor.attach(TunnelAuthDone, {onLeave: function (args) {send("TunnelAuthDone");}});
+
+var UpdateTunnel = Module.findExportByName("vpnikeapi.dll", "UpdateTunnel")
+Interceptor.attach(UpdateTunnel, {onLeave: function (args) {send("UpdateTunnel");}});
+

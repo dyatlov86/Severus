@@ -1,0 +1,81 @@
+var CreateAndEnqueueNarratorCommandEvent = Module.findExportByName("SRH.dll", "CreateAndEnqueueNarratorCommandEvent")
+Interceptor.attach(CreateAndEnqueueNarratorCommandEvent, {onLeave: function (args) {send("CreateAndEnqueueNarratorCommandEvent");}});
+
+var DllCanUnloadNow = Module.findExportByName("SRH.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("SRH.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("SRH.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllMain = Module.findExportByName("SRH.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var ExecuteNarratorFind = Module.findExportByName("SRH.dll", "ExecuteNarratorFind")
+Interceptor.attach(ExecuteNarratorFind, {onLeave: function (args) {send("ExecuteNarratorFind");}});
+
+var GetInputLearningHelper = Module.findExportByName("SRH.dll", "GetInputLearningHelper")
+Interceptor.attach(GetInputLearningHelper, {onLeave: function (args) {send("GetInputLearningHelper");}});
+
+var IgnoreLeaksInCurrentlyTrackedMemory = Module.findExportByName("SRH.dll", "IgnoreLeaksInCurrentlyTrackedMemory")
+Interceptor.attach(IgnoreLeaksInCurrentlyTrackedMemory, {onLeave: function (args) {send("IgnoreLeaksInCurrentlyTrackedMemory");}});
+
+var Initialize = Module.findExportByName("SRH.dll", "Initialize")
+Interceptor.attach(Initialize, {onLeave: function (args) {send("Initialize");}});
+
+var IsIgnoringLeaks = Module.findExportByName("SRH.dll", "IsIgnoringLeaks")
+Interceptor.attach(IsIgnoringLeaks, {onLeave: function (args) {send("IsIgnoringLeaks");}});
+
+var PostTestCheckForLeaks = Module.findExportByName("SRH.dll", "PostTestCheckForLeaks")
+Interceptor.attach(PostTestCheckForLeaks, {onLeave: function (args) {send("PostTestCheckForLeaks");}});
+
+var RunNarrator = Module.findExportByName("SRH.dll", "RunNarrator")
+Interceptor.attach(RunNarrator, {onLeave: function (args) {send("RunNarrator");}});
+
+var SetBrailleBlinkingCursor = Module.findExportByName("SRH.dll", "SetBrailleBlinkingCursor")
+Interceptor.attach(SetBrailleBlinkingCursor, {onLeave: function (args) {send("SetBrailleBlinkingCursor");}});
+
+var SetBrailleCursorRepresentation = Module.findExportByName("SRH.dll", "SetBrailleCursorRepresentation")
+Interceptor.attach(SetBrailleCursorRepresentation, {onLeave: function (args) {send("SetBrailleCursorRepresentation");}});
+
+var SetBrailleDeviceChangeFromReg = Module.findExportByName("SRH.dll", "SetBrailleDeviceChangeFromReg")
+Interceptor.attach(SetBrailleDeviceChangeFromReg, {onLeave: function (args) {send("SetBrailleDeviceChangeFromReg");}});
+
+var SetBrailleIsEnabledFromReg = Module.findExportByName("SRH.dll", "SetBrailleIsEnabledFromReg")
+Interceptor.attach(SetBrailleIsEnabledFromReg, {onLeave: function (args) {send("SetBrailleIsEnabledFromReg");}});
+
+var SetBrailleTablesFromReg = Module.findExportByName("SRH.dll", "SetBrailleTablesFromReg")
+Interceptor.attach(SetBrailleTablesFromReg, {onLeave: function (args) {send("SetBrailleTablesFromReg");}});
+
+var SetDictationRunning = Module.findExportByName("SRH.dll", "SetDictationRunning")
+Interceptor.attach(SetDictationRunning, {onLeave: function (args) {send("SetDictationRunning");}});
+
+var SetFastKeyEntryEnabled = Module.findExportByName("SRH.dll", "SetFastKeyEntryEnabled")
+Interceptor.attach(SetFastKeyEntryEnabled, {onLeave: function (args) {send("SetFastKeyEntryEnabled");}});
+
+var SetFollowInsertion = Module.findExportByName("SRH.dll", "SetFollowInsertion")
+Interceptor.attach(SetFollowInsertion, {onLeave: function (args) {send("SetFollowInsertion");}});
+
+var SetReadHints = Module.findExportByName("SRH.dll", "SetReadHints")
+Interceptor.attach(SetReadHints, {onLeave: function (args) {send("SetReadHints");}});
+
+var SetScriptingEnabledFromReg = Module.findExportByName("SRH.dll", "SetScriptingEnabledFromReg")
+Interceptor.attach(SetScriptingEnabledFromReg, {onLeave: function (args) {send("SetScriptingEnabledFromReg");}});
+
+var SetVoicePropertiesFromReg = Module.findExportByName("SRH.dll", "SetVoicePropertiesFromReg")
+Interceptor.attach(SetVoicePropertiesFromReg, {onLeave: function (args) {send("SetVoicePropertiesFromReg");}});
+
+var StartIgnoringLeaks = Module.findExportByName("SRH.dll", "StartIgnoringLeaks")
+Interceptor.attach(StartIgnoringLeaks, {onLeave: function (args) {send("StartIgnoringLeaks");}});
+
+var StopIgnoringLeaks = Module.findExportByName("SRH.dll", "StopIgnoringLeaks")
+Interceptor.attach(StopIgnoringLeaks, {onLeave: function (args) {send("StopIgnoringLeaks");}});
+
+var UpdateErrorLoggingCallback = Module.findExportByName("SRH.dll", "UpdateErrorLoggingCallback")
+Interceptor.attach(UpdateErrorLoggingCallback, {onLeave: function (args) {send("UpdateErrorLoggingCallback");}});
+
+var UpdateNarratorSettingsFromReg = Module.findExportByName("SRH.dll", "UpdateNarratorSettingsFromReg")
+Interceptor.attach(UpdateNarratorSettingsFromReg, {onLeave: function (args) {send("UpdateNarratorSettingsFromReg");}});
+

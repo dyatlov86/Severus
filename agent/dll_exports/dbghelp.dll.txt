@@ -1,0 +1,753 @@
+var DbgHelpCreateUserDump = Module.findExportByName("dbghelp.dll", "DbgHelpCreateUserDump")
+Interceptor.attach(DbgHelpCreateUserDump, {onLeave: function (args) {send("DbgHelpCreateUserDump");}});
+
+var DbgHelpCreateUserDumpW = Module.findExportByName("dbghelp.dll", "DbgHelpCreateUserDumpW")
+Interceptor.attach(DbgHelpCreateUserDumpW, {onLeave: function (args) {send("DbgHelpCreateUserDumpW");}});
+
+var EnumDirTree = Module.findExportByName("dbghelp.dll", "EnumDirTree")
+Interceptor.attach(EnumDirTree, {onLeave: function (args) {send("EnumDirTree");}});
+
+var EnumDirTreeW = Module.findExportByName("dbghelp.dll", "EnumDirTreeW")
+Interceptor.attach(EnumDirTreeW, {onLeave: function (args) {send("EnumDirTreeW");}});
+
+var EnumerateLoadedModules = Module.findExportByName("dbghelp.dll", "EnumerateLoadedModules")
+Interceptor.attach(EnumerateLoadedModules, {onLeave: function (args) {send("EnumerateLoadedModules");}});
+
+var EnumerateLoadedModules64 = Module.findExportByName("dbghelp.dll", "EnumerateLoadedModules64")
+Interceptor.attach(EnumerateLoadedModules64, {onLeave: function (args) {send("EnumerateLoadedModules64");}});
+
+var EnumerateLoadedModulesEx = Module.findExportByName("dbghelp.dll", "EnumerateLoadedModulesEx")
+Interceptor.attach(EnumerateLoadedModulesEx, {onLeave: function (args) {send("EnumerateLoadedModulesEx");}});
+
+var EnumerateLoadedModulesExW = Module.findExportByName("dbghelp.dll", "EnumerateLoadedModulesExW")
+Interceptor.attach(EnumerateLoadedModulesExW, {onLeave: function (args) {send("EnumerateLoadedModulesExW");}});
+
+var EnumerateLoadedModulesW64 = Module.findExportByName("dbghelp.dll", "EnumerateLoadedModulesW64")
+Interceptor.attach(EnumerateLoadedModulesW64, {onLeave: function (args) {send("EnumerateLoadedModulesW64");}});
+
+var ExtensionApiVersion = Module.findExportByName("dbghelp.dll", "ExtensionApiVersion")
+Interceptor.attach(ExtensionApiVersion, {onLeave: function (args) {send("ExtensionApiVersion");}});
+
+var FindDebugInfoFile = Module.findExportByName("dbghelp.dll", "FindDebugInfoFile")
+Interceptor.attach(FindDebugInfoFile, {onLeave: function (args) {send("FindDebugInfoFile");}});
+
+var FindDebugInfoFileEx = Module.findExportByName("dbghelp.dll", "FindDebugInfoFileEx")
+Interceptor.attach(FindDebugInfoFileEx, {onLeave: function (args) {send("FindDebugInfoFileEx");}});
+
+var FindDebugInfoFileExW = Module.findExportByName("dbghelp.dll", "FindDebugInfoFileExW")
+Interceptor.attach(FindDebugInfoFileExW, {onLeave: function (args) {send("FindDebugInfoFileExW");}});
+
+var FindExecutableImage = Module.findExportByName("dbghelp.dll", "FindExecutableImage")
+Interceptor.attach(FindExecutableImage, {onLeave: function (args) {send("FindExecutableImage");}});
+
+var FindExecutableImageEx = Module.findExportByName("dbghelp.dll", "FindExecutableImageEx")
+Interceptor.attach(FindExecutableImageEx, {onLeave: function (args) {send("FindExecutableImageEx");}});
+
+var FindExecutableImageExW = Module.findExportByName("dbghelp.dll", "FindExecutableImageExW")
+Interceptor.attach(FindExecutableImageExW, {onLeave: function (args) {send("FindExecutableImageExW");}});
+
+var FindFileInPath = Module.findExportByName("dbghelp.dll", "FindFileInPath")
+Interceptor.attach(FindFileInPath, {onLeave: function (args) {send("FindFileInPath");}});
+
+var FindFileInSearchPath = Module.findExportByName("dbghelp.dll", "FindFileInSearchPath")
+Interceptor.attach(FindFileInSearchPath, {onLeave: function (args) {send("FindFileInSearchPath");}});
+
+var GetSymLoadError = Module.findExportByName("dbghelp.dll", "GetSymLoadError")
+Interceptor.attach(GetSymLoadError, {onLeave: function (args) {send("GetSymLoadError");}});
+
+var GetTimestampForLoadedLibrary = Module.findExportByName("dbghelp.dll", "GetTimestampForLoadedLibrary")
+Interceptor.attach(GetTimestampForLoadedLibrary, {onLeave: function (args) {send("GetTimestampForLoadedLibrary");}});
+
+var ImageDirectoryEntryToData = Module.findExportByName("dbghelp.dll", "ImageDirectoryEntryToData")
+Interceptor.attach(ImageDirectoryEntryToData, {onLeave: function (args) {send("ImageDirectoryEntryToData");}});
+
+var ImageDirectoryEntryToDataEx = Module.findExportByName("dbghelp.dll", "ImageDirectoryEntryToDataEx")
+Interceptor.attach(ImageDirectoryEntryToDataEx, {onLeave: function (args) {send("ImageDirectoryEntryToDataEx");}});
+
+var ImageNtHeader = Module.findExportByName("dbghelp.dll", "ImageNtHeader")
+Interceptor.attach(ImageNtHeader, {onLeave: function (args) {send("ImageNtHeader");}});
+
+var ImageRvaToSection = Module.findExportByName("dbghelp.dll", "ImageRvaToSection")
+Interceptor.attach(ImageRvaToSection, {onLeave: function (args) {send("ImageRvaToSection");}});
+
+var ImageRvaToVa = Module.findExportByName("dbghelp.dll", "ImageRvaToVa")
+Interceptor.attach(ImageRvaToVa, {onLeave: function (args) {send("ImageRvaToVa");}});
+
+var ImagehlpApiVersion = Module.findExportByName("dbghelp.dll", "ImagehlpApiVersion")
+Interceptor.attach(ImagehlpApiVersion, {onLeave: function (args) {send("ImagehlpApiVersion");}});
+
+var ImagehlpApiVersionEx = Module.findExportByName("dbghelp.dll", "ImagehlpApiVersionEx")
+Interceptor.attach(ImagehlpApiVersionEx, {onLeave: function (args) {send("ImagehlpApiVersionEx");}});
+
+var MakeSureDirectoryPathExists = Module.findExportByName("dbghelp.dll", "MakeSureDirectoryPathExists")
+Interceptor.attach(MakeSureDirectoryPathExists, {onLeave: function (args) {send("MakeSureDirectoryPathExists");}});
+
+var MiniDumpReadDumpStream = Module.findExportByName("dbghelp.dll", "MiniDumpReadDumpStream")
+Interceptor.attach(MiniDumpReadDumpStream, {onLeave: function (args) {send("MiniDumpReadDumpStream");}});
+
+var MiniDumpWriteDump = Module.findExportByName("dbghelp.dll", "MiniDumpWriteDump")
+Interceptor.attach(MiniDumpWriteDump, {onLeave: function (args) {send("MiniDumpWriteDump");}});
+
+var RangeMapAddPeImageSections = Module.findExportByName("dbghelp.dll", "RangeMapAddPeImageSections")
+Interceptor.attach(RangeMapAddPeImageSections, {onLeave: function (args) {send("RangeMapAddPeImageSections");}});
+
+var RangeMapCreate = Module.findExportByName("dbghelp.dll", "RangeMapCreate")
+Interceptor.attach(RangeMapCreate, {onLeave: function (args) {send("RangeMapCreate");}});
+
+var RangeMapFree = Module.findExportByName("dbghelp.dll", "RangeMapFree")
+Interceptor.attach(RangeMapFree, {onLeave: function (args) {send("RangeMapFree");}});
+
+var RangeMapRead = Module.findExportByName("dbghelp.dll", "RangeMapRead")
+Interceptor.attach(RangeMapRead, {onLeave: function (args) {send("RangeMapRead");}});
+
+var RangeMapRemove = Module.findExportByName("dbghelp.dll", "RangeMapRemove")
+Interceptor.attach(RangeMapRemove, {onLeave: function (args) {send("RangeMapRemove");}});
+
+var RangeMapWrite = Module.findExportByName("dbghelp.dll", "RangeMapWrite")
+Interceptor.attach(RangeMapWrite, {onLeave: function (args) {send("RangeMapWrite");}});
+
+var RemoveInvalidModuleList = Module.findExportByName("dbghelp.dll", "RemoveInvalidModuleList")
+Interceptor.attach(RemoveInvalidModuleList, {onLeave: function (args) {send("RemoveInvalidModuleList");}});
+
+var ReportSymbolLoadSummary = Module.findExportByName("dbghelp.dll", "ReportSymbolLoadSummary")
+Interceptor.attach(ReportSymbolLoadSummary, {onLeave: function (args) {send("ReportSymbolLoadSummary");}});
+
+var SearchTreeForFile = Module.findExportByName("dbghelp.dll", "SearchTreeForFile")
+Interceptor.attach(SearchTreeForFile, {onLeave: function (args) {send("SearchTreeForFile");}});
+
+var SearchTreeForFileW = Module.findExportByName("dbghelp.dll", "SearchTreeForFileW")
+Interceptor.attach(SearchTreeForFileW, {onLeave: function (args) {send("SearchTreeForFileW");}});
+
+var SetCheckUserInterruptShared = Module.findExportByName("dbghelp.dll", "SetCheckUserInterruptShared")
+Interceptor.attach(SetCheckUserInterruptShared, {onLeave: function (args) {send("SetCheckUserInterruptShared");}});
+
+var SetSymLoadError = Module.findExportByName("dbghelp.dll", "SetSymLoadError")
+Interceptor.attach(SetSymLoadError, {onLeave: function (args) {send("SetSymLoadError");}});
+
+var StackWalk = Module.findExportByName("dbghelp.dll", "StackWalk")
+Interceptor.attach(StackWalk, {onLeave: function (args) {send("StackWalk");}});
+
+var StackWalk2 = Module.findExportByName("dbghelp.dll", "StackWalk2")
+Interceptor.attach(StackWalk2, {onLeave: function (args) {send("StackWalk2");}});
+
+var StackWalk64 = Module.findExportByName("dbghelp.dll", "StackWalk64")
+Interceptor.attach(StackWalk64, {onLeave: function (args) {send("StackWalk64");}});
+
+var StackWalkEx = Module.findExportByName("dbghelp.dll", "StackWalkEx")
+Interceptor.attach(StackWalkEx, {onLeave: function (args) {send("StackWalkEx");}});
+
+var SymAddSourceStream = Module.findExportByName("dbghelp.dll", "SymAddSourceStream")
+Interceptor.attach(SymAddSourceStream, {onLeave: function (args) {send("SymAddSourceStream");}});
+
+var SymAddSourceStreamA = Module.findExportByName("dbghelp.dll", "SymAddSourceStreamA")
+Interceptor.attach(SymAddSourceStreamA, {onLeave: function (args) {send("SymAddSourceStreamA");}});
+
+var SymAddSourceStreamW = Module.findExportByName("dbghelp.dll", "SymAddSourceStreamW")
+Interceptor.attach(SymAddSourceStreamW, {onLeave: function (args) {send("SymAddSourceStreamW");}});
+
+var SymAddSymbol = Module.findExportByName("dbghelp.dll", "SymAddSymbol")
+Interceptor.attach(SymAddSymbol, {onLeave: function (args) {send("SymAddSymbol");}});
+
+var SymAddSymbolW = Module.findExportByName("dbghelp.dll", "SymAddSymbolW")
+Interceptor.attach(SymAddSymbolW, {onLeave: function (args) {send("SymAddSymbolW");}});
+
+var SymAddrIncludeInlineTrace = Module.findExportByName("dbghelp.dll", "SymAddrIncludeInlineTrace")
+Interceptor.attach(SymAddrIncludeInlineTrace, {onLeave: function (args) {send("SymAddrIncludeInlineTrace");}});
+
+var SymAllocDiaString = Module.findExportByName("dbghelp.dll", "SymAllocDiaString")
+Interceptor.attach(SymAllocDiaString, {onLeave: function (args) {send("SymAllocDiaString");}});
+
+var SymCleanup = Module.findExportByName("dbghelp.dll", "SymCleanup")
+Interceptor.attach(SymCleanup, {onLeave: function (args) {send("SymCleanup");}});
+
+var SymCompareInlineTrace = Module.findExportByName("dbghelp.dll", "SymCompareInlineTrace")
+Interceptor.attach(SymCompareInlineTrace, {onLeave: function (args) {send("SymCompareInlineTrace");}});
+
+var SymDeleteSymbol = Module.findExportByName("dbghelp.dll", "SymDeleteSymbol")
+Interceptor.attach(SymDeleteSymbol, {onLeave: function (args) {send("SymDeleteSymbol");}});
+
+var SymDeleteSymbolW = Module.findExportByName("dbghelp.dll", "SymDeleteSymbolW")
+Interceptor.attach(SymDeleteSymbolW, {onLeave: function (args) {send("SymDeleteSymbolW");}});
+
+var SymEnumLines = Module.findExportByName("dbghelp.dll", "SymEnumLines")
+Interceptor.attach(SymEnumLines, {onLeave: function (args) {send("SymEnumLines");}});
+
+var SymEnumLinesW = Module.findExportByName("dbghelp.dll", "SymEnumLinesW")
+Interceptor.attach(SymEnumLinesW, {onLeave: function (args) {send("SymEnumLinesW");}});
+
+var SymEnumProcesses = Module.findExportByName("dbghelp.dll", "SymEnumProcesses")
+Interceptor.attach(SymEnumProcesses, {onLeave: function (args) {send("SymEnumProcesses");}});
+
+var SymEnumSourceFileTokens = Module.findExportByName("dbghelp.dll", "SymEnumSourceFileTokens")
+Interceptor.attach(SymEnumSourceFileTokens, {onLeave: function (args) {send("SymEnumSourceFileTokens");}});
+
+var SymEnumSourceFiles = Module.findExportByName("dbghelp.dll", "SymEnumSourceFiles")
+Interceptor.attach(SymEnumSourceFiles, {onLeave: function (args) {send("SymEnumSourceFiles");}});
+
+var SymEnumSourceFilesW = Module.findExportByName("dbghelp.dll", "SymEnumSourceFilesW")
+Interceptor.attach(SymEnumSourceFilesW, {onLeave: function (args) {send("SymEnumSourceFilesW");}});
+
+var SymEnumSourceLines = Module.findExportByName("dbghelp.dll", "SymEnumSourceLines")
+Interceptor.attach(SymEnumSourceLines, {onLeave: function (args) {send("SymEnumSourceLines");}});
+
+var SymEnumSourceLinesW = Module.findExportByName("dbghelp.dll", "SymEnumSourceLinesW")
+Interceptor.attach(SymEnumSourceLinesW, {onLeave: function (args) {send("SymEnumSourceLinesW");}});
+
+var SymEnumSym = Module.findExportByName("dbghelp.dll", "SymEnumSym")
+Interceptor.attach(SymEnumSym, {onLeave: function (args) {send("SymEnumSym");}});
+
+var SymEnumSymbols = Module.findExportByName("dbghelp.dll", "SymEnumSymbols")
+Interceptor.attach(SymEnumSymbols, {onLeave: function (args) {send("SymEnumSymbols");}});
+
+var SymEnumSymbolsEx = Module.findExportByName("dbghelp.dll", "SymEnumSymbolsEx")
+Interceptor.attach(SymEnumSymbolsEx, {onLeave: function (args) {send("SymEnumSymbolsEx");}});
+
+var SymEnumSymbolsExW = Module.findExportByName("dbghelp.dll", "SymEnumSymbolsExW")
+Interceptor.attach(SymEnumSymbolsExW, {onLeave: function (args) {send("SymEnumSymbolsExW");}});
+
+var SymEnumSymbolsForAddr = Module.findExportByName("dbghelp.dll", "SymEnumSymbolsForAddr")
+Interceptor.attach(SymEnumSymbolsForAddr, {onLeave: function (args) {send("SymEnumSymbolsForAddr");}});
+
+var SymEnumSymbolsForAddrW = Module.findExportByName("dbghelp.dll", "SymEnumSymbolsForAddrW")
+Interceptor.attach(SymEnumSymbolsForAddrW, {onLeave: function (args) {send("SymEnumSymbolsForAddrW");}});
+
+var SymEnumSymbolsW = Module.findExportByName("dbghelp.dll", "SymEnumSymbolsW")
+Interceptor.attach(SymEnumSymbolsW, {onLeave: function (args) {send("SymEnumSymbolsW");}});
+
+var SymEnumTypes = Module.findExportByName("dbghelp.dll", "SymEnumTypes")
+Interceptor.attach(SymEnumTypes, {onLeave: function (args) {send("SymEnumTypes");}});
+
+var SymEnumTypesByName = Module.findExportByName("dbghelp.dll", "SymEnumTypesByName")
+Interceptor.attach(SymEnumTypesByName, {onLeave: function (args) {send("SymEnumTypesByName");}});
+
+var SymEnumTypesByNameW = Module.findExportByName("dbghelp.dll", "SymEnumTypesByNameW")
+Interceptor.attach(SymEnumTypesByNameW, {onLeave: function (args) {send("SymEnumTypesByNameW");}});
+
+var SymEnumTypesW = Module.findExportByName("dbghelp.dll", "SymEnumTypesW")
+Interceptor.attach(SymEnumTypesW, {onLeave: function (args) {send("SymEnumTypesW");}});
+
+var SymEnumerateModules = Module.findExportByName("dbghelp.dll", "SymEnumerateModules")
+Interceptor.attach(SymEnumerateModules, {onLeave: function (args) {send("SymEnumerateModules");}});
+
+var SymEnumerateModules64 = Module.findExportByName("dbghelp.dll", "SymEnumerateModules64")
+Interceptor.attach(SymEnumerateModules64, {onLeave: function (args) {send("SymEnumerateModules64");}});
+
+var SymEnumerateModulesW64 = Module.findExportByName("dbghelp.dll", "SymEnumerateModulesW64")
+Interceptor.attach(SymEnumerateModulesW64, {onLeave: function (args) {send("SymEnumerateModulesW64");}});
+
+var SymEnumerateSymbols = Module.findExportByName("dbghelp.dll", "SymEnumerateSymbols")
+Interceptor.attach(SymEnumerateSymbols, {onLeave: function (args) {send("SymEnumerateSymbols");}});
+
+var SymEnumerateSymbols64 = Module.findExportByName("dbghelp.dll", "SymEnumerateSymbols64")
+Interceptor.attach(SymEnumerateSymbols64, {onLeave: function (args) {send("SymEnumerateSymbols64");}});
+
+var SymEnumerateSymbolsW = Module.findExportByName("dbghelp.dll", "SymEnumerateSymbolsW")
+Interceptor.attach(SymEnumerateSymbolsW, {onLeave: function (args) {send("SymEnumerateSymbolsW");}});
+
+var SymEnumerateSymbolsW64 = Module.findExportByName("dbghelp.dll", "SymEnumerateSymbolsW64")
+Interceptor.attach(SymEnumerateSymbolsW64, {onLeave: function (args) {send("SymEnumerateSymbolsW64");}});
+
+var SymFindDebugInfoFile = Module.findExportByName("dbghelp.dll", "SymFindDebugInfoFile")
+Interceptor.attach(SymFindDebugInfoFile, {onLeave: function (args) {send("SymFindDebugInfoFile");}});
+
+var SymFindDebugInfoFileW = Module.findExportByName("dbghelp.dll", "SymFindDebugInfoFileW")
+Interceptor.attach(SymFindDebugInfoFileW, {onLeave: function (args) {send("SymFindDebugInfoFileW");}});
+
+var SymFindExecutableImage = Module.findExportByName("dbghelp.dll", "SymFindExecutableImage")
+Interceptor.attach(SymFindExecutableImage, {onLeave: function (args) {send("SymFindExecutableImage");}});
+
+var SymFindExecutableImageW = Module.findExportByName("dbghelp.dll", "SymFindExecutableImageW")
+Interceptor.attach(SymFindExecutableImageW, {onLeave: function (args) {send("SymFindExecutableImageW");}});
+
+var SymFindFileInPath = Module.findExportByName("dbghelp.dll", "SymFindFileInPath")
+Interceptor.attach(SymFindFileInPath, {onLeave: function (args) {send("SymFindFileInPath");}});
+
+var SymFindFileInPathW = Module.findExportByName("dbghelp.dll", "SymFindFileInPathW")
+Interceptor.attach(SymFindFileInPathW, {onLeave: function (args) {send("SymFindFileInPathW");}});
+
+var SymFreeDiaString = Module.findExportByName("dbghelp.dll", "SymFreeDiaString")
+Interceptor.attach(SymFreeDiaString, {onLeave: function (args) {send("SymFreeDiaString");}});
+
+var SymFromAddr = Module.findExportByName("dbghelp.dll", "SymFromAddr")
+Interceptor.attach(SymFromAddr, {onLeave: function (args) {send("SymFromAddr");}});
+
+var SymFromAddrW = Module.findExportByName("dbghelp.dll", "SymFromAddrW")
+Interceptor.attach(SymFromAddrW, {onLeave: function (args) {send("SymFromAddrW");}});
+
+var SymFromIndex = Module.findExportByName("dbghelp.dll", "SymFromIndex")
+Interceptor.attach(SymFromIndex, {onLeave: function (args) {send("SymFromIndex");}});
+
+var SymFromIndexW = Module.findExportByName("dbghelp.dll", "SymFromIndexW")
+Interceptor.attach(SymFromIndexW, {onLeave: function (args) {send("SymFromIndexW");}});
+
+var SymFromInlineContext = Module.findExportByName("dbghelp.dll", "SymFromInlineContext")
+Interceptor.attach(SymFromInlineContext, {onLeave: function (args) {send("SymFromInlineContext");}});
+
+var SymFromInlineContextW = Module.findExportByName("dbghelp.dll", "SymFromInlineContextW")
+Interceptor.attach(SymFromInlineContextW, {onLeave: function (args) {send("SymFromInlineContextW");}});
+
+var SymFromName = Module.findExportByName("dbghelp.dll", "SymFromName")
+Interceptor.attach(SymFromName, {onLeave: function (args) {send("SymFromName");}});
+
+var SymFromNameW = Module.findExportByName("dbghelp.dll", "SymFromNameW")
+Interceptor.attach(SymFromNameW, {onLeave: function (args) {send("SymFromNameW");}});
+
+var SymFromToken = Module.findExportByName("dbghelp.dll", "SymFromToken")
+Interceptor.attach(SymFromToken, {onLeave: function (args) {send("SymFromToken");}});
+
+var SymFromTokenW = Module.findExportByName("dbghelp.dll", "SymFromTokenW")
+Interceptor.attach(SymFromTokenW, {onLeave: function (args) {send("SymFromTokenW");}});
+
+var SymFunctionTableAccess = Module.findExportByName("dbghelp.dll", "SymFunctionTableAccess")
+Interceptor.attach(SymFunctionTableAccess, {onLeave: function (args) {send("SymFunctionTableAccess");}});
+
+var SymFunctionTableAccess64 = Module.findExportByName("dbghelp.dll", "SymFunctionTableAccess64")
+Interceptor.attach(SymFunctionTableAccess64, {onLeave: function (args) {send("SymFunctionTableAccess64");}});
+
+var SymFunctionTableAccess64AccessRoutines = Module.findExportByName("dbghelp.dll", "SymFunctionTableAccess64AccessRoutines")
+Interceptor.attach(SymFunctionTableAccess64AccessRoutines, {onLeave: function (args) {send("SymFunctionTableAccess64AccessRoutines");}});
+
+var SymGetDiaSession = Module.findExportByName("dbghelp.dll", "SymGetDiaSession")
+Interceptor.attach(SymGetDiaSession, {onLeave: function (args) {send("SymGetDiaSession");}});
+
+var SymGetDiaSource = Module.findExportByName("dbghelp.dll", "SymGetDiaSource")
+Interceptor.attach(SymGetDiaSource, {onLeave: function (args) {send("SymGetDiaSource");}});
+
+var SymGetExtendedOption = Module.findExportByName("dbghelp.dll", "SymGetExtendedOption")
+Interceptor.attach(SymGetExtendedOption, {onLeave: function (args) {send("SymGetExtendedOption");}});
+
+var SymGetFileLineOffsets64 = Module.findExportByName("dbghelp.dll", "SymGetFileLineOffsets64")
+Interceptor.attach(SymGetFileLineOffsets64, {onLeave: function (args) {send("SymGetFileLineOffsets64");}});
+
+var SymGetHomeDirectory = Module.findExportByName("dbghelp.dll", "SymGetHomeDirectory")
+Interceptor.attach(SymGetHomeDirectory, {onLeave: function (args) {send("SymGetHomeDirectory");}});
+
+var SymGetHomeDirectoryW = Module.findExportByName("dbghelp.dll", "SymGetHomeDirectoryW")
+Interceptor.attach(SymGetHomeDirectoryW, {onLeave: function (args) {send("SymGetHomeDirectoryW");}});
+
+var SymGetLineFromAddr = Module.findExportByName("dbghelp.dll", "SymGetLineFromAddr")
+Interceptor.attach(SymGetLineFromAddr, {onLeave: function (args) {send("SymGetLineFromAddr");}});
+
+var SymGetLineFromAddr64 = Module.findExportByName("dbghelp.dll", "SymGetLineFromAddr64")
+Interceptor.attach(SymGetLineFromAddr64, {onLeave: function (args) {send("SymGetLineFromAddr64");}});
+
+var SymGetLineFromAddrEx = Module.findExportByName("dbghelp.dll", "SymGetLineFromAddrEx")
+Interceptor.attach(SymGetLineFromAddrEx, {onLeave: function (args) {send("SymGetLineFromAddrEx");}});
+
+var SymGetLineFromAddrW64 = Module.findExportByName("dbghelp.dll", "SymGetLineFromAddrW64")
+Interceptor.attach(SymGetLineFromAddrW64, {onLeave: function (args) {send("SymGetLineFromAddrW64");}});
+
+var SymGetLineFromInlineContext = Module.findExportByName("dbghelp.dll", "SymGetLineFromInlineContext")
+Interceptor.attach(SymGetLineFromInlineContext, {onLeave: function (args) {send("SymGetLineFromInlineContext");}});
+
+var SymGetLineFromInlineContextW = Module.findExportByName("dbghelp.dll", "SymGetLineFromInlineContextW")
+Interceptor.attach(SymGetLineFromInlineContextW, {onLeave: function (args) {send("SymGetLineFromInlineContextW");}});
+
+var SymGetLineFromName = Module.findExportByName("dbghelp.dll", "SymGetLineFromName")
+Interceptor.attach(SymGetLineFromName, {onLeave: function (args) {send("SymGetLineFromName");}});
+
+var SymGetLineFromName64 = Module.findExportByName("dbghelp.dll", "SymGetLineFromName64")
+Interceptor.attach(SymGetLineFromName64, {onLeave: function (args) {send("SymGetLineFromName64");}});
+
+var SymGetLineFromNameEx = Module.findExportByName("dbghelp.dll", "SymGetLineFromNameEx")
+Interceptor.attach(SymGetLineFromNameEx, {onLeave: function (args) {send("SymGetLineFromNameEx");}});
+
+var SymGetLineFromNameW64 = Module.findExportByName("dbghelp.dll", "SymGetLineFromNameW64")
+Interceptor.attach(SymGetLineFromNameW64, {onLeave: function (args) {send("SymGetLineFromNameW64");}});
+
+var SymGetLineNext = Module.findExportByName("dbghelp.dll", "SymGetLineNext")
+Interceptor.attach(SymGetLineNext, {onLeave: function (args) {send("SymGetLineNext");}});
+
+var SymGetLineNext64 = Module.findExportByName("dbghelp.dll", "SymGetLineNext64")
+Interceptor.attach(SymGetLineNext64, {onLeave: function (args) {send("SymGetLineNext64");}});
+
+var SymGetLineNextEx = Module.findExportByName("dbghelp.dll", "SymGetLineNextEx")
+Interceptor.attach(SymGetLineNextEx, {onLeave: function (args) {send("SymGetLineNextEx");}});
+
+var SymGetLineNextW64 = Module.findExportByName("dbghelp.dll", "SymGetLineNextW64")
+Interceptor.attach(SymGetLineNextW64, {onLeave: function (args) {send("SymGetLineNextW64");}});
+
+var SymGetLinePrev = Module.findExportByName("dbghelp.dll", "SymGetLinePrev")
+Interceptor.attach(SymGetLinePrev, {onLeave: function (args) {send("SymGetLinePrev");}});
+
+var SymGetLinePrev64 = Module.findExportByName("dbghelp.dll", "SymGetLinePrev64")
+Interceptor.attach(SymGetLinePrev64, {onLeave: function (args) {send("SymGetLinePrev64");}});
+
+var SymGetLinePrevEx = Module.findExportByName("dbghelp.dll", "SymGetLinePrevEx")
+Interceptor.attach(SymGetLinePrevEx, {onLeave: function (args) {send("SymGetLinePrevEx");}});
+
+var SymGetLinePrevW64 = Module.findExportByName("dbghelp.dll", "SymGetLinePrevW64")
+Interceptor.attach(SymGetLinePrevW64, {onLeave: function (args) {send("SymGetLinePrevW64");}});
+
+var SymGetModuleBase = Module.findExportByName("dbghelp.dll", "SymGetModuleBase")
+Interceptor.attach(SymGetModuleBase, {onLeave: function (args) {send("SymGetModuleBase");}});
+
+var SymGetModuleBase64 = Module.findExportByName("dbghelp.dll", "SymGetModuleBase64")
+Interceptor.attach(SymGetModuleBase64, {onLeave: function (args) {send("SymGetModuleBase64");}});
+
+var SymGetModuleInfo = Module.findExportByName("dbghelp.dll", "SymGetModuleInfo")
+Interceptor.attach(SymGetModuleInfo, {onLeave: function (args) {send("SymGetModuleInfo");}});
+
+var SymGetModuleInfo64 = Module.findExportByName("dbghelp.dll", "SymGetModuleInfo64")
+Interceptor.attach(SymGetModuleInfo64, {onLeave: function (args) {send("SymGetModuleInfo64");}});
+
+var SymGetModuleInfoW = Module.findExportByName("dbghelp.dll", "SymGetModuleInfoW")
+Interceptor.attach(SymGetModuleInfoW, {onLeave: function (args) {send("SymGetModuleInfoW");}});
+
+var SymGetModuleInfoW64 = Module.findExportByName("dbghelp.dll", "SymGetModuleInfoW64")
+Interceptor.attach(SymGetModuleInfoW64, {onLeave: function (args) {send("SymGetModuleInfoW64");}});
+
+var SymGetOmapBlockBase = Module.findExportByName("dbghelp.dll", "SymGetOmapBlockBase")
+Interceptor.attach(SymGetOmapBlockBase, {onLeave: function (args) {send("SymGetOmapBlockBase");}});
+
+var SymGetOmaps = Module.findExportByName("dbghelp.dll", "SymGetOmaps")
+Interceptor.attach(SymGetOmaps, {onLeave: function (args) {send("SymGetOmaps");}});
+
+var SymGetOptions = Module.findExportByName("dbghelp.dll", "SymGetOptions")
+Interceptor.attach(SymGetOptions, {onLeave: function (args) {send("SymGetOptions");}});
+
+var SymGetScope = Module.findExportByName("dbghelp.dll", "SymGetScope")
+Interceptor.attach(SymGetScope, {onLeave: function (args) {send("SymGetScope");}});
+
+var SymGetScopeW = Module.findExportByName("dbghelp.dll", "SymGetScopeW")
+Interceptor.attach(SymGetScopeW, {onLeave: function (args) {send("SymGetScopeW");}});
+
+var SymGetSearchPath = Module.findExportByName("dbghelp.dll", "SymGetSearchPath")
+Interceptor.attach(SymGetSearchPath, {onLeave: function (args) {send("SymGetSearchPath");}});
+
+var SymGetSearchPathW = Module.findExportByName("dbghelp.dll", "SymGetSearchPathW")
+Interceptor.attach(SymGetSearchPathW, {onLeave: function (args) {send("SymGetSearchPathW");}});
+
+var SymGetSourceFile = Module.findExportByName("dbghelp.dll", "SymGetSourceFile")
+Interceptor.attach(SymGetSourceFile, {onLeave: function (args) {send("SymGetSourceFile");}});
+
+var SymGetSourceFileChecksum = Module.findExportByName("dbghelp.dll", "SymGetSourceFileChecksum")
+Interceptor.attach(SymGetSourceFileChecksum, {onLeave: function (args) {send("SymGetSourceFileChecksum");}});
+
+var SymGetSourceFileChecksumW = Module.findExportByName("dbghelp.dll", "SymGetSourceFileChecksumW")
+Interceptor.attach(SymGetSourceFileChecksumW, {onLeave: function (args) {send("SymGetSourceFileChecksumW");}});
+
+var SymGetSourceFileFromToken = Module.findExportByName("dbghelp.dll", "SymGetSourceFileFromToken")
+Interceptor.attach(SymGetSourceFileFromToken, {onLeave: function (args) {send("SymGetSourceFileFromToken");}});
+
+var SymGetSourceFileFromTokenByTokenName = Module.findExportByName("dbghelp.dll", "SymGetSourceFileFromTokenByTokenName")
+Interceptor.attach(SymGetSourceFileFromTokenByTokenName, {onLeave: function (args) {send("SymGetSourceFileFromTokenByTokenName");}});
+
+var SymGetSourceFileFromTokenByTokenNameW = Module.findExportByName("dbghelp.dll", "SymGetSourceFileFromTokenByTokenNameW")
+Interceptor.attach(SymGetSourceFileFromTokenByTokenNameW, {onLeave: function (args) {send("SymGetSourceFileFromTokenByTokenNameW");}});
+
+var SymGetSourceFileFromTokenW = Module.findExportByName("dbghelp.dll", "SymGetSourceFileFromTokenW")
+Interceptor.attach(SymGetSourceFileFromTokenW, {onLeave: function (args) {send("SymGetSourceFileFromTokenW");}});
+
+var SymGetSourceFileToken = Module.findExportByName("dbghelp.dll", "SymGetSourceFileToken")
+Interceptor.attach(SymGetSourceFileToken, {onLeave: function (args) {send("SymGetSourceFileToken");}});
+
+var SymGetSourceFileTokenByTokenName = Module.findExportByName("dbghelp.dll", "SymGetSourceFileTokenByTokenName")
+Interceptor.attach(SymGetSourceFileTokenByTokenName, {onLeave: function (args) {send("SymGetSourceFileTokenByTokenName");}});
+
+var SymGetSourceFileTokenByTokenNameW = Module.findExportByName("dbghelp.dll", "SymGetSourceFileTokenByTokenNameW")
+Interceptor.attach(SymGetSourceFileTokenByTokenNameW, {onLeave: function (args) {send("SymGetSourceFileTokenByTokenNameW");}});
+
+var SymGetSourceFileTokenW = Module.findExportByName("dbghelp.dll", "SymGetSourceFileTokenW")
+Interceptor.attach(SymGetSourceFileTokenW, {onLeave: function (args) {send("SymGetSourceFileTokenW");}});
+
+var SymGetSourceFileW = Module.findExportByName("dbghelp.dll", "SymGetSourceFileW")
+Interceptor.attach(SymGetSourceFileW, {onLeave: function (args) {send("SymGetSourceFileW");}});
+
+var SymGetSourceVarFromToken = Module.findExportByName("dbghelp.dll", "SymGetSourceVarFromToken")
+Interceptor.attach(SymGetSourceVarFromToken, {onLeave: function (args) {send("SymGetSourceVarFromToken");}});
+
+var SymGetSourceVarFromTokenW = Module.findExportByName("dbghelp.dll", "SymGetSourceVarFromTokenW")
+Interceptor.attach(SymGetSourceVarFromTokenW, {onLeave: function (args) {send("SymGetSourceVarFromTokenW");}});
+
+var SymGetSymFromAddr = Module.findExportByName("dbghelp.dll", "SymGetSymFromAddr")
+Interceptor.attach(SymGetSymFromAddr, {onLeave: function (args) {send("SymGetSymFromAddr");}});
+
+var SymGetSymFromAddr64 = Module.findExportByName("dbghelp.dll", "SymGetSymFromAddr64")
+Interceptor.attach(SymGetSymFromAddr64, {onLeave: function (args) {send("SymGetSymFromAddr64");}});
+
+var SymGetSymFromName = Module.findExportByName("dbghelp.dll", "SymGetSymFromName")
+Interceptor.attach(SymGetSymFromName, {onLeave: function (args) {send("SymGetSymFromName");}});
+
+var SymGetSymFromName64 = Module.findExportByName("dbghelp.dll", "SymGetSymFromName64")
+Interceptor.attach(SymGetSymFromName64, {onLeave: function (args) {send("SymGetSymFromName64");}});
+
+var SymGetSymNext = Module.findExportByName("dbghelp.dll", "SymGetSymNext")
+Interceptor.attach(SymGetSymNext, {onLeave: function (args) {send("SymGetSymNext");}});
+
+var SymGetSymNext64 = Module.findExportByName("dbghelp.dll", "SymGetSymNext64")
+Interceptor.attach(SymGetSymNext64, {onLeave: function (args) {send("SymGetSymNext64");}});
+
+var SymGetSymPrev = Module.findExportByName("dbghelp.dll", "SymGetSymPrev")
+Interceptor.attach(SymGetSymPrev, {onLeave: function (args) {send("SymGetSymPrev");}});
+
+var SymGetSymPrev64 = Module.findExportByName("dbghelp.dll", "SymGetSymPrev64")
+Interceptor.attach(SymGetSymPrev64, {onLeave: function (args) {send("SymGetSymPrev64");}});
+
+var SymGetSymbolFile = Module.findExportByName("dbghelp.dll", "SymGetSymbolFile")
+Interceptor.attach(SymGetSymbolFile, {onLeave: function (args) {send("SymGetSymbolFile");}});
+
+var SymGetSymbolFileW = Module.findExportByName("dbghelp.dll", "SymGetSymbolFileW")
+Interceptor.attach(SymGetSymbolFileW, {onLeave: function (args) {send("SymGetSymbolFileW");}});
+
+var SymGetTypeFromName = Module.findExportByName("dbghelp.dll", "SymGetTypeFromName")
+Interceptor.attach(SymGetTypeFromName, {onLeave: function (args) {send("SymGetTypeFromName");}});
+
+var SymGetTypeFromNameW = Module.findExportByName("dbghelp.dll", "SymGetTypeFromNameW")
+Interceptor.attach(SymGetTypeFromNameW, {onLeave: function (args) {send("SymGetTypeFromNameW");}});
+
+var SymGetTypeInfo = Module.findExportByName("dbghelp.dll", "SymGetTypeInfo")
+Interceptor.attach(SymGetTypeInfo, {onLeave: function (args) {send("SymGetTypeInfo");}});
+
+var SymGetTypeInfoEx = Module.findExportByName("dbghelp.dll", "SymGetTypeInfoEx")
+Interceptor.attach(SymGetTypeInfoEx, {onLeave: function (args) {send("SymGetTypeInfoEx");}});
+
+var SymGetUnwindInfo = Module.findExportByName("dbghelp.dll", "SymGetUnwindInfo")
+Interceptor.attach(SymGetUnwindInfo, {onLeave: function (args) {send("SymGetUnwindInfo");}});
+
+var SymInitialize = Module.findExportByName("dbghelp.dll", "SymInitialize")
+Interceptor.attach(SymInitialize, {onLeave: function (args) {send("SymInitialize");}});
+
+var SymInitializeW = Module.findExportByName("dbghelp.dll", "SymInitializeW")
+Interceptor.attach(SymInitializeW, {onLeave: function (args) {send("SymInitializeW");}});
+
+var SymLoadModule = Module.findExportByName("dbghelp.dll", "SymLoadModule")
+Interceptor.attach(SymLoadModule, {onLeave: function (args) {send("SymLoadModule");}});
+
+var SymLoadModule64 = Module.findExportByName("dbghelp.dll", "SymLoadModule64")
+Interceptor.attach(SymLoadModule64, {onLeave: function (args) {send("SymLoadModule64");}});
+
+var SymLoadModuleEx = Module.findExportByName("dbghelp.dll", "SymLoadModuleEx")
+Interceptor.attach(SymLoadModuleEx, {onLeave: function (args) {send("SymLoadModuleEx");}});
+
+var SymLoadModuleExW = Module.findExportByName("dbghelp.dll", "SymLoadModuleExW")
+Interceptor.attach(SymLoadModuleExW, {onLeave: function (args) {send("SymLoadModuleExW");}});
+
+var SymMatchFileName = Module.findExportByName("dbghelp.dll", "SymMatchFileName")
+Interceptor.attach(SymMatchFileName, {onLeave: function (args) {send("SymMatchFileName");}});
+
+var SymMatchFileNameW = Module.findExportByName("dbghelp.dll", "SymMatchFileNameW")
+Interceptor.attach(SymMatchFileNameW, {onLeave: function (args) {send("SymMatchFileNameW");}});
+
+var SymMatchString = Module.findExportByName("dbghelp.dll", "SymMatchString")
+Interceptor.attach(SymMatchString, {onLeave: function (args) {send("SymMatchString");}});
+
+var SymMatchStringA = Module.findExportByName("dbghelp.dll", "SymMatchStringA")
+Interceptor.attach(SymMatchStringA, {onLeave: function (args) {send("SymMatchStringA");}});
+
+var SymMatchStringW = Module.findExportByName("dbghelp.dll", "SymMatchStringW")
+Interceptor.attach(SymMatchStringW, {onLeave: function (args) {send("SymMatchStringW");}});
+
+var SymNext = Module.findExportByName("dbghelp.dll", "SymNext")
+Interceptor.attach(SymNext, {onLeave: function (args) {send("SymNext");}});
+
+var SymNextW = Module.findExportByName("dbghelp.dll", "SymNextW")
+Interceptor.attach(SymNextW, {onLeave: function (args) {send("SymNextW");}});
+
+var SymPrev = Module.findExportByName("dbghelp.dll", "SymPrev")
+Interceptor.attach(SymPrev, {onLeave: function (args) {send("SymPrev");}});
+
+var SymPrevW = Module.findExportByName("dbghelp.dll", "SymPrevW")
+Interceptor.attach(SymPrevW, {onLeave: function (args) {send("SymPrevW");}});
+
+var SymQueryInlineTrace = Module.findExportByName("dbghelp.dll", "SymQueryInlineTrace")
+Interceptor.attach(SymQueryInlineTrace, {onLeave: function (args) {send("SymQueryInlineTrace");}});
+
+var SymRefreshModuleList = Module.findExportByName("dbghelp.dll", "SymRefreshModuleList")
+Interceptor.attach(SymRefreshModuleList, {onLeave: function (args) {send("SymRefreshModuleList");}});
+
+var SymRegisterCallback = Module.findExportByName("dbghelp.dll", "SymRegisterCallback")
+Interceptor.attach(SymRegisterCallback, {onLeave: function (args) {send("SymRegisterCallback");}});
+
+var SymRegisterCallback64 = Module.findExportByName("dbghelp.dll", "SymRegisterCallback64")
+Interceptor.attach(SymRegisterCallback64, {onLeave: function (args) {send("SymRegisterCallback64");}});
+
+var SymRegisterCallbackW64 = Module.findExportByName("dbghelp.dll", "SymRegisterCallbackW64")
+Interceptor.attach(SymRegisterCallbackW64, {onLeave: function (args) {send("SymRegisterCallbackW64");}});
+
+var SymRegisterFunctionEntryCallback = Module.findExportByName("dbghelp.dll", "SymRegisterFunctionEntryCallback")
+Interceptor.attach(SymRegisterFunctionEntryCallback, {onLeave: function (args) {send("SymRegisterFunctionEntryCallback");}});
+
+var SymRegisterFunctionEntryCallback64 = Module.findExportByName("dbghelp.dll", "SymRegisterFunctionEntryCallback64")
+Interceptor.attach(SymRegisterFunctionEntryCallback64, {onLeave: function (args) {send("SymRegisterFunctionEntryCallback64");}});
+
+var SymRegisterGetSourcePathPartCallback = Module.findExportByName("dbghelp.dll", "SymRegisterGetSourcePathPartCallback")
+Interceptor.attach(SymRegisterGetSourcePathPartCallback, {onLeave: function (args) {send("SymRegisterGetSourcePathPartCallback");}});
+
+var SymRegisterSourceFileUrlListCallback = Module.findExportByName("dbghelp.dll", "SymRegisterSourceFileUrlListCallback")
+Interceptor.attach(SymRegisterSourceFileUrlListCallback, {onLeave: function (args) {send("SymRegisterSourceFileUrlListCallback");}});
+
+var SymSearch = Module.findExportByName("dbghelp.dll", "SymSearch")
+Interceptor.attach(SymSearch, {onLeave: function (args) {send("SymSearch");}});
+
+var SymSearchW = Module.findExportByName("dbghelp.dll", "SymSearchW")
+Interceptor.attach(SymSearchW, {onLeave: function (args) {send("SymSearchW");}});
+
+var SymSetContext = Module.findExportByName("dbghelp.dll", "SymSetContext")
+Interceptor.attach(SymSetContext, {onLeave: function (args) {send("SymSetContext");}});
+
+var SymSetDiaSession = Module.findExportByName("dbghelp.dll", "SymSetDiaSession")
+Interceptor.attach(SymSetDiaSession, {onLeave: function (args) {send("SymSetDiaSession");}});
+
+var SymSetExtendedOption = Module.findExportByName("dbghelp.dll", "SymSetExtendedOption")
+Interceptor.attach(SymSetExtendedOption, {onLeave: function (args) {send("SymSetExtendedOption");}});
+
+var SymSetHomeDirectory = Module.findExportByName("dbghelp.dll", "SymSetHomeDirectory")
+Interceptor.attach(SymSetHomeDirectory, {onLeave: function (args) {send("SymSetHomeDirectory");}});
+
+var SymSetHomeDirectoryW = Module.findExportByName("dbghelp.dll", "SymSetHomeDirectoryW")
+Interceptor.attach(SymSetHomeDirectoryW, {onLeave: function (args) {send("SymSetHomeDirectoryW");}});
+
+var SymSetOptions = Module.findExportByName("dbghelp.dll", "SymSetOptions")
+Interceptor.attach(SymSetOptions, {onLeave: function (args) {send("SymSetOptions");}});
+
+var SymSetParentWindow = Module.findExportByName("dbghelp.dll", "SymSetParentWindow")
+Interceptor.attach(SymSetParentWindow, {onLeave: function (args) {send("SymSetParentWindow");}});
+
+var SymSetScopeFromAddr = Module.findExportByName("dbghelp.dll", "SymSetScopeFromAddr")
+Interceptor.attach(SymSetScopeFromAddr, {onLeave: function (args) {send("SymSetScopeFromAddr");}});
+
+var SymSetScopeFromIndex = Module.findExportByName("dbghelp.dll", "SymSetScopeFromIndex")
+Interceptor.attach(SymSetScopeFromIndex, {onLeave: function (args) {send("SymSetScopeFromIndex");}});
+
+var SymSetScopeFromInlineContext = Module.findExportByName("dbghelp.dll", "SymSetScopeFromInlineContext")
+Interceptor.attach(SymSetScopeFromInlineContext, {onLeave: function (args) {send("SymSetScopeFromInlineContext");}});
+
+var SymSetSearchPath = Module.findExportByName("dbghelp.dll", "SymSetSearchPath")
+Interceptor.attach(SymSetSearchPath, {onLeave: function (args) {send("SymSetSearchPath");}});
+
+var SymSetSearchPathW = Module.findExportByName("dbghelp.dll", "SymSetSearchPathW")
+Interceptor.attach(SymSetSearchPathW, {onLeave: function (args) {send("SymSetSearchPathW");}});
+
+var SymSetServiceManager = Module.findExportByName("dbghelp.dll", "SymSetServiceManager")
+Interceptor.attach(SymSetServiceManager, {onLeave: function (args) {send("SymSetServiceManager");}});
+
+var SymSrvDeltaName = Module.findExportByName("dbghelp.dll", "SymSrvDeltaName")
+Interceptor.attach(SymSrvDeltaName, {onLeave: function (args) {send("SymSrvDeltaName");}});
+
+var SymSrvDeltaNameW = Module.findExportByName("dbghelp.dll", "SymSrvDeltaNameW")
+Interceptor.attach(SymSrvDeltaNameW, {onLeave: function (args) {send("SymSrvDeltaNameW");}});
+
+var SymSrvGetFileIndexInfo = Module.findExportByName("dbghelp.dll", "SymSrvGetFileIndexInfo")
+Interceptor.attach(SymSrvGetFileIndexInfo, {onLeave: function (args) {send("SymSrvGetFileIndexInfo");}});
+
+var SymSrvGetFileIndexInfoW = Module.findExportByName("dbghelp.dll", "SymSrvGetFileIndexInfoW")
+Interceptor.attach(SymSrvGetFileIndexInfoW, {onLeave: function (args) {send("SymSrvGetFileIndexInfoW");}});
+
+var SymSrvGetFileIndexString = Module.findExportByName("dbghelp.dll", "SymSrvGetFileIndexString")
+Interceptor.attach(SymSrvGetFileIndexString, {onLeave: function (args) {send("SymSrvGetFileIndexString");}});
+
+var SymSrvGetFileIndexStringW = Module.findExportByName("dbghelp.dll", "SymSrvGetFileIndexStringW")
+Interceptor.attach(SymSrvGetFileIndexStringW, {onLeave: function (args) {send("SymSrvGetFileIndexStringW");}});
+
+var SymSrvGetFileIndexes = Module.findExportByName("dbghelp.dll", "SymSrvGetFileIndexes")
+Interceptor.attach(SymSrvGetFileIndexes, {onLeave: function (args) {send("SymSrvGetFileIndexes");}});
+
+var SymSrvGetFileIndexesW = Module.findExportByName("dbghelp.dll", "SymSrvGetFileIndexesW")
+Interceptor.attach(SymSrvGetFileIndexesW, {onLeave: function (args) {send("SymSrvGetFileIndexesW");}});
+
+var SymSrvGetSupplement = Module.findExportByName("dbghelp.dll", "SymSrvGetSupplement")
+Interceptor.attach(SymSrvGetSupplement, {onLeave: function (args) {send("SymSrvGetSupplement");}});
+
+var SymSrvGetSupplementW = Module.findExportByName("dbghelp.dll", "SymSrvGetSupplementW")
+Interceptor.attach(SymSrvGetSupplementW, {onLeave: function (args) {send("SymSrvGetSupplementW");}});
+
+var SymSrvIsStore = Module.findExportByName("dbghelp.dll", "SymSrvIsStore")
+Interceptor.attach(SymSrvIsStore, {onLeave: function (args) {send("SymSrvIsStore");}});
+
+var SymSrvIsStoreW = Module.findExportByName("dbghelp.dll", "SymSrvIsStoreW")
+Interceptor.attach(SymSrvIsStoreW, {onLeave: function (args) {send("SymSrvIsStoreW");}});
+
+var SymSrvStoreFile = Module.findExportByName("dbghelp.dll", "SymSrvStoreFile")
+Interceptor.attach(SymSrvStoreFile, {onLeave: function (args) {send("SymSrvStoreFile");}});
+
+var SymSrvStoreFileW = Module.findExportByName("dbghelp.dll", "SymSrvStoreFileW")
+Interceptor.attach(SymSrvStoreFileW, {onLeave: function (args) {send("SymSrvStoreFileW");}});
+
+var SymSrvStoreSupplement = Module.findExportByName("dbghelp.dll", "SymSrvStoreSupplement")
+Interceptor.attach(SymSrvStoreSupplement, {onLeave: function (args) {send("SymSrvStoreSupplement");}});
+
+var SymSrvStoreSupplementW = Module.findExportByName("dbghelp.dll", "SymSrvStoreSupplementW")
+Interceptor.attach(SymSrvStoreSupplementW, {onLeave: function (args) {send("SymSrvStoreSupplementW");}});
+
+var SymUnDName = Module.findExportByName("dbghelp.dll", "SymUnDName")
+Interceptor.attach(SymUnDName, {onLeave: function (args) {send("SymUnDName");}});
+
+var SymUnDName64 = Module.findExportByName("dbghelp.dll", "SymUnDName64")
+Interceptor.attach(SymUnDName64, {onLeave: function (args) {send("SymUnDName64");}});
+
+var SymUnloadModule = Module.findExportByName("dbghelp.dll", "SymUnloadModule")
+Interceptor.attach(SymUnloadModule, {onLeave: function (args) {send("SymUnloadModule");}});
+
+var SymUnloadModule64 = Module.findExportByName("dbghelp.dll", "SymUnloadModule64")
+Interceptor.attach(SymUnloadModule64, {onLeave: function (args) {send("SymUnloadModule64");}});
+
+var UnDecorateSymbolName = Module.findExportByName("dbghelp.dll", "UnDecorateSymbolName")
+Interceptor.attach(UnDecorateSymbolName, {onLeave: function (args) {send("UnDecorateSymbolName");}});
+
+var UnDecorateSymbolNameW = Module.findExportByName("dbghelp.dll", "UnDecorateSymbolNameW")
+Interceptor.attach(UnDecorateSymbolNameW, {onLeave: function (args) {send("UnDecorateSymbolNameW");}});
+
+var WinDbgExtensionDllInit = Module.findExportByName("dbghelp.dll", "WinDbgExtensionDllInit")
+Interceptor.attach(WinDbgExtensionDllInit, {onLeave: function (args) {send("WinDbgExtensionDllInit");}});
+
+var _EFN_DumpImage = Module.findExportByName("dbghelp.dll", "_EFN_DumpImage")
+Interceptor.attach(_EFN_DumpImage, {onLeave: function (args) {send("_EFN_DumpImage");}});
+
+var block = Module.findExportByName("dbghelp.dll", "block")
+Interceptor.attach(block, {onLeave: function (args) {send("block");}});
+
+var chksym = Module.findExportByName("dbghelp.dll", "chksym")
+Interceptor.attach(chksym, {onLeave: function (args) {send("chksym");}});
+
+var dbghelp = Module.findExportByName("dbghelp.dll", "dbghelp")
+Interceptor.attach(dbghelp, {onLeave: function (args) {send("dbghelp");}});
+
+var dh = Module.findExportByName("dbghelp.dll", "dh")
+Interceptor.attach(dh, {onLeave: function (args) {send("dh");}});
+
+var fptr = Module.findExportByName("dbghelp.dll", "fptr")
+Interceptor.attach(fptr, {onLeave: function (args) {send("fptr");}});
+
+var homedir = Module.findExportByName("dbghelp.dll", "homedir")
+Interceptor.attach(homedir, {onLeave: function (args) {send("homedir");}});
+
+var inlinedbg = Module.findExportByName("dbghelp.dll", "inlinedbg")
+Interceptor.attach(inlinedbg, {onLeave: function (args) {send("inlinedbg");}});
+
+var itoldyouso = Module.findExportByName("dbghelp.dll", "itoldyouso")
+Interceptor.attach(itoldyouso, {onLeave: function (args) {send("itoldyouso");}});
+
+var lmi = Module.findExportByName("dbghelp.dll", "lmi")
+Interceptor.attach(lmi, {onLeave: function (args) {send("lmi");}});
+
+var lminfo = Module.findExportByName("dbghelp.dll", "lminfo")
+Interceptor.attach(lminfo, {onLeave: function (args) {send("lminfo");}});
+
+var omap = Module.findExportByName("dbghelp.dll", "omap")
+Interceptor.attach(omap, {onLeave: function (args) {send("omap");}});
+
+var optdbgdump = Module.findExportByName("dbghelp.dll", "optdbgdump")
+Interceptor.attach(optdbgdump, {onLeave: function (args) {send("optdbgdump");}});
+
+var optdbgdumpaddr = Module.findExportByName("dbghelp.dll", "optdbgdumpaddr")
+Interceptor.attach(optdbgdumpaddr, {onLeave: function (args) {send("optdbgdumpaddr");}});
+
+var srcfiles = Module.findExportByName("dbghelp.dll", "srcfiles")
+Interceptor.attach(srcfiles, {onLeave: function (args) {send("srcfiles");}});
+
+var stack_force_ebp = Module.findExportByName("dbghelp.dll", "stack_force_ebp")
+Interceptor.attach(stack_force_ebp, {onLeave: function (args) {send("stack_force_ebp");}});
+
+var stackdbg = Module.findExportByName("dbghelp.dll", "stackdbg")
+Interceptor.attach(stackdbg, {onLeave: function (args) {send("stackdbg");}});
+
+var sym = Module.findExportByName("dbghelp.dll", "sym")
+Interceptor.attach(sym, {onLeave: function (args) {send("sym");}});
+
+var symsrv = Module.findExportByName("dbghelp.dll", "symsrv")
+Interceptor.attach(symsrv, {onLeave: function (args) {send("symsrv");}});
+
+var vc7fpo = Module.findExportByName("dbghelp.dll", "vc7fpo")
+Interceptor.attach(vc7fpo, {onLeave: function (args) {send("vc7fpo");}});
+

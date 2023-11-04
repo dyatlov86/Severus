@@ -1,0 +1,12 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.Networking.Proximity.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Networking.Proximity.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Networking.Proximity.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var ProximityConnect = Module.findExportByName("Windows.Networking.Proximity.dll", "ProximityConnect")
+Interceptor.attach(ProximityConnect, {onLeave: function (args) {send("ProximityConnect");}});
+

@@ -1,0 +1,852 @@
+var AcmGenerateConnectionId = Module.findExportByName("wlanapi.dll", "AcmGenerateConnectionId")
+Interceptor.attach(AcmGenerateConnectionId, {onLeave: function (args) {send("AcmGenerateConnectionId");}});
+
+var AcmGenerateConnectionIdForNotification = Module.findExportByName("wlanapi.dll", "AcmGenerateConnectionIdForNotification")
+Interceptor.attach(AcmGenerateConnectionIdForNotification, {onLeave: function (args) {send("AcmGenerateConnectionIdForNotification");}});
+
+var AcmGenerateNetworkId = Module.findExportByName("wlanapi.dll", "AcmGenerateNetworkId")
+Interceptor.attach(AcmGenerateNetworkId, {onLeave: function (args) {send("AcmGenerateNetworkId");}});
+
+var ConvertFrequencyToBandChannel = Module.findExportByName("wlanapi.dll", "ConvertFrequencyToBandChannel")
+Interceptor.attach(ConvertFrequencyToBandChannel, {onLeave: function (args) {send("ConvertFrequencyToBandChannel");}});
+
+var ConvertPassPhraseKeyStringToBuffer = Module.findExportByName("wlanapi.dll", "ConvertPassPhraseKeyStringToBuffer")
+Interceptor.attach(ConvertPassPhraseKeyStringToBuffer, {onLeave: function (args) {send("ConvertPassPhraseKeyStringToBuffer");}});
+
+var FreeMSMSecConfig = Module.findExportByName("wlanapi.dll", "FreeMSMSecConfig")
+Interceptor.attach(FreeMSMSecConfig, {onLeave: function (args) {send("FreeMSMSecConfig");}});
+
+var MSMSecCreateDefaultProfileStatic = Module.findExportByName("wlanapi.dll", "MSMSecCreateDefaultProfileStatic")
+Interceptor.attach(MSMSecCreateDefaultProfileStatic, {onLeave: function (args) {send("MSMSecCreateDefaultProfileStatic");}});
+
+var MSMSecGetNetworkCapabilitiesFromBSSDescriptionList = Module.findExportByName("wlanapi.dll", "MSMSecGetNetworkCapabilitiesFromBSSDescriptionList")
+Interceptor.attach(MSMSecGetNetworkCapabilitiesFromBSSDescriptionList, {onLeave: function (args) {send("MSMSecGetNetworkCapabilitiesFromBSSDescriptionList");}});
+
+var MSMSecGetSupportedAuthCiphers = Module.findExportByName("wlanapi.dll", "MSMSecGetSupportedAuthCiphers")
+Interceptor.attach(MSMSecGetSupportedAuthCiphers, {onLeave: function (args) {send("MSMSecGetSupportedAuthCiphers");}});
+
+var MSMSecProfileValidForSafeMode = Module.findExportByName("wlanapi.dll", "MSMSecProfileValidForSafeMode")
+Interceptor.attach(MSMSecProfileValidForSafeMode, {onLeave: function (args) {send("MSMSecProfileValidForSafeMode");}});
+
+var MSMSecSanitizeAuthCipherList = Module.findExportByName("wlanapi.dll", "MSMSecSanitizeAuthCipherList")
+Interceptor.attach(MSMSecSanitizeAuthCipherList, {onLeave: function (args) {send("MSMSecSanitizeAuthCipherList");}});
+
+var MSMSecValidateL2UIRequest = Module.findExportByName("wlanapi.dll", "MSMSecValidateL2UIRequest")
+Interceptor.attach(MSMSecValidateL2UIRequest, {onLeave: function (args) {send("MSMSecValidateL2UIRequest");}});
+
+var QueryNetconStatus = Module.findExportByName("wlanapi.dll", "QueryNetconStatus")
+Interceptor.attach(QueryNetconStatus, {onLeave: function (args) {send("QueryNetconStatus");}});
+
+var QueryNetconVirtualCharacteristic = Module.findExportByName("wlanapi.dll", "QueryNetconVirtualCharacteristic")
+Interceptor.attach(QueryNetconVirtualCharacteristic, {onLeave: function (args) {send("QueryNetconVirtualCharacteristic");}});
+
+var ShouldUseWlanString = Module.findExportByName("wlanapi.dll", "ShouldUseWlanString")
+Interceptor.attach(ShouldUseWlanString, {onLeave: function (args) {send("ShouldUseWlanString");}});
+
+var SsidToStringW = Module.findExportByName("wlanapi.dll", "SsidToStringW")
+Interceptor.attach(SsidToStringW, {onLeave: function (args) {send("SsidToStringW");}});
+
+var WFDAbortSessionInt = Module.findExportByName("wlanapi.dll", "WFDAbortSessionInt")
+Interceptor.attach(WFDAbortSessionInt, {onLeave: function (args) {send("WFDAbortSessionInt");}});
+
+var WFDAcceptConnectRequestAndOpenSessionInt = Module.findExportByName("wlanapi.dll", "WFDAcceptConnectRequestAndOpenSessionInt")
+Interceptor.attach(WFDAcceptConnectRequestAndOpenSessionInt, {onLeave: function (args) {send("WFDAcceptConnectRequestAndOpenSessionInt");}});
+
+var WFDAcceptGroupRequestAndOpenSessionInt = Module.findExportByName("wlanapi.dll", "WFDAcceptGroupRequestAndOpenSessionInt")
+Interceptor.attach(WFDAcceptGroupRequestAndOpenSessionInt, {onLeave: function (args) {send("WFDAcceptGroupRequestAndOpenSessionInt");}});
+
+var WFDCancelConnectorPairWithOOB = Module.findExportByName("wlanapi.dll", "WFDCancelConnectorPairWithOOB")
+Interceptor.attach(WFDCancelConnectorPairWithOOB, {onLeave: function (args) {send("WFDCancelConnectorPairWithOOB");}});
+
+var WFDCancelListenerPairWithOOB = Module.findExportByName("wlanapi.dll", "WFDCancelListenerPairWithOOB")
+Interceptor.attach(WFDCancelListenerPairWithOOB, {onLeave: function (args) {send("WFDCancelListenerPairWithOOB");}});
+
+var WFDCancelOpenSession = Module.findExportByName("wlanapi.dll", "WFDCancelOpenSession")
+Interceptor.attach(WFDCancelOpenSession, {onLeave: function (args) {send("WFDCancelOpenSession");}});
+
+var WFDCancelOpenSessionInt = Module.findExportByName("wlanapi.dll", "WFDCancelOpenSessionInt")
+Interceptor.attach(WFDCancelOpenSessionInt, {onLeave: function (args) {send("WFDCancelOpenSessionInt");}});
+
+var WFDCloseHandle = Module.findExportByName("wlanapi.dll", "WFDCloseHandle")
+Interceptor.attach(WFDCloseHandle, {onLeave: function (args) {send("WFDCloseHandle");}});
+
+var WFDCloseHandleInt = Module.findExportByName("wlanapi.dll", "WFDCloseHandleInt")
+Interceptor.attach(WFDCloseHandleInt, {onLeave: function (args) {send("WFDCloseHandleInt");}});
+
+var WFDCloseLegacySessionInt = Module.findExportByName("wlanapi.dll", "WFDCloseLegacySessionInt")
+Interceptor.attach(WFDCloseLegacySessionInt, {onLeave: function (args) {send("WFDCloseLegacySessionInt");}});
+
+var WFDCloseOOBPairingSession = Module.findExportByName("wlanapi.dll", "WFDCloseOOBPairingSession")
+Interceptor.attach(WFDCloseOOBPairingSession, {onLeave: function (args) {send("WFDCloseOOBPairingSession");}});
+
+var WFDCloseSession = Module.findExportByName("wlanapi.dll", "WFDCloseSession")
+Interceptor.attach(WFDCloseSession, {onLeave: function (args) {send("WFDCloseSession");}});
+
+var WFDCloseSessionInt = Module.findExportByName("wlanapi.dll", "WFDCloseSessionInt")
+Interceptor.attach(WFDCloseSessionInt, {onLeave: function (args) {send("WFDCloseSessionInt");}});
+
+var WFDConfigureFirewallForSessionInt = Module.findExportByName("wlanapi.dll", "WFDConfigureFirewallForSessionInt")
+Interceptor.attach(WFDConfigureFirewallForSessionInt, {onLeave: function (args) {send("WFDConfigureFirewallForSessionInt");}});
+
+var WFDCreateDHPrivatePublicKeyPairInt = Module.findExportByName("wlanapi.dll", "WFDCreateDHPrivatePublicKeyPairInt")
+Interceptor.attach(WFDCreateDHPrivatePublicKeyPairInt, {onLeave: function (args) {send("WFDCreateDHPrivatePublicKeyPairInt");}});
+
+var WFDDeclineConnectRequestInt = Module.findExportByName("wlanapi.dll", "WFDDeclineConnectRequestInt")
+Interceptor.attach(WFDDeclineConnectRequestInt, {onLeave: function (args) {send("WFDDeclineConnectRequestInt");}});
+
+var WFDDeclineGroupRequestInt = Module.findExportByName("wlanapi.dll", "WFDDeclineGroupRequestInt")
+Interceptor.attach(WFDDeclineGroupRequestInt, {onLeave: function (args) {send("WFDDeclineGroupRequestInt");}});
+
+var WFDDiscoverDeviceServiceInformationInt = Module.findExportByName("wlanapi.dll", "WFDDiscoverDeviceServiceInformationInt")
+Interceptor.attach(WFDDiscoverDeviceServiceInformationInt, {onLeave: function (args) {send("WFDDiscoverDeviceServiceInformationInt");}});
+
+var WFDDiscoverDevicesExInt = Module.findExportByName("wlanapi.dll", "WFDDiscoverDevicesExInt")
+Interceptor.attach(WFDDiscoverDevicesExInt, {onLeave: function (args) {send("WFDDiscoverDevicesExInt");}});
+
+var WFDDiscoverDevicesInt = Module.findExportByName("wlanapi.dll", "WFDDiscoverDevicesInt")
+Interceptor.attach(WFDDiscoverDevicesInt, {onLeave: function (args) {send("WFDDiscoverDevicesInt");}});
+
+var WFDFlushVisibleDeviceListInt = Module.findExportByName("wlanapi.dll", "WFDFlushVisibleDeviceListInt")
+Interceptor.attach(WFDFlushVisibleDeviceListInt, {onLeave: function (args) {send("WFDFlushVisibleDeviceListInt");}});
+
+var WFDForceDisconnectInt = Module.findExportByName("wlanapi.dll", "WFDForceDisconnectInt")
+Interceptor.attach(WFDForceDisconnectInt, {onLeave: function (args) {send("WFDForceDisconnectInt");}});
+
+var WFDForceDisconnectLegacyPeerInt = Module.findExportByName("wlanapi.dll", "WFDForceDisconnectLegacyPeerInt")
+Interceptor.attach(WFDForceDisconnectLegacyPeerInt, {onLeave: function (args) {send("WFDForceDisconnectLegacyPeerInt");}});
+
+var WFDFreeMemoryInt = Module.findExportByName("wlanapi.dll", "WFDFreeMemoryInt")
+Interceptor.attach(WFDFreeMemoryInt, {onLeave: function (args) {send("WFDFreeMemoryInt");}});
+
+var WFDGetDefaultGroupProfileInt = Module.findExportByName("wlanapi.dll", "WFDGetDefaultGroupProfileInt")
+Interceptor.attach(WFDGetDefaultGroupProfileInt, {onLeave: function (args) {send("WFDGetDefaultGroupProfileInt");}});
+
+var WFDGetDeviceDescriptorForPendingRequestInt = Module.findExportByName("wlanapi.dll", "WFDGetDeviceDescriptorForPendingRequestInt")
+Interceptor.attach(WFDGetDeviceDescriptorForPendingRequestInt, {onLeave: function (args) {send("WFDGetDeviceDescriptorForPendingRequestInt");}});
+
+var WFDGetNFCCarrierConfigBlobInt = Module.findExportByName("wlanapi.dll", "WFDGetNFCCarrierConfigBlobInt")
+Interceptor.attach(WFDGetNFCCarrierConfigBlobInt, {onLeave: function (args) {send("WFDGetNFCCarrierConfigBlobInt");}});
+
+var WFDGetOOBBlob = Module.findExportByName("wlanapi.dll", "WFDGetOOBBlob")
+Interceptor.attach(WFDGetOOBBlob, {onLeave: function (args) {send("WFDGetOOBBlob");}});
+
+var WFDGetPrimaryAdapterStateInt = Module.findExportByName("wlanapi.dll", "WFDGetPrimaryAdapterStateInt")
+Interceptor.attach(WFDGetPrimaryAdapterStateInt, {onLeave: function (args) {send("WFDGetPrimaryAdapterStateInt");}});
+
+var WFDGetProfileKeyInfoInt = Module.findExportByName("wlanapi.dll", "WFDGetProfileKeyInfoInt")
+Interceptor.attach(WFDGetProfileKeyInfoInt, {onLeave: function (args) {send("WFDGetProfileKeyInfoInt");}});
+
+var WFDGetSessionEndpointPairsInt = Module.findExportByName("wlanapi.dll", "WFDGetSessionEndpointPairsInt")
+Interceptor.attach(WFDGetSessionEndpointPairsInt, {onLeave: function (args) {send("WFDGetSessionEndpointPairsInt");}});
+
+var WFDGetVisibleDevicesExInt = Module.findExportByName("wlanapi.dll", "WFDGetVisibleDevicesExInt")
+Interceptor.attach(WFDGetVisibleDevicesExInt, {onLeave: function (args) {send("WFDGetVisibleDevicesExInt");}});
+
+var WFDGetVisibleDevicesInt = Module.findExportByName("wlanapi.dll", "WFDGetVisibleDevicesInt")
+Interceptor.attach(WFDGetVisibleDevicesInt, {onLeave: function (args) {send("WFDGetVisibleDevicesInt");}});
+
+var WFDIsInterfaceWiFiDirect = Module.findExportByName("wlanapi.dll", "WFDIsInterfaceWiFiDirect")
+Interceptor.attach(WFDIsInterfaceWiFiDirect, {onLeave: function (args) {send("WFDIsInterfaceWiFiDirect");}});
+
+var WFDIsWiFiDirectRunningOnWiFiAdapter = Module.findExportByName("wlanapi.dll", "WFDIsWiFiDirectRunningOnWiFiAdapter")
+Interceptor.attach(WFDIsWiFiDirectRunningOnWiFiAdapter, {onLeave: function (args) {send("WFDIsWiFiDirectRunningOnWiFiAdapter");}});
+
+var WFDLowPrivCancelOpenSessionInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivCancelOpenSessionInt")
+Interceptor.attach(WFDLowPrivCancelOpenSessionInt, {onLeave: function (args) {send("WFDLowPrivCancelOpenSessionInt");}});
+
+var WFDLowPrivCloseHandleInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivCloseHandleInt")
+Interceptor.attach(WFDLowPrivCloseHandleInt, {onLeave: function (args) {send("WFDLowPrivCloseHandleInt");}});
+
+var WFDLowPrivCloseLegacySessionInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivCloseLegacySessionInt")
+Interceptor.attach(WFDLowPrivCloseLegacySessionInt, {onLeave: function (args) {send("WFDLowPrivCloseLegacySessionInt");}});
+
+var WFDLowPrivCloseSessionInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivCloseSessionInt")
+Interceptor.attach(WFDLowPrivCloseSessionInt, {onLeave: function (args) {send("WFDLowPrivCloseSessionInt");}});
+
+var WFDLowPrivConfigureFirewallForSessionInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivConfigureFirewallForSessionInt")
+Interceptor.attach(WFDLowPrivConfigureFirewallForSessionInt, {onLeave: function (args) {send("WFDLowPrivConfigureFirewallForSessionInt");}});
+
+var WFDLowPrivDeclineDeviceApiConnectionRequestInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivDeclineDeviceApiConnectionRequestInt")
+Interceptor.attach(WFDLowPrivDeclineDeviceApiConnectionRequestInt, {onLeave: function (args) {send("WFDLowPrivDeclineDeviceApiConnectionRequestInt");}});
+
+var WFDLowPrivGetPendingGroupRequestDetailsInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivGetPendingGroupRequestDetailsInt")
+Interceptor.attach(WFDLowPrivGetPendingGroupRequestDetailsInt, {onLeave: function (args) {send("WFDLowPrivGetPendingGroupRequestDetailsInt");}});
+
+var WFDLowPrivGetSessionEndpointPairsInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivGetSessionEndpointPairsInt")
+Interceptor.attach(WFDLowPrivGetSessionEndpointPairsInt, {onLeave: function (args) {send("WFDLowPrivGetSessionEndpointPairsInt");}});
+
+var WFDLowPrivIsWfdSupportedInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivIsWfdSupportedInt")
+Interceptor.attach(WFDLowPrivIsWfdSupportedInt, {onLeave: function (args) {send("WFDLowPrivIsWfdSupportedInt");}});
+
+var WFDLowPrivOpenHandleInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivOpenHandleInt")
+Interceptor.attach(WFDLowPrivOpenHandleInt, {onLeave: function (args) {send("WFDLowPrivOpenHandleInt");}});
+
+var WFDLowPrivOpenLegacySessionInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivOpenLegacySessionInt")
+Interceptor.attach(WFDLowPrivOpenLegacySessionInt, {onLeave: function (args) {send("WFDLowPrivOpenLegacySessionInt");}});
+
+var WFDLowPrivOpenSessionByDafObjectIdInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivOpenSessionByDafObjectIdInt")
+Interceptor.attach(WFDLowPrivOpenSessionByDafObjectIdInt, {onLeave: function (args) {send("WFDLowPrivOpenSessionByDafObjectIdInt");}});
+
+var WFDLowPrivQueryPropertyInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivQueryPropertyInt")
+Interceptor.attach(WFDLowPrivQueryPropertyInt, {onLeave: function (args) {send("WFDLowPrivQueryPropertyInt");}});
+
+var WFDLowPrivRegisterNotificationInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivRegisterNotificationInt")
+Interceptor.attach(WFDLowPrivRegisterNotificationInt, {onLeave: function (args) {send("WFDLowPrivRegisterNotificationInt");}});
+
+var WFDLowPrivRegisterVMgrCallerInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivRegisterVMgrCallerInt")
+Interceptor.attach(WFDLowPrivRegisterVMgrCallerInt, {onLeave: function (args) {send("WFDLowPrivRegisterVMgrCallerInt");}});
+
+var WFDLowPrivSetPropertyInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivSetPropertyInt")
+Interceptor.attach(WFDLowPrivSetPropertyInt, {onLeave: function (args) {send("WFDLowPrivSetPropertyInt");}});
+
+var WFDLowPrivStartDeviceApiConnectionRequestListenerInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivStartDeviceApiConnectionRequestListenerInt")
+Interceptor.attach(WFDLowPrivStartDeviceApiConnectionRequestListenerInt, {onLeave: function (args) {send("WFDLowPrivStartDeviceApiConnectionRequestListenerInt");}});
+
+var WFDLowPrivStartUsingGroupInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivStartUsingGroupInt")
+Interceptor.attach(WFDLowPrivStartUsingGroupInt, {onLeave: function (args) {send("WFDLowPrivStartUsingGroupInt");}});
+
+var WFDLowPrivStopDeviceApiConnectionRequestListenerInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivStopDeviceApiConnectionRequestListenerInt")
+Interceptor.attach(WFDLowPrivStopDeviceApiConnectionRequestListenerInt, {onLeave: function (args) {send("WFDLowPrivStopDeviceApiConnectionRequestListenerInt");}});
+
+var WFDLowPrivStopUsingGroupInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivStopUsingGroupInt")
+Interceptor.attach(WFDLowPrivStopUsingGroupInt, {onLeave: function (args) {send("WFDLowPrivStopUsingGroupInt");}});
+
+var WFDLowPrivUnregisterVMgrCallerInt = Module.findExportByName("wlanapi.dll", "WFDLowPrivUnregisterVMgrCallerInt")
+Interceptor.attach(WFDLowPrivUnregisterVMgrCallerInt, {onLeave: function (args) {send("WFDLowPrivUnregisterVMgrCallerInt");}});
+
+var WFDOpenHandle = Module.findExportByName("wlanapi.dll", "WFDOpenHandle")
+Interceptor.attach(WFDOpenHandle, {onLeave: function (args) {send("WFDOpenHandle");}});
+
+var WFDOpenHandleInt = Module.findExportByName("wlanapi.dll", "WFDOpenHandleInt")
+Interceptor.attach(WFDOpenHandleInt, {onLeave: function (args) {send("WFDOpenHandleInt");}});
+
+var WFDOpenLegacySession = Module.findExportByName("wlanapi.dll", "WFDOpenLegacySession")
+Interceptor.attach(WFDOpenLegacySession, {onLeave: function (args) {send("WFDOpenLegacySession");}});
+
+var WFDOpenLegacySessionInt = Module.findExportByName("wlanapi.dll", "WFDOpenLegacySessionInt")
+Interceptor.attach(WFDOpenLegacySessionInt, {onLeave: function (args) {send("WFDOpenLegacySessionInt");}});
+
+var WFDPairCancelByDeviceAddressInt = Module.findExportByName("wlanapi.dll", "WFDPairCancelByDeviceAddressInt")
+Interceptor.attach(WFDPairCancelByDeviceAddressInt, {onLeave: function (args) {send("WFDPairCancelByDeviceAddressInt");}});
+
+var WFDPairCancelInt = Module.findExportByName("wlanapi.dll", "WFDPairCancelInt")
+Interceptor.attach(WFDPairCancelInt, {onLeave: function (args) {send("WFDPairCancelInt");}});
+
+var WFDPairContinuePairWithDeviceInt = Module.findExportByName("wlanapi.dll", "WFDPairContinuePairWithDeviceInt")
+Interceptor.attach(WFDPairContinuePairWithDeviceInt, {onLeave: function (args) {send("WFDPairContinuePairWithDeviceInt");}});
+
+var WFDPairEnumerateCeremoniesInt = Module.findExportByName("wlanapi.dll", "WFDPairEnumerateCeremoniesInt")
+Interceptor.attach(WFDPairEnumerateCeremoniesInt, {onLeave: function (args) {send("WFDPairEnumerateCeremoniesInt");}});
+
+var WFDPairSelectCeremonyInt = Module.findExportByName("wlanapi.dll", "WFDPairSelectCeremonyInt")
+Interceptor.attach(WFDPairSelectCeremonyInt, {onLeave: function (args) {send("WFDPairSelectCeremonyInt");}});
+
+var WFDPairWithDeviceAndOpenSessionExInt = Module.findExportByName("wlanapi.dll", "WFDPairWithDeviceAndOpenSessionExInt")
+Interceptor.attach(WFDPairWithDeviceAndOpenSessionExInt, {onLeave: function (args) {send("WFDPairWithDeviceAndOpenSessionExInt");}});
+
+var WFDPairWithDeviceAndOpenSessionInt = Module.findExportByName("wlanapi.dll", "WFDPairWithDeviceAndOpenSessionInt")
+Interceptor.attach(WFDPairWithDeviceAndOpenSessionInt, {onLeave: function (args) {send("WFDPairWithDeviceAndOpenSessionInt");}});
+
+var WFDParseOOBBlob = Module.findExportByName("wlanapi.dll", "WFDParseOOBBlob")
+Interceptor.attach(WFDParseOOBBlob, {onLeave: function (args) {send("WFDParseOOBBlob");}});
+
+var WFDParseOOBBlobTypeAndGetPayloadInt = Module.findExportByName("wlanapi.dll", "WFDParseOOBBlobTypeAndGetPayloadInt")
+Interceptor.attach(WFDParseOOBBlobTypeAndGetPayloadInt, {onLeave: function (args) {send("WFDParseOOBBlobTypeAndGetPayloadInt");}});
+
+var WFDParseProfileXmlInt = Module.findExportByName("wlanapi.dll", "WFDParseProfileXmlInt")
+Interceptor.attach(WFDParseProfileXmlInt, {onLeave: function (args) {send("WFDParseProfileXmlInt");}});
+
+var WFDParseWfaNfcCarrierConfigBlobInt = Module.findExportByName("wlanapi.dll", "WFDParseWfaNfcCarrierConfigBlobInt")
+Interceptor.attach(WFDParseWfaNfcCarrierConfigBlobInt, {onLeave: function (args) {send("WFDParseWfaNfcCarrierConfigBlobInt");}});
+
+var WFDQueryPropertyInt = Module.findExportByName("wlanapi.dll", "WFDQueryPropertyInt")
+Interceptor.attach(WFDQueryPropertyInt, {onLeave: function (args) {send("WFDQueryPropertyInt");}});
+
+var WFDRegisterNotificationInt = Module.findExportByName("wlanapi.dll", "WFDRegisterNotificationInt")
+Interceptor.attach(WFDRegisterNotificationInt, {onLeave: function (args) {send("WFDRegisterNotificationInt");}});
+
+var WFDRegisterVMgrCallerInt = Module.findExportByName("wlanapi.dll", "WFDRegisterVMgrCallerInt")
+Interceptor.attach(WFDRegisterVMgrCallerInt, {onLeave: function (args) {send("WFDRegisterVMgrCallerInt");}});
+
+var WFDResetSelectedWfdMgrInt = Module.findExportByName("wlanapi.dll", "WFDResetSelectedWfdMgrInt")
+Interceptor.attach(WFDResetSelectedWfdMgrInt, {onLeave: function (args) {send("WFDResetSelectedWfdMgrInt");}});
+
+var WFDSetAdditionalIEsInt = Module.findExportByName("wlanapi.dll", "WFDSetAdditionalIEsInt")
+Interceptor.attach(WFDSetAdditionalIEsInt, {onLeave: function (args) {send("WFDSetAdditionalIEsInt");}});
+
+var WFDSetPropertyInt = Module.findExportByName("wlanapi.dll", "WFDSetPropertyInt")
+Interceptor.attach(WFDSetPropertyInt, {onLeave: function (args) {send("WFDSetPropertyInt");}});
+
+var WFDSetSecondaryDeviceTypeListInt = Module.findExportByName("wlanapi.dll", "WFDSetSecondaryDeviceTypeListInt")
+Interceptor.attach(WFDSetSecondaryDeviceTypeListInt, {onLeave: function (args) {send("WFDSetSecondaryDeviceTypeListInt");}});
+
+var WFDSetSelectedWfdMgrInt = Module.findExportByName("wlanapi.dll", "WFDSetSelectedWfdMgrInt")
+Interceptor.attach(WFDSetSelectedWfdMgrInt, {onLeave: function (args) {send("WFDSetSelectedWfdMgrInt");}});
+
+var WFDStartBackgroundDiscoveryInt = Module.findExportByName("wlanapi.dll", "WFDStartBackgroundDiscoveryInt")
+Interceptor.attach(WFDStartBackgroundDiscoveryInt, {onLeave: function (args) {send("WFDStartBackgroundDiscoveryInt");}});
+
+var WFDStartConnectorPairWithOOB = Module.findExportByName("wlanapi.dll", "WFDStartConnectorPairWithOOB")
+Interceptor.attach(WFDStartConnectorPairWithOOB, {onLeave: function (args) {send("WFDStartConnectorPairWithOOB");}});
+
+var WFDStartListenerPairWithOOB = Module.findExportByName("wlanapi.dll", "WFDStartListenerPairWithOOB")
+Interceptor.attach(WFDStartListenerPairWithOOB, {onLeave: function (args) {send("WFDStartListenerPairWithOOB");}});
+
+var WFDStartOffloadedDiscoveryInt = Module.findExportByName("wlanapi.dll", "WFDStartOffloadedDiscoveryInt")
+Interceptor.attach(WFDStartOffloadedDiscoveryInt, {onLeave: function (args) {send("WFDStartOffloadedDiscoveryInt");}});
+
+var WFDStartOpenSession = Module.findExportByName("wlanapi.dll", "WFDStartOpenSession")
+Interceptor.attach(WFDStartOpenSession, {onLeave: function (args) {send("WFDStartOpenSession");}});
+
+var WFDStartOpenSessionInt = Module.findExportByName("wlanapi.dll", "WFDStartOpenSessionInt")
+Interceptor.attach(WFDStartOpenSessionInt, {onLeave: function (args) {send("WFDStartOpenSessionInt");}});
+
+var WFDStartUsingGroupExInt = Module.findExportByName("wlanapi.dll", "WFDStartUsingGroupExInt")
+Interceptor.attach(WFDStartUsingGroupExInt, {onLeave: function (args) {send("WFDStartUsingGroupExInt");}});
+
+var WFDStartUsingGroupInt = Module.findExportByName("wlanapi.dll", "WFDStartUsingGroupInt")
+Interceptor.attach(WFDStartUsingGroupInt, {onLeave: function (args) {send("WFDStartUsingGroupInt");}});
+
+var WFDStopBackgroundDiscoveryInt = Module.findExportByName("wlanapi.dll", "WFDStopBackgroundDiscoveryInt")
+Interceptor.attach(WFDStopBackgroundDiscoveryInt, {onLeave: function (args) {send("WFDStopBackgroundDiscoveryInt");}});
+
+var WFDStopDiscoverDevicesExInt = Module.findExportByName("wlanapi.dll", "WFDStopDiscoverDevicesExInt")
+Interceptor.attach(WFDStopDiscoverDevicesExInt, {onLeave: function (args) {send("WFDStopDiscoverDevicesExInt");}});
+
+var WFDStopDiscoverDevicesInt = Module.findExportByName("wlanapi.dll", "WFDStopDiscoverDevicesInt")
+Interceptor.attach(WFDStopDiscoverDevicesInt, {onLeave: function (args) {send("WFDStopDiscoverDevicesInt");}});
+
+var WFDStopOffloadedDiscoveryInt = Module.findExportByName("wlanapi.dll", "WFDStopOffloadedDiscoveryInt")
+Interceptor.attach(WFDStopOffloadedDiscoveryInt, {onLeave: function (args) {send("WFDStopOffloadedDiscoveryInt");}});
+
+var WFDStopUsingGroupInt = Module.findExportByName("wlanapi.dll", "WFDStopUsingGroupInt")
+Interceptor.attach(WFDStopUsingGroupInt, {onLeave: function (args) {send("WFDStopUsingGroupInt");}});
+
+var WFDSvcLowPrivAcceptSessionInt = Module.findExportByName("wlanapi.dll", "WFDSvcLowPrivAcceptSessionInt")
+Interceptor.attach(WFDSvcLowPrivAcceptSessionInt, {onLeave: function (args) {send("WFDSvcLowPrivAcceptSessionInt");}});
+
+var WFDSvcLowPrivCancelSessionInt = Module.findExportByName("wlanapi.dll", "WFDSvcLowPrivCancelSessionInt")
+Interceptor.attach(WFDSvcLowPrivCancelSessionInt, {onLeave: function (args) {send("WFDSvcLowPrivCancelSessionInt");}});
+
+var WFDSvcLowPrivCloseSessionInt = Module.findExportByName("wlanapi.dll", "WFDSvcLowPrivCloseSessionInt")
+Interceptor.attach(WFDSvcLowPrivCloseSessionInt, {onLeave: function (args) {send("WFDSvcLowPrivCloseSessionInt");}});
+
+var WFDSvcLowPrivConfigureSessionInt = Module.findExportByName("wlanapi.dll", "WFDSvcLowPrivConfigureSessionInt")
+Interceptor.attach(WFDSvcLowPrivConfigureSessionInt, {onLeave: function (args) {send("WFDSvcLowPrivConfigureSessionInt");}});
+
+var WFDSvcLowPrivConnectSessionInt = Module.findExportByName("wlanapi.dll", "WFDSvcLowPrivConnectSessionInt")
+Interceptor.attach(WFDSvcLowPrivConnectSessionInt, {onLeave: function (args) {send("WFDSvcLowPrivConnectSessionInt");}});
+
+var WFDSvcLowPrivGetProvisioningInfoInt = Module.findExportByName("wlanapi.dll", "WFDSvcLowPrivGetProvisioningInfoInt")
+Interceptor.attach(WFDSvcLowPrivGetProvisioningInfoInt, {onLeave: function (args) {send("WFDSvcLowPrivGetProvisioningInfoInt");}});
+
+var WFDSvcLowPrivGetSessionEndpointPairsInt = Module.findExportByName("wlanapi.dll", "WFDSvcLowPrivGetSessionEndpointPairsInt")
+Interceptor.attach(WFDSvcLowPrivGetSessionEndpointPairsInt, {onLeave: function (args) {send("WFDSvcLowPrivGetSessionEndpointPairsInt");}});
+
+var WFDSvcLowPrivOpenAdvertiserSessionInt = Module.findExportByName("wlanapi.dll", "WFDSvcLowPrivOpenAdvertiserSessionInt")
+Interceptor.attach(WFDSvcLowPrivOpenAdvertiserSessionInt, {onLeave: function (args) {send("WFDSvcLowPrivOpenAdvertiserSessionInt");}});
+
+var WFDSvcLowPrivOpenSeekerSessionInt = Module.findExportByName("wlanapi.dll", "WFDSvcLowPrivOpenSeekerSessionInt")
+Interceptor.attach(WFDSvcLowPrivOpenSeekerSessionInt, {onLeave: function (args) {send("WFDSvcLowPrivOpenSeekerSessionInt");}});
+
+var WFDSvcLowPrivPublishServiceInt = Module.findExportByName("wlanapi.dll", "WFDSvcLowPrivPublishServiceInt")
+Interceptor.attach(WFDSvcLowPrivPublishServiceInt, {onLeave: function (args) {send("WFDSvcLowPrivPublishServiceInt");}});
+
+var WFDSvcLowPrivUnpublishServiceInt = Module.findExportByName("wlanapi.dll", "WFDSvcLowPrivUnpublishServiceInt")
+Interceptor.attach(WFDSvcLowPrivUnpublishServiceInt, {onLeave: function (args) {send("WFDSvcLowPrivUnpublishServiceInt");}});
+
+var WFDUnregisterVMgrCallerInt = Module.findExportByName("wlanapi.dll", "WFDUnregisterVMgrCallerInt")
+Interceptor.attach(WFDUnregisterVMgrCallerInt, {onLeave: function (args) {send("WFDUnregisterVMgrCallerInt");}});
+
+var WFDUpdateDeviceVisibility = Module.findExportByName("wlanapi.dll", "WFDUpdateDeviceVisibility")
+Interceptor.attach(WFDUpdateDeviceVisibility, {onLeave: function (args) {send("WFDUpdateDeviceVisibility");}});
+
+var WiFiDisplayResetSinkStateInt = Module.findExportByName("wlanapi.dll", "WiFiDisplayResetSinkStateInt")
+Interceptor.attach(WiFiDisplayResetSinkStateInt, {onLeave: function (args) {send("WiFiDisplayResetSinkStateInt");}});
+
+var WiFiDisplaySetSinkClientHandleInt = Module.findExportByName("wlanapi.dll", "WiFiDisplaySetSinkClientHandleInt")
+Interceptor.attach(WiFiDisplaySetSinkClientHandleInt, {onLeave: function (args) {send("WiFiDisplaySetSinkClientHandleInt");}});
+
+var WiFiDisplaySetSinkStateInt = Module.findExportByName("wlanapi.dll", "WiFiDisplaySetSinkStateInt")
+Interceptor.attach(WiFiDisplaySetSinkStateInt, {onLeave: function (args) {send("WiFiDisplaySetSinkStateInt");}});
+
+var WlanAllocateMemory = Module.findExportByName("wlanapi.dll", "WlanAllocateMemory")
+Interceptor.attach(WlanAllocateMemory, {onLeave: function (args) {send("WlanAllocateMemory");}});
+
+var WlanAllocateProfileIpConfiguration = Module.findExportByName("wlanapi.dll", "WlanAllocateProfileIpConfiguration")
+Interceptor.attach(WlanAllocateProfileIpConfiguration, {onLeave: function (args) {send("WlanAllocateProfileIpConfiguration");}});
+
+var WlanCancelPlap = Module.findExportByName("wlanapi.dll", "WlanCancelPlap")
+Interceptor.attach(WlanCancelPlap, {onLeave: function (args) {send("WlanCancelPlap");}});
+
+var WlanCloseHandle = Module.findExportByName("wlanapi.dll", "WlanCloseHandle")
+Interceptor.attach(WlanCloseHandle, {onLeave: function (args) {send("WlanCloseHandle");}});
+
+var WlanConnect = Module.findExportByName("wlanapi.dll", "WlanConnect")
+Interceptor.attach(WlanConnect, {onLeave: function (args) {send("WlanConnect");}});
+
+var WlanConnectEx = Module.findExportByName("wlanapi.dll", "WlanConnectEx")
+Interceptor.attach(WlanConnectEx, {onLeave: function (args) {send("WlanConnectEx");}});
+
+var WlanConnectWithInput = Module.findExportByName("wlanapi.dll", "WlanConnectWithInput")
+Interceptor.attach(WlanConnectWithInput, {onLeave: function (args) {send("WlanConnectWithInput");}});
+
+var WlanDeinitPlapParams = Module.findExportByName("wlanapi.dll", "WlanDeinitPlapParams")
+Interceptor.attach(WlanDeinitPlapParams, {onLeave: function (args) {send("WlanDeinitPlapParams");}});
+
+var WlanDeleteProfile = Module.findExportByName("wlanapi.dll", "WlanDeleteProfile")
+Interceptor.attach(WlanDeleteProfile, {onLeave: function (args) {send("WlanDeleteProfile");}});
+
+var WlanDeviceServiceCommand = Module.findExportByName("wlanapi.dll", "WlanDeviceServiceCommand")
+Interceptor.attach(WlanDeviceServiceCommand, {onLeave: function (args) {send("WlanDeviceServiceCommand");}});
+
+var WlanDisconnect = Module.findExportByName("wlanapi.dll", "WlanDisconnect")
+Interceptor.attach(WlanDisconnect, {onLeave: function (args) {send("WlanDisconnect");}});
+
+var WlanDoPlap = Module.findExportByName("wlanapi.dll", "WlanDoPlap")
+Interceptor.attach(WlanDoPlap, {onLeave: function (args) {send("WlanDoPlap");}});
+
+var WlanDoesBssMatchSecurity = Module.findExportByName("wlanapi.dll", "WlanDoesBssMatchSecurity")
+Interceptor.attach(WlanDoesBssMatchSecurity, {onLeave: function (args) {send("WlanDoesBssMatchSecurity");}});
+
+var WlanEnumAllInterfaces = Module.findExportByName("wlanapi.dll", "WlanEnumAllInterfaces")
+Interceptor.attach(WlanEnumAllInterfaces, {onLeave: function (args) {send("WlanEnumAllInterfaces");}});
+
+var WlanEnumInterfaces = Module.findExportByName("wlanapi.dll", "WlanEnumInterfaces")
+Interceptor.attach(WlanEnumInterfaces, {onLeave: function (args) {send("WlanEnumInterfaces");}});
+
+var WlanExtractPsdIEDataList = Module.findExportByName("wlanapi.dll", "WlanExtractPsdIEDataList")
+Interceptor.attach(WlanExtractPsdIEDataList, {onLeave: function (args) {send("WlanExtractPsdIEDataList");}});
+
+var WlanFreeMemory = Module.findExportByName("wlanapi.dll", "WlanFreeMemory")
+Interceptor.attach(WlanFreeMemory, {onLeave: function (args) {send("WlanFreeMemory");}});
+
+var WlanGenerateProfileXmlBasicSettings = Module.findExportByName("wlanapi.dll", "WlanGenerateProfileXmlBasicSettings")
+Interceptor.attach(WlanGenerateProfileXmlBasicSettings, {onLeave: function (args) {send("WlanGenerateProfileXmlBasicSettings");}});
+
+var WlanGetAvailableNetworkList = Module.findExportByName("wlanapi.dll", "WlanGetAvailableNetworkList")
+Interceptor.attach(WlanGetAvailableNetworkList, {onLeave: function (args) {send("WlanGetAvailableNetworkList");}});
+
+var WlanGetAvailableNetworkList2 = Module.findExportByName("wlanapi.dll", "WlanGetAvailableNetworkList2")
+Interceptor.attach(WlanGetAvailableNetworkList2, {onLeave: function (args) {send("WlanGetAvailableNetworkList2");}});
+
+var WlanGetExtensibilityInfo = Module.findExportByName("wlanapi.dll", "WlanGetExtensibilityInfo")
+Interceptor.attach(WlanGetExtensibilityInfo, {onLeave: function (args) {send("WlanGetExtensibilityInfo");}});
+
+var WlanGetFilterList = Module.findExportByName("wlanapi.dll", "WlanGetFilterList")
+Interceptor.attach(WlanGetFilterList, {onLeave: function (args) {send("WlanGetFilterList");}});
+
+var WlanGetInterfaceCapability = Module.findExportByName("wlanapi.dll", "WlanGetInterfaceCapability")
+Interceptor.attach(WlanGetInterfaceCapability, {onLeave: function (args) {send("WlanGetInterfaceCapability");}});
+
+var WlanGetMFPNegotiated = Module.findExportByName("wlanapi.dll", "WlanGetMFPNegotiated")
+Interceptor.attach(WlanGetMFPNegotiated, {onLeave: function (args) {send("WlanGetMFPNegotiated");}});
+
+var WlanGetNetworkBssList = Module.findExportByName("wlanapi.dll", "WlanGetNetworkBssList")
+Interceptor.attach(WlanGetNetworkBssList, {onLeave: function (args) {send("WlanGetNetworkBssList");}});
+
+var WlanGetProfile = Module.findExportByName("wlanapi.dll", "WlanGetProfile")
+Interceptor.attach(WlanGetProfile, {onLeave: function (args) {send("WlanGetProfile");}});
+
+var WlanGetProfileCustomUserData = Module.findExportByName("wlanapi.dll", "WlanGetProfileCustomUserData")
+Interceptor.attach(WlanGetProfileCustomUserData, {onLeave: function (args) {send("WlanGetProfileCustomUserData");}});
+
+var WlanGetProfileEapUserDataInfo = Module.findExportByName("wlanapi.dll", "WlanGetProfileEapUserDataInfo")
+Interceptor.attach(WlanGetProfileEapUserDataInfo, {onLeave: function (args) {send("WlanGetProfileEapUserDataInfo");}});
+
+var WlanGetProfileIndex = Module.findExportByName("wlanapi.dll", "WlanGetProfileIndex")
+Interceptor.attach(WlanGetProfileIndex, {onLeave: function (args) {send("WlanGetProfileIndex");}});
+
+var WlanGetProfileKeyInfo = Module.findExportByName("wlanapi.dll", "WlanGetProfileKeyInfo")
+Interceptor.attach(WlanGetProfileKeyInfo, {onLeave: function (args) {send("WlanGetProfileKeyInfo");}});
+
+var WlanGetProfileList = Module.findExportByName("wlanapi.dll", "WlanGetProfileList")
+Interceptor.attach(WlanGetProfileList, {onLeave: function (args) {send("WlanGetProfileList");}});
+
+var WlanGetProfileMetadata = Module.findExportByName("wlanapi.dll", "WlanGetProfileMetadata")
+Interceptor.attach(WlanGetProfileMetadata, {onLeave: function (args) {send("WlanGetProfileMetadata");}});
+
+var WlanGetProfileMetadataWithProfileGuid = Module.findExportByName("wlanapi.dll", "WlanGetProfileMetadataWithProfileGuid")
+Interceptor.attach(WlanGetProfileMetadataWithProfileGuid, {onLeave: function (args) {send("WlanGetProfileMetadataWithProfileGuid");}});
+
+var WlanGetProfileSsidList = Module.findExportByName("wlanapi.dll", "WlanGetProfileSsidList")
+Interceptor.attach(WlanGetProfileSsidList, {onLeave: function (args) {send("WlanGetProfileSsidList");}});
+
+var WlanGetRadioInformation = Module.findExportByName("wlanapi.dll", "WlanGetRadioInformation")
+Interceptor.attach(WlanGetRadioInformation, {onLeave: function (args) {send("WlanGetRadioInformation");}});
+
+var WlanGetSecuritySettings = Module.findExportByName("wlanapi.dll", "WlanGetSecuritySettings")
+Interceptor.attach(WlanGetSecuritySettings, {onLeave: function (args) {send("WlanGetSecuritySettings");}});
+
+var WlanGetStoredRadioState = Module.findExportByName("wlanapi.dll", "WlanGetStoredRadioState")
+Interceptor.attach(WlanGetStoredRadioState, {onLeave: function (args) {send("WlanGetStoredRadioState");}});
+
+var WlanGetSupportedDeviceServices = Module.findExportByName("wlanapi.dll", "WlanGetSupportedDeviceServices")
+Interceptor.attach(WlanGetSupportedDeviceServices, {onLeave: function (args) {send("WlanGetSupportedDeviceServices");}});
+
+var WlanHostedNetworkForceStart = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkForceStart")
+Interceptor.attach(WlanHostedNetworkForceStart, {onLeave: function (args) {send("WlanHostedNetworkForceStart");}});
+
+var WlanHostedNetworkForceStop = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkForceStop")
+Interceptor.attach(WlanHostedNetworkForceStop, {onLeave: function (args) {send("WlanHostedNetworkForceStop");}});
+
+var WlanHostedNetworkFreeWCNSettings = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkFreeWCNSettings")
+Interceptor.attach(WlanHostedNetworkFreeWCNSettings, {onLeave: function (args) {send("WlanHostedNetworkFreeWCNSettings");}});
+
+var WlanHostedNetworkHlpQueryEverUsed = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkHlpQueryEverUsed")
+Interceptor.attach(WlanHostedNetworkHlpQueryEverUsed, {onLeave: function (args) {send("WlanHostedNetworkHlpQueryEverUsed");}});
+
+var WlanHostedNetworkInitSettings = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkInitSettings")
+Interceptor.attach(WlanHostedNetworkInitSettings, {onLeave: function (args) {send("WlanHostedNetworkInitSettings");}});
+
+var WlanHostedNetworkQueryProperty = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkQueryProperty")
+Interceptor.attach(WlanHostedNetworkQueryProperty, {onLeave: function (args) {send("WlanHostedNetworkQueryProperty");}});
+
+var WlanHostedNetworkQuerySecondaryKey = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkQuerySecondaryKey")
+Interceptor.attach(WlanHostedNetworkQuerySecondaryKey, {onLeave: function (args) {send("WlanHostedNetworkQuerySecondaryKey");}});
+
+var WlanHostedNetworkQueryStatus = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkQueryStatus")
+Interceptor.attach(WlanHostedNetworkQueryStatus, {onLeave: function (args) {send("WlanHostedNetworkQueryStatus");}});
+
+var WlanHostedNetworkQueryWCNSettings = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkQueryWCNSettings")
+Interceptor.attach(WlanHostedNetworkQueryWCNSettings, {onLeave: function (args) {send("WlanHostedNetworkQueryWCNSettings");}});
+
+var WlanHostedNetworkRefreshSecuritySettings = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkRefreshSecuritySettings")
+Interceptor.attach(WlanHostedNetworkRefreshSecuritySettings, {onLeave: function (args) {send("WlanHostedNetworkRefreshSecuritySettings");}});
+
+var WlanHostedNetworkSetProperty = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkSetProperty")
+Interceptor.attach(WlanHostedNetworkSetProperty, {onLeave: function (args) {send("WlanHostedNetworkSetProperty");}});
+
+var WlanHostedNetworkSetSecondaryKey = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkSetSecondaryKey")
+Interceptor.attach(WlanHostedNetworkSetSecondaryKey, {onLeave: function (args) {send("WlanHostedNetworkSetSecondaryKey");}});
+
+var WlanHostedNetworkSetWCNSettings = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkSetWCNSettings")
+Interceptor.attach(WlanHostedNetworkSetWCNSettings, {onLeave: function (args) {send("WlanHostedNetworkSetWCNSettings");}});
+
+var WlanHostedNetworkStartUsing = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkStartUsing")
+Interceptor.attach(WlanHostedNetworkStartUsing, {onLeave: function (args) {send("WlanHostedNetworkStartUsing");}});
+
+var WlanHostedNetworkStopUsing = Module.findExportByName("wlanapi.dll", "WlanHostedNetworkStopUsing")
+Interceptor.attach(WlanHostedNetworkStopUsing, {onLeave: function (args) {send("WlanHostedNetworkStopUsing");}});
+
+var WlanIhvControl = Module.findExportByName("wlanapi.dll", "WlanIhvControl")
+Interceptor.attach(WlanIhvControl, {onLeave: function (args) {send("WlanIhvControl");}});
+
+var WlanInitPlapParams = Module.findExportByName("wlanapi.dll", "WlanInitPlapParams")
+Interceptor.attach(WlanInitPlapParams, {onLeave: function (args) {send("WlanInitPlapParams");}});
+
+var WlanInternalCancelFTMRequest = Module.findExportByName("wlanapi.dll", "WlanInternalCancelFTMRequest")
+Interceptor.attach(WlanInternalCancelFTMRequest, {onLeave: function (args) {send("WlanInternalCancelFTMRequest");}});
+
+var WlanInternalGetNetworkBssListWithFTMData = Module.findExportByName("wlanapi.dll", "WlanInternalGetNetworkBssListWithFTMData")
+Interceptor.attach(WlanInternalGetNetworkBssListWithFTMData, {onLeave: function (args) {send("WlanInternalGetNetworkBssListWithFTMData");}});
+
+var WlanInternalNonDisruptiveScan = Module.findExportByName("wlanapi.dll", "WlanInternalNonDisruptiveScan")
+Interceptor.attach(WlanInternalNonDisruptiveScan, {onLeave: function (args) {send("WlanInternalNonDisruptiveScan");}});
+
+var WlanInternalNonDisruptiveScanEx = Module.findExportByName("wlanapi.dll", "WlanInternalNonDisruptiveScanEx")
+Interceptor.attach(WlanInternalNonDisruptiveScanEx, {onLeave: function (args) {send("WlanInternalNonDisruptiveScanEx");}});
+
+var WlanInternalRequestFTM = Module.findExportByName("wlanapi.dll", "WlanInternalRequestFTM")
+Interceptor.attach(WlanInternalRequestFTM, {onLeave: function (args) {send("WlanInternalRequestFTM");}});
+
+var WlanInternalScan = Module.findExportByName("wlanapi.dll", "WlanInternalScan")
+Interceptor.attach(WlanInternalScan, {onLeave: function (args) {send("WlanInternalScan");}});
+
+var WlanIsActiveConsoleUser = Module.findExportByName("wlanapi.dll", "WlanIsActiveConsoleUser")
+Interceptor.attach(WlanIsActiveConsoleUser, {onLeave: function (args) {send("WlanIsActiveConsoleUser");}});
+
+var WlanIsNetworkSuppressed = Module.findExportByName("wlanapi.dll", "WlanIsNetworkSuppressed")
+Interceptor.attach(WlanIsNetworkSuppressed, {onLeave: function (args) {send("WlanIsNetworkSuppressed");}});
+
+var WlanIsUIRequestPending = Module.findExportByName("wlanapi.dll", "WlanIsUIRequestPending")
+Interceptor.attach(WlanIsUIRequestPending, {onLeave: function (args) {send("WlanIsUIRequestPending");}});
+
+var WlanLowPrivCloseHandle = Module.findExportByName("wlanapi.dll", "WlanLowPrivCloseHandle")
+Interceptor.attach(WlanLowPrivCloseHandle, {onLeave: function (args) {send("WlanLowPrivCloseHandle");}});
+
+var WlanLowPrivEnumInterfaces = Module.findExportByName("wlanapi.dll", "WlanLowPrivEnumInterfaces")
+Interceptor.attach(WlanLowPrivEnumInterfaces, {onLeave: function (args) {send("WlanLowPrivEnumInterfaces");}});
+
+var WlanLowPrivFreeMemory = Module.findExportByName("wlanapi.dll", "WlanLowPrivFreeMemory")
+Interceptor.attach(WlanLowPrivFreeMemory, {onLeave: function (args) {send("WlanLowPrivFreeMemory");}});
+
+var WlanLowPrivNotifyVsIeProviderInt = Module.findExportByName("wlanapi.dll", "WlanLowPrivNotifyVsIeProviderInt")
+Interceptor.attach(WlanLowPrivNotifyVsIeProviderInt, {onLeave: function (args) {send("WlanLowPrivNotifyVsIeProviderInt");}});
+
+var WlanLowPrivOpenHandle = Module.findExportByName("wlanapi.dll", "WlanLowPrivOpenHandle")
+Interceptor.attach(WlanLowPrivOpenHandle, {onLeave: function (args) {send("WlanLowPrivOpenHandle");}});
+
+var WlanLowPrivQueryInterface = Module.findExportByName("wlanapi.dll", "WlanLowPrivQueryInterface")
+Interceptor.attach(WlanLowPrivQueryInterface, {onLeave: function (args) {send("WlanLowPrivQueryInterface");}});
+
+var WlanLowPrivSetInterface = Module.findExportByName("wlanapi.dll", "WlanLowPrivSetInterface")
+Interceptor.attach(WlanLowPrivSetInterface, {onLeave: function (args) {send("WlanLowPrivSetInterface");}});
+
+var WlanNotifyVsIeProviderExInt = Module.findExportByName("wlanapi.dll", "WlanNotifyVsIeProviderExInt")
+Interceptor.attach(WlanNotifyVsIeProviderExInt, {onLeave: function (args) {send("WlanNotifyVsIeProviderExInt");}});
+
+var WlanNotifyVsIeProviderInt = Module.findExportByName("wlanapi.dll", "WlanNotifyVsIeProviderInt")
+Interceptor.attach(WlanNotifyVsIeProviderInt, {onLeave: function (args) {send("WlanNotifyVsIeProviderInt");}});
+
+var WlanOpenHandle = Module.findExportByName("wlanapi.dll", "WlanOpenHandle")
+Interceptor.attach(WlanOpenHandle, {onLeave: function (args) {send("WlanOpenHandle");}});
+
+var WlanParseProfileXmlBasicSettings = Module.findExportByName("wlanapi.dll", "WlanParseProfileXmlBasicSettings")
+Interceptor.attach(WlanParseProfileXmlBasicSettings, {onLeave: function (args) {send("WlanParseProfileXmlBasicSettings");}});
+
+var WlanPrivateCanDeleteProfile = Module.findExportByName("wlanapi.dll", "WlanPrivateCanDeleteProfile")
+Interceptor.attach(WlanPrivateCanDeleteProfile, {onLeave: function (args) {send("WlanPrivateCanDeleteProfile");}});
+
+var WlanPrivateClearAnqpCache = Module.findExportByName("wlanapi.dll", "WlanPrivateClearAnqpCache")
+Interceptor.attach(WlanPrivateClearAnqpCache, {onLeave: function (args) {send("WlanPrivateClearAnqpCache");}});
+
+var WlanPrivateDeleteProfile = Module.findExportByName("wlanapi.dll", "WlanPrivateDeleteProfile")
+Interceptor.attach(WlanPrivateDeleteProfile, {onLeave: function (args) {send("WlanPrivateDeleteProfile");}});
+
+var WlanPrivateGetAnqpCacheResponse = Module.findExportByName("wlanapi.dll", "WlanPrivateGetAnqpCacheResponse")
+Interceptor.attach(WlanPrivateGetAnqpCacheResponse, {onLeave: function (args) {send("WlanPrivateGetAnqpCacheResponse");}});
+
+var WlanPrivateGetAnqpOSUProviderList = Module.findExportByName("wlanapi.dll", "WlanPrivateGetAnqpOSUProviderList")
+Interceptor.attach(WlanPrivateGetAnqpOSUProviderList, {onLeave: function (args) {send("WlanPrivateGetAnqpOSUProviderList");}});
+
+var WlanPrivateGetAnqpVenueUrl = Module.findExportByName("wlanapi.dll", "WlanPrivateGetAnqpVenueUrl")
+Interceptor.attach(WlanPrivateGetAnqpVenueUrl, {onLeave: function (args) {send("WlanPrivateGetAnqpVenueUrl");}});
+
+var WlanPrivateGetAvailableNetworkList = Module.findExportByName("wlanapi.dll", "WlanPrivateGetAvailableNetworkList")
+Interceptor.attach(WlanPrivateGetAvailableNetworkList, {onLeave: function (args) {send("WlanPrivateGetAvailableNetworkList");}});
+
+var WlanPrivateGetBssInfo = Module.findExportByName("wlanapi.dll", "WlanPrivateGetBssInfo")
+Interceptor.attach(WlanPrivateGetBssInfo, {onLeave: function (args) {send("WlanPrivateGetBssInfo");}});
+
+var WlanPrivateParseAnqpRawData = Module.findExportByName("wlanapi.dll", "WlanPrivateParseAnqpRawData")
+Interceptor.attach(WlanPrivateParseAnqpRawData, {onLeave: function (args) {send("WlanPrivateParseAnqpRawData");}});
+
+var WlanPrivateQuery11adPairedConfig = Module.findExportByName("wlanapi.dll", "WlanPrivateQuery11adPairedConfig")
+Interceptor.attach(WlanPrivateQuery11adPairedConfig, {onLeave: function (args) {send("WlanPrivateQuery11adPairedConfig");}});
+
+var WlanPrivateQueryInterface = Module.findExportByName("wlanapi.dll", "WlanPrivateQueryInterface")
+Interceptor.attach(WlanPrivateQueryInterface, {onLeave: function (args) {send("WlanPrivateQueryInterface");}});
+
+var WlanPrivateRefreshAnqpCache = Module.findExportByName("wlanapi.dll", "WlanPrivateRefreshAnqpCache")
+Interceptor.attach(WlanPrivateRefreshAnqpCache, {onLeave: function (args) {send("WlanPrivateRefreshAnqpCache");}});
+
+var WlanPrivateSetInterface = Module.findExportByName("wlanapi.dll", "WlanPrivateSetInterface")
+Interceptor.attach(WlanPrivateSetInterface, {onLeave: function (args) {send("WlanPrivateSetInterface");}});
+
+var WlanPrivateSetProfile = Module.findExportByName("wlanapi.dll", "WlanPrivateSetProfile")
+Interceptor.attach(WlanPrivateSetProfile, {onLeave: function (args) {send("WlanPrivateSetProfile");}});
+
+var WlanProfileIpConfigurationGetAddressList = Module.findExportByName("wlanapi.dll", "WlanProfileIpConfigurationGetAddressList")
+Interceptor.attach(WlanProfileIpConfigurationGetAddressList, {onLeave: function (args) {send("WlanProfileIpConfigurationGetAddressList");}});
+
+var WlanProfileIpConfigurationGetDnsServerConfigurationList = Module.findExportByName("wlanapi.dll", "WlanProfileIpConfigurationGetDnsServerConfigurationList")
+Interceptor.attach(WlanProfileIpConfigurationGetDnsServerConfigurationList, {onLeave: function (args) {send("WlanProfileIpConfigurationGetDnsServerConfigurationList");}});
+
+var WlanProfileIpConfigurationGetDnsServerList = Module.findExportByName("wlanapi.dll", "WlanProfileIpConfigurationGetDnsServerList")
+Interceptor.attach(WlanProfileIpConfigurationGetDnsServerList, {onLeave: function (args) {send("WlanProfileIpConfigurationGetDnsServerList");}});
+
+var WlanProfileIpConfigurationGetGatewayList = Module.findExportByName("wlanapi.dll", "WlanProfileIpConfigurationGetGatewayList")
+Interceptor.attach(WlanProfileIpConfigurationGetGatewayList, {onLeave: function (args) {send("WlanProfileIpConfigurationGetGatewayList");}});
+
+var WlanQueryAutoConfigParameter = Module.findExportByName("wlanapi.dll", "WlanQueryAutoConfigParameter")
+Interceptor.attach(WlanQueryAutoConfigParameter, {onLeave: function (args) {send("WlanQueryAutoConfigParameter");}});
+
+var WlanQueryCreateAllUserProfileRestricted = Module.findExportByName("wlanapi.dll", "WlanQueryCreateAllUserProfileRestricted")
+Interceptor.attach(WlanQueryCreateAllUserProfileRestricted, {onLeave: function (args) {send("WlanQueryCreateAllUserProfileRestricted");}});
+
+var WlanQueryInterface = Module.findExportByName("wlanapi.dll", "WlanQueryInterface")
+Interceptor.attach(WlanQueryInterface, {onLeave: function (args) {send("WlanQueryInterface");}});
+
+var WlanQueryPlapCredentials = Module.findExportByName("wlanapi.dll", "WlanQueryPlapCredentials")
+Interceptor.attach(WlanQueryPlapCredentials, {onLeave: function (args) {send("WlanQueryPlapCredentials");}});
+
+var WlanQueryPreConnectInput = Module.findExportByName("wlanapi.dll", "WlanQueryPreConnectInput")
+Interceptor.attach(WlanQueryPreConnectInput, {onLeave: function (args) {send("WlanQueryPreConnectInput");}});
+
+var WlanQueryVirtualInterfaceType = Module.findExportByName("wlanapi.dll", "WlanQueryVirtualInterfaceType")
+Interceptor.attach(WlanQueryVirtualInterfaceType, {onLeave: function (args) {send("WlanQueryVirtualInterfaceType");}});
+
+var WlanReasonCodeToString = Module.findExportByName("wlanapi.dll", "WlanReasonCodeToString")
+Interceptor.attach(WlanReasonCodeToString, {onLeave: function (args) {send("WlanReasonCodeToString");}});
+
+var WlanRefreshConnections = Module.findExportByName("wlanapi.dll", "WlanRefreshConnections")
+Interceptor.attach(WlanRefreshConnections, {onLeave: function (args) {send("WlanRefreshConnections");}});
+
+var WlanRegisterDeviceServiceNotification = Module.findExportByName("wlanapi.dll", "WlanRegisterDeviceServiceNotification")
+Interceptor.attach(WlanRegisterDeviceServiceNotification, {onLeave: function (args) {send("WlanRegisterDeviceServiceNotification");}});
+
+var WlanRegisterNotification = Module.findExportByName("wlanapi.dll", "WlanRegisterNotification")
+Interceptor.attach(WlanRegisterNotification, {onLeave: function (args) {send("WlanRegisterNotification");}});
+
+var WlanRegisterVirtualStationNotification = Module.findExportByName("wlanapi.dll", "WlanRegisterVirtualStationNotification")
+Interceptor.attach(WlanRegisterVirtualStationNotification, {onLeave: function (args) {send("WlanRegisterVirtualStationNotification");}});
+
+var WlanRemoveUIForwardingNetworkList = Module.findExportByName("wlanapi.dll", "WlanRemoveUIForwardingNetworkList")
+Interceptor.attach(WlanRemoveUIForwardingNetworkList, {onLeave: function (args) {send("WlanRemoveUIForwardingNetworkList");}});
+
+var WlanRenameProfile = Module.findExportByName("wlanapi.dll", "WlanRenameProfile")
+Interceptor.attach(WlanRenameProfile, {onLeave: function (args) {send("WlanRenameProfile");}});
+
+var WlanSaveTemporaryProfile = Module.findExportByName("wlanapi.dll", "WlanSaveTemporaryProfile")
+Interceptor.attach(WlanSaveTemporaryProfile, {onLeave: function (args) {send("WlanSaveTemporaryProfile");}});
+
+var WlanScan = Module.findExportByName("wlanapi.dll", "WlanScan")
+Interceptor.attach(WlanScan, {onLeave: function (args) {send("WlanScan");}});
+
+var WlanSendUIResponse = Module.findExportByName("wlanapi.dll", "WlanSendUIResponse")
+Interceptor.attach(WlanSendUIResponse, {onLeave: function (args) {send("WlanSendUIResponse");}});
+
+var WlanSetAllUserProfileRestricted = Module.findExportByName("wlanapi.dll", "WlanSetAllUserProfileRestricted")
+Interceptor.attach(WlanSetAllUserProfileRestricted, {onLeave: function (args) {send("WlanSetAllUserProfileRestricted");}});
+
+var WlanSetAutoConfigParameter = Module.findExportByName("wlanapi.dll", "WlanSetAutoConfigParameter")
+Interceptor.attach(WlanSetAutoConfigParameter, {onLeave: function (args) {send("WlanSetAutoConfigParameter");}});
+
+var WlanSetExtensibilityInfo = Module.findExportByName("wlanapi.dll", "WlanSetExtensibilityInfo")
+Interceptor.attach(WlanSetExtensibilityInfo, {onLeave: function (args) {send("WlanSetExtensibilityInfo");}});
+
+var WlanSetFilterList = Module.findExportByName("wlanapi.dll", "WlanSetFilterList")
+Interceptor.attach(WlanSetFilterList, {onLeave: function (args) {send("WlanSetFilterList");}});
+
+var WlanSetInterface = Module.findExportByName("wlanapi.dll", "WlanSetInterface")
+Interceptor.attach(WlanSetInterface, {onLeave: function (args) {send("WlanSetInterface");}});
+
+var WlanSetProfile = Module.findExportByName("wlanapi.dll", "WlanSetProfile")
+Interceptor.attach(WlanSetProfile, {onLeave: function (args) {send("WlanSetProfile");}});
+
+var WlanSetProfileCustomUserData = Module.findExportByName("wlanapi.dll", "WlanSetProfileCustomUserData")
+Interceptor.attach(WlanSetProfileCustomUserData, {onLeave: function (args) {send("WlanSetProfileCustomUserData");}});
+
+var WlanSetProfileEapUserData = Module.findExportByName("wlanapi.dll", "WlanSetProfileEapUserData")
+Interceptor.attach(WlanSetProfileEapUserData, {onLeave: function (args) {send("WlanSetProfileEapUserData");}});
+
+var WlanSetProfileEapXmlUserData = Module.findExportByName("wlanapi.dll", "WlanSetProfileEapXmlUserData")
+Interceptor.attach(WlanSetProfileEapXmlUserData, {onLeave: function (args) {send("WlanSetProfileEapXmlUserData");}});
+
+var WlanSetProfileList = Module.findExportByName("wlanapi.dll", "WlanSetProfileList")
+Interceptor.attach(WlanSetProfileList, {onLeave: function (args) {send("WlanSetProfileList");}});
+
+var WlanSetProfileListForOffload = Module.findExportByName("wlanapi.dll", "WlanSetProfileListForOffload")
+Interceptor.attach(WlanSetProfileListForOffload, {onLeave: function (args) {send("WlanSetProfileListForOffload");}});
+
+var WlanSetProfileMetadata = Module.findExportByName("wlanapi.dll", "WlanSetProfileMetadata")
+Interceptor.attach(WlanSetProfileMetadata, {onLeave: function (args) {send("WlanSetProfileMetadata");}});
+
+var WlanSetProfilePosition = Module.findExportByName("wlanapi.dll", "WlanSetProfilePosition")
+Interceptor.attach(WlanSetProfilePosition, {onLeave: function (args) {send("WlanSetProfilePosition");}});
+
+var WlanSetProtectedScenario = Module.findExportByName("wlanapi.dll", "WlanSetProtectedScenario")
+Interceptor.attach(WlanSetProtectedScenario, {onLeave: function (args) {send("WlanSetProtectedScenario");}});
+
+var WlanSetPsdIEDataList = Module.findExportByName("wlanapi.dll", "WlanSetPsdIEDataList")
+Interceptor.attach(WlanSetPsdIEDataList, {onLeave: function (args) {send("WlanSetPsdIEDataList");}});
+
+var WlanSetSecuritySettings = Module.findExportByName("wlanapi.dll", "WlanSetSecuritySettings")
+Interceptor.attach(WlanSetSecuritySettings, {onLeave: function (args) {send("WlanSetSecuritySettings");}});
+
+var WlanSetUIForwardingNetworkList = Module.findExportByName("wlanapi.dll", "WlanSetUIForwardingNetworkList")
+Interceptor.attach(WlanSetUIForwardingNetworkList, {onLeave: function (args) {send("WlanSetUIForwardingNetworkList");}});
+
+var WlanSignalValueToBar = Module.findExportByName("wlanapi.dll", "WlanSignalValueToBar")
+Interceptor.attach(WlanSignalValueToBar, {onLeave: function (args) {send("WlanSignalValueToBar");}});
+
+var WlanSignalValueToBarEx = Module.findExportByName("wlanapi.dll", "WlanSignalValueToBarEx")
+Interceptor.attach(WlanSignalValueToBarEx, {onLeave: function (args) {send("WlanSignalValueToBarEx");}});
+
+var WlanSsidToDisplayName = Module.findExportByName("wlanapi.dll", "WlanSsidToDisplayName")
+Interceptor.attach(WlanSsidToDisplayName, {onLeave: function (args) {send("WlanSsidToDisplayName");}});
+
+var WlanStartAP = Module.findExportByName("wlanapi.dll", "WlanStartAP")
+Interceptor.attach(WlanStartAP, {onLeave: function (args) {send("WlanStartAP");}});
+
+var WlanStartMovementDetector = Module.findExportByName("wlanapi.dll", "WlanStartMovementDetector")
+Interceptor.attach(WlanStartMovementDetector, {onLeave: function (args) {send("WlanStartMovementDetector");}});
+
+var WlanStopAP = Module.findExportByName("wlanapi.dll", "WlanStopAP")
+Interceptor.attach(WlanStopAP, {onLeave: function (args) {send("WlanStopAP");}});
+
+var WlanStopMovementDetector = Module.findExportByName("wlanapi.dll", "WlanStopMovementDetector")
+Interceptor.attach(WlanStopMovementDetector, {onLeave: function (args) {send("WlanStopMovementDetector");}});
+
+var WlanStoreRadioStateOnEnteringAirPlaneMode = Module.findExportByName("wlanapi.dll", "WlanStoreRadioStateOnEnteringAirPlaneMode")
+Interceptor.attach(WlanStoreRadioStateOnEnteringAirPlaneMode, {onLeave: function (args) {send("WlanStoreRadioStateOnEnteringAirPlaneMode");}});
+
+var WlanStringToSsid = Module.findExportByName("wlanapi.dll", "WlanStringToSsid")
+Interceptor.attach(WlanStringToSsid, {onLeave: function (args) {send("WlanStringToSsid");}});
+
+var WlanStringToUtf8Ssid = Module.findExportByName("wlanapi.dll", "WlanStringToUtf8Ssid")
+Interceptor.attach(WlanStringToUtf8Ssid, {onLeave: function (args) {send("WlanStringToUtf8Ssid");}});
+
+var WlanTryUpgradeCurrentConnectionAuthCipher = Module.findExportByName("wlanapi.dll", "WlanTryUpgradeCurrentConnectionAuthCipher")
+Interceptor.attach(WlanTryUpgradeCurrentConnectionAuthCipher, {onLeave: function (args) {send("WlanTryUpgradeCurrentConnectionAuthCipher");}});
+
+var WlanUpdateBasicProfileSecurity = Module.findExportByName("wlanapi.dll", "WlanUpdateBasicProfileSecurity")
+Interceptor.attach(WlanUpdateBasicProfileSecurity, {onLeave: function (args) {send("WlanUpdateBasicProfileSecurity");}});
+
+var WlanUpdateProfileWithAuthCipher = Module.findExportByName("wlanapi.dll", "WlanUpdateProfileWithAuthCipher")
+Interceptor.attach(WlanUpdateProfileWithAuthCipher, {onLeave: function (args) {send("WlanUpdateProfileWithAuthCipher");}});
+
+var WlanUtf8SsidToDisplayName = Module.findExportByName("wlanapi.dll", "WlanUtf8SsidToDisplayName")
+Interceptor.attach(WlanUtf8SsidToDisplayName, {onLeave: function (args) {send("WlanUtf8SsidToDisplayName");}});
+
+var WlanVMgrQueryCurrentScenariosInt = Module.findExportByName("wlanapi.dll", "WlanVMgrQueryCurrentScenariosInt")
+Interceptor.attach(WlanVMgrQueryCurrentScenariosInt, {onLeave: function (args) {send("WlanVMgrQueryCurrentScenariosInt");}});
+
+var WlanVerifyProfileIpConfiguration = Module.findExportByName("wlanapi.dll", "WlanVerifyProfileIpConfiguration")
+Interceptor.attach(WlanVerifyProfileIpConfiguration, {onLeave: function (args) {send("WlanVerifyProfileIpConfiguration");}});
+
+var WlanWcmDisconnect = Module.findExportByName("wlanapi.dll", "WlanWcmDisconnect")
+Interceptor.attach(WlanWcmDisconnect, {onLeave: function (args) {send("WlanWcmDisconnect");}});
+
+var WlanWcmGetInterface = Module.findExportByName("wlanapi.dll", "WlanWcmGetInterface")
+Interceptor.attach(WlanWcmGetInterface, {onLeave: function (args) {send("WlanWcmGetInterface");}});
+
+var WlanWcmGetProfileList = Module.findExportByName("wlanapi.dll", "WlanWcmGetProfileList")
+Interceptor.attach(WlanWcmGetProfileList, {onLeave: function (args) {send("WlanWcmGetProfileList");}});
+
+var WlanWcmSetInterface = Module.findExportByName("wlanapi.dll", "WlanWcmSetInterface")
+Interceptor.attach(WlanWcmSetInterface, {onLeave: function (args) {send("WlanWcmSetInterface");}});
+
+var WlanWcmSetProfile = Module.findExportByName("wlanapi.dll", "WlanWcmSetProfile")
+Interceptor.attach(WlanWcmSetProfile, {onLeave: function (args) {send("WlanWcmSetProfile");}});
+
+var WlanWfdGOSetWCNSettings = Module.findExportByName("wlanapi.dll", "WlanWfdGOSetWCNSettings")
+Interceptor.attach(WlanWfdGOSetWCNSettings, {onLeave: function (args) {send("WlanWfdGOSetWCNSettings");}});
+
+var WlanWfdGetPeerInfo = Module.findExportByName("wlanapi.dll", "WlanWfdGetPeerInfo")
+Interceptor.attach(WlanWfdGetPeerInfo, {onLeave: function (args) {send("WlanWfdGetPeerInfo");}});
+
+var WlanWfdStartGO = Module.findExportByName("wlanapi.dll", "WlanWfdStartGO")
+Interceptor.attach(WlanWfdStartGO, {onLeave: function (args) {send("WlanWfdStartGO");}});
+
+var WlanWfdStopGO = Module.findExportByName("wlanapi.dll", "WlanWfdStopGO")
+Interceptor.attach(WlanWfdStopGO, {onLeave: function (args) {send("WlanWfdStopGO");}});
+
+var WpAllocMemory = Module.findExportByName("wlanapi.dll", "WpAllocMemory")
+Interceptor.attach(WpAllocMemory, {onLeave: function (args) {send("WpAllocMemory");}});
+
+var WpDuplicateProfile = Module.findExportByName("wlanapi.dll", "WpDuplicateProfile")
+Interceptor.attach(WpDuplicateProfile, {onLeave: function (args) {send("WpDuplicateProfile");}});
+
+var WpFreeMemory = Module.findExportByName("wlanapi.dll", "WpFreeMemory")
+Interceptor.attach(WpFreeMemory, {onLeave: function (args) {send("WpFreeMemory");}});
+
+var WpFreeProfile = Module.findExportByName("wlanapi.dll", "WpFreeProfile")
+Interceptor.attach(WpFreeProfile, {onLeave: function (args) {send("WpFreeProfile");}});
+
+var WpGenerateProfileXml = Module.findExportByName("wlanapi.dll", "WpGenerateProfileXml")
+Interceptor.attach(WpGenerateProfileXml, {onLeave: function (args) {send("WpGenerateProfileXml");}});
+
+var WpLoadProfile = Module.findExportByName("wlanapi.dll", "WpLoadProfile")
+Interceptor.attach(WpLoadProfile, {onLeave: function (args) {send("WpLoadProfile");}});
+
+var WpParseProfileXml = Module.findExportByName("wlanapi.dll", "WpParseProfileXml")
+Interceptor.attach(WpParseProfileXml, {onLeave: function (args) {send("WpParseProfileXml");}});
+
+var WpSaveProfile = Module.findExportByName("wlanapi.dll", "WpSaveProfile")
+Interceptor.attach(WpSaveProfile, {onLeave: function (args) {send("WpSaveProfile");}});
+
+var WpValidateProfile = Module.findExportByName("wlanapi.dll", "WpValidateProfile")
+Interceptor.attach(WpValidateProfile, {onLeave: function (args) {send("WpValidateProfile");}});
+

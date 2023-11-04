@@ -1,0 +1,3 @@
+var DelayLoadFailureHook = Module.findExportByName("api-ms-win-core-delayload-l1-1-0.dll", "DelayLoadFailureHook")
+Interceptor.attach(DelayLoadFailureHook, {onLeave: function (args) {send("DelayLoadFailureHook");}});
+

@@ -1,0 +1,42 @@
+var CopyLZFile = Module.findExportByName("lz32.dll", "CopyLZFile")
+Interceptor.attach(CopyLZFile, {onLeave: function (args) {send("CopyLZFile");}});
+
+var GetExpandedNameA = Module.findExportByName("lz32.dll", "GetExpandedNameA")
+Interceptor.attach(GetExpandedNameA, {onLeave: function (args) {send("GetExpandedNameA");}});
+
+var GetExpandedNameW = Module.findExportByName("lz32.dll", "GetExpandedNameW")
+Interceptor.attach(GetExpandedNameW, {onLeave: function (args) {send("GetExpandedNameW");}});
+
+var LZClose = Module.findExportByName("lz32.dll", "LZClose")
+Interceptor.attach(LZClose, {onLeave: function (args) {send("LZClose");}});
+
+var LZCloseFile = Module.findExportByName("lz32.dll", "LZCloseFile")
+Interceptor.attach(LZCloseFile, {onLeave: function (args) {send("LZCloseFile");}});
+
+var LZCopy = Module.findExportByName("lz32.dll", "LZCopy")
+Interceptor.attach(LZCopy, {onLeave: function (args) {send("LZCopy");}});
+
+var LZCreateFileW = Module.findExportByName("lz32.dll", "LZCreateFileW")
+Interceptor.attach(LZCreateFileW, {onLeave: function (args) {send("LZCreateFileW");}});
+
+var LZDone = Module.findExportByName("lz32.dll", "LZDone")
+Interceptor.attach(LZDone, {onLeave: function (args) {send("LZDone");}});
+
+var LZInit = Module.findExportByName("lz32.dll", "LZInit")
+Interceptor.attach(LZInit, {onLeave: function (args) {send("LZInit");}});
+
+var LZOpenFileA = Module.findExportByName("lz32.dll", "LZOpenFileA")
+Interceptor.attach(LZOpenFileA, {onLeave: function (args) {send("LZOpenFileA");}});
+
+var LZOpenFileW = Module.findExportByName("lz32.dll", "LZOpenFileW")
+Interceptor.attach(LZOpenFileW, {onLeave: function (args) {send("LZOpenFileW");}});
+
+var LZRead = Module.findExportByName("lz32.dll", "LZRead")
+Interceptor.attach(LZRead, {onLeave: function (args) {send("LZRead");}});
+
+var LZSeek = Module.findExportByName("lz32.dll", "LZSeek")
+Interceptor.attach(LZSeek, {onLeave: function (args) {send("LZSeek");}});
+
+var LZStart = Module.findExportByName("lz32.dll", "LZStart")
+Interceptor.attach(LZStart, {onLeave: function (args) {send("LZStart");}});
+

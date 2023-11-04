@@ -1,0 +1,30 @@
+var CamCleanupDisardedCandidateAccounts = Module.findExportByName("camext.dll", "CamCleanupDisardedCandidateAccounts")
+Interceptor.attach(CamCleanupDisardedCandidateAccounts, {onLeave: function (args) {send("CamCleanupDisardedCandidateAccounts");}});
+
+var CamConnectCandidateUser = Module.findExportByName("camext.dll", "CamConnectCandidateUser")
+Interceptor.attach(CamConnectCandidateUser, {onLeave: function (args) {send("CamConnectCandidateUser");}});
+
+var CamFreeAuthBuffer = Module.findExportByName("camext.dll", "CamFreeAuthBuffer")
+Interceptor.attach(CamFreeAuthBuffer, {onLeave: function (args) {send("CamFreeAuthBuffer");}});
+
+var CamFreeBuffer = Module.findExportByName("camext.dll", "CamFreeBuffer")
+Interceptor.attach(CamFreeBuffer, {onLeave: function (args) {send("CamFreeBuffer");}});
+
+var CamGetCandidateAccountCredz = Module.findExportByName("camext.dll", "CamGetCandidateAccountCredz")
+Interceptor.attach(CamGetCandidateAccountCredz, {onLeave: function (args) {send("CamGetCandidateAccountCredz");}});
+
+var CamGetCandidateUserSessionIds = Module.findExportByName("camext.dll", "CamGetCandidateUserSessionIds")
+Interceptor.attach(CamGetCandidateUserSessionIds, {onLeave: function (args) {send("CamGetCandidateUserSessionIds");}});
+
+var CamGetNonCandidateUserSessionIds = Module.findExportByName("camext.dll", "CamGetNonCandidateUserSessionIds")
+Interceptor.attach(CamGetNonCandidateUserSessionIds, {onLeave: function (args) {send("CamGetNonCandidateUserSessionIds");}});
+
+var CamIsCandidateUser = Module.findExportByName("camext.dll", "CamIsCandidateUser")
+Interceptor.attach(CamIsCandidateUser, {onLeave: function (args) {send("CamIsCandidateUser");}});
+
+var CamIsEphemeralCandidateUser = Module.findExportByName("camext.dll", "CamIsEphemeralCandidateUser")
+Interceptor.attach(CamIsEphemeralCandidateUser, {onLeave: function (args) {send("CamIsEphemeralCandidateUser");}});
+
+var CamRefreshCandidateUser = Module.findExportByName("camext.dll", "CamRefreshCandidateUser")
+Interceptor.attach(CamRefreshCandidateUser, {onLeave: function (args) {send("CamRefreshCandidateUser");}});
+

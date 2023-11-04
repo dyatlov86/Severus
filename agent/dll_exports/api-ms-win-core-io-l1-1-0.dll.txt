@@ -1,0 +1,21 @@
+var CancelIoEx = Module.findExportByName("api-ms-win-core-io-l1-1-0.dll", "CancelIoEx")
+Interceptor.attach(CancelIoEx, {onLeave: function (args) {send("CancelIoEx");}});
+
+var CreateIoCompletionPort = Module.findExportByName("api-ms-win-core-io-l1-1-0.dll", "CreateIoCompletionPort")
+Interceptor.attach(CreateIoCompletionPort, {onLeave: function (args) {send("CreateIoCompletionPort");}});
+
+var DeviceIoControl = Module.findExportByName("api-ms-win-core-io-l1-1-0.dll", "DeviceIoControl")
+Interceptor.attach(DeviceIoControl, {onLeave: function (args) {send("DeviceIoControl");}});
+
+var GetOverlappedResult = Module.findExportByName("api-ms-win-core-io-l1-1-0.dll", "GetOverlappedResult")
+Interceptor.attach(GetOverlappedResult, {onLeave: function (args) {send("GetOverlappedResult");}});
+
+var GetQueuedCompletionStatus = Module.findExportByName("api-ms-win-core-io-l1-1-0.dll", "GetQueuedCompletionStatus")
+Interceptor.attach(GetQueuedCompletionStatus, {onLeave: function (args) {send("GetQueuedCompletionStatus");}});
+
+var GetQueuedCompletionStatusEx = Module.findExportByName("api-ms-win-core-io-l1-1-0.dll", "GetQueuedCompletionStatusEx")
+Interceptor.attach(GetQueuedCompletionStatusEx, {onLeave: function (args) {send("GetQueuedCompletionStatusEx");}});
+
+var PostQueuedCompletionStatus = Module.findExportByName("api-ms-win-core-io-l1-1-0.dll", "PostQueuedCompletionStatus")
+Interceptor.attach(PostQueuedCompletionStatus, {onLeave: function (args) {send("PostQueuedCompletionStatus");}});
+

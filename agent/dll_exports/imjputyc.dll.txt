@@ -1,0 +1,6 @@
+var DllMain = Module.findExportByName("imjputyc.dll", "DllMain")
+Interceptor.attach(DllMain, {onLeave: function (args) {send("DllMain");}});
+
+var OpenUty = Module.findExportByName("imjputyc.dll", "OpenUty")
+Interceptor.attach(OpenUty, {onLeave: function (args) {send("OpenUty");}});
+

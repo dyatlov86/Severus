@@ -1,0 +1,48 @@
+var AgGlLoad = Module.findExportByName("sysmain.dll", "AgGlLoad")
+Interceptor.attach(AgGlLoad, {onLeave: function (args) {send("AgGlLoad");}});
+
+var AgPdLoad = Module.findExportByName("sysmain.dll", "AgPdLoad")
+Interceptor.attach(AgPdLoad, {onLeave: function (args) {send("AgPdLoad");}});
+
+var AgTwLoad = Module.findExportByName("sysmain.dll", "AgTwLoad")
+Interceptor.attach(AgTwLoad, {onLeave: function (args) {send("AgTwLoad");}});
+
+var CloseReadyBoostPerfData = Module.findExportByName("sysmain.dll", "CloseReadyBoostPerfData")
+Interceptor.attach(CloseReadyBoostPerfData, {onLeave: function (args) {send("CloseReadyBoostPerfData");}});
+
+var CollectReadyBoostPerfData = Module.findExportByName("sysmain.dll", "CollectReadyBoostPerfData")
+Interceptor.attach(CollectReadyBoostPerfData, {onLeave: function (args) {send("CollectReadyBoostPerfData");}});
+
+var DllCanUnloadNow = Module.findExportByName("sysmain.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetClassObject = Module.findExportByName("sysmain.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var DllRegisterServer = Module.findExportByName("sysmain.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("sysmain.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var GetProviderClassID = Module.findExportByName("sysmain.dll", "GetProviderClassID")
+Interceptor.attach(GetProviderClassID, {onLeave: function (args) {send("GetProviderClassID");}});
+
+var MI_Main = Module.findExportByName("sysmain.dll", "MI_Main")
+Interceptor.attach(MI_Main, {onLeave: function (args) {send("MI_Main");}});
+
+var OpenReadyBoostPerfData = Module.findExportByName("sysmain.dll", "OpenReadyBoostPerfData")
+Interceptor.attach(OpenReadyBoostPerfData, {onLeave: function (args) {send("OpenReadyBoostPerfData");}});
+
+var PfSvSysprepCleanup = Module.findExportByName("sysmain.dll", "PfSvSysprepCleanup")
+Interceptor.attach(PfSvSysprepCleanup, {onLeave: function (args) {send("PfSvSysprepCleanup");}});
+
+var PfSvUnattendCallback = Module.findExportByName("sysmain.dll", "PfSvUnattendCallback")
+Interceptor.attach(PfSvUnattendCallback, {onLeave: function (args) {send("PfSvUnattendCallback");}});
+
+var PfSvWsSwapAssessmentTask = Module.findExportByName("sysmain.dll", "PfSvWsSwapAssessmentTask")
+Interceptor.attach(PfSvWsSwapAssessmentTask, {onLeave: function (args) {send("PfSvWsSwapAssessmentTask");}});
+
+var SysMtServiceMain = Module.findExportByName("sysmain.dll", "SysMtServiceMain")
+Interceptor.attach(SysMtServiceMain, {onLeave: function (args) {send("SysMtServiceMain");}});
+

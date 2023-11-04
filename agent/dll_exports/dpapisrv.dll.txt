@@ -1,0 +1,6 @@
+var InitializeLsaExtension = Module.findExportByName("dpapisrv.dll", "InitializeLsaExtension")
+Interceptor.attach(InitializeLsaExtension, {onLeave: function (args) {send("InitializeLsaExtension");}});
+
+var QueryLsaInterface = Module.findExportByName("dpapisrv.dll", "QueryLsaInterface")
+Interceptor.attach(QueryLsaInterface, {onLeave: function (args) {send("QueryLsaInterface");}});
+

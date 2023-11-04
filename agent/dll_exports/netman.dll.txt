@@ -1,0 +1,15 @@
+var DllRegisterServer = Module.findExportByName("netman.dll", "DllRegisterServer")
+Interceptor.attach(DllRegisterServer, {onLeave: function (args) {send("DllRegisterServer");}});
+
+var DllUnregisterServer = Module.findExportByName("netman.dll", "DllUnregisterServer")
+Interceptor.attach(DllUnregisterServer, {onLeave: function (args) {send("DllUnregisterServer");}});
+
+var HrGetPnpDeviceStatus = Module.findExportByName("netman.dll", "HrGetPnpDeviceStatus")
+Interceptor.attach(HrGetPnpDeviceStatus, {onLeave: function (args) {send("HrGetPnpDeviceStatus");}});
+
+var ServiceMain = Module.findExportByName("netman.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+
+var SvchostPushServiceGlobals = Module.findExportByName("netman.dll", "SvchostPushServiceGlobals")
+Interceptor.attach(SvchostPushServiceGlobals, {onLeave: function (args) {send("SvchostPushServiceGlobals");}});
+

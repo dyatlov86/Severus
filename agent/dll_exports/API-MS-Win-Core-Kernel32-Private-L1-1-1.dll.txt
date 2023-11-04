@@ -1,0 +1,3 @@
+var PrivCopyFileExW = Module.findExportByName("API-MS-Win-Core-Kernel32-Private-L1-1-1.dll", "PrivCopyFileExW")
+Interceptor.attach(PrivCopyFileExW, {onLeave: function (args) {send("PrivCopyFileExW");}});
+

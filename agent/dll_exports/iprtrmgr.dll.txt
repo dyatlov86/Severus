@@ -1,0 +1,6 @@
+var MapInterfaceToAdapter = Module.findExportByName("iprtrmgr.dll", "MapInterfaceToAdapter")
+Interceptor.attach(MapInterfaceToAdapter, {onLeave: function (args) {send("MapInterfaceToAdapter");}});
+
+var StartRouter = Module.findExportByName("iprtrmgr.dll", "StartRouter")
+Interceptor.attach(StartRouter, {onLeave: function (args) {send("StartRouter");}});
+

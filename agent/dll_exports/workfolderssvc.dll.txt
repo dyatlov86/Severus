@@ -1,0 +1,12 @@
+var ClientInitEcsLib = Module.findExportByName("workfolderssvc.dll", "ClientInitEcsLib")
+Interceptor.attach(ClientInitEcsLib, {onLeave: function (args) {send("ClientInitEcsLib");}});
+
+var ClientUnInitEcsLib = Module.findExportByName("workfolderssvc.dll", "ClientUnInitEcsLib")
+Interceptor.attach(ClientUnInitEcsLib, {onLeave: function (args) {send("ClientUnInitEcsLib");}});
+
+var DllCanUnloadNow = Module.findExportByName("workfolderssvc.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var ServiceMain = Module.findExportByName("workfolderssvc.dll", "ServiceMain")
+Interceptor.attach(ServiceMain, {onLeave: function (args) {send("ServiceMain");}});
+

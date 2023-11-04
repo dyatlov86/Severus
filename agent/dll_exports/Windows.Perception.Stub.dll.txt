@@ -1,0 +1,15 @@
+var DllCanUnloadNow = Module.findExportByName("Windows.Perception.Stub.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("Windows.Perception.Stub.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetActivationFactoryPerceptionStub = Module.findExportByName("Windows.Perception.Stub.dll", "DllGetActivationFactoryPerceptionStub")
+Interceptor.attach(DllGetActivationFactoryPerceptionStub, {onLeave: function (args) {send("DllGetActivationFactoryPerceptionStub");}});
+
+var DllGetClassObject = Module.findExportByName("Windows.Perception.Stub.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var GetProxyDllInfo = Module.findExportByName("Windows.Perception.Stub.dll", "GetProxyDllInfo")
+Interceptor.attach(GetProxyDllInfo, {onLeave: function (args) {send("GetProxyDllInfo");}});
+

@@ -1,0 +1,18 @@
+var CheckSnapshotPresence = Module.findExportByName("ifsutilx.dll", "CheckSnapshotPresence")
+Interceptor.attach(CheckSnapshotPresence, {onLeave: function (args) {send("CheckSnapshotPresence");}});
+
+var CreateVolumeSnapshot = Module.findExportByName("ifsutilx.dll", "CreateVolumeSnapshot")
+Interceptor.attach(CreateVolumeSnapshot, {onLeave: function (args) {send("CreateVolumeSnapshot");}});
+
+var GetSnapshotErrorMessage = Module.findExportByName("ifsutilx.dll", "GetSnapshotErrorMessage")
+Interceptor.attach(GetSnapshotErrorMessage, {onLeave: function (args) {send("GetSnapshotErrorMessage");}});
+
+var InitializeCOM = Module.findExportByName("ifsutilx.dll", "InitializeCOM")
+Interceptor.attach(InitializeCOM, {onLeave: function (args) {send("InitializeCOM");}});
+
+var ReleaseVolumeSnapshot = Module.findExportByName("ifsutilx.dll", "ReleaseVolumeSnapshot")
+Interceptor.attach(ReleaseVolumeSnapshot, {onLeave: function (args) {send("ReleaseVolumeSnapshot");}});
+
+var UninitializeCOM = Module.findExportByName("ifsutilx.dll", "UninitializeCOM")
+Interceptor.attach(UninitializeCOM, {onLeave: function (args) {send("UninitializeCOM");}});
+

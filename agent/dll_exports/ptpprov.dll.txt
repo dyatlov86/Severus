@@ -1,0 +1,9 @@
+var TimeProvClose = Module.findExportByName("ptpprov.dll", "TimeProvClose")
+Interceptor.attach(TimeProvClose, {onLeave: function (args) {send("TimeProvClose");}});
+
+var TimeProvCommand = Module.findExportByName("ptpprov.dll", "TimeProvCommand")
+Interceptor.attach(TimeProvCommand, {onLeave: function (args) {send("TimeProvCommand");}});
+
+var TimeProvOpen = Module.findExportByName("ptpprov.dll", "TimeProvOpen")
+Interceptor.attach(TimeProvOpen, {onLeave: function (args) {send("TimeProvOpen");}});
+

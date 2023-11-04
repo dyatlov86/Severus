@@ -1,0 +1,675 @@
+var AMD_CPU_AFFINITY = Module.findExportByName("amdocl32.dll", "AMD_CPU_AFFINITY")
+Interceptor.attach(AMD_CPU_AFFINITY, {onLeave: function (args) {send("AMD_CPU_AFFINITY");}});
+
+var AMD_DIRECT_DISPATCH = Module.findExportByName("amdocl32.dll", "AMD_DIRECT_DISPATCH")
+Interceptor.attach(AMD_DIRECT_DISPATCH, {onLeave: function (args) {send("AMD_DIRECT_DISPATCH");}});
+
+var AMD_GPU_FORCE_SINGLE_FP_DENORM = Module.findExportByName("amdocl32.dll", "AMD_GPU_FORCE_SINGLE_FP_DENORM")
+Interceptor.attach(AMD_GPU_FORCE_SINGLE_FP_DENORM, {onLeave: function (args) {send("AMD_GPU_FORCE_SINGLE_FP_DENORM");}});
+
+var AMD_LOG_LEVEL = Module.findExportByName("amdocl32.dll", "AMD_LOG_LEVEL")
+Interceptor.attach(AMD_LOG_LEVEL, {onLeave: function (args) {send("AMD_LOG_LEVEL");}});
+
+var AMD_LOG_LEVEL_FILE = Module.findExportByName("amdocl32.dll", "AMD_LOG_LEVEL_FILE")
+Interceptor.attach(AMD_LOG_LEVEL_FILE, {onLeave: function (args) {send("AMD_LOG_LEVEL_FILE");}});
+
+var AMD_LOG_MASK = Module.findExportByName("amdocl32.dll", "AMD_LOG_MASK")
+Interceptor.attach(AMD_LOG_MASK, {onLeave: function (args) {send("AMD_LOG_MASK");}});
+
+var AMD_OCL_BUILD_OPTIONS = Module.findExportByName("amdocl32.dll", "AMD_OCL_BUILD_OPTIONS")
+Interceptor.attach(AMD_OCL_BUILD_OPTIONS, {onLeave: function (args) {send("AMD_OCL_BUILD_OPTIONS");}});
+
+var AMD_OCL_BUILD_OPTIONS_APPEND = Module.findExportByName("amdocl32.dll", "AMD_OCL_BUILD_OPTIONS_APPEND")
+Interceptor.attach(AMD_OCL_BUILD_OPTIONS_APPEND, {onLeave: function (args) {send("AMD_OCL_BUILD_OPTIONS_APPEND");}});
+
+var AMD_OCL_LINK_OPTIONS = Module.findExportByName("amdocl32.dll", "AMD_OCL_LINK_OPTIONS")
+Interceptor.attach(AMD_OCL_LINK_OPTIONS, {onLeave: function (args) {send("AMD_OCL_LINK_OPTIONS");}});
+
+var AMD_OCL_LINK_OPTIONS_APPEND = Module.findExportByName("amdocl32.dll", "AMD_OCL_LINK_OPTIONS_APPEND")
+Interceptor.attach(AMD_OCL_LINK_OPTIONS_APPEND, {onLeave: function (args) {send("AMD_OCL_LINK_OPTIONS_APPEND");}});
+
+var AMD_OCL_SC_LIB = Module.findExportByName("amdocl32.dll", "AMD_OCL_SC_LIB")
+Interceptor.attach(AMD_OCL_SC_LIB, {onLeave: function (args) {send("AMD_OCL_SC_LIB");}});
+
+var AMD_OCL_WAIT_COMMAND = Module.findExportByName("amdocl32.dll", "AMD_OCL_WAIT_COMMAND")
+Interceptor.attach(AMD_OCL_WAIT_COMMAND, {onLeave: function (args) {send("AMD_OCL_WAIT_COMMAND");}});
+
+var AMD_OPT_FLUSH = Module.findExportByName("amdocl32.dll", "AMD_OPT_FLUSH")
+Interceptor.attach(AMD_OPT_FLUSH, {onLeave: function (args) {send("AMD_OPT_FLUSH");}});
+
+var AMD_SERIALIZE_COPY = Module.findExportByName("amdocl32.dll", "AMD_SERIALIZE_COPY")
+Interceptor.attach(AMD_SERIALIZE_COPY, {onLeave: function (args) {send("AMD_SERIALIZE_COPY");}});
+
+var AMD_SERIALIZE_KERNEL = Module.findExportByName("amdocl32.dll", "AMD_SERIALIZE_KERNEL")
+Interceptor.attach(AMD_SERIALIZE_KERNEL, {onLeave: function (args) {send("AMD_SERIALIZE_KERNEL");}});
+
+var AMD_THREAD_TRACE_ENABLE = Module.findExportByName("amdocl32.dll", "AMD_THREAD_TRACE_ENABLE")
+Interceptor.attach(AMD_THREAD_TRACE_ENABLE, {onLeave: function (args) {send("AMD_THREAD_TRACE_ENABLE");}});
+
+var CL_KHR_FP64 = Module.findExportByName("amdocl32.dll", "CL_KHR_FP64")
+Interceptor.attach(CL_KHR_FP64, {onLeave: function (args) {send("CL_KHR_FP64");}});
+
+var CQ_THREAD_STACK_SIZE = Module.findExportByName("amdocl32.dll", "CQ_THREAD_STACK_SIZE")
+Interceptor.attach(CQ_THREAD_STACK_SIZE, {onLeave: function (args) {send("CQ_THREAD_STACK_SIZE");}});
+
+var CUDA_VISIBLE_DEVICES = Module.findExportByName("amdocl32.dll", "CUDA_VISIBLE_DEVICES")
+Interceptor.attach(CUDA_VISIBLE_DEVICES, {onLeave: function (args) {send("CUDA_VISIBLE_DEVICES");}});
+
+var DISABLE_DEFERRED_ALLOC = Module.findExportByName("amdocl32.dll", "DISABLE_DEFERRED_ALLOC")
+Interceptor.attach(DISABLE_DEFERRED_ALLOC, {onLeave: function (args) {send("DISABLE_DEFERRED_ALLOC");}});
+
+var GPU_ADD_HBCC_SIZE = Module.findExportByName("amdocl32.dll", "GPU_ADD_HBCC_SIZE")
+Interceptor.attach(GPU_ADD_HBCC_SIZE, {onLeave: function (args) {send("GPU_ADD_HBCC_SIZE");}});
+
+var GPU_ANALYZE_HANG = Module.findExportByName("amdocl32.dll", "GPU_ANALYZE_HANG")
+Interceptor.attach(GPU_ANALYZE_HANG, {onLeave: function (args) {send("GPU_ANALYZE_HANG");}});
+
+var GPU_BLIT_ENGINE_TYPE = Module.findExportByName("amdocl32.dll", "GPU_BLIT_ENGINE_TYPE")
+Interceptor.attach(GPU_BLIT_ENGINE_TYPE, {onLeave: function (args) {send("GPU_BLIT_ENGINE_TYPE");}});
+
+var GPU_DEVICE_ORDINAL = Module.findExportByName("amdocl32.dll", "GPU_DEVICE_ORDINAL")
+Interceptor.attach(GPU_DEVICE_ORDINAL, {onLeave: function (args) {send("GPU_DEVICE_ORDINAL");}});
+
+var GPU_DUMP_BLIT_KERNELS = Module.findExportByName("amdocl32.dll", "GPU_DUMP_BLIT_KERNELS")
+Interceptor.attach(GPU_DUMP_BLIT_KERNELS, {onLeave: function (args) {send("GPU_DUMP_BLIT_KERNELS");}});
+
+var GPU_DUMP_CODE_OBJECT = Module.findExportByName("amdocl32.dll", "GPU_DUMP_CODE_OBJECT")
+Interceptor.attach(GPU_DUMP_CODE_OBJECT, {onLeave: function (args) {send("GPU_DUMP_CODE_OBJECT");}});
+
+var GPU_ENABLE_COOP_GROUPS = Module.findExportByName("amdocl32.dll", "GPU_ENABLE_COOP_GROUPS")
+Interceptor.attach(GPU_ENABLE_COOP_GROUPS, {onLeave: function (args) {send("GPU_ENABLE_COOP_GROUPS");}});
+
+var GPU_ENABLE_HW_P2P = Module.findExportByName("amdocl32.dll", "GPU_ENABLE_HW_P2P")
+Interceptor.attach(GPU_ENABLE_HW_P2P, {onLeave: function (args) {send("GPU_ENABLE_HW_P2P");}});
+
+var GPU_ENABLE_LARGE_ALLOCATION = Module.findExportByName("amdocl32.dll", "GPU_ENABLE_LARGE_ALLOCATION")
+Interceptor.attach(GPU_ENABLE_LARGE_ALLOCATION, {onLeave: function (args) {send("GPU_ENABLE_LARGE_ALLOCATION");}});
+
+var GPU_ENABLE_LC = Module.findExportByName("amdocl32.dll", "GPU_ENABLE_LC")
+Interceptor.attach(GPU_ENABLE_LC, {onLeave: function (args) {send("GPU_ENABLE_LC");}});
+
+var GPU_ENABLE_PAL = Module.findExportByName("amdocl32.dll", "GPU_ENABLE_PAL")
+Interceptor.attach(GPU_ENABLE_PAL, {onLeave: function (args) {send("GPU_ENABLE_PAL");}});
+
+var GPU_ENABLE_WAVE32_MODE = Module.findExportByName("amdocl32.dll", "GPU_ENABLE_WAVE32_MODE")
+Interceptor.attach(GPU_ENABLE_WAVE32_MODE, {onLeave: function (args) {send("GPU_ENABLE_WAVE32_MODE");}});
+
+var GPU_ENABLE_WGP_MODE = Module.findExportByName("amdocl32.dll", "GPU_ENABLE_WGP_MODE")
+Interceptor.attach(GPU_ENABLE_WGP_MODE, {onLeave: function (args) {send("GPU_ENABLE_WGP_MODE");}});
+
+var GPU_FLUSH_ON_EXECUTION = Module.findExportByName("amdocl32.dll", "GPU_FLUSH_ON_EXECUTION")
+Interceptor.attach(GPU_FLUSH_ON_EXECUTION, {onLeave: function (args) {send("GPU_FLUSH_ON_EXECUTION");}});
+
+var GPU_FORCE_64BIT_PTR = Module.findExportByName("amdocl32.dll", "GPU_FORCE_64BIT_PTR")
+Interceptor.attach(GPU_FORCE_64BIT_PTR, {onLeave: function (args) {send("GPU_FORCE_64BIT_PTR");}});
+
+var GPU_FORCE_BLIT_COPY_SIZE = Module.findExportByName("amdocl32.dll", "GPU_FORCE_BLIT_COPY_SIZE")
+Interceptor.attach(GPU_FORCE_BLIT_COPY_SIZE, {onLeave: function (args) {send("GPU_FORCE_BLIT_COPY_SIZE");}});
+
+var GPU_FORCE_OCL20_32BIT = Module.findExportByName("amdocl32.dll", "GPU_FORCE_OCL20_32BIT")
+Interceptor.attach(GPU_FORCE_OCL20_32BIT, {onLeave: function (args) {send("GPU_FORCE_OCL20_32BIT");}});
+
+var GPU_FORCE_QUEUE_PROFILING = Module.findExportByName("amdocl32.dll", "GPU_FORCE_QUEUE_PROFILING")
+Interceptor.attach(GPU_FORCE_QUEUE_PROFILING, {onLeave: function (args) {send("GPU_FORCE_QUEUE_PROFILING");}});
+
+var GPU_IFH_MODE = Module.findExportByName("amdocl32.dll", "GPU_IFH_MODE")
+Interceptor.attach(GPU_IFH_MODE, {onLeave: function (args) {send("GPU_IFH_MODE");}});
+
+var GPU_IMAGE_BUFFER_WAR = Module.findExportByName("amdocl32.dll", "GPU_IMAGE_BUFFER_WAR")
+Interceptor.attach(GPU_IMAGE_BUFFER_WAR, {onLeave: function (args) {send("GPU_IMAGE_BUFFER_WAR");}});
+
+var GPU_IMAGE_DMA = Module.findExportByName("amdocl32.dll", "GPU_IMAGE_DMA")
+Interceptor.attach(GPU_IMAGE_DMA, {onLeave: function (args) {send("GPU_IMAGE_DMA");}});
+
+var GPU_MAX_COMMAND_BUFFERS = Module.findExportByName("amdocl32.dll", "GPU_MAX_COMMAND_BUFFERS")
+Interceptor.attach(GPU_MAX_COMMAND_BUFFERS, {onLeave: function (args) {send("GPU_MAX_COMMAND_BUFFERS");}});
+
+var GPU_MAX_COMMAND_QUEUES = Module.findExportByName("amdocl32.dll", "GPU_MAX_COMMAND_QUEUES")
+Interceptor.attach(GPU_MAX_COMMAND_QUEUES, {onLeave: function (args) {send("GPU_MAX_COMMAND_QUEUES");}});
+
+var GPU_MAX_HEAP_SIZE = Module.findExportByName("amdocl32.dll", "GPU_MAX_HEAP_SIZE")
+Interceptor.attach(GPU_MAX_HEAP_SIZE, {onLeave: function (args) {send("GPU_MAX_HEAP_SIZE");}});
+
+var GPU_MAX_HW_QUEUES = Module.findExportByName("amdocl32.dll", "GPU_MAX_HW_QUEUES")
+Interceptor.attach(GPU_MAX_HW_QUEUES, {onLeave: function (args) {send("GPU_MAX_HW_QUEUES");}});
+
+var GPU_MAX_REMOTE_MEM_SIZE = Module.findExportByName("amdocl32.dll", "GPU_MAX_REMOTE_MEM_SIZE")
+Interceptor.attach(GPU_MAX_REMOTE_MEM_SIZE, {onLeave: function (args) {send("GPU_MAX_REMOTE_MEM_SIZE");}});
+
+var GPU_MAX_SUBALLOC_SIZE = Module.findExportByName("amdocl32.dll", "GPU_MAX_SUBALLOC_SIZE")
+Interceptor.attach(GPU_MAX_SUBALLOC_SIZE, {onLeave: function (args) {send("GPU_MAX_SUBALLOC_SIZE");}});
+
+var GPU_MAX_USWC_ALLOC_SIZE = Module.findExportByName("amdocl32.dll", "GPU_MAX_USWC_ALLOC_SIZE")
+Interceptor.attach(GPU_MAX_USWC_ALLOC_SIZE, {onLeave: function (args) {send("GPU_MAX_USWC_ALLOC_SIZE");}});
+
+var GPU_MAX_WORKGROUP_SIZE = Module.findExportByName("amdocl32.dll", "GPU_MAX_WORKGROUP_SIZE")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE");}});
+
+var GPU_MAX_WORKGROUP_SIZE_2D_X = Module.findExportByName("amdocl32.dll", "GPU_MAX_WORKGROUP_SIZE_2D_X")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE_2D_X, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE_2D_X");}});
+
+var GPU_MAX_WORKGROUP_SIZE_2D_Y = Module.findExportByName("amdocl32.dll", "GPU_MAX_WORKGROUP_SIZE_2D_Y")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE_2D_Y, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE_2D_Y");}});
+
+var GPU_MAX_WORKGROUP_SIZE_3D_X = Module.findExportByName("amdocl32.dll", "GPU_MAX_WORKGROUP_SIZE_3D_X")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE_3D_X, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE_3D_X");}});
+
+var GPU_MAX_WORKGROUP_SIZE_3D_Y = Module.findExportByName("amdocl32.dll", "GPU_MAX_WORKGROUP_SIZE_3D_Y")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE_3D_Y, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE_3D_Y");}});
+
+var GPU_MAX_WORKGROUP_SIZE_3D_Z = Module.findExportByName("amdocl32.dll", "GPU_MAX_WORKGROUP_SIZE_3D_Z")
+Interceptor.attach(GPU_MAX_WORKGROUP_SIZE_3D_Z, {onLeave: function (args) {send("GPU_MAX_WORKGROUP_SIZE_3D_Z");}});
+
+var GPU_MIPMAP = Module.findExportByName("amdocl32.dll", "GPU_MIPMAP")
+Interceptor.attach(GPU_MIPMAP, {onLeave: function (args) {send("GPU_MIPMAP");}});
+
+var GPU_NUM_COMPUTE_RINGS = Module.findExportByName("amdocl32.dll", "GPU_NUM_COMPUTE_RINGS")
+Interceptor.attach(GPU_NUM_COMPUTE_RINGS, {onLeave: function (args) {send("GPU_NUM_COMPUTE_RINGS");}});
+
+var GPU_NUM_MEM_DEPENDENCY = Module.findExportByName("amdocl32.dll", "GPU_NUM_MEM_DEPENDENCY")
+Interceptor.attach(GPU_NUM_MEM_DEPENDENCY, {onLeave: function (args) {send("GPU_NUM_MEM_DEPENDENCY");}});
+
+var GPU_PINNED_MIN_XFER_SIZE = Module.findExportByName("amdocl32.dll", "GPU_PINNED_MIN_XFER_SIZE")
+Interceptor.attach(GPU_PINNED_MIN_XFER_SIZE, {onLeave: function (args) {send("GPU_PINNED_MIN_XFER_SIZE");}});
+
+var GPU_PINNED_XFER_SIZE = Module.findExportByName("amdocl32.dll", "GPU_PINNED_XFER_SIZE")
+Interceptor.attach(GPU_PINNED_XFER_SIZE, {onLeave: function (args) {send("GPU_PINNED_XFER_SIZE");}});
+
+var GPU_PRINT_CHILD_KERNEL = Module.findExportByName("amdocl32.dll", "GPU_PRINT_CHILD_KERNEL")
+Interceptor.attach(GPU_PRINT_CHILD_KERNEL, {onLeave: function (args) {send("GPU_PRINT_CHILD_KERNEL");}});
+
+var GPU_RAW_TIMESTAMP = Module.findExportByName("amdocl32.dll", "GPU_RAW_TIMESTAMP")
+Interceptor.attach(GPU_RAW_TIMESTAMP, {onLeave: function (args) {send("GPU_RAW_TIMESTAMP");}});
+
+var GPU_RESOURCE_CACHE_SIZE = Module.findExportByName("amdocl32.dll", "GPU_RESOURCE_CACHE_SIZE")
+Interceptor.attach(GPU_RESOURCE_CACHE_SIZE, {onLeave: function (args) {send("GPU_RESOURCE_CACHE_SIZE");}});
+
+var GPU_SELECT_COMPUTE_RINGS_ID = Module.findExportByName("amdocl32.dll", "GPU_SELECT_COMPUTE_RINGS_ID")
+Interceptor.attach(GPU_SELECT_COMPUTE_RINGS_ID, {onLeave: function (args) {send("GPU_SELECT_COMPUTE_RINGS_ID");}});
+
+var GPU_SINGLE_ALLOC_PERCENT = Module.findExportByName("amdocl32.dll", "GPU_SINGLE_ALLOC_PERCENT")
+Interceptor.attach(GPU_SINGLE_ALLOC_PERCENT, {onLeave: function (args) {send("GPU_SINGLE_ALLOC_PERCENT");}});
+
+var GPU_STAGING_BUFFER_SIZE = Module.findExportByName("amdocl32.dll", "GPU_STAGING_BUFFER_SIZE")
+Interceptor.attach(GPU_STAGING_BUFFER_SIZE, {onLeave: function (args) {send("GPU_STAGING_BUFFER_SIZE");}});
+
+var GPU_STREAMOPS_CP_WAIT = Module.findExportByName("amdocl32.dll", "GPU_STREAMOPS_CP_WAIT")
+Interceptor.attach(GPU_STREAMOPS_CP_WAIT, {onLeave: function (args) {send("GPU_STREAMOPS_CP_WAIT");}});
+
+var GPU_USE_DEVICE_QUEUE = Module.findExportByName("amdocl32.dll", "GPU_USE_DEVICE_QUEUE")
+Interceptor.attach(GPU_USE_DEVICE_QUEUE, {onLeave: function (args) {send("GPU_USE_DEVICE_QUEUE");}});
+
+var GPU_USE_SINGLE_SCRATCH = Module.findExportByName("amdocl32.dll", "GPU_USE_SINGLE_SCRATCH")
+Interceptor.attach(GPU_USE_SINGLE_SCRATCH, {onLeave: function (args) {send("GPU_USE_SINGLE_SCRATCH");}});
+
+var GPU_USE_SYNC_OBJECTS = Module.findExportByName("amdocl32.dll", "GPU_USE_SYNC_OBJECTS")
+Interceptor.attach(GPU_USE_SYNC_OBJECTS, {onLeave: function (args) {send("GPU_USE_SYNC_OBJECTS");}});
+
+var GPU_WAVES_PER_SIMD = Module.findExportByName("amdocl32.dll", "GPU_WAVES_PER_SIMD")
+Interceptor.attach(GPU_WAVES_PER_SIMD, {onLeave: function (args) {send("GPU_WAVES_PER_SIMD");}});
+
+var GPU_WAVE_LIMIT_ENABLE = Module.findExportByName("amdocl32.dll", "GPU_WAVE_LIMIT_ENABLE")
+Interceptor.attach(GPU_WAVE_LIMIT_ENABLE, {onLeave: function (args) {send("GPU_WAVE_LIMIT_ENABLE");}});
+
+var GPU_WORKLOAD_SPLIT = Module.findExportByName("amdocl32.dll", "GPU_WORKLOAD_SPLIT")
+Interceptor.attach(GPU_WORKLOAD_SPLIT, {onLeave: function (args) {send("GPU_WORKLOAD_SPLIT");}});
+
+var GPU_XFER_BUFFER_SIZE = Module.findExportByName("amdocl32.dll", "GPU_XFER_BUFFER_SIZE")
+Interceptor.attach(GPU_XFER_BUFFER_SIZE, {onLeave: function (args) {send("GPU_XFER_BUFFER_SIZE");}});
+
+var HIP_HIDDEN_FREE_MEM = Module.findExportByName("amdocl32.dll", "HIP_HIDDEN_FREE_MEM")
+Interceptor.attach(HIP_HIDDEN_FREE_MEM, {onLeave: function (args) {send("HIP_HIDDEN_FREE_MEM");}});
+
+var HIP_HOST_COHERENT = Module.findExportByName("amdocl32.dll", "HIP_HOST_COHERENT")
+Interceptor.attach(HIP_HOST_COHERENT, {onLeave: function (args) {send("HIP_HOST_COHERENT");}});
+
+var HIP_MEM_POOL_SUPPORT = Module.findExportByName("amdocl32.dll", "HIP_MEM_POOL_SUPPORT")
+Interceptor.attach(HIP_MEM_POOL_SUPPORT, {onLeave: function (args) {send("HIP_MEM_POOL_SUPPORT");}});
+
+var HIP_VISIBLE_DEVICES = Module.findExportByName("amdocl32.dll", "HIP_VISIBLE_DEVICES")
+Interceptor.attach(HIP_VISIBLE_DEVICES, {onLeave: function (args) {send("HIP_VISIBLE_DEVICES");}});
+
+var HSA_ENABLE_COARSE_GRAIN_SVM = Module.findExportByName("amdocl32.dll", "HSA_ENABLE_COARSE_GRAIN_SVM")
+Interceptor.attach(HSA_ENABLE_COARSE_GRAIN_SVM, {onLeave: function (args) {send("HSA_ENABLE_COARSE_GRAIN_SVM");}});
+
+var HSA_KERNARG_POOL_SIZE = Module.findExportByName("amdocl32.dll", "HSA_KERNARG_POOL_SIZE")
+Interceptor.attach(HSA_KERNARG_POOL_SIZE, {onLeave: function (args) {send("HSA_KERNARG_POOL_SIZE");}});
+
+var HSA_LOCAL_MEMORY_ENABLE = Module.findExportByName("amdocl32.dll", "HSA_LOCAL_MEMORY_ENABLE")
+Interceptor.attach(HSA_LOCAL_MEMORY_ENABLE, {onLeave: function (args) {send("HSA_LOCAL_MEMORY_ENABLE");}});
+
+var OCL_CODE_CACHE_ENABLE = Module.findExportByName("amdocl32.dll", "OCL_CODE_CACHE_ENABLE")
+Interceptor.attach(OCL_CODE_CACHE_ENABLE, {onLeave: function (args) {send("OCL_CODE_CACHE_ENABLE");}});
+
+var OCL_CODE_CACHE_RESET = Module.findExportByName("amdocl32.dll", "OCL_CODE_CACHE_RESET")
+Interceptor.attach(OCL_CODE_CACHE_RESET, {onLeave: function (args) {send("OCL_CODE_CACHE_RESET");}});
+
+var OCL_SET_SVM_SIZE = Module.findExportByName("amdocl32.dll", "OCL_SET_SVM_SIZE")
+Interceptor.attach(OCL_SET_SVM_SIZE, {onLeave: function (args) {send("OCL_SET_SVM_SIZE");}});
+
+var OCL_STUB_PROGRAMS = Module.findExportByName("amdocl32.dll", "OCL_STUB_PROGRAMS")
+Interceptor.attach(OCL_STUB_PROGRAMS, {onLeave: function (args) {send("OCL_STUB_PROGRAMS");}});
+
+var OPENCL_VERSION = Module.findExportByName("amdocl32.dll", "OPENCL_VERSION")
+Interceptor.attach(OPENCL_VERSION, {onLeave: function (args) {send("OPENCL_VERSION");}});
+
+var PAL_ALWAYS_RESIDENT = Module.findExportByName("amdocl32.dll", "PAL_ALWAYS_RESIDENT")
+Interceptor.attach(PAL_ALWAYS_RESIDENT, {onLeave: function (args) {send("PAL_ALWAYS_RESIDENT");}});
+
+var PAL_DISABLE_SDMA = Module.findExportByName("amdocl32.dll", "PAL_DISABLE_SDMA")
+Interceptor.attach(PAL_DISABLE_SDMA, {onLeave: function (args) {send("PAL_DISABLE_SDMA");}});
+
+var PAL_EMBED_KERNEL_MD = Module.findExportByName("amdocl32.dll", "PAL_EMBED_KERNEL_MD")
+Interceptor.attach(PAL_EMBED_KERNEL_MD, {onLeave: function (args) {send("PAL_EMBED_KERNEL_MD");}});
+
+var PAL_FORCE_ASIC_REVISION = Module.findExportByName("amdocl32.dll", "PAL_FORCE_ASIC_REVISION")
+Interceptor.attach(PAL_FORCE_ASIC_REVISION, {onLeave: function (args) {send("PAL_FORCE_ASIC_REVISION");}});
+
+var PAL_MALL_POLICY = Module.findExportByName("amdocl32.dll", "PAL_MALL_POLICY")
+Interceptor.attach(PAL_MALL_POLICY, {onLeave: function (args) {send("PAL_MALL_POLICY");}});
+
+var PAL_PREPINNED_MEMORY_SIZE = Module.findExportByName("amdocl32.dll", "PAL_PREPINNED_MEMORY_SIZE")
+Interceptor.attach(PAL_PREPINNED_MEMORY_SIZE, {onLeave: function (args) {send("PAL_PREPINNED_MEMORY_SIZE");}});
+
+var PAL_RGP_DISP_COUNT = Module.findExportByName("amdocl32.dll", "PAL_RGP_DISP_COUNT")
+Interceptor.attach(PAL_RGP_DISP_COUNT, {onLeave: function (args) {send("PAL_RGP_DISP_COUNT");}});
+
+var REMOTE_ALLOC = Module.findExportByName("amdocl32.dll", "REMOTE_ALLOC")
+Interceptor.attach(REMOTE_ALLOC, {onLeave: function (args) {send("REMOTE_ALLOC");}});
+
+var ROC_ACTIVE_WAIT_TIMEOUT = Module.findExportByName("amdocl32.dll", "ROC_ACTIVE_WAIT_TIMEOUT")
+Interceptor.attach(ROC_ACTIVE_WAIT_TIMEOUT, {onLeave: function (args) {send("ROC_ACTIVE_WAIT_TIMEOUT");}});
+
+var ROC_AQL_QUEUE_SIZE = Module.findExportByName("amdocl32.dll", "ROC_AQL_QUEUE_SIZE")
+Interceptor.attach(ROC_AQL_QUEUE_SIZE, {onLeave: function (args) {send("ROC_AQL_QUEUE_SIZE");}});
+
+var ROC_CPU_WAIT_FOR_SIGNAL = Module.findExportByName("amdocl32.dll", "ROC_CPU_WAIT_FOR_SIGNAL")
+Interceptor.attach(ROC_CPU_WAIT_FOR_SIGNAL, {onLeave: function (args) {send("ROC_CPU_WAIT_FOR_SIGNAL");}});
+
+var ROC_ENABLE_LARGE_BAR = Module.findExportByName("amdocl32.dll", "ROC_ENABLE_LARGE_BAR")
+Interceptor.attach(ROC_ENABLE_LARGE_BAR, {onLeave: function (args) {send("ROC_ENABLE_LARGE_BAR");}});
+
+var ROC_ENABLE_PRE_VEGA = Module.findExportByName("amdocl32.dll", "ROC_ENABLE_PRE_VEGA")
+Interceptor.attach(ROC_ENABLE_PRE_VEGA, {onLeave: function (args) {send("ROC_ENABLE_PRE_VEGA");}});
+
+var ROC_GLOBAL_CU_MASK = Module.findExportByName("amdocl32.dll", "ROC_GLOBAL_CU_MASK")
+Interceptor.attach(ROC_GLOBAL_CU_MASK, {onLeave: function (args) {send("ROC_GLOBAL_CU_MASK");}});
+
+var ROC_HMM_FLAGS = Module.findExportByName("amdocl32.dll", "ROC_HMM_FLAGS")
+Interceptor.attach(ROC_HMM_FLAGS, {onLeave: function (args) {send("ROC_HMM_FLAGS");}});
+
+var ROC_P2P_SDMA_SIZE = Module.findExportByName("amdocl32.dll", "ROC_P2P_SDMA_SIZE")
+Interceptor.attach(ROC_P2P_SDMA_SIZE, {onLeave: function (args) {send("ROC_P2P_SDMA_SIZE");}});
+
+var ROC_SIGNAL_POOL_SIZE = Module.findExportByName("amdocl32.dll", "ROC_SIGNAL_POOL_SIZE")
+Interceptor.attach(ROC_SIGNAL_POOL_SIZE, {onLeave: function (args) {send("ROC_SIGNAL_POOL_SIZE");}});
+
+var ROC_SKIP_COPY_SYNC = Module.findExportByName("amdocl32.dll", "ROC_SKIP_COPY_SYNC")
+Interceptor.attach(ROC_SKIP_COPY_SYNC, {onLeave: function (args) {send("ROC_SKIP_COPY_SYNC");}});
+
+var ROC_SKIP_KERNEL_ARG_COPY = Module.findExportByName("amdocl32.dll", "ROC_SKIP_KERNEL_ARG_COPY")
+Interceptor.attach(ROC_SKIP_KERNEL_ARG_COPY, {onLeave: function (args) {send("ROC_SKIP_KERNEL_ARG_COPY");}});
+
+var ROC_SYSTEM_SCOPE_SIGNAL = Module.findExportByName("amdocl32.dll", "ROC_SYSTEM_SCOPE_SIGNAL")
+Interceptor.attach(ROC_SYSTEM_SCOPE_SIGNAL, {onLeave: function (args) {send("ROC_SYSTEM_SCOPE_SIGNAL");}});
+
+var ROC_USE_FGS_KERNARG = Module.findExportByName("amdocl32.dll", "ROC_USE_FGS_KERNARG")
+Interceptor.attach(ROC_USE_FGS_KERNARG, {onLeave: function (args) {send("ROC_USE_FGS_KERNARG");}});
+
+var clBuildProgram = Module.findExportByName("amdocl32.dll", "clBuildProgram")
+Interceptor.attach(clBuildProgram, {onLeave: function (args) {send("clBuildProgram");}});
+
+var clCloneKernel = Module.findExportByName("amdocl32.dll", "clCloneKernel")
+Interceptor.attach(clCloneKernel, {onLeave: function (args) {send("clCloneKernel");}});
+
+var clCompileProgram = Module.findExportByName("amdocl32.dll", "clCompileProgram")
+Interceptor.attach(clCompileProgram, {onLeave: function (args) {send("clCompileProgram");}});
+
+var clCreateBuffer = Module.findExportByName("amdocl32.dll", "clCreateBuffer")
+Interceptor.attach(clCreateBuffer, {onLeave: function (args) {send("clCreateBuffer");}});
+
+var clCreateCommandQueue = Module.findExportByName("amdocl32.dll", "clCreateCommandQueue")
+Interceptor.attach(clCreateCommandQueue, {onLeave: function (args) {send("clCreateCommandQueue");}});
+
+var clCreateCommandQueueWithProperties = Module.findExportByName("amdocl32.dll", "clCreateCommandQueueWithProperties")
+Interceptor.attach(clCreateCommandQueueWithProperties, {onLeave: function (args) {send("clCreateCommandQueueWithProperties");}});
+
+var clCreateContext = Module.findExportByName("amdocl32.dll", "clCreateContext")
+Interceptor.attach(clCreateContext, {onLeave: function (args) {send("clCreateContext");}});
+
+var clCreateContextFromType = Module.findExportByName("amdocl32.dll", "clCreateContextFromType")
+Interceptor.attach(clCreateContextFromType, {onLeave: function (args) {send("clCreateContextFromType");}});
+
+var clCreateFromGLBuffer = Module.findExportByName("amdocl32.dll", "clCreateFromGLBuffer")
+Interceptor.attach(clCreateFromGLBuffer, {onLeave: function (args) {send("clCreateFromGLBuffer");}});
+
+var clCreateFromGLRenderbuffer = Module.findExportByName("amdocl32.dll", "clCreateFromGLRenderbuffer")
+Interceptor.attach(clCreateFromGLRenderbuffer, {onLeave: function (args) {send("clCreateFromGLRenderbuffer");}});
+
+var clCreateFromGLTexture = Module.findExportByName("amdocl32.dll", "clCreateFromGLTexture")
+Interceptor.attach(clCreateFromGLTexture, {onLeave: function (args) {send("clCreateFromGLTexture");}});
+
+var clCreateFromGLTexture2D = Module.findExportByName("amdocl32.dll", "clCreateFromGLTexture2D")
+Interceptor.attach(clCreateFromGLTexture2D, {onLeave: function (args) {send("clCreateFromGLTexture2D");}});
+
+var clCreateFromGLTexture3D = Module.findExportByName("amdocl32.dll", "clCreateFromGLTexture3D")
+Interceptor.attach(clCreateFromGLTexture3D, {onLeave: function (args) {send("clCreateFromGLTexture3D");}});
+
+var clCreateImage = Module.findExportByName("amdocl32.dll", "clCreateImage")
+Interceptor.attach(clCreateImage, {onLeave: function (args) {send("clCreateImage");}});
+
+var clCreateImage2D = Module.findExportByName("amdocl32.dll", "clCreateImage2D")
+Interceptor.attach(clCreateImage2D, {onLeave: function (args) {send("clCreateImage2D");}});
+
+var clCreateImage3D = Module.findExportByName("amdocl32.dll", "clCreateImage3D")
+Interceptor.attach(clCreateImage3D, {onLeave: function (args) {send("clCreateImage3D");}});
+
+var clCreateKernel = Module.findExportByName("amdocl32.dll", "clCreateKernel")
+Interceptor.attach(clCreateKernel, {onLeave: function (args) {send("clCreateKernel");}});
+
+var clCreateKernelsInProgram = Module.findExportByName("amdocl32.dll", "clCreateKernelsInProgram")
+Interceptor.attach(clCreateKernelsInProgram, {onLeave: function (args) {send("clCreateKernelsInProgram");}});
+
+var clCreatePipe = Module.findExportByName("amdocl32.dll", "clCreatePipe")
+Interceptor.attach(clCreatePipe, {onLeave: function (args) {send("clCreatePipe");}});
+
+var clCreateProgramWithBinary = Module.findExportByName("amdocl32.dll", "clCreateProgramWithBinary")
+Interceptor.attach(clCreateProgramWithBinary, {onLeave: function (args) {send("clCreateProgramWithBinary");}});
+
+var clCreateProgramWithBuiltInKernels = Module.findExportByName("amdocl32.dll", "clCreateProgramWithBuiltInKernels")
+Interceptor.attach(clCreateProgramWithBuiltInKernels, {onLeave: function (args) {send("clCreateProgramWithBuiltInKernels");}});
+
+var clCreateProgramWithIL = Module.findExportByName("amdocl32.dll", "clCreateProgramWithIL")
+Interceptor.attach(clCreateProgramWithIL, {onLeave: function (args) {send("clCreateProgramWithIL");}});
+
+var clCreateProgramWithSource = Module.findExportByName("amdocl32.dll", "clCreateProgramWithSource")
+Interceptor.attach(clCreateProgramWithSource, {onLeave: function (args) {send("clCreateProgramWithSource");}});
+
+var clCreateSampler = Module.findExportByName("amdocl32.dll", "clCreateSampler")
+Interceptor.attach(clCreateSampler, {onLeave: function (args) {send("clCreateSampler");}});
+
+var clCreateSamplerWithProperties = Module.findExportByName("amdocl32.dll", "clCreateSamplerWithProperties")
+Interceptor.attach(clCreateSamplerWithProperties, {onLeave: function (args) {send("clCreateSamplerWithProperties");}});
+
+var clCreateSubBuffer = Module.findExportByName("amdocl32.dll", "clCreateSubBuffer")
+Interceptor.attach(clCreateSubBuffer, {onLeave: function (args) {send("clCreateSubBuffer");}});
+
+var clCreateSubDevices = Module.findExportByName("amdocl32.dll", "clCreateSubDevices")
+Interceptor.attach(clCreateSubDevices, {onLeave: function (args) {send("clCreateSubDevices");}});
+
+var clCreateUserEvent = Module.findExportByName("amdocl32.dll", "clCreateUserEvent")
+Interceptor.attach(clCreateUserEvent, {onLeave: function (args) {send("clCreateUserEvent");}});
+
+var clEnqueueAcquireGLObjects = Module.findExportByName("amdocl32.dll", "clEnqueueAcquireGLObjects")
+Interceptor.attach(clEnqueueAcquireGLObjects, {onLeave: function (args) {send("clEnqueueAcquireGLObjects");}});
+
+var clEnqueueBarrier = Module.findExportByName("amdocl32.dll", "clEnqueueBarrier")
+Interceptor.attach(clEnqueueBarrier, {onLeave: function (args) {send("clEnqueueBarrier");}});
+
+var clEnqueueBarrierWithWaitList = Module.findExportByName("amdocl32.dll", "clEnqueueBarrierWithWaitList")
+Interceptor.attach(clEnqueueBarrierWithWaitList, {onLeave: function (args) {send("clEnqueueBarrierWithWaitList");}});
+
+var clEnqueueCopyBuffer = Module.findExportByName("amdocl32.dll", "clEnqueueCopyBuffer")
+Interceptor.attach(clEnqueueCopyBuffer, {onLeave: function (args) {send("clEnqueueCopyBuffer");}});
+
+var clEnqueueCopyBufferRect = Module.findExportByName("amdocl32.dll", "clEnqueueCopyBufferRect")
+Interceptor.attach(clEnqueueCopyBufferRect, {onLeave: function (args) {send("clEnqueueCopyBufferRect");}});
+
+var clEnqueueCopyBufferToImage = Module.findExportByName("amdocl32.dll", "clEnqueueCopyBufferToImage")
+Interceptor.attach(clEnqueueCopyBufferToImage, {onLeave: function (args) {send("clEnqueueCopyBufferToImage");}});
+
+var clEnqueueCopyImage = Module.findExportByName("amdocl32.dll", "clEnqueueCopyImage")
+Interceptor.attach(clEnqueueCopyImage, {onLeave: function (args) {send("clEnqueueCopyImage");}});
+
+var clEnqueueCopyImageToBuffer = Module.findExportByName("amdocl32.dll", "clEnqueueCopyImageToBuffer")
+Interceptor.attach(clEnqueueCopyImageToBuffer, {onLeave: function (args) {send("clEnqueueCopyImageToBuffer");}});
+
+var clEnqueueFillBuffer = Module.findExportByName("amdocl32.dll", "clEnqueueFillBuffer")
+Interceptor.attach(clEnqueueFillBuffer, {onLeave: function (args) {send("clEnqueueFillBuffer");}});
+
+var clEnqueueFillImage = Module.findExportByName("amdocl32.dll", "clEnqueueFillImage")
+Interceptor.attach(clEnqueueFillImage, {onLeave: function (args) {send("clEnqueueFillImage");}});
+
+var clEnqueueMapBuffer = Module.findExportByName("amdocl32.dll", "clEnqueueMapBuffer")
+Interceptor.attach(clEnqueueMapBuffer, {onLeave: function (args) {send("clEnqueueMapBuffer");}});
+
+var clEnqueueMapImage = Module.findExportByName("amdocl32.dll", "clEnqueueMapImage")
+Interceptor.attach(clEnqueueMapImage, {onLeave: function (args) {send("clEnqueueMapImage");}});
+
+var clEnqueueMarker = Module.findExportByName("amdocl32.dll", "clEnqueueMarker")
+Interceptor.attach(clEnqueueMarker, {onLeave: function (args) {send("clEnqueueMarker");}});
+
+var clEnqueueMarkerWithWaitList = Module.findExportByName("amdocl32.dll", "clEnqueueMarkerWithWaitList")
+Interceptor.attach(clEnqueueMarkerWithWaitList, {onLeave: function (args) {send("clEnqueueMarkerWithWaitList");}});
+
+var clEnqueueMigrateMemObjects = Module.findExportByName("amdocl32.dll", "clEnqueueMigrateMemObjects")
+Interceptor.attach(clEnqueueMigrateMemObjects, {onLeave: function (args) {send("clEnqueueMigrateMemObjects");}});
+
+var clEnqueueNDRangeKernel = Module.findExportByName("amdocl32.dll", "clEnqueueNDRangeKernel")
+Interceptor.attach(clEnqueueNDRangeKernel, {onLeave: function (args) {send("clEnqueueNDRangeKernel");}});
+
+var clEnqueueNativeKernel = Module.findExportByName("amdocl32.dll", "clEnqueueNativeKernel")
+Interceptor.attach(clEnqueueNativeKernel, {onLeave: function (args) {send("clEnqueueNativeKernel");}});
+
+var clEnqueueReadBuffer = Module.findExportByName("amdocl32.dll", "clEnqueueReadBuffer")
+Interceptor.attach(clEnqueueReadBuffer, {onLeave: function (args) {send("clEnqueueReadBuffer");}});
+
+var clEnqueueReadBufferRect = Module.findExportByName("amdocl32.dll", "clEnqueueReadBufferRect")
+Interceptor.attach(clEnqueueReadBufferRect, {onLeave: function (args) {send("clEnqueueReadBufferRect");}});
+
+var clEnqueueReadImage = Module.findExportByName("amdocl32.dll", "clEnqueueReadImage")
+Interceptor.attach(clEnqueueReadImage, {onLeave: function (args) {send("clEnqueueReadImage");}});
+
+var clEnqueueReleaseGLObjects = Module.findExportByName("amdocl32.dll", "clEnqueueReleaseGLObjects")
+Interceptor.attach(clEnqueueReleaseGLObjects, {onLeave: function (args) {send("clEnqueueReleaseGLObjects");}});
+
+var clEnqueueSVMFree = Module.findExportByName("amdocl32.dll", "clEnqueueSVMFree")
+Interceptor.attach(clEnqueueSVMFree, {onLeave: function (args) {send("clEnqueueSVMFree");}});
+
+var clEnqueueSVMMap = Module.findExportByName("amdocl32.dll", "clEnqueueSVMMap")
+Interceptor.attach(clEnqueueSVMMap, {onLeave: function (args) {send("clEnqueueSVMMap");}});
+
+var clEnqueueSVMMemFill = Module.findExportByName("amdocl32.dll", "clEnqueueSVMMemFill")
+Interceptor.attach(clEnqueueSVMMemFill, {onLeave: function (args) {send("clEnqueueSVMMemFill");}});
+
+var clEnqueueSVMMemcpy = Module.findExportByName("amdocl32.dll", "clEnqueueSVMMemcpy")
+Interceptor.attach(clEnqueueSVMMemcpy, {onLeave: function (args) {send("clEnqueueSVMMemcpy");}});
+
+var clEnqueueSVMMigrateMem = Module.findExportByName("amdocl32.dll", "clEnqueueSVMMigrateMem")
+Interceptor.attach(clEnqueueSVMMigrateMem, {onLeave: function (args) {send("clEnqueueSVMMigrateMem");}});
+
+var clEnqueueSVMUnmap = Module.findExportByName("amdocl32.dll", "clEnqueueSVMUnmap")
+Interceptor.attach(clEnqueueSVMUnmap, {onLeave: function (args) {send("clEnqueueSVMUnmap");}});
+
+var clEnqueueTask = Module.findExportByName("amdocl32.dll", "clEnqueueTask")
+Interceptor.attach(clEnqueueTask, {onLeave: function (args) {send("clEnqueueTask");}});
+
+var clEnqueueUnmapMemObject = Module.findExportByName("amdocl32.dll", "clEnqueueUnmapMemObject")
+Interceptor.attach(clEnqueueUnmapMemObject, {onLeave: function (args) {send("clEnqueueUnmapMemObject");}});
+
+var clEnqueueWaitForEvents = Module.findExportByName("amdocl32.dll", "clEnqueueWaitForEvents")
+Interceptor.attach(clEnqueueWaitForEvents, {onLeave: function (args) {send("clEnqueueWaitForEvents");}});
+
+var clEnqueueWriteBuffer = Module.findExportByName("amdocl32.dll", "clEnqueueWriteBuffer")
+Interceptor.attach(clEnqueueWriteBuffer, {onLeave: function (args) {send("clEnqueueWriteBuffer");}});
+
+var clEnqueueWriteBufferRect = Module.findExportByName("amdocl32.dll", "clEnqueueWriteBufferRect")
+Interceptor.attach(clEnqueueWriteBufferRect, {onLeave: function (args) {send("clEnqueueWriteBufferRect");}});
+
+var clEnqueueWriteImage = Module.findExportByName("amdocl32.dll", "clEnqueueWriteImage")
+Interceptor.attach(clEnqueueWriteImage, {onLeave: function (args) {send("clEnqueueWriteImage");}});
+
+var clFinish = Module.findExportByName("amdocl32.dll", "clFinish")
+Interceptor.attach(clFinish, {onLeave: function (args) {send("clFinish");}});
+
+var clFlush = Module.findExportByName("amdocl32.dll", "clFlush")
+Interceptor.attach(clFlush, {onLeave: function (args) {send("clFlush");}});
+
+var clGetCommandQueueInfo = Module.findExportByName("amdocl32.dll", "clGetCommandQueueInfo")
+Interceptor.attach(clGetCommandQueueInfo, {onLeave: function (args) {send("clGetCommandQueueInfo");}});
+
+var clGetContextInfo = Module.findExportByName("amdocl32.dll", "clGetContextInfo")
+Interceptor.attach(clGetContextInfo, {onLeave: function (args) {send("clGetContextInfo");}});
+
+var clGetDeviceAndHostTimer = Module.findExportByName("amdocl32.dll", "clGetDeviceAndHostTimer")
+Interceptor.attach(clGetDeviceAndHostTimer, {onLeave: function (args) {send("clGetDeviceAndHostTimer");}});
+
+var clGetDeviceIDs = Module.findExportByName("amdocl32.dll", "clGetDeviceIDs")
+Interceptor.attach(clGetDeviceIDs, {onLeave: function (args) {send("clGetDeviceIDs");}});
+
+var clGetDeviceInfo = Module.findExportByName("amdocl32.dll", "clGetDeviceInfo")
+Interceptor.attach(clGetDeviceInfo, {onLeave: function (args) {send("clGetDeviceInfo");}});
+
+var clGetEventInfo = Module.findExportByName("amdocl32.dll", "clGetEventInfo")
+Interceptor.attach(clGetEventInfo, {onLeave: function (args) {send("clGetEventInfo");}});
+
+var clGetEventProfilingInfo = Module.findExportByName("amdocl32.dll", "clGetEventProfilingInfo")
+Interceptor.attach(clGetEventProfilingInfo, {onLeave: function (args) {send("clGetEventProfilingInfo");}});
+
+var clGetExtensionFunctionAddress = Module.findExportByName("amdocl32.dll", "clGetExtensionFunctionAddress")
+Interceptor.attach(clGetExtensionFunctionAddress, {onLeave: function (args) {send("clGetExtensionFunctionAddress");}});
+
+var clGetExtensionFunctionAddressForPlatform = Module.findExportByName("amdocl32.dll", "clGetExtensionFunctionAddressForPlatform")
+Interceptor.attach(clGetExtensionFunctionAddressForPlatform, {onLeave: function (args) {send("clGetExtensionFunctionAddressForPlatform");}});
+
+var clGetGLObjectInfo = Module.findExportByName("amdocl32.dll", "clGetGLObjectInfo")
+Interceptor.attach(clGetGLObjectInfo, {onLeave: function (args) {send("clGetGLObjectInfo");}});
+
+var clGetGLTextureInfo = Module.findExportByName("amdocl32.dll", "clGetGLTextureInfo")
+Interceptor.attach(clGetGLTextureInfo, {onLeave: function (args) {send("clGetGLTextureInfo");}});
+
+var clGetHostTimer = Module.findExportByName("amdocl32.dll", "clGetHostTimer")
+Interceptor.attach(clGetHostTimer, {onLeave: function (args) {send("clGetHostTimer");}});
+
+var clGetImageInfo = Module.findExportByName("amdocl32.dll", "clGetImageInfo")
+Interceptor.attach(clGetImageInfo, {onLeave: function (args) {send("clGetImageInfo");}});
+
+var clGetKernelArgInfo = Module.findExportByName("amdocl32.dll", "clGetKernelArgInfo")
+Interceptor.attach(clGetKernelArgInfo, {onLeave: function (args) {send("clGetKernelArgInfo");}});
+
+var clGetKernelInfo = Module.findExportByName("amdocl32.dll", "clGetKernelInfo")
+Interceptor.attach(clGetKernelInfo, {onLeave: function (args) {send("clGetKernelInfo");}});
+
+var clGetKernelSubGroupInfo = Module.findExportByName("amdocl32.dll", "clGetKernelSubGroupInfo")
+Interceptor.attach(clGetKernelSubGroupInfo, {onLeave: function (args) {send("clGetKernelSubGroupInfo");}});
+
+var clGetKernelWorkGroupInfo = Module.findExportByName("amdocl32.dll", "clGetKernelWorkGroupInfo")
+Interceptor.attach(clGetKernelWorkGroupInfo, {onLeave: function (args) {send("clGetKernelWorkGroupInfo");}});
+
+var clGetMemObjectInfo = Module.findExportByName("amdocl32.dll", "clGetMemObjectInfo")
+Interceptor.attach(clGetMemObjectInfo, {onLeave: function (args) {send("clGetMemObjectInfo");}});
+
+var clGetPipeInfo = Module.findExportByName("amdocl32.dll", "clGetPipeInfo")
+Interceptor.attach(clGetPipeInfo, {onLeave: function (args) {send("clGetPipeInfo");}});
+
+var clGetPlatformIDs = Module.findExportByName("amdocl32.dll", "clGetPlatformIDs")
+Interceptor.attach(clGetPlatformIDs, {onLeave: function (args) {send("clGetPlatformIDs");}});
+
+var clGetPlatformInfo = Module.findExportByName("amdocl32.dll", "clGetPlatformInfo")
+Interceptor.attach(clGetPlatformInfo, {onLeave: function (args) {send("clGetPlatformInfo");}});
+
+var clGetProgramBuildInfo = Module.findExportByName("amdocl32.dll", "clGetProgramBuildInfo")
+Interceptor.attach(clGetProgramBuildInfo, {onLeave: function (args) {send("clGetProgramBuildInfo");}});
+
+var clGetProgramInfo = Module.findExportByName("amdocl32.dll", "clGetProgramInfo")
+Interceptor.attach(clGetProgramInfo, {onLeave: function (args) {send("clGetProgramInfo");}});
+
+var clGetSamplerInfo = Module.findExportByName("amdocl32.dll", "clGetSamplerInfo")
+Interceptor.attach(clGetSamplerInfo, {onLeave: function (args) {send("clGetSamplerInfo");}});
+
+var clGetSupportedImageFormats = Module.findExportByName("amdocl32.dll", "clGetSupportedImageFormats")
+Interceptor.attach(clGetSupportedImageFormats, {onLeave: function (args) {send("clGetSupportedImageFormats");}});
+
+var clIcdGetPlatformIDsKHR = Module.findExportByName("amdocl32.dll", "clIcdGetPlatformIDsKHR")
+Interceptor.attach(clIcdGetPlatformIDsKHR, {onLeave: function (args) {send("clIcdGetPlatformIDsKHR");}});
+
+var clLinkProgram = Module.findExportByName("amdocl32.dll", "clLinkProgram")
+Interceptor.attach(clLinkProgram, {onLeave: function (args) {send("clLinkProgram");}});
+
+var clReleaseCommandQueue = Module.findExportByName("amdocl32.dll", "clReleaseCommandQueue")
+Interceptor.attach(clReleaseCommandQueue, {onLeave: function (args) {send("clReleaseCommandQueue");}});
+
+var clReleaseContext = Module.findExportByName("amdocl32.dll", "clReleaseContext")
+Interceptor.attach(clReleaseContext, {onLeave: function (args) {send("clReleaseContext");}});
+
+var clReleaseDevice = Module.findExportByName("amdocl32.dll", "clReleaseDevice")
+Interceptor.attach(clReleaseDevice, {onLeave: function (args) {send("clReleaseDevice");}});
+
+var clReleaseEvent = Module.findExportByName("amdocl32.dll", "clReleaseEvent")
+Interceptor.attach(clReleaseEvent, {onLeave: function (args) {send("clReleaseEvent");}});
+
+var clReleaseKernel = Module.findExportByName("amdocl32.dll", "clReleaseKernel")
+Interceptor.attach(clReleaseKernel, {onLeave: function (args) {send("clReleaseKernel");}});
+
+var clReleaseMemObject = Module.findExportByName("amdocl32.dll", "clReleaseMemObject")
+Interceptor.attach(clReleaseMemObject, {onLeave: function (args) {send("clReleaseMemObject");}});
+
+var clReleaseProgram = Module.findExportByName("amdocl32.dll", "clReleaseProgram")
+Interceptor.attach(clReleaseProgram, {onLeave: function (args) {send("clReleaseProgram");}});
+
+var clReleaseSampler = Module.findExportByName("amdocl32.dll", "clReleaseSampler")
+Interceptor.attach(clReleaseSampler, {onLeave: function (args) {send("clReleaseSampler");}});
+
+var clRetainCommandQueue = Module.findExportByName("amdocl32.dll", "clRetainCommandQueue")
+Interceptor.attach(clRetainCommandQueue, {onLeave: function (args) {send("clRetainCommandQueue");}});
+
+var clRetainContext = Module.findExportByName("amdocl32.dll", "clRetainContext")
+Interceptor.attach(clRetainContext, {onLeave: function (args) {send("clRetainContext");}});
+
+var clRetainDevice = Module.findExportByName("amdocl32.dll", "clRetainDevice")
+Interceptor.attach(clRetainDevice, {onLeave: function (args) {send("clRetainDevice");}});
+
+var clRetainEvent = Module.findExportByName("amdocl32.dll", "clRetainEvent")
+Interceptor.attach(clRetainEvent, {onLeave: function (args) {send("clRetainEvent");}});
+
+var clRetainKernel = Module.findExportByName("amdocl32.dll", "clRetainKernel")
+Interceptor.attach(clRetainKernel, {onLeave: function (args) {send("clRetainKernel");}});
+
+var clRetainMemObject = Module.findExportByName("amdocl32.dll", "clRetainMemObject")
+Interceptor.attach(clRetainMemObject, {onLeave: function (args) {send("clRetainMemObject");}});
+
+var clRetainProgram = Module.findExportByName("amdocl32.dll", "clRetainProgram")
+Interceptor.attach(clRetainProgram, {onLeave: function (args) {send("clRetainProgram");}});
+
+var clRetainSampler = Module.findExportByName("amdocl32.dll", "clRetainSampler")
+Interceptor.attach(clRetainSampler, {onLeave: function (args) {send("clRetainSampler");}});
+
+var clSVMAlloc = Module.findExportByName("amdocl32.dll", "clSVMAlloc")
+Interceptor.attach(clSVMAlloc, {onLeave: function (args) {send("clSVMAlloc");}});
+
+var clSVMFree = Module.findExportByName("amdocl32.dll", "clSVMFree")
+Interceptor.attach(clSVMFree, {onLeave: function (args) {send("clSVMFree");}});
+
+var clSetCommandQueueProperty = Module.findExportByName("amdocl32.dll", "clSetCommandQueueProperty")
+Interceptor.attach(clSetCommandQueueProperty, {onLeave: function (args) {send("clSetCommandQueueProperty");}});
+
+var clSetDefaultDeviceCommandQueue = Module.findExportByName("amdocl32.dll", "clSetDefaultDeviceCommandQueue")
+Interceptor.attach(clSetDefaultDeviceCommandQueue, {onLeave: function (args) {send("clSetDefaultDeviceCommandQueue");}});
+
+var clSetEventCallback = Module.findExportByName("amdocl32.dll", "clSetEventCallback")
+Interceptor.attach(clSetEventCallback, {onLeave: function (args) {send("clSetEventCallback");}});
+
+var clSetKernelArg = Module.findExportByName("amdocl32.dll", "clSetKernelArg")
+Interceptor.attach(clSetKernelArg, {onLeave: function (args) {send("clSetKernelArg");}});
+
+var clSetKernelArgSVMPointer = Module.findExportByName("amdocl32.dll", "clSetKernelArgSVMPointer")
+Interceptor.attach(clSetKernelArgSVMPointer, {onLeave: function (args) {send("clSetKernelArgSVMPointer");}});
+
+var clSetKernelExecInfo = Module.findExportByName("amdocl32.dll", "clSetKernelExecInfo")
+Interceptor.attach(clSetKernelExecInfo, {onLeave: function (args) {send("clSetKernelExecInfo");}});
+
+var clSetMemObjectDestructorCallback = Module.findExportByName("amdocl32.dll", "clSetMemObjectDestructorCallback")
+Interceptor.attach(clSetMemObjectDestructorCallback, {onLeave: function (args) {send("clSetMemObjectDestructorCallback");}});
+
+var clSetUserEventStatus = Module.findExportByName("amdocl32.dll", "clSetUserEventStatus")
+Interceptor.attach(clSetUserEventStatus, {onLeave: function (args) {send("clSetUserEventStatus");}});
+
+var clUnloadCompiler = Module.findExportByName("amdocl32.dll", "clUnloadCompiler")
+Interceptor.attach(clUnloadCompiler, {onLeave: function (args) {send("clUnloadCompiler");}});
+
+var clUnloadPlatformCompiler = Module.findExportByName("amdocl32.dll", "clUnloadPlatformCompiler")
+Interceptor.attach(clUnloadPlatformCompiler, {onLeave: function (args) {send("clUnloadPlatformCompiler");}});
+
+var clWaitForEvents = Module.findExportByName("amdocl32.dll", "clWaitForEvents")
+Interceptor.attach(clWaitForEvents, {onLeave: function (args) {send("clWaitForEvents");}});
+

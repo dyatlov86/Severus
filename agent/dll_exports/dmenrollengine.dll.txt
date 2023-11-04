@@ -1,0 +1,192 @@
+var AutoEnrollMDM = Module.findExportByName("dmenrollengine.dll", "AutoEnrollMDM")
+Interceptor.attach(AutoEnrollMDM, {onLeave: function (args) {send("AutoEnrollMDM");}});
+
+var BeginEnrollmentScope = Module.findExportByName("dmenrollengine.dll", "BeginEnrollmentScope")
+Interceptor.attach(BeginEnrollmentScope, {onLeave: function (args) {send("BeginEnrollmentScope");}});
+
+var CleanupExpiredOMADMSessions = Module.findExportByName("dmenrollengine.dll", "CleanupExpiredOMADMSessions")
+Interceptor.attach(CleanupExpiredOMADMSessions, {onLeave: function (args) {send("CleanupExpiredOMADMSessions");}});
+
+var DiscoverEndpoint = Module.findExportByName("dmenrollengine.dll", "DiscoverEndpoint")
+Interceptor.attach(DiscoverEndpoint, {onLeave: function (args) {send("DiscoverEndpoint");}});
+
+var DiscoverEndpointEx = Module.findExportByName("dmenrollengine.dll", "DiscoverEndpointEx")
+Interceptor.attach(DiscoverEndpointEx, {onLeave: function (args) {send("DiscoverEndpointEx");}});
+
+var DiscoverEndpointEx2 = Module.findExportByName("dmenrollengine.dll", "DiscoverEndpointEx2")
+Interceptor.attach(DiscoverEndpointEx2, {onLeave: function (args) {send("DiscoverEndpointEx2");}});
+
+var DllCanUnloadNow = Module.findExportByName("dmenrollengine.dll", "DllCanUnloadNow")
+Interceptor.attach(DllCanUnloadNow, {onLeave: function (args) {send("DllCanUnloadNow");}});
+
+var DllGetActivationFactory = Module.findExportByName("dmenrollengine.dll", "DllGetActivationFactory")
+Interceptor.attach(DllGetActivationFactory, {onLeave: function (args) {send("DllGetActivationFactory");}});
+
+var DllGetClassObject = Module.findExportByName("dmenrollengine.dll", "DllGetClassObject")
+Interceptor.attach(DllGetClassObject, {onLeave: function (args) {send("DllGetClassObject");}});
+
+var EnableLogging = Module.findExportByName("dmenrollengine.dll", "EnableLogging")
+Interceptor.attach(EnableLogging, {onLeave: function (args) {send("EnableLogging");}});
+
+var EnrollEngineInitialize = Module.findExportByName("dmenrollengine.dll", "EnrollEngineInitialize")
+Interceptor.attach(EnrollEngineInitialize, {onLeave: function (args) {send("EnrollEngineInitialize");}});
+
+var FindDiscoveryService = Module.findExportByName("dmenrollengine.dll", "FindDiscoveryService")
+Interceptor.attach(FindDiscoveryService, {onLeave: function (args) {send("FindDiscoveryService");}});
+
+var FindDiscoveryServiceEx = Module.findExportByName("dmenrollengine.dll", "FindDiscoveryServiceEx")
+Interceptor.attach(FindDiscoveryServiceEx, {onLeave: function (args) {send("FindDiscoveryServiceEx");}});
+
+var FreeMmpcDiscoveryResultsData = Module.findExportByName("dmenrollengine.dll", "FreeMmpcDiscoveryResultsData")
+Interceptor.attach(FreeMmpcDiscoveryResultsData, {onLeave: function (args) {send("FreeMmpcDiscoveryResultsData");}});
+
+var GetCertificatePolicy = Module.findExportByName("dmenrollengine.dll", "GetCertificatePolicy")
+Interceptor.attach(GetCertificatePolicy, {onLeave: function (args) {send("GetCertificatePolicy");}});
+
+var GetDatabaseManagerInstance = Module.findExportByName("dmenrollengine.dll", "GetDatabaseManagerInstance")
+Interceptor.attach(GetDatabaseManagerInstance, {onLeave: function (args) {send("GetDatabaseManagerInstance");}});
+
+var GetEnrollmentAadResourceUrl = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentAadResourceUrl")
+Interceptor.attach(GetEnrollmentAadResourceUrl, {onLeave: function (args) {send("GetEnrollmentAadResourceUrl");}});
+
+var GetEnrollmentAadSendDeviceToken = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentAadSendDeviceToken")
+Interceptor.attach(GetEnrollmentAadSendDeviceToken, {onLeave: function (args) {send("GetEnrollmentAadSendDeviceToken");}});
+
+var GetEnrollmentAltitude = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentAltitude")
+Interceptor.attach(GetEnrollmentAltitude, {onLeave: function (args) {send("GetEnrollmentAltitude");}});
+
+var GetEnrollmentAuthPolicy = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentAuthPolicy")
+Interceptor.attach(GetEnrollmentAuthPolicy, {onLeave: function (args) {send("GetEnrollmentAuthPolicy");}});
+
+var GetEnrollmentCertStore = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentCertStore")
+Interceptor.attach(GetEnrollmentCertStore, {onLeave: function (args) {send("GetEnrollmentCertStore");}});
+
+var GetEnrollmentClientCertThumbprint = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentClientCertThumbprint")
+Interceptor.attach(GetEnrollmentClientCertThumbprint, {onLeave: function (args) {send("GetEnrollmentClientCertThumbprint");}});
+
+var GetEnrollmentClientContext = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentClientContext")
+Interceptor.attach(GetEnrollmentClientContext, {onLeave: function (args) {send("GetEnrollmentClientContext");}});
+
+var GetEnrollmentCurCryptoProvider = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentCurCryptoProvider")
+Interceptor.attach(GetEnrollmentCurCryptoProvider, {onLeave: function (args) {send("GetEnrollmentCurCryptoProvider");}});
+
+var GetEnrollmentDiscoveryService = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentDiscoveryService")
+Interceptor.attach(GetEnrollmentDiscoveryService, {onLeave: function (args) {send("GetEnrollmentDiscoveryService");}});
+
+var GetEnrollmentEntDmId = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentEntDmId")
+Interceptor.attach(GetEnrollmentEntDmId, {onLeave: function (args) {send("GetEnrollmentEntDmId");}});
+
+var GetEnrollmentForceAadToken = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentForceAadToken")
+Interceptor.attach(GetEnrollmentForceAadToken, {onLeave: function (args) {send("GetEnrollmentForceAadToken");}});
+
+var GetEnrollmentLinkedEnrollmentHasPriority = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentLinkedEnrollmentHasPriority")
+Interceptor.attach(GetEnrollmentLinkedEnrollmentHasPriority, {onLeave: function (args) {send("GetEnrollmentLinkedEnrollmentHasPriority");}});
+
+var GetEnrollmentLinkedEnrollmentId = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentLinkedEnrollmentId")
+Interceptor.attach(GetEnrollmentLinkedEnrollmentId, {onLeave: function (args) {send("GetEnrollmentLinkedEnrollmentId");}});
+
+var GetEnrollmentLinkedEnrollmentLockedToMMPC = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentLinkedEnrollmentLockedToMMPC")
+Interceptor.attach(GetEnrollmentLinkedEnrollmentLockedToMMPC, {onLeave: function (args) {send("GetEnrollmentLinkedEnrollmentLockedToMMPC");}});
+
+var GetEnrollmentPartnerOpaqueID = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentPartnerOpaqueID")
+Interceptor.attach(GetEnrollmentPartnerOpaqueID, {onLeave: function (args) {send("GetEnrollmentPartnerOpaqueID");}});
+
+var GetEnrollmentSID = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentSID")
+Interceptor.attach(GetEnrollmentSID, {onLeave: function (args) {send("GetEnrollmentSID");}});
+
+var GetEnrollmentState = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentState")
+Interceptor.attach(GetEnrollmentState, {onLeave: function (args) {send("GetEnrollmentState");}});
+
+var GetEnrollmentTenantID = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentTenantID")
+Interceptor.attach(GetEnrollmentTenantID, {onLeave: function (args) {send("GetEnrollmentTenantID");}});
+
+var GetEnrollmentType = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentType")
+Interceptor.attach(GetEnrollmentType, {onLeave: function (args) {send("GetEnrollmentType");}});
+
+var GetEnrollmentUPN = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentUPN")
+Interceptor.attach(GetEnrollmentUPN, {onLeave: function (args) {send("GetEnrollmentUPN");}});
+
+var GetEnrollmentsOfTypes = Module.findExportByName("dmenrollengine.dll", "GetEnrollmentsOfTypes")
+Interceptor.attach(GetEnrollmentsOfTypes, {onLeave: function (args) {send("GetEnrollmentsOfTypes");}});
+
+var GetFirstEnrollmentGuidOfTypes = Module.findExportByName("dmenrollengine.dll", "GetFirstEnrollmentGuidOfTypes")
+Interceptor.attach(GetFirstEnrollmentGuidOfTypes, {onLeave: function (args) {send("GetFirstEnrollmentGuidOfTypes");}});
+
+var GetIsRecoveryAllowed = Module.findExportByName("dmenrollengine.dll", "GetIsRecoveryAllowed")
+Interceptor.attach(GetIsRecoveryAllowed, {onLeave: function (args) {send("GetIsRecoveryAllowed");}});
+
+var GetMmpcEnrollmentFlag = Module.findExportByName("dmenrollengine.dll", "GetMmpcEnrollmentFlag")
+Interceptor.attach(GetMmpcEnrollmentFlag, {onLeave: function (args) {send("GetMmpcEnrollmentFlag");}});
+
+var GetProviderID = Module.findExportByName("dmenrollengine.dll", "GetProviderID")
+Interceptor.attach(GetProviderID, {onLeave: function (args) {send("GetProviderID");}});
+
+var GetRecoveryInitiatedByServer = Module.findExportByName("dmenrollengine.dll", "GetRecoveryInitiatedByServer")
+Interceptor.attach(GetRecoveryInitiatedByServer, {onLeave: function (args) {send("GetRecoveryInitiatedByServer");}});
+
+var GetRecoveryRetryCount = Module.findExportByName("dmenrollengine.dll", "GetRecoveryRetryCount")
+Interceptor.attach(GetRecoveryRetryCount, {onLeave: function (args) {send("GetRecoveryRetryCount");}});
+
+var GetRecoveryStatusEnum = Module.findExportByName("dmenrollengine.dll", "GetRecoveryStatusEnum")
+Interceptor.attach(GetRecoveryStatusEnum, {onLeave: function (args) {send("GetRecoveryStatusEnum");}});
+
+var IsLockedToMmpc = Module.findExportByName("dmenrollengine.dll", "IsLockedToMmpc")
+Interceptor.attach(IsLockedToMmpc, {onLeave: function (args) {send("IsLockedToMmpc");}});
+
+var MmpcDiscoverEndpoint = Module.findExportByName("dmenrollengine.dll", "MmpcDiscoverEndpoint")
+Interceptor.attach(MmpcDiscoverEndpoint, {onLeave: function (args) {send("MmpcDiscoverEndpoint");}});
+
+var OpenEnrollmentsHKEY = Module.findExportByName("dmenrollengine.dll", "OpenEnrollmentsHKEY")
+Interceptor.attach(OpenEnrollmentsHKEY, {onLeave: function (args) {send("OpenEnrollmentsHKEY");}});
+
+var SetEnrollState = Module.findExportByName("dmenrollengine.dll", "SetEnrollState")
+Interceptor.attach(SetEnrollState, {onLeave: function (args) {send("SetEnrollState");}});
+
+var SetEnrollmentAadResourceUrl = Module.findExportByName("dmenrollengine.dll", "SetEnrollmentAadResourceUrl")
+Interceptor.attach(SetEnrollmentAadResourceUrl, {onLeave: function (args) {send("SetEnrollmentAadResourceUrl");}});
+
+var SetEnrollmentAadSendDeviceToken = Module.findExportByName("dmenrollengine.dll", "SetEnrollmentAadSendDeviceToken")
+Interceptor.attach(SetEnrollmentAadSendDeviceToken, {onLeave: function (args) {send("SetEnrollmentAadSendDeviceToken");}});
+
+var SetEnrollmentDormant = Module.findExportByName("dmenrollengine.dll", "SetEnrollmentDormant")
+Interceptor.attach(SetEnrollmentDormant, {onLeave: function (args) {send("SetEnrollmentDormant");}});
+
+var SetEnrollmentForceAadToken = Module.findExportByName("dmenrollengine.dll", "SetEnrollmentForceAadToken")
+Interceptor.attach(SetEnrollmentForceAadToken, {onLeave: function (args) {send("SetEnrollmentForceAadToken");}});
+
+var SetEnrollmentPartnerOpaqueID = Module.findExportByName("dmenrollengine.dll", "SetEnrollmentPartnerOpaqueID")
+Interceptor.attach(SetEnrollmentPartnerOpaqueID, {onLeave: function (args) {send("SetEnrollmentPartnerOpaqueID");}});
+
+var SetEnrollmentUPN = Module.findExportByName("dmenrollengine.dll", "SetEnrollmentUPN")
+Interceptor.attach(SetEnrollmentUPN, {onLeave: function (args) {send("SetEnrollmentUPN");}});
+
+var SetIsRecoveryAllowed = Module.findExportByName("dmenrollengine.dll", "SetIsRecoveryAllowed")
+Interceptor.attach(SetIsRecoveryAllowed, {onLeave: function (args) {send("SetIsRecoveryAllowed");}});
+
+var SetMmpcEnrollmentFlag = Module.findExportByName("dmenrollengine.dll", "SetMmpcEnrollmentFlag")
+Interceptor.attach(SetMmpcEnrollmentFlag, {onLeave: function (args) {send("SetMmpcEnrollmentFlag");}});
+
+var SetProviderID = Module.findExportByName("dmenrollengine.dll", "SetProviderID")
+Interceptor.attach(SetProviderID, {onLeave: function (args) {send("SetProviderID");}});
+
+var SetRecoveryInitiatedByServer = Module.findExportByName("dmenrollengine.dll", "SetRecoveryInitiatedByServer")
+Interceptor.attach(SetRecoveryInitiatedByServer, {onLeave: function (args) {send("SetRecoveryInitiatedByServer");}});
+
+var SetRecoveryRetryCount = Module.findExportByName("dmenrollengine.dll", "SetRecoveryRetryCount")
+Interceptor.attach(SetRecoveryRetryCount, {onLeave: function (args) {send("SetRecoveryRetryCount");}});
+
+var SetRecoveryStateAndErrorCode = Module.findExportByName("dmenrollengine.dll", "SetRecoveryStateAndErrorCode")
+Interceptor.attach(SetRecoveryStateAndErrorCode, {onLeave: function (args) {send("SetRecoveryStateAndErrorCode");}});
+
+var SwitchAADLinkedEnrollment = Module.findExportByName("dmenrollengine.dll", "SwitchAADLinkedEnrollment")
+Interceptor.attach(SwitchAADLinkedEnrollment, {onLeave: function (args) {send("SwitchAADLinkedEnrollment");}});
+
+var SysprepGeneralize = Module.findExportByName("dmenrollengine.dll", "SysprepGeneralize")
+Interceptor.attach(SysprepGeneralize, {onLeave: function (args) {send("SysprepGeneralize");}});
+
+var VerifyServerIsMmpcEx = Module.findExportByName("dmenrollengine.dll", "VerifyServerIsMmpcEx")
+Interceptor.attach(VerifyServerIsMmpcEx, {onLeave: function (args) {send("VerifyServerIsMmpcEx");}});
+
+var _IsManagementRegistrationAllowed = Module.findExportByName("dmenrollengine.dll", "_IsManagementRegistrationAllowed")
+Interceptor.attach(_IsManagementRegistrationAllowed, {onLeave: function (args) {send("_IsManagementRegistrationAllowed");}});
+
