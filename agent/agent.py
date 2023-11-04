@@ -29,14 +29,6 @@ def run():
     f=open("C:\\Users\\onuro\\OneDrive\\Masaüstü\\Severus\\agent\\dll_exports\\kernel32.dll.txt","r")
     js+=f.read()
     f.close()
-    script = """
-var AcquireSRWLockShared = Module.findExportByName("kernel32.dll", "AcquireSRWLockShared")
-Interceptor.attach(AcquireSRWLockShared, {onEnter: function (args) {send("AcquireSRWLockShared");}});
-
-
-
-"""
-
     script = session.create_script(js)
 
 
